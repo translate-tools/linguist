@@ -1,0 +1,52 @@
+typography:
+  font:
+    family:
+      value: 'Arial, Helvetica, sans-serif'
+
+  layout:
+    indent:
+      s:
+        all:
+          value: .3rem;
+
+      m:
+        all:
+          value: .5rem;
+      l:
+        all:
+          value: 1rem;
+
+    border:
+      radius:
+        value: 4px
+      width:
+        s:
+          value: 1px
+        m:
+          value: 2px
+
+    size:
+      s:
+        fontSize:
+          value: .9rem
+        lineHeight:
+          value: 1rem
+        indent:
+          inner:
+            value: .4rem
+      m:
+        fontSize:
+          value: 1rem
+        lineHeight:
+          value: 1.1rem
+        indent:
+          inner:
+            value: .5rem
+      l:
+        fontSize:
+          value: 1.2rem
+        lineHeight:
+          value: 1.2rem
+        indent:
+          inner:
+            value: .6rem

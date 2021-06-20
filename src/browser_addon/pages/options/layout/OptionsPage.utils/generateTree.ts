@@ -1,0 +1,387 @@
+import { langCodes } from '../../../../../core/types/Translator';
+import { getMessage } from '../../../../lib/language';
+import { OptionsGroup } from '../OptionsTree/OptionsTree';
+
+type Options = {
+	clearCacheProcess: boolean;
+	translatorModules: Record<string, string> | undefined;
+	clearCache: () => void;
+};
+
+/**
+ * Generate config tree for render with `OptionsTree`
+ */
+export const generateTree = ({
+	clearCacheProcess,
+	translatorModules,
+	clearCache,
+}: Options): OptionsGroup[] => {
+	return [
+		{
+			title: getMessage('settings_option_commonSettings'),
+			groupContent: [
+				{
+					title: getMessage('settings_option_userLanguage'),
+					description: getMessage('settings_option_userLanguage_desc'),
+					path: 'language',
+					optionContent: {
+						type: 'SelectList',
+						options: langCodes
+							.map((code) => ({
+								id: code,
+								content: getMessage(`langCode_${code}`),
+							}))
+							.sort(({ content: a }, { content: b }) =>
+								a > b ? 1 : a < b ? -1 : 0,
+							),
+					},
+				},
+			],
+		},
+		{
+			title: getMessage('settings_option_translatePreferences'),
+			groupContent: [
+				translatorModules === undefined
+					? undefined
+					: {
+						title: getMessage('settings_option_translatorModule'),
+						groupContent: [
+							{
+								description: getMessage(
+									'settings_option_translatorModule_desc',
+								),
+								path: 'translatorModule',
+								optionContent: {
+									type: 'SelectList',
+									options: Object.keys(translatorModules).map(
+										(value) => ({
+											id: value,
+											content: translatorModules[value],
+										}),
+									),
+								},
+							},
+						],
+					  },
+				{
+					title: getMessage('settings_option_translateScheduler'),
+					groupContent: [
+						{
+							title: getMessage('settings_option_translateScheduler_delay'),
+							description: getMessage(
+								'settings_option_translateScheduler_delay_desc',
+							),
+							path: 'scheduler.translatePoolDelay',
+							optionContent: {
+								type: 'InputNumber',
+							},
+						},
+						{
+							title: getMessage(
+								'settings_option_translateScheduler_retryLimit',
+							),
+							description: getMessage(
+								'settings_option_translateScheduler_retryLimit_desc',
+							),
+							path: 'scheduler.translateRetryAttemptLimit',
+							optionContent: {
+								type: 'InputNumber',
+							},
+						},
+					],
+				},
+				{
+					title: getMessage('settings_option_cache'),
+					groupContent: [
+						{
+							description: getMessage('settings_option_cache_enable_desc'),
+							path: 'scheduler.useCache',
+							optionContent: {
+								type: 'Checkbox',
+								text: getMessage('settings_option_cache_enable'),
+							},
+						},
+						{
+							description: getMessage(
+								'settings_option_cache_ignoreCase_desc',
+							),
+							path: 'cache.ignoreCase',
+							optionContent: {
+								type: 'Checkbox',
+								reverse: true,
+								text: getMessage('settings_option_cache_ignoreCase'),
+							},
+						},
+						{
+							description: getMessage('settings_option_cache_clear_desc'),
+							optionContent: {
+								type: 'Button',
+								text: getMessage('settings_option_cache_clear'),
+								disabled: clearCacheProcess,
+								action: clearCache,
+							},
+						},
+					],
+				},
+			],
+		},
+		{
+			title: getMessage('settings_option_pageTranslation'),
+			groupContent: [
+				{
+					title: getMessage('settings_option_mainPreferences'),
+					groupContent: [
+						{
+							description: getMessage(
+								'settings_option_pageTranslation_lazyTranslate_desc',
+							),
+							path: 'pageTranslator.lazyTranslate',
+							optionContent: {
+								type: 'Checkbox',
+								text: getMessage(
+									'settings_option_pageTranslation_lazyTranslate',
+								),
+							},
+						},
+					],
+				},
+				{
+					title: getMessage(
+						'settings_option_pageTranslation_translatableAttributes',
+					),
+					groupContent: [
+						{
+							description: getMessage(
+								'settings_option_pageTranslation_translatableAttributes_desc',
+							),
+							path: 'pageTranslator.translatableAttributes',
+							optionContent: {
+								type: 'InputMultilineFromArray',
+							},
+						},
+					],
+				},
+				{
+					title: getMessage('settings_option_pageTranslation_ignoredTags'),
+					groupContent: [
+						{
+							description: getMessage(
+								'settings_option_pageTranslation_ignoredTags_desc',
+							),
+							path: 'pageTranslator.ignoredTags',
+							optionContent: {
+								type: 'InputMultilineFromArray',
+							},
+						},
+					],
+				},
+			],
+		},
+		{
+			title: getMessage('settings_option_selectTranslation'),
+			groupContent: [
+				{
+					title: getMessage('settings_option_mainPreferences'),
+					groupContent: [
+						{
+							path: 'contentscript.selectTranslator.enabled',
+							optionContent: {
+								type: 'Checkbox',
+								text: getMessage(
+									'settings_option_selectTranslation_enable',
+								),
+							},
+						},
+						{
+							path: 'contentscript.selectTranslator.disableWhileTranslatePage',
+							optionContent: {
+								type: 'Checkbox',
+								text: getMessage(
+									'settings_option_selectTranslation_disableWhileTranslatePage',
+								),
+							},
+						},
+						{
+							path: 'selectTranslator.rememberDirection',
+							optionContent: {
+								type: 'Checkbox',
+								text: getMessage(
+									'settings_option_selectTranslation_rememberDirection',
+								),
+							},
+						},
+						{
+							description: getMessage(
+								'settings_option_selectTranslation_strictSelection_desc',
+							),
+							path: 'selectTranslator.strictSelection',
+							optionContent: {
+								type: 'Checkbox',
+								text: getMessage(
+									'settings_option_selectTranslation_strictSelection',
+								),
+							},
+						},
+						{
+							description: getMessage(
+								'settings_option_selectTranslation_detectedLangFirst_desc',
+							),
+							path: 'selectTranslator.detectedLangFirst',
+							optionContent: {
+								type: 'Checkbox',
+								text: getMessage(
+									'settings_option_selectTranslation_detectedLangFirst',
+								),
+							},
+						},
+						{
+							description: getMessage(
+								'settings_option_selectTranslation_focusOnTranslateButton_desc',
+							),
+							path: 'selectTranslator.focusOnTranslateButton',
+							optionContent: {
+								type: 'Checkbox',
+								text: getMessage(
+									'settings_option_selectTranslation_focusOnTranslateButton',
+								),
+							},
+						},
+					],
+				},
+				{
+					title: getMessage('settings_option_selectTranslation_quickTranslate'),
+					groupContent: [
+						{
+							description: getMessage(
+								'settings_option_selectTranslation_quickTranslate_desc',
+							),
+							path: 'selectTranslator.quickTranslate',
+							optionContent: {
+								type: 'Checkbox',
+								text: getMessage(
+									'settings_option_selectTranslation_quickTranslate_enable',
+								),
+							},
+						},
+					],
+				},
+				{
+					title: getMessage('settings_option_selectTranslation_modifers'),
+					groupContent: [
+						{
+							description: getMessage(
+								'settings_option_selectTranslation_modifers_desc',
+							),
+							path: 'selectTranslator.modifers',
+							optionContent: {
+								type: 'CheckboxGroup',
+								valueMap: ['ctrlKey', 'altKey', 'shiftKey', 'metaKey'],
+								options: [
+									{
+										type: 'Checkbox',
+										text: getMessage(
+											'settings_option_selectTranslation_modifers_key_ctrl',
+										),
+									},
+									{
+										type: 'Checkbox',
+										text: getMessage(
+											'settings_option_selectTranslation_modifers_key_alt',
+										),
+									},
+									{
+										type: 'Checkbox',
+										text: getMessage(
+											'settings_option_selectTranslation_modifers_key_shift',
+										),
+									},
+									{
+										type: 'Checkbox',
+										text: getMessage(
+											'settings_option_selectTranslation_modifers_key_meta',
+										),
+									},
+								],
+							},
+						},
+					],
+				},
+				{
+					title: getMessage(
+						'settings_option_selectTranslation_timeoutForHideButton',
+					),
+					groupContent: [
+						{
+							description: getMessage(
+								'settings_option_selectTranslation_timeoutForHideButton_desc',
+							),
+							path: 'selectTranslator.timeoutForHideButton',
+							optionContent: {
+								type: 'InputNumber',
+							},
+						},
+					],
+				},
+				{
+					title: getMessage('settings_option_selectTranslation_zIndex'),
+					groupContent: [
+						{
+							description: getMessage(
+								'settings_option_selectTranslation_zIndex_desc',
+							),
+							path: 'selectTranslator.zIndex',
+							optionContent: {
+								type: 'InputNumber',
+							},
+						},
+					],
+				},
+			],
+		},
+		{
+			title: getMessage('settings_option_textTranslator'),
+			groupContent: [
+				{
+					title: getMessage('settings_option_mainPreferences'),
+					groupContent: [
+						{
+							description: getMessage(
+								'settings_option_textTranslator_rememberText_desc',
+							),
+							path: 'textTranslator.rememberText',
+							optionContent: {
+								type: 'Checkbox',
+								text: getMessage(
+									'settings_option_textTranslator_rememberText',
+								),
+							},
+						},
+					],
+				},
+			],
+		},
+
+		{
+			title: getMessage('settings_section_popup'),
+			groupContent: [
+				{
+					title: getMessage('settings_option_pageTranslation'),
+					groupContent: [
+						{
+							description: getMessage(
+								'settings_option_popupTab_pageTranslator_showCounters_desc',
+							),
+							path: 'popupTab.pageTranslator.showCounters',
+							optionContent: {
+								type: 'Checkbox',
+								text: getMessage(
+									'settings_option_popupTab_pageTranslator_showCounters',
+								),
+							},
+						},
+					],
+				},
+			],
+		},
+	];
+};

@@ -1,0 +1,93 @@
+:root {
+	/* Hide firefox scrollbar */
+	scrollbar-width: none;
+}
+
+body {
+	margin: 0;
+	background-color: var(--color-essential);
+	font-size: var(--typography-layout-size-m-font-size);
+}
+
+.PopupWindow {
+	min-width: max-content;
+	width: 100%;
+}
+
+/* Header */
+.PopupWindow-Header {
+	display: flex;
+	background: var(--popup-window-header-fill-color);
+	line-height: 4rem;
+	padding: 0 var(--typography-layout-indent-l-all);
+}
+
+.PopupWindow-Header > *:not(:first-child) {
+	margin-left: var(--typography-layout-indent-l-all);
+}
+
+/* Logo */
+.PopupWindow-Logo {
+	display: inline-block;
+}
+
+.PopupWindow-Logo svg {
+	display: inline-block;
+	vertical-align: middle;
+	width: 80px;
+	height: auto;
+}
+
+/* HeaderMenu */
+.PopupWindow-HeaderMenu {
+	display: block;
+	font-family: var(--typography-font-family);
+	text-align: right;
+	width: 100%;
+	float: right;
+	line-height: inherit;
+}
+
+.PopupWindow-HeaderIcon {
+	margin: 0 0.2rem !important;
+}
+
+/* Tabs */
+.PopupWindow-Tabs {
+	padding: 0.5rem;
+	overflow-x: auto;
+}
+
+/* TabsMenu */
+.PopupWindow-TabsMenu {
+	display: flex;
+	min-width: max-content;
+}
+
+/* Content */
+.PopupWindow-Content {
+	padding: 0.5rem;
+}
+
+/* ErrorMessage */
+.PopupWindow-ErrorMessage {
+	min-width: 400px;
+}
+
+.PopupWindow-ErrorMessage_plainText {
+	padding: 2rem 0;
+	font-family: var(--typography-font-family);
+	font-size: var(--typography-layout-size-l-font-size);
+	text-align: center;
+}
+
+/* Loader */
+.PopupWindow-Loader {
+	min-width: 400px;
+	min-height: 200px;
+}
+
+.PopupWindow-Loader .Loader-Image {
+	width: 5rem;
+	height: 5rem;
+}

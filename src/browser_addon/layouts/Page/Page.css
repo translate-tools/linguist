@@ -1,0 +1,34 @@
+/* It need for show scroll in FF */
+:root {
+	scrollbar-width: auto;
+}
+
+body {
+	margin: 0;
+}
+
+/* Page */
+.Page-Body {
+	max-width: 800px;
+	margin: auto;
+	font-family: var(--typography-font-family);
+	font-size: var(--typography-layout-size-m-font-size);
+}
+
+/* Placeholder */
+.Page-Placeholder {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+
+.Page-Placeholder .Loader {
+	height: 100%;
+}
+
+.Page-Placeholder .Loader-Image {
+	width: 3rem;
+	height: 3rem;
+}

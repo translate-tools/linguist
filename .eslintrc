@@ -1,0 +1,86 @@
+{
+  "env": {
+    "browser": true,
+    "es2020": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 11,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react-hooks",
+    "@typescript-eslint"
+  ],
+  "extends": [
+    "plugin:react-hooks/recommended"
+  ],
+  "rules": {
+    // TODO: find option for specify immutable objects for improve consistency
+    // for example in `src/hooks/useLiveRef.ts` required as deps a `forceUpdate`
+    // but setter from `useState` is never required
+    "react-hooks/exhaustive-deps": [
+      "warn",
+      {
+        // custom hooks with deps
+        "additionalHooks": "(useEqualMemo|useImmutableCallback|useIsomorphicLayoutEffect)"
+      }
+    ],
+    "function-call-argument-newline": [
+      "error",
+      "consistent"
+    ],
+    "no-var": "error",
+    "no-bitwise": "error",
+    "no-multi-spaces": "error",
+    "no-multiple-empty-lines": "error",
+    "space-in-parens": "error",
+    "semi": "error",
+    "prefer-const": "error",
+    // off cuz eslint is dumb: https://stackoverflow.com/questions/63818415/react-was-used-before-it-was-defined
+    "no-use-before-define": "off",
+    "@typescript-eslint/no-use-before-define": [
+      "error"
+    ],
+    "valid-jsdoc": 0,
+    // Codestyle
+    "indent": [
+      "error",
+      "tab"
+    ],
+    "camelcase": [
+      "error",
+      {
+        "allow": [
+          "^UNSAFE_",
+          "^UNSTABLE_"
+        ]
+      }
+    ],
+    "arrow-parens": [
+      "error",
+      "always"
+    ],
+    "operator-linebreak": [
+      "error",
+      "after",
+      {
+        "overrides": {
+          "?": "before",
+          ":": "before"
+        }
+      }
+    ],
+    "space-before-function-paren": [
+      "error",
+      {
+        "asyncArrow": "always",
+        "anonymous": "never",
+        "named": "never"
+      }
+    ]
+  }
+}

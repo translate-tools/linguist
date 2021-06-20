@@ -1,0 +1,47 @@
+.PageTranslator {
+	font-family: var(--typography-font-family);
+}
+
+.PageTranslator > :not(:last-child) {
+	margin-block-end: var(--typography-controls-indent-l);
+}
+
+.PageTranslator-Header {
+	margin: 0 0 var(--typography-layout-indent-m-all);
+}
+
+/* Counter */
+.PageTranslator-Counter {
+	display: inline-block;
+	background-color: var(--button-view-default-fill-color-disabled);
+	color: var(--button-view-default-typo-color-disabled);
+	font-size: var(--button-size-s-font-size);
+	line-height: var(--button-size-s-line-height);
+	padding: 0 var(--button-size-m-indent-inner);
+	border-radius: var(--button-border-radius);
+}
+
+.PageTranslator-Counter:not(:last-child) {
+	margin-inline-end: var(--button-size-s-indent-outer);
+}
+
+.PageTranslator-CounterContent {
+	margin-left: var(--typography-layout-indent-s-all);
+	border-left: 1px solid currentColor;
+	padding-left: var(--typography-layout-indent-s-all);
+}
+
+/* List */
+.PageTranslator-List {
+	margin: 0;
+	padding: 0;
+}
+
+.PageTranslator-ListItem {
+	list-style: none;
+	padding: 0;
+}
+
+.PageTranslator-ListItem:not(:last-child) {
+	margin-block-end: var(--typography-controls-indent-m);
+}

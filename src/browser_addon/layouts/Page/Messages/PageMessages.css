@@ -1,0 +1,42 @@
+.Page-MessagesContainer {
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 999;
+	max-width: min(100%, 600px);
+	max-height: 100%;
+	box-sizing: border-box;
+	padding: var(--typography-layout-indent-l-all);
+	pointer-events: none;
+	overflow: hidden;
+}
+
+.Page-MessagesContainer > *:not(:first-child) {
+	margin-top: var(--typography-layout-indent-m-all);
+}
+
+.Page-Message {
+	cursor: pointer;
+	pointer-events: auto;
+	width: max-content;
+	max-width: 100%;
+	padding: 0.8rem;
+	box-sizing: border-box;
+	border-radius: var(--typography-layout-border-radius);
+	color: var(--color-typo-primary);
+	opacity: 0.9;
+}
+
+.Page-Message_type_info {
+	background: var(--page-message-type-info-fill-color);
+	color: var(--page-message-type-info-typo-color);
+}
+
+.Page-Message_type_error {
+	background: var(--page-message-type-error-fill-color);
+	color: var(--page-message-type-error-typo-color);
+}
+
+.Page-Message:hover {
+	opacity: 1;
+}

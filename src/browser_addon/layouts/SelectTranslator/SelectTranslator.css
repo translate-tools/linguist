@@ -1,0 +1,96 @@
+.SelectTranslator {
+	width: max-content;
+	max-width: 100%;
+	padding: var(--typography-layout-indent-l-all);
+	border-radius: var(--typography-layout-border-radius);
+	box-sizing: border-box;
+	font-family: var(--typography-font-family);
+	font-size: var(--typography-layout-size-s-font-size);
+	line-height: var(--typography-layout-size-m-line-height);
+	color: var(--color-typo-primary);
+	background: var(--select-translator-fill-color);
+	border: 1px solid var(--color-control-type-blank-border-color-base);
+}
+
+.SelectTranslator > *:not(:first-child) {
+	margin-top: var(--typography-layout-indent-m-all);
+}
+
+/* Button */
+.SelectTranslator .Button {
+	outline: none !important;
+}
+
+/* Head */
+.SelectTranslator-Head > *:not(:first-child) {
+	margin-left: var(--typography-layout-indent-m-all);
+}
+
+/* Container_direction */
+.SelectTranslator-Container_direction_left {
+	float: left;
+}
+
+.SelectTranslator-Container_direction_right {
+	float: right;
+}
+
+/* Clearfix */
+.SelectTranslator-Clearfix:after {
+	display: block;
+	content: '';
+	clear: both;
+}
+
+/* Body */
+.SelectTranslator-Body {
+	max-width: 600px;
+	max-height: 400px;
+	overflow-y: auto;
+	font-size: var(--typography-layout-size-s-font-size);
+	white-space: pre-line;
+}
+
+.SelectTranslator-OriginalTextContainer {
+	/* margin-top: var(--typography-controls-indent-l); */
+	background: #eee;
+	padding: 0.4rem;
+	width: min-content;
+	min-width: 100%;
+	box-sizing: border-box;
+}
+
+.SelectTranslator-OriginalText {
+	margin: var(--typography-controls-indent-m);
+	white-space: pre-wrap;
+}
+
+.SelectTranslator-Body_error {
+	color: var(--color-typo-error);
+}
+
+/* TranslateButton */
+.SelectTranslator-TranslateButton {
+	display: block;
+	opacity: 0.7;
+	width: 1.5rem;
+	height: 1.5rem;
+}
+
+.SelectTranslator-TranslateButton:hover {
+	opacity: 1;
+}
+
+/* Loader */
+.SelectTranslator-Loader {
+	padding: 0.25rem;
+	border: 1px solid var(--color-control-type-blank-border-color-base);
+	border-radius: var(--typography-layout-border-radius);
+	color: var(--color-typo-primary);
+	background: var(--color-container-page-popup-fill-color);
+}
+
+.SelectTranslator-Loader .Loader-Image {
+	width: 2rem;
+	height: 2rem;
+}

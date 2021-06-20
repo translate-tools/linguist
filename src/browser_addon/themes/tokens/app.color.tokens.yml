@@ -1,0 +1,14 @@
+# This config just overwrite some tokens from UI kit
+color:
+  project:
+    value: '#1f69ff'
+
+  typo:
+    primary:
+      value: '#000'
+      comment: 'Primary color for all text'
+    secondary:
+      value: '#535353'
+      comment: 'Used for descriptions'
+    alert:
+      value: '#c00101'

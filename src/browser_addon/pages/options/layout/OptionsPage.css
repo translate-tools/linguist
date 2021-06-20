@@ -1,0 +1,45 @@
+/* Page */
+.OptionsPage-Page {
+	padding: var(--typography-layout-indent-l-all) var(--typography-layout-indent-m-all);
+}
+
+.OptionsPage-Page_editMode {
+	margin-bottom: 4rem;
+}
+
+/* ConfirmMenu */
+.OptionsPage-ConfirmMenu {
+	position: fixed;
+	border-radius: var(--typography-layout-border-radius);
+	padding: var(--typography-layout-indent-m-all);
+	background: var(--options-page-dialog-fill-color);
+	max-width: max-content;
+	bottom: var(--typography-layout-indent-m-all);
+	left: 0;
+	right: 0;
+	margin: auto;
+	z-index: 999;
+}
+
+/* Inputs */
+.OptionsPage .Textarea {
+	width: min(100%, 600px);
+}
+
+.OptionsPage .Textarea-Wrap {
+	min-height: 5rem;
+	max-height: 20rem;
+}
+
+.OptionsPage .Textarea-Control {
+	position: absolute;
+}
+
+/* IndentMixin */
+.OptionsPage-IndentMixin_horizontal > *:not(:first-child) {
+	margin-left: var(--typography-layout-indent-m-all);
+}
+
+.OptionsPage-IndentMixin_vertical > *:not(:first-child) {
+	margin-top: var(--typography-layout-indent-m-all);
+}

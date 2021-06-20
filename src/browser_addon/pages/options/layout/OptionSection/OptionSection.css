@@ -1,0 +1,25 @@
+/* OptionSection */
+.OptionsPage-OptionSection > *:not(:first-child) {
+	margin-top: var(--typography-layout-indent-m-all);
+}
+
+.OptionsPage-OptionSection {
+	padding-left: var(--typography-layout-indent-m-all);
+	border-left: var(--typography-layout-border-width-m) solid transparent;
+}
+
+.OptionsPage-OptionSection_changed {
+	border-color: var(--options-page-section-active-border-color);
+}
+
+/* OptionDescription */
+.OptionsPage-OptionDescription {
+	color: var(--color-typo-secondary);
+	font-size: var(--typography-layout-size-s-font-size);
+	white-space: pre-wrap;
+}
+
+.OptionsPage-OptionErrorMessage {
+	color: var(--color-typo-error);
+	font-size: var(--typography-layout-size-s-font-size);
+}

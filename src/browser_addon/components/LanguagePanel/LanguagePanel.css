@@ -1,0 +1,3 @@
+.LanguagePanel > *:not(:first-child) {
+	margin-left: var(--typography-layout-indent-m-all);
+}

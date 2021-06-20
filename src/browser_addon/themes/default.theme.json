@@ -1,0 +1,12 @@
+{
+	"mappers": ["./node_modules/react-elegant-ui/**/*.mapper.yml"],
+	"sources": [
+		"./node_modules/react-elegant-ui/theme/tokens/light-color.tokens.yml",
+		"./node_modules/react-elegant-ui/theme/tokens/typography.tokens.yml",
+		"./node_modules/react-elegant-ui/theme/tokens/transition.tokens.yml",
+		"./node_modules/react-elegant-ui/components/**/*.tokens.yml",
+		"./themes/tokens/*.tokens.yml",
+		"./layouts/**/*.tokens.yml",
+		"./pages/**/*.tokens.yml"
+	]
+}

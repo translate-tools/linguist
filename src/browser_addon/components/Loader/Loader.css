@@ -1,0 +1,22 @@
+.Loader {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.Loader-Image {
+	animation-name: Loader-Spin;
+	animation-duration: 0.8s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+@keyframes Loader-Spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
