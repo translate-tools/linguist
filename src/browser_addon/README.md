@@ -1,3 +1,13 @@
+# Install
+
+Get addon for your browser
+
+- [firefox](https://addons.mozilla.org/addon/linguist-translator/)
+
+Browsers list will be replenished
+
+If you have other browser, check out [releases page](https://github.com/vitonsky/linguist/releases), download package and install it manually in development mode.
+
 # About
 
 Linguist - it browser extension for translate pages and any text.
