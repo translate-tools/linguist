@@ -3,7 +3,7 @@
  */
 export const fixPosToPreventOverflow = (left: number, top: number) => {
 	const fixLeft = (left: number) => {
-		const viewportWidth = document.body.clientWidth;
+		const viewportWidth = document.documentElement.clientWidth;
 
 		// Left
 		if (left < 0) {

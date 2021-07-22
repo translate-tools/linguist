@@ -122,7 +122,22 @@ export const SelectTranslator: FC<SelectTranslatorProps> = ({
 		};
 	}, [x, y]);
 
-	const modifiers = useMemo(() => [{ name: 'hide', enabled: false }], []);
+	const modifiers = useMemo(
+		() => [
+			{ name: 'hide', enabled: false },
+			{
+				// Compute as simply as possible, use only top and left
+				// Otherwise, with use `inset` may be invalid position
+				// Mod docs: https://popper.js.org/docs/v2/modifiers/compute-styles/#adaptive
+				name: 'computeStyles',
+				options: {
+					gpuAcceleration: false,
+					adaptive: false,
+				},
+			},
+		],
+		[],
+	);
 
 	const rootRef = useRef<any>(null);
 	const styles = ['common.css', 'contentscript.css'];
