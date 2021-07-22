@@ -1,4 +1,7 @@
 import { isEqual } from 'lodash';
+import { runByReadyState } from 'react-elegant-ui/esm/lib/runByReadyState';
+
+import { AppConfigType } from './types/runtime';
 import { getPageLanguageFromMeta } from './lib/browser';
 import { detectLanguage } from './lib/language';
 
@@ -17,11 +20,13 @@ import { untranslatePageFactory } from './requests/contentscript/untranslatePage
 
 const cs = new ContentScript();
 
+const getPageLanguage = async () =>
+	getPageLanguageFromMeta() ??
+	(await detectLanguage(document.body.innerText)) ??
+	undefined;
+
 cs.onLoad(async (initConfig) => {
-	const pageLanguage =
-		getPageLanguageFromMeta() ??
-		(await detectLanguage(document.body.innerText)) ??
-		undefined;
+	const pageLanguage = await getPageLanguage();
 
 	// Set last config after await
 	let config = cs.getConfig() ?? initConfig;
@@ -46,7 +51,7 @@ cs.onLoad(async (initConfig) => {
 		updateSelectTranslatorRef();
 	}
 
-	cs.onUpdate((newConfig) => {
+	const updateConfig = (newConfig: AppConfigType) => {
 		// Update global config
 		if (!isEqual(config.contentscript, newConfig.contentscript)) {
 			// Make or delete SelectTranslator
@@ -129,7 +134,9 @@ cs.onLoad(async (initConfig) => {
 
 		// Update local config
 		config = newConfig;
-	});
+	};
+
+	cs.onUpdate(updateConfig);
 
 	const factories = [
 		pingFactory,
@@ -149,36 +156,52 @@ cs.onLoad(async (initConfig) => {
 
 	// Init page translate
 
-	// Auto translate page
-	const fromLang = pageLanguage;
-	const toLang = config.language;
-	const sitePrefs = await getSitePreferences(location.host);
-	const autoTranslatedLangs = await getAutoTranslatedLangs();
-	if (!pageTranslator.isRun() && fromLang && fromLang !== toLang) {
-		let isNeedAutoTranslate = false;
+	const pageURL = location.host;
 
-		// Auto translate by host
-		if (sitePrefs?.translateAlways) {
-			isNeedAutoTranslate = true;
+	// TODO: add option to define stage to detect language and run auto translate
+	runByReadyState(async () => {
+		// Skip if page already in translating
+		if (pageTranslator.isRun()) return;
+
+		const actualPageLanguage = await getPageLanguage();
+
+		// Update config if language did updated after loading page
+		if (pageLanguage !== actualPageLanguage) {
+			updateConfig(config);
 		}
 
-		// Auto translate by language
-		if (autoTranslatedLangs.indexOf(fromLang) !== -1) {
-			isNeedAutoTranslate = true;
-		}
+		// Auto translate page
+		const fromLang = actualPageLanguage;
+		const toLang = config.language;
+		const sitePrefs = await getSitePreferences(pageURL);
+		const autoTranslatedLangs = await getAutoTranslatedLangs();
 
-		if (isNeedAutoTranslate) {
-			const selectTranslator = selectTranslatorRef.value;
+		if (fromLang && fromLang !== toLang) {
+			let isNeedAutoTranslate = false;
 
-			if (
-				selectTranslator !== null &&
-				selectTranslator.isRun() &&
-				config.contentscript.selectTranslator.disableWhileTranslatePage
-			) {
-				selectTranslator.stop();
+			// Auto translate by host
+			if (sitePrefs?.translateAlways) {
+				isNeedAutoTranslate = true;
 			}
 
-			pageTranslator.run(fromLang, toLang);
+			// Auto translate by language
+			if (autoTranslatedLangs.indexOf(fromLang) !== -1) {
+				isNeedAutoTranslate = true;
+			}
+
+			if (isNeedAutoTranslate) {
+				const selectTranslator = selectTranslatorRef.value;
+
+				if (
+					selectTranslator !== null &&
+					selectTranslator.isRun() &&
+					config.contentscript.selectTranslator.disableWhileTranslatePage
+				) {
+					selectTranslator.stop();
+				}
+
+				pageTranslator.run(fromLang, toLang);
+			}
 		}
-	}
+	}, 'interactive');
 });

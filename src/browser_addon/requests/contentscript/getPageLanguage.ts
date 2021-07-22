@@ -1,5 +1,5 @@
-import { browser } from 'webextension-polyfill-ts';
 import { addRequestHandler, csSendRequest } from '../../lib/communication';
+import { detectLanguage } from '../../lib/language';
 import { tryDecode, type } from '../../lib/types';
 import { ClientRequestHandlerFactory } from '../types';
 
@@ -12,12 +12,6 @@ export const getPageLanguage = (tabId: number) =>
 
 export const getPageLanguageFactory: ClientRequestHandlerFactory = () => {
 	addRequestHandler('getPageLanguage', () =>
-		browser.i18n.detectLanguage(document.body.innerText).then((rsp) => {
-			if (!rsp.isReliable) {
-				return null;
-			}
-
-			return rsp.languages[0].language;
-		}),
+		detectLanguage(document.body.innerText, true),
 	);
 };
