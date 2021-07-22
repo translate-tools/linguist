@@ -245,6 +245,8 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 						onChange={(evt) => setUserInput(evt.target.value)}
 						hasClear
 						onClearClick={clearState}
+						// TODO: make it as option
+						spellCheck={true}
 					/>
 					<div className={cnTextTranslator('Result')}>
 						{resultText.length > 0
