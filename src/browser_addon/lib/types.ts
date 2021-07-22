@@ -12,6 +12,7 @@ export const tryDecode = <T>(type: t.Type<T>, data: any) => {
 		return decodedData.right;
 	}
 
+	console.error('Data for the error below', data);
 	throw new TypeError('Invalid type');
 };
 

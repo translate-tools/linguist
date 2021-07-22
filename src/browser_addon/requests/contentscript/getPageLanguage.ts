@@ -3,7 +3,7 @@ import { addRequestHandler, csSendRequest } from '../../lib/communication';
 import { tryDecode, type } from '../../lib/types';
 import { ClientRequestHandlerFactory } from '../types';
 
-export const getPageLanguageOut = type.string;
+export const getPageLanguageOut = type.union([type.string, type.null]);
 
 export const getPageLanguage = (tabId: number) =>
 	csSendRequest(tabId, 'getPageLanguage').then((language) =>
