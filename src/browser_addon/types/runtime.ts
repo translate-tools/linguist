@@ -79,6 +79,7 @@ export const AppConfig = type.type({
 	}),
 	textTranslator: type.type({
 		rememberText: type.boolean,
+		spellCheck: type.boolean,
 	}),
 	contentscript: type.type({
 		selectTranslator: type.type({

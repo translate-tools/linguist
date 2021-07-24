@@ -175,6 +175,7 @@ export const TextTranslatorTab: TabComponent = ({
 			translatorFeatures={translatorFeatures}
 			translateHook={sendTranslateRequest}
 			noTranslate={inited === false}
+			spellCheck={config.textTranslator.spellCheck}
 			{...{
 				from,
 				setFrom,

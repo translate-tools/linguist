@@ -97,6 +97,7 @@ export const defaultConfig: AppConfigType = {
 	},
 	textTranslator: {
 		rememberText: true,
+		spellCheck: true,
 	},
 	selectTranslator: {
 		zIndex: 999999,

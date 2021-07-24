@@ -76,7 +76,7 @@ export class ConfigStorage<T extends t.Props> {
 
 				const defaultValue = this.defaultData[key];
 
-				// Try merge new and old value if it object
+				// Try merge default and current value if it object
 				let isMerged = false;
 				const currentValue = dataCollector[key];
 				if (

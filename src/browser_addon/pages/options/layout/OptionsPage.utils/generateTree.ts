@@ -356,6 +356,15 @@ export const generateTree = ({
 								),
 							},
 						},
+						{
+							path: 'textTranslator.spellCheck',
+							optionContent: {
+								type: 'Checkbox',
+								text: getMessage(
+									'settings_option_textTranslator_spellCheck',
+								),
+							},
+						},
 					],
 				},
 			],

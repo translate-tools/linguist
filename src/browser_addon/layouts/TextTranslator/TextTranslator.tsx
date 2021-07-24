@@ -54,6 +54,11 @@ export interface TextTranslatorProps
 	 * It useful while initiate state
 	 */
 	noTranslate?: boolean;
+
+	/**
+	 * Enable spellcheck
+	 */
+	spellCheck?: boolean;
 }
 
 /**
@@ -70,6 +75,7 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 	userInput,
 	setUserInput,
 	translateHook,
+	spellCheck,
 	inputControl: inputControlExternal,
 	inputDelay = 600,
 	noTranslate = false,
@@ -245,8 +251,7 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 						onChange={(evt) => setUserInput(evt.target.value)}
 						hasClear
 						onClearClick={clearState}
-						// TODO: make it as option
-						spellCheck={true}
+						spellCheck={spellCheck}
 					/>
 					<div className={cnTextTranslator('Result')}>
 						{resultText.length > 0
