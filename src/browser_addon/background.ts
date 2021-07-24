@@ -127,7 +127,7 @@ export const defaultConfig: AppConfigType = {
 // TODO: use async `storage.local` instead `localStorage`
 const cfg = new ConfigStorage(AppConfig.props, defaultConfig);
 
-// Validation config
+// Fix config
 const initTranslatorModule = cfg.getConfig('translatorModule');
 if (
 	initTranslatorModule === null ||
@@ -135,6 +135,20 @@ if (
 ) {
 	cfg.set({ translatorModule: defaultConfig.translatorModule });
 }
+
+// TODO: remove it after september 2021
+// Migration for previous data
+Object.keys(defaultConfig).forEach((key) => {
+	// Try write data if possible
+	const rawValue = localStorage.getItem(key);
+	if (rawValue !== null) {
+		const value = JSON.parse(rawValue);
+		cfg.set({ [key]: value });
+	}
+
+	// Remove from `localStorage`
+	localStorage.removeItem(key);
+});
 
 // Init BG
 

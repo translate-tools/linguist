@@ -1,6 +1,7 @@
 import * as t from 'io-ts';
 import { isEqual, cloneDeep } from 'lodash';
-import { tryDecodeObject } from '../../lib/types';
+
+import { tryDecode, tryDecodeObject } from '../../lib/types';
 
 export type Callback<T extends t.Props> = (
 	newProps: Partial<t.TypeOfProps<T>>,
@@ -13,8 +14,8 @@ export type Middleware<T extends t.Props> = (
 ) => boolean;
 
 export class ConfigStorage<T extends t.Props> {
+	private readonly storageName = 'config.Main';
 	private readonly types: T;
-	private readonly buildedType: t.TypeC<T>;
 
 	private readonly callbacks = new Set<Callback<T>>();
 	private state: t.TypeOfProps<T> | null = null;
@@ -22,13 +23,105 @@ export class ConfigStorage<T extends t.Props> {
 
 	constructor(types: T, defaultData?: Partial<t.TypeOfProps<T>>) {
 		this.types = types;
-		this.buildedType = t.type(types);
 
 		if (defaultData !== undefined) {
 			this.defaultData = tryDecodeObject(t.partial(this.types), defaultData);
 		}
 
-		this.write(this.read());
+		this.init();
+	}
+
+	/**
+	 * Init data
+	 */
+	private init() {
+		// Get data from storage if possible
+		const rawStorageData = localStorage.getItem(this.storageName);
+		const configData = rawStorageData === null ? {} : JSON.parse(rawStorageData);
+		if (typeof configData !== 'object') {
+			throw new Error('Invalid data from storage');
+		}
+
+		// Validate and write necessary config properties
+		const dataCollector: Record<string, any> = {};
+		for (const key in this.types) {
+			let isDefaultConfig = false;
+
+			// Write to tmp registry a value from storage or default value
+			if (key in configData) {
+				dataCollector[key] = configData[key];
+			} else {
+				if (this.defaultData === undefined || !(key in this.defaultData)) {
+					throw new Error(
+						`Key "${key}" not found in storage and not defined default value in constructor`,
+					);
+				}
+
+				isDefaultConfig = true;
+				dataCollector[key] = this.defaultData[key];
+			}
+
+			// Validate value and fix if possible
+			try {
+				// Try decode to validate
+				tryDecode(this.types[key], dataCollector[key]);
+			} catch (error) {
+				if (!(error instanceof TypeError) || isDefaultConfig) throw error;
+
+				if (this.defaultData === undefined || !(key in this.defaultData)) {
+					throw new Error(
+						`Key "${key}" from storage are invalid and not defined default value in constructor`,
+					);
+				}
+
+				const defaultValue = this.defaultData[key];
+
+				// Try merge new and old value if it object
+				let isMerged = false;
+				const currentValue = dataCollector[key];
+				if (
+					typeof defaultValue === 'object' &&
+					typeof currentValue === 'object'
+				) {
+					const mergedValue = { ...defaultValue, ...currentValue };
+
+					try {
+						dataCollector[key] = tryDecode(this.types[key], mergedValue);
+						isMerged = true;
+					} catch {}
+				}
+
+				// Try replace to default value
+				if (!isMerged) {
+					// Try decode to validate default value
+					dataCollector[key] = tryDecode(this.types[key], defaultValue);
+				}
+			}
+		}
+
+		// Additional validation. It may be removed, cuz data already validated
+		const configSignature = t.type(this.types);
+		const data = tryDecodeObject(configSignature, dataCollector);
+
+		this.write(data);
+	}
+
+	/**
+	 * Append data to state
+	 */
+	private write(newData: Partial<t.TypeOfProps<T>>) {
+		if (this.state === null) {
+			this.state = {} as t.TypeOfProps<T>;
+		}
+
+		// Write to local state
+		for (const key in newData) {
+			this.state[key] = newData[key];
+		}
+
+		// Write to store (sync)
+		const encodedData = JSON.stringify(this.state);
+		localStorage.setItem(this.storageName, encodedData);
 	}
 
 	public subscribe(callback: Callback<T>) {
@@ -55,30 +148,44 @@ export class ConfigStorage<T extends t.Props> {
 	}
 
 	public set(data: Partial<t.TypeOfProps<T>>) {
-		const newData: typeof data = {};
-		const oldData: typeof data = {};
-
 		if (this.state === null) {
 			throw Error('Config state is not init');
 		}
 
+		// Collect changes to variables
+		const newData: typeof data = {};
+		const oldData: typeof data = {};
+
 		for (const key in data) {
-			if (!isEqual(this.state[key], (data as any)[key])) {
-				(newData as any)[key] = (data as any)[key];
-				(oldData as any)[key] = cloneDeep(this.state[key]);
+			const newValue = data[key];
+			const currentValue = this.state[key];
+
+			if (!isEqual(currentValue, newValue)) {
+				newData[key] = newValue;
+				oldData[key] = cloneDeep(currentValue);
 			}
 		}
 
-		// Call to middleware
-		for (const middleware of this.middlewareHandlers) {
-			if (!middleware(newData, this.state)) {
+		// Validate new values
+		for (const key in newData) {
+			try {
+				tryDecode(this.types[key], newData[key]);
+			} catch (error) {
+				// Prevent exception and just prevent changes
 				return false;
 			}
 		}
 
-		this.write(newData);
+		// Call middleware
+		for (const middleware of this.middlewareHandlers) {
+			if (!middleware(newData, this.state)) {
+				// Prevent changes
+				return false;
+			}
+		}
 
-		// Send to all subscribers
+		// Write and send to all subscribers
+		this.write(newData);
 		this.callbacks.forEach((callback) => callback(newData, oldData));
 
 		return true;
@@ -91,42 +198,5 @@ export class ConfigStorage<T extends t.Props> {
 
 	public removeMiddleware(middleware: Middleware<T>) {
 		this.middlewareHandlers.delete(middleware);
-	}
-
-	private write(newData: Partial<t.TypeOfProps<T>>) {
-		if (this.state === null) {
-			this.state = {} as t.TypeOfProps<T>;
-		}
-
-		// Write data
-		for (const key in newData) {
-			const encodedData = JSON.stringify((newData as any)[key]);
-
-			// To store
-			localStorage.setItem(key, encodedData);
-
-			// To local property
-			this.state[key] = (newData as any)[key];
-		}
-	}
-
-	private read(): t.TypeOfProps<T> {
-		const dataCollector: Record<string, any> = {};
-
-		for (const key in this.types) {
-			const rawData = localStorage.getItem(key);
-			if (rawData === null) {
-				if (this.defaultData === undefined || !(key in this.defaultData)) {
-					throw new Error(
-						`Key "${key}" not found in storage and not defined default value in constructor`,
-					);
-				}
-				dataCollector[key] = this.defaultData[key];
-			} else {
-				dataCollector[key] = JSON.parse(rawData);
-			}
-		}
-
-		return tryDecodeObject(this.buildedType, dataCollector);
 	}
 }
