@@ -1,4 +1,16 @@
 .Theme_color_default {
+    --tabsmenu-view-default-outline-color: #D518DA;
+    --tabsmenu-view-default-border-color-base: rgb(204, 204, 204);
+    --tabsmenu-view-default-border-color-active: rgb(71, 133, 255);
+    --tabsmenu-view-default-fill-color-base: rgb(255, 255, 255);
+    --tabsmenu-view-default-fill-color-hover: rgb(247, 247, 247);
+    --tabsmenu-view-default-fill-color-disabled: rgb(242, 242, 242);
+    --tabsmenu-view-default-typo-color-base: #000;
+    --tabsmenu-view-default-typo-color-disabled: rgb(128, 128, 128);
+    --tabsmenu-view-primitive-outline-color: #D518DA;
+    --tabsmenu-view-primitive-border-color-base: #000;
+    --tabsmenu-view-primitive-typo-color-base: #000;
+    --tabsmenu-view-primitive-typo-color-disabled: rgb(128, 128, 128);
     --color-base: #000; /* base content color on which depend color of text, icons, etc */
     --color-essential: #fff; /* background color */
     --color-project: #1f69ff; /* project color for accents such as a action view */
@@ -145,18 +157,6 @@
     --select-fill-color-base: rgb(230, 230, 230);
     --spinner-view-primitive-border-color-active: #1f69ff;
     --spinner-view-primitive-border-color-common: transparent;
-    --tabsmenu-view-default-outline-color: #D518DA;
-    --tabsmenu-view-default-border-color-base: rgb(204, 204, 204);
-    --tabsmenu-view-default-border-color-active: rgb(71, 133, 255);
-    --tabsmenu-view-default-fill-color-base: rgb(255, 255, 255);
-    --tabsmenu-view-default-fill-color-hover: rgb(247, 247, 247);
-    --tabsmenu-view-default-fill-color-disabled: rgb(242, 242, 242);
-    --tabsmenu-view-default-typo-color-base: #000;
-    --tabsmenu-view-default-typo-color-disabled: rgb(128, 128, 128);
-    --tabsmenu-view-primitive-outline-color: #D518DA;
-    --tabsmenu-view-primitive-border-color-base: #000;
-    --tabsmenu-view-primitive-typo-color-base: #000;
-    --tabsmenu-view-primitive-typo-color-disabled: rgb(128, 128, 128);
     --textarea-view-default-fill-color-base: #fff;
     --textarea-view-default-fill-color-disabled: rgb(242, 242, 242);
     --textarea-view-default-border-color-base: rgb(217, 217, 217);

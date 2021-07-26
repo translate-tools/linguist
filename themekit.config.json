@@ -1,11 +1,11 @@
 {
 	"entry": {
-		"default": "./themes/default.theme.json"
+		"default": "./src/themes/default.theme.json"
 	},
 	"output": {
 		"css": {
 			"transforms": ["name/cti/kebab", "name/mapper"],
-			"buildPath": "./themes/presets",
+			"buildPath": "./src/themes/presets",
 			"actions": ["process-color"],
 			"files": [
 				{
