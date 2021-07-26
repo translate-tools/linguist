@@ -2,17 +2,17 @@ import { TranslatorClass } from '../types/objects';
 import { AppConfig } from '../types/runtime';
 
 import { ConfigStorage } from './ConfigStorage/ConfigStorage';
-import { ITranslateScheduler } from '../../core/TranslateScheduler/ITranslateScheduler';
-import { TranslateScheduler } from '../../core/TranslateScheduler/TranslateScheduler';
+import { ITranslateScheduler } from '@translate-tools/core/TranslateScheduler/ITranslateScheduler';
+import { TranslateScheduler } from '@translate-tools/core/TranslateScheduler/TranslateScheduler';
 import {
 	TranslatorCache,
 	TranslateSchedulerWithCache,
-} from '../../core/TranslateScheduler/TranslateSchedulerWithCache';
+} from '@translate-tools/core/TranslateScheduler/TranslateSchedulerWithCache';
 
-import { Translator } from '../../core/types/Translator';
-import { GoogleTranslator } from '../../core/translators/GoogleTranslator';
-import { YandexTranslator } from '../../core/translators/YandexTranslator';
-import { BingTranslatorPublic } from '../../core/translators/unstable/BingTranslatorPublic';
+import { Translator } from '@translate-tools/core/types/Translator';
+import { GoogleTranslator } from '@translate-tools/core/translators/GoogleTranslator';
+import { YandexTranslator } from '@translate-tools/core/translators/YandexTranslator';
+import { BingTranslatorPublic } from '@translate-tools/core/translators/unstable/BingTranslatorPublic';
 
 interface Registry {
 	translator?: Translator;

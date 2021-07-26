@@ -1,4 +1,4 @@
-import { langCodes } from '../../../../../core/types/Translator';
+import { langCodes } from '@translate-tools/core/types/Translator';
 import { getMessage } from '../../../../lib/language';
 import { OptionsGroup } from '../OptionsTree/OptionsTree';
 

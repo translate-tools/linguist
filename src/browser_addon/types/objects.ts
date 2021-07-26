@@ -1,4 +1,4 @@
-import { ITranslator } from '../../core/types/Translator';
+import { ITranslator } from '@translate-tools/core/types/Translator';
 
 import { ClassObject } from './utils';
 

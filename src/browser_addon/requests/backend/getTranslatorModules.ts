@@ -3,7 +3,7 @@ import { RequestHandlerFactory } from '../types';
 import { addRequestHandler, bgSendRequest } from '../../lib/communication';
 import { tryDecode, type } from '../../lib/types';
 
-import { Translator } from '../../../core/types/Translator';
+import { Translator } from '@translate-tools/core/types/Translator';
 
 export const getTranslatorModulesOut = type.record(type.string, type.string);
 
