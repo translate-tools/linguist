@@ -24,11 +24,11 @@ module.exports = {
 		extensions: ['.js', '.ts', '.tsx'],
 	},
 	entry: {
-		background: './background.ts',
-		contentscript: './contentscript.tsx',
-		['pages/popup/popup']: './pages/popup/popup.tsx',
-		['pages/options/options']: './pages/options/options.tsx',
-		['pages/dictionary/dictionary']: './pages/dictionary/dictionary.tsx',
+		background: './src/background.ts',
+		contentscript: './src/contentscript.tsx',
+		['pages/popup/popup']: './src/pages/popup/popup.tsx',
+		['pages/options/options']: './src/pages/options/options.tsx',
+		['pages/dictionary/dictionary']: './src/pages/dictionary/dictionary.tsx',
 	},
 	output: {
 		path: outputPath,
@@ -64,17 +64,17 @@ module.exports = {
 					'pages/options/options.html',
 					'pages/dictionary/dictionary.html',
 				].map((file) => ({
-					from: './' + file,
+					from: './src/' + file,
 					to: path.join(outputPath, file),
 				})),
 
 				// Resources & locales
 				{
-					from: './_locales',
+					from: './src/_locales',
 					to: path.join(outputPath, '_locales'),
 				},
 				{
-					from: './res',
+					from: './src/res',
 					to: path.join(outputPath, 'res'),
 				},
 			],

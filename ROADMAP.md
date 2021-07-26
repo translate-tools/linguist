@@ -2,7 +2,7 @@ List with main plans
 
 ## Platforms
 
-- [ ] Publish in firefox addons store
+- [x] Publish in firefox addons store
 - [ ] Publish in chrome addons store
 - [ ] Publish in [edge](https://docs.microsoft.com/en-us/microsoft-edge/extensions-chromium/publish/publish-extension) addons store
 - [ ] Add smartphones support

@@ -32,51 +32,51 @@ export class XMutationObserver {
 
 		mutations.forEach((mutation) => {
 			switch (mutation.type) {
-				case 'characterData': {
-					this.callHandlers('characterData', {
-						target: mutation.target,
-						oldValue: mutation.oldValue,
-					});
-					break;
-				}
+			case 'characterData': {
+				this.callHandlers('characterData', {
+					target: mutation.target,
+					oldValue: mutation.oldValue,
+				});
+				break;
+			}
 
-				case 'attributes': {
-					this.callHandlers('changeAttribute', {
-						target: mutation.target,
-						oldValue: mutation.oldValue,
-						attributeName: mutation.attributeName,
-					});
-					break;
-				}
+			case 'attributes': {
+				this.callHandlers('changeAttribute', {
+					target: mutation.target,
+					oldValue: mutation.oldValue,
+					attributeName: mutation.attributeName,
+				});
+				break;
+			}
 
-				case 'childList': {
-					// write all changes
+			case 'childList': {
+				// write all changes
 
-					mutation.removedNodes.forEach((node) => {
-						const counters = nodeCounters.get(node);
-						if (counters !== undefined) {
-							counters.removed++;
-						} else {
-							nodeCounters.set(node, {
-								added: 0,
-								removed: 1,
-							});
-						}
-					});
+				mutation.removedNodes.forEach((node) => {
+					const counters = nodeCounters.get(node);
+					if (counters !== undefined) {
+						counters.removed++;
+					} else {
+						nodeCounters.set(node, {
+							added: 0,
+							removed: 1,
+						});
+					}
+				});
 
-					mutation.addedNodes.forEach((node) => {
-						const counters = nodeCounters.get(node);
-						if (counters !== undefined) {
-							counters.added++;
-						} else {
-							nodeCounters.set(node, {
-								added: 1,
-								removed: 0,
-							});
-						}
-					});
-					break;
-				}
+				mutation.addedNodes.forEach((node) => {
+					const counters = nodeCounters.get(node);
+					if (counters !== undefined) {
+						counters.added++;
+					} else {
+						nodeCounters.set(node, {
+							added: 1,
+							removed: 0,
+						});
+					}
+				});
+				break;
+			}
 			}
 		});
 

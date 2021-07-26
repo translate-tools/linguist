@@ -1,0 +1,297 @@
+:root {
+	/* Hide firefox scrollbar */
+	scrollbar-width: none;
+}
+
+body {
+	margin: 0;
+	background-color: var(--color-essential);
+	font-size: var(--typography-layout-size-m-font-size);
+}
+
+.PopupWindow {
+	min-width: max-content;
+	width: 100%;
+}
+
+/* Header */
+.PopupWindow-Header {
+	display: flex;
+	background: var(--popup-window-header-fill-color);
+	line-height: 64px;
+	padding: 0 var(--typography-layout-indent-l-all);
+}
+
+.PopupWindow-Header > *:not(:first-child) {
+	margin-left: var(--typography-layout-indent-l-all);
+}
+
+/* Logo */
+.PopupWindow-Logo {
+	display: inline-block;
+}
+
+.PopupWindow-Logo svg {
+	display: inline-block;
+	vertical-align: middle;
+	width: 80px;
+	height: auto;
+}
+
+/* HeaderMenu */
+.PopupWindow-HeaderMenu {
+	display: block;
+	font-family: var(--typography-font-family);
+	text-align: right;
+	width: 100%;
+	float: right;
+	line-height: inherit;
+}
+
+.PopupWindow-HeaderIcon {
+	margin: 0 3.2px !important;
+}
+
+/* Tabs */
+.PopupWindow-Tabs {
+	padding: 8px;
+	overflow-x: auto;
+}
+
+/* TabsMenu */
+.PopupWindow-TabsMenu {
+	display: flex;
+	min-width: max-content;
+}
+
+/* Content */
+.PopupWindow-Content {
+	padding: 8px;
+}
+
+/* ErrorMessage */
+.PopupWindow-ErrorMessage {
+	min-width: 400px;
+}
+
+.PopupWindow-ErrorMessage_plainText {
+	padding: 32px 0;
+	font-family: var(--typography-font-family);
+	font-size: var(--typography-layout-size-l-font-size);
+	text-align: center;
+}
+
+/* Loader */
+.PopupWindow-Loader {
+	min-width: 400px;
+	min-height: 200px;
+}
+
+.PopupWindow-Loader .Loader-Image {
+	width: 80px;
+	height: 80px;
+}
+
+.TextTranslator {
+	box-sizing: border-box;
+	font-family: var(--textarea-font-family);
+}
+
+.TextTranslator > *:not(:last-child) {
+	margin-block-end: var(--typography-layout-indent-m-all);
+}
+
+/* LangPanel */
+.TextTranslator-LangPanel {
+	min-width: max-content;
+}
+
+/* InputContainer */
+.TextTranslator-InputContainer {
+	width: min-content;
+	min-width: 100%;
+	max-width: 100%;
+}
+
+.TextTranslator-InputContainerWrapper {
+	box-sizing: border-box;
+}
+
+.TextTranslator-InputContainerWrapper > *:not(:last-child) {
+	margin-block-end: var(--typography-layout-indent-m-all);
+}
+
+/* Input */
+.TextTranslator-Input {
+	width: 100%;
+}
+
+.TextTranslator-Input .Textarea-Wrap {
+	height: 150px;
+}
+
+/* Result */
+.TextTranslator-Result {
+	background-color: var(--textarea-view-default-fill-color-disabled);
+	color: var(--textarea-view-default-typo-color-base);
+	padding: var(--textarea-size-m-control-indent);
+	border-radius: var(--textarea-border-radius);
+	white-space: pre-line;
+	box-sizing: border-box;
+	overflow: auto;
+	min-height: 150px;
+	max-height: 200px;
+	font-family: var(--textarea-font-family);
+	word-break: break-word;
+}
+
+/* It need for show scroll in FF */
+:root {
+	scrollbar-width: auto;
+}
+
+body {
+	margin: 0;
+}
+
+/* Page */
+.Page-Body {
+	max-width: 800px;
+	margin: auto;
+	font-family: var(--typography-font-family);
+	font-size: var(--typography-layout-size-m-font-size);
+}
+
+/* Placeholder */
+.Page-Placeholder {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+
+.Page-Placeholder .Loader {
+	height: 100%;
+}
+
+.Page-Placeholder .Loader-Image {
+	width: 48px;
+	height: 48px;
+}
+
+.Page-MessagesContainer {
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 999;
+	max-width: min(100%, 600px);
+	max-height: 100%;
+	box-sizing: border-box;
+	padding: var(--typography-layout-indent-l-all);
+	pointer-events: none;
+	overflow: hidden;
+}
+
+.Page-MessagesContainer > *:not(:first-child) {
+	margin-top: var(--typography-layout-indent-m-all);
+}
+
+.Page-Message {
+	cursor: pointer;
+	pointer-events: auto;
+	width: max-content;
+	max-width: 100%;
+	padding: 12.8px;
+	box-sizing: border-box;
+	border-radius: var(--typography-layout-border-radius);
+	color: var(--color-typo-primary);
+	opacity: 0.9;
+}
+
+.Page-Message_type_info {
+	background: var(--page-message-type-info-fill-color);
+	color: var(--page-message-type-info-typo-color);
+}
+
+.Page-Message_type_error {
+	background: var(--page-message-type-error-fill-color);
+	color: var(--page-message-type-error-typo-color);
+}
+
+.Page-Message:hover {
+	opacity: 1;
+}
+
+/* OptionSection */
+.OptionsPage-OptionSection > *:not(:first-child) {
+	margin-top: var(--typography-layout-indent-m-all);
+}
+
+.OptionsPage-OptionSection {
+	padding-left: var(--typography-layout-indent-m-all);
+	border-left: var(--typography-layout-border-width-m) solid transparent;
+}
+
+.OptionsPage-OptionSection_changed {
+	border-color: var(--options-page-section-active-border-color);
+}
+
+/* OptionDescription */
+.OptionsPage-OptionDescription {
+	color: var(--color-typo-secondary);
+	font-size: var(--typography-layout-size-s-font-size);
+	white-space: pre-wrap;
+}
+
+.OptionsPage-OptionErrorMessage {
+	color: var(--color-typo-error);
+	font-size: var(--typography-layout-size-s-font-size);
+}
+
+/* Page */
+.OptionsPage-Page {
+	padding: var(--typography-layout-indent-l-all) var(--typography-layout-indent-m-all);
+}
+
+.OptionsPage-Page_editMode {
+	margin-bottom: 64px;
+}
+
+/* ConfirmMenu */
+.OptionsPage-ConfirmMenu {
+	position: fixed;
+	border-radius: var(--typography-layout-border-radius);
+	padding: var(--typography-layout-indent-m-all);
+	background: var(--options-page-dialog-fill-color);
+	max-width: max-content;
+	bottom: var(--typography-layout-indent-m-all);
+	left: 0;
+	right: 0;
+	margin: auto;
+	z-index: 999;
+}
+
+/* Inputs */
+.OptionsPage .Textarea {
+	width: min(100%, 600px);
+}
+
+.OptionsPage .Textarea-Wrap {
+	min-height: 80px;
+	max-height: 320px;
+}
+
+.OptionsPage .Textarea-Control {
+	position: absolute;
+}
+
+/* IndentMixin */
+.OptionsPage-IndentMixin_horizontal > *:not(:first-child) {
+	margin-left: var(--typography-layout-indent-m-all);
+}
+
+.OptionsPage-IndentMixin_vertical > *:not(:first-child) {
+	margin-top: var(--typography-layout-indent-m-all);
+}
+
