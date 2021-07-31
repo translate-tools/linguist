@@ -13,7 +13,8 @@
 		"clean": "rm -rf ./build",
 		"prettify": "prettier --write **/*.{ts,tsx,js} && eslint --fix **/*.{ts,tsx,js}",
 		"prepare": "husky install",
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"release:patch": "npm version patch && npm run clean && npm run build:firefox"
 	},
 	"dependencies": {
 		"@bem-react/classname": "^1.5.10",
