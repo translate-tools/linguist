@@ -78,7 +78,7 @@ export const TextTranslatorTab: TabComponent = ({
 		useState<TextTranslatorProps['translationData']>(null);
 
 	// Try recovery last translate state
-	const [inited, setInited] = useState(false);
+	const [isInit, setIsInit] = useState(false);
 	useEffect(() => {
 		const lastStateRaw = localStorage.getItem('TextTranslator.lastState');
 		if (lastStateRaw !== null) {
@@ -121,7 +121,7 @@ export const TextTranslatorTab: TabComponent = ({
 			}
 		}
 
-		setInited(true);
+		setIsInit(true);
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
@@ -178,11 +178,20 @@ export const TextTranslatorTab: TabComponent = ({
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [activeTab, tabId]);
 
+	// It need to prevent translating while init state,
+	// `noTranslate` need to prevent update right after change `noTranslate`
+	const [noTranslate, setNoTranslate] = useState(true);
+	useEffect(() => {
+		if (isInit) {
+			setNoTranslate(false);
+		}
+	}, [isInit]);
+
 	return (
 		<TextTranslator
 			translatorFeatures={translatorFeatures}
 			translateHook={sendTranslateRequest}
-			noTranslate={inited === false}
+			noTranslate={noTranslate}
 			spellCheck={config.textTranslator.spellCheck}
 			{...{
 				from,

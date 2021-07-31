@@ -1,7 +1,6 @@
 import React, { FC, Ref, useCallback, useEffect, useRef, useState } from 'react';
 import { cn } from '@bem-react/classname';
 import { useDelayCallback } from 'react-elegant-ui/esm/hooks/useDelayCallback';
-import { usePrevious } from 'react-elegant-ui/esm/hooks/usePrevious';
 
 import { Checkbox } from 'react-elegant-ui/esm/components/Checkbox/Checkbox.bundle/desktop';
 
@@ -127,14 +126,15 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 			});
 	}, [translateHook, userInput, from, to, setTranslationData]);
 
-	// TODO: remove it after refactor
-	const immediatelyTranslate = useRef(false);
+	// It need to disable translate delay for next state update
+	const disableDelayForNextTranslate = useRef(false);
 
 	const swapLanguages = ({ from, to }: { from: string; to: string }) => {
 		translateContext.current = Symbol('TranslateContext');
 
-		// Translate text
-		immediatelyTranslate.current = true;
+		// We can't translate right now, because must await an change state,
+		// so just mark delay disable for next translate
+		disableDelayForNextTranslate.current = true;
 
 		setFrom(from);
 		setTo(to);
@@ -165,10 +165,9 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 	// Translate by changes
 	const [setTranslateTask, resetTranslateTask] = useDelayCallback();
 
-	const prevNoTranslate = usePrevious(noTranslate);
 	useEffect(() => {
 		// Ignore changes
-		if (noTranslate || prevNoTranslate) {
+		if (noTranslate) {
 			return;
 		}
 
@@ -192,25 +191,24 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 		};
 
 		// Translate
-		if (immediatelyTranslate.current) {
-			immediatelyTranslate.current = false;
+		if (disableDelayForNextTranslate.current) {
+			disableDelayForNextTranslate.current = false;
 			resetTranslateTask();
 			translateTask();
 		} else {
 			setTranslateTask(translateTask, inputDelay);
 		}
-		// Ignore `prevNoTranslate`
+		// Ignore `noTranslate`
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [
 		from,
 		to,
 		userInput,
+		inputDelay,
 		clearState,
+		resetTranslateTask,
 		setTranslateTask,
 		translate,
-		inputDelay,
-		resetTranslateTask,
-		noTranslate,
 	]);
 
 	// Sync local result with actual data
