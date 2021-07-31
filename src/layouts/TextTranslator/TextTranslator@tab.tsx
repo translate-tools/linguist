@@ -1,7 +1,12 @@
 import React, { useContext, useEffect, useRef, useState } from 'react';
-import { type as makeType, string as stringType } from 'io-ts';
-import { useFocusVisible } from '@react-aria/interactions';
+import {
+	type as makeType,
+	union as unionType,
+	null as nullType,
+	string as stringType,
+} from 'io-ts';
 import { useDelayCallback } from 'react-elegant-ui/esm/hooks/useDelayCallback';
+import { useFocusVisible } from '@react-aria/interactions';
 
 import { LangCode, LangCodeWithAuto } from '../../types/runtime';
 import { tryDecodeObject } from '../../lib/types';
@@ -14,8 +19,13 @@ import { TextTranslator, TextTranslatorProps } from './TextTranslator';
 export const lastStateType = makeType({
 	from: LangCodeWithAuto,
 	to: LangCode,
-	text: stringType,
-	translatedText: stringType,
+	translate: unionType([
+		makeType({
+			text: stringType,
+			translate: stringType,
+		}),
+		nullType,
+	]),
 });
 
 /**
@@ -28,13 +38,15 @@ export const clearLastTranslation = () => {
 		try {
 			const lastStateParsed = JSON.parse(lastStateRaw);
 			const lastState = tryDecodeObject(lastStateType, lastStateParsed);
-			lastState.text = '';
-			lastState.translatedText = '';
+			lastState.translate = null;
 
 			const serializedData = JSON.stringify(lastState);
 			localStorage.setItem('TextTranslator.lastState', serializedData);
 		} catch (error) {
 			console.error(error);
+
+			//  Clear storage
+			localStorage.removeItem('TextTranslator.lastState');
 		}
 	}
 };
@@ -62,9 +74,8 @@ export const TextTranslatorTab: TabComponent = ({
 	const [to, setTo] = useState(initData.current.to);
 
 	const [userInput, setUserInput] = useState('');
-	const [translationData, setTranslationData] = useState<
-		TextTranslatorProps['translationData']
-	>({ translate: '', text: '' });
+	const [translationData, setTranslationData] =
+		useState<TextTranslatorProps['translationData']>(null);
 
 	// Try recovery last translate state
 	const [inited, setInited] = useState(false);
@@ -79,8 +90,7 @@ export const TextTranslatorTab: TabComponent = ({
 				const {
 					from: lastFrom,
 					to: lastTo,
-					text: lastText,
-					translatedText: lastTranslatedText,
+					translate: lastTranslate,
 				} = lastState;
 
 				if (
@@ -99,16 +109,15 @@ export const TextTranslatorTab: TabComponent = ({
 				}
 
 				// Recovery text
-				if (
-					config.textTranslator.rememberText &&
-					lastText.length > 0 &&
-					lastTranslatedText.length > 0
-				) {
-					setUserInput(lastText);
-					setTranslationData({ text: lastText, translate: lastTranslatedText });
+				if (config.textTranslator.rememberText && lastTranslate !== null) {
+					setUserInput(lastTranslate.text);
+					setTranslationData(lastTranslate);
 				}
 			} catch (err) {
 				console.error(err);
+
+				//  Clear storage
+				localStorage.removeItem('TextTranslator.lastState');
 			}
 		}
 
@@ -123,21 +132,20 @@ export const TextTranslatorTab: TabComponent = ({
 
 	useEffect(() => {
 		const serialize = () => {
-			const { text, translate } = translationData;
-
 			try {
 				const rememberText =
 					config.textTranslator.rememberText &&
-					text.length <= serializeLenLimit &&
-					translate.length <= serializeLenLimit &&
-					userInput.length > 0;
+					userInput.length > 0 &&
+					translationData !== null &&
+					translationData.text.length <= serializeLenLimit &&
+					translationData.translate.length <= serializeLenLimit;
 
 				const stringData = JSON.stringify({
 					from,
 					to,
-					text: rememberText ? text : '',
-					translatedText: rememberText ? translate : '',
+					translate: rememberText ? translationData : null,
 				});
+
 				localStorage.setItem('TextTranslator.lastState', stringData);
 			} catch (err) {
 				console.error(err);

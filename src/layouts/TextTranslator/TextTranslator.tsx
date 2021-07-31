@@ -17,17 +17,18 @@ import './TextTranslator.css';
 
 export const cnTextTranslator = cn('TextTranslator');
 
+// Success translated data
+export type TranslationResult = {
+	text: string;
+	translate: string;
+};
+
 export interface TextTranslatorProps
 	extends MutableValue<'userInput', string>,
 		MutableValue<'from', string>,
 		MutableValue<'to', string>,
-		MutableValue<
-			'translationData',
-			{
-				text: string;
-				translate: string;
-			}
-		> {
+		// It must be null only when translate result never be set or after reset input
+		MutableValue<'translationData', TranslationResult | null> {
 	/**
 	 * Features of translator module
 	 */
@@ -82,6 +83,9 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 }) => {
 	const [inTranslateProcess, setInTranslateProcess] = useState(false);
 	const [errorMessage, setErrorMessage] = useState<string | null>(null);
+	const [translatedText, setTranslatedText] = useState<string | null>(
+		translationData === null ? null : translationData.translate,
+	);
 
 	// Context of translate operation to prevent rewrite result by old slow request
 	const translateContext = useRef(Symbol('TranslateContext'));
@@ -123,23 +127,39 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 			});
 	}, [translateHook, userInput, from, to, setTranslationData]);
 
+	// TODO: remove it after refactor
 	const immediatelyTranslate = useRef(false);
+
 	const swapLanguages = ({ from, to }: { from: string; to: string }) => {
 		translateContext.current = Symbol('TranslateContext');
+
+		// Translate text
 		immediatelyTranslate.current = true;
 
 		setFrom(from);
 		setTo(to);
 
-		const translatedText = translationData.translate;
-		setUserInput(translatedText);
-		setTranslationData({ text: translatedText, translate: '' });
+		// Swap text
+		if (translationData !== null) {
+			setUserInput(translatedText ?? '');
+			setTranslatedText(userInput);
+		}
 	};
 
+	// Clear text and stop translation
 	const clearState = useCallback(() => {
-		setErrorMessage(null);
+		// Stop translation
+		translateContext.current = Symbol('TranslateContext');
+		setInTranslateProcess(false);
+
+		// Clear text
 		setUserInput('');
-		setTranslationData({ text: '', translate: '' });
+		// It will clear in next `useEffect`, but did it here also for UX performance
+		setTranslatedText(null);
+		setErrorMessage(null);
+
+		// Clear translation data
+		setTranslationData(null);
 	}, [setTranslationData, setUserInput]);
 
 	// Translate by changes
@@ -193,6 +213,13 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 		noTranslate,
 	]);
 
+	// Sync local result with actual data
+	useEffect(() => {
+		const translatedText =
+			translationData === null ? null : translationData.translate;
+		setTranslatedText(translatedText);
+	}, [translationData]);
+
 	// Favorite state
 	const {
 		isFavorite,
@@ -202,7 +229,10 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 		from,
 		to,
 		text: userInput,
-		translate: errorMessage !== null ? null : translationData.translate,
+		translate:
+			translationData !== null && errorMessage === null
+				? translationData.translate
+				: null,
 	});
 
 	const setIsFavoriteProxy = useCallback(
@@ -217,8 +247,9 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 		? '...'
 		: errorMessage !== null
 			? `[${errorMessage}]`
-			: translationData.translate;
+			: translatedText;
 
+	const isShowFullData = !inTranslateProcess && errorMessage === null;
 	return (
 		<div className={cnTextTranslator()}>
 			<div className={cnTextTranslator('LangPanel')}>
@@ -230,6 +261,7 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 					setFrom={(from) => from !== undefined && setFrom(from)}
 					setTo={(to) => to !== undefined && setTo(to)}
 					swapHandler={swapLanguages}
+					disableSwap={!isShowFullData}
 				/>
 			</div>
 			<div>
@@ -237,6 +269,7 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 					label={getMessage('common_action_addToDictionary')}
 					checked={isFavorite}
 					setChecked={setIsFavoriteProxy}
+					disabled={!isShowFullData}
 				/>
 			</div>
 			<div className={cnTextTranslator('InputContainer')}>
@@ -254,7 +287,7 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 						spellCheck={spellCheck}
 					/>
 					<div className={cnTextTranslator('Result')}>
-						{resultText.length > 0
+						{resultText !== null
 							? resultText
 							: getMessage('textTranslator_translatePlaceholder')}
 					</div>

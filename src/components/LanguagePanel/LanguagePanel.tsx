@@ -17,6 +17,7 @@ export interface LanguagePanelProps {
 	setFrom?: (value?: string) => void;
 	setTo?: (value?: string) => void;
 	swapHandler?: (languages: { from: string; to: string }) => void;
+	disableSwap?: boolean;
 }
 
 export const LanguagePanel: FC<LanguagePanelProps> = ({
@@ -27,6 +28,7 @@ export const LanguagePanel: FC<LanguagePanelProps> = ({
 	setFrom,
 	setTo,
 	swapHandler,
+	disableSwap,
 }) => {
 	const fromValue = from !== undefined ? from : auto ? 'auto' : languages[0];
 	const toValue = to !== undefined ? to : languages[0];
@@ -68,7 +70,7 @@ export const LanguagePanel: FC<LanguagePanelProps> = ({
 			<Button
 				view="default"
 				onPress={swapLanguages}
-				disabled={fromValue === 'auto' || fromValue === toValue}
+				disabled={fromValue === 'auto' || fromValue === toValue || disableSwap}
 				title={getMessage('lang_swap')}
 				content="icon"
 			>
