@@ -2,6 +2,8 @@ const path = require('path');
 const CopyPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
+const package = require('./package.json');
+
 const mode = process.env.NODE_ENV === 'production' ? 'production' : 'development';
 const devtool = mode === 'production' ? undefined : 'inline-source-map';
 const target = process.env.EXT_TARGET;
@@ -54,8 +56,19 @@ module.exports = {
 			patterns: [
 				// Manifest
 				{
-					from: `./manifest.${target}.json`,
+					from: `./manifests/manifest.json`,
 					to: path.join(outputPath, 'manifest.json'),
+					transform(content, absoluteFrom) {
+						const rawManifest = content.toString();
+						const manifest = JSON.parse(rawManifest);
+
+						// Set version
+						manifest.version = package.version;
+
+						// Stringify with prettifying and convert to buffer
+						const modifiedManifest = JSON.stringify(manifest, null, '\t');
+						return Buffer.from(modifiedManifest);
+					},
 				},
 
 				// HTML pages
