@@ -55,6 +55,8 @@ It is for make life little more comfortable, for all users of internet
 
 # Development
 
+See [ROADMAP.md](./ROADMAP.md) for getting know development plans.
+
 You may improve Linguist, [make issue](https://github.com/translate-tools/linguist/issues/new) and suggest features or tell about bugs unknown for us.
 
 Help us translate Linguist to your language. Read the [internationalization guide](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization) and make pull request.
