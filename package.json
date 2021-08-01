@@ -5,16 +5,18 @@
 	"license": "GPL-3.0",
 	"author": "Vitonsky <https://github.com/vitonsky>",
 	"scripts": {
+		"clean": "rm -rf ./build",
+		"packAll": "cd build && ../scripts/zipAll.sh",
+		"build:all": "npm run clean && npm run build:firefox && npm run packAll",
 		"build:dev": "export EXT_TARGET=firefox && webpack-cli -w",
 		"build:dev-fast": "export FAST_BUILD=on && export EXT_TARGET=firefox && webpack-cli -w",
 		"build:tokens": "themekit build -c themekit.config.json",
 		"build:chromium": "export NODE_ENV=production && export EXT_TARGET=chromium && webpack-cli",
 		"build:firefox": "export NODE_ENV=production && export EXT_TARGET=firefox && webpack-cli",
-		"clean": "rm -rf ./build",
+		"release:patch": "npm version patch",
+		"release:patchManually": "npm version patch && build:all",
 		"prettify": "prettier --write **/*.{ts,tsx,js} && eslint --fix **/*.{ts,tsx,js}",
-		"prepare": "husky install",
-		"test": "echo \"Error: no test specified\" && exit 1",
-		"release:patch": "npm version patch && npm run clean && npm run build:firefox"
+		"prepare": "husky install"
 	},
 	"dependencies": {
 		"@bem-react/classname": "^1.5.10",
