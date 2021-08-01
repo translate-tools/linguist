@@ -5,5 +5,5 @@
 # TODO: exclude dev directories
 for buildDir in `find -maxdepth 1 -type d -not -name . -print`;
 do
-	zip "$(basename $buildDir).zip" "$buildDir"/*;
+	zip -r "$(basename $buildDir).zip" "$buildDir"/*;
 done;
