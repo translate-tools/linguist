@@ -7,7 +7,7 @@
 	"scripts": {
 		"clean": "rm -rf ./build",
 		"packAll": "cd build && ../scripts/zipAll.sh",
-		"build:all": "npm run clean && npm run build:firefox && npm run packAll",
+		"build:all": "npm run clean && npm run build:firefox && npm run build:chromium && npm run packAll",
 		"build:dev": "export EXT_TARGET=firefox && webpack-cli -w",
 		"build:dev-fast": "export FAST_BUILD=on && export EXT_TARGET=firefox && webpack-cli -w",
 		"build:tokens": "themekit build -c themekit.config.json",
