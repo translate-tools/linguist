@@ -6,8 +6,9 @@
 	"author": "Vitonsky <https://github.com/vitonsky>",
 	"scripts": {
 		"clean": "rm -rf ./build",
-		"packAll": "cd build && ../scripts/zipAll.sh",
-		"build:all": "npm run clean && npm run build:firefox && npm run build:chromium && npm run packAll",
+		"packAll": "cd build && ../scripts/zipAll.sh && cd ..",
+		"test:buildArchives": "cd build && ../scripts/testBuildArchives.sh && cd ..",
+		"build:all": "npm run clean && npm run build:firefox && npm run build:chromium && npm run packAll && npm run test:buildArchives",
 		"build:dev": "export EXT_TARGET=firefox && webpack-cli -w",
 		"build:dev-fast": "export FAST_BUILD=on && export EXT_TARGET=firefox && webpack-cli -w",
 		"build:tokens": "themekit build -c themekit.config.json",
@@ -66,6 +67,7 @@
 		"prettier": "^2.3.1",
 		"ts-loader": "^8.3.0",
 		"typescript": "^4.3.2",
+		"web-ext": "^6.2.0",
 		"webpack": "^5.38.1",
 		"webpack-cli": "^4.7.1"
 	}

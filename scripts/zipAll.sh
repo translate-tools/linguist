@@ -2,8 +2,9 @@
 
 # Script make zip files for all directories from the current directory
 
-# TODO: exclude dev directories
-for buildDir in `find -maxdepth 1 -type d -not -name . -print`;
+startDir=`pwd`
+for buildDir in `find -maxdepth 1 -type d -not -name . -not -name dev -not -name tests -print`;
 do
-	zip -r "$(basename $buildDir).zip" "$buildDir"/*;
+	# Make archive
+	cd "$startDir/$buildDir" && zip -r "../$(basename $buildDir).zip" *;
 done;
