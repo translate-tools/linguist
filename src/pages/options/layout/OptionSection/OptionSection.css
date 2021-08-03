@@ -1,3 +1,10 @@
+/* Overloads */
+
+/* TODO: patch this in checkbox component */
+.OptionsPage-OptionContainer .Checkbox-Label {
+	margin-inline-start: var(--typography-layout-indent-s-all);
+}
+
 /* OptionSection */
 .OptionsPage-OptionSection > *:not(:first-child) {
 	margin-top: var(--typography-layout-indent-m-all);
