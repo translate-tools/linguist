@@ -8,7 +8,7 @@ interface Options {
 	/**
 	 * Key modifiers to activate translate of selected text
 	 */
-	modifers: Array<'ctrlKey' | 'altKey' | 'shiftKey' | 'metaKey'>;
+	modifiers: Array<'ctrlKey' | 'altKey' | 'shiftKey' | 'metaKey'>;
 
 	/**
 	 * Skip when pointerdown not on the selected text
@@ -61,7 +61,7 @@ interface Options {
  */
 export class SelectTranslator {
 	private options: Options = {
-		modifers: ['ctrlKey'],
+		modifiers: ['ctrlKey'],
 		detectedLangFirst: false,
 		quickTranslate: false,
 		strictSelection: false,
@@ -157,7 +157,7 @@ export class SelectTranslator {
 		if (evt.button !== 0) return;
 
 		// Check modifier keys
-		const requiredModifierKeys = this.options.modifers;
+		const requiredModifierKeys = this.options.modifiers;
 		if (
 			requiredModifierKeys.length > 0 &&
 			!requiredModifierKeys.every((value) => evt[value])

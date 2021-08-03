@@ -64,7 +64,7 @@ export const AppConfig = type.type({
 		focusOnTranslateButton: type.union([type.boolean, type.undefined]),
 		rememberDirection: type.boolean,
 		quickTranslate: type.boolean,
-		modifers: type.array(
+		modifiers: type.array(
 			type.union([
 				StringType('ctrlKey'),
 				StringType('altKey'),

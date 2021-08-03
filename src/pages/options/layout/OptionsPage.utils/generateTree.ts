@@ -278,13 +278,13 @@ export const generateTree = ({
 					],
 				},
 				{
-					title: getMessage('settings_option_selectTranslation_modifers'),
+					title: getMessage('settings_option_selectTranslation_modifiers'),
 					groupContent: [
 						{
 							description: getMessage(
-								'settings_option_selectTranslation_modifers_desc',
+								'settings_option_selectTranslation_modifiers_desc',
 							),
-							path: 'selectTranslator.modifers',
+							path: 'selectTranslator.modifiers',
 							optionContent: {
 								type: 'CheckboxGroup',
 								valueMap: ['ctrlKey', 'altKey', 'shiftKey', 'metaKey'],
@@ -292,25 +292,25 @@ export const generateTree = ({
 									{
 										type: 'Checkbox',
 										text: getMessage(
-											'settings_option_selectTranslation_modifers_key_ctrl',
+											'settings_option_selectTranslation_modifiers_key_ctrl',
 										),
 									},
 									{
 										type: 'Checkbox',
 										text: getMessage(
-											'settings_option_selectTranslation_modifers_key_alt',
+											'settings_option_selectTranslation_modifiers_key_alt',
 										),
 									},
 									{
 										type: 'Checkbox',
 										text: getMessage(
-											'settings_option_selectTranslation_modifers_key_shift',
+											'settings_option_selectTranslation_modifiers_key_shift',
 										),
 									},
 									{
 										type: 'Checkbox',
 										text: getMessage(
-											'settings_option_selectTranslation_modifers_key_meta',
+											'settings_option_selectTranslation_modifiers_key_meta',
 										),
 									},
 								],

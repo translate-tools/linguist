@@ -103,7 +103,7 @@ export const defaultConfig: AppConfigType = {
 		zIndex: 999999,
 		rememberDirection: false,
 		quickTranslate: false,
-		modifers: [],
+		modifiers: [],
 		strictSelection: false,
 		detectedLangFirst: true,
 		timeoutForHideButton: 3000,
