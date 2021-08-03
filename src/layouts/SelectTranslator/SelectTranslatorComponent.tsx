@@ -21,13 +21,14 @@ import { cnSelectTranslator } from './SelectTranslator';
 import './SelectTranslator.css';
 
 export interface SelectTranslatorComponentProps {
-	pageLanguage?: string;
 	detectedLangFirst: boolean;
 	rememberDirection: boolean;
 	text: string;
 	translate: (text: string, from: string, to: string) => Promise<string>;
 	closeHandler: () => void;
 	updatePopup: () => void;
+	pageLanguage?: string;
+	showOriginalText?: boolean;
 }
 
 // TODO: improve layout
@@ -40,6 +41,7 @@ export const SelectTranslatorComponent: FC<SelectTranslatorComponentProps> = ({
 	closeHandler,
 	translate,
 	updatePopup,
+	showOriginalText,
 }) => {
 	const [from, setFrom] = useState<string>();
 	const [to, setTo] = useState<string>();
@@ -263,24 +265,26 @@ export const SelectTranslatorComponent: FC<SelectTranslatorComponentProps> = ({
 				{error === null ? (
 					<>
 						<div className={cnSelectTranslator('Body')}>{translatedText}</div>
-						<div className={cnSelectTranslator('OriginalTextContainer')}>
-							<details onToggle={updatePopup}>
-								<summary>
-									{getMessage('inlineTranslator_showOriginalText')}
-								</summary>
-								<p className={cnSelectTranslator('OriginalText')}>
-									{text}
-								</p>
+						{!showOriginalText ? undefined : (
+							<div className={cnSelectTranslator('OriginalTextContainer')}>
+								<details onToggle={updatePopup}>
+									<summary>
+										{getMessage('inlineTranslator_showOriginalText')}
+									</summary>
+									<p className={cnSelectTranslator('OriginalText')}>
+										{text}
+									</p>
 
-								{/* NOTE: it may be useful */}
-								{/* <Textarea
+									{/* NOTE: it may be useful */}
+									{/* <Textarea
 									value={text}
 									style={{ width: '100%', height: '' }}
 									controlProps={{ style: { minHeight: '8rem' } }}
 								/>
 								<Button view="action">Translate</Button> */}
-							</details>
-						</div>
+								</details>
+							</div>
+						)}
 					</>
 				) : (
 					<>

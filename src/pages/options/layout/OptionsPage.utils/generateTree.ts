@@ -8,6 +8,21 @@ type Options = {
 	clearCache: () => void;
 };
 
+// TODO: make helper for build options
+
+// option({
+// 	type: 'Checkbox',
+// 	path: 'selectTranslator.showOriginalText',
+// 	withText: true,
+// 	withDescription: true,
+// })
+
+// checkbox({
+// 	path: 'selectTranslator.showOriginalText',
+// 	withText: true,
+// 	withDescription: true,
+// })
+
 /**
  * Generate config tree for render with `OptionsTree`
  */
@@ -255,6 +270,15 @@ export const generateTree = ({
 								type: 'Checkbox',
 								text: getMessage(
 									'settings_option_selectTranslation_focusOnTranslateButton',
+								),
+							},
+						},
+						{
+							path: 'selectTranslator.showOriginalText',
+							optionContent: {
+								type: 'Checkbox',
+								text: getMessage(
+									'settings_option_selectTranslation_showOriginalText',
 								),
 							},
 						},

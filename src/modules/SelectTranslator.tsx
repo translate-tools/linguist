@@ -54,6 +54,11 @@ interface Options {
 	 * Show translate block once for each text selection
 	 */
 	showOnceForSelection?: boolean;
+
+	/**
+	 * Show block with original text
+	 */
+	showOriginalText: boolean;
 }
 
 /**
@@ -67,6 +72,7 @@ export class SelectTranslator {
 		strictSelection: false,
 		rememberDirection: false,
 		showOnceForSelection: true,
+		showOriginalText: true,
 	};
 
 	constructor(options?: Partial<Options>) {
@@ -222,6 +228,7 @@ export class SelectTranslator {
 			zIndex,
 			timeoutForHideButton,
 			focusOnTranslateButton,
+			showOriginalText,
 		} = this.options;
 
 		ReactDOM.render(
@@ -230,6 +237,7 @@ export class SelectTranslator {
 				translate={translate}
 				{...{
 					pageLanguage,
+					showOriginalText,
 					quickTranslate,
 					detectedLangFirst,
 					rememberDirection,
