@@ -49,6 +49,11 @@ interface Options {
 	 * Useful for keyboard navigation
 	 */
 	focusOnTranslateButton?: boolean;
+
+	/**
+	 * Show translate block once for each text selection
+	 */
+	showOnceForSelection?: boolean;
 }
 
 /**
@@ -61,6 +66,7 @@ export class SelectTranslator {
 		quickTranslate: false,
 		strictSelection: false,
 		rememberDirection: false,
+		showOnceForSelection: true,
 	};
 
 	constructor(options?: Partial<Options>) {
@@ -73,6 +79,12 @@ export class SelectTranslator {
 
 	// Root DOM node contains component
 	private root: HTMLElement | null = null;
+
+	// Flag which set while every selection event and reset while button shown
+	private selectionFlag = false;
+	private selectionFlagUpdater = () => {
+		this.selectionFlag = true;
+	};
 
 	public start() {
 		if (this.root !== null) {
@@ -90,6 +102,7 @@ export class SelectTranslator {
 		document.addEventListener('pointerdown', this.pointerDown);
 		document.addEventListener('pointerup', this.pointerUp);
 		this.root.addEventListener('keydown', this.keyDown);
+		document.addEventListener('selectionchange', this.selectionFlagUpdater);
 	}
 
 	public stop() {
@@ -101,6 +114,7 @@ export class SelectTranslator {
 		document.removeEventListener('pointerdown', this.pointerDown);
 		document.removeEventListener('pointerup', this.pointerUp);
 		this.root.removeEventListener('keydown', this.keyDown);
+		document.removeEventListener('selectionchange', this.selectionFlagUpdater);
 
 		// Unmount component and remove root node
 		this.unmountComponent();
@@ -185,6 +199,9 @@ export class SelectTranslator {
 				if (parent !== null && parent !== target) return;
 			}
 
+			// Skip if it shown not first time
+			if (this.options.showOnceForSelection && !this.selectionFlag) return;
+
 			const selectedText = selection.toString();
 			if (selectedText.length > 0) {
 				this.mountComponent(selectedText, pageX, pageY);
@@ -194,6 +211,8 @@ export class SelectTranslator {
 
 	private mountComponent = (text: string, x: number, y: number) => {
 		if (this.root === null) return;
+
+		this.selectionFlag = false;
 
 		const {
 			pageLanguage,
