@@ -108,6 +108,7 @@ export const defaultConfig: AppConfigType = {
 		detectedLangFirst: true,
 		timeoutForHideButton: 3000,
 		focusOnTranslateButton: false,
+		showOnceForSelection: true,
 	},
 	contentscript: {
 		selectTranslator: {

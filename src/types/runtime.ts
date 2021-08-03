@@ -74,6 +74,7 @@ export const AppConfig = type.type({
 		),
 		strictSelection: type.boolean,
 		detectedLangFirst: type.boolean,
+		showOnceForSelection: type.boolean,
 		timeoutForHideButton: type.number,
 	}),
 	pageTranslator: type.type({

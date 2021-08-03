@@ -212,6 +212,18 @@ export const generateTree = ({
 						},
 						{
 							description: getMessage(
+								'settings_option_selectTranslation_showOnceForSelection_desc',
+							),
+							path: 'selectTranslator.showOnceForSelection',
+							optionContent: {
+								type: 'Checkbox',
+								text: getMessage(
+									'settings_option_selectTranslation_showOnceForSelection',
+								),
+							},
+						},
+						{
+							description: getMessage(
 								'settings_option_selectTranslation_strictSelection_desc',
 							),
 							path: 'selectTranslator.strictSelection',
