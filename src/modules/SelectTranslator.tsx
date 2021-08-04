@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import root from 'react-shadow';
+import { browser } from 'webextension-polyfill-ts';
 
 import { translate } from '../requests/backend/translate';
 import { SelectTranslator as SelectTranslatorPopup } from '../layouts/SelectTranslator/SelectTranslator';
@@ -109,6 +111,8 @@ export class SelectTranslator {
 		document.addEventListener('pointerup', this.pointerUp);
 		this.root.addEventListener('keydown', this.keyDown);
 		document.addEventListener('selectionchange', this.selectionFlagUpdater);
+
+		this.mountComponent();
 	}
 
 	public stop() {
@@ -149,7 +153,7 @@ export class SelectTranslator {
 		)
 			return;
 
-		this.unmountComponent();
+		this.mountComponent();
 	};
 
 	private context = Symbol('context');
@@ -210,45 +214,71 @@ export class SelectTranslator {
 
 			const selectedText = selection.toString();
 			if (selectedText.length > 0) {
-				this.mountComponent(selectedText, pageX, pageY);
+				this.mountComponent({
+					text: selectedText,
+					x: pageX,
+					y: pageY,
+				});
 			}
 		});
 	};
 
-	private mountComponent = (text: string, x: number, y: number) => {
+	// TODO: refactor me to `mountComponent(child?: React.ReactNode)`, `showPopup`, `hidePopup`
+	private mountComponent = (data?: { text: string; x: number; y: number }) => {
+		// Skip when root node is not exist
 		if (this.root === null) return;
 
-		this.selectionFlag = false;
+		// Render popup child if data are specify
+		let content: undefined | React.ReactNode = undefined;
+		if (data !== undefined) {
+			this.selectionFlag = false;
 
-		const {
-			pageLanguage,
-			quickTranslate,
-			detectedLangFirst,
-			rememberDirection,
-			zIndex,
-			timeoutForHideButton,
-			focusOnTranslateButton,
-			showOriginalText,
-		} = this.options;
+			const {
+				pageLanguage,
+				quickTranslate,
+				detectedLangFirst,
+				rememberDirection,
+				zIndex,
+				timeoutForHideButton,
+				focusOnTranslateButton,
+				showOriginalText,
+			} = this.options;
 
+			const { x, y, text } = data;
+			content = (
+				<SelectTranslatorPopup
+					closeHandler={() => this.mountComponent()}
+					translate={translate}
+					{...{
+						pageLanguage,
+						showOriginalText,
+						quickTranslate,
+						detectedLangFirst,
+						rememberDirection,
+						zIndex,
+						timeoutForHideButton,
+						focusOnTranslateButton,
+						x,
+						y,
+						text,
+					}}
+				/>
+			);
+		}
+
+		const styles = ['common.css', 'contentscript.css'];
 		ReactDOM.render(
-			<SelectTranslatorPopup
-				closeHandler={this.unmountComponent}
-				translate={translate}
-				{...{
-					pageLanguage,
-					showOriginalText,
-					quickTranslate,
-					detectedLangFirst,
-					rememberDirection,
-					zIndex,
-					timeoutForHideButton,
-					focusOnTranslateButton,
-					x,
-					y,
-					text,
-				}}
-			/>,
+			<root.div style={{ all: 'unset' }} mode="closed">
+				{/* Include styles and scripts */}
+				{styles.map((path, index) => (
+					<link
+						key={index}
+						rel="stylesheet"
+						href={browser.runtime.getURL(path)}
+					/>
+				))}
+				{content}
+			</root.div>,
 			this.root,
 		);
 	};

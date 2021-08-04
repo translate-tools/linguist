@@ -1,6 +1,5 @@
 import React, { FC, useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import root from 'react-shadow';
-import { browser } from 'webextension-polyfill-ts';
+
 import { cn } from '@bem-react/classname';
 import { isKeyCode, Keys } from 'react-elegant-ui/esm/lib/keyboard';
 
@@ -139,9 +138,6 @@ export const SelectTranslator: FC<SelectTranslatorProps> = ({
 		[],
 	);
 
-	const rootRef = useRef<any>(null);
-	const styles = ['common.css', 'contentscript.css'];
-
 	// Focus on translate button or root node by change `translating` state
 	const containerRef = useRef<HTMLDivElement>(null);
 	const translateButtonRef = useRef<HTMLDivElement>(null);
@@ -171,12 +167,19 @@ export const SelectTranslator: FC<SelectTranslatorProps> = ({
 		return true;
 	}, []);
 
-	// Shadow root component load async, then useEffect is not work
-	// To fix it we just force update manually
-	const [isShadowRootLoaded, setIsShadowRootLoaded] = useState(false);
-
-	// Focus by load of shadow root and by change state
+	// Components after render will change position and size,
+	// we wait it and update state
+	const [isComponentLoaded, setIsComponentLoaded] = useState(false);
 	useEffect(() => {
+		// Wait 1 frame after render
+		requestAnimationFrame(() => setIsComponentLoaded(true));
+	}, []);
+
+	// Focus by load component and by change state
+	useEffect(() => {
+		// Skip if component did not load
+		if (!isComponentLoaded) return;
+
 		if (translating) {
 			focusRootContainer();
 		} else if (focusOnTranslateButton) {
@@ -184,7 +187,7 @@ export const SelectTranslator: FC<SelectTranslatorProps> = ({
 			focusTranslateButton();
 		}
 	}, [
-		isShadowRootLoaded,
+		isComponentLoaded,
 		translating,
 		focusOnTranslateButton,
 		focusRootContainer,
@@ -192,20 +195,10 @@ export const SelectTranslator: FC<SelectTranslatorProps> = ({
 	]);
 
 	// Render div on the coordinates as cursor and attach popup to it
-	// We use real component instead virtual cuz need behavior of absolute position instead fixed
+	// We use real component instead virtual because require behavior of `position: absolute` instead `fixed`
 	// and implement this logic for virtual component is harder than use real component
 	return (
-		<root.div
-			style={{ all: 'unset' }}
-			ref={rootRef}
-			onLoad={() => setIsShadowRootLoaded(true)}
-			mode="closed"
-		>
-			{/* Include styles and scripts */}
-			{styles.map((path, index) => (
-				<link rel="stylesheet" href={browser.runtime.getURL(path)} key={index} />
-			))}
-
+		<>
 			{/* Render cursor */}
 			<div style={cursorStyle} ref={cursorRef} />
 
@@ -245,6 +238,6 @@ export const SelectTranslator: FC<SelectTranslatorProps> = ({
 					)}
 				</div>
 			</Popup>
-		</root.div>
+		</>
 	);
 };
