@@ -89,9 +89,9 @@ export class SelectTranslator {
 	private root: HTMLElement | null = null;
 
 	// Flag which set while every selection event and reset while button shown
-	private selectionFlag = false;
+	private unhandledSelection = false;
 	private selectionFlagUpdater = () => {
-		this.selectionFlag = true;
+		this.unhandledSelection = true;
 	};
 
 	public start() {
@@ -153,7 +153,7 @@ export class SelectTranslator {
 		)
 			return;
 
-		this.mountComponent();
+		this.hidePopup();
 	};
 
 	private context = Symbol('context');
@@ -210,63 +210,62 @@ export class SelectTranslator {
 			}
 
 			// Skip if it shown not first time
-			if (this.options.showOnceForSelection && !this.selectionFlag) return;
+			if (this.options.showOnceForSelection && !this.unhandledSelection) return;
 
 			const selectedText = selection.toString();
 			if (selectedText.length > 0) {
-				this.mountComponent({
-					text: selectedText,
-					x: pageX,
-					y: pageY,
-				});
+				this.showPopup(selectedText, pageX, pageY);
 			}
 		});
 	};
 
-	// TODO: refactor me to `mountComponent(child?: React.ReactNode)`, `showPopup`, `hidePopup`
-	private mountComponent = (data?: { text: string; x: number; y: number }) => {
+	private showPopup = (text: string, x: number, y: number) => {
+		// Update selection value
+		this.unhandledSelection = false;
+
+		const {
+			pageLanguage,
+			quickTranslate,
+			detectedLangFirst,
+			rememberDirection,
+			zIndex,
+			timeoutForHideButton,
+			focusOnTranslateButton,
+			showOriginalText,
+		} = this.options;
+
+		this.mountComponent(
+			<SelectTranslatorPopup
+				closeHandler={() => this.mountComponent()}
+				translate={translate}
+				{...{
+					pageLanguage,
+					showOriginalText,
+					quickTranslate,
+					detectedLangFirst,
+					rememberDirection,
+					zIndex,
+					timeoutForHideButton,
+					focusOnTranslateButton,
+					x,
+					y,
+					text,
+				}}
+			/>,
+		);
+	};
+
+	private hidePopup = () => {
+		this.mountComponent();
+	};
+
+	// Render shadow root with preloading resources
+	private mountComponent = (child?: React.ReactNode) => {
 		// Skip when root node is not exist
 		if (this.root === null) return;
 
-		// Render popup child if data are specify
-		let content: undefined | React.ReactNode = undefined;
-		if (data !== undefined) {
-			this.selectionFlag = false;
-
-			const {
-				pageLanguage,
-				quickTranslate,
-				detectedLangFirst,
-				rememberDirection,
-				zIndex,
-				timeoutForHideButton,
-				focusOnTranslateButton,
-				showOriginalText,
-			} = this.options;
-
-			const { x, y, text } = data;
-			content = (
-				<SelectTranslatorPopup
-					closeHandler={() => this.mountComponent()}
-					translate={translate}
-					{...{
-						pageLanguage,
-						showOriginalText,
-						quickTranslate,
-						detectedLangFirst,
-						rememberDirection,
-						zIndex,
-						timeoutForHideButton,
-						focusOnTranslateButton,
-						x,
-						y,
-						text,
-					}}
-				/>
-			);
-		}
-
 		const styles = ['common.css', 'contentscript.css'];
+
 		ReactDOM.render(
 			<root.div style={{ all: 'unset' }} mode="closed">
 				{/* Include styles and scripts */}
@@ -277,7 +276,7 @@ export class SelectTranslator {
 						href={browser.runtime.getURL(path)}
 					/>
 				))}
-				{content}
+				{child}
 			</root.div>,
 			this.root,
 		);
