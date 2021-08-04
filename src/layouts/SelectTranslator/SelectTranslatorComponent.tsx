@@ -47,6 +47,7 @@ export const SelectTranslatorComponent: FC<SelectTranslatorComponentProps> = ({
 	const [to, setTo] = useState<string>();
 	const [translatorFeatures, setTranslatorFeatures] = useState<TranslatorFeatures>();
 
+	const [originalText, setOriginalText] = useState<string>(text);
 	const [translatedText, setTranslatedText] = useState<string | null>(null);
 	const [error, setError] = useState<string | null>(null);
 
@@ -63,7 +64,7 @@ export const SelectTranslatorComponent: FC<SelectTranslatorComponentProps> = ({
 		setTranslatedText(null);
 		setError(null);
 
-		translate(text, from, to)
+		translate(originalText, from, to)
 			.then((translatedText) => {
 				if (context !== translateContext.current) return;
 
@@ -88,13 +89,27 @@ export const SelectTranslatorComponent: FC<SelectTranslatorComponentProps> = ({
 
 				translateContext.current = Symbol('TranslateContext');
 			});
-	}, [from, text, to, translate]);
+	}, [from, originalText, to, translate]);
+
+	const swapHandler = useCallback(
+		({ from, to }: { from: string; to: string }) => {
+			if (translatedText === null) return;
+
+			console.warn('Switch', { to, from, translatedText });
+
+			setFrom(from);
+			setTo(to);
+			setOriginalText(translatedText);
+			setTranslatedText(null);
+		},
+		[translatedText],
+	);
 
 	// Favorite state
 	const { isFavorite, toggleFavorite } = useTranslateFavorite({
 		from,
 		to,
-		text,
+		text: originalText,
 		translate: translatedText,
 	});
 
@@ -139,7 +154,7 @@ export const SelectTranslatorComponent: FC<SelectTranslatorComponentProps> = ({
 
 				// Try detect text language or get page language
 				if (from === undefined) {
-					const detectedLanguage = await detectLanguage(text);
+					const detectedLanguage = await detectLanguage(originalText);
 
 					const langs = detectedLangFirst
 						? [detectedLanguage, pageLanguage]
@@ -214,6 +229,14 @@ export const SelectTranslatorComponent: FC<SelectTranslatorComponentProps> = ({
 		if (updatePopup) updatePopup();
 	});
 
+	// Translate by update original text
+	// eslint-disable-next-line react-hooks/exhaustive-deps
+	useEffect(() => {
+		// Wait init
+		if (!isInited) return;
+		translateText();
+	}, [isInited, originalText]);
+
 	if (translatorFeatures !== undefined && (translatedText !== null || error !== null)) {
 		return (
 			<div className={cnSelectTranslator()}>
@@ -234,6 +257,8 @@ export const SelectTranslatorComponent: FC<SelectTranslatorComponentProps> = ({
 							setTo={setTo}
 							from={from}
 							to={to}
+							swapHandler={swapHandler}
+							disableSwap={translatedText === null}
 						/>{' '}
 					</div>
 
@@ -272,12 +297,12 @@ export const SelectTranslatorComponent: FC<SelectTranslatorComponentProps> = ({
 										{getMessage('inlineTranslator_showOriginalText')}
 									</summary>
 									<p className={cnSelectTranslator('OriginalText')}>
-										{text}
+										{originalText}
 									</p>
 
 									{/* NOTE: it may be useful */}
 									{/* <Textarea
-									value={text}
+									value={originalText}
 									style={{ width: '100%', height: '' }}
 									controlProps={{ style: { minHeight: '8rem' } }}
 								/>
