@@ -152,30 +152,84 @@ export const SelectTranslatorComponent: FC<SelectTranslatorComponentProps> = ({
 					}
 				}
 
-				// Try detect text language or get page language
+				// Set `from` language
 				if (from === undefined) {
+					// TODO: replace to option
+					const isUseAutoForDetectLang = true;
 					const detectedLanguage = await detectLanguage(originalText);
 
-					const langs = detectedLangFirst
-						? [detectedLanguage, pageLanguage]
-						: [pageLanguage, detectedLanguage];
-					for (const lang of langs) {
-						if (
-							typeof lang === 'string' &&
-							supportedLanguages.indexOf(lang) !== -1
-						) {
-							from = lang;
+					const isValidLang = (lang: any): lang is string => {
+						if (typeof lang !== 'string') return false;
+
+						if (supportedLanguages.indexOf(lang) !== -1) return true;
+						// TODO: rename `isSupportAutodetect` to `isSupportAutoDetect`
+						if (lang === 'auto' && isSupportAutodetect) return true;
+
+						return false;
+					};
+
+					// List of lang detectors which define language depends on config
+					const langDetectors: {
+						getLang: () => string | void;
+						priority: number;
+					}[] = [
+						{
+							// Detect language from text or use `auto` if support
+							getLang() {
+								console.warn('Detect 0');
+
+								// Set detected lang if found
+								if (detectedLanguage !== null) return detectedLanguage;
+
+								// Set `auto` if support and enable
+								if (isUseAutoForDetectLang && isSupportAutodetect)
+									return 'auto';
+							},
+							priority: 0,
+						},
+
+						{
+							// Set page lang if found
+							getLang() {
+								console.warn('Detect 1');
+
+								if (pageLanguage !== undefined) return pageLanguage;
+							},
+							priority: 0,
+						},
+
+						{
+							// Default value. Auto detect if supported, first lang otherwise
+							getLang() {
+								console.warn('Detect 2');
+
+								return isSupportAutodetect
+									? 'auto'
+									: supportedLanguages[0];
+							},
+							priority: -1,
+						},
+					];
+
+					// Set priority
+					if (detectedLangFirst) {
+						langDetectors[0].priority++;
+					} else {
+						langDetectors[1].priority++;
+					}
+
+					// Reverse sort by priority
+					const sortedLangDetectors = langDetectors.sort(
+						(x, y) => y.priority - x.priority,
+					);
+
+					// Select language
+					for (const detector of sortedLangDetectors) {
+						const selectedFromLang = detector.getLang();
+						if (isValidLang(selectedFromLang)) {
+							from = selectedFromLang;
 							break;
 						}
-					}
-				}
-
-				// Set auto language if support or first language otherwise
-				if (from === undefined) {
-					if (isSupportAutodetect) {
-						from = 'auto';
-					} else {
-						from = supportedLanguages[0];
 					}
 				}
 
@@ -230,11 +284,12 @@ export const SelectTranslatorComponent: FC<SelectTranslatorComponentProps> = ({
 	});
 
 	// Translate by update original text
-	// eslint-disable-next-line react-hooks/exhaustive-deps
 	useEffect(() => {
 		// Wait init
 		if (!isInited) return;
 		translateText();
+
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [isInited, originalText]);
 
 	if (translatorFeatures !== undefined && (translatedText !== null || error !== null)) {
