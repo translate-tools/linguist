@@ -180,6 +180,8 @@ export const SelectTranslatorComponent: FC<SelectTranslatorComponentProps> = ({
 								// Set `auto` if support and enable
 								if (isUseAutoForDetectLang && isSupportAutodetect)
 									return 'auto';
+
+								return;
 							},
 							priority: 0,
 						},
@@ -188,6 +190,8 @@ export const SelectTranslatorComponent: FC<SelectTranslatorComponentProps> = ({
 							// Set page lang if found
 							getLang() {
 								if (pageLanguage !== undefined) return pageLanguage;
+
+								return;
 							},
 							priority: 0,
 						},
