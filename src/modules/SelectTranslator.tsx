@@ -33,6 +33,11 @@ interface Options {
 	detectedLangFirst: boolean;
 
 	/**
+	 * Use auto detection for `from` direction
+	 */
+	isUseAutoForDetectLang: boolean;
+
+	/**
 	 * Remember translate direction
 	 */
 	rememberDirection: boolean;
@@ -75,6 +80,7 @@ export class SelectTranslator {
 		rememberDirection: false,
 		showOnceForSelection: true,
 		showOriginalText: true,
+		isUseAutoForDetectLang: true,
 	};
 
 	constructor(options?: Partial<Options>) {
@@ -227,6 +233,7 @@ export class SelectTranslator {
 			pageLanguage,
 			quickTranslate,
 			detectedLangFirst,
+			isUseAutoForDetectLang,
 			rememberDirection,
 			zIndex,
 			timeoutForHideButton,
@@ -243,6 +250,7 @@ export class SelectTranslator {
 					showOriginalText,
 					quickTranslate,
 					detectedLangFirst,
+					isUseAutoForDetectLang,
 					rememberDirection,
 					zIndex,
 					timeoutForHideButton,

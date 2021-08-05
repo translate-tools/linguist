@@ -217,15 +217,6 @@ export const generateTree = ({
 							},
 						},
 						{
-							path: 'selectTranslator.rememberDirection',
-							optionContent: {
-								type: 'Checkbox',
-								text: getMessage(
-									'settings_option_selectTranslation_rememberDirection',
-								),
-							},
-						},
-						{
 							description: getMessage(
 								'settings_option_selectTranslation_showOnceForSelection_desc',
 							),
@@ -251,18 +242,6 @@ export const generateTree = ({
 						},
 						{
 							description: getMessage(
-								'settings_option_selectTranslation_detectedLangFirst_desc',
-							),
-							path: 'selectTranslator.detectedLangFirst',
-							optionContent: {
-								type: 'Checkbox',
-								text: getMessage(
-									'settings_option_selectTranslation_detectedLangFirst',
-								),
-							},
-						},
-						{
-							description: getMessage(
 								'settings_option_selectTranslation_focusOnTranslateButton_desc',
 							),
 							path: 'selectTranslator.focusOnTranslateButton',
@@ -279,6 +258,47 @@ export const generateTree = ({
 								type: 'Checkbox',
 								text: getMessage(
 									'settings_option_selectTranslation_showOriginalText',
+								),
+							},
+						},
+					],
+				},
+				{
+					title: getMessage(
+						'settings_option_selectTranslation_header_languageChoice',
+					),
+					groupContent: [
+						{
+							path: 'selectTranslator.rememberDirection',
+							optionContent: {
+								type: 'Checkbox',
+								text: getMessage(
+									'settings_option_selectTranslation_rememberDirection',
+								),
+							},
+						},
+						{
+							description: getMessage(
+								'settings_option_selectTranslation_detectedLangFirst_desc',
+							),
+
+							path: 'selectTranslator.detectedLangFirst',
+							optionContent: {
+								type: 'Checkbox',
+								text: getMessage(
+									'settings_option_selectTranslation_detectedLangFirst',
+								),
+							},
+						},
+						{
+							description: getMessage(
+								'settings_option_selectTranslation_isUseAutoForDetectLang_desc',
+							),
+							path: 'selectTranslator.isUseAutoForDetectLang',
+							optionContent: {
+								type: 'Checkbox',
+								text: getMessage(
+									'settings_option_selectTranslation_isUseAutoForDetectLang',
 								),
 							},
 						},

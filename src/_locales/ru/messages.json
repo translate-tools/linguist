@@ -269,6 +269,21 @@
 	"settings_option_selectTranslation_disableWhileTranslatePage": {
 		"message": "Отключать во время перевода страницы"
 	},
+	"settings_option_selectTranslation_header_languageChoice": {
+		"message": "Выбор языка"
+	},
+	"settings_option_selectTranslation_detectedLangFirst": {
+		"message": "Предпочитать определённый язык текста, языку страницы"
+	},
+	"settings_option_selectTranslation_detectedLangFirst_desc": {
+		"message": "При включении, модуль будет пытаться определить язык выделенного текста, иначе при переводе будет предложен язык страницы"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang": {
+		"message": "Включить определение языка переводчиком"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
+		"message": "Использовать автоматическое определение языка переводчиком, если не удаётся определить язык текста локально"
+	},
 	"settings_option_selectTranslation_rememberDirection": {
 		"message": "Запоминать последнее направление перевода"
 	},
@@ -283,12 +298,6 @@
 	},
 	"settings_option_selectTranslation_strictSelection_desc": {
 		"message": "Игнорировать выделение, при отпускании мыши за пределами блока содержащего текст"
-	},
-	"settings_option_selectTranslation_detectedLangFirst": {
-		"message": "Предпочитать определённый язык текста, языку страницы"
-	},
-	"settings_option_selectTranslation_detectedLangFirst_desc": {
-		"message": "При включении, модуль будет пытаться определить язык выделенного текста, иначе при переводе будет предложен язык страницы"
 	},
 	"settings_option_selectTranslation_quickTranslate": {
 		"message": "Мгновенный перевод"

@@ -110,6 +110,7 @@ export const defaultConfig: AppConfigType = {
 		focusOnTranslateButton: false,
 		showOnceForSelection: true,
 		showOriginalText: true,
+		isUseAutoForDetectLang: true,
 	},
 	contentscript: {
 		selectTranslator: {

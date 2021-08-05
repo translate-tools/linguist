@@ -22,6 +22,7 @@ import './SelectTranslator.css';
 
 export interface SelectTranslatorComponentProps {
 	detectedLangFirst: boolean;
+	isUseAutoForDetectLang: boolean;
 	rememberDirection: boolean;
 	text: string;
 	translate: (text: string, from: string, to: string) => Promise<string>;
@@ -36,6 +37,7 @@ export interface SelectTranslatorComponentProps {
 export const SelectTranslatorComponent: FC<SelectTranslatorComponentProps> = ({
 	pageLanguage,
 	detectedLangFirst,
+	isUseAutoForDetectLang,
 	rememberDirection,
 	text,
 	closeHandler,
@@ -95,8 +97,6 @@ export const SelectTranslatorComponent: FC<SelectTranslatorComponentProps> = ({
 		({ from, to }: { from: string; to: string }) => {
 			if (translatedText === null) return;
 
-			console.warn('Switch', { to, from, translatedText });
-
 			setFrom(from);
 			setTo(to);
 			setOriginalText(translatedText);
@@ -154,8 +154,6 @@ export const SelectTranslatorComponent: FC<SelectTranslatorComponentProps> = ({
 
 				// Set `from` language
 				if (from === undefined) {
-					// TODO: replace to option
-					const isUseAutoForDetectLang = true;
 					const detectedLanguage = await detectLanguage(originalText);
 
 					const isValidLang = (lang: any): lang is string => {
@@ -176,8 +174,6 @@ export const SelectTranslatorComponent: FC<SelectTranslatorComponentProps> = ({
 						{
 							// Detect language from text or use `auto` if support
 							getLang() {
-								console.warn('Detect 0');
-
 								// Set detected lang if found
 								if (detectedLanguage !== null) return detectedLanguage;
 
@@ -191,8 +187,6 @@ export const SelectTranslatorComponent: FC<SelectTranslatorComponentProps> = ({
 						{
 							// Set page lang if found
 							getLang() {
-								console.warn('Detect 1');
-
 								if (pageLanguage !== undefined) return pageLanguage;
 							},
 							priority: 0,
@@ -201,8 +195,6 @@ export const SelectTranslatorComponent: FC<SelectTranslatorComponentProps> = ({
 						{
 							// Default value. Auto detect if supported, first lang otherwise
 							getLang() {
-								console.warn('Detect 2');
-
 								return isSupportAutodetect
 									? 'auto'
 									: supportedLanguages[0];

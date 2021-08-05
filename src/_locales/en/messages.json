@@ -269,6 +269,21 @@
 	"settings_option_selectTranslation_disableWhileTranslatePage": {
 		"message": "Disable while page translation"
 	},
+	"settings_option_selectTranslation_header_languageChoice": {
+		"message": "Language settings"
+	},
+	"settings_option_selectTranslation_detectedLangFirst": {
+		"message": "Preferent detected language of text instead page language"
+	},
+	"settings_option_selectTranslation_detectedLangFirst_desc": {
+		"message": "When enabled, module will try detect language of selected text, otherwise for selection of translate direction will used page language"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang": {
+		"message": "Enable auto detect language by translator"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
+		"message": "Use auto language detection by translator, when can't detect language locally"
+	},
 	"settings_option_selectTranslation_rememberDirection": {
 		"message": "Remember last translate direction language"
 	},
@@ -283,12 +298,6 @@
 	},
 	"settings_option_selectTranslation_strictSelection_desc": {
 		"message": "Ignore selection while release mouse button outside a block of contains selected text"
-	},
-	"settings_option_selectTranslation_detectedLangFirst": {
-		"message": "Preferent detected language of text instead page language"
-	},
-	"settings_option_selectTranslation_detectedLangFirst_desc": {
-		"message": "When enabled, module will try detect language of selected text, otherwise for selection of translate direction will used page language"
 	},
 	"settings_option_selectTranslation_quickTranslate": {
 		"message": "Quick translate"
