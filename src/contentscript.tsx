@@ -154,6 +154,9 @@ cs.onLoad(async (initConfig) => {
 
 	const pageURL = location.host;
 
+	// TODO: make it option
+	const isAllowTranslateSameLanguages = true;
+
 	// TODO: add option to define stage to detect language and run auto translate
 	runByReadyState(async () => {
 		// Skip if page already in translating
@@ -174,7 +177,7 @@ cs.onLoad(async (initConfig) => {
 		const sitePrefs = await getSitePreferences(pageURL);
 		const autoTranslatedLangs = await getAutoTranslatedLangs();
 
-		if (fromLang && fromLang !== toLang) {
+		if (fromLang && (isAllowTranslateSameLanguages || fromLang !== toLang)) {
 			let isNeedAutoTranslate = false;
 
 			// Auto translate by host
