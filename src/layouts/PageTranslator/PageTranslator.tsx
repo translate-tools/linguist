@@ -71,11 +71,7 @@ export const PageTranslator: FC<PageTranslatorProps> = ({
 	return (
 		<div className={cnPageTranslator()}>
 			<div className={cnPageTranslator('Direction')}>
-				<Button
-					view="action"
-					disabled={!isTranslated && from === to}
-					onPress={toggleTranslate}
-				>
+				<Button view="action" onPress={toggleTranslate}>
 					{actionBtnText}
 				</Button>{' '}
 				<LanguagePanel
