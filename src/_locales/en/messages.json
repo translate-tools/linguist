@@ -248,6 +248,12 @@
 	"settings_option_pageTranslation_lazyTranslate_desc": {
 		"message": "With disabled option, pages will translate fully at once. This option can safe more traffic"
 	},
+	"settings_option_pageTranslation_detectLanguageByContent": {
+		"message": "Detect language by content"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent_desc": {
+		"message": "Try detect page language by text content of page firstly. By default language detect by meta data provided by page"
+	},
 	"settings_option_pageTranslation_translatableAttributes": {
 		"message": "Translatable attributes"
 	},

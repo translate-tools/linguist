@@ -2,8 +2,7 @@ import { isEqual } from 'lodash';
 import { runByReadyState } from 'react-elegant-ui/esm/lib/runByReadyState';
 
 import { AppConfigType } from './types/runtime';
-import { getPageLanguageFromMeta } from './lib/browser';
-import { detectLanguage } from './lib/language';
+import { getPageLanguage } from './lib/browser';
 
 import { ContentScript } from './modules/ContentScript';
 import { PageTranslator } from './modules/PageTranslator/PageTranslator';
@@ -20,16 +19,13 @@ import { untranslatePageFactory } from './requests/contentscript/untranslatePage
 
 const cs = new ContentScript();
 
-const getPageLanguage = async () =>
-	getPageLanguageFromMeta() ??
-	(await detectLanguage(document.body.innerText)) ??
-	undefined;
-
 cs.onLoad(async (initConfig) => {
-	const pageLanguage = await getPageLanguage();
-
 	// Set last config after await
 	let config = cs.getConfig() ?? initConfig;
+
+	const pageLanguage = await getPageLanguage(
+		config.pageTranslator.detectLanguageByContent,
+	);
 
 	const pageTranslator = new PageTranslator(config.pageTranslator);
 
@@ -163,7 +159,9 @@ cs.onLoad(async (initConfig) => {
 		// Skip if page already in translating
 		if (pageTranslator.isRun()) return;
 
-		const actualPageLanguage = await getPageLanguage();
+		const actualPageLanguage = await getPageLanguage(
+			config.pageTranslator.detectLanguageByContent,
+		);
 
 		// Update config if language did updated after loading page
 		if (pageLanguage !== actualPageLanguage) {

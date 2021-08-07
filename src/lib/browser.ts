@@ -1,5 +1,7 @@
 import { browser } from 'webextension-polyfill-ts';
 
+import { detectLanguage } from './language';
+
 export const injectStyles = (paths: string[], parent?: Node) => {
 	paths.forEach((path) => {
 		const link = document.createElement('link');
@@ -25,3 +27,24 @@ export function getPageLanguageFromMeta() {
 
 	return null;
 }
+
+/**
+ * By default detect lang by meta, but while `detectByContent` is `true` its try detect lang by content
+ */
+export const getPageLanguage = async (detectByContent = false, reliableOnly = false) => {
+	const langFromMeta = getPageLanguageFromMeta();
+
+	// Try detect language by content
+	if (langFromMeta === null || detectByContent) {
+		const contentLang = await detectLanguage(document.body.innerText, reliableOnly);
+		if (contentLang !== null) {
+			return contentLang;
+		}
+	}
+
+	if (langFromMeta !== null) {
+		return langFromMeta;
+	}
+
+	return undefined;
+};

@@ -1,7 +1,8 @@
-import { addRequestHandler, csSendRequest } from '../../lib/communication';
-import { detectLanguage } from '../../lib/language';
-import { tryDecode, type } from '../../lib/types';
 import { ClientRequestHandlerFactory } from '../types';
+
+import { getPageLanguage as getPageLanguageHelper } from '../../lib/browser';
+import { addRequestHandler, csSendRequest } from '../../lib/communication';
+import { tryDecode, type } from '../../lib/types';
 
 export const getPageLanguageOut = type.union([type.string, type.null]);
 
@@ -10,8 +11,8 @@ export const getPageLanguage = (tabId: number) =>
 		tryDecode(getPageLanguageOut, language),
 	);
 
-export const getPageLanguageFactory: ClientRequestHandlerFactory = () => {
+export const getPageLanguageFactory: ClientRequestHandlerFactory = ({ config }) => {
 	addRequestHandler('getPageLanguage', () =>
-		detectLanguage(document.body.innerText, true),
+		getPageLanguageHelper(config.pageTranslator.detectLanguageByContent, true),
 	);
 };

@@ -248,6 +248,12 @@
 	"settings_option_pageTranslation_lazyTranslate_desc": {
 		"message": "При отключении, страницы переводятся полностью сразу. Эта настройка может значительно экономить на трафик"
 	},
+	"settings_option_pageTranslation_detectLanguageByContent": {
+		"message": "Определять язык страницы по содержимому тексту"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent_desc": {
+		"message": "Пытаться определить язык страницы по содержимому тексту в первую очередь. По умолчанию, язык определяется по мета информации предоставленной страницей"
+	},
 	"settings_option_pageTranslation_translatableAttributes": {
 		"message": "Список аттрибутов для перевода"
 	},

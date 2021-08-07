@@ -94,6 +94,7 @@ export const defaultConfig: AppConfigType = {
 		],
 		translatableAttributes: ['title', 'alt', 'placeholder', 'label', 'aria-label'],
 		lazyTranslate: true,
+		detectLanguageByContent: true,
 	},
 	textTranslator: {
 		rememberText: true,
