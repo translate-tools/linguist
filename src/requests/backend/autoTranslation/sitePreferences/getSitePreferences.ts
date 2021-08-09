@@ -2,7 +2,7 @@ import { addRequestHandler, bgSendRequest } from '../../../../lib/communication'
 import { tryDecode, type } from '../../../../lib/types';
 import { RequestHandlerFactory } from '../../../types';
 
-import { dataSignature, getPreferences } from './utils';
+import { getPreferences, dataSignature } from './utils';
 
 export const getSitePreferencesOut = type.union([dataSignature, type.null]);
 
