@@ -6,8 +6,9 @@ import { translateStateUpdateHandler } from '../../modules/PageTranslator/reques
 import { TabComponent } from '../../pages/popup/layout/PopupWindow';
 
 // Requests
-import { getAutoTranslatedLangs } from '../../requests/backend/autoTranslatedLangs/getAutoTranslatedLangs';
-import { setAutoTranslatedLangs } from '../../requests/backend/autoTranslatedLangs/setAutoTranslatedLangs';
+import { addAutoTranslatedLang } from '../../requests/backend/autoTranslatedLangs/addAutoTranslatedLang';
+import { deleteAutoTranslatedLang } from '../../requests/backend/autoTranslatedLangs/deleteAutoTranslatedLang';
+import { hasAutoTranslatedLang } from '../../requests/backend/autoTranslatedLangs/hasAutoTranslatedLang';
 import { getSitePreferences } from '../../requests/backend/sitePreferences/getSitePreferences';
 import { setSitePreferences } from '../../requests/backend/sitePreferences/setSitePreferences';
 import { getPageLanguage } from '../../requests/contentscript/getPageLanguage';
@@ -20,7 +21,6 @@ import { PageTranslator } from './PageTranslator';
 type initData = {
 	hostname: string;
 	sitePrefs: ReturnType<typeof getSitePreferences> extends Promise<infer T> ? T : never;
-	autoTranslatedLangs: string[];
 
 	tabId: number;
 	isTranslated: boolean;
@@ -46,12 +46,15 @@ export const PageTranslatorTab: TabComponent<initData> = ({
 	const {
 		hostname,
 		sitePrefs,
-		autoTranslatedLangs,
 		tabId,
 		isTranslated: isTranslatedInit,
 		counters: countersInit,
 	} = initData;
 
+	// TODO: refactor it
+	// - Move init data to init static member
+	// - Remove `translatorFeatures` if it unnecessary
+	// - Use context as shared cache if fetch `translatorFeatures` for each tab is too long
 	// Init state
 	const initStateData = useRef<Record<string, string>>();
 	if (!initStateData.current) {
@@ -89,40 +92,35 @@ export const PageTranslatorTab: TabComponent<initData> = ({
 		[hostname, sitePrefs],
 	);
 
+	// TODO: Preload it
 	// Define auto translate by language
-	const autoTranslatedLangsRef = useRef(autoTranslatedLangs);
-	const [translateLang, setTranslateLang] = useState(
-		from !== undefined && autoTranslatedLangsRef.current.indexOf(from) !== -1,
-	);
+	const [translateLang, setTranslateLang] = useState(false);
 
-	// Update after load
+	// Update `translateLang` while update `from`
 	useEffect(() => {
-		setTranslateLang(
-			from !== undefined && autoTranslatedLangsRef.current.indexOf(from) !== -1,
-		);
+		if (from === undefined) {
+			setTranslateLang(false);
+			return;
+		}
+
+		hasAutoTranslatedLang(from).then((lang) => {
+			console.warn('Is from auto', lang);
+			setTranslateLang(lang);
+		});
 	}, [from]);
 
 	const setTranslateLangProxy: any = useCallback(
 		(state: boolean) => {
 			setTranslateLang(state);
 
-			// Remember
 			if (from === undefined) return;
-			(async () => {
-				autoTranslatedLangsRef.current = await getAutoTranslatedLangs();
 
+			// Remember
+			(async () => {
 				if (state) {
-					if (autoTranslatedLangsRef.current.indexOf(from) === -1) {
-						const newLangsList = autoTranslatedLangsRef.current.concat(from);
-						setAutoTranslatedLangs(newLangsList);
-					}
+					addAutoTranslatedLang(from);
 				} else {
-					const newLangsList = autoTranslatedLangsRef.current.filter(
-						(lang) => lang !== from,
-					);
-					if (autoTranslatedLangsRef.current.length !== newLangsList.length) {
-						setAutoTranslatedLangs(newLangsList);
-					}
+					deleteAutoTranslatedLang(from);
 				}
 			})();
 		},
@@ -201,7 +199,6 @@ PageTranslatorTab.init = async (): Promise<initData> => {
 
 	// Get site preferences
 	const sitePrefs = await getSitePreferences(hostname);
-	const autoTranslatedLangs = await getAutoTranslatedLangs();
 
 	// Get tab id
 	const tabId = await getCurrentTabId();
@@ -225,7 +222,6 @@ PageTranslatorTab.init = async (): Promise<initData> => {
 	return {
 		hostname,
 		sitePrefs,
-		autoTranslatedLangs,
 
 		tabId,
 		isTranslated,

@@ -9,13 +9,13 @@ import { PageTranslator } from './modules/PageTranslator/PageTranslator';
 import { SelectTranslator } from './modules/SelectTranslator';
 
 // Requests
-import { getAutoTranslatedLangs } from './requests/backend/autoTranslatedLangs/getAutoTranslatedLangs';
 import { getSitePreferences } from './requests/backend/sitePreferences/getSitePreferences';
 import { getPageLanguageFactory } from './requests/contentscript/getPageLanguage';
 import { getTranslateStateFactory } from './requests/contentscript/getTranslateState';
 import { pingFactory } from './requests/contentscript/ping';
 import { translatePageFactory } from './requests/contentscript/translatePage';
 import { untranslatePageFactory } from './requests/contentscript/untranslatePage';
+import { hasAutoTranslatedLang } from './requests/backend/autoTranslatedLangs/hasAutoTranslatedLang';
 
 const cs = new ContentScript();
 
@@ -175,7 +175,6 @@ cs.onLoad(async (initConfig) => {
 		const fromLang = actualPageLanguage;
 		const toLang = config.language;
 		const sitePrefs = await getSitePreferences(pageURL);
-		const autoTranslatedLangs = await getAutoTranslatedLangs();
 
 		if (fromLang && (isAllowTranslateSameLanguages || fromLang !== toLang)) {
 			let isNeedAutoTranslate = false;
@@ -186,8 +185,8 @@ cs.onLoad(async (initConfig) => {
 			}
 
 			// Auto translate by language
-			if (autoTranslatedLangs.indexOf(fromLang) !== -1) {
-				isNeedAutoTranslate = true;
+			if (!isNeedAutoTranslate) {
+				isNeedAutoTranslate = await hasAutoTranslatedLang(fromLang);
 			}
 
 			if (isNeedAutoTranslate) {

@@ -23,14 +23,15 @@ import { resetConfigFactory } from './requests/backend/resetConfig';
 import { clearCacheFactory } from './requests/backend/clearCache';
 import { setSitePreferencesFactory } from './requests/backend/sitePreferences/setSitePreferences';
 import { getSitePreferencesFactory } from './requests/backend/sitePreferences/getSitePreferences';
-import { setAutoTranslatedLangsFactory } from './requests/backend/autoTranslatedLangs/setAutoTranslatedLangs';
-import { getAutoTranslatedLangsFactory } from './requests/backend/autoTranslatedLangs/getAutoTranslatedLangs';
 
 import { addTranslationFactory } from './requests/backend/translations/addTranslation';
 import { findTranslationFactory } from './requests/backend/translations/findTranslation';
 import { deleteTranslationFactory } from './requests/backend/translations/deleteTranslation';
 import { getTranslationsFactory } from './requests/backend/translations/getTranslations';
 import { clearTranslationsFactory } from './requests/backend/translations/clearTranslations';
+import { hasAutoTranslatedLangFactory } from './requests/backend/autoTranslatedLangs/hasAutoTranslatedLang';
+import { addAutoTranslatedLangFactory } from './requests/backend/autoTranslatedLangs/addAutoTranslatedLang';
+import { deleteAutoTranslatedLangFactory } from './requests/backend/autoTranslatedLangs/deleteAutoTranslatedLang';
 
 // Debug
 // TODO: write tests for translators in core dir
@@ -196,10 +197,11 @@ const factories = [
 	resetConfigFactory,
 	updateConfigFactory,
 
+	hasAutoTranslatedLangFactory,
+	addAutoTranslatedLangFactory,
+	deleteAutoTranslatedLangFactory,
 	setSitePreferencesFactory,
 	getSitePreferencesFactory,
-	setAutoTranslatedLangsFactory,
-	getAutoTranslatedLangsFactory,
 
 	addTranslationFactory,
 	deleteTranslationFactory,

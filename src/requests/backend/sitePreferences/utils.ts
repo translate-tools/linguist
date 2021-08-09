@@ -1,4 +1,5 @@
-// TODO: keep it in indexDB and show list on options page
+// TODO: refactor it. Split to standalone utils
+// TODO: show sites preference list on options page
 
 import * as IDB from 'idb/with-async-ittr';
 import { TypeOf } from 'io-ts';
@@ -25,6 +26,10 @@ export interface DBSchema extends IDB.DBSchema {
 		key: string;
 		value: SiteData;
 	};
+	autoTranslatedLanguages: {
+		key: string;
+		value: string;
+	};
 }
 
 type DB = IDB.IDBPDatabase<DBSchema>;
@@ -37,7 +42,9 @@ const getDB = async () => {
 		DBInstance = await IDB.openDB<DBSchema>(DBName, 1, {
 			upgrade(db) {
 				db.createObjectStore('sitePreferences', {
-					// keyPath: 'site',
+					autoIncrement: false,
+				});
+				db.createObjectStore('autoTranslatedLanguages', {
 					autoIncrement: false,
 				});
 			},
@@ -60,4 +67,27 @@ export const getPreferences = async (site: string) => {
 	const entry = await db.get('sitePreferences', site);
 
 	return entry ?? null;
+};
+
+export const addAutoTranslatedLang = async (language: string) => {
+	const db = await getDB();
+	await db.put('autoTranslatedLanguages', language, language);
+};
+
+export const deleteAutoTranslatedLang = async (language: string) => {
+	const db = await getDB();
+	await db.delete('autoTranslatedLanguages', language);
+};
+
+export const hasAutoTranslatedLang = async (language: string) => {
+	const db = await getDB();
+	const result = await db.get('autoTranslatedLanguages', language);
+	return result !== undefined;
+};
+
+export const getAutoTranslatedLangs = async () => {
+	const db = await getDB();
+	const languages = await db.getAll('autoTranslatedLanguages');
+
+	return languages ?? null;
 };
