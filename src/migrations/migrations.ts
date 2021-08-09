@@ -1,7 +1,7 @@
 import { TypeOf } from 'io-ts';
 import { browser } from 'webextension-polyfill-ts';
 
-import { tryDecode, type } from './types';
+import { tryDecode, type } from '../lib/types';
 
 const migrationsSignature = type.type({
 	appConfig: type.number,
@@ -16,7 +16,9 @@ const initData: Data = {
 };
 
 export const getMigrationsInfo = async () => {
-	const migrationsInfoRaw = await browser.storage.local.get('migrationsInfo');
+	const migrationsInfoRaw = (await browser.storage.local.get('migrationsInfo'))[
+		'migrationsInfo'
+	];
 
 	// Try load data
 	const tryLoadData = () => {
@@ -33,7 +35,7 @@ export const getMigrationsInfo = async () => {
 	const tryMergeWithInit = () => {
 		try {
 			if (typeof migrationsInfoRaw === 'object') {
-				const mergedData = { ...initData, migrationsInfoRaw };
+				const mergedData: Data = { ...initData, ...migrationsInfoRaw };
 				return tryDecode(migrationsSignature, mergedData);
 			}
 		} catch (error) {
@@ -47,6 +49,7 @@ export const getMigrationsInfo = async () => {
 
 	// Try get data
 	migrationsInfo = tryLoadData();
+
 	if (migrationsInfo === null) {
 		migrationsInfo = tryMergeWithInit();
 	}
@@ -58,5 +61,7 @@ export const getMigrationsInfo = async () => {
 };
 
 export const updateMigrationsInfoItem = async (data: Partial<Data>) => {
-	await browser.storage.local.set({ migrationsInfo: data });
+	const actualData = await getMigrationsInfo();
+
+	await browser.storage.local.set({ migrationsInfo: { ...actualData, ...data } });
 };

@@ -20,9 +20,6 @@ export const dataSignature = type.type({
 
 export type SiteData = TypeOf<typeof dataSignature>;
 
-// TODO: migrate data from `translateAlways`
-// const storageKeyPrefix = 'SitePreferences:';
-
 export const setPreferences = async (site: string, options: SiteData) => {
 	const db = await getDBInstance();
 	await db.put('sitePreferences', options, site);

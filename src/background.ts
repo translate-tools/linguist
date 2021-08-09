@@ -1,4 +1,4 @@
-import { getMigrationsInfo, updateMigrationsInfoItem } from './lib/migrations';
+import { getMigrationsInfo, updateMigrationsInfoItem } from './migrations/migrations';
 
 import { sendRequestToAllCS } from './lib/communication';
 import { getUserLanguage } from './lib/language';
@@ -34,6 +34,7 @@ import { clearTranslationsFactory } from './requests/backend/translations/clearT
 import { hasAutoTranslatedLangFactory } from './requests/backend/autoTranslation/autoTranslatedLangs/hasAutoTranslatedLang';
 import { addAutoTranslatedLangFactory } from './requests/backend/autoTranslation/autoTranslatedLangs/addAutoTranslatedLang';
 import { deleteAutoTranslatedLangFactory } from './requests/backend/autoTranslation/autoTranslatedLangs/deleteAutoTranslatedLang';
+import { migrateAll } from './migrations/migrationsList';
 
 // Debug
 // TODO: write tests for translators in core dir
@@ -68,8 +69,14 @@ if (process.env.NODE_ENV !== 'production') {
 	}
 }
 
-// Init migrations data
-getMigrationsInfo().then(updateMigrationsInfoItem);
+// Migrate data
+(async () => {
+	// Init migrations data
+	await updateMigrationsInfoItem({});
+
+	// Run migrations
+	await migrateAll();
+})();
 
 // Init config
 
