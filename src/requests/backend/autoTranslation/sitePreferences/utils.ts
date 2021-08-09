@@ -3,7 +3,7 @@
 
 import * as IDB from 'idb/with-async-ittr';
 import { TypeOf } from 'io-ts';
-import { type } from '../../../lib/types';
+import { type } from '../../../../lib/types';
 
 export const dataSignature = type.type({
 	/**

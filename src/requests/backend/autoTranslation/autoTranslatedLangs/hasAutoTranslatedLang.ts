@@ -1,6 +1,6 @@
-import { addRequestHandler, bgSendRequest } from '../../../lib/communication';
-import { tryDecode, type } from '../../../lib/types';
-import { RequestHandlerFactory } from '../../types';
+import { addRequestHandler, bgSendRequest } from '../../../../lib/communication';
+import { tryDecode, type } from '../../../../lib/types';
+import { RequestHandlerFactory } from '../../../types';
 import { hasAutoTranslatedLang as hasAutoTranslatedLangReq } from '../sitePreferences/utils';
 
 export const hasAutoTranslatedLang = (

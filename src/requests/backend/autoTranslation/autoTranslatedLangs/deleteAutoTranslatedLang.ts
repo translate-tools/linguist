@@ -1,6 +1,6 @@
-import { addRequestHandler, bgSendRequest } from '../../../lib/communication';
-import { tryDecode, type } from '../../../lib/types';
-import { RequestHandlerFactory } from '../../types';
+import { addRequestHandler, bgSendRequest } from '../../../../lib/communication';
+import { tryDecode, type } from '../../../../lib/types';
+import { RequestHandlerFactory } from '../../../types';
 import { deleteAutoTranslatedLang as deleteAutoTranslatedLangReq } from '../sitePreferences/utils';
 
 export const deleteAutoTranslatedLang = (lang: string): Promise<void> =>

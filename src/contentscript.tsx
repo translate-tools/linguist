@@ -9,13 +9,13 @@ import { PageTranslator } from './modules/PageTranslator/PageTranslator';
 import { SelectTranslator } from './modules/SelectTranslator';
 
 // Requests
-import { getSitePreferences } from './requests/backend/sitePreferences/getSitePreferences';
+import { getSitePreferences } from './requests/backend/autoTranslation/sitePreferences/getSitePreferences';
 import { getPageLanguageFactory } from './requests/contentscript/getPageLanguage';
 import { getTranslateStateFactory } from './requests/contentscript/getTranslateState';
 import { pingFactory } from './requests/contentscript/ping';
 import { translatePageFactory } from './requests/contentscript/translatePage';
 import { untranslatePageFactory } from './requests/contentscript/untranslatePage';
-import { hasAutoTranslatedLang } from './requests/backend/autoTranslatedLangs/hasAutoTranslatedLang';
+import { hasAutoTranslatedLang } from './requests/backend/autoTranslation/autoTranslatedLangs/hasAutoTranslatedLang';
 
 const cs = new ContentScript();
 

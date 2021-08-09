@@ -21,17 +21,17 @@ import { getConfigFactory } from './requests/backend/getConfig';
 import { setConfigFactory } from './requests/backend/setConfig';
 import { resetConfigFactory } from './requests/backend/resetConfig';
 import { clearCacheFactory } from './requests/backend/clearCache';
-import { setSitePreferencesFactory } from './requests/backend/sitePreferences/setSitePreferences';
-import { getSitePreferencesFactory } from './requests/backend/sitePreferences/getSitePreferences';
+import { setSitePreferencesFactory } from './requests/backend/autoTranslation/sitePreferences/setSitePreferences';
+import { getSitePreferencesFactory } from './requests/backend/autoTranslation/sitePreferences/getSitePreferences';
 
 import { addTranslationFactory } from './requests/backend/translations/addTranslation';
 import { findTranslationFactory } from './requests/backend/translations/findTranslation';
 import { deleteTranslationFactory } from './requests/backend/translations/deleteTranslation';
 import { getTranslationsFactory } from './requests/backend/translations/getTranslations';
 import { clearTranslationsFactory } from './requests/backend/translations/clearTranslations';
-import { hasAutoTranslatedLangFactory } from './requests/backend/autoTranslatedLangs/hasAutoTranslatedLang';
-import { addAutoTranslatedLangFactory } from './requests/backend/autoTranslatedLangs/addAutoTranslatedLang';
-import { deleteAutoTranslatedLangFactory } from './requests/backend/autoTranslatedLangs/deleteAutoTranslatedLang';
+import { hasAutoTranslatedLangFactory } from './requests/backend/autoTranslation/autoTranslatedLangs/hasAutoTranslatedLang';
+import { addAutoTranslatedLangFactory } from './requests/backend/autoTranslation/autoTranslatedLangs/addAutoTranslatedLang';
+import { deleteAutoTranslatedLangFactory } from './requests/backend/autoTranslation/autoTranslatedLangs/deleteAutoTranslatedLang';
 
 // Debug
 // TODO: write tests for translators in core dir

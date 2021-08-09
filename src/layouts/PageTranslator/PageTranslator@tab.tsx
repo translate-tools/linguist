@@ -6,11 +6,11 @@ import { translateStateUpdateHandler } from '../../modules/PageTranslator/reques
 import { TabComponent } from '../../pages/popup/layout/PopupWindow';
 
 // Requests
-import { addAutoTranslatedLang } from '../../requests/backend/autoTranslatedLangs/addAutoTranslatedLang';
-import { deleteAutoTranslatedLang } from '../../requests/backend/autoTranslatedLangs/deleteAutoTranslatedLang';
-import { hasAutoTranslatedLang } from '../../requests/backend/autoTranslatedLangs/hasAutoTranslatedLang';
-import { getSitePreferences } from '../../requests/backend/sitePreferences/getSitePreferences';
-import { setSitePreferences } from '../../requests/backend/sitePreferences/setSitePreferences';
+import { addAutoTranslatedLang } from '../../requests/backend/autoTranslation/autoTranslatedLangs/addAutoTranslatedLang';
+import { deleteAutoTranslatedLang } from '../../requests/backend/autoTranslation/autoTranslatedLangs/deleteAutoTranslatedLang';
+import { hasAutoTranslatedLang } from '../../requests/backend/autoTranslation/autoTranslatedLangs/hasAutoTranslatedLang';
+import { getSitePreferences } from '../../requests/backend/autoTranslation/sitePreferences/getSitePreferences';
+import { setSitePreferences } from '../../requests/backend/autoTranslation/sitePreferences/setSitePreferences';
 import { getPageLanguage } from '../../requests/contentscript/getPageLanguage';
 import { getTranslateState } from '../../requests/contentscript/getTranslateState';
 import { translatePage } from '../../requests/contentscript/translatePage';
