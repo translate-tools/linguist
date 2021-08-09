@@ -6,15 +6,24 @@ import { tryDecode, type } from '../../../lib/types';
 
 export type SiteData = TypeOf<typeof dataSignature>;
 
+// TODO: migrate data from `translateAlways`
 export const dataSignature = type.type({
-	translateAlways: type.boolean,
+	/**
+	 * While `false`, auto translate will not work, while `true` will work with consider other options
+	 */
+	enableAutoTranslate: type.boolean,
+
+	/**
+	 * While size greater than 0, page language code must be in array
+	 */
+	autoTranslateLanguages: type.array(type.string),
 });
 
 const storageKeyPrefix = 'SitePreferences:';
 
-export const setPreferences = async (site: string, data: SiteData) => {
+export const setPreferences = async (site: string, options: SiteData) => {
 	const storageKey = storageKeyPrefix + site;
-	return browser.storage.local.set({ [storageKey]: data });
+	return browser.storage.local.set({ [storageKey]: options });
 };
 
 export const getPreferences = async (site: string) => {

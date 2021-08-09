@@ -70,13 +70,20 @@ export const PageTranslatorTab: TabComponent<initData> = ({
 	const [to, setTo] = useState<string | undefined>(initStateData.current.to);
 
 	// Define auto translate by hostname
-	const isTranslateHostname = sitePrefs === null ? false : sitePrefs.translateAlways;
+	const isTranslateHostname =
+		sitePrefs === null ? false : sitePrefs.enableAutoTranslate;
 	const [translateSite, setTranslateSite] = useState(isTranslateHostname);
 
 	const setTranslateSiteProxy: any = useCallback(
 		(state: boolean) => {
 			// Remember
-			setSitePreferences(hostname, { translateAlways: state });
+			const newState = sitePrefs || {
+				enableAutoTranslate: state,
+				autoTranslateLanguages: [],
+			};
+
+			// TODO: use something like `updateSitePreferences` instead set full data
+			setSitePreferences(hostname, { ...newState, enableAutoTranslate: state });
 			setTranslateSite(state);
 		},
 		[hostname],

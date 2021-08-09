@@ -181,8 +181,8 @@ cs.onLoad(async (initConfig) => {
 			let isNeedAutoTranslate = false;
 
 			// Auto translate by host
-			if (sitePrefs?.translateAlways) {
-				isNeedAutoTranslate = true;
+			if (sitePrefs !== null) {
+				isNeedAutoTranslate = sitePrefs.enableAutoTranslate;
 			}
 
 			// Auto translate by language

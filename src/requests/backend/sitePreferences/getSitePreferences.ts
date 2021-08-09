@@ -6,7 +6,7 @@ import { dataSignature, getPreferences } from './utils';
 
 export const getSitePreferencesOut = type.union([dataSignature, type.null]);
 
-export const getSitePreferences = (site: string) =>
+export const getSitePreferences = (site: string): ReturnType<typeof getPreferences> =>
 	bgSendRequest('getSitePreferences', { site }).then((rsp) =>
 		tryDecode(getSitePreferencesOut, rsp),
 	);
@@ -18,6 +18,7 @@ export const getSitePreferencesIn = type.type({
 export const getSitePreferencesFactory: RequestHandlerFactory = () => {
 	addRequestHandler('getSitePreferences', async (rawData) => {
 		const { site } = tryDecode(getSitePreferencesIn, rawData);
+
 		return getPreferences(site);
 	});
 };
