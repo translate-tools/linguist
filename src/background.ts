@@ -1,3 +1,5 @@
+import { getMigrationsInfo, updateMigrationsInfoItem } from './lib/migrations';
+
 import { sendRequestToAllCS } from './lib/communication';
 import { getUserLanguage } from './lib/language';
 import { ConfigStorage } from './modules/ConfigStorage/ConfigStorage';
@@ -65,6 +67,9 @@ if (process.env.NODE_ENV !== 'production') {
 		);
 	}
 }
+
+// Init migrations data
+getMigrationsInfo().then(updateMigrationsInfoItem);
 
 // Init config
 

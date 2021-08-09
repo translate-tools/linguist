@@ -1,0 +1,62 @@
+import { TypeOf } from 'io-ts';
+import { browser } from 'webextension-polyfill-ts';
+
+import { tryDecode, type } from './types';
+
+const migrationsSignature = type.type({
+	appConfig: type.number,
+	autoTranslateDB: type.number,
+});
+
+type Data = TypeOf<typeof migrationsSignature>;
+
+const initData: Data = {
+	appConfig: 0,
+	autoTranslateDB: 0,
+};
+
+export const getMigrationsInfo = async () => {
+	const migrationsInfoRaw = await browser.storage.local.get('migrationsInfo');
+
+	// Try load data
+	const tryLoadData = () => {
+		try {
+			return tryDecode(migrationsSignature, migrationsInfoRaw);
+		} catch (error) {
+			if (!(error instanceof TypeError)) throw error;
+		}
+
+		return null;
+	};
+
+	// Try merge init data and current
+	const tryMergeWithInit = () => {
+		try {
+			if (typeof migrationsInfoRaw === 'object') {
+				const mergedData = { ...initData, migrationsInfoRaw };
+				return tryDecode(migrationsSignature, mergedData);
+			}
+		} catch (error) {
+			if (!(error instanceof TypeError)) throw error;
+		}
+
+		return null;
+	};
+
+	let migrationsInfo: Data | null = null;
+
+	// Try get data
+	migrationsInfo = tryLoadData();
+	if (migrationsInfo === null) {
+		migrationsInfo = tryMergeWithInit();
+	}
+	if (migrationsInfo === null) {
+		migrationsInfo = initData;
+	}
+
+	return migrationsInfo;
+};
+
+export const updateMigrationsInfoItem = async (data: Partial<Data>) => {
+	await browser.storage.local.set({ migrationsInfo: data });
+};
