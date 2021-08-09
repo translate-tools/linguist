@@ -1,5 +1,5 @@
 import { TypeOf } from 'io-ts';
-import { StringType, type } from '../lib/types';
+import { StringLiteralType, type } from '../lib/types';
 import {
 	langCode,
 	langCodes,
@@ -66,10 +66,10 @@ export const AppConfig = type.type({
 		quickTranslate: type.boolean,
 		modifiers: type.array(
 			type.union([
-				StringType('ctrlKey'),
-				StringType('altKey'),
-				StringType('shiftKey'),
-				StringType('metaKey'),
+				StringLiteralType('ctrlKey'),
+				StringLiteralType('altKey'),
+				StringLiteralType('shiftKey'),
+				StringLiteralType('metaKey'),
 			]),
 		),
 		strictSelection: type.boolean,

@@ -73,7 +73,7 @@ export const checkTypeByPath = <T extends t.Props>(
 
 // Type constructors
 
-export const StringType = <T extends string>(stringOfType: T) =>
+export const StringLiteralType = <T extends string>(stringOfType: T) =>
 	new type.Type(
 		`String["${stringOfType}"]`,
 		(input: unknown): input is T =>
