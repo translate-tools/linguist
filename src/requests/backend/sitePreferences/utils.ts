@@ -1,12 +1,9 @@
 // TODO: keep it in indexDB and show list on options page
 
+import * as IDB from 'idb/with-async-ittr';
 import { TypeOf } from 'io-ts';
-import { browser } from 'webextension-polyfill-ts';
-import { tryDecode, type } from '../../../lib/types';
+import { type } from '../../../lib/types';
 
-export type SiteData = TypeOf<typeof dataSignature>;
-
-// TODO: migrate data from `translateAlways`
 export const dataSignature = type.type({
 	/**
 	 * While `false`, auto translate will not work, while `true` will work with consider other options
@@ -19,25 +16,48 @@ export const dataSignature = type.type({
 	autoTranslateLanguages: type.array(type.string),
 });
 
-const storageKeyPrefix = 'SitePreferences:';
+export type SiteData = TypeOf<typeof dataSignature>;
+
+export type IEntryWithKey = { key: number; data: SiteData };
+
+export interface DBSchema extends IDB.DBSchema {
+	sitePreferences: {
+		key: string;
+		value: SiteData;
+	};
+}
+
+type DB = IDB.IDBPDatabase<DBSchema>;
+
+let DBInstance: null | DB = null;
+const getDB = async () => {
+	const DBName = 'autoTranslation';
+
+	if (DBInstance === null) {
+		DBInstance = await IDB.openDB<DBSchema>(DBName, 1, {
+			upgrade(db) {
+				db.createObjectStore('sitePreferences', {
+					// keyPath: 'site',
+					autoIncrement: false,
+				});
+			},
+		});
+	}
+
+	return DBInstance;
+};
+
+// TODO: migrate data from `translateAlways`
+// const storageKeyPrefix = 'SitePreferences:';
 
 export const setPreferences = async (site: string, options: SiteData) => {
-	const storageKey = storageKeyPrefix + site;
-	return browser.storage.local.set({ [storageKey]: options });
+	const db = await getDB();
+	await db.put('sitePreferences', options, site);
 };
 
 export const getPreferences = async (site: string) => {
-	const storageKey = storageKeyPrefix + site;
+	const db = await getDB();
+	const entry = await db.get('sitePreferences', site);
 
-	const store = await browser.storage.local.get(storageKey);
-
-	try {
-		return tryDecode(dataSignature, store[storageKey]);
-	} catch (error) {
-		if (error instanceof TypeError) {
-			return null;
-		} else {
-			throw error;
-		}
-	}
+	return entry ?? null;
 };

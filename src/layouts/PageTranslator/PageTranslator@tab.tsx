@@ -86,7 +86,7 @@ export const PageTranslatorTab: TabComponent<initData> = ({
 			setSitePreferences(hostname, { ...newState, enableAutoTranslate: state });
 			setTranslateSite(state);
 		},
-		[hostname],
+		[hostname, sitePrefs],
 	);
 
 	// Define auto translate by language

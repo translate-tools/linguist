@@ -16,6 +16,8 @@ export const setSitePreferencesFactory: RequestHandlerFactory = () => {
 	addRequestHandler('setSitePreferences', async (rawData) => {
 		const { site, options } = tryDecode(setSitePreferencesIn, rawData);
 
+		console.log('I handle', rawData);
+
 		await setPreferences(site, options);
 	});
 };
