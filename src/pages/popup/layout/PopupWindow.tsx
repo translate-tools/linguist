@@ -35,20 +35,20 @@ export type TranslatorFeatures = {
 };
 
 export interface TabData {
+	id: string;
 	config: AppConfigType;
 	translatorFeatures: TranslatorFeatures;
 }
 
 export type TabComponent<T = any> = ComponentType<
 	TabData & {
-		id: string;
 		initData?: T;
 	}
 > & {
 	/**
 	 * Hook which set init data for component
 	 */
-	init?: () => Promise<T>;
+	init?: (props: TabData) => Promise<T>;
 };
 
 export interface IPopupWindowTab {
@@ -216,20 +216,21 @@ export const PopupWindow: FC<PopupWindowProps> = ({
 		(async () => {
 			const panes = await Promise.all(
 				tabs.map(async ({ id, component: Pane }) => {
+					const paneProps: TabData = { translatorFeatures, config, id };
+
 					// Call and await init function
 					const initFn = Pane.init;
-					const initData = initFn !== undefined ? await initFn() : undefined;
+					const initData =
+						initFn !== undefined ? await initFn(paneProps) : undefined;
 
 					return {
 						id,
-						content: (
-							<Pane {...{ translatorFeatures, config, id, initData }} />
-						),
+						content: <Pane {...paneProps} initData={initData} />,
 					};
 				}),
 			);
 
-			// Check context before set data
+			// Check context before set data, to prevent set outdated panes
 			if (panesRenderContext.current === renderContext) {
 				setPanes(panes);
 			}

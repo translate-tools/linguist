@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 
 import { getCurrentTab, getCurrentTabId } from '../../lib/communication';
 import { PageTranslateState } from '../../modules/PageTranslator/PageTranslator';
@@ -26,8 +26,8 @@ type initData = {
 	isTranslated: boolean;
 	counters: PageTranslateState;
 	direction: {
-		from: string | null;
-		to: string | null;
+		from: string;
+		to: string;
 	};
 };
 
@@ -49,28 +49,12 @@ export const PageTranslatorTab: TabComponent<initData> = ({
 		tabId,
 		isTranslated: isTranslatedInit,
 		counters: countersInit,
+		direction: { from: initFrom, to: initTo },
 	} = initData;
 
-	// TODO: refactor it
-	// - Move init data to init static member
-	// - Remove `translatorFeatures` if it unnecessary
-	// - Use context as shared cache if fetch `translatorFeatures` for each tab is too long
-	// Init state
-	const initStateData = useRef<Record<string, string>>();
-	if (!initStateData.current) {
-		initStateData.current = {
-			from:
-				initData.direction.from ||
-				(translatorFeatures.isSupportAutodetect
-					? 'auto'
-					: translatorFeatures.supportedLanguages[0]),
-			to: initData.direction.to || config.language,
-		};
-	}
-
 	// Define from/to
-	const [from, setFrom] = useState<string | undefined>(initStateData.current.from);
-	const [to, setTo] = useState<string | undefined>(initStateData.current.to);
+	const [from, setFrom] = useState<string | undefined>(initFrom);
+	const [to, setTo] = useState<string | undefined>(initTo);
 
 	// Define auto translate by hostname
 	const isTranslateHostname =
@@ -92,7 +76,6 @@ export const PageTranslatorTab: TabComponent<initData> = ({
 		[hostname, sitePrefs],
 	);
 
-	// TODO: Preload it
 	// Define auto translate by language
 	const [translateLang, setTranslateLang] = useState(false);
 
@@ -103,10 +86,7 @@ export const PageTranslatorTab: TabComponent<initData> = ({
 			return;
 		}
 
-		hasAutoTranslatedLang(from).then((lang) => {
-			console.warn('Is from auto', lang);
-			setTranslateLang(lang);
-		});
+		hasAutoTranslatedLang(from).then(setTranslateLang);
 	}, [from]);
 
 	const setTranslateLangProxy: any = useCallback(
@@ -185,7 +165,7 @@ export const PageTranslatorTab: TabComponent<initData> = ({
 	);
 };
 
-PageTranslatorTab.init = async (): Promise<initData> => {
+PageTranslatorTab.init = async ({ translatorFeatures, config }): Promise<initData> => {
 	// Get current tab hostname
 	const tab = await getCurrentTab();
 
@@ -209,14 +189,26 @@ PageTranslatorTab.init = async (): Promise<initData> => {
 	let from: string | null = null;
 	let to: string | null = null;
 
+	// Set languages returned by translated page state
 	if (translateDirection !== null) {
 		from = translateDirection.from;
 		to = translateDirection.to;
 	}
 
-	// Set page language as "from"
+	// Set page language as "from" if page is not in translation
 	if (!isTranslated) {
 		from = await getPageLanguage(tabId);
+	}
+
+	// Set default lang directions
+	if (from === null) {
+		from = translatorFeatures.isSupportAutodetect
+			? 'auto'
+			: translatorFeatures.supportedLanguages[0];
+	}
+
+	if (to === null) {
+		to = config.language;
 	}
 
 	return {
