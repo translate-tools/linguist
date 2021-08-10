@@ -23,17 +23,20 @@ import { getConfigFactory } from './requests/backend/getConfig';
 import { setConfigFactory } from './requests/backend/setConfig';
 import { resetConfigFactory } from './requests/backend/resetConfig';
 import { clearCacheFactory } from './requests/backend/clearCache';
+
+// Auto translation
 import { setSitePreferencesFactory } from './requests/backend/autoTranslation/sitePreferences/setSitePreferences';
 import { getSitePreferencesFactory } from './requests/backend/autoTranslation/sitePreferences/getSitePreferences';
+import { deleteSitePreferencesFactory } from './requests/backend/autoTranslation/sitePreferences/deleteSitePreferences';
+import { hasAutoTranslatedLangFactory } from './requests/backend/autoTranslation/autoTranslatedLangs/hasAutoTranslatedLang';
+import { addAutoTranslatedLangFactory } from './requests/backend/autoTranslation/autoTranslatedLangs/addAutoTranslatedLang';
+import { deleteAutoTranslatedLangFactory } from './requests/backend/autoTranslation/autoTranslatedLangs/deleteAutoTranslatedLang';
 
 import { addTranslationFactory } from './requests/backend/translations/addTranslation';
 import { findTranslationFactory } from './requests/backend/translations/findTranslation';
 import { deleteTranslationFactory } from './requests/backend/translations/deleteTranslation';
 import { getTranslationsFactory } from './requests/backend/translations/getTranslations';
 import { clearTranslationsFactory } from './requests/backend/translations/clearTranslations';
-import { hasAutoTranslatedLangFactory } from './requests/backend/autoTranslation/autoTranslatedLangs/hasAutoTranslatedLang';
-import { addAutoTranslatedLangFactory } from './requests/backend/autoTranslation/autoTranslatedLangs/addAutoTranslatedLang';
-import { deleteAutoTranslatedLangFactory } from './requests/backend/autoTranslation/autoTranslatedLangs/deleteAutoTranslatedLang';
 import { migrateAll } from './migrations/migrationsList';
 
 // Debug
@@ -214,6 +217,7 @@ const factories = [
 	deleteAutoTranslatedLangFactory,
 	setSitePreferencesFactory,
 	getSitePreferencesFactory,
+	deleteSitePreferencesFactory,
 
 	addTranslationFactory,
 	deleteTranslationFactory,

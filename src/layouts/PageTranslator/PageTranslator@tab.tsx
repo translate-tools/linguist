@@ -16,12 +16,17 @@ import { translatePage } from '../../requests/contentscript/translatePage';
 import { untranslatePage } from '../../requests/contentscript/untranslatePage';
 
 import { InitFn, TabComponent } from '../../pages/popup/layout/PopupWindow';
-import { PageTranslator } from './PageTranslator';
+import { PageTranslator, sitePreferenceOptions } from './PageTranslator';
+import { deleteSitePreferences } from '../../requests/backend/autoTranslation/sitePreferences/deleteSitePreferences';
 
+type SitePrefs = ReturnType<typeof getSitePreferences> extends Promise<infer T>
+	? T
+	: never;
 type InitData = {
 	hostname: string;
-	sitePrefs: ReturnType<typeof getSitePreferences> extends Promise<infer T> ? T : never;
+	sitePrefs: SitePrefs;
 
+	translateSite: string;
 	tabId: number;
 	isTranslated: boolean;
 	counters: PageTranslateState;
@@ -29,6 +34,39 @@ type InitData = {
 		from: string;
 		to: string;
 	};
+};
+
+// TODO: move it to lib
+type RecordValue<T extends Record<any, string>> = keyof {
+	[K in keyof T as T[K]]: any;
+};
+
+export const getTranslatePreferencesForSite = (lang: string, sitePrefs: SitePrefs) => {
+	let translateSite: RecordValue<typeof sitePreferenceOptions> =
+		sitePreferenceOptions.default;
+	if (sitePrefs !== null) {
+		if (!sitePrefs.enableAutoTranslate) {
+			translateSite = sitePreferenceOptions.never;
+		} else if (
+			sitePrefs.autoTranslateIgnoreLanguages.length === 0 &&
+			sitePrefs.autoTranslateLanguages.length === 0
+		) {
+			translateSite = sitePreferenceOptions.always;
+		} else {
+			const isAutoTranslatedLang =
+				sitePrefs.autoTranslateLanguages.indexOf(lang) !== -1;
+			const isIgnoredLang =
+				sitePrefs.autoTranslateIgnoreLanguages.indexOf(lang) !== -1;
+
+			if (isIgnoredLang) {
+				translateSite = sitePreferenceOptions.neverForThisLang;
+			} else if (isAutoTranslatedLang) {
+				translateSite = sitePreferenceOptions.alwaysForThisLang;
+			}
+		}
+	}
+
+	return translateSite;
 };
 
 /**
@@ -56,24 +94,80 @@ export const PageTranslatorTab: TabComponent<InitFn<InitData>> = ({
 	const [from, setFrom] = useState<string | undefined>(initFrom);
 	const [to, setTo] = useState<string | undefined>(initTo);
 
-	// Define auto translate by hostname
-	const isTranslateHostname =
-		sitePrefs === null ? false : sitePrefs.enableAutoTranslate;
-	const [translateSite, setTranslateSite] = useState(isTranslateHostname);
+	// TODO: rename it to `autoTranslateSitePreferences`
+	const [translateSite, setTranslateSite] = useState<string>(initData.translateSite);
 
 	const setTranslateSiteProxy: any = useCallback(
-		(state: boolean) => {
+		(state: string) => {
 			// Remember
-			const newState = sitePrefs || {
-				enableAutoTranslate: state,
+			const newState: SitePrefs = sitePrefs || {
+				enableAutoTranslate: true,
 				autoTranslateLanguages: [],
+				autoTranslateIgnoreLanguages: [],
 			};
 
+			switch (state) {
+			case sitePreferenceOptions.default:
+				// Delete entry and exit
+				deleteSitePreferences(hostname);
+				setTranslateSite(state);
+				return;
+			case sitePreferenceOptions.always:
+				newState.enableAutoTranslate = true;
+				newState.autoTranslateLanguages = [];
+				newState.autoTranslateIgnoreLanguages = [];
+				break;
+			case sitePreferenceOptions.never:
+				newState.enableAutoTranslate = false;
+				newState.autoTranslateLanguages = [];
+				break;
+			case sitePreferenceOptions.alwaysForThisLang:
+				// Skip invalid language
+				if (from === undefined) break;
+
+				// Enable auto translate
+				newState.enableAutoTranslate = true;
+
+				// Remove language if exist
+				newState.autoTranslateIgnoreLanguages =
+						newState.autoTranslateIgnoreLanguages.filter(
+							(lang) => lang !== from,
+						);
+
+				// Add language if not exist
+				if (!newState.autoTranslateLanguages.find((lang) => lang === from)) {
+					newState.autoTranslateLanguages.push(from);
+				}
+
+				break;
+			case sitePreferenceOptions.neverForThisLang:
+				// Skip invalid language
+				if (from === undefined) break;
+
+				// Remove language if exist
+				newState.autoTranslateLanguages =
+						newState.autoTranslateLanguages.filter((lang) => lang !== from);
+
+				// Add language if not exist
+				if (
+					!newState.autoTranslateIgnoreLanguages.find(
+						(lang) => lang === from,
+					)
+				) {
+					newState.autoTranslateIgnoreLanguages.push(from);
+				}
+				break;
+
+			default:
+				console.error('Data for error below', state);
+				throw new Error(`Unknown type for "translateSite"`);
+			}
+
 			// TODO: use something like `updateSitePreferences` instead set full data
-			setSitePreferences(hostname, { ...newState, enableAutoTranslate: state });
+			setSitePreferences(hostname, newState);
 			setTranslateSite(state);
 		},
-		[hostname, sitePrefs],
+		[from, hostname, sitePrefs],
 	);
 
 	// Define auto translate by language
@@ -211,10 +305,14 @@ PageTranslatorTab.init = async ({ translatorFeatures, config }): Promise<InitDat
 		to = config.language;
 	}
 
+	// Set `translateSite`
+	const translateSite: string = getTranslatePreferencesForSite(from, sitePrefs);
+
 	return {
 		hostname,
 		sitePrefs,
 
+		translateSite,
 		tabId,
 		isTranslated,
 		counters,

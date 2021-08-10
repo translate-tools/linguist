@@ -6,6 +6,7 @@ import { type } from '../../../../lib/types';
 
 import { getDBInstance } from '../utils';
 
+// TODO: rename fields
 export const dataSignature = type.type({
 	/**
 	 * While `false`, auto translate will not work, while `true` will work with consider other options
@@ -13,9 +14,16 @@ export const dataSignature = type.type({
 	enableAutoTranslate: type.boolean,
 
 	/**
-	 * While size greater than 0, page language code must be in array
+	 * While size greater than 0, languages from list will translate
 	 */
 	autoTranslateLanguages: type.array(type.string),
+
+	/**
+	 * While size greater than 0, languages from list will not translate
+	 *
+	 * This list have priority over `autoTranslateLanguages`
+	 */
+	autoTranslateIgnoreLanguages: type.array(type.string),
 });
 
 export type SiteData = TypeOf<typeof dataSignature>;
@@ -30,4 +38,9 @@ export const getPreferences = async (site: string) => {
 	const entry = await db.get('sitePreferences', site);
 
 	return entry ?? null;
+};
+
+export const deletePreferences = async (site: string) => {
+	const db = await getDBInstance();
+	await db.delete('sitePreferences', site);
 };

@@ -1,24 +1,33 @@
-import React, { FC, useMemo } from 'react';
+import React, { FC, useCallback, useMemo } from 'react';
 import { cn } from '@bem-react/classname';
 
-import { Button } from '../../components/Button/Button.bundle/desktop';
 import { Checkbox } from 'react-elegant-ui/esm/components/Checkbox/Checkbox.bundle/desktop';
+import { Button } from '../../components/Button/Button.bundle/desktop';
+import { Select } from '../../components/Select/Select.bundle/desktop';
+import { LanguagePanel } from '../../components/LanguagePanel/LanguagePanel';
 
 import { getMessage } from '../../lib/language';
 import { MutableValue } from '../../types/utils';
 
 import { TabData } from '../../pages/popup/layout/PopupWindow';
-import { LanguagePanel } from '../../components/LanguagePanel/LanguagePanel';
 import { PageTranslateState } from '../../modules/PageTranslator/PageTranslator';
 
 import './PageTranslator.css';
 
 export const cnPageTranslator = cn('PageTranslator');
 
+export const sitePreferenceOptions = {
+	default: 'default',
+	never: 'never',
+	always: 'always',
+	alwaysForThisLang: 'alwaysForThisLang',
+	neverForThisLang: 'neverForThisLang',
+} as const;
+
 export interface PageTranslatorProps
 	extends MutableValue<'from', string | undefined>,
 		MutableValue<'to', string | undefined>,
-		MutableValue<'translateSite', boolean>,
+		MutableValue<'translateSite', string>,
 		MutableValue<'translateLang', boolean> {
 	/**
 	 * Features of translator module
@@ -68,6 +77,28 @@ export const PageTranslator: FC<PageTranslatorProps> = ({
 		[from],
 	);
 
+	const setTranslateStateAdaptor = useCallback(
+		(value: string[] | string | undefined) => {
+			if (typeof value === 'string' && value in sitePreferenceOptions) {
+				setTranslateSite(value);
+			}
+		},
+		[setTranslateSite],
+	);
+
+	const translateSiteOptions = useMemo(
+		() =>
+			['default', 'never', 'always', 'alwaysForThisLang', 'neverForThisLang'].map(
+				(key) => ({
+					id: key,
+					content: getMessage(
+						'pageTranslator_sitePreferences_autoTranslate_' + key,
+					),
+				}),
+			),
+		[],
+	);
+
 	return (
 		<div className={cnPageTranslator()}>
 			<div className={cnPageTranslator('Direction')}>
@@ -85,7 +116,7 @@ export const PageTranslator: FC<PageTranslatorProps> = ({
 			</div>
 
 			<ul className={cnPageTranslator('List')}>
-				<li className={cnPageTranslator('ListItem')}>
+				{/* <li className={cnPageTranslator('ListItem')}>
 					<Checkbox
 						label={
 							getMessage('pageTranslator_alwaysTranslateSite') +
@@ -94,7 +125,7 @@ export const PageTranslator: FC<PageTranslatorProps> = ({
 						checked={translateSite}
 						setChecked={setTranslateSite}
 					/>
-				</li>
+				</li> */}
 				<li className={cnPageTranslator('ListItem')}>
 					<Checkbox
 						label={
@@ -106,6 +137,23 @@ export const PageTranslator: FC<PageTranslatorProps> = ({
 					/>
 				</li>
 			</ul>
+
+			{/* TODO: use classes for styles */}
+			<div>
+				<h4 className={cnPageTranslator('Header')}>
+					{getMessage('pageTranslator_sitePreferences_title')} {escapedHostname}
+				</h4>
+				<span style={{ marginRight: '.5rem' }}>
+					{getMessage('pageTranslator_sitePreferences_autoTranslate_title')}
+				</span>
+				<span style={{ marginRight: '.5rem' }}>
+					<Select
+						options={translateSiteOptions}
+						value={translateSite}
+						setValue={setTranslateStateAdaptor}
+					/>
+				</span>
+			</div>
 
 			{showCounters ? (
 				<>
