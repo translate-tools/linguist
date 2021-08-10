@@ -41,6 +41,7 @@ type RecordValue<T extends Record<any, string>> = keyof {
 	[K in keyof T as T[K]]: any;
 };
 
+// TODO: comment this and move to requests or to main component
 export const getTranslatePreferencesForSite = (lang: string, sitePrefs: SitePrefs) => {
 	let translateSite: RecordValue<typeof sitePreferenceOptions> =
 		sitePreferenceOptions.default;
@@ -97,6 +98,16 @@ export const PageTranslatorTab: TabComponent<InitFn<InitData>> = ({
 	// TODO: rename it to `autoTranslateSitePreferences`
 	const [translateSite, setTranslateSite] = useState<string>(initData.translateSite);
 
+	// Update `translateSite` by change `from`
+	useEffect(() => {
+		if (from === undefined) return;
+
+		const actualPreference = getTranslatePreferencesForSite(from, sitePrefs);
+
+		setTranslateSite(actualPreference);
+	}, [from, sitePrefs]);
+
+	// Proxy for send requests by change `translateSite`
 	const setTranslateSiteProxy: any = useCallback(
 		(state: string) => {
 			// Remember
@@ -106,6 +117,8 @@ export const PageTranslatorTab: TabComponent<InitFn<InitData>> = ({
 				autoTranslateIgnoreLanguages: [],
 			};
 
+			// TODO: add option "default for this language" which will remove options for this language
+			// but will not delete entry if it not empty
 			switch (state) {
 			case sitePreferenceOptions.default:
 				// Delete entry and exit

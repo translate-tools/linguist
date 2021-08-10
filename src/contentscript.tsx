@@ -8,6 +8,8 @@ import { ContentScript } from './modules/ContentScript';
 import { PageTranslator } from './modules/PageTranslator/PageTranslator';
 import { SelectTranslator } from './modules/SelectTranslator';
 
+import { getTranslatePreferencesForSite } from './layouts/PageTranslator/PageTranslator@tab';
+
 // Requests
 import { getSitePreferences } from './requests/backend/autoTranslation/sitePreferences/getSitePreferences';
 import { getPageLanguageFactory } from './requests/contentscript/getPageLanguage';
@@ -152,7 +154,7 @@ cs.onLoad(async (initConfig) => {
 
 	// Init page translate
 
-	const pageURL = location.host;
+	const pageHost = location.host;
 
 	// TODO: make it option
 	const isAllowTranslateSameLanguages = true;
@@ -174,34 +176,43 @@ cs.onLoad(async (initConfig) => {
 		// Auto translate page
 		const fromLang = actualPageLanguage;
 		const toLang = config.language;
-		const sitePrefs = await getSitePreferences(pageURL);
+		const sitePrefs = await getSitePreferences(pageHost);
 
-		if (fromLang && (isAllowTranslateSameLanguages || fromLang !== toLang)) {
-			let isNeedAutoTranslate = false;
+		// Skip by common causes
+		if (fromLang === undefined) return;
+		if (fromLang === toLang && !isAllowTranslateSameLanguages) return;
 
-			// Auto translate by host
-			if (sitePrefs !== null) {
-				isNeedAutoTranslate = sitePrefs.enableAutoTranslate;
+		const translateState = getTranslatePreferencesForSite(fromLang, sitePrefs);
+
+		console.warn({ translateState });
+
+		// Skip by site preferences
+		if (translateState === 'never' || translateState === 'neverForThisLang') return;
+
+		let isNeedAutoTranslate = false;
+
+		// Translate by site preferences
+		if (translateState === 'always' || translateState === 'alwaysForThisLang') {
+			isNeedAutoTranslate = true;
+		}
+
+		// Auto translate by language
+		if (!isNeedAutoTranslate) {
+			isNeedAutoTranslate = await hasAutoTranslatedLang(fromLang);
+		}
+
+		if (isNeedAutoTranslate) {
+			const selectTranslator = selectTranslatorRef.value;
+
+			if (
+				selectTranslator !== null &&
+				selectTranslator.isRun() &&
+				config.contentscript.selectTranslator.disableWhileTranslatePage
+			) {
+				selectTranslator.stop();
 			}
 
-			// Auto translate by language
-			if (!isNeedAutoTranslate) {
-				isNeedAutoTranslate = await hasAutoTranslatedLang(fromLang);
-			}
-
-			if (isNeedAutoTranslate) {
-				const selectTranslator = selectTranslatorRef.value;
-
-				if (
-					selectTranslator !== null &&
-					selectTranslator.isRun() &&
-					config.contentscript.selectTranslator.disableWhileTranslatePage
-				) {
-					selectTranslator.stop();
-				}
-
-				pageTranslator.run(fromLang, toLang);
-			}
+			pageTranslator.run(fromLang, toLang);
 		}
 	}, 'interactive');
 });
