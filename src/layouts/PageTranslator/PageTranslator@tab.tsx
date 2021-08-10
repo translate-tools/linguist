@@ -18,7 +18,7 @@ import { untranslatePage } from '../../requests/contentscript/untranslatePage';
 
 import { PageTranslator } from './PageTranslator';
 
-type initData = {
+type InitData = {
 	hostname: string;
 	sitePrefs: ReturnType<typeof getSitePreferences> extends Promise<infer T> ? T : never;
 
@@ -34,7 +34,7 @@ type initData = {
 /**
  * Wrapper on `PageTranslator` to use as tab in `PopupWindow`
  */
-export const PageTranslatorTab: TabComponent<initData> = ({
+export const PageTranslatorTab: TabComponent<InitData> = ({
 	config,
 	translatorFeatures,
 	initData,
@@ -165,7 +165,7 @@ export const PageTranslatorTab: TabComponent<initData> = ({
 	);
 };
 
-PageTranslatorTab.init = async ({ translatorFeatures, config }): Promise<initData> => {
+PageTranslatorTab.init = async ({ translatorFeatures, config }): Promise<InitData> => {
 	// Get current tab hostname
 	const tab = await getCurrentTab();
 

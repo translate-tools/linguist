@@ -51,27 +51,28 @@ export const clearLastTranslation = () => {
 	}
 };
 
+type InitData = {
+	from: string;
+	to: string;
+};
+
 /**
  * Wrapper on `TextTranslator` to use as tab in `PopupWindow`
  */
-export const TextTranslatorTab: TabComponent = ({
+export const TextTranslatorTab: TabComponent<InitData> = ({
 	config,
 	translatorFeatures,
 	id: tabId,
+	initData,
 }) => {
-	// Init state
-	const initData = useRef<Record<string, string>>();
-	if (!initData.current) {
-		initData.current = {
-			from: translatorFeatures.isSupportAutodetect
-				? 'auto'
-				: translatorFeatures.supportedLanguages[0],
-			to: config.language,
-		};
+	// TODO: fix types to `initData` will `unknown` or `T` depends on specifying generic type
+	if (initData === undefined) {
+		throw Error(`Invalid init data`);
 	}
 
-	const [from, setFrom] = useState(initData.current.from);
-	const [to, setTo] = useState(initData.current.to);
+	const { from: initFrom, to: initTo } = initData;
+	const [from, setFrom] = useState(initFrom);
+	const [to, setTo] = useState(initTo);
 
 	const [userInput, setUserInput] = useState('');
 	const [translationData, setTranslationData] =
@@ -206,4 +207,13 @@ export const TextTranslatorTab: TabComponent = ({
 			}}
 		/>
 	);
+};
+
+TextTranslatorTab.init = async ({ translatorFeatures, config }) => {
+	return {
+		from: translatorFeatures.isSupportAutodetect
+			? 'auto'
+			: translatorFeatures.supportedLanguages[0],
+		to: config.language,
+	};
 };
