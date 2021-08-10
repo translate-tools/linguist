@@ -43,16 +43,21 @@ type RecordValue<T extends Record<any, string>> = keyof {
 
 // TODO: comment this and move to requests or to main component
 export const getTranslatePreferencesForSite = (lang: string, sitePrefs: SitePrefs) => {
-	let translateSite: RecordValue<typeof sitePreferenceOptions> =
+	// Set default
+	let translatePreference: RecordValue<typeof sitePreferenceOptions> =
 		sitePreferenceOptions.default;
+
 	if (sitePrefs !== null) {
+		// Set default for site
+		translatePreference = sitePreferenceOptions.defaultForThisLang;
+
 		if (!sitePrefs.enableAutoTranslate) {
-			translateSite = sitePreferenceOptions.never;
+			translatePreference = sitePreferenceOptions.never;
 		} else if (
 			sitePrefs.autoTranslateIgnoreLanguages.length === 0 &&
 			sitePrefs.autoTranslateLanguages.length === 0
 		) {
-			translateSite = sitePreferenceOptions.always;
+			translatePreference = sitePreferenceOptions.always;
 		} else {
 			const isAutoTranslatedLang =
 				sitePrefs.autoTranslateLanguages.indexOf(lang) !== -1;
@@ -60,14 +65,14 @@ export const getTranslatePreferencesForSite = (lang: string, sitePrefs: SitePref
 				sitePrefs.autoTranslateIgnoreLanguages.indexOf(lang) !== -1;
 
 			if (isIgnoredLang) {
-				translateSite = sitePreferenceOptions.neverForThisLang;
+				translatePreference = sitePreferenceOptions.neverForThisLang;
 			} else if (isAutoTranslatedLang) {
-				translateSite = sitePreferenceOptions.alwaysForThisLang;
+				translatePreference = sitePreferenceOptions.alwaysForThisLang;
 			}
 		}
 	}
 
-	return translateSite;
+	return translatePreference;
 };
 
 /**
@@ -125,6 +130,28 @@ export const PageTranslatorTab: TabComponent<InitFn<InitData>> = ({
 				deleteSitePreferences(hostname);
 				setTranslateSite(state);
 				return;
+			case sitePreferenceOptions.defaultForThisLang:
+				// Delete language from everywhere
+				newState.autoTranslateLanguages =
+						newState.autoTranslateLanguages.filter((lang) => lang !== from);
+
+				newState.autoTranslateIgnoreLanguages =
+						newState.autoTranslateIgnoreLanguages.filter(
+							(lang) => lang !== from,
+						);
+
+				if (
+					newState.autoTranslateLanguages.length === 0 &&
+						newState.autoTranslateIgnoreLanguages.length === 0
+				) {
+					// Delete empty entry
+					deleteSitePreferences(hostname);
+					setTranslateSite(state);
+					return;
+				} else {
+					// Break to write changes
+					break;
+				}
 			case sitePreferenceOptions.always:
 				newState.enableAutoTranslate = true;
 				newState.autoTranslateLanguages = [];

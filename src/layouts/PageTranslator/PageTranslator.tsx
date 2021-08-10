@@ -18,8 +18,9 @@ export const cnPageTranslator = cn('PageTranslator');
 
 export const sitePreferenceOptions = {
 	default: 'default',
-	never: 'never',
 	always: 'always',
+	never: 'never',
+	defaultForThisLang: 'defaultForThisLang',
 	alwaysForThisLang: 'alwaysForThisLang',
 	neverForThisLang: 'neverForThisLang',
 } as const;
@@ -88,14 +89,19 @@ export const PageTranslator: FC<PageTranslatorProps> = ({
 
 	const translateSiteOptions = useMemo(
 		() =>
-			['default', 'never', 'always', 'alwaysForThisLang', 'neverForThisLang'].map(
-				(key) => ({
-					id: key,
-					content: getMessage(
-						'pageTranslator_sitePreferences_autoTranslate_' + key,
-					),
-				}),
-			),
+			[
+				'default',
+				'never',
+				'always',
+				'defaultForThisLang',
+				'alwaysForThisLang',
+				'neverForThisLang',
+			].map((key) => ({
+				id: key,
+				content: getMessage(
+					'pageTranslator_sitePreferences_autoTranslate_' + key,
+				),
+			})),
 		[],
 	);
 
