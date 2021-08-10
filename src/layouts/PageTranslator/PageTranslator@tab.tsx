@@ -3,7 +3,6 @@ import React, { useCallback, useEffect, useState } from 'react';
 import { getCurrentTab, getCurrentTabId } from '../../lib/communication';
 import { PageTranslateState } from '../../modules/PageTranslator/PageTranslator';
 import { translateStateUpdateHandler } from '../../modules/PageTranslator/requests';
-import { TabComponent } from '../../pages/popup/layout/PopupWindow';
 
 // Requests
 import { addAutoTranslatedLang } from '../../requests/backend/autoTranslation/autoTranslatedLangs/addAutoTranslatedLang';
@@ -16,6 +15,7 @@ import { getTranslateState } from '../../requests/contentscript/getTranslateStat
 import { translatePage } from '../../requests/contentscript/translatePage';
 import { untranslatePage } from '../../requests/contentscript/untranslatePage';
 
+import { InitFn, TabComponent } from '../../pages/popup/layout/PopupWindow';
 import { PageTranslator } from './PageTranslator';
 
 type InitData = {
@@ -34,7 +34,7 @@ type InitData = {
 /**
  * Wrapper on `PageTranslator` to use as tab in `PopupWindow`
  */
-export const PageTranslatorTab: TabComponent<InitData> = ({
+export const PageTranslatorTab: TabComponent<InitFn<InitData>> = ({
 	config,
 	translatorFeatures,
 	initData,

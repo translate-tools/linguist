@@ -40,20 +40,15 @@ export interface TabData {
 	translatorFeatures: TranslatorFeatures;
 }
 
-export type TabComponent<T = any> = ComponentType<
-	TabData & {
-		initData?: T;
-	}
-> & {
-	/**
-	 * Hook which set init data for component
-	 */
-	init?: (props: TabData) => Promise<T>;
-};
+export type InitFn<T> = (props: TabData) => Promise<T>;
+
+export type TabComponent<I extends unknown | InitFn<any> = unknown> = ComponentType<
+	TabData & { initData: I extends InitFn<infer X> ? X : unknown }
+> & { init: I };
 
 export interface IPopupWindowTab {
 	id: string;
-	component: TabComponent;
+	component: TabComponent<InitFn<any>>;
 }
 
 export interface PopupWindowProps {

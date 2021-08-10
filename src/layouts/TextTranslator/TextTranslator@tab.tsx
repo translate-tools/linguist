@@ -13,7 +13,11 @@ import { tryDecodeObject } from '../../lib/types';
 
 import { translate as sendTranslateRequest } from '../../requests/backend/translate';
 
-import { PopupWindowContext, TabComponent } from '../../pages/popup/layout/PopupWindow';
+import {
+	InitFn,
+	TabComponent,
+	PopupWindowContext,
+} from '../../pages/popup/layout/PopupWindow';
 import { TextTranslator, TextTranslatorProps } from './TextTranslator';
 
 export const lastStateType = makeType({
@@ -59,7 +63,7 @@ type InitData = {
 /**
  * Wrapper on `TextTranslator` to use as tab in `PopupWindow`
  */
-export const TextTranslatorTab: TabComponent<InitData> = ({
+export const TextTranslatorTab: TabComponent<InitFn<InitData>> = ({
 	config,
 	translatorFeatures,
 	id: tabId,
