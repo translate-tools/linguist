@@ -1,4 +1,4 @@
-import { getMigrationsInfo, updateMigrationsInfoItem } from './migrations/migrations';
+import { updateMigrationsInfoItem } from './migrations/migrations';
 
 import { sendRequestToAllCS } from './lib/communication';
 import { getUserLanguage } from './lib/language';
