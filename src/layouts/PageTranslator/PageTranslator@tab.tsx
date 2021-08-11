@@ -211,27 +211,33 @@ export const PageTranslatorTab: TabComponent<InitFn<InitData>> = ({
 	);
 
 	// Define auto translate by language
-	const [translateLang, setTranslateLang] = useState(false);
+	// TODO: preload it
+	const [translateLang, setTranslateLang] = useState('disable');
 
 	// Update `translateLang` while update `from`
 	useEffect(() => {
 		if (from === undefined) {
-			setTranslateLang(false);
+			setTranslateLang('disable');
 			return;
 		}
 
-		hasAutoTranslatedLang(from).then(setTranslateLang);
+		hasAutoTranslatedLang(from).then((state) =>
+			setTranslateLang(state ? 'enable' : 'disable'),
+		);
 	}, [from]);
 
 	const setTranslateLangProxy: any = useCallback(
-		(state: boolean) => {
+		(state: string) => {
 			setTranslateLang(state);
+
+			console.warn('Set state', state);
 
 			if (from === undefined) return;
 
+			// TODO: add other options and use const dictionary
 			// Remember
 			(async () => {
-				if (state) {
+				if (state === 'enable') {
 					addAutoTranslatedLang(from);
 				} else {
 					deleteAutoTranslatedLang(from);
