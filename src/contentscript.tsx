@@ -17,7 +17,7 @@ import { getTranslateStateFactory } from './requests/contentscript/getTranslateS
 import { pingFactory } from './requests/contentscript/ping';
 import { translatePageFactory } from './requests/contentscript/translatePage';
 import { untranslatePageFactory } from './requests/contentscript/untranslatePage';
-import { hasAutoTranslatedLang } from './requests/backend/autoTranslation/autoTranslatedLangs/hasAutoTranslatedLang';
+import { getLanguagePreferences } from './requests/backend/autoTranslation/languagePreferences/getLanguagePreferences';
 
 const cs = new ContentScript();
 
@@ -196,9 +196,14 @@ cs.onLoad(async (initConfig) => {
 			isNeedAutoTranslate = true;
 		}
 
-		// Auto translate by language
-		if (!isNeedAutoTranslate) {
-			isNeedAutoTranslate = await hasAutoTranslatedLang(fromLang);
+		// Consider common language preferences
+		const langPrefs = await getLanguagePreferences(fromLang);
+		if (langPrefs !== null) {
+			// Never translate this language
+			if (!langPrefs) return;
+
+			// Otherwise translate
+			isNeedAutoTranslate = true;
 		}
 
 		if (isNeedAutoTranslate) {

@@ -7,7 +7,7 @@ import { detectLanguage, getMessage } from '../../lib/language';
 import { useTranslateFavorite } from '../../lib/hooks/useTranslateFavorite';
 
 import { getTranslatorFeatures } from '../../requests/backend/getTranslatorFeatures';
-import { getLanguagePreferences } from '../../requests/backend/getLanguagePreferences';
+import { getUserLanguagePreferences } from '../../requests/backend/getUserLanguagePreferences';
 
 // Components
 import { Checkbox } from 'react-elegant-ui/esm/components/Checkbox/Checkbox.bundle/desktop';
@@ -126,7 +126,7 @@ export const SelectTranslatorComponent: FC<SelectTranslatorComponentProps> = ({
 	useEffect(() => {
 		getTranslatorFeatures().then(
 			async ({ supportedLanguages, isSupportAutodetect }) => {
-				const { userLanguage } = await getLanguagePreferences();
+				const userLanguage = await getUserLanguagePreferences();
 
 				let from: string | undefined;
 

@@ -1,4 +1,5 @@
 import * as IDB from 'idb/with-async-ittr';
+import { LanguageInfo } from './languagePreferences/utils';
 import { SiteData } from './sitePreferences/utils';
 
 /**
@@ -12,7 +13,7 @@ export interface DBSchema extends IDB.DBSchema {
 
 	autoTranslatedLanguages: {
 		key: string;
-		value: string;
+		value: LanguageInfo;
 	};
 }
 

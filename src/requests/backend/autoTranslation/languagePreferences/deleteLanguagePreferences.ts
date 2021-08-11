@@ -3,11 +3,11 @@ import { tryDecode, type } from '../../../../lib/types';
 import { RequestHandlerFactory } from '../../../types';
 import { deleteLanguage } from './utils';
 
-export const deleteAutoTranslatedLang = (lang: string): Promise<void> =>
-	bgSendRequest('deleteAutoTranslatedLang', lang);
+export const deleteLanguagePreferences = (lang: string): Promise<void> =>
+	bgSendRequest('deleteLanguagePreferences', lang);
 
-export const deleteAutoTranslatedLangFactory: RequestHandlerFactory = () => {
-	addRequestHandler('deleteAutoTranslatedLang', async (rawData) => {
+export const deleteLanguagePreferencesFactory: RequestHandlerFactory = () => {
+	addRequestHandler('deleteLanguagePreferences', async (rawData) => {
 		const lang = tryDecode(type.string, rawData);
 		await deleteLanguage(lang);
 	});

@@ -5,9 +5,9 @@ import { PageTranslateState } from '../../modules/PageTranslator/PageTranslator'
 import { translateStateUpdateHandler } from '../../modules/PageTranslator/requests';
 
 // Requests
-import { addAutoTranslatedLang } from '../../requests/backend/autoTranslation/autoTranslatedLangs/addAutoTranslatedLang';
-import { deleteAutoTranslatedLang } from '../../requests/backend/autoTranslation/autoTranslatedLangs/deleteAutoTranslatedLang';
-import { hasAutoTranslatedLang } from '../../requests/backend/autoTranslation/autoTranslatedLangs/hasAutoTranslatedLang';
+import { addLanguagePreferences } from '../../requests/backend/autoTranslation/languagePreferences/addLanguagePreferences';
+import { deleteLanguagePreferences } from '../../requests/backend/autoTranslation/languagePreferences/deleteLanguagePreferences';
+import { getLanguagePreferences } from '../../requests/backend/autoTranslation/languagePreferences/getLanguagePreferences';
 import { getSitePreferences } from '../../requests/backend/autoTranslation/sitePreferences/getSitePreferences';
 import { setSitePreferences } from '../../requests/backend/autoTranslation/sitePreferences/setSitePreferences';
 import { getPageLanguage } from '../../requests/contentscript/getPageLanguage';
@@ -221,8 +221,10 @@ export const PageTranslatorTab: TabComponent<InitFn<InitData>> = ({
 			return;
 		}
 
-		hasAutoTranslatedLang(from).then((state) =>
-			setTranslateLang(state ? 'enable' : 'disable'),
+		getLanguagePreferences(from).then((state) =>
+			setTranslateLang(
+				state === null ? 'disable' : state ? 'enable' : 'disableForAll',
+			),
 		);
 	}, [from]);
 
@@ -230,17 +232,17 @@ export const PageTranslatorTab: TabComponent<InitFn<InitData>> = ({
 		(state: string) => {
 			setTranslateLang(state);
 
-			console.warn('Set state', state);
-
 			if (from === undefined) return;
 
-			// TODO: add other options and use const dictionary
+			// TODO: use const dictionary
 			// Remember
 			(async () => {
 				if (state === 'enable') {
-					addAutoTranslatedLang(from);
+					addLanguagePreferences(from, true);
+				} else if (state === 'disableForAll') {
+					addLanguagePreferences(from, false);
 				} else {
-					deleteAutoTranslatedLang(from);
+					deleteLanguagePreferences(from);
 				}
 			})();
 		},
