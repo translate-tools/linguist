@@ -69,11 +69,6 @@ export const TextTranslatorTab: TabComponent<InitFn<InitData>> = ({
 	id: tabId,
 	initData,
 }) => {
-	// TODO: fix types to `initData` will `unknown` or `T` depends on specifying generic type
-	if (initData === undefined) {
-		throw Error(`Invalid init data`);
-	}
-
 	const { from: initFrom, to: initTo } = initData;
 	const [from, setFrom] = useState(initFrom);
 	const [to, setTo] = useState(initTo);

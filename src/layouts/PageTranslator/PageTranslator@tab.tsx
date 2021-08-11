@@ -115,10 +115,6 @@ export const PageTranslatorTab: TabComponent<InitFn<InitData>> = ({
 	translatorFeatures,
 	initData,
 }) => {
-	if (initData === undefined) {
-		throw Error(`Invalid init data`);
-	}
-
 	const {
 		hostname,
 		sitePrefs,
