@@ -12,6 +12,8 @@ import { getSitePreferences } from '../../requests/backend/autoTranslation/siteP
 import { setSitePreferences } from '../../requests/backend/autoTranslation/sitePreferences/setSitePreferences';
 import { getPageLanguage } from '../../requests/contentscript/getPageLanguage';
 import { getTranslateState } from '../../requests/contentscript/getTranslateState';
+
+// TODO: rename it to `enableTranslatePage` and `disableTranslatePage`
 import { translatePage } from '../../requests/contentscript/translatePage';
 import { untranslatePage } from '../../requests/contentscript/untranslatePage';
 
@@ -30,6 +32,7 @@ type InitData = {
 	hostname: string;
 	sitePrefs: SitePrefs;
 
+	languagePreferences: string;
 	translateSite: string;
 	tabId: number;
 	isTranslated: boolean;
@@ -97,6 +100,13 @@ export const isRequireTranslateBySitePreferences = (
 	}
 };
 
+export const mapLanguagePreferences = (state: boolean | null) =>
+	state === null
+		? languagePreferenceOptions.DISABLE
+		: state
+			? languagePreferenceOptions.ENABLE
+			: languagePreferenceOptions.DISABLE_FOR_ALL;
+
 /**
  * Wrapper on `PageTranslator` to use as tab in `PopupWindow`
  */
@@ -123,7 +133,9 @@ export const PageTranslatorTab: TabComponent<InitFn<InitData>> = ({
 	const [to, setTo] = useState<string | undefined>(initTo);
 
 	// TODO: rename it to `autoTranslateSitePreferences`
-	const [translateSite, setTranslateSite] = useState<string>(initData.translateSite);
+	const [sitePreferences, setSitePreferencesState] = useState<string>(
+		initData.translateSite,
+	);
 
 	// Update `translateSite` by change `from`
 	useEffect(() => {
@@ -131,11 +143,11 @@ export const PageTranslatorTab: TabComponent<InitFn<InitData>> = ({
 
 		const actualPreference = getTranslatePreferencesForSite(from, sitePrefs);
 
-		setTranslateSite(actualPreference);
+		setSitePreferencesState(actualPreference);
 	}, [from, sitePrefs]);
 
 	// Proxy for send requests by change `translateSite`
-	const setTranslateSiteProxy: any = useCallback(
+	const setSitePreferencesProxy: any = useCallback(
 		(state: string) => {
 			// Remember
 			const newState: SitePrefs = sitePrefs || {
@@ -144,13 +156,11 @@ export const PageTranslatorTab: TabComponent<InitFn<InitData>> = ({
 				autoTranslateIgnoreLanguages: [],
 			};
 
-			// TODO: add option "default for this language" which will remove options for this language
-			// but will not delete entry if it not empty
 			switch (state) {
 			case sitePreferenceOptions.DEFAULT:
 				// Delete entry and exit
 				deleteSitePreferences(hostname);
-				setTranslateSite(state);
+				setSitePreferencesState(state);
 				return;
 			case sitePreferenceOptions.DEFAULT_FOR_THIS_LANGUAGE:
 				// Delete language from everywhere
@@ -168,7 +178,7 @@ export const PageTranslatorTab: TabComponent<InitFn<InitData>> = ({
 				) {
 					// Delete empty entry
 					deleteSitePreferences(hostname);
-					setTranslateSite(state);
+					setSitePreferencesState(state);
 					return;
 				} else {
 					// Break to write changes
@@ -227,26 +237,25 @@ export const PageTranslatorTab: TabComponent<InitFn<InitData>> = ({
 
 			// TODO: use something like `updateSitePreferences` instead set full data
 			setSitePreferences(hostname, newState);
-			setTranslateSite(state);
+			setSitePreferencesState(state);
 		},
 		[from, hostname, sitePrefs],
 	);
 
 	// Define auto translate by language
-	// TODO: preload it
-	const [translateLang, setTranslateLang] = useState<string>(
-		languagePreferenceOptions.DISABLE,
+	const [languagePreferences, setLanguagePreferencesState] = useState<string>(
+		initData.languagePreferences,
 	);
 
 	// Update `translateLang` while update `from`
 	useEffect(() => {
 		if (from === undefined) {
-			setTranslateLang(languagePreferenceOptions.DISABLE);
+			setLanguagePreferencesState(languagePreferenceOptions.DISABLE);
 			return;
 		}
 
 		getLanguagePreferences(from).then((state) =>
-			setTranslateLang(
+			setLanguagePreferencesState(
 				state === null
 					? languagePreferenceOptions.DISABLE
 					: state
@@ -256,9 +265,9 @@ export const PageTranslatorTab: TabComponent<InitFn<InitData>> = ({
 		);
 	}, [from]);
 
-	const setTranslateLangProxy: any = useCallback(
+	const setLanguagePreferencesProxy: any = useCallback(
 		(state: string) => {
-			setTranslateLang(state);
+			setLanguagePreferencesState(state);
 
 			if (from === undefined) return;
 
@@ -335,10 +344,10 @@ export const PageTranslatorTab: TabComponent<InitFn<InitData>> = ({
 				to,
 				setTo,
 				hostname,
-				translateSite,
-				setTranslateSite: setTranslateSiteProxy,
-				translateLang,
-				setTranslateLang: setTranslateLangProxy,
+				sitePreferences,
+				setSitePreferences: setSitePreferencesProxy,
+				languagePreferences,
+				setLanguagePreferences: setLanguagePreferencesProxy,
 			}}
 		/>
 	);
@@ -393,10 +402,15 @@ PageTranslatorTab.init = async ({ translatorFeatures, config }): Promise<InitDat
 	// Set `translateSite`
 	const translateSite: string = getTranslatePreferencesForSite(from, sitePrefs);
 
+	const languagePreferences = await getLanguagePreferences(from).then(
+		mapLanguagePreferences,
+	);
+
 	return {
 		hostname,
 		sitePrefs,
 
+		languagePreferences,
 		translateSite,
 		tabId,
 		isTranslated,

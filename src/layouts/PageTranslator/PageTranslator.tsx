@@ -34,8 +34,8 @@ export interface PageTranslatorProps
 	extends MutableValue<'from', string | undefined>,
 		MutableValue<'to', string | undefined>,
 		// TODO: use literals
-		MutableValue<'translateSite', string>,
-		MutableValue<'translateLang', string> {
+		MutableValue<'sitePreferences', string>,
+		MutableValue<'languagePreferences', string> {
 	/**
 	 * Features of translator module
 	 */
@@ -62,10 +62,10 @@ export const PageTranslator: FC<PageTranslatorProps> = ({
 	to,
 	setTo,
 	hostname,
-	translateSite,
-	setTranslateSite,
-	translateLang,
-	setTranslateLang,
+	sitePreferences,
+	setSitePreferences,
+	languagePreferences,
+	setLanguagePreferences,
 	showCounters,
 	toggleTranslate,
 	isTranslated,
@@ -89,19 +89,19 @@ export const PageTranslator: FC<PageTranslatorProps> = ({
 		(value: string[] | string | undefined) => {
 			// TODO: check that it is const value
 			if (typeof value === 'string') {
-				setTranslateLang(value);
+				setLanguagePreferences(value);
 			}
 		},
-		[setTranslateLang],
+		[setLanguagePreferences],
 	);
 
 	const setTranslateStateAdaptor = useCallback(
 		(value: string[] | string | undefined) => {
 			if (typeof value === 'string') {
-				setTranslateSite(value);
+				setSitePreferences(value);
 			}
 		},
-		[setTranslateSite],
+		[setSitePreferences],
 	);
 
 	const translateLanguageOptions = useMemo(
@@ -171,7 +171,7 @@ export const PageTranslator: FC<PageTranslatorProps> = ({
 				<span style={{ marginRight: '.5rem' }}>
 					<Select
 						options={translateLanguageOptions}
-						value={translateLang}
+						value={languagePreferences}
 						setValue={setTranslateLangAdaptor}
 					/>
 				</span>
@@ -191,7 +191,7 @@ export const PageTranslator: FC<PageTranslatorProps> = ({
 				<span style={{ marginRight: '.5rem' }}>
 					<Select
 						options={translateSiteOptions}
-						value={translateSite}
+						value={sitePreferences}
 						setValue={setTranslateStateAdaptor}
 					/>
 				</span>
