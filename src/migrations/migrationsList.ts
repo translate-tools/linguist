@@ -1,4 +1,4 @@
-import { migrateSitePreferences } from '../requests/backend/autoTranslation/sitePreferences/migrations';
+import { migrateSitePreferences } from '../requests/backend/autoTranslation/migrations';
 
 export type Migration = () => Promise<any>;
 
