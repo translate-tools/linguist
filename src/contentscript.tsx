@@ -8,7 +8,7 @@ import { ContentScript } from './modules/ContentScript';
 import { PageTranslator } from './modules/PageTranslator/PageTranslator';
 import { SelectTranslator } from './modules/SelectTranslator';
 
-import { getTranslatePreferencesForSite } from './layouts/PageTranslator/PageTranslator@tab';
+import { isRequireTranslateBySitePreferences } from './layouts/PageTranslator/PageTranslator@tab';
 
 // Requests
 import { getSitePreferences } from './requests/backend/autoTranslation/sitePreferences/getSitePreferences';
@@ -176,31 +176,32 @@ cs.onLoad(async (initConfig) => {
 		// Auto translate page
 		const fromLang = actualPageLanguage;
 		const toLang = config.language;
-		const sitePrefs = await getSitePreferences(pageHost);
 
 		// Skip by common causes
 		if (fromLang === undefined) return;
 		if (fromLang === toLang && !isAllowTranslateSameLanguages) return;
 
-		const translateState = getTranslatePreferencesForSite(fromLang, sitePrefs);
-
-		console.warn({ translateState });
-
-		// Skip by site preferences
-		if (translateState === 'never' || translateState === 'neverForThisLang') return;
-
 		let isNeedAutoTranslate = false;
 
-		// Translate by site preferences
-		if (translateState === 'always' || translateState === 'alwaysForThisLang') {
+		// Consider site preferences
+		const sitePreferences = await getSitePreferences(pageHost);
+		const isSiteRequireTranslate = isRequireTranslateBySitePreferences(
+			fromLang,
+			sitePreferences,
+		);
+		if (isSiteRequireTranslate !== null) {
+			// Never translate this site
+			if (!isSiteRequireTranslate) return;
+
+			// Otherwise translate
 			isNeedAutoTranslate = true;
 		}
 
 		// Consider common language preferences
-		const langPrefs = await getLanguagePreferences(fromLang);
-		if (langPrefs !== null) {
+		const isLanguageRequireTranslate = await getLanguagePreferences(fromLang);
+		if (isLanguageRequireTranslate !== null) {
 			// Never translate this language
-			if (!langPrefs) return;
+			if (!isLanguageRequireTranslate) return;
 
 			// Otherwise translate
 			isNeedAutoTranslate = true;

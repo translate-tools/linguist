@@ -16,7 +16,11 @@ import { translatePage } from '../../requests/contentscript/translatePage';
 import { untranslatePage } from '../../requests/contentscript/untranslatePage';
 
 import { InitFn, TabComponent } from '../../pages/popup/layout/PopupWindow';
-import { PageTranslator, sitePreferenceOptions } from './PageTranslator';
+import {
+	languagePreferenceOptions,
+	PageTranslator,
+	sitePreferenceOptions,
+} from './PageTranslator';
 import { deleteSitePreferences } from '../../requests/backend/autoTranslation/sitePreferences/deleteSitePreferences';
 
 type SitePrefs = ReturnType<typeof getSitePreferences> extends Promise<infer T>
@@ -45,19 +49,19 @@ type RecordValue<T extends Record<any, string>> = keyof {
 export const getTranslatePreferencesForSite = (lang: string, sitePrefs: SitePrefs) => {
 	// Set default
 	let translatePreference: RecordValue<typeof sitePreferenceOptions> =
-		sitePreferenceOptions.default;
+		sitePreferenceOptions.DEFAULT;
 
 	if (sitePrefs !== null) {
 		// Set default for site
-		translatePreference = sitePreferenceOptions.defaultForThisLang;
+		translatePreference = sitePreferenceOptions.DEFAULT_FOR_THIS_LANGUAGE;
 
 		if (!sitePrefs.enableAutoTranslate) {
-			translatePreference = sitePreferenceOptions.never;
+			translatePreference = sitePreferenceOptions.NEVER;
 		} else if (
 			sitePrefs.autoTranslateIgnoreLanguages.length === 0 &&
 			sitePrefs.autoTranslateLanguages.length === 0
 		) {
-			translatePreference = sitePreferenceOptions.always;
+			translatePreference = sitePreferenceOptions.ALWAYS;
 		} else {
 			const isAutoTranslatedLang =
 				sitePrefs.autoTranslateLanguages.indexOf(lang) !== -1;
@@ -65,14 +69,32 @@ export const getTranslatePreferencesForSite = (lang: string, sitePrefs: SitePref
 				sitePrefs.autoTranslateIgnoreLanguages.indexOf(lang) !== -1;
 
 			if (isIgnoredLang) {
-				translatePreference = sitePreferenceOptions.neverForThisLang;
+				translatePreference = sitePreferenceOptions.NEVER_FOR_THIS_LANGUAGE;
 			} else if (isAutoTranslatedLang) {
-				translatePreference = sitePreferenceOptions.alwaysForThisLang;
+				translatePreference = sitePreferenceOptions.ALWAYS_FOR_THIS_LANGUAGE;
 			}
 		}
 	}
 
 	return translatePreference;
+};
+
+export const isRequireTranslateBySitePreferences = (
+	lang: string,
+	sitePrefs: SitePrefs,
+) => {
+	const result = getTranslatePreferencesForSite(lang, sitePrefs);
+
+	switch (result) {
+	case sitePreferenceOptions.NEVER:
+	case sitePreferenceOptions.NEVER_FOR_THIS_LANGUAGE:
+		return false;
+	case sitePreferenceOptions.ALWAYS:
+	case sitePreferenceOptions.ALWAYS_FOR_THIS_LANGUAGE:
+		return true;
+	default:
+		return null;
+	}
 };
 
 /**
@@ -125,12 +147,12 @@ export const PageTranslatorTab: TabComponent<InitFn<InitData>> = ({
 			// TODO: add option "default for this language" which will remove options for this language
 			// but will not delete entry if it not empty
 			switch (state) {
-			case sitePreferenceOptions.default:
+			case sitePreferenceOptions.DEFAULT:
 				// Delete entry and exit
 				deleteSitePreferences(hostname);
 				setTranslateSite(state);
 				return;
-			case sitePreferenceOptions.defaultForThisLang:
+			case sitePreferenceOptions.DEFAULT_FOR_THIS_LANGUAGE:
 				// Delete language from everywhere
 				newState.autoTranslateLanguages =
 						newState.autoTranslateLanguages.filter((lang) => lang !== from);
@@ -152,16 +174,16 @@ export const PageTranslatorTab: TabComponent<InitFn<InitData>> = ({
 					// Break to write changes
 					break;
 				}
-			case sitePreferenceOptions.always:
+			case sitePreferenceOptions.ALWAYS:
 				newState.enableAutoTranslate = true;
 				newState.autoTranslateLanguages = [];
 				newState.autoTranslateIgnoreLanguages = [];
 				break;
-			case sitePreferenceOptions.never:
+			case sitePreferenceOptions.NEVER:
 				newState.enableAutoTranslate = false;
 				newState.autoTranslateLanguages = [];
 				break;
-			case sitePreferenceOptions.alwaysForThisLang:
+			case sitePreferenceOptions.ALWAYS_FOR_THIS_LANGUAGE:
 				// Skip invalid language
 				if (from === undefined) break;
 
@@ -180,7 +202,7 @@ export const PageTranslatorTab: TabComponent<InitFn<InitData>> = ({
 				}
 
 				break;
-			case sitePreferenceOptions.neverForThisLang:
+			case sitePreferenceOptions.NEVER_FOR_THIS_LANGUAGE:
 				// Skip invalid language
 				if (from === undefined) break;
 
@@ -212,18 +234,24 @@ export const PageTranslatorTab: TabComponent<InitFn<InitData>> = ({
 
 	// Define auto translate by language
 	// TODO: preload it
-	const [translateLang, setTranslateLang] = useState('disable');
+	const [translateLang, setTranslateLang] = useState<string>(
+		languagePreferenceOptions.DISABLE,
+	);
 
 	// Update `translateLang` while update `from`
 	useEffect(() => {
 		if (from === undefined) {
-			setTranslateLang('disable');
+			setTranslateLang(languagePreferenceOptions.DISABLE);
 			return;
 		}
 
 		getLanguagePreferences(from).then((state) =>
 			setTranslateLang(
-				state === null ? 'disable' : state ? 'enable' : 'disableForAll',
+				state === null
+					? languagePreferenceOptions.DISABLE
+					: state
+						? languagePreferenceOptions.ENABLE
+						: languagePreferenceOptions.DISABLE_FOR_ALL,
 			),
 		);
 	}, [from]);
@@ -234,15 +262,24 @@ export const PageTranslatorTab: TabComponent<InitFn<InitData>> = ({
 
 			if (from === undefined) return;
 
-			// TODO: use const dictionary
 			// Remember
 			(async () => {
-				if (state === 'enable') {
+				switch (state) {
+				case languagePreferenceOptions.ENABLE:
 					addLanguagePreferences(from, true);
-				} else if (state === 'disableForAll') {
+					break;
+
+				case languagePreferenceOptions.DISABLE_FOR_ALL:
 					addLanguagePreferences(from, false);
-				} else {
+					break;
+
+				case languagePreferenceOptions.DISABLE:
 					deleteLanguagePreferences(from);
+					break;
+
+				default:
+					console.error('Data for error below', state);
+					throw new Error(`Unknown type for "translateLang"`);
 				}
 			})();
 		},

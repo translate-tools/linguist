@@ -15,18 +15,25 @@ import './PageTranslator.css';
 
 export const cnPageTranslator = cn('PageTranslator');
 
+export const languagePreferenceOptions = {
+	ENABLE: 'enable',
+	DISABLE: 'disable',
+	DISABLE_FOR_ALL: 'disableForAll',
+} as const;
+
 export const sitePreferenceOptions = {
-	default: 'default',
-	always: 'always',
-	never: 'never',
-	defaultForThisLang: 'defaultForThisLang',
-	alwaysForThisLang: 'alwaysForThisLang',
-	neverForThisLang: 'neverForThisLang',
+	DEFAULT: 'default',
+	ALWAYS: 'always',
+	NEVER: 'never',
+	DEFAULT_FOR_THIS_LANGUAGE: 'defaultForThisLang',
+	ALWAYS_FOR_THIS_LANGUAGE: 'alwaysForThisLang',
+	NEVER_FOR_THIS_LANGUAGE: 'neverForThisLang',
 } as const;
 
 export interface PageTranslatorProps
 	extends MutableValue<'from', string | undefined>,
 		MutableValue<'to', string | undefined>,
+		// TODO: use literals
 		MutableValue<'translateSite', string>,
 		MutableValue<'translateLang', string> {
 	/**
@@ -80,6 +87,7 @@ export const PageTranslator: FC<PageTranslatorProps> = ({
 	// TODO: #important fix types in library to allow set types strict
 	const setTranslateLangAdaptor = useCallback(
 		(value: string[] | string | undefined) => {
+			// TODO: check that it is const value
 			if (typeof value === 'string') {
 				setTranslateLang(value);
 			}
@@ -89,7 +97,7 @@ export const PageTranslator: FC<PageTranslatorProps> = ({
 
 	const setTranslateStateAdaptor = useCallback(
 		(value: string[] | string | undefined) => {
-			if (typeof value === 'string' && value in sitePreferenceOptions) {
+			if (typeof value === 'string') {
 				setTranslateSite(value);
 			}
 		},
@@ -98,7 +106,11 @@ export const PageTranslator: FC<PageTranslatorProps> = ({
 
 	const translateLanguageOptions = useMemo(
 		() =>
-			['enable', 'disable', 'disableForAll'].map((key) => ({
+			[
+				languagePreferenceOptions.ENABLE,
+				languagePreferenceOptions.DISABLE,
+				languagePreferenceOptions.DISABLE_FOR_ALL,
+			].map((key) => ({
 				id: key,
 				content: getMessage(
 					'pageTranslator_commonPreferences_autoTranslate_' + key,
@@ -110,12 +122,12 @@ export const PageTranslator: FC<PageTranslatorProps> = ({
 	const translateSiteOptions = useMemo(
 		() =>
 			[
-				'default',
-				'never',
-				'always',
-				'defaultForThisLang',
-				'alwaysForThisLang',
-				'neverForThisLang',
+				sitePreferenceOptions.DEFAULT,
+				sitePreferenceOptions.NEVER,
+				sitePreferenceOptions.ALWAYS,
+				sitePreferenceOptions.DEFAULT_FOR_THIS_LANGUAGE,
+				sitePreferenceOptions.ALWAYS_FOR_THIS_LANGUAGE,
+				sitePreferenceOptions.NEVER_FOR_THIS_LANGUAGE,
 			].map((key) => ({
 				id: key,
 				content: getMessage(
