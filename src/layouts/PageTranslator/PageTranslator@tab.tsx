@@ -29,12 +29,13 @@ type SitePrefs = ReturnType<typeof getSitePreferences> extends Promise<infer T>
 	? T
 	: never;
 type InitData = {
-	hostname: string;
-	sitePrefs: SitePrefs;
-
-	languagePreferences: string;
-	translateSite: string;
 	tabId: number;
+	hostname: string;
+
+	sitePreferences: SitePrefs;
+	languagePreferences: string;
+	sitePreferencesForLanguage: string;
+
 	isTranslated: boolean;
 	counters: PageTranslateState;
 	direction: {
@@ -49,27 +50,30 @@ type RecordValue<T extends Record<any, string>> = keyof {
 };
 
 // TODO: comment this and move to requests or to main component
-export const getTranslatePreferencesForSite = (lang: string, sitePrefs: SitePrefs) => {
+export const getTranslatePreferencesForSite = (
+	lang: string,
+	sitePreferences: SitePrefs,
+) => {
 	// Set default
 	let translatePreference: RecordValue<typeof sitePreferenceOptions> =
 		sitePreferenceOptions.DEFAULT;
 
-	if (sitePrefs !== null) {
+	if (sitePreferences !== null) {
 		// Set default for site
 		translatePreference = sitePreferenceOptions.DEFAULT_FOR_THIS_LANGUAGE;
 
-		if (!sitePrefs.enableAutoTranslate) {
+		if (!sitePreferences.enableAutoTranslate) {
 			translatePreference = sitePreferenceOptions.NEVER;
 		} else if (
-			sitePrefs.autoTranslateIgnoreLanguages.length === 0 &&
-			sitePrefs.autoTranslateLanguages.length === 0
+			sitePreferences.autoTranslateIgnoreLanguages.length === 0 &&
+			sitePreferences.autoTranslateLanguages.length === 0
 		) {
 			translatePreference = sitePreferenceOptions.ALWAYS;
 		} else {
 			const isAutoTranslatedLang =
-				sitePrefs.autoTranslateLanguages.indexOf(lang) !== -1;
+				sitePreferences.autoTranslateLanguages.indexOf(lang) !== -1;
 			const isIgnoredLang =
-				sitePrefs.autoTranslateIgnoreLanguages.indexOf(lang) !== -1;
+				sitePreferences.autoTranslateIgnoreLanguages.indexOf(lang) !== -1;
 
 			if (isIgnoredLang) {
 				translatePreference = sitePreferenceOptions.NEVER_FOR_THIS_LANGUAGE;
@@ -84,9 +88,9 @@ export const getTranslatePreferencesForSite = (lang: string, sitePrefs: SitePref
 
 export const isRequireTranslateBySitePreferences = (
 	lang: string,
-	sitePrefs: SitePrefs,
+	sitePreferences: SitePrefs,
 ) => {
-	const result = getTranslatePreferencesForSite(lang, sitePrefs);
+	const result = getTranslatePreferencesForSite(lang, sitePreferences);
 
 	switch (result) {
 	case sitePreferenceOptions.NEVER:
@@ -117,7 +121,6 @@ export const PageTranslatorTab: TabComponent<InitFn<InitData>> = ({
 }) => {
 	const {
 		hostname,
-		sitePrefs,
 		tabId,
 		isTranslated: isTranslatedInit,
 		counters: countersInit,
@@ -128,25 +131,27 @@ export const PageTranslatorTab: TabComponent<InitFn<InitData>> = ({
 	const [from, setFrom] = useState<string | undefined>(initFrom);
 	const [to, setTo] = useState<string | undefined>(initTo);
 
-	// TODO: rename it to `autoTranslateSitePreferences`
 	const [sitePreferences, setSitePreferencesState] = useState<string>(
-		initData.translateSite,
+		initData.sitePreferencesForLanguage,
 	);
 
 	// Update `translateSite` by change `from`
 	useEffect(() => {
 		if (from === undefined) return;
 
-		const actualPreference = getTranslatePreferencesForSite(from, sitePrefs);
+		const actualPreference = getTranslatePreferencesForSite(
+			from,
+			initData.sitePreferences,
+		);
 
 		setSitePreferencesState(actualPreference);
-	}, [from, sitePrefs]);
+	}, [from, initData.sitePreferences]);
 
 	// Proxy for send requests by change `translateSite`
 	const setSitePreferencesProxy: any = useCallback(
 		(state: string) => {
 			// Remember
-			const newState: SitePrefs = sitePrefs || {
+			const newState: SitePrefs = initData.sitePreferences || {
 				enableAutoTranslate: true,
 				autoTranslateLanguages: [],
 				autoTranslateIgnoreLanguages: [],
@@ -235,7 +240,7 @@ export const PageTranslatorTab: TabComponent<InitFn<InitData>> = ({
 			setSitePreferences(hostname, newState);
 			setSitePreferencesState(state);
 		},
-		[from, hostname, sitePrefs],
+		[from, hostname, initData.sitePreferences],
 	);
 
 	// Define auto translate by language
@@ -362,7 +367,7 @@ PageTranslatorTab.init = async ({ translatorFeatures, config }): Promise<InitDat
 	const hostname = url.host;
 
 	// Get site preferences
-	const sitePrefs = await getSitePreferences(hostname);
+	const sitePreferences = await getSitePreferences(hostname);
 
 	// Get tab id
 	const tabId = await getCurrentTabId();
@@ -395,20 +400,23 @@ PageTranslatorTab.init = async ({ translatorFeatures, config }): Promise<InitDat
 		to = config.language;
 	}
 
-	// Set `translateSite`
-	const translateSite: string = getTranslatePreferencesForSite(from, sitePrefs);
-
+	// Set preferences for host and for language
+	const sitePreferencesForLanguage = getTranslatePreferencesForSite(
+		from,
+		sitePreferences,
+	);
 	const languagePreferences = await getLanguagePreferences(from).then(
 		mapLanguagePreferences,
 	);
 
 	return {
-		hostname,
-		sitePrefs,
-
-		languagePreferences,
-		translateSite,
 		tabId,
+		hostname,
+
+		sitePreferences,
+		languagePreferences,
+		sitePreferencesForLanguage,
+
 		isTranslated,
 		counters,
 		direction: {
