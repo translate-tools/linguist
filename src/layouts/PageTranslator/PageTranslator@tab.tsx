@@ -1,6 +1,9 @@
 import React, { useCallback, useEffect, useState } from 'react';
 
+import { RecordValue } from '../../types/utils';
 import { getCurrentTab, getCurrentTabId } from '../../lib/communication';
+import { useStateWithProxy } from '../../lib/hooks/useStateWithProxy';
+
 import { PageTranslateState } from '../../modules/PageTranslator/PageTranslator';
 import { translateStateUpdateHandler } from '../../modules/PageTranslator/requests';
 
@@ -10,6 +13,7 @@ import { deleteLanguagePreferences } from '../../requests/backend/autoTranslatio
 import { getLanguagePreferences } from '../../requests/backend/autoTranslation/languagePreferences/getLanguagePreferences';
 import { getSitePreferences } from '../../requests/backend/autoTranslation/sitePreferences/getSitePreferences';
 import { setSitePreferences } from '../../requests/backend/autoTranslation/sitePreferences/setSitePreferences';
+import { deleteSitePreferences } from '../../requests/backend/autoTranslation/sitePreferences/deleteSitePreferences';
 import { getPageLanguage } from '../../requests/contentscript/getPageLanguage';
 import { getTranslateState } from '../../requests/contentscript/getTranslateState';
 
@@ -23,8 +27,6 @@ import {
 	PageTranslator,
 	sitePreferenceOptions,
 } from './PageTranslator';
-import { deleteSitePreferences } from '../../requests/backend/autoTranslation/sitePreferences/deleteSitePreferences';
-import { useStateWithProxy } from '../../lib/hooks/useStateWithProxy';
 import { PageTranslationStorage } from './utils/PageTranslationStorage';
 
 type SitePrefs = ReturnType<typeof getSitePreferences> extends Promise<infer T>
@@ -46,11 +48,6 @@ type InitData = {
 	};
 
 	isShowOptions: boolean;
-};
-
-// TODO: move it to lib
-type RecordValue<T extends Record<any, string>> = keyof {
-	[K in keyof T as T[K]]: any;
 };
 
 // TODO: comment this and move to requests or to main component
