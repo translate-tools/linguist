@@ -1,4 +1,4 @@
-import React, { FC, useCallback, useMemo } from 'react';
+import React, { FC, ReactEventHandler, useCallback, useMemo } from 'react';
 import { cn } from '@bem-react/classname';
 
 import { Button } from '../../components/Button/Button.bundle/desktop';
@@ -33,6 +33,7 @@ export const sitePreferenceOptions = {
 export interface PageTranslatorProps
 	extends MutableValue<'from', string | undefined>,
 		MutableValue<'to', string | undefined>,
+		MutableValue<'isShowOptions', boolean>,
 		// TODO: use literals
 		MutableValue<'sitePreferences', string>,
 		MutableValue<'languagePreferences', string> {
@@ -70,6 +71,9 @@ export const PageTranslator: FC<PageTranslatorProps> = ({
 	toggleTranslate,
 	isTranslated,
 	counters,
+
+	isShowOptions,
+	setIsShowOptions,
 }) => {
 	const actionBtnText = getMessage(
 		isTranslated ? 'pageTranslator_showOriginal' : 'pageTranslator_translatePage',
@@ -137,6 +141,11 @@ export const PageTranslator: FC<PageTranslatorProps> = ({
 		[],
 	);
 
+	const onToggleSpoiler: ReactEventHandler<HTMLDetailsElement> = useCallback(
+		(evt) => setIsShowOptions(!!(evt.target as HTMLDetailsElement).open),
+		[setIsShowOptions],
+	);
+
 	return (
 		<div className={cnPageTranslator()}>
 			<div
@@ -156,46 +165,53 @@ export const PageTranslator: FC<PageTranslatorProps> = ({
 				/>
 			</div>
 
-			{/* TODO: use classes for styles */}
-			<div>
-				<h4
-					className={cnPageTranslator('Header')}
-					style={{ marginBottom: '.4rem', marginTop: '1rem' }}
-				>
-					{getMessage('pageTranslator_commonPreferences_title') +
-						` (${localizedLang})`}
-				</h4>
-				<span style={{ marginRight: '.5rem' }}>
-					{getMessage('pageTranslator_option_autoTranslate')}
-				</span>
-				<span style={{ marginRight: '.5rem' }}>
-					<Select
-						options={translateLanguageOptions}
-						value={languagePreferences}
-						setValue={setTranslateLangAdaptor}
-					/>
-				</span>
-			</div>
+			{/* TODO: move to component `Spoiler` */}
+			<details open={isShowOptions} onToggle={onToggleSpoiler}>
+				<summary>{getMessage('pageTranslator_showOptions')}</summary>
+				<div>
+					{/* TODO: use classes for styles */}
+					<div>
+						<h4
+							className={cnPageTranslator('Header')}
+							style={{ marginBottom: '.4rem', marginTop: '1rem' }}
+						>
+							{getMessage('pageTranslator_commonPreferences_title') +
+								` (${localizedLang})`}
+						</h4>
+						<span style={{ marginRight: '.5rem' }}>
+							{getMessage('pageTranslator_option_autoTranslate')}
+						</span>
+						<span style={{ marginRight: '.5rem' }}>
+							<Select
+								options={translateLanguageOptions}
+								value={languagePreferences}
+								setValue={setTranslateLangAdaptor}
+							/>
+						</span>
+					</div>
 
-			{/* TODO: use classes for styles */}
-			<div>
-				<h4
-					className={cnPageTranslator('Header')}
-					style={{ marginBottom: '.4rem', marginTop: '1rem' }}
-				>
-					{getMessage('pageTranslator_sitePreferences_title')} {escapedHostname}
-				</h4>
-				<span style={{ marginRight: '.5rem' }}>
-					{getMessage('pageTranslator_option_autoTranslate')}
-				</span>
-				<span style={{ marginRight: '.5rem' }}>
-					<Select
-						options={translateSiteOptions}
-						value={sitePreferences}
-						setValue={setTranslateStateAdaptor}
-					/>
-				</span>
-			</div>
+					{/* TODO: use classes for styles */}
+					<div>
+						<h4
+							className={cnPageTranslator('Header')}
+							style={{ marginBottom: '.4rem', marginTop: '1rem' }}
+						>
+							{getMessage('pageTranslator_sitePreferences_title')}{' '}
+							{escapedHostname}
+						</h4>
+						<span style={{ marginRight: '.5rem' }}>
+							{getMessage('pageTranslator_option_autoTranslate')}
+						</span>
+						<span style={{ marginRight: '.5rem' }}>
+							<Select
+								options={translateSiteOptions}
+								value={sitePreferences}
+								setValue={setTranslateStateAdaptor}
+							/>
+						</span>
+					</div>
+				</div>
+			</details>
 
 			{showCounters ? (
 				<>

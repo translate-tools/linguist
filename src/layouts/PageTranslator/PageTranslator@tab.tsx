@@ -24,6 +24,8 @@ import {
 	sitePreferenceOptions,
 } from './PageTranslator';
 import { deleteSitePreferences } from '../../requests/backend/autoTranslation/sitePreferences/deleteSitePreferences';
+import { useStateWithProxy } from '../../lib/hooks/useStateWithProxy';
+import { PageTranslationStorage } from './utils/PageTranslationStorage';
 
 type SitePrefs = ReturnType<typeof getSitePreferences> extends Promise<infer T>
 	? T
@@ -42,6 +44,8 @@ type InitData = {
 		from: string;
 		to: string;
 	};
+
+	isShowOptions: boolean;
 };
 
 // TODO: move it to lib
@@ -332,6 +336,18 @@ export const PageTranslatorTab: TabComponent<InitFn<InitData>> = ({
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
+	const [isShowOptions, setIsShowOptions] = useStateWithProxy<boolean>(
+		initData.isShowOptions,
+		(state, setState) => {
+			// Update data
+			if (typeof state !== 'function') {
+				PageTranslationStorage.updateData({ optionsSpoilerState: !!state });
+			}
+
+			setState(state);
+		},
+	);
+
 	return (
 		<PageTranslator
 			translatorFeatures={translatorFeatures}
@@ -349,6 +365,9 @@ export const PageTranslatorTab: TabComponent<InitFn<InitData>> = ({
 				setSitePreferences: setSitePreferencesProxy,
 				languagePreferences,
 				setLanguagePreferences: setLanguagePreferencesProxy,
+
+				isShowOptions,
+				setIsShowOptions,
 			}}
 		/>
 	);
@@ -409,6 +428,10 @@ PageTranslatorTab.init = async ({ translatorFeatures, config }): Promise<InitDat
 		mapLanguagePreferences,
 	);
 
+	const isShowOptions = await PageTranslationStorage.getData().then(
+		(data) => data.optionsSpoilerState,
+	);
+
 	return {
 		tabId,
 		hostname,
@@ -423,5 +446,7 @@ PageTranslatorTab.init = async ({ translatorFeatures, config }): Promise<InitDat
 			from,
 			to,
 		},
+
+		isShowOptions,
 	};
 };
