@@ -235,7 +235,10 @@ export const PageTranslator: FC<PageTranslatorProps> = ({
 						</span>
 					</div>
 				</>
-			) : undefined}
+			) : (
+				// Placeholder
+				<div style={{ marginBottom: '.5rem' }} />
+			)}
 		</div>
 	);
 };
