@@ -13,10 +13,10 @@ import { isRequireTranslateBySitePreferences } from './layouts/PageTranslator/Pa
 // Requests
 import { getSitePreferences } from './requests/backend/autoTranslation/sitePreferences/getSitePreferences';
 import { getPageLanguageFactory } from './requests/contentscript/getPageLanguage';
-import { getTranslateStateFactory } from './requests/contentscript/getTranslateState';
+import { getPageTranslateStateFactory } from './requests/contentscript/pageTranslation/getPageTranslateState';
 import { pingFactory } from './requests/contentscript/ping';
-import { translatePageFactory } from './requests/contentscript/translatePage';
-import { untranslatePageFactory } from './requests/contentscript/untranslatePage';
+import { enableTranslatePageFactory } from './requests/contentscript/pageTranslation/enableTranslatePage';
+import { disableTranslatePageFactory } from './requests/contentscript/pageTranslation/disableTranslatePage';
 import { getLanguagePreferences } from './requests/backend/autoTranslation/languagePreferences/getLanguagePreferences';
 
 const cs = new ContentScript();
@@ -138,10 +138,10 @@ cs.onLoad(async (initConfig) => {
 
 	const factories = [
 		pingFactory,
-		getTranslateStateFactory,
+		getPageTranslateStateFactory,
 		getPageLanguageFactory,
-		translatePageFactory,
-		untranslatePageFactory,
+		enableTranslatePageFactory,
+		disableTranslatePageFactory,
 	];
 
 	factories.forEach((factory) => {

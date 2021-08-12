@@ -1,6 +1,6 @@
 import { TypeOf } from 'io-ts';
 
-import { PageTranslateStateSignature } from '../../../requests/contentscript/getTranslateState';
+import { PageTranslateStateSignature } from '../../../requests/contentscript/pageTranslation/getPageTranslateState';
 import { addRequestHandler, bgSendRequest } from '../../../lib/communication';
 import { tryDecode } from '../../../lib/types';
 

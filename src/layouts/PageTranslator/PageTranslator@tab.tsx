@@ -15,11 +15,10 @@ import { getSitePreferences } from '../../requests/backend/autoTranslation/siteP
 import { setSitePreferences } from '../../requests/backend/autoTranslation/sitePreferences/setSitePreferences';
 import { deleteSitePreferences } from '../../requests/backend/autoTranslation/sitePreferences/deleteSitePreferences';
 import { getPageLanguage } from '../../requests/contentscript/getPageLanguage';
-import { getTranslateState } from '../../requests/contentscript/getTranslateState';
 
-// TODO: rename it to `enableTranslatePage` and `disableTranslatePage`
-import { translatePage } from '../../requests/contentscript/translatePage';
-import { untranslatePage } from '../../requests/contentscript/untranslatePage';
+import { getPageTranslateState } from '../../requests/contentscript/pageTranslation/getPageTranslateState';
+import { enableTranslatePage } from '../../requests/contentscript/pageTranslation/enableTranslatePage';
+import { disableTranslatePage } from '../../requests/contentscript/pageTranslation/disableTranslatePage';
 
 import { InitFn, TabComponent } from '../../pages/popup/layout/PopupWindow';
 import {
@@ -310,11 +309,11 @@ export const PageTranslatorTab: TabComponent<InitFn<InitData>> = ({
 
 		// TODO: handle errors
 		if (!isTranslated) {
-			translatePage(tabId, from, to)
+			enableTranslatePage(tabId, from, to)
 				.then(() => setIsTranslated(true))
 				.catch(console.warn);
 		} else {
-			untranslatePage(tabId)
+			disableTranslatePage(tabId)
 				.then(() => setIsTranslated(false))
 				.catch(console.warn);
 		}
@@ -389,7 +388,9 @@ PageTranslatorTab.init = async ({ translatorFeatures, config }): Promise<InitDat
 	const tabId = await getCurrentTabId();
 
 	// Get state
-	const { isTranslated, counters, translateDirection } = await getTranslateState(tabId);
+	const { isTranslated, counters, translateDirection } = await getPageTranslateState(
+		tabId,
+	);
 
 	let from: string | null = null;
 	let to: string | null = null;
