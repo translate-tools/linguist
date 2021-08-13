@@ -2,6 +2,7 @@ import { TypeOf } from 'io-ts';
 import { browser } from 'webextension-polyfill-ts';
 
 import { tryDecode, type } from '../../../lib/types';
+import { Migration } from '../../../migrations/migrationsList';
 import { LangCodeWithAuto, LangCode } from '../../../types/runtime';
 
 // TODO: migrate data from `TextTranslator.lastState`
@@ -81,3 +82,22 @@ export class TextTranslatorStorage {
 		}
 	};
 }
+
+// Migrate data from old versions
+export const migrateTextTranslatorStorage: Migration = async () => {
+	const lastState = localStorage.getItem('TextTranslator.lastState');
+
+	// Skip
+	if (lastState === null) return;
+
+	// Try decode and set data
+	try {
+		const decodedData = JSON.parse(lastState);
+		TextTranslatorStorage.setData(decodedData);
+	} catch (error) {
+		// Do nothing, because invalid data here it is not our responsibility domain
+	}
+
+	// Clear data
+	localStorage.removeItem('TextTranslator.lastState');
+};

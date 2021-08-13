@@ -1,4 +1,5 @@
 import { migrateSitePreferences } from '../requests/backend/autoTranslation/migrations';
+import { migrateTextTranslatorStorage } from '../layouts/TextTranslator/TextTranslator.utils/TextTranslatorStorage';
 
 export type Migration = () => Promise<any>;
 
@@ -11,7 +12,10 @@ export type Migration = () => Promise<any>;
  * NOTE: migration must be lazy i.e. run only by condition and only once
  */
 export const migrateAll = async () => {
-	const migrations: Migration[] = [migrateSitePreferences];
+	const migrations: Migration[] = [
+		migrateSitePreferences,
+		migrateTextTranslatorStorage,
+	];
 
 	console.log('Start migrations');
 
