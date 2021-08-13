@@ -6,15 +6,21 @@ export const type = t;
 /**
  * Helper for decode data by type
  */
-export const tryDecode = <T>(type: t.Type<T>, data: any) => {
+export function tryDecode<T>(type: t.Type<T>, data: any): T;
+export function tryDecode<T>(type: t.Type<T>, data: any, defaultData: T): T;
+export function tryDecode<T>(type: t.Type<T>, data: any, defaultData?: T) {
 	const decodedData = type.decode(data);
 	if (isRight(decodedData)) {
 		return decodedData.right;
 	}
 
+	if (arguments.length >= 3) {
+		return defaultData as T;
+	}
+
 	console.error('Data for the error below', data);
 	throw new TypeError('Invalid type');
-};
+}
 
 /**
  * Same as `tryDecode` but only for objects and more verbose
