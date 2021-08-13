@@ -143,11 +143,12 @@ export const PageTranslator: FC<PageTranslatorProps> = ({
 	);
 
 	return (
-		<div className={cnPageTranslator()}>
-			<div
-				className={cnPageTranslator('Direction')}
-				style={{ marginBottom: '1rem' }}
-			>
+		<div
+			className={cnPageTranslator(null, [
+				cnPageTranslator('Container', { indent: 'vertical' }),
+			])}
+		>
+			<div className={cnPageTranslator('PageTranslation')}>
 				<Button view="action" onPress={toggleTranslate}>
 					{actionBtnText}
 				</Button>{' '}
@@ -161,51 +162,46 @@ export const PageTranslator: FC<PageTranslatorProps> = ({
 				/>
 			</div>
 
+			{/* Options */}
 			<Spoiler
 				title={getMessage('pageTranslator_showOptions')}
 				open={isShowOptions}
 				onToggle={setIsShowOptions}
 			>
-				{/* TODO: use classes for styles */}
-				<div>
-					<h4
-						className={cnPageTranslator('Header')}
-						style={{ marginBottom: '.4rem', marginTop: '1rem' }}
-					>
-						{getMessage('pageTranslator_commonPreferences_title') +
-							` (${localizedLang})`}
-					</h4>
-					<span style={{ marginRight: '.5rem' }}>
-						{getMessage('pageTranslator_option_autoTranslate')}
-					</span>
-					<span style={{ marginRight: '.5rem' }}>
-						<Select
-							options={translateLanguageOptions}
-							value={languagePreferences}
-							setValue={setTranslateLangAdaptor}
-						/>
-					</span>
-				</div>
+				<div className={cnPageTranslator('Container', { indent: 'vertical' })}>
+					<div className={cnPageTranslator('Option')}>
+						<h4 className={cnPageTranslator('Header')}>
+							{getMessage('pageTranslator_commonPreferences_title') +
+								` (${localizedLang})`}
+						</h4>
+						<span className={cnPageTranslator('OptionTitle')}>
+							{getMessage('pageTranslator_option_autoTranslate')}
+						</span>
+						<span className={cnPageTranslator('OptionValue')}>
+							<Select
+								options={translateLanguageOptions}
+								value={languagePreferences}
+								setValue={setTranslateLangAdaptor}
+							/>
+						</span>
+					</div>
 
-				{/* TODO: use classes for styles */}
-				<div>
-					<h4
-						className={cnPageTranslator('Header')}
-						style={{ marginBottom: '.4rem', marginTop: '1rem' }}
-					>
-						{getMessage('pageTranslator_sitePreferences_title')}{' '}
-						{escapedHostname}
-					</h4>
-					<span style={{ marginRight: '.5rem' }}>
-						{getMessage('pageTranslator_option_autoTranslate')}
-					</span>
-					<span style={{ marginRight: '.5rem' }}>
-						<Select
-							options={translateSiteOptions}
-							value={sitePreferences}
-							setValue={setTranslateStateAdaptor}
-						/>
-					</span>
+					<div className={cnPageTranslator('Option')}>
+						<h4 className={cnPageTranslator('Header')}>
+							{getMessage('pageTranslator_sitePreferences_title')}{' '}
+							{escapedHostname}
+						</h4>
+						<span className={cnPageTranslator('OptionTitle')}>
+							{getMessage('pageTranslator_option_autoTranslate')}
+						</span>
+						<span className={cnPageTranslator('OptionValue')}>
+							<Select
+								options={translateSiteOptions}
+								value={sitePreferences}
+								setValue={setTranslateStateAdaptor}
+							/>
+						</span>
+					</div>
 				</div>
 			</Spoiler>
 
@@ -237,7 +233,7 @@ export const PageTranslator: FC<PageTranslatorProps> = ({
 				</>
 			) : (
 				// Placeholder
-				<div style={{ marginBottom: '.5rem' }} />
+				<div className={cnPageTranslator('Placeholder')} />
 			)}
 		</div>
 	);

@@ -7,7 +7,7 @@
 }
 
 .PageTranslator-Header {
-	margin: 0 0 var(--typography-layout-indent-m-all);
+	margin: var(--typography-layout-indent-l-all) 0 var(--typography-layout-indent-m-all);
 }
 
 /* Counter */
@@ -44,4 +44,28 @@
 
 .PageTranslator-ListItem:not(:last-child) {
 	margin-block-end: var(--typography-controls-indent-m);
+}
+
+/* Placeholder */
+.PageTranslator-Placeholder {
+	margin-bottom: 0.5rem;
+	/* margin-bottom: var(--typography-layout-indent-m-all); */
+}
+
+/* Option */
+.PageTranslator-Option {
+}
+
+.PageTranslator-OptionTitle {
+	margin-right: var(--typography-controls-indent-l);
+}
+
+/* Indent for space to select list */
+.PageTranslator-OptionValue {
+	margin-right: var(--typography-controls-indent-l);
+}
+
+/* Container */
+.PageTranslator-Container_indent_vertical > :not(:last-child) {
+	margin-block-end: var(--typography-controls-indent-l);
 }
