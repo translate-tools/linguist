@@ -26,7 +26,7 @@ import {
 	PageTranslator,
 	sitePreferenceOptions,
 } from './PageTranslator';
-import { PageTranslationStorage } from './utils/PageTranslationStorage';
+import { PageTranslationStorage } from './PageTranslator.utils/PageTranslationStorage';
 
 type SitePrefs = ReturnType<typeof getSitePreferences> extends Promise<infer T>
 	? T
