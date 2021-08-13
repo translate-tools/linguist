@@ -71,4 +71,13 @@ export class TextTranslatorStorage {
 	};
 
 	public static clear = async () => TextTranslatorStorage.setData(null);
+
+	public static forgetText = async () => {
+		const data = await TextTranslatorStorage.getData();
+
+		if (data !== null) {
+			data.translate = null;
+			TextTranslatorStorage.setData(data);
+		}
+	};
 }

@@ -194,7 +194,7 @@ cfg.subscribe((newProps, oldProps) => {
 		oldProps.textTranslator?.rememberText === true
 	) {
 		// NOTE: it is async operation
-		TextTranslatorStorage.clear();
+		TextTranslatorStorage.forgetText();
 	}
 
 	sendRequestToAllCS('configUpdated');
