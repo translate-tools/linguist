@@ -1,15 +1,6 @@
 import React, { useContext, useEffect, useRef, useState } from 'react';
-import {
-	type as makeType,
-	union as unionType,
-	null as nullType,
-	string as stringType,
-} from 'io-ts';
 import { useDelayCallback } from 'react-elegant-ui/esm/hooks/useDelayCallback';
 import { useFocusVisible } from '@react-aria/interactions';
-
-import { LangCode, LangCodeWithAuto } from '../../types/runtime';
-import { tryDecodeObject } from '../../lib/types';
 
 import { translate as sendTranslateRequest } from '../../requests/backend/translate';
 
@@ -19,45 +10,15 @@ import {
 	PopupWindowContext,
 } from '../../pages/popup/layout/PopupWindow';
 import { TextTranslator, TextTranslatorProps } from './TextTranslator';
-
-export const lastStateType = makeType({
-	from: LangCodeWithAuto,
-	to: LangCode,
-	translate: unionType([
-		makeType({
-			text: stringType,
-			translate: stringType,
-		}),
-		nullType,
-	]),
-});
-
-/**
- * Clear data of last translation
- */
-export const clearLastTranslation = () => {
-	const lastStateRaw = localStorage.getItem('TextTranslator.lastState');
-
-	if (lastStateRaw !== null) {
-		try {
-			const lastStateParsed = JSON.parse(lastStateRaw);
-			const lastState = tryDecodeObject(lastStateType, lastStateParsed);
-			lastState.translate = null;
-
-			const serializedData = JSON.stringify(lastState);
-			localStorage.setItem('TextTranslator.lastState', serializedData);
-		} catch (error) {
-			console.error(error);
-
-			//  Clear storage
-			localStorage.removeItem('TextTranslator.lastState');
-		}
-	}
-};
+import { TextTranslatorStorage } from './TextTranslator.utils/TextTranslatorStorage';
 
 type InitData = {
 	from: string;
 	to: string;
+	lastTranslate: {
+		text: string;
+		translate: string;
+	} | null;
 };
 
 /**
@@ -73,57 +34,10 @@ export const TextTranslatorTab: TabComponent<InitFn<InitData>> = ({
 	const [from, setFrom] = useState(initFrom);
 	const [to, setTo] = useState(initTo);
 
-	const [userInput, setUserInput] = useState('');
-	const [translationData, setTranslationData] =
-		useState<TextTranslatorProps['translationData']>(null);
-
-	// Try recovery last translate state
-	const [isInit, setIsInit] = useState(false);
-	useEffect(() => {
-		const lastStateRaw = localStorage.getItem('TextTranslator.lastState');
-		if (lastStateRaw !== null) {
-			try {
-				const lastStateParsed = JSON.parse(lastStateRaw);
-				const lastState = tryDecodeObject(lastStateType, lastStateParsed);
-
-				const { isSupportAutodetect, supportedLanguages } = translatorFeatures;
-				const {
-					from: lastFrom,
-					to: lastTo,
-					translate: lastTranslate,
-				} = lastState;
-
-				if (
-					(lastFrom === 'auto' && isSupportAutodetect) ||
-					supportedLanguages.indexOf(lastFrom) !== -1
-				) {
-					setFrom(lastFrom);
-				} else {
-					throw new Error(`Invalid property "from" in lastState`);
-				}
-
-				if (supportedLanguages.indexOf(lastTo) !== -1) {
-					setTo(lastTo);
-				} else {
-					throw new Error(`Invalid property "to" in lastState`);
-				}
-
-				// Recovery text
-				if (config.textTranslator.rememberText && lastTranslate !== null) {
-					setUserInput(lastTranslate.text);
-					setTranslationData(lastTranslate);
-				}
-			} catch (err) {
-				console.error(err);
-
-				//  Clear storage
-				localStorage.removeItem('TextTranslator.lastState');
-			}
-		}
-
-		setIsInit(true);
-		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, []);
+	const [userInput, setUserInput] = useState(initData.lastTranslate?.text ?? '');
+	const [translationData, setTranslationData] = useState<
+		TextTranslatorProps['translationData']
+	>(initData.lastTranslate ?? null);
 
 	// Remember user input
 	const serializeLenLimit = 100000;
@@ -140,13 +54,12 @@ export const TextTranslatorTab: TabComponent<InitFn<InitData>> = ({
 					translationData.text.length <= serializeLenLimit &&
 					translationData.translate.length <= serializeLenLimit;
 
-				const stringData = JSON.stringify({
-					from,
-					to,
+				TextTranslatorStorage.setData({
+					// Cast string to `langCode`
+					from: from as any,
+					to: to as any,
 					translate: rememberText ? translationData : null,
 				});
-
-				localStorage.setItem('TextTranslator.lastState', stringData);
 			} catch (err) {
 				console.error(err);
 			}
@@ -182,10 +95,8 @@ export const TextTranslatorTab: TabComponent<InitFn<InitData>> = ({
 	// `noTranslate` need to prevent update right after change `noTranslate`
 	const [noTranslate, setNoTranslate] = useState(true);
 	useEffect(() => {
-		if (isInit) {
-			setNoTranslate(false);
-		}
-	}, [isInit]);
+		setNoTranslate(false);
+	}, []);
 
 	return (
 		<TextTranslator
@@ -209,10 +120,35 @@ export const TextTranslatorTab: TabComponent<InitFn<InitData>> = ({
 };
 
 TextTranslatorTab.init = async ({ translatorFeatures, config }) => {
-	return {
-		from: translatorFeatures.isSupportAutodetect
-			? 'auto'
-			: translatorFeatures.supportedLanguages[0],
-		to: config.language,
-	};
+	let from = translatorFeatures.isSupportAutodetect
+		? 'auto'
+		: translatorFeatures.supportedLanguages[0];
+	let to = config.language;
+
+	// Try recovery state
+	let lastTranslate: InitData['lastTranslate'] = null;
+
+	const lastState = await TextTranslatorStorage.getData();
+	if (lastState !== null) {
+		const { isSupportAutodetect, supportedLanguages } = translatorFeatures;
+		const { from: lastFrom, to: lastTo, translate } = lastState;
+
+		if (
+			(lastFrom === 'auto' && isSupportAutodetect) ||
+			supportedLanguages.indexOf(lastFrom) !== -1
+		) {
+			from = lastFrom;
+		}
+
+		if (supportedLanguages.indexOf(lastTo) !== -1) {
+			to = lastTo;
+		}
+
+		// Recovery text
+		if (config.textTranslator.rememberText && translate !== null) {
+			lastTranslate = translate;
+		}
+	}
+
+	return { from, to, lastTranslate };
 };

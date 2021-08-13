@@ -10,7 +10,10 @@ import {
 	translatorModules,
 } from './modules/Background';
 import { AppConfig, AppConfigType } from './types/runtime';
-import { clearLastTranslation as clearTextTranslatorState } from './layouts/TextTranslator/TextTranslator@tab';
+
+import { migrateAll } from './migrations/migrationsList';
+
+import { TextTranslatorStorage } from './layouts/TextTranslator/TextTranslator.utils/TextTranslatorStorage';
 
 // Request handlers
 import { updateConfigFactory } from './requests/backend/updateConfig';
@@ -37,7 +40,6 @@ import { findTranslationFactory } from './requests/backend/translations/findTran
 import { deleteTranslationFactory } from './requests/backend/translations/deleteTranslation';
 import { getTranslationsFactory } from './requests/backend/translations/getTranslations';
 import { clearTranslationsFactory } from './requests/backend/translations/clearTranslations';
-import { migrateAll } from './migrations/migrationsList';
 
 // Debug
 // TODO: write tests for translators in core dir
@@ -191,7 +193,8 @@ cfg.subscribe((newProps, oldProps) => {
 		newProps.textTranslator.rememberText === false &&
 		oldProps.textTranslator?.rememberText === true
 	) {
-		clearTextTranslatorState();
+		// NOTE: it is async operation
+		TextTranslatorStorage.clear();
 	}
 
 	sendRequestToAllCS('configUpdated');
