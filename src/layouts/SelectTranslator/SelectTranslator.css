@@ -10,7 +10,10 @@
 	color: var(--color-typo-primary);
 	background: var(--select-translator-fill-color);
 	border: 1px solid var(--color-control-type-blank-border-color-base);
+	
+	/* Define styles explicit to avoid inherit of page styles. Yes, "reset all" is not work for all */
 	text-align: initial;
+	font-weight: normal;
 }
 
 .SelectTranslator > *:not(:first-child) {
