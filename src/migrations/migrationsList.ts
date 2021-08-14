@@ -1,6 +1,12 @@
+import { AbstractVersionedStorage, ClassObject, VersionedStorage } from '../types/utils';
+import { getMigrationsInfo, updateMigrationsInfoItem } from './migrations';
+
+// Storages
+import { TextTranslatorStorage } from '../layouts/TextTranslator/TextTranslator.utils/TextTranslatorStorage';
+import { PopupWindowStorage } from '../pages/popup/layout/PopupWindow.utils/PopupWindowStorage';
+
+// Standalone migrations
 import { migrateSitePreferences } from '../requests/backend/autoTranslation/migrations';
-import { migrateTextTranslatorStorage } from '../layouts/TextTranslator/TextTranslator.utils/TextTranslatorStorage';
-import { migratePopupWindowStorage } from '../pages/popup/layout/PopupWindow.utils/PopupWindowStorage';
 
 export type Migration = () => Promise<any>;
 
@@ -13,14 +19,36 @@ export type Migration = () => Promise<any>;
  * NOTE: migration must be lazy i.e. run only by condition and only once
  */
 export const migrateAll = async () => {
-	const migrations: Migration[] = [
-		migrateSitePreferences,
-		migrateTextTranslatorStorage,
-		migratePopupWindowStorage,
+	const storages: ClassObject<AbstractVersionedStorage, VersionedStorage>[] = [
+		PopupWindowStorage,
+		TextTranslatorStorage,
 	];
+
+	const migrations: Migration[] = [migrateSitePreferences];
 
 	console.log('Start migrations');
 
+	// Update storages
+	const { storageVersions } = await getMigrationsInfo();
+	for (const storage of storages) {
+		const name = storage.name;
+		const version = storage.storageVersion;
+
+		// Skip unchanged versions
+		if (name in storageVersions && version === storageVersions[name]) continue;
+
+		// Run update
+		const oldVersion = storageVersions[name] ?? null;
+		await storage.updateStorageVersion(oldVersion);
+
+		// Update storage version
+		storageVersions[name] = version;
+	}
+
+	// Update storages versions in DB
+	await updateMigrationsInfoItem({ storageVersions });
+
+	// Run other migrations
 	for (const migration of migrations) {
 		await migration().catch((error) => {
 			console.error('Migration error', error);

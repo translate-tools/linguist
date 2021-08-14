@@ -6,6 +6,7 @@ import { tryDecode, type } from '../lib/types';
 const migrationsSignature = type.type({
 	appConfig: type.number,
 	autoTranslateDB: type.number,
+	storageVersions: type.record(type.string, type.number),
 });
 
 type Data = TypeOf<typeof migrationsSignature>;
@@ -13,6 +14,7 @@ type Data = TypeOf<typeof migrationsSignature>;
 const initData: Data = {
 	appConfig: 0,
 	autoTranslateDB: 0,
+	storageVersions: {},
 };
 
 export const getMigrationsInfo = async () => {
