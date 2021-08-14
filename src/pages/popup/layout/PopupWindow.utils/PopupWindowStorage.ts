@@ -1,8 +1,9 @@
 import { TypeOf } from 'io-ts';
 import { browser } from 'webextension-polyfill-ts';
-import { tryDecode, type } from '../../../../lib/types';
 
-// TODO: migrate data from `PopupPage.tabSet#` prefix in `localStorage`
+import { tryDecode, type } from '../../../../lib/types';
+import { Migration } from '../../../../migrations/migrationsList';
+
 export class PopupWindowStorage {
 	public static readonly storeName = 'PopupWindowStorage';
 	public static readonly storageSignature = type.type({
@@ -68,3 +69,25 @@ export class PopupWindowStorage {
 		});
 	};
 }
+
+export const migratePopupWindowStorage: Migration = async () => {
+	// Migrate data from `localStorage`
+	const keyPrefix = 'PopupPage.tabSet#';
+	for (const key of Object.keys(localStorage)) {
+		// Skip not match keys
+		if (!key.startsWith(keyPrefix)) continue;
+
+		// Copy
+		const value = localStorage.getItem(key);
+		if (typeof value === 'string') {
+			// Cut prefix to get hash from key
+			const hash = key.slice(keyPrefix.length);
+
+			// Write data
+			await PopupWindowStorage.setActiveTab(hash, value);
+		}
+
+		// Remove
+		localStorage.removeItem(key);
+	}
+};

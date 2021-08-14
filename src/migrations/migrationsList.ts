@@ -1,5 +1,6 @@
 import { migrateSitePreferences } from '../requests/backend/autoTranslation/migrations';
 import { migrateTextTranslatorStorage } from '../layouts/TextTranslator/TextTranslator.utils/TextTranslatorStorage';
+import { migratePopupWindowStorage } from '../pages/popup/layout/PopupWindow.utils/PopupWindowStorage';
 
 export type Migration = () => Promise<any>;
 
@@ -15,6 +16,7 @@ export const migrateAll = async () => {
 	const migrations: Migration[] = [
 		migrateSitePreferences,
 		migrateTextTranslatorStorage,
+		migratePopupWindowStorage,
 	];
 
 	console.log('Start migrations');
