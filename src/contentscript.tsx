@@ -8,7 +8,7 @@ import { ContentScript } from './modules/ContentScript';
 import { PageTranslator } from './modules/PageTranslator/PageTranslator';
 import { SelectTranslator } from './modules/SelectTranslator';
 
-import { isRequireTranslateBySitePreferences } from './layouts/PageTranslator/PageTranslator@tab';
+import { isRequireTranslateBySitePreferences } from './layouts/PageTranslator/PageTranslator.utils/utils';
 
 // Requests
 import { getSitePreferences } from './requests/backend/autoTranslation/sitePreferences/getSitePreferences';
