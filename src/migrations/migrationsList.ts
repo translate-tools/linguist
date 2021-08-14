@@ -20,7 +20,6 @@ export type Migration = () => Promise<any>;
  * NOTE: migration must be lazy i.e. run only by condition and only once
  */
 export const migrateAll = async () => {
-	// TODO: verify names to prevent duplicates
 	const storages: ClassObject<AbstractVersionedStorage, VersionedStorage>[] = [
 		// TODO: remove cast
 		ConfigStorage as unknown as ClassObject<
@@ -34,6 +33,23 @@ export const migrateAll = async () => {
 	const migrations: Migration[] = [migrateSitePreferences];
 
 	console.log('Start migrations');
+
+	// Verify storages
+	storages
+		.map((storage, index) => {
+			const storageName = storage.publicName;
+			if (typeof storageName !== 'string' || storageName.length === 0) {
+				console.error('Data for error below', { index, storageName });
+				throw new TypeError('Storage must have name');
+			}
+			return storageName;
+		})
+		.forEach((storageName, index, names) => {
+			if (names.indexOf(storageName) !== index) {
+				console.error('Data for error below', { index, storageName });
+				throw new Error('Storage names must be unique');
+			}
+		});
 
 	// Update storages
 	const { storageVersions } = await getMigrationsInfo();
