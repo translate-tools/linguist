@@ -1,10 +1,13 @@
 import { TypeOf } from 'io-ts';
 import { browser } from 'webextension-polyfill-ts';
 
-import { tryDecode, type } from '../../../../lib/types';
 import { Migration } from '../../../../migrations/migrationsList';
+import { tryDecode, type } from '../../../../lib/types';
+import { AbstractVersionedStorage } from '../../../../types/utils';
 
-export class PopupWindowStorage {
+export class PopupWindowStorage extends AbstractVersionedStorage {
+	static storageVersion = 1;
+
 	public static readonly storeName = 'PopupWindowStorage';
 	public static readonly storageSignature = type.type({
 		/**

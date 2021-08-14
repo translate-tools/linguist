@@ -1,10 +1,12 @@
 import { TypeOf } from 'io-ts';
 import { browser } from 'webextension-polyfill-ts';
-import { tryDecode, type } from '../../../lib/types';
 
-// TODO: add interface for storages
-// TODO: Move `PopupPage.tabSet` to storage
-export class PageTranslationStorage {
+import { tryDecode, type } from '../../../lib/types';
+import { AbstractVersionedStorage } from '../../../types/utils';
+
+export class PageTranslationStorage extends AbstractVersionedStorage {
+	static storageVersion = 1;
+
 	public static readonly storeName = 'PageTranslationStorage';
 	public static readonly storageSignature = type.type({
 		optionsSpoilerState: type.boolean,

@@ -1,12 +1,14 @@
 import { TypeOf } from 'io-ts';
 import { browser } from 'webextension-polyfill-ts';
 
-import { tryDecode, type } from '../../../lib/types';
 import { Migration } from '../../../migrations/migrationsList';
+import { tryDecode, type } from '../../../lib/types';
 import { LangCodeWithAuto, LangCode } from '../../../types/runtime';
+import { AbstractVersionedStorage } from '../../../types/utils';
 
-// TODO: migrate data from `TextTranslator.lastState`
-export class TextTranslatorStorage {
+export class TextTranslatorStorage extends AbstractVersionedStorage {
+	static storageVersion = 1;
+
 	public static readonly storeName = 'TextTranslatorStorage';
 	public static readonly storageSignature = type.union([
 		type.type({
