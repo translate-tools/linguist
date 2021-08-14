@@ -1,6 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react';
 
-import { RecordValue } from '../../types/utils';
 import { getCurrentTab, getCurrentTabId } from '../../lib/communication';
 import { useStateWithProxy } from '../../lib/hooks/useStateWithProxy';
 
@@ -26,11 +25,16 @@ import {
 	PageTranslator,
 	sitePreferenceOptions,
 } from './PageTranslator';
+import {
+	getTranslatePreferencesForSite,
+	mapLanguagePreferences,
+} from './PageTranslator.utils/utils';
 import { PageTranslationStorage } from './PageTranslator.utils/PageTranslationStorage';
 
-type SitePrefs = ReturnType<typeof getSitePreferences> extends Promise<infer T>
+export type SitePrefs = ReturnType<typeof getSitePreferences> extends Promise<infer T>
 	? T
 	: never;
+
 type InitData = {
 	tabId: number;
 	hostname: string;
@@ -49,68 +53,7 @@ type InitData = {
 	isShowOptions: boolean;
 };
 
-// TODO: comment this and move to requests or to main component
-export const getTranslatePreferencesForSite = (
-	lang: string,
-	sitePreferences: SitePrefs,
-) => {
-	// Set default
-	let translatePreference: RecordValue<typeof sitePreferenceOptions> =
-		sitePreferenceOptions.DEFAULT;
-
-	if (sitePreferences !== null) {
-		// Set default for site
-		translatePreference = sitePreferenceOptions.DEFAULT_FOR_THIS_LANGUAGE;
-
-		if (!sitePreferences.enableAutoTranslate) {
-			translatePreference = sitePreferenceOptions.NEVER;
-		} else if (
-			sitePreferences.autoTranslateIgnoreLanguages.length === 0 &&
-			sitePreferences.autoTranslateLanguages.length === 0
-		) {
-			translatePreference = sitePreferenceOptions.ALWAYS;
-		} else {
-			const isAutoTranslatedLang =
-				sitePreferences.autoTranslateLanguages.indexOf(lang) !== -1;
-			const isIgnoredLang =
-				sitePreferences.autoTranslateIgnoreLanguages.indexOf(lang) !== -1;
-
-			if (isIgnoredLang) {
-				translatePreference = sitePreferenceOptions.NEVER_FOR_THIS_LANGUAGE;
-			} else if (isAutoTranslatedLang) {
-				translatePreference = sitePreferenceOptions.ALWAYS_FOR_THIS_LANGUAGE;
-			}
-		}
-	}
-
-	return translatePreference;
-};
-
-export const isRequireTranslateBySitePreferences = (
-	lang: string,
-	sitePreferences: SitePrefs,
-) => {
-	const result = getTranslatePreferencesForSite(lang, sitePreferences);
-
-	switch (result) {
-	case sitePreferenceOptions.NEVER:
-	case sitePreferenceOptions.NEVER_FOR_THIS_LANGUAGE:
-		return false;
-	case sitePreferenceOptions.ALWAYS:
-	case sitePreferenceOptions.ALWAYS_FOR_THIS_LANGUAGE:
-		return true;
-	default:
-		return null;
-	}
-};
-
-export const mapLanguagePreferences = (state: boolean | null) =>
-	state === null
-		? languagePreferenceOptions.DISABLE
-		: state
-			? languagePreferenceOptions.ENABLE
-			: languagePreferenceOptions.DISABLE_FOR_ALL;
-
+// TODO: review and refactor to simplify
 /**
  * Wrapper on `PageTranslator` to use as tab in `PopupWindow`
  */
