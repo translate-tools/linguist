@@ -7,7 +7,7 @@
 	"icons": {
 		"128": "res/logo-icon.svg"
 	},
-	"permissions": ["<all_urls>", "storage"],
+	"permissions": ["<all_urls>", "storage", "tabs"],
 	"web_accessible_resources": ["common.css", "contentscript.css"],
 	"background": {
 		"scripts": ["common.js", "background.js"]
