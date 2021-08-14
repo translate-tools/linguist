@@ -20,6 +20,7 @@ import '../../polyfills/scrollfix';
 // Tabs
 import { TextTranslatorTab } from '../../layouts/TextTranslator/TextTranslator@tab';
 import { PageTranslatorTab } from '../../layouts/PageTranslator/PageTranslator@tab';
+import { PopupWindowStorage } from './layout/PopupWindow.utils/PopupWindowStorage';
 
 interface PopupPageProps {
 	rootElement: HTMLElement;
@@ -57,6 +58,7 @@ const PopupPage: FC<PopupPageProps> = ({ rootElement }) => {
 
 		const tabsHash = tabs
 			.map(({ id }) => id)
+			// Sort for independent hash of string order
 			.sort((str1, str2) => {
 				if (str1 > str2) {
 					return 1;
@@ -67,7 +69,7 @@ const PopupPage: FC<PopupPageProps> = ({ rootElement }) => {
 			})
 			.join(';');
 
-		return `PopupPage.tabSet#${tabsHash}`;
+		return tabsHash;
 	}, [tabs]);
 
 	const isRememberLastTab = config?.popup.rememberLastTab;
@@ -77,7 +79,7 @@ const PopupPage: FC<PopupPageProps> = ({ rootElement }) => {
 			if (isRememberLastTab) {
 				const tabsHash = getTabsHash();
 				if (tabsHash !== null) {
-					localStorage.setItem(tabsHash, id);
+					PopupWindowStorage.setActiveTab(tabsHash, id);
 				}
 			}
 
@@ -141,17 +143,17 @@ const PopupPage: FC<PopupPageProps> = ({ rootElement }) => {
 		if (!config.popup.rememberLastTab || tabsHash === null) {
 			setActiveTabProxy(firstTabId);
 		} else {
-			const lastActiveTab = localStorage.getItem(tabsHash);
-
-			// Validate tab id
-			if (
-				lastActiveTab !== null &&
-				tabs.findIndex(({ id }) => id === lastActiveTab) !== -1
-			) {
-				setActiveTabProxy(lastActiveTab);
-			} else {
-				setActiveTabProxy(firstTabId);
-			}
+			PopupWindowStorage.getActiveTab(tabsHash).then((lastActiveTab) => {
+				// Validate tab id
+				if (
+					lastActiveTab !== null &&
+					tabs.findIndex(({ id }) => id === lastActiveTab) !== -1
+				) {
+					setActiveTabProxy(lastActiveTab);
+				} else {
+					setActiveTabProxy(firstTabId);
+				}
+			});
 		}
 	}, [config, getTabsHash, setActiveTabProxy, tabs]);
 
