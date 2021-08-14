@@ -6,7 +6,7 @@ import { LangCodeWithAuto, LangCode } from '../../../types/runtime';
 import { AbstractVersionedStorage } from '../../../types/utils';
 
 export class TextTranslatorStorage extends AbstractVersionedStorage {
-	static storageVersion = 1;
+	static storageVersion = 2;
 
 	public static readonly storeName = 'TextTranslatorStorage';
 	public static readonly storageSignature = type.union([
@@ -92,7 +92,7 @@ export class TextTranslatorStorage extends AbstractVersionedStorage {
 		// Try decode and set data
 		try {
 			const decodedData = JSON.parse(lastState);
-			TextTranslatorStorage.setData(decodedData);
+			await TextTranslatorStorage.setData(decodedData);
 		} catch (error) {
 			// Do nothing, because invalid data here it is not our responsibility domain
 		}
