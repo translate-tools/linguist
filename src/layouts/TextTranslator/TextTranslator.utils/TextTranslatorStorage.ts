@@ -7,7 +7,7 @@ import { LangCodeWithAuto, LangCode } from '../../../types/runtime';
 
 // TODO: migrate data from `TextTranslator.lastState`
 export class TextTranslatorStorage {
-	public static readonly storeName = 'TextTranslatorStorageTabState';
+	public static readonly storeName = 'TextTranslatorStorage';
 	public static readonly storageSignature = type.union([
 		type.type({
 			from: LangCodeWithAuto,

@@ -5,7 +5,7 @@ import { tryDecode, type } from '../../../lib/types';
 // TODO: add interface for storages
 // TODO: Move `PopupPage.tabSet` to storage
 export class PageTranslationStorage {
-	public static readonly storeName = 'PageTranslationTabState';
+	public static readonly storeName = 'PageTranslationStorage';
 	public static readonly storageSignature = type.type({
 		optionsSpoilerState: type.boolean,
 	});
