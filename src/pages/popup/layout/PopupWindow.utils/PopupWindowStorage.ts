@@ -5,6 +5,7 @@ import { tryDecode, type } from '../../../../lib/types';
 import { AbstractVersionedStorage } from '../../../../types/utils';
 
 export class PopupWindowStorage extends AbstractVersionedStorage {
+	static publicName = 'PopupWindowStorage';
 	static storageVersion = 1;
 
 	public static readonly storeName = 'PopupWindowStorage';

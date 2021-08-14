@@ -16,7 +16,8 @@ export type Middleware<T extends t.Props> = (
 
 // TODO: move to async storage
 export class ConfigStorage<T extends t.Props> extends AbstractVersionedStorage {
-	public static storageVersion = 1;
+	static publicName = 'ConfigStorage';
+	static storageVersion = 1;
 
 	private readonly storageName = 'config.Main';
 	private readonly types: T;

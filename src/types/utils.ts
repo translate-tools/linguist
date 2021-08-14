@@ -40,6 +40,11 @@ export type RecordValue<T extends Record<any, string | number>> = keyof RecordVa
  */
 export interface VersionedStorage {
 	/**
+	 * Public name for write in versions DB
+	 */
+	publicName: string;
+
+	/**
 	 * Storage version must be increase with every change of storage structure.
 	 *
 	 * While run application this version will compared to version from storages database and if it different, will call method `updateStorageVersion`

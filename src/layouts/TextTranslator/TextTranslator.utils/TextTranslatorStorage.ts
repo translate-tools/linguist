@@ -6,6 +6,7 @@ import { LangCodeWithAuto, LangCode } from '../../../types/runtime';
 import { AbstractVersionedStorage } from '../../../types/utils';
 
 export class TextTranslatorStorage extends AbstractVersionedStorage {
+	static publicName = 'TextTranslatorStorage';
 	static storageVersion = 2;
 
 	public static readonly storeName = 'TextTranslatorStorage';
