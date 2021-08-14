@@ -52,7 +52,7 @@ export interface VersionedStorage {
 	 * This method may be used to implement migration data between application versions,
 	 * such as migrations must run only by condition
 	 */
-	updateStorageVersion: (_prevVersion: number | null) => Promise<void>;
+	updateStorageVersion: (prevVersion: number | null) => Promise<void>;
 }
 
 /**

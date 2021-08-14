@@ -1,7 +1,6 @@
 import { TypeOf } from 'io-ts';
 import { browser } from 'webextension-polyfill-ts';
 
-import { Migration } from '../../../../migrations/migrationsList';
 import { tryDecode, type } from '../../../../lib/types';
 import { AbstractVersionedStorage } from '../../../../types/utils';
 
@@ -71,26 +70,26 @@ export class PopupWindowStorage extends AbstractVersionedStorage {
 			activeTab: mergedActiveTab,
 		});
 	};
-}
 
-export const migratePopupWindowStorage: Migration = async () => {
-	// Migrate data from `localStorage`
-	const keyPrefix = 'PopupPage.tabSet#';
-	for (const key of Object.keys(localStorage)) {
-		// Skip not match keys
-		if (!key.startsWith(keyPrefix)) continue;
+	public static async updateStorageVersion() {
+		// Migrate data from `localStorage`
+		const keyPrefix = 'PopupPage.tabSet#';
+		for (const key of Object.keys(localStorage)) {
+			// Skip not match keys
+			if (!key.startsWith(keyPrefix)) continue;
 
-		// Copy
-		const value = localStorage.getItem(key);
-		if (typeof value === 'string') {
-			// Cut prefix to get hash from key
-			const hash = key.slice(keyPrefix.length);
+			// Copy
+			const value = localStorage.getItem(key);
+			if (typeof value === 'string') {
+				// Cut prefix to get hash from key
+				const hash = key.slice(keyPrefix.length);
 
-			// Write data
-			await PopupWindowStorage.setActiveTab(hash, value);
+				// Write data
+				await PopupWindowStorage.setActiveTab(hash, value);
+			}
+
+			// Remove
+			localStorage.removeItem(key);
 		}
-
-		// Remove
-		localStorage.removeItem(key);
 	}
-};
+}

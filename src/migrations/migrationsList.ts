@@ -2,8 +2,9 @@ import { AbstractVersionedStorage, ClassObject, VersionedStorage } from '../type
 import { getMigrationsInfo, updateMigrationsInfoItem } from './migrations';
 
 // Storages
-import { TextTranslatorStorage } from '../layouts/TextTranslator/TextTranslator.utils/TextTranslatorStorage';
+import { ConfigStorage } from '../modules/ConfigStorage/ConfigStorage';
 import { PopupWindowStorage } from '../pages/popup/layout/PopupWindow.utils/PopupWindowStorage';
+import { TextTranslatorStorage } from '../layouts/TextTranslator/TextTranslator.utils/TextTranslatorStorage';
 
 // Standalone migrations
 import { migrateSitePreferences } from '../requests/backend/autoTranslation/migrations';
@@ -20,6 +21,11 @@ export type Migration = () => Promise<any>;
  */
 export const migrateAll = async () => {
 	const storages: ClassObject<AbstractVersionedStorage, VersionedStorage>[] = [
+		// TODO: remove cast
+		ConfigStorage as unknown as ClassObject<
+			AbstractVersionedStorage,
+			VersionedStorage
+		>,
 		PopupWindowStorage,
 		TextTranslatorStorage,
 	];

@@ -1,7 +1,6 @@
 import { TypeOf } from 'io-ts';
 import { browser } from 'webextension-polyfill-ts';
 
-import { Migration } from '../../../migrations/migrationsList';
 import { tryDecode, type } from '../../../lib/types';
 import { LangCodeWithAuto, LangCode } from '../../../types/runtime';
 import { AbstractVersionedStorage } from '../../../types/utils';
@@ -83,23 +82,22 @@ export class TextTranslatorStorage extends AbstractVersionedStorage {
 			TextTranslatorStorage.setData(data);
 		}
 	};
-}
 
-// Migrate data from old versions
-export const migrateTextTranslatorStorage: Migration = async () => {
-	const lastState = localStorage.getItem('TextTranslator.lastState');
+	public static async updateStorageVersion() {
+		const lastState = localStorage.getItem('TextTranslator.lastState');
 
-	// Skip
-	if (lastState === null) return;
+		// Skip
+		if (lastState === null) return;
 
-	// Try decode and set data
-	try {
-		const decodedData = JSON.parse(lastState);
-		TextTranslatorStorage.setData(decodedData);
-	} catch (error) {
-		// Do nothing, because invalid data here it is not our responsibility domain
+		// Try decode and set data
+		try {
+			const decodedData = JSON.parse(lastState);
+			TextTranslatorStorage.setData(decodedData);
+		} catch (error) {
+			// Do nothing, because invalid data here it is not our responsibility domain
+		}
+
+		// Clear data
+		localStorage.removeItem('TextTranslator.lastState');
 	}
-
-	// Clear data
-	localStorage.removeItem('TextTranslator.lastState');
-};
+}

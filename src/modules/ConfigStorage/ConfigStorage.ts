@@ -2,6 +2,7 @@ import * as t from 'io-ts';
 import { isEqual, cloneDeep } from 'lodash';
 
 import { tryDecode, tryDecodeObject } from '../../lib/types';
+import { AbstractVersionedStorage } from '../../types/utils';
 
 export type Callback<T extends t.Props> = (
 	newProps: Partial<t.TypeOfProps<T>>,
@@ -13,7 +14,10 @@ export type Middleware<T extends t.Props> = (
 	currentProps: t.TypeOfProps<T>,
 ) => boolean;
 
-export class ConfigStorage<T extends t.Props> {
+// TODO: move to async storage
+export class ConfigStorage<T extends t.Props> extends AbstractVersionedStorage {
+	public static storageVersion = 1;
+
 	private readonly storageName = 'config.Main';
 	private readonly types: T;
 
@@ -22,6 +26,8 @@ export class ConfigStorage<T extends t.Props> {
 	private readonly defaultData?: Partial<t.TypeOfProps<T>>;
 
 	constructor(types: T, defaultData?: Partial<t.TypeOfProps<T>>) {
+		super();
+
 		this.types = types;
 
 		if (defaultData !== undefined) {
