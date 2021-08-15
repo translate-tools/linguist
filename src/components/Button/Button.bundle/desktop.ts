@@ -1,9 +1,10 @@
 import { compose, composeU, ExtractProps } from 'react-elegant-ui/esm/lib/compose';
 import { withRegistry } from '@bem-react/di';
 
-import { Button as DesktopButton } from 'react-elegant-ui/esm/components/Button/Button@desktop';
+import { Button as PatchedButton } from '../Button';
 
 import { ButtonDesktopRegistry } from 'react-elegant-ui/esm/components/Button/Button.registry/desktop';
+import { withFocusVisible } from 'react-elegant-ui/esm/hocs/withFocusVisible';
 
 import { withModButtonViewDefault } from 'react-elegant-ui/esm/components/Button/_view/Button_view_default';
 import { withModButtonViewClear } from 'react-elegant-ui/esm/components/Button/_view/Button_view_clear';
@@ -19,8 +20,11 @@ import { withModButtonPressAnimation } from 'react-elegant-ui/esm/components/But
 import { withModButtonTypeLink } from 'react-elegant-ui/esm/components/Button/_type/Button_type_link';
 
 import { withModButtonContentIcon } from '../_content/Button_content_icon';
+import { cnButton } from 'react-elegant-ui/esm/components/Button/Button';
 
-export * from 'react-elegant-ui/esm/components/Button/Button@desktop';
+export * from '../Button';
+
+const DesktopButton = withFocusVisible(cnButton())(PatchedButton);
 
 export const Button = compose(
 	withRegistry(ButtonDesktopRegistry),

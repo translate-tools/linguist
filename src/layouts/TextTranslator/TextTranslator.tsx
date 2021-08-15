@@ -241,6 +241,8 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 		[isFavorite, toggleFavorite],
 	);
 
+	const [isFocusOnInput, setIsFocusOnInput] = useState(false);
+
 	const resultText = inTranslateProcess
 		? '...'
 		: errorMessage !== null
@@ -260,6 +262,7 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 					setTo={(to) => to !== undefined && setTo(to)}
 					swapHandler={swapLanguages}
 					disableSwap={!isShowFullData}
+					preventFocusOnPress={isFocusOnInput}
 				/>
 			</div>
 			<div>
@@ -283,6 +286,8 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 						hasClear
 						onClearClick={clearState}
 						spellCheck={spellCheck}
+						onFocus={() => setIsFocusOnInput(true)}
+						onBlur={() => setIsFocusOnInput(false)}
 					/>
 					<div className={cnTextTranslator('Result')}>
 						{resultText !== null

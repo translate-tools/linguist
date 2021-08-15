@@ -18,6 +18,7 @@ export interface LanguagePanelProps {
 	setTo?: (value?: string) => void;
 	swapHandler?: (languages: { from: string; to: string }) => void;
 	disableSwap?: boolean;
+	preventFocusOnPress?: boolean;
 }
 
 export const LanguagePanel: FC<LanguagePanelProps> = ({
@@ -29,6 +30,7 @@ export const LanguagePanel: FC<LanguagePanelProps> = ({
 	setTo,
 	swapHandler,
 	disableSwap,
+	preventFocusOnPress,
 }) => {
 	const fromValue = from !== undefined ? from : auto ? 'auto' : languages[0];
 	const toValue = to !== undefined ? to : languages[0];
@@ -73,6 +75,7 @@ export const LanguagePanel: FC<LanguagePanelProps> = ({
 				disabled={fromValue === 'auto' || fromValue === toValue || disableSwap}
 				title={getMessage('lang_swap')}
 				content="icon"
+				preventFocusOnPress={preventFocusOnPress}
 			>
 				<Icon glyph="swap-horiz" scalable={false} />
 			</Button>
