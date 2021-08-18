@@ -1,7 +1,9 @@
 import * as t from 'io-ts';
 import { isEqual, cloneDeep } from 'lodash';
+import { browser } from 'webextension-polyfill-ts';
 
 import { tryDecode, tryDecodeObject } from '../../lib/types';
+import { XEventManager } from '../../lib/XEventManager';
 import { AbstractVersionedStorage } from '../../types/utils';
 
 export type Callback<T extends t.Props> = (
@@ -9,114 +11,123 @@ export type Callback<T extends t.Props> = (
 	oldProps: Partial<t.TypeOfProps<T>>,
 ) => void;
 
+export type CallbackEventName = 'load' | 'update';
+
+export type CallbacksMap<T extends t.Props = any> = {
+	load: () => void;
+	update: (
+		newProps: Partial<t.TypeOfProps<T>>,
+		oldProps: Partial<t.TypeOfProps<T>>,
+	) => void;
+};
+
 export type Middleware<T extends t.Props> = (
 	newProps: Partial<t.TypeOfProps<T>>,
 	currentProps: t.TypeOfProps<T>,
 ) => boolean;
 
-// TODO: move to async storage
-export class ConfigStorage<T extends t.Props> extends AbstractVersionedStorage {
+// TODO: write migrations for data from `localStorage`
+export class ConfigStorage<T extends t.Props = any> extends AbstractVersionedStorage {
 	static publicName = 'ConfigStorage';
-	static storageVersion = 1;
+	static storageVersion = 2;
 
-	private readonly storageName = 'config.Main';
-	private readonly types: T;
+	private readonly storageName = 'appConfig';
+	private readonly dataSignature: T;
 
-	private readonly callbacks = new Set<Callback<T>>();
 	private state: t.TypeOfProps<T> | null = null;
 	private readonly defaultData?: Partial<t.TypeOfProps<T>>;
 
-	constructor(types: T, defaultData?: Partial<t.TypeOfProps<T>>) {
+	constructor(dataSignature: T, defaultData?: Partial<t.TypeOfProps<T>>) {
 		super();
 
-		this.types = types;
+		this.dataSignature = dataSignature;
 
+		// Set `defaultData` which can be partial
 		if (defaultData !== undefined) {
-			this.defaultData = tryDecodeObject(t.partial(this.types), defaultData);
+			this.defaultData = tryDecodeObject(
+				t.partial(this.dataSignature),
+				defaultData,
+			);
 		}
 
 		this.init();
 	}
 
+	private isLoadConfig = false;
+
 	/**
 	 * Init data
 	 */
-	private init() {
+	private async init() {
 		// Get data from storage if possible
-		const rawStorageData = localStorage.getItem(this.storageName);
-		const configData = rawStorageData === null ? {} : JSON.parse(rawStorageData);
-		if (typeof configData !== 'object') {
-			throw new Error('Invalid data from storage');
-		}
+		const { [this.storageName]: storageDataResponse } =
+			await browser.storage.local.get(this.storageName);
 
-		// Validate and write necessary config properties
-		const dataCollector: Record<string, any> = {};
-		for (const key in this.types) {
+		const storageData = storageDataResponse ?? {};
+
+		// Collect data from storage and validate each property by signature
+		const dataCollector: Partial<t.TypeOfProps<T>> = {};
+		for (const key in this.dataSignature) {
 			let isDefaultConfig = false;
 
 			// Write to tmp registry a value from storage or default value
-			if (key in configData) {
-				dataCollector[key] = configData[key];
+			if (key in storageData) {
+				dataCollector[key] = storageData[key];
 			} else {
+				// Make exception when impossible initiate property with current key
 				if (this.defaultData === undefined || !(key in this.defaultData)) {
 					throw new Error(
 						`Key "${key}" not found in storage and not defined default value in constructor`,
 					);
 				}
 
-				isDefaultConfig = true;
 				dataCollector[key] = this.defaultData[key];
+
+				// Mark value as default
+				isDefaultConfig = true;
 			}
 
 			// Validate value and fix if possible
 			try {
 				// Try decode to validate
-				tryDecode(this.types[key], dataCollector[key]);
+				tryDecode(this.dataSignature[key], dataCollector[key]);
 			} catch (error) {
+				// Throw when it unexpected error type or if it already default data
 				if (!(error instanceof TypeError) || isDefaultConfig) throw error;
 
+				// Make exception when default data is not exist for this key
 				if (this.defaultData === undefined || !(key in this.defaultData)) {
 					throw new Error(
 						`Key "${key}" from storage are invalid and not defined default value in constructor`,
 					);
 				}
 
-				const defaultValue = this.defaultData[key];
-
-				// Try merge default and current value if it object
-				let isMerged = false;
-				const currentValue = dataCollector[key];
-				if (
-					typeof defaultValue === 'object' &&
-					typeof currentValue === 'object'
-				) {
-					const mergedValue = { ...defaultValue, ...currentValue };
-
-					try {
-						dataCollector[key] = tryDecode(this.types[key], mergedValue);
-						isMerged = true;
-					} catch {}
-				}
-
 				// Try replace to default value
-				if (!isMerged) {
-					// Try decode to validate default value
-					dataCollector[key] = tryDecode(this.types[key], defaultValue);
-				}
+				const defaultValue = this.defaultData[key];
+				dataCollector[key] = tryDecode(this.dataSignature[key], defaultValue);
 			}
 		}
 
-		// Additional validation. It may be removed, cuz data already validated
-		const configSignature = t.type(this.types);
-		const data = tryDecodeObject(configSignature, dataCollector);
+		// Write data
+		await this.write(dataCollector).then(() => {
+			// Update status
+			this.isLoadConfig = true;
 
-		this.write(data);
+			// Call handlers
+			this.eventDispatcher
+				.getEventHandlers('load')
+				.forEach((callback) => callback());
+		});
+	}
+
+	public isLoad() {
+		return this.isLoadConfig;
 	}
 
 	/**
 	 * Append data to state
 	 */
-	private write(newData: Partial<t.TypeOfProps<T>>) {
+	private async write(newData: Partial<t.TypeOfProps<T>>) {
 		if (this.state === null) {
 			this.state = {} as t.TypeOfProps<T>;
 		}
@@ -126,27 +137,26 @@ export class ConfigStorage<T extends t.Props> extends AbstractVersionedStorage {
 			this.state[key] = newData[key];
 		}
 
+		// TODO: move to other method `sync`
 		// Write to store (sync)
-		const encodedData = JSON.stringify(this.state);
-		localStorage.setItem(this.storageName, encodedData);
+		await browser.storage.local.set({ [this.storageName]: this.state });
 	}
 
-	public subscribe(callback: Callback<T>) {
-		this.callbacks.add(callback);
-	}
-
-	public unsubscribe(callback: Callback<T>) {
-		this.callbacks.delete(callback);
-	}
-
-	public getAllConfig() {
+	public async getAllConfig() {
 		return this.state;
 	}
 
-	public getConfig<K extends keyof t.TypeOfProps<T>, D = null>(
+	public async getConfig<K extends keyof t.TypeOfProps<T>, D = null>(
+		key: K,
+		defaultValue: D,
+	): Promise<t.TypeOfProps<T>[K] | D>;
+	public async getConfig<K extends keyof t.TypeOfProps<T>, D = null>(
+		key: K,
+	): Promise<t.TypeOfProps<T>[K] | null>;
+	public async getConfig<K extends keyof t.TypeOfProps<T>, D = null>(
 		key: K,
 		defaultValue?: D,
-	): t.TypeOfProps<T>[K] | D {
+	): Promise<t.TypeOfProps<T>[K] | D> {
 		return this.state !== null && key in this.state
 			? this.state[key]
 			: defaultValue !== undefined
@@ -154,50 +164,63 @@ export class ConfigStorage<T extends t.Props> extends AbstractVersionedStorage {
 				: null;
 	}
 
-	public set(data: Partial<t.TypeOfProps<T>>) {
+	public async set(data: Partial<t.TypeOfProps<T>>) {
 		if (this.state === null) {
 			throw Error('Config state is not init');
 		}
 
-		// Collect changes to variables
+		// Collect diffs to variables
+		const actualData: typeof data = {};
 		const newData: typeof data = {};
-		const oldData: typeof data = {};
 
 		for (const key in data) {
+			const actualValue = this.state[key];
 			const newValue = data[key];
-			const currentValue = this.state[key];
 
-			if (!isEqual(currentValue, newValue)) {
+			if (!isEqual(actualValue, newValue)) {
+				actualData[key] = cloneDeep(actualValue);
 				newData[key] = newValue;
-				oldData[key] = cloneDeep(currentValue);
 			}
 		}
 
 		// Validate new values
 		for (const key in newData) {
-			try {
-				tryDecode(this.types[key], newData[key]);
-			} catch (error) {
-				// Prevent exception and just prevent changes
-				return false;
+			// Check signature to exist
+			if (!(key in this.dataSignature)) {
+				throw new RangeError(`Data signature is not have property "${key}"`);
 			}
+
+			tryDecode(this.dataSignature[key], newData[key]);
 		}
 
 		// Call middleware
 		for (const middleware of this.middlewareHandlers) {
 			if (!middleware(newData, this.state)) {
-				// Prevent changes
-				return false;
+				throw new Error('Update rejected by middleware');
 			}
 		}
 
-		// Write and send to all subscribers
-		this.write(newData);
-		this.callbacks.forEach((callback) => callback(newData, oldData));
-
-		return true;
+		// Write and send update event to subscribers
+		this.write(newData).then(() => {
+			this.eventDispatcher
+				.getEventHandlers('update')
+				.forEach((callback) => callback(newData, actualData));
+		});
 	}
 
+	private readonly eventDispatcher = new XEventManager<CallbacksMap<T>>();
+
+	/**
+	 * Add callback for listen changes
+	 */
+	public subscribe = this.eventDispatcher.subscribe;
+
+	/**
+	 * Delete callback for listen changes
+	 */
+	public unsubscribe = this.eventDispatcher.unsubscribe;
+
+	// TODO: make middleware are async
 	private readonly middlewareHandlers = new Set<Middleware<T>>();
 	public addMiddleware(middleware: Middleware<T>) {
 		this.middlewareHandlers.add(middleware);

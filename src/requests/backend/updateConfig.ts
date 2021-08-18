@@ -19,19 +19,23 @@ export const updateConfig = (configMap: TypeOf<typeof updateConfigIn>) =>
 	);
 
 /**
- * Partical update config by paths
+ * Partial update config by paths
  */
 export const updateConfigFactory: RequestHandlerFactory = ({ cfg, bg }) => {
 	console.warn('DBG translator', bg.translator);
 
 	addRequestHandler('updateConfig', async (rawData) => {
-		const configMap = tryDecode(updateConfigIn, rawData);
-		const clonedConfig = cloneDeep(cfg.getAllConfig());
-
-		if (clonedConfig === null) {
+		// Get actual config
+		const actualConfig = await cfg.getAllConfig();
+		if (actualConfig === null) {
 			throw new TypeError('Config is not set');
 		}
 
+		// Clone
+		const newConfigSegments = cloneDeep(actualConfig);
+
+		// Handle
+		const configMap = tryDecode(updateConfigIn, rawData);
 		const errors: Record<string, string> = {};
 		for (const path in configMap) {
 			const pathArray = path.split('.');
@@ -43,7 +47,7 @@ export const updateConfigFactory: RequestHandlerFactory = ({ cfg, bg }) => {
 
 			// Validate type of new value
 			if (checkTypeByPath(AppConfig, pathArray, value)) {
-				set(clonedConfig, path, value);
+				set(newConfigSegments, path, value);
 			} else {
 				errors[path] = getMessage('settings_message_common_invalidValueType');
 			}
@@ -55,9 +59,9 @@ export const updateConfigFactory: RequestHandlerFactory = ({ cfg, bg }) => {
 				errors,
 			};
 		} else {
-			console.warn('Update config', cfg.getAllConfig(), clonedConfig);
+			console.warn('Update config', actualConfig, newConfigSegments);
 
-			cfg.set(clonedConfig);
+			await cfg.set(newConfigSegments);
 			return {
 				success: true,
 				errors: null,

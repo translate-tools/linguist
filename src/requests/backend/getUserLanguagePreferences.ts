@@ -11,7 +11,7 @@ export const getUserLanguagePreferences = () =>
 
 export const getUserLanguagePreferencesFactory: RequestHandlerFactory = ({ cfg }) => {
 	addRequestHandler('getUserLanguagePreferences', async () => {
-		const userLanguage = cfg.getConfig('language');
+		const userLanguage = await cfg.getConfig('language');
 
 		if (userLanguage === null) {
 			throw new Error('Invalid value');

@@ -11,8 +11,6 @@ export const setConfig = (config: AppConfigType): Promise<void> =>
 export const setConfigFactory: RequestHandlerFactory = ({ cfg }) => {
 	addRequestHandler('setConfig', async (rawData) => {
 		const newConfig = tryDecode(setConfigIn, rawData);
-		if (!cfg.set(newConfig)) {
-			throw new Error('Rejected by middleware');
-		}
+		return cfg.set(newConfig);
 	});
 };

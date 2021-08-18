@@ -1,7 +1,10 @@
 import { TranslatorClass } from '../types/objects';
 import { AppConfig } from '../types/runtime';
 
+import { XEventManager } from '../lib/XEventManager';
+
 import { ConfigStorage } from './ConfigStorage/ConfigStorage';
+
 import { ITranslateScheduler } from '@translate-tools/core/TranslateScheduler/ITranslateScheduler';
 import { TranslateScheduler } from '@translate-tools/core/TranslateScheduler/TranslateScheduler';
 import {
@@ -35,10 +38,23 @@ export class Background<T extends typeof AppConfig.props> {
 	constructor(config: ConfigStorage<T>) {
 		this.config = config;
 
-		this.makeTranslator();
-		this.makeScheduler();
+		this.init();
+	}
 
-		config.addMiddleware((newProps) => {
+	private async init() {
+		// Await config loading
+		if (!this.config.isLoad()) {
+			await new Promise<void>((res) => {
+				this.config.subscribe('load', res);
+			});
+		}
+
+		// Init state
+		await this.makeTranslator();
+		await this.makeScheduler();
+
+		// Add handlers
+		this.config.addMiddleware((newProps) => {
 			if (newProps.translatorModule !== undefined) {
 				if (!isValidNativeTranslatorModuleName(newProps.translatorModule)) {
 					return false;
@@ -47,16 +63,30 @@ export class Background<T extends typeof AppConfig.props> {
 			return true;
 		});
 
-		config.subscribe(({ scheduler, translatorModule, cache }, prevConfig) => {
-			// Forced recreate a scheduler while change of key options
-			if (
-				scheduler !== undefined ||
-				translatorModule !== undefined ||
-				(cache !== undefined && prevConfig.scheduler?.useCache)
-			) {
-				this.makeScheduler(true);
-			}
-		});
+		this.config.subscribe(
+			'update',
+			({ scheduler, translatorModule, cache }, prevConfig) => {
+				// Forced recreate a scheduler while change of key options
+				if (
+					scheduler !== undefined ||
+					translatorModule !== undefined ||
+					(cache !== undefined && prevConfig.scheduler?.useCache)
+				) {
+					this.makeScheduler(true);
+				}
+			},
+		);
+
+		// Emit event
+		this.eventDispatcher.getEventHandlers('load').forEach((handler) => handler());
+	}
+
+	private readonly eventDispatcher = new XEventManager<{
+		load: () => void;
+	}>();
+
+	public onLoad(handler: () => void) {
+		this.eventDispatcher.subscribe('load', handler);
 	}
 
 	public get translator() {
@@ -67,6 +97,7 @@ export class Background<T extends typeof AppConfig.props> {
 		return this.registry.scheduler;
 	}
 
+	// TODO: move to requests
 	public async clearTranslatorsCache() {
 		// Clear for each module
 		for (const translatorName in translatorModules) {
@@ -75,10 +106,10 @@ export class Background<T extends typeof AppConfig.props> {
 		}
 	}
 
-	private makeTranslator = (force = false) => {
+	private makeTranslator = async (force = false) => {
 		if (this.registry.translator !== undefined && !force) return;
 
-		const translatorName = this.config.getConfig('translatorModule');
+		const translatorName = await this.config.getConfig('translatorModule');
 		if (translatorName === null || !(translatorName in translatorModules)) {
 			throw new Error(
 				`Translator builder can't make translator by key "${translatorName}"`,
@@ -88,25 +119,25 @@ export class Background<T extends typeof AppConfig.props> {
 		this.registry.translator = new (translatorModules as any)[translatorName]();
 	};
 
-	private makeCache = (force = false) => {
+	private makeCache = async (force = false) => {
 		if (this.registry.cache !== undefined && !force) return;
 
-		const translatorName = this.config.getConfig('translatorModule', 'unknown');
-		const cacheConfig = this.config.getConfig('cache', undefined);
+		const translatorName = await this.config.getConfig('translatorModule', 'unknown');
+		const cacheConfig = await this.config.getConfig('cache', undefined);
 		this.registry.cache = new TranslatorCache(translatorName, cacheConfig);
 	};
 
-	private makeScheduler = (force = false) => {
+	private makeScheduler = async (force = false) => {
 		if (this.registry.scheduler !== undefined && !force) return;
 
-		this.makeTranslator(force);
+		await this.makeTranslator(force);
 		const translator = this.registry.translator;
 
 		if (translator === undefined) {
 			throw new Error('Translator is not created');
 		}
 
-		const schedulerConfig = this.config.getConfig('scheduler');
+		const schedulerConfig = await this.config.getConfig('scheduler');
 		if (schedulerConfig === null) {
 			throw new Error("Can't get scheduler config");
 		}
@@ -116,7 +147,7 @@ export class Background<T extends typeof AppConfig.props> {
 		if (!useCache) {
 			this.registry.scheduler = baseScheduler;
 		} else {
-			this.makeCache(force);
+			await this.makeCache(force);
 			this.registry.scheduler = new TranslateSchedulerWithCache(
 				baseScheduler,
 				this.registry.cache,

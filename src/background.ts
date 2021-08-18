@@ -147,93 +147,71 @@ export const defaultConfig: AppConfigType = {
 	},
 };
 
-// TODO: use async `storage.local` instead `localStorage`
 const cfg = new ConfigStorage(AppConfig.props, defaultConfig);
 
-// Fix config
-const initTranslatorModule = cfg.getConfig('translatorModule');
-if (
-	initTranslatorModule === null ||
-	!isValidNativeTranslatorModuleName(initTranslatorModule)
-) {
-	cfg.set({ translatorModule: defaultConfig.translatorModule });
-}
+// TODO: uncomment and fix
+// cfg.subscribe((newProps, oldProps) => {
+// 	// Clear cache while disableing
+// 	if (
+// 		newProps.scheduler !== undefined &&
+// 		newProps.scheduler.useCache === false &&
+// 		oldProps.scheduler?.useCache === true
+// 	) {
+// 		bg.clearTranslatorsCache();
+// 	}
 
-// TODO: remove it after september 2021
-// Migration for previous data
-Object.keys(defaultConfig).forEach((key) => {
-	// Try write data if possible
-	const rawValue = localStorage.getItem(key);
-	if (rawValue !== null) {
-		const value = JSON.parse(rawValue);
-		cfg.set({ [key]: value });
-	}
+// 	// Clear TextTranslator state
+// 	if (
+// 		newProps.textTranslator !== undefined &&
+// 		newProps.textTranslator.rememberText === false &&
+// 		oldProps.textTranslator?.rememberText === true
+// 	) {
+// 		// NOTE: it is async operation
+// 		TextTranslatorStorage.forgetText();
+// 	}
 
-	// Remove from `localStorage`
-	localStorage.removeItem(key);
-});
+// 	sendRequestToAllCS('configUpdated');
+// });
 
 // Init BG
 
 const bg = new Background(cfg);
 
-cfg.subscribe((newProps, oldProps) => {
-	// Clear cache while disableing
-	if (
-		newProps.scheduler !== undefined &&
-		newProps.scheduler.useCache === false &&
-		oldProps.scheduler?.useCache === true
-	) {
-		bg.clearTranslatorsCache();
-	}
+bg.onLoad(() => {
+	// Set handlers from factories
+	const factories = [
+		pingFactory,
+		translateFactory,
+		getTranslatorFeaturesFactory,
+		getUserLanguagePreferencesFactory,
+		getTranslatorModulesFactory,
+		clearCacheFactory,
 
-	// Clear TextTranslator state
-	if (
-		newProps.textTranslator !== undefined &&
-		newProps.textTranslator.rememberText === false &&
-		oldProps.textTranslator?.rememberText === true
-	) {
-		// NOTE: it is async operation
-		TextTranslatorStorage.forgetText();
-	}
+		getConfigFactory,
+		setConfigFactory,
+		resetConfigFactory,
+		updateConfigFactory,
 
-	sendRequestToAllCS('configUpdated');
+		getLanguagePreferencesFactory,
+		addLanguagePreferencesFactory,
+		deleteLanguagePreferencesFactory,
+		setSitePreferencesFactory,
+		getSitePreferencesFactory,
+		deleteSitePreferencesFactory,
+
+		addTranslationFactory,
+		deleteTranslationFactory,
+		findTranslationFactory,
+		getTranslationsFactory,
+		clearTranslationsFactory,
+	];
+
+	// Prevent run it again on other pages, such as options page
+	// NOTE: on options page function `resetConfigFactory` is undefined. How it work?
+	const backgroundPagePath = '/_generated_background_page.html';
+	if (location.pathname === backgroundPagePath) {
+		factories.forEach((factory) => {
+			factory({ cfg, bg, translatorModules });
+		});
+	}
 });
-
-// Set handlers from factories
-
-const factories = [
-	pingFactory,
-	translateFactory,
-	getTranslatorFeaturesFactory,
-	getUserLanguagePreferencesFactory,
-	getTranslatorModulesFactory,
-	clearCacheFactory,
-
-	getConfigFactory,
-	setConfigFactory,
-	resetConfigFactory,
-	updateConfigFactory,
-
-	getLanguagePreferencesFactory,
-	addLanguagePreferencesFactory,
-	deleteLanguagePreferencesFactory,
-	setSitePreferencesFactory,
-	getSitePreferencesFactory,
-	deleteSitePreferencesFactory,
-
-	addTranslationFactory,
-	deleteTranslationFactory,
-	findTranslationFactory,
-	getTranslationsFactory,
-	clearTranslationsFactory,
-];
-
-// Prevent run it again on other pages, such as options page
-// NOTE: on options page function `resetConfigFactory` is undefined. How it work?
-const backgroundPagePath = '/_generated_background_page.html';
-if (location.pathname === backgroundPagePath) {
-	factories.forEach((factory) => {
-		factory({ cfg, bg, translatorModules });
-	});
-}
