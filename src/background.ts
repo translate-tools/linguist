@@ -105,7 +105,6 @@ if (process.env.NODE_ENV !== 'production') {
 
 		// Set handlers from factories
 		const factories = [
-			pingFactory,
 			translateFactory,
 			getTranslatorFeaturesFactory,
 			getUserLanguagePreferencesFactory,
@@ -129,6 +128,9 @@ if (process.env.NODE_ENV !== 'production') {
 			findTranslationFactory,
 			getTranslationsFactory,
 			clearTranslationsFactory,
+
+			// Up ping last to give success response only when all request handlers is ready
+			pingFactory,
 		];
 
 		// Prevent run it again on other pages, such as options page

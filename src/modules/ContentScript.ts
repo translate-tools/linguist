@@ -1,7 +1,10 @@
+import { AppConfigType } from '../types/runtime';
+
 import { addRequestHandler } from '../lib/communication';
 import { EventManager } from '../lib/EventManager';
+
 import { getConfig } from '../requests/backend/getConfig';
-import { AppConfigType } from '../types/runtime';
+import { ping } from '../requests/backend/ping';
 
 export class ContentScript {
 	private eventManger = new EventManager<{
@@ -11,16 +14,18 @@ export class ContentScript {
 	private config?: AppConfigType;
 
 	constructor() {
-		// Load config and initiate
-		getConfig().then((config) => {
-			this.config = config;
-			this.init();
-		});
+		this.init();
 	}
 
-	private init() {
+	private async init() {
+		// Wait load background script
+		await ping(200);
+
+		this.config = await getConfig();
 		if (this.config !== undefined) {
 			this.eventManger.emit('load', [this.config]);
+		} else {
+			throw new Error("Can't load config");
 		}
 
 		// Observe a config updating
