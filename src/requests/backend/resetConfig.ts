@@ -1,4 +1,4 @@
-import { defaultConfig } from '../../background';
+import { defaultConfig } from '../../config';
 import { addRequestHandler, bgSendRequest } from '../../lib/communication';
 import { RequestHandlerFactory } from '../types';
 

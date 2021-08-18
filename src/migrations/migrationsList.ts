@@ -34,6 +34,9 @@ export const migrateAll = async () => {
 
 	console.log('Start migrations');
 
+	// Init migrations data
+	await updateMigrationsInfoItem({});
+
 	// Verify storages
 	storages
 		.map((storage, index) => {

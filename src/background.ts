@@ -1,15 +1,10 @@
-import { updateMigrationsInfoItem } from './migrations/migrations';
-
+import { AppConfig } from './types/runtime';
 import { sendRequestToAllCS } from './lib/communication';
-import { getUserLanguage } from './lib/language';
-import { ConfigStorage } from './modules/ConfigStorage/ConfigStorage';
 
-import {
-	Background,
-	isValidNativeTranslatorModuleName,
-	translatorModules,
-} from './modules/Background';
-import { AppConfig, AppConfigType } from './types/runtime';
+import { defaultConfig } from './config';
+
+import { ConfigStorage } from './modules/ConfigStorage/ConfigStorage';
+import { Background, translatorModules } from './modules/Background';
 
 import { migrateAll } from './migrations/migrationsList';
 
@@ -74,144 +69,75 @@ if (process.env.NODE_ENV !== 'production') {
 	}
 }
 
-// Migrate data
+// Make async context
 (async () => {
-	// Init migrations data
-	await updateMigrationsInfoItem({});
-
-	// Run migrations
+	// Migrate data
 	await migrateAll();
-})();
 
-// Init config
+	// Run application
+	const cfg = new ConfigStorage(AppConfig.props, defaultConfig);
+	const bg = new Background(cfg);
 
-export const defaultConfig: AppConfigType = {
-	translatorModule: 'GoogleTranslator',
-	language: getUserLanguage(),
-	scheduler: {
-		useCache: true,
-		translateRetryAttemptLimit: 2,
-		isAllowDirectTranslateBadChunks: true,
-		directTranslateLength: null,
-		translatePoolDelay: 300,
-		chunkSizeForInstantTranslate: null,
-	},
-	cache: {
-		ignoreCase: true,
-	},
-	pageTranslator: {
-		ignoredTags: [
-			'meta',
-			'link',
-			'script',
-			'noscript',
-			'style',
-			'code',
-			'pre',
-			'textarea',
-		],
-		translatableAttributes: ['title', 'alt', 'placeholder', 'label', 'aria-label'],
-		lazyTranslate: true,
-		detectLanguageByContent: true,
-	},
-	textTranslator: {
-		rememberText: true,
-		spellCheck: true,
-	},
-	selectTranslator: {
-		zIndex: 999999,
-		rememberDirection: false,
-		quickTranslate: false,
-		modifiers: [],
-		strictSelection: false,
-		detectedLangFirst: true,
-		timeoutForHideButton: 3000,
-		focusOnTranslateButton: false,
-		showOnceForSelection: true,
-		showOriginalText: true,
-		isUseAutoForDetectLang: true,
-	},
-	contentscript: {
-		selectTranslator: {
-			enabled: true,
-			disableWhileTranslatePage: true,
-		},
-	},
-	popup: {
-		rememberLastTab: true,
-	},
-	popupTab: {
-		pageTranslator: {
-			showCounters: true,
-		},
-	},
-};
+	bg.onLoad(() => {
+		// Hooks for config update
+		cfg.subscribe('update', (newProps, oldProps) => {
+			// Clear cache while disableing
+			if (
+				newProps.scheduler !== undefined &&
+				newProps.scheduler.useCache === false &&
+				oldProps.scheduler?.useCache === true
+			) {
+				bg.clearTranslatorsCache();
+			}
 
-const cfg = new ConfigStorage(AppConfig.props, defaultConfig);
+			// Clear TextTranslator state
+			if (
+				newProps.textTranslator !== undefined &&
+				newProps.textTranslator.rememberText === false &&
+				oldProps.textTranslator?.rememberText === true
+			) {
+				// NOTE: it is async operation
+				TextTranslatorStorage.forgetText();
+			}
 
-// TODO: uncomment and fix
-// cfg.subscribe((newProps, oldProps) => {
-// 	// Clear cache while disableing
-// 	if (
-// 		newProps.scheduler !== undefined &&
-// 		newProps.scheduler.useCache === false &&
-// 		oldProps.scheduler?.useCache === true
-// 	) {
-// 		bg.clearTranslatorsCache();
-// 	}
-
-// 	// Clear TextTranslator state
-// 	if (
-// 		newProps.textTranslator !== undefined &&
-// 		newProps.textTranslator.rememberText === false &&
-// 		oldProps.textTranslator?.rememberText === true
-// 	) {
-// 		// NOTE: it is async operation
-// 		TextTranslatorStorage.forgetText();
-// 	}
-
-// 	sendRequestToAllCS('configUpdated');
-// });
-
-// Init BG
-
-const bg = new Background(cfg);
-
-bg.onLoad(() => {
-	// Set handlers from factories
-	const factories = [
-		pingFactory,
-		translateFactory,
-		getTranslatorFeaturesFactory,
-		getUserLanguagePreferencesFactory,
-		getTranslatorModulesFactory,
-		clearCacheFactory,
-
-		getConfigFactory,
-		setConfigFactory,
-		resetConfigFactory,
-		updateConfigFactory,
-
-		getLanguagePreferencesFactory,
-		addLanguagePreferencesFactory,
-		deleteLanguagePreferencesFactory,
-		setSitePreferencesFactory,
-		getSitePreferencesFactory,
-		deleteSitePreferencesFactory,
-
-		addTranslationFactory,
-		deleteTranslationFactory,
-		findTranslationFactory,
-		getTranslationsFactory,
-		clearTranslationsFactory,
-	];
-
-	// Prevent run it again on other pages, such as options page
-	// NOTE: on options page function `resetConfigFactory` is undefined. How it work?
-	const backgroundPagePath = '/_generated_background_page.html';
-	if (location.pathname === backgroundPagePath) {
-		factories.forEach((factory) => {
-			factory({ cfg, bg, translatorModules });
+			sendRequestToAllCS('configUpdated');
 		});
-	}
-});
+
+		// Set handlers from factories
+		const factories = [
+			pingFactory,
+			translateFactory,
+			getTranslatorFeaturesFactory,
+			getUserLanguagePreferencesFactory,
+			getTranslatorModulesFactory,
+			clearCacheFactory,
+
+			getConfigFactory,
+			setConfigFactory,
+			resetConfigFactory,
+			updateConfigFactory,
+
+			getLanguagePreferencesFactory,
+			addLanguagePreferencesFactory,
+			deleteLanguagePreferencesFactory,
+			setSitePreferencesFactory,
+			getSitePreferencesFactory,
+			deleteSitePreferencesFactory,
+
+			addTranslationFactory,
+			deleteTranslationFactory,
+			findTranslationFactory,
+			getTranslationsFactory,
+			clearTranslationsFactory,
+		];
+
+		// Prevent run it again on other pages, such as options page
+		// NOTE: on options page function `resetConfigFactory` is undefined. How it work?
+		const backgroundPagePath = '/_generated_background_page.html';
+		if (location.pathname === backgroundPagePath) {
+			factories.forEach((factory) => {
+				factory({ cfg, bg, translatorModules });
+			});
+		}
+	});
+})();
