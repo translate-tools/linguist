@@ -1,30 +1,45 @@
-export type EventManagerCallback<T> = (data: T) => void;
+import { RecordValues } from '../types/utils';
 
-export class EventManager<T = unknown> {
-	private readonly handlers = new Map<string, Set<EventManagerCallback<T>>>();
+export class EventManager<EventMap extends Record<string, (...args: any[]) => any>> {
+	private readonly callbacks = new Map<
+		keyof EventMap,
+		Set<keyof RecordValues<EventMap>>
+	>();
 
-	public subscribe(eventName: string, handler: EventManagerCallback<T>) {
-		if (!this.handlers.has(eventName)) {
-			this.handlers.set(eventName, new Set());
+	/**
+	 * Add callback for listen changes
+	 */
+	public subscribe = <K extends keyof EventMap>(event: K, handler: EventMap[K]) => {
+		// Init map
+		if (!this.callbacks.has(event)) {
+			this.callbacks.set(event, new Set());
 		}
 
-		const handlersSet = this.handlers.get(eventName);
-		if (handlersSet !== undefined) {
-			handlersSet.add(handler);
+		const eventHandlers = this.callbacks.get(event) as Set<EventMap[keyof EventMap]>;
+		eventHandlers.add(handler);
+	};
+
+	/**
+	 * Delete callback for listen changes
+	 */
+	public unsubscribe = <K extends keyof EventMap>(event: K, handler: EventMap[K]) => {
+		const eventHandlers = this.callbacks.get(event);
+
+		if (eventHandlers !== undefined) {
+			eventHandlers.delete(handler);
 		}
-	}
+	};
 
-	public unsubscribe(eventName: string, handler: EventManagerCallback<T>) {
-		const handlersSet = this.handlers.get(eventName);
-		if (handlersSet === undefined) return;
+	public getEventHandlers = <K extends keyof EventMap>(event: K): Set<EventMap[K]> => {
+		const eventHandlers = this.callbacks.get(event);
+		return eventHandlers === undefined
+			? new Set()
+			: (eventHandlers as Set<EventMap[K]>);
+	};
 
-		handlersSet.delete(handler);
-	}
-
-	public emit(eventName: string, data: T) {
-		const handlersSet = this.handlers.get(eventName);
-		if (handlersSet !== undefined) {
-			handlersSet.forEach((handler) => handler(data));
-		}
-	}
+	public emit = <K extends keyof EventMap>(event: K, args: Parameters<EventMap[K]>) => {
+		this.getEventHandlers(event).forEach((callback) => {
+			callback(...args);
+		});
+	};
 }

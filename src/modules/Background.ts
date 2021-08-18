@@ -1,7 +1,7 @@
 import { TranslatorClass } from '../types/objects';
 import { AppConfig } from '../types/runtime';
 
-import { XEventManager } from '../lib/XEventManager';
+import { EventManager } from '../lib/EventManager';
 
 import { ConfigStorage } from './ConfigStorage/ConfigStorage';
 
@@ -81,7 +81,7 @@ export class Background<T extends typeof AppConfig.props> {
 		this.eventDispatcher.getEventHandlers('load').forEach((handler) => handler());
 	}
 
-	private readonly eventDispatcher = new XEventManager<{
+	private readonly eventDispatcher = new EventManager<{
 		load: () => void;
 	}>();
 

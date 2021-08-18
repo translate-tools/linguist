@@ -3,7 +3,7 @@ import { isEqual, cloneDeep } from 'lodash';
 import { browser } from 'webextension-polyfill-ts';
 
 import { tryDecode, tryDecodeObject } from '../../lib/types';
-import { XEventManager } from '../../lib/XEventManager';
+import { EventManager } from '../../lib/EventManager';
 import { AbstractVersionedStorage } from '../../types/utils';
 
 export type Callback<T extends t.Props> = (
@@ -208,7 +208,7 @@ export class ConfigStorage<T extends t.Props = any> extends AbstractVersionedSto
 		});
 	}
 
-	private readonly eventDispatcher = new XEventManager<CallbacksMap<T>>();
+	private readonly eventDispatcher = new EventManager<CallbacksMap<T>>();
 
 	/**
 	 * Add callback for listen changes
