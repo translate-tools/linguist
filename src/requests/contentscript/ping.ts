@@ -6,15 +6,13 @@ import {
 } from '../../lib/communication';
 import { ClientRequestHandlerFactory } from '../types';
 
-export const ping = async ({
-	timeout,
-	tabId,
-	delay,
-}: {
+export const ping = async (options?: {
 	timeout?: number;
 	tabId?: number;
 	delay?: number;
 }) => {
+	const { timeout, tabId, delay } = options || {};
+
 	const actualTabId = tabId ?? (await getCurrentTabId());
 
 	return pingSomething(() => csSendRequest(actualTabId, 'ping'), timeout, delay)

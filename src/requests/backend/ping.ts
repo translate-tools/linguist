@@ -1,7 +1,8 @@
 import { addRequestHandler, bgSendRequest, pingSomething } from '../../lib/communication';
 import { RequestHandlerFactory } from '../types';
 
-export const ping = ({ timeout, delay }: { timeout?: number; delay?: number }) => {
+export const ping = (options?: { timeout?: number; delay?: number }) => {
+	const { timeout, delay } = options || {};
 	return pingSomething(() => bgSendRequest('ping'), timeout, delay)
 		.then(() => true)
 		.catch(() => false);
