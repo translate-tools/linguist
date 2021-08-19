@@ -1,5 +1,4 @@
 import { TranslatorClass } from '../types/objects';
-import { AppConfig } from '../types/runtime';
 
 import { EventManager } from '../lib/EventManager';
 
@@ -32,10 +31,10 @@ export const translatorModules: Record<string, TranslatorClass> = {
 export const isValidNativeTranslatorModuleName = (name: string) =>
 	name in translatorModules;
 
-export class Background<T extends typeof AppConfig.props> {
+export class Background {
 	private readonly registry: Registry = {};
-	private readonly config: ConfigStorage<T>;
-	constructor(config: ConfigStorage<T>) {
+	private readonly config: ConfigStorage;
+	constructor(config: ConfigStorage) {
 		this.config = config;
 
 		this.init();

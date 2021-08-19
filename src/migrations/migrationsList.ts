@@ -21,11 +21,7 @@ export type Migration = () => Promise<any>;
  */
 export const migrateAll = async () => {
 	const storages: ClassObject<AbstractVersionedStorage, VersionedStorage>[] = [
-		// TODO: remove cast
-		ConfigStorage as unknown as ClassObject<
-			AbstractVersionedStorage,
-			VersionedStorage
-		>,
+		ConfigStorage,
 		PopupWindowStorage,
 		TextTranslatorStorage,
 	];

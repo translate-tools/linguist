@@ -1,4 +1,3 @@
-import { AppConfig } from './types/runtime';
 import { sendRequestToAllCS } from './lib/communication';
 
 import { defaultConfig } from './config';
@@ -75,7 +74,7 @@ if (process.env.NODE_ENV !== 'production') {
 	await migrateAll();
 
 	// Run application
-	const cfg = new ConfigStorage(AppConfig.props, defaultConfig);
+	const cfg = new ConfigStorage(defaultConfig);
 	const bg = new Background(cfg);
 
 	bg.onLoad(() => {
