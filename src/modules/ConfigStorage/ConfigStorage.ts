@@ -108,6 +108,15 @@ export class ConfigStorage<T extends t.Props = any> extends AbstractVersionedSto
 			}
 		}
 
+		// Validate integrity
+		for (const key in this.dataSignature) {
+			if (!(key in dataCollector)) {
+				throw new Error(
+					`Loaded data does not match signature. Property "${key}" is not found`,
+				);
+			}
+		}
+
 		// Write data
 		await this.write(dataCollector).then(() => {
 			// Update status
