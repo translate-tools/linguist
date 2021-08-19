@@ -94,14 +94,14 @@ const PopupPage: FC<PopupPageProps> = ({ rootElement }) => {
 
 		Promise.all([
 			// Contentscript may be not available, it's ok for special pages
-			pingClient(200).then((isSuccess) => {
+			pingClient({ timeout: 200 }).then((isSuccess) => {
 				if (isSuccess) {
 					tabs.push(...contentScriptRequiredTabs);
 				}
 			}),
 
 			// Background is required
-			pingBackend(1000).then((isSuccess) => {
+			pingBackend({ timeout: 1000 }).then((isSuccess) => {
 				if (!isSuccess) {
 					throw new Error(getMessage('common_bgUnavailable'));
 				}

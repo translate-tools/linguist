@@ -19,7 +19,7 @@ export class ContentScript {
 
 	private async init() {
 		// Wait load background script
-		await ping(200);
+		await ping({ delay: 100 });
 
 		this.config = await getConfig();
 		if (this.config !== undefined) {

@@ -56,8 +56,11 @@ export const getCurrentTabId = () =>
 export const pingSomething = (
 	callback: () => Promise<any>,
 	timeout?: number,
+	delay?: number,
 ): Promise<void> => {
 	const startTime = new Date().getTime();
+	const sleep = (delay: number) =>
+		new Promise<void>((res) => window.setTimeout(res, delay));
 
 	return new Promise(async (resolve, reject) => {
 		let breakFlag = false;
@@ -71,13 +74,18 @@ export const pingSomething = (
 						throw new Error('Incorrect ping response');
 					}
 				})
-				.catch(() => {
+				.catch(async () => {
 					if (
 						timeout !== undefined &&
 						new Date().getTime() - startTime >= timeout
 					) {
 						reject(new Error('Timeout'));
 						breakFlag = true;
+					} else {
+						// Delay before next request
+						if (delay !== undefined) {
+							await sleep(delay);
+						}
 					}
 				});
 		}
