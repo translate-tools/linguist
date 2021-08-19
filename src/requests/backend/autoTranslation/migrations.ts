@@ -50,20 +50,21 @@ export const migrateSitePreferences: Migration = () =>
 
 			// Migrate preferences for languages
 			const languagesKey = 'autoTranslatedLangs';
-			const langsResponse = await browser.storage.local.get(
-				'autoTranslatedLangs',
-			);
-			if (
-				languagesKey in langsResponse &&
-					Array.isArray(langsResponse[languagesKey])
-			) {
-				for (const lang of langsResponse[languagesKey]) {
-					// Skip invalid types
-					if (typeof lang !== 'string') continue;
+			const langsResponse = await browser.storage.local.get(languagesKey);
+			if (languagesKey in langsResponse) {
+				// Migrate data
+				if (Array.isArray(langsResponse[languagesKey])) {
+					for (const lang of langsResponse[languagesKey]) {
+						// Skip invalid types
+						if (typeof lang !== 'string') continue;
 
-					// Add language
-					await addLanguage(lang, true);
+						// Add language
+						await addLanguage(lang, true);
+					}
 				}
+
+				// Remove key
+				await browser.storage.local.remove(languagesKey);
 			}
 
 			// Update migrate info to migrated method version
