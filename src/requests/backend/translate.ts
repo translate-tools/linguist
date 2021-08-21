@@ -1,33 +1,35 @@
-import { addRequestHandler, bgSendRequest } from '../../lib/communication';
-import { tryDecode, type } from '../../lib/types';
-import { LangCode, LangCodeWithAuto } from '../../types/runtime';
-import { RequestHandlerFactory } from '../types';
+import { langCode, langCodeWithAuto } from '@translate-tools/core/types/Translator';
 
-export const translateIn = type.type({
-	text: type.string,
-	from: LangCodeWithAuto,
-	to: LangCode,
-	context: type.union([type.string, type.undefined]),
+import { buildBackendRequest } from '../../lib/requestBuilder';
+import { type } from '../../lib/types';
+import { LangCode, LangCodeWithAuto } from '../../types/runtime';
+
+export const [translateFactory, translateRequest] = buildBackendRequest('translate', {
+	requestValidator: type.type({
+		text: type.string,
+		from: LangCodeWithAuto,
+		to: LangCode,
+		context: type.union([type.string, type.undefined]),
+	}),
+
+	responseValidator: type.string,
+
+	factoryHandler:
+		({ bg }) =>
+			async ({ text, from, to, context }) => {
+				const scheduler = bg.scheduler;
+				if (scheduler === undefined) {
+					throw new Error('Scheduler is not ready');
+				}
+
+				return scheduler.translate(text, from, to, { context });
+			},
 });
 
-export const translateOut = type.string;
-
 export const translate = (text: string, from: string, to: string, context?: string) =>
-	bgSendRequest('translate', {
+	translateRequest({
 		text,
-		from,
-		to,
+		from: from as langCodeWithAuto,
+		to: to as langCode,
 		context,
-	}).then((translate) => tryDecode(translateOut, translate));
-
-export const translateFactory: RequestHandlerFactory = ({ bg }) => {
-	addRequestHandler('translate', async (rawData) => {
-		const scheduler = bg.scheduler;
-		if (scheduler === undefined) {
-			throw new Error('Scheduler is not ready');
-		}
-
-		const { text, from, to, context } = tryDecode(translateIn, rawData);
-		return scheduler.translate(text, from, to, { context });
 	});
-};
