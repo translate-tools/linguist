@@ -1,15 +1,12 @@
-import { addRequestHandler, bgSendRequest } from '../../lib/communication';
-import { tryDecode } from '../../lib/types';
+import { buildBackendRequest } from '../../lib/requestBuilder';
 import { AppConfig } from '../../types/runtime';
-import { RequestHandlerFactory } from '../types';
 
-export const getConfigOut = AppConfig;
-
-export const getConfig = () =>
-	bgSendRequest('getConfig').then((rawData) => tryDecode(getConfigOut, rawData));
-
-export const getConfigFactory: RequestHandlerFactory = ({ cfg }) => {
-	addRequestHandler('getConfig', async () => {
-		return cfg.getAllConfig();
-	});
-};
+export const [getConfigFactory, getConfig] = buildBackendRequest('getConfig', {
+	responseValidator: AppConfig,
+	factoryHandler:
+		({ cfg }) =>
+			async () => {
+			// FIXME: remove cast and fix types
+				return cfg.getAllConfig() as any;
+			},
+});
