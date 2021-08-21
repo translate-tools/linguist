@@ -1,10 +1,9 @@
-import {
-	addRequestHandler,
-	csSendRequest,
-	getCurrentTabId,
-	pingSomething,
-} from '../../lib/communication';
-import { ClientRequestHandlerFactory } from '../types';
+import { getCurrentTabId, pingSomething } from '../../lib/communication';
+import { buildTabRequest } from '../../lib/requestBuilder';
+
+export const [pingFactory, pingReq] = buildTabRequest('ping', {
+	factoryHandler: () => async () => 'pong' as const,
+});
 
 export const ping = async (options?: {
 	timeout?: number;
@@ -15,11 +14,7 @@ export const ping = async (options?: {
 
 	const actualTabId = tabId ?? (await getCurrentTabId());
 
-	return pingSomething(() => csSendRequest(actualTabId, 'ping'), timeout, delay)
+	return pingSomething(() => pingReq(actualTabId), timeout, delay)
 		.then(() => true)
 		.catch(() => false);
-};
-
-export const pingFactory: ClientRequestHandlerFactory = () => {
-	addRequestHandler('ping', async () => 'pong');
 };
