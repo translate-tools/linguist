@@ -1,21 +1,19 @@
-import { addRequestHandler, bgSendRequest } from '../../../../lib/communication';
-import { tryDecode, type } from '../../../../lib/types';
-import { RequestHandlerFactory } from '../../../types';
+import { buildBackendRequest } from '../../../../lib/requestBuilder';
+import { type } from '../../../../lib/types';
 import { addLanguage, dataSignature, LanguageInfo } from './utils';
 
-const dataIn = type.type({
-	lang: type.string,
-	preferences: dataSignature,
-});
+export const [addLanguagePreferencesFactory, addLanguagePreferencesReq] =
+	buildBackendRequest('addLanguagePreferences', {
+		requestValidator: type.type({
+			lang: type.string,
+			preferences: dataSignature,
+		}),
 
-export const addLanguagePreferences = (
-	lang: string,
-	preferences: LanguageInfo,
-): Promise<void> => bgSendRequest('addLanguagePreferences', { lang, preferences });
-
-export const addLanguagePreferencesFactory: RequestHandlerFactory = () => {
-	addRequestHandler('addLanguagePreferences', async (rawData) => {
-		const { lang, preferences } = tryDecode(dataIn, rawData);
-		await addLanguage(lang, preferences);
+		factoryHandler:
+			() =>
+				({ lang, preferences }) =>
+					addLanguage(lang, preferences),
 	});
-};
+
+export const addLanguagePreferences = (lang: string, preferences: LanguageInfo) =>
+	addLanguagePreferencesReq({ lang, preferences });
