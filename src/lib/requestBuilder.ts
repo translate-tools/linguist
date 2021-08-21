@@ -11,6 +11,10 @@ type Options<O = any, R = any> = {
 	responseValidator?: t.Type<R, R>;
 };
 
+// TODO: inference response type by handler
+// For example, if request `resetConfig` not define type, but return something,
+// we must show real type instead `void` for hook
+
 /**
  * Factory for building requests which ensure its types
  */

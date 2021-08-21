@@ -1,9 +1,10 @@
 import { defaultConfig } from '../../config';
-import { addRequestHandler, bgSendRequest } from '../../lib/communication';
-import { RequestHandlerFactory } from '../types';
+import { buildBackendRequest } from '../../lib/requestBuilder';
 
-export const resetConfig = (): Promise<void> => bgSendRequest('resetConfig');
-
-export const resetConfigFactory: RequestHandlerFactory = ({ cfg }) => {
-	addRequestHandler('resetConfig', async () => cfg.set(defaultConfig));
-};
+export const [resetConfigFactory, resetConfig] = buildBackendRequest('resetConfig', {
+	factoryHandler:
+		({ cfg }) =>
+			async () => {
+				cfg.set(defaultConfig);
+			},
+});
