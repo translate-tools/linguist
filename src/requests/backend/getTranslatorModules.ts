@@ -1,28 +1,25 @@
-import { RequestHandlerFactory } from '../types';
-
-import { addRequestHandler, bgSendRequest } from '../../lib/communication';
-import { tryDecode, type } from '../../lib/types';
-
 import { Translator } from '@translate-tools/core/types/Translator';
 
-export const getTranslatorModulesOut = type.record(type.string, type.string);
+import { type } from '../../lib/types';
+import { buildBackendRequest } from '../../lib/requestBuilder';
 
-export const getTranslatorModules = () =>
-	bgSendRequest('getTranslatorModules').then((rawData) =>
-		tryDecode(getTranslatorModulesOut, rawData),
-	);
+export const [getTranslatorModulesFactory, getTranslatorModules] = buildBackendRequest(
+	'getTranslatorModules',
+	{
+		responseValidator: type.record(type.string, type.string),
+		factoryHandler:
+			({ translatorModules }) =>
+				async () => {
+					const modules: Record<string, string> = {};
 
-export const getTranslatorModulesFactory: RequestHandlerFactory = ({
-	translatorModules,
-}) => {
-	addRequestHandler('getTranslatorModules', async () => {
-		const modules: Record<string, string> = {};
-		for (const key in translatorModules) {
-			modules[key] = (
-				translatorModules[key] as unknown as typeof Translator
-			).moduleName;
-		}
+					// TODO: fix type for `translatorModules`
+					for (const key in translatorModules) {
+						modules[key] = (
+						translatorModules[key] as unknown as typeof Translator
+						).moduleName;
+					}
 
-		return modules;
-	});
-};
+					return modules;
+				},
+	},
+);
