@@ -1,8 +1,8 @@
-import { addRequestHandler, bgSendRequest } from '../../lib/communication';
-import { RequestHandlerFactory } from '../types';
+import { buildBackendRequest } from '../../lib/requestBuilder';
 
-export const clearCache = (): Promise<void> => bgSendRequest('clearCache');
-
-export const clearCacheFactory: RequestHandlerFactory = ({ bg }) => {
-	addRequestHandler('clearCache', async () => bg.clearTranslatorsCache());
-};
+export const [clearCacheFactory, clearCache] = buildBackendRequest('clearCache', {
+	factoryHandler:
+		({ bg }) =>
+			() =>
+				bg.clearTranslatorsCache(),
+});
