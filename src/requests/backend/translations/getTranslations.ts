@@ -1,15 +1,16 @@
-import { addRequestHandler, bgSendRequest } from '../../../lib/communication';
-import { tryDecode, type } from '../../../lib/types';
-import { RequestHandlerFactory } from '../../types';
+import { buildBackendRequest } from '../../../lib/requestBuilder';
+import { type } from '../../../lib/types';
 import { EntryWithKey, getEntries } from './data';
 
-const getTranslationsOut = type.array(EntryWithKey);
-
-export const getTranslations = () =>
-	bgSendRequest('getTranslations').then((rsp) => tryDecode(getTranslationsOut, rsp));
-
-export const getTranslationsFactory: RequestHandlerFactory = () => {
-	addRequestHandler('getTranslations', async () => {
-		return getEntries();
-	});
-};
+export const [getTranslationsFactory, getTranslations] = buildBackendRequest(
+	'getTranslations',
+	{
+		responseValidator: type.array(EntryWithKey),
+		factoryHandler: () => () =>
+			getEntries().then(
+				(entries) =>
+					// FIXME: remove this cast
+					entries as any,
+			),
+	},
+);

@@ -17,6 +17,8 @@ export const TranslationEntry = type.type({
 	text: type.string,
 	translate: type.string,
 	date: type.number,
+
+	// FIXME: make it optional as in `ITranslationEntry`
 	translator: type.union([type.string, type.undefined]),
 });
 
