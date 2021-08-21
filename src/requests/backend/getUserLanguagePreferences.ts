@@ -1,22 +1,19 @@
-import { addRequestHandler, bgSendRequest } from '../../lib/communication';
-import { tryDecode, type } from '../../lib/types';
-import { RequestHandlerFactory } from '../types';
+import { buildBackendRequest } from '../../lib/requestBuilder';
+import { type } from '../../lib/types';
 
-export const getLanguagePreferencesOut = type.string;
+export const [getUserLanguagePreferencesFactory, getUserLanguagePreferences] =
+	buildBackendRequest('getUserLanguagePreferences', {
+		responseValidator: type.string,
 
-export const getUserLanguagePreferences = () =>
-	bgSendRequest('getUserLanguagePreferences').then((rawData) =>
-		tryDecode(getLanguagePreferencesOut, rawData),
-	);
+		factoryHandler:
+			({ cfg }) =>
+				async () => {
+					const userLanguage = await cfg.getConfig('language');
 
-export const getUserLanguagePreferencesFactory: RequestHandlerFactory = ({ cfg }) => {
-	addRequestHandler('getUserLanguagePreferences', async () => {
-		const userLanguage = await cfg.getConfig('language');
+					if (userLanguage === null) {
+						throw new Error('Invalid value');
+					}
 
-		if (userLanguage === null) {
-			throw new Error('Invalid value');
-		}
-
-		return userLanguage;
+					return userLanguage;
+				},
 	});
-};
