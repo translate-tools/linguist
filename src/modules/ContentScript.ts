@@ -1,10 +1,20 @@
 import { AppConfigType } from '../types/runtime';
 
-import { addRequestHandler } from '../requests/utils';
 import { EventManager } from '../lib/EventManager';
+import { getAllTabs } from '../lib/browser/tabs';
 
+import { addRequestHandler, sendTabRequest } from '../requests/utils';
 import { getConfig } from '../requests/backend/getConfig';
 import { ping } from '../requests/backend/ping';
+
+// TODO: use builder for this request to ensure types integrity
+// Firstly, we should refactor builder to make it more abstract
+
+// Send update event
+export const sendConfigUpdateEvent = () =>
+	getAllTabs().then((tabs) =>
+		tabs.forEach((tab) => sendTabRequest(tab.id, 'configUpdated')),
+	);
 
 export class ContentScript {
 	private eventManger = new EventManager<{

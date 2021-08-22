@@ -1,5 +1,4 @@
 import { browser, Runtime } from 'webextension-polyfill-ts';
-import { getAllTabs } from '../../lib/browser/tabs';
 
 type RequestHandler = (data: any, sender: Runtime.MessageSender) => void | Promise<any>;
 
@@ -39,9 +38,3 @@ export function sendBackgroundRequest(action: string, data?: any) {
 export function sendTabRequest(tabId: number, action: string, data?: any) {
 	return browser.tabs.sendMessage(tabId, { action, data });
 }
-
-// TODO: remove it and replace use of this to handle result of `getAllTabs`
-export const sendRequestToAllTabs = (action: string, data?: any) =>
-	getAllTabs().then((tabs) =>
-		Promise.all(tabs.map((tab) => sendTabRequest(tab.id, action, data))),
-	);

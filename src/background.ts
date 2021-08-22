@@ -1,9 +1,8 @@
-import { sendRequestToAllTabs } from './requests/utils';
-
 import { defaultConfig } from './config';
 
 import { ConfigStorage } from './modules/ConfigStorage/ConfigStorage';
 import { Background, translatorModules } from './modules/Background';
+import { sendConfigUpdateEvent } from './modules/ContentScript';
 
 import { migrateAll } from './migrations/migrationsList';
 
@@ -99,7 +98,8 @@ if (process.env.NODE_ENV !== 'production') {
 				TextTranslatorStorage.forgetText();
 			}
 
-			sendRequestToAllTabs('configUpdated');
+			// Send update event
+			sendConfigUpdateEvent();
 		});
 
 		// Set handlers from factories
