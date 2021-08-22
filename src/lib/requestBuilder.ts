@@ -40,7 +40,7 @@ export const buildBackendRequest = <O = void, R = void>(
 	const factory: RequestHandlerFactory = (factoryProps) => {
 		const handler = factoryHandler(factoryProps);
 
-		addRequestHandler(endpoint, async (reqProps) => {
+		return addRequestHandler(endpoint, async (reqProps) => {
 			// Validate request props
 			if (requestValidator !== undefined) {
 				tryDecode(requestValidator, reqProps);
@@ -86,7 +86,7 @@ export const buildTabRequest = <O = void, R = void>(
 	const factory: ClientRequestHandlerFactory = (factoryProps) => {
 		const handler = factoryHandler(factoryProps);
 
-		addRequestHandler(endpoint, async (reqProps) => {
+		return addRequestHandler(endpoint, async (reqProps) => {
 			// Validate request props
 			if (requestValidator !== undefined) {
 				tryDecode(requestValidator, reqProps);

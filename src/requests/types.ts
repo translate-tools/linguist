@@ -16,7 +16,7 @@ export type RequestHandlerFactoryProps = {
 	translatorModules: Record<string, TranslatorClass>;
 };
 
-export type RequestHandlerFactory = (props: RequestHandlerFactoryProps) => void;
+export type RequestHandlerFactory = (props: RequestHandlerFactoryProps) => () => void;
 
 export type ClientRequestHandlerFactoryProps = {
 	pageTranslator: PageTranslator;
@@ -26,4 +26,4 @@ export type ClientRequestHandlerFactoryProps = {
 
 export type ClientRequestHandlerFactory = (
 	props: ClientRequestHandlerFactoryProps,
-) => void;
+) => () => void;
