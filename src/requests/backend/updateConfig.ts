@@ -2,7 +2,7 @@ import { cloneDeep, set } from 'lodash';
 
 import { checkTypeByPath, type } from '../../lib/types';
 import { getMessage } from '../../lib/language';
-import { buildBackendRequest } from '../../lib/requests/requestBuilder';
+import { buildBackendRequest } from '../utils/requestBuilder';
 import { AppConfig } from '../../types/runtime';
 
 export const [updateConfigFactory, updateConfig] = buildBackendRequest('updateConfig', {

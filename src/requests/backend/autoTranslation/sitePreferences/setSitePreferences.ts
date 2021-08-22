@@ -1,4 +1,4 @@
-import { buildBackendRequest } from '../../../../lib/requests/requestBuilder';
+import { buildBackendRequest } from '../../../utils/requestBuilder';
 import { type } from '../../../../lib/types';
 
 import { setPreferences, dataSignature, SiteData } from './utils';

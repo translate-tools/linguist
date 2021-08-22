@@ -1,5 +1,5 @@
-import { makePing } from '../../lib/requests/makePing';
-import { buildBackendRequest } from '../../lib/requests/requestBuilder';
+import { makePing } from '../utils/makePing';
+import { buildBackendRequest } from '../utils/requestBuilder';
 
 export const [pingFactory, pingReq] = buildBackendRequest('ping', {
 	factoryHandler: () => async () => 'pong' as const,

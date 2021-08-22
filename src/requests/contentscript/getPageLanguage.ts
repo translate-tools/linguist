@@ -1,6 +1,6 @@
 import { getPageLanguage as getPageLanguageHelper } from '../../lib/browser';
 import { type } from '../../lib/types';
-import { buildTabRequest } from '../../lib/requests/requestBuilder';
+import { buildTabRequest } from '../utils/requestBuilder';
 
 export const [getPageLanguageFactory, getPageLanguage] = buildTabRequest(
 	'getPageLanguage',

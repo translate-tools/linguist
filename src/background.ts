@@ -1,4 +1,4 @@
-import { sendRequestToAllTabs } from './lib/requests';
+import { sendRequestToAllTabs } from './requests/utils';
 
 import { defaultConfig } from './config';
 

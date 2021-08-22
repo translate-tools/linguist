@@ -1,7 +1,7 @@
 import { Translator } from '@translate-tools/core/types/Translator';
 
 import { type } from '../../lib/types';
-import { buildBackendRequest } from '../../lib/requests/requestBuilder';
+import { buildBackendRequest } from '../utils/requestBuilder';
 
 export const [getTranslatorModulesFactory, getTranslatorModules] = buildBackendRequest(
 	'getTranslatorModules',

@@ -1,4 +1,4 @@
-import { buildBackendRequest } from '../../lib/requests/requestBuilder';
+import { buildBackendRequest } from '../utils/requestBuilder';
 
 export const [clearCacheFactory, clearCache] = buildBackendRequest('clearCache', {
 	factoryHandler:

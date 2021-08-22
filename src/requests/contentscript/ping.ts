@@ -1,6 +1,6 @@
 import { getCurrentTabId } from '../../lib/browser/tabs';
-import { makePing } from '../../lib/requests/makePing';
-import { buildTabRequest } from '../../lib/requests/requestBuilder';
+import { makePing } from '../utils/makePing';
+import { buildTabRequest } from '../utils/requestBuilder';
 
 export const [pingFactory, pingReq] = buildTabRequest('ping', {
 	factoryHandler: () => async () => 'pong' as const,

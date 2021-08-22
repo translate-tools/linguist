@@ -1,10 +1,7 @@
 import * as t from 'io-ts';
 
-import {
-	RequestHandlerFactory,
-	RequestHandlerFactoryProps,
-} from '../../../requests/types';
-import { tryDecode } from '../../types';
+import { RequestHandlerFactory, RequestHandlerFactoryProps } from '../../types';
+import { tryDecode } from '../../../lib/types';
 
 import { sendBackgroundRequest, addRequestHandler } from '..';
 

@@ -1,5 +1,5 @@
 import { browser, Runtime } from 'webextension-polyfill-ts';
-import { getAllTabs } from '../browser/tabs';
+import { getAllTabs } from '../../lib/browser/tabs';
 
 type RequestHandler = (data: any, sender: Runtime.MessageSender) => void | Promise<any>;
 

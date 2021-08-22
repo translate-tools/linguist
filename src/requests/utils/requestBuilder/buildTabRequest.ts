@@ -3,8 +3,8 @@ import * as t from 'io-ts';
 import {
 	ClientRequestHandlerFactory,
 	ClientRequestHandlerFactoryProps,
-} from '../../../requests/types';
-import { tryDecode } from '../../types';
+} from '../../types';
+import { tryDecode } from '../../../lib/types';
 
 import { sendTabRequest, addRequestHandler } from '..';
 
