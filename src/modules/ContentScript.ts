@@ -1,6 +1,6 @@
 import { AppConfigType } from '../types/runtime';
 
-import { addRequestHandler } from '../lib/communication';
+import { addRequestHandler } from '../lib/requests';
 import { EventManager } from '../lib/EventManager';
 
 import { getConfig } from '../requests/backend/getConfig';

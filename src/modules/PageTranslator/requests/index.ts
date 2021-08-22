@@ -1,13 +1,13 @@
 import { TypeOf } from 'io-ts';
 
 import { PageTranslateStateSignature } from '../../../requests/contentscript/pageTranslation/getPageTranslateState';
-import { addRequestHandler, bgSendRequest } from '../../../lib/communication';
+import { addRequestHandler, sendBackgroundRequest } from '../../../lib/requests';
 import { tryDecode } from '../../../lib/types';
 
 type CountersObject = TypeOf<typeof PageTranslateStateSignature>;
 
 export const translateStateUpdate = (translateState: CountersObject): Promise<void> =>
-	bgSendRequest('translateStateUpdate', translateState);
+	sendBackgroundRequest('translateStateUpdate', translateState);
 
 export const translateStateUpdateHandler = (
 	handler: (counters: CountersObject, tabId?: number) => void,

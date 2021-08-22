@@ -5,9 +5,9 @@ import {
 	RequestHandlerFactoryProps,
 	ClientRequestHandlerFactory,
 	ClientRequestHandlerFactoryProps,
-} from '../requests/types';
-import { bgSendRequest, csSendRequest, addRequestHandler } from './communication';
-import { tryDecode } from './types';
+} from '../../requests/types';
+import { sendBackgroundRequest, sendTabRequest, addRequestHandler } from '.';
+import { tryDecode } from '../types';
 
 // TODO: add property `allowManyHandlers` and when it `false` (by default) throw exception while attempt define 2 endpoints with same name
 type BackgroundOptions<O = any, R = any> = {
@@ -15,10 +15,6 @@ type BackgroundOptions<O = any, R = any> = {
 	requestValidator?: t.Type<O, O>;
 	responseValidator?: t.Type<R, R>;
 };
-
-// TODO: inference response type by handler
-// For example, if request `resetConfig` not define type, but return something,
-// we must show real type instead `void` for hook
 
 /**
  * Factory for building requests which ensure its types
@@ -28,7 +24,7 @@ export const buildBackendRequest = <O = void, R = void>(
 	{ factoryHandler, requestValidator, responseValidator }: BackgroundOptions<O, R>,
 ) => {
 	const hook = (options: O) =>
-		bgSendRequest(endpoint, options).then((response): R => {
+		sendBackgroundRequest(endpoint, options).then((response): R => {
 			// Validate request props
 			if (responseValidator !== undefined) {
 				tryDecode(responseValidator, response);
@@ -74,7 +70,7 @@ export const buildTabRequest = <O = void, R = void>(
 	{ factoryHandler, requestValidator, responseValidator }: TabOptions<O, R>,
 ) => {
 	const hook = (tabId: number, options: O) =>
-		csSendRequest(tabId, endpoint, options).then((response): R => {
+		sendTabRequest(tabId, endpoint, options).then((response): R => {
 			// Validate request props
 			if (responseValidator !== undefined) {
 				tryDecode(responseValidator, response);

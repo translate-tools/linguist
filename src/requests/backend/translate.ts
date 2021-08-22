@@ -1,6 +1,6 @@
 import { langCode, langCodeWithAuto } from '@translate-tools/core/types/Translator';
 
-import { buildBackendRequest } from '../../lib/requestBuilder';
+import { buildBackendRequest } from '../../lib/requests/requestBuilder';
 import { type } from '../../lib/types';
 import { LangCode, LangCodeWithAuto } from '../../types/runtime';
 

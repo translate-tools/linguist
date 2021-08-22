@@ -1,5 +1,5 @@
 import { defaultConfig } from '../../config';
-import { buildBackendRequest } from '../../lib/requestBuilder';
+import { buildBackendRequest } from '../../lib/requests/requestBuilder';
 
 export const [resetConfigFactory, resetConfig] = buildBackendRequest('resetConfig', {
 	factoryHandler:

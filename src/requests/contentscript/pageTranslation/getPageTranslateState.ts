@@ -1,4 +1,4 @@
-import { buildTabRequest } from '../../../lib/requestBuilder';
+import { buildTabRequest } from '../../../lib/requests/requestBuilder';
 import { type } from '../../../lib/types';
 
 export const PageTranslateStateSignature = type.type({

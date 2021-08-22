@@ -1,4 +1,4 @@
-import { buildTabRequest } from '../../../lib/requestBuilder';
+import { buildTabRequest } from '../../../lib/requests/requestBuilder';
 
 export const [disableTranslatePageFactory, disableTranslatePage] = buildTabRequest(
 	'disableTranslatePage',

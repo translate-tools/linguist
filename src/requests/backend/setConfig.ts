@@ -1,4 +1,4 @@
-import { buildBackendRequest } from '../../lib/requestBuilder';
+import { buildBackendRequest } from '../../lib/requests/requestBuilder';
 import { AppConfig } from '../../types/runtime';
 
 export const [setConfigFactory, setConfig] = buildBackendRequest('setConfig', {

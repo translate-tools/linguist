@@ -1,5 +1,6 @@
-import { getCurrentTabId, pingSomething } from '../../lib/communication';
-import { buildTabRequest } from '../../lib/requestBuilder';
+import { getCurrentTabId } from '../../lib/requests/tabs';
+import { makePing } from '../../lib/requests/makePing';
+import { buildTabRequest } from '../../lib/requests/requestBuilder';
 
 export const [pingFactory, pingReq] = buildTabRequest('ping', {
 	factoryHandler: () => async () => 'pong' as const,
@@ -14,7 +15,7 @@ export const ping = async (options?: {
 
 	const actualTabId = tabId ?? (await getCurrentTabId());
 
-	return pingSomething(() => pingReq(actualTabId), timeout, delay)
+	return makePing(() => pingReq(actualTabId), timeout, delay)
 		.then(() => true)
 		.catch(() => false);
 };

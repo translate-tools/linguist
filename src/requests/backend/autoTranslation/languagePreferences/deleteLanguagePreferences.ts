@@ -1,4 +1,4 @@
-import { buildBackendRequest } from '../../../../lib/requestBuilder';
+import { buildBackendRequest } from '../../../../lib/requests/requestBuilder';
 import { deleteLanguage } from './utils';
 
 export const [deleteLanguagePreferencesFactory, deleteLanguagePreferencesReq] =

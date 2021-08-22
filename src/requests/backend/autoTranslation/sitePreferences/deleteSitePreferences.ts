@@ -1,4 +1,4 @@
-import { buildBackendRequest } from '../../../../lib/requestBuilder';
+import { buildBackendRequest } from '../../../../lib/requests/requestBuilder';
 import { type } from '../../../../lib/types';
 
 import { deletePreferences } from './utils';

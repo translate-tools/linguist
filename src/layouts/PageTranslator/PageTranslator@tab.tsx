@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react';
 
-import { getCurrentTab, getCurrentTabId } from '../../lib/communication';
+import { getCurrentTab, getCurrentTabId } from '../../lib/requests/tabs';
 import { useStateWithProxy } from '../../lib/hooks/useStateWithProxy';
 
 import { PageTranslateState } from '../../modules/PageTranslator/PageTranslator';

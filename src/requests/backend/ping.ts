@@ -1,5 +1,5 @@
-import { pingSomething } from '../../lib/communication';
-import { buildBackendRequest } from '../../lib/requestBuilder';
+import { makePing } from '../../lib/requests/makePing';
+import { buildBackendRequest } from '../../lib/requests/requestBuilder';
 
 export const [pingFactory, pingReq] = buildBackendRequest('ping', {
 	factoryHandler: () => async () => 'pong' as const,
@@ -8,7 +8,7 @@ export const [pingFactory, pingReq] = buildBackendRequest('ping', {
 export const ping = (options?: { timeout?: number; delay?: number }) => {
 	const { timeout, delay } = options || {};
 
-	return pingSomething(pingReq, timeout, delay)
+	return makePing(pingReq, timeout, delay)
 		.then(() => true)
 		.catch(() => false);
 };

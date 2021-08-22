@@ -1,4 +1,4 @@
-import { sendRequestToAllCS } from './lib/communication';
+import { sendRequestToAllTabs } from './lib/requests';
 
 import { defaultConfig } from './config';
 
@@ -99,7 +99,7 @@ if (process.env.NODE_ENV !== 'production') {
 				TextTranslatorStorage.forgetText();
 			}
 
-			sendRequestToAllCS('configUpdated');
+			sendRequestToAllTabs('configUpdated');
 		});
 
 		// Set handlers from factories
