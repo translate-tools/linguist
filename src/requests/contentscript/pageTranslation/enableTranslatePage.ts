@@ -1,41 +1,38 @@
-import { addRequestHandler, csSendRequest } from '../../../lib/communication';
-import { tryDecodeObject, type } from '../../../lib/types';
+import { langCode, langCodeWithAuto } from '@translate-tools/core/types/Translator';
+
+import { buildTabRequest } from '../../../lib/requestBuilder';
+import { type } from '../../../lib/types';
 import { LangCodeWithAuto, LangCode } from '../../../types/runtime';
-import { ClientRequestHandlerFactory } from '../../types';
 
-export const enableTranslatePageIn = type.type({
-	from: LangCodeWithAuto,
-	to: LangCode,
-});
+export const [enableTranslatePageFactory, enableTranslatePageReq] = buildTabRequest(
+	'enableTranslatePage',
+	{
+		requestValidator: type.type({
+			from: LangCodeWithAuto,
+			to: LangCode,
+		}),
 
-export const enableTranslatePage = (
-	tabId: number,
-	from: string,
-	to: string,
-): Promise<void> => csSendRequest(tabId, 'enableTranslatePage', { from, to });
+		factoryHandler:
+			({ pageTranslator, selectTranslatorRef, config }) =>
+				async ({ from, to }) => {
+					if (pageTranslator.isRun()) {
+						throw new Error('Page already translated');
+					}
 
-export const enableTranslatePageFactory: ClientRequestHandlerFactory = ({
-	pageTranslator,
-	selectTranslatorRef,
-	config,
-}) => {
-	addRequestHandler('enableTranslatePage', async (rawData) => {
-		if (pageTranslator.isRun()) {
-			throw new Error('Page already translated');
-		}
+					const selectTranslator = selectTranslatorRef.value;
 
-		const { from, to } = tryDecodeObject(enableTranslatePageIn, rawData);
+					if (
+						selectTranslator !== null &&
+					selectTranslator.isRun() &&
+					config.contentscript.selectTranslator.disableWhileTranslatePage
+					) {
+						selectTranslator.stop();
+					}
 
-		const selectTranslator = selectTranslatorRef.value;
+					pageTranslator.run(from, to);
+				},
+	},
+);
 
-		if (
-			selectTranslator !== null &&
-			selectTranslator.isRun() &&
-			config.contentscript.selectTranslator.disableWhileTranslatePage
-		) {
-			selectTranslator.stop();
-		}
-
-		pageTranslator.run(from, to);
-	});
-};
+export const enableTranslatePage = (tabId: number, from: string, to: string) =>
+	enableTranslatePageReq(tabId, { from: from as langCodeWithAuto, to: to as langCode });

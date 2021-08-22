@@ -1,24 +1,22 @@
-import { addRequestHandler, csSendRequest } from '../../../lib/communication';
-import { ClientRequestHandlerFactory } from '../../types';
+import { buildTabRequest } from '../../../lib/requestBuilder';
 
-export const disableTranslatePage = (tabId: number): Promise<void> =>
-	csSendRequest(tabId, 'disableTranslatePage');
+export const [disableTranslatePageFactory, disableTranslatePage] = buildTabRequest(
+	'disableTranslatePage',
+	{
+		factoryHandler:
+			({ pageTranslator, selectTranslatorRef }) =>
+				async () => {
+					if (!pageTranslator.isRun()) {
+						throw new Error('Page is not translated');
+					}
 
-export const disableTranslatePageFactory: ClientRequestHandlerFactory = ({
-	pageTranslator,
-	selectTranslatorRef,
-}) => {
-	addRequestHandler('disableTranslatePage', async () => {
-		if (!pageTranslator.isRun()) {
-			throw new Error('Page is not translated');
-		}
+					const selectTranslator = selectTranslatorRef.value;
 
-		const selectTranslator = selectTranslatorRef.value;
+					pageTranslator.stop();
 
-		pageTranslator.stop();
-
-		if (selectTranslator !== null && !selectTranslator.isRun()) {
-			selectTranslator.start();
-		}
-	});
-};
+					if (selectTranslator !== null && !selectTranslator.isRun()) {
+						selectTranslator.start();
+					}
+				},
+	},
+);
