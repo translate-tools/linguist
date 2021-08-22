@@ -1,4 +1,4 @@
-import { getCurrentTabId } from '../../lib/requests/tabs';
+import { getCurrentTabId } from '../../lib/browser/tabs';
 import { makePing } from '../../lib/requests/makePing';
 import { buildTabRequest } from '../../lib/requests/requestBuilder';
 

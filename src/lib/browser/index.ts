@@ -1,6 +1,6 @@
 import { browser } from 'webextension-polyfill-ts';
 
-import { detectLanguage } from './language';
+import { detectLanguage } from '../language';
 
 export const injectStyles = (paths: string[], parent?: Node) => {
 	paths.forEach((path) => {
