@@ -6,7 +6,16 @@ export const [getConfigFactory, getConfig] = buildBackendRequest('getConfig', {
 	factoryHandler:
 		({ cfg }) =>
 			async () => {
-			// FIXME: remove cast and fix types
-				return cfg.getAllConfig() as any;
+				const config = await cfg.getAllConfig();
+
+				if (config === null) {
+					if (cfg.isLoad()) {
+						throw new Error('Config is not initialized');
+					} else {
+						throw new Error('Config is null by unknown cause');
+					}
+				}
+
+				return config;
 			},
 });
