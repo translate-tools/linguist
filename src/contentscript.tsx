@@ -25,9 +25,13 @@ cs.onLoad(async (initConfig) => {
 	// Set last config after await
 	let config = cs.getConfig() ?? initConfig;
 
-	const pageLanguage = await getPageLanguage(
-		config.pageTranslator.detectLanguageByContent,
-	).then((lang) => (lang === null ? undefined : lang));
+	// Define helper
+	const detectPageLanguage = () =>
+		getPageLanguage(config.pageTranslator.detectLanguageByContent).then((lang) =>
+			lang === null ? undefined : lang,
+		);
+
+	let pageLanguage = await detectPageLanguage();
 
 	const pageTranslator = new PageTranslator(config.pageTranslator);
 
@@ -164,12 +168,14 @@ cs.onLoad(async (initConfig) => {
 		// Skip if page already in translating
 		if (pageTranslator.isRun()) return;
 
-		const actualPageLanguage = await getPageLanguage(
-			config.pageTranslator.detectLanguageByContent,
-		);
+		const actualPageLanguage = await detectPageLanguage();
 
 		// Update config if language did updated after loading page
-		if (pageLanguage !== actualPageLanguage) {
+		if (pageLanguage !== actualPageLanguage && actualPageLanguage !== undefined) {
+			// Update language state
+			pageLanguage = actualPageLanguage;
+
+			// Update config
 			updateConfig(config);
 		}
 
@@ -178,7 +184,7 @@ cs.onLoad(async (initConfig) => {
 		const toLang = config.language;
 
 		// Skip by common causes
-		if (fromLang === null) return;
+		if (fromLang === undefined) return;
 		if (fromLang === toLang && !isAllowTranslateSameLanguages) return;
 
 		let isNeedAutoTranslate = false;
