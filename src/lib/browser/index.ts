@@ -42,9 +42,5 @@ export const getPageLanguage = async (detectByContent = false, reliableOnly = fa
 		}
 	}
 
-	if (langFromMeta !== null) {
-		return langFromMeta;
-	}
-
-	return undefined;
+	return langFromMeta;
 };

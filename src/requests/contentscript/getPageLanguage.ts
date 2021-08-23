@@ -12,10 +12,6 @@ export const [getPageLanguageFactory, getPageLanguage] = buildTabRequest(
 					getPageLanguageHelper(
 						config.pageTranslator.detectLanguageByContent,
 						true,
-					).then(
-						(rsp) =>
-						// FIXME: fix types and remove cast
-						rsp as any,
 					),
 	},
 );

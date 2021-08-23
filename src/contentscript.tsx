@@ -27,7 +27,7 @@ cs.onLoad(async (initConfig) => {
 
 	const pageLanguage = await getPageLanguage(
 		config.pageTranslator.detectLanguageByContent,
-	);
+	).then((lang) => (lang === null ? undefined : lang));
 
 	const pageTranslator = new PageTranslator(config.pageTranslator);
 
@@ -178,7 +178,7 @@ cs.onLoad(async (initConfig) => {
 		const toLang = config.language;
 
 		// Skip by common causes
-		if (fromLang === undefined) return;
+		if (fromLang === null) return;
 		if (fromLang === toLang && !isAllowTranslateSameLanguages) return;
 
 		let isNeedAutoTranslate = false;
