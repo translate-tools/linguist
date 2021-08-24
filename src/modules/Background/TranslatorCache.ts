@@ -25,6 +25,7 @@ type OptionalOptions = { [key in keyof Options]?: Options[key] };
 
 const DBName = 'translatorsCache';
 
+// TODO: write migrations
 // TODO: refactor me
 export class TranslatorCache {
 	private readonly dbPromise: Promise<DB | undefined>;

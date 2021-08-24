@@ -13,7 +13,11 @@ import { ping } from '../requests/backend/ping';
 // Send update event
 export const sendConfigUpdateEvent = () =>
 	getAllTabs().then((tabs) =>
-		tabs.forEach((tab) => sendTabRequest(tab.id, 'configUpdated')),
+		tabs.forEach((tab) =>
+			sendTabRequest(tab.id, 'configUpdated')
+				// Ignore errors
+				.catch(() => {}),
+		),
 	);
 
 export class ContentScript {
