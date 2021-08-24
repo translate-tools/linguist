@@ -44,23 +44,31 @@ export class TranslatorCache {
 			}
 		}
 
-		this.dbPromise = IDB.openDB<any>(DBName, 1, {
-			upgrade(db) {
-				const store = db.createObjectStore(id, {
-					keyPath: 'id',
-					autoIncrement: true,
-				});
+		this.dbPromise = IDB.openDB<any>(DBName).then((db) => {
+			// Return DB if storage exist
+			if (db.objectStoreNames.contains(id)) return db;
 
-				store.createIndex('text', 'text', { unique: true });
-			},
-		})
-			.then((db) => {
-				return db;
+			// Otherwise create storage
+			const nextVersion = db.version + 1;
+
+			return IDB.openDB<any>(DBName, nextVersion, {
+				upgrade(db) {
+					const store = db.createObjectStore(id, {
+						keyPath: 'id',
+						autoIncrement: true,
+					});
+
+					store.createIndex('text', 'text', { unique: true });
+				},
 			})
-			.catch((reason) => {
-				this.lastError = reason;
-				return undefined;
-			});
+				.then((db) => {
+					return db;
+				})
+				.catch((reason) => {
+					this.lastError = reason;
+					return undefined;
+				});
+		});
 	}
 
 	private getDB() {
