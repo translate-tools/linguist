@@ -1,16 +1,16 @@
-import { TranslatorClass } from '../types/objects';
+import { TranslatorClass } from '../../types/objects';
 
-import { EventManager } from '../lib/EventManager';
+import { EventManager } from '../../lib/EventManager';
 
-import { ConfigStorage } from './ConfigStorage/ConfigStorage';
+import { ConfigStorage } from '../ConfigStorage/ConfigStorage';
+import { TranslatorCache } from './TranslatorCache';
 
+// Schedulers
 import { ITranslateScheduler } from '@translate-tools/core/TranslateScheduler/ITranslateScheduler';
 import { TranslateScheduler } from '@translate-tools/core/TranslateScheduler/TranslateScheduler';
-import {
-	TranslatorCache,
-	TranslateSchedulerWithCache,
-} from '@translate-tools/core/TranslateScheduler/TranslateSchedulerWithCache';
+import { TranslateSchedulerWithCache } from '@translate-tools/core/TranslateScheduler/TranslateSchedulerWithCache';
 
+// Translators
 import { Translator } from '@translate-tools/core/types/Translator';
 import { GoogleTranslator } from '@translate-tools/core/translators/GoogleTranslator';
 import { YandexTranslator } from '@translate-tools/core/translators/YandexTranslator';
@@ -143,14 +143,21 @@ export class Background {
 
 		const { useCache, ...config } = schedulerConfig;
 		const baseScheduler = new TranslateScheduler(translator, config);
-		if (!useCache) {
-			this.registry.scheduler = baseScheduler;
-		} else {
+
+		// Try use cache if possible
+		if (useCache) {
 			await this.makeCache(force);
-			this.registry.scheduler = new TranslateSchedulerWithCache(
-				baseScheduler,
-				this.registry.cache,
-			);
+			const cache = this.registry.cache;
+			if (cache !== undefined) {
+				this.registry.scheduler = new TranslateSchedulerWithCache(
+					baseScheduler,
+					cache,
+				);
+				return;
+			}
 		}
+
+		// Use scheduler without cache
+		this.registry.scheduler = baseScheduler;
 	};
 }
