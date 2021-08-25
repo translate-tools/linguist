@@ -1,5 +1,4 @@
 import * as IDB from 'idb/with-async-ittr';
-import { Translator } from '@translate-tools/core/types/Translator';
 
 import { translatorModules } from '.';
 
@@ -33,16 +32,13 @@ const DBName = 'translatorsCache';
 // TODO: refactor me
 export class TranslatorsCacheStorage extends AbstractVersionedStorage {
 	static publicName = 'TranslatorCache';
-	static storageVersion = 1;
+	static storageVersion = 2;
 
 	public static async updateStorageVersion(prevVersion: number | null) {
 		// Remove old databases
-		if (prevVersion === null) {
-			const translatorsNames = Object.values(translatorModules).map(
-				(translator) => (translator as unknown as typeof Translator).moduleName,
-			);
-
-			for (const translatorName of translatorsNames) {
+		if (prevVersion === null || prevVersion < 2) {
+			for (const translatorName in translatorModules) {
+				// Format is `translator_` + translator identifier (not its name)
 				const DBName = 'translator_' + translatorName;
 				await IDB.deleteDB(DBName);
 			}
