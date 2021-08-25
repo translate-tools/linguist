@@ -5,6 +5,7 @@ import { getMigrationsInfo, updateMigrationsInfoItem } from './migrations';
 import { ConfigStorage } from '../modules/ConfigStorage/ConfigStorage';
 import { PopupWindowStorage } from '../pages/popup/layout/PopupWindow.utils/PopupWindowStorage';
 import { TextTranslatorStorage } from '../layouts/TextTranslator/TextTranslator.utils/TextTranslatorStorage';
+import { TranslatorsCacheStorage } from '../modules/Background/TranslatorsCacheStorage';
 
 // Standalone migrations
 import { migrateSitePreferences } from '../requests/backend/autoTranslation/migrations';
@@ -24,6 +25,7 @@ export const migrateAll = async () => {
 		ConfigStorage,
 		PopupWindowStorage,
 		TextTranslatorStorage,
+		TranslatorsCacheStorage,
 	];
 
 	const migrations: Migration[] = [migrateSitePreferences];

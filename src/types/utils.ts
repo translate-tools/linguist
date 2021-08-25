@@ -8,7 +8,7 @@ import { Dispatch, SetStateAction } from 'react';
  * type SomeCar = ClassObject<AbstractRedCar, typeof AbstractRedCar>;
  */
 export type ClassObject<Class, StaticProps extends {} = {}> = {
-	new (): Class;
+	new (...args: any[]): Class;
 } & StaticProps;
 
 /**

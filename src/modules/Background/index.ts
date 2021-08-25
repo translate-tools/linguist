@@ -3,7 +3,7 @@ import { TranslatorClass } from '../../types/objects';
 import { EventManager } from '../../lib/EventManager';
 
 import { ConfigStorage } from '../ConfigStorage/ConfigStorage';
-import { TranslatorCache } from './TranslatorCache';
+import { TranslatorsCacheStorage } from './TranslatorsCacheStorage';
 
 // Schedulers
 import { ITranslateScheduler } from '@translate-tools/core/TranslateScheduler/ITranslateScheduler';
@@ -18,7 +18,7 @@ import { BingTranslatorPublic } from '@translate-tools/core/translators/unstable
 
 interface Registry {
 	translator?: Translator;
-	cache?: TranslatorCache;
+	cache?: TranslatorsCacheStorage;
 	scheduler?: ITranslateScheduler;
 }
 
@@ -100,7 +100,7 @@ export class Background {
 	public async clearTranslatorsCache() {
 		// Clear for each module
 		for (const translatorName in translatorModules) {
-			const cache = new TranslatorCache(translatorName);
+			const cache = new TranslatorsCacheStorage(translatorName);
 			await cache.clear();
 		}
 	}
@@ -123,7 +123,7 @@ export class Background {
 
 		const translatorName = await this.config.getConfig('translatorModule', 'unknown');
 		const cacheConfig = await this.config.getConfig('cache', undefined);
-		this.registry.cache = new TranslatorCache(translatorName, cacheConfig);
+		this.registry.cache = new TranslatorsCacheStorage(translatorName, cacheConfig);
 	};
 
 	private makeScheduler = async (force = false) => {
