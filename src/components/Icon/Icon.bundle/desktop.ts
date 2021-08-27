@@ -13,8 +13,7 @@ import { withGlyphSwapHoriz } from '../_glyph/Icon_glyph_swap-horiz';
 import { withGlyphSettings } from '../_glyph/Icon_glyph_settings';
 import { withGlyphDictionary } from '../_glyph/Icon_glyph_dictionary';
 import { withGlyphDelete } from '../_glyph/Icon_glyph_delete';
-
-// import '../Icon.css';
+import { withGlyphVolumeUp } from '../_glyph/Icon_glyph_volume-up';
 
 export const Icon = compose(
 	composeU(
@@ -22,6 +21,7 @@ export const Icon = compose(
 		withGlyphSwapHoriz,
 		withGlyphDictionary,
 		withGlyphDelete,
+		withGlyphVolumeUp,
 
 		withModIconGlyphUnfoldMore,
 		withModIconGlyphExpandMore,

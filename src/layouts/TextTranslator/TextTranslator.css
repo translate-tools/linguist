@@ -33,7 +33,18 @@
 }
 
 .TextTranslator-Input .Textarea-Wrap {
+	display: flex;
 	height: 150px;
+	flex-direction: column;
+}
+
+.TextTranslator-Input .Textarea-Control {
+	min-height: initial;
+	max-height: initial;
+}
+
+.TextTranslator-InputBar {
+	z-index: 2;
 }
 
 /* Result */

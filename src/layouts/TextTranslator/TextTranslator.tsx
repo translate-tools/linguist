@@ -8,9 +8,13 @@ import { useTranslateFavorite } from '../../lib/hooks/useTranslateFavorite';
 import { getMessage } from '../../lib/language';
 import { MutableValue } from '../../types/utils';
 
+import { getTTS } from '../../requests/backend/getTTS';
+
 import { TabData } from '../../pages/popup/layout/PopupWindow';
 import { LanguagePanel } from '../../components/LanguagePanel/LanguagePanel';
 import { Textarea } from '../../components/Textarea/Textarea.bundle/desktop';
+import { Button } from '../../components/Button/Button.bundle/desktop';
+import { Icon } from '../../components/Icon/Icon.bundle/desktop';
 
 import './TextTranslator.css';
 
@@ -85,6 +89,34 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 	const [translatedText, setTranslatedText] = useState<string | null>(
 		translationData === null ? null : translationData.translate,
 	);
+
+	const ttsPlayer = useRef<HTMLAudioElement | null>(null);
+	const runTTS = useCallback(async () => {
+		// TODO: translate from auto
+		if (userInput === null || from === 'auto') return;
+
+		// Make player
+		if (ttsPlayer.current === null) {
+			const blob = await getTTS({ lang: from, text: userInput });
+
+			console.warn({ blob });
+
+			const url = window.URL.createObjectURL(blob);
+			const audio = new Audio(url);
+			ttsPlayer.current = audio;
+		}
+
+		// Play
+		ttsPlayer.current.play();
+	}, [from, userInput]);
+
+	// Stop and clear player
+	useEffect(() => {
+		if (ttsPlayer.current !== null) {
+			ttsPlayer.current.pause();
+			ttsPlayer.current = null;
+		}
+	}, [from, userInput]);
 
 	// Context of translate operation to prevent rewrite result by old slow request
 	const translateContext = useRef(Symbol('TranslateContext'));
@@ -282,12 +314,24 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 						className={cnTextTranslator('Input')}
 						controlProps={{ innerRef: inputControlExternal }}
 						value={userInput}
-						onChange={(evt) => setUserInput(evt.target.value)}
+						onChange={(evt) => {
+							setUserInput(evt.target.value);
+						}}
 						hasClear
 						onClearClick={clearState}
 						spellCheck={spellCheck}
 						onFocus={() => setIsFocusOnInput(true)}
 						onBlur={() => setIsFocusOnInput(false)}
+						addonAfterControl={
+							// TODO: improve view
+							// TODO: add TTS for result of translate
+							// TODO: add TTS for select translator and for dictionary
+							<div className={cnTextTranslator('InputBar')}>
+								<Button onPress={runTTS} view="clear" size="s">
+									<Icon glyph="volume-up" scalable={false} />
+								</Button>
+							</div>
+						}
 					/>
 					<div className={cnTextTranslator('Result')}>
 						{resultText !== null
