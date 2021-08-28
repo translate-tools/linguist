@@ -43,21 +43,26 @@
 	max-height: initial;
 }
 
-.TextTranslator-InputBar {
+.TextTranslator-Input .TextTranslator-TextActions {
 	z-index: 2;
 }
 
 /* Result */
-.TextTranslator-Result {
+.TextTranslator-ResultContainer {
+	display: flex;
+	flex-direction: column;
 	background-color: var(--textarea-view-default-fill-color-disabled);
 	color: var(--textarea-view-default-typo-color-base);
-	padding: var(--textarea-size-m-control-indent);
 	border-radius: var(--textarea-border-radius);
-	white-space: pre-line;
-	box-sizing: border-box;
-	overflow: auto;
-	min-height: 150px;
 	max-height: 200px;
 	font-family: var(--textarea-font-family);
+}
+
+.TextTranslator-ResultText {
+	min-height: 130px;
+	overflow: auto;
+	padding: var(--textarea-size-m-control-indent);
+	white-space: pre-line;
+	box-sizing: border-box;
 	word-break: break-word;
 }

@@ -92,6 +92,7 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 
 	const ttsPlayer = useRef<HTMLAudioElement | null>(null);
 	const runTTS = useCallback(async () => {
+		// TODO: try to use blob link (if it work - dont forget about mechanism for flush unnecessary links)
 		// TODO: translate from auto
 		if (userInput === null || from === 'auto') return;
 
@@ -323,20 +324,26 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 						onFocus={() => setIsFocusOnInput(true)}
 						onBlur={() => setIsFocusOnInput(false)}
 						addonAfterControl={
-							// TODO: improve view
-							// TODO: add TTS for result of translate
+							// TODO: disable buttons when text is empty and while translation process
 							// TODO: add TTS for select translator and for dictionary
-							<div className={cnTextTranslator('InputBar')}>
+							<div className={cnTextTranslator('TextActions')}>
 								<Button onPress={runTTS} view="clear" size="s">
 									<Icon glyph="volume-up" scalable={false} />
 								</Button>
 							</div>
 						}
 					/>
-					<div className={cnTextTranslator('Result')}>
-						{resultText !== null
-							? resultText
-							: getMessage('textTranslator_translatePlaceholder')}
+					<div className={cnTextTranslator('ResultContainer')}>
+						<div className={cnTextTranslator('ResultText')}>
+							{resultText !== null
+								? resultText
+								: getMessage('textTranslator_translatePlaceholder')}
+						</div>
+						<div className={cnTextTranslator('TextActions')}>
+							<Button onPress={runTTS} view="clear" size="s" disabled>
+								<Icon glyph="volume-up" scalable={false} />
+							</Button>
+						</div>
 					</div>
 				</div>
 			</div>
