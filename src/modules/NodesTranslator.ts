@@ -41,7 +41,7 @@ const nodeExplore = (
 	includeSelf: boolean,
 	handler: (value: Node) => void | boolean,
 ) => {
-	const walk = document.createTreeWalker(inputNode, nodeFilter, null, false);
+	const walk = document.createTreeWalker(inputNode, nodeFilter, null);
 	let node = includeSelf ? walk.currentNode : walk.nextNode();
 	while (node) {
 		if (handler(node) === false) {
