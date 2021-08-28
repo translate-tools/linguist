@@ -6,6 +6,7 @@ import { Checkbox } from 'react-elegant-ui/esm/components/Checkbox/Checkbox.bund
 
 import { useTranslateFavorite } from '../../lib/hooks/useTranslateFavorite';
 import { getMessage } from '../../lib/language';
+import { QueuePlayer } from '../../lib/QueuePlayer';
 import { MutableValue } from '../../types/utils';
 
 import { getTTS } from '../../requests/backend/getTTS';
@@ -90,25 +91,29 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 		translationData === null ? null : translationData.translate,
 	);
 
-	const ttsPlayer = useRef<HTMLAudioElement | null>(null);
+	// TODO: speak both for text and for translate (but only one at the time)
+	const ttsPlayer = useRef<QueuePlayer | null>(null);
 	const runTTS = useCallback(async () => {
-		// TODO: try to use blob link (if it work - dont forget about mechanism for flush unnecessary links)
-		// TODO: translate from auto
+		// TODO: speak for auto
 		if (userInput === null || from === 'auto') return;
 
 		// Make player
 		if (ttsPlayer.current === null) {
-			const blob = await getTTS({ lang: from, text: userInput });
+			const urls = await getTTS({ lang: from, text: userInput });
+			const player = new QueuePlayer(urls);
 
-			console.warn({ blob });
+			// Skip if player is already set by other event
+			if (ttsPlayer.current !== null) return;
 
-			const url = window.URL.createObjectURL(blob);
-			const audio = new Audio(url);
-			ttsPlayer.current = audio;
+			ttsPlayer.current = player;
 		}
 
-		// Play
-		ttsPlayer.current.play();
+		// Play/stop
+		if (ttsPlayer.current.isPlayed()) {
+			ttsPlayer.current.stop();
+		} else {
+			ttsPlayer.current.play();
+		}
 	}, [from, userInput]);
 
 	// Stop and clear player
