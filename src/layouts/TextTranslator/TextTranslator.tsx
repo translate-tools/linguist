@@ -66,6 +66,8 @@ export interface TextTranslatorProps
 	spellCheck?: boolean;
 }
 
+type TTSTarget = 'original' | 'translation';
+
 /**
  * Component for translate any text
  */
@@ -91,38 +93,75 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 		translationData === null ? null : translationData.translate,
 	);
 
-	// TODO: speak both for text and for translate (but only one at the time)
-	const ttsPlayer = useRef<QueuePlayer | null>(null);
-	const runTTS = useCallback(async () => {
-		// TODO: speak for auto
-		if (userInput === null || from === 'auto') return;
+	// TODO: move it to hook `const [playText1, stopText1] = useTTS({lang, text})`
+	const ttsPlayer = useRef<{ target: TTSTarget; player: QueuePlayer } | null>(null);
 
-		// Make player
-		if (ttsPlayer.current === null) {
-			const urls = await getTTS({ lang: from, text: userInput });
-			const player = new QueuePlayer(urls);
+	const flushTTSPlayer = useCallback((onlyForTarget?: TTSTarget) => {
+		if (ttsPlayer.current === null) return;
 
-			// Skip if player is already set by other event
-			if (ttsPlayer.current !== null) return;
+		const { player, target } = ttsPlayer.current;
 
-			ttsPlayer.current = player;
-		}
+		// Skip if target not match
+		if (onlyForTarget !== undefined && target !== onlyForTarget) return;
 
-		// Play/stop
-		if (ttsPlayer.current.isPlayed()) {
-			ttsPlayer.current.stop();
-		} else {
-			ttsPlayer.current.play();
-		}
-	}, [from, userInput]);
+		// Clear
+		player.pause();
+		ttsPlayer.current = null;
+	}, []);
 
-	// Stop and clear player
+	const runTTS = useCallback(
+		async (target: TTSTarget) => {
+			// Flush player for previous target
+			if (ttsPlayer.current !== null && ttsPlayer.current.target !== target) {
+				flushTTSPlayer();
+			}
+
+			// Make player
+			if (ttsPlayer.current === null) {
+				let urls: string[] = [];
+
+				if (target === 'original') {
+					urls = await getTTS({
+						lang: from,
+						text: userInput,
+					});
+				} else {
+					// Skip request with invalid data
+					if (translatedText === null) return;
+
+					urls = await getTTS({
+						lang: to,
+						text: translatedText,
+					});
+				}
+
+				const player = new QueuePlayer(urls);
+
+				// Skip if player is already set by other event
+				if (ttsPlayer.current !== null) return;
+
+				ttsPlayer.current = { target, player };
+			}
+
+			// Play/stop
+			const { player } = ttsPlayer.current;
+			if (player.isPlayed()) {
+				player.stop();
+			} else {
+				player.play();
+			}
+		},
+		[flushTTSPlayer, from, to, translatedText, userInput],
+	);
+
+	// Stop and clear player while changes data which it use
 	useEffect(() => {
-		if (ttsPlayer.current !== null) {
-			ttsPlayer.current.pause();
-			ttsPlayer.current = null;
-		}
-	}, [from, userInput]);
+		flushTTSPlayer('original');
+	}, [flushTTSPlayer, from, userInput]);
+
+	useEffect(() => {
+		flushTTSPlayer('translation');
+	}, [flushTTSPlayer, to, translatedText]);
 
 	// Context of translate operation to prevent rewrite result by old slow request
 	const translateContext = useRef(Symbol('TranslateContext'));
@@ -308,7 +347,7 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 					label={getMessage('common_action_addToDictionary')}
 					checked={isFavorite}
 					setChecked={setIsFavoriteProxy}
-					disabled={!isShowFullData}
+					disabled={!isShowFullData || userInput.length === 0}
 				/>
 			</div>
 			<div className={cnTextTranslator('InputContainer')}>
@@ -329,10 +368,13 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 						onFocus={() => setIsFocusOnInput(true)}
 						onBlur={() => setIsFocusOnInput(false)}
 						addonAfterControl={
-							// TODO: disable buttons when text is empty and while translation process
-							// TODO: add TTS for select translator and for dictionary
 							<div className={cnTextTranslator('TextActions')}>
-								<Button onPress={runTTS} view="clear" size="s">
+								<Button
+									disabled={userInput.length === 0}
+									onPress={() => runTTS('original')}
+									view="clear"
+									size="s"
+								>
 									<Icon glyph="volume-up" scalable={false} />
 								</Button>
 							</div>
@@ -345,7 +387,12 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 								: getMessage('textTranslator_translatePlaceholder')}
 						</div>
 						<div className={cnTextTranslator('TextActions')}>
-							<Button onPress={runTTS} view="clear" size="s" disabled>
+							<Button
+								disabled={inTranslateProcess || translatedText === null}
+								onPress={() => runTTS('translation')}
+								view="clear"
+								size="s"
+							>
 								<Icon glyph="volume-up" scalable={false} />
 							</Button>
 						</div>
