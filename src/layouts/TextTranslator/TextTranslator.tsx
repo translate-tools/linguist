@@ -5,11 +5,9 @@ import { useDelayCallback } from 'react-elegant-ui/esm/hooks/useDelayCallback';
 import { Checkbox } from 'react-elegant-ui/esm/components/Checkbox/Checkbox.bundle/desktop';
 
 import { useTranslateFavorite } from '../../lib/hooks/useTranslateFavorite';
+import { useTTS } from '../../lib/hooks/useTTS';
 import { getMessage } from '../../lib/language';
-import { QueuePlayer } from '../../lib/QueuePlayer';
 import { MutableValue } from '../../types/utils';
-
-import { getTTS } from '../../requests/backend/getTTS';
 
 import { TabData } from '../../pages/popup/layout/PopupWindow';
 import { LanguagePanel } from '../../components/LanguagePanel/LanguagePanel';
@@ -93,75 +91,45 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 		translationData === null ? null : translationData.translate,
 	);
 
-	// TODO: move it to hook `const [playText1, stopText1] = useTTS({lang, text})`
-	const ttsPlayer = useRef<{ target: TTSTarget; player: QueuePlayer } | null>(null);
+	const originalTTS = useTTS(from, userInput);
+	const translateTTS = useTTS(to, translatedText || '');
 
-	const flushTTSPlayer = useCallback((onlyForTarget?: TTSTarget) => {
-		if (ttsPlayer.current === null) return;
+	const ttsTarget = useRef<TTSTarget | null>(null);
 
-		const { player, target } = ttsPlayer.current;
-
-		// Skip if target not match
-		if (onlyForTarget !== undefined && target !== onlyForTarget) return;
-
-		// Clear
-		player.pause();
-		ttsPlayer.current = null;
-	}, []);
+	const getTTSPlayer = useCallback(
+		(target: TTSTarget): ReturnType<typeof useTTS> => {
+			switch (target) {
+			case 'original':
+				return originalTTS;
+			case 'translation':
+				return translateTTS;
+			default:
+				throw new Error('invalid target');
+			}
+		},
+		[originalTTS, translateTTS],
+	);
 
 	const runTTS = useCallback(
 		async (target: TTSTarget) => {
-			// Flush player for previous target
-			if (ttsPlayer.current !== null && ttsPlayer.current.target !== target) {
-				flushTTSPlayer();
+			// Stop player for current target if it different from local target
+			if (ttsTarget.current !== null && ttsTarget.current !== target) {
+				getTTSPlayer(ttsTarget.current).stop();
 			}
 
-			// Make player
-			if (ttsPlayer.current === null) {
-				let urls: string[] = [];
-
-				if (target === 'original') {
-					urls = await getTTS({
-						lang: from,
-						text: userInput,
-					});
-				} else {
-					// Skip request with invalid data
-					if (translatedText === null) return;
-
-					urls = await getTTS({
-						lang: to,
-						text: translatedText,
-					});
-				}
-
-				const player = new QueuePlayer(urls);
-
-				// Skip if player is already set by other event
-				if (ttsPlayer.current !== null) return;
-
-				ttsPlayer.current = { target, player };
-			}
+			// Update current target
+			ttsTarget.current = target;
 
 			// Play/stop
-			const { player } = ttsPlayer.current;
+			const player = getTTSPlayer(target);
 			if (player.isPlayed()) {
 				player.stop();
 			} else {
 				player.play();
 			}
 		},
-		[flushTTSPlayer, from, to, translatedText, userInput],
+		[getTTSPlayer],
 	);
-
-	// Stop and clear player while changes data which it use
-	useEffect(() => {
-		flushTTSPlayer('original');
-	}, [flushTTSPlayer, from, userInput]);
-
-	useEffect(() => {
-		flushTTSPlayer('translation');
-	}, [flushTTSPlayer, to, translatedText]);
 
 	// Context of translate operation to prevent rewrite result by old slow request
 	const translateContext = useRef(Symbol('TranslateContext'));
