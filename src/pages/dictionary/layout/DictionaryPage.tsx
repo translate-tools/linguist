@@ -13,6 +13,7 @@ import { clearTranslations } from '../../../requests/backend/translations/clearT
 import { getMessage } from '../../../lib/language';
 import { saveFile } from '../../../lib/files';
 import { useMessageBroker } from '../../../lib/hooks/useMessageBroker';
+import { useTTS } from '../../../lib/hooks/useTTS';
 
 import { Button } from '../../../components/Button/Button.bundle/desktop';
 import { Select } from '../../../components/Select/Select.bundle/desktop';
@@ -131,6 +132,54 @@ export const DictionaryPage: FC<IDictionaryPageProps> = ({ confirmDelete = true 
 	}, [addMessage, updateData]);
 
 	//
+	// TTS
+	//
+
+	const [TTSData, setTTSData] = useState<{
+		id: string;
+		lang: string;
+		text: string;
+	} | null>(null);
+
+	const { lang: ttsLang = '', text: ttsText = '' } = TTSData || {};
+	const ttsPlayer = useTTS(ttsLang, ttsText);
+
+	const playPauseTTS = useImmutableCallback(
+		(id: string, lang: string, text: string) => {
+			const request = { id, lang, text };
+			const isSameObject =
+				TTSData !== null &&
+				Object.keys(request).every(
+					(key) => (request as any)[key] === (TTSData as any)[key],
+				);
+
+			if (isSameObject) {
+				if (ttsPlayer.isPlayed()) {
+					ttsPlayer.stop();
+				} else {
+					ttsPlayer.play();
+				}
+			} else {
+				ttsPlayer.stop();
+				setTTSData({ id, lang, text });
+			}
+		},
+		[TTSData, ttsPlayer],
+	);
+
+	// Play by change TTSData
+	useEffect(() => {
+		if (TTSData !== null) {
+			ttsPlayer.play();
+		}
+	}, [TTSData, ttsPlayer]);
+
+	// Stop TTS by change entries list
+	useEffect(() => {
+		ttsPlayer.stop();
+	}, [entries, ttsPlayer]);
+
+	//
 	// Render
 	//
 
@@ -233,15 +282,41 @@ export const DictionaryPage: FC<IDictionaryPageProps> = ({ confirmDelete = true 
 						</div>
 					</div>
 					<div className={cnDictionaryPage('EntryContent')}>
-						<div className={cnDictionaryPage('EntryText')}>{text}</div>
-						<div className={cnDictionaryPage('EntryTranslate')}>
-							{translate}
+						<div className={cnDictionaryPage('EntryTextContainer')}>
+							<div className={cnDictionaryPage('EntryTextAction')}>
+								<Button
+									onPress={() => {
+										playPauseTTS(idx + '', from, text);
+									}}
+									view="clear"
+									size="s"
+								>
+									<Icon glyph="volume-up" scalable={false} />
+								</Button>
+							</div>
+							<div className={cnDictionaryPage('EntryText')}>{text}</div>
+						</div>
+						<div className={cnDictionaryPage('EntryTextContainer')}>
+							<div className={cnDictionaryPage('EntryTextAction')}>
+								<Button
+									onPress={() => {
+										playPauseTTS(idx + '', to, translate);
+									}}
+									view="clear"
+									size="s"
+								>
+									<Icon glyph="volume-up" scalable={false} />
+								</Button>
+							</div>
+							<div className={cnDictionaryPage('EntryText')}>
+								{translate}
+							</div>
 						</div>
 					</div>
 				</div>
 			);
 		});
-	}, [entries, search, to, from, remove, resetFilters]);
+	}, [entries, from, to, search, resetFilters, remove, playPauseTTS]);
 
 	const langsListFrom = useMemo(
 		() => [

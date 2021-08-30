@@ -124,18 +124,25 @@
 	min-height: 3rem;
 }
 
-.DictionaryPage-EntryContent > * {
+.DictionaryPage-EntryContent > :not(:last-child) {
+	margin-right: var(--typography-controls-indent-m);
+}
+
+.DictionaryPage-EntryTextContainer {
 	box-sizing: border-box;
 	width: 100%;
+	border-radius: var(--typography-controls-border-radius);
+	background-color: #eee;
+}
+
+.DictionaryPage-EntryTextAction {
+	padding-top: var(--typography-controls-indent-l);
+}
+
+.DictionaryPage-EntryText {
 	max-height: 400px;
 	overflow: auto;
 	padding: var(--typography-controls-indent-l);
 	white-space: pre-wrap;
 	scrollbar-width: thin;
-	border-radius: var(--typography-controls-border-radius);
-	background-color: #eee;
-}
-
-.DictionaryPage-EntryContent > :not(:last-child) {
-	margin-right: var(--typography-controls-indent-m);
 }
