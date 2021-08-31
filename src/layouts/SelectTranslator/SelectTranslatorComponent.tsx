@@ -4,6 +4,7 @@ import { browser } from 'webextension-polyfill-ts';
 import { TranslatorFeatures } from '../../pages/popup/layout/PopupWindow';
 
 import { detectLanguage, getMessage } from '../../lib/language';
+import { useTTS } from '../../lib/hooks/useTTS';
 import { useTranslateFavorite } from '../../lib/hooks/useTranslateFavorite';
 
 import { getTranslatorFeatures } from '../../requests/backend/getTranslatorFeatures';
@@ -288,6 +289,20 @@ export const SelectTranslatorComponent: FC<SelectTranslatorComponentProps> = ({
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [isInited, originalText]);
 
+	// TTS playes
+	const ttsPlayer = useTTS(to ?? '', translatedText || '');
+	const toggleTTS = useCallback(() => {
+		if (ttsPlayer.isPlayed()) {
+			ttsPlayer.stop();
+		} else {
+			ttsPlayer.play();
+		}
+	}, [ttsPlayer]);
+
+	// Stop TTS by umount
+	// eslint-disable-next-line react-hooks/exhaustive-deps
+	useEffect(() => () => ttsPlayer.stop(), []);
+
 	if (translatorFeatures !== undefined && (translatedText !== null || error !== null)) {
 		return (
 			<div className={cnSelectTranslator()}>
@@ -311,6 +326,9 @@ export const SelectTranslatorComponent: FC<SelectTranslatorComponentProps> = ({
 							swapHandler={swapHandler}
 							disableSwap={translatedText === null}
 						/>{' '}
+						<Button onPress={toggleTTS} view="clear">
+							<Icon glyph="volume-up" scalable={false} />
+						</Button>
 					</div>
 
 					<div
