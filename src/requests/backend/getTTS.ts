@@ -41,9 +41,11 @@ export const [getTTSFactory, getTTSReq] = buildBackendRequest('getTTS', {
 export const getTTS = async (options: { text: string; lang: string }) => {
 	const encodedBlobs = await getTTSReq(options);
 
-	const ttsBlobs = encodedBlobs.map((encodedBlob) =>
-		base64ToBlob(encodedBlob.slice('data:audio/mpeg;base64,'.length), 'audio/mpeg'),
-	);
+	const ttsBlobs = encodedBlobs.map((encodedBlob) => {
+		const prefix = 'data:audio/mpeg;base64,';
+		const slice = encodedBlob.slice(prefix.length);
+		return base64ToBlob(slice, 'audio/mpeg');
+	});
 
 	const ttsUrls = ttsBlobs.map((blob) => window.URL.createObjectURL(blob));
 	return ttsUrls;

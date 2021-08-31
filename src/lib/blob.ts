@@ -1,3 +1,6 @@
+/**
+ * Source: https://stackoverflow.com/a/18650249
+ */
 export const blobToBase64 = (blob: Blob) => {
 	return new Promise<string>((resolve) => {
 		const reader = new FileReader();
@@ -12,6 +15,9 @@ export const blobToBase64 = (blob: Blob) => {
 	});
 };
 
+/**
+ * Source: https://stackoverflow.com/a/16245768
+ */
 export const base64ToBlob = (b64Data: string, contentType = '', sliceSize = 512) => {
 	const byteCharacters = atob(b64Data);
 	const byteArrays = [];
