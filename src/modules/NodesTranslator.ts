@@ -65,6 +65,15 @@ export interface Config {
 	lazyTranslate?: boolean;
 }
 
+const showOriginalTextByHover = true;
+
+function isBlockElement(element: Element) {
+	const blockTypes = ['block', 'flex', 'grid', 'table', 'table-row', 'list-item'];
+	const display = getComputedStyle(element).display;
+
+	return blockTypes.indexOf(display) !== -1;
+}
+
 /**
  * Module for dynamic translate a DOM nodes
  */
@@ -123,6 +132,10 @@ export class NodesTranslator {
 
 		observer.observe(node);
 		this.addNode(node);
+
+		if (showOriginalTextByHover) {
+			document.addEventListener('mouseover', this.showOriginalTextHandler);
+		}
 	}
 
 	unobserve(node: Element) {
@@ -133,7 +146,38 @@ export class NodesTranslator {
 		this.deleteNode(node);
 		this.observedNodesStorage.get(node)?.disconnect();
 		this.observedNodesStorage.delete(node);
+
+		if (showOriginalTextByHover) {
+			document.removeEventListener('mouseover', this.showOriginalTextHandler);
+		}
 	}
+
+	private showOriginalTextHandler = (evt: MouseEvent) => {
+		const target: Element = evt.target as Element;
+
+		const getTextOfElement = (element: Node) => {
+			let text = '';
+
+			if (element instanceof Text) {
+				text += this.nodeStorage.get(element)?.originalText ?? '';
+			} else if (element instanceof Element) {
+				for (const node of Array.from(element.childNodes)) {
+					if (node instanceof Text) {
+						text += this.nodeStorage.get(node)?.originalText ?? '';
+					} else if (node instanceof Element && !isBlockElement(node)) {
+						text += getTextOfElement(node);
+					} else {
+						break;
+					}
+				}
+			}
+
+			return text;
+		};
+
+		// TODO: show popup with text after delay. Don't show if text is empty
+		console.info(getTextOfElement(target));
+	};
 
 	private readonly itersectStorage = new WeakSet<Node>();
 	private readonly itersectObserver = new IntersectionObserver(
