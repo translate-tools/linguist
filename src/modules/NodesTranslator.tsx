@@ -1,4 +1,7 @@
+import { ShadowDOMContainerManager } from '../lib/ShadowDOMContainerManager';
 import { XMutationObserver } from '../lib/XMutationObserver';
+import { Popup } from '../components/Popup/Popup';
+import React from 'react';
 
 interface NodeData {
 	/**
@@ -152,6 +155,10 @@ export class NodesTranslator {
 		}
 	}
 
+	private readonly shadowRoot = new ShadowDOMContainerManager({
+		styles: ['common.css', 'contentscript.css'],
+	});
+
 	private showOriginalTextHandler = (evt: MouseEvent) => {
 		const target: Element = evt.target as Element;
 
@@ -175,8 +182,40 @@ export class NodesTranslator {
 			return text;
 		};
 
+		// Create root node
+		if (this.shadowRoot.getRootNode() === null) {
+			this.shadowRoot.createRootNode();
+		}
+
 		// TODO: show popup with text after delay. Don't show if text is empty
-		console.info(getTextOfElement(target));
+		const text = getTextOfElement(target);
+
+		// TODO: refactor me
+		if (text) {
+			this.shadowRoot.mountComponent(
+				<Popup
+					target="anchor"
+					anchor={{ current: target }}
+					view="default"
+					visible={true}
+					zIndex={999}
+				>
+					<div
+						// TODO: use class
+						style={{
+							background: '#eee',
+							color: '#000',
+							padding: '1rem',
+							maxWidth: '400px',
+						}}
+					>
+						{text}
+					</div>
+				</Popup>,
+			);
+		} else {
+			this.shadowRoot.unmountComponent();
+		}
 	};
 
 	private readonly itersectStorage = new WeakSet<Node>();
