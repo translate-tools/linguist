@@ -170,6 +170,15 @@ export const generateTree = ({
 								),
 							},
 						},
+						{
+							path: 'pageTranslator.originalTextPopup',
+							optionContent: {
+								type: 'Checkbox',
+								text: getMessage(
+									'settings_option_pageTranslation_originalTextPopup',
+								),
+							},
+						},
 					],
 				},
 				{

@@ -84,6 +84,7 @@ export const AppConfig = type.type({
 		translatableAttributes: ArrayOfStrings,
 		lazyTranslate: type.boolean,
 		detectLanguageByContent: type.boolean,
+		originalTextPopup: type.boolean,
 	}),
 	textTranslator: type.type({
 		rememberText: type.boolean,

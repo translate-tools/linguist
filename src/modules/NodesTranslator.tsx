@@ -60,15 +60,15 @@ interface InnerConfig {
 	ignoredTags: Set<string>;
 	translatableAttributes: Set<string>;
 	lazyTranslate: boolean;
+	originalTextPopup?: boolean;
 }
 
 export interface Config {
 	ignoredTags?: string[];
 	translatableAttributes?: string[];
 	lazyTranslate?: boolean;
+	originalTextPopup?: boolean;
 }
-
-const showOriginalTextByHover = true;
 
 function isBlockElement(element: Element) {
 	const blockTypes = ['block', 'flex', 'grid', 'table', 'table-row', 'list-item'];
@@ -87,6 +87,7 @@ export class NodesTranslator {
 	constructor(translateCallback: TranslatorInterface, config?: Config) {
 		this.translateCallback = translateCallback;
 		this.config = {
+			...config,
 			ignoredTags: new Set(
 				config?.ignoredTags !== undefined
 					? config.ignoredTags.filter(String)
@@ -136,7 +137,7 @@ export class NodesTranslator {
 		observer.observe(node);
 		this.addNode(node);
 
-		if (showOriginalTextByHover) {
+		if (this.config.originalTextPopup) {
 			document.addEventListener('mouseover', this.showOriginalTextHandler);
 		}
 	}
@@ -150,7 +151,7 @@ export class NodesTranslator {
 		this.observedNodesStorage.get(node)?.disconnect();
 		this.observedNodesStorage.delete(node);
 
-		if (showOriginalTextByHover) {
+		if (this.config.originalTextPopup) {
 			document.removeEventListener('mouseover', this.showOriginalTextHandler);
 		}
 	}

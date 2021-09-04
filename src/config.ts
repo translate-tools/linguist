@@ -30,6 +30,7 @@ export const defaultConfig: AppConfigType = {
 		translatableAttributes: ['title', 'alt', 'placeholder', 'label', 'aria-label'],
 		lazyTranslate: true,
 		detectLanguageByContent: true,
+		originalTextPopup: true,
 	},
 	textTranslator: {
 		rememberText: true,
