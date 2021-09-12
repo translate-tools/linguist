@@ -3,6 +3,10 @@
 		"prettier --write",
 		"eslint --fix"
 	],
+	"*.css": [
+		"prettier --write",
+		"stylelint --fix"
+	],
 	"*.md": [
 		"prettier --write --parser markdown"
 	],

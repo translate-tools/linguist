@@ -1,0 +1,30 @@
+{
+  "extends": "stylelint-config-standard",
+  "plugins": [
+    "stylelint-no-unsupported-browser-features"
+  ],
+  "rules": {
+    "indentation": "tab",
+    "max-empty-lines": 2,
+    "plugin/no-unsupported-browser-features": [
+      true,
+      {
+        # TODO: think about opera
+        "ignore": [
+          "css-resize",
+          "intrinsic-width",
+          "border-radius",
+          "css-animation",
+          "transforms2d"
+        ]
+      }
+    ]
+  },
+  "ignoreFiles": [
+    "**/*.ts",
+    "**/*.tsx",
+    "dist/**",
+    "examples/components-list/dist/**",
+    "src/theme/presets/**/*.css"
+  ]
+}
