@@ -13,7 +13,13 @@ export interface IOriginalTextPopupProps {
 
 export const OriginalTextPopup: FC<IOriginalTextPopupProps> = ({ target, children }) => {
 	return (
-		<Popup target="anchor" anchor={target} view="default" visible={true} zIndex={999}>
+		<Popup
+			target="anchor"
+			anchor={target}
+			view="default"
+			visible={true}
+			zIndex={999999999}
+		>
 			<div className={cnOriginalTextPopup()}>{children}</div>
 		</Popup>
 	);
