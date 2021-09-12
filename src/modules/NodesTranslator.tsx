@@ -1,7 +1,9 @@
+import React from 'react';
+
 import { ShadowDOMContainerManager } from '../lib/ShadowDOMContainerManager';
 import { XMutationObserver } from '../lib/XMutationObserver';
-import { Popup } from '../components/Popup/Popup';
-import React from 'react';
+
+import { OriginalTextPopup } from '../layouts/OriginalTextPopup/OriginalTextPopup';
 
 interface NodeData {
 	/**
@@ -153,6 +155,7 @@ export class NodesTranslator {
 
 		if (this.config.originalTextPopup) {
 			document.removeEventListener('mouseover', this.showOriginalTextHandler);
+			this.shadowRoot.unmountComponent();
 		}
 	}
 
@@ -188,31 +191,13 @@ export class NodesTranslator {
 			this.shadowRoot.createRootNode();
 		}
 
-		// TODO: show popup with text after delay. Don't show if text is empty
+		// TODO: show popup with text after delay
 		const text = getTextOfElement(target);
-
-		// TODO: refactor me
 		if (text) {
 			this.shadowRoot.mountComponent(
-				<Popup
-					target="anchor"
-					anchor={{ current: target }}
-					view="default"
-					visible={true}
-					zIndex={999}
-				>
-					<div
-						// TODO: use class
-						style={{
-							background: '#eee',
-							color: '#000',
-							padding: '1rem',
-							maxWidth: '400px',
-						}}
-					>
-						{text}
-					</div>
-				</Popup>,
+				<OriginalTextPopup target={{ current: target as HTMLElement }}>
+					{text}
+				</OriginalTextPopup>,
 			);
 		} else {
 			this.shadowRoot.unmountComponent();
