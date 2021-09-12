@@ -1,10 +1,8 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import root from 'react-shadow';
-import { browser } from 'webextension-polyfill-ts';
 
 import { translate } from '../requests/backend/translate';
 import { SelectTranslator as SelectTranslatorPopup } from '../layouts/SelectTranslator/SelectTranslator';
+import { ShadowDOMContainerManager } from '../lib/ShadowDOMContainerManager';
 
 interface Options {
 	/**
@@ -91,55 +89,52 @@ export class SelectTranslator {
 		}
 	}
 
-	// Root DOM node contains component
-	private root: HTMLElement | null = null;
-
 	// Flag which set while every selection event and reset while button shown
 	private unhandledSelection = false;
 	private selectionFlagUpdater = () => {
 		this.unhandledSelection = true;
 	};
 
+	private readonly shadowRoot = new ShadowDOMContainerManager({
+		styles: ['common.css', 'contentscript.css'],
+	});
+
 	public start() {
-		if (this.root !== null) {
+		if (this.shadowRoot.getRootNode() !== null) {
 			throw new Error('Already started');
 		}
 
-		// Create and insert root node
-		this.root = document.createElement('div');
-		document.body.appendChild(this.root);
-
-		// Reset all styles
-		this.root.style.setProperty('all', 'unset');
+		this.shadowRoot.createRootNode();
+		const root = this.shadowRoot.getRootNode() as HTMLElement;
 
 		// Add event listeners
+		root.addEventListener('keydown', this.keyDown);
 		document.addEventListener('pointerdown', this.pointerDown);
 		document.addEventListener('pointerup', this.pointerUp);
-		this.root.addEventListener('keydown', this.keyDown);
 		document.addEventListener('selectionchange', this.selectionFlagUpdater);
 
-		this.mountComponent();
+		this.mountEmptyComponent();
 	}
 
 	public stop() {
-		if (this.root === null) {
+		const root = this.shadowRoot.getRootNode();
+		if (root === null) {
 			throw new Error('Not started');
 		}
 
 		// Remove event listeners
+		root.removeEventListener('keydown', this.keyDown);
 		document.removeEventListener('pointerdown', this.pointerDown);
 		document.removeEventListener('pointerup', this.pointerUp);
-		this.root.removeEventListener('keydown', this.keyDown);
 		document.removeEventListener('selectionchange', this.selectionFlagUpdater);
 
 		// Unmount component and remove root node
-		this.unmountComponent();
-		this.root.remove();
-		this.root = null;
+		this.shadowRoot.unmountComponent();
+		this.shadowRoot.removeRootNode();
 	}
 
 	public isRun() {
-		return this.root !== null;
+		return this.shadowRoot.getRootNode() !== null;
 	}
 
 	// Prevent handle keys by page. It important for search language on pages like youtube where F key can open fullscreen mode
@@ -152,11 +147,8 @@ export class SelectTranslator {
 	 * Close popup by click outside the root
 	 */
 	private pointerDown = (evt: PointerEvent) => {
-		if (
-			evt.target instanceof Node &&
-			this.root !== null &&
-			this.root.contains(evt.target)
-		)
+		const root = this.shadowRoot.getRootNode();
+		if (root !== null && evt.target instanceof Node && root.contains(evt.target))
 			return;
 
 		this.hidePopup();
@@ -181,10 +173,10 @@ export class SelectTranslator {
 			return;
 
 		const target = evt.target;
+		const root = this.shadowRoot.getRootNode();
 
 		// Skip events inside root node
-		if (this.root === null || (target instanceof Node && this.root.contains(target)))
-			return;
+		if (root === null || (target instanceof Node && root.contains(target))) return;
 
 		this.context = Symbol('context');
 		const context = this.context;
@@ -203,9 +195,9 @@ export class SelectTranslator {
 
 			// Skip if selected a text inside root node
 			if (
-				this.root === null ||
-				this.root.contains(selection.anchorNode) ||
-				this.root.contains(selection.focusNode)
+				root === null ||
+				root.contains(selection.anchorNode) ||
+				root.contains(selection.focusNode)
 			)
 				return;
 
@@ -241,9 +233,9 @@ export class SelectTranslator {
 			showOriginalText,
 		} = this.options;
 
-		this.mountComponent(
+		this.shadowRoot.mountComponent(
 			<SelectTranslatorPopup
-				closeHandler={() => this.mountComponent()}
+				closeHandler={this.hidePopup}
 				translate={translate}
 				{...{
 					pageLanguage,
@@ -264,35 +256,10 @@ export class SelectTranslator {
 	};
 
 	private hidePopup = () => {
-		this.mountComponent();
+		this.mountEmptyComponent();
 	};
 
-	// Render shadow root with preloading resources
-	private mountComponent = (child?: React.ReactNode) => {
-		// Skip when root node is not exist
-		if (this.root === null) return;
-
-		const styles = ['common.css', 'contentscript.css'];
-
-		ReactDOM.render(
-			<root.div style={{ all: 'unset' }} mode="closed">
-				{/* Include styles and scripts */}
-				{styles.map((path, index) => (
-					<link
-						key={index}
-						rel="stylesheet"
-						href={browser.runtime.getURL(path)}
-					/>
-				))}
-				{child}
-			</root.div>,
-			this.root,
-		);
-	};
-
-	private unmountComponent = () => {
-		if (this.root !== null) {
-			ReactDOM.unmountComponentAtNode(this.root);
-		}
+	private mountEmptyComponent = () => {
+		this.shadowRoot.mountComponent();
 	};
 }
