@@ -1,12 +1,13 @@
 import React, { FC, Ref, useCallback, useEffect, useRef, useState } from 'react';
 import { cn } from '@bem-react/classname';
 import { useDelayCallback } from 'react-elegant-ui/esm/hooks/useDelayCallback';
+import { useImmutableCallback } from 'react-elegant-ui/esm/hooks/useImmutableCallback';
 
 import { Checkbox } from 'react-elegant-ui/esm/components/Checkbox/Checkbox.bundle/desktop';
 
 import { useTranslateFavorite } from '../../lib/hooks/useTranslateFavorite';
 import { useTTS } from '../../lib/hooks/useTTS';
-import { getMessage } from '../../lib/language';
+import { detectLanguage, getMessage } from '../../lib/language';
 import { MutableValue } from '../../types/utils';
 
 import { TabData } from '../../pages/popup/layout/PopupWindow';
@@ -131,16 +132,42 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 		[getTTSPlayer],
 	);
 
-	// Context of translate operation to prevent rewrite result by old slow request
-	const translateContext = useRef(Symbol('TranslateContext'));
+	const [languageSuggestion, setLanguageSuggestion] = useState<null | string>(null);
+
+	// Hide suggestion if language already selected
+	useEffect(() => {
+		if (from !== 'auto') {
+			setLanguageSuggestion(null);
+		}
+	}, [from]);
+
+	const applySuggestedLanguage: React.MouseEventHandler = useCallback(
+		(evt) => {
+			evt.preventDefault();
+
+			if (languageSuggestion !== null) {
+				setFrom(languageSuggestion);
+				setLanguageSuggestion(null);
+			}
+		},
+		[languageSuggestion, setFrom],
+	);
+
+	// Context of current text state. Its change with change text
+	const textStateContext = useRef(Symbol('TextContext'));
+
+	// Update context by change text
+	useEffect(() => {
+		textStateContext.current = Symbol('TextContext');
+	}, [from, to, userInput]);
 
 	// Translate manager
 	const translate = useCallback(() => {
-		const localContext = translateContext.current;
+		const localContext = textStateContext.current;
 
 		translateHook(userInput, from, to)
 			.then((response) => {
-				if (localContext !== translateContext.current) return;
+				if (localContext !== textStateContext.current) return;
 
 				// throw new Error('Test message');
 
@@ -155,7 +182,7 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 				});
 			})
 			.catch((reason) => {
-				if (localContext !== translateContext.current) return;
+				if (localContext !== textStateContext.current) return;
 
 				if (reason instanceof Error) {
 					setErrorMessage(`${getMessage('common_error')}: ${reason.message}`);
@@ -165,7 +192,7 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 				setErrorMessage(getMessage('message_unknownError'));
 			})
 			.finally(() => {
-				if (localContext !== translateContext.current) return;
+				if (localContext !== textStateContext.current) return;
 
 				setInTranslateProcess(false);
 			});
@@ -175,7 +202,7 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 	const disableDelayForNextTranslate = useRef(false);
 
 	const swapLanguages = ({ from, to }: { from: string; to: string }) => {
-		translateContext.current = Symbol('TranslateContext');
+		textStateContext.current = Symbol('TextContext');
 
 		// We can't translate right now, because must await an change state,
 		// so just mark delay disable for next translate
@@ -193,8 +220,8 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 
 	// Clear text and stop translation
 	const clearState = useCallback(() => {
-		// Stop translation
-		translateContext.current = Symbol('TranslateContext');
+		// Stop async operations
+		textStateContext.current = Symbol('TextContext');
 		setInTranslateProcess(false);
 
 		// Clear text
@@ -210,41 +237,58 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 	// Translate by changes
 	const [setTranslateTask, resetTranslateTask] = useDelayCallback();
 
+	const handleNewText = useImmutableCallback(() => {
+		const translateText = () => {
+			// Ignore changes
+			if (noTranslate) {
+				return;
+			}
+
+			// Ignore pointless direction
+			if (from === to) {
+				return;
+			}
+
+			setInTranslateProcess(true);
+			setErrorMessage(null);
+			translate();
+		};
+
+		translateText();
+
+		const suggestLanguage = () => {
+			if (from !== 'auto') {
+				setLanguageSuggestion(null);
+				return;
+			}
+
+			const localContext = textStateContext.current;
+
+			// TODO: replace it to request (in future it may be replaced to some translator API)
+			detectLanguage(userInput).then((lang) => {
+				if (localContext !== textStateContext.current) return;
+				setLanguageSuggestion(lang);
+			});
+		};
+
+		suggestLanguage();
+	}, [from, noTranslate, to, translate, userInput]);
+
+	// Handle text by change with debounce
 	useEffect(() => {
-		// Ignore changes
-		if (noTranslate) {
-			return;
-		}
-
-		translateContext.current = Symbol('TranslateContext');
-
 		// Clear state
 		if (userInput.length === 0) {
 			clearState();
 			return;
 		}
 
-		// Ignore pointless direction
-		if (from === to) {
-			return;
-		}
-
-		const translateTask = () => {
-			setInTranslateProcess(true);
-			setErrorMessage(null);
-			translate();
-		};
-
-		// Translate
 		if (disableDelayForNextTranslate.current) {
 			disableDelayForNextTranslate.current = false;
 			resetTranslateTask();
-			translateTask();
+			handleNewText();
 		} else {
-			setTranslateTask(translateTask, inputDelay);
+			setTranslateTask(handleNewText, inputDelay);
 		}
-		// Ignore `noTranslate`
-		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [
 		from,
 		to,
@@ -254,6 +298,7 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 		resetTranslateTask,
 		setTranslateTask,
 		translate,
+		handleNewText,
 	]);
 
 	// Sync local result with actual data
@@ -320,34 +365,51 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 			</div>
 			<div className={cnTextTranslator('InputContainer')}>
 				<div className={cnTextTranslator('InputContainerWrapper')}>
-					<Textarea
-						placeholder={getMessage(
-							'textTranslator_translateInputPlaceholder',
-						)}
-						className={cnTextTranslator('Input')}
-						controlProps={{ innerRef: inputControlExternal }}
-						value={userInput}
-						onChange={(evt) => {
-							setUserInput(evt.target.value);
-						}}
-						hasClear
-						onClearClick={clearState}
-						spellCheck={spellCheck}
-						onFocus={() => setIsFocusOnInput(true)}
-						onBlur={() => setIsFocusOnInput(false)}
-						addonAfterControl={
-							<div className={cnTextTranslator('TextActions')}>
-								<Button
-									disabled={userInput.length === 0}
-									onPress={() => runTTS('original')}
-									view="clear"
-									size="s"
-								>
-									<Icon glyph="volume-up" scalable={false} />
-								</Button>
-							</div>
-						}
-					/>
+					{languageSuggestion && (
+						// TODO: use class for block
+						// TODO: use i18n
+						// TODO: use helper for get language by code
+						<div>
+							<Icon glyph="autoFix" scalable={false} size="s" /> it seems
+							that language is{' '}
+							<a href="#" onClick={applySuggestedLanguage}>
+								{getMessage(
+									`langCode_${languageSuggestion}`,
+								).toLowerCase()}
+							</a>
+						</div>
+					)}
+
+					<div>
+						<Textarea
+							placeholder={getMessage(
+								'textTranslator_translateInputPlaceholder',
+							)}
+							className={cnTextTranslator('Input')}
+							controlProps={{ innerRef: inputControlExternal }}
+							value={userInput}
+							onChange={(evt) => {
+								setUserInput(evt.target.value);
+							}}
+							hasClear
+							onClearClick={clearState}
+							spellCheck={spellCheck}
+							onFocus={() => setIsFocusOnInput(true)}
+							onBlur={() => setIsFocusOnInput(false)}
+							addonAfterControl={
+								<div className={cnTextTranslator('TextActions')}>
+									<Button
+										disabled={userInput.length === 0}
+										onPress={() => runTTS('original')}
+										view="clear"
+										size="s"
+									>
+										<Icon glyph="volume-up" scalable={false} />
+									</Button>
+								</div>
+							}
+						/>
+					</div>
 					<div className={cnTextTranslator('ResultContainer')}>
 						<div className={cnTextTranslator('ResultText')}>
 							{resultText !== null

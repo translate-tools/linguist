@@ -8,20 +8,25 @@ import { withModIconGlyphClose } from 'react-elegant-ui/esm/components/Icon/_gly
 import { withModIconGlyphCheck } from 'react-elegant-ui/esm/components/Icon/_glyph/Icon_glyph_check';
 import { withModIconGlyphCancel } from 'react-elegant-ui/esm/components/Icon/_glyph/Icon_glyph_cancel';
 import { withModIconSizeM } from 'react-elegant-ui/esm/components/Icon/_size/Icon_size_m';
+import { withModIconSizeS } from 'react-elegant-ui/esm/components/Icon/_size/Icon_size_s';
 
 import { withGlyphSwapHoriz } from '../_glyph/Icon_glyph_swap-horiz';
 import { withGlyphSettings } from '../_glyph/Icon_glyph_settings';
 import { withGlyphDictionary } from '../_glyph/Icon_glyph_dictionary';
 import { withGlyphDelete } from '../_glyph/Icon_glyph_delete';
 import { withGlyphVolumeUp } from '../_glyph/Icon_glyph_volume-up';
+import { withGlyphAutoFix } from '../_glyph/Icon_glyph_autofix';
 
-export const Icon = compose(
+// TODO: #important fix composer to allow any number of components
+// or, at least, make type helper for build generic
+export const Icon = compose<any>(
 	composeU(
 		withGlyphSettings,
 		withGlyphSwapHoriz,
 		withGlyphDictionary,
 		withGlyphDelete,
 		withGlyphVolumeUp,
+		withGlyphAutoFix,
 
 		withModIconGlyphUnfoldMore,
 		withModIconGlyphExpandMore,
@@ -29,7 +34,8 @@ export const Icon = compose(
 		withModIconGlyphCheck,
 		withModIconGlyphCancel,
 	),
-	composeU(withModIconSizeM),
+
+	composeU(withModIconSizeM, withModIconSizeS),
 )(BaseIcon);
 
 Icon.defaultProps = {
