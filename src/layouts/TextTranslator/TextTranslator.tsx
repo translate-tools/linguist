@@ -368,10 +368,11 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 				<div className={cnTextTranslator('InputContainerWrapper')}>
 					{languageSuggestion && (
 						// TODO: use class for block
-						// TODO: use i18n
 						<div>
-							<Icon glyph="autoFix" scalable={false} size="s" /> it seems
-							that language is{' '}
+							<Icon glyph="autoFix" scalable={false} size="s" />
+							{getMessage(
+								'textTranslator_suggestLanguage',
+							).toLowerCase()}{' '}
 							<a href="#" onClick={applySuggestedLanguage}>
 								{getLanguageNameByCode(languageSuggestion).toLowerCase()}
 							</a>
