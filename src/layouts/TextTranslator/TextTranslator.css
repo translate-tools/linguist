@@ -66,3 +66,7 @@
 	box-sizing: border-box;
 	word-break: break-word;
 }
+
+.TextTranslator-LanguageSuggestion > *:not(:last-child) {
+	margin-inline-end: 0.3em;
+}

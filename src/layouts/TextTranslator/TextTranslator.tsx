@@ -367,12 +367,13 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 			<div className={cnTextTranslator('InputContainer')}>
 				<div className={cnTextTranslator('InputContainerWrapper')}>
 					{languageSuggestion && (
-						// TODO: use class for block
-						<div>
+						<div className={cnTextTranslator('LanguageSuggestion')}>
 							<Icon glyph="autoFix" scalable={false} size="s" />
-							{getMessage(
-								'textTranslator_suggestLanguage',
-							).toLowerCase()}{' '}
+							<span>
+								{getMessage(
+									'textTranslator_suggestLanguage',
+								).toLowerCase()}
+							</span>
 							<a href="#" onClick={applySuggestedLanguage}>
 								{getLanguageNameByCode(languageSuggestion).toLowerCase()}
 							</a>
