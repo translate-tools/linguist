@@ -230,8 +230,9 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 		setTranslatedText(null);
 		setErrorMessage(null);
 
-		// Clear translation data
+		// Clear data
 		setTranslationData(null);
+		setLanguageSuggestion(null);
 	}, [setTranslationData, setUserInput]);
 
 	// Translate by changes
