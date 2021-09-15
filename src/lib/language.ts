@@ -7,6 +7,9 @@ export const getMessage = (messageName: string, substitutions?: string | string[
 	return text.length > 0 ? text : `*${messageName}`;
 };
 
+export const getLanguageNameByCode = (code: string) =>
+	getMessage(code === 'auto' ? 'lang_detect' : `langCode_${code}`);
+
 export const detectLanguage = (text: string, reliableOnly = false) =>
 	browser.i18n.detectLanguage(text).then((result) => {
 		if (reliableOnly && !result.isReliable) {

@@ -5,7 +5,7 @@ import { Button } from '../../components/Button/Button.bundle/desktop';
 import { Select } from '../../components/Select/Select.bundle/desktop';
 import { LanguagePanel } from '../../components/LanguagePanel/LanguagePanel';
 
-import { getMessage } from '../../lib/language';
+import { getLanguageNameByCode, getMessage } from '../../lib/language';
 import { MutableValue } from '../../types/utils';
 
 import { TabData } from '../../pages/popup/layout/PopupWindow';
@@ -85,7 +85,7 @@ export const PageTranslator: FC<PageTranslatorProps> = ({
 		[hostname],
 	);
 	const localizedLang = useMemo(
-		() => getMessage(from === 'auto' ? 'lang_detect' : 'langCode_' + from),
+		() => (from ? getLanguageNameByCode(from) : null),
 		[from],
 	);
 
@@ -172,7 +172,7 @@ export const PageTranslator: FC<PageTranslatorProps> = ({
 					<div className={cnPageTranslator('Option')}>
 						<h4 className={cnPageTranslator('Header')}>
 							{getMessage('pageTranslator_commonPreferences_title') +
-								` (${localizedLang})`}
+								(localizedLang && ` (${localizedLang})`)}
 						</h4>
 						<span className={cnPageTranslator('OptionTitle')}>
 							{getMessage('pageTranslator_option_autoTranslate')}

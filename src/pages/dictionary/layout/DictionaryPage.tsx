@@ -10,7 +10,7 @@ import { IEntryWithKey } from '../../../requests/backend/translations/data';
 import { deleteTranslation } from '../../../requests/backend/translations/deleteTranslation';
 import { clearTranslations } from '../../../requests/backend/translations/clearTranslations';
 
-import { getMessage } from '../../../lib/language';
+import { getLanguageNameByCode, getMessage } from '../../../lib/language';
 import { saveFile } from '../../../lib/files';
 import { useMessageBroker } from '../../../lib/hooks/useMessageBroker';
 import { useTTS } from '../../../lib/hooks/useTTS';
@@ -258,12 +258,10 @@ export const DictionaryPage: FC<IDictionaryPageProps> = ({ confirmDelete = true 
 					<div className={cnDictionaryPage('EntryHead')}>
 						<div className={cnDictionaryPage('EntryMeta')}>
 							<span className={cnDictionaryPage('Lang')}>
-								{getMessage(
-									from === 'auto' ? 'lang_detect' : 'langCode_' + from,
-								)}
+								{getLanguageNameByCode(from)}
 							</span>
 							<span className={cnDictionaryPage('Lang')}>
-								{getMessage('langCode_' + to)}
+								{getLanguageNameByCode(to)}
 							</span>
 							<span className={cnDictionaryPage('Date')}>
 								{new Date(date).toLocaleDateString()}
@@ -324,7 +322,7 @@ export const DictionaryPage: FC<IDictionaryPageProps> = ({ confirmDelete = true 
 			{ id: 'auto', content: getMessage('lang_detect') },
 			...langCodes.map((langCode) => ({
 				id: langCode,
-				content: getMessage('langCode_' + langCode),
+				content: getLanguageNameByCode(langCode),
 			})),
 		],
 		[],
@@ -335,7 +333,7 @@ export const DictionaryPage: FC<IDictionaryPageProps> = ({ confirmDelete = true 
 			{ id: 'any', content: getMessage('lang_select') },
 			...langCodes.map((langCode) => ({
 				id: langCode,
-				content: getMessage('langCode_' + langCode),
+				content: getLanguageNameByCode(langCode),
 			})),
 		],
 		[],

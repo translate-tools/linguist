@@ -7,7 +7,7 @@ import { Checkbox } from 'react-elegant-ui/esm/components/Checkbox/Checkbox.bund
 
 import { useTranslateFavorite } from '../../lib/hooks/useTranslateFavorite';
 import { useTTS } from '../../lib/hooks/useTTS';
-import { detectLanguage, getMessage } from '../../lib/language';
+import { detectLanguage, getLanguageNameByCode, getMessage } from '../../lib/language';
 import { MutableValue } from '../../types/utils';
 
 import { TabData } from '../../pages/popup/layout/PopupWindow';
@@ -368,14 +368,11 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 					{languageSuggestion && (
 						// TODO: use class for block
 						// TODO: use i18n
-						// TODO: use helper for get language by code
 						<div>
 							<Icon glyph="autoFix" scalable={false} size="s" /> it seems
 							that language is{' '}
 							<a href="#" onClick={applySuggestedLanguage}>
-								{getMessage(
-									`langCode_${languageSuggestion}`,
-								).toLowerCase()}
+								{getLanguageNameByCode(languageSuggestion).toLowerCase()}
 							</a>
 						</div>
 					)}

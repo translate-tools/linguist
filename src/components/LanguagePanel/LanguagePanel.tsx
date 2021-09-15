@@ -1,11 +1,13 @@
 import React, { FC } from 'react';
+import { cn } from '@bem-react/classname';
+
+import { getLanguageNameByCode, getMessage } from '../../lib/language';
+
 import { Button } from '../Button/Button.bundle/desktop';
 import { Select } from '../Select/Select.bundle/desktop';
 import { Icon } from '../Icon/Icon.bundle/desktop';
-import { cn } from '@bem-react/classname';
 
 import './LanguagePanel.css';
-import { getMessage } from '../../lib/language';
 
 export const cnLanguagePanel = cn('LanguagePanel');
 
@@ -52,12 +54,12 @@ export const LanguagePanel: FC<LanguagePanelProps> = ({
 	const options = languages
 		.map((value) => ({
 			id: value,
-			content: getMessage(`langCode_${value}`),
+			content: getLanguageNameByCode(value),
 		}))
 		.sort(({ content: a }, { content: b }) => (a > b ? 1 : a < b ? -1 : 0));
 
 	const optionsFrom = auto
-		? [{ id: 'auto', content: getMessage('lang_detect') }, ...options]
+		? [{ id: 'auto', content: getLanguageNameByCode('auto') }, ...options]
 		: options;
 
 	return (

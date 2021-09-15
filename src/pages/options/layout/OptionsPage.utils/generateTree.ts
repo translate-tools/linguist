@@ -1,5 +1,5 @@
 import { langCodes } from '@translate-tools/core/types/Translator';
-import { getMessage } from '../../../../lib/language';
+import { getLanguageNameByCode, getMessage } from '../../../../lib/language';
 import { OptionsGroup } from '../OptionsTree/OptionsTree';
 
 type Options = {
@@ -44,7 +44,7 @@ export const generateTree = ({
 						options: langCodes
 							.map((code) => ({
 								id: code,
-								content: getMessage(`langCode_${code}`),
+								content: getLanguageNameByCode(code),
 							}))
 							.sort(({ content: a }, { content: b }) =>
 								a > b ? 1 : a < b ? -1 : 0,
