@@ -288,9 +288,8 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 			};
 
 			suggestLanguageHandler();
-			// eslint-disable-next-line react-hooks/exhaustive-deps
 		},
-		[from, to, translate, userInput],
+		[enableLanguageSuggestions, from, to, translate, userInput],
 	);
 
 	// Handle text by change with debounce
