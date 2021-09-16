@@ -12,6 +12,7 @@ import { TextTranslatorStorage } from './layouts/TextTranslator/TextTranslator.u
 import { updateConfigFactory } from './requests/backend/updateConfig';
 import { pingFactory } from './requests/backend/ping';
 import { translateFactory } from './requests/backend/translate';
+import { suggestLanguageFactory } from './requests/backend/suggestLanguage';
 import { getTranslatorFeaturesFactory } from './requests/backend/getTranslatorFeatures';
 import { getUserLanguagePreferencesFactory } from './requests/backend/getUserLanguagePreferences';
 import { getTranslatorModulesFactory } from './requests/backend/getTranslatorModules';
@@ -106,6 +107,7 @@ if (process.env.NODE_ENV !== 'production') {
 		// Set handlers from factories
 		const factories = [
 			translateFactory,
+			suggestLanguageFactory,
 			getTranslatorFeaturesFactory,
 			getUserLanguagePreferencesFactory,
 			getTranslatorModulesFactory,

@@ -7,8 +7,10 @@ import { Checkbox } from 'react-elegant-ui/esm/components/Checkbox/Checkbox.bund
 
 import { useTranslateFavorite } from '../../lib/hooks/useTranslateFavorite';
 import { useTTS } from '../../lib/hooks/useTTS';
-import { detectLanguage, getLanguageNameByCode, getMessage } from '../../lib/language';
+import { getLanguageNameByCode, getMessage } from '../../lib/language';
 import { MutableValue } from '../../types/utils';
+
+import { suggestLanguage } from '../../requests/backend/suggestLanguage';
 
 import { TabData } from '../../pages/popup/layout/PopupWindow';
 import { LanguagePanel } from '../../components/LanguagePanel/LanguagePanel';
@@ -63,6 +65,9 @@ export interface TextTranslatorProps
 	 * Enable spellcheck
 	 */
 	spellCheck?: boolean;
+
+	// TODO: move to preferences
+	enableLanguageSuggestions?: boolean;
 }
 
 type TTSTarget = 'original' | 'translation';
@@ -85,6 +90,7 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 	inputControl: inputControlExternal,
 	inputDelay = 600,
 	noTranslate = false,
+	enableLanguageSuggestions = true,
 }) => {
 	const [inTranslateProcess, setInTranslateProcess] = useState(false);
 	const [errorMessage, setErrorMessage] = useState<string | null>(null);
@@ -136,10 +142,20 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 
 	// Hide suggestion if language already selected
 	useEffect(() => {
+		if (!enableLanguageSuggestions) return;
 		if (from !== 'auto') {
 			setLanguageSuggestion(null);
 		}
+
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [from]);
+
+	// Null `languageSuggestion` while disable suggestions
+	useEffect(() => {
+		if (!enableLanguageSuggestions) {
+			setLanguageSuggestion(null);
+		}
+	}, [enableLanguageSuggestions]);
 
 	const applySuggestedLanguage: React.MouseEventHandler = useCallback(
 		(evt) => {
@@ -257,22 +273,26 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 
 		translateText();
 
-		const suggestLanguage = () => {
+		const suggestLanguageHandler = () => {
+			if (!enableLanguageSuggestions) return;
 			if (from !== 'auto') {
 				setLanguageSuggestion(null);
 				return;
 			}
 
 			const localContext = textStateContext.current;
-
-			// TODO: replace it to request (in future it may be replaced to some translator API)
-			detectLanguage(userInput).then((lang) => {
-				if (localContext !== textStateContext.current) return;
+			suggestLanguage(userInput).then((lang) => {
+				if (
+					localContext !== textStateContext.current ||
+					!enableLanguageSuggestions
+				)
+					return;
 				setLanguageSuggestion(lang);
 			});
 		};
 
-		suggestLanguage();
+		suggestLanguageHandler();
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [from, noTranslate, to, translate, userInput]);
 
 	// Handle text by change with debounce
