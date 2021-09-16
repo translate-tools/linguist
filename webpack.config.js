@@ -22,6 +22,7 @@ const outputPath = path.join(__dirname, outDir);
 module.exports = {
 	mode,
 	devtool,
+	target: 'web',
 	resolve: {
 		extensions: ['.js', '.ts', '.tsx'],
 	},
