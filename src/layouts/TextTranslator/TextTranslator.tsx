@@ -66,7 +66,6 @@ export interface TextTranslatorProps
 	 */
 	spellCheck?: boolean;
 
-	// TODO: move to preferences
 	enableLanguageSuggestions?: boolean;
 }
 

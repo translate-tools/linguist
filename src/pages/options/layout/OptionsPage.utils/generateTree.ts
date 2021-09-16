@@ -442,6 +442,15 @@ export const generateTree = ({
 								),
 							},
 						},
+						{
+							path: 'textTranslator.suggestLanguage',
+							optionContent: {
+								type: 'Checkbox',
+								text: getMessage(
+									'settings_option_textTranslator_suggestLanguage',
+								),
+							},
+						},
 					],
 				},
 			],

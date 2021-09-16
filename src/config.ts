@@ -35,6 +35,7 @@ export const defaultConfig: AppConfigType = {
 	textTranslator: {
 		rememberText: true,
 		spellCheck: true,
+		suggestLanguage: true,
 	},
 	selectTranslator: {
 		zIndex: 999999,
