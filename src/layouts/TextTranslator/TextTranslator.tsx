@@ -55,11 +55,11 @@ export interface TextTranslatorProps
 	inputDelay?: number;
 
 	/**
-	 * Prevent translate
+	 * Init phase say to component - await full loading
 	 *
-	 * It useful while initiate state
+	 * Useful to prevent translate
 	 */
-	noTranslate?: boolean;
+	initPhase?: boolean;
 
 	/**
 	 * Enable spellcheck
@@ -88,7 +88,7 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 	spellCheck,
 	inputControl: inputControlExternal,
 	inputDelay = 600,
-	noTranslate = false,
+	initPhase = false,
 	enableLanguageSuggestions = true,
 }) => {
 	const [inTranslateProcess, setInTranslateProcess] = useState(false);
@@ -253,46 +253,45 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 	// Translate by changes
 	const [setTranslateTask, resetTranslateTask] = useDelayCallback();
 
-	const handleNewText = useImmutableCallback(() => {
-		const translateText = () => {
-			// Ignore changes
-			if (noTranslate) {
-				return;
-			}
+	const handleNewText = useImmutableCallback(
+		(initPhase = false) => {
+			const translateText = () => {
+				// Ignore changes
+				if (initPhase) return;
 
-			// Ignore pointless direction
-			if (from === to) {
-				return;
-			}
+				// Ignore pointless direction
+				if (from === to) return;
 
-			setInTranslateProcess(true);
-			setErrorMessage(null);
-			translate();
-		};
+				setInTranslateProcess(true);
+				setErrorMessage(null);
+				translate();
+			};
 
-		translateText();
+			translateText();
 
-		const suggestLanguageHandler = () => {
-			if (!enableLanguageSuggestions) return;
-			if (from !== 'auto') {
-				setLanguageSuggestion(null);
-				return;
-			}
-
-			const localContext = textStateContext.current;
-			suggestLanguage(userInput).then((lang) => {
-				if (
-					localContext !== textStateContext.current ||
-					!enableLanguageSuggestions
-				)
+			const suggestLanguageHandler = () => {
+				if (!enableLanguageSuggestions) return;
+				if (from !== 'auto') {
+					setLanguageSuggestion(null);
 					return;
-				setLanguageSuggestion(lang);
-			});
-		};
+				}
 
-		suggestLanguageHandler();
-		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [from, noTranslate, to, translate, userInput]);
+				const localContext = textStateContext.current;
+				suggestLanguage(userInput).then((lang) => {
+					if (
+						localContext !== textStateContext.current ||
+						!enableLanguageSuggestions
+					)
+						return;
+					setLanguageSuggestion(lang);
+				});
+			};
+
+			suggestLanguageHandler();
+			// eslint-disable-next-line react-hooks/exhaustive-deps
+		},
+		[from, to, translate, userInput],
+	);
 
 	// Handle text by change with debounce
 	useEffect(() => {
@@ -305,10 +304,11 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 		if (disableDelayForNextTranslate.current) {
 			disableDelayForNextTranslate.current = false;
 			resetTranslateTask();
-			handleNewText();
+			handleNewText(initPhase);
 		} else {
-			setTranslateTask(handleNewText, inputDelay);
+			setTranslateTask(() => handleNewText(initPhase), inputDelay);
 		}
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [
 		from,
 		to,

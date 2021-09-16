@@ -92,17 +92,17 @@ export const TextTranslatorTab: TabComponent<InitFn<InitData>> = ({
 	}, [activeTab, tabId]);
 
 	// It need to prevent translating while init state,
-	// `noTranslate` need to prevent update right after change `noTranslate`
-	const [noTranslate, setNoTranslate] = useState(true);
+	// `isInitPhase` need to prevent update right after change `isInitPhase`
+	const [isInitPhase, setIsInitPhase] = useState(true);
 	useEffect(() => {
-		setNoTranslate(false);
+		setIsInitPhase(false);
 	}, []);
 
 	return (
 		<TextTranslator
 			translatorFeatures={translatorFeatures}
 			translateHook={sendTranslateRequest}
-			noTranslate={noTranslate}
+			initPhase={isInitPhase}
 			spellCheck={config.textTranslator.spellCheck}
 			enableLanguageSuggestions={config.textTranslator.suggestLanguage}
 			{...{
