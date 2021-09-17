@@ -408,7 +408,13 @@
 		"message": "Включить проверку правописания"
 	},
 	"settings_option_textTranslator_suggestLanguage": {
-		"message": "Предлагать определенный язык текста"
+		"message": "Определять и предлагать язык текста"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways": {
+		"message": "Определять и предлагать язык всегда"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways_desc": {
+		"message": "В выключенном состоянии язык будет определяться только при не установленном языке текста"
 	},
 	"settings_section_popup": {
 		"message": "Popup"

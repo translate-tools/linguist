@@ -105,6 +105,7 @@ export const TextTranslatorTab: TabComponent<InitFn<InitData>> = ({
 			initPhase={isInitPhase}
 			spellCheck={config.textTranslator.spellCheck}
 			enableLanguageSuggestions={config.textTranslator.suggestLanguage}
+			enableLanguageSuggestionsAlways={config.textTranslator.suggestLanguageAlways}
 			{...{
 				from,
 				setFrom,

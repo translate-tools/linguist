@@ -67,6 +67,7 @@ export interface TextTranslatorProps
 	spellCheck?: boolean;
 
 	enableLanguageSuggestions?: boolean;
+	enableLanguageSuggestionsAlways?: boolean;
 }
 
 type TTSTarget = 'original' | 'translation';
@@ -90,6 +91,7 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 	inputDelay = 600,
 	initPhase = false,
 	enableLanguageSuggestions = true,
+	enableLanguageSuggestionsAlways = true,
 }) => {
 	const [inTranslateProcess, setInTranslateProcess] = useState(false);
 	const [errorMessage, setErrorMessage] = useState<string | null>(null);
@@ -139,22 +141,27 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 
 	const [languageSuggestion, setLanguageSuggestion] = useState<null | string>(null);
 
+	const isSuggestLanguage =
+		enableLanguageSuggestions && (enableLanguageSuggestionsAlways || from === 'auto');
+
 	// Hide suggestion if language already selected
 	useEffect(() => {
-		if (!enableLanguageSuggestions) return;
-		if (from !== 'auto') {
+		if (
+			enableLanguageSuggestions &&
+			!enableLanguageSuggestionsAlways &&
+			from !== 'auto'
+		) {
 			setLanguageSuggestion(null);
 		}
-
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [from]);
 
 	// Null `languageSuggestion` while disable suggestions
 	useEffect(() => {
-		if (!enableLanguageSuggestions) {
+		if (!isSuggestLanguage) {
 			setLanguageSuggestion(null);
 		}
-	}, [enableLanguageSuggestions]);
+	}, [isSuggestLanguage]);
 
 	const applySuggestedLanguage: React.MouseEventHandler = useCallback(
 		(evt) => {
@@ -270,18 +277,11 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 			translateText();
 
 			const suggestLanguageHandler = () => {
-				if (!enableLanguageSuggestions) return;
-				if (from !== 'auto') {
-					setLanguageSuggestion(null);
-					return;
-				}
+				if (!isSuggestLanguage) return;
 
 				const localContext = textStateContext.current;
 				suggestLanguage(userInput).then((lang) => {
-					if (
-						localContext !== textStateContext.current ||
-						!enableLanguageSuggestions
-					)
+					if (localContext !== textStateContext.current || !isSuggestLanguage)
 						return;
 					setLanguageSuggestion(lang);
 				});
@@ -289,7 +289,7 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 
 			suggestLanguageHandler();
 		},
-		[enableLanguageSuggestions, from, to, translate, userInput],
+		[isSuggestLanguage, from, to, translate, userInput],
 	);
 
 	// Handle text by change with debounce
@@ -384,7 +384,7 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 			</div>
 			<div className={cnTextTranslator('InputContainer')}>
 				<div className={cnTextTranslator('InputContainerWrapper')}>
-					{languageSuggestion && (
+					{languageSuggestion && languageSuggestion !== from && (
 						<div className={cnTextTranslator('LanguageSuggestion')}>
 							<Icon glyph="autoFix" scalable={false} size="s" />
 							<span>

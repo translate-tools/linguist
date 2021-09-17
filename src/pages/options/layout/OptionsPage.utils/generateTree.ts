@@ -451,6 +451,18 @@ export const generateTree = ({
 								),
 							},
 						},
+						{
+							description: getMessage(
+								'settings_option_textTranslator_suggestLanguageAlways_desc',
+							),
+							path: 'textTranslator.suggestLanguageAlways',
+							optionContent: {
+								type: 'Checkbox',
+								text: getMessage(
+									'settings_option_textTranslator_suggestLanguageAlways',
+								),
+							},
+						},
 					],
 				},
 			],
