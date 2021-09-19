@@ -144,16 +144,9 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 	const isSuggestLanguage =
 		enableLanguageSuggestions && (enableLanguageSuggestionsAlways || from === 'auto');
 
-	// Hide suggestion if language already selected
+	// Hide suggestion while change language
 	useEffect(() => {
-		if (
-			enableLanguageSuggestions &&
-			!enableLanguageSuggestionsAlways &&
-			from !== 'auto'
-		) {
-			setLanguageSuggestion(null);
-		}
-		// eslint-disable-next-line react-hooks/exhaustive-deps
+		setLanguageSuggestion(null);
 	}, [from]);
 
 	// Null `languageSuggestion` while disable suggestions
