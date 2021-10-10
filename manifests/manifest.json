@@ -5,7 +5,7 @@
 	"name": "__MSG_ext_name__",
 	"description": "__MSG_ext_description__",
 	"icons": {
-		"128": "res/logo-icon.svg"
+		"512": "static/logo-icon.png"
 	},
 	"permissions": ["<all_urls>", "storage", "tabs"],
 	"web_accessible_resources": ["common.css", "contentscript.css"],
@@ -21,7 +21,7 @@
 	"browser_action": {
 		"default_popup": "pages/popup/popup.html",
 		"default_title": "__MSG_ext_name__",
-		"default_icon": "res/logo-icon-simple.svg"
+		"default_icon": "static/logo-icon-simple.png"
 	},
 	"options_ui": {
 		"page": "pages/options/options.html",

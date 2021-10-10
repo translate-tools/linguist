@@ -1,6 +1,7 @@
 const path = require('path');
 const CopyPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { convert } = require('convert-svg-to-png');
 
 const package = require('./package.json');
 
@@ -87,10 +88,17 @@ module.exports = {
 					from: './src/_locales',
 					to: path.join(outputPath, '_locales'),
 				},
-				{
-					from: './src/res',
-					to: path.join(outputPath, 'res'),
-				},
+
+				// Serve static files
+
+				//  Convert svg to png files
+				...['logo-icon.svg', 'logo-icon-simple.svg'].map((file) => ({
+					from: './src/res/' + file,
+					to: path.join(outputPath, 'static', file.replace(/\.svg$/, '.png')),
+					transform(content) {
+						return convert(content, { width: 512, height: 512 });
+					},
+				})),
 			],
 		}),
 	],
