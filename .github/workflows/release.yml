@@ -22,9 +22,15 @@ jobs:
 
       - name: Build
         run: npm run build:all
+        
+      - name: Build CRX file
+        working-directory: './build'
+        run: |
+          echo "$CHROMIUM_CRX_PEM" > ./crx.pem
+          npx crx pack chromium -o linguist.crx -p ./crx.pem
 
       - name: Release
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
         with:
-          files: build/*.zip
+          files: build/*.{zip,crx}
