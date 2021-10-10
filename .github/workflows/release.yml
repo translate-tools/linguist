@@ -25,6 +25,8 @@ jobs:
         
       - name: Build CRX file
         working-directory: './build'
+        env:
+          CHROMIUM_CRX_PEM: ${{ secrets.CHROMIUM_CRX_PEM }}
         run: |
           echo "$CHROMIUM_CRX_PEM" > ./crx.pem
           npx crx pack chromium -o linguist.crx -p ./crx.pem
