@@ -1,4 +1,5 @@
 const path = require('path');
+const fs = require('fs');
 const CopyPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { convert } = require('convert-svg-to-png');
@@ -62,7 +63,25 @@ module.exports = {
 					to: path.join(outputPath, 'manifest.json'),
 					transform(content, absoluteFrom) {
 						const rawManifest = content.toString();
-						const manifest = JSON.parse(rawManifest);
+						let manifest = JSON.parse(rawManifest);
+
+						// Patch manifest with data from target manifest
+						const targetManifestPath = path.join(
+							__dirname,
+							'manifests',
+							target + '.json',
+						);
+						if (
+							target &&
+							fs.existsSync(targetManifestPath) &&
+							fs.lstatSync(targetManifestPath).isFile()
+						) {
+							const rawTargetManifest = fs
+								.readFileSync(targetManifestPath)
+								.toString();
+							const targetManifest = JSON.parse(rawTargetManifest);
+							manifest = { ...manifest, ...targetManifest };
+						}
 
 						// Set version
 						manifest.version = package.version;
