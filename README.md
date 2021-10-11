@@ -66,3 +66,7 @@ Help us translate Linguist to your language. Read the [internationalization guid
 Do you like Linguist? Tell about it to your friends and colleagues, let's make it popular.
 
 You is don't like Linguist? [Make issue](https://github.com/translate-tools/linguist/issues/new) and suggest improvements.
+
+# Supporters
+
+![](./assets/jb_beam.svg)
