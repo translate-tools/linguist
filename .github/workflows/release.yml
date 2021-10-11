@@ -39,3 +39,19 @@ jobs:
           files: |
             build/*.zip
             build/linguist.crx
+            
+      - name: Build static files for GitHub Pages
+        working-directory: './build'
+        run: |
+          mkdir ./site
+          node ../scripts/genCrxUpdateManifest.js > ./site/chromium_updates.xml
+          # TODO: build index.html with landing page
+      
+      - name: Deploy to GitHub Pages
+        uses: Cecilapp/GitHub-Pages-deploy@v3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          email: noreply@example.com
+          build_dir: './build/site'
+          branch: gh-pages
