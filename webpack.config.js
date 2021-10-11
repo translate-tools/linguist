@@ -109,11 +109,20 @@ module.exports = {
 				},
 
 				// Serve static files
+				...['logo-icon.svg', 'logo-icon-simple.svg'].map((filename) => ({
+					from: './src/res/' + filename,
+					to: path.join(outputPath, 'static', filename),
+				})),
 
-				//  Convert svg to png files
+				//  Convert svg to png files for use as addon logotypes (chromium is not support svg logotypes)
 				...['logo-icon.svg', 'logo-icon-simple.svg'].map((file) => ({
 					from: './src/res/' + file,
-					to: path.join(outputPath, 'static', file.replace(/\.svg$/, '.png')),
+					to: path.join(
+						outputPath,
+						'static',
+						'logo',
+						file.replace(/\.svg$/, '.png'),
+					),
 					transform(content) {
 						return convert(content, { width: 512, height: 512 });
 					},
