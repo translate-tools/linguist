@@ -12,7 +12,7 @@ const target = process.env.EXT_TARGET;
 const isFastBuild =
 	process.env.NODE_ENV !== 'production' && process.env.FAST_BUILD === 'on';
 
-const targetsList = ['firefox', 'chromium'];
+const targetsList = ['firefox', 'chromium', 'chromium-google-store'];
 if (targetsList.indexOf(target) === -1) {
 	throw new Error(`Invalid target "${target}" in EXT_TARGET`);
 }
