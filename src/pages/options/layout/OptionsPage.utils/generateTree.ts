@@ -42,6 +42,8 @@ export const generateTree = ({
 					optionContent: {
 						type: 'SelectList',
 						options: langCodes
+							// Remove repeated langs
+							.filter((lang, idx, arr) => arr.indexOf(lang) === idx)
 							.map((code) => ({
 								id: code,
 								content: getLanguageNameByCode(code),
