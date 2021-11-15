@@ -2,13 +2,13 @@ import { isEqual } from 'lodash';
 import { runByReadyState } from 'react-elegant-ui/esm/lib/runByReadyState';
 
 import { AppConfigType } from './types/runtime';
-import { getPageLanguage } from './lib/browser';
+import { getPageLanguage, isSmartphone } from './lib/browser';
 
 // TODO: move all contentscript modules to use augment class
 import { ContentScript } from './modules/ContentScript';
 import { PageTranslator } from './modules/PageTranslator/PageTranslator';
 import { SelectTranslator } from './modules/SelectTranslator';
-import { EmbeddedControlPanel } from './augments/EmbeddedControlPanel';
+// import { EmbeddedControlPanel } from './augments/EmbeddedControlPanel';
 
 import { isRequireTranslateBySitePreferences } from './layouts/PageTranslator/PageTranslator.utils/utils';
 
@@ -20,19 +20,6 @@ import { pingFactory } from './requests/contentscript/ping';
 import { enableTranslatePageFactory } from './requests/contentscript/pageTranslation/enableTranslatePage';
 import { disableTranslatePageFactory } from './requests/contentscript/pageTranslation/disableTranslatePage';
 import { getLanguagePreferences } from './requests/backend/autoTranslation/languagePreferences/getLanguagePreferences';
-
-// Insert panel for smartphones
-const UA = navigator.userAgent;
-const isSmartphone =
-	/\b(BlackBerry|webOS|iPhone|IEMobile)\b/i.test(UA) ||
-	/\b(Android|Windows Phone|iPad|iPod)\b/i.test(UA);
-
-if (isSmartphone) {
-	console.warn("It's smartphone");
-
-	const embeddedPanel = new EmbeddedControlPanel();
-	embeddedPanel.enable();
-}
 
 const cs = new ContentScript();
 
@@ -171,6 +158,14 @@ cs.onLoad(async (initConfig) => {
 			selectTranslatorRef,
 		});
 	});
+
+	// Insert panel for smartphones
+	if (isSmartphone()) {
+		console.warn("It's smartphone");
+
+		// const embeddedPanel = new EmbeddedControlPanel();
+		// embeddedPanel.enable();
+	}
 
 	// Init page translate
 

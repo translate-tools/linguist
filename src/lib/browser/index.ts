@@ -2,6 +2,18 @@ import { browser } from 'webextension-polyfill-ts';
 
 import { detectLanguage } from '../language';
 
+/**
+ * Helper to detect platform
+ */
+export const isSmartphone = () => {
+	const UA = navigator.userAgent;
+	const isSmartphone =
+		/\b(BlackBerry|webOS|iPhone|IEMobile)\b/i.test(UA) ||
+		/\b(Android|Windows Phone|iPad|iPod)\b/i.test(UA);
+
+	return isSmartphone;
+};
+
 export const injectStyles = (paths: string[], parent?: Node) => {
 	paths.forEach((path) => {
 		const link = document.createElement('link');

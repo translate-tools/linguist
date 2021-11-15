@@ -4,6 +4,7 @@ import { EmbeddedControlPanel as EmbeddedControlPanelComponent } from './Embedde
 
 import { ShadowDOMContainerManager } from '../../lib/ShadowDOMContainerManager';
 
+// TODO: finish development of it
 /**
  * Control panel for smartphones
  */
