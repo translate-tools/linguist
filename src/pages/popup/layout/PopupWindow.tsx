@@ -123,6 +123,9 @@ export const PopupWindow: FC<PopupWindowProps> = ({
 	// Resize window
 	const resizeObserver = useRef<XResizeObserver>();
 	useEffect(() => {
+		// Disable on mobile browsers
+		if (isSmartphone()) return;
+
 		resizeObserver.current = new XResizeObserver({
 			sizeGetter: (node: Element) => ({
 				height: node.scrollHeight,
@@ -240,7 +243,7 @@ export const PopupWindow: FC<PopupWindowProps> = ({
 				setPanes(panes);
 			}
 		})();
-	}, [config, tabs, translatorFeatures]);
+	}, [config, isMobile, tabs, translatorFeatures]);
 
 	// Render content
 
