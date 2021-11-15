@@ -368,6 +368,7 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 					swapHandler={swapLanguages}
 					disableSwap={!isShowFullData}
 					preventFocusOnPress={isFocusOnInput}
+					mobile={isMobile}
 				/>
 			</div>
 			<div>

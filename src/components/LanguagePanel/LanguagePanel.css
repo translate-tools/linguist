@@ -1,3 +1,21 @@
-.LanguagePanel > *:not(:first-child) {
+.LanguagePanel_view_wide > *:not(:first-child) {
+	margin-top: var(--typography-layout-indent-m-all);
+}
+
+.LanguagePanel:not(.LanguagePanel_view_wide) > *:not(:first-child) {
 	margin-left: var(--typography-layout-indent-m-all);
+}
+
+.LanguagePanel_view_wide .LanguagePanel-Select {
+	width: 100%;
+}
+
+.LanguagePanel_view_wide .LanguagePanel-Button {
+	width: 100%;
+}
+
+.LanguagePanel_view_wide .Button-Text {
+	text-align: center;
+	font-size: 1.1em;
+	padding: 0.1em;
 }

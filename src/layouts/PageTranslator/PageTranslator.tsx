@@ -181,6 +181,7 @@ export const PageTranslator: FC<PageTranslatorProps> = ({
 						to={to}
 						setFrom={setFrom}
 						setTo={setTo}
+						mobile={isMobile}
 					/>
 				</div>
 			</div>
