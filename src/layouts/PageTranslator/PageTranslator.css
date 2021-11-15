@@ -10,6 +10,25 @@
 	margin: var(--typography-layout-indent-l-all) 0 var(--typography-layout-indent-m-all);
 }
 
+/* Mobile view */
+.PageTranslator-TranslateButton_fill {
+	width: 100%;
+}
+
+.PageTranslator-TranslateButton_fill .Button-Text {
+	text-align: center;
+	font-size: 1.1em;
+	padding: 0.1em;
+}
+
+.PageTranslator-LangPanel {
+	display: inline;
+}
+
+.PageTranslator_view_mobile .PageTranslator-LangPanel {
+	display: block;
+}
+
 /* Counter */
 .PageTranslator-Counter {
 	display: inline-block;
@@ -49,7 +68,6 @@
 /* Placeholder */
 .PageTranslator-Placeholder {
 	margin-bottom: 0.5rem;
-	/* margin-bottom: var(--typography-layout-indent-m-all); */
 }
 
 /* Option */
@@ -65,4 +83,8 @@
 /* Container */
 .PageTranslator-Container_indent_vertical > :not(:last-child) {
 	margin-block-end: var(--typography-controls-indent-l);
+}
+
+.PageTranslator-Container_indent_horizontal > :not(:last-child) {
+	margin-inline-end: var(--typography-controls-indent-l);
 }

@@ -52,6 +52,8 @@ export interface PageTranslatorProps
 	toggleTranslate: () => void;
 
 	counters: PageTranslateState;
+
+	isMobile?: boolean;
 }
 
 /**
@@ -75,6 +77,8 @@ export const PageTranslator: FC<PageTranslatorProps> = ({
 
 	isShowOptions,
 	setIsShowOptions,
+
+	isMobile,
 }) => {
 	const actionBtnText = getMessage(
 		isTranslated ? 'pageTranslator_showOriginal' : 'pageTranslator_translatePage',
@@ -144,22 +148,41 @@ export const PageTranslator: FC<PageTranslatorProps> = ({
 
 	return (
 		<div
-			className={cnPageTranslator(null, [
+			className={cnPageTranslator({ view: isMobile ? 'mobile' : undefined }, [
 				cnPageTranslator('Container', { indent: 'vertical' }),
 			])}
 		>
-			<div className={cnPageTranslator('PageTranslation')}>
-				<Button view="action" onPress={toggleTranslate}>
+			<div
+				className={cnPageTranslator(
+					'PageTranslation',
+					{
+						view: isMobile ? 'mobile' : undefined,
+					},
+					[
+						cnPageTranslator('Container', {
+							indent: isMobile ? 'vertical' : 'horizontal',
+						}),
+					],
+				)}
+			>
+				<Button
+					view="action"
+					onPress={toggleTranslate}
+					size={isMobile ? 'l' : 'm'}
+					className={cnPageTranslator('TranslateButton', { fill: isMobile })}
+				>
 					{actionBtnText}
-				</Button>{' '}
-				<LanguagePanel
-					auto={translatorFeatures.isSupportAutodetect}
-					languages={translatorFeatures.supportedLanguages}
-					from={from}
-					to={to}
-					setFrom={setFrom}
-					setTo={setTo}
-				/>
+				</Button>
+				<div className={cnPageTranslator('LangPanel')}>
+					<LanguagePanel
+						auto={translatorFeatures.isSupportAutodetect}
+						languages={translatorFeatures.supportedLanguages}
+						from={from}
+						to={to}
+						setFrom={setFrom}
+						setTo={setTo}
+					/>
+				</div>
 			</div>
 
 			{/* Options */}

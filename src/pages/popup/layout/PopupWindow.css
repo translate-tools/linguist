@@ -9,9 +9,13 @@ body {
 	font-size: var(--typography-layout-size-m-font-size);
 }
 
-.PopupWindow {
+.PopupWindow:not(.PopupWindow_view_mobile) {
 	min-width: max-content;
 	width: 100%;
+}
+
+.PopupWindow_view_mobile {
+	max-width: 100vw;
 }
 
 /* Header */
@@ -71,7 +75,7 @@ body {
 
 /* ErrorMessage */
 .PopupWindow-ErrorMessage {
-	min-width: 400px;
+	min-width: 100%;
 }
 
 .PopupWindow-ErrorMessage_plainText {
@@ -83,7 +87,7 @@ body {
 
 /* Loader */
 .PopupWindow-Loader {
-	min-width: 400px;
+	min-width: 100%;
 	min-height: 200px;
 }
 

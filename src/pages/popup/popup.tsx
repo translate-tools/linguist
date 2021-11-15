@@ -1,4 +1,4 @@
-import React, { FC, useCallback, useEffect, useState } from 'react';
+import React, { FC, useCallback, useEffect, useMemo, useState } from 'react';
 import ReactDOM from 'react-dom';
 import { configureRootTheme } from 'react-elegant-ui/esm/theme';
 
@@ -8,6 +8,7 @@ import { ping as pingBackend } from '../../requests/backend/ping';
 import { getConfig } from '../../requests/backend/getConfig';
 import { getTranslatorFeatures } from '../../requests/backend/getTranslatorFeatures';
 
+import { isSmartphone } from '../../lib/browser';
 import { getMessage } from '../../lib/language';
 import { AppConfigType } from '../../types/runtime';
 
@@ -157,6 +158,8 @@ const PopupPage: FC<PopupPageProps> = ({ rootElement }) => {
 		}
 	}, [config, getTabsHash, setActiveTabProxy, tabs]);
 
+	const minWidth = useMemo(() => (isSmartphone() ? undefined : 450), []);
+
 	return (
 		<PopupWindow
 			rootElement={rootElement}
@@ -166,6 +169,7 @@ const PopupPage: FC<PopupPageProps> = ({ rootElement }) => {
 			error={error}
 			config={config}
 			translatorFeatures={translatorFeatures}
+			minWidth={minWidth}
 		/>
 	);
 };

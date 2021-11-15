@@ -29,6 +29,7 @@ export const TextTranslatorTab: TabComponent<InitFn<InitData>> = ({
 	translatorFeatures,
 	id: tabId,
 	initData,
+	isMobile,
 }) => {
 	const { from: initFrom, to: initTo } = initData;
 	const [from, setFrom] = useState(initFrom);
@@ -81,6 +82,7 @@ export const TextTranslatorTab: TabComponent<InitFn<InitData>> = ({
 	const inputControl = useRef<HTMLTextAreaElement | null>(null);
 
 	useEffect(() => {
+		// TODO: prevent focus for mobile device
 		if (
 			activeTab === tabId &&
 			inputControl.current !== null &&
@@ -116,6 +118,7 @@ export const TextTranslatorTab: TabComponent<InitFn<InitData>> = ({
 				userInput,
 				setUserInput,
 				inputControl,
+				isMobile,
 			}}
 		/>
 	);
