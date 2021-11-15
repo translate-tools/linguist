@@ -6,12 +6,21 @@ Its may use any translate service and builds on it great user interface with man
 
 Get addon for your browser
 
-[![](./assets/firefox.png)](https://addons.mozilla.org/addon/linguist-translator/)
+[![](./assets/firefox.png)](https://addons.mozilla.org/addon/linguist-translator/) [![](./assets/chrome.png)](https://chrome.google.com/webstore/detail/gbefmodhlophhakmoecijeppjblibmie)
 
-<!-- [![](./assets/chrome.png)](#) -->
 <!-- [![](./assets/edge.png)](#) -->
 
 If you have other browser, check out [GitHub Releases page](https://github.com/vitonsky/linguist/releases), download package and install it manually in development mode.
+
+## Android
+
+<!-- Text partly copied from https://github.com/ajayyy/SponsorBlock/wiki/Android -->
+
+This can be used on mobile browsers with [Firefox Nightly](https://play.google.com/store/apps/details?id=org.mozilla.fenix) (Recommended), or with any chromium browser that supports extensions.
+
+To try it on Firefox, you must add the [Linguist add-on](https://addons.mozilla.org/addon/linguist-translator/) to a [custom add-on collection](https://www.ghacks.net/2020/10/01/you-can-now-install-any-add-on-in-firefox-nightly-for-android-but-it-is-complicated/) and using this to install the extension.
+
+To try it on a chromium browser, download the normal extension for Chrome.
 
 # Features
 
