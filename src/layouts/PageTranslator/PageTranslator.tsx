@@ -192,22 +192,28 @@ export const PageTranslator: FC<PageTranslatorProps> = ({
 				open={isShowOptions}
 				onToggle={setIsShowOptions}
 			>
-				<div className={cnPageTranslator('Container', { indent: 'vertical' })}>
+				<div
+					className={cnPageTranslator('OptionContainer', { mobile: isMobile }, [
+						cnPageTranslator('Container', { indent: 'vertical' }),
+					])}
+				>
 					<div className={cnPageTranslator('Option')}>
 						<h4 className={cnPageTranslator('Header')}>
 							{getMessage('pageTranslator_commonPreferences_title') +
 								(localizedLang && ` (${localizedLang})`)}
 						</h4>
-						<span className={cnPageTranslator('OptionTitle')}>
-							{getMessage('pageTranslator_option_autoTranslate')}
-						</span>
-						<span className={cnPageTranslator('OptionValue')}>
-							<Select
-								options={translateLanguageOptions}
-								value={languagePreferences}
-								setValue={setTranslateLangAdaptor}
-							/>
-						</span>
+						<div className={cnPageTranslator('OptionBody')}>
+							<span className={cnPageTranslator('OptionTitle')}>
+								{getMessage('pageTranslator_option_autoTranslate')}
+							</span>
+							<span className={cnPageTranslator('OptionValue')}>
+								<Select
+									options={translateLanguageOptions}
+									value={languagePreferences}
+									setValue={setTranslateLangAdaptor}
+								/>
+							</span>
+						</div>
 					</div>
 
 					<div className={cnPageTranslator('Option')}>
@@ -215,16 +221,18 @@ export const PageTranslator: FC<PageTranslatorProps> = ({
 							{getMessage('pageTranslator_sitePreferences_title')}{' '}
 							{escapedHostname}
 						</h4>
-						<span className={cnPageTranslator('OptionTitle')}>
-							{getMessage('pageTranslator_option_autoTranslate')}
-						</span>
-						<span className={cnPageTranslator('OptionValue')}>
-							<Select
-								options={translateSiteOptions}
-								value={sitePreferences}
-								setValue={setTranslateStateAdaptor}
-							/>
-						</span>
+						<div className={cnPageTranslator('OptionBody')}>
+							<span className={cnPageTranslator('OptionTitle')}>
+								{getMessage('pageTranslator_option_autoTranslate')}
+							</span>
+							<span className={cnPageTranslator('OptionValue')}>
+								<Select
+									options={translateSiteOptions}
+									value={sitePreferences}
+									setValue={setTranslateStateAdaptor}
+								/>
+							</span>
+						</div>
 					</div>
 				</div>
 			</Spoiler>

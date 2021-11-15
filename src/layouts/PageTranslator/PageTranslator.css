@@ -88,3 +88,12 @@
 .PageTranslator-Container_indent_horizontal > :not(:last-child) {
 	margin-inline-end: var(--typography-controls-indent-l);
 }
+
+/* .PageTranslator-OptionContainer_mobile */
+.PageTranslator-OptionContainer_mobile .PageTranslator-OptionTitle {
+	display: block;
+}
+
+.PageTranslator-OptionContainer_mobile .PageTranslator-OptionValue .Select {
+	width: 100%;
+}
