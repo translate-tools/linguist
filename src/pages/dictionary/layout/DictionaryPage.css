@@ -2,47 +2,20 @@
 	padding: var(--typography-layout-indent-l-all) var(--typography-layout-indent-m-all);
 }
 
-.DictionaryPage > :not(:last-child) {
-	margin-bottom: var(--typography-controls-indent-l);
-}
-
 /* Description */
 
 .DictionaryPage-Description {
 	border-radius: var(--typography-controls-border-radius);
 	color: var(--color-typo-secondary);
-	padding-bottom: 1rem;
 }
 
-/* Controls */
+/* Search components */
 
-.DictionaryPage-Controls {
-	display: flex;
-}
-
-.DictionaryPage-ControlsPanel {
-	min-width: max-content;
-}
-
-.DictionaryPage-ControlsPanel:not(:last-child) {
-	padding-right: 1rem;
-}
-
-.DictionaryPage-ControlsPanel > :not(:last-child) {
-	margin-right: var(--typography-controls-indent-m);
-}
-
-.DictionaryPage-ControlsPanel_width_max {
+.DictionaryPage-SearchControl {
 	width: 100%;
 }
 
-.DictionaryPage-ControlsPanel_direction_right {
-	margin-left: auto;
-}
-
-/* Control elements */
-
-.DictionaryPage-SearchControl {
+.DictionaryPage_mobile .DictionaryPage-SearchOptions .Select {
 	width: 100%;
 }
 
