@@ -4,14 +4,14 @@
 
 /* full */
 .OptionsPanel_view_full .OptionsPanel-Option {
-	display: flex;
+	display: table-row;
 }
 
 .OptionsPanel_view_full .OptionsPanel-OptionTitle {
-	display: block;
-	margin-right: 0.3rem;
-	width: 20%;
+	display: table-cell;
 	line-height: 200%;
+	padding-bottom: 0.3rem;
+	padding-right: 0.3rem;
 }
 
 .OptionsPanel_view_full .OptionsPanel-OptionBody {
