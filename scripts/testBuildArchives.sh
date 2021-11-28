@@ -14,13 +14,17 @@ do
 
 	echo;
 
+	# At this time linting is disabled due to BUG https://github.com/mozilla/web-ext/issues/2245
+	# If it will not fixed, we have to replace test tool
+	# TODO: make this step optional and report about falls to TG/elsewhere by HTTP request with API key
+
 	# Check builds on errors
-	echo "Lint build \"$packageArchive\"";
-	npx web-ext lint --source-dir "$unpackDir";
-	if [ $? -ne 0 ];
-	then
-		exit 1;
-	fi;
+	# echo "Lint build \"$packageArchive\"";
+	# npx web-ext lint --source-dir "$unpackDir";
+	# if [ $? -ne 0 ];
+	# then
+	# 	exit 1;
+	# fi;
 
 	echo;
 done;
