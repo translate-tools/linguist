@@ -23,7 +23,7 @@ export const LayoutFlow: FC<ILayoutFlowProps> = ({
 }) => {
 	const content = useMemo(() => {
 		const childs = Array.isArray(children) ? children : [children];
-		return childs.map((content, idx) => (
+		return childs.filter(Boolean).map((content, idx) => (
 			<div className={cnLayoutFlow('Item')} key={idx}>
 				{content}
 			</div>

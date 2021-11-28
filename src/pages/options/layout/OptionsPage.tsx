@@ -5,7 +5,7 @@ import { get, isEqual } from 'lodash';
 import { AppConfigType } from '../../../types/runtime';
 
 import { getMessage } from '../../../lib/language';
-import { saveFile, openFileDialog, readAsText } from '../../../lib/files';
+import { openFileDialog, readAsText, saveFile } from '../../../lib/files';
 
 // Requests
 import { clearCache as clearCacheReq } from '../../../requests/backend/clearCache';
@@ -285,13 +285,15 @@ export const OptionsPage: FC<OptionsPageProps> = ({ messageHideDelay }) => {
 								>
 									{getMessage('settings_button_import')}
 								</Button>
-								<Button
-									view="action"
-									onPress={exportConfig}
-									width={isMobile ? 'max' : undefined}
-								>
-									{getMessage('settings_button_export')}
-								</Button>
+								{!isMobile && (
+									<Button
+										view="action"
+										onPress={exportConfig}
+										width={isMobile ? 'max' : undefined}
+									>
+										{getMessage('settings_button_export')}
+									</Button>
+								)}
 								<Button
 									view="action"
 									onPress={resetConfig}

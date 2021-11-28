@@ -397,9 +397,11 @@ export const DictionaryPage: FC<IDictionaryPageProps> = ({ confirmDelete = true 
 
 					<LayoutFlow indent="l" className={cnDictionaryPage('MainContainer')}>
 						<LayoutFlow indent="m" direction="horizontal">
-							<Button view="default" onPress={exportDictionary}>
-								{getMessage('dictionary_button_export')}
-							</Button>
+							{!isMobile && (
+								<Button view="default" onPress={exportDictionary}>
+									{getMessage('dictionary_button_export')}
+								</Button>
+							)}
 							<Button view="default" onPress={removeAll}>
 								{getMessage('dictionary_button_removeAll')}
 							</Button>
