@@ -1,4 +1,4 @@
-import { RecordValue } from '../../../types/utils';
+import { RecordValues } from '../../../types/utils';
 
 import { sitePreferenceOptions, languagePreferenceOptions } from '../PageTranslator';
 import { SitePrefs } from '../PageTranslator@tab';
@@ -13,7 +13,7 @@ export const getTranslatePreferencesForSite = (
 	sitePreferences: SitePrefs,
 ) => {
 	// Set default
-	let translatePreference: RecordValue<typeof sitePreferenceOptions> =
+	let translatePreference: RecordValues<typeof sitePreferenceOptions> =
 		sitePreferenceOptions.DEFAULT;
 
 	if (sitePreferences !== null) {

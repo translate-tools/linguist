@@ -16,22 +16,14 @@ export type ClassObject<Class, StaticProps extends {} = {}> = {
  */
 export type MutableValue<Name extends string, Type> = {
 	[K in `${Name}`]: Type;
-} &
-	{
-		[K in `set${Capitalize<Name>}`]: Dispatch<SetStateAction<Type>>;
-	};
+} & {
+	[K in `set${Capitalize<Name>}`]: Dispatch<SetStateAction<Type>>;
+};
 
 /**
  * Return object values as keys
  */
-export type RecordValues<T extends Record<any, any>> = {
-	[K in keyof T as T[K]]: any;
-};
-
-/**
- * Make type from object values
- */
-export type RecordValue<T extends Record<any, string | number>> = keyof RecordValues<T>;
+export type RecordValues<T extends Record<any, any>> = T[keyof T];
 
 /**
  * Versioned storage object.
