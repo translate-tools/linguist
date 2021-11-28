@@ -29,10 +29,14 @@ export const openFileDialog = () =>
 	});
 
 export const saveFile = (blob: Blob, name: string) => {
+	const url = URL.createObjectURL(blob);
+
 	const a = document.createElement('a');
-	a.href = URL.createObjectURL(blob);
+	a.href = url;
 	a.download = name;
 	a.click();
+
+	URL.revokeObjectURL(url);
 };
 
 export const readAsText = (blob: Blob) =>
