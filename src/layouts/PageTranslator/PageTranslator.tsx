@@ -52,6 +52,8 @@ export interface PageTranslatorProps
 	toggleTranslate: () => void;
 
 	counters: PageTranslateState;
+
+	isMobile?: boolean;
 }
 
 /**
@@ -75,6 +77,8 @@ export const PageTranslator: FC<PageTranslatorProps> = ({
 
 	isShowOptions,
 	setIsShowOptions,
+
+	isMobile,
 }) => {
 	const actionBtnText = getMessage(
 		isTranslated ? 'pageTranslator_showOriginal' : 'pageTranslator_translatePage',
@@ -144,22 +148,42 @@ export const PageTranslator: FC<PageTranslatorProps> = ({
 
 	return (
 		<div
-			className={cnPageTranslator(null, [
+			className={cnPageTranslator({ view: isMobile ? 'mobile' : undefined }, [
 				cnPageTranslator('Container', { indent: 'vertical' }),
 			])}
 		>
-			<div className={cnPageTranslator('PageTranslation')}>
-				<Button view="action" onPress={toggleTranslate}>
+			<div
+				className={cnPageTranslator(
+					'PageTranslation',
+					{
+						view: isMobile ? 'mobile' : undefined,
+					},
+					[
+						cnPageTranslator('Container', {
+							indent: isMobile ? 'vertical' : 'horizontal',
+						}),
+					],
+				)}
+			>
+				<Button
+					view="action"
+					onPress={toggleTranslate}
+					size={isMobile ? 'l' : 'm'}
+					className={cnPageTranslator('TranslateButton', { fill: isMobile })}
+				>
 					{actionBtnText}
-				</Button>{' '}
-				<LanguagePanel
-					auto={translatorFeatures.isSupportAutodetect}
-					languages={translatorFeatures.supportedLanguages}
-					from={from}
-					to={to}
-					setFrom={setFrom}
-					setTo={setTo}
-				/>
+				</Button>
+				<div className={cnPageTranslator('LangPanel')}>
+					<LanguagePanel
+						auto={translatorFeatures.isSupportAutodetect}
+						languages={translatorFeatures.supportedLanguages}
+						from={from}
+						to={to}
+						setFrom={setFrom}
+						setTo={setTo}
+						mobile={isMobile}
+					/>
+				</div>
 			</div>
 
 			{/* Options */}
@@ -168,22 +192,28 @@ export const PageTranslator: FC<PageTranslatorProps> = ({
 				open={isShowOptions}
 				onToggle={setIsShowOptions}
 			>
-				<div className={cnPageTranslator('Container', { indent: 'vertical' })}>
+				<div
+					className={cnPageTranslator('OptionContainer', { mobile: isMobile }, [
+						cnPageTranslator('Container', { indent: 'vertical' }),
+					])}
+				>
 					<div className={cnPageTranslator('Option')}>
 						<h4 className={cnPageTranslator('Header')}>
 							{getMessage('pageTranslator_commonPreferences_title') +
 								(localizedLang && ` (${localizedLang})`)}
 						</h4>
-						<span className={cnPageTranslator('OptionTitle')}>
-							{getMessage('pageTranslator_option_autoTranslate')}
-						</span>
-						<span className={cnPageTranslator('OptionValue')}>
-							<Select
-								options={translateLanguageOptions}
-								value={languagePreferences}
-								setValue={setTranslateLangAdaptor}
-							/>
-						</span>
+						<div className={cnPageTranslator('OptionBody')}>
+							<span className={cnPageTranslator('OptionTitle')}>
+								{getMessage('pageTranslator_option_autoTranslate')}
+							</span>
+							<span className={cnPageTranslator('OptionValue')}>
+								<Select
+									options={translateLanguageOptions}
+									value={languagePreferences}
+									setValue={setTranslateLangAdaptor}
+								/>
+							</span>
+						</div>
 					</div>
 
 					<div className={cnPageTranslator('Option')}>
@@ -191,16 +221,18 @@ export const PageTranslator: FC<PageTranslatorProps> = ({
 							{getMessage('pageTranslator_sitePreferences_title')}{' '}
 							{escapedHostname}
 						</h4>
-						<span className={cnPageTranslator('OptionTitle')}>
-							{getMessage('pageTranslator_option_autoTranslate')}
-						</span>
-						<span className={cnPageTranslator('OptionValue')}>
-							<Select
-								options={translateSiteOptions}
-								value={sitePreferences}
-								setValue={setTranslateStateAdaptor}
-							/>
-						</span>
+						<div className={cnPageTranslator('OptionBody')}>
+							<span className={cnPageTranslator('OptionTitle')}>
+								{getMessage('pageTranslator_option_autoTranslate')}
+							</span>
+							<span className={cnPageTranslator('OptionValue')}>
+								<Select
+									options={translateSiteOptions}
+									value={sitePreferences}
+									setValue={setTranslateStateAdaptor}
+								/>
+							</span>
+						</div>
 					</div>
 				</div>
 			</Spoiler>

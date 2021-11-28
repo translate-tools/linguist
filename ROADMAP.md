@@ -3,11 +3,11 @@ List with main plans
 ## Platforms
 
 - [x] Publish in firefox addons store
-- [ ] Publish in chrome addons store
+- [x] Publish in chrome addons store
 - [ ] Publish in [edge](https://docs.microsoft.com/en-us/microsoft-edge/extensions-chromium/publish/publish-extension) addons store
-- [ ] Add smartphones support
+- [x] Add smartphones support
   - [ ] Add popup in content script contains UI for control page translation for mobiles (detect it by UserAgent while first run)
-  - [ ] Use markup which looks good on phones
+  - [x] Use markup which looks good on phones
 - [ ] Try electron application
 
 ## Features
@@ -15,7 +15,7 @@ List with main plans
 - [ ] User defined translate modules
 - [ ] Local translator
 - [ ] Translate text on images
-- [ ] Text speaking
+- [x] Text speaking
 - [ ] Optional voice recognition, input text with voice
 - [ ] Open text translation in separate page (with unpin as standalone window)
 - [ ] Translates history page (it may be implement as tab in dictionary)
@@ -48,7 +48,7 @@ List with main plans
 
 ### Low priority
 
-- [ ] Use `browser.storage` instead `localStorage` for store config
+- [x] Use `browser.storage` instead `localStorage` to store config
 - [ ] Keep rules for translate tags as cssQuery (like uBlock)
 - [ ] Picker of nodes for enable/disable translate (like uBlock)
 

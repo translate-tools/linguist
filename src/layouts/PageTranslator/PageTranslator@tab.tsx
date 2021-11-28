@@ -61,6 +61,7 @@ export const PageTranslatorTab: TabComponent<InitFn<InitData>> = ({
 	config,
 	translatorFeatures,
 	initData,
+	isMobile,
 }) => {
 	const {
 		hostname,
@@ -307,6 +308,8 @@ export const PageTranslatorTab: TabComponent<InitFn<InitData>> = ({
 
 				isShowOptions,
 				setIsShowOptions,
+
+				isMobile,
 			}}
 		/>
 	);

@@ -68,6 +68,8 @@ export interface TextTranslatorProps
 
 	enableLanguageSuggestions?: boolean;
 	enableLanguageSuggestionsAlways?: boolean;
+
+	isMobile?: boolean;
 }
 
 type TTSTarget = 'original' | 'translation';
@@ -92,6 +94,7 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 	initPhase = false,
 	enableLanguageSuggestions = true,
 	enableLanguageSuggestionsAlways = true,
+	isMobile,
 }) => {
 	const [inTranslateProcess, setInTranslateProcess] = useState(false);
 	const [errorMessage, setErrorMessage] = useState<string | null>(null);
@@ -353,7 +356,7 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 
 	const isShowFullData = !inTranslateProcess && errorMessage === null;
 	return (
-		<div className={cnTextTranslator()}>
+		<div className={cnTextTranslator({ view: isMobile ? 'mobile' : undefined })}>
 			<div className={cnTextTranslator('LangPanel')}>
 				<LanguagePanel
 					auto={translatorFeatures.isSupportAutodetect}
@@ -365,6 +368,7 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 					swapHandler={swapLanguages}
 					disableSwap={!isShowFullData}
 					preventFocusOnPress={isFocusOnInput}
+					mobile={isMobile}
 				/>
 			</div>
 			<div>

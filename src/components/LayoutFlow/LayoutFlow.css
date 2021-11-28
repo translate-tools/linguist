@@ -1,0 +1,50 @@
+.LayoutFlow_direction_vertical > .LayoutFlow-Item {
+	display: block;
+}
+
+.LayoutFlow_direction_horizontal > .LayoutFlow-Item {
+	display: inline-block;
+}
+
+/* Vertical */
+.LayoutFlow_direction_vertical.LayoutFlow_indent_s > .LayoutFlow-Item:not(:last-child) {
+	margin-block-end: 0.2rem;
+}
+
+.LayoutFlow_direction_vertical.LayoutFlow_indent_m > .LayoutFlow-Item:not(:last-child) {
+	margin-block-end: 0.3rem;
+}
+
+.LayoutFlow_direction_vertical.LayoutFlow_indent_l > .LayoutFlow-Item:not(:last-child) {
+	margin-block-end: 0.5rem;
+}
+
+.LayoutFlow_direction_vertical.LayoutFlow_indent_xl > .LayoutFlow-Item:not(:last-child) {
+	margin-block-end: 0.8rem;
+}
+
+.LayoutFlow_direction_vertical.LayoutFlow_indent_2xl > .LayoutFlow-Item:not(:last-child) {
+	margin-block-end: 1.2rem;
+}
+
+/* Horizontal */
+
+.LayoutFlow_direction_horizontal.LayoutFlow_indent_s > .LayoutFlow-Item:not(:last-child) {
+	margin-inline-end: 0.2rem;
+}
+
+.LayoutFlow_direction_horizontal.LayoutFlow_indent_m > .LayoutFlow-Item:not(:last-child) {
+	margin-inline-end: 0.3rem;
+}
+
+.LayoutFlow_direction_horizontal.LayoutFlow_indent_l > .LayoutFlow-Item:not(:last-child) {
+	margin-inline-end: 0.5rem;
+}
+
+.LayoutFlow_direction_horizontal.LayoutFlow_indent_xl > .LayoutFlow-Item:not(:last-child) {
+	margin-inline-end: 0.8rem;
+}
+
+.LayoutFlow_direction_horizontal.LayoutFlow_indent_2xl > .LayoutFlow-Item:not(:last-child) {
+	margin-inline-end: 1.2rem;
+}

@@ -16,6 +16,8 @@ import {
 
 import { getMessage } from '../../../lib/language';
 import { XResizeObserver } from '../../../lib/XResizeObserver';
+import { isMobileBrowser } from '../../../lib/browser';
+
 import { TabsMenu } from '../../../components/TabsMenu/TabsMenu.bundle/desktop';
 import { Icon } from '../../../components/Icon/Icon.bundle/desktop';
 
@@ -38,6 +40,7 @@ export interface TabData {
 	id: string;
 	config: AppConfigType;
 	translatorFeatures: TranslatorFeatures;
+	isMobile: boolean;
 }
 
 export type InitFn<T> = (props: TabData) => Promise<T>;
@@ -115,11 +118,14 @@ export const PopupWindow: FC<PopupWindowProps> = ({
 	activeTab: activeTabId,
 	setActiveTab,
 	rootElement,
-	minWidth = 450,
+	minWidth,
 }) => {
 	// Resize window
 	const resizeObserver = useRef<XResizeObserver>();
 	useEffect(() => {
+		// Disable on mobile browsers
+		if (isMobileBrowser()) return;
+
 		resizeObserver.current = new XResizeObserver({
 			sizeGetter: (node: Element) => ({
 				height: node.scrollHeight,
@@ -193,6 +199,8 @@ export const PopupWindow: FC<PopupWindowProps> = ({
 	const [panes, setPanes] = useState<PaneItem[] | null>(null);
 	const panesRenderContext = useRef({});
 
+	const isMobile = useMemo(() => isMobileBrowser(), []);
+
 	useEffect(() => {
 		// Update context
 		const renderContext = {};
@@ -211,7 +219,12 @@ export const PopupWindow: FC<PopupWindowProps> = ({
 		(async () => {
 			const panes = await Promise.all(
 				tabs.map(async ({ id, component: Pane }) => {
-					const paneProps: TabData = { translatorFeatures, config, id };
+					const paneProps: TabData = {
+						translatorFeatures,
+						config,
+						id,
+						isMobile,
+					};
 
 					// Call and await init function
 					const initFn = Pane.init;
@@ -230,7 +243,7 @@ export const PopupWindow: FC<PopupWindowProps> = ({
 				setPanes(panes);
 			}
 		})();
-	}, [config, tabs, translatorFeatures]);
+	}, [config, isMobile, tabs, translatorFeatures]);
 
 	// Render content
 
@@ -276,7 +289,7 @@ export const PopupWindow: FC<PopupWindowProps> = ({
 	);
 
 	return (
-		<div className={cnPopupWindow()}>
+		<div className={cnPopupWindow({ view: isMobile ? 'mobile' : undefined })}>
 			<div className={cnPopupWindow('Header')}>
 				<div className={cnPopupWindow('Logo')}>
 					<LogoElement />

@@ -1,11 +1,11 @@
-import React, { FC, useCallback, useEffect, useState } from 'react';
+import React, { FC, useCallback, useEffect, useMemo, useState } from 'react';
 import { cn } from '@bem-react/classname';
 import { get, isEqual } from 'lodash';
 
 import { AppConfigType } from '../../../types/runtime';
 
 import { getMessage } from '../../../lib/language';
-import { saveFile, openFileDialog, readAsText } from '../../../lib/files';
+import { openFileDialog, readAsText, saveFile } from '../../../lib/files';
 
 // Requests
 import { clearCache as clearCacheReq } from '../../../requests/backend/clearCache';
@@ -16,12 +16,14 @@ import { resetConfig as resetConfigReq } from '../../../requests/backend/resetCo
 import { setConfig as setConfigReq } from '../../../requests/backend/setConfig';
 import { updateConfig as updateConfigReq } from '../../../requests/backend/updateConfig';
 
-import { Button } from '../../../components/Button/Button.bundle/desktop';
+import { Button } from '../../../components/Button/Button.bundle/universal';
+import { LayoutFlow } from '../../../components/LayoutFlow/LayoutFlow';
 import { Page } from '../../../layouts/Page/Page';
 import { PageMessages } from '../../../layouts/Page/Messages/PageMessages';
 
 import { generateTree } from './OptionsPage.utils/generateTree';
 import { useMessageBroker } from '../../../lib/hooks/useMessageBroker';
+import { isMobileBrowser } from '../../../lib/browser';
 import { OptionsGroup, OptionsTree } from './OptionsTree/OptionsTree';
 import { PageSection } from './PageSection/PageSection';
 
@@ -255,6 +257,8 @@ export const OptionsPage: FC<OptionsPageProps> = ({ messageHideDelay }) => {
 	// Render
 	//
 
+	const isMobile = useMemo(() => isMobileBrowser(), []);
+
 	if (!loaded || config === undefined || configTree === undefined) {
 		return <Page loading />;
 	}
@@ -270,15 +274,34 @@ export const OptionsPage: FC<OptionsPageProps> = ({ messageHideDelay }) => {
 								cnOptionsPage('IndentMixin', { horizontal: true }),
 							])}
 						>
-							<Button view="action" onPress={importConfig}>
-								{getMessage('settings_button_import')}
-							</Button>
-							<Button view="action" onPress={exportConfig}>
-								{getMessage('settings_button_export')}
-							</Button>
-							<Button view="action" onPress={resetConfig}>
-								{getMessage('settings_button_reset')}
-							</Button>
+							<LayoutFlow
+								direction={isMobile ? 'vertical' : 'horizontal'}
+								indent="l"
+							>
+								<Button
+									view="action"
+									onPress={importConfig}
+									width={isMobile ? 'max' : undefined}
+								>
+									{getMessage('settings_button_import')}
+								</Button>
+								{!isMobile && (
+									<Button
+										view="action"
+										onPress={exportConfig}
+										width={isMobile ? 'max' : undefined}
+									>
+										{getMessage('settings_button_export')}
+									</Button>
+								)}
+								<Button
+									view="action"
+									onPress={resetConfig}
+									width={isMobile ? 'max' : undefined}
+								>
+									{getMessage('settings_button_reset')}
+								</Button>
+							</LayoutFlow>
 						</div>
 
 						<OptionsTree
