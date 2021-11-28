@@ -23,7 +23,7 @@ import { PageMessages } from '../../../layouts/Page/Messages/PageMessages';
 
 import { generateTree } from './OptionsPage.utils/generateTree';
 import { useMessageBroker } from '../../../lib/hooks/useMessageBroker';
-import { isSmartphone } from '../../../lib/browser';
+import { isMobileBrowser } from '../../../lib/browser';
 import { OptionsGroup, OptionsTree } from './OptionsTree/OptionsTree';
 import { PageSection } from './PageSection/PageSection';
 
@@ -257,7 +257,7 @@ export const OptionsPage: FC<OptionsPageProps> = ({ messageHideDelay }) => {
 	// Render
 	//
 
-	const isMobile = useMemo(() => isSmartphone(), []);
+	const isMobile = useMemo(() => isMobileBrowser(), []);
 
 	if (!loaded || config === undefined || configTree === undefined) {
 		return <Page loading />;

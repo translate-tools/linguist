@@ -2,7 +2,7 @@ import React, { useMemo } from 'react';
 import { withClassnameHOC, withHOCConstructor } from 'react-elegant-ui/esm/lib/compose';
 
 import { cnButton, IButtonProps } from '../Button';
-import { isSmartphone } from '../../../lib/browser';
+import { isMobileBrowser } from '../../../lib/browser';
 
 import './Button_mobile.css';
 
@@ -18,7 +18,7 @@ export const withButtonMobile = withHOCConstructor<{}, IButtonProps>({}, (Compon
 	const WrappedComponent = withModButtonMobile(Component);
 
 	return ({ className, ...props }) => {
-		const isMobile = useMemo(() => isSmartphone(), []);
+		const isMobile = useMemo(() => isMobileBrowser(), []);
 
 		return (
 			<WrappedComponent

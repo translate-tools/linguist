@@ -8,7 +8,7 @@ import { ping as pingBackend } from '../../requests/backend/ping';
 import { getConfig } from '../../requests/backend/getConfig';
 import { getTranslatorFeatures } from '../../requests/backend/getTranslatorFeatures';
 
-import { isSmartphone } from '../../lib/browser';
+import { isMobileBrowser } from '../../lib/browser';
 import { getMessage } from '../../lib/language';
 import { AppConfigType } from '../../types/runtime';
 
@@ -158,7 +158,7 @@ const PopupPage: FC<PopupPageProps> = ({ rootElement }) => {
 		}
 	}, [config, getTabsHash, setActiveTabProxy, tabs]);
 
-	const minWidth = useMemo(() => (isSmartphone() ? undefined : 450), []);
+	const minWidth = useMemo(() => (isMobileBrowser() ? undefined : 450), []);
 
 	return (
 		<PopupWindow

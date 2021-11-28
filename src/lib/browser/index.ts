@@ -5,13 +5,13 @@ import { detectLanguage } from '../language';
 /**
  * Helper to detect platform
  */
-export const isSmartphone = () => {
+export const isMobileBrowser = () => {
 	const UA = navigator.userAgent;
-	const isSmartphone =
+	const isMobileUserAgent =
 		/\b(BlackBerry|webOS|iPhone|IEMobile)\b/i.test(UA) ||
 		/\b(Android|Windows Phone|iPad|iPod)\b/i.test(UA);
 
-	return isSmartphone;
+	return isMobileUserAgent;
 };
 
 export const injectStyles = (paths: string[], parent?: Node) => {

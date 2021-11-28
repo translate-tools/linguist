@@ -16,7 +16,7 @@ import { getLanguageNameByCode, getMessage } from '../../../lib/language';
 import { saveFile } from '../../../lib/files';
 import { useMessageBroker } from '../../../lib/hooks/useMessageBroker';
 import { useTTS } from '../../../lib/hooks/useTTS';
-import { isSmartphone } from '../../../lib/browser';
+import { isMobileBrowser } from '../../../lib/browser';
 
 import { Button } from '../../../components/Button/Button.bundle/desktop';
 import { Select } from '../../../components/Select/Select.bundle/desktop';
@@ -189,7 +189,7 @@ export const DictionaryPage: FC<IDictionaryPageProps> = ({ confirmDelete = true 
 	// Render
 	//
 
-	const isMobile = useMemo(() => isSmartphone(), []);
+	const isMobile = useMemo(() => isMobileBrowser(), []);
 
 	const [search, setSearch] = useState<string>('');
 	const [from, setFrom] = useState<string | string[] | undefined>('any');

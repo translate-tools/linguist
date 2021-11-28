@@ -16,7 +16,7 @@ import {
 
 import { getMessage } from '../../../lib/language';
 import { XResizeObserver } from '../../../lib/XResizeObserver';
-import { isSmartphone } from '../../../lib/browser';
+import { isMobileBrowser } from '../../../lib/browser';
 
 import { TabsMenu } from '../../../components/TabsMenu/TabsMenu.bundle/desktop';
 import { Icon } from '../../../components/Icon/Icon.bundle/desktop';
@@ -124,7 +124,7 @@ export const PopupWindow: FC<PopupWindowProps> = ({
 	const resizeObserver = useRef<XResizeObserver>();
 	useEffect(() => {
 		// Disable on mobile browsers
-		if (isSmartphone()) return;
+		if (isMobileBrowser()) return;
 
 		resizeObserver.current = new XResizeObserver({
 			sizeGetter: (node: Element) => ({
@@ -199,7 +199,7 @@ export const PopupWindow: FC<PopupWindowProps> = ({
 	const [panes, setPanes] = useState<PaneItem[] | null>(null);
 	const panesRenderContext = useRef({});
 
-	const isMobile = useMemo(() => isSmartphone(), []);
+	const isMobile = useMemo(() => isMobileBrowser(), []);
 
 	useEffect(() => {
 		// Update context

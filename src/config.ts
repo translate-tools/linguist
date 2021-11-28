@@ -1,4 +1,4 @@
-import { isSmartphone } from './lib/browser';
+import { isMobileBrowser } from './lib/browser';
 import { getUserLanguage } from './lib/language';
 import { AppConfigType } from './types/runtime';
 
@@ -30,7 +30,7 @@ export const defaultConfig: AppConfigType = {
 		],
 		translatableAttributes: ['title', 'alt', 'placeholder', 'label', 'aria-label'],
 		// Temporary solution to fix UX due to bug https://github.com/translate-tools/linguist/issues/75
-		lazyTranslate: isSmartphone() ? false : true,
+		lazyTranslate: isMobileBrowser() ? false : true,
 		detectLanguageByContent: true,
 		originalTextPopup: false,
 	},
