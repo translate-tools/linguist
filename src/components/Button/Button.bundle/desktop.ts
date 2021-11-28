@@ -14,6 +14,7 @@ import { withModButtonViewPseudo } from 'react-elegant-ui/esm/components/Button/
 import { withModButtonSizeS } from 'react-elegant-ui/esm/components/Button/_size/Button_size_s';
 import { withModButtonSizeM } from 'react-elegant-ui/esm/components/Button/_size/Button_size_m';
 import { withModButtonSizeL } from 'react-elegant-ui/esm/components/Button/_size/Button_size_l';
+import { withModButtonWidthMax } from 'react-elegant-ui/esm/components/Button/_width/Button_width_max';
 
 import { withModButtonPressAnimation } from 'react-elegant-ui/esm/components/Button/_pressAnimation/Button_pressAnimation';
 
@@ -37,6 +38,7 @@ export const Button = compose(
 	composeU(withModButtonSizeS, withModButtonSizeM, withModButtonSizeL),
 	composeU(withModButtonTypeLink),
 	composeU(withModButtonContentIcon),
+	composeU(withModButtonWidthMax),
 	withModButtonPressAnimation,
 )(DesktopButton);
 

@@ -1,6 +1,7 @@
 /* Page */
 .OptionsPage-Page {
 	padding: var(--typography-layout-indent-l-all) var(--typography-layout-indent-m-all);
+	max-width: 100%;
 }
 
 .OptionsPage-Page_editMode {
@@ -42,4 +43,9 @@
 
 .OptionsPage-IndentMixin_vertical > *:not(:first-child) {
 	margin-top: var(--typography-layout-indent-l-all);
+}
+
+/* Components */
+.OptionsPage .Checkbox {
+	white-space: break-spaces;
 }
