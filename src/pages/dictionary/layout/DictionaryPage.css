@@ -94,10 +94,19 @@
 
 .DictionaryPage-EntryContent {
 	display: flex;
+	flex-direction: row;
 	min-height: 3rem;
 }
 
-.DictionaryPage-EntryContent > :not(:last-child) {
+.DictionaryPage_mobile .DictionaryPage-EntryContent {
+	flex-direction: column;
+}
+
+.DictionaryPage_mobile .DictionaryPage-EntryContent > :not(:last-child) {
+	margin-bottom: var(--typography-controls-indent-m);
+}
+
+.DictionaryPage:not(.DictionaryPage_mobile) .DictionaryPage-EntryContent > :not(:last-child) {
 	margin-right: var(--typography-controls-indent-m);
 }
 

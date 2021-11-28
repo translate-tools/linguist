@@ -189,6 +189,8 @@ export const DictionaryPage: FC<IDictionaryPageProps> = ({ confirmDelete = true 
 	// Render
 	//
 
+	const isMobile = useMemo(() => isSmartphone(), []);
+
 	const [search, setSearch] = useState<string>('');
 	const [from, setFrom] = useState<string | string[] | undefined>('any');
 	const [to, setTo] = useState<string | string[] | undefined>('any');
@@ -269,9 +271,11 @@ export const DictionaryPage: FC<IDictionaryPageProps> = ({ confirmDelete = true 
 							<span className={cnDictionaryPage('Lang')}>
 								{getLanguageNameByCode(to)}
 							</span>
-							<span className={cnDictionaryPage('Date')}>
-								{new Date(date).toLocaleDateString()}
-							</span>
+							{!isMobile && (
+								<span className={cnDictionaryPage('Date')}>
+									{new Date(date).toLocaleDateString()}
+								</span>
+							)}
 						</div>
 						<div className={cnDictionaryPage('EntryControl')}>
 							<Button
@@ -320,7 +324,7 @@ export const DictionaryPage: FC<IDictionaryPageProps> = ({ confirmDelete = true 
 				</div>
 			);
 		});
-	}, [entries, from, to, search, resetFilters, remove, playPauseTTS]);
+	}, [isMobile, entries, from, to, search, resetFilters, remove, playPauseTTS]);
 
 	const langsListFrom = useMemo(
 		() => [
@@ -344,8 +348,6 @@ export const DictionaryPage: FC<IDictionaryPageProps> = ({ confirmDelete = true 
 		],
 		[],
 	);
-
-	const isMobile = useMemo(() => isSmartphone(), []);
 
 	return (
 		<Page loading={entries === null}>
