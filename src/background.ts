@@ -36,39 +36,6 @@ import { deleteTranslationFactory } from './requests/backend/translations/delete
 import { getTranslationsFactory } from './requests/backend/translations/getTranslations';
 import { clearTranslationsFactory } from './requests/backend/translations/clearTranslations';
 
-// Debug
-// TODO: write tests for translators in core dir
-if (process.env.NODE_ENV !== 'production') {
-	console.warn('Welcome to background debug');
-
-	const isTestTranslateModules = false;
-	if (isTestTranslateModules) {
-		(Object.keys(translatorModules) as (keyof typeof translatorModules)[]).forEach(
-			(name) => {
-				const displayName = `DBG [${name}]`;
-
-				const translatorClass = translatorModules[name];
-
-				console.warn(`${displayName}: class`, translatorClass);
-
-				const tr = new translatorClass();
-
-				const knob = (text = 'Hello world') =>
-					tr
-						.translate(text, 'en', 'es')
-						.then((result) =>
-							console.info(
-								`${displayName}: translate "${text}" as ${result}`,
-							),
-						);
-
-				console.warn(`${displayName}: knob`, knob);
-				knob();
-			},
-		);
-	}
-}
-
 // Make async context
 (async () => {
 	// Migrate data
