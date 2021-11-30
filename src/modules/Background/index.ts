@@ -1,4 +1,7 @@
+import { browser } from 'webextension-polyfill-ts';
+
 import { TranslatorClass } from '../../types/objects';
+import { AppConfigType } from '../../types/runtime';
 
 import { EventManager } from '../../lib/EventManager';
 
@@ -48,6 +51,12 @@ export class Background {
 			});
 		}
 
+		// Set icon
+		const appIcon = await this.config.getConfig('appIcon');
+		if (appIcon !== null) {
+			this.setAppIcon(appIcon);
+		}
+
 		// Init state
 		await this.makeTranslator();
 		await this.makeScheduler();
@@ -64,7 +73,11 @@ export class Background {
 
 		this.config.subscribe(
 			'update',
-			({ scheduler, translatorModule, cache }, prevConfig) => {
+			({ scheduler, translatorModule, cache, appIcon }, prevConfig) => {
+				if (appIcon && appIcon !== prevConfig.appIcon) {
+					this.setAppIcon(appIcon);
+				}
+
 				// Forced recreate a scheduler while change of key options
 				if (
 					scheduler !== undefined ||
@@ -79,6 +92,25 @@ export class Background {
 		// Emit event
 		this.eventDispatcher.getEventHandlers('load').forEach((handler) => handler());
 	}
+
+	// TODO: use actual icons
+	// TODO: implement auto icon with browser specific theme observers
+	// TODO: add i18n texts
+	private setAppIcon = (icon: AppConfigType['appIcon']) => {
+		const iconsMap = {
+			dark: 'static/logo-icon-simple.svg',
+			color: 'static/logo-icon.svg',
+		};
+
+		const iconPath = iconsMap[icon === 'color' ? 'color' : 'dark'];
+		browser.browserAction.setIcon({
+			path: {
+				32: iconPath,
+			},
+		});
+
+		console.warn('SET ICON', icon);
+	};
 
 	private readonly eventDispatcher = new EventManager<{
 		load: () => void;
