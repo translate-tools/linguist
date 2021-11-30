@@ -23,7 +23,7 @@
 .OptionsPage-OptionDescription {
 	color: var(--color-typo-secondary);
 	font-size: var(--typography-layout-size-s-font-size);
-	white-space: pre-wrap;
+	white-space: break-spaces;
 }
 
 .OptionsPage-OptionErrorMessage {

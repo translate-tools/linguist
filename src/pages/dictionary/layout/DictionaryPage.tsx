@@ -1,3 +1,5 @@
+// TODO: adopt entries styles to mobile
+
 import React, { FC, useCallback, useEffect, useMemo, useState } from 'react';
 import { cn } from '@bem-react/classname';
 import Papa from 'papaparse';
@@ -14,11 +16,15 @@ import { getLanguageNameByCode, getMessage } from '../../../lib/language';
 import { saveFile } from '../../../lib/files';
 import { useMessageBroker } from '../../../lib/hooks/useMessageBroker';
 import { useTTS } from '../../../lib/hooks/useTTS';
+import { isMobileBrowser } from '../../../lib/browser';
 
 import { Button } from '../../../components/Button/Button.bundle/desktop';
 import { Select } from '../../../components/Select/Select.bundle/desktop';
 import { Textinput } from '../../../components/Textinput/Textinput.bundle/desktop';
 import { Icon } from '../../../components/Icon/Icon.bundle/desktop';
+
+import { OptionsPanel } from '../../../components/OptionsPanel/OptionsPanel';
+import { LayoutFlow } from '../../../components/LayoutFlow/LayoutFlow';
 
 import { Page } from '../../../layouts/Page/Page';
 import { PageMessages } from '../../../layouts/Page/Messages/PageMessages';
@@ -183,6 +189,8 @@ export const DictionaryPage: FC<IDictionaryPageProps> = ({ confirmDelete = true 
 	// Render
 	//
 
+	const isMobile = useMemo(() => isMobileBrowser(), []);
+
 	const [search, setSearch] = useState<string>('');
 	const [from, setFrom] = useState<string | string[] | undefined>('any');
 	const [to, setTo] = useState<string | string[] | undefined>('any');
@@ -263,9 +271,11 @@ export const DictionaryPage: FC<IDictionaryPageProps> = ({ confirmDelete = true 
 							<span className={cnDictionaryPage('Lang')}>
 								{getLanguageNameByCode(to)}
 							</span>
-							<span className={cnDictionaryPage('Date')}>
-								{new Date(date).toLocaleDateString()}
-							</span>
+							{!isMobile && (
+								<span className={cnDictionaryPage('Date')}>
+									{new Date(date).toLocaleDateString()}
+								</span>
+							)}
 						</div>
 						<div className={cnDictionaryPage('EntryControl')}>
 							<Button
@@ -314,7 +324,7 @@ export const DictionaryPage: FC<IDictionaryPageProps> = ({ confirmDelete = true 
 				</div>
 			);
 		});
-	}, [entries, from, to, search, resetFilters, remove, playPauseTTS]);
+	}, [isMobile, entries, from, to, search, resetFilters, remove, playPauseTTS]);
 
 	const langsListFrom = useMemo(
 		() => [
@@ -341,18 +351,13 @@ export const DictionaryPage: FC<IDictionaryPageProps> = ({ confirmDelete = true 
 
 	return (
 		<Page loading={entries === null}>
-			<div className={cnDictionaryPage()}>
-				<div className={cnDictionaryPage('Description')}>
-					{getMessage('dictionary_description')}
-				</div>
+			<div className={cnDictionaryPage({ mobile: isMobile })}>
+				<LayoutFlow indent="2xl">
+					<div className={cnDictionaryPage('Description')}>
+						{getMessage('dictionary_description')}
+					</div>
 
-				<div className={cnDictionaryPage('Controls')}>
-					<div
-						className={cnDictionaryPage('ControlsPanel', {
-							direction: 'left',
-							width: 'max',
-						})}
-					>
+					<LayoutFlow indent="m" className={cnDictionaryPage('SearchPanel')}>
 						<Textinput
 							placeholder={getMessage('dictionary_searchPlaceholder')}
 							value={search}
@@ -361,37 +366,52 @@ export const DictionaryPage: FC<IDictionaryPageProps> = ({ confirmDelete = true 
 							onClearClick={() => setSearch('')}
 							hasClear
 						/>
-					</div>
 
-					<div
-						className={cnDictionaryPage('ControlsPanel', {
-							direction: 'right',
-						})}
-					>
-						<Button view="action" onPress={exportDictionary}>
-							{getMessage('dictionary_button_export')}
-						</Button>
-						<Button view="action" onPress={removeAll}>
-							{getMessage('dictionary_button_removeAll')}
-						</Button>
-					</div>
-				</div>
+						<OptionsPanel
+							className={cnDictionaryPage('SearchOptions')}
+							view={isMobile ? 'mobile' : 'full'}
+							options={[
+								{
+									title: getMessage('dictionary_filter_from'),
+									content: (
+										<Select
+											options={langsListFrom}
+											value={from}
+											setValue={setFrom}
+										/>
+									),
+								},
+								{
+									title: getMessage('dictionary_filter_to'),
+									content: (
+										<Select
+											options={langsListTo}
+											value={to}
+											setValue={setTo}
+										/>
+									),
+								},
+							]}
+						/>
+					</LayoutFlow>
 
-				<div className={cnDictionaryPage('Controls')}>
-					<div
-						className={cnDictionaryPage('ControlsPanel', {
-							direction: 'left',
-						})}
-					>
-						<span>{getMessage('dictionary_filter_from')}:</span>
-						<Select options={langsListFrom} value={from} setValue={setFrom} />
+					<LayoutFlow indent="l" className={cnDictionaryPage('MainContainer')}>
+						<LayoutFlow indent="m" direction="horizontal">
+							{!isMobile && (
+								<Button view="default" onPress={exportDictionary}>
+									{getMessage('dictionary_button_export')}
+								</Button>
+							)}
+							<Button view="default" onPress={removeAll}>
+								{getMessage('dictionary_button_removeAll')}
+							</Button>
+						</LayoutFlow>
 
-						<span>{getMessage('dictionary_filter_to')}:</span>
-						<Select options={langsListTo} value={to} setValue={setTo} />
-					</div>
-				</div>
-
-				<div className={cnDictionaryPage('Entries')}>{renderedEntries}</div>
+						<div className={cnDictionaryPage('Entries')}>
+							{renderedEntries}
+						</div>
+					</LayoutFlow>
+				</LayoutFlow>
 			</div>
 
 			<PageMessages

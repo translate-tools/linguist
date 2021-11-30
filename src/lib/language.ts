@@ -1,5 +1,5 @@
 import { browser } from 'webextension-polyfill-ts';
-import { isSmartphone } from './browser';
+import { isMobileBrowser } from './browser';
 
 export const getUserLanguage = () => browser.i18n.getUILanguage().split('-')[0];
 
@@ -16,7 +16,7 @@ export const detectLanguage = async (text: string, reliableOnly = false) => {
 	// https://github.com/mozilla-mobile/fenix/issues/18633
 
 	// We should await fix or we may use https://github.com/wooorm/franc library, but it's have low precision
-	if (isSmartphone()) return null;
+	if (isMobileBrowser()) return null;
 
 	return browser.i18n.detectLanguage(text).then((result) => {
 		if (reliableOnly && !result.isReliable) {

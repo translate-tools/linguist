@@ -21,6 +21,7 @@ export interface LanguagePanelProps {
 	swapHandler?: (languages: { from: string; to: string }) => void;
 	disableSwap?: boolean;
 	preventFocusOnPress?: boolean;
+	mobile?: boolean;
 }
 
 export const LanguagePanel: FC<LanguagePanelProps> = ({
@@ -33,6 +34,7 @@ export const LanguagePanel: FC<LanguagePanelProps> = ({
 	swapHandler,
 	disableSwap,
 	preventFocusOnPress,
+	mobile,
 }) => {
 	const fromValue = from !== undefined ? from : auto ? 'auto' : languages[0];
 	const toValue = to !== undefined ? to : languages[0];
@@ -63,13 +65,14 @@ export const LanguagePanel: FC<LanguagePanelProps> = ({
 		: options;
 
 	return (
-		<span className={cnLanguagePanel()}>
+		<span className={cnLanguagePanel({ view: mobile ? 'wide' : undefined })}>
 			<Select
 				options={optionsFrom}
 				value={fromValue}
 				setValue={(value) =>
 					typeof value === 'string' && setFrom !== undefined && setFrom(value)
 				}
+				className={cnLanguagePanel('Select')}
 			/>
 			<Button
 				view="default"
@@ -78,6 +81,8 @@ export const LanguagePanel: FC<LanguagePanelProps> = ({
 				title={getMessage('lang_swap')}
 				content="icon"
 				preventFocusOnPress={preventFocusOnPress}
+				className={cnLanguagePanel('Button')}
+				size={mobile ? 'l' : 'm'}
 			>
 				<Icon glyph="swap-horiz" scalable={false} />
 			</Button>
@@ -87,6 +92,7 @@ export const LanguagePanel: FC<LanguagePanelProps> = ({
 				setValue={(value) =>
 					typeof value === 'string' && setTo !== undefined && setTo(value)
 				}
+				className={cnLanguagePanel('Select')}
 			/>
 		</span>
 	);

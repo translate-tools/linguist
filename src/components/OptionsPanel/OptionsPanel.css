@@ -1,0 +1,33 @@
+.OptionsPanel-Option:not(:last-child) {
+	margin-block-end: 0.5rem;
+}
+
+/* full */
+.OptionsPanel_view_full .OptionsPanel-Option {
+	display: table-row;
+}
+
+.OptionsPanel_view_full .OptionsPanel-OptionTitle {
+	display: table-cell;
+	line-height: 200%;
+	padding-bottom: 0.3rem;
+	padding-right: 0.3rem;
+}
+
+.OptionsPanel_view_full .OptionsPanel-OptionBody {
+	display: block;
+}
+
+/* mobile */
+.OptionsPanel_view_mobile .OptionsPanel-Option {
+	display: block;
+}
+
+.OptionsPanel_view_mobile .OptionsPanel-OptionTitle {
+	display: block;
+	margin-bottom: 0.3rem;
+}
+
+.OptionsPanel_view_mobile .OptionsPanel-OptionBody {
+	display: block;
+}

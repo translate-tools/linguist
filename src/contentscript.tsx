@@ -2,7 +2,7 @@ import { isEqual } from 'lodash';
 import { runByReadyState } from 'react-elegant-ui/esm/lib/runByReadyState';
 
 import { AppConfigType } from './types/runtime';
-import { getPageLanguage, isSmartphone } from './lib/browser';
+import { getPageLanguage, isMobileBrowser } from './lib/browser';
 
 // TODO: move all contentscript modules to use augment class
 import { ContentScript } from './modules/ContentScript';
@@ -33,7 +33,6 @@ cs.onLoad(async (initConfig) => {
 			lang === null ? undefined : lang,
 		);
 
-	// TODO: this is throw error on smartphones
 	let pageLanguage = await detectPageLanguage();
 
 	const pageTranslator = new PageTranslator(config.pageTranslator);
@@ -159,9 +158,9 @@ cs.onLoad(async (initConfig) => {
 		});
 	});
 
-	// Insert panel for smartphones
-	if (isSmartphone()) {
-		console.warn("It's smartphone");
+	// Insert panel on smartphones
+	if (isMobileBrowser()) {
+		console.warn("It's mobile browser");
 
 		// const embeddedPanel = new EmbeddedControlPanel();
 		// embeddedPanel.enable();
