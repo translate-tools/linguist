@@ -1,10 +1,7 @@
 import { RecordValues } from '../types/utils';
 
 export class EventManager<EventMap extends Record<string, (...args: any[]) => any>> {
-	private readonly callbacks = new Map<
-		keyof EventMap,
-		Set<keyof RecordValues<EventMap>>
-	>();
+	private readonly callbacks = new Map<keyof EventMap, Set<RecordValues<EventMap>>>();
 
 	/**
 	 * Add callback for listen changes
