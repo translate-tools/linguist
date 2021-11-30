@@ -40,6 +40,9 @@ export function getPageLanguageFromMeta() {
 	return null;
 }
 
+export const isFirefox = () => /firefox/i.test(navigator.userAgent);
+export const isChromium = () => /chrome/i.test(navigator.userAgent);
+
 /**
  * By default detect lang by meta, but while `detectByContent` is `true` its try detect lang by content
  */
