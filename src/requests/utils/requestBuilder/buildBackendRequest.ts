@@ -41,8 +41,5 @@ export const buildBackendRequest = <O = void, R = void>(
 		});
 	};
 
-	return [
-		factory,
-		hook as O extends void ? () => Promise<R> : (options: O) => Promise<R>,
-	] as const;
+	return [factory, hook as (options: O) => Promise<R>] as const;
 };
