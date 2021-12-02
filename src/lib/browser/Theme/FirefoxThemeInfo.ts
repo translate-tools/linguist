@@ -8,7 +8,7 @@ export type FirefoxTheme = {
 };
 
 const isLightText = (theme: FirefoxTheme) => {
-	const textColor = theme.colors.toolbar_field_text ?? null;
+	const textColor = theme?.colors.toolbar_field_text ?? null;
 
 	if (textColor === null) return null;
 

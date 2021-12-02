@@ -10,7 +10,9 @@ import { ping } from '../requests/backend/ping';
 // TODO: use builder for this request to ensure types integrity
 // Firstly, we should refactor builder to make it more abstract
 
-// Send update event
+/**
+ * Send update event to all tabs
+ */
 export const sendConfigUpdateEvent = () =>
 	getAllTabs().then((tabs) =>
 		tabs.forEach((tab) =>

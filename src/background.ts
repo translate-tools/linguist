@@ -4,6 +4,8 @@ import { ConfigStorage } from './modules/ConfigStorage/ConfigStorage';
 import { Background, translatorModules } from './modules/Background';
 import { sendConfigUpdateEvent } from './modules/ContentScript';
 
+import { AppThemeControl } from './lib/browser/AppThemeControl';
+
 import { migrateAll } from './migrations/migrationsList';
 
 import { TextTranslatorStorage } from './layouts/TextTranslator/TextTranslator.utils/TextTranslatorStorage';
@@ -45,7 +47,15 @@ import { clearTranslationsFactory } from './requests/backend/translations/clearT
 	const cfg = new ConfigStorage(defaultConfig);
 	const bg = new Background(cfg);
 
+	// Set icon
+	const appThemeControl = new AppThemeControl();
+	const appIcon = await cfg.getConfig('appIcon');
+	if (appIcon !== null) {
+		appThemeControl.setAppIconPreferences(appIcon);
+	}
+
 	bg.onLoad(() => {
+		// TODO: implement `deps` argument and split to standalone handlers
 		// Hooks for config update
 		cfg.subscribe('update', (newProps, oldProps) => {
 			// Clear cache while disable
@@ -65,6 +75,11 @@ import { clearTranslationsFactory } from './requests/backend/translations/clearT
 			) {
 				// NOTE: it is async operation
 				TextTranslatorStorage.forgetText();
+			}
+
+			// Update app icon
+			if (newProps.appIcon && newProps.appIcon !== oldProps.appIcon) {
+				appThemeControl.setAppIconPreferences(newProps.appIcon);
 			}
 
 			// Send update event
