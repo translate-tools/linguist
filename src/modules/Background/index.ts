@@ -98,7 +98,7 @@ export class Background {
 	// TODO: add i18n texts
 	private setAppIcon = (icon: AppConfigType['appIcon']) => {
 		const iconsMap = {
-			dark: 'static/logo-icon-simple.svg',
+			dark: 'static/logo-icon-simple-dark.svg',
 			color: 'static/logo-icon.svg',
 		};
 

@@ -48,7 +48,7 @@ import { clearTranslationsFactory } from './requests/backend/translations/clearT
 	bg.onLoad(() => {
 		// Hooks for config update
 		cfg.subscribe('update', (newProps, oldProps) => {
-			// Clear cache while disableing
+			// Clear cache while disable
 			if (
 				newProps.scheduler !== undefined &&
 				newProps.scheduler.useCache === false &&

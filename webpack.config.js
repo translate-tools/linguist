@@ -3,6 +3,7 @@ const fs = require('fs');
 const CopyPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { convert } = require('convert-svg-to-png');
+const { merge } = require('lodash');
 
 const package = require('./package.json');
 
@@ -80,7 +81,7 @@ module.exports = {
 								.readFileSync(targetManifestPath)
 								.toString();
 							const targetManifest = JSON.parse(rawTargetManifest);
-							manifest = { ...manifest, ...targetManifest };
+							manifest = merge(manifest, targetManifest);
 						}
 
 						// Set version
@@ -109,13 +110,21 @@ module.exports = {
 				},
 
 				// Serve static files
-				...['logo-icon.svg', 'logo-icon-simple.svg'].map((filename) => ({
+				...[
+					'logo-icon.svg',
+					'logo-icon-simple-dark.svg',
+					'logo-icon-simple-light.svg',
+				].map((filename) => ({
 					from: './src/res/' + filename,
 					to: path.join(outputPath, 'static', filename),
 				})),
 
 				//  Convert svg to png files for use as addon logotypes (chromium is not support svg logotypes)
-				...['logo-icon.svg', 'logo-icon-simple.svg'].map((file) => ({
+				...[
+					'logo-icon.svg',
+					'logo-icon-simple-dark.svg',
+					'logo-icon-simple-light.svg',
+				].map((file) => ({
 					from: './src/res/' + file,
 					to: path.join(
 						outputPath,
