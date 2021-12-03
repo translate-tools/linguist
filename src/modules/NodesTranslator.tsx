@@ -81,6 +81,9 @@ function isBlockElement(element: Element) {
 
 /**
  * Module for dynamic translate a DOM nodes
+ *
+ * TODO: describe nodes life cycle
+ * TODO: refactor to simplify it
  */
 export class NodesTranslator {
 	translateCallback: TranslatorInterface;
@@ -228,6 +231,7 @@ export class NodesTranslator {
 	private idCounter = 0;
 	private nodeStorage = new WeakMap<Node, NodeData>();
 	private addNode(node: Node, force = false) {
+		// FIXME: prevent explore element each time. It's very expensive
 		// Add attributes and text nodes from element
 		if (node instanceof Element) {
 			this.handleTree(node, (node) => {
@@ -249,7 +253,8 @@ export class NodesTranslator {
 			this.config.lazyTranslate &&
 			!force &&
 			owner !== null &&
-			document.body.contains(owner)
+			// Check on attachment node to page (ignore virtial nodes and removed from DOM)
+			node.getRootNode() !== node
 		) {
 			this.handleElementByIntersectViewport(owner);
 			return;
@@ -385,8 +390,15 @@ export class NodesTranslator {
 		nodeExplore(node, NodeFilter.SHOW_ALL, true, (node) => {
 			callback(node);
 
-			// Handle attributes of element
 			if (node instanceof Element) {
+				// Handle nodes from opened shadow DOM
+				if (node.shadowRoot !== null) {
+					for (const child of Array.from(node.shadowRoot.children)) {
+						this.handleTree(child, callback);
+					}
+				}
+
+				// Handle attributes of element
 				for (const attribute of Object.values(node.attributes)) {
 					callback(attribute);
 				}
