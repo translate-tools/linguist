@@ -1,7 +1,5 @@
 // NOTE: probably should make factory builder which control update props and rebuild factories which require changed props
 
-import { TranslatorClass } from '../types/objects';
-
 import { Background } from '../modules/Background';
 import { ConfigStorage } from '../modules/ConfigStorage/ConfigStorage';
 
@@ -9,11 +7,12 @@ import { AppConfigType } from '../types/runtime';
 
 import { PageTranslator } from '../modules/PageTranslator/PageTranslator';
 import { SelectTranslator } from '../modules/SelectTranslator';
+import { BaseTranslator } from '@translate-tools/core/types/Translator';
 
 export type RequestHandlerFactoryProps = {
 	cfg: ConfigStorage;
 	bg: Background;
-	translatorModules: Record<string, TranslatorClass>;
+	translatorModules: Record<string, BaseTranslator>;
 };
 
 export type RequestHandlerFactory = (props: RequestHandlerFactoryProps) => () => void;

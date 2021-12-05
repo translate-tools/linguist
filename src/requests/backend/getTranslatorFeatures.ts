@@ -13,15 +13,13 @@ export const [getTranslatorFeaturesFactory, getTranslatorFeatures] = buildBacken
 		factoryHandler:
 			({ bg }) =>
 				async () => {
-					const translator = bg.translator;
-					if (translator === undefined) {
+					const translatorInfo = await bg.getTranslatorInfo();
+
+					if (translatorInfo === null) {
 						throw new Error('Translator is not ready');
 					}
 
-					return {
-						supportedLanguages: translator.supportedLanguages(),
-						isSupportAutodetect: translator.isSupportAutodetect(),
-					};
+					return translatorInfo;
 				},
 	},
 );

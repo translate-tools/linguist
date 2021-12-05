@@ -1,4 +1,4 @@
-import { Translator } from '@translate-tools/core/types/Translator';
+import { TranslatorInstance } from '@translate-tools/core/types/Translator';
 
 import { type } from '../../lib/types';
 import { buildBackendRequest } from '../utils/requestBuilder';
@@ -15,8 +15,8 @@ export const [getTranslatorModulesFactory, getTranslatorModules] = buildBackendR
 					// TODO: fix type for `translatorModules`
 					for (const key in translatorModules) {
 						modules[key] = (
-						translatorModules[key] as unknown as typeof Translator
-						).moduleName;
+						translatorModules[key] as unknown as TranslatorInstance
+						).translatorName;
 					}
 
 					return modules;

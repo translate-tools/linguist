@@ -123,7 +123,7 @@ import { clearTranslationsFactory } from './requests/backend/translations/clearT
 		const backgroundPagePath = '/_generated_background_page.html';
 		if (location.pathname === backgroundPagePath) {
 			factories.forEach((factory) => {
-				factory({ cfg, bg, translatorModules });
+				factory({ cfg, bg, translatorModules: translatorModules as any });
 			});
 		}
 	});

@@ -1,32 +1,32 @@
-import { TranslatorClass } from '../../types/objects';
-
 import { EventManager } from '../../lib/EventManager';
 
 import { ConfigStorage } from '../ConfigStorage/ConfigStorage';
 import { TranslatorsCacheStorage } from './TranslatorsCacheStorage';
 
 // Schedulers
-import { ITranslateScheduler } from '@translate-tools/core/TranslateScheduler/ITranslateScheduler';
-import { TranslateScheduler } from '@translate-tools/core/TranslateScheduler/TranslateScheduler';
-import { TranslateSchedulerWithCache } from '@translate-tools/core/TranslateScheduler/TranslateSchedulerWithCache';
+import {
+	IScheduler,
+	Scheduler,
+	SchedulerWithCache,
+} from '@translate-tools/core/util/Scheduler';
 
 // Translators
-import { Translator } from '@translate-tools/core/types/Translator';
+import { BaseTranslator } from '@translate-tools/core/types/Translator';
 import { GoogleTranslator } from '@translate-tools/core/translators/GoogleTranslator';
 import { YandexTranslator } from '@translate-tools/core/translators/YandexTranslator';
 import { BingTranslatorPublic } from '@translate-tools/core/translators/unstable/BingTranslatorPublic';
 
 interface Registry {
-	translator?: Translator;
+	translator?: BaseTranslator;
 	cache?: TranslatorsCacheStorage;
-	scheduler?: ITranslateScheduler;
+	scheduler?: IScheduler;
 }
 
-export const translatorModules: Record<string, TranslatorClass> = {
+export const translatorModules = {
 	YandexTranslator,
 	GoogleTranslator,
 	BingTranslatorPublic,
-};
+} as const;
 
 export const isValidNativeTranslatorModuleName = (name: string) =>
 	name in translatorModules;
@@ -96,6 +96,19 @@ export class Background {
 		return this.registry.scheduler;
 	}
 
+	public getTranslatorInfo = async () => {
+		const translatorName = (await this.config.getConfig('translatorModule')) as
+			| null
+			| keyof typeof translatorModules;
+		if (translatorName === null) return null;
+
+		const translatorModule = translatorModules[translatorName];
+		return {
+			supportedLanguages: translatorModule.getSupportedLanguages(),
+			isSupportAutodetect: translatorModule.isSupportedAutoFrom(),
+		};
+	};
+
 	// TODO: move to requests
 	public async clearTranslatorsCache() {
 		// Clear for each module
@@ -108,14 +121,15 @@ export class Background {
 	private makeTranslator = async (force = false) => {
 		if (this.registry.translator !== undefined && !force) return;
 
-		const translatorName = await this.config.getConfig('translatorModule');
+		const translatorName = (await this.config.getConfig('translatorModule')) as
+			| null
+			| keyof typeof translatorModules;
 		if (translatorName === null || !(translatorName in translatorModules)) {
 			throw new Error(
 				`Translator builder can't make translator by key "${translatorName}"`,
 			);
 		}
-
-		this.registry.translator = new (translatorModules as any)[translatorName]();
+		this.registry.translator = new translatorModules[translatorName]();
 	};
 
 	private makeCache = async (force = false) => {
@@ -142,17 +156,14 @@ export class Background {
 		}
 
 		const { useCache, ...config } = schedulerConfig;
-		const baseScheduler = new TranslateScheduler(translator, config);
+		const baseScheduler = new Scheduler(translator, config);
 
 		// Try use cache if possible
 		if (useCache) {
 			await this.makeCache(force);
 			const cache = this.registry.cache;
 			if (cache !== undefined) {
-				this.registry.scheduler = new TranslateSchedulerWithCache(
-					baseScheduler,
-					cache,
-				);
+				this.registry.scheduler = new SchedulerWithCache(baseScheduler, cache);
 				return;
 			}
 		}
