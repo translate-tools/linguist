@@ -64,6 +64,8 @@ interface Options {
 	 * Show block with original text
 	 */
 	showOriginalText: boolean;
+
+	enableTranslateFromContextMenu?: boolean;
 }
 
 /**
@@ -79,6 +81,7 @@ export class SelectTranslator {
 		showOnceForSelection: true,
 		showOriginalText: true,
 		isUseAutoForDetectLang: true,
+		enableTranslateFromContextMenu: true,
 	};
 
 	constructor(options?: Partial<Options>) {
@@ -137,6 +140,57 @@ export class SelectTranslator {
 		return this.shadowRoot.getRootNode() !== null;
 	}
 
+	public translateSelectedText = () => {
+		// TODO: Review options conflicts
+		// TODO: Implement feature as option
+
+		// TODO: get selected text anchore coordinates if last position is empty
+		if (this.lastPointerPosition === null) return;
+		const { x, y } = this.lastPointerPosition;
+
+		this.getSelectedText().then((selection) => {
+			if (selection === null) return;
+
+			this.showPopup(selection.text, x, y);
+		});
+	};
+
+	private getSelectedText = () =>
+		new Promise<{ selection: Selection; text: string } | null>((res) => {
+			const root = this.shadowRoot.getRootNode();
+
+			this.context = Symbol('context');
+			const context = this.context;
+
+			// Get selected text in next frame
+			requestAnimationFrame(() => {
+				if (context !== this.context) {
+					res(null);
+					return;
+				}
+				this.context = Symbol('context');
+
+				const selection = window.getSelection();
+
+				// Skip empty selection
+				if (selection === null) {
+					res(null);
+					return;
+				}
+
+				// Skip if selected a text inside root node
+				if (
+					root === null ||
+					root.contains(selection.anchorNode) ||
+					root.contains(selection.focusNode)
+				)
+					return;
+
+				const selectedText = selection.toString();
+				res(selectedText.length > 0 ? { selection, text: selectedText } : null);
+			});
+		});
+
 	// Prevent handle keys by page. It important for search language on pages like youtube where F key can open fullscreen mode
 	private keyDown = (evt: KeyboardEvent) => {
 		evt.stopImmediatePropagation();
@@ -156,6 +210,8 @@ export class SelectTranslator {
 
 	private context = Symbol('context');
 
+	private lastPointerPosition: { x: number; y: number } | null = null;
+
 	/**
 	 * Open popup by text selection on the page
 	 */
@@ -163,6 +219,15 @@ export class SelectTranslator {
 		// Reject if press not left button or not just touch
 		// Codes list: https://www.w3.org/TR/pointerevents1/#h5_chorded-button-interactions
 		if (evt.button !== 0) return;
+
+		const { pageX, pageY } = evt;
+		this.lastPointerPosition = {
+			x: pageX,
+			y: pageY,
+		};
+
+		// Skip when enabled translation with context menu
+		if (this.options.enableTranslateFromContextMenu) return;
 
 		// Check modifier keys
 		const requiredModifierKeys = this.options.modifiers;
@@ -178,28 +243,10 @@ export class SelectTranslator {
 		// Skip events inside root node
 		if (root === null || (target instanceof Node && root.contains(target))) return;
 
-		this.context = Symbol('context');
-		const context = this.context;
+		this.getSelectedText().then((result) => {
+			if (result === null) return;
 
-		const { pageX, pageY } = evt;
-
-		// Get selected text in next frame
-		requestAnimationFrame(() => {
-			if (context !== this.context) return;
-			this.context = Symbol('context');
-
-			const selection = window.getSelection();
-
-			// Skip empty selection
-			if (selection === null) return;
-
-			// Skip if selected a text inside root node
-			if (
-				root === null ||
-				root.contains(selection.anchorNode) ||
-				root.contains(selection.focusNode)
-			)
-				return;
+			const { selection } = result;
 
 			// Skip when pointerdown not on the selected text
 			if (this.options.strictSelection && selection.focusNode instanceof Text) {
@@ -210,10 +257,7 @@ export class SelectTranslator {
 			// Skip if it shown not first time
 			if (this.options.showOnceForSelection && !this.unhandledSelection) return;
 
-			const selectedText = selection.toString();
-			if (selectedText.length > 0) {
-				this.showPopup(selectedText, pageX, pageY);
-			}
+			this.showPopup(result.text, pageX, pageY);
 		});
 	};
 
@@ -231,6 +275,7 @@ export class SelectTranslator {
 			timeoutForHideButton,
 			focusOnTranslateButton,
 			showOriginalText,
+			enableTranslateFromContextMenu,
 		} = this.options;
 
 		this.shadowRoot.mountComponent(
@@ -240,7 +285,9 @@ export class SelectTranslator {
 				{...{
 					pageLanguage,
 					showOriginalText,
-					quickTranslate,
+					quickTranslate: enableTranslateFromContextMenu
+						? true
+						: quickTranslate,
 					detectedLangFirst,
 					isUseAutoForDetectLang,
 					rememberDirection,

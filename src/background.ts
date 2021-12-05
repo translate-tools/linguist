@@ -1,3 +1,6 @@
+import { browser } from 'webextension-polyfill-ts';
+
+import { contextMenuIds } from './constants';
 import { defaultConfig } from './config';
 
 import { ConfigStorage } from './modules/ConfigStorage/ConfigStorage';
@@ -37,6 +40,7 @@ import { findTranslationFactory } from './requests/backend/translations/findTran
 import { deleteTranslationFactory } from './requests/backend/translations/deleteTranslation';
 import { getTranslationsFactory } from './requests/backend/translations/getTranslations';
 import { clearTranslationsFactory } from './requests/backend/translations/clearTranslations';
+import { translateSelectedText } from './requests/contentscript/translateSelectedText';
 
 // Make async context
 (async () => {
@@ -126,5 +130,19 @@ import { clearTranslationsFactory } from './requests/backend/translations/clearT
 				factory({ cfg, bg, translatorModules: translatorModules as any });
 			});
 		}
+
+		// TODO: move to requests
+		browser.contextMenus.create({
+			id: contextMenuIds.translateText,
+			title: 'Translate text',
+			contexts: ['all'],
+		});
+
+		browser.contextMenus.onClicked.addListener((info, tab) => {
+			if (info.menuItemId !== contextMenuIds.translateText || !tab || !tab.id)
+				return;
+
+			translateSelectedText(tab.id);
+		});
 	});
 })();

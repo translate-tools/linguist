@@ -7,7 +7,7 @@
 	"icons": {
 		"512": "static/logo/logo-icon.png"
 	},
-	"permissions": ["<all_urls>", "storage", "tabs"],
+	"permissions": ["<all_urls>", "storage", "tabs", "contextMenus"],
 	"web_accessible_resources": ["common.css", "contentscript.css"],
 	"background": {
 		"scripts": ["common.js", "background.js"]
