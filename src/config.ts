@@ -53,6 +53,7 @@ export const defaultConfig: AppConfigType = {
 		showOnceForSelection: true,
 		showOriginalText: true,
 		isUseAutoForDetectLang: true,
+		enableTranslateFromContextMenu: true,
 	},
 	contentscript: {
 		selectTranslator: {

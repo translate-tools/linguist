@@ -1,6 +1,3 @@
-import { browser } from 'webextension-polyfill-ts';
-
-import { contextMenuIds } from './constants';
 import { defaultConfig } from './config';
 
 import { ConfigStorage } from './modules/ConfigStorage/ConfigStorage';
@@ -8,6 +5,7 @@ import { Background, translatorModules } from './modules/Background';
 import { sendConfigUpdateEvent } from './modules/ContentScript';
 
 import { AppThemeControl } from './lib/browser/AppThemeControl';
+import { toggleTranslateItemInContextMenu } from './lib/browser/toggleTranslateItemInContextMenu';
 
 import { migrateAll } from './migrations/migrationsList';
 
@@ -40,7 +38,6 @@ import { findTranslationFactory } from './requests/backend/translations/findTran
 import { deleteTranslationFactory } from './requests/backend/translations/deleteTranslation';
 import { getTranslationsFactory } from './requests/backend/translations/getTranslations';
 import { clearTranslationsFactory } from './requests/backend/translations/clearTranslations';
-import { translateSelectedText } from './requests/contentscript/translateSelectedText';
 
 // Make async context
 (async () => {
@@ -51,14 +48,24 @@ import { translateSelectedText } from './requests/contentscript/translateSelecte
 	const cfg = new ConfigStorage(defaultConfig);
 	const bg = new Background(cfg);
 
-	// Set icon
-	const appThemeControl = new AppThemeControl();
-	const appIcon = await cfg.getConfig('appIcon');
-	if (appIcon !== null) {
-		appThemeControl.setAppIconPreferences(appIcon);
-	}
+	bg.onLoad(async () => {
+		// Get config
+		const initCfg = await cfg.getAllConfig();
+		if (initCfg === null) {
+			throw new Error('Empty config');
+		}
 
-	bg.onLoad(() => {
+		// Set icon
+		const appThemeControl = new AppThemeControl();
+		if (initCfg.appIcon !== null) {
+			appThemeControl.setAppIconPreferences(initCfg.appIcon);
+		}
+
+		// Configure context menu
+		if (initCfg.selectTranslator.enableTranslateFromContextMenu) {
+			toggleTranslateItemInContextMenu(true);
+		}
+
 		// TODO: implement `deps` argument and split to standalone handlers
 		// Hooks for config update
 		cfg.subscribe('update', (newProps, oldProps) => {
@@ -84,6 +91,17 @@ import { translateSelectedText } from './requests/contentscript/translateSelecte
 			// Update app icon
 			if (newProps.appIcon && newProps.appIcon !== oldProps.appIcon) {
 				appThemeControl.setAppIconPreferences(newProps.appIcon);
+			}
+
+			// Update translate text by context menu
+			if (
+				newProps?.selectTranslator?.enableTranslateFromContextMenu !==
+				oldProps?.selectTranslator?.enableTranslateFromContextMenu
+			) {
+				const isEnabled = Boolean(
+					newProps?.selectTranslator?.enableTranslateFromContextMenu,
+				);
+				toggleTranslateItemInContextMenu(isEnabled);
 			}
 
 			// Send update event
@@ -130,19 +148,5 @@ import { translateSelectedText } from './requests/contentscript/translateSelecte
 				factory({ cfg, bg, translatorModules: translatorModules as any });
 			});
 		}
-
-		// TODO: move to requests
-		browser.contextMenus.create({
-			id: contextMenuIds.translateText,
-			title: 'Translate text',
-			contexts: ['all'],
-		});
-
-		browser.contextMenus.onClicked.addListener((info, tab) => {
-			if (info.menuItemId !== contextMenuIds.translateText || !tab || !tab.id)
-				return;
-
-			translateSelectedText(tab.id);
-		});
 	});
 })();

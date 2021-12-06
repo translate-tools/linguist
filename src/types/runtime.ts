@@ -84,6 +84,7 @@ export const AppConfig = type.type({
 		showOriginalText: type.boolean,
 		isUseAutoForDetectLang: type.boolean,
 		timeoutForHideButton: type.number,
+		enableTranslateFromContextMenu: type.boolean,
 	}),
 	pageTranslator: type.type({
 		ignoredTags: ArrayOfStrings,

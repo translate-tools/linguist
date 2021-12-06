@@ -81,7 +81,7 @@ export class SelectTranslator {
 		showOnceForSelection: true,
 		showOriginalText: true,
 		isUseAutoForDetectLang: true,
-		enableTranslateFromContextMenu: true,
+		enableTranslateFromContextMenu: false,
 	};
 
 	constructor(options?: Partial<Options>) {
@@ -141,13 +141,12 @@ export class SelectTranslator {
 	}
 
 	public translateSelectedText = () => {
-		// TODO: Review options conflicts
-		// TODO: Implement feature as option
+		this.hidePopup();
 
-		// TODO: get selected text anchore coordinates if last position is empty
-		if (this.lastPointerPosition === null) return;
-		const { x, y } = this.lastPointerPosition;
-
+		const { x, y } = this.lastPointerPosition || {
+			x: window.scrollX,
+			y: window.scrollY,
+		};
 		this.getSelectedText().then((selection) => {
 			if (selection === null) return;
 
@@ -278,16 +277,16 @@ export class SelectTranslator {
 			enableTranslateFromContextMenu,
 		} = this.options;
 
+		const isForceQuickTranslate = enableTranslateFromContextMenu;
+
 		this.shadowRoot.mountComponent(
 			<SelectTranslatorPopup
 				closeHandler={this.hidePopup}
-				translate={translate}
+				quickTranslate={isForceQuickTranslate || quickTranslate}
 				{...{
+					translate,
 					pageLanguage,
 					showOriginalText,
-					quickTranslate: enableTranslateFromContextMenu
-						? true
-						: quickTranslate,
 					detectedLangFirst,
 					isUseAutoForDetectLang,
 					rememberDirection,
