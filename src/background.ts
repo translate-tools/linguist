@@ -88,8 +88,8 @@ import { clearTranslationsFactory } from './requests/backend/translations/clearT
 	// TODO: toggle it while switch tabs
 	// Configure context menu
 	cfg.onUpdate(
-		({ selectTranslator }) => {
-			const isEnabled = selectTranslator.mode === 'contextMenu';
+		({ selectTranslator: { enabled, mode } }) => {
+			const isEnabled = enabled && mode === 'contextMenu';
 			toggleTranslateItemInContextMenu(isEnabled);
 		},
 		['selectTranslator'],
