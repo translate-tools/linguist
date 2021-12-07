@@ -4,7 +4,7 @@ import { translate } from '../requests/backend/translate';
 import { SelectTranslator as SelectTranslatorPopup } from '../layouts/SelectTranslator/SelectTranslator';
 import { ShadowDOMContainerManager } from '../lib/ShadowDOMContainerManager';
 
-interface Options {
+export interface Options {
 	/**
 	 * Key modifiers to activate translate of selected text
 	 */

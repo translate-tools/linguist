@@ -24,7 +24,7 @@ export const [enableTranslatePageFactory, enableTranslatePageReq] = buildTabRequ
 					if (
 						selectTranslator !== null &&
 					selectTranslator.isRun() &&
-					config.contentscript.selectTranslator.disableWhileTranslatePage
+					config.selectTranslator.disableWhileTranslatePage
 					) {
 						selectTranslator.stop();
 					}

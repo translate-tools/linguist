@@ -365,14 +365,17 @@
 	"settings_option_selectTranslation_strictSelection_desc": {
 		"message": "Игнорировать выделение, при отпускании мыши за пределами блока содержащего текст"
 	},
-	"settings_option_selectTranslation_quickTranslate": {
-		"message": "Мгновенный перевод"
+	"settings_option_selectTranslation_mode": {
+		"message": "Способ перевода"
 	},
-	"settings_option_selectTranslation_quickTranslate_desc": {
-		"message": "Вместо отображения кнопки для перевода, текст переводится сразу после выделения"
+	"settings_option_selectTranslation_mode_item_popupButton": {
+		"message": "Всплывающая кнопка"
 	},
-	"settings_option_selectTranslation_quickTranslate_enable": {
-		"message": "Включить"
+	"settings_option_selectTranslation_mode_item_quickTranslate": {
+		"message": "Быстрый перевод по выделению"
+	},
+	"settings_option_selectTranslation_mode_item_contextMenu": {
+		"message": "Кнопка в контекстном меню"
 	},
 	"settings_option_selectTranslation_modifiers": {
 		"message": "Модификаторы"

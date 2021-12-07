@@ -7,7 +7,10 @@ import { getPageLanguage, isMobileBrowser } from './lib/browser';
 // TODO: move all contentscript modules to use augment class
 import { ContentScript } from './modules/ContentScript';
 import { PageTranslator } from './modules/PageTranslator/PageTranslator';
-import { SelectTranslator } from './modules/SelectTranslator';
+import {
+	SelectTranslator,
+	Options as SelectTranslatorOptions,
+} from './modules/SelectTranslator';
 // import { EmbeddedControlPanel } from './augments/EmbeddedControlPanel';
 
 import { isRequireTranslateBySitePreferences } from './layouts/PageTranslator/PageTranslator.utils/utils';
@@ -21,6 +24,16 @@ import { enableTranslatePageFactory } from './requests/contentscript/pageTransla
 import { disableTranslatePageFactory } from './requests/contentscript/pageTranslation/disableTranslatePage';
 import { getLanguagePreferences } from './requests/backend/autoTranslation/languagePreferences/getLanguagePreferences';
 import { translateSelectedTextFactory } from './requests/contentscript/translateSelectedText';
+
+const buildSelectTranslatorOptions = (
+	{ mode, ...options }: AppConfigType['selectTranslator'],
+	{ pageLanguage }: { pageLanguage?: string },
+): SelectTranslatorOptions => ({
+	...options,
+	pageLanguage,
+	quickTranslate: mode === 'quickTranslate',
+	enableTranslateFromContextMenu: mode === 'contextMenu',
+});
 
 const cs = new ContentScript();
 
@@ -47,25 +60,27 @@ cs.onLoad(async (initConfig) => {
 	const updateSelectTranslatorRef = () =>
 		(selectTranslatorRef.value = selectTranslator);
 
-	if (config.contentscript.selectTranslator.enabled) {
-		selectTranslator = new SelectTranslator({
-			...config.selectTranslator,
-			pageLanguage,
-		});
+	if (config.selectTranslator.enabled) {
+		selectTranslator = new SelectTranslator(
+			buildSelectTranslatorOptions(config.selectTranslator, {
+				pageLanguage,
+			}),
+		);
 		selectTranslator.start();
 		updateSelectTranslatorRef();
 	}
 
 	const updateConfig = (newConfig: AppConfigType) => {
 		// Update global config
-		if (!isEqual(config.contentscript, newConfig.contentscript)) {
+		if (!isEqual(config.selectTranslator, newConfig.selectTranslator)) {
 			// Make or delete SelectTranslator
-			if (newConfig.contentscript.selectTranslator.enabled) {
+			if (newConfig.selectTranslator.enabled) {
 				if (selectTranslator === null) {
-					selectTranslator = new SelectTranslator({
-						...newConfig.selectTranslator,
-						pageLanguage,
-					});
+					selectTranslator = new SelectTranslator(
+						buildSelectTranslatorOptions(newConfig.selectTranslator, {
+							pageLanguage,
+						}),
+					);
 					updateSelectTranslatorRef();
 				}
 			} else {
@@ -80,8 +95,8 @@ cs.onLoad(async (initConfig) => {
 
 			// Start/stop of SelectTranslator
 			const isNeedRunSelectTranslator =
-				newConfig.contentscript.selectTranslator.enabled &&
-				(!newConfig.contentscript.selectTranslator.disableWhileTranslatePage ||
+				newConfig.selectTranslator.enabled &&
+				(!newConfig.selectTranslator.disableWhileTranslatePage ||
 					!pageTranslator.isRun());
 
 			if (isNeedRunSelectTranslator) {
@@ -97,24 +112,23 @@ cs.onLoad(async (initConfig) => {
 
 		// Update SelectTranslator
 		if (!isEqual(config.selectTranslator, newConfig.selectTranslator)) {
-			if (
-				newConfig.contentscript.selectTranslator.enabled &&
-				selectTranslator !== null
-			) {
+			if (newConfig.selectTranslator.enabled && selectTranslator !== null) {
 				if (selectTranslator.isRun()) {
 					selectTranslator.stop();
-					selectTranslator = new SelectTranslator({
-						...newConfig.selectTranslator,
-						pageLanguage,
-					});
+					selectTranslator = new SelectTranslator(
+						buildSelectTranslatorOptions(newConfig.selectTranslator, {
+							pageLanguage,
+						}),
+					);
 					updateSelectTranslatorRef();
 
 					selectTranslator.start();
 				} else {
-					selectTranslator = new SelectTranslator({
-						...newConfig.selectTranslator,
-						pageLanguage,
-					});
+					selectTranslator = new SelectTranslator(
+						buildSelectTranslatorOptions(newConfig.selectTranslator, {
+							pageLanguage,
+						}),
+					);
 					updateSelectTranslatorRef();
 				}
 			}
@@ -231,7 +245,7 @@ cs.onLoad(async (initConfig) => {
 			if (
 				selectTranslator !== null &&
 				selectTranslator.isRun() &&
-				config.contentscript.selectTranslator.disableWhileTranslatePage
+				config.selectTranslator.disableWhileTranslatePage
 			) {
 				selectTranslator.stop();
 			}

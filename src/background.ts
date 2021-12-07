@@ -62,7 +62,7 @@ import { clearTranslationsFactory } from './requests/backend/translations/clearT
 		}
 
 		// Configure context menu
-		if (initCfg.selectTranslator.enableTranslateFromContextMenu) {
+		if (initCfg.selectTranslator.mode === 'contextMenu') {
 			toggleTranslateItemInContextMenu(true);
 		}
 
@@ -94,13 +94,8 @@ import { clearTranslationsFactory } from './requests/backend/translations/clearT
 			}
 
 			// Update translate text by context menu
-			if (
-				newProps?.selectTranslator?.enableTranslateFromContextMenu !==
-				oldProps?.selectTranslator?.enableTranslateFromContextMenu
-			) {
-				const isEnabled = Boolean(
-					newProps?.selectTranslator?.enableTranslateFromContextMenu,
-				);
+			if (newProps?.selectTranslator?.mode !== oldProps?.selectTranslator?.mode) {
+				const isEnabled = newProps?.selectTranslator?.mode === 'contextMenu';
 				toggleTranslateItemInContextMenu(isEnabled);
 			}
 

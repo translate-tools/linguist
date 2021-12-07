@@ -66,10 +66,11 @@ export const AppConfig = type.type({
 		ignoreCase: type.boolean,
 	}),
 	selectTranslator: type.type({
+		enabled: type.boolean,
+		disableWhileTranslatePage: type.boolean,
 		zIndex: type.union([type.number, type.undefined]),
 		focusOnTranslateButton: type.union([type.boolean, type.undefined]),
 		rememberDirection: type.boolean,
-		quickTranslate: type.boolean,
 		modifiers: type.array(
 			type.union([
 				StringLiteralType('ctrlKey'),
@@ -84,7 +85,11 @@ export const AppConfig = type.type({
 		showOriginalText: type.boolean,
 		isUseAutoForDetectLang: type.boolean,
 		timeoutForHideButton: type.number,
-		enableTranslateFromContextMenu: type.boolean,
+		mode: type.union([
+			StringLiteralType('popupButton'),
+			StringLiteralType('quickTranslate'),
+			StringLiteralType('contextMenu'),
+		]),
 	}),
 	pageTranslator: type.type({
 		ignoredTags: ArrayOfStrings,
@@ -98,12 +103,6 @@ export const AppConfig = type.type({
 		spellCheck: type.boolean,
 		suggestLanguage: type.boolean,
 		suggestLanguageAlways: type.boolean,
-	}),
-	contentscript: type.type({
-		selectTranslator: type.type({
-			enabled: type.boolean,
-			disableWhileTranslatePage: type.boolean,
-		}),
 	}),
 	popup: type.type({
 		rememberLastTab: type.boolean,
