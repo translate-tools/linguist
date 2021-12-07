@@ -13,8 +13,6 @@ const isLightText = (theme: FirefoxTheme) => {
 	if (textColor === null) return null;
 
 	const brightness = colord(textColor).brightness();
-	console.warn({ brightness });
-
 	return brightness > 0.5;
 };
 
