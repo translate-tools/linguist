@@ -63,6 +63,7 @@ import { clearTranslationsFactory } from './requests/backend/translations/clearT
 
 		// Configure context menu
 		if (initCfg.selectTranslator.mode === 'contextMenu') {
+			// TODO: toggle it while switch tabs
 			toggleTranslateItemInContextMenu(true);
 		}
 
