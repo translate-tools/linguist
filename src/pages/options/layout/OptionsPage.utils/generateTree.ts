@@ -244,9 +244,6 @@ export const generateTree = ({
 						},
 						{
 							title: getMessage('settings_option_selectTranslation_mode'),
-							description: getMessage(
-								'settings_option_selectTranslation_mode_desc',
-							),
 							path: 'selectTranslator.mode',
 							optionContent: {
 								type: 'SelectList',
