@@ -55,15 +55,7 @@ export const defaultConfig: AppConfigType = {
 		showOnceForSelection: true,
 		showOriginalText: true,
 		isUseAutoForDetectLang: true,
-		// quickTranslate: false,
-		// enableTranslateFromContextMenu: true,
 	},
-	// contentscript: {
-	// 	selectTranslator: {
-	// 		enabled: true,
-	// 		disableWhileTranslatePage: true,
-	// 	},
-	// },
 	popup: {
 		rememberLastTab: true,
 	},
