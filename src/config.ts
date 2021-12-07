@@ -42,9 +42,11 @@ export const defaultConfig: AppConfigType = {
 		suggestLanguageAlways: true,
 	},
 	selectTranslator: {
+		enabled: true,
+		disableWhileTranslatePage: true,
+		mode: 'popupButton',
 		zIndex: 999999,
 		rememberDirection: false,
-		quickTranslate: false,
 		modifiers: [],
 		strictSelection: false,
 		detectedLangFirst: true,
@@ -53,12 +55,6 @@ export const defaultConfig: AppConfigType = {
 		showOnceForSelection: true,
 		showOriginalText: true,
 		isUseAutoForDetectLang: true,
-	},
-	contentscript: {
-		selectTranslator: {
-			enabled: true,
-			disableWhileTranslatePage: true,
-		},
 	},
 	popup: {
 		rememberLastTab: true,

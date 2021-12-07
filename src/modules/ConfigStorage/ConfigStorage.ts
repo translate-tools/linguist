@@ -21,7 +21,7 @@ type ConfigType = t.TypeOfProps<typeof AppConfig.props>;
 // <T extends t.Props = any>
 export class ConfigStorage extends AbstractVersionedStorage {
 	static publicName = 'ConfigStorage';
-	static storageVersion = 2;
+	static storageVersion = 3;
 
 	private static readonly storageName = 'appConfig';
 	private static readonly dataSignature = AppConfig.props;
@@ -260,6 +260,37 @@ export class ConfigStorage extends AbstractVersionedStorage {
 
 			// Delete old data
 			localStorage.removeItem(storageKey);
+
+			break;
+		}
+		case 2: {
+			// Merge actual data with old
+			let { [ConfigStorage.storageName]: actualData } =
+					await browser.storage.local.get(ConfigStorage.storageName);
+			if (typeof actualData !== 'object') {
+				actualData = {};
+			}
+
+			const contentscriptPropData =
+					actualData?.contentscript?.selectTranslator || {};
+			const quickTranslate = actualData?.selectTranslator?.quickTranslate;
+
+			const newData = actualData;
+			delete newData.contentscript;
+
+			// Write data
+			browser.storage.local.set({
+				[ConfigStorage.storageName]: {
+					...newData,
+					selectTranslator: {
+						...newData?.selectTranslator,
+						...contentscriptPropData,
+						mode: quickTranslate
+							? 'quickTranslate'
+							: newData?.selectTranslator?.mode,
+					},
+				},
+			});
 
 			break;
 		}

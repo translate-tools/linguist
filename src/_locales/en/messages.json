@@ -77,6 +77,9 @@
 	"common_action_removeFromDictionary": {
 		"message": "Remove translate from dictionary"
 	},
+	"contextMenu_translateSelectedText": {
+		"message": "Translate selected text"
+	},
 	"dictionary_pageTitle": {
 		"message": "Dictionary"
 	},
@@ -366,14 +369,17 @@
 	"settings_option_selectTranslation_strictSelection_desc": {
 		"message": "Ignore selection while release mouse button outside a block of contains selected text"
 	},
-	"settings_option_selectTranslation_quickTranslate": {
-		"message": "Quick translate"
+	"settings_option_selectTranslation_mode": {
+		"message": "Translation trigger"
 	},
-	"settings_option_selectTranslation_quickTranslate_desc": {
-		"message": "Text will translate at once instead of showing a button of translate"
+	"settings_option_selectTranslation_mode_item_popupButton": {
+		"message": "Popup button"
 	},
-	"settings_option_selectTranslation_quickTranslate_enable": {
-		"message": "Enable"
+	"settings_option_selectTranslation_mode_item_quickTranslate": {
+		"message": "Quick translation by selection"
+	},
+	"settings_option_selectTranslation_mode_item_contextMenu": {
+		"message": "Context menu button"
 	},
 	"settings_option_selectTranslation_modifiers": {
 		"message": "Modifiers"

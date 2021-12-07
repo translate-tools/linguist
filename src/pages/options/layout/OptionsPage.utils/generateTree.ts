@@ -234,7 +234,7 @@ export const generateTree = ({
 					title: getMessage('settings_option_mainPreferences'),
 					groupContent: [
 						{
-							path: 'contentscript.selectTranslator.enabled',
+							path: 'selectTranslator.enabled',
 							optionContent: {
 								type: 'Checkbox',
 								text: getMessage(
@@ -243,7 +243,24 @@ export const generateTree = ({
 							},
 						},
 						{
-							path: 'contentscript.selectTranslator.disableWhileTranslatePage',
+							title: getMessage('settings_option_selectTranslation_mode'),
+							path: 'selectTranslator.mode',
+							optionContent: {
+								type: 'SelectList',
+								options: [
+									'popupButton',
+									'quickTranslate',
+									'contextMenu',
+								].map((id) => ({
+									id,
+									content: getMessage(
+										`settings_option_selectTranslation_mode_item_${id}`,
+									),
+								})),
+							},
+						},
+						{
+							path: 'selectTranslator.disableWhileTranslatePage',
 							optionContent: {
 								type: 'Checkbox',
 								text: getMessage(
@@ -334,23 +351,6 @@ export const generateTree = ({
 								type: 'Checkbox',
 								text: getMessage(
 									'settings_option_selectTranslation_isUseAutoForDetectLang',
-								),
-							},
-						},
-					],
-				},
-				{
-					title: getMessage('settings_option_selectTranslation_quickTranslate'),
-					groupContent: [
-						{
-							description: getMessage(
-								'settings_option_selectTranslation_quickTranslate_desc',
-							),
-							path: 'selectTranslator.quickTranslate',
-							optionContent: {
-								type: 'Checkbox',
-								text: getMessage(
-									'settings_option_selectTranslation_quickTranslate_enable',
 								),
 							},
 						},

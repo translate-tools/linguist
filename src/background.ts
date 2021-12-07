@@ -5,6 +5,7 @@ import { Background, translatorModules } from './modules/Background';
 import { sendConfigUpdateEvent } from './modules/ContentScript';
 
 import { AppThemeControl } from './lib/browser/AppThemeControl';
+import { toggleTranslateItemInContextMenu } from './lib/browser/toggleTranslateItemInContextMenu';
 
 import { migrateAll } from './migrations/migrationsList';
 
@@ -47,14 +48,25 @@ import { clearTranslationsFactory } from './requests/backend/translations/clearT
 	const cfg = new ConfigStorage(defaultConfig);
 	const bg = new Background(cfg);
 
-	// Set icon
-	const appThemeControl = new AppThemeControl();
-	const appIcon = await cfg.getConfig('appIcon');
-	if (appIcon !== null) {
-		appThemeControl.setAppIconPreferences(appIcon);
-	}
+	bg.onLoad(async () => {
+		// Get config
+		const initCfg = await cfg.getAllConfig();
+		if (initCfg === null) {
+			throw new Error('Empty config');
+		}
 
-	bg.onLoad(() => {
+		// Set icon
+		const appThemeControl = new AppThemeControl();
+		if (initCfg.appIcon !== null) {
+			appThemeControl.setAppIconPreferences(initCfg.appIcon);
+		}
+
+		// Configure context menu
+		if (initCfg.selectTranslator.mode === 'contextMenu') {
+			// TODO: toggle it while switch tabs
+			toggleTranslateItemInContextMenu(true);
+		}
+
 		// TODO: implement `deps` argument and split to standalone handlers
 		// Hooks for config update
 		cfg.subscribe('update', (newProps, oldProps) => {
@@ -80,6 +92,12 @@ import { clearTranslationsFactory } from './requests/backend/translations/clearT
 			// Update app icon
 			if (newProps.appIcon && newProps.appIcon !== oldProps.appIcon) {
 				appThemeControl.setAppIconPreferences(newProps.appIcon);
+			}
+
+			// Update translate text by context menu
+			if (newProps?.selectTranslator?.mode !== oldProps?.selectTranslator?.mode) {
+				const isEnabled = newProps?.selectTranslator?.mode === 'contextMenu';
+				toggleTranslateItemInContextMenu(isEnabled);
 			}
 
 			// Send update event
