@@ -70,6 +70,7 @@ cs.onLoad(async (initConfig) => {
 		updateSelectTranslatorRef();
 	}
 
+	// TODO: simplify it
 	const updateConfig = (newConfig: AppConfigType) => {
 		// Update global config
 		if (!isEqual(config.selectTranslator, newConfig.selectTranslator)) {

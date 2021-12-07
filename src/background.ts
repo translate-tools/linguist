@@ -48,59 +48,60 @@ import { clearTranslationsFactory } from './requests/backend/translations/clearT
 	const cfg = new ConfigStorage(defaultConfig);
 	const bg = new Background(cfg);
 
-	bg.onLoad(async () => {
-		// Get config
-		const initCfg = await cfg.getAllConfig();
-		if (initCfg === null) {
-			throw new Error('Empty config');
-		}
+	//
+	// Handle config updates
+	//
 
-		// Set icon
-		const appThemeControl = new AppThemeControl();
-		if (initCfg.appIcon !== null) {
-			appThemeControl.setAppIconPreferences(initCfg.appIcon);
-		}
+	// Set icon
+	const appThemeControl = new AppThemeControl();
+	cfg.onUpdate(
+		({ appIcon }) => {
+			appThemeControl.setAppIconPreferences(appIcon);
+		},
+		['appIcon'],
+	);
 
-		// Configure context menu
-		if (initCfg.selectTranslator.mode === 'contextMenu') {
-			// TODO: toggle it while switch tabs
-			toggleTranslateItemInContextMenu(true);
-		}
-
-		// TODO: implement `deps` argument and split to standalone handlers
-		// Hooks for config update
-		cfg.subscribe('update', (newProps, oldProps) => {
-			// Clear cache while disable
-			if (
-				newProps.scheduler !== undefined &&
-				newProps.scheduler.useCache === false &&
-				oldProps.scheduler?.useCache === true
-			) {
+	// Clear cache while disable
+	cfg.onUpdate(
+		({ scheduler }, prev) => {
+			if (scheduler.useCache === false && prev.scheduler.useCache === true) {
 				bg.clearTranslatorsCache();
 			}
+		},
+		['scheduler'],
+	);
 
-			// Clear TextTranslator state
+	// Clear TextTranslator state
+	cfg.onUpdate(
+		({ textTranslator }, prev) => {
 			if (
-				newProps.textTranslator !== undefined &&
-				newProps.textTranslator.rememberText === false &&
-				oldProps.textTranslator?.rememberText === true
+				textTranslator.rememberText === false &&
+				prev.textTranslator.rememberText === true
 			) {
 				// NOTE: it is async operation
 				TextTranslatorStorage.forgetText();
 			}
+		},
+		['textTranslator'],
+	);
 
-			// Update app icon
-			if (newProps.appIcon && newProps.appIcon !== oldProps.appIcon) {
-				appThemeControl.setAppIconPreferences(newProps.appIcon);
-			}
+	// TODO: toggle it while switch tabs
+	// Configure context menu
+	cfg.onUpdate(
+		({ selectTranslator }) => {
+			const isEnabled = selectTranslator.mode === 'contextMenu';
+			toggleTranslateItemInContextMenu(isEnabled);
+		},
+		['selectTranslator'],
+	);
 
-			// Update translate text by context menu
-			if (newProps?.selectTranslator?.mode !== oldProps?.selectTranslator?.mode) {
-				const isEnabled = newProps?.selectTranslator?.mode === 'contextMenu';
-				toggleTranslateItemInContextMenu(isEnabled);
-			}
+	//
+	// Handle first load
+	//
 
-			// Send update event
+	bg.onLoad(async () => {
+		// Send update event
+		cfg.subscribe('update', () => {
 			sendConfigUpdateEvent();
 		});
 

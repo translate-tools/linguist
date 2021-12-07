@@ -62,19 +62,10 @@ export class Background {
 			return true;
 		});
 
-		this.config.subscribe(
-			'update',
-			({ scheduler, translatorModule, cache }, prevConfig) => {
-				// Forced recreate a scheduler while change of key options
-				if (
-					scheduler !== undefined ||
-					translatorModule !== undefined ||
-					(cache !== undefined && prevConfig.scheduler?.useCache)
-				) {
-					this.makeScheduler(true);
-				}
-			},
-		);
+		this.config.onUpdate(() => {
+			// Forced recreate a scheduler
+			this.makeScheduler(true);
+		}, ['scheduler', 'translatorModule', 'cache']);
 
 		// Emit event
 		this.eventDispatcher.getEventHandlers('load').forEach((handler) => handler());
