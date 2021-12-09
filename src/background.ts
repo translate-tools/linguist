@@ -101,7 +101,7 @@ import { clearTranslationsFactory } from './requests/backend/translations/clearT
 
 	bg.onLoad(async () => {
 		// Send update event
-		cfg.subscribe('update', () => {
+		cfg.onUpdate(() => {
 			sendConfigUpdateEvent();
 		});
 
