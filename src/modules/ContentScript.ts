@@ -2,6 +2,7 @@ import { AppConfigType } from '../types/runtime';
 
 import { EventManager } from '../lib/EventManager';
 import { getAllTabs } from '../lib/browser/tabs';
+import { ObservableRecord } from '../lib/ObservableRecord';
 
 import { addRequestHandler, sendTabRequest } from '../requests/utils';
 import { getConfig } from '../requests/backend/getConfig';
@@ -29,6 +30,7 @@ export class ContentScript {
 	}>();
 	private config?: AppConfigType;
 
+	private recordObserver = new ObservableRecord<AppConfigType>();
 	constructor() {
 		this.init();
 	}
@@ -46,9 +48,11 @@ export class ContentScript {
 
 		// Observe a config updating
 		addRequestHandler('configUpdated', () => {
-			getConfig().then((config) => {
-				this.config = config;
-				this.eventManger.emit('configUpdate', [this.config]);
+			getConfig().then((newConfig) => {
+				const prevConfig = this.config ?? newConfig;
+
+				this.config = newConfig;
+				this.recordObserver.updateState(newConfig, prevConfig);
 			});
 		});
 	}
@@ -61,7 +65,5 @@ export class ContentScript {
 		this.eventManger.subscribe('load', callback);
 	}
 
-	public onUpdate(callback: (config: AppConfigType) => void) {
-		this.eventManger.subscribe('configUpdate', callback);
-	}
+	public onUpdate = this.recordObserver.onUpdate;
 }
