@@ -6,6 +6,7 @@ import { tryDecode, tryDecodeObject } from '../../lib/types';
 import { EventManager } from '../../lib/EventManager';
 import { AbstractVersionedStorage } from '../../types/utils';
 import { AppConfig } from '../../types/runtime';
+import { ObservableRecord } from '../../lib/ObservableRecord';
 
 export type CallbackEventName = 'load' | 'update';
 
@@ -39,6 +40,13 @@ export class ConfigStorage extends AbstractVersionedStorage {
 				defaultData,
 			);
 		}
+
+		this.eventDispatcher.subscribe('update', (newProps, prevProps) => {
+			this.observable.updateState(
+				{ ...(this.state as ConfigType), ...newProps },
+				{ ...(this.state as ConfigType), ...prevProps },
+			);
+		});
 
 		this.init();
 	}
@@ -325,33 +333,6 @@ export class ConfigStorage extends AbstractVersionedStorage {
 		this.middlewareHandlers.delete(middleware);
 	}
 
-	public onUpdate = <T extends keyof ConfigType>(
-		handler: (cfg: ConfigType, prevProps: Pick<ConfigType, T>) => void,
-		deps: T[],
-	) => {
-		const innerHandler: CallbacksMap<ConfigType>['update'] = (
-			newProps,
-			prevProps,
-		) => {
-			// Skip empty state
-			if (this.state === null) return;
-
-			// Call handler when change at least one dependency
-			if (deps.some((key) => key in newProps)) {
-				const localPrevProps = {} as Pick<ConfigType, T>;
-
-				// Collect prev props and get current state as previous if it has not changes
-				for (const key of deps) {
-					(localPrevProps as any)[key] = prevProps[key] ?? this.state[key];
-				}
-
-				handler(this.state, localPrevProps);
-			}
-		};
-
-		this.subscribe('update', innerHandler);
-		return () => {
-			this.unsubscribe('update', innerHandler);
-		};
-	};
+	private observable = new ObservableRecord<ConfigType>();
+	public onUpdate = this.observable.onUpdate;
 }
