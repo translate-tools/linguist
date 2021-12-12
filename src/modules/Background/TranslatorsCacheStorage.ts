@@ -45,7 +45,7 @@ export class TranslatorsCacheStorage extends AbstractVersionedStorage {
 		}
 	}
 
-	private readonly dbPromise: Promise<DB | undefined>;
+	private dbPromise: null | Promise<DB | undefined> = null;
 	private readonly options: Options = {
 		ignoreCase: true,
 	};
@@ -63,35 +63,48 @@ export class TranslatorsCacheStorage extends AbstractVersionedStorage {
 				(this.options as any)[key] = (options as any)[key];
 			}
 		}
-
-		this.dbPromise = IDB.openDB<any>(DBName).then((db) => {
-			// Return DB if storage exist
-			if (db.objectStoreNames.contains(id)) return db;
-
-			// Otherwise create storage
-			const nextVersion = db.version + 1;
-
-			return IDB.openDB<any>(DBName, nextVersion, {
-				upgrade(db) {
-					const store = db.createObjectStore(id, {
-						keyPath: 'id',
-						autoIncrement: true,
-					});
-
-					store.createIndex('text', 'text', { unique: true });
-				},
-			})
-				.then((db) => {
-					return db;
-				})
-				.catch((reason) => {
-					this.lastError = reason;
-					return undefined;
-				});
-		});
 	}
 
 	private getDB() {
+		if (this.dbPromise === null) {
+			const id = this.tableName;
+			this.dbPromise = IDB.openDB<any>(DBName).then((db) => {
+				// Prevent versionchange blocking
+				db.addEventListener('versionchange', () => {
+					db.close();
+				});
+
+				// Return DB if storage exist
+				if (db.objectStoreNames.contains(id)) return db;
+
+				// Otherwise create storage
+				const nextVersion = db.version + 1;
+
+				return IDB.openDB<any>(DBName, nextVersion, {
+					upgrade(db) {
+						const store = db.createObjectStore(id, {
+							keyPath: 'id',
+							autoIncrement: true,
+						});
+
+						store.createIndex('text', 'text', { unique: true });
+
+						// Prevent versionchange blocking
+						db.addEventListener('versionchange', () => {
+							db.close();
+						});
+					},
+				})
+					.then((db) => {
+						return db;
+					})
+					.catch((reason) => {
+						this.lastError = reason;
+						return undefined;
+					});
+			});
+		}
+
 		return this.dbPromise.then((db) => {
 			if (db === undefined) {
 				throw this.lastError;
