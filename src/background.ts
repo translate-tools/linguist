@@ -1,3 +1,4 @@
+import { AppConfigType } from './types/runtime';
 import { defaultConfig } from './config';
 
 import { ConfigStorage } from './modules/ConfigStorage/ConfigStorage';
@@ -6,6 +7,7 @@ import { sendConfigUpdateEvent } from './modules/ContentScript';
 
 import { AppThemeControl } from './lib/browser/AppThemeControl';
 import { toggleTranslateItemInContextMenu } from './lib/browser/toggleTranslateItemInContextMenu';
+import { StateManager } from './lib/StateManager';
 
 import { migrateAll } from './migrations/migrationsList';
 
@@ -52,48 +54,39 @@ import { clearTranslationsFactory } from './requests/backend/translations/clearT
 	// Handle config updates
 	//
 
-	// Set icon
-	const appThemeControl = new AppThemeControl();
-	cfg.onUpdate(
-		({ appIcon }) => {
-			appThemeControl.setAppIconPreferences(appIcon);
-		},
-		['appIcon'],
-	);
+	const state = new StateManager<AppConfigType>();
 
-	// Clear cache while disable
-	cfg.onUpdate(
-		({ scheduler }, prev) => {
-			if (scheduler.useCache === false && prev.scheduler.useCache === true) {
+	const appThemeControl = new AppThemeControl();
+	state.onUpdate(({ appIcon, scheduler, textTranslator, selectTranslator }) => {
+		// Set icon
+		state.useEffect(() => {
+			appThemeControl.setAppIconPreferences(appIcon);
+		}, [appIcon]);
+
+		// Clear cache while disable
+		state.useEffect(() => {
+			if (!scheduler.useCache) {
 				bg.clearTranslatorsCache();
 			}
-		},
-		['scheduler'],
-	);
+		}, [scheduler.useCache]);
 
-	// Clear TextTranslator state
-	cfg.onUpdate(
-		({ textTranslator }, prev) => {
-			if (
-				textTranslator.rememberText === false &&
-				prev.textTranslator.rememberText === true
-			) {
+		// Clear TextTranslator state
+		state.useEffect(() => {
+			if (!textTranslator.rememberText) {
 				// NOTE: it is async operation
 				TextTranslatorStorage.forgetText();
 			}
-		},
-		['textTranslator'],
-	);
+		}, [textTranslator.rememberText]);
 
-	// TODO: toggle it while switch tabs
-	// Configure context menu
-	cfg.onUpdate(
-		({ selectTranslator: { enabled, mode } }) => {
+		// Configure context menu
+		state.useEffect(() => {
+			const { enabled, mode } = selectTranslator;
 			const isEnabled = enabled && mode === 'contextMenu';
 			toggleTranslateItemInContextMenu(isEnabled);
-		},
-		['selectTranslator'],
-	);
+		}, [selectTranslator]);
+	});
+
+	cfg.onUpdate((cfg) => state.update(cfg));
 
 	//
 	// Handle first load

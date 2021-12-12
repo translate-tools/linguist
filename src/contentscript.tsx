@@ -1,8 +1,8 @@
-import { isEqual } from 'lodash';
 import { runByReadyState } from 'react-elegant-ui/esm/lib/runByReadyState';
 
 import { AppConfigType } from './types/runtime';
 import { getPageLanguage, isMobileBrowser } from './lib/browser';
+import { StateManager } from './lib/StateManager';
 
 // TODO: move all contentscript modules to use augment class
 import { ContentScript } from './modules/ContentScript';
@@ -60,25 +60,20 @@ cs.onLoad(async (initConfig) => {
 	const updateSelectTranslatorRef = () =>
 		(selectTranslatorRef.value = selectTranslator);
 
-	if (config.selectTranslator.enabled) {
-		selectTranslator = new SelectTranslator(
-			buildSelectTranslatorOptions(config.selectTranslator, {
-				pageLanguage,
-			}),
-		);
-		selectTranslator.start();
-		updateSelectTranslatorRef();
-	}
+	const state = new StateManager<AppConfigType>();
 
-	// TODO: simplify it
-	const updateConfig = (newConfig: AppConfigType) => {
+	state.onUpdate((cfg) => {
 		// Update global config
-		if (!isEqual(config.selectTranslator, newConfig.selectTranslator)) {
-			// Make or delete SelectTranslator
-			if (newConfig.selectTranslator.enabled) {
+		config = cfg;
+
+		// Make or delete SelectTranslator
+		// We re-create instance to make able a disable select translator
+		// to avoid appending unnecessary nodes to DOM
+		state.useEffect(() => {
+			if (cfg.selectTranslator.enabled) {
 				if (selectTranslator === null) {
 					selectTranslator = new SelectTranslator(
-						buildSelectTranslatorOptions(newConfig.selectTranslator, {
+						buildSelectTranslatorOptions(cfg.selectTranslator, {
 							pageLanguage,
 						}),
 					);
@@ -93,70 +88,78 @@ cs.onLoad(async (initConfig) => {
 					updateSelectTranslatorRef();
 				}
 			}
+		}, [cfg.selectTranslator.enabled]);
 
-			// Start/stop of SelectTranslator
-			const isNeedRunSelectTranslator =
-				newConfig.selectTranslator.enabled &&
-				(!newConfig.selectTranslator.disableWhileTranslatePage ||
-					!pageTranslator.isRun());
+		// Start/stop of SelectTranslator
+		const isNeedRunSelectTranslator =
+			cfg.selectTranslator.enabled &&
+			(!cfg.selectTranslator.disableWhileTranslatePage || !pageTranslator.isRun());
+
+		state.useEffect(() => {
+			if (selectTranslator === null) return;
 
 			if (isNeedRunSelectTranslator) {
-				if (selectTranslator !== null && !selectTranslator.isRun()) {
+				if (!selectTranslator.isRun()) {
 					selectTranslator.start();
 				}
-			} else {
-				if (selectTranslator !== null && selectTranslator.isRun()) {
-					selectTranslator.stop();
-				}
+			} else if (selectTranslator.isRun()) {
+				selectTranslator.stop();
 			}
-		}
+		}, [isNeedRunSelectTranslator, selectTranslator]);
 
 		// Update SelectTranslator
-		if (!isEqual(config.selectTranslator, newConfig.selectTranslator)) {
-			if (newConfig.selectTranslator.enabled && selectTranslator !== null) {
-				if (selectTranslator.isRun()) {
-					selectTranslator.stop();
-					selectTranslator = new SelectTranslator(
-						buildSelectTranslatorOptions(newConfig.selectTranslator, {
-							pageLanguage,
-						}),
-					);
-					updateSelectTranslatorRef();
+		state.useEffect(
+			() => {
+				if (selectTranslator === null || !cfg.selectTranslator.enabled) return;
 
-					selectTranslator.start();
-				} else {
-					selectTranslator = new SelectTranslator(
-						buildSelectTranslatorOptions(newConfig.selectTranslator, {
-							pageLanguage,
-						}),
-					);
-					updateSelectTranslatorRef();
+				const isRunning = selectTranslator.isRun();
+
+				// Stop current instance
+				if (isRunning) {
+					selectTranslator.stop();
 				}
-			}
-		}
+
+				selectTranslator = new SelectTranslator(
+					buildSelectTranslatorOptions(cfg.selectTranslator, {
+						pageLanguage,
+					}),
+				);
+
+				updateSelectTranslatorRef();
+
+				// Run new instance
+				if (isRunning) {
+					selectTranslator.start();
+				}
+			},
+			[cfg.selectTranslator],
+			{ deepEqual: true },
+		);
 
 		// Update PageTranslator
-		if (!isEqual(config.pageTranslator, newConfig.pageTranslator)) {
-			if (pageTranslator.isRun()) {
-				const direction = pageTranslator.getTranslateDirection();
-				if (direction === null) {
-					throw new TypeError(
-						'Invalid response from getTranslateDirection method',
-					);
+		state.useEffect(
+			() => {
+				if (pageTranslator.isRun()) {
+					const direction = pageTranslator.getTranslateDirection();
+					if (direction === null) {
+						throw new TypeError(
+							'Invalid response from getTranslateDirection method',
+						);
+					}
+					pageTranslator.stop();
+					pageTranslator.updateConfig(cfg.pageTranslator);
+					pageTranslator.run(direction.from, direction.to);
+				} else {
+					pageTranslator.updateConfig(cfg.pageTranslator);
 				}
-				pageTranslator.stop();
-				pageTranslator.updateConfig(newConfig.pageTranslator);
-				pageTranslator.run(direction.from, direction.to);
-			} else {
-				pageTranslator.updateConfig(newConfig.pageTranslator);
-			}
-		}
+			},
+			[cfg.pageTranslator],
+			{ deepEqual: true },
+		);
+	});
 
-		// Update local config
-		config = newConfig;
-	};
-
-	cs.onUpdate(updateConfig);
+	cs.onUpdate((cfg) => state.update(cfg));
+	state.update(config);
 
 	const factories = [
 		pingFactory,
@@ -203,7 +206,7 @@ cs.onLoad(async (initConfig) => {
 			pageLanguage = actualPageLanguage;
 
 			// Update config
-			updateConfig(config);
+			state.update(config);
 		}
 
 		// Auto translate page
