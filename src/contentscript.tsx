@@ -24,7 +24,6 @@ import { enableTranslatePageFactory } from './requests/contentscript/pageTransla
 import { disableTranslatePageFactory } from './requests/contentscript/pageTranslation/disableTranslatePage';
 import { getLanguagePreferences } from './requests/backend/autoTranslation/languagePreferences/getLanguagePreferences';
 import { translateSelectedTextFactory } from './requests/contentscript/translateSelectedText';
-// import { StateManager } from './lib/StateManager';
 
 const buildSelectTranslatorOptions = (
 	{ mode, ...options }: AppConfigType['selectTranslator'],
@@ -158,33 +157,6 @@ cs.onLoad(async (initConfig) => {
 	};
 
 	cs.onUpdate(updateConfig);
-
-	// const state = new StateManager<AppConfigType>();
-
-	// state.onUpdate((cfg, prevCfg) => {
-	// 	console.warn('Update state 123', { cfg, prevCfg });
-
-	// 	state.deps(() => {
-	// 		console.warn('EFFECT');
-
-	// 		if (pageTranslator.isRun()) {
-	// 			const direction = pageTranslator.getTranslateDirection();
-	// 			if (direction === null) {
-	// 				throw new TypeError(
-	// 					'Invalid response from getTranslateDirection method',
-	// 				);
-	// 			}
-	// 			pageTranslator.stop();
-	// 			pageTranslator.updateConfig(cfg.pageTranslator);
-	// 			pageTranslator.run(direction.from, direction.to);
-	// 		} else {
-	// 			pageTranslator.updateConfig(cfg.pageTranslator);
-	// 		}
-	// 	}, [pageTranslator, cfg.pageTranslator], { deepEqual: true });
-	// });
-
-	// cs.onUpdate((cfg) => state.update(cfg));
-	// state.update(config);
 
 	const factories = [
 		pingFactory,
