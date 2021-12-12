@@ -66,64 +66,70 @@ cs.onLoad(async (initConfig) => {
 		// Update global config
 		config = cfg;
 
-		state.useEffect(
-			() => {
-				// Make or delete SelectTranslator
-				if (cfg.selectTranslator.enabled) {
-					if (selectTranslator === null) {
-						selectTranslator = new SelectTranslator(
-							buildSelectTranslatorOptions(cfg.selectTranslator, {
-								pageLanguage,
-							}),
-						);
-						updateSelectTranslatorRef();
-					}
-				} else {
-					if (selectTranslator !== null) {
-						if (selectTranslator.isRun()) {
-							selectTranslator.stop();
-						}
-						selectTranslator = null;
-						updateSelectTranslatorRef();
-					}
+		// Make or delete SelectTranslator
+		// We re-create instance to make able a disable select translator
+		// to avoid appending unnecessary nodes to DOM
+		state.useEffect(() => {
+			if (cfg.selectTranslator.enabled) {
+				if (selectTranslator === null) {
+					selectTranslator = new SelectTranslator(
+						buildSelectTranslatorOptions(cfg.selectTranslator, {
+							pageLanguage,
+						}),
+					);
+					updateSelectTranslatorRef();
 				}
-
-				// Start/stop of SelectTranslator
-				const isNeedRunSelectTranslator =
-					cfg.selectTranslator.enabled &&
-					(!cfg.selectTranslator.disableWhileTranslatePage ||
-						!pageTranslator.isRun());
-
-				if (isNeedRunSelectTranslator) {
-					if (selectTranslator !== null && !selectTranslator.isRun()) {
-						selectTranslator.start();
-					}
-				} else {
-					if (selectTranslator !== null && selectTranslator.isRun()) {
-						selectTranslator.stop();
-					}
-				}
-
-				// Update SelectTranslator
-				if (cfg.selectTranslator.enabled && selectTranslator !== null) {
+			} else {
+				if (selectTranslator !== null) {
 					if (selectTranslator.isRun()) {
 						selectTranslator.stop();
-						selectTranslator = new SelectTranslator(
-							buildSelectTranslatorOptions(cfg.selectTranslator, {
-								pageLanguage,
-							}),
-						);
-						updateSelectTranslatorRef();
-
-						selectTranslator.start();
-					} else {
-						selectTranslator = new SelectTranslator(
-							buildSelectTranslatorOptions(cfg.selectTranslator, {
-								pageLanguage,
-							}),
-						);
-						updateSelectTranslatorRef();
 					}
+					selectTranslator = null;
+					updateSelectTranslatorRef();
+				}
+			}
+		}, [cfg.selectTranslator.enabled]);
+
+		// Start/stop of SelectTranslator
+		const isNeedRunSelectTranslator =
+			cfg.selectTranslator.enabled &&
+			(!cfg.selectTranslator.disableWhileTranslatePage || !pageTranslator.isRun());
+
+		state.useEffect(() => {
+			if (selectTranslator === null) return;
+
+			if (isNeedRunSelectTranslator) {
+				if (!selectTranslator.isRun()) {
+					selectTranslator.start();
+				}
+			} else if (selectTranslator.isRun()) {
+				selectTranslator.stop();
+			}
+		}, [isNeedRunSelectTranslator, selectTranslator]);
+
+		// Update SelectTranslator
+		state.useEffect(
+			() => {
+				if (selectTranslator === null || !cfg.selectTranslator.enabled) return;
+
+				const isRunning = selectTranslator.isRun();
+
+				// Stop current instance
+				if (isRunning) {
+					selectTranslator.stop();
+				}
+
+				selectTranslator = new SelectTranslator(
+					buildSelectTranslatorOptions(cfg.selectTranslator, {
+						pageLanguage,
+					}),
+				);
+
+				updateSelectTranslatorRef();
+
+				// Run new instance
+				if (isRunning) {
+					selectTranslator.start();
 				}
 			},
 			[cfg.selectTranslator],
