@@ -216,10 +216,10 @@ export class NodesTranslator {
 
 				this.itersectStorage.delete(node);
 				observer.unobserve(node);
-				this.addNode(node, true);
+				this.intersectNode(node);
 			});
 		},
-		{ root: null, rootMargin: '0px', threshold: 1.0 },
+		{ root: null, rootMargin: '0px', threshold: 0 },
 	);
 
 	private handleElementByIntersectViewport(node: Element) {
@@ -230,7 +230,27 @@ export class NodesTranslator {
 
 	private idCounter = 0;
 	private nodeStorage = new WeakMap<Node, NodeData>();
-	private addNode(node: Node, force = false) {
+	private handleNode = (node: Node) => {
+		this.nodeStorage.set(node, {
+			id: this.idCounter++,
+			updateId: 1,
+			translateContext: 0,
+			originalText: '',
+		});
+
+		this.translateNode(node);
+	};
+
+	private intersectNode = (node: Element) => {
+		// Translate child text nodes and attributes of target node
+		node.childNodes.forEach((node) => {
+			if (node instanceof Element || !this.isTranslatableNode(node)) return;
+			this.handleNode(node);
+		});
+	};
+
+	private addNode(node: Node) {
+		// TODO: explore only `Element` nodes
 		// FIXME: prevent explore element each time. It's very expensive
 		// Add attributes and text nodes from element
 		if (node instanceof Element) {
@@ -240,7 +260,7 @@ export class NodesTranslator {
 					node.nodeValue.trim().length > 0 &&
 					this.isTranslatableNode(node)
 				) {
-					this.addNode(node, force);
+					this.addNode(node);
 				}
 			});
 			return;
@@ -251,7 +271,6 @@ export class NodesTranslator {
 		const owner = node.parentElement;
 		if (
 			this.config.lazyTranslate &&
-			!force &&
 			owner !== null &&
 			// Check on attachment node to page (ignore virtial nodes and removed from DOM)
 			node.getRootNode() !== node
@@ -260,6 +279,7 @@ export class NodesTranslator {
 			return;
 		}
 
+		// TODO: move all logic below to `handleNode`
 		if (this.nodeStorage.has(node)) return;
 
 		// Skip: Empthy text
@@ -283,14 +303,7 @@ export class NodesTranslator {
 		if (parent === null || !this.isTranslatableNode(parent)) return;
 
 		// Add to storage
-		this.nodeStorage.set(node, {
-			id: this.idCounter++,
-			updateId: 1,
-			translateContext: 0,
-			originalText: '',
-		});
-
-		this.translateNode(node);
+		this.handleNode(node);
 	}
 
 	private deleteNode(node: Node) {
