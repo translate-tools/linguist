@@ -27,7 +27,17 @@ interface NodeData {
 	originalText: string;
 }
 
-const searchParent = (node: Node, callback: (value: Node) => boolean) => {
+const searchParent = (
+	node: Node,
+	callback: (value: Node) => boolean,
+	includeSelf = false,
+) => {
+	// Check self
+	if (includeSelf && callback(node)) {
+		return node;
+	}
+
+	// Check parents
 	let lookingNode: Node | null = node;
 	while ((lookingNode = lookingNode.parentNode)) {
 		if (callback(lookingNode)) {
@@ -86,8 +96,8 @@ function isBlockElement(element: Element) {
  * TODO: refactor to simplify it
  */
 export class NodesTranslator {
-	translateCallback: TranslatorInterface;
-	config: InnerConfig;
+	private translateCallback: TranslatorInterface;
+	private config: InnerConfig;
 
 	constructor(translateCallback: TranslatorInterface, config?: Config) {
 		this.translateCallback = translateCallback;
@@ -109,7 +119,7 @@ export class NodesTranslator {
 	}
 
 	private observedNodesStorage = new Map<Element, XMutationObserver>();
-	observe(node: Element) {
+	public observe(node: Element) {
 		if (this.observedNodesStorage.has(node)) {
 			throw new Error('Node already under observe');
 		}
@@ -147,7 +157,7 @@ export class NodesTranslator {
 		}
 	}
 
-	unobserve(node: Element) {
+	public unobserve(node: Element) {
 		if (!this.observedNodesStorage.has(node)) {
 			throw new Error('Node is not under observe');
 		}
@@ -166,6 +176,7 @@ export class NodesTranslator {
 		styles: ['common.css', 'contentscript.css'],
 	});
 
+	// TODO: add public method to get node text and move this to PageTranslator
 	private showOriginalTextHandler = (evt: MouseEvent) => {
 		const target: Element = evt.target as Element;
 
@@ -231,6 +242,14 @@ export class NodesTranslator {
 	private idCounter = 0;
 	private nodeStorage = new WeakMap<Node, NodeData>();
 	private handleNode = (node: Node) => {
+		if (this.nodeStorage.has(node)) return;
+
+		// Skip empthy text
+		if (node.nodeValue === null || node.nodeValue.trim().length == 0) return;
+
+		// Skip not translatable nodes
+		if (!this.isTranslatableNode(node)) return;
+
 		this.nodeStorage.set(node, {
 			id: this.idCounter++,
 			updateId: 1,
@@ -243,84 +262,75 @@ export class NodesTranslator {
 
 	private intersectNode = (node: Element) => {
 		// Translate child text nodes and attributes of target node
+		// WARNING: we shall not touch inner nodes, because its may still not intersected
 		node.childNodes.forEach((node) => {
 			if (node instanceof Element || !this.isTranslatableNode(node)) return;
 			this.handleNode(node);
 		});
 	};
 
+	private isIntersectableNode = (node: Element) => {
+		return document.body.contains(node);
+	};
+
 	private addNode(node: Node) {
-		// TODO: explore only `Element` nodes
-		// FIXME: prevent explore element each time. It's very expensive
-		// Add attributes and text nodes from element
+		// Add all nodes which element contains (text nodes and attributes of current and inner elements)
 		if (node instanceof Element) {
 			this.handleTree(node, (node) => {
-				if (
-					node.nodeValue !== null &&
-					node.nodeValue.trim().length > 0 &&
-					this.isTranslatableNode(node)
-				) {
+				if (node instanceof Element) return;
+
+				if (this.isTranslatableNode(node)) {
 					this.addNode(node);
 				}
 			});
+
 			return;
 		}
+
+		// Handle text nodes and attributes
 
 		// Lazy translate when own element intersect viewport
 		// But translate at once if node have not parent (virtual node) or parent node is outside of body (utility tags like meta or title)
-		const owner = node.parentElement;
-		if (
-			this.config.lazyTranslate &&
-			owner !== null &&
-			// Check on attachment node to page (ignore virtial nodes and removed from DOM)
-			node.getRootNode() !== node
-		) {
-			this.handleElementByIntersectViewport(owner);
-			return;
+		if (this.config.lazyTranslate) {
+			const isAttachedToDOM = node.getRootNode() !== node;
+			const observableNode =
+				node instanceof Attr ? node.ownerElement : node.parentElement;
+
+			// Ignore lazy translation for not intersectable nodes and translate it immediately
+			if (
+				isAttachedToDOM &&
+				observableNode !== null &&
+				this.isIntersectableNode(observableNode)
+			) {
+				this.handleElementByIntersectViewport(observableNode);
+				return;
+			}
 		}
-
-		// TODO: move all logic below to `handleNode`
-		if (this.nodeStorage.has(node)) return;
-
-		// Skip: Empthy text
-		if (node.nodeValue === null || node.nodeValue.trim().length == 0) return;
-
-		// WARNING: this check with looking for parent too expensive
-		// You should not do it If you can guarante that method will not call for ignored tags
-
-		// Skip: Inappropriate nodes
-		let parent;
-		if (node instanceof Text) {
-			parent = node.parentElement;
-		} else if (node instanceof Attr) {
-			if (!this.config.translatableAttributes.has(node.name)) return;
-			parent = node.ownerElement;
-		} else {
-			return;
-		}
-
-		// Skip: Content from ignored tags
-		if (parent === null || !this.isTranslatableNode(parent)) return;
 
 		// Add to storage
 		this.handleNode(node);
 	}
 
-	private deleteNode(node: Node) {
-		// Delete attributes and text nodes from element
+	private deleteNode(node: Node, onlyTarget = false) {
 		if (node instanceof Element) {
-			this.handleTree(node, (node) => {
-				if (this.nodeStorage.has(node)) {
-					this.deleteNode(node);
-				}
-			});
-			return;
+			// Delete all attributes and inner nodes
+			if (!onlyTarget) {
+				this.handleTree(node, (node) => {
+					this.deleteNode(node, true);
+				});
+			}
+
+			// Unobserve
+			this.itersectStorage.delete(node);
+			this.itersectObserver.unobserve(node);
 		}
 
 		const nodeData = this.nodeStorage.get(node);
-		if (nodeData === undefined) return;
-		node.nodeValue = nodeData.originalText;
-		this.nodeStorage.delete(node);
+		if (nodeData !== undefined) {
+			// Restore original text
+			node.nodeValue = nodeData.originalText;
+			this.nodeStorage.delete(node);
+		}
 	}
 
 	// Updates never be lazy
@@ -368,30 +378,43 @@ export class NodesTranslator {
 	}
 
 	private isTranslatableNode(targetNode: Node) {
-		if (
-			targetNode instanceof Element &&
-			this.config.ignoredTags.has(targetNode.localName)
-		) {
+		let targetToParentsCheck: Element | null = null;
+
+		// Check node type and filters for its type
+		if (targetNode instanceof Element) {
+			if (this.config.ignoredTags.has(targetNode.localName)) {
+				return false;
+			}
+
+			targetToParentsCheck = targetNode;
+		} else if (targetNode instanceof Attr) {
+			if (!this.config.translatableAttributes.has(targetNode.name)) {
+				return false;
+			}
+
+			targetToParentsCheck = targetNode.ownerElement;
+		} else if (targetNode instanceof Text) {
+			targetToParentsCheck = targetNode.parentElement;
+		} else {
 			return false;
 		}
 
-		if (
-			targetNode instanceof Attr &&
-			!this.config.translatableAttributes.has(targetNode.name)
-		) {
-			return false;
+		// Check parents to ignore
+		if (targetToParentsCheck !== null) {
+			const ignoredParent = searchParent(
+				targetToParentsCheck,
+				(node: Node) =>
+					node instanceof Element &&
+					this.config.ignoredTags.has(node.localName),
+				true,
+			);
+
+			if (ignoredParent !== null) {
+				return false;
+			}
 		}
 
-		const ignoredParent = searchParent(
-			targetNode,
-			(node) =>
-				node instanceof Element && this.config.ignoredTags.has(node.localName),
-		);
-
-		if (ignoredParent !== null) {
-			return false;
-		}
-
+		// We can't proof that node is not translatable
 		return true;
 	}
 
