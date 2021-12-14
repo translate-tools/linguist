@@ -1,9 +1,4 @@
-import React from 'react';
-
-import { ShadowDOMContainerManager } from '../lib/ShadowDOMContainerManager';
 import { XMutationObserver } from '../lib/XMutationObserver';
-
-import { OriginalTextPopup } from '../layouts/OriginalTextPopup/OriginalTextPopup';
 
 interface NodeData {
 	/**
@@ -72,32 +67,24 @@ interface InnerConfig {
 	ignoredTags: Set<string>;
 	translatableAttributes: Set<string>;
 	lazyTranslate: boolean;
-	originalTextPopup?: boolean;
 }
 
 export interface Config {
 	ignoredTags?: string[];
 	translatableAttributes?: string[];
 	lazyTranslate?: boolean;
-	originalTextPopup?: boolean;
 }
 
-function isBlockElement(element: Element) {
-	const blockTypes = ['block', 'flex', 'grid', 'table', 'table-row', 'list-item'];
-	const display = getComputedStyle(element).display;
-
-	return blockTypes.indexOf(display) !== -1;
-}
+// TODO: prioritize nodes to translate - visible text, visible nodes attributes, then text and attributes of nodes out of viewport
+// TODO: scan nodes lazy - defer scan to `requestIdleCallback` instead of instant scan
+// TODO: describe nodes life cycle
 
 /**
  * Module for dynamic translate a DOM nodes
- *
- * TODO: describe nodes life cycle
- * TODO: refactor to simplify it
  */
 export class NodesTranslator {
-	private translateCallback: TranslatorInterface;
-	private config: InnerConfig;
+	private readonly translateCallback: TranslatorInterface;
+	private readonly config: InnerConfig;
 
 	constructor(translateCallback: TranslatorInterface, config?: Config) {
 		this.translateCallback = translateCallback;
@@ -118,7 +105,7 @@ export class NodesTranslator {
 		};
 	}
 
-	private observedNodesStorage = new Map<Element, XMutationObserver>();
+	private readonly observedNodesStorage = new Map<Element, XMutationObserver>();
 	public observe(node: Element) {
 		if (this.observedNodesStorage.has(node)) {
 			throw new Error('Node already under observe');
@@ -151,10 +138,6 @@ export class NodesTranslator {
 
 		observer.observe(node);
 		this.addNode(node);
-
-		if (this.config.originalTextPopup) {
-			document.addEventListener('mouseover', this.showOriginalTextHandler);
-		}
 	}
 
 	public unobserve(node: Element) {
@@ -165,58 +148,15 @@ export class NodesTranslator {
 		this.deleteNode(node);
 		this.observedNodesStorage.get(node)?.disconnect();
 		this.observedNodesStorage.delete(node);
-
-		if (this.config.originalTextPopup) {
-			document.removeEventListener('mouseover', this.showOriginalTextHandler);
-			this.shadowRoot.unmountComponent();
-		}
 	}
 
-	private readonly shadowRoot = new ShadowDOMContainerManager({
-		styles: ['common.css', 'contentscript.css'],
-	});
+	public getNodeData(node: Node) {
+		const nodeData = this.nodeStorage.get(node);
+		if (nodeData === undefined) return null;
 
-	// TODO: add public method to get node text and move this to PageTranslator
-	private showOriginalTextHandler = (evt: MouseEvent) => {
-		const target: Element = evt.target as Element;
-
-		const getTextOfElement = (element: Node) => {
-			let text = '';
-
-			if (element instanceof Text) {
-				text += this.nodeStorage.get(element)?.originalText ?? '';
-			} else if (element instanceof Element) {
-				for (const node of Array.from(element.childNodes)) {
-					if (node instanceof Text) {
-						text += this.nodeStorage.get(node)?.originalText ?? '';
-					} else if (node instanceof Element && !isBlockElement(node)) {
-						text += getTextOfElement(node);
-					} else {
-						break;
-					}
-				}
-			}
-
-			return text;
-		};
-
-		// Create root node
-		if (this.shadowRoot.getRootNode() === null) {
-			this.shadowRoot.createRootNode();
-		}
-
-		// TODO: show popup with text after delay
-		const text = getTextOfElement(target);
-		if (text) {
-			this.shadowRoot.mountComponent(
-				<OriginalTextPopup target={{ current: target as HTMLElement }}>
-					{text}
-				</OriginalTextPopup>,
-			);
-		} else {
-			this.shadowRoot.unmountComponent();
-		}
-	};
+		const { originalText } = nodeData;
+		return { originalText };
+	}
 
 	private readonly itersectStorage = new WeakSet<Node>();
 	private readonly itersectObserver = new IntersectionObserver(
@@ -232,6 +172,15 @@ export class NodesTranslator {
 		},
 		{ root: null, rootMargin: '0px', threshold: 0 },
 	);
+
+	private intersectNode = (node: Element) => {
+		// Translate child text nodes and attributes of target node
+		// WARNING: we shall not touch inner nodes, because its may still not intersected
+		node.childNodes.forEach((node) => {
+			if (node instanceof Element || !this.isTranslatableNode(node)) return;
+			this.handleNode(node);
+		});
+	};
 
 	private handleElementByIntersectViewport(node: Element) {
 		if (this.itersectStorage.has(node)) return;
@@ -250,6 +199,7 @@ export class NodesTranslator {
 		// Skip not translatable nodes
 		if (!this.isTranslatableNode(node)) return;
 
+		// TODO: set priority here
 		this.nodeStorage.set(node, {
 			id: this.idCounter++,
 			updateId: 1,
@@ -258,19 +208,6 @@ export class NodesTranslator {
 		});
 
 		this.translateNode(node);
-	};
-
-	private intersectNode = (node: Element) => {
-		// Translate child text nodes and attributes of target node
-		// WARNING: we shall not touch inner nodes, because its may still not intersected
-		node.childNodes.forEach((node) => {
-			if (node instanceof Element || !this.isTranslatableNode(node)) return;
-			this.handleNode(node);
-		});
-	};
-
-	private isIntersectableNode = (node: Element) => {
-		return document.body.contains(node);
 	};
 
 	private addNode(node: Node) {
@@ -417,6 +354,10 @@ export class NodesTranslator {
 		// We can't proof that node is not translatable
 		return true;
 	}
+
+	private isIntersectableNode = (node: Element) => {
+		return document.body.contains(node);
+	};
 
 	/**
 	 * Handle all translatable nodes from element

@@ -1,3 +1,8 @@
+import React from 'react';
+
+import { ShadowDOMContainerManager } from '../../lib/ShadowDOMContainerManager';
+import { OriginalTextPopup } from '../../layouts/OriginalTextPopup/OriginalTextPopup';
+
 import { NodesTranslator, Config as NodesTranslatorConfig } from '../NodesTranslator';
 
 import { translate } from '../../requests/backend/translate';
@@ -9,6 +14,16 @@ export type PageTranslateState = {
 	pending: number;
 };
 
+function isBlockElement(element: Element) {
+	const blockTypes = ['block', 'flex', 'grid', 'table', 'table-row', 'list-item'];
+	const display = getComputedStyle(element).display;
+
+	return blockTypes.indexOf(display) !== -1;
+}
+
+type PageTranslatorConfig = { originalTextPopup?: boolean };
+
+// TODO: rewrite to augmentation
 export class PageTranslator {
 	private translateContext = Symbol();
 	private pageTranslator: NodesTranslator | null = null;
@@ -19,12 +34,16 @@ export class PageTranslator {
 		pending: 0,
 	};
 
-	private config: NodesTranslatorConfig;
-	constructor(config: NodesTranslatorConfig) {
-		this.config = config;
+	private config: PageTranslatorConfig;
+	private nodesTranslatorConfig: NodesTranslatorConfig;
+	constructor(config: NodesTranslatorConfig & PageTranslatorConfig) {
+		const { originalTextPopup, ...nodesTranslatorConfig } = config;
+
+		this.config = { originalTextPopup };
+		this.nodesTranslatorConfig = nodesTranslatorConfig;
 	}
 
-	public updateConfig(config: NodesTranslatorConfig) {
+	public updateConfig(config: PageTranslatorConfig) {
 		this.config = config;
 	}
 
@@ -82,8 +101,15 @@ export class PageTranslator {
 		};
 
 		this.pageTranslateDirection = { from, to };
-		this.pageTranslator = new NodesTranslator(translateText, this.config);
+		this.pageTranslator = new NodesTranslator(
+			translateText,
+			this.nodesTranslatorConfig,
+		);
 		this.pageTranslator.observe(document.documentElement);
+
+		if (this.config.originalTextPopup) {
+			document.addEventListener('mouseover', this.showOriginalTextHandler);
+		}
 	}
 
 	public stop() {
@@ -102,7 +128,60 @@ export class PageTranslator {
 			pending: 0,
 		};
 		this.translateStateUpdate();
+
+		if (this.config.originalTextPopup) {
+			document.removeEventListener('mouseover', this.showOriginalTextHandler);
+			this.shadowRoot.unmountComponent();
+		}
 	}
+
+	private readonly shadowRoot = new ShadowDOMContainerManager({
+		styles: ['common.css', 'contentscript.css'],
+	});
+
+	// TODO: add public method to get node text and move this to PageTranslator
+	private showOriginalTextHandler = (evt: MouseEvent) => {
+		const target: Element = evt.target as Element;
+
+		const getTextOfElement = (element: Node) => {
+			let text = '';
+
+			if (element instanceof Text) {
+				text += this.pageTranslator?.getNodeData(element)?.originalText ?? '';
+			} else if (element instanceof Element) {
+				for (const node of Array.from(element.childNodes)) {
+					if (node instanceof Text) {
+						text +=
+							this.pageTranslator?.getNodeData(node)?.originalText ?? '';
+					} else if (node instanceof Element && !isBlockElement(node)) {
+						text += getTextOfElement(node);
+					} else {
+						break;
+					}
+				}
+			}
+
+			return text;
+		};
+
+		// Create root node
+		if (this.shadowRoot.getRootNode() === null) {
+			this.shadowRoot.createRootNode();
+		}
+
+		// TODO: show popup with text after delay
+		const text = getTextOfElement(target);
+		if (text) {
+			// TODO: consider viewport boundaries
+			this.shadowRoot.mountComponent(
+				<OriginalTextPopup target={{ current: target as HTMLElement }}>
+					{text}
+				</OriginalTextPopup>,
+			);
+		} else {
+			this.shadowRoot.unmountComponent();
+		}
+	};
 
 	/**
 	 * For reduce re-render frequency on client
