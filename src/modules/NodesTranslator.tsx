@@ -20,6 +20,8 @@ interface NodeData {
 	 * Original text of node, before translate
 	 */
 	originalText: string;
+
+	priority: number;
 }
 
 const searchParent = (
@@ -61,7 +63,28 @@ const nodeExplore = (
 	}
 };
 
-type TranslatorInterface = (text: string) => Promise<string>;
+/**
+ * Check visibility of element in viewport
+ */
+export function isInViewport(element: Element, threshold = 0) {
+	const { top, left, bottom, right, height, width } = element.getBoundingClientRect();
+	const overflows = {
+		top,
+		left,
+		bottom: (window.innerHeight || document.documentElement.clientHeight) - bottom,
+		right: (window.innerWidth || document.documentElement.clientWidth) - right,
+	};
+
+	if (overflows.top + height * threshold < 0) return false;
+	if (overflows.bottom + height * threshold < 0) return false;
+
+	if (overflows.left + width * threshold < 0) return false;
+	if (overflows.right + width * threshold < 0) return false;
+
+	return true;
+}
+
+type TranslatorInterface = (text: string, priority: number) => Promise<string>;
 
 interface InnerConfig {
 	ignoredTags: Set<string>;
@@ -75,7 +98,7 @@ export interface Config {
 	lazyTranslate?: boolean;
 }
 
-// TODO: prioritize nodes to translate - visible text, visible nodes attributes, then text and attributes of nodes out of viewport
+// TODO: consider local language definitions (and implement `from`, `to` parameters for translator to specify default or locale languages)
 // TODO: scan nodes lazy - defer scan to `requestIdleCallback` instead of instant scan
 // TODO: describe nodes life cycle
 
@@ -199,12 +222,14 @@ export class NodesTranslator {
 		// Skip not translatable nodes
 		if (!this.isTranslatableNode(node)) return;
 
-		// TODO: set priority here
+		const priority = this.getNodeScore(node);
+
 		this.nodeStorage.set(node, {
 			id: this.idCounter++,
 			updateId: 1,
 			translateContext: 0,
 			originalText: '',
+			priority,
 		});
 
 		this.translateNode(node);
@@ -297,7 +322,7 @@ export class NodesTranslator {
 
 		const nodeId = nodeData.id;
 		const nodeContext = nodeData.updateId;
-		return this.translateCallback(node.nodeValue).then((text) => {
+		return this.translateCallback(node.nodeValue, nodeData.priority).then((text) => {
 			const actualNodeData = this.nodeStorage.get(node);
 			if (actualNodeData === undefined || nodeId !== actualNodeData.id) {
 				return;
@@ -357,6 +382,26 @@ export class NodesTranslator {
 
 	private isIntersectableNode = (node: Element) => {
 		return document.body.contains(node);
+	};
+
+	private getNodeScore = (node: Node) => {
+		let score = 0;
+
+		if (node instanceof Attr) {
+			score += 1;
+			const parent = node.ownerElement;
+			if (parent && isInViewport(parent)) {
+				score += 1;
+			}
+		} else if (node instanceof Text) {
+			score += 2;
+			const parent = node.parentElement;
+			if (parent && isInViewport(parent)) {
+				score += 1;
+			}
+		}
+
+		return score;
 	};
 
 	/**
