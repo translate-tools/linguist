@@ -69,7 +69,7 @@ export class PageTranslator {
 
 		// Create local reference to object for decrease risc mutation
 		const localTranslateState = this.translateState;
-		const translateText = async (text: string) => {
+		const translateText = async (text: string, priority: number) => {
 			if (localContext !== this.translateContext) {
 				throw new Error('Outdated context');
 			}
@@ -77,7 +77,7 @@ export class PageTranslator {
 			localTranslateState.pending++;
 			this.translateStateUpdate();
 
-			return translate(text, from, to)
+			return translate(text, from, to, { priority })
 				.then((translatedText) => {
 					if (localContext === this.translateContext) {
 						localTranslateState.resolved++;
@@ -139,7 +139,6 @@ export class PageTranslator {
 		styles: ['common.css', 'contentscript.css'],
 	});
 
-	// TODO: add public method to get node text and move this to PageTranslator
 	private showOriginalTextHandler = (evt: MouseEvent) => {
 		const target: Element = evt.target as Element;
 

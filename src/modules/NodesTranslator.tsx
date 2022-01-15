@@ -84,7 +84,7 @@ export function isInViewport(element: Element, threshold = 0) {
 	return true;
 }
 
-type TranslatorInterface = (text: string) => Promise<string>;
+type TranslatorInterface = (text: string, priority: number) => Promise<string>;
 
 interface InnerConfig {
 	ignoredTags: Set<string>;
@@ -98,7 +98,7 @@ export interface Config {
 	lazyTranslate?: boolean;
 }
 
-// TODO: prioritize nodes to translate - visible text, visible nodes attributes, then text and attributes of nodes out of viewport
+// TODO: consider local language definitions (and implement `from`, `to` parameters for translator to specify default or locale languages)
 // TODO: scan nodes lazy - defer scan to `requestIdleCallback` instead of instant scan
 // TODO: describe nodes life cycle
 
@@ -232,17 +232,8 @@ export class NodesTranslator {
 			priority,
 		});
 
-		// TODO: push to queue instead direct translation
 		this.translateNode(node);
 	};
-
-	// private addToTranslateQueue = (node: Node, priority: number) => {
-	// 	// TODO: add to queue and run executor
-	// }
-
-	// private translateQueueExecutor = (node: Node, priority: number) => {
-	// 	// TODO: execute translate queue
-	// }
 
 	private addNode(node: Node) {
 		// Add all nodes which element contains (text nodes and attributes of current and inner elements)
@@ -331,7 +322,7 @@ export class NodesTranslator {
 
 		const nodeId = nodeData.id;
 		const nodeContext = nodeData.updateId;
-		return this.translateCallback(node.nodeValue).then((text) => {
+		return this.translateCallback(node.nodeValue, nodeData.priority).then((text) => {
 			const actualNodeData = this.nodeStorage.get(node);
 			if (actualNodeData === undefined || nodeId !== actualNodeData.id) {
 				return;
