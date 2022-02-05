@@ -348,6 +348,12 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 
 	const [isFocusOnInput, setIsFocusOnInput] = useState(false);
 
+	// TODO: hide suggestions only for languages which is not supported by translator
+	const langSuggestion =
+		languageSuggestion && languageSuggestion !== from
+			? getLanguageNameByCode(languageSuggestion, false)
+			: null;
+
 	const resultText = inTranslateProcess
 		? '...'
 		: errorMessage !== null
@@ -381,7 +387,7 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 			</div>
 			<div className={cnTextTranslator('InputContainer')}>
 				<div className={cnTextTranslator('InputContainerWrapper')}>
-					{languageSuggestion && languageSuggestion !== from && (
+					{langSuggestion && (
 						<div className={cnTextTranslator('LanguageSuggestion')}>
 							<Icon glyph="autoFix" scalable={false} size="s" />
 							<span>
@@ -390,7 +396,7 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 								).toLowerCase()}
 							</span>
 							<a href="#" onClick={applySuggestedLanguage}>
-								{getLanguageNameByCode(languageSuggestion).toLowerCase()}
+								{langSuggestion.toLowerCase()}
 							</a>
 						</div>
 					)}

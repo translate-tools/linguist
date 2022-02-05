@@ -3,13 +3,38 @@ import { isMobileBrowser } from './browser';
 
 export const getUserLanguage = () => browser.i18n.getUILanguage().split('-')[0];
 
-export const getMessage = (messageName: string, substitutions?: string | string[]) => {
+export const getInternationalizedMessage = <T = null>(
+	messageName: string,
+	substitutions?: string | string[],
+	emptyResult: T = null as any,
+) => {
 	const text = browser.i18n.getMessage(messageName, substitutions);
-	return text.length > 0 ? text : `*${messageName}`;
+	return text.length > 0 ? text : emptyResult;
 };
 
-export const getLanguageNameByCode = (code: string) =>
-	getMessage(code === 'auto' ? 'lang_detect' : `langCode_${code}`);
+export const isMessageExist = (messageName: string, substitutions?: string | string[]) =>
+	getInternationalizedMessage(messageName, substitutions, null) !== null;
+
+export const getMessage = (messageName: string, substitutions?: string | string[]) =>
+	getInternationalizedMessage(messageName, substitutions, `*${messageName}`);
+
+export function getLanguageNameByCode(
+	langCode: string,
+	encodeNotFoundToString?: true,
+): string;
+export function getLanguageNameByCode(
+	langCode: string,
+	encodeNotFoundToString: false,
+): string | null;
+export function getLanguageNameByCode(
+	langCode: string,
+	encodeNotFoundToString: boolean = true,
+) {
+	const fixedLangCode = langCode === 'auto' ? 'lang_detect' : `langCode_${langCode}`;
+	return encodeNotFoundToString
+		? getMessage(fixedLangCode)
+		: getInternationalizedMessage(fixedLangCode, undefined, null);
+}
 
 export const detectLanguage = async (text: string, reliableOnly = false) => {
 	// Language detection is not work on mobile firefox version, so we can't detect language
