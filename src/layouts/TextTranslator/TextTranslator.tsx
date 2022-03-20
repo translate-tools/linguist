@@ -216,26 +216,6 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 			});
 	}, [translateHook, userInput, from, to, setTranslationData]);
 
-	// It need to disable translate delay for next state update
-	const disableDelayForNextTranslate = useRef(false);
-
-	const swapLanguages = ({ from, to }: { from: string; to: string }) => {
-		textStateContext.current = Symbol('TextContext');
-
-		// We can't translate right now, because must await an change state,
-		// so just mark delay disable for next translate
-		disableDelayForNextTranslate.current = true;
-
-		setFrom(from);
-		setTo(to);
-
-		// Swap text
-		if (translationData !== null) {
-			setUserInput(translatedText ?? '');
-			setTranslatedText(userInput);
-		}
-	};
-
 	// Clear text and stop translation
 	const clearState = useCallback(() => {
 		// Stop async operations
@@ -253,68 +233,84 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 		setLanguageSuggestion(null);
 	}, [setTranslationData, setUserInput]);
 
-	// Translate by changes
-	const [setTranslateTask, resetTranslateTask] = useDelayCallback();
+	const swapLanguages = useCallback(
+		({ from, to }: { from: string; to: string }) => {
+			textStateContext.current = Symbol('TextContext');
 
-	const handleNewText = useImmutableCallback(
-		(initPhase = false) => {
-			const translateText = () => {
-				// Ignore changes
-				if (initPhase) return;
+			setFrom(from);
+			setTo(to);
 
-				// Ignore pointless direction
-				if (from === to) return;
+			if (inTranslateProcess) {
+				clearState();
+				return;
+			}
 
-				setInTranslateProcess(true);
-				setErrorMessage(null);
-				translate();
-			};
-
-			translateText();
-
-			const suggestLanguageHandler = () => {
-				if (!isSuggestLanguage) return;
-
-				const localContext = textStateContext.current;
-				suggestLanguage(userInput).then((lang) => {
-					if (localContext !== textStateContext.current || !isSuggestLanguage)
-						return;
-					setLanguageSuggestion(lang);
-				});
-			};
-
-			suggestLanguageHandler();
+			// Swap text
+			if (translationData !== null) {
+				setUserInput(translatedText ?? '');
+				setTranslatedText(userInput);
+			}
 		},
-		[isSuggestLanguage, from, to, translate, userInput],
+		[
+			clearState,
+			inTranslateProcess,
+			setFrom,
+			setTo,
+			setUserInput,
+			translatedText,
+			translationData,
+			userInput,
+		],
 	);
 
-	// Handle text by change with debounce
-	useEffect(() => {
-		// Clear state
-		if (userInput.length === 0) {
-			clearState();
-			return;
+	const handleText = useImmutableCallback(() => {
+		// Translate
+		if (from !== to) {
+			setInTranslateProcess(true);
+			setErrorMessage(null);
+			translate();
 		}
 
-		if (disableDelayForNextTranslate.current) {
-			disableDelayForNextTranslate.current = false;
-			resetTranslateTask();
-			handleNewText(initPhase);
-		} else {
-			setTranslateTask(() => handleNewText(initPhase), inputDelay);
+		// Suggest language
+		if (isSuggestLanguage) {
+			const localContext = textStateContext.current;
+			suggestLanguage(userInput).then((lang) => {
+				if (localContext !== textStateContext.current || !isSuggestLanguage)
+					return;
+				setLanguageSuggestion(lang);
+			});
 		}
+	}, [isSuggestLanguage, from, to, translate, userInput]);
+
+	// Translate by changes
+	const [setTranslateTask] = useDelayCallback();
+	const onTextChange = useCallback(
+		(evt: React.ChangeEvent<HTMLTextAreaElement>) => {
+			// TODO: maybe move it??? Is it necessary here?
+			if (initPhase) return;
+
+			const text = evt.target.value;
+
+			// Clear state
+			if (text.length === 0) {
+				clearState();
+				return;
+			}
+
+			setUserInput(text);
+			setTranslateTask(handleText, inputDelay);
+		},
+		[clearState, handleText, initPhase, inputDelay, setTranslateTask, setUserInput],
+	);
+
+	// Handle text by
+	useEffect(() => {
+		if (!initPhase) {
+			handleText();
+		}
+
 		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [
-		from,
-		to,
-		userInput,
-		inputDelay,
-		clearState,
-		resetTranslateTask,
-		setTranslateTask,
-		translate,
-		handleNewText,
-	]);
+	}, [initPhase]);
 
 	// Sync local result with actual data
 	useEffect(() => {
@@ -372,7 +368,6 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 					setFrom={(from) => from !== undefined && setFrom(from)}
 					setTo={(to) => to !== undefined && setTo(to)}
 					swapHandler={swapLanguages}
-					disableSwap={!isShowFullData}
 					preventFocusOnPress={isFocusOnInput}
 					mobile={isMobile}
 				/>
@@ -409,9 +404,7 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 							className={cnTextTranslator('Input')}
 							controlProps={{ innerRef: inputControlExternal }}
 							value={userInput}
-							onChange={(evt) => {
-								setUserInput(evt.target.value);
-							}}
+							onChange={onTextChange}
 							hasClear
 							onClearClick={clearState}
 							spellCheck={spellCheck}
