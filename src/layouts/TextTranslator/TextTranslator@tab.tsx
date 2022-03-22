@@ -9,16 +9,13 @@ import {
 	TabComponent,
 	PopupWindowContext,
 } from '../../pages/popup/layout/PopupWindow';
-import { TextTranslator, TextTranslatorProps } from './TextTranslator';
+import { TextTranslator, TextTranslatorProps, TranslationState } from './TextTranslator';
 import { TextTranslatorStorage } from './TextTranslator.utils/TextTranslatorStorage';
 
 type InitData = {
 	from: string;
 	to: string;
-	lastTranslate: {
-		text: string;
-		translate: string;
-	} | null;
+	lastTranslate: TranslationState | null;
 };
 
 /**
@@ -31,9 +28,8 @@ export const TextTranslatorTab: TabComponent<InitFn<InitData>> = ({
 	initData,
 	isMobile,
 }) => {
-	const { from: initFrom, to: initTo } = initData;
-	const [from, setFrom] = useState(initFrom);
-	const [to, setTo] = useState(initTo);
+	const [from, setFrom] = useState(initData.from);
+	const [to, setTo] = useState(initData.to);
 
 	const [userInput, setUserInput] = useState(initData.lastTranslate?.text ?? '');
 	const [translationData, setTranslationData] = useState<
@@ -53,7 +49,8 @@ export const TextTranslatorTab: TabComponent<InitFn<InitData>> = ({
 					userInput.length > 0 &&
 					translationData !== null &&
 					translationData.text.length <= serializeLenLimit &&
-					translationData.translate.length <= serializeLenLimit;
+					(translationData.translate === null ||
+						translationData.translate.length <= serializeLenLimit);
 
 				TextTranslatorStorage.setData({
 					// Cast string to `langCode`
@@ -95,16 +92,15 @@ export const TextTranslatorTab: TabComponent<InitFn<InitData>> = ({
 
 	// It need to prevent translating while init state,
 	// `isInitPhase` need to prevent update right after change `isInitPhase`
-	const [isInitPhase, setIsInitPhase] = useState(true);
-	useEffect(() => {
-		setIsInitPhase(false);
-	}, []);
+	// const [isInitPhase, setIsInitPhase] = useState(true);
+	// useEffect(() => {
+	// 	setIsInitPhase(false);
+	// }, []);
 
 	return (
 		<TextTranslator
 			translatorFeatures={translatorFeatures}
 			translateHook={sendTranslateRequest}
-			initPhase={isInitPhase}
 			spellCheck={config.textTranslator.spellCheck}
 			enableLanguageSuggestions={config.textTranslator.suggestLanguage}
 			enableLanguageSuggestionsAlways={config.textTranslator.suggestLanguageAlways}

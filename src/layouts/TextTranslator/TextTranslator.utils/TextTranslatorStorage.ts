@@ -17,7 +17,7 @@ export class TextTranslatorStorage extends AbstractVersionedStorage {
 			translate: type.union([
 				type.type({
 					text: type.string,
-					translate: type.string,
+					translate: type.union([type.string, type.null]),
 				}),
 				type.null,
 			]),
@@ -36,7 +36,7 @@ export class TextTranslatorStorage extends AbstractVersionedStorage {
 		const storeName = TextTranslatorStorage.storeName;
 		const { [storeName]: tabData } = await browser.storage.local.get(storeName);
 
-		const defaultData = TextTranslatorStorage.defaultData;
+		const { defaultData } = TextTranslatorStorage;
 		if (tabData !== undefined) {
 			return tryDecode(
 				TextTranslatorStorage.storageSignature,
