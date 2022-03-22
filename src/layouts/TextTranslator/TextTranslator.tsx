@@ -106,6 +106,15 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 
 	const isFirstRenderRef = useIsFirstRenderRef();
 
+	const translatedTextOrigin = useRef<string | null>(
+		lastTranslation !== null && lastTranslation.translate !== null
+			? lastTranslation.text
+			: null,
+	);
+	const isTranslatedTextRelative =
+		translatedTextOrigin.current !== null &&
+		translatedTextOrigin.current === userInput;
+
 	//
 	// TTS
 	//
@@ -201,6 +210,7 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 				}
 
 				setTranslatedText(response);
+				translatedTextOrigin.current = userInput;
 			})
 			.catch((reason) => {
 				if (localContext !== textStateContext.current) return;
@@ -236,6 +246,7 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 		// Clear text
 		setUserInput('');
 		setTranslatedText(null);
+		translatedTextOrigin.current = null;
 	}, [resetTemporaryTextState]);
 
 	const isPreventClearTranslation = useRef(false);
@@ -250,6 +261,7 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 				if (translatedText !== null) {
 					setUserInput(translatedText);
 					setTranslatedText(userInput);
+					translatedTextOrigin.current = translatedText;
 				}
 
 				setFrom(from);
@@ -270,16 +282,15 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 	}, [isSuggestLanguage, userInput]);
 
 	const rememberTranslationState = useImmutableCallback(() => {
-		// TODO: introduce ref `translatedForText` and  when `userInput` is not match with this ref, write null instead translation
 		setLastTranslation(
 			userInput.length === 0
 				? null
 				: {
 					text: userInput,
-					translate: translatedText,
+					translate: isTranslatedTextRelative ? translatedText : null,
 				  },
 		);
-	}, [setLastTranslation, translatedText, userInput]);
+	}, [isTranslatedTextRelative, setLastTranslation, translatedText, userInput]);
 
 	const handleText = useImmutableCallback(() => {
 		// Translate
@@ -333,15 +344,11 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 			isPreventClearTranslation.current = false;
 		} else {
 			setTranslatedText(null);
+			translatedTextOrigin.current = null;
 		}
 
 		handleText();
 	}, [from, to, handleText, resetTemporaryTextState, isFirstRenderRef]);
-
-	// Backup state by changes
-	useEffect(() => {
-		rememberTranslationState();
-	}, [rememberTranslationState, userInput, translatedText]);
 
 	// Backup state by changes
 	useEffect(() => {
@@ -361,9 +368,10 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 		from,
 		to,
 		text: userInput,
-		// TODO: translation may be is not actual for input
 		translate:
-			errorMessage === null && translatedText !== null ? translatedText : null,
+			errorMessage === null && translatedText !== null && isTranslatedTextRelative
+				? translatedText
+				: null,
 	});
 
 	const setIsFavoriteProxy = useCallback(
