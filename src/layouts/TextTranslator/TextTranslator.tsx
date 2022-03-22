@@ -1,12 +1,4 @@
-import React, {
-	FC,
-	Ref,
-	useCallback,
-	useEffect,
-	useLayoutEffect,
-	useRef,
-	useState,
-} from 'react';
+import React, { FC, Ref, useCallback, useEffect, useRef, useState } from 'react';
 import ReactDOM from 'react-dom';
 
 import { cn } from '@bem-react/classname';
@@ -91,6 +83,7 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 	to,
 	setFrom,
 	setTo,
+	// TODO: use it to init state
 	// translationData,
 	setTranslationData,
 	translatorFeatures,
@@ -187,7 +180,6 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 
 	// Translate manager
 	const textStateContext = useRef(Symbol('TextContext'));
-	// const [translationResult, setTranslationResult] = useState<string | null>(null);
 	const translate = useCallback(() => {
 		const localContext = textStateContext.current;
 
@@ -307,29 +299,17 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 				return;
 			}
 
-			// Stop translation and clear
-			if (inTranslateProcess) {
-				resetTemporaryTextState();
-				setTranslatedText(null);
-			}
-
+			resetTemporaryTextState();
 			setUserInput(text);
 			setTranslateTask(handleText, inputDelay);
 		},
-		[
-			clearState,
-			handleText,
-			inTranslateProcess,
-			inputDelay,
-			resetTemporaryTextState,
-			setTranslateTask,
-		],
+		[clearState, handleText, inputDelay, resetTemporaryTextState, setTranslateTask],
 	);
 
 	// TODO: auto translate when translated text is null
 
 	// Handle languages changes
-	useLayoutEffect(() => {
+	useEffect(() => {
 		// TODO: skip for initialization
 
 		resetTemporaryTextState();
@@ -350,9 +330,9 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 	}, [saveState, userInput, translatedText]);
 
 	// Backup state by changes
-	// useEffect(() => {
-	// 	saveState();
-	// }, [saveState, userInput, translatedText]);
+	useEffect(() => {
+		saveState();
+	}, [saveState, userInput, translatedText]);
 
 	//
 	// Favorites
