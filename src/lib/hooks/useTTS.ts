@@ -4,6 +4,7 @@ import { useImmutableCallback } from 'react-elegant-ui/esm/hooks/useImmutableCal
 import { QueuePlayer } from '../QueuePlayer';
 import { getTTS } from '../../requests/backend/getTTS';
 
+// TODO: support null as empty text
 /**
  * TTS is text to speak
  *

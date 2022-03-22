@@ -97,8 +97,16 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 	isMobile,
 }) => {
 	const [userInput, setUserInput] = useState(lastTranslation?.text ?? '');
-	const [translatedText, setTranslatedText] = useState<string | null>(
-		lastTranslation?.translate ?? null,
+	const [translation, setTranslation] = useState<{
+		text: string;
+		original: string;
+	} | null>(
+		lastTranslation !== null && lastTranslation.translate !== null
+			? {
+				original: lastTranslation.text,
+				text: lastTranslation.translate,
+			  }
+			: null,
 	);
 
 	const [inTranslateProcess, setInTranslateProcess] = useState(false);
@@ -106,21 +114,15 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 
 	const isFirstRenderRef = useIsFirstRenderRef();
 
-	const translatedTextOrigin = useRef<string | null>(
-		lastTranslation !== null && lastTranslation.translate !== null
-			? lastTranslation.text
-			: null,
-	);
 	const isTranslatedTextRelative =
-		translatedTextOrigin.current !== null &&
-		translatedTextOrigin.current === userInput;
+		translation !== null && translation.original === userInput;
 
 	//
 	// TTS
 	//
 
 	const originalTTS = useTTS(from, userInput);
-	const translateTTS = useTTS(to, translatedText || '');
+	const translateTTS = useTTS(to, translation ? translation.text : '');
 
 	const ttsTarget = useRef<TTSTarget | null>(null);
 
@@ -209,8 +211,10 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 					);
 				}
 
-				setTranslatedText(response);
-				translatedTextOrigin.current = userInput;
+				setTranslation({
+					text: response,
+					original: userInput,
+				});
 			})
 			.catch((reason) => {
 				if (localContext !== textStateContext.current) return;
@@ -245,8 +249,7 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 
 		// Clear text
 		setUserInput('');
-		setTranslatedText(null);
-		translatedTextOrigin.current = null;
+		setTranslation(null);
 	}, [resetTemporaryTextState]);
 
 	const isPreventClearTranslation = useRef(false);
@@ -258,17 +261,19 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 				clearState();
 
 				// Set translate as input
-				if (translatedText !== null) {
-					setUserInput(translatedText);
-					setTranslatedText(userInput);
-					translatedTextOrigin.current = translatedText;
+				if (translation !== null) {
+					setUserInput(translation.text);
+					setTranslation({
+						text: userInput,
+						original: translation.text,
+					});
 				}
 
 				setFrom(from);
 				setTo(to);
 			});
 		},
-		[clearState, setFrom, setTo, translatedText, userInput],
+		[clearState, setFrom, setTo, translation, userInput],
 	);
 
 	const showLanguageSuggestion = useCallback(() => {
@@ -287,10 +292,10 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 				? null
 				: {
 					text: userInput,
-					translate: isTranslatedTextRelative ? translatedText : null,
+					translate: isTranslatedTextRelative ? translation.text : null,
 				  },
 		);
-	}, [isTranslatedTextRelative, setLastTranslation, translatedText, userInput]);
+	}, [isTranslatedTextRelative, setLastTranslation, translation, userInput]);
 
 	const handleText = useImmutableCallback(() => {
 		// Translate
@@ -324,9 +329,7 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 	);
 
 	// Translate text from last state if it not have translation
-	const isRequiredInitTranslate = useRef(
-		userInput.length > 0 && translatedText === null,
-	);
+	const isRequiredInitTranslate = useRef(userInput.length > 0 && translation === null);
 	useEffect(() => {
 		if (!isRequiredInitTranslate.current) return;
 
@@ -343,8 +346,7 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 		if (isPreventClearTranslation.current) {
 			isPreventClearTranslation.current = false;
 		} else {
-			setTranslatedText(null);
-			translatedTextOrigin.current = null;
+			setTranslation(null);
 		}
 
 		handleText();
@@ -353,7 +355,7 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 	// Backup state by changes
 	useEffect(() => {
 		rememberTranslationState();
-	}, [rememberTranslationState, userInput, translatedText]);
+	}, [rememberTranslationState, userInput, translation]);
 
 	//
 	// Favorites
@@ -369,8 +371,8 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 		to,
 		text: userInput,
 		translate:
-			errorMessage === null && translatedText !== null && isTranslatedTextRelative
-				? translatedText
+			errorMessage === null && translation !== null && isTranslatedTextRelative
+				? translation.text
 				: null,
 	});
 
@@ -394,7 +396,9 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 		? '...'
 		: errorMessage !== null
 			? `[${errorMessage}]`
-			: translatedText;
+			: translation !== null
+				? translation.text
+				: null;
 
 	const isShowFullData = !inTranslateProcess && errorMessage === null;
 	return (
@@ -472,7 +476,7 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 						</div>
 						<div className={cnTextTranslator('TextActions')}>
 							<Button
-								disabled={inTranslateProcess || translatedText === null}
+								disabled={inTranslateProcess || translation === null}
 								onPress={() => runTTS('translation')}
 								view="clear"
 								size="s"
