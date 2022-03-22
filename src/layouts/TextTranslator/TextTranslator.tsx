@@ -7,6 +7,7 @@ import { useImmutableCallback } from 'react-elegant-ui/esm/hooks/useImmutableCal
 
 import { Checkbox } from 'react-elegant-ui/esm/components/Checkbox/Checkbox.bundle/desktop';
 
+import { useIsFirstRenderRef } from '../../lib/hooks/useIsFirstRenderRef';
 import { useTranslateFavorite } from '../../lib/hooks/useTranslateFavorite';
 import { useTTS } from '../../lib/hooks/useTTS';
 import { getLanguageNameByCode, getMessage } from '../../lib/language';
@@ -34,7 +35,7 @@ export interface TextTranslatorProps
 		MutableValue<'from', string>,
 		MutableValue<'to', string>,
 		// It must be null only when translate result never be set or after reset input
-		MutableValue<'translationData', TranslationState | null> {
+		MutableValue<'lastTranslation', TranslationState | null> {
 	/**
 	 * Features of translator module
 	 */
@@ -75,6 +76,7 @@ export interface TextTranslatorProps
 
 type TTSTarget = 'original' | 'translation';
 
+// TODO: refactor - move favorites and TTS logic to standalone components
 /**
  * Component for translate any text
  */
@@ -83,9 +85,8 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 	to,
 	setFrom,
 	setTo,
-	// TODO: use it to init state
-	// translationData,
-	setTranslationData,
+	lastTranslation,
+	setLastTranslation,
 	translatorFeatures,
 	translateHook,
 	spellCheck,
@@ -95,11 +96,15 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 	enableLanguageSuggestionsAlways = true,
 	isMobile,
 }) => {
-	const [userInput, setUserInput] = useState('');
-	const [translatedText, setTranslatedText] = useState<string | null>(null);
+	const [userInput, setUserInput] = useState(lastTranslation?.text ?? '');
+	const [translatedText, setTranslatedText] = useState<string | null>(
+		lastTranslation?.translate ?? null,
+	);
 
 	const [inTranslateProcess, setInTranslateProcess] = useState(false);
 	const [errorMessage, setErrorMessage] = useState<string | null>(null);
+
+	const isFirstRenderRef = useIsFirstRenderRef();
 
 	//
 	// TTS
@@ -264,8 +269,9 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 		});
 	}, [isSuggestLanguage, userInput]);
 
-	const saveState = useImmutableCallback(() => {
-		setTranslationData(
+	const rememberTranslationState = useImmutableCallback(() => {
+		// TODO: introduce ref `translatedForText` and  when `userInput` is not match with this ref, write null instead translation
+		setLastTranslation(
 			userInput.length === 0
 				? null
 				: {
@@ -273,7 +279,7 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 					translate: translatedText,
 				  },
 		);
-	}, [setTranslationData, translatedText, userInput]);
+	}, [setLastTranslation, translatedText, userInput]);
 
 	const handleText = useImmutableCallback(() => {
 		// Translate
@@ -306,11 +312,19 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 		[clearState, handleText, inputDelay, resetTemporaryTextState, setTranslateTask],
 	);
 
-	// TODO: auto translate when translated text is null
+	// Translate text from last state if it not have translation
+	const isRequiredInitTranslate = useRef(
+		userInput.length > 0 && translatedText === null,
+	);
+	useEffect(() => {
+		if (!isRequiredInitTranslate.current) return;
+
+		handleText();
+	}, [handleText]);
 
 	// Handle languages changes
 	useEffect(() => {
-		// TODO: skip for initialization
+		if (isFirstRenderRef.current) return;
 
 		resetTemporaryTextState();
 
@@ -322,17 +336,17 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 		}
 
 		handleText();
-	}, [from, to, handleText, resetTemporaryTextState]);
+	}, [from, to, handleText, resetTemporaryTextState, isFirstRenderRef]);
 
 	// Backup state by changes
 	useEffect(() => {
-		saveState();
-	}, [saveState, userInput, translatedText]);
+		rememberTranslationState();
+	}, [rememberTranslationState, userInput, translatedText]);
 
 	// Backup state by changes
 	useEffect(() => {
-		saveState();
-	}, [saveState, userInput, translatedText]);
+		rememberTranslationState();
+	}, [rememberTranslationState, userInput, translatedText]);
 
 	//
 	// Favorites
@@ -347,13 +361,9 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 		from,
 		to,
 		text: userInput,
-
-		// TODO: make it work back
-		translate: null,
-		// translate:
-		// 	translationData !== null && errorMessage === null
-		// 		? translationData.translate
-		// 		: null,
+		// TODO: translation may be is not actual for input
+		translate:
+			errorMessage === null && translatedText !== null ? translatedText : null,
 	});
 
 	const setIsFavoriteProxy = useCallback(

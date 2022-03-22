@@ -32,8 +32,8 @@ export const TextTranslatorTab: TabComponent<InitFn<InitData>> = ({
 	const [to, setTo] = useState(initData.to);
 
 	const [userInput, setUserInput] = useState(initData.lastTranslate?.text ?? '');
-	const [translationData, setTranslationData] = useState<
-		TextTranslatorProps['translationData']
+	const [lastTranslation, setLastTranslation] = useState<
+		TextTranslatorProps['lastTranslation']
 	>(initData.lastTranslate ?? null);
 
 	// Remember user input
@@ -44,34 +44,34 @@ export const TextTranslatorTab: TabComponent<InitFn<InitData>> = ({
 	useEffect(() => {
 		const serialize = () => {
 			try {
-				const rememberText =
-					config.textTranslator.rememberText &&
-					userInput.length > 0 &&
-					translationData !== null &&
-					translationData.text.length <= serializeLenLimit &&
-					(translationData.translate === null ||
-						translationData.translate.length <= serializeLenLimit);
-
-				TextTranslatorStorage.setData({
+				const translationState: Parameters<
+					typeof TextTranslatorStorage['setData']
+				>['0'] = {
 					// Cast string to `langCode`
 					from: from as any,
 					to: to as any,
-					translate: rememberText ? translationData : null,
-				});
+					translate: null,
+				};
+
+				if (lastTranslation !== null && config.textTranslator.rememberText) {
+					const { text, translate } = lastTranslation;
+
+					if (
+						text.length <= serializeLenLimit &&
+						(translate === null || translate.length <= serializeLenLimit)
+					) {
+						translationState.translate = lastTranslation;
+					}
+				}
+
+				TextTranslatorStorage.setData(translationState);
 			} catch (err) {
 				console.error(err);
 			}
 		};
 
 		setDelayCb(serialize, serializeDelay);
-	}, [
-		setDelayCb,
-		translationData,
-		config.textTranslator.rememberText,
-		userInput.length,
-		from,
-		to,
-	]);
+	}, [setDelayCb, lastTranslation, config.textTranslator.rememberText, from, to]);
 
 	// Focus on input when focus is free
 	const { activeTab } = useContext(PopupWindowContext);
@@ -109,8 +109,8 @@ export const TextTranslatorTab: TabComponent<InitFn<InitData>> = ({
 				setFrom,
 				to,
 				setTo,
-				translationData,
-				setTranslationData,
+				lastTranslation,
+				setLastTranslation,
 				userInput,
 				setUserInput,
 				inputControl,
