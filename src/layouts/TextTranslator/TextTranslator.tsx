@@ -9,7 +9,7 @@ import { Checkbox } from 'react-elegant-ui/esm/components/Checkbox/Checkbox.bund
 
 import { useIsFirstRenderRef } from '../../lib/hooks/useIsFirstRenderRef';
 import { useTranslateFavorite } from '../../lib/hooks/useTranslateFavorite';
-import { useTTS } from '../../lib/hooks/useTTS';
+import { useConcurrentTTS, useTTS } from '../../lib/hooks/useTTS';
 import { getLanguageNameByCode, getMessage } from '../../lib/language';
 import { MutableValue } from '../../types/utils';
 
@@ -74,8 +74,6 @@ export interface TextTranslatorProps
 	isMobile?: boolean;
 }
 
-type TTSTarget = 'original' | 'translation';
-
 // TODO: refactor - move favorites and TTS logic to standalone components
 /**
  * Component for translate any text
@@ -117,49 +115,20 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 	const isTranslatedTextRelative =
 		translation !== null && translation.original === userInput;
 
-	//
-	// TTS
-	//
-
-	const originalTTS = useTTS(from, userInput);
-	const translateTTS = useTTS(to, translation ? translation.text : null);
-
-	const ttsTarget = useRef<TTSTarget | null>(null);
-
-	const getTTSPlayer = useCallback(
-		(target: TTSTarget): ReturnType<typeof useTTS> => {
-			switch (target) {
-			case 'original':
-				return originalTTS;
-			case 'translation':
-				return translateTTS;
-			default:
-				throw new Error('invalid target');
-			}
+	const ttsPlayers = useConcurrentTTS({
+		original: {
+			lang: from,
+			text: userInput,
 		},
-		[originalTTS, translateTTS],
-	);
-
-	const runTTS = useCallback(
-		async (target: TTSTarget) => {
-			// Stop player for current target if it different from local target
-			if (ttsTarget.current !== null && ttsTarget.current !== target) {
-				getTTSPlayer(ttsTarget.current).stop();
-			}
-
-			// Update current target
-			ttsTarget.current = target;
-
-			// Play/stop
-			const player = getTTSPlayer(target);
-			if (player.isPlayed()) {
-				player.stop();
-			} else {
-				player.play();
-			}
+		translate: {
+			lang: to,
+			text: translation ? translation.text : null,
 		},
-		[getTTSPlayer],
-	);
+	});
+
+	//
+	// Lang suggestions
+	//
 
 	const [languageSuggestion, setLanguageSuggestion] = useState<null | string>(null);
 
@@ -458,7 +427,7 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 								<div className={cnTextTranslator('TextActions')}>
 									<Button
 										disabled={userInput.length === 0}
-										onPress={() => runTTS('original')}
+										onPress={ttsPlayers.original.toggle}
 										view="clear"
 										size="s"
 									>
@@ -477,7 +446,7 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 						<div className={cnTextTranslator('TextActions')}>
 							<Button
 								disabled={inTranslateProcess || translation === null}
-								onPress={() => runTTS('translation')}
+								onPress={ttsPlayers.translate.toggle}
 								view="clear"
 								size="s"
 							>
