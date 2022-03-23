@@ -122,7 +122,7 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 	//
 
 	const originalTTS = useTTS(from, userInput);
-	const translateTTS = useTTS(to, translation ? translation.text : '');
+	const translateTTS = useTTS(to, translation ? translation.text : null);
 
 	const ttsTarget = useRef<TTSTarget | null>(null);
 

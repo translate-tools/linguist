@@ -1,71 +1,31 @@
-import { useRef, useEffect, useCallback, useMemo } from 'react';
-import { useImmutableCallback } from 'react-elegant-ui/esm/hooks/useImmutableCallback';
+import { useRef, useEffect, useState } from 'react';
 
-import { QueuePlayer } from '../QueuePlayer';
+import { TTSPlayer } from '../TTSPlayer';
 import { getTTS } from '../../requests/backend/getTTS';
 
-// TODO: support null as empty text
 /**
  * TTS is text to speak
  *
  * Use player for speak text
  */
-export const useTTS = (lang: string, text: string) => {
-	const player = useRef<QueuePlayer | null>(null);
+export const useTTS = (lang: string, text: string | null) => {
+	const player = useRef<TTSPlayer>(null as any);
+	if (player.current === null) {
+		player.current = new TTSPlayer(getTTS);
+	}
 
-	// Update state context
-	const stateContext = useRef({});
 	useEffect(() => {
-		// Update context
-		const newContext = {};
-		stateContext.current = newContext;
-
-		// Stop current player
-		if (player.current !== null) {
-			player.current.stop();
-			player.current = null;
-		}
+		player.current.setOptions(lang, text);
 	}, [lang, text]);
 
-	const play = useImmutableCallback(async () => {
-		// Update player
-		if (player.current === null) {
-			const localContext = stateContext.current;
-
-			await getTTS({ lang, text }).then((urls) => {
-				// Skip by change context
-				if (localContext !== stateContext.current) return;
-
-				// Stop current player
-				if (player.current !== null) {
-					player.current.stop();
-				}
-
-				player.current = new QueuePlayer(urls);
-			});
-
-			// Skip by change context
-			if (localContext !== stateContext.current) return;
-		}
-
-		if (player.current !== null) {
-			player.current.play();
-		}
-	}, [lang, text]);
-
-	const stop = useCallback(() => {
-		if (player.current !== null) {
-			player.current.stop();
-		}
+	const [isLoading, setIsLoading] = useState(player.current.getIsLoading());
+	useEffect(() => {
+		player.current.onLoading = setIsLoading;
+		() => {
+			player.current.onLoading = null;
+		};
 	}, []);
 
-	const isPlayed = useCallback(() => {
-		if (player.current !== null) {
-			return player.current.isPlayed();
-		}
-
-		return false;
-	}, []);
-
-	return useMemo(() => ({ play, stop, isPlayed } as const), [isPlayed, play, stop]);
+	const { play, stop, isPlayed } = player.current;
+	return { play, stop, isPlayed, isLoading };
 };
