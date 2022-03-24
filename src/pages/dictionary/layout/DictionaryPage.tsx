@@ -142,7 +142,7 @@ export const DictionaryPage: FC<IDictionaryPageProps> = ({ confirmDelete = true 
 	//
 
 	const [TTSData, setTTSData] = useState<{
-		id: string;
+		id: number;
 		lang: string;
 		text: string;
 	} | null>(null);
@@ -150,8 +150,19 @@ export const DictionaryPage: FC<IDictionaryPageProps> = ({ confirmDelete = true 
 	const { lang: ttsLang = null, text: ttsText = null } = TTSData || {};
 	const ttsPlayer = useTTS(ttsLang, ttsText);
 
-	const playPauseTTS = useImmutableCallback(
-		(id: string, lang: string, text: string) => {
+	// Play by change TTSData
+	useEffect(() => {
+		if (TTSData === null) return;
+		ttsPlayer.play();
+	}, [TTSData, ttsPlayer]);
+
+	// Stop TTS by change entries list
+	useEffect(() => {
+		ttsPlayer.stop();
+	}, [entries, ttsPlayer]);
+
+	const toggleTTS = useImmutableCallback(
+		(id: number, lang: string, text: string) => {
 			const request = { id, lang, text };
 			const isSameObject =
 				TTSData !== null &&
@@ -160,7 +171,6 @@ export const DictionaryPage: FC<IDictionaryPageProps> = ({ confirmDelete = true 
 				);
 
 			if (isSameObject) {
-				// if (ttsPlayer.isPlayed()) {
 				if (ttsPlayer.isPlayed) {
 					ttsPlayer.stop();
 				} else {
@@ -173,18 +183,6 @@ export const DictionaryPage: FC<IDictionaryPageProps> = ({ confirmDelete = true 
 		},
 		[TTSData, ttsPlayer],
 	);
-
-	// Play by change TTSData
-	useEffect(() => {
-		if (TTSData !== null) {
-			ttsPlayer.play();
-		}
-	}, [TTSData, ttsPlayer]);
-
-	// Stop TTS by change entries list
-	useEffect(() => {
-		ttsPlayer.stop();
-	}, [entries, ttsPlayer]);
 
 	//
 	// Render
@@ -295,7 +293,7 @@ export const DictionaryPage: FC<IDictionaryPageProps> = ({ confirmDelete = true 
 							<div className={cnDictionaryPage('EntryTextAction')}>
 								<Button
 									onPress={() => {
-										playPauseTTS(idx + '', from, text);
+										toggleTTS(idx, from, text);
 									}}
 									view="clear"
 									size="s"
@@ -309,7 +307,7 @@ export const DictionaryPage: FC<IDictionaryPageProps> = ({ confirmDelete = true 
 							<div className={cnDictionaryPage('EntryTextAction')}>
 								<Button
 									onPress={() => {
-										playPauseTTS(idx + '', to, translate);
+										toggleTTS(idx, to, translate);
 									}}
 									view="clear"
 									size="s"
@@ -325,7 +323,7 @@ export const DictionaryPage: FC<IDictionaryPageProps> = ({ confirmDelete = true 
 				</div>
 			);
 		});
-	}, [isMobile, entries, from, to, search, resetFilters, remove, playPauseTTS]);
+	}, [isMobile, entries, from, to, search, resetFilters, remove, toggleTTS]);
 
 	const langsListFrom = useMemo(
 		() => [
