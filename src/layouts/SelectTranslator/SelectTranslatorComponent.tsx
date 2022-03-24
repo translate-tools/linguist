@@ -289,20 +289,10 @@ export const SelectTranslatorComponent: FC<SelectTranslatorComponentProps> = ({
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [isInited, originalText]);
 
-	// TTS playes
-	const ttsPlayer = useTTS(to ?? '', translatedText || '');
-	const toggleTTS = useCallback(() => {
-		// if (ttsPlayer.isPlayed()) {
-		if (ttsPlayer.isPlayed) {
-			ttsPlayer.stop();
-		} else {
-			ttsPlayer.play();
-		}
-	}, [ttsPlayer]);
+	const ttsPlayer = useTTS(to ?? null, translatedText);
 
 	// Stop TTS by umount
-	// eslint-disable-next-line react-hooks/exhaustive-deps
-	useEffect(() => () => ttsPlayer.stop(), []);
+	useEffect(() => () => ttsPlayer.stop(), [ttsPlayer]);
 
 	if (translatorFeatures !== undefined && (translatedText !== null || error !== null)) {
 		return (
@@ -327,7 +317,7 @@ export const SelectTranslatorComponent: FC<SelectTranslatorComponentProps> = ({
 							swapHandler={swapHandler}
 							disableSwap={translatedText === null}
 						/>{' '}
-						<Button onPress={toggleTTS} view="clear">
+						<Button onPress={ttsPlayer.toggle} view="clear">
 							<Icon glyph="volume-up" scalable={false} />
 						</Button>
 					</div>

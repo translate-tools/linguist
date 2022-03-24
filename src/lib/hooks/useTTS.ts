@@ -13,7 +13,11 @@ type PlayerSignal = {
  *
  * Use player to speak text
  */
-export const useTTS = (lang: string, text: string | null, signal?: PlayerSignal) => {
+export const useTTS = (
+	lang: string | null,
+	text: string | null,
+	signal?: PlayerSignal,
+) => {
 	const id = useRef(Symbol('Player'));
 
 	// Send signal to other players will stop
@@ -83,7 +87,7 @@ export const useTTS = (lang: string, text: string | null, signal?: PlayerSignal)
 	const play = useImmutableCallback(() => {
 		stopOtherPlayers();
 
-		if (text === null) return;
+		if (lang === null || text === null) return;
 
 		contextSymbol.current = {};
 		const localContext = contextSymbol.current;

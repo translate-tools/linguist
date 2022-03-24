@@ -147,7 +147,7 @@ export const DictionaryPage: FC<IDictionaryPageProps> = ({ confirmDelete = true 
 		text: string;
 	} | null>(null);
 
-	const { lang: ttsLang = '', text: ttsText = '' } = TTSData || {};
+	const { lang: ttsLang = null, text: ttsText = null } = TTSData || {};
 	const ttsPlayer = useTTS(ttsLang, ttsText);
 
 	const playPauseTTS = useImmutableCallback(
