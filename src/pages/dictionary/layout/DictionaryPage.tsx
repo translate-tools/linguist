@@ -160,7 +160,8 @@ export const DictionaryPage: FC<IDictionaryPageProps> = ({ confirmDelete = true 
 				);
 
 			if (isSameObject) {
-				if (ttsPlayer.isPlayed()) {
+				// if (ttsPlayer.isPlayed()) {
+				if (ttsPlayer.isPlayed) {
 					ttsPlayer.stop();
 				} else {
 					ttsPlayer.play();

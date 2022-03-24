@@ -292,7 +292,8 @@ export const SelectTranslatorComponent: FC<SelectTranslatorComponentProps> = ({
 	// TTS playes
 	const ttsPlayer = useTTS(to ?? '', translatedText || '');
 	const toggleTTS = useCallback(() => {
-		if (ttsPlayer.isPlayed()) {
+		// if (ttsPlayer.isPlayed()) {
+		if (ttsPlayer.isPlayed) {
 			ttsPlayer.stop();
 		} else {
 			ttsPlayer.play();

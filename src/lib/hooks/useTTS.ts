@@ -1,85 +1,150 @@
-import { useRef, useEffect, useState, useMemo } from 'react';
+import { useRef, useEffect, useState, useCallback } from 'react';
+import { useImmutableCallback } from 'react-elegant-ui/esm/hooks/useImmutableCallback';
 
-import { TTSPlayer } from '../TTSPlayer';
 import { getTTS } from '../../requests/backend/getTTS';
+
+type PlayerSignal = {
+	active: symbol | null;
+	setActive: (id: symbol | null) => void;
+};
 
 /**
  * TTS is text to speak
  *
  * Use player to speak text
  */
-export const useTTS = (lang: string, text: string | null) => {
-	const player = useRef<TTSPlayer>(null as any);
+export const useTTS = (lang: string, text: string | null, signal?: PlayerSignal) => {
+	const id = useRef(Symbol('Player'));
+
+	// Send signal to other players will stop
+	const setActiveInstance = signal !== undefined ? signal.setActive : null;
+	const stopOtherPlayers = useImmutableCallback(() => {
+		if (!setActiveInstance) return;
+
+		setActiveInstance(id.current);
+	}, [setActiveInstance]);
+
+	const player = useRef<HTMLAudioElement>(null as any);
 	if (player.current === null) {
-		player.current = new TTSPlayer(getTTS);
+		player.current = new Audio();
 	}
 
-	useEffect(() => {
-		player.current.setOptions(lang, text);
-	}, [lang, text]);
+	const src = useRef<{ sources: string[]; index: number } | null>(null);
+	const nextSourcePusher = useCallback(() => {
+		const source = src.current;
+		if (source === null) return;
 
-	const [isLoading, setIsLoading] = useState(player.current.getIsLoading());
-	useEffect(() => {
-		player.current.onLoading = setIsLoading;
-		() => {
-			player.current.onLoading = null;
-		};
-	}, []);
-
-	const { play, stop, isPlayed } = player.current;
-	return { play, stop, isPlayed, isLoading };
-};
-
-type TTSItem = { lang: string; text: string | null };
-
-// TODO: update by loading state change. Maybe we have to just manage collection of `useTTS`?
-/**
- * TTS is text to speak
- *
- * Return TTS players which stop all other when start playing
- */
-export const useConcurrentTTS = <T extends string = string>(
-	ttsList: Record<T, TTSItem>,
-) => {
-	const players = useRef<Record<string, TTSPlayer>>({});
-	const currentPlayer = useRef<TTSPlayer | null>(null);
-
-	// Sync players with data list
-	useMemo(() => {
-		// Set and update players
-		for (const key in ttsList) {
-			if (!(key in players.current)) {
-				const player = new TTSPlayer(getTTS);
-				players.current[key] = new Proxy(player, {
-					// Stop other player while play current
-					get(target, key) {
-						return ['play', 'toggle'].indexOf(key as any) === -1
-							? (target as any)[key]
-							: (...args: any[]) => {
-								if (
-									currentPlayer.current !== null &&
-										currentPlayer.current !== target
-								) {
-									currentPlayer.current.stop();
-								}
-
-								currentPlayer.current = target;
-								(target as any)[key](...args);
-							  };
-					},
-				}) as TTSPlayer;
-			}
-
-			const { lang, text } = ttsList[key];
-			players.current[key].setOptions(lang, text);
+		let isEnd = false;
+		if (++source.index >= source.sources.length) {
+			source.index = 0;
+			isEnd = true;
 		}
 
-		// Remove players
-		Object.keys(players.current).forEach((key) => {
-			if (key in ttsList) return;
-			delete players.current[key];
-		});
-	}, [ttsList]);
+		const nextSrc = source.sources[source.index];
+		player.current.src = nextSrc;
 
-	return players.current as Record<T, TTSPlayer>;
+		// Continue play if it is not last segment
+		if (!isEnd) {
+			player.current.play();
+		}
+	}, []);
+
+	const [isLoading, setIsLoading] = useState(false);
+	const [isPlayed, setIsPlayed] = useState(false);
+
+	useEffect(() => {
+		const startLoading = () => setIsLoading(true);
+		const stopLoading = () => setIsLoading(false);
+
+		const startPlaying = () => setIsPlayed(true);
+		const stopPlaying = () => setIsPlayed(false);
+
+		player.current.addEventListener('ended', nextSourcePusher);
+
+		player.current.addEventListener('waiting', startLoading);
+		player.current.addEventListener('canplaythrough', stopLoading);
+
+		player.current.addEventListener('play', startPlaying);
+		player.current.addEventListener('pause', stopPlaying);
+
+		return () => {
+			player.current.removeEventListener('ended', nextSourcePusher);
+
+			player.current.removeEventListener('waiting', startLoading);
+			player.current.removeEventListener('canplaythrough', stopLoading);
+
+			player.current.removeEventListener('play', startPlaying);
+			player.current.removeEventListener('pause', stopPlaying);
+		};
+	}, [nextSourcePusher]);
+
+	const ttsPlaylist = useRef<string[] | null>(null);
+	useEffect(() => {
+		ttsPlaylist.current = null;
+	}, [lang, text]);
+
+	const contextSymbol = useRef({});
+	const play = useImmutableCallback(() => {
+		stopOtherPlayers();
+
+		if (text === null) return;
+
+		contextSymbol.current = {};
+		const localContext = contextSymbol.current;
+
+		(async () => {
+			setIsLoading(true);
+			const urls = ttsPlaylist.current || (await getTTS({ lang, text }));
+
+			if (localContext !== contextSymbol.current) return;
+
+			ttsPlaylist.current = urls;
+			src.current = {
+				sources: urls,
+				index: 0,
+			};
+
+			player.current.src = urls[0];
+			player.current.play();
+		})();
+	}, [lang, stopOtherPlayers, text]);
+
+	const stop = useImmutableCallback(() => {
+		contextSymbol.current = {};
+
+		player.current.pause();
+		player.current.currentTime = 0;
+
+		// Reset playlist
+		const playlist = src.current;
+		if (playlist !== null) {
+			player.current.src = playlist.sources[playlist.index];
+		}
+
+		setIsPlayed(false);
+	}, []);
+
+	const toggle = useImmutableCallback(() => {
+		if (isPlayed) {
+			stop();
+		} else {
+			play();
+		}
+	}, [isPlayed, play, stop]);
+
+	const simplePlayer = useRef({ play, stop, toggle, isPlayed, isLoading });
+	simplePlayer.current.isLoading = isLoading;
+	simplePlayer.current.isPlayed = isPlayed;
+
+	// Stop player by signal
+	const activeInstance = signal !== undefined ? signal.active : null;
+	useEffect(() => {
+		if (!activeInstance) return;
+
+		if (activeInstance !== null && activeInstance !== id.current) {
+			simplePlayer.current.stop();
+		}
+	}, [activeInstance]);
+
+	return simplePlayer.current;
 };

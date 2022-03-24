@@ -9,7 +9,7 @@ import { Checkbox } from 'react-elegant-ui/esm/components/Checkbox/Checkbox.bund
 
 import { useIsFirstRenderRef } from '../../lib/hooks/useIsFirstRenderRef';
 import { useTranslateFavorite } from '../../lib/hooks/useTranslateFavorite';
-import { useConcurrentTTS, useTTS } from '../../lib/hooks/useTTS';
+import { useTTS } from '../../lib/hooks/useTTS';
 import { getLanguageNameByCode, getMessage } from '../../lib/language';
 import { MutableValue } from '../../types/utils';
 
@@ -115,16 +115,13 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 	const isTranslatedTextRelative =
 		translation !== null && translation.original === userInput;
 
-	const ttsPlayers = useConcurrentTTS({
-		original: {
-			lang: from,
-			text: userInput,
-		},
-		translate: {
-			lang: to,
-			text: translation ? translation.text : null,
-		},
-	});
+	const [activeTTS, setActiveTTS] = useState<symbol | null>(null);
+	const TTSSignal = {
+		active: activeTTS,
+		setActive: setActiveTTS,
+	};
+	const ttsOriginal = useTTS(from, userInput, TTSSignal);
+	const ttsTranslate = useTTS(to, translation ? translation.text : null, TTSSignal);
 
 	//
 	// Lang suggestions
@@ -427,7 +424,7 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 								<div className={cnTextTranslator('TextActions')}>
 									<Button
 										disabled={userInput.length === 0}
-										onPress={ttsPlayers.original.toggle}
+										onPress={ttsOriginal.toggle}
 										view="clear"
 										size="s"
 									>
@@ -446,7 +443,7 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 						<div className={cnTextTranslator('TextActions')}>
 							<Button
 								disabled={inTranslateProcess || translation === null}
-								onPress={ttsPlayers.translate.toggle}
+								onPress={ttsTranslate.toggle}
 								view="clear"
 								size="s"
 							>
