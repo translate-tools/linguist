@@ -78,12 +78,8 @@ export const useTTS = (lang: string, text: string | null, signal?: PlayerSignal)
 		};
 	}, [nextSourcePusher]);
 
-	const ttsPlaylist = useRef<string[] | null>(null);
-	useEffect(() => {
-		ttsPlaylist.current = null;
-	}, [lang, text]);
-
 	const contextSymbol = useRef({});
+	const ttsPlaylist = useRef<string[] | null>(null);
 	const play = useImmutableCallback(() => {
 		stopOtherPlayers();
 
@@ -145,6 +141,13 @@ export const useTTS = (lang: string, text: string | null, signal?: PlayerSignal)
 			simplePlayer.current.stop();
 		}
 	}, [activeInstance]);
+
+	// Stop and update state by change data
+	useEffect(() => {
+		contextSymbol.current = {};
+		ttsPlaylist.current = null;
+		stop();
+	}, [stop, lang, text]);
 
 	return simplePlayer.current;
 };
