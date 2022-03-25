@@ -68,6 +68,13 @@ export interface Options {
 	enableTranslateFromContextMenu?: boolean;
 }
 
+export const getSelectedTextOfInput = (elm: HTMLInputElement | HTMLTextAreaElement) => {
+	const { selectionStart, selectionEnd } = elm;
+
+	if (selectionStart === null || selectionEnd === null) return '';
+	return elm.value.slice(selectionStart, selectionEnd);
+};
+
 /**
  * This wrapper on component need to allow convenient manage state
  */
@@ -94,8 +101,10 @@ export class SelectTranslator {
 
 	// Flag which set while every selection event and reset while button shown
 	private unhandledSelection = false;
-	private selectionFlagUpdater = () => {
+	private selectionTarget: HTMLElement | null = null;
+	private selectionFlagUpdater = (evt: Event) => {
 		this.unhandledSelection = true;
+		this.selectionTarget = evt.target instanceof HTMLElement ? evt.target : null;
 	};
 
 	private readonly shadowRoot = new ShadowDOMContainerManager({
@@ -223,7 +232,9 @@ export class SelectTranslator {
 	 * Open popup by text selection on the page
 	 */
 	private pointerUp = (evt: PointerEvent | TouchEvent) => {
-		const isTouchEvt = evt instanceof TouchEvent;
+		const getIsTouchEvt = (evt: Event): evt is TouchEvent =>
+			evt.type === 'touchstart' || evt.type === 'touchend';
+		const isTouchEvt = getIsTouchEvt(evt);
 
 		// Reject if press not left button or not just touch
 		// Codes list: https://www.w3.org/TR/pointerevents1/#h5_chorded-button-interactions
@@ -252,21 +263,35 @@ export class SelectTranslator {
 		// Skip events inside root node
 		if (root === null || (target instanceof Node && root.contains(target))) return;
 
-		this.getSelectedText().then((result) => {
-			if (result === null) return;
+		this.getSelectedText().then((selectedTextObj) => {
+			let text: string | null = null;
 
-			const { selection } = result;
+			if (selectedTextObj !== null) {
+				// Use selected text on page
+				text = selectedTextObj.text;
 
-			// Skip when pointerdown not on the selected text
-			if (this.options.strictSelection && selection.focusNode instanceof Text) {
-				const parent = selection.focusNode.parentElement;
-				if (parent !== null && parent !== target) return;
+				const { selection } = selectedTextObj;
+
+				// Skip when pointerdown not on the selected text
+				if (this.options.strictSelection && selection.focusNode instanceof Text) {
+					const parent = selection.focusNode.parentElement;
+					if (parent !== null && parent !== target) return;
+				}
+
+				// Skip if it shown not first time
+				if (this.options.showOnceForSelection && !this.unhandledSelection) return;
+			} else if (
+				(this.selectionTarget !== null &&
+					this.selectionTarget instanceof HTMLTextAreaElement) ||
+				this.selectionTarget instanceof HTMLInputElement
+			) {
+				// Use selected text in input
+				text = getSelectedTextOfInput(this.selectionTarget);
 			}
 
-			// Skip if it shown not first time
-			if (this.options.showOnceForSelection && !this.unhandledSelection) return;
-
-			this.showPopup(result.text, pageX, pageY);
+			if (text !== null) {
+				this.showPopup(text, pageX, pageY);
+			}
 		});
 	};
 
