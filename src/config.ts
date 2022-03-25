@@ -52,7 +52,7 @@ export const defaultConfig: AppConfigType = {
 		detectedLangFirst: true,
 		timeoutForHideButton: 3000,
 		focusOnTranslateButton: false,
-		showOnceForSelection: true,
+		showOnceForSelection: isMobileBrowser() ? false : true,
 		showOriginalText: true,
 		isUseAutoForDetectLang: true,
 	},

@@ -112,9 +112,13 @@ export class SelectTranslator {
 
 		// Add event listeners
 		root.addEventListener('keydown', this.keyDown);
+		document.addEventListener('selectionchange', this.selectionFlagUpdater);
+
 		document.addEventListener('pointerdown', this.pointerDown);
 		document.addEventListener('pointerup', this.pointerUp);
-		document.addEventListener('selectionchange', this.selectionFlagUpdater);
+
+		document.addEventListener('touchstart', this.pointerDown);
+		document.addEventListener('touchend', this.pointerUp);
 
 		this.mountEmptyComponent();
 	}
@@ -127,9 +131,13 @@ export class SelectTranslator {
 
 		// Remove event listeners
 		root.removeEventListener('keydown', this.keyDown);
+		document.removeEventListener('selectionchange', this.selectionFlagUpdater);
+
 		document.removeEventListener('pointerdown', this.pointerDown);
 		document.removeEventListener('pointerup', this.pointerUp);
-		document.removeEventListener('selectionchange', this.selectionFlagUpdater);
+
+		document.removeEventListener('touchstart', this.pointerDown);
+		document.removeEventListener('touchend', this.pointerUp);
 
 		// Unmount component and remove root node
 		this.shadowRoot.unmountComponent();
@@ -199,7 +207,7 @@ export class SelectTranslator {
 	/**
 	 * Close popup by click outside the root
 	 */
-	private pointerDown = (evt: PointerEvent) => {
+	private pointerDown = (evt: PointerEvent | TouchEvent) => {
 		const root = this.shadowRoot.getRootNode();
 		if (root !== null && evt.target instanceof Node && root.contains(evt.target))
 			return;
@@ -214,12 +222,14 @@ export class SelectTranslator {
 	/**
 	 * Open popup by text selection on the page
 	 */
-	private pointerUp = (evt: PointerEvent) => {
+	private pointerUp = (evt: PointerEvent | TouchEvent) => {
+		const isTouchEvt = evt instanceof TouchEvent;
+
 		// Reject if press not left button or not just touch
 		// Codes list: https://www.w3.org/TR/pointerevents1/#h5_chorded-button-interactions
-		if (evt.button !== 0) return;
+		if (!isTouchEvt && evt.button !== 0) return;
 
-		const { pageX, pageY } = evt;
+		const { pageX, pageY } = isTouchEvt ? evt.changedTouches[0] : evt;
 		this.lastPointerPosition = {
 			x: pageX,
 			y: pageY,
