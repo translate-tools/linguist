@@ -17,9 +17,7 @@ import { withGlyphDelete } from '../_glyph/Icon_glyph_delete';
 import { withGlyphVolumeUp } from '../_glyph/Icon_glyph_volume-up';
 import { withGlyphAutoFix } from '../_glyph/Icon_glyph_autofix';
 
-// TODO: #important fix composer to allow any number of components
-// or, at least, make type helper for build generic
-export const Icon = compose<any>(
+export const Icon = compose(
 	composeU(
 		withGlyphSettings,
 		withGlyphSwapHoriz,
