@@ -1,0 +1,12 @@
+.TranslatorsManager {
+	min-width: 400px;
+}
+
+.TranslatorsManager-TranslatorEntry {
+	display: flex;
+	flex-flow: row;
+}
+
+.TranslatorsManager-TranslatorEntryName {
+	width: 100%;
+}

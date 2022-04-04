@@ -1,4 +1,4 @@
-import React, { FC, useCallback, useEffect, useMemo, useState } from 'react';
+import React, { FC, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { cn } from '@bem-react/classname';
 import { get, isEqual } from 'lodash';
 
@@ -28,6 +28,7 @@ import { OptionsGroup, OptionsTree } from './OptionsTree/OptionsTree';
 import { PageSection } from './PageSection/PageSection';
 
 import './OptionsPage.css';
+import { TranslatorsManager } from './OptionsPage.components/TranslatorsManager/TranslatorsManager';
 
 export const cnOptionsPage = cn('OptionsPage');
 
@@ -46,6 +47,10 @@ export const OptionsPage: FC<OptionsPageProps> = ({ messageHideDelay }) => {
 		null,
 	);
 	const [configTree, setConfigTree] = useState<OptionsGroup[] | undefined>();
+
+	const windowsStackRef = useRef<HTMLDivElement>(null);
+	const [isOpenCustomTranslatorsWindow, setIsOpenCustomTranslatorsWindow] =
+		useState<boolean>(false);
 
 	const [clearCacheProcess, setClearCacheProcess] = useState<boolean>(false);
 	const [translatorModules, setTranslatorModules] = useState<
@@ -248,6 +253,9 @@ export const OptionsPage: FC<OptionsPageProps> = ({ messageHideDelay }) => {
 			clearCacheProcess,
 			translatorModules,
 			clearCache,
+			toggleCustomTranslatorsWindow: () => {
+				setIsOpenCustomTranslatorsWindow((value) => !value);
+			},
 		});
 
 		setConfigTree(configTree);
@@ -334,6 +342,14 @@ export const OptionsPage: FC<OptionsPageProps> = ({ messageHideDelay }) => {
 						</Button>
 					</div>
 				) : undefined}
+
+				<div ref={windowsStackRef} />
+
+				<TranslatorsManager
+					scope={windowsStackRef}
+					visible={isOpenCustomTranslatorsWindow}
+					onClose={() => setIsOpenCustomTranslatorsWindow(false)}
+				/>
 			</div>
 		</Page>
 	);

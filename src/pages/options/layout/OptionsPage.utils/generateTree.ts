@@ -6,6 +6,7 @@ type Options = {
 	clearCacheProcess: boolean;
 	translatorModules: Record<string, string> | undefined;
 	clearCache: () => void;
+	toggleCustomTranslatorsWindow: () => void;
 };
 
 // TODO: make helper for build options
@@ -30,6 +31,7 @@ export const generateTree = ({
 	clearCacheProcess,
 	translatorModules,
 	clearCache,
+	toggleCustomTranslatorsWindow,
 }: Options): OptionsGroup[] => {
 	return [
 		{
@@ -92,6 +94,24 @@ export const generateTree = ({
 							},
 						],
 					  },
+				{
+					title: getMessage('settings_option_customTranslatorModule'),
+					groupContent: [
+						{
+							description: getMessage(
+								'settings_option_customTranslatorModule_desc',
+							),
+							// path: 'translatorModule',
+							optionContent: {
+								type: 'Button',
+								text: getMessage(
+									'settings_option_customTranslatorModule_manageButton',
+								),
+								action: toggleCustomTranslatorsWindow,
+							},
+						},
+					],
+				},
 				{
 					title: getMessage('settings_option_translateScheduler'),
 					groupContent: [
