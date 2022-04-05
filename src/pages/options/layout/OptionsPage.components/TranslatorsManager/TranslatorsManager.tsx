@@ -1,15 +1,17 @@
 import { cn } from '@bem-react/classname';
-import React, { FC } from 'react';
+import React, { FC, useContext, useState } from 'react';
 
 // TODO: move modal to local component
 import { Modal } from 'react-elegant-ui/components/Modal/Modal.bundle/desktop';
 import { Button } from '../../../../../components/Button/Button.bundle/universal';
 import { LayoutFlow } from '../../../../../components/LayoutFlow/LayoutFlow';
 import { ModalLayout } from '../../../../../components/ModalLayout/ModalLayout';
+import { OptionsModalsContext } from '../../OptionsPage';
+import { TranslatorEditor } from '../TranslatorEditor/TranslatorEditor';
 
 import './TranslatorsManager.css';
 
-type CustomTranslator = {
+export type CustomTranslator = {
 	id: string;
 	name: string;
 	code: string;
@@ -20,30 +22,49 @@ const cnTranslatorsManager = cn('TranslatorsManager');
 export const TranslatorsManager: FC<{
 	visible: boolean;
 	onClose: () => void;
-	scope: React.RefObject<HTMLDivElement>;
-}> = ({ visible, onClose, scope }) => {
-	const translators: CustomTranslator[] = [
-		{
-			id: '1',
-			name: 'TestTranslator #1',
-			code: '123',
-		},
-		{
-			id: '2',
-			name: 'TestTranslator #2',
-			code: '123',
-		},
-	];
+}> = ({ visible, onClose }) => {
+	const scope = useContext(OptionsModalsContext);
+
+	const [editedTranslator, setEditedTranslator] = useState<CustomTranslator | null>(
+		null,
+	);
+
+	const translators: CustomTranslator[] = Array(15)
+		.fill(1)
+		.map((_, idx) => {
+			const id = idx + 1;
+			return {
+				id: '' + id,
+				name: 'TestTranslator #' + id,
+				code: 'some code of translator #' + id,
+			};
+		});
 
 	return (
 		<Modal visible={visible} onClose={onClose} scope={scope} preventBodyScroll>
 			<ModalLayout
 				title={'Custom translators list'}
-				footer={<Button onPress={onClose}>Close</Button>}
+				footer={[
+					<Button
+						view="action"
+						onPress={() => {
+							setEditedTranslator({
+								id: '',
+								name: '',
+								code: '',
+							});
+						}}
+					>
+						Add new
+					</Button>,
+					<Button onPress={onClose}>Close</Button>,
+				]}
 			>
 				<div className={cnTranslatorsManager({})}>
 					<LayoutFlow direction="vertical" indent="m">
-						{translators.map(({ id, name }) => {
+						{translators.map((translatorInfo) => {
+							const { id, name } = translatorInfo;
+
 							return (
 								<div
 									className={cnTranslatorsManager('TranslatorEntry')}
@@ -64,7 +85,13 @@ export const TranslatorsManager: FC<{
 											'TranslatorEntryControls',
 										)}
 									>
-										<Button>Edit</Button>
+										<Button
+											onPress={() => {
+												setEditedTranslator(translatorInfo);
+											}}
+										>
+											Edit
+										</Button>
 										<Button>Delete</Button>
 									</LayoutFlow>
 								</div>
@@ -73,6 +100,17 @@ export const TranslatorsManager: FC<{
 					</LayoutFlow>
 				</div>
 			</ModalLayout>
+
+			{editedTranslator === null ? undefined : (
+				<TranslatorEditor
+					translator={editedTranslator}
+					onClose={() => setEditedTranslator(null)}
+					onSave={(translator) => {
+						console.warn('Updated Translator', translator);
+						setEditedTranslator(null);
+					}}
+				/>
+			)}
 		</Modal>
 	);
 };

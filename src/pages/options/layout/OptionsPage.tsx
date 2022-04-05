@@ -1,4 +1,12 @@
-import React, { FC, useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import React, {
+	createContext,
+	FC,
+	useCallback,
+	useEffect,
+	useMemo,
+	useRef,
+	useState,
+} from 'react';
 import { cn } from '@bem-react/classname';
 import { get, isEqual } from 'lodash';
 
@@ -31,6 +39,10 @@ import './OptionsPage.css';
 import { TranslatorsManager } from './OptionsPage.components/TranslatorsManager/TranslatorsManager';
 
 export const cnOptionsPage = cn('OptionsPage');
+
+export const OptionsModalsContext = createContext<
+	React.RefObject<HTMLDivElement> | undefined
+>(undefined);
 
 type Errors = null | Record<string, string>;
 
@@ -345,11 +357,12 @@ export const OptionsPage: FC<OptionsPageProps> = ({ messageHideDelay }) => {
 
 				<div ref={windowsStackRef} />
 
-				<TranslatorsManager
-					scope={windowsStackRef}
-					visible={isOpenCustomTranslatorsWindow}
-					onClose={() => setIsOpenCustomTranslatorsWindow(false)}
-				/>
+				<OptionsModalsContext.Provider value={windowsStackRef}>
+					<TranslatorsManager
+						visible={isOpenCustomTranslatorsWindow}
+						onClose={() => setIsOpenCustomTranslatorsWindow(false)}
+					/>
+				</OptionsModalsContext.Provider>
 			</div>
 		</Page>
 	);
