@@ -4,6 +4,8 @@ import React, { FC } from 'react';
 // TODO: move modal to local component
 import { Modal } from 'react-elegant-ui/components/Modal/Modal.bundle/desktop';
 import { Button } from '../../../../../components/Button/Button.bundle/universal';
+import { LayoutFlow } from '../../../../../components/LayoutFlow/LayoutFlow';
+import { ModalLayout } from '../../../../../components/ModalLayout/ModalLayout';
 
 import './TranslatorsManager.css';
 
@@ -33,35 +35,44 @@ export const TranslatorsManager: FC<{
 		},
 	];
 
-	// TODO: make default layouts. Title bar, buttons bar
 	return (
 		<Modal visible={visible} onClose={onClose} scope={scope} preventBodyScroll>
-			<div style={{ padding: '1rem' }}>
+			<ModalLayout
+				title={'Custom translators list'}
+				footer={<Button onPress={onClose}>Close</Button>}
+			>
 				<div className={cnTranslatorsManager({})}>
-					{translators.map(({ id, name }) => {
-						return (
-							<div
-								className={cnTranslatorsManager('TranslatorEntry')}
-								key={id}
-							>
-								<span
-									className={cnTranslatorsManager(
-										'TranslatorEntryName',
-									)}
+					<LayoutFlow direction="vertical" indent="m">
+						{translators.map(({ id, name }) => {
+							return (
+								<div
+									className={cnTranslatorsManager('TranslatorEntry')}
+									key={id}
 								>
-									{name}
-								</span>
+									<span
+										className={cnTranslatorsManager(
+											'TranslatorEntryName',
+										)}
+									>
+										{name}
+									</span>
 
-								<Button>Edit</Button>
-								<Button>Delete</Button>
-							</div>
-						);
-					})}
+									<LayoutFlow
+										direction="horizontal"
+										indent="m"
+										className={cnTranslatorsManager(
+											'TranslatorEntryControls',
+										)}
+									>
+										<Button>Edit</Button>
+										<Button>Delete</Button>
+									</LayoutFlow>
+								</div>
+							);
+						})}
+					</LayoutFlow>
 				</div>
-				<div style={{ padding: '1rem' }}>
-					<Button onPress={onClose}>Close</Button>
-				</div>
-			</div>
+			</ModalLayout>
 		</Modal>
 	);
 };
