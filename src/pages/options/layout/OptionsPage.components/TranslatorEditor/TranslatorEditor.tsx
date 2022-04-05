@@ -20,9 +20,15 @@ import { CustomTranslator } from '../TranslatorsManager/TranslatorsManager';
 
 const cnTranslatorsEditor = cn('TranslatorEditor');
 
+export type EditedCustomTranslator = Pick<
+	CustomTranslator,
+	Exclude<keyof CustomTranslator, 'id'>
+> &
+	Partial<Pick<CustomTranslator, 'id'>>;
+
 interface TranslatorEditorProps extends Pick<IModalProps, 'onClose'> {
-	translator: CustomTranslator;
-	onSave: (value: CustomTranslator) => void;
+	translator: CustomTranslator | null;
+	onSave: (value: EditedCustomTranslator) => void;
 }
 
 export const TranslatorEditor: FC<TranslatorEditorProps> = ({
@@ -37,17 +43,20 @@ export const TranslatorEditor: FC<TranslatorEditorProps> = ({
 
 	// Init
 	useEffect(() => {
+		if (translator === null) return;
 		setName(translator.name);
 		setCode(translator.code);
-	}, [translator.code, translator.name]);
+	}, [translator]);
 
 	const onSavePress = useImmutableCallback(() => {
+		const { id } = translator || {};
+
 		onSave({
-			id: translator.id,
+			id,
 			name,
 			code,
 		});
-	}, [code, name, onSave, translator.id]);
+	}, [code, name, onSave, translator]);
 
 	return (
 		<Modal visible={true} onClose={onClose} scope={scope} preventBodyScroll>

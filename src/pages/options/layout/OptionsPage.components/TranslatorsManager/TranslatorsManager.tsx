@@ -1,18 +1,27 @@
+import React, { FC, useCallback, useContext, useEffect, useState } from 'react';
 import { cn } from '@bem-react/classname';
-import React, { FC, useContext, useState } from 'react';
 
 // TODO: move modal to local component
 import { Modal } from 'react-elegant-ui/components/Modal/Modal.bundle/desktop';
 import { Button } from '../../../../../components/Button/Button.bundle/universal';
+import { Icon } from '../../../../../components/Icon/Icon.bundle/desktop';
 import { LayoutFlow } from '../../../../../components/LayoutFlow/LayoutFlow';
+import { Loader } from '../../../../../components/Loader/Loader';
 import { ModalLayout } from '../../../../../components/ModalLayout/ModalLayout';
+import { addTranslator } from '../../../../../requests/backend/translators/addTranslator';
+import { deleteTranslator } from '../../../../../requests/backend/translators/deleteTranslator';
+import { getTranslators } from '../../../../../requests/backend/translators/getTranslators';
+import { updateTranslator } from '../../../../../requests/backend/translators/updateTranslator';
 import { OptionsModalsContext } from '../../OptionsPage';
-import { TranslatorEditor } from '../TranslatorEditor/TranslatorEditor';
+import {
+	EditedCustomTranslator,
+	TranslatorEditor,
+} from '../TranslatorEditor/TranslatorEditor';
 
 import './TranslatorsManager.css';
 
 export type CustomTranslator = {
-	id: string;
+	id: number;
 	name: string;
 	code: string;
 };
@@ -25,90 +34,153 @@ export const TranslatorsManager: FC<{
 }> = ({ visible, onClose }) => {
 	const scope = useContext(OptionsModalsContext);
 
+	const [isEditorOpened, setIsEditorOpened] = useState(false);
 	const [editedTranslator, setEditedTranslator] = useState<CustomTranslator | null>(
 		null,
 	);
 
-	const translators: CustomTranslator[] = Array(15)
-		.fill(1)
-		.map((_, idx) => {
-			const id = idx + 1;
-			return {
-				id: '' + id,
-				name: 'TestTranslator #' + id,
-				code: 'some code of translator #' + id,
-			};
+	const [isLoading, setIsLoading] = useState(true);
+	const [translators, setTranslators] = useState<CustomTranslator[]>([]);
+
+	const addNewTranslator = useCallback(() => {
+		setEditedTranslator(null);
+		setIsEditorOpened(true);
+	}, []);
+
+	const updateTranslatorsList = useCallback(
+		() =>
+			getTranslators().then((translators) => {
+				setTranslators(translators.map(({ key: id, data }) => ({ id, ...data })));
+			}),
+		[],
+	);
+
+	const editTranslator = useCallback((translator: CustomTranslator) => {
+		setEditedTranslator(translator);
+		setIsEditorOpened(true);
+	}, []);
+
+	const closeEditor = useCallback(() => {
+		setEditedTranslator(null);
+		setIsEditorOpened(false);
+	}, []);
+
+	const deleteTranslatorWithConfirmation = useCallback(
+		(translator: CustomTranslator) => {
+			if (!confirm(`Are you sure about removing translator "${translator.name}"?`))
+				return;
+
+			deleteTranslator(translator.id).then(() => {
+				updateTranslatorsList();
+			});
+		},
+		[updateTranslatorsList],
+	);
+
+	const onSave = useCallback(
+		async (translator: EditedCustomTranslator) => {
+			const { id, name, code } = translator;
+
+			console.warn('onSave', translator);
+
+			if (id === undefined) {
+				await addTranslator({ name, code });
+			} else {
+				const data = { id, translator: { name, code } };
+				// FIXME: this code is not work
+				await updateTranslator(data);
+			}
+
+			await updateTranslatorsList();
+			closeEditor();
+		},
+		[closeEditor, updateTranslatorsList],
+	);
+
+	useEffect(() => {
+		console.warn('Start loading');
+
+		updateTranslatorsList().then(() => {
+			console.warn('Loaded');
+
+			setIsLoading(false);
 		});
+	}, [updateTranslatorsList]);
 
 	return (
 		<Modal visible={visible} onClose={onClose} scope={scope} preventBodyScroll>
-			<ModalLayout
-				title={'Custom translators list'}
-				footer={[
-					<Button
-						view="action"
-						onPress={() => {
-							setEditedTranslator({
-								id: '',
-								name: '',
-								code: '',
-							});
-						}}
-					>
-						Add new
-					</Button>,
-					<Button onPress={onClose}>Close</Button>,
-				]}
-			>
-				<div className={cnTranslatorsManager({})}>
-					<LayoutFlow direction="vertical" indent="m">
-						{translators.map((translatorInfo) => {
-							const { id, name } = translatorInfo;
+			{isLoading ? (
+				<Loader />
+			) : (
+				<ModalLayout
+					title={'Custom translators list'}
+					footer={[
+						<Button view="action" onPress={addNewTranslator}>
+							Add new
+						</Button>,
+						<Button onPress={onClose}>Close</Button>,
+					]}
+				>
+					<div className={cnTranslatorsManager({})}>
+						{translators.length !== 0
+							? undefined
+							: 'Custom translate modules is not defined yet'}
+						<LayoutFlow direction="vertical" indent="m">
+							{translators.map((translatorInfo) => {
+								const { id, name } = translatorInfo;
 
-							return (
-								<div
-									className={cnTranslatorsManager('TranslatorEntry')}
-									key={id}
-								>
-									<span
+								return (
+									<div
 										className={cnTranslatorsManager(
-											'TranslatorEntryName',
+											'TranslatorEntry',
 										)}
+										key={id}
 									>
-										{name}
-									</span>
-
-									<LayoutFlow
-										direction="horizontal"
-										indent="m"
-										className={cnTranslatorsManager(
-											'TranslatorEntryControls',
-										)}
-									>
-										<Button
-											onPress={() => {
-												setEditedTranslator(translatorInfo);
-											}}
+										<span
+											className={cnTranslatorsManager(
+												'TranslatorEntryName',
+											)}
 										>
-											Edit
-										</Button>
-										<Button>Delete</Button>
-									</LayoutFlow>
-								</div>
-							);
-						})}
-					</LayoutFlow>
-				</div>
-			</ModalLayout>
+											{name}
+										</span>
 
-			{editedTranslator === null ? undefined : (
+										<LayoutFlow
+											direction="horizontal"
+											indent="m"
+											className={cnTranslatorsManager(
+												'TranslatorEntryControls',
+											)}
+										>
+											<Button
+												onPress={() => {
+													editTranslator(translatorInfo);
+												}}
+											>
+												Edit
+											</Button>
+											<Button
+												onPress={() => {
+													deleteTranslatorWithConfirmation(
+														translatorInfo,
+													);
+												}}
+											>
+												<Icon glyph="delete" scalable={false} />
+											</Button>
+										</LayoutFlow>
+									</div>
+								);
+							})}
+						</LayoutFlow>
+					</div>
+				</ModalLayout>
+			)}
+
+			{isEditorOpened && (
 				<TranslatorEditor
 					translator={editedTranslator}
-					onClose={() => setEditedTranslator(null)}
-					onSave={(translator) => {
-						console.warn('Updated Translator', translator);
-						setEditedTranslator(null);
-					}}
+					onClose={closeEditor}
+					onSave={onSave}
 				/>
 			)}
 		</Modal>

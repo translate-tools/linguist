@@ -58,6 +58,8 @@ export const deleteEntry = async (entryId: number) => {
 
 export const updateEntry = async (id: number, entry: ITranslatorEntry) => {
 	const db = await getDB();
+
+	// FIXME: this code is not work
 	return db.put('translators', entry, id);
 };
 
@@ -69,12 +71,12 @@ export const updateEntry = async (id: number, entry: ITranslatorEntry) => {
 // 	await transaction.done;
 // };
 
-export const getEntries = async (
-	from?: number,
-	limit?: number,
-	options?: { order: 'desc' | 'asc' },
-) => {
-	const { order = 'desc' } = options ?? {};
+export const getEntries = async (options?: {
+	from?: number;
+	limit?: number;
+	order: 'desc' | 'asc';
+}) => {
+	const { from, limit, order = 'desc' } = options ?? {};
 
 	const db = await getDB();
 
