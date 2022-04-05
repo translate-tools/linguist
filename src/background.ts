@@ -41,6 +41,11 @@ import { deleteTranslationFactory } from './requests/backend/translations/delete
 import { getTranslationsFactory } from './requests/backend/translations/getTranslations';
 import { clearTranslationsFactory } from './requests/backend/translations/clearTranslations';
 
+import { addTranslatorFactory } from './requests/backend/translators/addTranslator';
+import { deleteTranslatorFactory } from './requests/backend/translators/deleteTranslator';
+import { updateTranslatorFactory } from './requests/backend/translators/updateTranslator';
+import { getTranslatorsFactory } from './requests/backend/translators/getTranslators';
+
 // Make async context
 (async () => {
 	// Migrate data
@@ -125,6 +130,11 @@ import { clearTranslationsFactory } from './requests/backend/translations/clearT
 			findTranslationFactory,
 			getTranslationsFactory,
 			clearTranslationsFactory,
+
+			addTranslatorFactory,
+			deleteTranslatorFactory,
+			updateTranslatorFactory,
+			getTranslatorsFactory,
 
 			// Up ping last to give success response only when all request handlers is ready
 			pingFactory,
