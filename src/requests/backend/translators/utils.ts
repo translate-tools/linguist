@@ -1,0 +1,46 @@
+import {
+	TranslatorClass,
+	BaseTranslator as ExternalBaseTranslator,
+} from '@translate-tools/core/types/Translator';
+
+// TODO: write translator API docs
+export const loadTranslator = (code: string) => {
+	// Define API variables which available for custom translators
+	// @ts-ignore
+	const BaseTranslator = ExternalBaseTranslator;
+
+	const translatorClass = eval(code);
+
+	if (typeof translatorClass !== 'function') {
+		throw new TypeError('Type of object must be callable');
+	}
+
+	let instance: any;
+	try {
+		instance = new translatorClass();
+	} catch (error) {
+		console.error(error);
+		throw new Error('Error while create instance of translator');
+	}
+
+	// Validate methods
+	const requiredMethods = [
+		'translate',
+		'translateBatch',
+		'getLengthLimit',
+		'getRequestsTimeout',
+		'isSupportedAutoFrom',
+		'checkLimitExceeding',
+	];
+
+	requiredMethods.forEach((key) => {
+		if (!(key in instance)) {
+			throw new TypeError(`Translator method "${key}" is not defined`);
+		}
+		if (typeof instance[key] !== 'function') {
+			throw new TypeError(`Translator instance member "${key}" is not a function`);
+		}
+	});
+
+	return translatorClass as TranslatorClass;
+};

@@ -2,6 +2,7 @@ import { buildBackendRequest } from '../../utils/requestBuilder';
 import { type } from '../../../lib/types';
 
 import * as db from './data';
+import { loadTranslator } from './utils';
 
 export const [updateTranslatorFactory, updateTranslator] = buildBackendRequest(
 	'updateTranslator',
@@ -17,7 +18,8 @@ export const [updateTranslatorFactory, updateTranslator] = buildBackendRequest(
 		factoryHandler:
 			() =>
 				async ({ id, translator }) => {
-				// TODO: validate the code
+					loadTranslator(translator.code);
+
 					await db.updateTranslator(id, translator);
 				},
 	},

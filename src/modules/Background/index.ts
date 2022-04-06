@@ -28,9 +28,12 @@ export const translatorModules = {
 	BingTranslatorPublic,
 } as const;
 
-export const isValidNativeTranslatorModuleName = (name: string) =>
-	name in translatorModules;
+// export const isValidNativeTranslatorModuleName = (name: string) =>
+// 	name in translatorModules;
+export const isValidNativeTranslatorModuleName = (_name: string) => true;
 
+// NOTE: At this time all this file is early PoC and MUST BE NOT USED for production
+// TODO: implement logic for custom translators
 export class Background {
 	private readonly registry: Registry = {};
 	private readonly config: ConfigStorage;
@@ -39,6 +42,14 @@ export class Background {
 
 		this.init();
 	}
+
+	private customTranslators: Record<string, any> = {};
+	public updateCustomTranslatorsList = (translators: Record<string, any>) => {
+		console.warn('UPDATE translators', translators);
+
+		this.customTranslators = translators;
+		this.makeScheduler(true);
+	};
 
 	private async init() {
 		// Await config loading
@@ -120,7 +131,17 @@ export class Background {
 				`Translator builder can't make translator by key "${translatorName}"`,
 			);
 		}
-		this.registry.translator = new translatorModules[translatorName]();
+
+		const customTranslatorsNames = Object.keys(this.customTranslators);
+		if (customTranslatorsNames.length > 0) {
+			console.warn('USE CUSTOM TRANSLATOR');
+
+			const translatorClass: any =
+				this.customTranslators[customTranslatorsNames[0]];
+			this.registry.translator = new translatorClass();
+		} else {
+			this.registry.translator = new translatorModules[translatorName]();
+		}
 	};
 
 	private makeCache = async (force = false) => {

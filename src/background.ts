@@ -45,6 +45,7 @@ import { addTranslatorFactory } from './requests/backend/translators/addTranslat
 import { deleteTranslatorFactory } from './requests/backend/translators/deleteTranslator';
 import { updateTranslatorFactory } from './requests/backend/translators/updateTranslator';
 import { getTranslatorsFactory } from './requests/backend/translators/getTranslators';
+import { applyTranslatorsFactory } from './requests/backend/translators/applyTranslators';
 
 // Make async context
 (async () => {
@@ -135,6 +136,7 @@ import { getTranslatorsFactory } from './requests/backend/translators/getTransla
 			deleteTranslatorFactory,
 			updateTranslatorFactory,
 			getTranslatorsFactory,
+			applyTranslatorsFactory,
 
 			// Up ping last to give success response only when all request handlers is ready
 			pingFactory,

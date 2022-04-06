@@ -19,6 +19,7 @@ import {
 } from '../TranslatorEditor/TranslatorEditor';
 
 import './TranslatorsManager.css';
+import { applyTranslators } from '../../../../../requests/backend/translators/applyTranslators';
 
 export type CustomTranslator = {
 	id: number;
@@ -34,6 +35,7 @@ export const TranslatorsManager: FC<{
 }> = ({ visible, onClose }) => {
 	const scope = useContext(OptionsModalsContext);
 
+	const [editorError, setEditorError] = useState<string | null>(null);
 	const [isEditorOpened, setIsEditorOpened] = useState(false);
 	const [editedTranslator, setEditedTranslator] = useState<CustomTranslator | null>(
 		null,
@@ -61,6 +63,7 @@ export const TranslatorsManager: FC<{
 	}, []);
 
 	const closeEditor = useCallback(() => {
+		setEditorError(null);
 		setEditedTranslator(null);
 		setIsEditorOpened(false);
 	}, []);
@@ -83,14 +86,25 @@ export const TranslatorsManager: FC<{
 
 			console.warn('onSave', translator);
 
-			if (id === undefined) {
-				await addTranslator({ name, code });
-			} else {
-				const data = { id, translator: { name, code } };
-				await updateTranslator(data);
+			// await new Promise((res) => setTimeout(res, 1000));
+			setEditorError(null);
+			try {
+				if (id === undefined) {
+					await addTranslator({ name, code });
+				} else {
+					const data = { id, translator: { name, code } };
+					await updateTranslator(data);
+				}
+			} catch (error) {
+				if (error instanceof Error) {
+					setEditorError(error.message);
+				}
+
+				return;
 			}
 
 			await updateTranslatorsList();
+			await applyTranslators();
 			closeEditor();
 		},
 		[closeEditor, updateTranslatorsList],
@@ -180,6 +194,7 @@ export const TranslatorsManager: FC<{
 					translator={editedTranslator}
 					onClose={closeEditor}
 					onSave={onSave}
+					error={editorError}
 				/>
 			)}
 		</Modal>

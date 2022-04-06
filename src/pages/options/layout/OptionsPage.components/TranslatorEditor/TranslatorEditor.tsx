@@ -29,12 +29,14 @@ export type EditedCustomTranslator = Pick<
 interface TranslatorEditorProps extends Pick<IModalProps, 'onClose'> {
 	translator: CustomTranslator | null;
 	onSave: (value: EditedCustomTranslator) => void;
+	error: null | string;
 }
 
 export const TranslatorEditor: FC<TranslatorEditorProps> = ({
 	translator,
 	onClose,
 	onSave,
+	error,
 }) => {
 	const scope = useContext(OptionsModalsContext);
 
@@ -84,6 +86,10 @@ export const TranslatorEditor: FC<TranslatorEditorProps> = ({
 								}}
 							/>
 						</LayoutFlow>
+
+						{error && (
+							<div className={cnTranslatorsEditor('Error')}>{error}</div>
+						)}
 					</LayoutFlow>
 				</div>
 			</ModalLayout>
