@@ -45,31 +45,23 @@ const getDB = async () => {
 	return DBInstance;
 };
 
-export const addEntry = async (entry: ITranslatorEntry) => {
+export const addTranslator = async (entry: ITranslatorEntry) => {
 	const db = await getDB();
 	return db.add('translators', entry);
 };
 
-export const deleteEntry = async (entryId: number) => {
+export const deleteTranslator = async (entryId: number) => {
 	const db = await getDB();
 	return db.delete('translators', entryId);
 };
 
-export const updateEntry = async (id: number, entry: ITranslatorEntry) => {
+export const updateTranslator = async (id: number, entry: ITranslatorEntry) => {
 	const db = await getDB();
 
 	return db.put('translators', entry, id);
 };
 
-// export const flush = async () => {
-// 	const db = await getDB();
-// 	const transaction = await db.transaction('translators', 'readwrite');
-
-// 	await transaction.store.delete(IDBKeyRange.lowerBound(0));
-// 	await transaction.done;
-// };
-
-export const getEntries = async (options?: {
+export const getTranslators = async (options?: {
 	from?: number;
 	limit?: number;
 	order: 'desc' | 'asc';

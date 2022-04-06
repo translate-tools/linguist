@@ -1,7 +1,7 @@
 import { buildBackendRequest } from '../../utils/requestBuilder';
 import { type } from '../../../lib/types';
 
-import { deleteEntry } from './data';
+import * as db from './data';
 
 export const [deleteTranslatorFactory, deleteTranslator] = buildBackendRequest(
 	'deleteTranslator',
@@ -9,7 +9,7 @@ export const [deleteTranslatorFactory, deleteTranslator] = buildBackendRequest(
 		requestValidator: type.number,
 
 		factoryHandler: () => async (translatorId) => {
-			await deleteEntry(translatorId);
+			await db.deleteTranslator(translatorId);
 		},
 	},
 );

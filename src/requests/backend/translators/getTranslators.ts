@@ -1,10 +1,10 @@
 import { buildBackendRequest } from '../../utils/requestBuilder';
 
-import { getEntries } from './data';
+import * as db from './data';
 
 export const [getTranslatorsFactory, getTranslators] = buildBackendRequest(
 	'getTranslators',
 	{
-		factoryHandler: () => () => getEntries({ order: 'asc' }),
+		factoryHandler: () => () => db.getTranslators({ order: 'asc' }),
 	},
 );

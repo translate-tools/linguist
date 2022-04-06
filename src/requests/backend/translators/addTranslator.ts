@@ -1,7 +1,7 @@
 import { buildBackendRequest } from '../../utils/requestBuilder';
 import { type } from '../../../lib/types';
 
-import { addEntry } from './data';
+import * as db from './data';
 
 export const [addTranslatorFactory, addTranslator] = buildBackendRequest(
 	'addTranslator',
@@ -13,7 +13,7 @@ export const [addTranslatorFactory, addTranslator] = buildBackendRequest(
 
 		factoryHandler: () => async (data) => {
 			// TODO: validate the code
-			await addEntry(data);
+			await db.addTranslator(data);
 		},
 	},
 );
