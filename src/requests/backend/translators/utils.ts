@@ -27,10 +27,9 @@ export const loadTranslator = (code: string) => {
 	const requiredMethods = [
 		'translate',
 		'translateBatch',
+		'checkLimitExceeding',
 		'getLengthLimit',
 		'getRequestsTimeout',
-		'isSupportedAutoFrom',
-		'checkLimitExceeding',
 	];
 
 	requiredMethods.forEach((key) => {
@@ -39,6 +38,18 @@ export const loadTranslator = (code: string) => {
 		}
 		if (typeof instance[key] !== 'function') {
 			throw new TypeError(`Translator instance member "${key}" is not a function`);
+		}
+	});
+
+	// Validate static methods
+	const requiredStaticMethods = ['isSupportedAutoFrom', 'getSupportedLanguages'];
+
+	requiredStaticMethods.forEach((key) => {
+		if (!(key in translatorClass)) {
+			throw new TypeError(`Translator static method "${key}" is not defined`);
+		}
+		if (typeof translatorClass[key] !== 'function') {
+			throw new TypeError(`Translator static member "${key}" is not a function`);
 		}
 	});
 

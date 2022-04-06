@@ -29,10 +29,12 @@ export type CustomTranslator = {
 
 const cnTranslatorsManager = cn('TranslatorsManager');
 
+// TODO: add info about use
 export const TranslatorsManager: FC<{
 	visible: boolean;
 	onClose: () => void;
-}> = ({ visible, onClose }) => {
+	updateConfig: () => void;
+}> = ({ visible, onClose, updateConfig }) => {
 	const scope = useContext(OptionsModalsContext);
 
 	const [editorError, setEditorError] = useState<string | null>(null);
@@ -49,13 +51,13 @@ export const TranslatorsManager: FC<{
 		setIsEditorOpened(true);
 	}, []);
 
-	const updateTranslatorsList = useCallback(
-		() =>
-			getTranslators().then((translators) => {
-				setTranslators(translators.map(({ key: id, data }) => ({ id, ...data })));
-			}),
-		[],
-	);
+	const updateTranslatorsList = useCallback(async () => {
+		updateConfig();
+
+		await getTranslators().then((translators) => {
+			setTranslators(translators.map(({ key: id, data }) => ({ id, ...data })));
+		});
+	}, [updateConfig]);
 
 	const editTranslator = useCallback((translator: CustomTranslator) => {
 		setEditedTranslator(translator);

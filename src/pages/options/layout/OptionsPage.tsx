@@ -37,6 +37,7 @@ import { PageSection } from './PageSection/PageSection';
 
 import './OptionsPage.css';
 import { TranslatorsManager } from './OptionsPage.components/TranslatorsManager/TranslatorsManager';
+import { getTranslators } from '../../../requests/backend/translators/getTranslators';
 
 export const cnOptionsPage = cn('OptionsPage');
 
@@ -69,16 +70,22 @@ export const OptionsPage: FC<OptionsPageProps> = ({ messageHideDelay }) => {
 		Record<string, string> | undefined
 	>();
 
-	const updateConfig = useCallback(
-		() =>
-			getConfig().then(async (config) => {
-				const translatorModules = await getTranslatorModules();
-				setLoaded(true);
-				setConfig(config);
-				setTranslatorModules(translatorModules);
-			}),
-		[],
-	);
+	const updateConfig = useCallback(() => {
+		(async () => {
+			const config = await getConfig();
+			const translatorModules = await getTranslatorModules();
+
+			// Add custom translators
+			const customTranslatorModules = await getTranslators();
+			customTranslatorModules.forEach(({ key, data }) => {
+				translatorModules['#' + key] = data.name;
+			});
+
+			setLoaded(true);
+			setConfig(config);
+			setTranslatorModules(translatorModules);
+		})();
+	}, []);
 
 	//
 	// Messages broker
@@ -361,6 +368,7 @@ export const OptionsPage: FC<OptionsPageProps> = ({ messageHideDelay }) => {
 					<TranslatorsManager
 						visible={isOpenCustomTranslatorsWindow}
 						onClose={() => setIsOpenCustomTranslatorsWindow(false)}
+						updateConfig={updateConfig}
 					/>
 				</OptionsModalsContext.Provider>
 			</div>

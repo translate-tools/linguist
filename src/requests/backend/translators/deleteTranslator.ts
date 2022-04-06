@@ -10,6 +10,7 @@ export const [deleteTranslatorFactory, deleteTranslator] = buildBackendRequest(
 
 		factoryHandler: () => async (translatorId) => {
 			await db.deleteTranslator(translatorId);
+			// TODO: call `applyTranslators`
 		},
 	},
 );
