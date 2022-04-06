@@ -87,7 +87,6 @@ export const TranslatorsManager: FC<{
 				await addTranslator({ name, code });
 			} else {
 				const data = { id, translator: { name, code } };
-				// FIXME: this code is not work
 				await updateTranslator(data);
 			}
 

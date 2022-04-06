@@ -36,7 +36,6 @@ const getDB = async () => {
 		DBInstance = await IDB.openDB<DBSchema>(DBName, 1, {
 			upgrade(db) {
 				db.createObjectStore('translators', {
-					keyPath: 'id',
 					autoIncrement: true,
 				});
 			},
@@ -59,7 +58,6 @@ export const deleteEntry = async (entryId: number) => {
 export const updateEntry = async (id: number, entry: ITranslatorEntry) => {
 	const db = await getDB();
 
-	// FIXME: this code is not work
 	return db.put('translators', entry, id);
 };
 
