@@ -8,6 +8,7 @@ import { sendConfigUpdateEvent } from './modules/ContentScript';
 import { AppThemeControl } from './lib/browser/AppThemeControl';
 import { toggleTranslateItemInContextMenu } from './lib/browser/toggleTranslateItemInContextMenu';
 import { StateManager } from './lib/StateManager';
+import { isBackgroundContext } from './lib/browser';
 
 import { migrateAll } from './migrations/migrationsList';
 
@@ -144,8 +145,7 @@ import { applyTranslatorsFactory } from './requests/backend/translators/applyTra
 
 		// Prevent run it again on other pages, such as options page
 		// NOTE: on options page function `resetConfigFactory` is undefined. How it work?
-		const backgroundPagePath = '/_generated_background_page.html';
-		if (location.pathname === backgroundPagePath) {
+		if (isBackgroundContext()) {
 			factories.forEach((factory) => {
 				factory({ cfg, bg, translatorModules: translatorModules as any });
 			});

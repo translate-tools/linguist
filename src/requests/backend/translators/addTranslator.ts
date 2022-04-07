@@ -3,6 +3,7 @@ import { type } from '../../../lib/types';
 
 import * as db from './data';
 import { loadTranslator } from './utils';
+import { applyTranslators } from './applyTranslators';
 
 export const [addTranslatorFactory, addTranslator] = buildBackendRequest(
 	'addTranslator',
@@ -16,6 +17,7 @@ export const [addTranslatorFactory, addTranslator] = buildBackendRequest(
 			loadTranslator(data.code);
 
 			await db.addTranslator(data);
+			await applyTranslators();
 		},
 	},
 );

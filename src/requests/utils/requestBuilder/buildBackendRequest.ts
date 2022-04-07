@@ -2,6 +2,7 @@ import * as t from 'io-ts';
 
 import { RequestHandlerFactory, RequestHandlerFactoryProps } from '../../types';
 import { tryDecode } from '../../../lib/types';
+import { isBackgroundContext } from '../../../lib/browser';
 
 import { sendBackgroundRequest, addRequestHandler } from '..';
 
@@ -18,8 +19,20 @@ export const buildBackendRequest = <O = void, R = void>(
 	endpoint: string,
 	{ factoryHandler, requestValidator, responseValidator }: BackgroundOptions<O, R>,
 ) => {
-	const hook = (options: O) =>
-		sendBackgroundRequest(endpoint, options).then((response): R => {
+	let localHandler: ((options: O) => Promise<R>) | null = null;
+
+	const hook = (options: O) => {
+		// Call handler directly for invokes from background context
+		if (isBackgroundContext()) {
+			if (localHandler === null) {
+				throw new Error('Request handler is not initialized');
+			}
+
+			return localHandler(options);
+		}
+
+		// Send request
+		return sendBackgroundRequest(endpoint, options).then((response): R => {
 			// Validate request props
 			if (responseValidator !== undefined) {
 				tryDecode(responseValidator, response);
@@ -27,11 +40,13 @@ export const buildBackendRequest = <O = void, R = void>(
 
 			return response;
 		});
+	};
 
 	const factory: RequestHandlerFactory = (factoryProps) => {
 		const handler = factoryHandler(factoryProps);
 
-		return addRequestHandler(endpoint, async (reqProps) => {
+		localHandler = handler;
+		const cleanup = addRequestHandler(endpoint, async (reqProps) => {
 			// Validate request props
 			if (requestValidator !== undefined) {
 				tryDecode(requestValidator, reqProps);
@@ -39,6 +54,11 @@ export const buildBackendRequest = <O = void, R = void>(
 
 			return handler(reqProps);
 		});
+
+		return () => {
+			localHandler = null;
+			cleanup();
+		};
 	};
 
 	return [factory, hook as (options: O) => Promise<R>] as const;

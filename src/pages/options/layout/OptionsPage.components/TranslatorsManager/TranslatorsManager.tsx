@@ -19,7 +19,6 @@ import {
 } from '../TranslatorEditor/TranslatorEditor';
 
 import './TranslatorsManager.css';
-import { applyTranslators } from '../../../../../requests/backend/translators/applyTranslators';
 
 export type CustomTranslator = {
 	id: number;
@@ -106,7 +105,6 @@ export const TranslatorsManager: FC<{
 			}
 
 			await updateTranslatorsList();
-			await applyTranslators();
 			closeEditor();
 		},
 		[closeEditor, updateTranslatorsList],

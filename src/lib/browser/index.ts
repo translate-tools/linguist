@@ -42,6 +42,8 @@ export function getPageLanguageFromMeta() {
 
 export const isFirefox = () => /firefox/i.test(navigator.userAgent);
 export const isChromium = () => /chrome/i.test(navigator.userAgent);
+export const isBackgroundContext = () =>
+	location.pathname === '/_generated_background_page.html';
 
 /**
  * By default detect lang by meta, but while `detectByContent` is `true` its try detect lang by content
