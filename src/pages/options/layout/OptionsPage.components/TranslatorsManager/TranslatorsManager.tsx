@@ -125,16 +125,16 @@ export const TranslatorsManager: FC<{
 			{isLoading ? (
 				<Loader />
 			) : (
-				<ModalLayout
-					title={'Custom translators list'}
-					footer={[
-						<Button view="action" onPress={addNewTranslator}>
-							Add new
-						</Button>,
-						<Button onPress={onClose}>Close</Button>,
-					]}
-				>
-					<div className={cnTranslatorsManager({})}>
+				<div className={cnTranslatorsManager({})}>
+					<ModalLayout
+						title={'Custom translators list'}
+						footer={[
+							<Button view="action" onPress={addNewTranslator}>
+								Add new
+							</Button>,
+							<Button onPress={onClose}>Close</Button>,
+						]}
+					>
 						{translators.length !== 0
 							? undefined
 							: 'Custom translate modules is not defined yet'}
@@ -185,8 +185,8 @@ export const TranslatorsManager: FC<{
 								);
 							})}
 						</LayoutFlow>
-					</div>
-				</ModalLayout>
+					</ModalLayout>
+				</div>
 			)}
 
 			{isEditorOpened && (

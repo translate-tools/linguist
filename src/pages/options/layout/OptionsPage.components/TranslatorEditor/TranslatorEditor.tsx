@@ -72,15 +72,15 @@ export const TranslatorEditor: FC<TranslatorEditorProps> = ({
 
 	return (
 		<Modal visible={true} onClose={onClose} scope={scope} preventBodyScroll>
-			<ModalLayout
-				footer={[
-					<Button view="action" onPress={onSavePress}>
-						Save
-					</Button>,
-					<Button onPress={onClose as any}>Close</Button>,
-				]}
-			>
-				<div className={cnTranslatorsEditor({})}>
+			<div className={cnTranslatorsEditor({})}>
+				<ModalLayout
+					footer={[
+						<Button view="action" onPress={onSavePress}>
+							Save
+						</Button>,
+						<Button onPress={onClose as any}>Close</Button>,
+					]}
+				>
 					<LayoutFlow direction="vertical" indent="l">
 						<LayoutFlow direction="vertical" indent="m">
 							<div>Name</div>
@@ -103,8 +103,8 @@ export const TranslatorEditor: FC<TranslatorEditorProps> = ({
 							</div>
 						)}
 					</LayoutFlow>
-				</div>
-			</ModalLayout>
+				</ModalLayout>
+			</div>
 		</Modal>
 	);
 };
