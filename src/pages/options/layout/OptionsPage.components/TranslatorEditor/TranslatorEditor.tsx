@@ -2,16 +2,13 @@ import React, { FC, useContext, useEffect, useState } from 'react';
 import { cn } from '@bem-react/classname';
 import { useImmutableCallback } from 'react-elegant-ui/esm/hooks/useImmutableCallback';
 
-import {
-	Modal,
-	IModalProps,
-} from 'react-elegant-ui/components/Modal/Modal.bundle/desktop';
 import { Button } from '../../../../../components/Button/Button.bundle/universal';
-import { LayoutFlow } from '../../../../../components/LayoutFlow/LayoutFlow';
-import { ModalLayout } from '../../../../../components/ModalLayout/ModalLayout';
-
 import { Textinput } from '../../../../../components/Textinput/Textinput.bundle/desktop';
 import { Textarea } from '../../../../../components/Textarea/Textarea.bundle/desktop';
+
+import { LayoutFlow } from '../../../../../components/LayoutFlow/LayoutFlow';
+import { ModalLayout } from '../../../../../components/ModalLayout/ModalLayout';
+import { IModalProps, Modal } from '../../../../../components/Modal/Modal.bundle/desktop';
 
 import { OptionsModalsContext } from '../../OptionsPage';
 

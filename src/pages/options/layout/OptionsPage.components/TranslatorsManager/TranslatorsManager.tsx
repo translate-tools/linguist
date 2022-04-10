@@ -1,13 +1,13 @@
 import React, { FC, useCallback, useContext, useEffect, useState } from 'react';
 import { cn } from '@bem-react/classname';
 
-// TODO: move modal to local component
-import { Modal } from 'react-elegant-ui/components/Modal/Modal.bundle/desktop';
 import { Button } from '../../../../../components/Button/Button.bundle/universal';
 import { Icon } from '../../../../../components/Icon/Icon.bundle/desktop';
 import { LayoutFlow } from '../../../../../components/LayoutFlow/LayoutFlow';
 import { Loader } from '../../../../../components/Loader/Loader';
+import { Modal } from '../../../../../components/Modal/Modal.bundle/desktop';
 import { ModalLayout } from '../../../../../components/ModalLayout/ModalLayout';
+
 import { addTranslator } from '../../../../../requests/backend/translators/addTranslator';
 import { deleteTranslator } from '../../../../../requests/backend/translators/deleteTranslator';
 import { getTranslators } from '../../../../../requests/backend/translators/getTranslators';

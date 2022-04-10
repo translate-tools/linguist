@@ -1,0 +1,18 @@
+.Modal-Table {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-sizing: border-box;
+	flex-wrap: wrap;
+}
+
+.Modal-Cell {
+	max-width: 100%;
+	padding: var(--modal-size-m-content-indent);
+	box-sizing: border-box;
+}
+
+.Modal-Content.Modal-Content {
+	max-width: 100%;
+	margin: 0;
+}
