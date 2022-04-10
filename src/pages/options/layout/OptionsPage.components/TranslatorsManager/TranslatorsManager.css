@@ -1,5 +1,6 @@
 .TranslatorsManager {
 	min-width: 400px;
+	max-width: 600px;
 }
 
 .TranslatorsManager-TranslatorEntry {
@@ -11,6 +12,9 @@
 .TranslatorsManager-TranslatorEntryName {
 	width: 100%;
 	padding: 0 0.3rem;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
 }
 
 .TranslatorsManager-TranslatorEntryControls {

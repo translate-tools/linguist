@@ -9,6 +9,8 @@ import {
 } from 'react-elegant-ui/esm/components/Button/Button';
 import { Defaultize } from 'react-elegant-ui/esm/types/utility-types';
 
+import './Button.css';
+
 export * from 'react-elegant-ui/esm/components/Button/Button';
 
 export const defaultProps = {
