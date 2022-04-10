@@ -1,6 +1,6 @@
 import * as IDB from 'idb/with-async-ittr';
 
-import { type } from '../../../lib/types';
+import { StringPatternType, type } from '../../../lib/types';
 
 export type ITranslatorEntry = {
 	name: string;
@@ -8,16 +8,11 @@ export type ITranslatorEntry = {
 };
 
 export const TranslatorEntry = type.type({
-	name: type.string,
+	name: StringPatternType(/[^\s]/),
 	code: type.string,
 });
 
 export type IEntryWithKey = { key: number; data: ITranslatorEntry };
-
-export const EntryWithKey = type.type({
-	key: type.number,
-	data: TranslatorEntry,
-});
 
 export interface DBSchema extends IDB.DBSchema {
 	translators: {

@@ -90,3 +90,14 @@ export const StringLiteralType = <T extends string>(stringOfType: T) =>
 				: type.failure(input, context),
 		type.identity,
 	);
+
+export const StringPatternType = <T extends string = string>(pattern: RegExp) =>
+	new type.Type(
+		`StringPatternType["${pattern.source}"]`,
+		(input: unknown): input is T => typeof input === 'string' && pattern.test(input),
+		(input, context) =>
+			typeof input === 'string' && pattern.test(input)
+				? type.success(input as T)
+				: type.failure(input, context),
+		type.identity,
+	);

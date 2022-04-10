@@ -43,6 +43,12 @@ export const TranslatorEditor: FC<TranslatorEditorProps> = ({
 	const [name, setName] = useState('');
 	const [code, setCode] = useState('');
 
+	// Local error are reset while update outer error
+	const [localError, setLocalError] = useState<string | null>(null);
+	useEffect(() => {
+		setLocalError(null);
+	}, [error]);
+
 	// Init
 	useEffect(() => {
 		if (translator === null) return;
@@ -53,12 +59,19 @@ export const TranslatorEditor: FC<TranslatorEditorProps> = ({
 	const onSavePress = useImmutableCallback(() => {
 		const { id } = translator || {};
 
+		if (name.trim().length < 1) {
+			setLocalError('Name must contain at least 1 symbol');
+			return;
+		}
+
 		onSave({
 			id,
 			name,
 			code,
 		});
 	}, [code, name, onSave, translator]);
+
+	const actualError = localError || error;
 
 	return (
 		<Modal visible={true} onClose={onClose} scope={scope} preventBodyScroll>
@@ -87,8 +100,10 @@ export const TranslatorEditor: FC<TranslatorEditorProps> = ({
 							/>
 						</LayoutFlow>
 
-						{error && (
-							<div className={cnTranslatorsEditor('Error')}>{error}</div>
+						{actualError && (
+							<div className={cnTranslatorsEditor('Error')}>
+								{actualError}
+							</div>
 						)}
 					</LayoutFlow>
 				</div>

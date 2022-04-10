@@ -2,6 +2,7 @@ import { buildBackendRequest } from '../../utils/requestBuilder';
 import { type } from '../../../lib/types';
 
 import * as db from './data';
+import { TranslatorEntry } from './data';
 import { loadTranslator } from './utils';
 import { applyTranslators } from './applyTranslators';
 
@@ -10,10 +11,7 @@ export const [updateTranslatorFactory, updateTranslator] = buildBackendRequest(
 	{
 		requestValidator: type.type({
 			id: type.number,
-			translator: type.type({
-				name: type.string,
-				code: type.string,
-			}),
+			translator: TranslatorEntry,
 		}),
 
 		factoryHandler:
