@@ -1,8 +1,3 @@
-import { EventManager } from '../../lib/EventManager';
-
-import { ConfigStorage } from '../ConfigStorage/ConfigStorage';
-import { TranslatorsCacheStorage } from './TranslatorsCacheStorage';
-
 // Schedulers
 import {
 	IScheduler,
@@ -16,6 +11,11 @@ import { GoogleTranslator } from '@translate-tools/core/translators/GoogleTransl
 import { YandexTranslator } from '@translate-tools/core/translators/YandexTranslator';
 import { BingTranslatorPublic } from '@translate-tools/core/translators/unstable/BingTranslatorPublic';
 import { TranslatorClass } from '@translate-tools/core/types/Translator';
+
+import { EventManager } from '../../lib/EventManager';
+
+import { ConfigStorage } from '../ConfigStorage/ConfigStorage';
+import { TranslatorsCacheStorage } from './TranslatorsCacheStorage';
 
 interface Registry {
 	translator?: BaseTranslator;
@@ -31,18 +31,13 @@ export const translatorModules = {
 
 export const DEFAULT_TRANSLATOR = 'GoogleTranslator';
 
-// export const isValidNativeTranslatorModuleName = (name: string) =>
-// 	name in translatorModules;
-export const isValidNativeTranslatorModuleName = (_name: string) => true;
-
-// NOTE: At this time all this file is early PoC and MUST BE NOT USED for production
-// TODO: keep actual translator always
+// TODO: refactor translator management
 export class Background {
 	private readonly registry: Registry = {};
+
 	private readonly config: ConfigStorage;
 	constructor(config: ConfigStorage) {
 		this.config = config;
-
 		this.init();
 	}
 
@@ -153,6 +148,7 @@ export class Background {
 	private makeScheduler = async (force = false) => {
 		if (this.registry.scheduler !== undefined && !force) return;
 
+		// TODO: check context loss after awaiting
 		await this.makeTranslator(force);
 		const translator = this.registry.translator;
 

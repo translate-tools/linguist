@@ -3,7 +3,6 @@ import {
 	BaseTranslator as ExternalBaseTranslator,
 } from '@translate-tools/core/types/Translator';
 
-// TODO: write translator API docs
 export const loadTranslator = (code: string) => {
 	// Define API variables which available for custom translators
 	// @ts-ignore

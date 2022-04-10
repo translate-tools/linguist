@@ -28,7 +28,6 @@ export type CustomTranslator = {
 
 const cnTranslatorsManager = cn('TranslatorsManager');
 
-// TODO: add info about use
 export const TranslatorsManager: FC<{
 	visible: boolean;
 	onClose: () => void;
@@ -85,8 +84,6 @@ export const TranslatorsManager: FC<{
 		async (translator: EditedCustomTranslator) => {
 			const { id, name, code } = translator;
 
-			console.warn('onSave', translator);
-
 			// await new Promise((res) => setTimeout(res, 1000));
 			setEditorError(null);
 			try {
@@ -111,11 +108,7 @@ export const TranslatorsManager: FC<{
 	);
 
 	useEffect(() => {
-		console.warn('Start loading');
-
 		updateTranslatorsList().then(() => {
-			console.warn('Loaded');
-
 			setIsLoading(false);
 		});
 	}, [updateTranslatorsList]);
