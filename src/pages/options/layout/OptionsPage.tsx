@@ -14,6 +14,7 @@ import { AppConfigType } from '../../../types/runtime';
 
 import { getMessage } from '../../../lib/language';
 import { openFileDialog, readAsText, saveFile } from '../../../lib/files';
+import { getTranslatorNameById } from '../../../modules/Background';
 
 // Requests
 import { clearCache as clearCacheReq } from '../../../requests/backend/clearCache';
@@ -23,6 +24,7 @@ import { ping } from '../../../requests/backend/ping';
 import { resetConfig as resetConfigReq } from '../../../requests/backend/resetConfig';
 import { setConfig as setConfigReq } from '../../../requests/backend/setConfig';
 import { updateConfig as updateConfigReq } from '../../../requests/backend/updateConfig';
+import { getTranslators } from '../../../requests/backend/translators/getTranslators';
 
 import { Button } from '../../../components/Button/Button.bundle/universal';
 import { LayoutFlow } from '../../../components/LayoutFlow/LayoutFlow';
@@ -37,7 +39,6 @@ import { PageSection } from './PageSection/PageSection';
 
 import './OptionsPage.css';
 import { TranslatorsManager } from './OptionsPage.components/TranslatorsManager/TranslatorsManager';
-import { getTranslators } from '../../../requests/backend/translators/getTranslators';
 
 export const cnOptionsPage = cn('OptionsPage');
 
@@ -78,7 +79,7 @@ export const OptionsPage: FC<OptionsPageProps> = ({ messageHideDelay }) => {
 			// Add custom translators
 			const customTranslatorModules = await getTranslators();
 			customTranslatorModules.forEach(({ key, data }) => {
-				translatorModules['#' + key] = data.name;
+				translatorModules[getTranslatorNameById(key)] = data.name;
 			});
 
 			setLoaded(true);

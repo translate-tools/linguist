@@ -25,7 +25,7 @@ import { getTranslatorModulesFactory } from './requests/backend/getTranslatorMod
 import { getConfigFactory } from './requests/backend/getConfig';
 import { setConfigFactory } from './requests/backend/setConfig';
 import { resetConfigFactory } from './requests/backend/resetConfig';
-import { clearCacheFactory } from './requests/backend/clearCache';
+import { clearCache, clearCacheFactory } from './requests/backend/clearCache';
 import { getTTSFactory } from './requests/backend/getTTS';
 
 // Auto translation
@@ -73,7 +73,7 @@ import { applyTranslatorsFactory } from './requests/backend/translators/applyTra
 		// Clear cache while disable
 		state.useEffect(() => {
 			if (!scheduler.useCache) {
-				bg.clearTranslatorsCache();
+				clearCache();
 			}
 		}, [scheduler.useCache]);
 
@@ -99,6 +99,7 @@ import { applyTranslatorsFactory } from './requests/backend/translators/applyTra
 	// Handle first load
 	//
 
+	// TODO: move this logic to `Background` class
 	bg.onLoad(async () => {
 		// Send update event
 		cfg.onUpdate(() => {

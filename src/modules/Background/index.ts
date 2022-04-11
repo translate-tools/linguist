@@ -31,13 +31,19 @@ export const translatorModules = {
 
 export const DEFAULT_TRANSLATOR = 'GoogleTranslator';
 
-// TODO: refactor translator management
+export const getTranslatorNameById = (id: number | string) => '#' + id;
+
+/**
+ * Resources manager class
+ */
 export class Background {
 	private readonly registry: Registry = {};
 
 	private readonly config: ConfigStorage;
 	constructor(config: ConfigStorage) {
 		this.config = config;
+
+		// TODO: move initializing to direct call outside
 		this.init();
 	}
 
@@ -49,6 +55,16 @@ export class Background {
 
 		this.customTranslators = translators;
 		this.makeScheduler(true);
+	};
+
+	public getTranslators = (): Record<string, TranslatorClass> => {
+		// Build custom translators list
+		const translators: Record<string, TranslatorClass> = {};
+		for (const key in this.customTranslators) {
+			translators[getTranslatorNameById(key)] = this.customTranslators[key];
+		}
+
+		return { ...translators, ...translatorModules };
 	};
 
 	private async init() {
@@ -80,6 +96,8 @@ export class Background {
 		this.eventDispatcher.subscribe('load', handler);
 	}
 
+	// TODO: split class here. Move logic below to class `TranslatorManager`,
+	// and create instance outside of this class
 	public get translator() {
 		return this.registry.translator;
 	}
@@ -93,15 +111,10 @@ export class Background {
 
 		if (translatorName === null) return null;
 
-		const isCustomTranslator = translatorName[0] === '#';
-		if (isCustomTranslator) {
-			const translatorId = translatorName.slice(1);
-			const translator = this.customTranslators[translatorId];
-			return translator === undefined ? null : (translator as any);
-		} else {
-			const translator = (translatorModules as any)[translatorName];
-			return translator === undefined ? null : translator;
-		}
+		const translators = this.getTranslators();
+		const translatorClass = translators[translatorName];
+
+		return (translatorClass as TranslatorClass<BaseTranslator>) ?? null;
 	};
 
 	public getTranslatorInfo = async () => {
@@ -113,15 +126,6 @@ export class Background {
 				isSupportAutodetect: translatorModule.isSupportedAutoFrom(),
 			  };
 	};
-
-	// TODO: move to requests
-	public async clearTranslatorsCache() {
-		// Clear for each module
-		for (const translatorName in translatorModules) {
-			const cache = new TranslatorsCacheStorage(translatorName);
-			await cache.clear();
-		}
-	}
 
 	private makeTranslator = async (force = false) => {
 		if (this.registry.translator !== undefined && !force) return;
