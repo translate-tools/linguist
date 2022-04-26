@@ -45,6 +45,7 @@ export interface OptionCheckboxGroup {
 export interface OptionButton {
 	type: 'Button';
 	text: string;
+	view?: 'default' | 'action';
 	disabled?: boolean;
 	action: () => void;
 }
@@ -154,7 +155,7 @@ export const OptionsTree: FC<OptionsTreeProps> = ({
 			case 'Button':
 				return (
 					<Button
-						view="action"
+						view={option.view ?? 'default'}
 						onPress={option.action}
 						disabled={option.disabled}
 					>

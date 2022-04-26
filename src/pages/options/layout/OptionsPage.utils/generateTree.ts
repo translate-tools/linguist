@@ -165,6 +165,7 @@ export const generateTree = ({
 							description: getMessage('settings_option_cache_clear_desc'),
 							optionContent: {
 								type: 'Button',
+								view: 'action',
 								text: getMessage('settings_option_cache_clear'),
 								disabled: clearCacheProcess,
 								action: clearCache,
