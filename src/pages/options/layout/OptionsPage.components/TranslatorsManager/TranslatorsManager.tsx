@@ -84,14 +84,12 @@ export const TranslatorsManager: FC<{
 		async (translator: EditedCustomTranslator) => {
 			const { id, name, code } = translator;
 
-			// await new Promise((res) => setTimeout(res, 1000));
 			setEditorError(null);
 			try {
 				if (id === undefined) {
 					await addTranslator({ name, code });
 				} else {
-					const data = { id, translator: { name, code } };
-					await updateTranslator(data);
+					await updateTranslator({ id, translator: { name, code } });
 				}
 			} catch (error) {
 				if (error instanceof Error) {

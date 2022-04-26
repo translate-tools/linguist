@@ -82,9 +82,9 @@ export const OptionsPage: FC<OptionsPageProps> = ({ messageHideDelay }) => {
 				translatorModules[getTranslatorNameById(key)] = data.name;
 			});
 
-			setLoaded(true);
 			setConfig(config);
 			setTranslatorModules(translatorModules);
+			setLoaded(true);
 		})();
 	}, []);
 
