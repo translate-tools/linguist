@@ -10,6 +10,7 @@ import { LayoutFlow } from '../../../../../components/LayoutFlow/LayoutFlow';
 import { ModalLayout } from '../../../../../components/ModalLayout/ModalLayout';
 import { IModalProps, Modal } from '../../../../../components/Modal/Modal.bundle/desktop';
 
+import { getMessage } from '../../../../../lib/language';
 import { OptionsModalsContext } from '../../OptionsPage';
 import { CustomTranslator } from '../TranslatorsManager/TranslatorsManager';
 
@@ -57,7 +58,9 @@ export const TranslatorEditor: FC<TranslatorEditorProps> = ({
 		const { id } = translator || {};
 
 		if (name.trim().length < 1) {
-			setLocalError('Name must contain at least 1 symbol');
+			setLocalError(
+				getMessage('translatorEditorWindow_message_invalidTranslatorName'),
+			);
 			return;
 		}
 
@@ -76,19 +79,25 @@ export const TranslatorEditor: FC<TranslatorEditorProps> = ({
 				<ModalLayout
 					footer={[
 						<Button view="action" onPress={onSavePress}>
-							Save
+							{getMessage('translatorEditorWindow_save')}
 						</Button>,
-						<Button onPress={onClose as any}>Close</Button>,
+						<Button onPress={onClose as any}>
+							{getMessage('translatorEditorWindow_close')}
+						</Button>,
 					]}
 				>
 					<LayoutFlow direction="vertical" indent="l">
 						<LayoutFlow direction="vertical" indent="m">
-							<div>Name</div>
+							<div>
+								{getMessage('translatorEditorWindow_translatorName')}
+							</div>
 							<Textinput value={name} setValue={setName} />
 						</LayoutFlow>
 
 						<LayoutFlow direction="vertical" indent="m">
-							<div>Code</div>
+							<div>
+								{getMessage('translatorEditorWindow_translatorCode')}
+							</div>
 							<Textarea
 								value={code}
 								onChange={(evt) => {

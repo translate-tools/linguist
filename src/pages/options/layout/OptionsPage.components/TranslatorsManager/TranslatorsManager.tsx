@@ -8,6 +8,7 @@ import { Loader } from '../../../../../components/Loader/Loader';
 import { Modal } from '../../../../../components/Modal/Modal.bundle/desktop';
 import { ModalLayout } from '../../../../../components/ModalLayout/ModalLayout';
 
+import { getMessage } from '../../../../../lib/language';
 import { addTranslator } from '../../../../../requests/backend/translators/addTranslator';
 import { deleteTranslator } from '../../../../../requests/backend/translators/deleteTranslator';
 import { getTranslators } from '../../../../../requests/backend/translators/getTranslators';
@@ -70,7 +71,14 @@ export const TranslatorsManager: FC<{
 
 	const deleteTranslatorWithConfirmation = useCallback(
 		(translator: CustomTranslator) => {
-			if (!confirm(`Are you sure about removing translator "${translator.name}"?`))
+			if (
+				!confirm(
+					getMessage(
+						'translatorsManagerWindow_message_translatorRemovingConfirmation',
+						[translator.name],
+					),
+				)
+			)
 				return;
 
 			deleteTranslator(translator.id).then(() => {
@@ -118,17 +126,21 @@ export const TranslatorsManager: FC<{
 			) : (
 				<div className={cnTranslatorsManager({})}>
 					<ModalLayout
-						title={'Custom translators list'}
+						title={getMessage('translatorsManagerWindow_title')}
 						footer={[
 							<Button view="action" onPress={addNewTranslator}>
-								Add new
+								{getMessage('translatorsManagerWindow_add')}
 							</Button>,
-							<Button onPress={onClose}>Close</Button>,
+							<Button onPress={onClose}>
+								{getMessage('translatorsManagerWindow_close')}
+							</Button>,
 						]}
 					>
 						{translators.length !== 0
 							? undefined
-							: 'Custom translate modules is not defined yet'}
+							: getMessage(
+								'translatorsManagerWindow_emptyTranslatorsListText',
+							  )}
 						<LayoutFlow direction="vertical" indent="m">
 							{translators.map((translatorInfo) => {
 								const { id, name } = translatorInfo;
@@ -160,7 +172,9 @@ export const TranslatorsManager: FC<{
 													editTranslator(translatorInfo);
 												}}
 											>
-												Edit
+												{getMessage(
+													'translatorsManagerWindow_translator_edit',
+												)}
 											</Button>
 											<Button
 												onPress={() => {
@@ -168,6 +182,9 @@ export const TranslatorsManager: FC<{
 														translatorInfo,
 													);
 												}}
+												title={getMessage(
+													'translatorsManagerWindow_translator_delete',
+												)}
 											>
 												<Icon glyph="delete" scalable={false} />
 											</Button>

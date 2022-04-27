@@ -101,7 +101,6 @@ export const generateTree = ({
 							description: getMessage(
 								'settings_option_customTranslatorModule_desc',
 							),
-							// path: 'translatorModule',
 							optionContent: {
 								type: 'Button',
 								text: getMessage(
