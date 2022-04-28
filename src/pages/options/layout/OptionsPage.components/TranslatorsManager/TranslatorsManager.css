@@ -8,6 +8,13 @@
 	}
 }
 
+.TranslatorsManager-Description {
+	padding: 0.8rem;
+	border-radius: 4px;
+	background: #e6e6e6;
+	margin-bottom: 1rem;
+}
+
 .TranslatorsManager-TranslatorEntry {
 	display: flex;
 	flex-flow: row;
