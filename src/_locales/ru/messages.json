@@ -449,6 +449,15 @@
 	"settings_option_popupTab_pageTranslator_showCounters_desc": {
 		"message": "Отображать статистику перевода страницы"
 	},
+	"settings_option_customTranslatorModule_manageButton": {
+		"message": "Управление переводчиками"
+	},
+	"settings_option_customTranslatorModule_desc": {
+		"message": "Вы можете добавить собственные переводчики, использующие ваши любимые сервисы перевода"
+	},
+	"settings_option_customTranslatorModule": {
+		"message": "Пользовательские модули перевода"
+	},
 	"settings_button_saveChanges": {
 		"message": "Сохранить изменения"
 	},
@@ -463,6 +472,54 @@
 	},
 	"settings_button_reset": {
 		"message": "Сброс настроек"
+	},
+	"translatorEditorWindow_message_invalidTranslatorName": {
+		"message": "Название должно содержать как минимум 1 символ"
+	},
+	"translatorEditorWindow_save": {
+		"message": "Сохранить"
+	},
+	"translatorEditorWindow_close": {
+		"message": "Закрыть"
+	},
+	"translatorEditorWindow_translatorName": {
+		"message": "Название"
+	},
+	"translatorEditorWindow_translatorCode": {
+		"message": "Код"
+	},
+	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
+		"message": "Вы действительно хотите удалить переводчик \"$translator_name$\"?",
+		"placeholders": {
+			"translator_name": {
+				"content": "$1",
+				"example": "Google translator"
+			}
+		}
+	},
+	"translatorsManagerWindow_description": {
+		"message": "Больше информации о пользовательских переводчиках"
+	},
+	"translatorsManagerWindow_description_link": {
+		"message": "в документации"
+	},
+	"translatorsManagerWindow_title": {
+		"message": "Пользовательские модули перевода"
+	},
+	"translatorsManagerWindow_add": {
+		"message": "Добавить"
+	},
+	"translatorsManagerWindow_close": {
+		"message": "Закрыть"
+	},
+	"translatorsManagerWindow_emptyTranslatorsListText": {
+		"message": "Список пуст. Самое время добавить новый переводчик"
+	},
+	"translatorsManagerWindow_translator_edit": {
+		"message": "Редактировать"
+	},
+	"translatorsManagerWindow_translator_delete": {
+		"message": "Удалить"
 	},
 	"langCode_aa": {
 		"message": "Афар"

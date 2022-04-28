@@ -1,4 +1,12 @@
-import React, { FC, useCallback, useEffect, useMemo, useState } from 'react';
+import React, {
+	createContext,
+	FC,
+	useCallback,
+	useEffect,
+	useMemo,
+	useRef,
+	useState,
+} from 'react';
 import { cn } from '@bem-react/classname';
 import { get, isEqual } from 'lodash';
 
@@ -6,6 +14,7 @@ import { AppConfigType } from '../../../types/runtime';
 
 import { getMessage } from '../../../lib/language';
 import { openFileDialog, readAsText, saveFile } from '../../../lib/files';
+import { getTranslatorNameById } from '../../../modules/Background';
 
 // Requests
 import { clearCache as clearCacheReq } from '../../../requests/backend/clearCache';
@@ -15,6 +24,7 @@ import { ping } from '../../../requests/backend/ping';
 import { resetConfig as resetConfigReq } from '../../../requests/backend/resetConfig';
 import { setConfig as setConfigReq } from '../../../requests/backend/setConfig';
 import { updateConfig as updateConfigReq } from '../../../requests/backend/updateConfig';
+import { getTranslators } from '../../../requests/backend/translators/getTranslators';
 
 import { Button } from '../../../components/Button/Button.bundle/universal';
 import { LayoutFlow } from '../../../components/LayoutFlow/LayoutFlow';
@@ -28,8 +38,13 @@ import { OptionsGroup, OptionsTree } from './OptionsTree/OptionsTree';
 import { PageSection } from './PageSection/PageSection';
 
 import './OptionsPage.css';
+import { TranslatorsManager } from './OptionsPage.components/TranslatorsManager/TranslatorsManager';
 
 export const cnOptionsPage = cn('OptionsPage');
+
+export const OptionsModalsContext = createContext<
+	React.RefObject<HTMLDivElement> | undefined
+>(undefined);
 
 type Errors = null | Record<string, string>;
 
@@ -47,21 +62,31 @@ export const OptionsPage: FC<OptionsPageProps> = ({ messageHideDelay }) => {
 	);
 	const [configTree, setConfigTree] = useState<OptionsGroup[] | undefined>();
 
+	const windowsStackRef = useRef<HTMLDivElement>(null);
+	const [isOpenCustomTranslatorsWindow, setIsOpenCustomTranslatorsWindow] =
+		useState<boolean>(false);
+
 	const [clearCacheProcess, setClearCacheProcess] = useState<boolean>(false);
 	const [translatorModules, setTranslatorModules] = useState<
 		Record<string, string> | undefined
 	>();
 
-	const updateConfig = useCallback(
-		() =>
-			getConfig().then(async (config) => {
-				const translatorModules = await getTranslatorModules();
-				setLoaded(true);
-				setConfig(config);
-				setTranslatorModules(translatorModules);
-			}),
-		[],
-	);
+	const updateConfig = useCallback(() => {
+		(async () => {
+			const config = await getConfig();
+			const translatorModules = await getTranslatorModules();
+
+			// Add custom translators
+			const customTranslatorModules = await getTranslators();
+			customTranslatorModules.forEach(({ key, data }) => {
+				translatorModules[getTranslatorNameById(key)] = data.name;
+			});
+
+			setConfig(config);
+			setTranslatorModules(translatorModules);
+			setLoaded(true);
+		})();
+	}, []);
 
 	//
 	// Messages broker
@@ -248,6 +273,9 @@ export const OptionsPage: FC<OptionsPageProps> = ({ messageHideDelay }) => {
 			clearCacheProcess,
 			translatorModules,
 			clearCache,
+			toggleCustomTranslatorsWindow: () => {
+				setIsOpenCustomTranslatorsWindow((value) => !value);
+			},
 		});
 
 		setConfigTree(configTree);
@@ -334,6 +362,16 @@ export const OptionsPage: FC<OptionsPageProps> = ({ messageHideDelay }) => {
 						</Button>
 					</div>
 				) : undefined}
+
+				<div ref={windowsStackRef} />
+
+				<OptionsModalsContext.Provider value={windowsStackRef}>
+					<TranslatorsManager
+						visible={isOpenCustomTranslatorsWindow}
+						onClose={() => setIsOpenCustomTranslatorsWindow(false)}
+						updateConfig={updateConfig}
+					/>
+				</OptionsModalsContext.Provider>
 			</div>
 		</Page>
 	);

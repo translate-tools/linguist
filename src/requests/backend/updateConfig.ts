@@ -16,7 +16,7 @@ export const [updateConfigFactory, updateConfig] = buildBackendRequest('updateCo
 	 * Partial update config by paths
 	 */
 	factoryHandler:
-		({ cfg }) =>
+		({ cfg, bg }) =>
 			async (configMap) => {
 			// Get actual config
 				const actualConfig = await cfg.getAllConfig();
@@ -44,6 +44,16 @@ export const [updateConfigFactory, updateConfig] = buildBackendRequest('updateCo
 						errors[path] = getMessage('settings_message_common_invalidValueType');
 					}
 				}
+
+				// Validate translator
+				if ('translatorModule' in newConfigSegments) {
+					switch (false) {
+					case newConfigSegments.translatorModule in bg.getTranslators():
+						throw new Error('Custom translator is unavailable');
+					}
+				}
+
+				// loadTranslator(data.code);
 
 				if (Object.keys(errors).length > 0) {
 					return {

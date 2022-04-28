@@ -1,0 +1,41 @@
+.TranslatorsManager {
+	max-width: 600px;
+}
+
+@media (min-width: 600px) {
+	.TranslatorsManager {
+		min-width: 400px;
+	}
+}
+
+.TranslatorsManager-Description {
+	padding: 0.8rem;
+	border-radius: 4px;
+	background: #e6e6e6;
+	margin-bottom: 1rem;
+}
+
+.TranslatorsManager-TranslatorEntry {
+	display: flex;
+	flex-flow: row;
+	line-height: 2em;
+}
+
+.TranslatorsManager-TranslatorEntryName {
+	width: 100%;
+	padding: 0 0.3rem;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.TranslatorsManager-TranslatorEntryControls {
+	min-width: max-content;
+}
+
+.TranslatorEditor-Error {
+	border-radius: 4px;
+	padding: 0.6rem;
+	background: #e10a0a;
+	color: #fff;
+}

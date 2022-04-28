@@ -450,6 +450,15 @@
 	"settings_option_popupTab_pageTranslator_showCounters_desc": {
 		"message": "Display statistic of page translating"
 	},
+	"settings_option_customTranslatorModule_manageButton": {
+		"message": "Manage translators"
+	},
+	"settings_option_customTranslatorModule_desc": {
+		"message": "You can add custom translators which use your favorite translation services"
+	},
+	"settings_option_customTranslatorModule": {
+		"message": "Custom translators"
+	},
 	"settings_button_saveChanges": {
 		"message": "Save changes"
 	},
@@ -464,6 +473,54 @@
 	},
 	"settings_button_reset": {
 		"message": "Reset config"
+	},
+	"translatorEditorWindow_message_invalidTranslatorName": {
+		"message": "Name must contain at least 1 symbol"
+	},
+	"translatorEditorWindow_save": {
+		"message": "Save"
+	},
+	"translatorEditorWindow_close": {
+		"message": "Close"
+	},
+	"translatorEditorWindow_translatorName": {
+		"message": "Name"
+	},
+	"translatorEditorWindow_translatorCode": {
+		"message": "Code"
+	},
+	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
+		"message": "Are you sure about removing translator \"$translator_name$\"?",
+		"placeholders": {
+			"translator_name": {
+				"content": "$1",
+				"example": "Google translator"
+			}
+		}
+	},
+	"translatorsManagerWindow_description": {
+		"message": "Read more info about custom translators"
+	},
+	"translatorsManagerWindow_description_link": {
+		"message": "in documentation"
+	},
+	"translatorsManagerWindow_title": {
+		"message": "Custom translators"
+	},
+	"translatorsManagerWindow_add": {
+		"message": "Add"
+	},
+	"translatorsManagerWindow_close": {
+		"message": "Close"
+	},
+	"translatorsManagerWindow_emptyTranslatorsListText": {
+		"message": "Custom translators is not added yet"
+	},
+	"translatorsManagerWindow_translator_edit": {
+		"message": "Edit"
+	},
+	"translatorsManagerWindow_translator_delete": {
+		"message": "Delete"
 	},
 	"langCode_aa": {
 		"message": "Afar"

@@ -9,6 +9,7 @@
 	},
 	"permissions": ["<all_urls>", "storage", "tabs", "contextMenus"],
 	"web_accessible_resources": ["common.css", "contentscript.css"],
+	"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
 	"background": {
 		"scripts": ["common.js", "background.js"]
 	},

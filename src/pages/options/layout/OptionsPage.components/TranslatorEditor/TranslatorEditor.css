@@ -1,0 +1,17 @@
+.TranslatorEditor {
+	width: 600px;
+}
+
+@media (max-width: 600px) {
+	.TranslatorEditor {
+		max-width: 100%;
+	}
+}
+
+.TranslatorEditor .Textinput {
+	width: 100%;
+}
+
+.TranslatorEditor .Textarea-Wrap {
+	min-height: 200px;
+}

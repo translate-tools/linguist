@@ -8,6 +8,7 @@ import { sendConfigUpdateEvent } from './modules/ContentScript';
 import { AppThemeControl } from './lib/browser/AppThemeControl';
 import { toggleTranslateItemInContextMenu } from './lib/browser/toggleTranslateItemInContextMenu';
 import { StateManager } from './lib/StateManager';
+import { isBackgroundContext } from './lib/browser';
 
 import { migrateAll } from './migrations/migrationsList';
 
@@ -24,7 +25,7 @@ import { getTranslatorModulesFactory } from './requests/backend/getTranslatorMod
 import { getConfigFactory } from './requests/backend/getConfig';
 import { setConfigFactory } from './requests/backend/setConfig';
 import { resetConfigFactory } from './requests/backend/resetConfig';
-import { clearCacheFactory } from './requests/backend/clearCache';
+import { clearCache, clearCacheFactory } from './requests/backend/clearCache';
 import { getTTSFactory } from './requests/backend/getTTS';
 
 // Auto translation
@@ -40,6 +41,12 @@ import { findTranslationFactory } from './requests/backend/translations/findTran
 import { deleteTranslationFactory } from './requests/backend/translations/deleteTranslation';
 import { getTranslationsFactory } from './requests/backend/translations/getTranslations';
 import { clearTranslationsFactory } from './requests/backend/translations/clearTranslations';
+
+import { addTranslatorFactory } from './requests/backend/translators/addTranslator';
+import { deleteTranslatorFactory } from './requests/backend/translators/deleteTranslator';
+import { updateTranslatorFactory } from './requests/backend/translators/updateTranslator';
+import { getTranslatorsFactory } from './requests/backend/translators/getTranslators';
+import { applyTranslatorsFactory } from './requests/backend/translators/applyTranslators';
 
 // Make async context
 (async () => {
@@ -66,7 +73,7 @@ import { clearTranslationsFactory } from './requests/backend/translations/clearT
 		// Clear cache while disable
 		state.useEffect(() => {
 			if (!scheduler.useCache) {
-				bg.clearTranslatorsCache();
+				clearCache();
 			}
 		}, [scheduler.useCache]);
 
@@ -92,6 +99,7 @@ import { clearTranslationsFactory } from './requests/backend/translations/clearT
 	// Handle first load
 	//
 
+	// TODO: move this logic to `Background` class
 	bg.onLoad(async () => {
 		// Send update event
 		cfg.onUpdate(() => {
@@ -126,14 +134,19 @@ import { clearTranslationsFactory } from './requests/backend/translations/clearT
 			getTranslationsFactory,
 			clearTranslationsFactory,
 
+			addTranslatorFactory,
+			deleteTranslatorFactory,
+			updateTranslatorFactory,
+			getTranslatorsFactory,
+			applyTranslatorsFactory,
+
 			// Up ping last to give success response only when all request handlers is ready
 			pingFactory,
 		];
 
 		// Prevent run it again on other pages, such as options page
 		// NOTE: on options page function `resetConfigFactory` is undefined. How it work?
-		const backgroundPagePath = '/_generated_background_page.html';
-		if (location.pathname === backgroundPagePath) {
+		if (isBackgroundContext()) {
 			factories.forEach((factory) => {
 				factory({ cfg, bg, translatorModules: translatorModules as any });
 			});
