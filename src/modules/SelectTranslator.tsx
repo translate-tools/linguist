@@ -164,10 +164,24 @@ export class SelectTranslator {
 			x: window.scrollX,
 			y: window.scrollY,
 		};
-		this.getSelectedText().then((selection) => {
-			if (selection === null) return;
 
-			this.showPopup(selection.text, x, y);
+		this.getSelectedText().then((selection) => {
+			let text: string | null = null;
+
+			// TODO: #refactor move this logic to one method `getSelectedText(target?: Node)`
+			if (selection !== null) {
+				text = selection.text;
+			} else if (
+				this.selectionTarget !== null &&
+				(this.selectionTarget instanceof HTMLTextAreaElement ||
+					this.selectionTarget instanceof HTMLInputElement)
+			) {
+				text = getSelectedTextOfInput(this.selectionTarget);
+			}
+
+			if (text !== null && text.trim().length > 0) {
+				this.showPopup(text, x, y);
+			}
 		});
 	};
 
@@ -281,9 +295,9 @@ export class SelectTranslator {
 				// Skip if it shown not first time
 				if (this.options.showOnceForSelection && !this.unhandledSelection) return;
 			} else if (
-				(this.selectionTarget !== null &&
-					this.selectionTarget instanceof HTMLTextAreaElement) ||
-				this.selectionTarget instanceof HTMLInputElement
+				this.selectionTarget !== null &&
+				(this.selectionTarget instanceof HTMLTextAreaElement ||
+					this.selectionTarget instanceof HTMLInputElement)
 			) {
 				// Use selected text in input
 				text = getSelectedTextOfInput(this.selectionTarget);
