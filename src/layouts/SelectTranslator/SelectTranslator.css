@@ -10,7 +10,7 @@
 	color: var(--color-typo-primary);
 	background: var(--select-translator-fill-color);
 	border: 1px solid var(--color-control-type-blank-border-color-base);
-	
+
 	/* Define styles explicit to avoid inherit of page styles. Yes, "reset all" is not work for all */
 	text-align: initial;
 	font-weight: normal;
@@ -40,7 +40,7 @@
 }
 
 /* Clearfix */
-.SelectTranslator-Clearfix:after {
+.SelectTranslator-Clearfix::after {
 	display: block;
 	content: '';
 	clear: both;
@@ -53,6 +53,7 @@
 	overflow-y: auto;
 	font-size: var(--typography-layout-size-s-font-size);
 	white-space: pre-line;
+	scrollbar-width: thin;
 }
 
 .SelectTranslator-OriginalTextContainer {
@@ -67,6 +68,9 @@
 .SelectTranslator-OriginalText {
 	margin: var(--typography-controls-indent-m);
 	white-space: pre-wrap;
+	max-height: 400px;
+	overflow: auto;
+	scrollbar-width: thin;
 }
 
 .SelectTranslator-Body_error {
