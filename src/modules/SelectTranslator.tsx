@@ -289,7 +289,7 @@ export class SelectTranslator {
 				text = getSelectedTextOfInput(this.selectionTarget);
 			}
 
-			if (text !== null) {
+			if (text !== null && text.trim().length > 0) {
 				this.showPopup(text, pageX, pageY);
 			}
 		});
