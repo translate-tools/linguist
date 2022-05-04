@@ -296,7 +296,6 @@ export const SelectTranslatorComponent: FC<SelectTranslatorComponentProps> = ({
 	useEffect(() => () => ttsPlayer.stop(), [ttsPlayer]);
 
 	const isMobile = useMemo(() => isMobileBrowser(), []);
-	// const isMobile = true;
 
 	const closeButton = (
 		<div
@@ -350,10 +349,6 @@ export const SelectTranslatorComponent: FC<SelectTranslatorComponentProps> = ({
 							disableSwap={translatedText === null}
 							mobile={isMobile}
 						/>
-						{/* {' '} */}
-						{/* <Button onPress={ttsPlayer.toggle} view="clear">
-							<Icon glyph="volume-up" scalable={false} />
-						</Button> */}
 					</div>
 
 					{!isMobile && closeButton}

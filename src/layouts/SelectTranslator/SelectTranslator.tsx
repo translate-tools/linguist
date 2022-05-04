@@ -3,10 +3,12 @@ import React, { FC, useCallback, useEffect, useMemo, useRef, useState } from 're
 import { cn } from '@bem-react/classname';
 import { isKeyCode, Keys } from 'react-elegant-ui/esm/lib/keyboard';
 
+import { isMobileBrowser } from '../../lib/browser';
 import LogoElement from '../../res/logo-icon.svg';
 
 import { theme } from '../../themes/presets/default/desktop';
 import { Popup } from '../../components/Popup/Popup';
+import { Modal } from '../../components/Modal/Modal.bundle/desktop';
 
 import './SelectTranslator.css';
 import {
@@ -14,8 +16,6 @@ import {
 	SelectTranslatorComponent,
 } from './SelectTranslatorComponent';
 import { fixPosToPreventOverflow } from './SelectTranslator.utils/fixPosToPreventOverflow';
-import { Modal } from '../../components/Modal/Modal.bundle/desktop';
-import { isMobileBrowser } from '../../lib/browser';
 
 export const cnSelectTranslator = cn('SelectTranslator');
 
@@ -197,7 +197,6 @@ export const SelectTranslator: FC<SelectTranslatorProps> = ({
 	]);
 
 	const isMobile = useMemo(() => isMobileBrowser(), []);
-	// const isMobile = true;
 
 	const content = (
 		<div tabIndex={0} ref={containerRef}>
