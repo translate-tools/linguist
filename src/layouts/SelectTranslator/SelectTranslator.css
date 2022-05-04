@@ -26,7 +26,7 @@
 }
 
 /* Head */
-.SelectTranslator-Head > *:not(:first-child) {
+.SelectTranslator-Head:not(.SelectTranslator-Head_mobile) > *:not(:first-child) {
 	margin-left: var(--typography-layout-indent-m-all);
 }
 
@@ -53,6 +53,7 @@
 	overflow-y: auto;
 	font-size: var(--typography-layout-size-s-font-size);
 	white-space: pre-line;
+	line-height: 1.2rem;
 	scrollbar-width: thin;
 }
 
@@ -101,4 +102,23 @@
 .SelectTranslator-Loader .Loader-Image {
 	width: 2rem;
 	height: 2rem;
+}
+
+.SelectTranslator-MobileHead {
+	margin-bottom: var(--typography-layout-indent-m-all);
+	width: 100%;
+	text-align: right;
+}
+
+.SelectTranslator-TextContainer::after {
+	display: block;
+	content: '';
+	clear: both;
+}
+
+.SelectTranslator-TextControls {
+	--button-size-m-indent-outer: 2px;
+
+	float: left;
+	margin-right: var(--typography-layout-indent-s-all);
 }

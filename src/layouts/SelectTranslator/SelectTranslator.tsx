@@ -14,6 +14,8 @@ import {
 	SelectTranslatorComponent,
 } from './SelectTranslatorComponent';
 import { fixPosToPreventOverflow } from './SelectTranslator.utils/fixPosToPreventOverflow';
+import { Modal } from '../../components/Modal/Modal.bundle/desktop';
+import { isMobileBrowser } from '../../lib/browser';
 
 export const cnSelectTranslator = cn('SelectTranslator');
 
@@ -29,7 +31,7 @@ export interface SelectTranslatorProps
 	closeHandler: () => void;
 }
 
-const themeClassname = cn('Theme')(theme);
+const themeClassName = cn('Theme')(theme);
 
 // TODO: split styles
 export const SelectTranslator: FC<SelectTranslatorProps> = ({
@@ -194,6 +196,42 @@ export const SelectTranslator: FC<SelectTranslatorProps> = ({
 		focusTranslateButton,
 	]);
 
+	const isMobile = useMemo(() => isMobileBrowser(), []);
+	// const isMobile = true;
+
+	const content = (
+		<div tabIndex={0} ref={containerRef}>
+			{translating ? (
+				<SelectTranslatorComponent {...props} updatePopup={updateHook} />
+			) : (
+				<div
+					tabIndex={0}
+					ref={translateButtonRef}
+					onKeyDown={(evt) => {
+						if (isKeyCode(evt.code, [Keys.ENTER, Keys.SPACE])) {
+							evt.preventDefault();
+							doTranslate();
+						}
+					}}
+					onClick={doTranslate}
+					onMouseOver={() => toggleAutoclose(false)}
+					onMouseLeave={() => toggleAutoclose(true)}
+				>
+					<LogoElement className={cnSelectTranslator('TranslateButton')} />
+				</div>
+			)}
+		</div>
+	);
+
+	// Mobile view
+	if (isMobile && translating) {
+		return (
+			<Modal view="default" visible className={themeClassName} preventBodyScroll>
+				{content}
+			</Modal>
+		);
+	}
+
 	// Render div on the coordinates as cursor and attach popup to it
 	// We use real component instead virtual because require behavior of `position: absolute` instead `fixed`
 	// and implement this logic for virtual component is harder than use real component
@@ -210,33 +248,11 @@ export const SelectTranslator: FC<SelectTranslatorProps> = ({
 				zIndex={zIndex}
 				modifiers={modifiers}
 				onClose={closeHandler}
-				className={themeClassname}
+				className={themeClassName}
 				view={translating ? 'default' : undefined}
 				UNSTABLE_updatePosition={updateRef}
 			>
-				<div tabIndex={0} ref={containerRef}>
-					{translating ? (
-						<SelectTranslatorComponent {...props} updatePopup={updateHook} />
-					) : (
-						<div
-							tabIndex={0}
-							ref={translateButtonRef}
-							onKeyDown={(evt) => {
-								if (isKeyCode(evt.code, [Keys.ENTER, Keys.SPACE])) {
-									evt.preventDefault();
-									doTranslate();
-								}
-							}}
-							onClick={doTranslate}
-							onMouseOver={() => toggleAutoclose(false)}
-							onMouseLeave={() => toggleAutoclose(true)}
-						>
-							<LogoElement
-								className={cnSelectTranslator('TranslateButton')}
-							/>
-						</div>
-					)}
-				</div>
+				{content}
 			</Popup>
 		</>
 	);

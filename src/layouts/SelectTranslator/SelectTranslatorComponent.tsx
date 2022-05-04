@@ -1,4 +1,4 @@
-import React, { FC, useCallback, useEffect, useRef, useState } from 'react';
+import React, { FC, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { browser } from 'webextension-polyfill-ts';
 
 import { TranslatorFeatures } from '../../pages/popup/layout/PopupWindow';
@@ -20,6 +20,7 @@ import { Loader } from '../../components/Loader/Loader';
 
 import { cnSelectTranslator } from './SelectTranslator';
 import './SelectTranslator.css';
+import { isMobileBrowser } from '../../lib/browser';
 
 export interface SelectTranslatorComponentProps {
 	detectedLangFirst: boolean;
@@ -294,18 +295,49 @@ export const SelectTranslatorComponent: FC<SelectTranslatorComponentProps> = ({
 	// Stop TTS by umount
 	useEffect(() => () => ttsPlayer.stop(), [ttsPlayer]);
 
+	const isMobile = useMemo(() => isMobileBrowser(), []);
+	// const isMobile = true;
+
+	const closeButton = (
+		<div
+			className={
+				isMobile
+					? cnSelectTranslator('MobileHead')
+					: cnSelectTranslator('Container', {
+						direction: 'right',
+					  })
+			}
+		>
+			<Button
+				view="clear"
+				// `onPress` is not work in shadow DOM
+				onPress={closeHandler}
+				title={getMessage('common_close')}
+				content="icon"
+			>
+				<Icon glyph="close" />
+			</Button>
+		</div>
+	);
+
 	if (translatorFeatures !== undefined && (translatedText !== null || error !== null)) {
 		return (
 			<div className={cnSelectTranslator()}>
 				<div
-					className={cnSelectTranslator('Head', {}, [
+					className={cnSelectTranslator('Head', { mobile: isMobile }, [
 						cnSelectTranslator('Clearfix'),
 					])}
 				>
+					{isMobile && closeButton}
+
 					<div
-						className={cnSelectTranslator('Container', {
-							direction: 'left',
-						})}
+						className={
+							!isMobile
+								? cnSelectTranslator('Container', {
+									direction: 'left',
+								  })
+								: undefined
+						}
 					>
 						<LanguagePanel
 							languages={translatorFeatures.supportedLanguages}
@@ -316,27 +348,15 @@ export const SelectTranslatorComponent: FC<SelectTranslatorComponentProps> = ({
 							to={to}
 							swapHandler={swapHandler}
 							disableSwap={translatedText === null}
-						/>{' '}
-						<Button onPress={ttsPlayer.toggle} view="clear">
+							mobile={isMobile}
+						/>
+						{/* {' '} */}
+						{/* <Button onPress={ttsPlayer.toggle} view="clear">
 							<Icon glyph="volume-up" scalable={false} />
-						</Button>
+						</Button> */}
 					</div>
 
-					<div
-						className={cnSelectTranslator('Container', {
-							direction: 'right',
-						})}
-					>
-						<Button
-							view="clear"
-							// `onPress` is not work in shadow DOM
-							onPress={closeHandler}
-							title={getMessage('common_close')}
-							content="icon"
-						>
-							<Icon glyph="close" />
-						</Button>
-					</div>
+					{!isMobile && closeButton}
 				</div>
 				<div className={cnSelectTranslator('Menu')}>
 					<span>
@@ -349,7 +369,16 @@ export const SelectTranslatorComponent: FC<SelectTranslatorComponentProps> = ({
 				</div>
 				{error === null ? (
 					<>
-						<div className={cnSelectTranslator('Body')}>{translatedText}</div>
+						<div className={cnSelectTranslator('TextContainer')}>
+							<div className={cnSelectTranslator('TextControls')}>
+								<Button onPress={ttsPlayer.toggle} view="clear">
+									<Icon glyph="volume-up" scalable={false} />
+								</Button>
+							</div>
+							<div className={cnSelectTranslator('Body')}>
+								{translatedText}
+							</div>
+						</div>
 						{!showOriginalText ? undefined : (
 							<div className={cnSelectTranslator('OriginalTextContainer')}>
 								<details onToggle={updatePopup}>
