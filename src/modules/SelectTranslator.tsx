@@ -179,7 +179,7 @@ export class SelectTranslator {
 				text = getSelectedTextOfInput(this.selectionTarget);
 			}
 
-			if (text !== null && text.trim().length > 0) {
+			if (text !== null) {
 				this.showPopup(text, x, y);
 			}
 		});
@@ -303,13 +303,17 @@ export class SelectTranslator {
 				text = getSelectedTextOfInput(this.selectionTarget);
 			}
 
-			if (text !== null && text.trim().length > 0) {
+			if (text !== null) {
 				this.showPopup(text, pageX, pageY);
 			}
 		});
 	};
 
 	private showPopup = (text: string, x: number, y: number) => {
+		const trimmedText = text.trim();
+
+		if (trimmedText.length === 0) return;
+
 		// Update selection value
 		this.unhandledSelection = false;
 
@@ -344,7 +348,7 @@ export class SelectTranslator {
 					focusOnTranslateButton,
 					x,
 					y,
-					text,
+					text: trimmedText,
 				}}
 			/>,
 		);
