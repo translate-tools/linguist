@@ -1,6 +1,6 @@
 {
 	"ext_name": {
-		"message": "Linguist - web pages translator"
+		"message": "Linguist - web page translator"
 	},
 	"ext_description": {
 		"message": "Text translation without page reloading"
@@ -57,7 +57,7 @@
 		"message": "The parameter must be a positive number."
 	},
 	"validation_numberBetweenRange": {
-		"message": "The parameter must be a number from $1 to $2"
+		"message": "The parameter must be a number between $1 and $2"
 	},
 	"lang_detect": {
 		"message": "Auto detect"
@@ -72,10 +72,10 @@
 		"message": "Select language"
 	},
 	"common_action_addToDictionary": {
-		"message": "Add translate to dictionary"
+		"message": "Add translation to dictionary"
 	},
 	"common_action_removeFromDictionary": {
-		"message": "Remove translate from dictionary"
+		"message": "Remove translation from dictionary"
 	},
 	"contextMenu_translateSelectedText": {
 		"message": "Translate selected text"
@@ -84,25 +84,25 @@
 		"message": "Dictionary"
 	},
 	"dictionary_deleteConfirmation": {
-		"message": "Are you sure about delete this translation?"
+		"message": "Are you sure about deleting this translation?"
 	},
 	"dictionary_deleteAll": {
-		"message": "Are you sure about delete ALL translations in dictionary?"
+		"message": "Are you sure about deleting ALL translations in the dictionary?"
 	},
 	"dictionary_message_deleteAll_success": {
-		"message": "All translations was removed"
+		"message": "All translations were removed"
 	},
 	"dictionary_emptyDictionary": {
-		"message": "Dictionary is empty. Start fill it while translate some text"
+		"message": "Dictionary is empty. Start filling it while translating some text"
 	},
 	"dictionary_notFoundEntries": {
-		"message": "Not found entries match with this filters"
+		"message": "Entries matching these filters not found"
 	},
 	"dictionary_resetFilters": {
 		"message": "reset filters"
 	},
 	"dictionary_description": {
-		"message": "Keep your translations in dictionary to find it later"
+		"message": "Keep your translations in the dictionary to find them later"
 	},
 	"dictionary_searchPlaceholder": {
 		"message": "Search by text"
@@ -196,7 +196,7 @@
 	},
 
 	"textTranslator_suggestLanguage": {
-		"message": "It seems that language is"
+		"message": "It looks like that language is"
 	},
 	"inlineTranslator_showOriginalText": {
 		"message": "Show original text"
@@ -211,10 +211,10 @@
 		"message": "Import done"
 	},
 	"settings_message_importConfig_invalidFile": {
-		"message": "File for import can't' be handle"
+		"message": "File for import can't be handled"
 	},
 	"settings_message_resetConfig_confirm": {
-		"message": "You want to reset settings?"
+		"message": "Do you want to reset the settings?"
 	},
 	"settings_message_resetConfig_success": {
 		"message": "Settings reset"
@@ -232,13 +232,13 @@
 		"message": "Your language"
 	},
 	"settings_option_userLanguage_desc": {
-		"message": "On this language will translate all texts by default\n\nLanguage of interface depends from browser language settings, maybe you can set it here in future"
+		"message": "All texts will be translated to this language by default\n\nLanguage of the interface depends on browser language settings, maybe you can set it here in the future"
 	},
 	"settings_option_appIcon": {
 		"message": "Extension icon"
 	},
 	"settings_option_appIcon_desc": {
-		"message": "When selected dynamic icon, color will adopt for browser theme"
+		"message": "When dynamic icon is selected, colors will be adapted to the browser theme"
 	},
 	"settings_option_appIcon_item_auto": {
 		"message": "Dynamic"
@@ -253,28 +253,28 @@
 		"message": "Color"
 	},
 	"settings_option_translatePreferences": {
-		"message": "Translate preferences"
+		"message": "Translation preferences"
 	},
 	"settings_option_translatorModule": {
-		"message": "Translate module"
+		"message": "Translation module"
 	},
 	"settings_option_translatorModule_desc": {
-		"message": "From choosen module depend speed and quality of translates, available directions of translate.\n\nChange module if it work badely"
+		"message": "The speed and quality of translations and available translation directions depend on the chosen module.\n\nChange the module if it works badly"
 	},
 	"settings_option_translateScheduler": {
-		"message": "Translate scheduler"
+		"message": "Translation scheduler"
 	},
 	"settings_option_translateScheduler_delay": {
 		"message": "Delay for text accumulation (ms)"
 	},
 	"settings_option_translateScheduler_delay_desc": {
-		"message": "Translate scheduler trying decrease number of requests to translate services API and for this it accumulate texts to chunks, for send many texts by one request.\n\nAfter adding text to chunk, scheduler await some time specified above and after it send chunk to translate if new texts was not added"
+		"message": "The translation scheduler tries to decrease the number of requests to the translate services API by accumulating texts to chunks, to send many texts using only one request.\n\nAfter adding text to a chunk, the scheduler will wait some time specified above and after that it sends the chunk to be translated if new texts were not added"
 	},
 	"settings_option_translateScheduler_retryLimit": {
-		"message": "Number of attempts to retry translate"
+		"message": "Number of attempts to retry translation"
 	},
 	"settings_option_translateScheduler_retryLimit_desc": {
-		"message": "With error of translate, scheduler will try again until limit.\nFor disable limit set negative number"
+		"message": "When the translation errors, the scheduler will try again until the limit.\nTo disable the limit set it to a negative number"
 	},
 	"settings_option_cache": {
 		"message": "Cache"
@@ -283,19 +283,19 @@
 		"message": "Enable cache"
 	},
 	"settings_option_cache_enable_desc": {
-		"message": "When enabled, translations will save to local storage and in future same translate requests will translate immidiately.\n\nFor example, you can translate page while you have internet and switch between translated and original text when u have not internet"
+		"message": "When enabled, translations will be saved to the local storage and in the future the same translation requests will be translated immediately.\n\nFor example, you can translate a page while having internet and switch between the translated and the original text when you don't have internet"
 	},
 	"settings_option_cache_ignoreCase": {
-		"message": "Registry sensitivity"
+		"message": "Registration sensitivity"
 	},
 	"settings_option_cache_ignoreCase_desc": {
-		"message": "With enabled option, more text will match with cache entries, but it can cause artefacts"
+		"message": "With the option enabled, more text will be matched with cache entries, but it can cause artifacts"
 	},
 	"settings_option_cache_clear": {
 		"message": "Clear cache"
 	},
 	"settings_option_cache_clear_desc": {
-		"message": "If you did translate private text and this was cached or you have artefacts, you can delete translators cache"
+		"message": "If you have translated private text and this was cached or you have artifacts, you can clear the translators cache"
 	},
 	"settings_option_pageTranslation": {
 		"message": "Page translation"
@@ -304,31 +304,31 @@
 		"message": "Main settings"
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
-		"message": "Translate only vizible elements"
+		"message": "Only translate visible elements"
 	},
 	"settings_option_pageTranslation_lazyTranslate_desc": {
-		"message": "With disabled option, pages will translate fully at once. This option can safe more traffic"
+		"message": "With the option disabled, pages will fully translate at once. This option can save network traffic"
 	},
 	"settings_option_pageTranslation_detectLanguageByContent": {
 		"message": "Detect language by content"
 	},
 	"settings_option_pageTranslation_detectLanguageByContent_desc": {
-		"message": "Try detect page language by text content of page firstly. By default language detect by meta data provided by page"
+		"message": "Try to detect the page language by the text content of the page first. Detect the default language using metadata provided by the page"
 	},
 	"settings_option_pageTranslation_translatableAttributes": {
 		"message": "Translatable attributes"
 	},
 	"settings_option_pageTranslation_translatableAttributes_desc": {
-		"message": "Only attributes specified here will translated. Specify each name from new line"
+		"message": "Only attributes specified here will translated. Specify each name on a new line"
 	},
 	"settings_option_pageTranslation_ignoredTags": {
 		"message": "Ignored tags"
 	},
 	"settings_option_pageTranslation_ignoredTags_desc": {
-		"message": "All tags will translate except specified and their childs. Specify each name from new line"
+		"message": "All tags will be translated except those specified here and their children. Specify each name on a new line"
 	},
 	"settings_option_pageTranslation_originalTextPopup": {
-		"message": "Show original text by hover"
+		"message": "Show original text by hovering"
 	},
 	"settings_option_selectTranslation": {
 		"message": "Translation of selected text"
@@ -337,37 +337,37 @@
 		"message": "Enable"
 	},
 	"settings_option_selectTranslation_disableWhileTranslatePage": {
-		"message": "Disable while page translation"
+		"message": "Disable while page is translating"
 	},
 	"settings_option_selectTranslation_header_languageChoice": {
 		"message": "Language settings"
 	},
 	"settings_option_selectTranslation_detectedLangFirst": {
-		"message": "Preferent detected language of text instead page language"
+		"message": "Prefer detected language of the text instead of the page language"
 	},
 	"settings_option_selectTranslation_detectedLangFirst_desc": {
-		"message": "When enabled, module will try detect language of selected text, otherwise for selection of translate direction will used page language"
+		"message": "When enabled, the module will try to detect the language of the selected text. Otherwise the translation direction will be decided using the page language"
 	},
 	"settings_option_selectTranslation_isUseAutoForDetectLang": {
-		"message": "Enable auto detect language by translator"
+		"message": "Enable language auto detection by the translator"
 	},
 	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
-		"message": "Use auto language detection by translator, when can't detect language locally"
+		"message": "Use language auto detection by the translator, when the language can't be detected locally"
 	},
 	"settings_option_selectTranslation_rememberDirection": {
-		"message": "Remember last translate direction language"
+		"message": "Remember the last translation direction language"
 	},
 	"settings_option_selectTranslation_showOnceForSelection": {
-		"message": "Show translate button once for each text selection"
+		"message": "Show translation button once for each text selection"
 	},
 	"settings_option_selectTranslation_showOnceForSelection_desc": {
-		"message": "Button will show only once while each text selection. If you need show it, select text again"
+		"message": "Button will show only once for each text selection. If you need to show it, select text again"
 	},
 	"settings_option_selectTranslation_strictSelection": {
 		"message": "Strict selection"
 	},
 	"settings_option_selectTranslation_strictSelection_desc": {
-		"message": "Ignore selection while release mouse button outside a block of contains selected text"
+		"message": "Ignore the selection if the left mouse button is released outside of a block that contains selected text"
 	},
 	"settings_option_selectTranslation_mode": {
 		"message": "Translation trigger"
@@ -385,7 +385,7 @@
 		"message": "Modifiers"
 	},
 	"settings_option_selectTranslation_modifiers_desc": {
-		"message": "Check modifiers who should be pressed while selecting to show translation"
+		"message": "Check the keyboard modifiers that should be pressed to show the translation while selecting"
 	},
 	"settings_option_selectTranslation_modifiers_key_ctrl": {
 		"message": "ctrl"
@@ -400,22 +400,22 @@
 		"message": "meta"
 	},
 	"settings_option_selectTranslation_timeoutForHideButton": {
-		"message": "Delay for auto hidding of translate button"
+		"message": "Delay for auto hiding the translation button"
 	},
 	"settings_option_selectTranslation_timeoutForHideButton_desc": {
-		"message": "Time in ms to hide translate button after selecting a text.\nPointer hovering on button will reset timer.\n\nFor disable auto hidding set value lower than 1"
+		"message": "Time in ms to hide the translation button after selecting text.\nPointer hovering on a button will reset the timer.\n\nTo disable auto hiding, set the value lower than 1"
 	},
 	"settings_option_selectTranslation_zIndex": {
 		"message": "z-index"
 	},
 	"settings_option_selectTranslation_zIndex_desc": {
-		"message": "If other elements on some pages overlaped a block with translated text, increase this value"
+		"message": "If other elements on some pages overlap a block with translated text, increase this value"
 	},
 	"settings_option_selectTranslation_focusOnTranslateButton": {
-		"message": "Auto focus on translate button"
+		"message": "Auto focus on translation button"
 	},
 	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
-		"message": "Focus on translate button after end of selection. It useful for keyboard control"
+		"message": "Focus on translation button after ending the selection. Useful for keyboard control"
 	},
 	"settings_option_selectTranslation_showOriginalText": {
 		"message": "Show original text block"
@@ -427,7 +427,7 @@
 		"message": "Remember translated text"
 	},
 	"settings_option_textTranslator_rememberText_desc": {
-		"message": "Remembering translated text for next open of window"
+		"message": "Remember translated text for next time window is opened"
 	},
 	"settings_option_textTranslator_spellCheck": {
 		"message": "Enable spellcheck"
@@ -436,19 +436,19 @@
 		"message": "Suggest detected text language"
 	},
 	"settings_option_textTranslator_suggestLanguageAlways": {
-		"message": "Detect and suggest language always"
+		"message": "Always detect and suggest language"
 	},
 	"settings_option_textTranslator_suggestLanguageAlways_desc": {
-		"message": "When disabled, language detect only with not set language of text"
+		"message": "When disabled, language will be detected only using the unset language of the text"
 	},
 	"settings_section_popup": {
 		"message": "Popup"
 	},
 	"settings_option_popupTab_pageTranslator_showCounters": {
-		"message": "Show translate statistic"
+		"message": "Show translation statistic"
 	},
 	"settings_option_popupTab_pageTranslator_showCounters_desc": {
-		"message": "Display statistic of page translating"
+		"message": "Display statistics of page translation"
 	},
 	"settings_option_customTranslatorModule_manageButton": {
 		"message": "Manage translators"
@@ -475,7 +475,7 @@
 		"message": "Reset config"
 	},
 	"translatorEditorWindow_message_invalidTranslatorName": {
-		"message": "Name must contain at least 1 symbol"
+		"message": "Name must contain at least one symbol"
 	},
 	"translatorEditorWindow_save": {
 		"message": "Save"
@@ -499,10 +499,10 @@
 		}
 	},
 	"translatorsManagerWindow_description": {
-		"message": "Read more info about custom translators"
+		"message": "Read more about custom translators"
 	},
 	"translatorsManagerWindow_description_link": {
-		"message": "in documentation"
+		"message": "in the documentation"
 	},
 	"translatorsManagerWindow_title": {
 		"message": "Custom translators"
@@ -514,7 +514,7 @@
 		"message": "Close"
 	},
 	"translatorsManagerWindow_emptyTranslatorsListText": {
-		"message": "Custom translators is not added yet"
+		"message": "Custom translators have not been added yet"
 	},
 	"translatorsManagerWindow_translator_edit": {
 		"message": "Edit"
