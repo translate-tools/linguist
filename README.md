@@ -46,9 +46,9 @@ Linguist cares about your traffic and uses a cache. If you translate a page or a
 
 # Why it better than online translation services?
 
-When you use a translation service, you can't translate pages which require authorization, because online services can only translate public pages. Also, online services collect your personal data, track you and give you only one translator, but linguist may use any translate service. It may even use a local translation service that translates your data on your PC without any internet.
+When you use a translation service, you can't translate pages which require authorization, because online services can only translate public pages. Also, online services collect your personal data, track you and give you only one translator, but linguist may use any translation service. It may even use a local translation service that translates your data on your PC without any internet.
 
-# Why it better than other extensions for translate?
+# Why it better than other translation extensions?
 
 It's free, open source, supports all translation services and does not collect your personal data.
 
