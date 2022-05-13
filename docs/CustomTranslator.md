@@ -1,26 +1,26 @@
 With Linguist you can use custom translators.
 
-You may use it to include translators for your favorite translation services and even to use translator deployed on your local machine.
+You may use it to include translators for your favorite translation services and even to use a translator deployed on your local machine.
 
-With custom translator you have control over all HTTP requests from the extension (except text to speak service at this time).
+With a custom translator you have control over all HTTP requests from within the extension (except text to speech services at this time).
 
 ## WARNING
 
-When you use custom translator, you insert javascript code which will evaluated in browser extension environment.
+When you use a custom translator, you insert javascript code which will be evaluated in the browser extension environment.
 
-This is mean that you MUST trust to this code. Never add custom translators which code you don't understand or don't trust.
+This means that you MUST trust this code. Never add custom translators with code that you don't understand or don't trust.
 
-Otherwise, hacker may execute any code in your browser - for example, track your translations texts, take access to any opened site, steal your personal data and read your personal messages or steal your money on the site of your bank.
+Otherwise, hackers may execute any code in your browser - for example, to track your translated texts, have access to any opened site, steal your personal data and read your personal messages or to steal your money using the site of your bank.
 
 ## How to use?
 
-To use custom translator, you have to implement translator API on javascript and add this code on the options page.
+To use a custom translator, you have to implement the translator API in javascript and add this code to the options page.
 
-If you can't programming, you can please help to your friend. If you can, you may share your translator for other people, just make issue with your code.
+If you can't program, you can ask for help from your friend. If you can, you may share your translator to other people. Just make an issue with your code.
 
 ## Translator API
 
-Code must have translator class and this object must be a last object in the code.
+Code must have a translator class and this object must be the last object in the code.
 
 ```js
 class MyTranslator {
@@ -91,7 +91,7 @@ class Translator {
 
 ## Example
 
-Example of dummy translator. In your code, you feel free to use HTTP requests to any urls.
+Example of a dummy translator. In your code, feel free to use HTTP requests to any urls.
 
 ```js
 class FakeTranslator {

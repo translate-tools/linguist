@@ -2,7 +2,7 @@
 
 - Install and configure ADB
 - Run `adb devices` and copy your device identifier
-- Make file `.ADB_DEVICE` in root of repository and write there device identifier
+- Make the file `.ADB_DEVICE` in the root of the repository and write the device identifier to there
 - Run `npm run run:mobile-firefox`
 
 # Related links

@@ -1,6 +1,6 @@
 #! /usr/bin/sh
 
-# Script unpack build archives and test extensions
+# Script to unpack build archives and test extensions
 
 testDir=tests
 
