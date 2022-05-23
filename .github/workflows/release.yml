@@ -7,6 +7,7 @@ on:
 
   workflow_dispatch:
 
+# TODO: add job to upload new versions to stores with API
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -23,7 +24,7 @@ jobs:
       - name: Build
         run: npm run build:all
         
-      - name: Build CRX file
+      - name: Build CRX file for chromium
         working-directory: './build'
         env:
           CHROMIUM_CRX_PEM: ${{ secrets.CHROMIUM_CRX_PEM }}
@@ -31,14 +32,26 @@ jobs:
           echo "$CHROMIUM_CRX_PEM" > ./crx.pem
           npx crx pack chromium -o linguist.crx -p ./crx.pem
           ls -al ./
+        
+      - name: Build XPI file for firefox
+        working-directory: './build'
+        env:
+          AMO_KEY: ${{ secrets.AMO_KEY }}
+          AMO_SECRET: ${{ secrets.AMO_SECRET }}
+          AMO_ADDON_ID: ${{ secrets.AMO_ADDON_ID }}
+        run: |
+          mkdir ./AMO
+          npx web-ext sign --api-key "$AMO_KEY" --api-secret "$AMO_SECRET" --id "$AMO_ADDON_ID" --source-dir ./firefox --artifacts-dir ./AMO
+          mv AMO/*.xpi AMO/linguist.xpi
 
-      - name: Release
+      - name: Publish release on GitHub
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
         with:
           files: |
-            build/*.zip
+            build/AMO/linguist.xpi
             build/linguist.crx
+            build/*.zip
             
       - name: Build static files for GitHub Pages
         working-directory: './build'
