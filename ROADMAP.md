@@ -12,7 +12,7 @@ List with main plans
 
 ## Features
 
-- [ ] User defined translation modules
+- [x] User defined translation modules
 - [ ] Local translator
 - [ ] Translate text in images
 - [x] Text to speech
@@ -34,7 +34,7 @@ List with main plans
 
 ### Little things
 
-- [ ] Add translation button in page context menu
+- [x] Add translation button in page context menu
 - [ ] Add popup for translation page in omnibox for firefox (`page_action` key in manifest)
 
 ### Low priority
