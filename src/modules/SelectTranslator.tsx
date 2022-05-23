@@ -245,7 +245,9 @@ export class SelectTranslator {
 	/**
 	 * Open popup by text selection on the page
 	 */
-	private pointerUp = (evt: PointerEvent | TouchEvent) => {
+	private pointerUp = async (evt: PointerEvent | TouchEvent) => {
+		await new Promise((res) => setTimeout(res, 10));
+
 		const getIsTouchEvt = (evt: Event): evt is TouchEvent =>
 			evt.type === 'touchstart' || evt.type === 'touchend';
 		const isTouchEvt = getIsTouchEvt(evt);
