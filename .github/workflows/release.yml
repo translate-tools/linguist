@@ -38,10 +38,9 @@ jobs:
         env:
           AMO_KEY: ${{ secrets.AMO_KEY }}
           AMO_SECRET: ${{ secrets.AMO_SECRET }}
-          AMO_ADDON_ID: ${{ secrets.AMO_ADDON_ID }}
         run: |
           mkdir ./AMO
-          npx web-ext sign --api-key "$AMO_KEY" --api-secret "$AMO_SECRET" --id "$AMO_ADDON_ID" --source-dir ./firefox --artifacts-dir ./AMO
+          npx web-ext sign --api-key "$AMO_KEY" --api-secret "$AMO_SECRET" --id "{e3fc2d33-09fc-4fe8-9331-d0a464698035}" --source-dir ./firefox --artifacts-dir ./AMO
           mv AMO/*.xpi AMO/linguist.xpi
 
       - name: Publish release on GitHub
