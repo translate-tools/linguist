@@ -13,7 +13,7 @@ const target = process.env.EXT_TARGET;
 const isFastBuild =
 	process.env.NODE_ENV !== 'production' && process.env.FAST_BUILD === 'on';
 
-const targetsList = ['firefox', 'chromium', 'chromium-google-store'];
+const targetsList = ['firefox', 'chromium', 'chrome'];
 if (targetsList.indexOf(target) === -1) {
 	throw new Error(`Invalid target "${target}" in EXT_TARGET`);
 }
@@ -193,18 +193,6 @@ module.exports = {
 				test: /\.svg$/,
 				use: ['@svgr/webpack'],
 			},
-			// {
-			// 	test: /\.(woff(2)?|ttf|eot)$/,
-			// 	use: [
-			// 		{
-			// 			loader: 'file-loader',
-			// 			options: {
-			// 				name: '[name].[contenthash].[ext]',
-			// 				outputPath: 'fonts/',
-			// 			},
-			// 		},
-			// 	],
-			// },
 		],
 	},
 };
