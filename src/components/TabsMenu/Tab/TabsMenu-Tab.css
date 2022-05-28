@@ -1,6 +1,7 @@
 .TabsMenu-Tab {
 	padding: 0 var(--typography-controls-size-m-indent-inner);
 	position: relative;
+
 	/* border-radius: var(--typography-controls-border-radius); */
 	overflow: hidden;
 	outline: none;
@@ -10,23 +11,25 @@
 	background: var(--color-control-bg-hover);
 }
 
-.TabsMenu-Tab:after {
+.TabsMenu-Tab::after {
 	display: block;
 	position: absolute;
 	bottom: 0;
 	left: 0;
 	content: '';
-	border-bottom: var(--typography-controls-border-width-m) solid
+	border-bottom:
+		var(--typography-controls-border-width-m) solid
 		var(--color-control-bg-border-default);
 	font-size: var(--typography-controls-size-m-font-size);
 	width: 100%;
 }
 
-.TabsMenu-Tab_active:after {
+.TabsMenu-Tab_active::after {
 	border-color: var(--color-control-bg-border-focus);
 }
 
 .utilityfocus .TabsMenu-Tab_active:focus {
-	box-shadow: 0 0 0 var(--typography-controls-border-width-m)
+	box-shadow:
+		0 0 0 var(--typography-controls-border-width-m)
 		var(--color-control-bg-border-focus);
 }
