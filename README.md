@@ -26,11 +26,11 @@ To try it on a chromium browser, download the normal extension for Chrome.
 
 Linguist is very convenient to use.
 
+- Supports all translation services in the world (read about [custom translators](./docs/CustomTranslator.md))
 - Real time page translations without reloading
 - Translate selected text segments
-- Translate input text manually
-- Dictionary for saving important translations
-- Supports all translation services (even your own service)
+- Translate any text you entered
+- Dictionary to keep important translations
 
 Supported translators out of the box:
 
@@ -38,7 +38,7 @@ Supported translators out of the box:
 - Yandex
 - Bing
 
-You can also use your own custom service (in development).
+You can also use your own [custom translator](./docs/CustomTranslator.md).
 
 You control all your data and can download your personal dictionary and other data at any time.
 
@@ -50,9 +50,9 @@ When you use a translation service, you can't translate pages which require auth
 
 # Why it better than other translation extensions?
 
-It's free, open source, supports all translation services and does not collect your personal data.
+It's free, open source, [supports all translation services](./docs/CustomTranslator.md) and does not collect your personal data.
 
-This extension allows you to not only translate text on pages, but to translate anything you wish and to keep these important translations for yourself. It's like your personal translator on the internet.
+This extension allows you to not only translate text on pages, but also translate entered text, keep these important translations for yourself and speak text. It's like your personal translator on the internet.
 
 It is for making life a little more comfortable, for all users of the internet.
 
@@ -64,9 +64,11 @@ It is for making life a little more comfortable, for all users of the internet.
 
 # Development
 
-See [ROADMAP.md](./ROADMAP.md) for getting to know development plans.
+See [ROADMAP.md](./ROADMAP.md) to getting know development plans.
 
-You may improve Linguist, [make issues](https://github.com/translate-tools/linguist/issues/new) and suggest features or tell us about unknown bugs.
+See [development docs](./docs/Development.md) to get info how to build and debug the addon.
+
+You can improve Linguist, [make issues](https://github.com/translate-tools/linguist/issues/new) and suggest features or tell us about unknown bugs. You can also look at ["help wanted" label](https://github.com/translate-tools/linguist/labels/help%20wanted) to solve problems together.
 
 Help us translate Linguist to your language. Read the [internationalization guide](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization) and make a pull request.
 
