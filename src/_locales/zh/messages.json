@@ -1,0 +1,1076 @@
+{
+  "ext_name": {
+    "message": "Linguist - 网页翻译器"
+  },
+  "ext_description": {
+    "message": "无需重新加载页面的文本翻译"
+  },
+  "common_translate": {
+    "message": "翻译"
+  },
+  "common_retry": {
+    "message": "重试"
+  },
+  "common_copy": {
+    "message": "复制"
+  },
+  "common_close": {
+    "message": "关闭"
+  },
+  "common_cancel": {
+    "message": "取消"
+  },
+  "common_error": {
+    "message": "错误"
+  },
+  "common_bgUnavailable": {
+    "message": "后台脚本不可用"
+  },
+  "message_translateOfText": {
+    "message": "已翻译"
+  },
+  "message_errorOfTranslate": {
+    "message": "翻译错误"
+  },
+  "message_error": {
+    "message": "错误"
+  },
+  "message_unknownError": {
+    "message": "未知错误"
+  },
+  "message_askResetConfig": {
+    "message": "重置设置？"
+  },
+  "message_cacheFlushed": {
+    "message": "缓存已清空"
+  },
+  "message_changesSaved": {
+    "message": "更改已保存"
+  },
+  "message_serviceRequiredKey": {
+    "message": "服务需要一个 key"
+  },
+  "validation_number": {
+    "message": "参数必须是一个数字。"
+  },
+  "validation_positiveNumber": {
+    "message": "参数必须是一个正数。"
+  },
+  "validation_numberBetweenRange": {
+    "message": "参数必须是一个位于 $1 和 $2 之间的数字。"
+  },
+  "lang_detect": {
+    "message": "自动检测"
+  },
+  "lang_swap": {
+    "message": "交换语言"
+  },
+  "lang_change": {
+    "message": "更改语言"
+  },
+  "lang_select": {
+    "message": "选择语言"
+  },
+  "common_action_addToDictionary": {
+    "message": "将翻译添加到词典"
+  },
+  "common_action_removeFromDictionary": {
+    "message": "从词典中删除翻译"
+  },
+  "contextMenu_translateSelectedText": {
+    "message": "翻译选择的文本"
+  },
+  "dictionary_pageTitle": {
+    "message": "词典"
+  },
+  "dictionary_deleteConfirmation": {
+    "message": "确定要删除这个翻译？"
+  },
+  "dictionary_deleteAll": {
+    "message": "确定要删除词典中的全部翻译？"
+  },
+  "dictionary_message_deleteAll_success": {
+    "message": "已删除全部翻译"
+  },
+  "dictionary_emptyDictionary": {
+    "message": "词典是空的。在翻译文本的同时，开始填充它吧！"
+  },
+  "dictionary_notFoundEntries": {
+    "message": "未找到符合这些过滤器的条目"
+  },
+  "dictionary_resetFilters": {
+    "message": "重置过滤器"
+  },
+  "dictionary_description": {
+    "message": "将翻译放在词典中，以便日后查找"
+  },
+  "dictionary_searchPlaceholder": {
+    "message": "按文本搜索"
+  },
+  "dictionary_button_export": {
+    "message": "导出"
+  },
+  "dictionary_button_removeAll": {
+    "message": "移除全部"
+  },
+  "dictionary_filter_from": {
+    "message": "从"
+  },
+  "dictionary_filter_to": {
+    "message": "到"
+  },
+  "popup_tabIdNotFound": {
+    "message": "标签页 \"$1\" 不存在"
+  },
+  "popup_tab_translatePage": {
+    "message": "页面翻译"
+  },
+  "popup_tab_translateText": {
+    "message": "文本翻译"
+  },
+  "pageTranslator_translatePage": {
+    "message": "翻译页面"
+  },
+  "pageTranslator_showOriginal": {
+    "message": "显示原文"
+  },
+  "pageTranslator_showOptions": {
+    "message": "显示选项"
+  },
+  "pageTranslator_translationReport": {
+    "message": "翻译报告"
+  },
+  "pageTranslator_alwaysTranslateLang": {
+    "message": "始终翻译这种语言"
+  },
+  "pageTranslator_commonPreferences_title": {
+    "message": "这种语言的通用设置"
+  },
+  "pageTranslator_commonPreferences_autoTranslate_enable": {
+    "message": "启用"
+  },
+  "pageTranslator_commonPreferences_autoTranslate_disable": {
+    "message": "禁用"
+  },
+  "pageTranslator_commonPreferences_autoTranslate_disableForAll": {
+    "message": "在所有站点中禁用"
+  },
+  "pageTranslator_sitePreferences_title": {
+    "message": "设置"
+  },
+  "pageTranslator_option_autoTranslate": {
+    "message": "自动翻译"
+  },
+  "pageTranslator_sitePreferences_autoTranslate_default": {
+    "message": "使用通用规则"
+  },
+  "pageTranslator_sitePreferences_autoTranslate_never": {
+    "message": "永不翻译"
+  },
+  "pageTranslator_sitePreferences_autoTranslate_always": {
+    "message": "始终翻译"
+  },
+  "pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
+    "message": "使用这种语言的通用规则"
+  },
+  "pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
+    "message": "始终翻译为这种语言"
+  },
+  "pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
+    "message": "永不翻译这种语言"
+  },
+  "pageTranslator_translationReport_resolve": {
+    "message": "已翻译"
+  },
+  "pageTranslator_translationReport_reject": {
+    "message": "错误"
+  },
+  "pageTranslator_translationReport_queue": {
+    "message": "队列"
+  },
+  "textTranslator_translateInputPlaceholder": {
+    "message": "输入文本"
+  },
+  "textTranslator_translatePlaceholder": {
+    "message": "翻译文本"
+  },
+  "textTranslator_suggestLanguage": {
+    "message": "看起来这种语言是"
+  },
+  "inlineTranslator_showOriginalText": {
+    "message": "显示原文"
+  },
+  "settings_pageTitle": {
+    "message": "设置"
+  },
+  "settings_message_common_invalidValueType": {
+    "message": "无效值"
+  },
+  "settings_message_importConfig_success": {
+    "message": "导入完成"
+  },
+  "settings_message_importConfig_invalidFile": {
+    "message": "无法处理导入文件"
+  },
+  "settings_message_resetConfig_confirm": {
+    "message": "是否要重置设置？"
+  },
+  "settings_message_resetConfig_success": {
+    "message": "设置重置"
+  },
+  "settings_message_saveChanges_success": {
+    "message": "已保存更改"
+  },
+  "settings_message_clearCache_success": {
+    "message": "缓存已清除"
+  },
+  "settings_option_commonSettings": {
+    "message": "通用设置"
+  },
+  "settings_option_userLanguage": {
+    "message": "您的语言"
+  },
+  "settings_option_userLanguage_desc": {
+    "message": "默认情况下，所有文本都将翻译为这种语言\n\n界面语言取决于浏览器的语言设置，或许您以后可以在这里设置"
+  },
+  "settings_option_appIcon": {
+    "message": "扩展图标"
+  },
+  "settings_option_appIcon_desc": {
+    "message": "选择动态图标时，颜色将跟随浏览器主题"
+  },
+  "settings_option_appIcon_item_auto": {
+    "message": "动态"
+  },
+  "settings_option_appIcon_item_dark": {
+    "message": "深色"
+  },
+  "settings_option_appIcon_item_light": {
+    "message": "浅色"
+  },
+  "settings_option_appIcon_item_color": {
+    "message": "彩色"
+  },
+  "settings_option_translatePreferences": {
+    "message": "翻译偏好"
+  },
+  "settings_option_translatorModule": {
+    "message": "翻译模块"
+  },
+  "settings_option_translatorModule_desc": {
+    "message": "翻译的速度、质量以及可用的翻译目标取决于所选模块。\n\n如果模块工作异常，请更换模块"
+  },
+  "settings_option_translateScheduler": {
+    "message": "翻译调度程序"
+  },
+  "settings_option_translateScheduler_delay": {
+    "message": "文本累积延迟（毫秒）"
+  },
+  "settings_option_translateScheduler_delay_desc": {
+    "message": "翻译调度程序尝试通过将文本累积到块中来减少对翻译服务 API 的请求数量，以便仅使用一个请求发送许多文本。\n\n将文本添加到块后，调度程序将等待上面指定的一段时间，如果没有新增文本，它才会发送要翻译的块"
+  },
+  "settings_option_translateScheduler_retryLimit": {
+    "message": "尝试重新翻译的次数"
+  },
+  "settings_option_translateScheduler_retryLimit_desc": {
+    "message": "翻译出错时，调度程序会再次尝试，直到抵达限制次数。\n要禁用限制，请将值设置为负数"
+  },
+  "settings_option_cache": {
+    "message": "缓存"
+  },
+  "settings_option_cache_enable": {
+    "message": "启用缓存"
+  },
+  "settings_option_cache_enable_desc": {
+    "message": "启用后，翻译将保存到本地存储中，将来相同的翻译请求可以立即翻译。\n\n例如，联网时翻译的页面，断网后仍可在原文和译文之间切换"
+  },
+  "settings_option_cache_ignoreCase": {
+    "message": "不区分大小写"
+  },
+  "settings_option_cache_ignoreCase_desc": {
+    "message": "启用该选项后，更多文本将与缓存条目匹配，但可能会导致伪匹配"
+  },
+  "settings_option_cache_clear": {
+    "message": "清除缓存"
+  },
+  "settings_option_cache_clear_desc": {
+    "message": "如果翻译了私人文本，并且它们已缓存或有伪匹配，可以清除翻译器缓存"
+  },
+  "settings_option_pageTranslation": {
+    "message": "页面翻译"
+  },
+  "settings_option_mainPreferences": {
+    "message": "主要设置"
+  },
+  "settings_option_pageTranslation_lazyTranslate": {
+    "message": "仅翻译可视区域内的元素"
+  },
+  "settings_option_pageTranslation_lazyTranslate_desc": {
+    "message": "禁用此选项后，页面将立即全部翻译。此选项可以节省网络流量"
+  },
+  "settings_option_pageTranslation_detectLanguageByContent": {
+    "message": "按内容检测语言"
+  },
+  "settings_option_pageTranslation_detectLanguageByContent_desc": {
+    "message": "首先尝试通过页面的文本内容来检测页面语言。使用页面提供的元数据检测默认语言"
+  },
+  "settings_option_pageTranslation_translatableAttributes": {
+    "message": "可翻译的属性"
+  },
+  "settings_option_pageTranslation_translatableAttributes_desc": {
+    "message": "只有此处指定的属性才会被翻译。每行一个名称"
+  },
+  "settings_option_pageTranslation_ignoredTags": {
+    "message": "忽略的标签"
+  },
+  "settings_option_pageTranslation_ignoredTags_desc": {
+    "message": "除了此处指定的元素标签及其子标签，所有标签都将被翻译。每行一个名称"
+  },
+  "settings_option_pageTranslation_originalTextPopup": {
+    "message": "悬停显示原文"
+  },
+  "settings_option_selectTranslation": {
+    "message": "选中文本翻译"
+  },
+  "settings_option_selectTranslation_enable": {
+    "message": "启用"
+  },
+  "settings_option_selectTranslation_disableWhileTranslatePage": {
+    "message": "翻译页面时禁用"
+  },
+  "settings_option_selectTranslation_header_languageChoice": {
+    "message": "语言设置"
+  },
+  "settings_option_selectTranslation_detectedLangFirst": {
+    "message": "首选检测到的文本语言而不是页面语言"
+  },
+  "settings_option_selectTranslation_detectedLangFirst_desc": {
+    "message": "启用后，模块将尝试检测所选文本的语言。否则将使用页面语言决定翻译的源语言"
+  },
+  "settings_option_selectTranslation_isUseAutoForDetectLang": {
+    "message": "启用翻译服务的自动检测语言"
+  },
+  "settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
+    "message": "本地无法检测到语言时，使用翻译服务自动检测语言"
+  },
+  "settings_option_selectTranslation_rememberDirection": {
+    "message": "记住最后翻译的目标语言"
+  },
+  "settings_option_selectTranslation_showOnceForSelection": {
+    "message": "每个文本选择显示一次翻译按钮"
+  },
+  "settings_option_selectTranslation_showOnceForSelection_desc": {
+    "message": "对于每个文本选择，按钮只会显示一次。如果需要再次显示，请重新选择文本"
+  },
+  "settings_option_selectTranslation_strictSelection": {
+    "message": "严格选择"
+  },
+  "settings_option_selectTranslation_strictSelection_desc": {
+    "message": "如果在包含选定文本块之外释放鼠标左键，则忽略选择"
+  },
+  "settings_option_selectTranslation_mode": {
+    "message": "翻译触发方式"
+  },
+  "settings_option_selectTranslation_mode_item_popupButton": {
+    "message": "弹出按钮"
+  },
+  "settings_option_selectTranslation_mode_item_quickTranslate": {
+    "message": "选择快速翻译"
+  },
+  "settings_option_selectTranslation_mode_item_contextMenu": {
+    "message": "上下文菜单按钮"
+  },
+  "settings_option_selectTranslation_modifiers": {
+    "message": "修饰键"
+  },
+  "settings_option_selectTranslation_modifiers_desc": {
+    "message": "选择时检测修饰键是否按下，以确定是否显示翻译"
+  },
+  "settings_option_selectTranslation_modifiers_key_ctrl": {
+    "message": "ctrl"
+  },
+  "settings_option_selectTranslation_modifiers_key_alt": {
+    "message": "alt"
+  },
+  "settings_option_selectTranslation_modifiers_key_shift": {
+    "message": "shift"
+  },
+  "settings_option_selectTranslation_modifiers_key_meta": {
+    "message": "meta"
+  },
+  "settings_option_selectTranslation_timeoutForHideButton": {
+    "message": "翻译按钮的自动隐藏延迟"
+  },
+  "settings_option_selectTranslation_timeoutForHideButton_desc": {
+    "message": "选择文本后隐藏翻译按钮的时间（毫秒）。\n光标悬停在按钮上将重置计时器。\n\n要禁用自动隐藏，请设置小于 1 的值"
+  },
+  "settings_option_selectTranslation_zIndex": {
+    "message": "z-index"
+  },
+  "settings_option_selectTranslation_zIndex_desc": {
+    "message": "如果某些页面上的其他元素与翻译文本块重叠，请增加此值"
+  },
+  "settings_option_selectTranslation_focusOnTranslateButton": {
+    "message": "自动聚焦到翻译按钮"
+  },
+  "settings_option_selectTranslation_focusOnTranslateButton_desc": {
+    "message": "选择结束后聚焦到翻译按钮。用于键盘控制"
+  },
+  "settings_option_selectTranslation_showOriginalText": {
+    "message": "显示原始文本块"
+  },
+  "settings_option_textTranslator": {
+    "message": "文本翻译"
+  },
+  "settings_option_textTranslator_rememberText": {
+    "message": "记住翻译文本"
+  },
+  "settings_option_textTranslator_rememberText_desc": {
+    "message": "记住翻译文本，下次打开窗口时自动显示"
+  },
+  "settings_option_textTranslator_spellCheck": {
+    "message": "启用拼写检查"
+  },
+  "settings_option_textTranslator_suggestLanguage": {
+    "message": "提供文本语言检测建议"
+  },
+  "settings_option_textTranslator_suggestLanguageAlways": {
+    "message": "始终检测和建议语言"
+  },
+  "settings_option_textTranslator_suggestLanguageAlways_desc": {
+    "message": "禁用时，仅在未设置文本语言时才检测语言"
+  },
+  "settings_section_popup": {
+    "message": "弹窗"
+  },
+  "settings_option_popupTab_pageTranslator_showCounters": {
+    "message": "显示翻译统计"
+  },
+  "settings_option_popupTab_pageTranslator_showCounters_desc": {
+    "message": "显示页面翻译统计"
+  },
+  "settings_option_customTranslatorModule_manageButton": {
+    "message": "管理翻译服务"
+  },
+  "settings_option_customTranslatorModule_desc": {
+    "message": "添加自定义翻译，以使用喜欢的翻译服务"
+  },
+  "settings_option_customTranslatorModule": {
+    "message": "自定义翻译服务"
+  },
+  "settings_button_saveChanges": {
+    "message": "保存更改"
+  },
+  "settings_button_cancel": {
+    "message": "取消"
+  },
+  "settings_button_import": {
+    "message": "导入配置"
+  },
+  "settings_button_export": {
+    "message": "导出配置"
+  },
+  "settings_button_reset": {
+    "message": "重置配置"
+  },
+  "translatorEditorWindow_message_invalidTranslatorName": {
+    "message": "名称必须包含至少一个符号"
+  },
+  "translatorEditorWindow_save": {
+    "message": "保存"
+  },
+  "translatorEditorWindow_close": {
+    "message": "关闭"
+  },
+  "translatorEditorWindow_translatorName": {
+    "message": "名称"
+  },
+  "translatorEditorWindow_translatorCode": {
+    "message": "代码"
+  },
+  "translatorsManagerWindow_message_translatorRemovingConfirmation": {
+    "message": "确定要删除翻译服务 \"$translator_name$\" 吗？",
+    "placeholders": {
+      "translator_name": {
+        "content": "$1",
+        "example": "谷歌翻译"
+      }
+    }
+  },
+  "translatorsManagerWindow_description": {
+    "message": "阅读有关自定义翻译服务的更多信息"
+  },
+  "translatorsManagerWindow_description_link": {
+    "message": "在文档中"
+  },
+  "translatorsManagerWindow_title": {
+    "message": "自定义翻译服务"
+  },
+  "translatorsManagerWindow_add": {
+    "message": "添加"
+  },
+  "translatorsManagerWindow_close": {
+    "message": "关闭"
+  },
+  "translatorsManagerWindow_emptyTranslatorsListText": {
+    "message": "尚未添加自定义翻译服务"
+  },
+  "translatorsManagerWindow_translator_edit": {
+    "message": "编辑"
+  },
+  "translatorsManagerWindow_translator_delete": {
+    "message": "删除"
+  },
+  "langCode_aa": {
+    "message": "阿法尔语"
+  },
+  "langCode_ab": {
+    "message": "阿布哈兹语"
+  },
+  "langCode_af": {
+    "message": "南非荷兰语"
+  },
+  "langCode_ak": {
+    "message": "阿坎语"
+  },
+  "langCode_sq": {
+    "message": "阿尔巴尼亚语"
+  },
+  "langCode_am": {
+    "message": "阿姆哈拉语"
+  },
+  "langCode_ar": {
+    "message": "阿拉伯语"
+  },
+  "langCode_an": {
+    "message": "阿拉贡语"
+  },
+  "langCode_hy": {
+    "message": "亚美尼亚语"
+  },
+  "langCode_as": {
+    "message": "阿萨姆语"
+  },
+  "langCode_av": {
+    "message": "阿瓦尔语"
+  },
+  "langCode_ae": {
+    "message": "阿维斯陀语"
+  },
+  "langCode_ay": {
+    "message": "艾玛拉语"
+  },
+  "langCode_az": {
+    "message": "阿塞拜疆语"
+  },
+  "langCode_ba": {
+    "message": "巴什基尔语"
+  },
+  "langCode_bm": {
+    "message": "班巴拉语"
+  },
+  "langCode_eu": {
+    "message": "巴斯克语"
+  },
+  "langCode_be": {
+    "message": "白俄罗斯语"
+  },
+  "langCode_bn": {
+    "message": "孟加拉语"
+  },
+  "langCode_bh": {
+    "message": "比哈尔语"
+  },
+  "langCode_bi": {
+    "message": "比斯拉马语"
+  },
+  "langCode_bo": {
+    "message": "藏语"
+  },
+  "langCode_bs": {
+    "message": "波斯尼亚语"
+  },
+  "langCode_br": {
+    "message": "布列塔尼语"
+  },
+  "langCode_bg": {
+    "message": "保加利亚语"
+  },
+  "langCode_my": {
+    "message": "缅甸语"
+  },
+  "langCode_ca": {
+    "message": "加泰隆语"
+  },
+  "langCode_cs": {
+    "message": "捷克语"
+  },
+  "langCode_ch": {
+    "message": "查莫罗语"
+  },
+  "langCode_ce": {
+    "message": "车臣语"
+  },
+  "langCode_zh": {
+    "message": "中文"
+  },
+  "langCode_cu": {
+    "message": "教会斯拉夫语"
+  },
+  "langCode_cv": {
+    "message": "楚瓦什语"
+  },
+  "langCode_kw": {
+    "message": "康沃尔语"
+  },
+  "langCode_co": {
+    "message": "科西嘉语"
+  },
+  "langCode_cr": {
+    "message": "克里语"
+  },
+  "langCode_cy": {
+    "message": "威尔士语"
+  },
+  "langCode_da": {
+    "message": "丹麦语"
+  },
+  "langCode_de": {
+    "message": "德语"
+  },
+  "langCode_dv": {
+    "message": "迪维希语"
+  },
+  "langCode_nl": {
+    "message": "荷兰语"
+  },
+  "langCode_dz": {
+    "message": "宗喀语"
+  },
+  "langCode_el": {
+    "message": "希腊语"
+  },
+  "langCode_en": {
+    "message": "英语"
+  },
+  "langCode_eo": {
+    "message": "世界语"
+  },
+  "langCode_et": {
+    "message": "爱沙尼亚语"
+  },
+  "langCode_ee": {
+    "message": "埃维语"
+  },
+  "langCode_fo": {
+    "message": "法罗语"
+  },
+  "langCode_fa": {
+    "message": "波斯语"
+  },
+  "langCode_fj": {
+    "message": "斐济语"
+  },
+  "langCode_fi": {
+    "message": "芬兰语"
+  },
+  "langCode_fr": {
+    "message": "法语"
+  },
+  "langCode_fy": {
+    "message": "弗里斯兰语"
+  },
+  "langCode_ff": {
+    "message": "富拉语"
+  },
+  "langCode_ka": {
+    "message": "格鲁吉亚语"
+  },
+  "langCode_gd": {
+    "message": "盖尔语"
+  },
+  "langCode_ga": {
+    "message": "爱尔兰语"
+  },
+  "langCode_gl": {
+    "message": "加利西亚语"
+  },
+  "langCode_gv": {
+    "message": "马恩岛语"
+  },
+  "langCode_gn": {
+    "message": "瓜拉尼语"
+  },
+  "langCode_gu": {
+    "message": "古吉拉特语"
+  },
+  "langCode_ht": {
+    "message": "海地克里奥尔语"
+  },
+  "langCode_ha": {
+    "message": "豪萨语"
+  },
+  "langCode_he": {
+    "message": "希伯来语"
+  },
+  "langCode_hz": {
+    "message": "赫雷罗语"
+  },
+  "langCode_hi": {
+    "message": "印地语"
+  },
+  "langCode_ho": {
+    "message": "希里木托语"
+  },
+  "langCode_hr": {
+    "message": "克罗地亚语"
+  },
+  "langCode_hu": {
+    "message": "匈牙利语"
+  },
+  "langCode_ig": {
+    "message": "伊博语"
+  },
+  "langCode_is": {
+    "message": "冰岛语"
+  },
+  "langCode_io": {
+    "message": "伊多语"
+  },
+  "langCode_ii": {
+    "message": "彝族北部方言"
+  },
+  "langCode_iu": {
+    "message": "因纽特语"
+  },
+  "langCode_ie": {
+    "message": "因特语"
+  },
+  "langCode_ia": {
+    "message": "西方国际语"
+  },
+  "langCode_id": {
+    "message": "印度尼西亚语"
+  },
+  "langCode_ik": {
+    "message": "依努庇亚克语"
+  },
+  "langCode_it": {
+    "message": "意大利语"
+  },
+  "langCode_jv": {
+    "message": "爪哇语"
+  },
+  "langCode_ja": {
+    "message": "日语"
+  },
+  "langCode_kl": {
+    "message": "格陵兰语"
+  },
+  "langCode_kn": {
+    "message": "卡纳达语"
+  },
+  "langCode_ks": {
+    "message": "克什米尔语"
+  },
+  "langCode_kr": {
+    "message": "卡努里语"
+  },
+  "langCode_kk": {
+    "message": "哈萨克语"
+  },
+  "langCode_km": {
+    "message": "高棉语"
+  },
+  "langCode_ki": {
+    "message": "基库尤语"
+  },
+  "langCode_rw": {
+    "message": "卢旺达语"
+  },
+  "langCode_ky": {
+    "message": "吉尔吉斯语"
+  },
+  "langCode_kv": {
+    "message": "科米语"
+  },
+  "langCode_kg": {
+    "message": "刚果语"
+  },
+  "langCode_ko": {
+    "message": "韩语"
+  },
+  "langCode_kj": {
+    "message": "宽宽亚玛语"
+  },
+  "langCode_ku": {
+    "message": "库尔德语"
+  },
+  "langCode_lo": {
+    "message": "寮语"
+  },
+  "langCode_la": {
+    "message": "拉丁语"
+  },
+  "langCode_lv": {
+    "message": "拉脱维亚语"
+  },
+  "langCode_li": {
+    "message": "林堡语"
+  },
+  "langCode_ln": {
+    "message": "林加拉语"
+  },
+  "langCode_lt": {
+    "message": "立陶宛语"
+  },
+  "langCode_lb": {
+    "message": "卢森堡语"
+  },
+  "langCode_lu": {
+    "message": "卢巴卡丹加语"
+  },
+  "langCode_lg": {
+    "message": "卢甘达语"
+  },
+  "langCode_mk": {
+    "message": "马其顿语"
+  },
+  "langCode_mh": {
+    "message": "马绍尔语"
+  },
+  "langCode_ml": {
+    "message": "马拉雅拉姆语"
+  },
+  "langCode_mi": {
+    "message": "毛利语"
+  },
+  "langCode_mr": {
+    "message": "马拉地语"
+  },
+  "langCode_ms": {
+    "message": "马来语"
+  },
+  "langCode_mg": {
+    "message": "马达加斯加语"
+  },
+  "langCode_mt": {
+    "message": "马耳他语"
+  },
+  "langCode_mn": {
+    "message": "蒙古语"
+  },
+  "langCode_na": {
+    "message": "瑙鲁语"
+  },
+  "langCode_nv": {
+    "message": "纳瓦霍语"
+  },
+  "langCode_nr": {
+    "message": "南恩德贝莱语"
+  },
+  "langCode_nd": {
+    "message": "北恩德贝莱语"
+  },
+  "langCode_ng": {
+    "message": "恩敦加语"
+  },
+  "langCode_ne": {
+    "message": "尼泊尔语"
+  },
+  "langCode_nn": {
+    "message": "挪威尼诺斯克"
+  },
+  "langCode_nb": {
+    "message": "书面挪威语"
+  },
+  "langCode_no": {
+    "message": "新挪威语"
+  },
+  "langCode_ny": {
+    "message": "奇切瓦语"
+  },
+  "langCode_oc": {
+    "message": "奥克语"
+  },
+  "langCode_oj": {
+    "message": "奥吉布瓦语"
+  },
+  "langCode_or": {
+    "message": "奥里亚语"
+  },
+  "langCode_om": {
+    "message": "奥罗莫语"
+  },
+  "langCode_os": {
+    "message": "奥塞梯语"
+  },
+  "langCode_pa": {
+    "message": "旁遮普语"
+  },
+  "langCode_pi": {
+    "message": "巴利语"
+  },
+  "langCode_pl": {
+    "message": "波兰语"
+  },
+  "langCode_pt": {
+    "message": "葡萄牙语"
+  },
+  "langCode_ps": {
+    "message": "普什图语"
+  },
+  "langCode_qu": {
+    "message": "盖丘亚语"
+  },
+  "langCode_rm": {
+    "message": "罗曼什语"
+  },
+  "langCode_ro": {
+    "message": "罗马尼亚语"
+  },
+  "langCode_rn": {
+    "message": "基隆迪语"
+  },
+  "langCode_ru": {
+    "message": "俄语"
+  },
+  "langCode_sg": {
+    "message": "桑戈语"
+  },
+  "langCode_sa": {
+    "message": "梵语"
+  },
+  "langCode_si": {
+    "message": "僧伽罗语"
+  },
+  "langCode_sk": {
+    "message": "斯洛伐克语"
+  },
+  "langCode_sl": {
+    "message": "斯洛文尼亚语"
+  },
+  "langCode_se": {
+    "message": "北萨米语"
+  },
+  "langCode_sm": {
+    "message": "萨摩亚语"
+  },
+  "langCode_sn": {
+    "message": "绍纳语"
+  },
+  "langCode_sd": {
+    "message": "信德语"
+  },
+  "langCode_so": {
+    "message": "索马里语"
+  },
+  "langCode_st": {
+    "message": "塞索托语"
+  },
+  "langCode_es": {
+    "message": "西班牙语"
+  },
+  "langCode_sc": {
+    "message": "撒丁语"
+  },
+  "langCode_sr": {
+    "message": "塞尔维亚语"
+  },
+  "langCode_ss": {
+    "message": "史瓦帝语"
+  },
+  "langCode_su": {
+    "message": "巽他语"
+  },
+  "langCode_sw": {
+    "message": "斯瓦希里语"
+  },
+  "langCode_sv": {
+    "message": "瑞典语"
+  },
+  "langCode_ty": {
+    "message": "大溪地语"
+  },
+  "langCode_ta": {
+    "message": "泰米尔语"
+  },
+  "langCode_tt": {
+    "message": "鞑靼语"
+  },
+  "langCode_te": {
+    "message": "泰卢固语"
+  },
+  "langCode_tg": {
+    "message": "塔吉克语"
+  },
+  "langCode_tl": {
+    "message": "他加禄语"
+  },
+  "langCode_th": {
+    "message": "泰语"
+  },
+  "langCode_ti": {
+    "message": "提格里尼亚语"
+  },
+  "langCode_to": {
+    "message": "汤加语"
+  },
+  "langCode_tn": {
+    "message": "茨瓦纳语"
+  },
+  "langCode_ts": {
+    "message": "聪加语"
+  },
+  "langCode_tk": {
+    "message": "土库曼语"
+  },
+  "langCode_tr": {
+    "message": "土耳其语"
+  },
+  "langCode_tw": {
+    "message": "契维语"
+  },
+  "langCode_ug": {
+    "message": "维吾尔语"
+  },
+  "langCode_uk": {
+    "message": "乌克兰语"
+  },
+  "langCode_ur": {
+    "message": "乌尔都语"
+  },
+  "langCode_uz": {
+    "message": "乌兹别克语"
+  },
+  "langCode_ve": {
+    "message": "文达语"
+  },
+  "langCode_vi": {
+    "message": "越南语"
+  },
+  "langCode_vo": {
+    "message": "沃拉普克语"
+  },
+  "langCode_wa": {
+    "message": "瓦隆语"
+  },
+  "langCode_wo": {
+    "message": "沃洛夫语"
+  },
+  "langCode_xh": {
+    "message": "科萨语"
+  },
+  "langCode_yi": {
+    "message": "意第绪语"
+  },
+  "langCode_yo": {
+    "message": "约鲁巴语"
+  },
+  "langCode_za": {
+    "message": "壮语"
+  },
+  "langCode_zu": {
+    "message": "祖鲁语"
+  }
+}
