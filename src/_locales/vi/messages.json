@@ -1,0 +1,1077 @@
+{
+	"ext_name": {
+		"message": "Linguist - trình dịch trang web"
+	},
+	"ext_description": {
+		"message": "Dịch văn bản mà không cần tải lại trang"
+	},
+	"common_translate": {
+		"message": "Dịch thuật"
+	},
+	"common_retry": {
+		"message": "Thử lại"
+	},
+	"common_copy": {
+		"message": "Sao chép"
+	},
+	"common_close": {
+		"message": "Đóng"
+	},
+	"common_cancel": {
+		"message": "Huỷ bỏ"
+	},
+	"common_error": {
+		"message": "Lỗi"
+	},
+	"common_bgUnavailable": {
+		"message": "Tập lệnh nền không khả dụng"
+	},
+	"message_translateOfText": {
+		"message": "Đã dịch"
+	},
+	"message_errorOfTranslate": {
+		"message": "Lỗi dịch thuật"
+	},
+	"message_error": {
+		"message": "Lỗi"
+	},
+	"message_unknownError": {
+		"message": "Lỗi không xác định"
+	},
+	"message_askResetConfig": {
+		"message": "Đặt lại cài đặt?"
+	},
+	"message_cacheFlushed": {
+		"message": "Bộ nhớ cache bị xóa"
+	},
+	"message_changesSaved": {
+		"message": "Đã lưu các thay đổi"
+	},
+	"message_serviceRequiredKey": {
+		"message": "Dịch vụ yêu cầu một khóa"
+	},
+	"validation_number": {
+		"message": "Tham số phải là một số"
+	},
+	"validation_positiveNumber": {
+		"message": "Tham số phải là một số dương."
+	},
+	"validation_numberBetweenRange": {
+		"message": "Tham số phải là một số từ $1 đến $2"
+	},
+	"lang_detect": {
+		"message": "Tự động phát hiện"
+	},
+	"lang_swap": {
+		"message": "Hoán đổi ngôn ngữ"
+	},
+	"lang_change": {
+		"message": "Thay đổi ngôn ngữ"
+	},
+	"lang_select": {
+		"message": "Chọn ngôn ngữ"
+	},
+	"common_action_addToDictionary": {
+		"message": "Thêm bản dịch vào từ điển"
+	},
+	"common_action_removeFromDictionary": {
+		"message": "Xóa bản dịch khỏi từ điển"
+	},
+	"contextMenu_translateSelectedText": {
+		"message": "Dịch văn bản đã chọn"
+	},
+	"dictionary_pageTitle": {
+		"message": "Từ điển"
+	},
+	"dictionary_deleteConfirmation": {
+		"message": "Bạn có chắc chắn về việc xóa bản dịch này không?"
+	},
+	"dictionary_deleteAll": {
+		"message": "Bạn có chắc chắn về việc xóa TẤT CẢ các bản dịch trong từ điển không?"
+	},
+	"dictionary_message_deleteAll_success": {
+		"message": "Tất cả các bản dịch đã bị xóa"
+	},
+	"dictionary_emptyDictionary": {
+		"message": "Từ điển trống rỗng. Bắt đầu điền vào nó trong khi dịch một số văn bản"
+	},
+	"dictionary_notFoundEntries": {
+		"message": "Không tìm thấy các mục nhập khớp với các bộ lọc này"
+	},
+	"dictionary_resetFilters": {
+		"message": "đặt lại bộ lọc"
+	},
+	"dictionary_description": {
+		"message": "Giữ bản dịch của bạn trong từ điển để tìm chúng sau này"
+	},
+	"dictionary_searchPlaceholder": {
+		"message": "Tìm kiếm theo văn bản"
+	},
+	"dictionary_button_export": {
+		"message": "Xuất"
+	},
+	"dictionary_button_removeAll": {
+		"message": "Loại bỏ tất cả"
+	},
+	"dictionary_filter_from": {
+		"message": "Từ"
+	},
+	"dictionary_filter_to": {
+		"message": "Đến"
+	},
+	"popup_tabIdNotFound": {
+		"message": "Tab \"$1\" không tìm thấy"
+	},
+	"popup_tab_translatePage": {
+		"message": "Dịch trang"
+	},
+	"popup_tab_translateText": {
+		"message": "Dịch văn bản"
+	},
+	"pageTranslator_translatePage": {
+		"message": "Dịch trang"
+	},
+	"pageTranslator_showOriginal": {
+		"message": "Xem bản gốc"
+	},
+	"pageTranslator_showOptions": {
+		"message": "Hiển thị các tùy chọn"
+	},
+	"pageTranslator_translationReport": {
+		"message": "Báo cáo dịch thuật"
+	},
+	"pageTranslator_alwaysTranslateLang": {
+		"message": "Luôn dịch ngôn ngữ này"
+	},
+	"pageTranslator_commonPreferences_title": {
+		"message": "Tùy chọn phổ biến cho ngôn ngữ này"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_enable": {
+		"message": "Kích hoạt"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disable": {
+		"message": "Vô hiệu hóa"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
+		"message": "Vô hiệu hóa cho tất cả các trang web"
+	},
+	"pageTranslator_sitePreferences_title": {
+		"message": "Sở thích cho"
+	},
+	"pageTranslator_option_autoTranslate": {
+		"message": "Dịch tự động"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_default": {
+		"message": "Sử dụng các quy tắc chung"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_never": {
+		"message": "Không bao giờ dịch"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_always": {
+		"message": "Luôn dịch"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
+		"message": "Sử dụng các quy tắc phổ biến cho ngôn ngữ này"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
+		"message": "Luôn dịch cho ngôn ngữ này"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
+		"message": "Không bao giờ dịch cho ngôn ngữ này"
+	},
+	"pageTranslator_translationReport_resolve": {
+		"message": "Đã dịch"
+	},
+	"pageTranslator_translationReport_reject": {
+		"message": "Lỗi"
+	},
+	"pageTranslator_translationReport_queue": {
+		"message": "Queue"
+	},
+	"textTranslator_translateInputPlaceholder": {
+		"message": "Nhập văn bản"
+	},
+	"textTranslator_translatePlaceholder": {
+		"message": "Văn bản đã dịch"
+	},
+
+	"textTranslator_suggestLanguage": {
+		"message": "Có vẻ như ngôn ngữ đó là"
+	},
+	"inlineTranslator_showOriginalText": {
+		"message": "Hiển thị văn bản gốc"
+	},
+	"settings_pageTitle": {
+		"message": "Cài đặt"
+	},
+	"settings_message_common_invalidValueType": {
+		"message": "Giá trị không hợp lệ"
+	},
+	"settings_message_importConfig_success": {
+		"message": "Nhập xong"
+	},
+	"settings_message_importConfig_invalidFile": {
+		"message": "Không thể xử lý tệp để nhập"
+	},
+	"settings_message_resetConfig_confirm": {
+		"message": "Bạn có muốn đặt lại cài đặt không?"
+	},
+	"settings_message_resetConfig_success": {
+		"message": "Đặt lại cài đặt"
+	},
+	"settings_message_saveChanges_success": {
+		"message": "Đã lưu các thay đổi"
+	},
+	"settings_message_clearCache_success": {
+		"message": "Bộ nhớ cache bị xóa"
+	},
+	"settings_option_commonSettings": {
+		"message": "Cài đặt phổ biến"
+	},
+	"settings_option_userLanguage": {
+		"message": "Ngôn ngữ của bạn"
+	},
+	"settings_option_userLanguage_desc": {
+		"message": "Tất cả các văn bản sẽ được dịch sang ngôn ngữ này theo mặc định\n\nNgôn ngữ của giao diện phụ thuộc vào cài đặt ngôn ngữ trình duyệt, có thể bạn có thể đặt nó ở đây trong tương lai"
+	},
+	"settings_option_appIcon": {
+		"message": "Extension icon"
+	},
+	"settings_option_appIcon_desc": {
+		"message": "Khi biểu tượng động được chọn, màu sắc sẽ được điều chỉnh cho phù hợp với chủ đề trình duyệt"
+	},
+	"settings_option_appIcon_item_auto": {
+		"message": "Dynamic"
+	},
+	"settings_option_appIcon_item_dark": {
+		"message": "Tối"
+	},
+	"settings_option_appIcon_item_light": {
+		"message": "Sáng"
+	},
+	"settings_option_appIcon_item_color": {
+		"message": "Màu sắc"
+	},
+	"settings_option_translatePreferences": {
+		"message": "Tùy chọn dịch"
+	},
+	"settings_option_translatorModule": {
+		"message": "Mô-đun dịch thuật"
+	},
+	"settings_option_translatorModule_desc": {
+		"message": "Tốc độ và chất lượng của bản dịch và hướng dẫn dịch có sẵn phụ thuộc vào mô-đun đã chọn.\n\nThay đổi mô-đun nếu nó hoạt động kém"
+	},
+	"settings_option_translateScheduler": {
+		"message": "Lập lịch dịch thuật"
+	},
+	"settings_option_translateScheduler_delay": {
+		"message": "Độ trễ tích lũy văn bản (mili giây)"
+	},
+	"settings_option_translateScheduler_delay_desc": {
+		"message": "Bộ lập lịch dịch cố gắng giảm số lượng yêu cầu đến API dịch vụ dịch bằng cách tích lũy văn bản thành các đoạn, để gửi nhiều văn bản chỉ bằng một yêu cầu.\n\nSau khi thêm văn bản vào một đoạn, bộ lập lịch sẽ đợi một thời gian được chỉ định ở trên và sau đó nó sẽ gửi đoạn sẽ được dịch nếu văn bản mới không được thêm vào"
+	},
+	"settings_option_translateScheduler_retryLimit": {
+		"message": "Số lần thử dịch lại"
+	},
+	"settings_option_translateScheduler_retryLimit_desc": {
+		"message": "Khi lỗi dịch, bộ lập lịch sẽ thử lại cho đến khi giới hạn.\nĐể vô hiệu hóa giới hạn, hãy đặt nó thành một số âm"
+	},
+	"settings_option_cache": {
+		"message": "Cache"
+	},
+	"settings_option_cache_enable": {
+		"message": "Bật bộ nhớ cache"
+	},
+	"settings_option_cache_enable_desc": {
+		"message": "Khi được bật, các bản dịch sẽ được lưu vào bộ nhớ cục bộ và trong tương lai, các yêu cầu dịch tương tự sẽ được dịch ngay lập tức.\n\nVí dụ: bạn có thể dịch một trang trong khi có mạng và chuyển đổi giữa văn bản đã dịch và văn bản gốc khi bạn không có mạng"
+	},
+	"settings_option_cache_ignoreCase": {
+		"message": "Trường hợp không nhạy cảm"
+	},
+	"settings_option_cache_ignoreCase_desc": {
+		"message": "Với tùy chọn được bật, nhiều văn bản hơn sẽ được khớp với các mục nhập bộ nhớ cache, nhưng nó có thể gây ra các tạo tác"
+	},
+	"settings_option_cache_clear": {
+		"message": "Xóa bộ nhớ cache"
+	},
+	"settings_option_cache_clear_desc": {
+		"message": "Nếu bạn đã dịch văn bản riêng tư và văn bản này đã được lưu vào bộ nhớ cache hoặc bạn có thành phần lạ, bạn có thể xóa bộ nhớ cache của trình dịch"
+	},
+	"settings_option_pageTranslation": {
+		"message": "Dịch trang"
+	},
+	"settings_option_mainPreferences": {
+		"message": "Thông số cơ bản"
+	},
+	"settings_option_pageTranslation_lazyTranslate": {
+		"message": "Chỉ dịch các yếu tố hiển thị"
+	},
+	"settings_option_pageTranslation_lazyTranslate_desc": {
+		"message": "Khi tùy chọn bị tắt, các trang sẽ dịch đầy đủ cùng một lúc. Tùy chọn này có thể tiết kiệm lưu lượng mạng"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent": {
+		"message": "Phát hiện ngôn ngữ theo nội dung"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent_desc": {
+		"message": "Trước tiên, hãy thử phát hiện ngôn ngữ trang theo nội dung văn bản của trang. Phát hiện ngôn ngữ mặc định bằng siêu dữ liệu do trang cung cấp"
+	},
+	"settings_option_pageTranslation_translatableAttributes": {
+		"message": "Thuộc tính có thể dịch"
+	},
+	"settings_option_pageTranslation_translatableAttributes_desc": {
+		"message": "Chỉ các thuộc tính được chỉ định ở đây mới được dịch. Chỉ định từng tên trên một dòng mới"
+	},
+	"settings_option_pageTranslation_ignoredTags": {
+		"message": "Thẻ bị bỏ qua"
+	},
+	"settings_option_pageTranslation_ignoredTags_desc": {
+		"message": "Tất cả các thẻ sẽ được dịch ngoại trừ những thẻ được chỉ định ở đây và thẻ con của chúng. Chỉ định từng tên trên một dòng mới"
+	},
+	"settings_option_pageTranslation_originalTextPopup": {
+		"message": "Hiển thị văn bản gốc bằng cách di chuột qua"
+	},
+	"settings_option_selectTranslation": {
+		"message": "Dịch văn bản đã chọn"
+	},
+	"settings_option_selectTranslation_enable": {
+		"message": "Kích hoạt"
+	},
+	"settings_option_selectTranslation_disableWhileTranslatePage": {
+		"message": "Tắt trong khi trang đang dịch"
+	},
+	"settings_option_selectTranslation_header_languageChoice": {
+		"message": "Cài đặt ngôn ngữ"
+	},
+	"settings_option_selectTranslation_detectedLangFirst": {
+		"message": "Ưu tiên ngôn ngữ được phát hiện của văn bản thay vì ngôn ngữ trang"
+	},
+	"settings_option_selectTranslation_detectedLangFirst_desc": {
+		"message": "Khi được bật, mô-đun sẽ cố gắng phát hiện ngôn ngữ của văn bản đã chọn. Nếu không, hướng dịch sẽ được quyết định bằng ngôn ngữ trang"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang": {
+		"message": "Bật tính năng tự động phát hiện ngôn ngữ của trình dịch"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
+		"message": "Sử dụng tính năng tự động phát hiện ngôn ngữ của trình dịch, khi không thể phát hiện ngôn ngữ cục bộ"
+	},
+	"settings_option_selectTranslation_rememberDirection": {
+		"message": "Nhớ ngôn ngữ hướng dịch cuối cùng"
+	},
+	"settings_option_selectTranslation_showOnceForSelection": {
+		"message": "Hiển thị nút dịch một lần cho mỗi lựa chọn văn bản"
+	},
+	"settings_option_selectTranslation_showOnceForSelection_desc": {
+		"message": "Nút sẽ chỉ hiển thị một lần cho mỗi lựa chọn văn bản. Nếu bạn cần hiển thị nó, hãy chọn lại văn bản"
+	},
+	"settings_option_selectTranslation_strictSelection": {
+		"message": "Lựa chọn nghiêm ngặt"
+	},
+	"settings_option_selectTranslation_strictSelection_desc": {
+		"message": "Bỏ qua vùng chọn nếu nút chuột trái được thả ra bên ngoài một khối có chứa văn bản đã chọn"
+	},
+	"settings_option_selectTranslation_mode": {
+		"message": "Kích hoạt dịch"
+	},
+	"settings_option_selectTranslation_mode_item_popupButton": {
+		"message": "Nút bật lên"
+	},
+	"settings_option_selectTranslation_mode_item_quickTranslate": {
+		"message": "Dịch nhanh bằng cách lựa chọn"
+	},
+	"settings_option_selectTranslation_mode_item_contextMenu": {
+		"message": "Nút menu ngữ cảnh"
+	},
+	"settings_option_selectTranslation_modifiers": {
+		"message": "Công cụ sửa đổi"
+	},
+	"settings_option_selectTranslation_modifiers_desc": {
+		"message": "Kiểm tra các công cụ sửa đổi bàn phím cần được nhấn để hiển thị bản dịch trong khi chọn"
+	},
+	"settings_option_selectTranslation_modifiers_key_ctrl": {
+		"message": "ctrl"
+	},
+	"settings_option_selectTranslation_modifiers_key_alt": {
+		"message": "alt"
+	},
+	"settings_option_selectTranslation_modifiers_key_shift": {
+		"message": "shift"
+	},
+	"settings_option_selectTranslation_modifiers_key_meta": {
+		"message": "meta"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton": {
+		"message": "Độ trễ để tự động ẩn nút dịch"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton_desc": {
+		"message": "Thời gian mili giây để ẩn nút dịch sau khi chọn văn bản.\nCon trỏ di chuột trên một nút sẽ đặt lại bộ hẹn giờ.\n\nĐể tắt tính năng tự động ẩn, hãy đặt giá trị thấp hơn 1"
+	},
+	"settings_option_selectTranslation_zIndex": {
+		"message": "z-index"
+	},
+	"settings_option_selectTranslation_zIndex_desc": {
+		"message": "Nếu các yếu tố khác trên một số trang trùng lặp với một khối với văn bản đã dịch, hãy tăng giá trị này"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton": {
+		"message": "Tự động tập trung vào nút dịch"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
+		"message": "Tập trung vào nút dịch sau khi kết thúc lựa chọn. Hữu ích cho điều khiển bàn phím"
+	},
+	"settings_option_selectTranslation_showOriginalText": {
+		"message": "Hiển thị khối văn bản gốc"
+	},
+	"settings_option_textTranslator": {
+		"message": "Dịch văn bản"
+	},
+	"settings_option_textTranslator_rememberText": {
+		"message": "Ghi nhớ văn bản đã dịch"
+	},
+	"settings_option_textTranslator_rememberText_desc": {
+		"message": "Ghi nhớ văn bản đã dịch cho lần tiếp theo cửa sổ được mở"
+	},
+	"settings_option_textTranslator_spellCheck": {
+		"message": "Bật kiểm tra chính tả"
+	},
+	"settings_option_textTranslator_suggestLanguage": {
+		"message": "Đề xuất ngôn ngữ văn bản được phát hiện"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways": {
+		"message": "Luôn phát hiện và đề xuất ngôn ngữ"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways_desc": {
+		"message": "Khi tắt, ngôn ngữ sẽ chỉ được phát hiện bằng cách sử dụng ngôn ngữ chưa đặt của văn bản"
+	},
+	"settings_section_popup": {
+		"message": "Popup"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters": {
+		"message": "Hiển thị thống kê dịch thuật"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters_desc": {
+		"message": "Hiển thị thống kê dịch trang"
+	},
+	"settings_option_customTranslatorModule_manageButton": {
+		"message": "Quản lý trình dịch"
+	},
+	"settings_option_customTranslatorModule_desc": {
+		"message": "Bạn có thể thêm trình dịch tùy chỉnh sử dụng dịch vụ dịch thuật yêu thích của bạn"
+	},
+	"settings_option_customTranslatorModule": {
+		"message": "Trình dịch tùy chỉnh"
+	},
+	"settings_button_saveChanges": {
+		"message": "Lưu thay đổi"
+	},
+	"settings_button_cancel": {
+		"message": "Huỷ bỏ"
+	},
+	"settings_button_import": {
+		"message": "Nhập cấu hình"
+	},
+	"settings_button_export": {
+		"message": "Xuất cấu hình"
+	},
+	"settings_button_reset": {
+		"message": "Đặt lại cấu hình"
+	},
+	"translatorEditorWindow_message_invalidTranslatorName": {
+		"message": "Tên phải chứa ít nhất một ký hiệu"
+	},
+	"translatorEditorWindow_save": {
+		"message": "Lưu"
+	},
+	"translatorEditorWindow_close": {
+		"message": "Đóng"
+	},
+	"translatorEditorWindow_translatorName": {
+		"message": "Tên"
+	},
+	"translatorEditorWindow_translatorCode": {
+		"message": "Code"
+	},
+	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
+		"message": "Bạn có chắc chắn về việc loại bỏ trình dịch \"$translator_name$\"?",
+		"placeholders": {
+			"translator_name": {
+				"content": "$1",
+				"example": "Trình dịch của Google"
+			}
+		}
+	},
+	"translatorsManagerWindow_description": {
+		"message": "Đọc thêm về trình dịch tùy chỉnh"
+	},
+	"translatorsManagerWindow_description_link": {
+		"message": "trong tài liệu"
+	},
+	"translatorsManagerWindow_title": {
+		"message": "Trình dịch tùy chỉnh"
+	},
+	"translatorsManagerWindow_add": {
+		"message": "Thêm"
+	},
+	"translatorsManagerWindow_close": {
+		"message": "Đóng"
+	},
+	"translatorsManagerWindow_emptyTranslatorsListText": {
+		"message": "Trình dịch tùy chỉnh chưa được thêm vào"
+	},
+	"translatorsManagerWindow_translator_edit": {
+		"message": "Sửa"
+	},
+	"translatorsManagerWindow_translator_delete": {
+		"message": "Xoá"
+	},
+	"langCode_aa": {
+		"message": "Afar"
+	},
+	"langCode_ab": {
+		"message": "Abkhazian"
+	},
+	"langCode_af": {
+		"message": "Afrikaans"
+	},
+	"langCode_ak": {
+		"message": "Akan"
+	},
+	"langCode_sq": {
+		"message": "Albanian"
+	},
+	"langCode_am": {
+		"message": "Amharic"
+	},
+	"langCode_ar": {
+		"message": "Arabic"
+	},
+	"langCode_an": {
+		"message": "Aragonese"
+	},
+	"langCode_hy": {
+		"message": "Armenian"
+	},
+	"langCode_as": {
+		"message": "Assamese"
+	},
+	"langCode_av": {
+		"message": "Avaric"
+	},
+	"langCode_ae": {
+		"message": "Avestan"
+	},
+	"langCode_ay": {
+		"message": "Aymara"
+	},
+	"langCode_az": {
+		"message": "Azerbaijani"
+	},
+	"langCode_ba": {
+		"message": "Bashkir"
+	},
+	"langCode_bm": {
+		"message": "Bambara"
+	},
+	"langCode_eu": {
+		"message": "Basque"
+	},
+	"langCode_be": {
+		"message": "Belarusian"
+	},
+	"langCode_bn": {
+		"message": "Bengali"
+	},
+	"langCode_bh": {
+		"message": "Bihari languages"
+	},
+	"langCode_bi": {
+		"message": "Bislama"
+	},
+	"langCode_bo": {
+		"message": "Tibetan"
+	},
+	"langCode_bs": {
+		"message": "Bosnian"
+	},
+	"langCode_br": {
+		"message": "Breton"
+	},
+	"langCode_bg": {
+		"message": "Bulgarian"
+	},
+	"langCode_my": {
+		"message": "Burmese"
+	},
+	"langCode_ca": {
+		"message": "Catalan"
+	},
+	"langCode_cs": {
+		"message": "Czech"
+	},
+	"langCode_ch": {
+		"message": "Chamorro"
+	},
+	"langCode_ce": {
+		"message": "Chechen"
+	},
+	"langCode_zh": {
+		"message": "Chinese"
+	},
+	"langCode_cu": {
+		"message": "Church Slavic"
+	},
+	"langCode_cv": {
+		"message": "Chuvash"
+	},
+	"langCode_kw": {
+		"message": "Cornish"
+	},
+	"langCode_co": {
+		"message": "Corsican"
+	},
+	"langCode_cr": {
+		"message": "Cree"
+	},
+	"langCode_cy": {
+		"message": "Welsh"
+	},
+	"langCode_da": {
+		"message": "Danish"
+	},
+	"langCode_de": {
+		"message": "German"
+	},
+	"langCode_dv": {
+		"message": "Divehi"
+	},
+	"langCode_nl": {
+		"message": "Dutch"
+	},
+	"langCode_dz": {
+		"message": "Dzongkha"
+	},
+	"langCode_el": {
+		"message": "Greek"
+	},
+	"langCode_en": {
+		"message": "English"
+	},
+	"langCode_eo": {
+		"message": "Esperanto"
+	},
+	"langCode_et": {
+		"message": "Estonian"
+	},
+	"langCode_ee": {
+		"message": "Ewe"
+	},
+	"langCode_fo": {
+		"message": "Faroese"
+	},
+	"langCode_fa": {
+		"message": "Persian"
+	},
+	"langCode_fj": {
+		"message": "Fijian"
+	},
+	"langCode_fi": {
+		"message": "Finnish"
+	},
+	"langCode_fr": {
+		"message": "French"
+	},
+	"langCode_fy": {
+		"message": "Western Frisian"
+	},
+	"langCode_ff": {
+		"message": "Fulah"
+	},
+	"langCode_ka": {
+		"message": "Georgian"
+	},
+	"langCode_gd": {
+		"message": "Gaelic"
+	},
+	"langCode_ga": {
+		"message": "Irish"
+	},
+	"langCode_gl": {
+		"message": "Galician"
+	},
+	"langCode_gv": {
+		"message": "Manx"
+	},
+	"langCode_gn": {
+		"message": "Guarani"
+	},
+	"langCode_gu": {
+		"message": "Gujarati"
+	},
+	"langCode_ht": {
+		"message": "Haitian"
+	},
+	"langCode_ha": {
+		"message": "Hausa"
+	},
+	"langCode_he": {
+		"message": "Hebrew"
+	},
+	"langCode_hz": {
+		"message": "Herero"
+	},
+	"langCode_hi": {
+		"message": "Hindi"
+	},
+	"langCode_ho": {
+		"message": "Hiri Motu"
+	},
+	"langCode_hr": {
+		"message": "Croatian"
+	},
+	"langCode_hu": {
+		"message": "Hungarian"
+	},
+	"langCode_ig": {
+		"message": "Igbo"
+	},
+	"langCode_is": {
+		"message": "Icelandic"
+	},
+	"langCode_io": {
+		"message": "Ido"
+	},
+	"langCode_ii": {
+		"message": "Sichuan Yi"
+	},
+	"langCode_iu": {
+		"message": "Inuktitut"
+	},
+	"langCode_ie": {
+		"message": "Interlingue"
+	},
+	"langCode_ia": {
+		"message": "Interlingua"
+	},
+	"langCode_id": {
+		"message": "Indonesian"
+	},
+	"langCode_ik": {
+		"message": "Inupiaq"
+	},
+	"langCode_it": {
+		"message": "Italian"
+	},
+	"langCode_jv": {
+		"message": "Javanese"
+	},
+	"langCode_ja": {
+		"message": "Japanese"
+	},
+	"langCode_kl": {
+		"message": "Kalaallisut"
+	},
+	"langCode_kn": {
+		"message": "Kannada"
+	},
+	"langCode_ks": {
+		"message": "Kashmiri"
+	},
+	"langCode_kr": {
+		"message": "Kanuri"
+	},
+	"langCode_kk": {
+		"message": "Kazakh"
+	},
+	"langCode_km": {
+		"message": "Central Khmer"
+	},
+	"langCode_ki": {
+		"message": "Kikuyu"
+	},
+	"langCode_rw": {
+		"message": "Kinyarwanda"
+	},
+	"langCode_ky": {
+		"message": "Kirghiz"
+	},
+	"langCode_kv": {
+		"message": "Komi"
+	},
+	"langCode_kg": {
+		"message": "Kongo"
+	},
+	"langCode_ko": {
+		"message": "Korean"
+	},
+	"langCode_kj": {
+		"message": "Kuanyama"
+	},
+	"langCode_ku": {
+		"message": "Kurdish"
+	},
+	"langCode_lo": {
+		"message": "Lao"
+	},
+	"langCode_la": {
+		"message": "Latin"
+	},
+	"langCode_lv": {
+		"message": "Latvian"
+	},
+	"langCode_li": {
+		"message": "Limburgan"
+	},
+	"langCode_ln": {
+		"message": "Lingala"
+	},
+	"langCode_lt": {
+		"message": "Lithuanian"
+	},
+	"langCode_lb": {
+		"message": "Luxembourgish"
+	},
+	"langCode_lu": {
+		"message": "Luba-Katanga"
+	},
+	"langCode_lg": {
+		"message": "Ganda"
+	},
+	"langCode_mk": {
+		"message": "Macedonian"
+	},
+	"langCode_mh": {
+		"message": "Marshallese"
+	},
+	"langCode_ml": {
+		"message": "Malayalam"
+	},
+	"langCode_mi": {
+		"message": "Maori"
+	},
+	"langCode_mr": {
+		"message": "Marathi"
+	},
+	"langCode_ms": {
+		"message": "Malay"
+	},
+	"langCode_mg": {
+		"message": "Malagasy"
+	},
+	"langCode_mt": {
+		"message": "Maltese"
+	},
+	"langCode_mn": {
+		"message": "Mongolian"
+	},
+	"langCode_na": {
+		"message": "Nauru"
+	},
+	"langCode_nv": {
+		"message": "Navajo"
+	},
+	"langCode_nr": {
+		"message": "South Ndebele"
+	},
+	"langCode_nd": {
+		"message": "North Ndebele"
+	},
+	"langCode_ng": {
+		"message": "Ndonga"
+	},
+	"langCode_ne": {
+		"message": "Nepali"
+	},
+	"langCode_nn": {
+		"message": "Norwegian Nynorsk"
+	},
+	"langCode_nb": {
+		"message": "Norwegian Bokmål"
+	},
+	"langCode_no": {
+		"message": "Norwegian"
+	},
+	"langCode_ny": {
+		"message": "Chichewa"
+	},
+	"langCode_oc": {
+		"message": "Occitan"
+	},
+	"langCode_oj": {
+		"message": "Ojibwa"
+	},
+	"langCode_or": {
+		"message": "Oriya"
+	},
+	"langCode_om": {
+		"message": "Oromo"
+	},
+	"langCode_os": {
+		"message": "Ossetian"
+	},
+	"langCode_pa": {
+		"message": "Panjabi"
+	},
+	"langCode_pi": {
+		"message": "Pali"
+	},
+	"langCode_pl": {
+		"message": "Polish"
+	},
+	"langCode_pt": {
+		"message": "Portuguese"
+	},
+	"langCode_ps": {
+		"message": "Pushto"
+	},
+	"langCode_qu": {
+		"message": "Quechua"
+	},
+	"langCode_rm": {
+		"message": "Romansh"
+	},
+	"langCode_ro": {
+		"message": "Romanian"
+	},
+	"langCode_rn": {
+		"message": "Rundi"
+	},
+	"langCode_ru": {
+		"message": "Russian"
+	},
+	"langCode_sg": {
+		"message": "Sango"
+	},
+	"langCode_sa": {
+		"message": "Sanskrit"
+	},
+	"langCode_si": {
+		"message": "Sinhala"
+	},
+	"langCode_sk": {
+		"message": "Slovak"
+	},
+	"langCode_sl": {
+		"message": "Slovenian"
+	},
+	"langCode_se": {
+		"message": "Northern Sami"
+	},
+	"langCode_sm": {
+		"message": "Samoan"
+	},
+	"langCode_sn": {
+		"message": "Shona"
+	},
+	"langCode_sd": {
+		"message": "Sindhi"
+	},
+	"langCode_so": {
+		"message": "Somali"
+	},
+	"langCode_st": {
+		"message": "South Sotho"
+	},
+	"langCode_es": {
+		"message": "Spanish"
+	},
+	"langCode_sc": {
+		"message": "Sardinian"
+	},
+	"langCode_sr": {
+		"message": "Serbian"
+	},
+	"langCode_ss": {
+		"message": "Swati"
+	},
+	"langCode_su": {
+		"message": "Sundanese"
+	},
+	"langCode_sw": {
+		"message": "Swahili"
+	},
+	"langCode_sv": {
+		"message": "Swedish"
+	},
+	"langCode_ty": {
+		"message": "Tahitian"
+	},
+	"langCode_ta": {
+		"message": "Tamil"
+	},
+	"langCode_tt": {
+		"message": "Tatar"
+	},
+	"langCode_te": {
+		"message": "Telugu"
+	},
+	"langCode_tg": {
+		"message": "Tajik"
+	},
+	"langCode_tl": {
+		"message": "Tagalog"
+	},
+	"langCode_th": {
+		"message": "Thai"
+	},
+	"langCode_ti": {
+		"message": "Tigrinya"
+	},
+	"langCode_to": {
+		"message": "Tonga"
+	},
+	"langCode_tn": {
+		"message": "Tswana"
+	},
+	"langCode_ts": {
+		"message": "Tsonga"
+	},
+	"langCode_tk": {
+		"message": "Turkmen"
+	},
+	"langCode_tr": {
+		"message": "Turkish"
+	},
+	"langCode_tw": {
+		"message": "Twi"
+	},
+	"langCode_ug": {
+		"message": "Uighur"
+	},
+	"langCode_uk": {
+		"message": "Ukrainian"
+	},
+	"langCode_ur": {
+		"message": "Urdu"
+	},
+	"langCode_uz": {
+		"message": "Uzbek"
+	},
+	"langCode_ve": {
+		"message": "Venda"
+	},
+	"langCode_vi": {
+		"message": "Tiếng Việt"
+	},
+	"langCode_vo": {
+		"message": "Volapük"
+	},
+	"langCode_wa": {
+		"message": "Walloon"
+	},
+	"langCode_wo": {
+		"message": "Wolof"
+	},
+	"langCode_xh": {
+		"message": "Xhosa"
+	},
+	"langCode_yi": {
+		"message": "Yiddish"
+	},
+	"langCode_yo": {
+		"message": "Yoruba"
+	},
+	"langCode_za": {
+		"message": "Zhuang"
+	},
+	"langCode_zu": {
+		"message": "Zulu"
+	}
+}
