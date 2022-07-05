@@ -4,7 +4,7 @@ import { AppConfigType } from './types/runtime';
 
 // Init config
 export const defaultConfig: AppConfigType = {
-	translatorModule: 'GoogleTranslator',
+	translatorModule: 'YandexTranslator',
 	appIcon: 'auto',
 	language: getUserLanguage(),
 	scheduler: {
