@@ -46,6 +46,12 @@ export class ShadowDOMContainerManager {
 		// Skip when root node is not exist
 		if (this.root === null) return;
 
+		// #123 attach root node again on the page, for cases when whole DOM been replaced
+		if (!document.body.contains(this.root)) {
+			console.warn('Patch');
+			document.body.appendChild(this.root);
+		}
+
 		ReactDOM.render(
 			<root.div style={{ all: 'unset' }} mode="closed">
 				{/* Include styles and scripts */}
