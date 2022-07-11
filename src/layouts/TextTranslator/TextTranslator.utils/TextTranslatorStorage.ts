@@ -68,7 +68,9 @@ export class TextTranslatorStorage extends AbstractVersionedStorage {
 			throw new TypeError('Cant merge with null');
 		}
 
-		const mergedData = Object.assign(actualData, data);
+		const mergedData = { ...actualData, ...data } as TypeOf<
+			typeof TextTranslatorStorage.storageSignature
+		>;
 
 		return TextTranslatorStorage.setData(mergedData);
 	};
