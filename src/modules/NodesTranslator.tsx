@@ -386,6 +386,9 @@ export class NodesTranslator {
 		return document.body.contains(node);
 	};
 
+	/**
+	 * Calculate node priority for translate, the bigger number the importance text
+	 */
 	private getNodeScore = (node: Node) => {
 		let score = 0;
 
@@ -393,13 +396,15 @@ export class NodesTranslator {
 			score += 1;
 			const parent = node.ownerElement;
 			if (parent && isInViewport(parent)) {
-				score += 1;
+				// Attribute of visible element is important than text of non-visible element
+				score += 2;
 			}
 		} else if (node instanceof Text) {
 			score += 2;
 			const parent = node.parentElement;
 			if (parent && isInViewport(parent)) {
-				score += 1;
+				// Text of visible element is most important node for translation
+				score += 2;
 			}
 		}
 
