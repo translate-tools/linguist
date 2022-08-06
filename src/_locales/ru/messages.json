@@ -1,9 +1,9 @@
 {
 	"ext_name": {
-		"message": "Linguist - переводчик страниц"
+		"message": "Linguist — переводчик страниц"
 	},
 	"ext_description": {
-		"message": "Перевод текста, без перезагрузки страниц"
+		"message": "Перевод текста без перезагрузки страниц"
 	},
 	"common_translate": {
 		"message": "Перевести"
@@ -27,7 +27,7 @@
 		"message": "Фоновый скрипт не отвечает"
 	},
 	"message_translateOfText": {
-		"message": "Перевод"
+		"message": "Переведено"
 	},
 	"message_errorOfTranslate": {
 		"message": "Ошибка перевода"
@@ -42,7 +42,7 @@
 		"message": "Сбросить настройки?"
 	},
 	"message_cacheFlushed": {
-		"message": "Кэш очищен"
+		"message": "Кеш очищен"
 	},
 	"message_changesSaved": {
 		"message": "Изменения сохранены"
@@ -87,7 +87,7 @@
 		"message": "Вы уверены что хотите удалить этот перевод?"
 	},
 	"dictionary_deleteAll": {
-		"message": "Удалить ВСЕ переводы из словаря?"
+		"message": "Вы уверены что хотите удалить ВСЕ переводы из словаря?"
 	},
 	"dictionary_message_deleteAll_success": {
 		"message": "Словарь успешно очищен"
@@ -96,13 +96,13 @@
 		"message": "Словарь пуст. Начните сохранять тексты при переводе"
 	},
 	"dictionary_notFoundEntries": {
-		"message": "Не найдены переводы удовлетворяющие фильтрам"
+		"message": "Не найдены записи, соответствующие фильтрам"
 	},
 	"dictionary_resetFilters": {
 		"message": "сбросить фильтры"
 	},
 	"dictionary_description": {
-		"message": "Сохраняйте переводы в словарь, что бы найти их позже"
+		"message": "Сохраняйте переводы в словаре, что бы найти их позже"
 	},
 	"dictionary_searchPlaceholder": {
 		"message": "Поиск по тексту"
@@ -114,7 +114,7 @@
 		"message": "Очистить"
 	},
 	"dictionary_filter_from": {
-		"message": "Оригинальный язык"
+		"message": "Исходный язык"
 	},
 	"dictionary_filter_to": {
 		"message": "Целевой язык"
@@ -258,7 +258,7 @@
 		"message": "Модуль перевода"
 	},
 	"settings_option_translatorModule_desc": {
-		"message": "От выбранного модуля зависит скорость и качество переводов, доступные направления перевода.\n\nЕсли модуль работает некорректно, стоит его сменить"
+		"message": "От выбранного модуля зависит скорость и качество переводов, а также доступные направления перевода.\n\nЕсли модуль работает некорректно, смените его"
 	},
 	"settings_option_translateScheduler": {
 		"message": "Планировщик перевода"
@@ -330,7 +330,7 @@
 		"message": "Показывать оригинальный текст при наведении"
 	},
 	"settings_option_selectTranslation": {
-		"message": "Перевод по выделению"
+		"message": "Перевод при выделении"
 	},
 	"settings_option_selectTranslation_enable": {
 		"message": "Включить"
@@ -408,7 +408,7 @@
 		"message": "z-index"
 	},
 	"settings_option_selectTranslation_zIndex_desc": {
-		"message": "Если блок перевода перекрывается другими элементами - увеличьте это значение"
+		"message": "Если блок перевода перекрывается другими элементами, увеличьте это значение"
 	},
 	"settings_option_selectTranslation_focusOnTranslateButton": {
 		"message": "Автоматический фокус на кнопке перевода"
@@ -441,7 +441,7 @@
 		"message": "В выключенном состоянии язык будет определяться только при не установленном языке текста"
 	},
 	"settings_section_popup": {
-		"message": "Popup"
+		"message": "Всплывающее окно"
 	},
 	"settings_option_popupTab_pageTranslator_showCounters": {
 		"message": "Показывать статистику перевода"
@@ -579,7 +579,7 @@
 		"message": "Бенгальский"
 	},
 	"langCode_bh": {
-		"message": "Языки бихари"
+		"message": "Бихарские языки"
 	},
 	"langCode_bi": {
 		"message": "Бислама"
@@ -642,7 +642,7 @@
 		"message": "Дивехи"
 	},
 	"langCode_nl": {
-		"message": "Нидерландский язык"
+		"message": "Нидерландский"
 	},
 	"langCode_dz": {
 		"message": "Дзонгка"
@@ -663,7 +663,7 @@
 		"message": "Эве"
 	},
 	"langCode_fo": {
-		"message": "Фарерские острова"
+		"message": "Фарерский"
 	},
 	"langCode_fa": {
 		"message": "Персидский"
@@ -675,7 +675,7 @@
 		"message": "Финский"
 	},
 	"langCode_fr": {
-		"message": "Французский язык"
+		"message": "Французский"
 	},
 	"langCode_fy": {
 		"message": "Западно-фризский"
@@ -813,7 +813,7 @@
 		"message": "Латинский"
 	},
 	"langCode_lv": {
-		"message": "Латышский язык"
+		"message": "Латышский"
 	},
 	"langCode_li": {
 		"message": "Лимбурган"
@@ -885,7 +885,7 @@
 		"message": "Норвежский Букмол"
 	},
 	"langCode_no": {
-		"message": "Норвежский язык"
+		"message": "Норвежский"
 	},
 	"langCode_ny": {
 		"message": "Чичева"
@@ -969,7 +969,7 @@
 		"message": "Южный Сото"
 	},
 	"langCode_es": {
-		"message": "Испанский язык"
+		"message": "Испанский"
 	},
 	"langCode_sc": {
 		"message": "Сардинский"
