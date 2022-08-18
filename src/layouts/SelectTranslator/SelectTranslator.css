@@ -58,23 +58,6 @@
 	padding-top: 0.3rem;
 }
 
-.SelectTranslator-OriginalTextContainer {
-	/* margin-top: var(--typography-controls-indent-l); */
-	background: #eee;
-	padding: 0.4rem;
-	width: min-content;
-	min-width: 100%;
-	box-sizing: border-box;
-}
-
-.SelectTranslator-OriginalText {
-	margin: var(--typography-controls-indent-m);
-	white-space: pre-wrap;
-	max-height: 400px;
-	overflow: auto;
-	scrollbar-width: thin;
-}
-
 .SelectTranslator-Body_error {
 	color: var(--color-typo-error);
 }
@@ -111,6 +94,11 @@
 	text-align: right;
 }
 
+/* Content */
+.SelectTranslator-TextContainer {
+	border-radius: inherit;
+}
+
 .SelectTranslator-TextContainer::after {
 	display: block;
 	content: '';
@@ -122,4 +110,20 @@
 
 	float: left;
 	margin-right: var(--typography-layout-indent-s-all);
+}
+
+/* TODO: fix summary tag focus vew and marker */
+.SelectTranslator-TextContainer_text_original {
+	background: #eee;
+	width: min-content;
+	min-width: 100%;
+	box-sizing: border-box;
+}
+
+.SelectTranslator-OriginalText {
+	margin: var(--typography-controls-indent-m);
+	white-space: pre-wrap;
+	max-height: 400px;
+	overflow: auto;
+	scrollbar-width: thin;
 }
