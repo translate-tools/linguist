@@ -364,7 +364,11 @@ export const SelectTranslatorComponent: FC<SelectTranslatorComponentProps> = ({
 				</div>
 				{error === null ? (
 					<>
-						<div className={cnSelectTranslator('TextContainer')}>
+						<div
+							className={cnSelectTranslator('TextContainer', {
+								text: 'translation',
+							})}
+						>
 							<div className={cnSelectTranslator('TextControls')}>
 								<Button onPress={ttsPlayer.toggle} view="clear">
 									<Icon glyph="volume-up" scalable={false} />
@@ -375,23 +379,28 @@ export const SelectTranslatorComponent: FC<SelectTranslatorComponentProps> = ({
 							</div>
 						</div>
 						{!showOriginalText ? undefined : (
-							<div className={cnSelectTranslator('OriginalTextContainer')}>
-								<details onToggle={updatePopup}>
-									<summary>
-										{getMessage('inlineTranslator_showOriginalText')}
-									</summary>
-									<p className={cnSelectTranslator('OriginalText')}>
-										{originalText}
-									</p>
-
-									{/* NOTE: it may be useful */}
-									{/* <Textarea
-									value={originalText}
-									style={{ width: '100%', height: '' }}
-									controlProps={{ style: { minHeight: '8rem' } }}
-								/>
-								<Button view="action">Translate</Button> */}
-								</details>
+							<div
+								className={cnSelectTranslator('TextContainer', {
+									text: 'original',
+								})}
+							>
+								<div className={cnSelectTranslator('TextControls')}>
+									<Button onPress={ttsPlayer.toggle} view="clear">
+										<Icon glyph="volume-up" scalable={false} />
+									</Button>
+								</div>
+								<div className={cnSelectTranslator('Body')}>
+									<details onToggle={updatePopup}>
+										<summary>
+											{getMessage(
+												'inlineTranslator_showOriginalText',
+											)}
+										</summary>
+										<p className={cnSelectTranslator('OriginalText')}>
+											{originalText}
+										</p>
+									</details>
+								</div>
 							</div>
 						)}
 					</>
