@@ -153,5 +153,13 @@ export const useTTS = (
 		stop();
 	}, [stop, lang, text]);
 
+	// Stop player by unmount
+	useEffect(
+		() => () => {
+			simplePlayer.current.stop();
+		},
+		[],
+	);
+
 	return simplePlayer.current;
 };
