@@ -29,6 +29,9 @@ export interface SelectTranslatorComponentProps {
 	text: string;
 	translate: (text: string, from: string, to: string) => Promise<string>;
 	closeHandler: () => void;
+	/**
+	 * Recalculate popup position
+	 */
 	updatePopup: () => void;
 	pageLanguage?: string;
 	showOriginalText?: boolean;
