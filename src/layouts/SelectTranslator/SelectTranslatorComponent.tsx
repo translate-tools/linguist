@@ -393,7 +393,10 @@ export const SelectTranslatorComponent: FC<SelectTranslatorComponentProps> = ({
 									</Button>
 								</div>
 								<div className={cnSelectTranslator('Body')}>
-									<details onToggle={updatePopup}>
+									<details
+										onToggle={updatePopup}
+										className={cnSelectTranslator('Details')}
+									>
 										<summary>
 											{getMessage(
 												'inlineTranslator_showOriginalText',

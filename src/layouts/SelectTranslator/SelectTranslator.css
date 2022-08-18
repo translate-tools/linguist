@@ -48,6 +48,7 @@
 
 /* Body */
 .SelectTranslator-Body {
+	width: 100%;
 	max-width: 600px;
 	max-height: 400px;
 	overflow-y: auto;
@@ -96,6 +97,7 @@
 
 /* Content */
 .SelectTranslator-TextContainer {
+	display: flex;
 	border-radius: inherit;
 }
 
@@ -112,7 +114,6 @@
 	margin-right: var(--typography-layout-indent-s-all);
 }
 
-/* TODO: fix summary tag focus vew and marker */
 .SelectTranslator-TextContainer_text_original {
 	background: #eee;
 	width: min-content;
@@ -126,4 +127,8 @@
 	max-height: 400px;
 	overflow: auto;
 	scrollbar-width: thin;
+}
+
+.SelectTranslator-Details > summary {
+	margin: 0 5px;
 }
