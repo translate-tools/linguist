@@ -46,22 +46,27 @@
 	clear: both;
 }
 
-/* Body */
-.SelectTranslator-Body {
-	max-width: 600px;
-	max-height: 400px;
-	overflow-y: auto;
-	font-size: var(--typography-layout-size-s-font-size);
-	white-space: pre-line;
-	line-height: 1.2rem;
-	scrollbar-width: thin;
-	padding-top: 0.3rem;
+/* Content */
+.SelectTranslator-TextContainer {
+	display: flex;
+	border-radius: inherit;
 }
 
-.SelectTranslator-OriginalTextContainer {
-	/* margin-top: var(--typography-controls-indent-l); */
+.SelectTranslator-TextContainer::after {
+	display: block;
+	content: '';
+	clear: both;
+}
+
+.SelectTranslator-TextControls {
+	--button-size-m-indent-outer: 2px;
+
+	float: left;
+	margin-right: var(--typography-layout-indent-s-all);
+}
+
+.SelectTranslator-TextContainer_text_original {
 	background: #eee;
-	padding: 0.4rem;
 	width: min-content;
 	min-width: 100%;
 	box-sizing: border-box;
@@ -73,6 +78,23 @@
 	max-height: 400px;
 	overflow: auto;
 	scrollbar-width: thin;
+}
+
+.SelectTranslator-Details > summary {
+	margin: 0 5px;
+}
+
+/* Body */
+.SelectTranslator-Body {
+	width: 100%;
+	max-width: 600px;
+	max-height: 400px;
+	overflow-y: auto;
+	font-size: var(--typography-layout-size-s-font-size);
+	white-space: pre-line;
+	line-height: 1.2rem;
+	scrollbar-width: thin;
+	padding-top: 0.3rem;
 }
 
 .SelectTranslator-Body_error {
@@ -109,17 +131,4 @@
 	margin-bottom: var(--typography-layout-indent-m-all);
 	width: 100%;
 	text-align: right;
-}
-
-.SelectTranslator-TextContainer::after {
-	display: block;
-	content: '';
-	clear: both;
-}
-
-.SelectTranslator-TextControls {
-	--button-size-m-indent-outer: 2px;
-
-	float: left;
-	margin-right: var(--typography-layout-indent-s-all);
 }

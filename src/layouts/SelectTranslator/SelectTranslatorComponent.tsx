@@ -29,6 +29,9 @@ export interface SelectTranslatorComponentProps {
 	text: string;
 	translate: (text: string, from: string, to: string) => Promise<string>;
 	closeHandler: () => void;
+	/**
+	 * Recalculate popup position
+	 */
 	updatePopup: () => void;
 	pageLanguage?: string;
 	showOriginalText?: boolean;
@@ -290,10 +293,13 @@ export const SelectTranslatorComponent: FC<SelectTranslatorComponentProps> = ({
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [isInited, originalText]);
 
-	const ttsPlayer = useTTS(to ?? null, translatedText);
-
-	// Stop TTS by umount
-	useEffect(() => () => ttsPlayer.stop(), [ttsPlayer]);
+	const [activeTTS, setActiveTTS] = useState<symbol | null>(null);
+	const TTSSignal = {
+		active: activeTTS,
+		setActive: setActiveTTS,
+	};
+	const ttsOriginal = useTTS(from ?? null, originalText, TTSSignal);
+	const ttsTranslate = useTTS(to ?? null, translatedText, TTSSignal);
 
 	const isMobile = useMemo(() => isMobileBrowser(), []);
 
@@ -364,9 +370,13 @@ export const SelectTranslatorComponent: FC<SelectTranslatorComponentProps> = ({
 				</div>
 				{error === null ? (
 					<>
-						<div className={cnSelectTranslator('TextContainer')}>
+						<div
+							className={cnSelectTranslator('TextContainer', {
+								text: 'translation',
+							})}
+						>
 							<div className={cnSelectTranslator('TextControls')}>
-								<Button onPress={ttsPlayer.toggle} view="clear">
+								<Button onPress={ttsTranslate.toggle} view="clear">
 									<Icon glyph="volume-up" scalable={false} />
 								</Button>
 							</div>
@@ -375,23 +385,31 @@ export const SelectTranslatorComponent: FC<SelectTranslatorComponentProps> = ({
 							</div>
 						</div>
 						{!showOriginalText ? undefined : (
-							<div className={cnSelectTranslator('OriginalTextContainer')}>
-								<details onToggle={updatePopup}>
-									<summary>
-										{getMessage('inlineTranslator_showOriginalText')}
-									</summary>
-									<p className={cnSelectTranslator('OriginalText')}>
-										{originalText}
-									</p>
-
-									{/* NOTE: it may be useful */}
-									{/* <Textarea
-									value={originalText}
-									style={{ width: '100%', height: '' }}
-									controlProps={{ style: { minHeight: '8rem' } }}
-								/>
-								<Button view="action">Translate</Button> */}
-								</details>
+							<div
+								className={cnSelectTranslator('TextContainer', {
+									text: 'original',
+								})}
+							>
+								<div className={cnSelectTranslator('TextControls')}>
+									<Button onPress={ttsOriginal.toggle} view="clear">
+										<Icon glyph="volume-up" scalable={false} />
+									</Button>
+								</div>
+								<div className={cnSelectTranslator('Body')}>
+									<details
+										onToggle={updatePopup}
+										className={cnSelectTranslator('Details')}
+									>
+										<summary>
+											{getMessage(
+												'inlineTranslator_showOriginalText',
+											)}
+										</summary>
+										<p className={cnSelectTranslator('OriginalText')}>
+											{originalText}
+										</p>
+									</details>
+								</div>
 							</div>
 						)}
 					</>
