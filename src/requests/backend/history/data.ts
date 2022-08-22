@@ -16,31 +16,17 @@ export type HistoryEntry = {
 	timestamp: number;
 };
 
-export const TranslationEntry = type.type({
-	from: type.string,
-	to: type.string,
-	text: type.string,
-	translate: type.string,
-	date: type.number,
-
-	// FIXME: make it optional as in `ITranslationEntry`
-	translator: type.union([type.string, type.undefined]),
-});
-
 export type IEntryWithKey = { key: number; data: HistoryEntry };
 
 export const EntryWithKey = type.type({
 	key: type.number,
-	data: TranslationEntry,
+	// data: TranslationEntry,
 });
 
 export interface DBSchema extends IDB.DBSchema {
 	translationsHistory: {
 		key: number;
 		value: HistoryEntry;
-		indexes: {
-			text: string;
-		};
 	};
 }
 
@@ -53,12 +39,10 @@ const getDB = async () => {
 	if (DBInstance === null) {
 		DBInstance = await IDB.openDB<DBSchema>(DBName, 1, {
 			upgrade(db) {
-				const store = db.createObjectStore('translationsHistory', {
+				db.createObjectStore('translationsHistory', {
 					keyPath: 'id',
 					autoIncrement: true,
 				});
-
-				store.createIndex('text', 'text', { unique: false });
 			},
 		});
 	}
