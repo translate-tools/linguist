@@ -1,33 +1,31 @@
 import * as IDB from 'idb/with-async-ittr';
 
 import { type } from '../../../lib/types';
+import { ITranslation, TranslationType } from '../../../types/translation/Translation';
 
-export type ITranslationEntry = {
-	from: string;
-	to: string;
-	text: string;
-	translate: string;
+export type ITranslationEntry = ITranslation & {
 	date: number;
 	translator?: string;
 };
 
-export const TranslationEntry = type.type({
-	from: type.string,
-	to: type.string,
-	text: type.string,
-	translate: type.string,
-	date: type.number,
+// TODO: refactor: keep translation data in property `translation`
+export const TranslationEntryType = type.intersection([
+	TranslationType,
+	type.type({
+		// TODO: rename to `timestamp`
+		date: type.number,
+	}),
+	type.partial({
+		translator: type.union([type.string, type.undefined]),
+	}),
+]);
 
-	// FIXME: make it optional as in `ITranslationEntry`
-	translator: type.union([type.string, type.undefined]),
-});
-
-export type IEntryWithKey = { key: number; data: ITranslationEntry };
-
-export const EntryWithKey = type.type({
+export const TranslationEntryWithKeyType = type.type({
 	key: type.number,
-	data: TranslationEntry,
+	data: TranslationEntryType,
 });
+
+export type ITranslationEntryWithKey = { key: number; data: ITranslationEntry };
 
 export interface DBSchema extends IDB.DBSchema {
 	translations: {
@@ -115,7 +113,7 @@ export const getEntries = async (
 
 	const transaction = await db.transaction('translations', 'readonly');
 
-	const entries: IEntryWithKey[] = [];
+	const entries: ITranslationEntryWithKey[] = [];
 
 	let isJumped = false;
 	let counter = 0;
@@ -152,7 +150,7 @@ export const findEntry = async (entry: Partial<ITranslationEntry>) => {
 	const db = await getDB();
 	const transaction = await db.transaction('translations', 'readonly');
 
-	let result: IEntryWithKey | null = null;
+	let result: ITranslationEntryWithKey | null = null;
 
 	// Find
 	const index = await transaction.objectStore('translations').index('text');
@@ -176,13 +174,3 @@ export const findEntry = async (entry: Partial<ITranslationEntry>) => {
 
 	return result;
 };
-
-// Things for debug
-// export const knobs = {
-// 	addEntry,
-// 	deleteEntry,
-// 	deleteEntries,
-// 	getEntries,
-// 	flush,
-// 	findEntry,
-// };

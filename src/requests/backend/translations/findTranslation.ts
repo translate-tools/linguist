@@ -1,17 +1,13 @@
 import { buildBackendRequest } from '../../utils/requestBuilder';
 import { type } from '../../../lib/types';
+import { TranslationType } from '../../../types/translation/Translation';
 
 import { findEntry } from './data';
 
 export const [findTranslationFactory, findTranslation] = buildBackendRequest(
 	'findTranslation',
 	{
-		requestValidator: type.type({
-			from: type.union([type.string, type.undefined]),
-			to: type.union([type.string, type.undefined]),
-			text: type.union([type.string, type.undefined]),
-			translate: type.union([type.string, type.undefined]),
-		}),
+		requestValidator: type.partial(TranslationType.props),
 		responseValidator: type.union([type.number, type.null]),
 
 		factoryHandler: () => async (data) => {

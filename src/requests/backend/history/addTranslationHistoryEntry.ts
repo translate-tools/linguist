@@ -1,17 +1,13 @@
 import { buildBackendRequest } from '../../utils/requestBuilder';
 import { type } from '../../../lib/types';
+import { TranslationType } from '../../../types/translation/Translation';
 
 import { addEntry } from './data';
 
 export const [addTranslationHistoryEntryFactory, addTranslationHistoryEntry] =
 	buildBackendRequest('addTranslationHistoryEntry', {
 		requestValidator: type.type({
-			translation: type.type({
-				from: type.string,
-				to: type.string,
-				text: type.string,
-				translate: type.string,
-			}),
+			translation: TranslationType,
 			origin: type.string,
 		}),
 		responseValidator: type.number,

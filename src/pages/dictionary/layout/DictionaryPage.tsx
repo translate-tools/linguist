@@ -8,7 +8,7 @@ import { useImmutableCallback } from 'react-elegant-ui/esm/hooks/useImmutableCal
 import { langCodes } from '@translate-tools/core/types/Translator';
 
 import { getTranslations } from '../../../requests/backend/translations/getTranslations';
-import { IEntryWithKey } from '../../../requests/backend/translations/data';
+import { ITranslationEntryWithKey } from '../../../requests/backend/translations/data';
 import { deleteTranslation } from '../../../requests/backend/translations/deleteTranslation';
 import { clearTranslations } from '../../../requests/backend/translations/clearTranslations';
 
@@ -56,7 +56,7 @@ export const DictionaryPage: FC<IDictionaryPageProps> = ({ confirmDelete = true 
 		hideDelay: 5000,
 	});
 
-	const [entries, setEntries] = useState<IEntryWithKey[] | null>(null);
+	const [entries, setEntries] = useState<ITranslationEntryWithKey[] | null>(null);
 
 	const updateData = useCallback(
 		() => getTranslations().then((entries) => setEntries(entries)),

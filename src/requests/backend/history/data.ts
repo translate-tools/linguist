@@ -1,14 +1,7 @@
 import * as IDB from 'idb/with-async-ittr';
 
 import { type } from '../../../lib/types';
-
-// TODO: introduce `Translation` type and its variants + runtime types
-export type ITranslation = {
-	from: string;
-	to: string;
-	text: string;
-	translate: string;
-};
+import { ITranslation, TranslationType } from '../../../types/translation/Translation';
 
 export type HistoryEntry = {
 	translation: ITranslation;
@@ -16,12 +9,18 @@ export type HistoryEntry = {
 	timestamp: number;
 };
 
-export type IEntryWithKey = { key: number; data: HistoryEntry };
-
-export const EntryWithKey = type.type({
-	key: type.number,
-	// data: TranslationEntry,
+export const TranslationHistoryEntryType = type.type({
+	translation: TranslationType,
+	timestamp: type.number,
+	origin: type.string,
 });
+
+export const TranslationHistoryEntryWithKeyType = type.type({
+	key: type.number,
+	data: TranslationHistoryEntryType,
+});
+
+export type ITranslationHistoryEntryWithKey = { key: number; data: HistoryEntry };
 
 export interface DBSchema extends IDB.DBSchema {
 	translationsHistory: {
@@ -79,7 +78,7 @@ export const getEntries = async (
 
 	const transaction = await db.transaction('translationsHistory', 'readonly');
 
-	const entries: IEntryWithKey[] = [];
+	const entries: ITranslationHistoryEntryWithKey[] = [];
 
 	let isJumped = false;
 	let counter = 0;
