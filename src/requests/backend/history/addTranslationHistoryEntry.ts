@@ -12,5 +12,7 @@ export const [addTranslationHistoryEntryFactory, addTranslationHistoryEntry] =
 		}),
 		responseValidator: type.number,
 
-		factoryHandler: () => (data) => addEntry({ ...data, timestamp: Date.now() }),
+		factoryHandler: () => (data) => {
+			return addEntry({ ...data, timestamp: Date.now() });
+		},
 	});

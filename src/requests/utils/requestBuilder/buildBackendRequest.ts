@@ -63,3 +63,14 @@ export const buildBackendRequest = <O = void, R = void>(
 
 	return [factory, hook as (options: O) => Promise<R>] as const;
 };
+
+export const joinRequestHandlers =
+	(handlers: RequestHandlerFactory[]): RequestHandlerFactory =>
+		(props) => {
+			const cancelHandlers = handlers.map((handler) => handler(props));
+			return () => {
+				cancelHandlers.forEach((cancel) => {
+					cancel();
+				});
+			};
+		};

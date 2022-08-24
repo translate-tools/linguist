@@ -48,6 +48,8 @@ import { updateTranslatorFactory } from './requests/backend/translators/updateTr
 import { getTranslatorsFactory } from './requests/backend/translators/getTranslators';
 import { applyTranslatorsFactory } from './requests/backend/translators/applyTranslators';
 
+import { historyRequestHandlersFactory } from './requests/backend/history';
+
 // Make async context
 (async () => {
 	// Migrate data
@@ -115,6 +117,8 @@ import { applyTranslatorsFactory } from './requests/backend/translators/applyTra
 			getTranslatorModulesFactory,
 			clearCacheFactory,
 			getTTSFactory,
+
+			historyRequestHandlersFactory,
 
 			getConfigFactory,
 			setConfigFactory,
