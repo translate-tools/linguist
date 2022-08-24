@@ -22,6 +22,8 @@ import { Button } from '../../components/Button/Button.bundle/desktop';
 import { Icon } from '../../components/Icon/Icon.bundle/desktop';
 
 import './TextTranslator.css';
+import { addTranslationHistoryEntry } from '../../requests/backend/history/addTranslationHistoryEntry';
+import { TRANSLATION_ORIGIN } from '../../requests/backend/history/constants';
 
 export const cnTextTranslator = cn('TextTranslator');
 
@@ -180,6 +182,16 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 				setTranslation({
 					text: response,
 					original: userInput,
+				});
+
+				addTranslationHistoryEntry({
+					origin: TRANSLATION_ORIGIN.USER_INPUT,
+					translation: {
+						from,
+						to,
+						text: userInput,
+						translate: response,
+					},
 				});
 			})
 			.catch((reason) => {
