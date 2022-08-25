@@ -1,6 +1,6 @@
 // TODO: adopt entries styles to mobile
 
-import React, { FC, useCallback, useEffect, useMemo, useState } from 'react';
+import React, { FC, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { cn } from '@bem-react/classname';
 import Papa from 'papaparse';
 import { useImmutableCallback } from 'react-elegant-ui/esm/hooks/useImmutableCallback';
@@ -123,6 +123,65 @@ export const TranslationEntry: FC<TranslationEntryProps> = ({
 	);
 };
 
+/**
+ * Create TTS instance to speak few texts by call hook
+ *
+ * At one time may play only one player, another will be stop
+ */
+const useConcurrentTTS = () => {
+	const [TTSData, setTTSData] = useState<{
+		readonly id: any;
+		readonly lang: string;
+		readonly text: string;
+	} | null>(null);
+
+	const ttsState = useRef(TTSData);
+	ttsState.current = TTSData ? { ...TTSData } : null;
+
+	const { lang: ttsLang = null, text: ttsText = null } = TTSData || {};
+	const ttsPlayer = useTTS(ttsLang, ttsText);
+
+	// Play by change TTSData
+	useEffect(() => {
+		if (TTSData === null) return;
+		ttsPlayer.play();
+	}, [TTSData, ttsPlayer]);
+
+	// Stop TTS by change entries list
+	useEffect(() => {
+		ttsPlayer.stop();
+	}, [ttsPlayer]);
+
+	const toggleTTS = useImmutableCallback(
+		(id: any, lang: string, text: string) => {
+			const request = { id, lang, text };
+			const isSameObject =
+				TTSData !== null &&
+				Object.keys(request).every(
+					(key) => (request as any)[key] === (TTSData as any)[key],
+				);
+
+			if (isSameObject) {
+				if (ttsPlayer.isPlayed) {
+					ttsPlayer.stop();
+				} else {
+					ttsPlayer.play();
+				}
+			} else {
+				ttsPlayer.stop();
+				setTTSData({ id, lang, text });
+			}
+		},
+		[TTSData, ttsPlayer],
+	);
+
+	return {
+		ttsState,
+		ttsPlayer,
+		toggleTTS,
+	} as const;
+};
+
 // TODO: improve styles
 
 // Future
@@ -226,48 +285,20 @@ export const DictionaryPage: FC<IDictionaryPageProps> = ({ confirmDelete = true 
 	// TTS
 	//
 
-	const [TTSData, setTTSData] = useState<{
-		id: number;
-		lang: string;
-		text: string;
-	} | null>(null);
+	const { toggleTTS, ttsPlayer, ttsState } = useConcurrentTTS();
 
-	const { lang: ttsLang = null, text: ttsText = null } = TTSData || {};
-	const ttsPlayer = useTTS(ttsLang, ttsText);
-
-	// Play by change TTSData
+	// Stop TTS by change entries
 	useEffect(() => {
-		if (TTSData === null) return;
-		ttsPlayer.play();
-	}, [TTSData, ttsPlayer]);
+		const currentPlayedTTS = ttsState.current ? ttsState.current.id : null;
 
-	// Stop TTS by change entries list
-	useEffect(() => {
-		ttsPlayer.stop();
-	}, [entries, ttsPlayer]);
-
-	const toggleTTS = useImmutableCallback(
-		(id: number, lang: string, text: string) => {
-			const request = { id, lang, text };
-			const isSameObject =
-				TTSData !== null &&
-				Object.keys(request).every(
-					(key) => (request as any)[key] === (TTSData as any)[key],
-				);
-
-			if (isSameObject) {
-				if (ttsPlayer.isPlayed) {
-					ttsPlayer.stop();
-				} else {
-					ttsPlayer.play();
-				}
-			} else {
-				ttsPlayer.stop();
-				setTTSData({ id, lang, text });
-			}
-		},
-		[TTSData, ttsPlayer],
-	);
+		// Stop for empty entries or when current played entry removed
+		if (
+			entries === null ||
+			(currentPlayedTTS && !entries.find(({ key }) => key === currentPlayedTTS))
+		) {
+			ttsPlayer.stop();
+		}
+	}, [entries, ttsPlayer, ttsState]);
 
 	//
 	// Render
@@ -343,19 +374,19 @@ export const DictionaryPage: FC<IDictionaryPageProps> = ({ confirmDelete = true 
 
 		// Render entries
 		// TODO: highlight results
-		return filtredEntries.map(({ data }, idx) => {
+		return filtredEntries.map(({ data, key }, idx) => {
 			const { date, ...translation } = data;
 			return (
 				<TranslationEntry
-					key={idx}
+					key={key}
 					translation={translation}
 					timestamp={date}
 					onPressRemove={() => remove(idx)}
 					onPressTTS={(target) => {
 						if (target === 'original') {
-							toggleTTS(idx, translation.from, translation.text);
+							toggleTTS(key, translation.from, translation.text);
 						} else {
-							toggleTTS(idx, translation.to, translation.translate);
+							toggleTTS(key, translation.to, translation.translate);
 						}
 					}}
 				/>
