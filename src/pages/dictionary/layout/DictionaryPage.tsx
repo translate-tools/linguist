@@ -30,6 +30,7 @@ import { Page } from '../../../layouts/Page/Page';
 import { PageMessages } from '../../../layouts/Page/Messages/PageMessages';
 
 import './DictionaryPage.css';
+import { ITranslation } from '../../../types/translation/Translation';
 
 export const cnDictionaryPage = cn('DictionaryPage');
 
@@ -37,6 +38,90 @@ export const cnDictionaryPage = cn('DictionaryPage');
 export interface IDictionaryPageProps {
 	confirmDelete?: boolean;
 }
+
+export type TranslationEntryProps = {
+	translation: ITranslation;
+	timestamp?: number;
+	onPressRemove?: () => void;
+	onPressTTS: (target: 'original' | 'translation') => void;
+};
+
+// TODO: move to standalone component
+export const TranslationEntry: FC<TranslationEntryProps> = ({
+	translation,
+	timestamp,
+	onPressRemove,
+	onPressTTS,
+}) => {
+	const { from, to, text, translate } = translation;
+
+	const isMobile = useMemo(() => isMobileBrowser(), []);
+
+	return (
+		<div className={cnDictionaryPage('Entry')}>
+			<div className={cnDictionaryPage('EntryHead')}>
+				<div className={cnDictionaryPage('EntryMeta')}>
+					<span className={cnDictionaryPage('Lang')}>
+						{getLanguageNameByCode(from)}
+					</span>
+					<span className={cnDictionaryPage('Lang')}>
+						{getLanguageNameByCode(to)}
+					</span>
+					{!isMobile && timestamp && (
+						<span className={cnDictionaryPage('Date')}>
+							{new Date(timestamp).toLocaleDateString()}
+						</span>
+					)}
+				</div>
+				<div className={cnDictionaryPage('EntryControl')}>
+					{onPressRemove && (
+						<Button
+							view="clear"
+							size="s"
+							onPress={onPressRemove}
+							title={getMessage('common_action_removeFromDictionary')}
+							content="icon"
+						>
+							<Icon glyph="delete" scalable={false} />
+						</Button>
+					)}
+				</div>
+			</div>
+			<div className={cnDictionaryPage('EntryContent')}>
+				<div className={cnDictionaryPage('EntryTextContainer')}>
+					<div className={cnDictionaryPage('EntryTextAction')}>
+						<Button
+							onPress={() => {
+								// toggleTTS(idx, from, text);
+								onPressTTS('original');
+							}}
+							view="clear"
+							size="s"
+						>
+							<Icon glyph="volume-up" scalable={false} />
+						</Button>
+					</div>
+					<div className={cnDictionaryPage('EntryText')}>{text}</div>
+				</div>
+				<div className={cnDictionaryPage('EntryTextContainer')}>
+					<div className={cnDictionaryPage('EntryTextAction')}>
+						<Button
+							onPress={() => {
+								// toggleTTS(idx, to, translate);
+								onPressTTS('translation');
+							}}
+							view="clear"
+							size="s"
+						>
+							<Icon glyph="volume-up" scalable={false} />
+						</Button>
+					</div>
+					<div className={cnDictionaryPage('EntryText')}>{translate}</div>
+				</div>
+			</div>
+		</div>
+	);
+};
 
 // TODO: improve styles
 
@@ -259,71 +344,24 @@ export const DictionaryPage: FC<IDictionaryPageProps> = ({ confirmDelete = true 
 		// Render entries
 		// TODO: highlight results
 		return filtredEntries.map(({ data }, idx) => {
-			const { text, translate, from, to, date } = data;
+			const { date, ...translation } = data;
 			return (
-				<div key={idx} className={cnDictionaryPage('Entry')}>
-					<div className={cnDictionaryPage('EntryHead')}>
-						<div className={cnDictionaryPage('EntryMeta')}>
-							<span className={cnDictionaryPage('Lang')}>
-								{getLanguageNameByCode(from)}
-							</span>
-							<span className={cnDictionaryPage('Lang')}>
-								{getLanguageNameByCode(to)}
-							</span>
-							{!isMobile && (
-								<span className={cnDictionaryPage('Date')}>
-									{new Date(date).toLocaleDateString()}
-								</span>
-							)}
-						</div>
-						<div className={cnDictionaryPage('EntryControl')}>
-							<Button
-								view="clear"
-								size="s"
-								onPress={() => remove(idx)}
-								title={getMessage('common_action_removeFromDictionary')}
-								content="icon"
-							>
-								<Icon glyph="delete" scalable={false} />
-							</Button>
-						</div>
-					</div>
-					<div className={cnDictionaryPage('EntryContent')}>
-						<div className={cnDictionaryPage('EntryTextContainer')}>
-							<div className={cnDictionaryPage('EntryTextAction')}>
-								<Button
-									onPress={() => {
-										toggleTTS(idx, from, text);
-									}}
-									view="clear"
-									size="s"
-								>
-									<Icon glyph="volume-up" scalable={false} />
-								</Button>
-							</div>
-							<div className={cnDictionaryPage('EntryText')}>{text}</div>
-						</div>
-						<div className={cnDictionaryPage('EntryTextContainer')}>
-							<div className={cnDictionaryPage('EntryTextAction')}>
-								<Button
-									onPress={() => {
-										toggleTTS(idx, to, translate);
-									}}
-									view="clear"
-									size="s"
-								>
-									<Icon glyph="volume-up" scalable={false} />
-								</Button>
-							</div>
-							<div className={cnDictionaryPage('EntryText')}>
-								{translate}
-							</div>
-						</div>
-					</div>
-				</div>
+				<TranslationEntry
+					key={idx}
+					translation={translation}
+					timestamp={date}
+					onPressRemove={() => remove(idx)}
+					onPressTTS={(target) => {
+						if (target === 'original') {
+							toggleTTS(idx, translation.from, translation.text);
+						} else {
+							toggleTTS(idx, translation.to, translation.translate);
+						}
+					}}
+				/>
 			);
 		});
-	}, [isMobile, entries, from, to, search, resetFilters, remove, toggleTTS]);
+	}, [entries, from, to, search, resetFilters, remove, toggleTTS]);
 
 	const langsListFrom = useMemo(
 		() => [

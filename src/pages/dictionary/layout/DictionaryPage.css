@@ -106,7 +106,7 @@
 	margin-bottom: var(--typography-controls-indent-m);
 }
 
-.DictionaryPage:not(.DictionaryPage_mobile) .DictionaryPage-EntryContent > :not(:last-child) {
+:not(.DictionaryPage.DictionaryPage_mobile) .DictionaryPage-EntryContent > :not(:last-child) {
 	margin-right: var(--typography-controls-indent-m);
 }
 
