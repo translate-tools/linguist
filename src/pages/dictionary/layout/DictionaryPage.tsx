@@ -123,12 +123,13 @@ export const TranslationEntry: FC<TranslationEntryProps> = ({
 	);
 };
 
+// TODO: move to library
 /**
  * Create TTS instance to speak few texts by call hook
  *
  * At one time may play only one player, another will be stop
  */
-const useConcurrentTTS = () => {
+export const useConcurrentTTS = () => {
 	const [TTSData, setTTSData] = useState<{
 		readonly id: any;
 		readonly lang: string;
