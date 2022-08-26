@@ -10,8 +10,10 @@ import {
 	TranslationEntry,
 	useConcurrentTTS,
 } from '../../pages/dictionary/layout/DictionaryPage';
+import { clearTranslationHistory } from '../../requests/backend/history/clearTranslationHistory';
 
 import { ITranslationHistoryEntryWithKey } from '../../requests/backend/history/data';
+import { deleteTranslationHistoryEntry } from '../../requests/backend/history/deleteTranslationHistoryEntry';
 import { ITranslation } from '../../types/translation/Translation';
 
 import './TranslationsHistory.css';
@@ -180,6 +182,30 @@ export const TranslationsHistory: FC<TranslationsHistoryProps> = ({
 		setCheckedItems(newState);
 	}, [selectedItemsNumber, translations]);
 
+	const deleteEntry = useCallback(
+		(id: number) => {
+			// TODO: add prompt when not pressed ctrl button
+			deleteTranslationHistoryEntry(id).then(updateTranslations);
+		},
+		[updateTranslations],
+	);
+
+	const deleteSelectedEntries = useCallback(() => {
+		const selectedEntriesId = Object.keys(checkedItems).map(Number);
+		if (selectedEntriesId.length === 0) return;
+
+		// TODO: add prompt when not pressed ctrl button
+		Promise.all(
+			selectedEntriesId.map((id) => deleteTranslationHistoryEntry(id)),
+		).finally(updateTranslations);
+	}, [checkedItems, updateTranslations]);
+
+	const deleteAllEntries = useCallback(() => {
+		// TODO: add prompt when not pressed ctrl button
+		// TODO: add modal window to select options to delete
+		clearTranslationHistory().then(updateTranslations);
+	}, [updateTranslations]);
+
 	const [search, setSearch] = useState('');
 
 	return (
@@ -199,13 +225,31 @@ export const TranslationsHistory: FC<TranslationsHistoryProps> = ({
 						indeterminate={indeterminateSelection}
 						checked={isNotEmptySelection}
 						setChecked={toggleSelectionAll}
+						disabled={translations.length === 0}
 					/>
 
-					<Button view="default">Delete selected</Button>
+					<Button
+						view="default"
+						onPress={deleteSelectedEntries}
+						disabled={selectedItemsNumber === 0}
+					>
+						Delete selected
+					</Button>
 
-					<Button view="default">Clear history</Button>
+					<Button
+						view="default"
+						onPress={deleteAllEntries}
+						disabled={translations.length === 0}
+					>
+						Clear history
+					</Button>
 				</LayoutFlow>
 
+				{translations.length === 0 && (
+					<div className={cnTranslationsHistory('EmptyResults')}>
+						History clear
+					</div>
+				)}
 				{translations.map(({ data, key }) => {
 					const { translation, timestamp } = data;
 					return (
@@ -213,7 +257,7 @@ export const TranslationsHistory: FC<TranslationsHistoryProps> = ({
 							key={key}
 							translation={translation}
 							timestamp={timestamp}
-							onPressRemove={console.log}
+							onPressRemove={() => deleteEntry(key)}
 							onPressTTS={(target) => {
 								if (target === 'original') {
 									toggleTTS(key, translation.from, translation.text);

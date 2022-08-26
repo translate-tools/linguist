@@ -1,3 +1,10 @@
 .TranslationsHistory-Search {
 	width: 100%;
 }
+
+.TranslationsHistory-EmptyResults {
+	padding: 4rem 2rem;
+	font-size: 2rem;
+	font-weight: bold;
+	text-align: center;
+}
