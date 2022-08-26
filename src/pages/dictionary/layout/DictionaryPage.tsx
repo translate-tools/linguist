@@ -1,6 +1,14 @@
 // TODO: adopt entries styles to mobile
 
-import React, { FC, useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import React, {
+	FC,
+	ReactNode,
+	useCallback,
+	useEffect,
+	useMemo,
+	useRef,
+	useState,
+} from 'react';
 import { cn } from '@bem-react/classname';
 import Papa from 'papaparse';
 import { useImmutableCallback } from 'react-elegant-ui/esm/hooks/useImmutableCallback';
@@ -44,6 +52,8 @@ export type TranslationEntryProps = {
 	timestamp?: number;
 	onPressRemove?: () => void;
 	onPressTTS: (target: 'original' | 'translation') => void;
+	controlPanelSlot?: ReactNode | ReactNode[];
+	headStartSlot?: ReactNode | ReactNode[];
 };
 
 // TODO: move to standalone component
@@ -52,6 +62,8 @@ export const TranslationEntry: FC<TranslationEntryProps> = ({
 	timestamp,
 	onPressRemove,
 	onPressTTS,
+	controlPanelSlot,
+	headStartSlot,
 }) => {
 	const { from, to, text, translate } = translation;
 
@@ -61,6 +73,7 @@ export const TranslationEntry: FC<TranslationEntryProps> = ({
 		<div className={cnDictionaryPage('Entry')}>
 			<div className={cnDictionaryPage('EntryHead')}>
 				<div className={cnDictionaryPage('EntryMeta')}>
+					{headStartSlot}
 					<span className={cnDictionaryPage('Lang')}>
 						{getLanguageNameByCode(from)}
 					</span>
@@ -74,6 +87,8 @@ export const TranslationEntry: FC<TranslationEntryProps> = ({
 					)}
 				</div>
 				<div className={cnDictionaryPage('EntryControl')}>
+					{controlPanelSlot}
+					{/* TODO: insert remove button in use place */}
 					{onPressRemove && (
 						<Button
 							view="clear"

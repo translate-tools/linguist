@@ -1,8 +1,13 @@
+import { cn } from '@bem-react/classname';
 import React, { FC, useCallback, useEffect, useState } from 'react';
 import { TranslationsHistory } from '../../../layouts/History/TranslationsHistory';
 import { Page } from '../../../layouts/Page/Page';
 import { ITranslationHistoryEntryWithKey } from '../../../requests/backend/history/data';
 import { getTranslationHistoryEntries } from '../../../requests/backend/history/getHistoryEntries';
+
+import './HistoryPage.css';
+
+export const cnHistoryPage = cn('HistoryPage');
 
 export const HistoryPage: FC = () => {
 	const [translations, setTranslations] = useState<
@@ -21,9 +26,11 @@ export const HistoryPage: FC = () => {
 
 	return (
 		<Page loading={translations === null}>
-			<TranslationsHistory
-				{...{ translations: translations || [], updateTranslations }}
-			/>
+			<div className={cnHistoryPage()}>
+				<TranslationsHistory
+					{...{ translations: translations || [], updateTranslations }}
+				/>
+			</div>
 		</Page>
 	);
 };
