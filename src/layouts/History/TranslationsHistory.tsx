@@ -6,6 +6,7 @@ import { Icon } from '../../components/Icon/Icon.bundle/desktop';
 import { LayoutFlow } from '../../components/LayoutFlow/LayoutFlow';
 import { Textinput } from '../../components/Textinput/Textinput.bundle/desktop';
 import { useTranslateFavorite } from '../../lib/hooks/useTranslateFavorite';
+import { getMessage } from '../../lib/language';
 import {
 	TranslationEntry,
 	useConcurrentTTS,
@@ -25,7 +26,15 @@ export const BookmarksButton: FC<{ translation: ITranslation }> = ({ translation
 	const { isFavorite, toggleFavorite } = useTranslateFavorite(translation);
 
 	return (
-		<Button view="clear" size="s" content="icon" onPress={toggleFavorite}>
+		<Button
+			view="clear"
+			size="s"
+			content="icon"
+			onPress={toggleFavorite}
+			title={getMessage(
+				isFavorite ? 'bookmarkButton_delete' : 'bookmarkButton_add',
+			)}
+		>
 			<Icon glyph={isFavorite ? 'bookmark' : 'bookmark-border'} scalable={false} />
 		</Button>
 	);
@@ -214,7 +223,7 @@ export const TranslationsHistory: FC<TranslationsHistoryProps> = ({
 				<Textinput
 					hasClear
 					className={cnTranslationsHistory('Search')}
-					placeholder="Search by text"
+					placeholder={getMessage('history_searchPlaceholder')}
 					value={search}
 					setValue={setSearch}
 					onClearClick={() => setSearch('')}
@@ -226,6 +235,7 @@ export const TranslationsHistory: FC<TranslationsHistoryProps> = ({
 						checked={isNotEmptySelection}
 						setChecked={toggleSelectionAll}
 						disabled={translations.length === 0}
+						title={getMessage('history_controls_selectAll')}
 					/>
 
 					<Button
@@ -233,7 +243,7 @@ export const TranslationsHistory: FC<TranslationsHistoryProps> = ({
 						onPress={deleteSelectedEntries}
 						disabled={selectedItemsNumber === 0}
 					>
-						Delete selected
+						{getMessage('history_controls_deleteSelected')}
 					</Button>
 
 					<Button
@@ -241,13 +251,13 @@ export const TranslationsHistory: FC<TranslationsHistoryProps> = ({
 						onPress={deleteAllEntries}
 						disabled={translations.length === 0}
 					>
-						Clear history
+						{getMessage('history_controls_clearHistory')}
 					</Button>
 				</LayoutFlow>
 
 				{translations.length === 0 && (
 					<div className={cnTranslationsHistory('EmptyResults')}>
-						History clear
+						{getMessage('history_message_emptyEntries')}
 					</div>
 				)}
 				{translations.map(({ data, key }) => {
@@ -269,6 +279,7 @@ export const TranslationsHistory: FC<TranslationsHistoryProps> = ({
 								<Checkbox
 									checked={key in checkedItems}
 									setChecked={() => toggleCheckbox(key)}
+									title={getMessage('history_control_selectEntry')}
 								/>
 							}
 							controlPanelSlot={
