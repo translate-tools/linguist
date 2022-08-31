@@ -68,6 +68,7 @@ export const flush = async () => {
 };
 
 export const getEntries = async (
+	search?: string,
 	from?: number,
 	limit?: number,
 	options?: { order: 'desc' | 'asc' },
@@ -97,6 +98,20 @@ export const getEntries = async (
 
 			// Stop by limit
 			if (limit !== undefined && ++counter > limit) break;
+
+			if (search !== undefined && search.length > 0) {
+				// Skip not match texts
+				const { text, translate } = cursor.value.translation;
+
+				// TODO: make it configurable
+				// Ignore case
+				const textToSearch = search.toLowerCase();
+				if (
+					!text.toLowerCase().includes(search) &&
+					!translate.toLowerCase().includes(textToSearch)
+				)
+					continue;
+			}
 
 			// Add entry
 			entries.push({

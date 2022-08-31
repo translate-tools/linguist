@@ -40,15 +40,24 @@ export const BookmarksButton: FC<{ translation: ITranslation }> = ({ translation
 	);
 };
 
+export type TranslationsHistoryFetcher = (options?: { search: string }) => void;
+
 export type TranslationsHistoryProps = {
 	translations: ITranslationHistoryEntryWithKey[];
-	updateTranslations: () => void;
+	requestTranslations: TranslationsHistoryFetcher;
 };
 
 export const TranslationsHistory: FC<TranslationsHistoryProps> = ({
 	translations,
-	updateTranslations,
+	requestTranslations,
 }) => {
+	const [search, setSearch] = useState('');
+
+	const updateTranslations = useCallback(
+		() => requestTranslations({ search }),
+		[requestTranslations, search],
+	);
+
 	useEffect(() => {
 		updateTranslations();
 	}, [updateTranslations]);
@@ -214,8 +223,6 @@ export const TranslationsHistory: FC<TranslationsHistoryProps> = ({
 		// TODO: add modal window to select options to delete
 		clearTranslationHistory().then(updateTranslations);
 	}, [updateTranslations]);
-
-	const [search, setSearch] = useState('');
 
 	return (
 		<div className={cnTranslationsHistory()}>
