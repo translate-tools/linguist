@@ -1,3 +1,5 @@
+# Offline translation
+
 You can use offline translation with [custom translators](../CustomTranslator.md) start of Linguist version 4.0.
 
 To do it, you should deploy locally any service for translate text and implement JS binding for Linguist.

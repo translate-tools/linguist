@@ -110,3 +110,5 @@ class FakeTranslator {
 
 FakeTranslator;
 ```
+
+See also code for another services in [Offline translation manual](./manuals/OfflineTranslation.md)
