@@ -26,7 +26,7 @@ To try it on a chromium browser, download the normal extension for Chrome.
 
 Linguist is very convenient to use.
 
-- Supports all translation services in the world (read about [custom translators](./docs/CustomTranslator.md))
+- Supports all translation services in the world (read [custom translators](./docs/CustomTranslator.md) or [Offline translation manual](./docs/manuals/OfflineTranslation.md))
 - Real time page translations without reloading
 - Translate selected text segments
 - Translate any text you entered
