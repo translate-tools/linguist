@@ -15,6 +15,8 @@ class LibreTranslator {
     // URL of your instance of LibreTranslate
     // for local instance use URL "http://localhost/translate"
     apiPath = "https://translate.terraprint.co/translate";
+    // Insert API key if you have
+    apiKey = "";
 
     translate = (text, from, to) => {
         return fetch(this.apiPath, {
@@ -35,7 +37,8 @@ class LibreTranslator {
                 q: text,
                 source: from,
                 target: to,
-                format: "text"
+                format: "text",
+                api_key: this.apiKey
             }),
         })
             .then((r) => r.json())
