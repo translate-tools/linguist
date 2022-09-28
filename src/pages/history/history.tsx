@@ -7,6 +7,6 @@ import { HistoryPage } from './layout/HistoryPage';
 
 renderPage({
 	PageComponent: HistoryPage,
-	title: getMessage('dictionary_pageTitle'),
+	title: getMessage('history_pageTitle'),
 	theme,
 });
