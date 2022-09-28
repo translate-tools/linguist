@@ -18,6 +18,7 @@ import { withGlyphVolumeUp } from '../_glyph/Icon_glyph_volume-up';
 import { withGlyphAutoFix } from '../_glyph/Icon_glyph_autofix';
 import { withGlyphBookmark } from '../_glyph/Icon_glyph_bookmark';
 import { withGlyphBookmarkBorder } from '../_glyph/Icon_glyph_bookmark-border';
+import { withGlyphHistory } from '../_glyph/Icon_glyph_history';
 
 export const Icon = compose(
 	composeU(
@@ -29,6 +30,7 @@ export const Icon = compose(
 		withGlyphAutoFix,
 		withGlyphBookmark,
 		withGlyphBookmarkBorder,
+		withGlyphHistory,
 
 		withModIconGlyphUnfoldMore,
 		withModIconGlyphExpandMore,
