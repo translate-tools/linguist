@@ -6,10 +6,10 @@
   "rules": {
     "indentation": "tab",
     "max-empty-lines": 2,
+    "no-descending-specificity": null,
     "plugin/no-unsupported-browser-features": [
       true,
       {
-        # TODO: think about opera
         "ignore": [
           "css-resize",
           "intrinsic-width",
