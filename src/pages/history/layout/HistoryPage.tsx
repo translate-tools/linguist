@@ -1,5 +1,5 @@
 import { cn } from '@bem-react/classname';
-import React, { FC, useCallback, useEffect, useState } from 'react';
+import React, { FC, useCallback, useEffect, useLayoutEffect, useState } from 'react';
 import {
 	TranslationsHistory,
 	TranslationsHistoryFetcher,
@@ -15,7 +15,7 @@ export const cnHistoryPage = cn('HistoryPage');
 export const HistoryPage: FC = () => {
 	const [translations, setTranslations] = useState<
 		null | ITranslationHistoryEntryWithKey[]
-	>();
+	>(null);
 
 	const requestTranslations: TranslationsHistoryFetcher = useCallback((options) => {
 		getTranslationHistoryEntries(options).then((entries) => {
@@ -27,8 +27,16 @@ export const HistoryPage: FC = () => {
 		requestTranslations();
 	}, [requestTranslations]);
 
+	// Wait render nested components with new props
+	const [isLoaded, setIsLoaded] = useState(false);
+	useLayoutEffect(() => {
+		if (translations !== null) {
+			setIsLoaded(true);
+		}
+	}, [translations]);
+
 	return (
-		<Page loading={translations === null}>
+		<Page loading={!isLoaded}>
 			<div className={cnHistoryPage()}>
 				<TranslationsHistory
 					{...{ translations: translations || [], requestTranslations }}
