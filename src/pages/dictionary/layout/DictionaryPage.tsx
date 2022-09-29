@@ -67,20 +67,12 @@ export const TranslationEntry: FC<TranslationEntryProps> = ({
 }) => {
 	const { from, to, text, translate } = translation;
 
-	const isMobile = useMemo(() => isMobileBrowser(), []);
-
 	return (
 		<div className={cnDictionaryPage('Entry')}>
 			<div className={cnDictionaryPage('EntryHead')}>
 				<div className={cnDictionaryPage('EntryMeta')}>
 					{headStartSlot}
-					<span className={cnDictionaryPage('Lang')}>
-						{getLanguageNameByCode(from)}
-					</span>
-					<span className={cnDictionaryPage('Lang')}>
-						{getLanguageNameByCode(to)}
-					</span>
-					{!isMobile && timestamp && (
+					{timestamp && (
 						<span className={cnDictionaryPage('Date')}>
 							{new Date(timestamp).toLocaleDateString()}
 						</span>
@@ -101,6 +93,16 @@ export const TranslationEntry: FC<TranslationEntryProps> = ({
 						</Button>
 					)}
 				</div>
+			</div>
+			<div className={cnDictionaryPage('EntryHead')}>
+				<LayoutFlow direction="horizontal" indent="l">
+					<span className={cnDictionaryPage('Lang')}>
+						{getLanguageNameByCode(from)}
+					</span>
+					<span className={cnDictionaryPage('Lang')}>
+						{getLanguageNameByCode(to)}
+					</span>
+				</LayoutFlow>
 			</div>
 			<div className={cnDictionaryPage('EntryContent')}>
 				<div className={cnDictionaryPage('EntryTextContainer')}>

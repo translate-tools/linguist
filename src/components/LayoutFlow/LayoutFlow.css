@@ -41,6 +41,14 @@
 	margin-inline-end: 0.5rem;
 }
 
+.LayoutFlow_direction_horizontal.LayoutFlow_indent_l > .LayoutFlow-Item {
+	margin-block-start: 0.5rem;
+}
+
+.LayoutFlow_direction_horizontal.LayoutFlow_indent_l {
+	margin-block-start: -0.5rem;
+}
+
 .LayoutFlow_direction_horizontal.LayoutFlow_indent_xl > .LayoutFlow-Item:not(:last-child) {
 	margin-inline-end: 0.8rem;
 }
