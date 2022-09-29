@@ -94,20 +94,16 @@
 
 .DictionaryPage-EntryContent {
 	display: flex;
-	flex-direction: row;
 	min-height: 3rem;
+	gap: var(--typography-controls-indent-l);
 }
 
-.DictionaryPage_mobile .DictionaryPage-EntryContent {
+.DictionaryPage-Entry_layout_vertical .DictionaryPage-EntryContent {
 	flex-direction: column;
 }
 
-.DictionaryPage_mobile .DictionaryPage-EntryContent > :not(:last-child) {
-	margin-bottom: var(--typography-controls-indent-m);
-}
-
-:not(.DictionaryPage.DictionaryPage_mobile) .DictionaryPage-EntryContent > :not(:last-child) {
-	margin-right: var(--typography-controls-indent-m);
+.DictionaryPage-Entry_layout_horizontal .DictionaryPage-EntryContent {
+	flex-direction: row;
 }
 
 .DictionaryPage-EntryTextContainer {

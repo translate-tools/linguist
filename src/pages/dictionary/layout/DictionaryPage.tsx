@@ -67,8 +67,11 @@ export const TranslationEntry: FC<TranslationEntryProps> = ({
 }) => {
 	const { from, to, text, translate } = translation;
 
+	// TODO: make option to choose translation layout direction
+	const layout = isMobileBrowser() ? 'vertical' : 'horizontal';
+
 	return (
-		<div className={cnDictionaryPage('Entry')}>
+		<div className={cnDictionaryPage('Entry', { layout })}>
 			<div className={cnDictionaryPage('EntryHead')}>
 				<div className={cnDictionaryPage('EntryMeta')}>
 					{headStartSlot}
@@ -94,16 +97,6 @@ export const TranslationEntry: FC<TranslationEntryProps> = ({
 					)}
 				</div>
 			</div>
-			<div className={cnDictionaryPage('EntryHead')}>
-				<LayoutFlow direction="horizontal" indent="l">
-					<span className={cnDictionaryPage('Lang')}>
-						{getLanguageNameByCode(from)}
-					</span>
-					<span className={cnDictionaryPage('Lang')}>
-						{getLanguageNameByCode(to)}
-					</span>
-				</LayoutFlow>
-			</div>
 			<div className={cnDictionaryPage('EntryContent')}>
 				<div className={cnDictionaryPage('EntryTextContainer')}>
 					<div className={cnDictionaryPage('EntryTextAction')}>
@@ -117,6 +110,10 @@ export const TranslationEntry: FC<TranslationEntryProps> = ({
 						>
 							<Icon glyph="volume-up" scalable={false} />
 						</Button>
+
+						<span className={cnDictionaryPage('Lang')}>
+							{getLanguageNameByCode(from)}
+						</span>
 					</div>
 					<div className={cnDictionaryPage('EntryText')}>{text}</div>
 				</div>
@@ -132,6 +129,10 @@ export const TranslationEntry: FC<TranslationEntryProps> = ({
 						>
 							<Icon glyph="volume-up" scalable={false} />
 						</Button>
+
+						<span className={cnDictionaryPage('Lang')}>
+							{getLanguageNameByCode(to)}
+						</span>
 					</div>
 					<div className={cnDictionaryPage('EntryText')}>{translate}</div>
 				</div>
