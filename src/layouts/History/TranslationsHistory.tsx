@@ -70,7 +70,7 @@ export const TranslationsHistory: FC<TranslationsHistoryProps> = ({
 
 		// Stop for empty translations or when current played entry removed
 		if (
-			translations === null ||
+			translations.length === 0 ||
 			(currentPlayedTTS &&
 				!translations.find(({ key }) => key === currentPlayedTTS))
 		) {
