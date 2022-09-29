@@ -443,7 +443,7 @@ export const DictionaryPage: FC<IDictionaryPageProps> = ({ confirmDelete = true 
 						{getMessage('dictionary_description')}
 					</div>
 
-					<LayoutFlow indent="m" className={cnDictionaryPage('SearchPanel')}>
+					<LayoutFlow indent="l" className={cnDictionaryPage('SearchPanel')}>
 						<Textinput
 							placeholder={getMessage('dictionary_searchPlaceholder')}
 							value={search}
