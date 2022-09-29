@@ -224,6 +224,14 @@ export const TranslationsHistory: FC<TranslationsHistoryProps> = ({
 		clearTranslationHistory().then(updateTranslations);
 	}, [updateTranslations]);
 
+	let noEntriesMessage: string | null = null;
+	if (translations.length === 0) {
+		const isEmptyFilters = search === '';
+		noEntriesMessage = isEmptyFilters
+			? getMessage('history_message_emptyEntries')
+			: getMessage('history_message_entriesNotFound');
+	}
+
 	return (
 		<div className={cnTranslationsHistory()}>
 			<LayoutFlow indent="xl">
@@ -262,9 +270,9 @@ export const TranslationsHistory: FC<TranslationsHistoryProps> = ({
 					</Button>
 				</LayoutFlow>
 
-				{translations.length === 0 && (
+				{noEntriesMessage && (
 					<div className={cnTranslationsHistory('EmptyResults')}>
-						{getMessage('history_message_emptyEntries')}
+						{noEntriesMessage}
 					</div>
 				)}
 				{translations.map(({ data, key }) => {
