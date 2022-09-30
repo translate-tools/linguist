@@ -56,7 +56,8 @@ export type TranslationsHistoryProps = {
 	requestTranslations: TranslationsHistoryFetcher;
 };
 
-const PAGE_SIZE = 5;
+// TODO: set 100 for release
+const TRANSLATIONS_NUMBER_FOR_PAGE = 5;
 export const TranslationsHistory: FC<TranslationsHistoryProps> = ({
 	translations,
 	hasMoreTranslations,
@@ -80,7 +81,7 @@ export const TranslationsHistory: FC<TranslationsHistoryProps> = ({
 
 		requestTranslations({
 			search,
-			limit: PAGE_SIZE,
+			limit: TRANSLATIONS_NUMBER_FOR_PAGE,
 			limitFrom: cursor !== null ? cursor - 1 : undefined,
 		});
 	}, [requestTranslations, search]);
