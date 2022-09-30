@@ -1,5 +1,8 @@
 import { cn } from '@bem-react/classname';
 import React, { FC, useCallback, useEffect, useRef, useState } from 'react';
+import InfiniteScroll from 'react-infinite-scroller';
+import { Spinner } from 'react-elegant-ui/esm/components/Spinner/Spinner.bundle/desktop';
+
 import { Checkbox } from 'react-elegant-ui/esm/components/Checkbox/Checkbox.bundle/desktop';
 import { Button } from '../../components/Button/Button.bundle/universal';
 import { Icon } from '../../components/Icon/Icon.bundle/desktop';
@@ -13,7 +16,10 @@ import {
 } from '../../pages/dictionary/layout/DictionaryPage';
 import { clearTranslationHistory } from '../../requests/backend/history/clearTranslationHistory';
 
-import { ITranslationHistoryEntryWithKey } from '../../requests/backend/history/data';
+import {
+	TranslationHistoryFetcherOptions,
+	ITranslationHistoryEntryWithKey,
+} from '../../requests/backend/history/data';
 import { deleteTranslationHistoryEntry } from '../../requests/backend/history/deleteTranslationHistoryEntry';
 import { ITranslation } from '../../types/translation/Translation';
 
@@ -40,24 +46,60 @@ export const BookmarksButton: FC<{ translation: ITranslation }> = ({ translation
 	);
 };
 
-export type TranslationsHistoryFetcher = (options?: { search: string }) => void;
+export type TranslationsHistoryFetcher = (
+	options?: TranslationHistoryFetcherOptions,
+) => void;
 
 export type TranslationsHistoryProps = {
 	translations: ITranslationHistoryEntryWithKey[];
+	hasMoreTranslations: boolean;
 	requestTranslations: TranslationsHistoryFetcher;
 };
 
+const PAGE_SIZE = 5;
 export const TranslationsHistory: FC<TranslationsHistoryProps> = ({
 	translations,
+	hasMoreTranslations,
 	requestTranslations,
 }) => {
 	const [search, setSearch] = useState('');
 
-	const updateTranslations = useCallback(
-		() => requestTranslations({ search }),
-		[requestTranslations, search],
-	);
+	const scrollDataRef = useRef<{
+		cursor: null | number;
+	}>({
+		cursor: null,
+	});
 
+	// Reset scroll cursor by change filters
+	useEffect(() => {
+		scrollDataRef.current.cursor = null;
+	}, [search]);
+
+	const updateTranslations = useCallback(() => {
+		const { cursor } = scrollDataRef.current;
+
+		requestTranslations({
+			search,
+			limit: PAGE_SIZE,
+			limitFrom: cursor !== null ? cursor - 1 : undefined,
+		});
+	}, [requestTranslations, search]);
+
+	const getMoreTranslations = useCallback(() => {
+		const lastItemId =
+			translations.length === 0 ? null : translations[translations.length - 1].key;
+		scrollDataRef.current.cursor = lastItemId;
+
+		updateTranslations();
+	}, [translations, updateTranslations]);
+
+	// Call once to init component
+	// eslint-disable-next-line react-hooks/exhaustive-deps
+	useEffect(() => {
+		getMoreTranslations();
+	}, []);
+
+	// TODO: throttle input
 	useEffect(() => {
 		updateTranslations();
 	}, [updateTranslations]);
@@ -275,34 +317,58 @@ export const TranslationsHistory: FC<TranslationsHistoryProps> = ({
 						{noEntriesMessage}
 					</div>
 				)}
-				{translations.map(({ data, key }) => {
-					const { translation, timestamp } = data;
-					return (
-						<TranslationEntry
-							key={key}
-							translation={translation}
-							timestamp={timestamp}
-							onPressRemove={() => deleteEntry(key)}
-							onPressTTS={(target) => {
-								if (target === 'original') {
-									toggleTTS(key, translation.from, translation.text);
-								} else {
-									toggleTTS(key, translation.to, translation.translate);
+				<InfiniteScroll
+					loadMore={getMoreTranslations}
+					hasMore={hasMoreTranslations}
+					threshold={50}
+					loader={
+						// TODO: add class to style it
+						<div
+							style={{ textAlign: 'center', paddingTop: '1rem' }}
+							key="loader"
+						>
+							<Spinner view="primitive" progress />
+						</div>
+					}
+				>
+					{translations.map(({ data, key }) => {
+						const { translation, timestamp } = data;
+						return (
+							<TranslationEntry
+								key={key}
+								translation={translation}
+								timestamp={timestamp}
+								onPressRemove={() => deleteEntry(key)}
+								onPressTTS={(target) => {
+									if (target === 'original') {
+										toggleTTS(
+											key,
+											translation.from,
+											translation.text,
+										);
+									} else {
+										toggleTTS(
+											key,
+											translation.to,
+											translation.translate,
+										);
+									}
+								}}
+								headStartSlot={
+									<Checkbox
+										checked={key in checkedItems}
+										setChecked={() => toggleCheckbox(key)}
+										title={getMessage('history_control_selectEntry')}
+									/>
 								}
-							}}
-							headStartSlot={
-								<Checkbox
-									checked={key in checkedItems}
-									setChecked={() => toggleCheckbox(key)}
-									title={getMessage('history_control_selectEntry')}
-								/>
-							}
-							controlPanelSlot={
-								<BookmarksButton translation={translation} />
-							}
-						/>
-					);
-				})}
+								controlPanelSlot={
+									// TODO: update entries by change
+									<BookmarksButton translation={translation} />
+								}
+							/>
+						);
+					})}
+				</InfiniteScroll>
 			</LayoutFlow>
 		</div>
 	);

@@ -67,12 +67,21 @@ export const flush = async () => {
 	await transaction.done;
 };
 
-export const getEntries = async (
-	search?: string,
-	from?: number,
-	limit?: number,
-	options?: { order: 'desc' | 'asc' },
-) => {
+export type TranslationHistoryFetcherOptions = {
+	search?: string;
+	from?: number;
+	limitFrom?: number;
+	limit?: number;
+	options?: { order: 'desc' | 'asc' };
+};
+
+export const getEntries = async ({
+	search,
+	from,
+	limitFrom,
+	limit,
+	options,
+}: TranslationHistoryFetcherOptions) => {
 	const { order = 'desc' } = options ?? {};
 
 	const db = await getDB();
@@ -83,6 +92,7 @@ export const getEntries = async (
 
 	let isJumped = false;
 	let counter = 0;
+	let pauseCounter = limitFrom !== undefined;
 	const startCursor = await transaction.store.openCursor(
 		null,
 		order === 'desc' ? 'prev' : 'next',
@@ -96,9 +106,7 @@ export const getEntries = async (
 				continue;
 			}
 
-			// Stop by limit
-			if (limit !== undefined && ++counter > limit) break;
-
+			// Skip by filter
 			if (search !== undefined && search.length > 0) {
 				// Skip not match texts
 				const { text, translate } = cursor.value.translation;
@@ -111,6 +119,22 @@ export const getEntries = async (
 					!translate.toLowerCase().includes(textToSearch)
 				)
 					continue;
+			}
+
+			// TODO: check another places that limit used after filtration
+			// Stop by limit
+			if (limit !== undefined) {
+				// Check reach entry to start count
+				if (limitFrom !== undefined && pauseCounter) {
+					if (cursor.primaryKey === limitFrom) {
+						pauseCounter = false;
+					}
+				}
+
+				if (!pauseCounter) {
+					const currentNumber = ++counter;
+					if (currentNumber > limit) break;
+				}
 			}
 
 			// Add entry

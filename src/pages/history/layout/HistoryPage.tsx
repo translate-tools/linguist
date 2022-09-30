@@ -1,5 +1,7 @@
+import React, { FC, useCallback, useLayoutEffect, useState } from 'react';
 import { cn } from '@bem-react/classname';
-import React, { FC, useCallback, useEffect, useLayoutEffect, useState } from 'react';
+import { isEqual } from 'lodash';
+
 import {
 	TranslationsHistory,
 	TranslationsHistoryFetcher,
@@ -17,15 +19,21 @@ export const HistoryPage: FC = () => {
 		null | ITranslationHistoryEntryWithKey[]
 	>(null);
 
+	const [hasMoreTranslations, setIsHasMoreTranslations] = useState(true);
 	const requestTranslations: TranslationsHistoryFetcher = useCallback((options) => {
 		getTranslationHistoryEntries(options).then((entries) => {
-			setTranslations(entries);
+			setTranslations((currentEntries) => {
+				// Check should we try load more data or not
+				const hasChanges =
+					currentEntries === null ||
+					currentEntries.length !== entries.length ||
+					!isEqual(currentEntries, entries);
+				setIsHasMoreTranslations(hasChanges);
+
+				return entries;
+			});
 		});
 	}, []);
-
-	useEffect(() => {
-		requestTranslations();
-	}, [requestTranslations]);
 
 	// Wait render nested components with new props
 	const [isLoaded, setIsLoaded] = useState(false);
@@ -36,10 +44,14 @@ export const HistoryPage: FC = () => {
 	}, [translations]);
 
 	return (
-		<Page loading={!isLoaded}>
+		<Page loading={!isLoaded} renderWhileLoading>
 			<div className={cnHistoryPage()}>
 				<TranslationsHistory
-					{...{ translations: translations || [], requestTranslations }}
+					{...{
+						translations: translations || [],
+						hasMoreTranslations,
+						requestTranslations,
+					}}
 				/>
 			</div>
 		</Page>
