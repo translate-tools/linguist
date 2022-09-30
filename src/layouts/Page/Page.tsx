@@ -29,13 +29,7 @@ export const Page: FC<IPageProps> = ({
 			)}
 
 			{!loading || renderWhileLoading ? (
-				// TODO: add modifier to hide
-				<div
-					className={cnPage('Body')}
-					style={{ display: loading ? 'none' : 'block' }}
-				>
-					{children}
-				</div>
+				<div className={cnPage('Body', { hidden: loading })}>{children}</div>
 			) : null}
 		</div>
 	);

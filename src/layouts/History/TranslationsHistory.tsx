@@ -324,7 +324,7 @@ export const TranslationsHistory: FC<TranslationsHistoryProps> = ({
 					loader={
 						// TODO: add class to style it
 						<div
-							style={{ textAlign: 'center', paddingTop: '1rem' }}
+							className={cnTranslationsHistory('InfinityScrollLoader')}
 							key="loader"
 						>
 							<Spinner view="primitive" progress />
