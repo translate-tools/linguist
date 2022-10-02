@@ -1,8 +1,15 @@
 import { useCallback, useEffect, useState } from 'react';
+import { isEqual } from 'lodash';
+
 import { findTranslation } from '../../requests/backend/translations/findTranslation';
 import { useImmutableCallback } from 'react-elegant-ui/esm/hooks/useImmutableCallback';
 import { addTranslation } from '../../requests/backend/translations/addTranslation';
 import { deleteTranslation } from '../../requests/backend/translations/deleteTranslation';
+import {
+	onClearDictionary,
+	onDictionaryEntryAdd,
+	onDictionaryEntryDelete,
+} from '../../requests/backend/translations';
 
 // TODO: think about consistent name for liked translations: bookmarks, favorites, dictionary entries
 // TODO: rename this hook and components consistent, check i18n texts consistent too
@@ -87,6 +94,38 @@ export const useTranslateFavorite = ({
 	useEffect(() => {
 		setIsFavorite(favId !== null);
 	}, [favId]);
+
+	// Observe state
+	useEffect(() => {
+		const cleanupFunctions: (() => any)[] = [];
+
+		if (favId === null) {
+			const cleanup = onDictionaryEntryAdd((translation) => {
+				const isEqualData = isEqual(translation, {
+					from,
+					to,
+					text,
+					translate,
+				});
+
+				if (isEqualData) {
+					update();
+				}
+			});
+
+			cleanupFunctions.push(cleanup);
+		} else {
+			const cleanupOnDelete = onDictionaryEntryDelete(favId, update);
+			const cleanupOnClear = onClearDictionary(update);
+
+			cleanupFunctions.push(cleanupOnDelete);
+			cleanupFunctions.push(cleanupOnClear);
+		}
+
+		return () => {
+			cleanupFunctions.map((fn) => fn());
+		};
+	}, [favId, from, text, to, translate, update]);
 
 	return { isFavorite, toggleFavorite, update };
 };

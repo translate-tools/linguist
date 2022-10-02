@@ -3,6 +3,7 @@ import { type } from '../../../lib/types';
 
 import { addEntry } from './data';
 import { TranslationType } from '../../../types/translation/Translation';
+import { notifyDictionaryEntryAdd } from '.';
 
 export const [addTranslationFactory, addTranslation] = buildBackendRequest(
 	'addTranslation',
@@ -10,6 +11,12 @@ export const [addTranslationFactory, addTranslation] = buildBackendRequest(
 		requestValidator: TranslationType,
 		responseValidator: type.number,
 
-		factoryHandler: () => (data) => addEntry({ ...data, date: new Date().getTime() }),
+		factoryHandler: () => async (data) => {
+			const id = await addEntry({ ...data, date: new Date().getTime() });
+
+			notifyDictionaryEntryAdd(data);
+
+			return id;
+		},
 	},
 );

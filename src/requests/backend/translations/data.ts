@@ -69,6 +69,11 @@ export const deleteEntry = async (entryId: number) => {
 	return db.delete('translations', entryId);
 };
 
+export const getEntry = async (entryId: number) => {
+	const db = await getDB();
+	return db.get('translations', entryId);
+};
+
 export const deleteEntries = async (
 	entry: Pick<ITranslationEntry, 'from' | 'to' | 'text' | 'translate'>,
 ) => {
