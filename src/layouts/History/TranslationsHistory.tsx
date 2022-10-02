@@ -3,12 +3,11 @@ import React, { FC, useCallback, useEffect, useRef, useState } from 'react';
 import InfiniteScroll from 'react-infinite-scroller';
 import { Spinner } from 'react-elegant-ui/esm/components/Spinner/Spinner.bundle/desktop';
 
+import { BookmarksButton } from '../../components/Bookmarks/BookmarksButton';
 import { Checkbox } from 'react-elegant-ui/esm/components/Checkbox/Checkbox.bundle/desktop';
 import { Button } from '../../components/Button/Button.bundle/universal';
-import { Icon } from '../../components/Icon/Icon.bundle/desktop';
 import { LayoutFlow } from '../../components/LayoutFlow/LayoutFlow';
 import { Textinput } from '../../components/Textinput/Textinput.bundle/desktop';
-import { useTranslateFavorite } from '../../lib/hooks/useTranslateFavorite';
 import { getMessage } from '../../lib/language';
 import {
 	TranslationEntry,
@@ -17,34 +16,14 @@ import {
 import { clearTranslationHistory } from '../../requests/backend/history/clearTranslationHistory';
 
 import {
-	TranslationHistoryFetcherOptions,
 	ITranslationHistoryEntryWithKey,
+	TranslationHistoryFetcherOptions,
 } from '../../requests/backend/history/data';
 import { deleteTranslationHistoryEntry } from '../../requests/backend/history/deleteTranslationHistoryEntry';
-import { ITranslation } from '../../types/translation/Translation';
 
 import './TranslationsHistory.css';
 
 export const cnTranslationsHistory = cn('TranslationsHistory');
-
-// TODO: move to another file
-export const BookmarksButton: FC<{ translation: ITranslation }> = ({ translation }) => {
-	const { isFavorite, toggleFavorite } = useTranslateFavorite(translation);
-
-	return (
-		<Button
-			view="clear"
-			size="s"
-			content="icon"
-			onPress={toggleFavorite}
-			title={getMessage(
-				isFavorite ? 'bookmarkButton_delete' : 'bookmarkButton_add',
-			)}
-		>
-			<Icon glyph={isFavorite ? 'bookmark' : 'bookmark-border'} scalable={false} />
-		</Button>
-	);
-};
 
 export type TranslationsHistoryFetcher = (
 	options?: TranslationHistoryFetcherOptions,
@@ -94,10 +73,10 @@ export const TranslationsHistory: FC<TranslationsHistoryProps> = ({
 		updateTranslations();
 	}, [translations, updateTranslations]);
 
-	// Call once to init component
-	// eslint-disable-next-line react-hooks/exhaustive-deps
 	useEffect(() => {
 		getMoreTranslations();
+		// Call once to init component
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
 	// TODO: throttle input

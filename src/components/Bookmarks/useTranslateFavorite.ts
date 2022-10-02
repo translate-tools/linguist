@@ -1,10 +1,11 @@
-import { useState, useCallback, useEffect } from 'react';
+import { useCallback, useEffect, useState } from 'react';
+import { findTranslation } from '../../requests/backend/translations/findTranslation';
 import { useImmutableCallback } from 'react-elegant-ui/esm/hooks/useImmutableCallback';
-
 import { addTranslation } from '../../requests/backend/translations/addTranslation';
 import { deleteTranslation } from '../../requests/backend/translations/deleteTranslation';
-import { findTranslation } from '../../requests/backend/translations/findTranslation';
 
+// TODO: think about consistent name for liked translations: bookmarks, favorites, dictionary entries
+// TODO: rename this hook and components consistent, check i18n texts consistent too
 export const useTranslateFavorite = ({
 	from,
 	to,

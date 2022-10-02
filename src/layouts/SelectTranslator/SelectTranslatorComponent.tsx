@@ -5,12 +5,12 @@ import { TranslatorFeatures } from '../../pages/popup/layout/PopupWindow';
 
 import { detectLanguage, getMessage } from '../../lib/language';
 import { useTTS } from '../../lib/hooks/useTTS';
-import { useTranslateFavorite } from '../../lib/hooks/useTranslateFavorite';
 
 import { getTranslatorFeatures } from '../../requests/backend/getTranslatorFeatures';
 import { getUserLanguagePreferences } from '../../requests/backend/getUserLanguagePreferences';
 
 // Components
+import { useTranslateFavorite } from '../../components/Bookmarks/useTranslateFavorite';
 import { Checkbox } from 'react-elegant-ui/esm/components/Checkbox/Checkbox.bundle/desktop';
 // import { Textarea } from '../../components/Textarea/Textarea.bundle/desktop';
 import { Button } from '../../components/Button/Button.bundle/desktop';
