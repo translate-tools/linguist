@@ -1,5 +1,5 @@
-import { cn } from '@bem-react/classname';
 import React, { FC, useCallback, useEffect, useRef, useState } from 'react';
+import { cn } from '@bem-react/classname';
 import InfiniteScroll from 'react-infinite-scroller';
 import { Spinner } from 'react-elegant-ui/esm/components/Spinner/Spinner.bundle/desktop';
 
@@ -9,6 +9,7 @@ import { Button } from '../../components/Button/Button.bundle/universal';
 import { LayoutFlow } from '../../components/LayoutFlow/LayoutFlow';
 import { Textinput } from '../../components/Textinput/Textinput.bundle/desktop';
 import { getMessage } from '../../lib/language';
+import { useDebouncedInput } from '../../lib/hooks/useDebouncedInput';
 import {
 	TranslationEntry,
 	useConcurrentTTS,
@@ -42,7 +43,8 @@ export const TranslationsHistory: FC<TranslationsHistoryProps> = ({
 	hasMoreTranslations,
 	requestTranslations,
 }) => {
-	const [search, setSearch] = useState('');
+	const searchInput = useDebouncedInput('');
+	const search = searchInput.debouncedValue;
 
 	const scrollDataRef = useRef<{
 		cursor: null | number;
@@ -79,7 +81,6 @@ export const TranslationsHistory: FC<TranslationsHistoryProps> = ({
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
-	// TODO: throttle input
 	useEffect(() => {
 		updateTranslations();
 	}, [updateTranslations]);
@@ -261,9 +262,9 @@ export const TranslationsHistory: FC<TranslationsHistoryProps> = ({
 					hasClear
 					className={cnTranslationsHistory('Search')}
 					placeholder={getMessage('history_searchPlaceholder')}
-					value={search}
-					setValue={setSearch}
-					onClearClick={() => setSearch('')}
+					value={searchInput.value}
+					setValue={searchInput.setValue}
+					onClearClick={() => searchInput.setValue('')}
 				/>
 
 				<LayoutFlow direction="horizontal" indent="l">
