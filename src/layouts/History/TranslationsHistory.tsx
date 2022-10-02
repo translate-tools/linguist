@@ -8,8 +8,11 @@ import { Checkbox } from 'react-elegant-ui/esm/components/Checkbox/Checkbox.bund
 import { Button } from '../../components/Button/Button.bundle/universal';
 import { LayoutFlow } from '../../components/LayoutFlow/LayoutFlow';
 import { Textinput } from '../../components/Textinput/Textinput.bundle/desktop';
+
 import { getMessage } from '../../lib/language';
 import { useDebouncedInput } from '../../lib/hooks/useDebouncedInput';
+import { useConfirm } from '../../lib/hooks/useConfirm';
+
 import {
 	TranslationEntry,
 	useConcurrentTTS,
@@ -223,29 +226,47 @@ export const TranslationsHistory: FC<TranslationsHistoryProps> = ({
 		setCheckedItems(newState);
 	}, [selectedItemsNumber, translations]);
 
+	const requestConfirm = useConfirm();
+
 	const deleteEntry = useCallback(
 		(id: number) => {
-			// TODO: add prompt when not pressed ctrl button
-			deleteTranslationHistoryEntry(id).then(updateTranslations);
+			requestConfirm({
+				message: getMessage('history_message_deleteEntryConfirmation'),
+				onAccept: () => {
+					deleteTranslationHistoryEntry(id).then(updateTranslations);
+				},
+			});
 		},
-		[updateTranslations],
+		[requestConfirm, updateTranslations],
 	);
 
 	const deleteSelectedEntries = useCallback(() => {
 		const selectedEntriesId = Object.keys(checkedItems).map(Number);
 		if (selectedEntriesId.length === 0) return;
 
-		// TODO: add prompt when not pressed ctrl button
-		Promise.all(
-			selectedEntriesId.map((id) => deleteTranslationHistoryEntry(id)),
-		).finally(updateTranslations);
-	}, [checkedItems, updateTranslations]);
+		const checkedItemsNumber = String(Object.keys(checkedItems).length);
+		requestConfirm({
+			message: getMessage(
+				'history_message_deleteSelectedEntriesConfirmation',
+				checkedItemsNumber,
+			),
+			onAccept: () => {
+				Promise.all(
+					selectedEntriesId.map((id) => deleteTranslationHistoryEntry(id)),
+				).finally(updateTranslations);
+			},
+		});
+	}, [checkedItems, requestConfirm, updateTranslations]);
 
 	const deleteAllEntries = useCallback(() => {
-		// TODO: add prompt when not pressed ctrl button
 		// TODO: add modal window to select options to delete
-		clearTranslationHistory().then(updateTranslations);
-	}, [updateTranslations]);
+		requestConfirm({
+			message: getMessage('history_message_clearHistoryConfirmation'),
+			onAccept: () => {
+				clearTranslationHistory().then(updateTranslations);
+			},
+		});
+	}, [requestConfirm, updateTranslations]);
 
 	let noEntriesMessage: string | null = null;
 	if (translations.length === 0) {
