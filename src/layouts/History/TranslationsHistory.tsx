@@ -324,7 +324,6 @@ export const TranslationsHistory: FC<TranslationsHistoryProps> = ({
 					hasMore={hasMoreTranslations}
 					threshold={50}
 					loader={
-						// TODO: add class to style it
 						<div
 							className={cnTranslationsHistory('InfinityScrollLoader')}
 							key="loader"
@@ -364,7 +363,6 @@ export const TranslationsHistory: FC<TranslationsHistoryProps> = ({
 									/>
 								}
 								controlPanelSlot={
-									// TODO: update entries by change
 									<BookmarksButton translation={translation} />
 								}
 							/>
