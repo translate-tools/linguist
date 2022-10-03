@@ -73,6 +73,7 @@ export type TranslationHistoryFetcherOptions = {
 	limitFrom?: number;
 	limit?: number;
 	options?: { order: 'desc' | 'asc' };
+	ignoreCase?: boolean;
 };
 
 export const getEntries = async ({
@@ -81,6 +82,7 @@ export const getEntries = async ({
 	limitFrom,
 	limit,
 	options,
+	ignoreCase = true,
 }: TranslationHistoryFetcherOptions) => {
 	const { order = 'desc' } = options ?? {};
 
@@ -108,20 +110,18 @@ export const getEntries = async ({
 
 			// Skip by filter
 			if (search !== undefined && search.length > 0) {
-				// Skip not match texts
 				const { text, translate } = cursor.value.translation;
 
-				// TODO: make it configurable
-				// Ignore case
-				const textToSearch = search.toLowerCase();
-				if (
-					!text.toLowerCase().includes(search) &&
-					!translate.toLowerCase().includes(textToSearch)
-				)
-					continue;
+				const textToSearch = ignoreCase ? search.toLowerCase() : search;
+				const isSomeTextMatch = [text, translate].some((text) => {
+					const transformedText = ignoreCase ? text.toLowerCase() : text;
+					return transformedText.includes(textToSearch);
+				});
+
+				// Skip not match texts
+				if (!isSomeTextMatch) continue;
 			}
 
-			// TODO: check another places that limit used after filtration
 			// Stop by limit
 			if (limit !== undefined) {
 				// Check reach entry to start count
