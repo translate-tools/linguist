@@ -3,18 +3,19 @@ import { cn } from '@bem-react/classname';
 import InfiniteScroll from 'react-infinite-scroller';
 import { Spinner } from 'react-elegant-ui/esm/components/Spinner/Spinner.bundle/desktop';
 
-import { BookmarksButton } from '../../components/Bookmarks/BookmarksButton';
 import { Checkbox } from 'react-elegant-ui/esm/components/Checkbox/Checkbox.bundle/desktop';
 import { Button } from '../../components/Button/Button.bundle/universal';
 import { LayoutFlow } from '../../components/LayoutFlow/LayoutFlow';
 import { Textinput } from '../../components/Textinput/Textinput.bundle/desktop';
+
+import { Translation } from '../../components/Translation/Translation';
+import { BookmarksButton } from '../../components/Bookmarks/BookmarksButton';
 
 import { getMessage } from '../../lib/language';
 import { useDebouncedInput } from '../../lib/hooks/useDebouncedInput';
 import { useConfirm } from '../../lib/hooks/useConfirm';
 import { useConcurrentTTS } from '../../lib/hooks/useConcurrentTTS';
 
-import { TranslationEntry } from '../../pages/dictionary/layout/DictionaryPage';
 import { clearTranslationHistory } from '../../requests/backend/history/clearTranslationHistory';
 
 import {
@@ -333,7 +334,7 @@ export const TranslationsHistory: FC<TranslationsHistoryProps> = ({
 					{translations.map(({ data, key }) => {
 						const { translation, timestamp } = data;
 						return (
-							<TranslationEntry
+							<Translation
 								key={key}
 								translation={translation}
 								timestamp={timestamp}

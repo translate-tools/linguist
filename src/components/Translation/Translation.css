@@ -1,0 +1,79 @@
+.Translation {
+	border: 2px solid #eee;
+	padding: var(--typography-controls-indent-xl);
+	border-radius: var(--typography-controls-border-radius);
+}
+
+.Translation:not(:last-child) {
+	margin-bottom: var(--typography-controls-indent-l);
+}
+
+.Translation > :not(:last-child) {
+	margin-bottom: var(--typography-controls-indent-m);
+}
+
+/* EntryHead */
+
+.Translation-Head {
+	display: flex;
+	line-height: 100%;
+}
+
+.Translation-Meta > :not(:last-child) {
+	margin-right: var(--typography-controls-indent-m);
+}
+
+.Translation-Meta > * {
+	vertical-align: middle;
+}
+
+.Translation-Lang {
+	display: inline-block;
+	background: #000;
+	color: #fff;
+	padding: var(--typography-controls-indent-m);
+	border-radius: var(--typography-controls-border-radius);
+}
+
+.Translation-Date {
+	color: var(--color-typo-secondary);
+}
+
+.Translation-Control {
+	margin-left: auto;
+}
+
+/* Content */
+
+.Translation-Content {
+	display: flex;
+	min-height: 3rem;
+	gap: var(--typography-controls-indent-l);
+}
+
+.Translation_layout_vertical .Translation-Content {
+	flex-direction: column;
+}
+
+.Translation_layout_horizontal .Translation-Content {
+	flex-direction: row;
+}
+
+.Translation-TextContainer {
+	box-sizing: border-box;
+	width: 100%;
+	border-radius: var(--typography-controls-border-radius);
+	background-color: #eee;
+}
+
+.Translation-TextAction {
+	padding-top: var(--typography-controls-indent-l);
+}
+
+.Translation-Text {
+	max-height: 400px;
+	overflow: auto;
+	padding: var(--typography-controls-indent-l);
+	white-space: pre-wrap;
+	scrollbar-width: thin;
+}

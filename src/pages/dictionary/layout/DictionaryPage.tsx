@@ -1,4 +1,4 @@
-import React, { FC, ReactNode, useCallback, useEffect, useMemo, useState } from 'react';
+import React, { FC, useCallback, useEffect, useMemo, useState } from 'react';
 import { cn } from '@bem-react/classname';
 import Papa from 'papaparse';
 import { useImmutableCallback } from 'react-elegant-ui/esm/hooks/useImmutableCallback';
@@ -19,8 +19,8 @@ import { isMobileBrowser } from '../../../lib/browser';
 import { Button } from '../../../components/Button/Button.bundle/desktop';
 import { Select } from '../../../components/Select/Select.bundle/desktop';
 import { Textinput } from '../../../components/Textinput/Textinput.bundle/desktop';
-import { Icon } from '../../../components/Icon/Icon.bundle/desktop';
 
+import { Translation } from '../../../components/Translation/Translation';
 import { OptionsPanel } from '../../../components/OptionsPanel/OptionsPanel';
 import { LayoutFlow } from '../../../components/LayoutFlow/LayoutFlow';
 
@@ -28,7 +28,6 @@ import { Page } from '../../../layouts/Page/Page';
 import { PageMessages } from '../../../layouts/Page/Messages/PageMessages';
 
 import './DictionaryPage.css';
-import { ITranslation } from '../../../types/translation/Translation';
 
 export const cnDictionaryPage = cn('DictionaryPage');
 
@@ -36,100 +35,6 @@ export const cnDictionaryPage = cn('DictionaryPage');
 export interface IDictionaryPageProps {
 	confirmDelete?: boolean;
 }
-
-export type TranslationEntryProps = {
-	translation: ITranslation;
-	timestamp?: number;
-	onPressRemove?: () => void;
-	onPressTTS: (target: 'original' | 'translation') => void;
-	controlPanelSlot?: ReactNode | ReactNode[];
-	headStartSlot?: ReactNode | ReactNode[];
-};
-
-// TODO: move to standalone component
-export const TranslationEntry: FC<TranslationEntryProps> = ({
-	translation,
-	timestamp,
-	onPressRemove,
-	onPressTTS,
-	controlPanelSlot,
-	headStartSlot,
-}) => {
-	const { from, to, text, translate } = translation;
-
-	// TODO: make option to choose translation layout direction
-	const layout = isMobileBrowser() ? 'vertical' : 'horizontal';
-
-	return (
-		<div className={cnDictionaryPage('Entry', { layout })}>
-			<div className={cnDictionaryPage('EntryHead')}>
-				<div className={cnDictionaryPage('EntryMeta')}>
-					{headStartSlot}
-					{timestamp && (
-						<span className={cnDictionaryPage('Date')}>
-							{new Date(timestamp).toLocaleDateString()}
-						</span>
-					)}
-				</div>
-				<div className={cnDictionaryPage('EntryControl')}>
-					{controlPanelSlot}
-					{/* TODO: insert remove button in use place */}
-					{onPressRemove && (
-						<Button
-							view="clear"
-							size="s"
-							onPress={onPressRemove}
-							title={getMessage('common_action_removeFromDictionary')}
-							content="icon"
-						>
-							<Icon glyph="delete" scalable={false} />
-						</Button>
-					)}
-				</div>
-			</div>
-			<div className={cnDictionaryPage('EntryContent')}>
-				<div className={cnDictionaryPage('EntryTextContainer')}>
-					<div className={cnDictionaryPage('EntryTextAction')}>
-						<Button
-							onPress={() => {
-								// toggleTTS(idx, from, text);
-								onPressTTS('original');
-							}}
-							view="clear"
-							size="s"
-						>
-							<Icon glyph="volume-up" scalable={false} />
-						</Button>
-
-						<span className={cnDictionaryPage('Lang')}>
-							{getLanguageNameByCode(from)}
-						</span>
-					</div>
-					<div className={cnDictionaryPage('EntryText')}>{text}</div>
-				</div>
-				<div className={cnDictionaryPage('EntryTextContainer')}>
-					<div className={cnDictionaryPage('EntryTextAction')}>
-						<Button
-							onPress={() => {
-								// toggleTTS(idx, to, translate);
-								onPressTTS('translation');
-							}}
-							view="clear"
-							size="s"
-						>
-							<Icon glyph="volume-up" scalable={false} />
-						</Button>
-
-						<span className={cnDictionaryPage('Lang')}>
-							{getLanguageNameByCode(to)}
-						</span>
-					</div>
-					<div className={cnDictionaryPage('EntryText')}>{translate}</div>
-				</div>
-			</div>
-		</div>
-	);
-};
 
 // TODO: improve styles
 
@@ -326,7 +231,7 @@ export const DictionaryPage: FC<IDictionaryPageProps> = ({ confirmDelete = true 
 		return filtredEntries.map(({ data, key }, idx) => {
 			const { date, ...translation } = data;
 			return (
-				<TranslationEntry
+				<Translation
 					key={key}
 					translation={translation}
 					timestamp={date}
