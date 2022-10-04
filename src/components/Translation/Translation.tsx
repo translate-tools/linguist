@@ -3,7 +3,7 @@ import { cn } from '@bem-react/classname';
 
 import { ITranslation } from '../../types/translation/Translation';
 import { isMobileBrowser } from '../../lib/browser';
-import { getLanguageNameByCode, getMessage } from '../../lib/language';
+import { getLanguageNameByCode } from '../../lib/language';
 
 import { Button } from '../Button/Button.bundle/desktop';
 import { Icon } from '../Icon/Icon.bundle/desktop';
@@ -15,16 +15,15 @@ export const cnTranslation = cn('Translation');
 export type TranslationEntryProps = {
 	translation: ITranslation;
 	timestamp?: number;
-	onPressRemove?: () => void;
 	onPressTTS: (target: 'original' | 'translation') => void;
 	controlPanelSlot?: ReactNode | ReactNode[];
 	headStartSlot?: ReactNode | ReactNode[];
 };
 
+// TODO: implement text highlighting for search results
 export const Translation: FC<TranslationEntryProps> = ({
 	translation,
 	timestamp,
-	onPressRemove,
 	onPressTTS,
 	controlPanelSlot,
 	headStartSlot,
@@ -45,21 +44,7 @@ export const Translation: FC<TranslationEntryProps> = ({
 						</span>
 					)}
 				</div>
-				<div className={cnTranslation('Control')}>
-					{controlPanelSlot}
-					{/* TODO: insert remove button in use place */}
-					{onPressRemove && (
-						<Button
-							view="clear"
-							size="s"
-							onPress={onPressRemove}
-							title={getMessage('common_action_removeFromDictionary')}
-							content="icon"
-						>
-							<Icon glyph="delete" scalable={false} />
-						</Button>
-					)}
-				</div>
+				<div className={cnTranslation('Control')}>{controlPanelSlot}</div>
 			</div>
 			<div className={cnTranslation('Content')}>
 				<div className={cnTranslation('TextContainer')}>

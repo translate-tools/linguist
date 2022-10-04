@@ -19,6 +19,7 @@ import { isMobileBrowser } from '../../../lib/browser';
 import { Button } from '../../../components/Button/Button.bundle/desktop';
 import { Select } from '../../../components/Select/Select.bundle/desktop';
 import { Textinput } from '../../../components/Textinput/Textinput.bundle/desktop';
+import { Icon } from '../../../components/Icon/Icon.bundle/desktop';
 
 import { Translation } from '../../../components/Translation/Translation';
 import { OptionsPanel } from '../../../components/OptionsPanel/OptionsPanel';
@@ -227,7 +228,6 @@ export const DictionaryPage: FC<IDictionaryPageProps> = ({ confirmDelete = true 
 			);
 
 		// Render entries
-		// TODO: highlight results
 		return filtredEntries.map(({ data, key }, idx) => {
 			const { date, ...translation } = data;
 			return (
@@ -235,7 +235,6 @@ export const DictionaryPage: FC<IDictionaryPageProps> = ({ confirmDelete = true 
 					key={key}
 					translation={translation}
 					timestamp={date}
-					onPressRemove={() => remove(idx)}
 					onPressTTS={(target) => {
 						if (target === 'original') {
 							toggleTTS(key, translation.from, translation.text);
@@ -243,6 +242,17 @@ export const DictionaryPage: FC<IDictionaryPageProps> = ({ confirmDelete = true 
 							toggleTTS(key, translation.to, translation.translate);
 						}
 					}}
+					controlPanelSlot={
+						<Button
+							view="clear"
+							size="s"
+							onPress={() => remove(idx)}
+							title={getMessage('common_action_removeFromDictionary')}
+							content="icon"
+						>
+							<Icon glyph="delete" scalable={false} />
+						</Button>
+					}
 				/>
 			);
 		});

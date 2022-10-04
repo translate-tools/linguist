@@ -7,6 +7,7 @@ import { Checkbox } from 'react-elegant-ui/esm/components/Checkbox/Checkbox.bund
 import { Button } from '../../components/Button/Button.bundle/universal';
 import { LayoutFlow } from '../../components/LayoutFlow/LayoutFlow';
 import { Textinput } from '../../components/Textinput/Textinput.bundle/desktop';
+import { Icon } from '../../components/Icon/Icon.bundle/desktop';
 
 import { Translation } from '../../components/Translation/Translation';
 import { BookmarksButton } from '../../components/Bookmarks/BookmarksButton';
@@ -338,7 +339,6 @@ export const TranslationsHistory: FC<TranslationsHistoryProps> = ({
 								key={key}
 								translation={translation}
 								timestamp={timestamp}
-								onPressRemove={() => deleteEntry(key)}
 								onPressTTS={(target) => {
 									if (target === 'original') {
 										toggleTTS(
@@ -362,7 +362,20 @@ export const TranslationsHistory: FC<TranslationsHistoryProps> = ({
 									/>
 								}
 								controlPanelSlot={
-									<BookmarksButton translation={translation} />
+									<>
+										<BookmarksButton translation={translation} />
+										<Button
+											view="clear"
+											size="s"
+											onPress={() => deleteEntry(key)}
+											title={getMessage(
+												'common_action_removeFromDictionary',
+											)}
+											content="icon"
+										>
+											<Icon glyph="delete" scalable={false} />
+										</Button>
+									</>
 								}
 							/>
 						);
