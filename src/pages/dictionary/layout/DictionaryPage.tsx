@@ -1,14 +1,4 @@
-// TODO: adopt entries styles to mobile
-
-import React, {
-	FC,
-	ReactNode,
-	useCallback,
-	useEffect,
-	useMemo,
-	useRef,
-	useState,
-} from 'react';
+import React, { FC, ReactNode, useCallback, useEffect, useMemo, useState } from 'react';
 import { cn } from '@bem-react/classname';
 import Papa from 'papaparse';
 import { useImmutableCallback } from 'react-elegant-ui/esm/hooks/useImmutableCallback';
@@ -23,7 +13,7 @@ import { clearTranslations } from '../../../requests/backend/translations/clearT
 import { getLanguageNameByCode, getMessage } from '../../../lib/language';
 import { saveFile } from '../../../lib/files';
 import { useMessageBroker } from '../../../lib/hooks/useMessageBroker';
-import { useTTS } from '../../../lib/hooks/useTTS';
+import { useConcurrentTTS } from '../../../lib/hooks/useConcurrentTTS';
 import { isMobileBrowser } from '../../../lib/browser';
 
 import { Button } from '../../../components/Button/Button.bundle/desktop';
@@ -139,66 +129,6 @@ export const TranslationEntry: FC<TranslationEntryProps> = ({
 			</div>
 		</div>
 	);
-};
-
-// TODO: move to library
-/**
- * Create TTS instance to speak few texts by call hook
- *
- * At one time may play only one player, another will be stop
- */
-export const useConcurrentTTS = () => {
-	const [TTSData, setTTSData] = useState<{
-		readonly id: any;
-		readonly lang: string;
-		readonly text: string;
-	} | null>(null);
-
-	const ttsState = useRef(TTSData);
-	ttsState.current = TTSData ? { ...TTSData } : null;
-
-	const { lang: ttsLang = null, text: ttsText = null } = TTSData || {};
-	const ttsPlayer = useTTS(ttsLang, ttsText);
-
-	// Play by change TTSData
-	useEffect(() => {
-		if (TTSData === null) return;
-		ttsPlayer.play();
-	}, [TTSData, ttsPlayer]);
-
-	// Stop TTS by change entries list
-	useEffect(() => {
-		ttsPlayer.stop();
-	}, [ttsPlayer]);
-
-	const toggleTTS = useImmutableCallback(
-		(id: any, lang: string, text: string) => {
-			const request = { id, lang, text };
-			const isSameObject =
-				TTSData !== null &&
-				Object.keys(request).every(
-					(key) => (request as any)[key] === (TTSData as any)[key],
-				);
-
-			if (isSameObject) {
-				if (ttsPlayer.isPlayed) {
-					ttsPlayer.stop();
-				} else {
-					ttsPlayer.play();
-				}
-			} else {
-				ttsPlayer.stop();
-				setTTSData({ id, lang, text });
-			}
-		},
-		[TTSData, ttsPlayer],
-	);
-
-	return {
-		ttsState,
-		ttsPlayer,
-		toggleTTS,
-	} as const;
 };
 
 // TODO: improve styles

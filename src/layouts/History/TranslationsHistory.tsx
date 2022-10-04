@@ -12,11 +12,9 @@ import { Textinput } from '../../components/Textinput/Textinput.bundle/desktop';
 import { getMessage } from '../../lib/language';
 import { useDebouncedInput } from '../../lib/hooks/useDebouncedInput';
 import { useConfirm } from '../../lib/hooks/useConfirm';
+import { useConcurrentTTS } from '../../lib/hooks/useConcurrentTTS';
 
-import {
-	TranslationEntry,
-	useConcurrentTTS,
-} from '../../pages/dictionary/layout/DictionaryPage';
+import { TranslationEntry } from '../../pages/dictionary/layout/DictionaryPage';
 import { clearTranslationHistory } from '../../requests/backend/history/clearTranslationHistory';
 
 import {
