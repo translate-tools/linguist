@@ -1,8 +1,8 @@
 import { useCallback, useEffect, useState } from 'react';
 import { isEqual } from 'lodash';
+import { useImmutableCallback } from 'react-elegant-ui/esm/hooks/useImmutableCallback';
 
 import { findTranslation } from '../../requests/backend/translations/findTranslation';
-import { useImmutableCallback } from 'react-elegant-ui/esm/hooks/useImmutableCallback';
 import { addTranslation } from '../../requests/backend/translations/addTranslation';
 import { deleteTranslation } from '../../requests/backend/translations/deleteTranslation';
 import {

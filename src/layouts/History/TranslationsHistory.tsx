@@ -39,8 +39,7 @@ export type TranslationsHistoryProps = {
 	requestTranslations: TranslationsHistoryFetcher;
 };
 
-// TODO: set 100 for release
-const TRANSLATIONS_NUMBER_FOR_PAGE = 5;
+const TRANSLATIONS_NUMBER_FOR_PAGE = 100;
 export const TranslationsHistory: FC<TranslationsHistoryProps> = ({
 	translations,
 	hasMoreTranslations,
