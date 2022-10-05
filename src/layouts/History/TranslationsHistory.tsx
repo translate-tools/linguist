@@ -16,6 +16,7 @@ import { getMessage } from '../../lib/language';
 import { useDebouncedInput } from '../../lib/hooks/useDebouncedInput';
 import { useConfirm } from '../../lib/hooks/useConfirm';
 import { useConcurrentTTS } from '../../lib/hooks/useConcurrentTTS';
+import { useKeyboardModifiers } from '../../lib/hooks/useKeyboardModifiers';
 
 import { clearTranslationHistory } from '../../requests/backend/history/clearTranslationHistory';
 
@@ -105,32 +106,6 @@ export const TranslationsHistory: FC<TranslationsHistoryProps> = ({
 
 	const [checkedItems, setCheckedItems] = useState<Record<number, any>>({});
 
-	// Track shift key press state
-	const isShiftPressed = useRef(false);
-	useEffect(() => {
-		const updateShiftState = (event: KeyboardEvent) => {
-			isShiftPressed.current = event.shiftKey;
-		};
-
-		const onVisibilityCHange = () => {
-			if (document.visibilityState !== 'visible') {
-				isShiftPressed.current = false;
-			}
-		};
-
-		document.addEventListener('keydown', updateShiftState);
-		document.addEventListener('keyup', updateShiftState);
-
-		document.addEventListener('visibilitychange', onVisibilityCHange);
-
-		return () => {
-			document.removeEventListener('keydown', updateShiftState);
-			document.removeEventListener('keyup', updateShiftState);
-
-			document.removeEventListener('visibilitychange', onVisibilityCHange);
-		};
-	}, []);
-
 	// Remove checked items that no more exists
 	useEffect(() => {
 		const notExistItems = { ...checkedItems };
@@ -154,12 +129,14 @@ export const TranslationsHistory: FC<TranslationsHistoryProps> = ({
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [translations]);
 
+	const keyboardModifiers = useKeyboardModifiers();
+
 	// Toggle checkbox
 	const lastCheckbox = useRef<null | number>(null);
 	const toggleCheckbox = useCallback(
 		(id: number) => {
 			const isSelected = id in checkedItems;
-			const isMultiSelect = isShiftPressed.current;
+			const isMultiSelect = keyboardModifiers.shift;
 
 			const getRange = (a: number, b: number) => {
 				const keys: number[] = [];
@@ -199,7 +176,7 @@ export const TranslationsHistory: FC<TranslationsHistoryProps> = ({
 			lastCheckbox.current = id;
 			setCheckedItems(newState);
 		},
-		[checkedItems, translations],
+		[checkedItems, keyboardModifiers, translations],
 	);
 
 	const selectedItemsNumber = Object.keys(checkedItems).length;
