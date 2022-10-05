@@ -1,6 +1,7 @@
 import * as IDB from 'idb/with-async-ittr';
 
 import { type } from '../../../lib/types';
+import { isTextsContainsSubstring } from '../../../lib/utils';
 import { ITranslation, TranslationType } from '../../../types/translation/Translation';
 
 export type HistoryEntry = {
@@ -112,13 +113,12 @@ export const getEntries = async ({
 			if (search !== undefined && search.length > 0) {
 				const { text, translate } = cursor.value.translation;
 
-				const textToSearch = ignoreCase ? search.toLowerCase() : search;
-				const isSomeTextMatch = [text, translate].some((text) => {
-					const transformedText = ignoreCase ? text.toLowerCase() : text;
-					return transformedText.includes(textToSearch);
-				});
-
 				// Skip not match texts
+				const isSomeTextMatch = isTextsContainsSubstring(
+					search,
+					[text, translate],
+					ignoreCase,
+				);
 				if (!isSomeTextMatch) continue;
 			}
 

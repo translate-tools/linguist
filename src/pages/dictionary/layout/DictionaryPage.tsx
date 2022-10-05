@@ -10,6 +10,7 @@ import { ITranslationEntryWithKey } from '../../../requests/backend/translations
 import { deleteTranslation } from '../../../requests/backend/translations/deleteTranslation';
 import { clearTranslations } from '../../../requests/backend/translations/clearTranslations';
 
+import { isTextsContainsSubstring } from '../../../lib/utils';
 import { getLanguageNameByCode, getMessage } from '../../../lib/language';
 import { saveFile } from '../../../lib/files';
 import { useMessageBroker } from '../../../lib/hooks/useMessageBroker';
@@ -197,18 +198,13 @@ export const DictionaryPage: FC<IDictionaryPageProps> = ({ confirmDelete = true 
 
 					// Match text
 					if (search.length !== 0) {
-						const searchPhrase = search.toLowerCase();
-
-						if (entry.data.text.toLowerCase().search(searchPhrase) !== -1)
-							return true;
-						if (
-							entry.data.translate
-								.toLowerCase()
-								.search(searchPhrase) !== -1
-						)
-							return true;
-
-						return false;
+						const { text, translate } = entry.data;
+						const isTextsMatchSearch = isTextsContainsSubstring(
+							search,
+							[text, translate],
+							true,
+						);
+						return isTextsMatchSearch;
 					}
 
 					return true;
