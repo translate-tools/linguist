@@ -138,7 +138,7 @@ export const TranslationsHistory: FC<TranslationsHistoryProps> = ({
 			const isSelected = id in checkedItems;
 			const isMultiSelect = keyboardModifiers.shift;
 
-			const getRange = (a: number, b: number) => {
+			const getTranslationsKeysRange = (a: number, b: number) => {
 				const keys: number[] = [];
 
 				let checkpoints = 0;
@@ -148,6 +148,7 @@ export const TranslationsHistory: FC<TranslationsHistoryProps> = ({
 						checkpoints++;
 					}
 
+					// Skip if checkpoint still didn't found
 					if (checkpoints === 0) continue;
 
 					keys.push(item.key);
@@ -163,7 +164,7 @@ export const TranslationsHistory: FC<TranslationsHistoryProps> = ({
 
 			const keysList =
 				isMultiSelect && lastCheckbox.current
-					? getRange(lastCheckbox.current, id)
+					? getTranslationsKeysRange(lastCheckbox.current, id)
 					: [id];
 			keysList.forEach((id) => {
 				if (isSelected) {
@@ -180,26 +181,20 @@ export const TranslationsHistory: FC<TranslationsHistoryProps> = ({
 	);
 
 	const selectedItemsNumber = Object.keys(checkedItems).length;
-	const isNotEmptySelection = selectedItemsNumber > 0 ? true : false;
-	const indeterminateSelection =
-		isNotEmptySelection &&
-		translations.length !== 0 &&
-		translations.length !== selectedItemsNumber;
-
 	const toggleSelectionAll = useCallback(() => {
-		console.log('toggleSelectionAll');
+		// Empty selection
+		const selectedItems: Record<number, any> = {};
 
-		const newState: Record<number, any> = {};
-
-		const isShouldSelectAll =
+		const shouldSelectAll =
 			selectedItemsNumber === 0 || selectedItemsNumber < translations.length;
-		if (isShouldSelectAll) {
+		if (shouldSelectAll) {
+			// Select all
 			translations.forEach(({ key }) => {
-				newState[key] = true;
+				selectedItems[key] = true;
 			});
 		}
 
-		setCheckedItems(newState);
+		setCheckedItems(selectedItems);
 	}, [selectedItemsNumber, translations]);
 
 	const requestConfirm = useConfirm();
@@ -220,17 +215,19 @@ export const TranslationsHistory: FC<TranslationsHistoryProps> = ({
 		const selectedEntriesId = Object.keys(checkedItems).map(Number);
 		if (selectedEntriesId.length === 0) return;
 
+		const deleteSelected = () => {
+			Promise.all(
+				selectedEntriesId.map((id) => deleteTranslationHistoryEntry(id)),
+			).finally(updateTranslations);
+		};
+
 		const checkedItemsNumber = String(Object.keys(checkedItems).length);
 		requestConfirm({
 			message: getMessage(
 				'history_message_deleteSelectedEntriesConfirmation',
 				checkedItemsNumber,
 			),
-			onAccept: () => {
-				Promise.all(
-					selectedEntriesId.map((id) => deleteTranslationHistoryEntry(id)),
-				).finally(updateTranslations);
-			},
+			onAccept: deleteSelected,
 		});
 	}, [checkedItems, requestConfirm, updateTranslations]);
 
@@ -252,6 +249,12 @@ export const TranslationsHistory: FC<TranslationsHistoryProps> = ({
 			: getMessage('history_message_entriesNotFound');
 	}
 
+	const hasSelectedTranslations = selectedItemsNumber > 0;
+	const isIndeterminateTranslationsSelection =
+		hasSelectedTranslations &&
+		translations.length !== 0 &&
+		translations.length !== selectedItemsNumber;
+
 	return (
 		<div className={cnTranslationsHistory()}>
 			<LayoutFlow indent="xl">
@@ -266,8 +269,8 @@ export const TranslationsHistory: FC<TranslationsHistoryProps> = ({
 
 				<LayoutFlow direction="horizontal" indent="l">
 					<Checkbox
-						indeterminate={indeterminateSelection}
-						checked={isNotEmptySelection}
+						indeterminate={isIndeterminateTranslationsSelection}
+						checked={hasSelectedTranslations}
 						setChecked={toggleSelectionAll}
 						disabled={translations.length === 0}
 						title={getMessage('history_controls_selectAll')}
@@ -295,6 +298,7 @@ export const TranslationsHistory: FC<TranslationsHistoryProps> = ({
 						{noEntriesMessage}
 					</div>
 				)}
+
 				<InfiniteScroll
 					loadMore={getMoreTranslations}
 					hasMore={hasMoreTranslations}
