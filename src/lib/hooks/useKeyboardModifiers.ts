@@ -7,6 +7,9 @@ type KeyboardModifiers = {
 	shift: boolean;
 };
 
+/**
+ * Return immutable object equal to ref, that contains modifiers state
+ */
 export const useKeyboardModifiers = (): Readonly<KeyboardModifiers> => {
 	const modifiersRef = useRef<KeyboardModifiers>({
 		ctrl: false,
@@ -18,6 +21,13 @@ export const useKeyboardModifiers = (): Readonly<KeyboardModifiers> => {
 	useEffect(() => {
 		const modifiers = modifiersRef.current;
 
+		const resetModifiers = () => {
+			modifiers.ctrl = false;
+			modifiers.meta = false;
+			modifiers.alt = false;
+			modifiers.shift = false;
+		};
+
 		const keyboardHandler = (evt: KeyboardEvent) => {
 			modifiers.ctrl = evt.ctrlKey;
 			modifiers.meta = evt.metaKey;
@@ -25,16 +35,23 @@ export const useKeyboardModifiers = (): Readonly<KeyboardModifiers> => {
 			modifiers.shift = evt.shiftKey;
 		};
 
+		const onVisibilityCHange = () => {
+			// Reset state by open another tab
+			if (document.visibilityState !== 'visible') {
+				resetModifiers();
+			}
+		};
+
 		document.addEventListener('keydown', keyboardHandler);
 		document.addEventListener('keyup', keyboardHandler);
-		return () => {
-			document.addEventListener('keydown', keyboardHandler);
-			document.addEventListener('keyup', keyboardHandler);
+		document.addEventListener('visibilitychange', onVisibilityCHange);
 
-			modifiers.ctrl = false;
-			modifiers.meta = false;
-			modifiers.alt = false;
-			modifiers.shift = false;
+		return () => {
+			document.removeEventListener('keydown', keyboardHandler);
+			document.removeEventListener('keyup', keyboardHandler);
+			document.removeEventListener('visibilitychange', onVisibilityCHange);
+
+			resetModifiers();
 		};
 	}, []);
 
