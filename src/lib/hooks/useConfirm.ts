@@ -7,7 +7,9 @@ export const useConfirm = () => {
 
 	return useCallback(
 		({ message, onAccept }: { message: string; onAccept: () => void }) => {
-			if (keyboardModifiers.ctrl || confirm(message)) {
+			const isForced = keyboardModifiers.ctrl;
+			const isAccepted = isForced || confirm(message);
+			if (isAccepted) {
 				onAccept();
 			}
 		},

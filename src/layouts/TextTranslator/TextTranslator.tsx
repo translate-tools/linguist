@@ -5,9 +5,6 @@ import { cn } from '@bem-react/classname';
 import { useDelayCallback } from 'react-elegant-ui/esm/hooks/useDelayCallback';
 import { useImmutableCallback } from 'react-elegant-ui/esm/hooks/useImmutableCallback';
 
-import { useTranslateFavorite } from '../../components/Bookmarks/useTranslateFavorite';
-import { Checkbox } from 'react-elegant-ui/esm/components/Checkbox/Checkbox.bundle/desktop';
-
 import { useIsFirstRenderRef } from '../../lib/hooks/useIsFirstRenderRef';
 import { useTTS } from '../../lib/hooks/useTTS';
 import { getLanguageNameByCode, getMessage } from '../../lib/language';
@@ -16,6 +13,9 @@ import { MutableValue } from '../../types/utils';
 import { suggestLanguage } from '../../requests/backend/suggestLanguage';
 
 import { TabData } from '../../pages/popup/layout/PopupWindow';
+
+import { useTranslateFavorite } from '../../components/Bookmarks/useTranslateFavorite';
+import { Checkbox } from 'react-elegant-ui/esm/components/Checkbox/Checkbox.bundle/desktop';
 import { LanguagePanel } from '../../components/LanguagePanel/LanguagePanel';
 import { Textarea } from '../../components/Textarea/Textarea.bundle/desktop';
 import { Button } from '../../components/Button/Button.bundle/desktop';
