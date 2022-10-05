@@ -1,8 +1,8 @@
 import React, { FC, useCallback, useEffect, useRef, useState } from 'react';
 import { cn } from '@bem-react/classname';
 import InfiniteScroll from 'react-infinite-scroller';
-import { Spinner } from 'react-elegant-ui/esm/components/Spinner/Spinner.bundle/desktop';
 
+import { Spinner } from 'react-elegant-ui/esm/components/Spinner/Spinner.bundle/desktop';
 import { Checkbox } from 'react-elegant-ui/esm/components/Checkbox/Checkbox.bundle/desktop';
 import { Button } from '../../components/Button/Button.bundle/universal';
 import { LayoutFlow } from '../../components/LayoutFlow/LayoutFlow';
@@ -39,7 +39,7 @@ export type TranslationsHistoryProps = {
 	requestTranslations: TranslationsHistoryFetcher;
 };
 
-const TRANSLATIONS_NUMBER_FOR_PAGE = 100;
+const TRANSLATIONS_PER_PAGE = 100;
 export const TranslationsHistory: FC<TranslationsHistoryProps> = ({
 	translations,
 	hasMoreTranslations,
@@ -64,7 +64,7 @@ export const TranslationsHistory: FC<TranslationsHistoryProps> = ({
 
 		requestTranslations({
 			search,
-			limit: TRANSLATIONS_NUMBER_FOR_PAGE,
+			limit: TRANSLATIONS_PER_PAGE,
 			limitFrom: cursor !== null ? cursor - 1 : undefined,
 		});
 	}, [requestTranslations, search]);

@@ -116,9 +116,9 @@ export const useTranslateFavorite = ({
 			cleanupFunctions.push(cleanup);
 		} else {
 			const cleanupOnDelete = onDictionaryEntryDelete(favId, update);
-			const cleanupOnClear = onClearDictionary(update);
-
 			cleanupFunctions.push(cleanupOnDelete);
+
+			const cleanupOnClear = onClearDictionary(update);
 			cleanupFunctions.push(cleanupOnClear);
 		}
 
