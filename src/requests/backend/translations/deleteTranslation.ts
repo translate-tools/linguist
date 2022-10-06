@@ -2,12 +2,17 @@ import { buildBackendRequest } from '../../utils/requestBuilder';
 import { type } from '../../../lib/types';
 
 import { deleteEntry } from './data';
+import { notifyDictionaryEntryDelete } from '.';
 
 export const [deleteTranslationFactory, deleteTranslationReq] = buildBackendRequest(
 	'deleteTranslation',
 	{
 		requestValidator: type.number,
-		factoryHandler: () => (id) => deleteEntry(id),
+		factoryHandler: () => async (id) => {
+			await deleteEntry(id);
+
+			notifyDictionaryEntryDelete(id);
+		},
 	},
 );
 

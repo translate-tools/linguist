@@ -9,21 +9,28 @@ export const cnPage = cn('Page');
 
 export interface IPageProps {
 	loading?: boolean;
+	renderWhileLoading?: boolean;
 }
 
 /**
  * Component for represent any standalone page
  */
-export const Page: FC<IPageProps> = ({ children, loading }) => {
+export const Page: FC<IPageProps> = ({
+	children,
+	loading,
+	renderWhileLoading = false,
+}) => {
 	return (
 		<div className={cnPage()}>
-			{loading ? (
+			{loading && (
 				<div className={cnPage('Placeholder')}>
 					<Loader />
 				</div>
-			) : (
-				<div className={cnPage('Body')}>{children}</div>
 			)}
+
+			{!loading || renderWhileLoading ? (
+				<div className={cnPage('Body', { hidden: loading })}>{children}</div>
+			) : null}
 		</div>
 	);
 };

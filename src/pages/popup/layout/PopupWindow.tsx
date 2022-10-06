@@ -84,6 +84,14 @@ export interface PopupWindowProps {
 	translatorFeatures?: TranslatorFeatures;
 }
 
+const HistoryIcon = (className: string) => (
+	<Icon
+		glyph="history"
+		scalable={false}
+		className={cnPopupWindow('HeaderIcon', [className])}
+	/>
+);
+
 const SettingsIcon = (className: string) => (
 	<Icon
 		glyph="settings"
@@ -295,6 +303,15 @@ export const PopupWindow: FC<PopupWindowProps> = ({
 					<LogoElement />
 				</div>
 				<div className={cnPopupWindow('HeaderMenu')}>
+					<Button
+						as="a"
+						type="link"
+						url="/pages/history/history.html"
+						target="__blank"
+						title={getMessage('history_pageTitle')}
+						iconRight={HistoryIcon}
+						view="clear"
+					/>
 					<Button
 						as="a"
 						type="link"

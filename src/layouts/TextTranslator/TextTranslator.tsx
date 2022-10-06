@@ -5,10 +5,7 @@ import { cn } from '@bem-react/classname';
 import { useDelayCallback } from 'react-elegant-ui/esm/hooks/useDelayCallback';
 import { useImmutableCallback } from 'react-elegant-ui/esm/hooks/useImmutableCallback';
 
-import { Checkbox } from 'react-elegant-ui/esm/components/Checkbox/Checkbox.bundle/desktop';
-
 import { useIsFirstRenderRef } from '../../lib/hooks/useIsFirstRenderRef';
-import { useTranslateFavorite } from '../../lib/hooks/useTranslateFavorite';
 import { useTTS } from '../../lib/hooks/useTTS';
 import { getLanguageNameByCode, getMessage } from '../../lib/language';
 import { MutableValue } from '../../types/utils';
@@ -16,12 +13,17 @@ import { MutableValue } from '../../types/utils';
 import { suggestLanguage } from '../../requests/backend/suggestLanguage';
 
 import { TabData } from '../../pages/popup/layout/PopupWindow';
+
+import { useTranslateFavorite } from '../../components/Bookmarks/useTranslateFavorite';
+import { Checkbox } from 'react-elegant-ui/esm/components/Checkbox/Checkbox.bundle/desktop';
 import { LanguagePanel } from '../../components/LanguagePanel/LanguagePanel';
 import { Textarea } from '../../components/Textarea/Textarea.bundle/desktop';
 import { Button } from '../../components/Button/Button.bundle/desktop';
 import { Icon } from '../../components/Icon/Icon.bundle/desktop';
 
 import './TextTranslator.css';
+import { addTranslationHistoryEntry } from '../../requests/backend/history/addTranslationHistoryEntry';
+import { TRANSLATION_ORIGIN } from '../../requests/backend/history/constants';
 
 export const cnTextTranslator = cn('TextTranslator');
 
@@ -180,6 +182,16 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 				setTranslation({
 					text: response,
 					original: userInput,
+				});
+
+				addTranslationHistoryEntry({
+					origin: TRANSLATION_ORIGIN.USER_INPUT,
+					translation: {
+						from,
+						to,
+						text: userInput,
+						translate: response,
+					},
 				});
 			})
 			.catch((reason) => {

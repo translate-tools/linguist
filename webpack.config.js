@@ -35,6 +35,7 @@ module.exports = {
 		['pages/popup/popup']: './src/pages/popup/popup.tsx',
 		['pages/options/options']: './src/pages/options/options.tsx',
 		['pages/dictionary/dictionary']: './src/pages/dictionary/dictionary.tsx',
+		['pages/history/history']: './src/pages/history/history.tsx',
 	},
 	output: {
 		path: outputPath,
@@ -98,6 +99,7 @@ module.exports = {
 					'pages/popup/popup.html',
 					'pages/options/options.html',
 					'pages/dictionary/dictionary.html',
+					'pages/history/history.html',
 				].map((file) => ({
 					from: './src/' + file,
 					to: path.join(outputPath, file),

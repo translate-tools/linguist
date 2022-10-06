@@ -15,6 +15,10 @@ body {
 	font-size: var(--typography-layout-size-m-font-size);
 }
 
+.Page-Body_hidden {
+	display: none;
+}
+
 /* Placeholder */
 .Page-Placeholder {
 	position: absolute;

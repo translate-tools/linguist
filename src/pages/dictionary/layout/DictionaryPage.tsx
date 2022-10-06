@@ -1,5 +1,3 @@
-// TODO: adopt entries styles to mobile
-
 import React, { FC, useCallback, useEffect, useMemo, useState } from 'react';
 import { cn } from '@bem-react/classname';
 import Papa from 'papaparse';
@@ -8,14 +6,15 @@ import { useImmutableCallback } from 'react-elegant-ui/esm/hooks/useImmutableCal
 import { langCodes } from '@translate-tools/core/types/Translator';
 
 import { getTranslations } from '../../../requests/backend/translations/getTranslations';
-import { IEntryWithKey } from '../../../requests/backend/translations/data';
+import { ITranslationEntryWithKey } from '../../../requests/backend/translations/data';
 import { deleteTranslation } from '../../../requests/backend/translations/deleteTranslation';
 import { clearTranslations } from '../../../requests/backend/translations/clearTranslations';
 
+import { isTextsContainsSubstring } from '../../../lib/utils';
 import { getLanguageNameByCode, getMessage } from '../../../lib/language';
 import { saveFile } from '../../../lib/files';
 import { useMessageBroker } from '../../../lib/hooks/useMessageBroker';
-import { useTTS } from '../../../lib/hooks/useTTS';
+import { useConcurrentTTS } from '../../../lib/hooks/useConcurrentTTS';
 import { isMobileBrowser } from '../../../lib/browser';
 
 import { Button } from '../../../components/Button/Button.bundle/desktop';
@@ -23,6 +22,7 @@ import { Select } from '../../../components/Select/Select.bundle/desktop';
 import { Textinput } from '../../../components/Textinput/Textinput.bundle/desktop';
 import { Icon } from '../../../components/Icon/Icon.bundle/desktop';
 
+import { Translation } from '../../../components/Translation/Translation';
 import { OptionsPanel } from '../../../components/OptionsPanel/OptionsPanel';
 import { LayoutFlow } from '../../../components/LayoutFlow/LayoutFlow';
 
@@ -56,7 +56,7 @@ export const DictionaryPage: FC<IDictionaryPageProps> = ({ confirmDelete = true 
 		hideDelay: 5000,
 	});
 
-	const [entries, setEntries] = useState<IEntryWithKey[] | null>(null);
+	const [entries, setEntries] = useState<ITranslationEntryWithKey[] | null>(null);
 
 	const updateData = useCallback(
 		() => getTranslations().then((entries) => setEntries(entries)),
@@ -141,48 +141,20 @@ export const DictionaryPage: FC<IDictionaryPageProps> = ({ confirmDelete = true 
 	// TTS
 	//
 
-	const [TTSData, setTTSData] = useState<{
-		id: number;
-		lang: string;
-		text: string;
-	} | null>(null);
+	const { toggleTTS, ttsPlayer, ttsState } = useConcurrentTTS();
 
-	const { lang: ttsLang = null, text: ttsText = null } = TTSData || {};
-	const ttsPlayer = useTTS(ttsLang, ttsText);
-
-	// Play by change TTSData
+	// Stop TTS by change entries
 	useEffect(() => {
-		if (TTSData === null) return;
-		ttsPlayer.play();
-	}, [TTSData, ttsPlayer]);
+		const currentPlayedTTS = ttsState.current ? ttsState.current.id : null;
 
-	// Stop TTS by change entries list
-	useEffect(() => {
-		ttsPlayer.stop();
-	}, [entries, ttsPlayer]);
-
-	const toggleTTS = useImmutableCallback(
-		(id: number, lang: string, text: string) => {
-			const request = { id, lang, text };
-			const isSameObject =
-				TTSData !== null &&
-				Object.keys(request).every(
-					(key) => (request as any)[key] === (TTSData as any)[key],
-				);
-
-			if (isSameObject) {
-				if (ttsPlayer.isPlayed) {
-					ttsPlayer.stop();
-				} else {
-					ttsPlayer.play();
-				}
-			} else {
-				ttsPlayer.stop();
-				setTTSData({ id, lang, text });
-			}
-		},
-		[TTSData, ttsPlayer],
-	);
+		// Stop for empty entries or when current played entry removed
+		if (
+			entries === null ||
+			(currentPlayedTTS && !entries.find(({ key }) => key === currentPlayedTTS))
+		) {
+			ttsPlayer.stop();
+		}
+	}, [entries, ttsPlayer, ttsState]);
 
 	//
 	// Render
@@ -226,18 +198,13 @@ export const DictionaryPage: FC<IDictionaryPageProps> = ({ confirmDelete = true 
 
 					// Match text
 					if (search.length !== 0) {
-						const searchPhrase = search.toLowerCase();
-
-						if (entry.data.text.toLowerCase().search(searchPhrase) !== -1)
-							return true;
-						if (
-							entry.data.translate
-								.toLowerCase()
-								.search(searchPhrase) !== -1
-						)
-							return true;
-
-						return false;
+						const { text, translate } = entry.data;
+						const isTextsMatchSearch = isTextsContainsSubstring(
+							search,
+							[text, translate],
+							true,
+						);
+						return isTextsMatchSearch;
 					}
 
 					return true;
@@ -257,73 +224,35 @@ export const DictionaryPage: FC<IDictionaryPageProps> = ({ confirmDelete = true 
 			);
 
 		// Render entries
-		// TODO: highlight results
-		return filtredEntries.map(({ data }, idx) => {
-			const { text, translate, from, to, date } = data;
+		return filtredEntries.map(({ data, key }, idx) => {
+			const { date, ...translation } = data;
 			return (
-				<div key={idx} className={cnDictionaryPage('Entry')}>
-					<div className={cnDictionaryPage('EntryHead')}>
-						<div className={cnDictionaryPage('EntryMeta')}>
-							<span className={cnDictionaryPage('Lang')}>
-								{getLanguageNameByCode(from)}
-							</span>
-							<span className={cnDictionaryPage('Lang')}>
-								{getLanguageNameByCode(to)}
-							</span>
-							{!isMobile && (
-								<span className={cnDictionaryPage('Date')}>
-									{new Date(date).toLocaleDateString()}
-								</span>
-							)}
-						</div>
-						<div className={cnDictionaryPage('EntryControl')}>
-							<Button
-								view="clear"
-								size="s"
-								onPress={() => remove(idx)}
-								title={getMessage('common_action_removeFromDictionary')}
-								content="icon"
-							>
-								<Icon glyph="delete" scalable={false} />
-							</Button>
-						</div>
-					</div>
-					<div className={cnDictionaryPage('EntryContent')}>
-						<div className={cnDictionaryPage('EntryTextContainer')}>
-							<div className={cnDictionaryPage('EntryTextAction')}>
-								<Button
-									onPress={() => {
-										toggleTTS(idx, from, text);
-									}}
-									view="clear"
-									size="s"
-								>
-									<Icon glyph="volume-up" scalable={false} />
-								</Button>
-							</div>
-							<div className={cnDictionaryPage('EntryText')}>{text}</div>
-						</div>
-						<div className={cnDictionaryPage('EntryTextContainer')}>
-							<div className={cnDictionaryPage('EntryTextAction')}>
-								<Button
-									onPress={() => {
-										toggleTTS(idx, to, translate);
-									}}
-									view="clear"
-									size="s"
-								>
-									<Icon glyph="volume-up" scalable={false} />
-								</Button>
-							</div>
-							<div className={cnDictionaryPage('EntryText')}>
-								{translate}
-							</div>
-						</div>
-					</div>
-				</div>
+				<Translation
+					key={key}
+					translation={translation}
+					timestamp={date}
+					onPressTTS={(target) => {
+						if (target === 'original') {
+							toggleTTS(key, translation.from, translation.text);
+						} else {
+							toggleTTS(key, translation.to, translation.translate);
+						}
+					}}
+					controlPanelSlot={
+						<Button
+							view="clear"
+							size="s"
+							onPress={() => remove(idx)}
+							title={getMessage('common_action_removeFromDictionary')}
+							content="icon"
+						>
+							<Icon glyph="delete" scalable={false} />
+						</Button>
+					}
+				/>
 			);
 		});
-	}, [isMobile, entries, from, to, search, resetFilters, remove, toggleTTS]);
+	}, [entries, from, to, search, resetFilters, remove, toggleTTS]);
 
 	const langsListFrom = useMemo(
 		() => [
@@ -356,7 +285,7 @@ export const DictionaryPage: FC<IDictionaryPageProps> = ({ confirmDelete = true 
 						{getMessage('dictionary_description')}
 					</div>
 
-					<LayoutFlow indent="m" className={cnDictionaryPage('SearchPanel')}>
+					<LayoutFlow indent="l" className={cnDictionaryPage('SearchPanel')}>
 						<Textinput
 							placeholder={getMessage('dictionary_searchPlaceholder')}
 							value={search}

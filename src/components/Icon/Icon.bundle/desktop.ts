@@ -16,6 +16,9 @@ import { withGlyphDictionary } from '../_glyph/Icon_glyph_dictionary';
 import { withGlyphDelete } from '../_glyph/Icon_glyph_delete';
 import { withGlyphVolumeUp } from '../_glyph/Icon_glyph_volume-up';
 import { withGlyphAutoFix } from '../_glyph/Icon_glyph_autofix';
+import { withGlyphBookmark } from '../_glyph/Icon_glyph_bookmark';
+import { withGlyphBookmarkBorder } from '../_glyph/Icon_glyph_bookmark-border';
+import { withGlyphHistory } from '../_glyph/Icon_glyph_history';
 
 export const Icon = compose(
 	composeU(
@@ -25,6 +28,9 @@ export const Icon = compose(
 		withGlyphDelete,
 		withGlyphVolumeUp,
 		withGlyphAutoFix,
+		withGlyphBookmark,
+		withGlyphBookmarkBorder,
+		withGlyphHistory,
 
 		withModIconGlyphUnfoldMore,
 		withModIconGlyphExpandMore,

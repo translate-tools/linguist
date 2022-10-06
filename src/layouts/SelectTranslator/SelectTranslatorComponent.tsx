@@ -5,12 +5,12 @@ import { TranslatorFeatures } from '../../pages/popup/layout/PopupWindow';
 
 import { detectLanguage, getMessage } from '../../lib/language';
 import { useTTS } from '../../lib/hooks/useTTS';
-import { useTranslateFavorite } from '../../lib/hooks/useTranslateFavorite';
 
 import { getTranslatorFeatures } from '../../requests/backend/getTranslatorFeatures';
 import { getUserLanguagePreferences } from '../../requests/backend/getUserLanguagePreferences';
 
 // Components
+import { useTranslateFavorite } from '../../components/Bookmarks/useTranslateFavorite';
 import { Checkbox } from 'react-elegant-ui/esm/components/Checkbox/Checkbox.bundle/desktop';
 // import { Textarea } from '../../components/Textarea/Textarea.bundle/desktop';
 import { Button } from '../../components/Button/Button.bundle/desktop';
@@ -21,6 +21,8 @@ import { Loader } from '../../components/Loader/Loader';
 import { cnSelectTranslator } from './SelectTranslator';
 import './SelectTranslator.css';
 import { isMobileBrowser } from '../../lib/browser';
+import { addTranslationHistoryEntry } from '../../requests/backend/history/addTranslationHistoryEntry';
+import { TRANSLATION_ORIGIN } from '../../requests/backend/history/constants';
 
 export interface SelectTranslatorComponentProps {
 	detectedLangFirst: boolean;
@@ -77,6 +79,16 @@ export const SelectTranslatorComponent: FC<SelectTranslatorComponentProps> = ({
 
 				setTranslatedText(translatedText);
 				setError(null);
+
+				addTranslationHistoryEntry({
+					origin: TRANSLATION_ORIGIN.USER_INPUT,
+					translation: {
+						from,
+						to,
+						text: originalText,
+						translate: translatedText,
+					},
+				});
 			})
 			.catch((reason) => {
 				if (context !== translateContext.current) return;
