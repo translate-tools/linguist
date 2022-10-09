@@ -47,6 +47,10 @@
 	z-index: 2;
 }
 
+.TextTranslator-TextActions > :not(:last-child) {
+	margin-right: var(--typography-layout-indent-s-all);
+}
+
 /* Result */
 .TextTranslator-ResultContainer {
 	display: flex;

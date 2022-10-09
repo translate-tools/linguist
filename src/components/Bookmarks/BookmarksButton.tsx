@@ -5,7 +5,9 @@ import { getMessage } from '../../lib/language';
 import { Icon } from '../Icon/Icon.bundle/desktop';
 import { useTranslateFavorite } from './useTranslateFavorite';
 
-export const BookmarksButton: FC<{ translation: ITranslation }> = ({ translation }) => {
+export const BookmarksButton: FC<{ translation: ITranslation | null }> = ({
+	translation,
+}) => {
 	const { isFavorite, toggleFavorite } = useTranslateFavorite(translation);
 
 	return (
@@ -17,6 +19,7 @@ export const BookmarksButton: FC<{ translation: ITranslation }> = ({ translation
 			title={getMessage(
 				isFavorite ? 'bookmarkButton_delete' : 'bookmarkButton_add',
 			)}
+			disabled={translation === null}
 		>
 			<Icon glyph={isFavorite ? 'bookmark' : 'bookmark-border'} scalable={false} />
 		</Button>

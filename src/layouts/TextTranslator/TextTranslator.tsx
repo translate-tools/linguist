@@ -1,4 +1,4 @@
-import React, { FC, Ref, useCallback, useEffect, useRef, useState } from 'react';
+import React, { FC, Ref, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import ReactDOM from 'react-dom';
 
 import { cn } from '@bem-react/classname';
@@ -14,12 +14,11 @@ import { suggestLanguage } from '../../requests/backend/suggestLanguage';
 
 import { TabData } from '../../pages/popup/layout/PopupWindow';
 
-import { useTranslateFavorite } from '../../components/Bookmarks/useTranslateFavorite';
-import { Checkbox } from 'react-elegant-ui/esm/components/Checkbox/Checkbox.bundle/desktop';
 import { LanguagePanel } from '../../components/LanguagePanel/LanguagePanel';
 import { Textarea } from '../../components/Textarea/Textarea.bundle/desktop';
 import { Button } from '../../components/Button/Button.bundle/desktop';
 import { Icon } from '../../components/Icon/Icon.bundle/desktop';
+import { BookmarksButton } from '../../components/Bookmarks/BookmarksButton';
 
 import './TextTranslator.css';
 import { addTranslationHistoryEntry } from '../../requests/backend/history/addTranslationHistoryEntry';
@@ -335,32 +334,17 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 		rememberTranslationState();
 	}, [rememberTranslationState, userInput, translation]);
 
-	//
-	// Favorites
-	//
+	const dictionaryData = useMemo(() => {
+		if (errorMessage !== null || translation === null || !isTranslatedTextRelative)
+			return null;
 
-	// Favorite state
-	const {
-		isFavorite,
-		toggleFavorite,
-		// update: updateFavoriteData,
-	} = useTranslateFavorite({
-		from,
-		to,
-		text: userInput,
-		translate:
-			errorMessage === null && translation !== null && isTranslatedTextRelative
-				? translation.text
-				: null,
-	});
-
-	const setIsFavoriteProxy = useCallback(
-		(state: boolean) => {
-			if (state === isFavorite) return;
-			toggleFavorite();
-		},
-		[isFavorite, toggleFavorite],
-	);
+		return {
+			from,
+			to,
+			text: userInput,
+			translate: translation.text,
+		};
+	}, [errorMessage, from, isTranslatedTextRelative, to, translation, userInput]);
 
 	const [isFocusOnInput, setIsFocusOnInput] = useState(false);
 
@@ -378,7 +362,6 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 				? translation.text
 				: null;
 
-	const isShowFullData = !inTranslateProcess && errorMessage === null;
 	return (
 		<div className={cnTextTranslator({ view: isMobile ? 'mobile' : undefined })}>
 			<div className={cnTextTranslator('LangPanel')}>
@@ -392,14 +375,6 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 					swapHandler={swapLanguages}
 					preventFocusOnPress={isFocusOnInput}
 					mobile={isMobile}
-				/>
-			</div>
-			<div>
-				<Checkbox
-					label={getMessage('common_action_addToDictionary')}
-					checked={isFavorite}
-					setChecked={setIsFavoriteProxy}
-					disabled={!isShowFullData || userInput.length === 0}
 				/>
 			</div>
 			<div className={cnTextTranslator('InputContainer')}>
@@ -442,6 +417,7 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 									>
 										<Icon glyph="volume-up" scalable={false} />
 									</Button>
+									<BookmarksButton translation={dictionaryData} />
 								</div>
 							}
 						/>

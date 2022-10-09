@@ -11,37 +11,31 @@ import {
 	onDictionaryEntryDelete,
 } from '../../requests/backend/translations';
 
+import { ITranslation } from '../../types/translation/Translation';
+import { isExtensionContext } from '../../lib/browser';
+
 // TODO: think about consistent name for liked translations: bookmarks, favorites, dictionary entries
 // TODO: rename this hook and components consistent, check i18n texts consistent too
-export const useTranslateFavorite = ({
-	from,
-	to,
-	text,
-	translate,
-}: {
-	from?: string;
-	to?: string;
-	text?: string;
-	translate: string | null;
-}) => {
+export const useTranslateFavorite = (translation: ITranslation | null) => {
+	const { from, to, text, translate } = translation || {};
+
 	const [favId, setFavId] = useState<null | number>(null);
 
 	const findFavId = useCallback(async () => {
 		if (
-			text === undefined ||
-			translate === null ||
 			from === undefined ||
-			to === undefined
-		) {
+			to === undefined ||
+			text === undefined ||
+			translate === undefined
+		)
 			return null;
-		} else {
-			return findTranslation({
-				from,
-				to,
-				text: text.trim(),
-				translate: translate.trim(),
-			});
-		}
+
+		return findTranslation({
+			from,
+			to,
+			text: text.trim(),
+			translate: translate.trim(),
+		});
 	}, [from, text, to, translate]);
 
 	const [isFavorite, setIsFavorite] = useState(favId !== null);
@@ -51,10 +45,10 @@ export const useTranslateFavorite = ({
 	}, [findFavId]);
 
 	const toggleFavorite = useImmutableCallback(() => {
-		const state = !isFavorite;
-		setIsFavorite(state);
+		const nextState = !isFavorite;
+		setIsFavorite(nextState);
 
-		if (state) {
+		if (nextState) {
 			if (favId === null) {
 				(async () => {
 					const id = await findFavId();
@@ -64,20 +58,21 @@ export const useTranslateFavorite = ({
 					}
 
 					if (
-						text === undefined ||
-						translate === null ||
 						from === undefined ||
-						to === undefined
+						to === undefined ||
+						text === undefined ||
+						translate === undefined
 					) {
 						setFavId(null);
-					} else {
-						addTranslation({
-							from,
-							to,
-							text: text.trim(),
-							translate: translate.trim(),
-						}).then(setFavId);
+						return;
 					}
+
+					addTranslation({
+						from,
+						to,
+						text: text.trim(),
+						translate: translate.trim(),
+					}).then(setFavId);
 				})();
 			}
 		} else {
@@ -97,6 +92,10 @@ export const useTranslateFavorite = ({
 
 	// Observe state
 	useEffect(() => {
+		// TODO: implement observing for content scripts
+		// Don't observe state for content scripts
+		if (!isExtensionContext) return;
+
 		const cleanupFunctions: (() => any)[] = [];
 
 		if (favId === null) {

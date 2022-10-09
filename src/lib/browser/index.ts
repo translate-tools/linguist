@@ -45,6 +45,9 @@ export const isChromium = () => /chrome/i.test(navigator.userAgent);
 export const isBackgroundContext = () =>
 	location.pathname === '/_generated_background_page.html';
 
+const extensionHostname = new URL(browser.extension.getURL('')).host;
+export const isExtensionContext = location.host === extensionHostname;
+
 /**
  * By default detect lang by meta, but while `detectByContent` is `true` its try detect lang by content
  */

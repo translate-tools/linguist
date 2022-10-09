@@ -61,6 +61,9 @@
 .SelectTranslator-TextControls {
 	--button-size-m-indent-outer: 2px;
 
+	display: flex;
+	flex-direction: column;
+	gap: var(--typography-layout-indent-s-all);
 	float: left;
 	margin-right: var(--typography-layout-indent-s-all);
 }

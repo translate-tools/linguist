@@ -10,13 +10,11 @@ import { getTranslatorFeatures } from '../../requests/backend/getTranslatorFeatu
 import { getUserLanguagePreferences } from '../../requests/backend/getUserLanguagePreferences';
 
 // Components
-import { useTranslateFavorite } from '../../components/Bookmarks/useTranslateFavorite';
-import { Checkbox } from 'react-elegant-ui/esm/components/Checkbox/Checkbox.bundle/desktop';
-// import { Textarea } from '../../components/Textarea/Textarea.bundle/desktop';
 import { Button } from '../../components/Button/Button.bundle/desktop';
 import { LanguagePanel } from '../../components/LanguagePanel/LanguagePanel';
 import { Icon } from '../../components/Icon/Icon.bundle/desktop';
 import { Loader } from '../../components/Loader/Loader';
+import { BookmarksButton } from '../../components/Bookmarks/BookmarksButton';
 
 import { cnSelectTranslator } from './SelectTranslator';
 import './SelectTranslator.css';
@@ -122,21 +120,17 @@ export const SelectTranslatorComponent: FC<SelectTranslatorComponentProps> = ({
 		[translatedText],
 	);
 
-	// Favorite state
-	const { isFavorite, toggleFavorite } = useTranslateFavorite({
-		from,
-		to,
-		text: originalText,
-		translate: translatedText,
-	});
+	const dictionaryData = useMemo(() => {
+		if (translatedText === null || from === undefined || to === undefined)
+			return null;
 
-	const setIsFavoriteProxy = useCallback(
-		(state: boolean) => {
-			if (state === isFavorite) return;
-			toggleFavorite();
-		},
-		[isFavorite, toggleFavorite],
-	);
+		return {
+			from,
+			to,
+			text: originalText,
+			translate: translatedText,
+		};
+	}, [from, originalText, to, translatedText]);
 
 	// Init
 	const isUnmount = useRef(false);
@@ -371,15 +365,6 @@ export const SelectTranslatorComponent: FC<SelectTranslatorComponentProps> = ({
 
 					{!isMobile && closeButton}
 				</div>
-				<div className={cnSelectTranslator('Menu')}>
-					<span>
-						<Checkbox
-							label={getMessage('common_action_addToDictionary')}
-							checked={isFavorite}
-							setChecked={setIsFavoriteProxy}
-						/>
-					</span>
-				</div>
 				{error === null ? (
 					<>
 						<div
@@ -391,6 +376,7 @@ export const SelectTranslatorComponent: FC<SelectTranslatorComponentProps> = ({
 								<Button onPress={ttsTranslate.toggle} view="clear">
 									<Icon glyph="volume-up" scalable={false} />
 								</Button>
+								<BookmarksButton translation={dictionaryData} />
 							</div>
 							<div className={cnSelectTranslator('Body')}>
 								{translatedText}
