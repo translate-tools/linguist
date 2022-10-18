@@ -52,7 +52,8 @@ const getDB = async () => {
 					autoIncrement: true,
 				});
 
-				store.createIndex('text', ['translation', 'text'], { unique: false });
+				// `keyPath` with `.` separator: https://w3c.github.io/IndexedDB/#inject-key-into-value
+				store.createIndex('text', ['translation.text'], { unique: false });
 			},
 		});
 	}
