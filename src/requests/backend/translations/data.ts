@@ -1,19 +1,20 @@
 import * as IDB from 'idb/with-async-ittr';
+import { isEqual } from 'lodash';
 
 import { type } from '../../../lib/types';
+import { DeepPartial } from '../../../types/lib';
 import { ITranslation, TranslationType } from '../../../types/translation/Translation';
 
-export type ITranslationEntry = ITranslation & {
-	date: number;
+export type ITranslationEntry = {
+	translation: ITranslation;
+	timestamp: number;
 	translator?: string;
 };
 
-// TODO: refactor: keep translation data in property `translation`
 export const TranslationEntryType = type.intersection([
-	TranslationType,
 	type.type({
-		// TODO: rename to `timestamp`
-		date: type.number,
+		translation: TranslationType,
+		timestamp: type.number,
 	}),
 	type.partial({
 		translator: type.union([type.string, type.undefined]),
@@ -51,7 +52,7 @@ const getDB = async () => {
 					autoIncrement: true,
 				});
 
-				store.createIndex('text', 'text', { unique: false });
+				store.createIndex('text', ['translation', 'text'], { unique: false });
 			},
 		});
 	}
@@ -74,9 +75,7 @@ export const getEntry = async (entryId: number) => {
 	return db.get('translations', entryId);
 };
 
-export const deleteEntries = async (
-	entry: Pick<ITranslationEntry, 'from' | 'to' | 'text' | 'translate'>,
-) => {
+export const deleteEntries = async (entry: ITranslation) => {
 	const db = await getDB();
 	const transaction = await db.transaction('translations', 'readwrite');
 
@@ -85,11 +84,9 @@ export const deleteEntries = async (
 	for await (const cursor of index.iterate(entry.text)) {
 		const currentEntry = cursor.value;
 
-		console.warn('del dbg: currentEntry', currentEntry);
-
 		if (
 			(Object.keys(entry) as (keyof typeof entry)[]).every(
-				(key) => entry[key] === currentEntry[key],
+				(key) => entry[key] === currentEntry.translation[key],
 			)
 		) {
 			await cursor.delete();
@@ -151,7 +148,30 @@ export const getEntries = async (
 	return entries;
 };
 
-export const findEntry = async (entry: Partial<ITranslationEntry>) => {
+/**
+ * Check second object contains all properties of first object with equal values
+ */
+const isEqualIntersection = (obj1: any, obj2: any): boolean => {
+	// Compare primitive values
+	if (typeof obj1 !== 'object' && typeof obj2 !== 'object') {
+		return obj1 === obj2;
+	}
+
+	const xIsArray = Array.isArray(obj1);
+	const yIsArray = Array.isArray(obj2);
+
+	// Compare arrays
+	if (xIsArray && yIsArray) {
+		return isEqual(obj1, obj2);
+	} else if (xIsArray || yIsArray) {
+		return false;
+	}
+
+	// Compare objects
+	return Object.keys(obj1).every((key) => isEqualIntersection(obj1[key], obj2[key]));
+};
+
+export const findEntry = async (entry: DeepPartial<ITranslationEntry>) => {
 	const db = await getDB();
 	const transaction = await db.transaction('translations', 'readonly');
 
@@ -159,14 +179,11 @@ export const findEntry = async (entry: Partial<ITranslationEntry>) => {
 
 	// Find
 	const index = await transaction.objectStore('translations').index('text');
-	for await (const cursor of index.iterate(entry.text)) {
+	for await (const cursor of index.iterate(entry?.translation?.text)) {
 		const currentEntry = cursor.value;
 
-		if (
-			(Object.keys(entry) as (keyof typeof entry)[]).every(
-				(key) => entry[key] === currentEntry[key],
-			)
-		) {
+		const isMatch = isEqualIntersection(entry, currentEntry);
+		if (isMatch) {
 			result = {
 				key: cursor.primaryKey,
 				data: currentEntry,

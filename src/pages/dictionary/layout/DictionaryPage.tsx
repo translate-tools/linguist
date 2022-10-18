@@ -81,14 +81,16 @@ export const DictionaryPage: FC<IDictionaryPageProps> = ({ confirmDelete = true 
 			const entry = entries[idx];
 			if (entry === undefined) return;
 
+			const translation = entry.data.translation;
+
 			if (
 				confirmDelete &&
 				!confirm(
 					getMessage('dictionary_deleteConfirmation') +
 						'\n\n---\n\n' +
-						entry.data.text +
+						translation.text +
 						'\n\n---\n\n' +
-						entry.data.translate,
+						translation.translate,
 				)
 			)
 				return;
@@ -108,12 +110,13 @@ export const DictionaryPage: FC<IDictionaryPageProps> = ({ confirmDelete = true 
 	const exportDictionary = useCallback(() => {
 		const csv = Papa.unparse([
 			['from', 'to', 'text', 'translation'],
-			...(entries || []).map(({ data: { from, to, text, translate } }) => [
-				from,
-				to,
-				text,
-				translate,
-			]),
+			...(entries || []).map(
+				({
+					data: {
+						translation: { from, to, text, translate },
+					},
+				}) => [from, to, text, translate],
+			),
 		]);
 
 		const date = new Date().toLocaleDateString();
@@ -193,15 +196,16 @@ export const DictionaryPage: FC<IDictionaryPageProps> = ({ confirmDelete = true 
 			fromIsEmpty && toIsEmpty && search.length === 0
 				? entries
 				: entries.filter((entry) => {
-					if (!fromIsEmpty && entry.data.from !== from) return false;
-					if (!toIsEmpty && entry.data.to !== to) return false;
+					const translation = entry.data.translation;
+
+					if (!fromIsEmpty && translation.from !== from) return false;
+					if (!toIsEmpty && translation.to !== to) return false;
 
 					// Match text
 					if (search.length !== 0) {
-						const { text, translate } = entry.data;
 						const isTextsMatchSearch = isTextsContainsSubstring(
 							search,
-							[text, translate],
+							[translation.text, translation.translate],
 							true,
 						);
 						return isTextsMatchSearch;
@@ -225,12 +229,12 @@ export const DictionaryPage: FC<IDictionaryPageProps> = ({ confirmDelete = true 
 
 		// Render entries
 		return filtredEntries.map(({ data, key }, idx) => {
-			const { date, ...translation } = data;
+			const { timestamp, translation } = data;
 			return (
 				<Translation
 					key={key}
 					translation={translation}
-					timestamp={date}
+					timestamp={timestamp}
 					onPressTTS={(target) => {
 						if (target === 'original') {
 							toggleTTS(key, translation.from, translation.text);
