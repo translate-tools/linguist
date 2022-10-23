@@ -5,6 +5,29 @@ import { type } from '../../../lib/types';
 import { DeepPartial } from '../../../types/lib';
 import { ITranslation, TranslationType } from '../../../types/translation/Translation';
 
+/**
+ * Check second object contains all properties of first object with equal values
+ */
+const isEqualIntersection = (obj1: any, obj2: any): boolean => {
+	// Compare primitive values
+	if (typeof obj1 !== 'object' && typeof obj2 !== 'object') {
+		return obj1 === obj2;
+	}
+
+	const xIsArray = Array.isArray(obj1);
+	const yIsArray = Array.isArray(obj2);
+
+	// Compare arrays
+	if (xIsArray && yIsArray) {
+		return isEqual(obj1, obj2);
+	} else if (xIsArray || yIsArray) {
+		return false;
+	}
+
+	// Compare objects
+	return Object.keys(obj1).every((key) => isEqualIntersection(obj1[key], obj2[key]));
+};
+
 export type ITranslationEntry = {
 	translation: ITranslation;
 	timestamp: number;
@@ -87,11 +110,8 @@ export const deleteEntries = async (entry: ITranslation) => {
 	for await (const cursor of index.iterate(entry.originalText)) {
 		const currentEntry = cursor.value;
 
-		if (
-			(Object.keys(entry) as (keyof typeof entry)[]).every(
-				(key) => entry[key] === currentEntry.translation[key],
-			)
-		) {
+		const isMatchProps = isEqualIntersection(entry, currentEntry.translation);
+		if (isMatchProps) {
 			await cursor.delete();
 		}
 	}
@@ -151,36 +171,13 @@ export const getEntries = async (
 	return entries;
 };
 
-/**
- * Check second object contains all properties of first object with equal values
- */
-const isEqualIntersection = (obj1: any, obj2: any): boolean => {
-	// Compare primitive values
-	if (typeof obj1 !== 'object' && typeof obj2 !== 'object') {
-		return obj1 === obj2;
-	}
-
-	const xIsArray = Array.isArray(obj1);
-	const yIsArray = Array.isArray(obj2);
-
-	// Compare arrays
-	if (xIsArray && yIsArray) {
-		return isEqual(obj1, obj2);
-	} else if (xIsArray || yIsArray) {
-		return false;
-	}
-
-	// Compare objects
-	return Object.keys(obj1).every((key) => isEqualIntersection(obj1[key], obj2[key]));
-};
-
-export const findEntry = async (entry: DeepPartial<ITranslationEntry>) => {
+export const findEntry = async (entryPropsToSearch: DeepPartial<ITranslationEntry>) => {
 	const db = await getDB();
 	const transaction = await db.transaction('translations', 'readonly');
 
 	let result: ITranslationEntryWithKey | null = null;
 
-	const originalText = entry?.translation?.originalText;
+	const originalText = entryPropsToSearch?.translation?.originalText;
 	if (originalText === undefined) {
 		throw new Error('Parameter `originalText` is required to search');
 	}
@@ -191,8 +188,8 @@ export const findEntry = async (entry: DeepPartial<ITranslationEntry>) => {
 	for await (const cursor of index.iterate(originalText)) {
 		const currentEntry = cursor.value;
 
-		const isMatch = isEqualIntersection(entry, currentEntry);
-		if (isMatch) {
+		const isMatchEntryProps = isEqualIntersection(entryPropsToSearch, currentEntry);
+		if (isMatchEntryProps) {
 			result = {
 				key: cursor.primaryKey,
 				data: currentEntry,
