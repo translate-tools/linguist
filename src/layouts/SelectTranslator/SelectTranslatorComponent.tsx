@@ -21,6 +21,7 @@ import './SelectTranslator.css';
 import { isMobileBrowser } from '../../lib/browser';
 import { addTranslationHistoryEntry } from '../../requests/backend/history/addTranslationHistoryEntry';
 import { TRANSLATION_ORIGIN } from '../../requests/backend/history/constants';
+import { ITranslation } from '../../types/translation/Translation';
 
 export interface SelectTranslatorComponentProps {
 	detectedLangFirst: boolean;
@@ -83,8 +84,8 @@ export const SelectTranslatorComponent: FC<SelectTranslatorComponentProps> = ({
 					translation: {
 						from,
 						to,
-						text: originalText,
-						translate: translatedText,
+						originalText,
+						translatedText,
 					},
 				});
 			})
@@ -120,15 +121,15 @@ export const SelectTranslatorComponent: FC<SelectTranslatorComponentProps> = ({
 		[translatedText],
 	);
 
-	const dictionaryData = useMemo(() => {
+	const dictionaryData: ITranslation | null = useMemo(() => {
 		if (translatedText === null || from === undefined || to === undefined)
 			return null;
 
 		return {
 			from,
 			to,
-			text: originalText,
-			translate: translatedText,
+			originalText,
+			translatedText,
 		};
 	}, [from, originalText, to, translatedText]);
 

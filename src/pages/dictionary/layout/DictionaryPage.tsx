@@ -30,6 +30,7 @@ import { Page } from '../../../layouts/Page/Page';
 import { PageMessages } from '../../../layouts/Page/Messages/PageMessages';
 
 import './DictionaryPage.css';
+import { ITranslation } from '../../../types/translation/Translation';
 
 export const cnDictionaryPage = cn('DictionaryPage');
 
@@ -88,9 +89,9 @@ export const DictionaryPage: FC<IDictionaryPageProps> = ({ confirmDelete = true 
 				!confirm(
 					getMessage('dictionary_deleteConfirmation') +
 						'\n\n---\n\n' +
-						translation.text +
+						translation.originalText +
 						'\n\n---\n\n' +
-						translation.translate,
+						translation.translatedText,
 				)
 			)
 				return;
@@ -108,16 +109,18 @@ export const DictionaryPage: FC<IDictionaryPageProps> = ({ confirmDelete = true 
 	);
 
 	const exportDictionary = useCallback(() => {
-		const csv = Papa.unparse([
-			['from', 'to', 'text', 'translation'],
-			...(entries || []).map(
-				({
-					data: {
-						translation: { from, to, text, translate },
-					},
-				}) => [from, to, text, translate],
-			),
-		]);
+		const fields: (keyof ITranslation)[] = [
+			'from',
+			'to',
+			'originalText',
+			'translatedText',
+		];
+		const rows = (entries || []).map((entry) => {
+			const translation = entry.data.translation;
+			return fields.map((key) => translation[key]);
+		});
+
+		const csv = Papa.unparse([fields, ...rows]);
 
 		const date = new Date().toLocaleDateString();
 		saveFile(
@@ -205,7 +208,7 @@ export const DictionaryPage: FC<IDictionaryPageProps> = ({ confirmDelete = true 
 					if (search.length !== 0) {
 						const isTextsMatchSearch = isTextsContainsSubstring(
 							search,
-							[translation.text, translation.translate],
+							[translation.originalText, translation.translatedText],
 							true,
 						);
 						return isTextsMatchSearch;
@@ -237,9 +240,9 @@ export const DictionaryPage: FC<IDictionaryPageProps> = ({ confirmDelete = true 
 					timestamp={timestamp}
 					onPressTTS={(target) => {
 						if (target === 'original') {
-							toggleTTS(key, translation.from, translation.text);
+							toggleTTS(key, translation.from, translation.originalText);
 						} else {
-							toggleTTS(key, translation.to, translation.translate);
+							toggleTTS(key, translation.to, translation.translatedText);
 						}
 					}}
 					controlPanelSlot={

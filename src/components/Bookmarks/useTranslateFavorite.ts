@@ -17,7 +17,7 @@ import { isExtensionContext } from '../../lib/browser';
 // TODO: think about consistent name for liked translations: bookmarks, favorites, dictionary entries
 // TODO: rename this hook and components consistent, check i18n texts consistent too
 export const useTranslateFavorite = (translation: ITranslation | null) => {
-	const { from, to, text, translate } = translation || {};
+	const { from, to, originalText, translatedText } = translation || {};
 
 	const [favId, setFavId] = useState<null | number>(null);
 
@@ -25,18 +25,18 @@ export const useTranslateFavorite = (translation: ITranslation | null) => {
 		if (
 			from === undefined ||
 			to === undefined ||
-			text === undefined ||
-			translate === undefined
+			originalText === undefined ||
+			translatedText === undefined
 		)
 			return null;
 
 		return findTranslation({
 			from,
 			to,
-			text: text.trim(),
-			translate: translate.trim(),
+			originalText: originalText.trim(),
+			translatedText: translatedText.trim(),
 		});
-	}, [from, text, to, translate]);
+	}, [from, to, originalText, translatedText]);
 
 	const [isFavorite, setIsFavorite] = useState(favId !== null);
 
@@ -60,8 +60,8 @@ export const useTranslateFavorite = (translation: ITranslation | null) => {
 					if (
 						from === undefined ||
 						to === undefined ||
-						text === undefined ||
-						translate === undefined
+						originalText === undefined ||
+						translatedText === undefined
 					) {
 						setFavId(null);
 						return;
@@ -70,8 +70,8 @@ export const useTranslateFavorite = (translation: ITranslation | null) => {
 					addTranslation({
 						from,
 						to,
-						text: text.trim(),
-						translate: translate.trim(),
+						originalText: originalText.trim(),
+						translatedText: translatedText.trim(),
 					}).then(setFavId);
 				})();
 			}
@@ -80,7 +80,7 @@ export const useTranslateFavorite = (translation: ITranslation | null) => {
 				deleteTranslation(favId).then(() => setFavId(null));
 			}
 		}
-	}, [favId, findFavId, from, isFavorite, text, to, translate]);
+	}, [favId, findFavId, from, to, isFavorite, originalText, translatedText]);
 
 	useEffect(() => {
 		findFavId().then(setFavId);
@@ -99,14 +99,10 @@ export const useTranslateFavorite = (translation: ITranslation | null) => {
 		const cleanupFunctions: (() => any)[] = [];
 
 		if (favId === null) {
-			const cleanup = onDictionaryEntryAdd((translation) => {
-				const isEqualData = isEqual(translation, {
-					from,
-					to,
-					text,
-					translate,
-				});
+			const cleanup = onDictionaryEntryAdd((newTranslation) => {
+				if (translation === null) return;
 
+				const isEqualData = isEqual(newTranslation, translation);
 				if (isEqualData) {
 					update();
 				}
@@ -124,7 +120,7 @@ export const useTranslateFavorite = (translation: ITranslation | null) => {
 		return () => {
 			cleanupFunctions.map((fn) => fn());
 		};
-	}, [favId, from, text, to, translate, update]);
+	}, [favId, translation, update]);
 
 	return { isFavorite, toggleFavorite, update };
 };

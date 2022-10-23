@@ -23,9 +23,11 @@ import { BookmarksButton } from '../../components/Bookmarks/BookmarksButton';
 import './TextTranslator.css';
 import { addTranslationHistoryEntry } from '../../requests/backend/history/addTranslationHistoryEntry';
 import { TRANSLATION_ORIGIN } from '../../requests/backend/history/constants';
+import { ITranslation } from '../../types/translation/Translation';
 
 export const cnTextTranslator = cn('TextTranslator');
 
+// TODO: rename according to `ITranslation`
 export type TranslationState = {
 	text: string;
 	translate: string | null;
@@ -188,8 +190,8 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 					translation: {
 						from,
 						to,
-						text: userInput,
-						translate: response,
+						originalText: userInput,
+						translatedText: response,
 					},
 				});
 			})
@@ -334,15 +336,15 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 		rememberTranslationState();
 	}, [rememberTranslationState, userInput, translation]);
 
-	const dictionaryData = useMemo(() => {
+	const dictionaryData: ITranslation | null = useMemo(() => {
 		if (errorMessage !== null || translation === null || !isTranslatedTextRelative)
 			return null;
 
 		return {
 			from,
 			to,
-			text: userInput,
-			translate: translation.text,
+			originalText: userInput,
+			translatedText: translation.text,
 		};
 	}, [errorMessage, from, isTranslatedTextRelative, to, translation, userInput]);
 

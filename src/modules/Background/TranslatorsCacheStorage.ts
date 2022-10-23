@@ -7,6 +7,8 @@ import { AbstractVersionedStorage } from '../../types/utils';
 export interface TranslatorDBSchema extends IDB.DBSchema {
 	[key: string]: {
 		key: string;
+		// TODO: use `ITranslation` interface and update index in DB
+		// TODO: check another IDB use cases
 		value: {
 			from: string;
 			to: string;

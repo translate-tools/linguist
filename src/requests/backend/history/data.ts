@@ -111,12 +111,12 @@ export const getEntries = async ({
 
 			// Skip by filter
 			if (search !== undefined && search.length > 0) {
-				const { text, translate } = cursor.value.translation;
+				const translation = cursor.value.translation;
 
 				// Skip not match texts
 				const isSomeTextMatch = isTextsContainsSubstring(
 					search,
-					[text, translate],
+					[translation.originalText, translation.translatedText],
 					ignoreCase,
 				);
 				if (!isSomeTextMatch) continue;

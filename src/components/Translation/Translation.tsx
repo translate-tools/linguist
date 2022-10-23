@@ -28,8 +28,6 @@ export const Translation: FC<TranslationEntryProps> = ({
 	controlPanelSlot,
 	headStartSlot,
 }) => {
-	const { from, to, text, translate } = translation;
-
 	// TODO: make option to choose translation layout direction
 	const layout = isMobileBrowser() ? 'vertical' : 'horizontal';
 
@@ -60,10 +58,12 @@ export const Translation: FC<TranslationEntryProps> = ({
 						</Button>
 
 						<span className={cnTranslation('Lang')}>
-							{getLanguageNameByCode(from)}
+							{getLanguageNameByCode(translation.from)}
 						</span>
 					</div>
-					<div className={cnTranslation('Text')}>{text}</div>
+					<div className={cnTranslation('Text')}>
+						{translation.originalText}
+					</div>
 				</div>
 				<div className={cnTranslation('TextContainer')}>
 					<div className={cnTranslation('TextAction')}>
@@ -78,10 +78,12 @@ export const Translation: FC<TranslationEntryProps> = ({
 						</Button>
 
 						<span className={cnTranslation('Lang')}>
-							{getLanguageNameByCode(to)}
+							{getLanguageNameByCode(translation.to)}
 						</span>
 					</div>
-					<div className={cnTranslation('Text')}>{translate}</div>
+					<div className={cnTranslation('Text')}>
+						{translation.translatedText}
+					</div>
 				</div>
 			</div>
 		</div>

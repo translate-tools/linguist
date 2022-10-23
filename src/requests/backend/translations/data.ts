@@ -33,7 +33,7 @@ export interface DBSchema extends IDB.DBSchema {
 		key: number;
 		value: ITranslationEntry;
 		indexes: {
-			text: string;
+			originalText: string;
 		};
 	};
 }
@@ -53,7 +53,9 @@ const getDB = async () => {
 				});
 
 				// `keyPath` with `.` separator: https://w3c.github.io/IndexedDB/#inject-key-into-value
-				store.createIndex('text', ['translation.text'], { unique: false });
+				store.createIndex('originalText', 'translation.originalText', {
+					unique: false,
+				});
 			},
 		});
 	}
@@ -81,8 +83,8 @@ export const deleteEntries = async (entry: ITranslation) => {
 	const transaction = await db.transaction('translations', 'readwrite');
 
 	// Delete
-	const index = await transaction.objectStore('translations').index('text');
-	for await (const cursor of index.iterate(entry.text)) {
+	const index = await transaction.objectStore('translations').index('originalText');
+	for await (const cursor of index.iterate(entry.originalText)) {
 		const currentEntry = cursor.value;
 
 		if (
@@ -178,9 +180,15 @@ export const findEntry = async (entry: DeepPartial<ITranslationEntry>) => {
 
 	let result: ITranslationEntryWithKey | null = null;
 
+	const originalText = entry?.translation?.originalText;
+	if (originalText === undefined) {
+		throw new Error('Parameter `originalText` is required to search');
+	}
+
+	// TODO: search not only by index
 	// Find
-	const index = await transaction.objectStore('translations').index('text');
-	for await (const cursor of index.iterate(entry?.translation?.text)) {
+	const index = await transaction.objectStore('translations').index('originalText');
+	for await (const cursor of index.iterate(originalText)) {
 		const currentEntry = cursor.value;
 
 		const isMatch = isEqualIntersection(entry, currentEntry);
