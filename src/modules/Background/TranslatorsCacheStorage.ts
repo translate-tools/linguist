@@ -1,33 +1,30 @@
 import * as IDB from 'idb/with-async-ittr';
 
 import { translatorModules } from '.';
+import { ITranslation } from '../../types/translation/Translation';
 
 import { AbstractVersionedStorage } from '../../types/utils';
 
 export interface TranslatorDBSchema extends IDB.DBSchema {
-	[key: string]: {
+	tableName: {
 		key: string;
-		// TODO: use `ITranslation` interface and update index in DB
-		// TODO: check another IDB use cases
-		value: {
-			from: string;
-			to: string;
-			text: string;
-			translate: string;
-		};
+		value: ITranslation;
 		indexes: {
-			text: string;
+			originalText: string;
 		};
 	};
 }
 
-type DB = IDB.IDBPDatabase<any>;
+type DB = IDB.IDBPDatabase<TranslatorDBSchema>;
+
+/**
+ * Helper type to cast table name string
+ */
+type TableName = 'tableName';
 
 interface Options {
 	ignoreCase: boolean;
 }
-
-type OptionalOptions = { [key in keyof Options]?: Options[key] };
 
 const DBName = 'translatorsCache';
 
@@ -55,7 +52,7 @@ export class TranslatorsCacheStorage extends AbstractVersionedStorage {
 	private tableName: string;
 	private lastError: any;
 
-	constructor(id: string, options?: OptionalOptions) {
+	constructor(id: string, options?: Partial<Options>) {
 		super();
 
 		this.tableName = id;
@@ -70,26 +67,28 @@ export class TranslatorsCacheStorage extends AbstractVersionedStorage {
 	private getDB() {
 		if (this.dbPromise === null) {
 			const id = this.tableName;
-			this.dbPromise = IDB.openDB<any>(DBName).then((db) => {
+			this.dbPromise = IDB.openDB<TranslatorDBSchema>(DBName).then((db) => {
 				// Prevent versionchange blocking
 				db.addEventListener('versionchange', () => {
 					db.close();
 				});
 
 				// Return DB if storage exist
-				if (db.objectStoreNames.contains(id)) return db;
+				if (db.objectStoreNames.contains(id as TableName)) return db;
 
 				// Otherwise create storage
 				const nextVersion = db.version + 1;
 
-				return IDB.openDB<any>(DBName, nextVersion, {
+				return IDB.openDB<TranslatorDBSchema>(DBName, nextVersion, {
 					upgrade(db) {
-						const store = db.createObjectStore(id, {
+						const store = db.createObjectStore(id as TableName, {
 							keyPath: 'id',
 							autoIncrement: true,
 						});
 
-						store.createIndex('text', 'text', { unique: true });
+						store.createIndex('originalText', 'originalText', {
+							unique: true,
+						});
 
 						// Prevent versionchange blocking
 						db.addEventListener('versionchange', () => {
@@ -118,14 +117,14 @@ export class TranslatorsCacheStorage extends AbstractVersionedStorage {
 
 	public get(text: string, from: string, to: string) {
 		return this.getDB().then(async (db) => {
-			const tx = db.transaction(this.tableName);
-			const index = tx.store.index('text');
+			const tx = db.transaction(this.tableName as TableName, 'readonly');
+			const index = tx.store.index('originalText');
 
 			let result: string | null = null;
 			const sourceText = this.options.ignoreCase ? text.toLowerCase() : text;
 			for await (const cursor of index.iterate(sourceText)) {
 				if (cursor.value.from === from && cursor.value.to === to) {
-					result = cursor.value.translate;
+					result = cursor.value.translatedText;
 					break;
 				}
 			}
@@ -135,17 +134,24 @@ export class TranslatorsCacheStorage extends AbstractVersionedStorage {
 		});
 	}
 
-	public set(text: string, translate: string, from: string, to: string) {
+	public set(originalText: string, translatedText: string, from: string, to: string) {
 		return this.getDB().then(async (db) => {
-			const tx = db.transaction(this.tableName, 'readwrite');
+			const tx = db.transaction(this.tableName as TableName, 'readwrite');
 
-			const sourceText = this.options.ignoreCase ? text.toLowerCase() : text;
-			await tx.store.put({ from, to, text: sourceText, translate });
+			const transformedOriginalText = this.options.ignoreCase
+				? originalText.toLowerCase()
+				: originalText;
+			await tx.store.put({
+				from,
+				to,
+				originalText: transformedOriginalText,
+				translatedText,
+			});
 			await tx.done;
 		});
 	}
 
 	public clear() {
-		return this.getDB().then((db) => db.clear(this.tableName));
+		return this.getDB().then((db) => db.clear(this.tableName as TableName));
 	}
 }
