@@ -16,8 +16,8 @@ export class TextTranslatorStorage extends AbstractVersionedStorage {
 			to: LangCode,
 			translate: type.union([
 				type.type({
-					text: type.string,
-					translate: type.union([type.string, type.null]),
+					originalText: type.string,
+					translatedText: type.union([type.string, type.null]),
 				}),
 				type.null,
 			]),

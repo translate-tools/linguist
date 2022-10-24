@@ -31,7 +31,9 @@ export const TextTranslatorTab: TabComponent<InitFn<InitData>> = ({
 	const [from, setFrom] = useState(initData.from);
 	const [to, setTo] = useState(initData.to);
 
-	const [userInput, setUserInput] = useState(initData.lastTranslate?.text ?? '');
+	const [userInput, setUserInput] = useState(
+		initData.lastTranslate?.originalText ?? '',
+	);
 	const [lastTranslation, setLastTranslation] = useState<
 		TextTranslatorProps['lastTranslation']
 	>(initData.lastTranslate ?? null);
@@ -54,11 +56,12 @@ export const TextTranslatorTab: TabComponent<InitFn<InitData>> = ({
 				};
 
 				if (lastTranslation !== null && config.textTranslator.rememberText) {
-					const { text, translate } = lastTranslation;
+					const { originalText, translatedText } = lastTranslation;
 
 					if (
-						text.length <= serializeLenLimit &&
-						(translate === null || translate.length <= serializeLenLimit)
+						originalText.length <= serializeLenLimit &&
+						(translatedText === null ||
+							translatedText.length <= serializeLenLimit)
 					) {
 						translationState.translate = lastTranslation;
 					}
