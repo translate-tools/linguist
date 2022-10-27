@@ -51,34 +51,107 @@ export const TranslationEntryWithKeyType = type.type({
 
 export type ITranslationEntryWithKey = { key: number; data: ITranslationEntry };
 
-export interface DBSchema extends IDB.DBSchema {
-	translations: {
-		key: number;
-		value: ITranslationEntry;
-		indexes: {
-			originalText: string;
+type TranslationsDBSchemeVersions = {
+	1: {
+		translations: {
+			key: number;
+			value: any;
 		};
 	};
-}
+	2: {
+		translations: {
+			key: number;
+			value: ITranslationEntry;
+			indexes: {
+				originalText: string;
+			};
+		};
+	};
+};
 
-type DB = IDB.IDBPDatabase<DBSchema>;
+export type TranslationsDBSchema = IDB.DBSchema & TranslationsDBSchemeVersions[2];
+
+type DB = IDB.IDBPDatabase<TranslationsDBSchema>;
+
+const translationsStoreName = 'translations';
 
 let DBInstance: null | DB = null;
 const getDB = async () => {
 	const DBName = 'translations';
 
 	if (DBInstance === null) {
-		DBInstance = await IDB.openDB<DBSchema>(DBName, 1, {
-			upgrade(db) {
-				const store = db.createObjectStore('translations', {
-					keyPath: 'id',
-					autoIncrement: true,
-				});
+		DBInstance = await IDB.openDB<TranslationsDBSchema>(DBName, 2, {
+			async upgrade(db, prevVersion, currentVersion, tx) {
+				const isFirstUpdate = prevVersion === 0;
+				const isMigrationNeeded = !isFirstUpdate;
 
-				// `keyPath` with `.` separator: https://w3c.github.io/IndexedDB/#inject-key-into-value
-				store.createIndex('originalText', 'translation.originalText', {
-					unique: false,
-				});
+				// TODO: introduce util to execute migration steps and to set `isMigrationNeeded` for each step
+				switch (currentVersion) {
+					case 1: {
+						// Create store
+						(
+							db as unknown as IDB.IDBPDatabase<
+								IDB.DBSchema & TranslationsDBSchemeVersions[1]
+							>
+						).createObjectStore('translations', {
+							keyPath: 'id',
+							autoIncrement: true,
+						});
+					}
+					default: {
+						// Prepare data
+						const translations: TranslationsDBSchemeVersions[1]['translations']['value'][] =
+							[];
+						if (isMigrationNeeded) {
+							const entries = await tx
+								.objectStore('translations' as any)
+								.getAll();
+							for (const translation of entries) {
+								// TODO: add validation data
+								const { from, to, text, translate, date } = translation;
+
+								translations.push({
+									timestamp: date,
+									translation: {
+										from,
+										to,
+										originalText: text,
+										translatedText: translate,
+									},
+								});
+							}
+
+							db.deleteObjectStore(translationsStoreName);
+						}
+
+						// Create store
+						const translationsStore = db.createObjectStore(
+							translationsStoreName,
+							{
+								keyPath: 'id',
+								autoIncrement: true,
+							},
+						);
+
+						// `keyPath` with `.` separator: https://w3c.github.io/IndexedDB/#inject-key-into-value
+						translationsStore.createIndex(
+							'originalText',
+							'translation.originalText',
+							{
+								unique: false,
+							},
+						);
+
+						// Insert data
+						if (isMigrationNeeded && translations.length > 0) {
+							for (const translation of translations) {
+								await translationsStore.add(translation);
+							}
+						}
+					}
+				}
+
+				return tx.done;
 			},
 		});
 	}
@@ -88,25 +161,27 @@ const getDB = async () => {
 
 export const addEntry = async (entry: ITranslationEntry) => {
 	const db = await getDB();
-	return db.add('translations', entry);
+	return db.add(translationsStoreName, entry);
 };
 
 export const deleteEntry = async (entryId: number) => {
 	const db = await getDB();
-	return db.delete('translations', entryId);
+	return db.delete(translationsStoreName, entryId);
 };
 
 export const getEntry = async (entryId: number) => {
 	const db = await getDB();
-	return db.get('translations', entryId);
+	return db.get(translationsStoreName, entryId);
 };
 
 export const deleteEntries = async (entry: ITranslation) => {
 	const db = await getDB();
-	const transaction = await db.transaction('translations', 'readwrite');
+	const transaction = await db.transaction(translationsStoreName, 'readwrite');
 
 	// Delete
-	const index = await transaction.objectStore('translations').index('originalText');
+	const index = await transaction
+		.objectStore(translationsStoreName)
+		.index('originalText');
 	for await (const cursor of index.iterate(entry.originalText)) {
 		const currentEntry = cursor.value;
 
@@ -121,7 +196,7 @@ export const deleteEntries = async (entry: ITranslation) => {
 
 export const flush = async () => {
 	const db = await getDB();
-	const transaction = await db.transaction('translations', 'readwrite');
+	const transaction = await db.transaction(translationsStoreName, 'readwrite');
 
 	await transaction.store.delete(IDBKeyRange.lowerBound(0));
 	await transaction.done;
@@ -136,7 +211,7 @@ export const getEntries = async (
 
 	const db = await getDB();
 
-	const transaction = await db.transaction('translations', 'readonly');
+	const transaction = await db.transaction(translationsStoreName, 'readonly');
 
 	const entries: ITranslationEntryWithKey[] = [];
 
@@ -173,7 +248,7 @@ export const getEntries = async (
 
 export const findEntry = async (entryPropsToSearch: DeepPartial<ITranslationEntry>) => {
 	const db = await getDB();
-	const transaction = await db.transaction('translations', 'readonly');
+	const transaction = await db.transaction(translationsStoreName, 'readonly');
 
 	let result: ITranslationEntryWithKey | null = null;
 
@@ -184,7 +259,9 @@ export const findEntry = async (entryPropsToSearch: DeepPartial<ITranslationEntr
 
 	// TODO: search not only by index
 	// Find
-	const index = await transaction.objectStore('translations').index('originalText');
+	const index = await transaction
+		.objectStore(translationsStoreName)
+		.index('originalText');
 	for await (const cursor of index.iterate(originalText)) {
 		const currentEntry = cursor.value;
 

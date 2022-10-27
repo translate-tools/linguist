@@ -230,84 +230,84 @@ export class ConfigStorage extends AbstractVersionedStorage {
 
 	public static updateStorageVersion = async (prevVersion: number | null) => {
 		switch (prevVersion) {
-		case 1: {
-			const storageKey = 'config.Main';
-			const storageDataRaw = localStorage.getItem(storageKey);
+			case 1: {
+				const storageKey = 'config.Main';
+				const storageDataRaw = localStorage.getItem(storageKey);
 
-			// Skip
-			if (storageDataRaw === null) break;
+				// Skip
+				if (storageDataRaw === null) break;
 
-			// Import valid data
-			const storageData = JSON.parse(storageDataRaw);
-			if (typeof storageData === 'object') {
-				// Collect old data
-				const partialData: Partial<ConfigType> = {};
-				for (const key in ConfigStorage.dataSignature) {
-					if (key in storageData) {
-						try {
-							const value = storageData[key];
-							(partialData as any)[key] = tryDecode(
-								(ConfigStorage.dataSignature as any)[key],
-								value,
-							);
-						} catch (err) {
-							// Ingore decode errors and throw other
-							if (!(err instanceof TypeError)) throw err;
+				// Import valid data
+				const storageData = JSON.parse(storageDataRaw);
+				if (typeof storageData === 'object') {
+					// Collect old data
+					const partialData: Partial<ConfigType> = {};
+					for (const key in ConfigStorage.dataSignature) {
+						if (key in storageData) {
+							try {
+								const value = storageData[key];
+								(partialData as any)[key] = tryDecode(
+									(ConfigStorage.dataSignature as any)[key],
+									value,
+								);
+							} catch (err) {
+								// Ingore decode errors and throw other
+								if (!(err instanceof TypeError)) throw err;
+							}
 						}
 					}
+
+					// Merge actual data with old
+					let { [ConfigStorage.storageName]: actualData } =
+						await browser.storage.local.get(ConfigStorage.storageName);
+					if (typeof actualData !== 'object') {
+						actualData = {};
+					}
+
+					const mergedData = { ...actualData, ...partialData };
+
+					// Write data
+					browser.storage.local.set({
+						[ConfigStorage.storageName]: mergedData,
+					});
 				}
 
+				// Delete old data
+				localStorage.removeItem(storageKey);
+
+				break;
+			}
+			case 2: {
 				// Merge actual data with old
 				let { [ConfigStorage.storageName]: actualData } =
-						await browser.storage.local.get(ConfigStorage.storageName);
+					await browser.storage.local.get(ConfigStorage.storageName);
 				if (typeof actualData !== 'object') {
 					actualData = {};
 				}
 
-				const mergedData = { ...actualData, ...partialData };
+				const contentscriptPropData =
+					actualData?.contentscript?.selectTranslator || {};
+				const quickTranslate = actualData?.selectTranslator?.quickTranslate;
+
+				const newData = actualData;
+				delete newData.contentscript;
 
 				// Write data
 				browser.storage.local.set({
-					[ConfigStorage.storageName]: mergedData,
-				});
-			}
-
-			// Delete old data
-			localStorage.removeItem(storageKey);
-
-			break;
-		}
-		case 2: {
-			// Merge actual data with old
-			let { [ConfigStorage.storageName]: actualData } =
-					await browser.storage.local.get(ConfigStorage.storageName);
-			if (typeof actualData !== 'object') {
-				actualData = {};
-			}
-
-			const contentscriptPropData =
-					actualData?.contentscript?.selectTranslator || {};
-			const quickTranslate = actualData?.selectTranslator?.quickTranslate;
-
-			const newData = actualData;
-			delete newData.contentscript;
-
-			// Write data
-			browser.storage.local.set({
-				[ConfigStorage.storageName]: {
-					...newData,
-					selectTranslator: {
-						...newData?.selectTranslator,
-						...contentscriptPropData,
-						mode: quickTranslate
-							? 'quickTranslate'
-							: newData?.selectTranslator?.mode,
+					[ConfigStorage.storageName]: {
+						...newData,
+						selectTranslator: {
+							...newData?.selectTranslator,
+							...contentscriptPropData,
+							mode: quickTranslate
+								? 'quickTranslate'
+								: newData?.selectTranslator?.mode,
+						},
 					},
-				},
-			});
+				});
 
-			break;
-		}
+				break;
+			}
 		}
 	};
 
