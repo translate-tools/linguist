@@ -49,7 +49,10 @@
     // Codestyle
     "indent": [
       "error",
-      "tab"
+      "tab",
+      {
+        "SwitchCase": 1
+      }
     ],
     "camelcase": [
       "error",
