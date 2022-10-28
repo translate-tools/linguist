@@ -2,9 +2,11 @@ import * as IDB from 'idb/with-async-ittr';
 import { isEqual } from 'lodash';
 
 import { type } from '../../../lib/types';
+import { IDBConstructor, configureIDB } from '../../../lib/idb/manager';
 import { DeepPartial } from '../../../types/lib';
 import { ITranslation, TranslationType } from '../../../types/translation/Translation';
 
+// TODO: move to utils
 /**
  * Check second object contains all properties of first object with equal values
  */
@@ -75,84 +77,76 @@ type DB = IDB.IDBPDatabase<TranslationsDBSchema>;
 
 const translationsStoreName = 'translations';
 
+// TODO: test migration from version 1 to 2
+// TODO: move migrations to another files
+const scheme1: IDBConstructor<IDB.DBSchema & TranslationsDBSchemeVersions[1]> = {
+	version: 1,
+	apply: (db) => {
+		// Create store
+		db.createObjectStore('translations', {
+			keyPath: 'id',
+			autoIncrement: true,
+		});
+	},
+};
+
+const scheme2: IDBConstructor<TranslationsDBSchema> = {
+	version: 2,
+	apply: async (db, { transaction: tx, migrateFrom }) => {
+		const isMigrationNeeded = migrateFrom !== null;
+
+		// Prepare data
+		const translations: TranslationsDBSchemeVersions[1]['translations']['value'][] =
+			[];
+		if (isMigrationNeeded) {
+			const entries = await tx.objectStore('translations' as any).getAll();
+			for (const translation of entries) {
+				// TODO: add validation data
+				const { from, to, text, translate, date } = translation;
+
+				translations.push({
+					timestamp: date,
+					translation: {
+						from,
+						to,
+						originalText: text,
+						translatedText: translate,
+					},
+				});
+			}
+
+			db.deleteObjectStore(translationsStoreName);
+		}
+
+		// Create store
+		const translationsStore = db.createObjectStore(translationsStoreName, {
+			keyPath: 'id',
+			autoIncrement: true,
+		});
+
+		// `keyPath` with `.` separator: https://w3c.github.io/IndexedDB/#inject-key-into-value
+		translationsStore.createIndex('originalText', 'translation.originalText', {
+			unique: false,
+		});
+
+		// Insert data
+		if (isMigrationNeeded && translations.length > 0) {
+			for (const translation of translations) {
+				await translationsStore.add(translation);
+			}
+		}
+	},
+};
+
+const constructTranslationsIDB = configureIDB<TranslationsDBSchema>([scheme1, scheme2]);
+
 let DBInstance: null | DB = null;
 const getDB = async () => {
 	const DBName = 'translations';
 
 	if (DBInstance === null) {
 		DBInstance = await IDB.openDB<TranslationsDBSchema>(DBName, 2, {
-			async upgrade(db, prevVersion, currentVersion, tx) {
-				const isFirstUpdate = prevVersion === 0;
-				const isMigrationNeeded = !isFirstUpdate;
-
-				// TODO: introduce util to execute migration steps and to set `isMigrationNeeded` for each step
-				switch (currentVersion) {
-					case 1: {
-						// Create store
-						(
-							db as unknown as IDB.IDBPDatabase<
-								IDB.DBSchema & TranslationsDBSchemeVersions[1]
-							>
-						).createObjectStore('translations', {
-							keyPath: 'id',
-							autoIncrement: true,
-						});
-					}
-					default: {
-						// Prepare data
-						const translations: TranslationsDBSchemeVersions[1]['translations']['value'][] =
-							[];
-						if (isMigrationNeeded) {
-							const entries = await tx
-								.objectStore('translations' as any)
-								.getAll();
-							for (const translation of entries) {
-								// TODO: add validation data
-								const { from, to, text, translate, date } = translation;
-
-								translations.push({
-									timestamp: date,
-									translation: {
-										from,
-										to,
-										originalText: text,
-										translatedText: translate,
-									},
-								});
-							}
-
-							db.deleteObjectStore(translationsStoreName);
-						}
-
-						// Create store
-						const translationsStore = db.createObjectStore(
-							translationsStoreName,
-							{
-								keyPath: 'id',
-								autoIncrement: true,
-							},
-						);
-
-						// `keyPath` with `.` separator: https://w3c.github.io/IndexedDB/#inject-key-into-value
-						translationsStore.createIndex(
-							'originalText',
-							'translation.originalText',
-							{
-								unique: false,
-							},
-						);
-
-						// Insert data
-						if (isMigrationNeeded && translations.length > 0) {
-							for (const translation of translations) {
-								await translationsStore.add(translation);
-							}
-						}
-					}
-				}
-
-				return tx.done;
-			},
+			upgrade: constructTranslationsIDB,
 		});
 	}
 
