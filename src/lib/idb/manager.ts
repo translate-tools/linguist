@@ -4,6 +4,9 @@ import * as IDB from 'idb/with-async-ittr';
  * Object contains constructor for exact IDB version
  */
 export type IDBConstructor<T extends IDB.DBSchema | unknown> = {
+	/**
+	 * IDB version to apply constructor
+	 */
 	version: number;
 	apply: (
 		database: IDB.IDBPDatabase<T>,
@@ -23,6 +26,10 @@ export const configureIDB = <ActualDBSchema>(
 	constructors: IDBConstructor<any>[],
 ): IDB.OpenDBCallbacks<ActualDBSchema>['upgrade'] => {
 	return async (db, prevVersion, currentVersion, transaction) => {
+		// `null` mean IDB will delete https://developer.mozilla.org/en-US/docs/Web/API/IDBVersionChangeEvent/newVersion#value
+		const isDeletionUpgrade = currentVersion === null;
+		if (isDeletionUpgrade) return;
+
 		let isAborted = false;
 		transaction.addEventListener(
 			'abort',
@@ -37,12 +44,14 @@ export const configureIDB = <ActualDBSchema>(
 				throw new Error('IDB constructors array are empty');
 			}
 
-			const isFirstUpdate = prevVersion === 0;
 			const constructorsToUse = constructors
 				// Sort by versions
 				.sort((scheme1, scheme2) => scheme1.version - scheme2.version)
-				// Leave only last version for first update
-				.slice(isFirstUpdate ? -1 : 0);
+				// Remove versions under or equal to previous and over current
+				.filter(
+					(scheme) =>
+						scheme.version > prevVersion && scheme.version <= currentVersion,
+				);
 
 			if (
 				constructorsToUse[constructorsToUse.length - 1].version !== currentVersion
@@ -52,7 +61,7 @@ export const configureIDB = <ActualDBSchema>(
 				);
 			}
 
-			let migrateFrom: number | null = null;
+			let migrateFrom: number | null = prevVersion;
 			for (const scheme of constructorsToUse) {
 				if (isAborted) {
 					throw new Error('Update transaction was aborted');
