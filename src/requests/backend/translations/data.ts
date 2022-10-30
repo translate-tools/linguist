@@ -1,5 +1,7 @@
 import * as IDB from 'idb/with-async-ittr';
 import { isEqual } from 'lodash';
+import * as D from 'io-ts/Decoder';
+import { isRight } from 'fp-ts/Either';
 
 import { type } from '../../../lib/types';
 import { IDBConstructor, configureIDB } from '../../../lib/idb/manager';
@@ -93,15 +95,28 @@ const scheme1: IDBConstructor<IDB.DBSchema & TranslationsDBSchemeVersions[1]> = 
 const scheme2: IDBConstructor<TranslationsDBSchema> = {
 	version: 2,
 	apply: async (db, { transaction: tx, migrateFrom }) => {
-		const isMigrationNeeded = migrateFrom !== null;
+		const isMigrationNeeded = migrateFrom === 1;
 
 		// Prepare data
-		const translations: TranslationsDBSchemeVersions[1]['translations']['value'][] =
+		const translations: TranslationsDBSchemeVersions[2]['translations']['value'][] =
 			[];
 		if (isMigrationNeeded) {
+			// TODO: use pipeline and `fold` function: https://github.com/gcanti/io-ts/blob/master/Decoder.md#model
+			const translationType = D.struct({
+				from: D.string,
+				to: D.string,
+				text: D.string,
+				translate: D.string,
+				date: D.number,
+			});
+
 			const entries = await tx.objectStore('translations' as any).getAll();
 			for (const translation of entries) {
-				// TODO: add validation data
+				// Skip invalid data
+				if (!isRight(translationType.decode(translation))) {
+					continue;
+				}
+
 				const { from, to, text, translate, date } = translation;
 
 				translations.push({
