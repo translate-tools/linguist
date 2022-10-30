@@ -1,9 +1,7 @@
 import * as IDB from 'idb/with-async-ittr';
 import { isEqual } from 'lodash';
-import * as D from 'io-ts/Decoder';
-import { isRight } from 'fp-ts/Either';
 
-import { type } from '../../../lib/types';
+import { decodeStruct, type } from '../../../lib/types';
 import { IDBConstructor, configureIDB } from '../../../lib/idb/manager';
 import { DeepPartial } from '../../../types/lib';
 import { ITranslation, TranslationType } from '../../../types/translation/Translation';
@@ -101,23 +99,23 @@ const scheme2: IDBConstructor<TranslationsDBSchema> = {
 		const translations: TranslationsDBSchemeVersions[2]['translations']['value'][] =
 			[];
 		if (isMigrationNeeded) {
-			// TODO: use pipeline and `fold` function: https://github.com/gcanti/io-ts/blob/master/Decoder.md#model
-			const translationType = D.struct({
-				from: D.string,
-				to: D.string,
-				text: D.string,
-				translate: D.string,
-				date: D.number,
+			const translationType = type.type({
+				from: type.string,
+				to: type.string,
+				text: type.string,
+				translate: type.string,
+				date: type.number,
 			});
 
 			const entries = await tx.objectStore('translations' as any).getAll();
 			for (const translation of entries) {
 				// Skip invalid data
-				if (!isRight(translationType.decode(translation))) {
+				const translationCodecResult = decodeStruct(translationType, translation);
+				if (translationCodecResult.errors !== null) {
 					continue;
 				}
 
-				const { from, to, text, translate, date } = translation;
+				const { from, to, text, translate, date } = translationCodecResult.data;
 
 				translations.push({
 					timestamp: date,
