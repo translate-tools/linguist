@@ -19,6 +19,7 @@ export type IDBConstructor<T extends IDB.DBSchema | unknown> = {
 	) => any;
 };
 
+// TODO: return IDB hooks, latest scheme version
 /**
  * Configure IDB constructor to update version
  */

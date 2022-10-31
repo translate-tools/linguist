@@ -1,10 +1,12 @@
 import * as IDB from 'idb/with-async-ittr';
 import { isEqual } from 'lodash';
 
-import { decodeStruct, type } from '../../../lib/types';
-import { IDBConstructor, configureIDB } from '../../../lib/idb/manager';
+import { type } from '../../../lib/types';
+import { configureIDB } from '../../../lib/idb/manager';
 import { DeepPartial } from '../../../types/lib';
 import { ITranslation, TranslationType } from '../../../types/translation/Translation';
+import { IDBTranslationSchemes } from './idb/schema';
+import { IDBTranslationsSchemaV2 } from './idb/schema/v2';
 
 // TODO: move to utils
 /**
@@ -53,112 +55,21 @@ export const TranslationEntryWithKeyType = type.type({
 
 export type ITranslationEntryWithKey = { key: number; data: ITranslationEntry };
 
-type TranslationsDBSchemeVersions = {
-	1: {
-		translations: {
-			key: number;
-			value: any;
-		};
-	};
-	2: {
-		translations: {
-			key: number;
-			value: ITranslationEntry;
-			indexes: {
-				originalText: string;
-			};
-		};
-	};
-};
-
-export type TranslationsDBSchema = IDB.DBSchema & TranslationsDBSchemeVersions[2];
-
-type DB = IDB.IDBPDatabase<TranslationsDBSchema>;
-
 const translationsStoreName = 'translations';
 
-// TODO: test migration from version 1 to 2
-// TODO: move migrations to another files
-const scheme1: IDBConstructor<IDB.DBSchema & TranslationsDBSchemeVersions[1]> = {
-	version: 1,
-	apply: (db) => {
-		// Create store
-		db.createObjectStore('translations', {
-			keyPath: 'id',
-			autoIncrement: true,
-		});
-	},
-};
+// TODO: add unit tests for IDB migrations
 
-const scheme2: IDBConstructor<TranslationsDBSchema> = {
-	version: 2,
-	apply: async (db, { transaction: tx, migrateFrom }) => {
-		const isMigrationNeeded = migrateFrom === 1;
+type IDBTranslationsSchema = IDBTranslationsSchemaV2;
 
-		// Prepare data
-		const translations: TranslationsDBSchemeVersions[2]['translations']['value'][] =
-			[];
-		if (isMigrationNeeded) {
-			const translationType = type.type({
-				from: type.string,
-				to: type.string,
-				text: type.string,
-				translate: type.string,
-				date: type.number,
-			});
+const constructTranslationsIDB =
+	configureIDB<IDBTranslationsSchema>(IDBTranslationSchemes);
 
-			const entries = await tx.objectStore('translations' as any).getAll();
-			for (const translation of entries) {
-				// Skip invalid data
-				const translationCodecResult = decodeStruct(translationType, translation);
-				if (translationCodecResult.errors !== null) {
-					continue;
-				}
-
-				const { from, to, text, translate, date } = translationCodecResult.data;
-
-				translations.push({
-					timestamp: date,
-					translation: {
-						from,
-						to,
-						originalText: text,
-						translatedText: translate,
-					},
-				});
-			}
-
-			db.deleteObjectStore(translationsStoreName);
-		}
-
-		// Create store
-		const translationsStore = db.createObjectStore(translationsStoreName, {
-			keyPath: 'id',
-			autoIncrement: true,
-		});
-
-		// `keyPath` with `.` separator: https://w3c.github.io/IndexedDB/#inject-key-into-value
-		translationsStore.createIndex('originalText', 'translation.originalText', {
-			unique: false,
-		});
-
-		// Insert data
-		if (isMigrationNeeded && translations.length > 0) {
-			for (const translation of translations) {
-				await translationsStore.add(translation);
-			}
-		}
-	},
-};
-
-const constructTranslationsIDB = configureIDB<TranslationsDBSchema>([scheme1, scheme2]);
-
-let DBInstance: null | DB = null;
+let DBInstance: null | IDB.IDBPDatabase<IDBTranslationsSchema> = null;
 const getDB = async () => {
 	const DBName = 'translations';
 
 	if (DBInstance === null) {
-		DBInstance = await IDB.openDB<TranslationsDBSchema>(DBName, 2, {
+		DBInstance = await IDB.openDB<IDBTranslationsSchema>(DBName, 2, {
 			upgrade: constructTranslationsIDB,
 		});
 	}
