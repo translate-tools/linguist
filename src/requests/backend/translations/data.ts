@@ -1,36 +1,12 @@
 import * as IDB from 'idb/with-async-ittr';
-import { isEqual } from 'lodash';
 
 import { type } from '../../../lib/types';
 import { configureIDB } from '../../../lib/idb/manager';
+import { isEqualIntersection } from '../../../lib/utils';
 import { DeepPartial } from '../../../types/lib';
 import { ITranslation, TranslationType } from '../../../types/translation/Translation';
 import { IDBTranslationSchemes } from './idb/schema';
 import { IDBTranslationsSchemaV2 } from './idb/schema/v2';
-
-// TODO: move to utils
-/**
- * Check second object contains all properties of first object with equal values
- */
-const isEqualIntersection = (obj1: any, obj2: any): boolean => {
-	// Compare primitive values
-	if (typeof obj1 !== 'object' && typeof obj2 !== 'object') {
-		return obj1 === obj2;
-	}
-
-	const xIsArray = Array.isArray(obj1);
-	const yIsArray = Array.isArray(obj2);
-
-	// Compare arrays
-	if (xIsArray && yIsArray) {
-		return isEqual(obj1, obj2);
-	} else if (xIsArray || yIsArray) {
-		return false;
-	}
-
-	// Compare objects
-	return Object.keys(obj1).every((key) => isEqualIntersection(obj1[key], obj2[key]));
-};
 
 export type ITranslationEntry = {
 	translation: ITranslation;
