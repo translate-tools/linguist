@@ -3,6 +3,7 @@ import * as IDB from 'idb/with-async-ittr';
 import { type } from '../../../lib/types';
 import { configureIDB } from '../../../lib/idb/manager';
 import { isEqualIntersection } from '../../../lib/utils';
+
 import { DeepPartial } from '../../../types/lib';
 import { ITranslation, TranslationType } from '../../../types/translation/Translation';
 import { IDBTranslationSchemes } from './idb/schema';
@@ -13,6 +14,8 @@ export type ITranslationEntry = {
 	timestamp: number;
 	translator?: string;
 };
+
+export type ITranslationEntryWithKey = { key: number; data: ITranslationEntry };
 
 export const TranslationEntryType = type.intersection([
 	type.type({
@@ -28,8 +31,6 @@ export const TranslationEntryWithKeyType = type.type({
 	key: type.number,
 	data: TranslationEntryType,
 });
-
-export type ITranslationEntryWithKey = { key: number; data: ITranslationEntry };
 
 const translationsStoreName = 'translations';
 
