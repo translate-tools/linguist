@@ -41,6 +41,7 @@ type IDBTranslationsSchema = IDBTranslationsSchemaV2;
 const constructTranslationsIDB =
 	configureIDB<IDBTranslationsSchema>(IDBTranslationSchemes);
 
+// TODO: add tests for this storage
 let DBInstance: null | IDB.IDBPDatabase<IDBTranslationsSchema> = null;
 const getDB = async () => {
 	const DBName = 'translations';

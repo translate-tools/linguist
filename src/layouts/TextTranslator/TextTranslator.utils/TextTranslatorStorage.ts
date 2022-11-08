@@ -5,6 +5,8 @@ import { tryDecode, type } from '../../../lib/types';
 import { LangCodeWithAuto, LangCode } from '../../../types/runtime';
 import { AbstractVersionedStorage } from '../../../types/utils';
 
+// TODO: add tests for this storage
+// TODO: migrate data
 export class TextTranslatorStorage extends AbstractVersionedStorage {
 	static publicName = 'TextTranslatorStorage';
 	static storageVersion = 2;

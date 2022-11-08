@@ -19,7 +19,6 @@ export type Middleware<T extends {}> = (newProps: Partial<T>, currentProps: T) =
 
 type ConfigType = t.TypeOfProps<typeof AppConfig.props>;
 
-// <T extends t.Props = any>
 export class ConfigStorage extends AbstractVersionedStorage {
 	static publicName = 'ConfigStorage';
 	static storageVersion = 3;
