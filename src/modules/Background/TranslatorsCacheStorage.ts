@@ -28,18 +28,37 @@ interface Options {
 
 const DBName = 'translatorsCache';
 
+// TODO: add tests for this storage
 // TODO: refactor me
+/**
+ * Data are stores in IDB
+ */
 export class TranslatorsCacheStorage extends AbstractVersionedStorage {
 	static publicName = 'TranslatorCache';
-	static storageVersion = 2;
+	static storageVersion = 3;
 
+	/**
+	 * An update strategy for this storage is deleting IDB database and re-creating with new structure
+	 *
+	 * It's because DB contains only temporary data and IDB version increase while add each new translator,
+	 * so we can't migrate data by IDB version, because it didn't reflect an IDB structure, but only number of updates.
+	 */
 	public static async updateStorageVersion(prevVersion: number | null) {
-		// Remove old databases
+		// Remove legacy databases
 		if (prevVersion === null || prevVersion < 2) {
 			for (const translatorName in translatorModules) {
 				// Format is `translator_` + translator identifier (not its name)
-				const DBName = 'translator_' + translatorName;
+				const LegacyDBName = 'translator_' + translatorName;
+				await IDB.deleteDB(LegacyDBName);
+			}
+			return;
+		}
+
+		switch (prevVersion) {
+			case 2: {
+				// Drop table with cache, to re-create with new structure
 				await IDB.deleteDB(DBName);
+				break;
 			}
 		}
 	}
@@ -152,6 +171,7 @@ export class TranslatorsCacheStorage extends AbstractVersionedStorage {
 	}
 
 	public clear() {
+		// TODO: remove DB instead of clear
 		return this.getDB().then((db) => db.clear(this.tableName as TableName));
 	}
 }
