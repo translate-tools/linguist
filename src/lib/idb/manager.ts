@@ -25,7 +25,7 @@ export type IDBConstructor<T extends IDB.DBSchema | unknown> = {
  */
 export const configureIDB = <ActualDBSchema>(
 	constructors: IDBConstructor<any>[],
-): IDB.OpenDBCallbacks<ActualDBSchema>['upgrade'] => {
+): Exclude<IDB.OpenDBCallbacks<ActualDBSchema>['upgrade'], undefined> => {
 	return async (db, prevVersion, currentVersion, transaction) => {
 		// `null` mean IDB will delete https://developer.mozilla.org/en-US/docs/Web/API/IDBVersionChangeEvent/newVersion#value
 		const isDeletionUpgrade = currentVersion === null;
