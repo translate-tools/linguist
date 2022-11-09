@@ -1,12 +1,18 @@
 import * as translationsStore from './data';
 
-// import { IDBFactory } from "fake-indexeddb";
-// const wipeIDB = () => {
-// 	// Whenever you want a fresh indexedDB
-// 	indexedDB = new IDBFactory();
-// };
+import { IDBFactory } from 'fake-indexeddb';
+const wipeIDB = () => {
+	// Whenever you want a fresh indexedDB
+	indexedDB = new IDBFactory();
+};
 
-test('translations data handler', async () => {
+// Close IDB and wipe to clear test
+beforeEach(() => {
+	translationsStore.closeDB();
+	wipeIDB();
+});
+
+test('translations model CRUD operations', async () => {
 	const translations = Array(5)
 		.fill(null)
 		.map((_, index) => ({
@@ -43,4 +49,8 @@ test('translations data handler', async () => {
 
 	// Check equality with original data
 	expect(entries).toEqual(translations);
+});
+
+test('TODO: translations model migrations', async () => {
+	expect(true).toEqual(true);
 });

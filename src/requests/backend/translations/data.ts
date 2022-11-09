@@ -55,6 +55,14 @@ const getDB = async () => {
 	return DBInstance;
 };
 
+export const closeDB = () => {
+	if (DBInstance !== null) {
+		DBInstance.close();
+	}
+
+	DBInstance = null;
+};
+
 export const addEntry = async (entry: ITranslationEntry) => {
 	const db = await getDB();
 	return db.add(translationsStoreName, entry);
