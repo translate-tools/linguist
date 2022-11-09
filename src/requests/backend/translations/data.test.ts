@@ -26,7 +26,8 @@ test('translations data handler', async () => {
 		identifiers.push(id);
 	}
 
-	expect(identifiers.length).toBe(translations.length);
+	const expectedIdentifiersList = translations.map((_, index) => index + 1);
+	expect(identifiers).toEqual(expectedIdentifiersList);
 
 	const entriesWithKeys = await translationsStore.getEntries(undefined, undefined, {
 		order: 'asc',
