@@ -6,6 +6,7 @@
 	"author": "Vitonsky <https://github.com/vitonsky>",
 	"scripts": {
 		"test": "jest",
+		"test-fast": "TEST_FAST=true jest --maxWorkers=4",
 		"clean": "rm -rf ./build",
 		"packAll": "cd build && ../scripts/zipAll.sh && cd ..",
 		"test:buildArchives": "cd build && ../scripts/testBuildArchives.sh && cd ..",
