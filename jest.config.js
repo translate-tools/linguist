@@ -17,5 +17,5 @@ module.exports = {
 
 	preset: 'ts-jest/presets/js-with-ts-esm',
 
-	setupFiles: ['fake-indexeddb/auto'],
+	setupFiles: ['fake-indexeddb/auto', 'jest-webextension-mock'],
 };
