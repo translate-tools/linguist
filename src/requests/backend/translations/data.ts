@@ -32,16 +32,13 @@ export const TranslationEntryWithKeyType = type.type({
 	data: TranslationEntryType,
 });
 
-const translationsStoreName = 'translations';
-
-// TODO: add unit tests for IDB migrations
+export const translationsStoreName = 'translations';
 
 type IDBTranslationsSchema = IDBTranslationsSchemaV2;
 
 const constructTranslationsIDB =
 	configureIDB<IDBTranslationsSchema>(IDBTranslationSchemes);
 
-// TODO: migrate data
 let DBInstance: null | IDB.IDBPDatabase<IDBTranslationsSchema> = null;
 const getDB = async () => {
 	const DBName = 'translations';
@@ -106,6 +103,7 @@ export const flush = async () => {
 	await transaction.done;
 };
 
+// TODO: refactor it to use object with options
 export const getEntries = async (
 	from?: number,
 	limit?: number,

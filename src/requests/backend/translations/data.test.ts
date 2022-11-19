@@ -1,6 +1,8 @@
+import * as IDB from 'idb/with-async-ittr';
 import * as translationsStore from './data';
 
 import { IDBFactory } from 'fake-indexeddb';
+import { translationsStoreName } from './data';
 const wipeIDB = () => {
 	// Whenever you want a fresh indexedDB
 	indexedDB = new IDBFactory();
@@ -12,7 +14,7 @@ beforeEach(() => {
 	wipeIDB();
 });
 
-test('translations model CRUD operations', async () => {
+test('translations data CRUD operations', async () => {
 	const translations = Array(5)
 		.fill(null)
 		.map((_, index) => ({
@@ -51,6 +53,57 @@ test('translations model CRUD operations', async () => {
 	expect(entries).toEqual(translations);
 });
 
-test('TODO: translations model migrations', async () => {
-	expect(true).toEqual(true);
+describe('translations data migrations', () => {
+	const translationsV1 = Array(5)
+		.fill(null)
+		.map((_, index) => ({
+			from: 'en',
+			to: 'de',
+			text: 'text ' + (index + 1),
+			translate: 'text ' + (index + 1),
+			date: new Date().getTime(),
+		}));
+
+	const initDBWithVersion1 = async () => {
+		// Init DB
+		const db = await IDB.openDB<any>(translationsStoreName, 1, {
+			upgrade(db) {
+				db.createObjectStore('translations', {
+					keyPath: 'id',
+					autoIncrement: true,
+				});
+			},
+		});
+
+		// Add entries
+		for (const translation of translationsV1) {
+			await db.add('translations', translation);
+		}
+
+		// Close to unlock
+		db.close();
+	};
+
+	test('migrate from version 1 to latest', async () => {
+		await initDBWithVersion1();
+
+		const entriesWithKeys = await translationsStore.getEntries(undefined, undefined, {
+			order: 'asc',
+		});
+
+		entriesWithKeys.forEach(({ data }, index) => {
+			const mappedData = {
+				date: data.timestamp,
+				from: data.translation.from,
+				to: data.translation.to,
+				text: data.translation.originalText,
+				translate: data.translation.translatedText,
+			};
+
+			const originalData = translationsV1[index];
+			expect(mappedData).toEqual(originalData);
+		});
+
+		expect(entriesWithKeys.length === translationsV1.length);
+	});
 });
