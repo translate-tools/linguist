@@ -13,7 +13,6 @@
 		"noImplicitAny": true,
 		"noImplicitReturns": true,
 		"noImplicitThis": true,
-		"noFallthroughCasesInSwitch": true,
 		"noUnusedLocals": true,
 		"noUnusedParameters": true,
 		"declaration": false,
@@ -24,17 +23,11 @@
 		"preserveConstEnums": true,
 		"removeComments": false,
 		"sourceMap": true,
-		"lib": [
-			"es2020",
-			"dom"
-		],
+		"lib": ["es2020", "dom"],
 		"rootDir": ".",
 		"jsx": "react",
 		"allowJs": true,
 		"resolveJsonModule": true
 	},
-	"include": [
-		"src/**/*.ts",
-		"src/**/*.tsx"
-	]
+	"include": ["src/**/*.ts", "src/**/*.tsx"]
 }
