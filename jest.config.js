@@ -17,5 +17,10 @@ module.exports = {
 
 	preset: 'ts-jest/presets/js-with-ts-esm',
 
-	setupFiles: ['fake-indexeddb/auto', 'jest-webextension-mock'],
+	resetMocks: false,
+	setupFiles: [
+		'jest-localstorage-mock',
+		'fake-indexeddb/auto',
+		'jest-webextension-mock',
+	],
 };

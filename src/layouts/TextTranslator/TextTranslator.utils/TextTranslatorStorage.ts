@@ -6,7 +6,6 @@ import { LangCodeWithAuto, LangCode } from '../../../types/runtime';
 import { AbstractVersionedStorage } from '../../../types/utils';
 
 // TODO: #refactor use not static class. To implement singleton we may export instance of class
-// TODO: add tests for this storage and for migrations
 export class TextTranslatorStorage extends AbstractVersionedStorage {
 	static publicName = 'TextTranslatorStorage';
 	static storageVersion = 3;
