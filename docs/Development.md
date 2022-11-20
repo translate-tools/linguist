@@ -21,3 +21,11 @@ If you change a theme tokens, you also have to compile a theme files: `npm run b
 To debug on android, [see instructions](./AndroidDebug.md).
 
 To make a custom translator, see [translator API](./CustomTranslator.md).
+
+# Tests
+
+When you change code that touch any user data and interact with browser storages (`localStorage`, `indexedDB`, `browser.storage`, etc) or some external API, you must to add or update tests for it.
+
+The common rule is any code that just transform data should be tested.
+
+You may a not add tests for UI, but should add tests for data.
