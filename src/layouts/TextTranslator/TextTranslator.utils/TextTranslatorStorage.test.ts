@@ -1,4 +1,5 @@
 import { browser } from 'webextension-polyfill-ts';
+import { clearAllMocks } from '../../../lib/tests';
 import { TextTranslatorStorage } from './TextTranslatorStorage';
 
 const translatorStorageDataV1 = {
@@ -19,10 +20,7 @@ const expectedData = {
 	},
 } as const;
 
-beforeEach(async () => {
-	localStorage.clear();
-	await browser.storage.local.clear();
-});
+beforeEach(clearAllMocks);
 
 test('TextTranslatorStorage CRUD operations', async () => {
 	const initData = await TextTranslatorStorage.getData();

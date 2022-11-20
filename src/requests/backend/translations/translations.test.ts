@@ -1,17 +1,14 @@
 import * as IDB from 'idb/with-async-ittr';
-import * as translationsStore from './data';
 
-import { IDBFactory } from 'fake-indexeddb';
+import { clearAllMocks } from '../../../lib/tests';
+
+import * as translationsStore from './data';
 import { translationsStoreName } from './data';
-const wipeIDB = () => {
-	// Whenever you want a fresh indexedDB
-	indexedDB = new IDBFactory();
-};
 
 // Close IDB and wipe to clear test
 beforeEach(() => {
 	translationsStore.closeDB();
-	wipeIDB();
+	clearAllMocks();
 });
 
 test('translations data CRUD operations', async () => {
