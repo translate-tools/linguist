@@ -28,7 +28,6 @@ interface Options {
 
 const DBName = 'translatorsCache';
 
-// TODO: add tests for this storage
 // TODO: refactor me
 /**
  * Data are stores in IDB
