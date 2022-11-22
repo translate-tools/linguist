@@ -30,16 +30,18 @@ type UpgradeHandler<T> = Exclude<IDB.OpenDBCallbacks<T>['upgrade'], undefined>;
 /**
  * Configure IDB plan by schemes array
  *
+ * WARNING: to correct typing provide latest scheme as last element in a static array
+ *
  * Plan provide a hooks to manage IDB:
  * - `update` to update IDB version and execute migrations
  */
 export const getIDBPlan = <ActualDBSchema = unknown>(
-	constructors: readonly [...IDBConstructor<any>[], IDBConstructor<ActualDBSchema>],
+	schemes: readonly [...IDBConstructor<any>[], IDBConstructor<ActualDBSchema>],
 ): {
 	latestVersion: number;
 	upgrade: UpgradeHandler<ActualDBSchema>;
 } => {
-	const sortedConstructors = [...constructors].sort(
+	const sortedSchemes = [...schemes].sort(
 		(scheme1, scheme2) => scheme1.version - scheme2.version,
 	);
 
@@ -63,26 +65,24 @@ export const getIDBPlan = <ActualDBSchema = unknown>(
 		);
 
 		try {
-			if (constructors.length === 0) {
+			if (schemes.length === 0) {
 				throw new Error('IDB constructors array are empty');
 			}
 
 			// Remove versions under or equal to previous and over current
-			const constructorsToUse = sortedConstructors.filter(
+			const schemesToUse = sortedSchemes.filter(
 				(scheme) =>
 					scheme.version > prevVersion && scheme.version <= currentVersion,
 			);
 
-			if (
-				constructorsToUse[constructorsToUse.length - 1].version !== currentVersion
-			) {
+			if (schemesToUse[schemesToUse.length - 1].version !== currentVersion) {
 				throw new Error(
 					'Not found constructor to update IDB to version ' + currentVersion,
 				);
 			}
 
 			let migrateFrom: number | null = prevVersion;
-			for (const scheme of constructorsToUse) {
+			for (const scheme of schemesToUse) {
 				if (isAborted) {
 					throw new Error('Update transaction was aborted');
 				}
@@ -108,7 +108,7 @@ export const getIDBPlan = <ActualDBSchema = unknown>(
 	};
 
 	return {
-		latestVersion: sortedConstructors[sortedConstructors.length - 1].version,
+		latestVersion: sortedSchemes[sortedSchemes.length - 1].version,
 		upgrade,
 	};
 };
