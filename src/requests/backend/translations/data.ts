@@ -1,13 +1,12 @@
 import * as IDB from 'idb/with-async-ittr';
 
 import { type } from '../../../lib/types';
-import { configureIDB } from '../../../lib/idb/manager';
+import { configureIDB, ExtractSchemeFromIDBConstructor } from '../../../lib/idb/manager';
 import { isEqualIntersection } from '../../../lib/utils';
 
 import { DeepPartial } from '../../../types/lib';
 import { ITranslation, TranslationType } from '../../../types/translation/Translation';
 import { IDBTranslationSchemes } from './idb/schema';
-import { IDBTranslationsSchemaV2 } from './idb/schema/v2';
 
 export type ITranslationEntry = {
 	translation: ITranslation;
@@ -34,17 +33,16 @@ export const TranslationEntryWithKeyType = type.type({
 
 export const translationsStoreName = 'translations';
 
-type IDBTranslationsSchema = IDBTranslationsSchemaV2;
+const constructTranslationsIDB = configureIDB(IDBTranslationSchemes);
 
-const constructTranslationsIDB =
-	configureIDB<IDBTranslationsSchema>(IDBTranslationSchemes);
-
-let DBInstance: null | IDB.IDBPDatabase<IDBTranslationsSchema> = null;
+let DBInstance: null | IDB.IDBPDatabase<
+	ExtractSchemeFromIDBConstructor<typeof constructTranslationsIDB>
+> = null;
 const getDB = async () => {
 	const DBName = 'translations';
 
 	if (DBInstance === null) {
-		DBInstance = await IDB.openDB<IDBTranslationsSchema>(DBName, 2, {
+		DBInstance = await IDB.openDB(DBName, 2, {
 			upgrade: constructTranslationsIDB,
 		});
 	}

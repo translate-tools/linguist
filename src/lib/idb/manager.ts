@@ -19,12 +19,19 @@ export type IDBConstructor<T extends IDB.DBSchema | unknown> = {
 	) => any;
 };
 
+export type ExtractSchemeFromIDBConstructor<T> = T extends (
+	db: IDB.IDBPDatabase<infer X>,
+	...params: any[]
+) => any
+	? X
+	: never;
+
 // TODO: return IDB hooks, latest scheme version
 /**
  * Configure IDB constructor to update version
  */
-export const configureIDB = <ActualDBSchema>(
-	constructors: IDBConstructor<any>[],
+export const configureIDB = <ActualDBSchema = unknown>(
+	constructors: readonly [...IDBConstructor<any>[], IDBConstructor<ActualDBSchema>],
 ): Exclude<IDB.OpenDBCallbacks<ActualDBSchema>['upgrade'], undefined> => {
 	return async (db, prevVersion, currentVersion, transaction) => {
 		// `null` mean IDB will delete https://developer.mozilla.org/en-US/docs/Web/API/IDBVersionChangeEvent/newVersion#value
@@ -45,7 +52,7 @@ export const configureIDB = <ActualDBSchema>(
 				throw new Error('IDB constructors array are empty');
 			}
 
-			const constructorsToUse = constructors
+			const constructorsToUse = [...constructors]
 				// Sort by versions
 				.sort((scheme1, scheme2) => scheme1.version - scheme2.version)
 				// Remove versions under or equal to previous and over current
