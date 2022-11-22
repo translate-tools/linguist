@@ -19,21 +19,36 @@ export type IDBConstructor<T extends IDB.DBSchema | unknown> = {
 	) => any;
 };
 
-export type ExtractSchemeFromIDBConstructor<T> = T extends (
-	db: IDB.IDBPDatabase<infer X>,
-	...params: any[]
-) => any
+export type ExtractSchemeFromIDBConstructor<T> = T extends {
+	upgrade: (db: IDB.IDBPDatabase<infer X>, ...params: any[]) => any;
+}
 	? X
 	: never;
 
-// TODO: return IDB hooks, latest scheme version
+type UpgradeHandler<T> = Exclude<IDB.OpenDBCallbacks<T>['upgrade'], undefined>;
+
 /**
- * Configure IDB constructor to update version
+ * Configure IDB plan by schemes array
+ *
+ * Plan provide a hooks to manage IDB:
+ * - `update` to update IDB version and execute migrations
  */
-export const configureIDB = <ActualDBSchema = unknown>(
+export const getIDBPlan = <ActualDBSchema = unknown>(
 	constructors: readonly [...IDBConstructor<any>[], IDBConstructor<ActualDBSchema>],
-): Exclude<IDB.OpenDBCallbacks<ActualDBSchema>['upgrade'], undefined> => {
-	return async (db, prevVersion, currentVersion, transaction) => {
+): {
+	latestVersion: number;
+	upgrade: UpgradeHandler<ActualDBSchema>;
+} => {
+	const sortedConstructors = [...constructors].sort(
+		(scheme1, scheme2) => scheme1.version - scheme2.version,
+	);
+
+	const upgrade: UpgradeHandler<ActualDBSchema> = async (
+		db,
+		prevVersion,
+		currentVersion,
+		transaction,
+	) => {
 		// `null` mean IDB will delete https://developer.mozilla.org/en-US/docs/Web/API/IDBVersionChangeEvent/newVersion#value
 		const isDeletionUpgrade = currentVersion === null;
 		if (isDeletionUpgrade) return;
@@ -52,14 +67,11 @@ export const configureIDB = <ActualDBSchema = unknown>(
 				throw new Error('IDB constructors array are empty');
 			}
 
-			const constructorsToUse = [...constructors]
-				// Sort by versions
-				.sort((scheme1, scheme2) => scheme1.version - scheme2.version)
-				// Remove versions under or equal to previous and over current
-				.filter(
-					(scheme) =>
-						scheme.version > prevVersion && scheme.version <= currentVersion,
-				);
+			// Remove versions under or equal to previous and over current
+			const constructorsToUse = sortedConstructors.filter(
+				(scheme) =>
+					scheme.version > prevVersion && scheme.version <= currentVersion,
+			);
 
 			if (
 				constructorsToUse[constructorsToUse.length - 1].version !== currentVersion
@@ -93,5 +105,10 @@ export const configureIDB = <ActualDBSchema = unknown>(
 
 			throw error;
 		}
+	};
+
+	return {
+		latestVersion: sortedConstructors[sortedConstructors.length - 1].version,
+		upgrade,
 	};
 };

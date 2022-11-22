@@ -1,7 +1,7 @@
 import * as IDB from 'idb/with-async-ittr';
 
 import { type } from '../../../lib/types';
-import { configureIDB, ExtractSchemeFromIDBConstructor } from '../../../lib/idb/manager';
+import { getIDBPlan, ExtractSchemeFromIDBConstructor } from '../../../lib/idb/manager';
 import { isEqualIntersection } from '../../../lib/utils';
 
 import { DeepPartial } from '../../../types/lib';
@@ -33,17 +33,17 @@ export const TranslationEntryWithKeyType = type.type({
 
 export const translationsStoreName = 'translations';
 
-const constructTranslationsIDB = configureIDB(IDBTranslationSchemes);
+const translationsIDBPlan = getIDBPlan(IDBTranslationSchemes);
 
 let DBInstance: null | IDB.IDBPDatabase<
-	ExtractSchemeFromIDBConstructor<typeof constructTranslationsIDB>
+	ExtractSchemeFromIDBConstructor<typeof translationsIDBPlan>
 > = null;
 const getDB = async () => {
 	const DBName = 'translations';
 
 	if (DBInstance === null) {
-		DBInstance = await IDB.openDB(DBName, 2, {
-			upgrade: constructTranslationsIDB,
+		DBInstance = await IDB.openDB(DBName, translationsIDBPlan.latestVersion, {
+			upgrade: translationsIDBPlan.upgrade,
 		});
 	}
 
