@@ -87,7 +87,9 @@ export const getIDBPlan = <ActualDBSchema = unknown>(
 					throw new Error('Update transaction was aborted');
 				}
 
-				await scheme.apply(db, {
+				// Cast to any, because we apply several schemes to one DB
+				await scheme.apply(db as any, {
+					// Cast type because we can provide one transaction to several schemes
 					transaction: transaction as any,
 					oldVersion: prevVersion,
 					newVersion: currentVersion,
