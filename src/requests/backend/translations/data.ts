@@ -3,8 +3,8 @@ import * as IDB from 'idb/with-async-ittr';
 import { type } from '../../../lib/types';
 import { getIDBPlan, ExtractSchemeFromIDBConstructor } from '../../../lib/idb/manager';
 import { isEqualIntersection } from '../../../lib/utils';
+import { DeepPartial } from '../../../types/utils';
 
-import { DeepPartial } from '../../../types/lib';
 import { ITranslation, TranslationType } from '../../../types/translation/Translation';
 import { IDBTranslationSchemes } from './idb/schema';
 

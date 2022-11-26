@@ -60,3 +60,12 @@ export abstract class AbstractVersionedStorage {
 
 	public static async updateStorageVersion(_prevVersion: number | null) {}
 }
+
+/**
+ * Make all nested properties of object are optional
+ */
+export type DeepPartial<T> = T extends object
+	? {
+			[P in keyof T]?: DeepPartial<T[P]>;
+	  }
+	: T;
