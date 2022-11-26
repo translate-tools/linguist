@@ -1,6 +1,6 @@
 export * from 'react-elegant-ui/esm/components/Select/Select.bundle/desktop';
 
-import { withRegistry } from '@bem-react/di';
+import { withRegistry } from 'react-elegant-ui/esm/lib/di';
 
 import { compose, composeU, ExtractProps } from 'react-elegant-ui/esm/lib/compose';
 

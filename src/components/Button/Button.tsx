@@ -1,4 +1,4 @@
-import { useComponentRegistry } from '@bem-react/di';
+import { useComponentRegistry } from 'react-elegant-ui/esm/lib/di';
 import { usePress } from '@react-aria/interactions';
 import { mergeProps } from '@react-aria/utils';
 import React, { FC } from 'react';

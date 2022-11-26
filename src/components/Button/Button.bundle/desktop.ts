@@ -1,5 +1,5 @@
 import { compose, composeU, ExtractProps } from 'react-elegant-ui/esm/lib/compose';
-import { withRegistry } from '@bem-react/di';
+import { withRegistry } from 'react-elegant-ui/esm/lib/di';
 
 import { Button as PatchedButton } from '../Button';
 

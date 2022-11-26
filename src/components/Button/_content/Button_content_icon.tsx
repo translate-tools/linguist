@@ -1,6 +1,6 @@
 import React from 'react';
 import { withHOCConstructor } from 'react-elegant-ui/esm/lib/compose';
-import { useComponentRegistry } from '@bem-react/di';
+import { useComponentRegistry } from 'react-elegant-ui/esm/lib/di';
 
 import { IButtonProps, cnButton } from 'react-elegant-ui/esm/components/Button/Button';
 import { IButtonDesktopRegistry } from 'react-elegant-ui/esm/components/Button/Button.registry/desktop';

@@ -1,6 +1,6 @@
 export * from 'react-elegant-ui/esm/components/Select/Select.registry/desktop';
 
-import { Registry } from '@bem-react/di';
+import { Registry } from 'react-elegant-ui/esm/lib/di';
 
 import { cnSelect } from 'react-elegant-ui/esm/components/Select/Select';
 import { withDefaultProps } from 'react-elegant-ui/esm/hocs/withDefaultProps';
