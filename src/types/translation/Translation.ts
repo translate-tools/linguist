@@ -6,15 +6,13 @@ import { type } from '../../lib/types';
 export type ITranslation = {
 	from: string;
 	to: string;
-	// TODO: rename to `originalText`
-	text: string;
-	// TODO: rename to `translatedText`
-	translate: string;
+	originalText: string;
+	translatedText: string;
 };
 
 export const TranslationType = type.type({
 	from: type.string,
 	to: type.string,
-	text: type.string,
-	translate: type.string,
+	originalText: type.string,
+	translatedText: type.string,
 });

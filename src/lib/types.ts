@@ -3,6 +3,53 @@ import { isRight } from 'fp-ts/lib/Either';
 
 export const type = t;
 
+// TODO: remove not declared properties
+/**
+ * Try to decode object and return object with data or with errors
+ */
+export function decodeStruct<T>(
+	type: t.Type<T>,
+	data: any,
+):
+	| { data: T; errors: null }
+	| {
+			data: null;
+			errors: Array<{
+				key: string;
+				value: unknown;
+				type: t.Decoder<any, any>;
+				message?: string;
+			}>;
+	  } {
+	const decodeResult = type.decode(data);
+
+	// Return decoded value
+	if (isRight(decodeResult)) {
+		return {
+			data: decodeResult.right,
+			errors: null,
+		};
+	}
+
+	// Build errors object
+	return {
+		data: null,
+		errors: decodeResult.left.map((error) => {
+			// Remove root object from context tree
+			const context = error.context.slice(1);
+			const targetPropertyContext = context[context.length - 1];
+
+			return {
+				key: context.map(({ key }) => key).join('.'),
+				value: error.value,
+				type: targetPropertyContext.type,
+				message: error.message,
+			};
+		}),
+	};
+}
+
+// TODO: decode primitive values and generate reports like in `decodeStruct`
 /**
  * Helper for decode data by type
  */
@@ -14,6 +61,7 @@ export function tryDecode<T>(type: t.Type<T>, data: any, defaultData?: T) {
 		return decodedData.right;
 	}
 
+	// TODO: remove this
 	if (arguments.length >= 3) {
 		return defaultData as T;
 	}
@@ -24,6 +72,8 @@ export function tryDecode<T>(type: t.Type<T>, data: any, defaultData?: T) {
 
 /**
  * Same as `tryDecode` but only for objects and more verbose
+ *
+ * @deprecated: use `decodeStruct` instead and generate exception
  */
 export const tryDecodeObject = <T extends t.Props>(
 	type: t.TypeC<T> | t.PartialC<T>,

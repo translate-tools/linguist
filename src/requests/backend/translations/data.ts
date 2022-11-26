@@ -1,19 +1,25 @@
 import * as IDB from 'idb/with-async-ittr';
 
 import { type } from '../../../lib/types';
-import { ITranslation, TranslationType } from '../../../types/translation/Translation';
+import { getIDBPlan, ExtractSchemeFromIDBConstructor } from '../../../lib/idb/manager';
+import { isEqualIntersection } from '../../../lib/utils';
+import { DeepPartial } from '../../../types/utils';
 
-export type ITranslationEntry = ITranslation & {
-	date: number;
+import { ITranslation, TranslationType } from '../../../types/translation/Translation';
+import { IDBTranslationSchemes } from './idb/schema';
+
+export type ITranslationEntry = {
+	translation: ITranslation;
+	timestamp: number;
 	translator?: string;
 };
 
-// TODO: refactor: keep translation data in property `translation`
+export type ITranslationEntryWithKey = { key: number; data: ITranslationEntry };
+
 export const TranslationEntryType = type.intersection([
-	TranslationType,
 	type.type({
-		// TODO: rename to `timestamp`
-		date: type.number,
+		translation: TranslationType,
+		timestamp: type.number,
 	}),
 	type.partial({
 		translator: type.union([type.string, type.undefined]),
@@ -25,73 +31,61 @@ export const TranslationEntryWithKeyType = type.type({
 	data: TranslationEntryType,
 });
 
-export type ITranslationEntryWithKey = { key: number; data: ITranslationEntry };
+export const translationsStoreName = 'translations';
 
-export interface DBSchema extends IDB.DBSchema {
-	translations: {
-		key: number;
-		value: ITranslationEntry;
-		indexes: {
-			text: string;
-		};
-	};
-}
+const translationsIDBPlan = getIDBPlan(IDBTranslationSchemes);
 
-type DB = IDB.IDBPDatabase<DBSchema>;
-
-let DBInstance: null | DB = null;
+let DBInstance: null | IDB.IDBPDatabase<
+	ExtractSchemeFromIDBConstructor<typeof translationsIDBPlan>
+> = null;
 const getDB = async () => {
 	const DBName = 'translations';
 
 	if (DBInstance === null) {
-		DBInstance = await IDB.openDB<DBSchema>(DBName, 1, {
-			upgrade(db) {
-				const store = db.createObjectStore('translations', {
-					keyPath: 'id',
-					autoIncrement: true,
-				});
-
-				store.createIndex('text', 'text', { unique: false });
-			},
+		DBInstance = await IDB.openDB(DBName, translationsIDBPlan.latestVersion, {
+			upgrade: translationsIDBPlan.upgrade,
 		});
 	}
 
 	return DBInstance;
 };
 
+export const closeDB = () => {
+	if (DBInstance !== null) {
+		DBInstance.close();
+	}
+
+	DBInstance = null;
+};
+
 export const addEntry = async (entry: ITranslationEntry) => {
 	const db = await getDB();
-	return db.add('translations', entry);
+	return db.add(translationsStoreName, entry);
 };
 
 export const deleteEntry = async (entryId: number) => {
 	const db = await getDB();
-	return db.delete('translations', entryId);
+	return db.delete(translationsStoreName, entryId);
 };
 
 export const getEntry = async (entryId: number) => {
 	const db = await getDB();
-	return db.get('translations', entryId);
+	return db.get(translationsStoreName, entryId);
 };
 
-export const deleteEntries = async (
-	entry: Pick<ITranslationEntry, 'from' | 'to' | 'text' | 'translate'>,
-) => {
+export const deleteEntries = async (entry: ITranslation) => {
 	const db = await getDB();
-	const transaction = await db.transaction('translations', 'readwrite');
+	const transaction = await db.transaction(translationsStoreName, 'readwrite');
 
 	// Delete
-	const index = await transaction.objectStore('translations').index('text');
-	for await (const cursor of index.iterate(entry.text)) {
+	const index = await transaction
+		.objectStore(translationsStoreName)
+		.index('originalText');
+	for await (const cursor of index.iterate(entry.originalText)) {
 		const currentEntry = cursor.value;
 
-		console.warn('del dbg: currentEntry', currentEntry);
-
-		if (
-			(Object.keys(entry) as (keyof typeof entry)[]).every(
-				(key) => entry[key] === currentEntry[key],
-			)
-		) {
+		const isMatchProps = isEqualIntersection(entry, currentEntry.translation);
+		if (isMatchProps) {
 			await cursor.delete();
 		}
 	}
@@ -101,12 +95,13 @@ export const deleteEntries = async (
 
 export const flush = async () => {
 	const db = await getDB();
-	const transaction = await db.transaction('translations', 'readwrite');
+	const transaction = await db.transaction(translationsStoreName, 'readwrite');
 
 	await transaction.store.delete(IDBKeyRange.lowerBound(0));
 	await transaction.done;
 };
 
+// TODO: refactor it to use object with options
 export const getEntries = async (
 	from?: number,
 	limit?: number,
@@ -116,7 +111,7 @@ export const getEntries = async (
 
 	const db = await getDB();
 
-	const transaction = await db.transaction('translations', 'readonly');
+	const transaction = await db.transaction(translationsStoreName, 'readonly');
 
 	const entries: ITranslationEntryWithKey[] = [];
 
@@ -151,22 +146,27 @@ export const getEntries = async (
 	return entries;
 };
 
-export const findEntry = async (entry: Partial<ITranslationEntry>) => {
+export const findEntry = async (entryPropsToSearch: DeepPartial<ITranslationEntry>) => {
 	const db = await getDB();
-	const transaction = await db.transaction('translations', 'readonly');
+	const transaction = await db.transaction(translationsStoreName, 'readonly');
 
 	let result: ITranslationEntryWithKey | null = null;
 
+	const originalText = entryPropsToSearch?.translation?.originalText;
+	if (originalText === undefined) {
+		throw new Error('Parameter `originalText` is required to search');
+	}
+
+	// TODO: search not only by index
 	// Find
-	const index = await transaction.objectStore('translations').index('text');
-	for await (const cursor of index.iterate(entry.text)) {
+	const index = await transaction
+		.objectStore(translationsStoreName)
+		.index('originalText');
+	for await (const cursor of index.iterate(originalText)) {
 		const currentEntry = cursor.value;
 
-		if (
-			(Object.keys(entry) as (keyof typeof entry)[]).every(
-				(key) => entry[key] === currentEntry[key],
-			)
-		) {
+		const isMatchEntryProps = isEqualIntersection(entryPropsToSearch, currentEntry);
+		if (isMatchEntryProps) {
 			result = {
 				key: cursor.primaryKey,
 				data: currentEntry,

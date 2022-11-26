@@ -23,12 +23,13 @@ import { BookmarksButton } from '../../components/Bookmarks/BookmarksButton';
 import './TextTranslator.css';
 import { addTranslationHistoryEntry } from '../../requests/backend/history/addTranslationHistoryEntry';
 import { TRANSLATION_ORIGIN } from '../../requests/backend/history/constants';
+import { ITranslation } from '../../types/translation/Translation';
 
 export const cnTextTranslator = cn('TextTranslator');
 
 export type TranslationState = {
-	text: string;
-	translate: string | null;
+	originalText: string;
+	translatedText: string | null;
 };
 
 export interface TextTranslatorProps
@@ -75,7 +76,6 @@ export interface TextTranslatorProps
 	isMobile?: boolean;
 }
 
-// TODO: refactor - move favorites and TTS logic to standalone components
 /**
  * Component for translate any text
  */
@@ -95,15 +95,15 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 	enableLanguageSuggestionsAlways = true,
 	isMobile,
 }) => {
-	const [userInput, setUserInput] = useState(lastTranslation?.text ?? '');
+	const [userInput, setUserInput] = useState(lastTranslation?.originalText ?? '');
 	const [translation, setTranslation] = useState<{
 		text: string;
 		original: string;
 	} | null>(
-		lastTranslation !== null && lastTranslation.translate !== null
+		lastTranslation !== null && lastTranslation.translatedText !== null
 			? {
-				original: lastTranslation.text,
-				text: lastTranslation.translate,
+				original: lastTranslation.originalText,
+				text: lastTranslation.translatedText,
 			  }
 			: null,
 	);
@@ -188,8 +188,8 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 					translation: {
 						from,
 						to,
-						text: userInput,
-						translate: response,
+						originalText: userInput,
+						translatedText: response,
 					},
 				});
 			})
@@ -268,8 +268,10 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 			userInput.length === 0
 				? null
 				: {
-					text: userInput,
-					translate: isTranslatedTextRelative ? translation.text : null,
+					originalText: userInput,
+					translatedText: isTranslatedTextRelative
+						? translation.text
+						: null,
 				  },
 		);
 	}, [isTranslatedTextRelative, setLastTranslation, translation, userInput]);
@@ -334,15 +336,15 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 		rememberTranslationState();
 	}, [rememberTranslationState, userInput, translation]);
 
-	const dictionaryData = useMemo(() => {
+	const dictionaryData: ITranslation | null = useMemo(() => {
 		if (errorMessage !== null || translation === null || !isTranslatedTextRelative)
 			return null;
 
 		return {
 			from,
 			to,
-			text: userInput,
-			translate: translation.text,
+			originalText: userInput,
+			translatedText: translation.text,
 		};
 	}, [errorMessage, from, isTranslatedTextRelative, to, translation, userInput]);
 

@@ -30,6 +30,7 @@ import { Page } from '../../../layouts/Page/Page';
 import { PageMessages } from '../../../layouts/Page/Messages/PageMessages';
 
 import './DictionaryPage.css';
+import { ITranslation } from '../../../types/translation/Translation';
 
 export const cnDictionaryPage = cn('DictionaryPage');
 
@@ -81,14 +82,16 @@ export const DictionaryPage: FC<IDictionaryPageProps> = ({ confirmDelete = true 
 			const entry = entries[idx];
 			if (entry === undefined) return;
 
+			const translation = entry.data.translation;
+
 			if (
 				confirmDelete &&
 				!confirm(
 					getMessage('dictionary_deleteConfirmation') +
 						'\n\n---\n\n' +
-						entry.data.text +
+						translation.originalText +
 						'\n\n---\n\n' +
-						entry.data.translate,
+						translation.translatedText,
 				)
 			)
 				return;
@@ -106,15 +109,18 @@ export const DictionaryPage: FC<IDictionaryPageProps> = ({ confirmDelete = true 
 	);
 
 	const exportDictionary = useCallback(() => {
-		const csv = Papa.unparse([
-			['from', 'to', 'text', 'translation'],
-			...(entries || []).map(({ data: { from, to, text, translate } }) => [
-				from,
-				to,
-				text,
-				translate,
-			]),
-		]);
+		const fields: (keyof ITranslation)[] = [
+			'from',
+			'to',
+			'originalText',
+			'translatedText',
+		];
+		const rows = (entries || []).map((entry) => {
+			const translation = entry.data.translation;
+			return fields.map((key) => translation[key]);
+		});
+
+		const csv = Papa.unparse([fields, ...rows]);
 
 		const date = new Date().toLocaleDateString();
 		saveFile(
@@ -193,15 +199,16 @@ export const DictionaryPage: FC<IDictionaryPageProps> = ({ confirmDelete = true 
 			fromIsEmpty && toIsEmpty && search.length === 0
 				? entries
 				: entries.filter((entry) => {
-					if (!fromIsEmpty && entry.data.from !== from) return false;
-					if (!toIsEmpty && entry.data.to !== to) return false;
+					const translation = entry.data.translation;
+
+					if (!fromIsEmpty && translation.from !== from) return false;
+					if (!toIsEmpty && translation.to !== to) return false;
 
 					// Match text
 					if (search.length !== 0) {
-						const { text, translate } = entry.data;
 						const isTextsMatchSearch = isTextsContainsSubstring(
 							search,
-							[text, translate],
+							[translation.originalText, translation.translatedText],
 							true,
 						);
 						return isTextsMatchSearch;
@@ -225,17 +232,17 @@ export const DictionaryPage: FC<IDictionaryPageProps> = ({ confirmDelete = true 
 
 		// Render entries
 		return filtredEntries.map(({ data, key }, idx) => {
-			const { date, ...translation } = data;
+			const { timestamp, translation } = data;
 			return (
 				<Translation
 					key={key}
 					translation={translation}
-					timestamp={date}
+					timestamp={timestamp}
 					onPressTTS={(target) => {
 						if (target === 'original') {
-							toggleTTS(key, translation.from, translation.text);
+							toggleTTS(key, translation.from, translation.originalText);
 						} else {
-							toggleTTS(key, translation.to, translation.translate);
+							toggleTTS(key, translation.to, translation.translatedText);
 						}
 					}}
 					controlPanelSlot={

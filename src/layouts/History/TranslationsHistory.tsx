@@ -324,13 +324,13 @@ export const TranslationsHistory: FC<TranslationsHistoryProps> = ({
 										toggleTTS(
 											key,
 											translation.from,
-											translation.text,
+											translation.originalText,
 										);
 									} else {
 										toggleTTS(
 											key,
 											translation.to,
-											translation.translate,
+											translation.translatedText,
 										);
 									}
 								}}

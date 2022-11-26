@@ -10,8 +10,8 @@ export const [findTranslationFactory, findTranslation] = buildBackendRequest(
 		requestValidator: type.partial(TranslationType.props),
 		responseValidator: type.union([type.number, type.null]),
 
-		factoryHandler: () => async (data) => {
-			const entry = await findEntry(data);
+		factoryHandler: () => async (translation) => {
+			const entry = await findEntry({ translation });
 			return entry === null ? null : entry.key;
 		},
 	},
