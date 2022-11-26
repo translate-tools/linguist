@@ -21,6 +21,22 @@ on:
     - cron: '43 4 * * 6'
 
 jobs:
+  tests:
+    name: Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install deps
+        run: npm install
+
+      - name: Run tests
+        run: npm test
+
   analyze:
     name: Analyze
     runs-on: ubuntu-latest
