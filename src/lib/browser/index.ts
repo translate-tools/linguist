@@ -45,7 +45,7 @@ export const isChromium = () => /chrome/i.test(navigator.userAgent);
 export const isBackgroundContext = () =>
 	location.pathname === '/_generated_background_page.html';
 
-const extensionHostname = new URL(browser.extension.getURL('')).host;
+const extensionHostname = new URL(browser.runtime.getURL('')).host;
 export const isExtensionContext = location.host === extensionHostname;
 
 /**
