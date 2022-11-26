@@ -1,7 +1,7 @@
 import { runByReadyState } from 'react-elegant-ui/esm/lib/runByReadyState';
 
 import { AppConfigType } from './types/runtime';
-import { getPageLanguage, isMobileBrowser } from './lib/browser';
+import { getPageLanguage } from './lib/browser';
 import { StateManager } from './lib/StateManager';
 
 // TODO: move all contentscript modules to use augment class
@@ -177,14 +177,6 @@ cs.onLoad(async (initConfig) => {
 			selectTranslatorRef,
 		});
 	});
-
-	// Insert panel on smartphones
-	if (isMobileBrowser()) {
-		console.warn("It's mobile browser");
-
-		// const embeddedPanel = new EmbeddedControlPanel();
-		// embeddedPanel.enable();
-	}
 
 	// Init page translate
 
