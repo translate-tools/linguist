@@ -21,6 +21,6 @@ module.exports = {
 	setupFiles: [
 		'jest-localstorage-mock',
 		'fake-indexeddb/auto',
-		'jest-webextension-mock',
+		'./test/setupFiles/webextension.js',
 	],
 };
