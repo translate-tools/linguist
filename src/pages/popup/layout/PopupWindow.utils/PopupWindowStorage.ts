@@ -1,5 +1,5 @@
 import { TypeOf } from 'io-ts';
-import { browser } from 'webextension-polyfill-ts';
+import browser from 'webextension-polyfill';
 
 import { tryDecode, type } from '../../../../lib/types';
 import { AbstractVersionedStorage } from '../../../../types/utils';

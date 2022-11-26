@@ -1,5 +1,5 @@
 import React, { FC, useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { browser } from 'webextension-polyfill-ts';
+import browser from 'webextension-polyfill';
 
 import { TranslatorFeatures } from '../../pages/popup/layout/PopupWindow';
 

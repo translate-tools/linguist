@@ -42,7 +42,7 @@
 		"react-infinite-scroller": "^1.2.6",
 		"react-shadow": "^18.6.2",
 		"use-debounce": "^8.0.4",
-		"webextension-polyfill-ts": "^0.26.0"
+		"webextension-polyfill": "^0.10.0"
 	},
 	"devDependencies": {
 		"@babel/preset-env": "^7.18.6",
@@ -58,6 +58,7 @@
 		"@types/react-dom": "^17.0.17",
 		"@types/react-infinite-scroller": "^1.2.3",
 		"@types/resize-observer-browser": "^0.1.7",
+		"@types/webextension-polyfill": "^0.9.1",
 		"@typescript-eslint/eslint-plugin": "^4.8.1",
 		"@typescript-eslint/parser": "^4.8.1",
 		"@yandex/themekit": "^1.6.7",

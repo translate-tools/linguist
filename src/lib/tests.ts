@@ -1,4 +1,4 @@
-import { browser } from 'webextension-polyfill-ts';
+import browser from 'webextension-polyfill';
 import { IDBFactory } from 'fake-indexeddb';
 
 export const wipeIDB = () => {

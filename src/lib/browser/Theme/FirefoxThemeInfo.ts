@@ -1,4 +1,4 @@
-import { browser } from 'webextension-polyfill-ts';
+import browser from 'webextension-polyfill';
 import { colord } from 'colord';
 import { ThemeInfo } from './ThemeInfo';
 

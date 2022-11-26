@@ -1,4 +1,4 @@
-import { browser, Tabs } from 'webextension-polyfill-ts';
+import browser, { Tabs } from 'webextension-polyfill';
 
 export const getCurrentTab = () => {
 	return browser.tabs

@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import root from 'react-shadow';
-import { browser } from 'webextension-polyfill-ts';
+import browser from 'webextension-polyfill';
 
 /**
  * Shadow DOM container manager

@@ -1,6 +1,6 @@
 import * as t from 'io-ts';
 import { isEqual, cloneDeep } from 'lodash';
-import { browser } from 'webextension-polyfill-ts';
+import browser from 'webextension-polyfill';
 
 import { tryDecode, tryDecodeObject } from '../../lib/types';
 import { EventManager } from '../../lib/EventManager';

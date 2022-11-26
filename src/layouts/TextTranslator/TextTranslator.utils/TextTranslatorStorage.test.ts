@@ -1,4 +1,4 @@
-import { browser } from 'webextension-polyfill-ts';
+import browser from 'webextension-polyfill';
 import { clearAllMocks } from '../../../lib/tests';
 import { TextTranslatorStorage } from './TextTranslatorStorage';
 

@@ -1,4 +1,4 @@
-import { browser } from 'webextension-polyfill-ts';
+import browser from 'webextension-polyfill';
 import { isMobileBrowser } from './browser';
 
 export const getUserLanguage = () => browser.i18n.getUILanguage().split('-')[0];

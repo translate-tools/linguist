@@ -1,4 +1,4 @@
-import { browser, Runtime } from 'webextension-polyfill-ts';
+import browser, { Runtime } from 'webextension-polyfill';
 
 type RequestHandler = (data: any, sender: Runtime.MessageSender) => void | Promise<any>;
 

@@ -1,4 +1,4 @@
-import { browser, Menus, Tabs } from 'webextension-polyfill-ts';
+import browser, { Menus, Tabs } from 'webextension-polyfill';
 
 import { contextMenuIds } from '../../constants';
 import { getMessage } from '../language';
