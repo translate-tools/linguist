@@ -84,11 +84,16 @@ export class TranslatorsCacheStorage extends AbstractVersionedStorage {
 
 	private getDB() {
 		if (this.dbPromise === null) {
+			const unsetPromise = () => {
+				this.dbPromise = null;
+			};
+
 			const id = this.tableName;
 			this.dbPromise = IDB.openDB<TranslatorDBSchema>(DBName).then((db) => {
 				// Prevent versionchange blocking
 				db.addEventListener('versionchange', () => {
 					db.close();
+					unsetPromise();
 				});
 
 				// Return DB if storage exist
@@ -111,6 +116,7 @@ export class TranslatorsCacheStorage extends AbstractVersionedStorage {
 						// Prevent versionchange blocking
 						db.addEventListener('versionchange', () => {
 							db.close();
+							unsetPromise();
 						});
 					},
 				})
