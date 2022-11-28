@@ -5,11 +5,56 @@ import { tryDecode, type } from '../../../../lib/types';
 import { AbstractVersionedStorage } from '../../../../types/utils';
 
 export class PopupWindowStorage extends AbstractVersionedStorage {
-	static publicName = 'PopupWindowStorage';
-	static storageVersion = 1;
+	public static readonly publicName = 'PopupWindowStorage';
+	public static readonly storageVersion = 1;
 
-	public static readonly storeName = 'PopupWindowStorage';
-	public static readonly storageSignature = type.type({
+	// TODO: be sure that `prevVersion` is `null` for first clean run and `0` for case when versions did not used
+	// TODO: use library for migrations
+	public static async updateStorageVersion(prevVersion: number | null) {
+		switch (prevVersion) {
+			case 0: {
+				// Migrate data from `localStorage`
+				const keyPrefix = 'PopupPage.tabSet#';
+				for (const key of Object.keys(localStorage)) {
+					// Skip not match keys
+					if (!key.startsWith(keyPrefix)) continue;
+
+					// Copy
+					const value = localStorage.getItem(key);
+					if (typeof value === 'string') {
+						// Cut prefix to get hash from key
+						const hash = key.slice(keyPrefix.length);
+
+						// Write data
+						await new this().setActiveTab(hash, value);
+					}
+
+					// Remove
+					localStorage.removeItem(key);
+				}
+			}
+		}
+	}
+
+	public getActiveTab = async (tabsSetHash: string) => {
+		const { activeTab } = await this.getData();
+
+		return tabsSetHash in activeTab ? activeTab[tabsSetHash] : null;
+	};
+
+	public setActiveTab = async (tabsSetHash: string, activeTab: string) => {
+		const actualData = await this.getData();
+		const mergedActiveTab = Object.assign(actualData.activeTab, {
+			[tabsSetHash]: activeTab,
+		});
+
+		return this.updateData({
+			activeTab: mergedActiveTab,
+		});
+	};
+
+	private readonly storeName = 'PopupWindowStorage';
+	private readonly storageSignature = type.type({
 		/**
 		 * Map where key is tabs set hash and value is active tab ID
 		 */
@@ -19,78 +64,33 @@ export class PopupWindowStorage extends AbstractVersionedStorage {
 	/**
 	 * Default data
 	 */
-	public static readonly defaultData: TypeOf<
-		typeof PopupWindowStorage.storageSignature
-	> = {
+	private readonly defaultData: TypeOf<typeof this.storageSignature> = {
 		activeTab: {},
 	};
 
-	public static getData = async () => {
-		const storeName = PopupWindowStorage.storeName;
+	private getData = async () => {
+		const storeName = this.storeName;
 		const { [storeName]: tabData } = await browser.storage.local.get(storeName);
 
 		if (tabData !== undefined) {
-			return tryDecode(PopupWindowStorage.storageSignature, tabData);
+			return tryDecode(this.storageSignature, tabData);
 		} else {
-			return PopupWindowStorage.defaultData;
+			return this.defaultData;
 		}
 	};
 
-	private static setData = async (
-		data: TypeOf<typeof PopupWindowStorage.storageSignature>,
-	) => {
+	private setData = async (data: TypeOf<typeof this.storageSignature>) => {
 		// Verify data
-		tryDecode(PopupWindowStorage.storageSignature, data);
+		tryDecode(this.storageSignature, data);
 
-		const storeName = PopupWindowStorage.storeName;
+		const storeName = this.storeName;
 		await browser.storage.local.set({ [storeName]: data });
 	};
 
-	public static updateData = async (
-		data: Partial<TypeOf<typeof PopupWindowStorage.storageSignature>>,
-	) => {
-		const actualData = await PopupWindowStorage.getData();
+	private updateData = async (data: Partial<TypeOf<typeof this.storageSignature>>) => {
+		const actualData = await this.getData();
 		const mergedData = Object.assign(actualData, data);
 
-		return PopupWindowStorage.setData(mergedData);
+		return this.setData(mergedData);
 	};
-
-	public static getActiveTab = async (tabsSetHash: string) => {
-		const { activeTab } = await PopupWindowStorage.getData();
-
-		return tabsSetHash in activeTab ? activeTab[tabsSetHash] : null;
-	};
-
-	public static setActiveTab = async (tabsSetHash: string, activeTab: string) => {
-		const actualData = await PopupWindowStorage.getData();
-		const mergedActiveTab = Object.assign(actualData.activeTab, {
-			[tabsSetHash]: activeTab,
-		});
-
-		return PopupWindowStorage.updateData({
-			activeTab: mergedActiveTab,
-		});
-	};
-
-	public static async updateStorageVersion() {
-		// Migrate data from `localStorage`
-		const keyPrefix = 'PopupPage.tabSet#';
-		for (const key of Object.keys(localStorage)) {
-			// Skip not match keys
-			if (!key.startsWith(keyPrefix)) continue;
-
-			// Copy
-			const value = localStorage.getItem(key);
-			if (typeof value === 'string') {
-				// Cut prefix to get hash from key
-				const hash = key.slice(keyPrefix.length);
-
-				// Write data
-				await PopupWindowStorage.setActiveTab(hash, value);
-			}
-
-			// Remove
-			localStorage.removeItem(key);
-		}
-	}
 }

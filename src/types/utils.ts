@@ -58,7 +58,7 @@ export interface VersionedStorage {
 export abstract class AbstractVersionedStorage {
 	public static storageVersion = 0;
 
-	public static async updateStorageVersion(_prevVersion: number | null) {}
+	// public static async updateStorageVersion(_prevVersion: number | null) { }
 }
 
 /**
