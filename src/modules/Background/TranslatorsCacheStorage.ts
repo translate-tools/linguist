@@ -3,7 +3,7 @@ import * as IDB from 'idb/with-async-ittr';
 import { translatorModules } from '.';
 import { ITranslation } from '../../types/translation/Translation';
 
-import { AbstractVersionedStorage } from '../../types/utils';
+import { AbstractVersionedStorage } from '../../types/VersionedStorage';
 
 export interface TranslatorDBSchema extends IDB.DBSchema {
 	tableName: {

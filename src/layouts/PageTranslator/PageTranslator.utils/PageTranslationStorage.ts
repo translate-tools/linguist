@@ -2,7 +2,7 @@ import { TypeOf } from 'io-ts';
 import browser from 'webextension-polyfill';
 
 import { tryDecode, type } from '../../../lib/types';
-import { AbstractVersionedStorage } from '../../../types/utils';
+import { AbstractVersionedStorage } from '../../../types/VersionedStorage';
 
 const storageSignature = type.type({
 	optionsSpoilerState: type.boolean,

@@ -1,4 +1,5 @@
-import { AbstractVersionedStorage, ClassObject, VersionedStorage } from '../types/utils';
+import { ClassObject } from '../types/utils';
+import { AbstractVersionedStorage, VersionedStorage } from '../types/VersionedStorage';
 import { getMigrationsInfo, updateMigrationsInfoItem } from './migrations';
 
 // Storages

@@ -4,7 +4,7 @@ import browser from 'webextension-polyfill';
 
 import { tryDecode, tryDecodeObject } from '../../lib/types';
 import { EventManager } from '../../lib/EventManager';
-import { AbstractVersionedStorage } from '../../types/utils';
+import { AbstractVersionedStorage } from '../../types/VersionedStorage';
 import { AppConfig } from '../../types/runtime';
 import { ObservableRecord } from '../../lib/ObservableRecord';
 

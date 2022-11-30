@@ -3,7 +3,7 @@ import browser from 'webextension-polyfill';
 
 import { decodeStruct, tryDecode, type } from '../../../lib/types';
 import { LangCodeWithAuto, LangCode } from '../../../types/runtime';
-import { AbstractVersionedStorage } from '../../../types/utils';
+import { AbstractVersionedStorage } from '../../../types/VersionedStorage';
 
 const storageSignature = type.union([
 	type.type({
