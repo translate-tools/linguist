@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
 
 import { getCurrentTab, getCurrentTabId } from '../../lib/browser/tabs';
 import { useStateWithProxy } from '../../lib/hooks/useStateWithProxy';
@@ -102,82 +102,82 @@ export const PageTranslatorTab: TabComponent<InitFn<InitData>> = ({
 			};
 
 			switch (state) {
-			case sitePreferenceOptions.DEFAULT:
-				// Delete entry and exit
-				deleteSitePreferences(hostname);
-				setSitePreferencesState(state);
-				return;
-			case sitePreferenceOptions.DEFAULT_FOR_THIS_LANGUAGE:
-				// Delete language from everywhere
-				newState.autoTranslateLanguages =
-						newState.autoTranslateLanguages.filter((lang) => lang !== from);
-
-				newState.autoTranslateIgnoreLanguages =
-						newState.autoTranslateIgnoreLanguages.filter(
-							(lang) => lang !== from,
-						);
-
-				if (
-					newState.autoTranslateLanguages.length === 0 &&
-						newState.autoTranslateIgnoreLanguages.length === 0
-				) {
-					// Delete empty entry
+				case sitePreferenceOptions.DEFAULT:
+					// Delete entry and exit
 					deleteSitePreferences(hostname);
 					setSitePreferencesState(state);
 					return;
-				} else {
-					// Break to write changes
-					break;
-				}
-			case sitePreferenceOptions.ALWAYS:
-				newState.enableAutoTranslate = true;
-				newState.autoTranslateLanguages = [];
-				newState.autoTranslateIgnoreLanguages = [];
-				break;
-			case sitePreferenceOptions.NEVER:
-				newState.enableAutoTranslate = false;
-				newState.autoTranslateLanguages = [];
-				break;
-			case sitePreferenceOptions.ALWAYS_FOR_THIS_LANGUAGE:
-				// Skip invalid language
-				if (from === undefined) break;
+				case sitePreferenceOptions.DEFAULT_FOR_THIS_LANGUAGE:
+					// Delete language from everywhere
+					newState.autoTranslateLanguages =
+						newState.autoTranslateLanguages.filter((lang) => lang !== from);
 
-				// Enable auto translate
-				newState.enableAutoTranslate = true;
-
-				// Remove language if exist
-				newState.autoTranslateIgnoreLanguages =
+					newState.autoTranslateIgnoreLanguages =
 						newState.autoTranslateIgnoreLanguages.filter(
 							(lang) => lang !== from,
 						);
 
-				// Add language if not exist
-				if (!newState.autoTranslateLanguages.find((lang) => lang === from)) {
-					newState.autoTranslateLanguages.push(from);
-				}
+					if (
+						newState.autoTranslateLanguages.length === 0 &&
+						newState.autoTranslateIgnoreLanguages.length === 0
+					) {
+						// Delete empty entry
+						deleteSitePreferences(hostname);
+						setSitePreferencesState(state);
+						return;
+					} else {
+						// Break to write changes
+						break;
+					}
+				case sitePreferenceOptions.ALWAYS:
+					newState.enableAutoTranslate = true;
+					newState.autoTranslateLanguages = [];
+					newState.autoTranslateIgnoreLanguages = [];
+					break;
+				case sitePreferenceOptions.NEVER:
+					newState.enableAutoTranslate = false;
+					newState.autoTranslateLanguages = [];
+					break;
+				case sitePreferenceOptions.ALWAYS_FOR_THIS_LANGUAGE:
+					// Skip invalid language
+					if (from === undefined) break;
 
-				break;
-			case sitePreferenceOptions.NEVER_FOR_THIS_LANGUAGE:
-				// Skip invalid language
-				if (from === undefined) break;
+					// Enable auto translate
+					newState.enableAutoTranslate = true;
 
-				// Remove language if exist
-				newState.autoTranslateLanguages =
+					// Remove language if exist
+					newState.autoTranslateIgnoreLanguages =
+						newState.autoTranslateIgnoreLanguages.filter(
+							(lang) => lang !== from,
+						);
+
+					// Add language if not exist
+					if (!newState.autoTranslateLanguages.find((lang) => lang === from)) {
+						newState.autoTranslateLanguages.push(from);
+					}
+
+					break;
+				case sitePreferenceOptions.NEVER_FOR_THIS_LANGUAGE:
+					// Skip invalid language
+					if (from === undefined) break;
+
+					// Remove language if exist
+					newState.autoTranslateLanguages =
 						newState.autoTranslateLanguages.filter((lang) => lang !== from);
 
-				// Add language if not exist
-				if (
-					!newState.autoTranslateIgnoreLanguages.find(
-						(lang) => lang === from,
-					)
-				) {
-					newState.autoTranslateIgnoreLanguages.push(from);
-				}
-				break;
+					// Add language if not exist
+					if (
+						!newState.autoTranslateIgnoreLanguages.find(
+							(lang) => lang === from,
+						)
+					) {
+						newState.autoTranslateIgnoreLanguages.push(from);
+					}
+					break;
 
-			default:
-				console.error('Data for error below', state);
-				throw new Error(`Unknown type for "translateSite"`);
+				default:
+					console.error('Data for error below', state);
+					throw new Error(`Unknown type for "translateSite"`);
 			}
 
 			// TODO: use something like `updateSitePreferences` instead set full data
@@ -219,21 +219,21 @@ export const PageTranslatorTab: TabComponent<InitFn<InitData>> = ({
 			// Remember
 			(async () => {
 				switch (state) {
-				case languagePreferenceOptions.ENABLE:
-					addLanguagePreferences(from, true);
-					break;
+					case languagePreferenceOptions.ENABLE:
+						addLanguagePreferences(from, true);
+						break;
 
-				case languagePreferenceOptions.DISABLE_FOR_ALL:
-					addLanguagePreferences(from, false);
-					break;
+					case languagePreferenceOptions.DISABLE_FOR_ALL:
+						addLanguagePreferences(from, false);
+						break;
 
-				case languagePreferenceOptions.DISABLE:
-					deleteLanguagePreferences(from);
-					break;
+					case languagePreferenceOptions.DISABLE:
+						deleteLanguagePreferences(from);
+						break;
 
-				default:
-					console.error('Data for error below', state);
-					throw new Error(`Unknown type for "translateLang"`);
+					default:
+						console.error('Data for error below', state);
+						throw new Error(`Unknown type for "translateLang"`);
 				}
 			})();
 		},
@@ -276,12 +276,13 @@ export const PageTranslatorTab: TabComponent<InitFn<InitData>> = ({
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
+	const pageTranslationStorage = useMemo(() => new PageTranslationStorage(), []);
 	const [isShowOptions, setIsShowOptions] = useStateWithProxy<boolean>(
 		initData.isShowOptions,
 		(state, setState) => {
 			// Update data
 			if (typeof state !== 'function') {
-				PageTranslationStorage.updateData({ optionsSpoilerState: !!state });
+				pageTranslationStorage.updateData({ optionsSpoilerState: !!state });
 			}
 
 			setState(state);
@@ -372,9 +373,10 @@ PageTranslatorTab.init = async ({ translatorFeatures, config }): Promise<InitDat
 		mapLanguagePreferences,
 	);
 
-	const isShowOptions = await PageTranslationStorage.getData().then(
-		(data) => data.optionsSpoilerState,
-	);
+	const pageTranslationStorage = new PageTranslationStorage();
+	const isShowOptions = await pageTranslationStorage
+		.getData()
+		.then((data) => data.optionsSpoilerState);
 
 	return {
 		tabId,

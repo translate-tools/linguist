@@ -98,12 +98,12 @@ export class TextTranslatorStorage extends AbstractVersionedStorage {
 		}
 	}
 
-	public readonly storeName = 'TextTranslatorStorage';
+	private readonly storeName = 'TextTranslatorStorage';
 
 	/**
 	 * Default data
 	 */
-	public readonly defaultData: TextTranslatorData = null;
+	private readonly defaultData: TextTranslatorData = null;
 
 	public getData = async () => {
 		const storeName = this.storeName;
