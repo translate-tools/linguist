@@ -23,18 +23,20 @@ const expectedData = {
 beforeEach(clearAllMocks);
 
 test('TextTranslatorStorage CRUD operations', async () => {
-	const initData = await TextTranslatorStorage.getData();
+	const textTranslatorStorage = new TextTranslatorStorage();
+	const initData = await textTranslatorStorage.getData();
 	expect(initData).toBe(null);
 
-	await TextTranslatorStorage.setData(expectedData);
+	await textTranslatorStorage.setData(expectedData);
 
-	const dataFromStorage = await TextTranslatorStorage.getData();
+	const dataFromStorage = await textTranslatorStorage.getData();
 	expect(dataFromStorage).toEqual(expectedData);
 });
 
-describe('TextTranslatorStorage migrations', () => {
+describe('textTranslatorStorage migrations', () => {
 	test('migration v1', async () => {
 		const storeName = 'TextTranslator.lastState';
+		const textTranslatorStorage = new TextTranslatorStorage();
 
 		// Write data
 		localStorage.setItem(storeName, JSON.stringify(translatorStorageDataV1));
@@ -45,12 +47,13 @@ describe('TextTranslatorStorage migrations', () => {
 		expect(localStorage.getItem(storeName)).toBe(null);
 
 		// Test migration result
-		const actualData = await TextTranslatorStorage.getData();
+		const actualData = await textTranslatorStorage.getData();
 		expect(actualData).toEqual(expectedData);
 	});
 
 	test('migration v2', async () => {
 		const storeName = 'TextTranslatorStorage';
+		const textTranslatorStorage = new TextTranslatorStorage();
 
 		// Write data
 		await browser.storage.local.set({
@@ -60,7 +63,7 @@ describe('TextTranslatorStorage migrations', () => {
 		await TextTranslatorStorage.updateStorageVersion(2);
 
 		// Test migration result
-		const actualData = await TextTranslatorStorage.getData();
+		const actualData = await textTranslatorStorage.getData();
 		expect(actualData).toEqual(expectedData);
 	});
 });

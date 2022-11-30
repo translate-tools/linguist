@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef, useState } from 'react';
+import React, { useContext, useEffect, useMemo, useRef, useState } from 'react';
 import { useDelayCallback } from 'react-elegant-ui/esm/hooks/useDelayCallback';
 import { useFocusVisible } from '@react-aria/interactions';
 
@@ -10,7 +10,10 @@ import {
 	PopupWindowContext,
 } from '../../pages/popup/layout/PopupWindow';
 import { TextTranslator, TextTranslatorProps, TranslationState } from './TextTranslator';
-import { TextTranslatorStorage } from './TextTranslator.utils/TextTranslatorStorage';
+import {
+	TextTranslatorData,
+	TextTranslatorStorage,
+} from './TextTranslator.utils/TextTranslatorStorage';
 
 type InitData = {
 	from: string;
@@ -43,12 +46,11 @@ export const TextTranslatorTab: TabComponent<InitFn<InitData>> = ({
 	const serializeDelay = 300;
 	const [setDelayCb] = useDelayCallback();
 
+	const textTranslatorStorage = useMemo(() => new TextTranslatorStorage(), []);
 	useEffect(() => {
 		const serialize = () => {
 			try {
-				const translationState: Parameters<
-					typeof TextTranslatorStorage['setData']
-				>['0'] = {
+				const translationState: TextTranslatorData = {
 					// Cast string to `langCode`
 					from: from as any,
 					to: to as any,
@@ -67,14 +69,21 @@ export const TextTranslatorTab: TabComponent<InitFn<InitData>> = ({
 					}
 				}
 
-				TextTranslatorStorage.setData(translationState);
+				textTranslatorStorage.setData(translationState);
 			} catch (err) {
 				console.error(err);
 			}
 		};
 
 		setDelayCb(serialize, serializeDelay);
-	}, [setDelayCb, lastTranslation, config.textTranslator.rememberText, from, to]);
+	}, [
+		setDelayCb,
+		lastTranslation,
+		config.textTranslator.rememberText,
+		from,
+		to,
+		textTranslatorStorage,
+	]);
 
 	// Focus on input when focus is free
 	const { activeTab } = useContext(PopupWindowContext);
@@ -132,7 +141,8 @@ TextTranslatorTab.init = async ({ translatorFeatures, config }) => {
 	// Try recovery state
 	let lastTranslate: InitData['lastTranslate'] = null;
 
-	const lastState = await TextTranslatorStorage.getData();
+	const textTranslatorStorage = new TextTranslatorStorage();
+	const lastState = await textTranslatorStorage.getData();
 	if (lastState !== null) {
 		const { isSupportAutodetect, supportedLanguages } = translatorFeatures;
 		const { from: lastFrom, to: lastTo, translate } = lastState;

@@ -5,91 +5,30 @@ import { decodeStruct, tryDecode, type } from '../../../lib/types';
 import { LangCodeWithAuto, LangCode } from '../../../types/runtime';
 import { AbstractVersionedStorage } from '../../../types/utils';
 
-// TODO: #refactor use not static class. To implement singleton we may export instance of class
+const storageSignature = type.union([
+	type.type({
+		from: LangCodeWithAuto,
+		to: LangCode,
+		translate: type.union([
+			type.type({
+				originalText: type.string,
+				translatedText: type.union([type.string, type.null]),
+			}),
+			type.null,
+		]),
+	}),
+	type.null,
+]);
+
+export type TextTranslatorData = TypeOf<typeof storageSignature>;
+
 export class TextTranslatorStorage extends AbstractVersionedStorage {
 	static publicName = 'TextTranslatorStorage';
 	static storageVersion = 3;
 
-	public static readonly storeName = 'TextTranslatorStorage';
-	public static readonly storageSignature = type.union([
-		type.type({
-			from: LangCodeWithAuto,
-			to: LangCode,
-			translate: type.union([
-				type.type({
-					originalText: type.string,
-					translatedText: type.union([type.string, type.null]),
-				}),
-				type.null,
-			]),
-		}),
-		type.null,
-	]);
-
-	/**
-	 * Default data
-	 */
-	public static readonly defaultData: TypeOf<
-		typeof TextTranslatorStorage.storageSignature
-	> = null;
-
-	public static getData = async () => {
-		const storeName = TextTranslatorStorage.storeName;
-		const { [storeName]: tabData } = await browser.storage.local.get(storeName);
-
-		const { defaultData } = TextTranslatorStorage;
-		if (tabData !== undefined) {
-			return tryDecode(
-				TextTranslatorStorage.storageSignature,
-				tabData,
-				defaultData,
-			);
-		} else {
-			return defaultData;
-		}
-	};
-
-	public static setData = async (
-		data: TypeOf<typeof TextTranslatorStorage.storageSignature>,
-	) => {
-		// Verify data
-		tryDecode(TextTranslatorStorage.storageSignature, data);
-
-		const storeName = TextTranslatorStorage.storeName;
-		await browser.storage.local.set({ [storeName]: data });
-	};
-
-	public static updateData = async (
-		data: Partial<TypeOf<typeof TextTranslatorStorage.storageSignature>>,
-	) => {
-		const actualData = await TextTranslatorStorage.getData();
-
-		// Protect from null
-		if (typeof actualData === null) {
-			throw new TypeError('Cant merge with null');
-		}
-
-		const mergedData = { ...actualData, ...data } as TypeOf<
-			typeof TextTranslatorStorage.storageSignature
-		>;
-
-		return TextTranslatorStorage.setData(mergedData);
-	};
-
-	public static clear = async () => TextTranslatorStorage.setData(null);
-
-	public static forgetText = async () => {
-		const data = await TextTranslatorStorage.getData();
-
-		if (data !== null) {
-			data.translate = null;
-			TextTranslatorStorage.setData(data);
-		}
-	};
-
 	// TODO: wrap it to tool for migrations. It may be a data transforming pipeline or array with cases to execution for complex migrations
 	public static async updateStorageVersion(prevVersion: number | null) {
-		const storeName = TextTranslatorStorage.storeName;
+		const storeName = 'TextTranslatorStorage';
 
 		const dataStructureVersions = {
 			0: type.union([
@@ -158,4 +97,55 @@ export class TextTranslatorStorage extends AbstractVersionedStorage {
 			}
 		}
 	}
+
+	public readonly storeName = 'TextTranslatorStorage';
+
+	/**
+	 * Default data
+	 */
+	public readonly defaultData: TextTranslatorData = null;
+
+	public getData = async () => {
+		const storeName = this.storeName;
+		const { [storeName]: tabData } = await browser.storage.local.get(storeName);
+
+		const { defaultData } = this;
+		if (tabData !== undefined) {
+			return tryDecode(storageSignature, tabData, defaultData);
+		} else {
+			return defaultData;
+		}
+	};
+
+	public setData = async (data: TextTranslatorData) => {
+		// Verify data
+		tryDecode(storageSignature, data);
+
+		const storeName = this.storeName;
+		await browser.storage.local.set({ [storeName]: data });
+	};
+
+	public updateData = async (data: Partial<TextTranslatorData>) => {
+		const actualData = await this.getData();
+
+		// Protect from null
+		if (typeof actualData === null) {
+			throw new TypeError('Cant merge with null');
+		}
+
+		const mergedData = { ...actualData, ...data } as TextTranslatorData;
+
+		return this.setData(mergedData);
+	};
+
+	public clear = async () => this.setData(null);
+
+	public forgetText = async () => {
+		const data = await this.getData();
+
+		if (data !== null) {
+			data.translate = null;
+			this.setData(data);
+		}
+	};
 }
