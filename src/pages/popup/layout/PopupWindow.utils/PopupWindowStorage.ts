@@ -1,7 +1,7 @@
 import { TypeOf } from 'io-ts';
 import browser from 'webextension-polyfill';
 
-import { tryDecode, type } from '../../../../lib/types';
+import { decodeStruct, type } from '../../../../lib/types';
 import { AbstractVersionedStorage } from '../../../../types/VersionedStorage';
 
 const storageStruct = type.type({
@@ -75,16 +75,15 @@ export class PopupWindowStorage extends AbstractVersionedStorage {
 		const storeName = this.storeName;
 		const { [storeName]: tabData } = await browser.storage.local.get(storeName);
 
-		if (tabData !== undefined) {
-			return tryDecode(storageStruct, tabData);
-		} else {
-			return this.defaultData;
-		}
+		const struct = decodeStruct(storageStruct, tabData);
+
+		return struct.errors ? this.defaultData : struct.data;
 	};
 
 	private setData = async (data: StorageType) => {
-		// Verify data
-		tryDecode(storageStruct, data);
+		const struct = decodeStruct(storageStruct, data);
+
+		if (struct.errors !== null) return;
 
 		const storeName = this.storeName;
 		await browser.storage.local.set({ [storeName]: data });
