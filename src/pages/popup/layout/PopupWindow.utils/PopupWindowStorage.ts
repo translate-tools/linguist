@@ -4,12 +4,21 @@ import browser from 'webextension-polyfill';
 import { tryDecode, type } from '../../../../lib/types';
 import { AbstractVersionedStorage } from '../../../../types/VersionedStorage';
 
+const storageStruct = type.type({
+	/**
+	 * Map where key is tabs set hash and value is active tab ID
+	 */
+	activeTab: type.record(type.string, type.string),
+});
+
+type StorageType = TypeOf<typeof storageStruct>;
+
 export class PopupWindowStorage extends AbstractVersionedStorage {
 	public static readonly publicName = 'PopupWindowStorage';
 	public static readonly storageVersion = 1;
 
 	// TODO: be sure that `prevVersion` is `null` for first clean run and `0` for case when versions did not used
-	// TODO: use library for migrations
+	// TODO: #181 use library for migrations
 	public static async updateStorageVersion(prevVersion: number | null) {
 		switch (prevVersion) {
 			case 0: {
@@ -54,17 +63,11 @@ export class PopupWindowStorage extends AbstractVersionedStorage {
 	};
 
 	private readonly storeName = 'PopupWindowStorage';
-	private readonly storageSignature = type.type({
-		/**
-		 * Map where key is tabs set hash and value is active tab ID
-		 */
-		activeTab: type.record(type.string, type.string),
-	});
 
 	/**
 	 * Default data
 	 */
-	private readonly defaultData: TypeOf<typeof this.storageSignature> = {
+	private readonly defaultData: StorageType = {
 		activeTab: {},
 	};
 
@@ -73,21 +76,21 @@ export class PopupWindowStorage extends AbstractVersionedStorage {
 		const { [storeName]: tabData } = await browser.storage.local.get(storeName);
 
 		if (tabData !== undefined) {
-			return tryDecode(this.storageSignature, tabData);
+			return tryDecode(storageStruct, tabData);
 		} else {
 			return this.defaultData;
 		}
 	};
 
-	private setData = async (data: TypeOf<typeof this.storageSignature>) => {
+	private setData = async (data: StorageType) => {
 		// Verify data
-		tryDecode(this.storageSignature, data);
+		tryDecode(storageStruct, data);
 
 		const storeName = this.storeName;
 		await browser.storage.local.set({ [storeName]: data });
 	};
 
-	private updateData = async (data: Partial<TypeOf<typeof this.storageSignature>>) => {
+	private updateData = async (data: Partial<StorageType>) => {
 		const actualData = await this.getData();
 		const mergedData = Object.assign(actualData, data);
 
