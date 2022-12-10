@@ -32,12 +32,12 @@ const migrationsList: { name: string; migration: MigrationTask }[] = [
 ];
 
 /**
- * Function for run all migrations
+ * Run migrations
  *
- * Migration is are process of converting data from old format to new.
+ * Migration is a process of converting data from a legacy format to an actual format.
  * For example, move data from `localStorage` to `indexedDB`
  *
- * NOTE: migration must be lazy i.e. run only by condition and only once
+ * Migrations are not execute for a new users
  */
 export const migrateAll = async () => {
 	// Init migrations data
@@ -78,9 +78,21 @@ export const migrateAll = async () => {
 
 	if (migrationsToApply.length === 0) return;
 
+	// Set actual data structure versions and exit for new users
+	const shouldOnlySetVersions = Object.keys(storageVersions).length === 0;
+	if (!shouldOnlySetVersions) {
+		console.log('Set actual storage versions');
+		for (const { name, migration } of migrationsToApply) {
+			storageVersions[name] = migration.version;
+		}
+		await updateMigrationsInfoItem({ storageVersions });
+
+		return;
+	}
+
 	console.log('Start migrations');
 
-	// Update storages
+	// Execute migrations
 	for (const { name, migration } of migrationsToApply) {
 		const currentVersion = migration.version;
 
