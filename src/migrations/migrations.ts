@@ -3,6 +3,20 @@ import browser from 'webextension-polyfill';
 
 import { tryDecode, type } from '../lib/types';
 
+export type MigrationTask = {
+	/**
+	 * Data structure version
+	 */
+	version: number;
+
+	/**
+	 * Function to migrate data
+	 *
+	 * WARNING: previous version may contain `0` in case when data structure run migration first time
+	 */
+	migrate: (previousVersion: number, currentVersion: number) => Promise<void>;
+};
+
 const migrationsSignature = type.type({
 	appConfig: type.number,
 	autoTranslateDB: type.number,

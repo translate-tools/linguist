@@ -1,17 +1,35 @@
-import { ClassObject } from '../types/utils';
-import { AbstractVersionedStorage, VersionedStorage } from '../types/VersionedStorage';
-import { getMigrationsInfo, updateMigrationsInfoItem } from './migrations';
+import { getMigrationsInfo, MigrationTask, updateMigrationsInfoItem } from './migrations';
 
 // Storages
-import { ConfigStorage } from '../modules/ConfigStorage/ConfigStorage';
-import { PopupWindowStorage } from '../pages/popup/layout/PopupWindow.utils/PopupWindowStorage';
-import { TextTranslatorStorage } from '../layouts/TextTranslator/TextTranslator.utils/TextTranslatorStorage';
-import { TranslatorsCacheStorage } from '../modules/Background/TranslatorsCacheStorage';
+import { ConfigStorageMigration } from '../modules/ConfigStorage/ConfigStorage';
+import { PopupWindowStorageMigration } from '../pages/popup/layout/PopupWindow.utils/PopupWindowStorage';
+import { TextTranslatorStorageMigration } from '../layouts/TextTranslator/TextTranslator.utils/TextTranslatorStorage';
+import { TranslatorsCacheStorageMigration } from '../modules/Background/TranslatorsCacheStorage';
+import { SitePreferencesMigration } from '../requests/backend/autoTranslation/migrations';
 
-// Standalone migrations
-import { migrateSitePreferences } from '../requests/backend/autoTranslation/migrations';
-
-export type Migration = () => Promise<any>;
+// TODO: review migrations names
+const migrationsList: { name: string; migration: MigrationTask }[] = [
+	{
+		name: 'ConfigStorage',
+		migration: ConfigStorageMigration,
+	},
+	{
+		name: 'TextTranslatorStorage',
+		migration: TextTranslatorStorageMigration,
+	},
+	{
+		name: 'TranslatorCache',
+		migration: TranslatorsCacheStorageMigration,
+	},
+	{
+		name: 'PopupWindowStorage',
+		migration: PopupWindowStorageMigration,
+	},
+	{
+		name: 'autoTranslateDB',
+		migration: SitePreferencesMigration,
+	},
+];
 
 /**
  * Function for run all migrations
@@ -22,62 +40,58 @@ export type Migration = () => Promise<any>;
  * NOTE: migration must be lazy i.e. run only by condition and only once
  */
 export const migrateAll = async () => {
-	const storages: ClassObject<AbstractVersionedStorage, VersionedStorage>[] = [
-		ConfigStorage,
-		PopupWindowStorage,
-		TextTranslatorStorage,
-		TranslatorsCacheStorage,
-	];
-
-	const migrations: Migration[] = [migrateSitePreferences];
-
-	console.log('Start migrations');
-
 	// Init migrations data
 	await updateMigrationsInfoItem({});
 
-	// Verify storages
-	storages
-		.map((storage, index) => {
-			const storageName = storage.publicName;
-			if (typeof storageName !== 'string' || storageName.length === 0) {
-				console.error('Data for error below', { index, storageName });
+	// TODO: review migrations utils, automatically init data
+	const { storageVersions } = await getMigrationsInfo();
+
+	// Filter storages
+	const migrationsToApply = migrationsList.filter(
+		(migrationObject, index, migrations) => {
+			const { name, migration } = migrationObject;
+
+			if (name.length === 0) {
+				console.error('Data for error below', {
+					index,
+					migration: migrationObject,
+				});
 				throw new TypeError('Storage must have name');
 			}
-			return storageName;
-		})
-		.forEach((storageName, index, names) => {
-			if (names.indexOf(storageName) !== index) {
-				console.error('Data for error below', { index, storageName });
+
+			const migrationNameIndex = migrations.findIndex(
+				(migration) => migration.name === name,
+			);
+			if (migrationNameIndex !== index) {
+				console.error('Data for error below', {
+					index,
+					migration: migrationObject,
+				});
 				throw new Error('Storage names must be unique');
 			}
-		});
+
+			const shouldApplyMigration =
+				!(name in storageVersions) || storageVersions[name] < migration.version;
+			return shouldApplyMigration;
+		},
+	);
+
+	if (migrationsToApply.length === 0) return;
+
+	console.log('Start migrations');
 
 	// Update storages
-	const { storageVersions } = await getMigrationsInfo();
-	for (const storage of storages) {
-		const name = storage.publicName;
-		const version = storage.storageVersion;
+	for (const { name, migration } of migrationsToApply) {
+		const currentVersion = migration.version;
 
-		// Skip unchanged versions
-		if (name in storageVersions && version === storageVersions[name]) continue;
+		// Special value '0' for case when storage apply migration first time
+		const oldVersion = storageVersions[name] ?? 0;
 
-		// Run update
-		const oldVersion = storageVersions[name] ?? null;
-		await storage.updateStorageVersion(oldVersion);
+		await migration.migrate(oldVersion, currentVersion);
 
 		// Update storage version
-		storageVersions[name] = version;
-	}
-
-	// Update storages versions in DB
-	await updateMigrationsInfoItem({ storageVersions });
-
-	// Run other migrations
-	for (const migration of migrations) {
-		await migration().catch((error) => {
-			console.error('Migration error', error);
-		});
+		storageVersions[name] = currentVersion;
+		await updateMigrationsInfoItem({ storageVersions });
 	}
 
 	console.log('End of migrations');

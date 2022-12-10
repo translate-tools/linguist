@@ -1,9 +1,8 @@
 import * as IDB from 'idb/with-async-ittr';
 
 import { translatorModules } from '.';
+import { MigrationTask } from '../../migrations/migrations';
 import { ITranslation } from '../../types/translation/Translation';
-
-import { AbstractVersionedStorage } from '../../types/VersionedStorage';
 
 export interface TranslatorDBSchema extends IDB.DBSchema {
 	tableName: {
@@ -28,21 +27,15 @@ interface Options {
 
 const DBName = 'translatorsCache';
 
-// TODO: refactor me
 /**
- * Data are stores in IDB
+ * An update strategy for this storage is deleting IDB database and re-creating with new structure
+ *
+ * It's because DB contains only temporary data and IDB version increase while add each new translator,
+ * so we can't migrate data by IDB version, because it didn't reflect an IDB structure, but only number of updates.
  */
-export class TranslatorsCacheStorage extends AbstractVersionedStorage {
-	static publicName = 'TranslatorCache';
-	static storageVersion = 3;
-
-	/**
-	 * An update strategy for this storage is deleting IDB database and re-creating with new structure
-	 *
-	 * It's because DB contains only temporary data and IDB version increase while add each new translator,
-	 * so we can't migrate data by IDB version, because it didn't reflect an IDB structure, but only number of updates.
-	 */
-	public static async updateStorageVersion(prevVersion: number | null) {
+export const TranslatorsCacheStorageMigration: MigrationTask = {
+	version: 3,
+	async migrate(prevVersion) {
 		// Remove legacy databases
 		if (prevVersion === null || prevVersion < 2) {
 			for (const translatorName in translatorModules) {
@@ -60,8 +53,14 @@ export class TranslatorsCacheStorage extends AbstractVersionedStorage {
 				break;
 			}
 		}
-	}
+	},
+};
 
+// TODO: refactor me
+/**
+ * Data are stores in IDB
+ */
+export class TranslatorsCacheStorage {
 	private dbPromise: null | Promise<DB | undefined> = null;
 	private readonly options: Options = {
 		ignoreCase: true,
@@ -71,8 +70,6 @@ export class TranslatorsCacheStorage extends AbstractVersionedStorage {
 	private lastError: any;
 
 	constructor(id: string, options?: Partial<Options>) {
-		super();
-
 		this.tableName = id;
 
 		if (options !== undefined) {

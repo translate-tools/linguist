@@ -4,9 +4,9 @@ import browser from 'webextension-polyfill';
 
 import { tryDecode, tryDecodeObject } from '../../lib/types';
 import { EventManager } from '../../lib/EventManager';
-import { AbstractVersionedStorage } from '../../types/VersionedStorage';
 import { AppConfig } from '../../types/runtime';
 import { ObservableRecord } from '../../lib/ObservableRecord';
+import { MigrationTask } from '../../migrations/migrations';
 
 export type CallbackEventName = 'load' | 'update';
 
@@ -19,14 +19,10 @@ export type Middleware<T extends {}> = (newProps: Partial<T>, currentProps: T) =
 
 type ConfigType = t.TypeOfProps<typeof AppConfig.props>;
 
-// TODO: add tests and review the code
-export class ConfigStorage extends AbstractVersionedStorage {
-	static publicName = 'ConfigStorage';
-	static storageVersion = 3;
-
-	// TODO: add tests
-	// TODO: move code to library for migrations
-	public static updateStorageVersion = async (prevVersion: number | null) => {
+// TODO: #181 move code to library for migrations
+export const ConfigStorageMigration: MigrationTask = {
+	version: 3,
+	async migrate(prevVersion) {
 		const dataSchemeV1 = AppConfig.props;
 		const storageNameV2 = 'appConfig';
 
@@ -112,8 +108,11 @@ export class ConfigStorage extends AbstractVersionedStorage {
 				break;
 			}
 		}
-	};
+	},
+};
 
+// TODO: add tests and review the code
+export class ConfigStorage {
 	private readonly storageName = 'appConfig';
 	private readonly dataSignature = AppConfig.props;
 
@@ -121,8 +120,6 @@ export class ConfigStorage extends AbstractVersionedStorage {
 	private readonly defaultData?: Partial<ConfigType>;
 
 	constructor(defaultData?: Partial<ConfigType>) {
-		super();
-
 		// Set `defaultData` which can be partial
 		if (defaultData !== undefined) {
 			this.defaultData = tryDecodeObject(

@@ -2,8 +2,8 @@ import { TypeOf } from 'io-ts';
 import browser from 'webextension-polyfill';
 
 import { decodeStruct, tryDecode, type } from '../../../lib/types';
+import { MigrationTask } from '../../../migrations/migrations';
 import { LangCodeWithAuto, LangCode } from '../../../types/runtime';
-import { AbstractVersionedStorage } from '../../../types/VersionedStorage';
 
 const storageSignature = type.union([
 	type.type({
@@ -22,12 +22,10 @@ const storageSignature = type.union([
 
 export type TextTranslatorData = TypeOf<typeof storageSignature>;
 
-export class TextTranslatorStorage extends AbstractVersionedStorage {
-	static publicName = 'TextTranslatorStorage';
-	static storageVersion = 3;
-
-	// TODO: wrap it to tool for migrations. It may be a data transforming pipeline or array with cases to execution for complex migrations
-	public static async updateStorageVersion(prevVersion: number | null) {
+// TODO: #181 wrap it to tool for migrations. It may be a data transforming pipeline or array with cases to execution for complex migrations
+export const TextTranslatorStorageMigration: MigrationTask = {
+	version: 3,
+	async migrate(prevVersion) {
 		const storeName = 'TextTranslatorStorage';
 
 		const dataStructureVersions = {
@@ -96,8 +94,10 @@ export class TextTranslatorStorage extends AbstractVersionedStorage {
 				});
 			}
 		}
-	}
+	},
+};
 
+export class TextTranslatorStorage {
 	private readonly storeName = 'TextTranslatorStorage';
 
 	/**

@@ -1,17 +1,13 @@
 import browser from 'webextension-polyfill';
 
-import { Migration } from '../../../migrations/migrationsList';
-import {
-	getMigrationsInfo,
-	updateMigrationsInfoItem,
-} from '../../../migrations/migrations';
-
 import { SiteData, getPreferences, setPreferences } from './sitePreferences/utils';
 import { addLanguage } from './languagePreferences/utils';
+import { MigrationTask } from '../../../migrations/migrations';
 
-export const migrateSitePreferences: Migration = () =>
-	getMigrationsInfo().then(async ({ autoTranslateDB }) => {
-		switch (autoTranslateDB) {
+export const SitePreferencesMigration: MigrationTask = {
+	version: 1,
+	async migrate(previousVersion) {
+		switch (previousVersion) {
 			case 0: {
 				const allStorageData = await browser.storage.local.get();
 				const storagePrefix = 'SitePreferences:';
@@ -66,9 +62,7 @@ export const migrateSitePreferences: Migration = () =>
 					// Remove key
 					await browser.storage.local.remove(languagesKey);
 				}
-
-				// Update migrate info to migrated method version
-				await updateMigrationsInfoItem({ autoTranslateDB: 1 });
 			}
 		}
-	});
+	},
+};
