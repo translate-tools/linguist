@@ -37,7 +37,7 @@ export const TranslatorsCacheStorageMigration: MigrationTask = {
 	version: 3,
 	async migrate(prevVersion) {
 		// Remove legacy databases
-		if (prevVersion === null || prevVersion < 2) {
+		if (prevVersion < 2) {
 			for (const translatorName in translatorModules) {
 				// Format is `translator_` + translator identifier (not its name)
 				const LegacyDBName = 'translator_' + translatorName;
