@@ -2,7 +2,6 @@ import { TypeOf } from 'io-ts';
 import browser from 'webextension-polyfill';
 
 import { tryDecode, type } from '../../../lib/types';
-import { AbstractVersionedStorage } from '../../../types/VersionedStorage';
 
 const storageSignature = type.type({
 	optionsSpoilerState: type.boolean,
@@ -10,10 +9,8 @@ const storageSignature = type.type({
 
 type PageTranslationData = TypeOf<typeof storageSignature>;
 
-export class PageTranslationStorage extends AbstractVersionedStorage {
-	public static readonly storageVersion = 1;
-
-	public static readonly storeName = 'PageTranslationStorage';
+export class PageTranslationStorage {
+	private readonly storeName = 'PageTranslationStorage';
 
 	/**
 	 * Default data
@@ -23,7 +20,7 @@ export class PageTranslationStorage extends AbstractVersionedStorage {
 	};
 
 	public getData = async () => {
-		const storeName = PageTranslationStorage.storeName;
+		const storeName = this.storeName;
 		const { [storeName]: tabData } = await browser.storage.local.get(storeName);
 
 		if (tabData !== undefined) {
@@ -37,7 +34,7 @@ export class PageTranslationStorage extends AbstractVersionedStorage {
 		// Verify data
 		tryDecode(storageSignature, data);
 
-		const storeName = PageTranslationStorage.storeName;
+		const storeName = this.storeName;
 		await browser.storage.local.set({ [storeName]: data });
 	};
 
