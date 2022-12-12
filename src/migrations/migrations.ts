@@ -81,3 +81,28 @@ export const updateMigrationsInfoItem = async (data: Partial<Data>) => {
 
 	await browser.storage.local.set({ migrationsInfo: { ...actualData, ...data } });
 };
+
+export type MigrationObject = {
+	version: number;
+	migrate: (previousVersion: number) => Promise<void>;
+};
+
+export const configureMigration = (migrations: MigrationObject[]) => {
+	return async (options: { fromVersion: number; toVersion: number }) => {
+		const sortedMigrations = migrations
+			.filter(
+				(migration) =>
+					migration.version > options.fromVersion &&
+					migration.version <= options.toVersion,
+			)
+			.sort((migration1, migration2) => migration1.version - migration2.version);
+
+		if (sortedMigrations.length === 0) return;
+
+		let currentVersion = options.fromVersion;
+		for (const migration of sortedMigrations) {
+			await migration.migrate(currentVersion);
+			currentVersion = migration.version;
+		}
+	};
+};
