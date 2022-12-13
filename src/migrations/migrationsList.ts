@@ -1,7 +1,7 @@
 import { getMigrationsInfo, MigrationTask, updateMigrationsInfoItem } from './migrations';
 
 // Storages
-import { ConfigStorageMigration } from '../modules/ConfigStorage/ConfigStorage';
+import { ConfigStorageMigration } from '../modules/ConfigStorage/migrations';
 import { PopupWindowStorageMigration } from '../pages/popup/layout/PopupWindow.utils/PopupWindowStorage';
 import { TextTranslatorStorageMigration } from '../layouts/TextTranslator/TextTranslator.utils/TextTranslatorStorage';
 import { TranslatorsCacheStorageMigration } from '../modules/Background/TranslatorsCacheStorage';
