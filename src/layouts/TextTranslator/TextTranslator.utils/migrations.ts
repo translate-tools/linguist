@@ -7,8 +7,6 @@ import {
 	MigrationTask,
 } from '../../../migrations/migrations';
 
-const storeName = 'TextTranslatorStorage';
-
 const dataStructureVersions = {
 	0: type.union([
 		type.type({
@@ -30,31 +28,40 @@ const migrations: MigrationObject[] = [
 	{
 		version: 1,
 		async migrate() {
-			const lastState = localStorage.getItem('TextTranslator.lastState');
+			const localStorageName = 'TextTranslator.lastState';
+			const textTranslatorData = localStorage.getItem(localStorageName);
 
 			// Skip
-			if (lastState === null) return;
+			if (textTranslatorData === null) return;
 
 			// Try decode and write data to a new storage
 			try {
-				const parsedData = JSON.parse(lastState);
+				const parsedData = JSON.parse(textTranslatorData);
 				const codec = decodeStruct(dataStructureVersions[0], parsedData);
 
 				if (codec.errors === null && codec.data !== null) {
-					await browser.storage.local.set({ [storeName]: codec.data });
+					await browser.storage.local.set({
+						TextTranslatorStorage: codec.data,
+					});
 				}
 			} catch (error) {
-				// Do nothing, because invalid data here it is not our responsibility domain
+				// Ignore JSON parsing errors
+				if (!(error instanceof SyntaxError)) {
+					throw error;
+				}
 			}
 
 			// Clear data
-			localStorage.removeItem('TextTranslator.lastState');
+			localStorage.removeItem(localStorageName);
 		},
 	},
 	{
 		version: 2,
 		async migrate() {
-			const { [storeName]: tabData } = await browser.storage.local.get(storeName);
+			const browserStorageName = 'TextTranslatorStorage';
+			const { [browserStorageName]: tabData } = await browser.storage.local.get(
+				browserStorageName,
+			);
 
 			const codec = decodeStruct(dataStructureVersions[0], tabData);
 
@@ -63,7 +70,7 @@ const migrations: MigrationObject[] = [
 
 			const { from, to, translate } = codec.data;
 			await browser.storage.local.set({
-				[storeName]: {
+				[browserStorageName]: {
 					from,
 					to,
 					translate: translate
