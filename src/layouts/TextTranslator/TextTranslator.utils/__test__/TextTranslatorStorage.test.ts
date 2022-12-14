@@ -21,13 +21,13 @@ test('TextTranslatorStorage CRUD operations', async () => {
 });
 
 describe('textTranslatorStorage migrations', () => {
-	test('migration v1', async () => {
+	test('migration v2', async () => {
 		const localStorageName = 'TextTranslator.lastState';
 
 		// Write data
 		localStorage.setItem(localStorageName, JSON.stringify(dataSampleV1));
 
-		await TextTranslatorStorageMigration.migrate(0, 1);
+		await TextTranslatorStorageMigration.migrate(0, 2);
 
 		// Test clearance
 		expect(localStorage.getItem(localStorageName)).toBe(null);
@@ -41,7 +41,7 @@ describe('textTranslatorStorage migrations', () => {
 		expect(actualData).toEqual(dataSampleV1);
 	});
 
-	test('migration v2', async () => {
+	test('migration v3', async () => {
 		const browserStorageName = 'TextTranslatorStorage';
 
 		// Write data
@@ -49,7 +49,7 @@ describe('textTranslatorStorage migrations', () => {
 			[browserStorageName]: dataSampleV1,
 		});
 
-		await TextTranslatorStorageMigration.migrate(1, 2);
+		await TextTranslatorStorageMigration.migrate(2, 3);
 
 		// Test migration result
 		const { [browserStorageName]: actualData } = await browser.storage.local.get(

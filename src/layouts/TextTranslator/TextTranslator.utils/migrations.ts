@@ -22,7 +22,7 @@ const dataStructureVersions = {
 
 const migrations: MigrationObject[] = [
 	{
-		version: 1,
+		version: 2,
 		async migrate() {
 			const localStorageName = 'TextTranslator.lastState';
 			const textTranslatorData = localStorage.getItem(localStorageName);
@@ -52,7 +52,7 @@ const migrations: MigrationObject[] = [
 		},
 	},
 	{
-		version: 2,
+		version: 3,
 		async migrate() {
 			const browserStorageName = 'TextTranslatorStorage';
 			const { [browserStorageName]: tabData } = await browser.storage.local.get(
