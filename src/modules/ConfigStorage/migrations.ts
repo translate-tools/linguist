@@ -1,10 +1,6 @@
 import browser from 'webextension-polyfill';
 
-import {
-	configureMigration,
-	MigrationObject,
-	MigrationTask,
-} from '../../migrations/migrations';
+import { configureMigration, MigrationObject } from '../../migrations/migrations';
 
 const migrations: MigrationObject[] = [
 	{
@@ -82,10 +78,4 @@ const migrations: MigrationObject[] = [
 	},
 ];
 
-export const ConfigStorageMigration: MigrationTask = {
-	version: 3,
-	async migrate(prevVersion, currentVersion) {
-		const migrate = configureMigration(migrations);
-		await migrate({ fromVersion: prevVersion, toVersion: currentVersion });
-	},
-};
+export const ConfigStorageMigration = configureMigration(migrations);

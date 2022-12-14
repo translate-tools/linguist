@@ -60,8 +60,8 @@ describe('data migration util', () => {
 	test('migrate from v0 to v3', async () => {
 		data = generateDataSample();
 
-		const migrate = configureMigration(migrations);
-		await migrate({ fromVersion: 0, toVersion: 3 });
+		const migration = configureMigration(migrations);
+		await migration.migrate(0, 3);
 
 		expect(data.length).toBe(3);
 		data.forEach((data) => {
@@ -72,8 +72,8 @@ describe('data migration util', () => {
 	test('migrate from v0 to v4', async () => {
 		data = generateDataSample();
 
-		const migrate = configureMigration(migrations);
-		await migrate({ fromVersion: 0, toVersion: 4 });
+		const migration = configureMigration(migrations);
+		await migration.migrate(0, 4);
 
 		expect(data.length).toBe(3);
 		data.forEach((data) => {
@@ -86,8 +86,8 @@ describe('data migration util', () => {
 	test('migrate from v1 to v4', async () => {
 		data = generateDataSample();
 
-		const migrate = configureMigration(migrations);
-		await migrate({ fromVersion: 1, toVersion: 4 });
+		const migration = configureMigration(migrations);
+		await migration.migrate(1, 4);
 
 		expect(data.length).toBe(3);
 		data.forEach((data) => {
@@ -101,8 +101,8 @@ describe('data migration util', () => {
 		data = generateDataSample();
 
 		const migrationsExcludeV2 = migrations.filter(({ version }) => version !== 2);
-		const migrate = configureMigration(migrationsExcludeV2);
-		await migrate({ fromVersion: 0, toVersion: 3 });
+		const migration = configureMigration(migrationsExcludeV2);
+		await migration.migrate(0, 3);
 
 		expect(data.length).toBe(3);
 		data.forEach((data) => {

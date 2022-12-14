@@ -87,22 +87,32 @@ export type MigrationObject = {
 	migrate: (previousVersion: number) => Promise<void>;
 };
 
-export const configureMigration = (migrations: MigrationObject[]) => {
-	return async (options: { fromVersion: number; toVersion: number }) => {
-		const sortedMigrations = migrations
-			.filter(
+export const configureMigration = (migrations: MigrationObject[]): MigrationTask => {
+	const sortedMigrations = migrations.sort(
+		(migration1, migration2) => migration1.version - migration2.version,
+	);
+
+	const latestMigration =
+		sortedMigrations.length > 0
+			? sortedMigrations[sortedMigrations.length - 1]
+			: undefined;
+	const lastMigrationVersion = latestMigration ? latestMigration.version : 0;
+
+	return {
+		version: lastMigrationVersion,
+		migrate: async (fromVersion: number, toVersion: number) => {
+			const migrationsToApply = sortedMigrations.filter(
 				(migration) =>
-					migration.version > options.fromVersion &&
-					migration.version <= options.toVersion,
-			)
-			.sort((migration1, migration2) => migration1.version - migration2.version);
+					migration.version > fromVersion && migration.version <= toVersion,
+			);
 
-		if (sortedMigrations.length === 0) return;
+			if (migrationsToApply.length === 0) return;
 
-		let currentVersion = options.fromVersion;
-		for (const migration of sortedMigrations) {
-			await migration.migrate(currentVersion);
-			currentVersion = migration.version;
-		}
+			let currentVersion = fromVersion;
+			for (const migration of migrationsToApply) {
+				await migration.migrate(currentVersion);
+				currentVersion = migration.version;
+			}
+		},
 	};
 };
