@@ -10,8 +10,7 @@ describe('config migrations', () => {
 		localStorage.setItem('config.Main', JSON.stringify(configVersion1));
 
 		// Migrate data
-		const currentVersion = ConfigStorageMigration.version;
-		await ConfigStorageMigration.migrate(0, currentVersion);
+		await ConfigStorageMigration.migrate(0, 2);
 
 		const { appConfig } = await browser.storage.local.get('appConfig');
 

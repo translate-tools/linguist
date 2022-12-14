@@ -84,8 +84,8 @@ const migrations: MigrationObject[] = [
 
 export const ConfigStorageMigration: MigrationTask = {
 	version: 3,
-	async migrate(prevVersion) {
+	async migrate(prevVersion, currentVersion) {
 		const migrate = configureMigration(migrations);
-		await migrate({ fromVersion: prevVersion, toVersion: 3 });
+		await migrate({ fromVersion: prevVersion, toVersion: currentVersion });
 	},
 };
