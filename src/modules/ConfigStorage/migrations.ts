@@ -38,7 +38,7 @@ const migrations: MigrationObject[] = [
 		},
 	},
 	{
-		version: 2,
+		version: 3,
 		async migrate() {
 			const storageNameV2 = 'appConfig';
 
