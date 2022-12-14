@@ -1,8 +1,7 @@
 import { TypeOf } from 'io-ts';
 import browser from 'webextension-polyfill';
 
-import { decodeStruct, tryDecode, type } from '../../../lib/types';
-import { MigrationTask } from '../../../migrations/migrations';
+import { tryDecode, type } from '../../../lib/types';
 import { LangCodeWithAuto, LangCode } from '../../../types/runtime';
 
 const storageSignature = type.union([
@@ -21,81 +20,6 @@ const storageSignature = type.union([
 ]);
 
 export type TextTranslatorData = TypeOf<typeof storageSignature>;
-
-// TODO: #181 wrap it to tool for migrations. It may be a data transforming pipeline or array with cases to execution for complex migrations
-export const TextTranslatorStorageMigration: MigrationTask = {
-	version: 3,
-	async migrate(prevVersion) {
-		const storeName = 'TextTranslatorStorage';
-
-		const dataStructureVersions = {
-			0: type.union([
-				type.type({
-					from: LangCodeWithAuto,
-					to: LangCode,
-					translate: type.union([
-						type.type({
-							text: type.string,
-							translate: type.union([type.string, type.null]),
-						}),
-						type.null,
-					]),
-				}),
-				type.null,
-			]),
-		};
-
-		// We fall trough cases to migrate from older versions to newer
-		switch (prevVersion) {
-			case 1: {
-				const lastState = localStorage.getItem('TextTranslator.lastState');
-
-				// Skip
-				if (lastState === null) return;
-
-				// Try decode and write data to a new storage
-				try {
-					const parsedData = JSON.parse(lastState);
-					const codec = decodeStruct(dataStructureVersions[0], parsedData);
-
-					if (codec.errors === null && codec.data !== null) {
-						await browser.storage.local.set({ [storeName]: codec.data });
-					}
-				} catch (error) {
-					// Do nothing, because invalid data here it is not our responsibility domain
-				}
-
-				// Clear data
-				localStorage.removeItem('TextTranslator.lastState');
-			}
-
-			case 2: {
-				const { [storeName]: tabData } = await browser.storage.local.get(
-					storeName,
-				);
-
-				const codec = decodeStruct(dataStructureVersions[0], tabData);
-
-				// Skip invalid data
-				if (codec.errors !== null || codec.data === null) return;
-
-				const { from, to, translate } = codec.data;
-				await browser.storage.local.set({
-					[storeName]: {
-						from,
-						to,
-						translate: translate
-							? {
-								originalText: translate.text,
-								translatedText: translate.translate,
-							  }
-							: null,
-					},
-				});
-			}
-		}
-	},
-};
 
 export class TextTranslatorStorage {
 	private readonly storeName = 'TextTranslatorStorage';

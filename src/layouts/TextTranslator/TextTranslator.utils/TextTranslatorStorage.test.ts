@@ -1,9 +1,8 @@
 import browser from 'webextension-polyfill';
+
 import { clearAllMocks } from '../../../lib/tests';
-import {
-	TextTranslatorStorage,
-	TextTranslatorStorageMigration,
-} from './TextTranslatorStorage';
+import { TextTranslatorStorageMigration } from './migrations';
+import { TextTranslatorStorage } from './TextTranslatorStorage';
 
 const translatorStorageDataV1 = {
 	from: 'en',
@@ -44,10 +43,7 @@ describe('textTranslatorStorage migrations', () => {
 		// Write data
 		localStorage.setItem(storeName, JSON.stringify(translatorStorageDataV1));
 
-		await TextTranslatorStorageMigration.migrate(
-			1,
-			TextTranslatorStorageMigration.version,
-		);
+		await TextTranslatorStorageMigration.migrate(0, 1);
 
 		// Test clearance
 		expect(localStorage.getItem(storeName)).toBe(null);
@@ -66,10 +62,7 @@ describe('textTranslatorStorage migrations', () => {
 			[storeName]: translatorStorageDataV1,
 		});
 
-		await TextTranslatorStorageMigration.migrate(
-			2,
-			TextTranslatorStorageMigration.version,
-		);
+		await TextTranslatorStorageMigration.migrate(0, 2);
 
 		// Test migration result
 		const actualData = await textTranslatorStorage.getData();
