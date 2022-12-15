@@ -5,9 +5,9 @@ import { TextTranslatorStorageMigration } from '../layouts/TextTranslator/TextTr
 import { TranslatorsCacheStorageMigration } from '../modules/Background/migrations';
 import { SitePreferencesMigration } from '../requests/backend/autoTranslation/migrations';
 
-import { ExpectedMigration, migrateData } from './migrateData/migrateData';
+import { PersistentMigrationTask, migrateData } from './migrateData/migrateData';
 
-const migrationsList: ExpectedMigration[] = [
+const migrationsList: PersistentMigrationTask[] = [
 	{
 		name: 'ConfigStorage',
 		migration: ConfigStorageMigration,

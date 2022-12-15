@@ -1,6 +1,25 @@
-export type MigrationTask = {
+/**
+ * Object describes migration
+ */
+export type Migration = {
 	/**
 	 * Data structure version
+	 */
+	version: number;
+
+	/**
+	 * Function to migrate data
+	 */
+	migrate: (previousVersion: number) => Promise<void>;
+};
+
+/**
+ * Task to migrate from one version to another
+ * Task may execute several migrations, so it may take a time
+ */
+export type MigrationTask = {
+	/**
+	 * Task version
 	 */
 	version: number;
 
@@ -12,12 +31,10 @@ export type MigrationTask = {
 	migrate: (previousVersion: number, currentVersion: number) => Promise<void>;
 };
 
-export type MigrationObject = {
-	version: number;
-	migrate: (previousVersion: number) => Promise<void>;
-};
-
-export const configureMigration = (migrations: MigrationObject[]): MigrationTask => {
+/**
+ * Build migration task from migrations list
+ */
+export const configureMigration = (migrations: Migration[]): MigrationTask => {
 	const sortedMigrations = migrations.sort(
 		(migration1, migration2) => migration1.version - migration2.version,
 	);

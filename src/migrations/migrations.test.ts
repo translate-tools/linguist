@@ -1,4 +1,4 @@
-import { configureMigration, MigrationObject } from './migrations';
+import { configureMigration, Migration } from './migrations';
 
 function generateDataSample() {
 	return [
@@ -10,7 +10,7 @@ function generateDataSample() {
 
 let data: Record<string, any>[] = [];
 
-const migrations: MigrationObject[] = [
+const migrations: Migration[] = [
 	{
 		version: 1,
 		async migrate() {

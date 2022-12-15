@@ -9,7 +9,10 @@ import {
 } from './data';
 import { migrationsForMigrationsData } from './data.migrations';
 
-export type ExpectedMigration = { name: string; migration: MigrationTask };
+export type PersistentMigrationTask = {
+	name: string;
+	migration: MigrationTask;
+};
 
 // TODO: add tests
 /**
@@ -20,7 +23,7 @@ export type ExpectedMigration = { name: string; migration: MigrationTask };
  *
  * Migrations are not execute for a new users
  */
-export const migrateData = async (migrationsList: ExpectedMigration[]) => {
+export const migrateData = async (migrationsList: PersistentMigrationTask[]) => {
 	const latestVersion = migrationsForMigrationsData.version;
 	const initData = {
 		version: latestVersion,

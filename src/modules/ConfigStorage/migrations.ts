@@ -1,8 +1,8 @@
 import browser from 'webextension-polyfill';
 
-import { configureMigration, MigrationObject } from '../../migrations/migrations';
+import { configureMigration, Migration } from '../../migrations/migrations';
 
-const migrations: MigrationObject[] = [
+const migrations: Migration[] = [
 	{
 		version: 1,
 		async migrate() {

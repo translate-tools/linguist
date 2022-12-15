@@ -1,7 +1,7 @@
 import browser from 'webextension-polyfill';
 
 import { decodeStruct, type } from '../../../lib/types';
-import { configureMigration, MigrationObject } from '../../../migrations/migrations';
+import { configureMigration, Migration } from '../../../migrations/migrations';
 
 const dataStructureVersions = {
 	0: type.union([
@@ -20,7 +20,7 @@ const dataStructureVersions = {
 	]),
 };
 
-const migrations: MigrationObject[] = [
+const migrations: Migration[] = [
 	{
 		version: 2,
 		async migrate() {
