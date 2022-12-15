@@ -1,7 +1,63 @@
 import { TypeOf } from 'io-ts';
 import browser from 'webextension-polyfill';
 
-import { tryDecode, type } from '../lib/types';
+import { decodeStruct, type } from '../lib/types';
+
+const migrationsStructure = type.type({
+	version: type.number,
+	dataVersions: type.record(type.string, type.number),
+});
+
+type MigrationsData = TypeOf<typeof migrationsStructure>;
+
+const storageName = 'migrationsInfo';
+
+export const getMigrationsMetaInfo = async () => {
+	const storage = await browser.storage.local.get(storageName);
+	const isMigrationsStorageExist = storageName in storage;
+	const migrationsStorageVersion =
+		isMigrationsStorageExist && typeof storage[storageName].version === 'number'
+			? storage[storageName].version
+			: 0;
+
+	return {
+		isMigrationsStorageExist,
+		migrationsStorageVersion,
+	};
+};
+
+export const getMigrationsData = async () => {
+	const { [storageName]: rawData } = await browser.storage.local.get(storageName);
+
+	// Verify data
+	const codec = decodeStruct(migrationsStructure, rawData);
+	if (codec.errors !== null) return null;
+
+	return codec.data;
+};
+
+export const setMigrationsData = async (migrationsData: MigrationsData) => {
+	await browser.storage.local.set({ [storageName]: migrationsData });
+};
+
+export const getMigrationsVersions = async () => {
+	const migrationsData = await getMigrationsData();
+	return migrationsData ? migrationsData.dataVersions : {};
+};
+
+export const setMigrationsVersions = async (
+	migrationsVersions: MigrationsData['dataVersions'],
+) => {
+	const migrationsData = await getMigrationsData();
+
+	if (migrationsData === null) {
+		throw new TypeError('Migrations data are empty');
+	}
+
+	await setMigrationsData({ ...migrationsData, dataVersions: migrationsVersions });
+};
+
+// TODO: split this file to 2 files
 
 export type MigrationTask = {
 	/**
@@ -15,71 +71,6 @@ export type MigrationTask = {
 	 * WARNING: previous version may contain `0` in case when data structure run migration first time
 	 */
 	migrate: (previousVersion: number, currentVersion: number) => Promise<void>;
-};
-
-const migrationsSignature = type.type({
-	appConfig: type.number,
-	autoTranslateDB: type.number,
-	storageVersions: type.record(type.string, type.number),
-});
-
-type Data = TypeOf<typeof migrationsSignature>;
-
-const initData: Data = {
-	appConfig: 0,
-	autoTranslateDB: 0,
-	storageVersions: {},
-};
-
-export const getMigrationsInfo = async () => {
-	const migrationsInfoRaw = (await browser.storage.local.get('migrationsInfo'))[
-		'migrationsInfo'
-	];
-
-	// Try load data
-	const tryLoadData = () => {
-		try {
-			return tryDecode(migrationsSignature, migrationsInfoRaw);
-		} catch (error) {
-			if (!(error instanceof TypeError)) throw error;
-		}
-
-		return null;
-	};
-
-	// Try merge init data and current
-	const tryMergeWithInit = () => {
-		try {
-			if (typeof migrationsInfoRaw === 'object') {
-				const mergedData: Data = { ...initData, ...migrationsInfoRaw };
-				return tryDecode(migrationsSignature, mergedData);
-			}
-		} catch (error) {
-			if (!(error instanceof TypeError)) throw error;
-		}
-
-		return null;
-	};
-
-	let migrationsInfo: Data | null = null;
-
-	// Try get data
-	migrationsInfo = tryLoadData();
-
-	if (migrationsInfo === null) {
-		migrationsInfo = tryMergeWithInit();
-	}
-	if (migrationsInfo === null) {
-		migrationsInfo = initData;
-	}
-
-	return migrationsInfo;
-};
-
-export const updateMigrationsInfoItem = async (data: Partial<Data>) => {
-	const actualData = await getMigrationsInfo();
-
-	await browser.storage.local.set({ migrationsInfo: { ...actualData, ...data } });
 };
 
 export type MigrationObject = {
