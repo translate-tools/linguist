@@ -2,7 +2,7 @@ import { getMigrationsInfo, MigrationTask, updateMigrationsInfoItem } from './mi
 
 // Storages
 import { ConfigStorageMigration } from '../modules/ConfigStorage/migrations';
-import { PopupWindowStorageMigration } from '../pages/popup/layout/PopupWindow.utils/PopupWindowStorage';
+import { PopupWindowStorageMigration } from '../pages/popup/layout/PopupWindow.utils/migrations';
 import { TextTranslatorStorageMigration } from '../layouts/TextTranslator/TextTranslator.utils/migrations';
 import { TranslatorsCacheStorageMigration } from '../modules/Background/migrations';
 import { SitePreferencesMigration } from '../requests/backend/autoTranslation/migrations';
