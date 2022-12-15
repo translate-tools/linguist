@@ -1,7 +1,7 @@
 import browser from 'webextension-polyfill';
 
 import { clearAllMocks } from '../../../../lib/tests';
-import { TextTranslatorStorageMigration } from '../migrations';
+import { TextTranslatorStorageMigration } from '../TextTranslatorStorage.migrations';
 import { TextTranslatorStorage } from '../TextTranslatorStorage';
 
 import dataSampleV1 from './TextTranslatorData-v1.sample.json';

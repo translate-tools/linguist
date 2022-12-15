@@ -4,7 +4,7 @@ import { SiteData, getPreferences, setPreferences } from './sitePreferences/util
 import { addLanguage } from './languagePreferences/utils';
 import { configureMigration } from '../../../migrations/migrations';
 
-export const SitePreferencesMigration = configureMigration([
+export const AutoTranslationMigration = configureMigration([
 	{
 		version: 1,
 		/**

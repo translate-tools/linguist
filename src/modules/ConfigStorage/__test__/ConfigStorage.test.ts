@@ -1,5 +1,5 @@
 import browser from 'webextension-polyfill';
-import { ConfigStorageMigration } from '../migrations';
+import { ConfigStorageMigration } from '../ConfigStorage.migrations';
 
 import configVersion1 from './config-v1.json';
 import configVersion3 from './config-v3.json';
