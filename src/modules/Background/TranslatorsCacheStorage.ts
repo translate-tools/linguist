@@ -1,7 +1,5 @@
 import * as IDB from 'idb/with-async-ittr';
 
-import { translatorModules } from '.';
-import { MigrationTask } from '../../migrations/migrations';
 import { ITranslation } from '../../types/translation/Translation';
 
 export interface TranslatorDBSchema extends IDB.DBSchema {
@@ -26,35 +24,6 @@ interface Options {
 }
 
 const DBName = 'translatorsCache';
-
-/**
- * An update strategy for this storage is deleting IDB database and re-creating with new structure
- *
- * It's because DB contains only temporary data and IDB version increase while add each new translator,
- * so we can't migrate data by IDB version, because it didn't reflect an IDB structure, but only number of updates.
- */
-export const TranslatorsCacheStorageMigration: MigrationTask = {
-	version: 3,
-	async migrate(prevVersion) {
-		// Remove legacy databases
-		if (prevVersion < 2) {
-			for (const translatorName in translatorModules) {
-				// Format is `translator_` + translator identifier (not its name)
-				const LegacyDBName = 'translator_' + translatorName;
-				await IDB.deleteDB(LegacyDBName);
-			}
-			return;
-		}
-
-		switch (prevVersion) {
-			case 2: {
-				// Drop table with cache, to re-create with new structure
-				await IDB.deleteDB(DBName);
-				break;
-			}
-		}
-	},
-};
 
 // TODO: refactor me
 /**
