@@ -14,7 +14,8 @@ const storageName = 'migrationsInfo';
 
 export const getMigrationsMetaInfo = async () => {
 	const storage = await browser.storage.local.get(storageName);
-	const isMigrationsStorageExist = storageName in storage;
+	const isMigrationsStorageExist =
+		storageName in storage && storage[storageName] !== undefined;
 	const migrationsStorageVersion =
 		isMigrationsStorageExist && typeof storage[storageName].version === 'number'
 			? storage[storageName].version
