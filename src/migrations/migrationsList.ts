@@ -9,7 +9,7 @@ import {
 	PersistentMigrationTask,
 	PersistentMigrationsExecutor,
 } from './MigrationsExecutor/PersistentMigrationsExecutor';
-import { MigrationsStorage } from './MigrationsExecutor/MigrationsStorage';
+import { AppMigrationsStorage } from './MigrationsExecutor/AppMigrationsStorage';
 
 const migrationsList: PersistentMigrationTask[] = [
 	{
@@ -35,7 +35,7 @@ const migrationsList: PersistentMigrationTask[] = [
 ];
 
 export const migrateAll = async () => {
-	const migrationsStorage = new MigrationsStorage();
+	const migrationsStorage = new AppMigrationsStorage();
 	const migrationExecutor = new PersistentMigrationsExecutor(migrationsStorage);
 	await migrationExecutor.executeMigrations(migrationsList);
 };

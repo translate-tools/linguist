@@ -1,5 +1,5 @@
 import { clearAllMocks } from '../../lib/tests';
-import { MigrationsStorage } from './MigrationsStorage';
+import { AppMigrationsStorage } from './AppMigrationsStorage';
 import { PersistentMigrationsExecutor } from './PersistentMigrationsExecutor';
 
 describe('migrations persistence', () => {
@@ -8,7 +8,7 @@ describe('migrations persistence', () => {
 
 		// TODO: encapsulate initializing
 		// Init storage
-		const migrationsStorage = new MigrationsStorage();
+		const migrationsStorage = new AppMigrationsStorage();
 		await migrationsStorage.prepareStorage();
 	});
 
@@ -35,7 +35,7 @@ describe('migrations persistence', () => {
 	};
 
 	test('migrations does not execute for new users', async () => {
-		const migrationsStorage = new MigrationsStorage();
+		const migrationsStorage = new AppMigrationsStorage();
 		const persistentMigrationsExecutor = new PersistentMigrationsExecutor(
 			migrationsStorage,
 		);
@@ -57,7 +57,7 @@ describe('migrations persistence', () => {
 	});
 
 	test('migrations run when versions changes', async () => {
-		const migrationsStorage = new MigrationsStorage();
+		const migrationsStorage = new AppMigrationsStorage();
 		const persistentMigrationsExecutor = new PersistentMigrationsExecutor(
 			migrationsStorage,
 		);
