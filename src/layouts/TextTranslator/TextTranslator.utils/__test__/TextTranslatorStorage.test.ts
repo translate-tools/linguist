@@ -7,20 +7,48 @@ import { TextTranslatorStorage } from '../TextTranslatorStorage';
 import dataSampleV1 from './TextTranslatorData-v1.sample.json';
 import dataSampleV2 from './TextTranslatorData-v2.sample.json';
 
-beforeEach(clearAllMocks);
+describe('TextTranslatorStorage CRUD operations', () => {
+	beforeAll(clearAllMocks);
 
-test('TextTranslatorStorage CRUD operations', async () => {
-	const textTranslatorStorage = new TextTranslatorStorage();
-	const initData = await textTranslatorStorage.getData();
-	expect(initData).toBe(null);
+	test('set data', async () => {
+		const textTranslatorStorage = new TextTranslatorStorage();
 
-	await textTranslatorStorage.setData(dataSampleV2 as any);
+		const initData = await textTranslatorStorage.getData();
+		expect(initData).toBeNull();
 
-	const dataFromStorage = await textTranslatorStorage.getData();
-	expect(dataFromStorage).toEqual(dataSampleV2);
+		await textTranslatorStorage.setData(dataSampleV2 as any);
+		const textTranslatorData = await textTranslatorStorage.getData();
+		expect(textTranslatorData).toEqual(dataSampleV2);
+	});
+
+	test('update data', async () => {
+		const textTranslatorStorage = new TextTranslatorStorage();
+
+		await textTranslatorStorage.updateData({ from: 'de', to: 'de' });
+		const textTranslatorData = await textTranslatorStorage.getData();
+		expect(textTranslatorData).not.toBeNull();
+		expect(textTranslatorData?.from).toBe('de');
+		expect(textTranslatorData?.to).toBe('de');
+		expect(textTranslatorData?.translate).toEqual(dataSampleV2.translate);
+	});
+
+	test('clear data', async () => {
+		const textTranslatorStorage = new TextTranslatorStorage();
+
+		await textTranslatorStorage.forgetText();
+		const textTranslatorData1 = await textTranslatorStorage.getData();
+		expect(textTranslatorData1).not.toBeNull();
+		expect(textTranslatorData1?.translate).toBeNull();
+
+		await textTranslatorStorage.clear();
+		const textTranslatorData2 = await textTranslatorStorage.getData();
+		expect(textTranslatorData2).toBeNull();
+	});
 });
 
-describe('textTranslatorStorage migrations', () => {
+describe('TextTranslatorStorage migrations', () => {
+	beforeEach(clearAllMocks);
+
 	test('migration v2', async () => {
 		const localStorageName = 'TextTranslator.lastState';
 
