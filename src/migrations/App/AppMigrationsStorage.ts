@@ -2,8 +2,12 @@ import { TypeOf } from 'io-ts';
 import browser from 'webextension-polyfill';
 
 import { decodeStruct, type } from '../../lib/types';
-import { migrationsForMigrationsStorage } from './MigrationsStorage.migrations';
-import { MigrationsMap, MigrationsStorage } from './MigrationsStorage';
+import {
+	MigrationsMap,
+	MigrationsStorage,
+} from '../../lib/migrations/MigrationsExecutor/MigrationsStorage';
+
+import { migrationsForMigrationsStorage } from './AppMigrationsStorage.migrations';
 
 const migrationsStructure = type.type({
 	version: type.number,

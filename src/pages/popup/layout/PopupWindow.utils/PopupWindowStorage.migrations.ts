@@ -1,7 +1,7 @@
-import { configureMigration } from '../../../../migrations/migrations';
+import { createMigrationTask } from '../../../../lib/migrations/createMigrationTask';
 import { PopupWindowStorage } from './PopupWindowStorage';
 
-export const PopupWindowStorageMigration = configureMigration([
+export const PopupWindowStorageMigration = createMigrationTask([
 	{
 		version: 1,
 		async migrate() {

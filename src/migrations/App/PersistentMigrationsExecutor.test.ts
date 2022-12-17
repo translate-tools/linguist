@@ -1,6 +1,6 @@
 import { clearAllMocks } from '../../lib/tests';
 import { AppMigrationsStorage } from './AppMigrationsStorage';
-import { PersistentMigrationsExecutor } from './PersistentMigrationsExecutor';
+import { PersistentMigrationsExecutor } from '../../lib/migrations/MigrationsExecutor/PersistentMigrationsExecutor';
 
 describe('migrations persistence', () => {
 	beforeAll(async () => {

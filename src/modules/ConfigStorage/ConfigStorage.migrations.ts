@@ -1,6 +1,6 @@
 import browser from 'webextension-polyfill';
 
-import { configureMigration, Migration } from '../../migrations/migrations';
+import { createMigrationTask, Migration } from '../../lib/migrations/createMigrationTask';
 
 const migrations: Migration[] = [
 	{
@@ -78,4 +78,4 @@ const migrations: Migration[] = [
 	},
 ];
 
-export const ConfigStorageMigration = configureMigration(migrations);
+export const ConfigStorageMigration = createMigrationTask(migrations);

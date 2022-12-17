@@ -1,4 +1,4 @@
-import { configureMigration, Migration } from './migrations';
+import { createMigrationTask, Migration } from './createMigrationTask';
 
 function generateDataSample() {
 	return [
@@ -60,7 +60,7 @@ describe('data migration util', () => {
 	test('migrate from v0 to v3', async () => {
 		data = generateDataSample();
 
-		const migration = configureMigration(migrations);
+		const migration = createMigrationTask(migrations);
 		await migration.migrate(0, 3);
 
 		expect(data.length).toBe(3);
@@ -72,7 +72,7 @@ describe('data migration util', () => {
 	test('migrate from v0 to v4', async () => {
 		data = generateDataSample();
 
-		const migration = configureMigration(migrations);
+		const migration = createMigrationTask(migrations);
 		await migration.migrate(0, 4);
 
 		expect(data.length).toBe(3);
@@ -86,7 +86,7 @@ describe('data migration util', () => {
 	test('migrate from v1 to v4', async () => {
 		data = generateDataSample();
 
-		const migration = configureMigration(migrations);
+		const migration = createMigrationTask(migrations);
 		await migration.migrate(1, 4);
 
 		expect(data.length).toBe(3);
@@ -101,7 +101,7 @@ describe('data migration util', () => {
 		data = generateDataSample();
 
 		const migrationsExcludeV2 = migrations.filter(({ version }) => version !== 2);
-		const migration = configureMigration(migrationsExcludeV2);
+		const migration = createMigrationTask(migrationsExcludeV2);
 		await migration.migrate(0, 3);
 
 		expect(data.length).toBe(3);

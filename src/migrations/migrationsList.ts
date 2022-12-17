@@ -8,8 +8,8 @@ import { AutoTranslationMigration } from '../requests/backend/autoTranslation/au
 import {
 	PersistentMigrationTask,
 	PersistentMigrationsExecutor,
-} from './MigrationsExecutor/PersistentMigrationsExecutor';
-import { AppMigrationsStorage } from './MigrationsExecutor/AppMigrationsStorage';
+} from '../lib/migrations/MigrationsExecutor/PersistentMigrationsExecutor';
+import { AppMigrationsStorage } from './App/AppMigrationsStorage';
 
 const migrationsList: PersistentMigrationTask[] = [
 	{

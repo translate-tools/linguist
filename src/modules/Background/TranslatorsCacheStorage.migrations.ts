@@ -1,6 +1,6 @@
 import * as IDB from 'idb/with-async-ittr';
 
-import { configureMigration } from '../../migrations/migrations';
+import { createMigrationTask } from '../../lib/migrations/createMigrationTask';
 
 /**
  * An update strategy for this storage is deleting IDB database and re-creating with new structure
@@ -8,7 +8,7 @@ import { configureMigration } from '../../migrations/migrations';
  * It's because DB contains only temporary data and IDB version increase while add each new translator,
  * so we can't migrate data by IDB version, because it didn't reflect an IDB structure, but only number of updates.
  */
-export const TranslatorsCacheStorageMigration = configureMigration([
+export const TranslatorsCacheStorageMigration = createMigrationTask([
 	{
 		version: 2,
 		async migrate() {

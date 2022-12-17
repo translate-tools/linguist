@@ -1,4 +1,4 @@
-import { MigrationTask } from '../migrations';
+import { MigrationTask } from '../createMigrationTask';
 
 import { MigrationsStorage } from './MigrationsStorage';
 

@@ -34,7 +34,7 @@ export type MigrationTask = {
 /**
  * Build migration task from migrations list
  */
-export const configureMigration = (migrations: Migration[]): MigrationTask => {
+export const createMigrationTask = (migrations: Migration[]): MigrationTask => {
 	const sortedMigrations = migrations.sort(
 		(migration1, migration2) => migration1.version - migration2.version,
 	);

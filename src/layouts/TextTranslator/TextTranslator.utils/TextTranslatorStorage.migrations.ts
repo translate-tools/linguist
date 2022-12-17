@@ -1,7 +1,10 @@
 import browser from 'webextension-polyfill';
 
 import { decodeStruct, type } from '../../../lib/types';
-import { configureMigration, Migration } from '../../../migrations/migrations';
+import {
+	createMigrationTask,
+	Migration,
+} from '../../../lib/migrations/createMigrationTask';
 
 const dataStructureVersions = {
 	0: type.union([
@@ -81,4 +84,4 @@ const migrations: Migration[] = [
 	},
 ];
 
-export const TextTranslatorStorageMigration = configureMigration(migrations);
+export const TextTranslatorStorageMigration = createMigrationTask(migrations);
