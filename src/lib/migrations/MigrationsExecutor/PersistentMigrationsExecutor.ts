@@ -7,6 +7,7 @@ export type PersistentMigrationTask = {
 	migration: MigrationTask;
 };
 
+// TODO: replace logger to external library-level
 export class PersistentMigrationsExecutor {
 	private readonly storage: MigrationsStorage;
 	constructor(storage: MigrationsStorage) {
@@ -32,10 +33,6 @@ export class PersistentMigrationsExecutor {
 				const { name, migration } = migrationObject;
 
 				if (name.length === 0) {
-					console.error('Data for error below', {
-						index,
-						migration: migrationObject,
-					});
 					throw new TypeError('Storage must have name');
 				}
 
@@ -43,10 +40,6 @@ export class PersistentMigrationsExecutor {
 					(migration) => migration.name === name,
 				);
 				if (migrationNameIndex !== index) {
-					console.error('Data for error below', {
-						index,
-						migration: migrationObject,
-					});
 					throw new Error('Storage names must be unique');
 				}
 
