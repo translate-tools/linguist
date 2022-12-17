@@ -2,6 +2,11 @@ import * as IDB from 'idb/with-async-ittr';
 
 import { ITranslation } from '../../types/translation/Translation';
 
+/**
+ * Helper type to cast table name string
+ */
+type TableName = 'tableName';
+
 export interface TranslatorDBSchema extends IDB.DBSchema {
 	tableName: {
 		key: string;
@@ -12,40 +17,25 @@ export interface TranslatorDBSchema extends IDB.DBSchema {
 	};
 }
 
-type DB = IDB.IDBPDatabase<TranslatorDBSchema>;
-
-/**
- * Helper type to cast table name string
- */
-type TableName = 'tableName';
-
 interface Options {
 	ignoreCase: boolean;
 }
 
-const DBName = 'translatorsCache';
-
-// TODO: refactor me
 /**
  * Data are stores in IDB
  */
 export class TranslatorsCacheStorage {
-	private dbPromise: null | Promise<DB | undefined> = null;
-	private readonly options: Options = {
-		ignoreCase: true,
-	};
+	private dbPromise: Promise<IDB.IDBPDatabase<TranslatorDBSchema>> | null = null;
 
-	private tableName: string;
-	private lastError: any;
+	private readonly tableName: string;
+	private readonly options: Options;
 
-	constructor(id: string, options?: Partial<Options>) {
+	constructor(id: string, options: Partial<Options> = {}) {
 		this.tableName = id;
-
-		if (options !== undefined) {
-			for (const key in options) {
-				(this.options as any)[key] = (options as any)[key];
-			}
-		}
+		this.options = {
+			ignoreCase: true,
+			...options,
+		};
 	}
 
 	private getDB() {
@@ -54,8 +44,10 @@ export class TranslatorsCacheStorage {
 				this.dbPromise = null;
 			};
 
+			const DBName = 'translatorsCache';
 			const id = this.tableName;
-			this.dbPromise = IDB.openDB<TranslatorDBSchema>(DBName).then((db) => {
+
+			const dbPromise = IDB.openDB<TranslatorDBSchema>(DBName).then((db) => {
 				// Prevent versionchange blocking
 				db.addEventListener('versionchange', () => {
 					db.close();
@@ -90,19 +82,19 @@ export class TranslatorsCacheStorage {
 						return db;
 					})
 					.catch((reason) => {
-						this.lastError = reason;
-						return undefined;
+						// Clear promise
+						if (this.dbPromise === dbPromise) {
+							this.dbPromise = null;
+						}
+
+						throw reason;
 					});
 			});
+
+			this.dbPromise = dbPromise;
 		}
 
-		return this.dbPromise.then((db) => {
-			if (db === undefined) {
-				throw this.lastError;
-			}
-
-			return db;
-		});
+		return this.dbPromise;
 	}
 
 	public get(text: string, from: string, to: string) {
