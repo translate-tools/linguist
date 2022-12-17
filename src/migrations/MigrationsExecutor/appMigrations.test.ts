@@ -1,8 +1,16 @@
 import { clearAllMocks } from '../../lib/tests';
-import { migrateData } from './migrateData';
+import { MigrationsStorage } from './MigrationsStorage';
+import { PersistentMigrationsExecutor } from './PersistentMigrationsExecutor';
 
 describe('migrations persistence', () => {
-	beforeAll(clearAllMocks);
+	beforeAll(async () => {
+		await clearAllMocks();
+
+		// TODO: encapsulate initializing
+		// Init storage
+		const migrationsStorage = new MigrationsStorage();
+		await migrationsStorage.prepareStorage();
+	});
 
 	const getMockedMigrations = () => {
 		const migrateFooStub = jest.fn();
@@ -27,23 +35,33 @@ describe('migrations persistence', () => {
 	};
 
 	test('migrations does not execute for new users', async () => {
+		const migrationsStorage = new MigrationsStorage();
+		const persistentMigrationsExecutor = new PersistentMigrationsExecutor(
+			migrationsStorage,
+		);
+
 		const migrations = getMockedMigrations();
 
 		const migrationFoo = migrations[0];
 		const migrationBar = migrations[1];
 
 		// Call first time and only remember migrations versions
-		await migrateData(migrations);
+		await persistentMigrationsExecutor.executeMigrations(migrations);
 		expect(migrationFoo.migration.migrate).not.toHaveBeenCalled();
 		expect(migrationBar.migration.migrate).not.toHaveBeenCalled();
 
 		// Call one more time and do nothing
-		await migrateData(migrations);
+		await persistentMigrationsExecutor.executeMigrations(migrations);
 		expect(migrationFoo.migration.migrate).not.toHaveBeenCalled();
 		expect(migrationBar.migration.migrate).not.toHaveBeenCalled();
 	});
 
 	test('migrations run when versions changes', async () => {
+		const migrationsStorage = new MigrationsStorage();
+		const persistentMigrationsExecutor = new PersistentMigrationsExecutor(
+			migrationsStorage,
+		);
+
 		const migrations = getMockedMigrations();
 
 		const migrationFoo = migrations[0];
@@ -53,7 +71,7 @@ describe('migrations persistence', () => {
 		jest.clearAllMocks();
 		migrationFoo.migration.version++;
 
-		await migrateData(migrations);
+		await persistentMigrationsExecutor.executeMigrations(migrations);
 		expect(migrationFoo.migration.migrate).toHaveBeenCalled();
 		expect(migrationBar.migration.migrate).not.toHaveBeenCalled();
 
@@ -61,7 +79,7 @@ describe('migrations persistence', () => {
 		jest.clearAllMocks();
 		migrationBar.migration.version++;
 
-		await migrateData(migrations);
+		await persistentMigrationsExecutor.executeMigrations(migrations);
 		expect(migrationFoo.migration.migrate).not.toHaveBeenCalled();
 		expect(migrationBar.migration.migrate).toHaveBeenCalled();
 
@@ -70,7 +88,7 @@ describe('migrations persistence', () => {
 		migrationFoo.migration.version++;
 		migrationBar.migration.version++;
 
-		await migrateData(migrations);
+		await persistentMigrationsExecutor.executeMigrations(migrations);
 		expect(migrationFoo.migration.migrate).toHaveBeenCalled();
 		expect(migrationBar.migration.migrate).toHaveBeenCalled();
 
@@ -78,7 +96,7 @@ describe('migrations persistence', () => {
 		jest.clearAllMocks();
 		migrationBar.migration.version = 1;
 
-		await migrateData(migrations);
+		await persistentMigrationsExecutor.executeMigrations(migrations);
 		expect(migrationFoo.migration.migrate).not.toHaveBeenCalled();
 		expect(migrationBar.migration.migrate).not.toHaveBeenCalled();
 	});

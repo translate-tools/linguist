@@ -3,7 +3,7 @@ import browser from 'webextension-polyfill';
 import { decodeStruct, type } from '../../lib/types';
 import { configureMigration } from '../migrations';
 
-export const migrationsForMigrationsData = configureMigration([
+export const migrationsForMigrationsStorage = configureMigration([
 	{
 		version: 1,
 		async migrate() {

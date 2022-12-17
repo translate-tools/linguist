@@ -5,7 +5,11 @@ import { TextTranslatorStorageMigration } from '../layouts/TextTranslator/TextTr
 import { TranslatorsCacheStorageMigration } from '../modules/Background/TranslatorsCacheStorage.migrations';
 import { AutoTranslationMigration } from '../requests/backend/autoTranslation/autoTranslation.migrations';
 
-import { PersistentMigrationTask, migrateData } from './migrateData/migrateData';
+import {
+	PersistentMigrationTask,
+	PersistentMigrationsExecutor,
+} from './MigrationsExecutor/PersistentMigrationsExecutor';
+import { MigrationsStorage } from './MigrationsExecutor/MigrationsStorage';
 
 const migrationsList: PersistentMigrationTask[] = [
 	{
@@ -31,5 +35,7 @@ const migrationsList: PersistentMigrationTask[] = [
 ];
 
 export const migrateAll = async () => {
-	await migrateData(migrationsList);
+	const migrationsStorage = new MigrationsStorage();
+	const migrationExecutor = new PersistentMigrationsExecutor(migrationsStorage);
+	await migrationExecutor.executeMigrations(migrationsList);
 };
