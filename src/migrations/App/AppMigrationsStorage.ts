@@ -68,13 +68,17 @@ export class AppMigrationsStorage implements MigrationsStorage {
 	};
 
 	private getMigrationsData = async () => {
+		await this.prepareStorage();
+
 		const { [this.storageName]: rawData } = await browser.storage.local.get(
 			this.storageName,
 		);
 
 		// Verify data
 		const codec = decodeStruct(migrationsStructure, rawData);
-		if (codec.errors !== null) return null;
+		if (codec.errors !== null) {
+			throw new TypeError("Can't decode migrations data");
+		}
 
 		return codec.data;
 	};
@@ -90,11 +94,6 @@ export class AppMigrationsStorage implements MigrationsStorage {
 
 	public setMigrationsVersions = async (migrationsVersions: MigrationsMap) => {
 		const migrationsData = await this.getMigrationsData();
-
-		if (migrationsData === null) {
-			throw new TypeError('Migrations data are empty');
-		}
-
 		await this.setMigrationsData({
 			...migrationsData,
 			dataVersions: migrationsVersions,

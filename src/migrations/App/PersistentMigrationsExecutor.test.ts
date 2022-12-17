@@ -7,11 +7,6 @@ import { AppMigrationsStorage } from './AppMigrationsStorage';
 describe('migrations persistence', () => {
 	beforeAll(async () => {
 		await clearAllMocks();
-
-		// TODO: encapsulate initializing
-		// Init storage
-		const migrationsStorage = new AppMigrationsStorage();
-		await migrationsStorage.prepareStorage();
 	});
 
 	testPersistentMigrationsExecutor(() => {
