@@ -18,7 +18,7 @@ export type Middleware<T extends {}> = (newProps: Partial<T>, currentProps: T) =
 
 type ConfigType = t.TypeOfProps<typeof AppConfig.props>;
 
-// TODO: add tests and review the code
+// TODO: #184 refactor code
 export class ConfigStorage {
 	private readonly storageName = 'appConfig';
 	private readonly dataSignature = AppConfig.props;
