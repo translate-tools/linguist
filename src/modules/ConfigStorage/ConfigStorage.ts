@@ -4,7 +4,6 @@ import browser from 'webextension-polyfill';
 
 import { tryDecode, tryDecodeObject } from '../../lib/types';
 import { EventManager } from '../../lib/EventManager';
-import { AbstractVersionedStorage } from '../../types/utils';
 import { AppConfig } from '../../types/runtime';
 import { ObservableRecord } from '../../lib/ObservableRecord';
 
@@ -19,23 +18,19 @@ export type Middleware<T extends {}> = (newProps: Partial<T>, currentProps: T) =
 
 type ConfigType = t.TypeOfProps<typeof AppConfig.props>;
 
-export class ConfigStorage extends AbstractVersionedStorage {
-	static publicName = 'ConfigStorage';
-	static storageVersion = 3;
+// TODO: #184 refactor code
+export class ConfigStorage {
+	private readonly storageName = 'appConfig';
+	private readonly dataSignature = AppConfig.props;
 
-	private static readonly storageName = 'appConfig';
-	private static readonly dataSignature = AppConfig.props;
-
-	private state: t.TypeOfProps<typeof ConfigStorage.dataSignature> | null = null;
+	private state: t.TypeOfProps<typeof this.dataSignature> | null = null;
 	private readonly defaultData?: Partial<ConfigType>;
 
 	constructor(defaultData?: Partial<ConfigType>) {
-		super();
-
 		// Set `defaultData` which can be partial
 		if (defaultData !== undefined) {
 			this.defaultData = tryDecodeObject(
-				t.partial(ConfigStorage.dataSignature),
+				t.partial(this.dataSignature),
 				defaultData,
 			);
 		}
@@ -57,14 +52,14 @@ export class ConfigStorage extends AbstractVersionedStorage {
 	 */
 	private async init() {
 		// Get data from storage if possible
-		const { [ConfigStorage.storageName]: storageDataResponse } =
-			await browser.storage.local.get(ConfigStorage.storageName);
+		const { [this.storageName]: storageDataResponse } =
+			await browser.storage.local.get(this.storageName);
 
 		const storageData = storageDataResponse ?? {};
 
 		// Collect data from storage and validate each property by signature
 		const dataCollector: Partial<ConfigType> = {};
-		for (const keyRaw in ConfigStorage.dataSignature) {
+		for (const keyRaw in this.dataSignature) {
 			const key = keyRaw as keyof ConfigType;
 
 			let isDefaultConfig = false;
@@ -91,7 +86,7 @@ export class ConfigStorage extends AbstractVersionedStorage {
 			// Validate value and fix if possible
 			try {
 				// Try decode to validate
-				tryDecode((ConfigStorage.dataSignature as any)[key], dataCollector[key]);
+				tryDecode((this.dataSignature as any)[key], dataCollector[key]);
 			} catch (error) {
 				// Throw when it unexpected error type or if it already default data
 				if (!(error instanceof TypeError) || isDefaultConfig) throw error;
@@ -106,14 +101,14 @@ export class ConfigStorage extends AbstractVersionedStorage {
 				// Try replace to default value
 				const defaultValue = this.defaultData[key];
 				dataCollector[key as keyof ConfigType] = tryDecode(
-					(ConfigStorage.dataSignature as any)[key],
+					(this.dataSignature as any)[key],
 					defaultValue,
 				);
 			}
 		}
 
 		// Validate integrity
-		for (const key in ConfigStorage.dataSignature) {
+		for (const key in this.dataSignature) {
 			if (!(key in dataCollector)) {
 				throw new Error(
 					`Loaded data does not match signature. Property "${key}" is not found`,
@@ -156,7 +151,7 @@ export class ConfigStorage extends AbstractVersionedStorage {
 
 		// TODO: move to other method `sync`
 		// Write to store (sync)
-		await browser.storage.local.set({ [ConfigStorage.storageName]: this.state });
+		await browser.storage.local.set({ [this.storageName]: this.state });
 
 		return this.state;
 	}
@@ -205,11 +200,11 @@ export class ConfigStorage extends AbstractVersionedStorage {
 		// Validate new values
 		for (const key in newData) {
 			// Check signature to exist
-			if (!(key in ConfigStorage.dataSignature)) {
+			if (!(key in this.dataSignature)) {
 				throw new RangeError(`Data signature is not have property "${key}"`);
 			}
 
-			tryDecode((ConfigStorage.dataSignature as any)[key], (newData as any)[key]);
+			tryDecode((this.dataSignature as any)[key], (newData as any)[key]);
 		}
 
 		// Call middleware
@@ -226,89 +221,6 @@ export class ConfigStorage extends AbstractVersionedStorage {
 				.forEach((callback) => callback(newData, actualData));
 		});
 	}
-
-	public static updateStorageVersion = async (prevVersion: number | null) => {
-		switch (prevVersion) {
-			case 1: {
-				const storageKey = 'config.Main';
-				const storageDataRaw = localStorage.getItem(storageKey);
-
-				// Skip
-				if (storageDataRaw === null) break;
-
-				// Import valid data
-				const storageData = JSON.parse(storageDataRaw);
-				if (typeof storageData === 'object') {
-					// Collect old data
-					const partialData: Partial<ConfigType> = {};
-					for (const key in ConfigStorage.dataSignature) {
-						if (key in storageData) {
-							try {
-								const value = storageData[key];
-								(partialData as any)[key] = tryDecode(
-									(ConfigStorage.dataSignature as any)[key],
-									value,
-								);
-							} catch (err) {
-								// Ingore decode errors and throw other
-								if (!(err instanceof TypeError)) throw err;
-							}
-						}
-					}
-
-					// Merge actual data with old
-					let { [ConfigStorage.storageName]: actualData } =
-						await browser.storage.local.get(ConfigStorage.storageName);
-					if (typeof actualData !== 'object') {
-						actualData = {};
-					}
-
-					const mergedData = { ...actualData, ...partialData };
-
-					// Write data
-					browser.storage.local.set({
-						[ConfigStorage.storageName]: mergedData,
-					});
-				}
-
-				// Delete old data
-				localStorage.removeItem(storageKey);
-
-				break;
-			}
-			case 2: {
-				// Merge actual data with old
-				let { [ConfigStorage.storageName]: actualData } =
-					await browser.storage.local.get(ConfigStorage.storageName);
-				if (typeof actualData !== 'object') {
-					actualData = {};
-				}
-
-				const contentscriptPropData =
-					actualData?.contentscript?.selectTranslator || {};
-				const quickTranslate = actualData?.selectTranslator?.quickTranslate;
-
-				const newData = actualData;
-				delete newData.contentscript;
-
-				// Write data
-				browser.storage.local.set({
-					[ConfigStorage.storageName]: {
-						...newData,
-						selectTranslator: {
-							...newData?.selectTranslator,
-							...contentscriptPropData,
-							mode: quickTranslate
-								? 'quickTranslate'
-								: newData?.selectTranslator?.mode,
-						},
-					},
-				});
-
-				break;
-			}
-		}
-	};
 
 	private readonly eventDispatcher = new EventManager<CallbacksMap<ConfigType>>();
 

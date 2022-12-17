@@ -2,52 +2,46 @@ import { TypeOf } from 'io-ts';
 import browser from 'webextension-polyfill';
 
 import { tryDecode, type } from '../../../lib/types';
-import { AbstractVersionedStorage } from '../../../types/utils';
 
-export class PageTranslationStorage extends AbstractVersionedStorage {
-	static storageVersion = 1;
+const storageSignature = type.type({
+	optionsSpoilerState: type.boolean,
+});
 
-	public static readonly storeName = 'PageTranslationStorage';
-	public static readonly storageSignature = type.type({
-		optionsSpoilerState: type.boolean,
-	});
+type PageTranslationData = TypeOf<typeof storageSignature>;
+
+export class PageTranslationStorage {
+	private readonly storeName = 'PageTranslationStorage';
 
 	/**
 	 * Default data
 	 */
-	public static readonly defaultData: TypeOf<
-		typeof PageTranslationStorage.storageSignature
-	> = {
+	private readonly defaultData: PageTranslationData = {
 		optionsSpoilerState: false,
 	};
 
-	public static getData = async () => {
-		const storeName = PageTranslationStorage.storeName;
+	public getData = async () => {
+		const storeName = this.storeName;
 		const { [storeName]: tabData } = await browser.storage.local.get(storeName);
 
 		if (tabData !== undefined) {
-			return tryDecode(PageTranslationStorage.storageSignature, tabData);
+			return tryDecode(storageSignature, tabData);
 		} else {
-			return PageTranslationStorage.defaultData;
+			return this.defaultData;
 		}
 	};
 
-	private static setData = async (
-		data: TypeOf<typeof PageTranslationStorage.storageSignature>,
-	) => {
+	public setData = async (data: PageTranslationData) => {
 		// Verify data
-		tryDecode(PageTranslationStorage.storageSignature, data);
+		tryDecode(storageSignature, data);
 
-		const storeName = PageTranslationStorage.storeName;
+		const storeName = this.storeName;
 		await browser.storage.local.set({ [storeName]: data });
 	};
 
-	public static updateData = async (
-		data: Partial<TypeOf<typeof PageTranslationStorage.storageSignature>>,
-	) => {
-		const actualData = await PageTranslationStorage.getData();
+	public updateData = async (data: Partial<PageTranslationData>) => {
+		const actualData = await this.getData();
 		const mergedData = Object.assign(actualData, data);
 
-		return PageTranslationStorage.setData(mergedData);
+		return this.setData(mergedData);
 	};
 }

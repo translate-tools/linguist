@@ -73,6 +73,8 @@ const PopupPage: FC<PopupPageProps> = ({ rootElement }) => {
 		return tabsHash;
 	}, [tabs]);
 
+	const popupStorage = useMemo(() => new PopupWindowStorage(), []);
+
 	const isRememberLastTab = config?.popup.rememberLastTab;
 	const setActiveTabProxy = useCallback(
 		(id: string) => {
@@ -80,13 +82,13 @@ const PopupPage: FC<PopupPageProps> = ({ rootElement }) => {
 			if (isRememberLastTab) {
 				const tabsHash = getTabsHash();
 				if (tabsHash !== null) {
-					PopupWindowStorage.setActiveTab(tabsHash, id);
+					popupStorage.setActiveTab(tabsHash, id);
 				}
 			}
 
 			setActiveTab(id);
 		},
-		[isRememberLastTab, getTabsHash],
+		[isRememberLastTab, getTabsHash, popupStorage],
 	);
 
 	// Init
@@ -144,7 +146,7 @@ const PopupPage: FC<PopupPageProps> = ({ rootElement }) => {
 		if (!config.popup.rememberLastTab || tabsHash === null) {
 			setActiveTabProxy(firstTabId);
 		} else {
-			PopupWindowStorage.getActiveTab(tabsHash).then((lastActiveTab) => {
+			popupStorage.getActiveTab(tabsHash).then((lastActiveTab) => {
 				// Validate tab id
 				if (
 					lastActiveTab !== null &&
@@ -156,7 +158,7 @@ const PopupPage: FC<PopupPageProps> = ({ rootElement }) => {
 				}
 			});
 		}
-	}, [config, getTabsHash, setActiveTabProxy, tabs]);
+	}, [config, getTabsHash, popupStorage, setActiveTabProxy, tabs]);
 
 	const minWidth = useMemo(() => (isMobileBrowser() ? undefined : 450), []);
 

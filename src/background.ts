@@ -80,10 +80,11 @@ import { historyRequestHandlersFactory } from './requests/backend/history';
 		}, [scheduler.useCache]);
 
 		// Clear TextTranslator state
+		const textTranslatorStorage = new TextTranslatorStorage();
 		state.useEffect(() => {
 			if (!textTranslator.rememberText) {
 				// NOTE: it is async operation
-				TextTranslatorStorage.forgetText();
+				textTranslatorStorage.forgetText();
 			}
 		}, [textTranslator.rememberText]);
 

@@ -36,11 +36,14 @@ export function decodeStruct<T>(
 		data: null,
 		errors: decodeResult.left.map((error) => {
 			// Remove root object from context tree
-			const context = error.context.slice(1);
+			const context = error.context;
 			const targetPropertyContext = context[context.length - 1];
 
 			return {
-				key: context.map(({ key }) => key).join('.'),
+				key: context
+					.slice(1)
+					.map(({ key }) => key)
+					.join('.'),
 				value: error.value,
 				type: targetPropertyContext.type,
 				message: error.message,

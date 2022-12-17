@@ -1,9 +1,11 @@
 import * as IDB from 'idb/with-async-ittr';
 
-import { translatorModules } from '.';
 import { ITranslation } from '../../types/translation/Translation';
 
-import { AbstractVersionedStorage } from '../../types/utils';
+/**
+ * Helper type to cast table name string
+ */
+type TableName = 'tableName';
 
 export interface TranslatorDBSchema extends IDB.DBSchema {
 	tableName: {
@@ -15,71 +17,25 @@ export interface TranslatorDBSchema extends IDB.DBSchema {
 	};
 }
 
-type DB = IDB.IDBPDatabase<TranslatorDBSchema>;
-
-/**
- * Helper type to cast table name string
- */
-type TableName = 'tableName';
-
 interface Options {
 	ignoreCase: boolean;
 }
 
-const DBName = 'translatorsCache';
-
-// TODO: refactor me
 /**
  * Data are stores in IDB
  */
-export class TranslatorsCacheStorage extends AbstractVersionedStorage {
-	static publicName = 'TranslatorCache';
-	static storageVersion = 3;
+export class TranslatorsCacheStorage {
+	private dbPromise: Promise<IDB.IDBPDatabase<TranslatorDBSchema>> | null = null;
 
-	/**
-	 * An update strategy for this storage is deleting IDB database and re-creating with new structure
-	 *
-	 * It's because DB contains only temporary data and IDB version increase while add each new translator,
-	 * so we can't migrate data by IDB version, because it didn't reflect an IDB structure, but only number of updates.
-	 */
-	public static async updateStorageVersion(prevVersion: number | null) {
-		// Remove legacy databases
-		if (prevVersion === null || prevVersion < 2) {
-			for (const translatorName in translatorModules) {
-				// Format is `translator_` + translator identifier (not its name)
-				const LegacyDBName = 'translator_' + translatorName;
-				await IDB.deleteDB(LegacyDBName);
-			}
-			return;
-		}
+	private readonly tableName: string;
+	private readonly options: Options;
 
-		switch (prevVersion) {
-			case 2: {
-				// Drop table with cache, to re-create with new structure
-				await IDB.deleteDB(DBName);
-				break;
-			}
-		}
-	}
-
-	private dbPromise: null | Promise<DB | undefined> = null;
-	private readonly options: Options = {
-		ignoreCase: true,
-	};
-
-	private tableName: string;
-	private lastError: any;
-
-	constructor(id: string, options?: Partial<Options>) {
-		super();
-
+	constructor(id: string, options: Partial<Options> = {}) {
 		this.tableName = id;
-
-		if (options !== undefined) {
-			for (const key in options) {
-				(this.options as any)[key] = (options as any)[key];
-			}
-		}
+		this.options = {
+			ignoreCase: true,
+			...options,
+		};
 	}
 
 	private getDB() {
@@ -88,8 +44,10 @@ export class TranslatorsCacheStorage extends AbstractVersionedStorage {
 				this.dbPromise = null;
 			};
 
+			const DBName = 'translatorsCache';
 			const id = this.tableName;
-			this.dbPromise = IDB.openDB<TranslatorDBSchema>(DBName).then((db) => {
+
+			const dbPromise = IDB.openDB<TranslatorDBSchema>(DBName).then((db) => {
 				// Prevent versionchange blocking
 				db.addEventListener('versionchange', () => {
 					db.close();
@@ -124,19 +82,19 @@ export class TranslatorsCacheStorage extends AbstractVersionedStorage {
 						return db;
 					})
 					.catch((reason) => {
-						this.lastError = reason;
-						return undefined;
+						// Clear promise
+						if (this.dbPromise === dbPromise) {
+							this.dbPromise = null;
+						}
+
+						throw reason;
 					});
 			});
+
+			this.dbPromise = dbPromise;
 		}
 
-		return this.dbPromise.then((db) => {
-			if (db === undefined) {
-				throw this.lastError;
-			}
-
-			return db;
-		});
+		return this.dbPromise;
 	}
 
 	public get(text: string, from: string, to: string) {

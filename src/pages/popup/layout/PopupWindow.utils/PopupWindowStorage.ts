@@ -1,96 +1,66 @@
 import { TypeOf } from 'io-ts';
 import browser from 'webextension-polyfill';
 
-import { tryDecode, type } from '../../../../lib/types';
-import { AbstractVersionedStorage } from '../../../../types/utils';
+import { decodeStruct, type } from '../../../../lib/types';
 
-export class PopupWindowStorage extends AbstractVersionedStorage {
-	static publicName = 'PopupWindowStorage';
-	static storageVersion = 1;
-
-	public static readonly storeName = 'PopupWindowStorage';
-	public static readonly storageSignature = type.type({
-		/**
-		 * Map where key is tabs set hash and value is active tab ID
-		 */
-		activeTab: type.record(type.string, type.string),
-	});
-
+const storageStruct = type.type({
 	/**
-	 * Default data
+	 * Map where key is tabs set hash and value is active tab ID
 	 */
-	public static readonly defaultData: TypeOf<
-		typeof PopupWindowStorage.storageSignature
-	> = {
-		activeTab: {},
-	};
+	activeTab: type.record(type.string, type.string),
+});
 
-	public static getData = async () => {
-		const storeName = PopupWindowStorage.storeName;
-		const { [storeName]: tabData } = await browser.storage.local.get(storeName);
+type StorageType = TypeOf<typeof storageStruct>;
 
-		if (tabData !== undefined) {
-			return tryDecode(PopupWindowStorage.storageSignature, tabData);
-		} else {
-			return PopupWindowStorage.defaultData;
-		}
-	};
-
-	private static setData = async (
-		data: TypeOf<typeof PopupWindowStorage.storageSignature>,
-	) => {
-		// Verify data
-		tryDecode(PopupWindowStorage.storageSignature, data);
-
-		const storeName = PopupWindowStorage.storeName;
-		await browser.storage.local.set({ [storeName]: data });
-	};
-
-	public static updateData = async (
-		data: Partial<TypeOf<typeof PopupWindowStorage.storageSignature>>,
-	) => {
-		const actualData = await PopupWindowStorage.getData();
-		const mergedData = Object.assign(actualData, data);
-
-		return PopupWindowStorage.setData(mergedData);
-	};
-
-	public static getActiveTab = async (tabsSetHash: string) => {
-		const { activeTab } = await PopupWindowStorage.getData();
+export class PopupWindowStorage {
+	public getActiveTab = async (tabsSetHash: string) => {
+		const { activeTab } = await this.getData();
 
 		return tabsSetHash in activeTab ? activeTab[tabsSetHash] : null;
 	};
 
-	public static setActiveTab = async (tabsSetHash: string, activeTab: string) => {
-		const actualData = await PopupWindowStorage.getData();
+	public setActiveTab = async (tabsSetHash: string, activeTab: string) => {
+		const actualData = await this.getData();
 		const mergedActiveTab = Object.assign(actualData.activeTab, {
 			[tabsSetHash]: activeTab,
 		});
 
-		return PopupWindowStorage.updateData({
+		return this.updateData({
 			activeTab: mergedActiveTab,
 		});
 	};
 
-	public static async updateStorageVersion() {
-		// Migrate data from `localStorage`
-		const keyPrefix = 'PopupPage.tabSet#';
-		for (const key of Object.keys(localStorage)) {
-			// Skip not match keys
-			if (!key.startsWith(keyPrefix)) continue;
+	private readonly storeName = 'PopupWindowStorage';
 
-			// Copy
-			const value = localStorage.getItem(key);
-			if (typeof value === 'string') {
-				// Cut prefix to get hash from key
-				const hash = key.slice(keyPrefix.length);
+	/**
+	 * Default data
+	 */
+	private readonly defaultData: StorageType = {
+		activeTab: {},
+	};
 
-				// Write data
-				await PopupWindowStorage.setActiveTab(hash, value);
-			}
+	private getData = async () => {
+		const storeName = this.storeName;
+		const { [storeName]: tabData } = await browser.storage.local.get(storeName);
 
-			// Remove
-			localStorage.removeItem(key);
-		}
-	}
+		const struct = decodeStruct(storageStruct, tabData);
+
+		return struct.errors ? this.defaultData : struct.data;
+	};
+
+	private setData = async (data: StorageType) => {
+		const struct = decodeStruct(storageStruct, data);
+
+		if (struct.errors !== null) return;
+
+		const storeName = this.storeName;
+		await browser.storage.local.set({ [storeName]: data });
+	};
+
+	private updateData = async (data: Partial<StorageType>) => {
+		const actualData = await this.getData();
+		const mergedData = Object.assign(actualData, data);
+
+		return this.setData(mergedData);
+	};
 }
