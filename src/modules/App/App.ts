@@ -1,4 +1,5 @@
-import { AppConfigType } from '../../types/runtime';
+import { createStore } from 'effector';
+
 import { defaultConfig } from '../../config';
 
 import { ConfigStorage } from '../ConfigStorage/ConfigStorage';
@@ -7,7 +8,6 @@ import { sendConfigUpdateEvent } from '../ContentScript';
 
 import { AppThemeControl } from '../../lib/browser/AppThemeControl';
 import { toggleTranslateItemInContextMenu } from '../../lib/browser/toggleTranslateItemInContextMenu';
-import { StateManager } from '../../lib/StateManager';
 import { isBackgroundContext } from '../../lib/browser';
 
 import { migrateAll } from '../../migrations/migrationsList';
@@ -28,46 +28,72 @@ export class App {
 
 		// Run application
 		const cfg = new ConfigStorage(defaultConfig);
+
 		const bg = new Background(cfg);
 
-		//
-		// Handle config updates
-		//
+		const $isLoaded = createStore(false);
+		$isLoaded.on(cfg.$config, (state, params) => state || params !== null);
 
-		const state = new StateManager<AppConfigType>();
+		// Await loading data. It happens only once
+		$isLoaded.watch((isLoaded) => {
+			if (!isLoaded) return;
 
-		const appThemeControl = new AppThemeControl();
-		state.onUpdate(({ appIcon, scheduler, textTranslator, selectTranslator }) => {
-			// Set icon
-			state.useEffect(() => {
-				appThemeControl.setAppIconPreferences(appIcon);
-			}, [appIcon]);
+			console.log('CONFIG LOADED');
+
+			//
+			// Handle config updates
+			//
+
+			const $appConfig = cfg.$config.map((state) => {
+				// State can't be null after loading data
+				if (state === null) {
+					throw new Error('Unexpected value');
+				}
+
+				console.log('UPDATED CFG IN APP');
+				return state;
+			});
+
+			// Update icon
+			const appThemeControl = new AppThemeControl();
+			$appConfig
+				.map((config) => config.appIcon)
+				.watch((appIcon) => {
+					console.log('>> Update icon');
+					appThemeControl.setAppIconPreferences(appIcon);
+				});
 
 			// Clear cache while disable
-			state.useEffect(() => {
-				if (!scheduler.useCache) {
-					clearCache();
-				}
-			}, [scheduler.useCache]);
+			$appConfig
+				.map((config) => config.scheduler.useCache)
+				.watch((useCache) => {
+					console.log('>> Clear cache while disable');
+					if (!useCache) {
+						clearCache();
+					}
+				});
 
 			// Clear TextTranslator state
 			const textTranslatorStorage = new TextTranslatorStorage();
-			state.useEffect(() => {
-				if (!textTranslator.rememberText) {
-					// NOTE: it is async operation
-					textTranslatorStorage.forgetText();
-				}
-			}, [textTranslator.rememberText]);
+			$appConfig
+				.map((config) => config.textTranslator.rememberText)
+				.watch((rememberText) => {
+					console.log('>> Clear TextTranslator state');
+					if (!rememberText) {
+						textTranslatorStorage.forgetText();
+					}
+				});
 
 			// Configure context menu
-			state.useEffect(() => {
-				const { enabled, mode } = selectTranslator;
-				const isEnabled = enabled && mode === 'contextMenu';
-				toggleTranslateItemInContextMenu(isEnabled);
-			}, [selectTranslator]);
+			$appConfig
+				.map((config) => config.selectTranslator)
+				.watch((selectTranslator) => {
+					console.log('>> Configure context menu');
+					const { enabled, mode } = selectTranslator;
+					const isEnabled = enabled && mode === 'contextMenu';
+					toggleTranslateItemInContextMenu(isEnabled);
+				});
 		});
-
-		cfg.onUpdate((cfg) => state.update(cfg));
 
 		//
 		// Handle first load
@@ -76,7 +102,7 @@ export class App {
 		// TODO: move this logic to `Background` class
 		bg.onLoad(async () => {
 			// Send update event
-			cfg.onUpdate(() => {
+			cfg.$config.watch(() => {
 				sendConfigUpdateEvent();
 			});
 

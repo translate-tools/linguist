@@ -6,6 +6,7 @@ import { tryDecode, tryDecodeObject } from '../../lib/types';
 import { EventManager } from '../../lib/EventManager';
 import { AppConfig } from '../../types/runtime';
 import { ObservableRecord } from '../../lib/ObservableRecord';
+import { createEffect, createEvent, createStore } from 'effector';
 
 export type CallbackEventName = 'load' | 'update';
 
@@ -18,6 +19,19 @@ export type Middleware<T extends {}> = (newProps: Partial<T>, currentProps: T) =
 
 type ConfigType = t.TypeOfProps<typeof AppConfig.props>;
 
+export const $config = createStore<ConfigType | null>(null);
+export const $isConfigLoaded = $config.map((state) => state !== null);
+
+export const updateConfigFx = createEffect(async (storage: ConfigStorage) => {
+	if (!storage.isLoad()) {
+		await new Promise<void>((res) => storage.subscribe('load', res));
+	}
+
+	return storage.getAllConfig();
+});
+
+export const updatedConfig = createEvent<ConfigType>();
+
 // TODO: #184 refactor code
 export class ConfigStorage {
 	private readonly storageName = 'appConfig';
@@ -25,6 +39,8 @@ export class ConfigStorage {
 
 	private state: t.TypeOfProps<typeof this.dataSignature> | null = null;
 	private readonly defaultData?: Partial<ConfigType>;
+
+	public readonly $config = createStore<ConfigType | null>(null);
 
 	constructor(defaultData?: Partial<ConfigType>) {
 		// Set `defaultData` which can be partial
@@ -34,6 +50,12 @@ export class ConfigStorage {
 				defaultData,
 			);
 		}
+
+		this.$config.on(updatedConfig, (_, newConfig) => {
+			console.log('set config constructor');
+
+			return newConfig;
+		});
 
 		this.eventDispatcher.subscribe('update', (newProps, prevProps) => {
 			this.observable.updateState(
@@ -118,6 +140,8 @@ export class ConfigStorage {
 
 		// Write data
 		await this.write(dataCollector).then((state) => {
+			updatedConfig({ ...state });
+
 			// Update status
 			this.isLoadConfig = true;
 
@@ -215,7 +239,11 @@ export class ConfigStorage {
 		}
 
 		// Write and send update event to subscribers
-		this.write(newData).then(() => {
+		this.write(newData).then((newState) => {
+			updatedConfig({ ...newState });
+
+			console.log('set config after write');
+
 			this.eventDispatcher
 				.getEventHandlers('update')
 				.forEach((callback) => callback(newData, actualData));
