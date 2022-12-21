@@ -1,3 +1,6 @@
+import { merge } from 'effector';
+import { reshape } from 'patronum';
+
 // Schedulers
 import {
 	IScheduler,
@@ -79,10 +82,26 @@ export class Background {
 		await this.makeTranslator();
 		await this.makeScheduler();
 
-		this.config.onUpdate(() => {
+		const schedulerStores = reshape({
+			source: this.config.$config.map((payload) => {
+				if (payload === null) {
+					throw new Error('Unexpected empty config');
+				}
+
+				return payload;
+			}),
+			shape: {
+				scheduler: ({ scheduler }) => scheduler,
+				translatorModule: ({ translatorModule }) => translatorModule,
+				cache: ({ cache }) => cache,
+			},
+		});
+
+		merge(Object.values(schedulerStores)).watch(() => {
+			console.log('>> makeScheduler call');
 			// Forced recreate a scheduler
 			this.makeScheduler(true);
-		}, ['scheduler', 'translatorModule', 'cache']);
+		});
 
 		// Emit event
 		this.eventDispatcher.getEventHandlers('load').forEach((handler) => handler());
