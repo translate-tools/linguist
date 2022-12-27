@@ -2,6 +2,7 @@ import browser from 'webextension-polyfill';
 import { createEvent, createStore, Store } from 'effector';
 
 import { decodeStruct } from '../../lib/types';
+import { updateNotEqualProps } from '../../lib/effector/reducers';
 import { AppConfig, AppConfigType } from '../../types/runtime';
 
 interface AbstractStorage<T> {
@@ -55,7 +56,7 @@ export class ObservableConfigStorage implements AbstractStorage<AppConfigType> {
 		if (this.store === null) {
 			const state = await this.config.get();
 			this.store = createStore<AppConfigType>(state);
-			this.store.on(this.updateData, (_, data) => data);
+			this.store.on(this.updateData, updateNotEqualProps);
 		}
 
 		return this.store;
