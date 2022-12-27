@@ -6,14 +6,9 @@ export const [getUserLanguagePreferencesFactory, getUserLanguagePreferences] =
 		responseValidator: type.string,
 
 		factoryHandler:
-			({ cfg }) =>
+			({ config }) =>
 				async () => {
-					const userLanguage = await cfg.getConfig('language');
-
-					if (userLanguage === null) {
-						throw new Error('Invalid value');
-					}
-
-					return userLanguage;
+					const { language } = await config.get();
+					return language;
 				},
 	});

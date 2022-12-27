@@ -17,7 +17,7 @@ import { TranslatorClass } from '@translate-tools/core/types/Translator';
 
 import { EventManager } from '../../lib/EventManager';
 
-import { ConfigStorage } from '../ConfigStorage/ConfigStorage';
+import { ObservableConfigStorage } from '../ConfigStorage/ConfigStorage';
 import { TranslatorsCacheStorage } from './TranslatorsCacheStorage';
 
 interface Registry {
@@ -42,8 +42,8 @@ export const getTranslatorNameById = (id: number | string) => '#' + id;
 export class Background {
 	private readonly registry: Registry = {};
 
-	private readonly config: ConfigStorage;
-	constructor(config: ConfigStorage) {
+	private readonly config: ObservableConfigStorage;
+	constructor(config: ObservableConfigStorage) {
 		this.config = config;
 
 		// TODO: move initializing to direct call outside
@@ -71,25 +71,14 @@ export class Background {
 	};
 
 	private async init() {
-		// Await config loading
-		if (!this.config.isLoad()) {
-			await new Promise<void>((res) => {
-				this.config.subscribe('load', res);
-			});
-		}
+		const $config = await this.config.getObservableStore();
 
 		// Init state
 		await this.makeTranslator();
 		await this.makeScheduler();
 
 		const schedulerStores = reshape({
-			source: this.config.$config.map((payload) => {
-				if (payload === null) {
-					throw new Error('Unexpected empty config');
-				}
-
-				return payload;
-			}),
+			source: $config,
 			shape: {
 				scheduler: ({ scheduler }) => scheduler,
 				translatorModule: ({ translatorModule }) => translatorModule,
@@ -126,12 +115,12 @@ export class Background {
 	}
 
 	private getTranslator = async (): Promise<TranslatorClass<BaseTranslator> | null> => {
-		const translatorName = await this.config.getConfig('translatorModule');
+		const { translatorModule } = await this.config.get();
 
-		if (translatorName === null) return null;
+		if (translatorModule === null) return null;
 
 		const translators = this.getTranslators();
-		const translatorClass = translators[translatorName];
+		const translatorClass = translators[translatorModule];
 
 		return (translatorClass as TranslatorClass<BaseTranslator>) ?? null;
 	};
@@ -163,9 +152,8 @@ export class Background {
 	private makeCache = async (force = false) => {
 		if (this.registry.cache !== undefined && !force) return;
 
-		const translatorName = await this.config.getConfig('translatorModule', 'unknown');
-		const cacheConfig = await this.config.getConfig('cache', undefined);
-		this.registry.cache = new TranslatorsCacheStorage(translatorName, cacheConfig);
+		const { translatorModule, cache } = await this.config.get();
+		this.registry.cache = new TranslatorsCacheStorage(translatorModule, cache);
 	};
 
 	private makeScheduler = async (force = false) => {
@@ -180,13 +168,13 @@ export class Background {
 			return;
 		}
 
-		const schedulerConfig = await this.config.getConfig('scheduler');
-		if (schedulerConfig === null) {
+		const { scheduler } = await this.config.get();
+		if (scheduler === null) {
 			throw new Error("Can't get scheduler config");
 		}
 
-		const { useCache, ...config } = schedulerConfig;
-		const baseScheduler = new Scheduler(translator, config);
+		const { useCache, ...schedulerConfig } = scheduler;
+		const baseScheduler = new Scheduler(translator, schedulerConfig);
 
 		// Try use cache if possible
 		if (useCache) {

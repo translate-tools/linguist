@@ -9,7 +9,7 @@ import { loadTranslator } from './utils';
 export const [applyTranslatorsFactory, applyTranslators] = buildBackendRequest(
 	'applyTranslators',
 	{
-		factoryHandler: ({ bg, cfg }) => {
+		factoryHandler: ({ bg, config }) => {
 			const update = async () =>
 				getTranslators({ order: 'asc' })
 					.then((translators) => {
@@ -31,9 +31,8 @@ export const [applyTranslatorsFactory, applyTranslators] = buildBackendRequest(
 						return translatorsRecord;
 					})
 					.then(async (translators) => {
-						const translatorName = await cfg.getConfig('translatorModule');
-
-						if (translatorName === null) return;
+						const latestConfig = await config.get();
+						const { translatorModule: translatorName } = latestConfig;
 
 						const isCustomTranslator = translatorName[0] === '#';
 						if (!isCustomTranslator) return;
@@ -41,7 +40,10 @@ export const [applyTranslatorsFactory, applyTranslators] = buildBackendRequest(
 						// Reset translator to default if custom translator is not available
 						const customTranslatorName = translatorName.slice(1);
 						if (!(customTranslatorName in translators)) {
-							cfg.set({ translatorModule: DEFAULT_TRANSLATOR });
+							await config.set({
+								...latestConfig,
+								translatorModule: DEFAULT_TRANSLATOR,
+							});
 						}
 					});
 

@@ -16,13 +16,10 @@ export const [updateConfigFactory, updateConfig] = buildBackendRequest('updateCo
 	 * Partial update config by paths
 	 */
 	factoryHandler:
-		({ cfg, bg }) =>
+		({ config, bg }) =>
 			async (configMap) => {
 			// Get actual config
-				const actualConfig = await cfg.getAllConfig();
-				if (actualConfig === null) {
-					throw new TypeError('Config is not set');
-				}
+				const actualConfig = await config.get();
 
 				// Clone
 				const newConfigSegments = cloneDeep(actualConfig);
@@ -48,8 +45,8 @@ export const [updateConfigFactory, updateConfig] = buildBackendRequest('updateCo
 				// Validate translator
 				if ('translatorModule' in newConfigSegments) {
 					switch (false) {
-					case newConfigSegments.translatorModule in bg.getTranslators():
-						throw new Error('Custom translator is unavailable');
+						case newConfigSegments.translatorModule in bg.getTranslators():
+							throw new Error('Custom translator is unavailable');
 					}
 				}
 
@@ -63,7 +60,7 @@ export const [updateConfigFactory, updateConfig] = buildBackendRequest('updateCo
 				} else {
 					console.warn('Update config', actualConfig, newConfigSegments);
 
-					await cfg.set(newConfigSegments);
+					await config.set(newConfigSegments);
 					return {
 						success: true,
 						errors: null,

@@ -1,8 +1,6 @@
-import { createStore } from 'effector';
-
 import { defaultConfig } from '../../config';
 
-import { ConfigStorage } from '../ConfigStorage/ConfigStorage';
+import { ConfigStorage, ObservableConfigStorage } from '../ConfigStorage/ConfigStorage';
 import { Background, translatorModules } from '../Background';
 import { sendConfigUpdateEvent } from '../ContentScript';
 
@@ -27,82 +25,64 @@ export class App {
 		await migrateAll();
 
 		// Run application
-		const cfg = new ConfigStorage(defaultConfig);
+		const config = new ConfigStorage(defaultConfig);
+		const observableConfig = new ObservableConfigStorage(config);
 
-		const bg = new Background(cfg);
+		const background = new Background(observableConfig);
 
-		const $isLoaded = createStore(false);
-		$isLoaded.on(cfg.$config, (state, params) => state || params !== null);
+		//
+		// Handle config updates
+		//
+		const $appConfig = await observableConfig.getObservableStore();
 
-		// Await loading data. It happens only once
-		$isLoaded.watch((isLoaded) => {
-			if (!isLoaded) return;
-
-			console.log('CONFIG LOADED');
-
-			//
-			// Handle config updates
-			//
-
-			const $appConfig = cfg.$config.map((state) => {
-				// State can't be null after loading data
-				if (state === null) {
-					throw new Error('Unexpected value');
-				}
-
-				console.log('UPDATED CFG IN APP');
-				return state;
+		// Update icon
+		const appThemeControl = new AppThemeControl();
+		$appConfig
+			.map((config) => config.appIcon)
+			.watch((appIcon) => {
+				console.log('>> Update icon');
+				appThemeControl.setAppIconPreferences(appIcon);
 			});
 
-			// Update icon
-			const appThemeControl = new AppThemeControl();
-			$appConfig
-				.map((config) => config.appIcon)
-				.watch((appIcon) => {
-					console.log('>> Update icon');
-					appThemeControl.setAppIconPreferences(appIcon);
-				});
+		// Clear cache while disable
+		$appConfig
+			.map((config) => config.scheduler.useCache)
+			.watch((useCache) => {
+				console.log('>> Clear cache while disable');
+				if (!useCache) {
+					clearCache();
+				}
+			});
 
-			// Clear cache while disable
-			$appConfig
-				.map((config) => config.scheduler.useCache)
-				.watch((useCache) => {
-					console.log('>> Clear cache while disable');
-					if (!useCache) {
-						clearCache();
-					}
-				});
+		// Clear TextTranslator state
+		const textTranslatorStorage = new TextTranslatorStorage();
+		$appConfig
+			.map((config) => config.textTranslator.rememberText)
+			.watch((rememberText) => {
+				console.log('>> Clear TextTranslator state');
+				if (!rememberText) {
+					textTranslatorStorage.forgetText();
+				}
+			});
 
-			// Clear TextTranslator state
-			const textTranslatorStorage = new TextTranslatorStorage();
-			$appConfig
-				.map((config) => config.textTranslator.rememberText)
-				.watch((rememberText) => {
-					console.log('>> Clear TextTranslator state');
-					if (!rememberText) {
-						textTranslatorStorage.forgetText();
-					}
-				});
-
-			// Configure context menu
-			$appConfig
-				.map((config) => config.selectTranslator)
-				.watch((selectTranslator) => {
-					console.log('>> Configure context menu');
-					const { enabled, mode } = selectTranslator;
-					const isEnabled = enabled && mode === 'contextMenu';
-					toggleTranslateItemInContextMenu(isEnabled);
-				});
-		});
+		// Configure context menu
+		$appConfig
+			.map((config) => config.selectTranslator)
+			.watch((selectTranslator) => {
+				console.log('>> Configure context menu');
+				const { enabled, mode } = selectTranslator;
+				const isEnabled = enabled && mode === 'contextMenu';
+				toggleTranslateItemInContextMenu(isEnabled);
+			});
 
 		//
 		// Handle first load
 		//
 
 		// TODO: move this logic to `Background` class
-		bg.onLoad(async () => {
+		background.onLoad(async () => {
 			// Send update event
-			cfg.$config.watch(() => {
+			$appConfig.watch(() => {
 				sendConfigUpdateEvent();
 			});
 
@@ -110,7 +90,11 @@ export class App {
 			// NOTE: on options page function `resetConfigFactory` is undefined. How it work?
 			if (isBackgroundContext()) {
 				requestHandlers.forEach((factory) => {
-					factory({ cfg, bg, translatorModules: translatorModules as any });
+					factory({
+						config: observableConfig,
+						bg: background,
+						translatorModules: translatorModules as any,
+					});
 				});
 			}
 		});
