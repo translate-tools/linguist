@@ -17,7 +17,8 @@ import { TranslatorClass } from '@translate-tools/core/types/Translator';
 
 import { EventManager } from '../../lib/EventManager';
 
-import { ObservableConfigStorage } from '../ConfigStorage/ConfigStorage';
+import { AppConfigType } from '../../types/runtime';
+import { ObservableAsyncStorage } from '../ConfigStorage/ConfigStorage';
 import { TranslatorsCacheStorage } from './TranslatorsCacheStorage';
 
 interface Registry {
@@ -42,8 +43,8 @@ export const getTranslatorNameById = (id: number | string) => '#' + id;
 export class Background {
 	private readonly registry: Registry = {};
 
-	private readonly config: ObservableConfigStorage;
-	constructor(config: ObservableConfigStorage) {
+	private readonly config: ObservableAsyncStorage<AppConfigType>;
+	constructor(config: ObservableAsyncStorage<AppConfigType>) {
 		this.config = config;
 
 		// TODO: move initializing to direct call outside

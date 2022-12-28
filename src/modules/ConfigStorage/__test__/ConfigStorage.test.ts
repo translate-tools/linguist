@@ -3,7 +3,7 @@ import browser from 'webextension-polyfill';
 import { clearAllMocks } from '../../../lib/tests';
 import { AppConfigType } from '../../../types/runtime';
 
-import { ConfigStorage, ObservableConfigStorage } from '../ConfigStorage';
+import { ConfigStorage, ObservableAsyncStorage } from '../ConfigStorage';
 import { ConfigStorageMigration } from '../ConfigStorage.migrations';
 
 import configVersion1 from './config-v1.json';
@@ -29,7 +29,7 @@ describe('use config', () => {
 
 	test('load config', async () => {
 		const configStorage = new ConfigStorage(configVersion3 as AppConfigType);
-		const observableConfigStorage = new ObservableConfigStorage(configStorage);
+		const observableConfigStorage = new ObservableAsyncStorage(configStorage);
 
 		// Get config
 		const config1 = await configStorage.get();

@@ -1,7 +1,7 @@
 // NOTE: probably should make factory builder which control update props and rebuild factories which require changed props
 
 import { Background } from '../modules/Background';
-import { ObservableConfigStorage } from '../modules/ConfigStorage/ConfigStorage';
+import { ObservableAsyncStorage } from '../modules/ConfigStorage/ConfigStorage';
 
 import { AppConfigType } from '../types/runtime';
 
@@ -10,7 +10,7 @@ import { SelectTranslator } from '../modules/SelectTranslator';
 import { BaseTranslator } from '@translate-tools/core/types/Translator';
 
 export type RequestHandlerFactoryProps = {
-	config: ObservableConfigStorage;
+	config: ObservableAsyncStorage<AppConfigType>;
 	bg: Background;
 	translatorModules: Record<string, BaseTranslator>;
 };

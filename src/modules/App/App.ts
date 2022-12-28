@@ -1,6 +1,6 @@
 import { defaultConfig } from '../../config';
 
-import { ConfigStorage, ObservableConfigStorage } from '../ConfigStorage/ConfigStorage';
+import { ConfigStorage, ObservableAsyncStorage } from '../ConfigStorage/ConfigStorage';
 import { Background, translatorModules } from '../Background';
 import { sendConfigUpdateEvent } from '../ContentScript';
 
@@ -26,7 +26,7 @@ export class App {
 
 		// Run application
 		const config = new ConfigStorage(defaultConfig);
-		const observableConfig = new ObservableConfigStorage(config);
+		const observableConfig = new ObservableAsyncStorage(config);
 
 		const background = new Background(observableConfig);
 
