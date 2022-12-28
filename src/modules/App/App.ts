@@ -40,7 +40,6 @@ export class App {
 		$appConfig
 			.map((config) => config.appIcon)
 			.watch((appIcon) => {
-				console.log('>> Update icon');
 				appThemeControl.setAppIconPreferences(appIcon);
 			});
 
@@ -48,7 +47,6 @@ export class App {
 		$appConfig
 			.map((config) => config.scheduler.useCache)
 			.watch((useCache) => {
-				console.log('>> Clear cache while disable');
 				if (!useCache) {
 					clearCache();
 				}
@@ -59,7 +57,6 @@ export class App {
 		$appConfig
 			.map((config) => config.textTranslator.rememberText)
 			.watch((rememberText) => {
-				console.log('>> Clear TextTranslator state');
 				if (!rememberText) {
 					textTranslatorStorage.forgetText();
 				}
@@ -69,7 +66,6 @@ export class App {
 		$appConfig
 			.map((config) => config.selectTranslator)
 			.watch((selectTranslator) => {
-				console.log('>> Configure context menu');
 				const { enabled, mode } = selectTranslator;
 				const isEnabled = enabled && mode === 'contextMenu';
 				toggleTranslateItemInContextMenu(isEnabled);

@@ -55,8 +55,6 @@ export class Background {
 	public updateCustomTranslatorsList = (
 		translators: Record<string, TranslatorClass>,
 	) => {
-		console.warn('UPDATE translators', translators);
-
 		this.customTranslators = translators;
 		this.makeScheduler(true);
 	};
@@ -88,7 +86,6 @@ export class Background {
 		});
 
 		merge(Object.values(schedulerStores)).watch(() => {
-			console.log('>> makeScheduler call');
 			// Forced recreate a scheduler
 			this.makeScheduler(true);
 		});
