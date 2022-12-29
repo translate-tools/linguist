@@ -3,7 +3,7 @@ import browser from 'webextension-polyfill';
 import { clearAllMocks } from '../../../lib/tests';
 import { AppConfigType } from '../../../types/runtime';
 
-import { ConfigStorage } from '../ConfigStorage';
+import { ConfigStorage, ObservableAsyncStorage } from '../ConfigStorage';
 import { ConfigStorageMigration } from '../ConfigStorage.migrations';
 
 import configVersion1 from './config-v1.json';
@@ -27,26 +27,32 @@ describe('config migrations', () => {
 describe('use config', () => {
 	beforeAll(clearAllMocks);
 
-	test('load config', async () => {
+	test('config storage set/get', async () => {
 		const configStorage = new ConfigStorage(configVersion3 as AppConfigType);
 
-		// Await loading data
-		await new Promise<void>((res) => configStorage.subscribe('load', res));
-
 		// Get config
-		const config1 = await configStorage.getAllConfig();
+		const config1 = await configStorage.get();
 		expect(config1).toEqual(configVersion3);
-		expect(config1?.scheduler).toEqual(configVersion3.scheduler);
 
-		// Get config by key
-		const schedulerConfig = await configStorage.getConfig('scheduler');
-		expect(schedulerConfig).toEqual(configVersion3.scheduler);
+		const newData = { ...config1, translatorModule: 'testTranslator' };
+		await configStorage.set(newData);
+
+		const config2 = await configStorage.get();
+		expect(config2).toEqual(newData);
+	});
+
+	test.skip('observable storage', async () => {
+		const configStorage = new ConfigStorage(configVersion3 as AppConfigType);
+		const observableConfigStorage = new ObservableAsyncStorage(configStorage);
 
 		// Listen config update
+		const $config = await observableConfigStorage.getObservableStore();
 		const updateConfigPromise = new Promise<AppConfigType>((res) => {
-			configStorage.onUpdate(res);
+			$config.updates.watch(res);
 		});
-		await configStorage.set({ language: 'ja' });
+
+		const latestConfig = await configStorage.get();
+		await observableConfigStorage.set({ ...latestConfig, language: 'ja' });
 
 		const updatedConfig = await updateConfigPromise;
 		expect(updatedConfig.language).toBe('ja');

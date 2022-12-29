@@ -3,8 +3,8 @@ import { buildBackendRequest } from '../utils/requestBuilder';
 
 export const [resetConfigFactory, resetConfig] = buildBackendRequest('resetConfig', {
 	factoryHandler:
-		({ cfg }) =>
+		({ config }) =>
 			async () => {
-				cfg.set(defaultConfig);
+				await config.set(defaultConfig);
 			},
 });

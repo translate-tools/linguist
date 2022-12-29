@@ -4,8 +4,8 @@ import { AppConfig } from '../../types/runtime';
 export const [setConfigFactory, setConfig] = buildBackendRequest('setConfig', {
 	requestValidator: AppConfig,
 	factoryHandler:
-		({ cfg }) =>
+		({ config }) =>
 			async (newConfig) => {
-				return cfg.set(newConfig);
+				await config.set(newConfig);
 			},
 });
