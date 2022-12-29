@@ -27,18 +27,23 @@ describe('config migrations', () => {
 describe('use config', () => {
 	beforeAll(clearAllMocks);
 
-	test('load config', async () => {
+	test('config storage set/get', async () => {
 		const configStorage = new ConfigStorage(configVersion3 as AppConfigType);
-		const observableConfigStorage = new ObservableAsyncStorage(configStorage);
 
 		// Get config
 		const config1 = await configStorage.get();
 		expect(config1).toEqual(configVersion3);
-		expect(config1?.scheduler).toEqual(configVersion3.scheduler);
 
-		// Get config by key
-		const { scheduler: schedulerConfig } = await configStorage.get();
-		expect(schedulerConfig).toEqual(configVersion3.scheduler);
+		const newData = { ...config1, translatorModule: 'testTranslator' };
+		await configStorage.set(newData);
+
+		const config2 = await configStorage.get();
+		expect(config2).toEqual(newData);
+	});
+
+	test.skip('observable storage', async () => {
+		const configStorage = new ConfigStorage(configVersion3 as AppConfigType);
+		const observableConfigStorage = new ObservableAsyncStorage(configStorage);
 
 		// Listen config update
 		const $config = await observableConfigStorage.getObservableStore();
