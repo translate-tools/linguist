@@ -15,11 +15,12 @@ import { YandexTranslator } from '@translate-tools/core/translators/YandexTransl
 import { BingTranslatorPublic } from '@translate-tools/core/translators/unstable/BingTranslatorPublic';
 import { TranslatorClass } from '@translate-tools/core/types/Translator';
 
-import { EventManager } from '../../lib/EventManager';
-
 import { AppConfigType } from '../../types/runtime';
 import { ObservableAsyncStorage } from '../ConfigStorage/ConfigStorage';
 import { TranslatorsCacheStorage } from './TranslatorsCacheStorage';
+import { isBackgroundContext } from '../../lib/browser';
+import { requestHandlers } from '../App/messages';
+import { sendConfigUpdateEvent } from '../ContentScript';
 
 interface Registry {
 	translator?: BaseTranslator;
@@ -46,9 +47,6 @@ export class Background {
 	private readonly config: ObservableAsyncStorage<AppConfigType>;
 	constructor(config: ObservableAsyncStorage<AppConfigType>) {
 		this.config = config;
-
-		// TODO: move initializing to direct call outside
-		this.init();
 	}
 
 	private customTranslators: Record<string, TranslatorClass> = {};
@@ -69,7 +67,8 @@ export class Background {
 		return { ...translators, ...translatorModules };
 	};
 
-	private async init() {
+	// TODO: think about move it outside
+	public async start() {
 		const $config = await this.config.getObservableStore();
 
 		// Init state
@@ -90,16 +89,21 @@ export class Background {
 			this.makeScheduler(true);
 		});
 
-		// Emit event
-		this.eventDispatcher.getEventHandlers('load').forEach((handler) => handler());
-	}
+		// Send update event
+		$config.watch(() => {
+			sendConfigUpdateEvent();
+		});
 
-	private readonly eventDispatcher = new EventManager<{
-		load: () => void;
-	}>();
-
-	public onLoad(handler: () => void) {
-		this.eventDispatcher.subscribe('load', handler);
+		// Prevent run it again on other pages, such as options page
+		if (isBackgroundContext()) {
+			requestHandlers.forEach((factory) => {
+				factory({
+					config: this.config,
+					bg: this,
+					translatorModules: translatorModules as any,
+				});
+			});
+		}
 	}
 
 	// TODO: split class here. Move logic below to class `TranslatorManager`,

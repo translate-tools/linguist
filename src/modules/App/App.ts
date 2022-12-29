@@ -1,20 +1,16 @@
 import { defaultConfig } from '../../config';
 
 import { ConfigStorage, ObservableAsyncStorage } from '../ConfigStorage/ConfigStorage';
-import { Background, translatorModules } from '../Background';
-import { sendConfigUpdateEvent } from '../ContentScript';
+import { Background } from '../Background';
 
 import { AppThemeControl } from '../../lib/browser/AppThemeControl';
 import { toggleTranslateItemInContextMenu } from '../../lib/browser/toggleTranslateItemInContextMenu';
-import { isBackgroundContext } from '../../lib/browser';
 
 import { migrateAll } from '../../migrations/migrationsList';
 
 import { TextTranslatorStorage } from '../../layouts/TextTranslator/TextTranslator.utils/TextTranslatorStorage';
 
 import { clearCache } from '../../requests/backend/clearCache';
-
-import { requestHandlers } from './messages';
 
 /**
  * Class that contains app context
@@ -29,6 +25,7 @@ export class App {
 		const observableConfig = new ObservableAsyncStorage(config);
 
 		const background = new Background(observableConfig);
+		background.start();
 
 		//
 		// Handle config updates
@@ -70,29 +67,5 @@ export class App {
 				const isEnabled = enabled && mode === 'contextMenu';
 				toggleTranslateItemInContextMenu(isEnabled);
 			});
-
-		//
-		// Handle first load
-		//
-
-		// TODO: move this logic to `Background` class
-		background.onLoad(async () => {
-			// Send update event
-			$appConfig.watch(() => {
-				sendConfigUpdateEvent();
-			});
-
-			// Prevent run it again on other pages, such as options page
-			// NOTE: on options page function `resetConfigFactory` is undefined. How it work?
-			if (isBackgroundContext()) {
-				requestHandlers.forEach((factory) => {
-					factory({
-						config: observableConfig,
-						bg: background,
-						translatorModules: translatorModules as any,
-					});
-				});
-			}
-		});
 	}
 }
