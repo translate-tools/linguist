@@ -111,4 +111,55 @@ class FakeTranslator {
 FakeTranslator;
 ```
 
+Example of custom translator using [Lingva (Alternative front-end for Google Translate ) API](https://github.com/thedaviddelta/lingva-translate):
+
+```js
+class LingvaTranslator {
+    // URL list of instance of LingvaTranslate, add more to use fastest one using Promise.race()
+    apiList = ["https://lingva.ml"]
+
+    translate = (text, from, to) => {
+        let promiseList = this.apiList.map(api => fetch(`${api}/api/v1/${from}/${to}/${text}`, {
+            credentials: "omit",
+            headers: {
+                "User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:99.0) Gecko/20100101 Firefox/99.0",
+                Accept: "*/*",
+                "Accept-Language": "en-US,en;q=0.5",
+                "Sec-Fetch-Dest": "empty",
+                "Sec-Fetch-Mode": "cors",
+                "Sec-Fetch-Site": "same-origin"
+            },
+            method: "GET",
+            mode: "cors",
+        }))
+        return Promise.race(promiseList)
+            .then((r) => r.json())
+            .then(({ translation }) => translation);
+    };
+
+    translateBatch = (texts, from, to) =>
+        Promise.all(texts.map((text) => this.translate(text, from, to)));
+
+    getLengthLimit = () => 4000;
+    getRequestsTimeout = () => 1000;
+    checkLimitExceeding = (text) => {
+        const textLength = !Array.isArray(text) ? text.length : text.reduce((len, text) => len + text.length, 0);
+
+        return textLength - this.getLengthLimit();
+    }
+
+    static isSupportedAutoFrom = () => true;
+    static getSupportedLanguages = () => [
+        "en", "ar", "az", "zh", "cs",
+        "nl", "eo", "fi", "fr", "de",
+        "el", "hi", "hu", "id", "ga",
+        "it", "ja", "ko", "fa", "pl",
+        "pt", "ru", "sk", "es", "sv",
+        "tr", "uk", "vi"
+    ];
+}
+
+LingvaTranslator;
+```
+
 See also code for another services in [Offline translation manual](./manuals/OfflineTranslation.md)
