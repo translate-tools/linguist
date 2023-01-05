@@ -21,6 +21,7 @@ import { TranslatorsCacheStorage } from './TranslatorsCacheStorage';
 import { isBackgroundContext } from '../../lib/browser';
 import { requestHandlers } from '../App/messages';
 import { sendConfigUpdateEvent } from '../ContentScript';
+import { getCustomTranslatorsClasses } from '../../requests/backend/translators/applyTranslators';
 
 export const translatorModules = {
 	YandexTranslator,
@@ -31,6 +32,20 @@ export const translatorModules = {
 export const DEFAULT_TRANSLATOR = 'GoogleTranslator';
 
 export const getTranslatorNameById = (id: number | string) => '#' + id;
+
+export const mergeCustomTranslatorsWithBasicTranslators = (
+	customTranslators: Record<string, TranslatorClass>,
+) => {
+	const translatorsClasses: Record<string, TranslatorClass> = { ...translatorModules };
+	for (const key in customTranslators) {
+		const translatorId = getTranslatorNameById(key);
+		const translatorClass = customTranslators[key];
+
+		translatorsClasses[translatorId] = translatorClass;
+	}
+
+	return translatorsClasses;
+};
 
 interface Registry {
 	translator?: BaseTranslator;
@@ -48,13 +63,13 @@ export class TranslateScheduler {
 	private readonly registry: Registry = {};
 
 	private config: TranslateSchedulerConfig;
-	private customTranslatorsInstances: Record<string, TranslatorClass> = {};
+	private translators: Record<string, TranslatorClass> = {};
 	constructor(
 		config: TranslateSchedulerConfig,
-		customTranslators: Record<string, TranslatorClass>,
+		translators: Record<string, TranslatorClass>,
 	) {
 		this.config = config;
-		this.customTranslatorsInstances = customTranslators;
+		this.translators = translators;
 	}
 
 	public async setConfig(config: TranslateSchedulerConfig) {
@@ -62,25 +77,17 @@ export class TranslateScheduler {
 		await this.makeScheduler(true);
 	}
 
-	public async setCustomTranslators(
-		customTranslators: Record<string, TranslatorClass>,
-	) {
-		this.customTranslatorsInstances = customTranslators;
+	public async setTranslators(customTranslators: Record<string, TranslatorClass>) {
+		this.translators = customTranslators;
 		await this.makeScheduler(true);
 	}
 
+	// TODO: return `{customTranslators, translators}`
 	/**
 	 * Return map `{name: instance}` with available translators
 	 */
 	public getTranslators = (): Record<string, TranslatorClass> => {
-		// Build custom translators list
-		const translators: Record<string, TranslatorClass> = {};
-		for (const key in this.customTranslatorsInstances) {
-			translators[getTranslatorNameById(key)] =
-				this.customTranslatorsInstances[key];
-		}
-
-		return { ...translators, ...translatorModules };
+		return this.translators;
 	};
 
 	public getTranslatorInfo = async () => {
@@ -254,10 +261,16 @@ export class Background {
 			}),
 		);
 
+		// Build translators list
+		const translators = await getCustomTranslatorsClasses().then(
+			(customTranslators) => {
+				return mergeCustomTranslatorsWithBasicTranslators(customTranslators);
+			},
+		);
+
 		$translateManagerConfig.watch((config) => {
 			if (this.translateManager === null) {
-				// TODO: forward custom translators
-				this.translateManager = new TranslateScheduler(config, {});
+				this.translateManager = new TranslateScheduler(config, translators);
 
 				// Return a scheduler instance for awaiters
 				if (this.translateManagerPromise !== null) {

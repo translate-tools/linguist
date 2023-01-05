@@ -1,10 +1,32 @@
 import { TranslatorClass } from '@translate-tools/core/types/Translator';
 
-import { DEFAULT_TRANSLATOR } from '../../../modules/Background';
+import {
+	DEFAULT_TRANSLATOR,
+	mergeCustomTranslatorsWithBasicTranslators,
+} from '../../../modules/Background';
 import { buildBackendRequest } from '../../utils/requestBuilder';
 
 import { getTranslators } from './data';
 import { loadTranslator } from './utils';
+
+export const getCustomTranslatorsClasses = () =>
+	getTranslators({ order: 'asc' }).then(async (translators) => {
+		const translatorsRecord: Record<string, TranslatorClass> = {};
+
+		// Validate and collect translators
+		for (const { key, data: translatorData } of translators) {
+			try {
+				translatorsRecord[key] = loadTranslator(translatorData.code);
+			} catch (error) {
+				console.error(
+					`Translator "${translatorData.name}" (id:${key}) is thrown exception`,
+					error,
+				);
+			}
+		}
+
+		return translatorsRecord;
+	});
 
 // TODO: move logic to `TranslateSchedulerConfig`
 export const [applyTranslatorsFactory, applyTranslators] = buildBackendRequest(
@@ -12,25 +34,15 @@ export const [applyTranslatorsFactory, applyTranslators] = buildBackendRequest(
 	{
 		factoryHandler: ({ bg, config }) => {
 			const update = async () =>
-				getTranslators({ order: 'asc' })
-					.then(async (translators) => {
-						const translatorsRecord: Record<string, TranslatorClass> = {};
-
-						translators.forEach(({ key, data: { name, code } }) => {
-							try {
-								translatorsRecord[key] = loadTranslator(code);
-							} catch (error) {
-								console.error(
-									`Translator "${name}" (id:${key}) is thrown exception`,
-									error,
-								);
-							}
-						});
-
+				getCustomTranslatorsClasses()
+					.then(async (customTranslators) => {
 						const translateManager = await bg.getTranslateManager();
-						translateManager.setCustomTranslators(translatorsRecord);
 
-						return translatorsRecord;
+						const translatorClasses =
+							mergeCustomTranslatorsWithBasicTranslators(customTranslators);
+						translateManager.setTranslators(translatorClasses);
+
+						return customTranslators;
 					})
 					.then(async (translators) => {
 						const latestConfig = await config.get();
