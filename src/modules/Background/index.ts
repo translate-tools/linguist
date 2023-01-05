@@ -16,12 +16,13 @@ import { BingTranslatorPublic } from '@translate-tools/core/translators/unstable
 import { TranslatorClass } from '@translate-tools/core/types/Translator';
 
 import { AppConfigType } from '../../types/runtime';
-import { ObservableAsyncStorage } from '../ConfigStorage/ConfigStorage';
-import { TranslatorsCacheStorage } from './TranslatorsCacheStorage';
+import { createPromiseWithControls, PromiseWithControls } from '../../lib/utils';
 import { isBackgroundContext } from '../../lib/browser';
+import { ObservableAsyncStorage } from '../ConfigStorage/ConfigStorage';
+import { getCustomTranslatorsClasses } from '../../requests/backend/translators/applyTranslators';
 import { requestHandlers } from '../App/messages';
 import { sendConfigUpdateEvent } from '../ContentScript';
-import { getCustomTranslatorsClasses } from '../../requests/backend/translators/applyTranslators';
+import { TranslatorsCacheStorage } from './TranslatorsCacheStorage';
 
 export const translatorModules = {
 	YandexTranslator,
@@ -145,24 +146,6 @@ export class TranslatorManager {
 	};
 }
 
-// TODO: move to another file
-type ProvidePromise<T = void> = {
-	promise: Promise<T>;
-	resolve: (value: T | PromiseLike<T>) => void;
-	reject: (reason?: any) => void;
-};
-
-const createPromiseWithControls = <T = void>() => {
-	const result = {} as ProvidePromise<T>;
-
-	result.promise = new Promise<T>((resolve, reject) => {
-		result.resolve = resolve;
-		result.reject = reject;
-	});
-
-	return result;
-};
-
 /**
  * Resources manager class
  */
@@ -173,7 +156,7 @@ export class Background {
 	}
 
 	private translateManager: TranslatorManager | null = null;
-	private translateManagerPromise: ProvidePromise<TranslatorManager> | null = null;
+	private translateManagerPromise: PromiseWithControls<TranslatorManager> | null = null;
 	public async getTranslateManager() {
 		if (this.translateManager === null) {
 			// Create promise to await configuring instance
