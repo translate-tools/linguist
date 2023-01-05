@@ -1,4 +1,4 @@
-import { merge } from 'effector';
+import { combine } from 'effector';
 import { reshape } from 'patronum';
 
 // Schedulers
@@ -22,12 +22,6 @@ import { isBackgroundContext } from '../../lib/browser';
 import { requestHandlers } from '../App/messages';
 import { sendConfigUpdateEvent } from '../ContentScript';
 
-interface Registry {
-	translator?: BaseTranslator;
-	cache?: TranslatorsCacheStorage;
-	scheduler?: IScheduler;
-}
-
 export const translatorModules = {
 	YandexTranslator,
 	GoogleTranslator,
@@ -38,123 +32,117 @@ export const DEFAULT_TRANSLATOR = 'GoogleTranslator';
 
 export const getTranslatorNameById = (id: number | string) => '#' + id;
 
-/**
- * Resources manager class
- */
-export class Background {
+interface Registry {
+	translator?: BaseTranslator;
+	cache?: TranslatorsCacheStorage;
+	scheduler?: IScheduler;
+}
+
+type TranslateSchedulerConfig = Pick<
+	AppConfigType,
+	'translatorModule' | 'scheduler' | 'cache'
+>;
+
+// TODO: refactor registry use
+export class TranslateScheduler {
 	private readonly registry: Registry = {};
 
-	private readonly config: ObservableAsyncStorage<AppConfigType>;
-	constructor(config: ObservableAsyncStorage<AppConfigType>) {
+	private config: TranslateSchedulerConfig;
+	private customTranslatorsInstances: Record<string, TranslatorClass> = {};
+	constructor(
+		config: TranslateSchedulerConfig,
+		customTranslators: Record<string, TranslatorClass>,
+	) {
 		this.config = config;
+		this.customTranslatorsInstances = customTranslators;
 	}
 
-	private customTranslators: Record<string, TranslatorClass> = {};
-	public updateCustomTranslatorsList = (
-		translators: Record<string, TranslatorClass>,
-	) => {
-		this.customTranslators = translators;
-		this.makeScheduler(true);
-	};
+	public async setConfig(config: TranslateSchedulerConfig) {
+		this.config = config;
+		await this.makeScheduler(true);
+	}
 
+	public async setCustomTranslators(
+		customTranslators: Record<string, TranslatorClass>,
+	) {
+		this.customTranslatorsInstances = customTranslators;
+		await this.makeScheduler(true);
+	}
+
+	/**
+	 * Return map `{name: instance}` with available translators
+	 */
 	public getTranslators = (): Record<string, TranslatorClass> => {
 		// Build custom translators list
 		const translators: Record<string, TranslatorClass> = {};
-		for (const key in this.customTranslators) {
-			translators[getTranslatorNameById(key)] = this.customTranslators[key];
+		for (const key in this.customTranslatorsInstances) {
+			translators[getTranslatorNameById(key)] =
+				this.customTranslatorsInstances[key];
 		}
 
 		return { ...translators, ...translatorModules };
 	};
 
-	// TODO: think about move it outside
-	public async start() {
-		const $config = await this.config.getObservableStore();
-
-		// Init state
-		await this.makeTranslator();
-		await this.makeScheduler();
-
-		const schedulerStores = reshape({
-			source: $config,
-			shape: {
-				scheduler: ({ scheduler }) => scheduler,
-				translatorModule: ({ translatorModule }) => translatorModule,
-				cache: ({ cache }) => cache,
-			},
-		});
-
-		merge(Object.values(schedulerStores)).watch(() => {
-			// Forced recreate a scheduler
-			this.makeScheduler(true);
-		});
-
-		// Send update event
-		$config.watch(() => {
-			sendConfigUpdateEvent();
-		});
-
-		// Prevent run it again on other pages, such as options page
-		if (isBackgroundContext()) {
-			requestHandlers.forEach((factory) => {
-				factory({
-					config: this.config,
-					bg: this,
-					translatorModules: translatorModules as any,
-				});
-			});
-		}
-	}
+	public getTranslatorInfo = async () => {
+		const translatorClass = await this.getTranslatorClass();
+		return translatorClass === null
+			? null
+			: {
+				supportedLanguages: translatorClass.getSupportedLanguages(),
+				isSupportAutodetect: translatorClass.isSupportedAutoFrom(),
+			  };
+	};
 
 	// TODO: split class here. Move logic below to class `TranslatorManager`,
 	// and create instance outside of this class
-	public get translator() {
-		return this.registry.translator;
+	private schedulerAwaiter: Promise<IScheduler> | null = null;
+	public async getScheduler() {
+		if (this.registry.scheduler !== undefined) return this.registry.scheduler;
+
+		if (this.schedulerAwaiter !== null) return this.schedulerAwaiter;
+
+		this.schedulerAwaiter = this.makeScheduler().then(() => {
+			this.schedulerAwaiter = null;
+
+			if (this.registry.scheduler === undefined) {
+				throw new Error("Can't make scheduler");
+			}
+
+			return this.registry.scheduler;
+		});
+
+		return this.schedulerAwaiter;
 	}
 
-	public get scheduler() {
-		return this.registry.scheduler;
-	}
-
-	private getTranslator = async (): Promise<TranslatorClass<BaseTranslator> | null> => {
-		const { translatorModule } = await this.config.get();
-
-		if (translatorModule === null) return null;
+	private getTranslatorClass = async (): Promise<TranslatorClass<BaseTranslator>> => {
+		const { translatorModule } = await this.config;
 
 		const translators = this.getTranslators();
-		const translatorClass = translators[translatorModule];
+		let translatorClass = translators[translatorModule];
+		if (translatorClass === undefined) {
+			console.warn('Not found translator by name', translatorModule);
+			translatorClass = translators[DEFAULT_TRANSLATOR];
+			if (translatorClass === undefined) {
+				throw new Error(
+					"Can't found default translator in provided translators list",
+				);
+			}
+		}
 
-		return (translatorClass as TranslatorClass<BaseTranslator>) ?? null;
-	};
-
-	public getTranslatorInfo = async () => {
-		const translatorModule = await this.getTranslator();
-		return translatorModule === null
-			? null
-			: {
-				supportedLanguages: translatorModule.getSupportedLanguages(),
-				isSupportAutodetect: translatorModule.isSupportedAutoFrom(),
-			  };
+		return translatorClass as TranslatorClass<BaseTranslator>;
 	};
 
 	private makeTranslator = async (force = false) => {
 		if (this.registry.translator !== undefined && !force) return;
 
-		const translatorModule = await this.getTranslator();
-		if (translatorModule === null) {
-			// throw new Error(
-			// 	`Not found translator`,
-			// );
-			return;
-		}
-
-		this.registry.translator = new translatorModule();
+		const translatorClass = await this.getTranslatorClass();
+		this.registry.translator = new translatorClass();
 	};
 
 	private makeCache = async (force = false) => {
 		if (this.registry.cache !== undefined && !force) return;
 
-		const { translatorModule, cache } = await this.config.get();
+		const { translatorModule, cache } = await this.config;
 		this.registry.cache = new TranslatorsCacheStorage(translatorModule, cache);
 	};
 
@@ -170,7 +158,7 @@ export class Background {
 			return;
 		}
 
-		const { scheduler } = await this.config.get();
+		const { scheduler } = await this.config;
 		if (scheduler === null) {
 			throw new Error("Can't get scheduler config");
 		}
@@ -191,4 +179,106 @@ export class Background {
 		// Use scheduler without cache
 		this.registry.scheduler = baseScheduler;
 	};
+}
+
+// TODO: move to another file
+type ProvidePromise<T = void> = {
+	promise: Promise<T>;
+	resolve: (value: T | PromiseLike<T>) => void;
+	reject: (reason?: any) => void;
+};
+
+const createPromiseWithControls = <T = void>() => {
+	const result = {} as ProvidePromise<T>;
+
+	result.promise = new Promise<T>((resolve, reject) => {
+		result.resolve = resolve;
+		result.reject = reject;
+	});
+
+	return result;
+};
+
+/**
+ * Resources manager class
+ */
+export class Background {
+	private readonly config: ObservableAsyncStorage<AppConfigType>;
+	constructor(config: ObservableAsyncStorage<AppConfigType>) {
+		this.config = config;
+	}
+
+	private translateManager: TranslateScheduler | null = null;
+	private translateManagerPromise: ProvidePromise<TranslateScheduler> | null = null;
+	public async getTranslateManager() {
+		if (this.translateManager === null) {
+			// Create promise to await configuring instance
+			if (this.translateManagerPromise === null) {
+				this.translateManagerPromise = createPromiseWithControls();
+			}
+
+			return this.translateManagerPromise.promise;
+		}
+
+		return this.translateManager;
+	}
+
+	public async start() {
+		const $config = await this.config.getObservableStore();
+
+		// Send update event
+		$config.watch(() => {
+			sendConfigUpdateEvent();
+		});
+
+		// Update translate scheduler
+		const schedulerStores = reshape({
+			source: $config,
+			shape: {
+				scheduler: ({ scheduler }) => scheduler,
+				translatorModule: ({ translatorModule }) => translatorModule,
+				cache: ({ cache }) => cache,
+			},
+		});
+
+		const $translateManagerConfig = combine(
+			[
+				schedulerStores.translatorModule,
+				schedulerStores.scheduler,
+				schedulerStores.cache,
+			],
+			([translatorModule, scheduler, cache]) => ({
+				translatorModule,
+				scheduler,
+				cache,
+			}),
+		);
+
+		$translateManagerConfig.watch((config) => {
+			if (this.translateManager === null) {
+				// TODO: forward custom translators
+				this.translateManager = new TranslateScheduler(config, {});
+
+				// Return a scheduler instance for awaiters
+				if (this.translateManagerPromise !== null) {
+					this.translateManagerPromise.resolve(this.translateManager);
+				}
+				return;
+			}
+
+			this.translateManager.setConfig(config);
+		});
+
+		// Prevent run it again on other pages, such as options page
+		if (isBackgroundContext()) {
+			requestHandlers.forEach((factory) => {
+				factory({
+					config: this.config,
+					bg: this,
+					// TODO: review usages, maybe add custom translators
+					translatorModules: translatorModules as any,
+				});
+			});
+		}
+	}
 }

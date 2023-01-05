@@ -6,13 +6,14 @@ import { buildBackendRequest } from '../../utils/requestBuilder';
 import { getTranslators } from './data';
 import { loadTranslator } from './utils';
 
+// TODO: move logic to `TranslateSchedulerConfig`
 export const [applyTranslatorsFactory, applyTranslators] = buildBackendRequest(
 	'applyTranslators',
 	{
 		factoryHandler: ({ bg, config }) => {
 			const update = async () =>
 				getTranslators({ order: 'asc' })
-					.then((translators) => {
+					.then(async (translators) => {
 						const translatorsRecord: Record<string, TranslatorClass> = {};
 
 						translators.forEach(({ key, data: { name, code } }) => {
@@ -26,7 +27,8 @@ export const [applyTranslatorsFactory, applyTranslators] = buildBackendRequest(
 							}
 						});
 
-						bg.updateCustomTranslatorsList(translatorsRecord);
+						const translateManager = await bg.getTranslateManager();
+						translateManager.setCustomTranslators(translatorsRecord);
 
 						return translatorsRecord;
 					})

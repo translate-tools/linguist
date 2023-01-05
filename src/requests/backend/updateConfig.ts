@@ -43,10 +43,11 @@ export const [updateConfigFactory, updateConfig] = buildBackendRequest('updateCo
 				}
 
 				// Validate translator
+				const translateManager = await bg.getTranslateManager();
 				if ('translatorModule' in newConfigSegments) {
-					switch (false) {
-						case newConfigSegments.translatorModule in bg.getTranslators():
-							throw new Error('Custom translator is unavailable');
+					const translators = translateManager.getTranslators();
+					if (!(newConfigSegments.translatorModule in translators)) {
+						throw new Error('Custom translator is unavailable');
 					}
 				}
 

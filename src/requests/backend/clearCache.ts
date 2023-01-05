@@ -5,8 +5,11 @@ export const [clearCacheFactory, clearCache] = buildBackendRequest('clearCache',
 	factoryHandler:
 		({ bg }) =>
 			async () => {
-			// Clear for each module
-				for (const translatorName in bg.getTranslators()) {
+				const translateManager = await bg.getTranslateManager();
+
+				// Clear for each module
+				const translators = translateManager.getTranslators();
+				for (const translatorName in translators) {
 					const cache = new TranslatorsCacheStorage(translatorName);
 					await cache.clear();
 				}
