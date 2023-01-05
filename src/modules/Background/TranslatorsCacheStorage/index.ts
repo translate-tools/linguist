@@ -1,6 +1,6 @@
 import * as IDB from 'idb/with-async-ittr';
 
-import { ITranslation } from '../../types/translation/Translation';
+import { ITranslation } from '../../../types/translation/Translation';
 
 /**
  * Helper type to cast table name string

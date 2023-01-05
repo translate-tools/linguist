@@ -1,5 +1,5 @@
-import { clearAllMocks } from '../../lib/tests';
-import { TranslatorsCacheStorage } from './TranslatorsCacheStorage';
+import { clearAllMocks } from '../../../lib/tests';
+import { TranslatorsCacheStorage } from '.';
 
 beforeEach(clearAllMocks);
 
