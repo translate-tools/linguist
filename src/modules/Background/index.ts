@@ -52,7 +52,7 @@ type TranslateSchedulerConfig = Pick<
 	'translatorModule' | 'scheduler' | 'cache'
 >;
 
-export class TranslateScheduler {
+export class TranslatorManager {
 	private config: TranslateSchedulerConfig;
 	private translators: Record<string, TranslatorClass> = {};
 	constructor(
@@ -63,14 +63,14 @@ export class TranslateScheduler {
 		this.translators = translators;
 	}
 
-	public async setConfig(config: TranslateSchedulerConfig) {
+	public setConfig(config: TranslateSchedulerConfig) {
 		this.config = config;
-		await this.getTranslationScheduler(true);
+		this.getTranslationSchedulerInstance(true);
 	}
 
-	public async setTranslators(customTranslators: Record<string, TranslatorClass>) {
+	public setTranslators(customTranslators: Record<string, TranslatorClass>) {
 		this.translators = customTranslators;
-		await this.getTranslationScheduler(true);
+		this.getTranslationSchedulerInstance(true);
 	}
 
 	// TODO: return `{customTranslators, translators}`
@@ -81,8 +81,9 @@ export class TranslateScheduler {
 		return this.translators;
 	};
 
-	public getTranslatorInfo = async () => {
-		const translatorClass = await this.getTranslatorClass();
+	public getTranslatorInfo = () => {
+		// TODO: prevent return null
+		const translatorClass = this.getTranslatorClass();
 		return translatorClass === null
 			? null
 			: {
@@ -91,29 +92,15 @@ export class TranslateScheduler {
 			  };
 	};
 
-	// TODO: split class here. Move logic below to class `TranslatorManager`,
-	// and create instance outside of this class
-	private schedulerAwaiter: Promise<IScheduler> | null = null;
-	public async getScheduler() {
-		// Return instance
-		if (this.schedulerInstance !== null) return this.schedulerInstance;
-
-		// Request create instance
-		if (this.schedulerAwaiter === null) {
-			this.schedulerAwaiter = this.getTranslationScheduler().then((scheduler) => {
-				this.schedulerAwaiter = null;
-				return scheduler;
-			});
-		}
-
-		return this.schedulerAwaiter;
+	public getScheduler() {
+		return this.getTranslationSchedulerInstance();
 	}
 
 	private schedulerInstance: IScheduler | null = null;
-	private getTranslationScheduler = async (isForceCreate = false) => {
-		if (this.schedulerInstance === null || isForceCreate) {
+	private getTranslationSchedulerInstance = (forceCreate = false) => {
+		if (this.schedulerInstance === null || forceCreate) {
 			// TODO: check context loss after awaiting
-			const translator = await this.getTranslator();
+			const translator = this.getTranslator();
 
 			const { useCache, ...schedulerConfig } = this.config.scheduler;
 
@@ -121,7 +108,7 @@ export class TranslateScheduler {
 
 			let schedulerInstance: IScheduler = baseScheduler;
 			if (useCache) {
-				const cacheInstance = await this.getCache();
+				const cacheInstance = this.getCache();
 				schedulerInstance = new SchedulerWithCache(baseScheduler, cacheInstance);
 			}
 
@@ -131,17 +118,17 @@ export class TranslateScheduler {
 		return this.schedulerInstance;
 	};
 
-	private getTranslator = async () => {
-		const translatorClass = await this.getTranslatorClass();
+	private getTranslator = () => {
+		const translatorClass = this.getTranslatorClass();
 		return new translatorClass();
 	};
 
-	private getCache = async () => {
+	private getCache = () => {
 		const { translatorModule, cache } = this.config;
 		return new TranslatorsCacheStorage(translatorModule, cache);
 	};
 
-	private getTranslatorClass = async (): Promise<TranslatorClass<BaseTranslator>> => {
+	private getTranslatorClass = (): TranslatorClass<BaseTranslator> => {
 		const { translatorModule } = this.config;
 
 		const translators = this.getTranslators();
@@ -181,8 +168,8 @@ export class Background {
 		this.config = config;
 	}
 
-	private translateManager: TranslateScheduler | null = null;
-	private translateManagerPromise: ProvidePromise<TranslateScheduler> | null = null;
+	private translateManager: TranslatorManager | null = null;
+	private translateManagerPromise: ProvidePromise<TranslatorManager> | null = null;
 	public async getTranslateManager() {
 		if (this.translateManager === null) {
 			// Create promise to await configuring instance
@@ -190,6 +177,7 @@ export class Background {
 				this.translateManagerPromise = createPromiseWithControls();
 			}
 
+			// TODO: clear promise property
 			return this.translateManagerPromise.promise;
 		}
 
@@ -236,7 +224,7 @@ export class Background {
 
 		$translateManagerConfig.watch((config) => {
 			if (this.translateManager === null) {
-				this.translateManager = new TranslateScheduler(config, translators);
+				this.translateManager = new TranslatorManager(config, translators);
 
 				// Return a scheduler instance for awaiters
 				if (this.translateManagerPromise !== null) {
