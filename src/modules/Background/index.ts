@@ -31,20 +31,25 @@ export const translatorModules = {
 
 export const DEFAULT_TRANSLATOR = 'GoogleTranslator';
 
-// TODO: review usages
-export const getTranslatorNameById = (id: number | string) => '#' + id;
+/**
+ * Format custom translator unique id as key to use with another translators
+ */
+export const getFormattedCustomTranslatorId = (id: number) => '#' + id;
 
 /**
  * Map where key is identifier of translator and value is translator constructor
  */
 export type TranslatorsDictinary = Record<string, TranslatorClass>;
 
-export const mergeCustomTranslatorsWithBasicTranslators = (
-	customTranslators: TranslatorsDictinary,
+/**
+ * Receive custom translators map and return new map with formatted keys
+ */
+export const getCustomTranslatorsMapWithFormattedKeys = (
+	customTranslators: Record<number, TranslatorClass>,
 ) => {
-	const translatorsMap: TranslatorsDictinary = { ...translatorModules };
+	const translatorsMap: TranslatorsDictinary = {};
 	for (const key in customTranslators) {
-		const translatorId = getTranslatorNameById(key);
+		const translatorId = getFormattedCustomTranslatorId(Number(key));
 		const translatorClass = customTranslators[key];
 
 		translatorsMap[translatorId] = translatorClass;
@@ -227,7 +232,10 @@ export class Background {
 		// Build translators list
 		const translators = await getCustomTranslatorsClasses().then(
 			(customTranslators) => {
-				return mergeCustomTranslatorsWithBasicTranslators(customTranslators);
+				return {
+					...translatorModules,
+					...getCustomTranslatorsMapWithFormattedKeys(customTranslators),
+				};
 			},
 		);
 

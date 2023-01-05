@@ -2,7 +2,8 @@ import { TranslatorClass } from '@translate-tools/core/types/Translator';
 
 import {
 	DEFAULT_TRANSLATOR,
-	mergeCustomTranslatorsWithBasicTranslators,
+	getCustomTranslatorsMapWithFormattedKeys,
+	translatorModules,
 } from '../../../modules/Background';
 import { buildBackendRequest } from '../../utils/requestBuilder';
 
@@ -11,7 +12,7 @@ import { loadTranslator } from './utils';
 
 export const getCustomTranslatorsClasses = () =>
 	getTranslators({ order: 'asc' }).then(async (translators) => {
-		const translatorsRecord: Record<string, TranslatorClass> = {};
+		const translatorsRecord: Record<number, TranslatorClass> = {};
 
 		// Validate and collect translators
 		for (const { key, data: translatorData } of translators) {
@@ -38,8 +39,12 @@ export const [applyTranslatorsFactory, applyTranslators] = buildBackendRequest(
 					.then(async (customTranslators) => {
 						const translateManager = await bg.getTranslateManager();
 
-						const translatorClasses =
-							mergeCustomTranslatorsWithBasicTranslators(customTranslators);
+						const translatorClasses = {
+							...translatorModules,
+							...getCustomTranslatorsMapWithFormattedKeys(
+								customTranslators,
+							),
+						};
 						translateManager.setTranslators(translatorClasses);
 
 						return customTranslators;
