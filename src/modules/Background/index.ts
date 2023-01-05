@@ -34,18 +34,23 @@ export const DEFAULT_TRANSLATOR = 'GoogleTranslator';
 // TODO: review usages
 export const getTranslatorNameById = (id: number | string) => '#' + id;
 
+/**
+ * Map where key is identifier of translator and value is translator constructor
+ */
+export type TranslatorsDictinary = Record<string, TranslatorClass>;
+
 export const mergeCustomTranslatorsWithBasicTranslators = (
-	customTranslators: Record<string, TranslatorClass>,
+	customTranslators: TranslatorsDictinary,
 ) => {
-	const translatorsClasses: Record<string, TranslatorClass> = { ...translatorModules };
+	const translatorsMap: TranslatorsDictinary = { ...translatorModules };
 	for (const key in customTranslators) {
 		const translatorId = getTranslatorNameById(key);
 		const translatorClass = customTranslators[key];
 
-		translatorsClasses[translatorId] = translatorClass;
+		translatorsMap[translatorId] = translatorClass;
 	}
 
-	return translatorsClasses;
+	return translatorsMap;
 };
 
 type TranslateSchedulerConfig = Pick<
@@ -55,11 +60,8 @@ type TranslateSchedulerConfig = Pick<
 
 export class TranslatorManager {
 	private config: TranslateSchedulerConfig;
-	private translators: Record<string, TranslatorClass> = {};
-	constructor(
-		config: TranslateSchedulerConfig,
-		translators: Record<string, TranslatorClass>,
-	) {
+	private translators: TranslatorsDictinary = {};
+	constructor(config: TranslateSchedulerConfig, translators: TranslatorsDictinary) {
 		this.config = config;
 		this.translators = translators;
 	}
@@ -69,16 +71,15 @@ export class TranslatorManager {
 		this.getTranslationSchedulerInstance(true);
 	}
 
-	public setTranslators(customTranslators: Record<string, TranslatorClass>) {
+	public setTranslators(customTranslators: TranslatorsDictinary) {
 		this.translators = customTranslators;
 		this.getTranslationSchedulerInstance(true);
 	}
 
-	// TODO: return `{customTranslators, translators}`
 	/**
 	 * Return map `{name: instance}` with available translators
 	 */
-	public getTranslators = (): Record<string, TranslatorClass> => {
+	public getTranslators = (): TranslatorsDictinary => {
 		return this.translators;
 	};
 
