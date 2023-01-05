@@ -9,11 +9,8 @@ import { TranslatorClass } from '@translate-tools/core/types/Translator';
 
 import { AppConfigType } from '../../types/runtime';
 import { createPromiseWithControls, PromiseWithControls } from '../../lib/utils';
-import { isBackgroundContext } from '../../lib/browser';
 import { ObservableAsyncStorage } from '../ConfigStorage/ConfigStorage';
 import { getCustomTranslatorsClasses } from '../../requests/backend/translators/applyTranslators';
-import { requestHandlers } from '../App/messages';
-import { sendConfigUpdateEvent } from '../ContentScript';
 import { TranslatorManager } from './TranslatorManager';
 
 export const translatorModules = {
@@ -52,7 +49,7 @@ export const getCustomTranslatorsMapWithFormattedKeys = (
 };
 
 /**
- * Resources manager class
+ * Object to manage core features
  */
 export class Background {
 	private readonly config: ObservableAsyncStorage<AppConfigType>;
@@ -89,11 +86,7 @@ export class Background {
 	public async start() {
 		const $config = await this.config.getObservableStore();
 
-		// Send update event
-		$config.watch(() => {
-			sendConfigUpdateEvent();
-		});
-
+		// TODO: pick props instead of reshape
 		// Update translate scheduler
 		const schedulerStores = reshape({
 			source: $config,
@@ -140,17 +133,5 @@ export class Background {
 
 			this.translateManager.setConfig(config);
 		});
-
-		// Prevent run it again on other pages, such as options page
-		if (isBackgroundContext()) {
-			requestHandlers.forEach((factory) => {
-				factory({
-					config: this.config,
-					bg: this,
-					// TODO: review usages, maybe add custom translators
-					translatorModules: translatorModules as any,
-				});
-			});
-		}
 	}
 }
