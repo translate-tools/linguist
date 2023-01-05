@@ -82,14 +82,11 @@ export class TranslatorManager {
 	};
 
 	public getTranslatorInfo = () => {
-		// TODO: prevent return null
 		const translatorClass = this.getTranslatorClass();
-		return translatorClass === null
-			? null
-			: {
-				supportedLanguages: translatorClass.getSupportedLanguages(),
-				isSupportAutodetect: translatorClass.isSupportedAutoFrom(),
-			  };
+		return {
+			supportedLanguages: translatorClass.getSupportedLanguages(),
+			isSupportAutodetect: translatorClass.isSupportedAutoFrom(),
+		};
 	};
 
 	public getScheduler() {
@@ -99,17 +96,17 @@ export class TranslatorManager {
 	private schedulerInstance: IScheduler | null = null;
 	private getTranslationSchedulerInstance = (forceCreate = false) => {
 		if (this.schedulerInstance === null || forceCreate) {
-			// TODO: check context loss after awaiting
 			const translator = this.getTranslator();
 
 			const { useCache, ...schedulerConfig } = this.config.scheduler;
 
-			const baseScheduler = new Scheduler(translator, schedulerConfig);
+			const scheduler = new Scheduler(translator, schedulerConfig);
 
-			let schedulerInstance: IScheduler = baseScheduler;
+			let schedulerInstance: IScheduler = scheduler;
 			if (useCache) {
+				// Wrap scheduler by cache
 				const cacheInstance = this.getCache();
-				schedulerInstance = new SchedulerWithCache(baseScheduler, cacheInstance);
+				schedulerInstance = new SchedulerWithCache(scheduler, cacheInstance);
 			}
 
 			this.schedulerInstance = schedulerInstance;
