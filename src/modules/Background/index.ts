@@ -47,21 +47,12 @@ export const mergeCustomTranslatorsWithBasicTranslators = (
 	return translatorsClasses;
 };
 
-interface Registry {
-	translator?: BaseTranslator;
-	cache?: TranslatorsCacheStorage;
-	scheduler?: IScheduler;
-}
-
 type TranslateSchedulerConfig = Pick<
 	AppConfigType,
 	'translatorModule' | 'scheduler' | 'cache'
 >;
 
-// TODO: refactor registry use
 export class TranslateScheduler {
-	private readonly registry: Registry = {};
-
 	private config: TranslateSchedulerConfig;
 	private translators: Record<string, TranslatorClass> = {};
 	constructor(
@@ -104,64 +95,50 @@ export class TranslateScheduler {
 	// and create instance outside of this class
 	private schedulerAwaiter: Promise<IScheduler> | null = null;
 	public async getScheduler() {
-		if (this.registry.scheduler !== undefined) return this.registry.scheduler;
+		// Return instance
+		if (this.schedulerInstance !== null) return this.schedulerInstance;
 
+		// Request create instance
 		if (this.schedulerAwaiter === null) {
-			this.schedulerAwaiter = this.getTranslationScheduler().then(() => {
+			this.schedulerAwaiter = this.getTranslationScheduler().then((scheduler) => {
 				this.schedulerAwaiter = null;
-
-				if (this.registry.scheduler === undefined) {
-					throw new Error("Can't make scheduler");
-				}
-
-				return this.registry.scheduler;
+				return scheduler;
 			});
 		}
 
 		return this.schedulerAwaiter;
 	}
 
+	private schedulerInstance: IScheduler | null = null;
 	private getTranslationScheduler = async (isForceCreate = false) => {
-		if (this.registry.scheduler === undefined || isForceCreate) {
+		if (this.schedulerInstance === null || isForceCreate) {
 			// TODO: check context loss after awaiting
-			const translator = await this.getTranslator(isForceCreate);
+			const translator = await this.getTranslator();
 
 			const { useCache, ...schedulerConfig } = this.config.scheduler;
 
-			let schedulerInstance: IScheduler;
-
 			const baseScheduler = new Scheduler(translator, schedulerConfig);
-			schedulerInstance = baseScheduler;
 
-			// Use cache if possible
+			let schedulerInstance: IScheduler = baseScheduler;
 			if (useCache) {
-				const cacheInstance = await this.getCache(isForceCreate);
+				const cacheInstance = await this.getCache();
 				schedulerInstance = new SchedulerWithCache(baseScheduler, cacheInstance);
 			}
 
-			// Use scheduler without cache
-			this.registry.scheduler = schedulerInstance;
+			this.schedulerInstance = schedulerInstance;
 		}
 
-		return this.registry.scheduler;
+		return this.schedulerInstance;
 	};
 
-	private getTranslator = async (isForceCreate = false) => {
-		if (this.registry.translator === undefined || isForceCreate) {
-			const translatorClass = await this.getTranslatorClass();
-			this.registry.translator = new translatorClass();
-		}
-
-		return this.registry.translator;
+	private getTranslator = async () => {
+		const translatorClass = await this.getTranslatorClass();
+		return new translatorClass();
 	};
 
-	private getCache = async (isForceCreate = false) => {
-		if (this.registry.cache === undefined || isForceCreate) {
-			const { translatorModule, cache } = this.config;
-			this.registry.cache = new TranslatorsCacheStorage(translatorModule, cache);
-		}
-
-		return this.registry.cache;
+	private getCache = async () => {
+		const { translatorModule, cache } = this.config;
+		return new TranslatorsCacheStorage(translatorModule, cache);
 	};
 
 	private getTranslatorClass = async (): Promise<TranslatorClass<BaseTranslator>> => {
