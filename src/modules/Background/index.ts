@@ -74,12 +74,12 @@ export class TranslateScheduler {
 
 	public async setConfig(config: TranslateSchedulerConfig) {
 		this.config = config;
-		await this.makeScheduler(true);
+		await this.getTranslationScheduler(true);
 	}
 
 	public async setTranslators(customTranslators: Record<string, TranslatorClass>) {
 		this.translators = customTranslators;
-		await this.makeScheduler(true);
+		await this.getTranslationScheduler(true);
 	}
 
 	// TODO: return `{customTranslators, translators}`
@@ -106,85 +106,74 @@ export class TranslateScheduler {
 	public async getScheduler() {
 		if (this.registry.scheduler !== undefined) return this.registry.scheduler;
 
-		if (this.schedulerAwaiter !== null) return this.schedulerAwaiter;
+		if (this.schedulerAwaiter === null) {
+			this.schedulerAwaiter = this.getTranslationScheduler().then(() => {
+				this.schedulerAwaiter = null;
 
-		this.schedulerAwaiter = this.makeScheduler().then(() => {
-			this.schedulerAwaiter = null;
+				if (this.registry.scheduler === undefined) {
+					throw new Error("Can't make scheduler");
+				}
 
-			if (this.registry.scheduler === undefined) {
-				throw new Error("Can't make scheduler");
-			}
-
-			return this.registry.scheduler;
-		});
+				return this.registry.scheduler;
+			});
+		}
 
 		return this.schedulerAwaiter;
 	}
 
+	private getTranslationScheduler = async (isForceCreate = false) => {
+		if (this.registry.scheduler === undefined || isForceCreate) {
+			// TODO: check context loss after awaiting
+			const translator = await this.getTranslator(isForceCreate);
+
+			const { useCache, ...schedulerConfig } = this.config.scheduler;
+
+			let schedulerInstance: IScheduler;
+
+			const baseScheduler = new Scheduler(translator, schedulerConfig);
+			schedulerInstance = baseScheduler;
+
+			// Use cache if possible
+			if (useCache) {
+				const cacheInstance = await this.getCache(isForceCreate);
+				schedulerInstance = new SchedulerWithCache(baseScheduler, cacheInstance);
+			}
+
+			// Use scheduler without cache
+			this.registry.scheduler = schedulerInstance;
+		}
+
+		return this.registry.scheduler;
+	};
+
+	private getTranslator = async (isForceCreate = false) => {
+		if (this.registry.translator === undefined || isForceCreate) {
+			const translatorClass = await this.getTranslatorClass();
+			this.registry.translator = new translatorClass();
+		}
+
+		return this.registry.translator;
+	};
+
+	private getCache = async (isForceCreate = false) => {
+		if (this.registry.cache === undefined || isForceCreate) {
+			const { translatorModule, cache } = this.config;
+			this.registry.cache = new TranslatorsCacheStorage(translatorModule, cache);
+		}
+
+		return this.registry.cache;
+	};
+
 	private getTranslatorClass = async (): Promise<TranslatorClass<BaseTranslator>> => {
-		const { translatorModule } = await this.config;
+		const { translatorModule } = this.config;
 
 		const translators = this.getTranslators();
-		let translatorClass = translators[translatorModule];
+		const translatorClass = translators[translatorModule];
 		if (translatorClass === undefined) {
-			console.warn('Not found translator by name', translatorModule);
-			translatorClass = translators[DEFAULT_TRANSLATOR];
-			if (translatorClass === undefined) {
-				throw new Error(
-					"Can't found default translator in provided translators list",
-				);
-			}
+			throw new Error(`Not found translator "${translatorModule}"`);
 		}
 
 		return translatorClass as TranslatorClass<BaseTranslator>;
-	};
-
-	private makeTranslator = async (force = false) => {
-		if (this.registry.translator !== undefined && !force) return;
-
-		const translatorClass = await this.getTranslatorClass();
-		this.registry.translator = new translatorClass();
-	};
-
-	private makeCache = async (force = false) => {
-		if (this.registry.cache !== undefined && !force) return;
-
-		const { translatorModule, cache } = await this.config;
-		this.registry.cache = new TranslatorsCacheStorage(translatorModule, cache);
-	};
-
-	private makeScheduler = async (force = false) => {
-		if (this.registry.scheduler !== undefined && !force) return;
-
-		// TODO: check context loss after awaiting
-		await this.makeTranslator(force);
-		const translator = this.registry.translator;
-
-		if (translator === undefined) {
-			// throw new Error('Translator is not created');
-			return;
-		}
-
-		const { scheduler } = await this.config;
-		if (scheduler === null) {
-			throw new Error("Can't get scheduler config");
-		}
-
-		const { useCache, ...schedulerConfig } = scheduler;
-		const baseScheduler = new Scheduler(translator, schedulerConfig);
-
-		// Try use cache if possible
-		if (useCache) {
-			await this.makeCache(force);
-			const cache = this.registry.cache;
-			if (cache !== undefined) {
-				this.registry.scheduler = new SchedulerWithCache(baseScheduler, cache);
-				return;
-			}
-		}
-
-		// Use scheduler without cache
-		this.registry.scheduler = baseScheduler;
 	};
 }
 
