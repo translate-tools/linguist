@@ -31,6 +31,7 @@ export const translatorModules = {
 
 export const DEFAULT_TRANSLATOR = 'GoogleTranslator';
 
+// TODO: review usages
 export const getTranslatorNameById = (id: number | string) => '#' + id;
 
 export const mergeCustomTranslatorsWithBasicTranslators = (
@@ -171,10 +172,20 @@ export class Background {
 		if (this.translateManager === null) {
 			// Create promise to await configuring instance
 			if (this.translateManagerPromise === null) {
-				this.translateManagerPromise = createPromiseWithControls();
+				const promiseWithControls =
+					createPromiseWithControls<TranslatorManager>();
+
+				// Set promise
+				this.translateManagerPromise = promiseWithControls;
+
+				// Clear promise
+				promiseWithControls.promise.finally(() => {
+					if (promiseWithControls === this.translateManagerPromise) {
+						this.translateManagerPromise = null;
+					}
+				});
 			}
 
-			// TODO: clear promise property
 			return this.translateManagerPromise.promise;
 		}
 
