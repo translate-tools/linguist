@@ -3,6 +3,7 @@ import { TranslatorInstance } from '@translate-tools/core/types/Translator';
 import { type } from '../../lib/types';
 import { buildBackendRequest } from '../utils/requestBuilder';
 
+// TODO: rename to `getTranslatorsNames` and add custom translators
 export const [getTranslatorModulesFactory, getTranslatorModules] = buildBackendRequest(
 	'getTranslatorModules',
 	{
