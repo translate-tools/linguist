@@ -2,11 +2,6 @@ import * as IDB from 'idb/with-async-ittr';
 
 import { ITranslation } from '../../../types/translation/Translation';
 
-/**
- * Helper type to cast table name string
- */
-type TableName = 'tableName';
-
 export interface TranslatorDBSchema extends IDB.DBSchema {
 	tableName: {
 		key: string;
@@ -22,7 +17,12 @@ interface Options {
 }
 
 /**
- * Data are stores in IDB
+ * Helper type to cast table name string
+ */
+type TableName = 'tableName';
+
+/**
+ * Manage cache by translator id
  */
 export class TranslatorsCacheStorage {
 	private dbPromise: Promise<IDB.IDBPDatabase<TranslatorDBSchema>> | null = null;

@@ -15,7 +15,7 @@ import { sendConfigUpdateEvent } from '../ContentScript';
 import { requestHandlers } from './messages';
 
 /**
- * Class that contains app context and manage global states
+ * Manage global states and application context
  */
 export class App {
 	/**

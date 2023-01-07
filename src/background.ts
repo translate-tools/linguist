@@ -1,3 +1,3 @@
-import { App } from './modules/App/App';
+import { App } from './modules/App';
 
 App.main();

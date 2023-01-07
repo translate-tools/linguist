@@ -16,6 +16,9 @@ export type TranslateSchedulerConfig = Pick<
 	'translatorModule' | 'scheduler' | 'cache'
 >;
 
+/**
+ * Manage a scheduler for translators
+ */
 export class TranslatorManager {
 	private config: TranslateSchedulerConfig;
 	private translators: TranslatorsDictinary = {};

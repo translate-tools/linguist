@@ -49,7 +49,7 @@ export const getCustomTranslatorsMapWithFormattedKeys = (
 };
 
 /**
- * Object to manage core features
+ * Background features manager
  */
 export class Background {
 	private readonly config: ObservableAsyncStorage<AppConfigType>;
