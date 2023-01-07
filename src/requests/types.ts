@@ -7,12 +7,12 @@ import { AppConfigType } from '../types/runtime';
 
 import { PageTranslator } from '../modules/PageTranslator/PageTranslator';
 import { SelectTranslator } from '../modules/SelectTranslator';
-import { BaseTranslator } from '@translate-tools/core/types/Translator';
+import { TranslatorClass } from '@translate-tools/core/types/Translator';
 
 export type RequestHandlerFactoryProps = {
 	config: ObservableAsyncStorage<AppConfigType>;
 	bg: Background;
-	translatorModules: Record<string, BaseTranslator>;
+	translatorModules: Record<string, TranslatorClass>;
 };
 
 export type RequestHandlerFactory = (props: RequestHandlerFactoryProps) => () => void;

@@ -3,7 +3,7 @@ import { cn } from '@bem-react/classname';
 import Papa from 'papaparse';
 import { useImmutableCallback } from 'react-elegant-ui/esm/hooks/useImmutableCallback';
 
-import { langCodes } from '@translate-tools/core/types/Translator';
+import { langCodes } from '@translate-tools/core/util/languages';
 
 import { getTranslations } from '../../../requests/backend/translations/getTranslations';
 import { ITranslationEntryWithKey } from '../../../requests/backend/translations/data';
