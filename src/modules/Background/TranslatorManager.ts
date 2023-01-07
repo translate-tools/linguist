@@ -16,7 +16,6 @@ export type TranslateSchedulerConfig = Pick<
 	'translatorModule' | 'scheduler' | 'cache'
 >;
 
-// TODO: add tests
 export class TranslatorManager {
 	private config: TranslateSchedulerConfig;
 	private translators: TranslatorsDictinary = {};
