@@ -1,8 +1,8 @@
 import { TranslatorClass } from '@translate-tools/core/types/Translator';
 import { TranslatorInstanceMembers } from '@translate-tools/core/types/Translator';
-import { clearAllMocks } from '../../lib/tests';
+import { clearAllMocks } from '../../../lib/tests';
 
-import { TranslatorManager } from './TranslatorManager';
+import { TranslatorManager } from '.';
 
 const createTranslatorMockClass = (translatorName: string) => {
 	return class MockTranslator {

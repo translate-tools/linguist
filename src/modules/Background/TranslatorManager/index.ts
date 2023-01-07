@@ -6,10 +6,10 @@ import {
 import { BaseTranslator } from '@translate-tools/core/types/Translator';
 import { TranslatorClass } from '@translate-tools/core/types/Translator';
 
-import { AppConfigType } from '../../types/runtime';
+import { AppConfigType } from '../../../types/runtime';
 
-import { TranslatorsCacheStorage } from './TranslatorsCacheStorage';
-import { TranslatorsDictinary } from './index';
+import { TranslatorsCacheStorage } from '../TranslatorsCacheStorage';
+import { TranslatorsDictinary } from '..';
 
 export type TranslateSchedulerConfig = Pick<
 	AppConfigType,
