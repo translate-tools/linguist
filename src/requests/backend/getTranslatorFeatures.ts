@@ -14,7 +14,7 @@ export const [getTranslatorFeaturesFactory, getTranslatorFeatures] = buildBacken
 			({ bg }) =>
 				async () => {
 					const translateManager = await bg.getTranslateManager();
-					return translateManager.getTranslatorInfo();
+					return translateManager.getTranslatorFeatures();
 				},
 	},
 );

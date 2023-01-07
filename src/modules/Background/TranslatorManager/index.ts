@@ -9,42 +9,39 @@ import { TranslatorClass } from '@translate-tools/core/types/Translator';
 import { AppConfigType } from '../../../types/runtime';
 
 import { TranslatorsCacheStorage } from '../TranslatorsCacheStorage';
-import { TranslatorsDictinary } from '..';
+import { TranslatorsMap } from '..';
 
-export type TranslateSchedulerConfig = Pick<
-	AppConfigType,
-	'translatorModule' | 'scheduler' | 'cache'
->;
+export type Config = Pick<AppConfigType, 'translatorModule' | 'scheduler' | 'cache'>;
 
 /**
- * Manage a scheduler for translators
+ * Build and manage a translation scheduler
  */
 export class TranslatorManager {
-	private config: TranslateSchedulerConfig;
-	private translators: TranslatorsDictinary = {};
-	constructor(config: TranslateSchedulerConfig, translators: TranslatorsDictinary) {
+	private config: Config;
+	private translators: TranslatorsMap = {};
+	constructor(config: Config, translators: TranslatorsMap) {
 		this.config = config;
 		this.translators = translators;
 	}
 
-	public setConfig(config: TranslateSchedulerConfig) {
+	public setConfig(config: Config) {
 		this.config = config;
 		this.getTranslationSchedulerInstance(true);
 	}
 
-	public setTranslators(customTranslators: TranslatorsDictinary) {
+	public setTranslators(customTranslators: TranslatorsMap) {
 		this.translators = customTranslators;
 		this.getTranslationSchedulerInstance(true);
 	}
 
 	/**
-	 * Return map `{name: instance}` with available translators
+	 * Return map with available translators
 	 */
-	public getTranslators = (): TranslatorsDictinary => {
+	public getTranslators = (): TranslatorsMap => {
 		return this.translators;
 	};
 
-	public getTranslatorInfo = () => {
+	public getTranslatorFeatures = () => {
 		const translatorClass = this.getTranslatorClass();
 		return {
 			supportedLanguages: translatorClass.getSupportedLanguages(),
@@ -52,6 +49,9 @@ export class TranslatorManager {
 		};
 	};
 
+	/**
+	 * Return configured translation scheduler
+	 */
 	public getScheduler() {
 		return this.getTranslationSchedulerInstance();
 	}

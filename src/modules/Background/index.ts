@@ -29,7 +29,7 @@ export const getFormattedCustomTranslatorId = (id: number) => '#' + id;
 /**
  * Map where key is identifier of translator and value is translator constructor
  */
-export type TranslatorsDictinary = Record<string, TranslatorClass>;
+export type TranslatorsMap = Record<string, TranslatorClass>;
 
 /**
  * Receive custom translators map and return new map with formatted keys
@@ -37,7 +37,7 @@ export type TranslatorsDictinary = Record<string, TranslatorClass>;
 export const getCustomTranslatorsMapWithFormattedKeys = (
 	customTranslators: Record<number, TranslatorClass>,
 ) => {
-	const translatorsMap: TranslatorsDictinary = {};
+	const translatorsMap: TranslatorsMap = {};
 	for (const key in customTranslators) {
 		const translatorId = getFormattedCustomTranslatorId(Number(key));
 		const translatorClass = customTranslators[key];
