@@ -1,5 +1,4 @@
-import { combine } from 'effector';
-import { reshape } from 'patronum';
+import { isEqual } from 'lodash';
 
 // Translators
 import { GoogleTranslator } from '@translate-tools/core/translators/GoogleTranslator';
@@ -8,6 +7,7 @@ import { BingTranslatorPublic } from '@translate-tools/core/translators/unstable
 import { TranslatorClass } from '@translate-tools/core/types/Translator';
 
 import { AppConfigType } from '../../types/runtime';
+import { createSelector } from '../../lib/effector/createSelector';
 import { createPromiseWithControls, PromiseWithControls } from '../../lib/utils';
 import { ObservableAsyncStorage } from '../ConfigStorage/ConfigStorage';
 import { getCustomTranslatorsClasses } from '../../requests/backend/translators/applyTranslators';
@@ -85,29 +85,16 @@ export class Background {
 
 	public async start() {
 		const $config = await this.config.getObservableStore();
-
-		// TODO: pick props instead of reshape
-		// Update translate scheduler
-		const schedulerStores = reshape({
-			source: $config,
-			shape: {
-				scheduler: ({ scheduler }) => scheduler,
-				translatorModule: ({ translatorModule }) => translatorModule,
-				cache: ({ cache }) => cache,
-			},
-		});
-
-		const $translateManagerConfig = combine(
-			[
-				schedulerStores.translatorModule,
-				schedulerStores.scheduler,
-				schedulerStores.cache,
-			],
-			([translatorModule, scheduler, cache]) => ({
-				translatorModule,
+		const $translateManagerConfig = createSelector(
+			$config,
+			({ scheduler, translatorModule, cache }) => ({
 				scheduler,
+				translatorModule,
 				cache,
 			}),
+			{
+				updateFilter: (update, state) => !isEqual(update, state),
+			},
 		);
 
 		// Build translators list
