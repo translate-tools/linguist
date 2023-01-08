@@ -33,20 +33,20 @@ export class TranslatorManager<Translators extends TranslatorsMap = TranslatorsM
 		this.getTranslationSchedulerInstance(true);
 	}
 
-	/**
-	 * Return map with available translators
-	 */
-	public getTranslators = (): Translators => {
-		return this.translators;
-	};
-
-	public getTranslatorFeatures = () => {
+	public getTranslatorFeatures() {
 		const translatorClass = this.getTranslatorClass();
 		return {
 			supportedLanguages: translatorClass.getSupportedLanguages(),
 			isSupportAutodetect: translatorClass.isSupportedAutoFrom(),
 		};
-	};
+	}
+
+	/**
+	 * Return map with available translators
+	 */
+	public getTranslators(): Translators {
+		return this.translators;
+	}
 
 	public getTranslator(): InstanceType<RecordValues<Translators>> {
 		return this.getTranslatorInstance(false);
@@ -60,7 +60,7 @@ export class TranslatorManager<Translators extends TranslatorsMap = TranslatorsM
 	}
 
 	private schedulerInstance: IScheduler | null = null;
-	private getTranslationSchedulerInstance = (forceCreate = false) => {
+	private getTranslationSchedulerInstance(forceCreate = false) {
 		if (this.schedulerInstance === null || forceCreate) {
 			const translator = this.getTranslatorInstance(true);
 
@@ -79,10 +79,10 @@ export class TranslatorManager<Translators extends TranslatorsMap = TranslatorsM
 		}
 
 		return this.schedulerInstance;
-	};
+	}
 
 	private translator: InstanceType<RecordValues<Translators>> | null = null;
-	private getTranslatorInstance = (forceCreate: boolean) => {
+	private getTranslatorInstance(forceCreate: boolean) {
 		if (!forceCreate && this.translator !== null) return this.translator;
 
 		const translatorClass = this.getTranslatorClass();
@@ -91,14 +91,14 @@ export class TranslatorManager<Translators extends TranslatorsMap = TranslatorsM
 		>;
 
 		return this.translator;
-	};
+	}
 
-	private getCacheInstance = () => {
+	private getCacheInstance() {
 		const { translatorModule, cache } = this.config;
 		return new TranslatorsCacheStorage(translatorModule, cache);
-	};
+	}
 
-	private getTranslatorClass = (): RecordValues<Translators> => {
+	private getTranslatorClass(): RecordValues<Translators> {
 		const { translatorModule } = this.config;
 
 		const translators = this.getTranslators();
@@ -108,5 +108,5 @@ export class TranslatorManager<Translators extends TranslatorsMap = TranslatorsM
 		}
 
 		return translatorClass as RecordValues<Translators>;
-	};
+	}
 }
