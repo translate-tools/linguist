@@ -25,18 +25,19 @@ export class App {
 		// Migrate data
 		await migrateAll();
 
-		const app = new App();
+		const config = new ConfigStorage(defaultConfig);
+		const observableConfig = new ObservableAsyncStorage(config);
+		const background = new Background(observableConfig);
+
+		const app = new App(observableConfig, background);
 		await app.start();
 	}
 
 	private readonly background: Background;
 	private readonly config: ObservableAsyncStorage<AppConfigType>;
-	constructor() {
-		const config = new ConfigStorage(defaultConfig);
-		const observableConfig = new ObservableAsyncStorage(config);
-
-		this.config = observableConfig;
-		this.background = new Background(observableConfig);
+	constructor(config: ObservableAsyncStorage<AppConfigType>, background: Background) {
+		this.config = config;
+		this.background = background;
 	}
 
 	private isStarted = false;
