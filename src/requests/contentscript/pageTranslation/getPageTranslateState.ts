@@ -23,11 +23,18 @@ export const [getPageTranslateStateFactory, getPageTranslateState] = buildTabReq
 		}),
 
 		factoryHandler:
-			({ pageTranslator }) =>
-				async () => ({
-					isTranslated: pageTranslator.isRun(),
-					counters: pageTranslator.getStatus(),
-					translateDirection: pageTranslator.getTranslateDirection(),
-				}),
+			({ pageContext }) =>
+				async () => {
+					const domTranslator = pageContext.getDOMTranslator();
+					if (domTranslator === null) {
+						throw new Error('DOM translator are empty');
+					}
+
+					return {
+						isTranslated: domTranslator.isRun(),
+						counters: domTranslator.getStatus(),
+						translateDirection: domTranslator.getTranslateDirection(),
+					};
+				},
 	},
 );

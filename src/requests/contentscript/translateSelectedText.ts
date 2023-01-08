@@ -4,12 +4,12 @@ export const [translateSelectedTextFactory, translateSelectedText] = buildTabReq
 	'translateSelectedText',
 	{
 		factoryHandler:
-			({ selectTranslatorRef }) =>
+			({ pageContext }) =>
 				async () => {
-					const selectTranslator = selectTranslatorRef.value;
-					if (selectTranslator === null || !selectTranslator.isRun()) return;
+					const textTranslator = pageContext.getTextTranslator();
+					if (textTranslator === null || !textTranslator.isRun()) return;
 
-					selectTranslator.translateSelectedText();
+					textTranslator.translateSelectedText();
 				},
 	},
 );

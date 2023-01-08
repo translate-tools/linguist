@@ -56,6 +56,7 @@ type PageData = {
 	language: string | null;
 };
 
+// TODO: introduce new class with contentscript context like `getDOMTranslator` (to not provide methods like `start`)
 // TODO: eliminate `getState` calls
 export class ContentScript {
 	public static async main() {
@@ -71,7 +72,16 @@ export class ContentScript {
 	}
 
 	private pageTranslator: PageTranslator | null = null;
+	// TODO: ensure it never return null if it may be avoided
+	public getDOMTranslator() {
+		return this.pageTranslator;
+	}
+
 	private selectTranslator: SelectTranslator | null = null;
+	public getTextTranslator() {
+		return this.selectTranslator;
+	}
+
 	private pageData: Store<PageData> | null = null;
 	private readonly pageDataControl = {
 		updatedLanguage: createEvent<string>(),
@@ -233,13 +243,10 @@ export class ContentScript {
 			translateSelectedTextFactory,
 		];
 
-		// TODO: provide reactive storage instead
-		const pageTranslatorInstance = this.pageTranslator;
 		factories.forEach((factory) => {
 			factory({
-				pageTranslator: pageTranslatorInstance,
 				$config,
-				selectTranslatorRef,
+				pageContext: this,
 			});
 		});
 
@@ -256,6 +263,7 @@ export class ContentScript {
 
 		// TODO: add option to define stage to detect language and run auto translate
 		runByReadyState(async () => {
+			const $config = await this.config.getStore();
 			const config = $config.getState();
 
 			// Skip if page already in translating
@@ -310,7 +318,7 @@ export class ContentScript {
 				}
 
 				if (isNeedAutoTranslate) {
-					const selectTranslator = selectTranslatorRef.value;
+					const selectTranslator = this.selectTranslator;
 
 					if (
 						selectTranslator !== null &&
