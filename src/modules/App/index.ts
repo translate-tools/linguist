@@ -62,7 +62,7 @@ export class App {
 					config: this.config,
 					bg: this.background,
 					// TODO: review usages, maybe add custom translators
-					translatorModules: translatorModules as any,
+					translatorModules,
 				});
 			});
 		}
