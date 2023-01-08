@@ -115,14 +115,6 @@ export class ContentScript {
 
 		this.pageTranslator = new PageTranslator(config.pageTranslator);
 
-		// TODO: use reactive store instead
-		const selectTranslatorRef: { value: SelectTranslator | null } = {
-			value: this.selectTranslator,
-		};
-
-		const updateSelectTranslatorRef = () =>
-			(selectTranslatorRef.value = this.selectTranslator);
-
 		//
 		//
 		//
@@ -147,7 +139,6 @@ export class ContentScript {
 							pageLanguage,
 						}),
 					);
-					updateSelectTranslatorRef();
 				}
 			} else {
 				if (this.selectTranslator !== null) {
@@ -155,7 +146,6 @@ export class ContentScript {
 						this.selectTranslator.stop();
 					}
 					this.selectTranslator = null;
-					updateSelectTranslatorRef();
 				}
 			}
 		});
@@ -200,8 +190,6 @@ export class ContentScript {
 					pageLanguage,
 				}),
 			);
-
-			updateSelectTranslatorRef();
 
 			// Run new instance
 			if (isRunning) {
