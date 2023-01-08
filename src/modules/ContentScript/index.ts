@@ -64,11 +64,15 @@ export class ContentScript {
 		this.config = config;
 	}
 
+	private pageTranslator: PageTranslator | null = null;
+	private selectTranslator: SelectTranslator | null = null;
+
 	// TODO: review code inside
 	// TODO: split this method
 	public async start() {
 		const $config = await this.config.getStore();
 
+		// TODO: remove it
 		const config = $config.getState();
 
 		// Define helper
@@ -79,16 +83,15 @@ export class ContentScript {
 
 		let pageLanguage = await detectPageLanguage();
 
-		const pageTranslator = new PageTranslator(config.pageTranslator);
+		this.pageTranslator = new PageTranslator(config.pageTranslator);
 
-		let selectTranslator: SelectTranslator | null = null;
-
+		// TODO: use reactive store instead
 		const selectTranslatorRef: { value: SelectTranslator | null } = {
-			value: selectTranslator,
+			value: this.selectTranslator,
 		};
 
 		const updateSelectTranslatorRef = () =>
-			(selectTranslatorRef.value = selectTranslator);
+			(selectTranslatorRef.value = this.selectTranslator);
 
 		//
 		//
@@ -110,8 +113,8 @@ export class ContentScript {
 		// to avoid appending unnecessary nodes to DOM
 		$selectTranslator.watch((config) => {
 			if (config.enabled) {
-				if (selectTranslator === null) {
-					selectTranslator = new SelectTranslator(
+				if (this.selectTranslator === null) {
+					this.selectTranslator = new SelectTranslator(
 						buildSelectTranslatorOptions(config, {
 							pageLanguage,
 						}),
@@ -119,11 +122,11 @@ export class ContentScript {
 					updateSelectTranslatorRef();
 				}
 			} else {
-				if (selectTranslator !== null) {
-					if (selectTranslator.isRun()) {
-						selectTranslator.stop();
+				if (this.selectTranslator !== null) {
+					if (this.selectTranslator.isRun()) {
+						this.selectTranslator.stop();
 					}
-					selectTranslator = null;
+					this.selectTranslator = null;
 					updateSelectTranslatorRef();
 				}
 			}
@@ -135,34 +138,35 @@ export class ContentScript {
 				return (
 					selectTranslator.enabled &&
 					(!selectTranslator.disableWhileTranslatePage ||
-						!pageTranslator.isRun())
+						this.pageTranslator === null ||
+						!this.pageTranslator.isRun())
 				);
 			})
 			.watch((isNeedRunSelectTranslator) => {
 				// TODO: depend on change this state reactively
-				if (selectTranslator === null) return;
+				if (this.selectTranslator === null) return;
 
 				if (isNeedRunSelectTranslator) {
-					if (!selectTranslator.isRun()) {
-						selectTranslator.start();
+					if (!this.selectTranslator.isRun()) {
+						this.selectTranslator.start();
 					}
-				} else if (selectTranslator.isRun()) {
-					selectTranslator.stop();
+				} else if (this.selectTranslator.isRun()) {
+					this.selectTranslator.stop();
 				}
 			});
 
 		// Update SelectTranslator
 		$selectTranslator.watch((config) => {
-			if (selectTranslator === null || !config.enabled) return;
+			if (this.selectTranslator === null || !config.enabled) return;
 
-			const isRunning = selectTranslator.isRun();
+			const isRunning = this.selectTranslator.isRun();
 
 			// Stop current instance
 			if (isRunning) {
-				selectTranslator.stop();
+				this.selectTranslator.stop();
 			}
 
-			selectTranslator = new SelectTranslator(
+			this.selectTranslator = new SelectTranslator(
 				buildSelectTranslatorOptions(config, {
 					pageLanguage,
 				}),
@@ -172,7 +176,7 @@ export class ContentScript {
 
 			// Run new instance
 			if (isRunning) {
-				selectTranslator.start();
+				this.selectTranslator.start();
 			}
 		});
 
@@ -180,18 +184,20 @@ export class ContentScript {
 		createSelector($config, (state) => state.pageTranslator, {
 			updateFilter: updateNotEqualFilter,
 		}).watch((config) => {
-			if (pageTranslator.isRun()) {
-				const direction = pageTranslator.getTranslateDirection();
+			if (this.pageTranslator === null) return;
+
+			if (this.pageTranslator.isRun()) {
+				const direction = this.pageTranslator.getTranslateDirection();
 				if (direction === null) {
 					throw new TypeError(
 						'Invalid response from getTranslateDirection method',
 					);
 				}
-				pageTranslator.stop();
-				pageTranslator.updateConfig(config);
-				pageTranslator.run(direction.from, direction.to);
+				this.pageTranslator.stop();
+				this.pageTranslator.updateConfig(config);
+				this.pageTranslator.run(direction.from, direction.to);
 			} else {
-				pageTranslator.updateConfig(config);
+				this.pageTranslator.updateConfig(config);
 			}
 		});
 
@@ -208,9 +214,11 @@ export class ContentScript {
 			translateSelectedTextFactory,
 		];
 
+		// TODO: provide reactive storage instead
+		const pageTranslatorInstance = this.pageTranslator;
 		factories.forEach((factory) => {
 			factory({
-				pageTranslator,
+				pageTranslator: pageTranslatorInstance,
 				config,
 				selectTranslatorRef,
 			});
@@ -230,7 +238,7 @@ export class ContentScript {
 		// TODO: add option to define stage to detect language and run auto translate
 		runByReadyState(async () => {
 			// Skip if page already in translating
-			if (pageTranslator.isRun()) return;
+			if (this.pageTranslator && this.pageTranslator.isRun()) return;
 
 			const actualPageLanguage = await detectPageLanguage();
 
@@ -289,7 +297,9 @@ export class ContentScript {
 					selectTranslator.stop();
 				}
 
-				pageTranslator.run(fromLang, toLang);
+				if (this.pageTranslator) {
+					this.pageTranslator.run(fromLang, toLang);
+				}
 			}
 		}, 'interactive');
 	}
