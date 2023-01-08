@@ -1,20 +1,16 @@
-import { TranslatorClass } from '@translate-tools/core/types/Translator';
-import { TranslatorInstanceMembers } from '@translate-tools/core/types/Translator';
 import { clearAllMocks } from '../../../lib/tests';
 
 import { TranslatorManager } from '.';
 
 const createTranslatorMockClass = (translatorName: string) => {
 	return class MockTranslator {
-		translate(text: string, from: string, to: string) {
-			MockTranslator.mocks.translate();
+		translate = jest.fn((text: string, from: string, to: string) => {
 			return Promise.resolve(`${translatorName}["${text}"-${from}-${to}]`);
-		}
+		});
 
-		translateBatch(texts: string[], from: string, to: string) {
-			MockTranslator.mocks.translateBatch();
+		translateBatch = jest.fn((texts: string[], from: string, to: string) => {
 			return Promise.all(texts.map((text) => this.translate(text, from, to)));
-		}
+		});
 
 		getLengthLimit = () => 4000;
 		getRequestsTimeout = () => 300;
@@ -24,16 +20,6 @@ const createTranslatorMockClass = (translatorName: string) => {
 		static getSupportedLanguages = () => ['en', 'ru', 'ja', 'de'];
 		static translatorName = 'FakeTranslator';
 		static isRequiredKey = () => false;
-
-		static mocks = {
-			translate: jest.fn(),
-			translateBatch: jest.fn(),
-		};
-	} as TranslatorClass<TranslatorInstanceMembers> & {
-		mocks: {
-			translate: jest.Mock;
-			translateBatch: jest.Mock;
-		};
 	};
 };
 
@@ -92,19 +78,20 @@ describe('TranslatorManager consider cache preferences', () => {
 		const translatorManager = new TranslatorManager(defaultConfig, translators);
 
 		const scheduler = translatorManager.getScheduler();
+		const translateFn = translatorManager.getTranslator().translate;
 
 		// Should call translate method first time for each new translation request
 		await scheduler.translate('Hello world', 'en', 'de');
-		expect(translators.translator2.mocks.translate).toBeCalledTimes(1);
+		expect(translateFn).toBeCalledTimes(1);
 
 		await scheduler.translate('Another text', 'en', 'de');
-		expect(translators.translator2.mocks.translate).toBeCalledTimes(2);
+		expect(translateFn).toBeCalledTimes(2);
 
 		// Should return translation from cache
-		translators.translator2.mocks.translate.mockClear();
+		translateFn.mockClear();
 
 		await scheduler.translate('Hello world', 'en', 'de');
-		expect(translators.translator2.mocks.translate).not.toBeCalled();
+		expect(translateFn).not.toBeCalled();
 	});
 
 	test('TranslatorManager with disabled cache', async () => {
@@ -121,39 +108,41 @@ describe('TranslatorManager consider cache preferences', () => {
 		);
 
 		const scheduler = translatorManager.getScheduler();
+		const translateFn = translatorManager.getTranslator().translate;
 
 		// Should call translate method first time for each new translation request
 		await scheduler.translate('Hello world', 'en', 'de');
-		expect(translators.translator2.mocks.translate).toBeCalledTimes(1);
+		expect(translateFn).toBeCalledTimes(1);
 
 		await scheduler.translate('Another text', 'en', 'de');
-		expect(translators.translator2.mocks.translate).toBeCalledTimes(2);
+		expect(translateFn).toBeCalledTimes(2);
 
 		// Should call translate method
-		translators.translator2.mocks.translate.mockClear();
+		translateFn.mockClear();
 
 		await scheduler.translate('Hello world', 'en', 'de');
-		expect(translators.translator2.mocks.translate).toBeCalled();
+		expect(translateFn).toBeCalled();
 
 		// Consider config updates
 		translatorManager.setConfig(defaultConfig);
 
 		// TODO: implement behavior to reuse scheduler
 		const scheduler2 = translatorManager.getScheduler();
+		const translateFn2 = translatorManager.getTranslator().translate;
 
-		translators.translator2.mocks.translate.mockClear();
+		translateFn2.mockClear();
 
 		// Should call translate method first time for each new translation request
 		await scheduler2.translate('Hello world', 'en', 'de');
-		expect(translators.translator2.mocks.translate).toBeCalledTimes(1);
+		expect(translateFn2).toBeCalledTimes(1);
 
 		await scheduler2.translate('Another text', 'en', 'de');
-		expect(translators.translator2.mocks.translate).toBeCalledTimes(2);
+		expect(translateFn2).toBeCalledTimes(2);
 
 		// Should return translation from cache
-		translators.translator2.mocks.translate.mockClear();
+		translateFn2.mockClear();
 
 		await scheduler2.translate('Hello world', 'en', 'de');
-		expect(translators.translator2.mocks.translate).not.toBeCalled();
+		expect(translateFn2).not.toBeCalled();
 	});
 });

@@ -3,10 +3,9 @@ import {
 	Scheduler,
 	SchedulerWithCache,
 } from '@translate-tools/core/util/Scheduler';
-import { BaseTranslator } from '@translate-tools/core/types/Translator';
-import { TranslatorClass } from '@translate-tools/core/types/Translator';
 
 import { AppConfigType } from '../../../types/runtime';
+import { RecordValues } from '../../../types/utils';
 
 import { TranslatorsCacheStorage } from '../TranslatorsCacheStorage';
 import { TranslatorsMap } from '..';
@@ -16,10 +15,10 @@ export type Config = Pick<AppConfigType, 'translatorModule' | 'scheduler' | 'cac
 /**
  * Build and manage a translation scheduler
  */
-export class TranslatorManager {
+export class TranslatorManager<Translators extends TranslatorsMap = TranslatorsMap> {
 	private config: Config;
-	private translators: TranslatorsMap = {};
-	constructor(config: Config, translators: TranslatorsMap) {
+	private translators: Translators;
+	constructor(config: Config, translators: Translators) {
 		this.config = config;
 		this.translators = translators;
 	}
@@ -29,7 +28,7 @@ export class TranslatorManager {
 		this.getTranslationSchedulerInstance(true);
 	}
 
-	public setTranslators(customTranslators: TranslatorsMap) {
+	public setTranslators(customTranslators: Translators) {
 		this.translators = customTranslators;
 		this.getTranslationSchedulerInstance(true);
 	}
@@ -37,7 +36,7 @@ export class TranslatorManager {
 	/**
 	 * Return map with available translators
 	 */
-	public getTranslators = (): TranslatorsMap => {
+	public getTranslators = (): Translators => {
 		return this.translators;
 	};
 
@@ -49,6 +48,10 @@ export class TranslatorManager {
 		};
 	};
 
+	public getTranslator(): InstanceType<RecordValues<Translators>> {
+		return this.getTranslatorInstance(false);
+	}
+
 	/**
 	 * Return configured translation scheduler
 	 */
@@ -59,7 +62,7 @@ export class TranslatorManager {
 	private schedulerInstance: IScheduler | null = null;
 	private getTranslationSchedulerInstance = (forceCreate = false) => {
 		if (this.schedulerInstance === null || forceCreate) {
-			const translator = this.getTranslator();
+			const translator = this.getTranslatorInstance(true);
 
 			const { useCache, ...schedulerConfig } = this.config.scheduler;
 
@@ -68,7 +71,7 @@ export class TranslatorManager {
 			let schedulerInstance: IScheduler = scheduler;
 			if (useCache) {
 				// Wrap scheduler by cache
-				const cacheInstance = this.getCache();
+				const cacheInstance = this.getCacheInstance();
 				schedulerInstance = new SchedulerWithCache(scheduler, cacheInstance);
 			}
 
@@ -78,17 +81,24 @@ export class TranslatorManager {
 		return this.schedulerInstance;
 	};
 
-	private getTranslator = () => {
+	private translator: InstanceType<RecordValues<Translators>> | null = null;
+	private getTranslatorInstance = (forceCreate: boolean) => {
+		if (!forceCreate && this.translator !== null) return this.translator;
+
 		const translatorClass = this.getTranslatorClass();
-		return new translatorClass();
+		this.translator = new translatorClass() as InstanceType<
+			RecordValues<Translators>
+		>;
+
+		return this.translator;
 	};
 
-	private getCache = () => {
+	private getCacheInstance = () => {
 		const { translatorModule, cache } = this.config;
 		return new TranslatorsCacheStorage(translatorModule, cache);
 	};
 
-	private getTranslatorClass = (): TranslatorClass<BaseTranslator> => {
+	private getTranslatorClass = (): RecordValues<Translators> => {
 		const { translatorModule } = this.config;
 
 		const translators = this.getTranslators();
@@ -97,6 +107,6 @@ export class TranslatorManager {
 			throw new Error(`Not found translator "${translatorModule}"`);
 		}
 
-		return translatorClass as TranslatorClass<BaseTranslator>;
+		return translatorClass as RecordValues<Translators>;
 	};
 }
