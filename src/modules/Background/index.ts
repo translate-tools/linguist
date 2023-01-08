@@ -98,7 +98,7 @@ export class Background {
 		);
 
 		// Build translators list
-		const translators = await getCustomTranslatorsClasses().then(
+		const translators: TranslatorsMap = await getCustomTranslatorsClasses().then(
 			(customTranslators) => {
 				return {
 					...translatorModules,
