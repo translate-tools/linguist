@@ -87,23 +87,20 @@ export class ContentScript {
 		updatedLanguage: createEvent<string>(),
 	} as const;
 
-	// TODO: review code inside
-	// TODO: split this method
 	public async start() {
 		const $config = await this.config.getStore();
-
-		// TODO: remove it
 		const config = $config.getState();
 
-		// Define helper
-		const detectPageLanguage = () =>
-			getPageLanguage(config.pageTranslator.detectLanguageByContent);
+		// Create instances for translation
+		this.pageTranslator = new PageTranslator(config.pageTranslator);
 
-		// Analyze page
-		const pageLang = await detectPageLanguage();
+		// Collect page data
+		const pageLanguage = await getPageLanguage(
+			config.pageTranslator.detectLanguageByContent,
+		);
 
 		const $pageData = createStore({
-			language: pageLang,
+			language: pageLanguage,
 		});
 
 		$pageData.on(this.pageDataControl.updatedLanguage, (state, language) => ({
@@ -113,11 +110,27 @@ export class ContentScript {
 
 		this.pageData = $pageData;
 
-		this.pageTranslator = new PageTranslator(config.pageTranslator);
+		await this.startTranslation();
 
-		//
-		//
-		//
+		const factories = [
+			pingFactory,
+			getPageTranslateStateFactory,
+			getPageLanguageFactory,
+			enableTranslatePageFactory,
+			disableTranslatePageFactory,
+			translateSelectedTextFactory,
+		];
+
+		factories.forEach((factory) => {
+			factory({
+				$config,
+				pageContext: this,
+			});
+		});
+	}
+
+	private async startTranslation() {
+		const $config = await this.config.getStore();
 
 		const $selectTranslator = createSelector(
 			$config,
@@ -218,109 +231,88 @@ export class ContentScript {
 			}
 		});
 
-		//
-		//
-		//
-
-		const factories = [
-			pingFactory,
-			getPageTranslateStateFactory,
-			getPageLanguageFactory,
-			enableTranslatePageFactory,
-			disableTranslatePageFactory,
-			translateSelectedTextFactory,
-		];
-
-		factories.forEach((factory) => {
-			factory({
-				$config,
-				pageContext: this,
-			});
-		});
-
-		//
-		//
-		//
-
 		// Init page translate
+		// TODO: add option to define stage to detect language and run auto translate
+		runByReadyState(this.onPageLoaded, 'interactive');
+	}
 
+	private onPageLoaded = async () => {
 		const pageHost = location.host;
 
 		// TODO: make it option
 		const isAllowTranslateSameLanguages = true;
 
-		// TODO: add option to define stage to detect language and run auto translate
-		runByReadyState(async () => {
-			const $config = await this.config.getStore();
-			const config = $config.getState();
+		const $config = await this.config.getStore();
+		const config = $config.getState();
 
-			// Skip if page already in translating
-			if (this.pageTranslator && this.pageTranslator.isRun()) return;
+		// Skip if page already in translating
+		if (this.pageTranslator && this.pageTranslator.isRun()) return;
 
-			const actualPageLanguage = await detectPageLanguage();
+		const actualPageLanguage = await getPageLanguage(
+			config.pageTranslator.detectLanguageByContent,
+		);
 
-			// TODO: make it reactive
-			// Update config if language did updated after loading page
-			const pageLanguage = this.pageData?.getState().language || undefined;
-			if (pageLanguage !== actualPageLanguage && actualPageLanguage !== null) {
-				// Update language state
-				this.pageDataControl.updatedLanguage(actualPageLanguage);
+		// TODO: make it reactive
+		// Update config if language did updated after loading page
+		const pageLanguage = this.pageData?.getState().language || undefined;
+		if (pageLanguage !== actualPageLanguage && actualPageLanguage !== null) {
+			// Update language state
+			this.pageDataControl.updatedLanguage(actualPageLanguage);
 
-				// Update config
-				// state.update(config);
-			}
+			// Update config
+			// state.update(config);
+		}
 
-			// Auto translate page
-			const fromLang = actualPageLanguage;
-			const toLang = config.language;
+		// Auto translate page
+		const fromLang = actualPageLanguage;
+		const toLang = config.language;
 
-			// Skip by common causes
-			if (fromLang === undefined) return;
-			if (fromLang === toLang && !isAllowTranslateSameLanguages) return;
+		// Skip by common causes
+		if (fromLang === undefined) return;
+		if (fromLang === toLang && !isAllowTranslateSameLanguages) return;
 
-			let isNeedAutoTranslate = false;
+		let isNeedAutoTranslate = false;
 
-			// Consider site preferences
-			const sitePreferences = await getSitePreferences(pageHost);
-			const isSiteRequireTranslate =
-				fromLang !== null &&
-				isRequireTranslateBySitePreferences(fromLang, sitePreferences);
-			if (isSiteRequireTranslate !== null) {
-				// Never translate this site
-				if (!isSiteRequireTranslate) return;
+		// Consider site preferences
+		const sitePreferences = await getSitePreferences(pageHost);
+		const isSiteRequireTranslate =
+			fromLang !== null &&
+			isRequireTranslateBySitePreferences(fromLang, sitePreferences);
+		if (isSiteRequireTranslate !== null) {
+			// Never translate this site
+			if (!isSiteRequireTranslate) return;
+
+			// Otherwise translate
+			isNeedAutoTranslate = true;
+		}
+
+		if (fromLang !== null) {
+			// Consider common language preferences
+
+			const isLanguageRequireTranslate = await getLanguagePreferences(fromLang);
+			if (isLanguageRequireTranslate !== null) {
+				// Never translate this language
+				if (!isLanguageRequireTranslate) return;
 
 				// Otherwise translate
 				isNeedAutoTranslate = true;
 			}
 
-			if (fromLang !== null) {
-				// Consider common language preferences
+			if (isNeedAutoTranslate) {
+				const selectTranslator = this.selectTranslator;
 
-				const isLanguageRequireTranslate = await getLanguagePreferences(fromLang);
-				if (isLanguageRequireTranslate !== null) {
-					// Never translate this language
-					if (!isLanguageRequireTranslate) return;
-
-					// Otherwise translate
-					isNeedAutoTranslate = true;
+				if (
+					selectTranslator !== null &&
+					selectTranslator.isRun() &&
+					config.selectTranslator.disableWhileTranslatePage
+				) {
+					selectTranslator.stop();
 				}
 
-				if (isNeedAutoTranslate) {
-					const selectTranslator = this.selectTranslator;
-
-					if (
-						selectTranslator !== null &&
-						selectTranslator.isRun() &&
-						config.selectTranslator.disableWhileTranslatePage
-					) {
-						selectTranslator.stop();
-					}
-
-					if (this.pageTranslator) {
-						this.pageTranslator.run(fromLang, toLang);
-					}
+				if (this.pageTranslator) {
+					this.pageTranslator.run(fromLang, toLang);
 				}
 			}
-		}, 'interactive');
-	}
+		}
+	};
 }
