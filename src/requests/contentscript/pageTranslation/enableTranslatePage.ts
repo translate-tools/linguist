@@ -13,13 +13,14 @@ export const [enableTranslatePageFactory, enableTranslatePageReq] = buildTabRequ
 		}),
 
 		factoryHandler:
-			({ pageTranslator, selectTranslatorRef, config }) =>
+			({ pageTranslator, selectTranslatorRef, $config }) =>
 				async ({ from, to }) => {
 					if (pageTranslator.isRun()) {
 						throw new Error('Page already translated');
 					}
 
 					const selectTranslator = selectTranslatorRef.value;
+					const config = $config.getState();
 
 					if (
 						selectTranslator !== null &&

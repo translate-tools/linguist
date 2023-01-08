@@ -238,7 +238,7 @@ export class ContentScript {
 		factories.forEach((factory) => {
 			factory({
 				pageTranslator: pageTranslatorInstance,
-				config,
+				$config,
 				selectTranslatorRef,
 			});
 		});
@@ -256,6 +256,8 @@ export class ContentScript {
 
 		// TODO: add option to define stage to detect language and run auto translate
 		runByReadyState(async () => {
+			const config = $config.getState();
+
 			// Skip if page already in translating
 			if (this.pageTranslator && this.pageTranslator.isRun()) return;
 
