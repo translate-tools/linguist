@@ -1,8 +1,7 @@
-import { TranslatorInstance } from '@translate-tools/core/types/Translator';
-
 import { type } from '../../lib/types';
 import { buildBackendRequest } from '../utils/requestBuilder';
 
+// TODO: rename to `getTranslatorsNames` and add custom translators
 export const [getTranslatorModulesFactory, getTranslatorModules] = buildBackendRequest(
 	'getTranslatorModules',
 	{
@@ -12,11 +11,8 @@ export const [getTranslatorModulesFactory, getTranslatorModules] = buildBackendR
 				async () => {
 					const modules: Record<string, string> = {};
 
-					// TODO: fix type for `translatorModules`
 					for (const key in translatorModules) {
-						modules[key] = (
-						translatorModules[key] as unknown as TranslatorInstance
-						).translatorName;
+						modules[key] = translatorModules[key].translatorName;
 					}
 
 					return modules;

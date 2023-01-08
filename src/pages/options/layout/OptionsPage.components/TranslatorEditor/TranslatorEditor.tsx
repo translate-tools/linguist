@@ -77,21 +77,28 @@ export const TranslatorEditor: FC<TranslatorEditorProps> = ({
 		<Modal visible={true} onClose={onClose} scope={scope} preventBodyScroll>
 			<div className={cnTranslatorsEditor({})}>
 				<ModalLayout
-					footer={[
-						<Button view="action" onPress={onSavePress}>
-							{getMessage('translatorEditorWindow_save')}
-						</Button>,
-						<Button onPress={onClose as any}>
-							{getMessage('translatorEditorWindow_close')}
-						</Button>,
-					]}
+					footer={
+						<>
+							<Button view="action" onPress={onSavePress}>
+								{getMessage('translatorEditorWindow_save')}
+							</Button>
+							<Button onPress={onClose as any}>
+								{getMessage('translatorEditorWindow_close')}
+							</Button>
+						</>
+					}
 				>
 					<LayoutFlow direction="vertical" indent="l">
 						<LayoutFlow direction="vertical" indent="m">
 							<div>
 								{getMessage('translatorEditorWindow_translatorName')}
 							</div>
-							<Textinput value={name} setValue={setName} />
+							<Textinput
+								value={name}
+								onChange={(evt) => {
+									setName(evt.target.value);
+								}}
+							/>
 						</LayoutFlow>
 
 						<LayoutFlow direction="vertical" indent="m">

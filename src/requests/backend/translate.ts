@@ -15,10 +15,8 @@ export const [translateFactory, translateRequest] = buildBackendRequest<
 	factoryHandler:
 		({ bg }) =>
 			async ({ text, from, to, options }) => {
-				const scheduler = bg.scheduler;
-				if (scheduler === undefined) {
-					throw new Error('Scheduler is not ready');
-				}
+				const translateManager = await bg.getTranslateManager();
+				const scheduler = translateManager.getScheduler();
 
 				return scheduler.translate(text, from, to, options);
 			},

@@ -1,10 +1,7 @@
 import { TypeOf } from 'io-ts';
 import { StringLiteralType, type } from '../lib/types';
-import {
-	langCode,
-	langCodes,
-	langCodeWithAuto,
-} from '@translate-tools/core/types/Translator';
+import { langCode, langCodeWithAuto } from '@translate-tools/core/types/Translator';
+import { langCodes } from '@translate-tools/core/util/languages';
 
 export const ArrayOfStrings = new type.Type<string[], string[], unknown>(
 	'ArrayOfStrings',

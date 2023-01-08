@@ -1,4 +1,3 @@
-import { App } from './modules/App/App';
+import { App } from './modules/App';
 
-const app = new App();
-app.start();
+App.main();

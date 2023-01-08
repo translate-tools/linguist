@@ -14,7 +14,7 @@ import { AppConfigType } from '../../../types/runtime';
 
 import { getMessage } from '../../../lib/language';
 import { openFileDialog, readAsText, saveFile } from '../../../lib/files';
-import { getTranslatorNameById } from '../../../modules/Background';
+import { getFormattedCustomTranslatorId } from '../../../modules/Background';
 
 // Requests
 import { clearCache as clearCacheReq } from '../../../requests/backend/clearCache';
@@ -79,7 +79,7 @@ export const OptionsPage: FC<OptionsPageProps> = ({ messageHideDelay }) => {
 			// Add custom translators
 			const customTranslatorModules = await getTranslators();
 			customTranslatorModules.forEach(({ key, data }) => {
-				translatorModules[getTranslatorNameById(key)] = data.name;
+				translatorModules[getFormattedCustomTranslatorId(key)] = data.name;
 			});
 
 			setConfig(config);

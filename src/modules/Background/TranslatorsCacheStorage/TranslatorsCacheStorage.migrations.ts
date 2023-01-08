@@ -1,6 +1,6 @@
 import * as IDB from 'idb/with-async-ittr';
 
-import { createMigrationTask } from '../../lib/migrations/createMigrationTask';
+import { createMigrationTask } from '../../../lib/migrations/createMigrationTask';
 
 /**
  * An update strategy for this storage is deleting IDB database and re-creating with new structure
