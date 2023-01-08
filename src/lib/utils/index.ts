@@ -37,23 +37,3 @@ export const isEqualIntersection = (obj1: any, obj2: any): boolean => {
 	// Compare objects
 	return Object.keys(obj1).every((key) => isEqualIntersection(obj1[key], obj2[key]));
 };
-
-export type PromiseWithControls<T = void> = {
-	promise: Promise<T>;
-	resolve: (value: T | PromiseLike<T>) => void;
-	reject: (reason?: any) => void;
-};
-
-/**
- * Create promise that may be resolved/rejected outside
- */
-export const createPromiseWithControls = <T = void>() => {
-	const result = {} as PromiseWithControls<T>;
-
-	result.promise = new Promise<T>((resolve, reject) => {
-		result.resolve = resolve;
-		result.reject = reject;
-	});
-
-	return result;
-};

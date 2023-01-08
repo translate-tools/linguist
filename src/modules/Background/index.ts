@@ -8,7 +8,10 @@ import { TranslatorClass } from '@translate-tools/core/types/Translator';
 
 import { AppConfigType } from '../../types/runtime';
 import { createSelector } from '../../lib/effector/createSelector';
-import { createPromiseWithControls, PromiseWithControls } from '../../lib/utils';
+import {
+	createPromiseWithControls,
+	PromiseWithControls,
+} from '../../lib/utils/createPromiseWithControls';
 import { ObservableAsyncStorage } from '../ConfigStorage/ConfigStorage';
 import { getCustomTranslatorsClasses } from '../../requests/backend/translators/applyTranslators';
 import { TranslatorManager } from './TranslatorManager';
