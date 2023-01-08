@@ -24,6 +24,7 @@ import { getLanguagePreferences } from '../../requests/backend/autoTranslation/l
 import { translateSelectedTextFactory } from '../../requests/contentscript/translateSelectedText';
 import { runByReadyState } from 'react-elegant-ui/esm/lib/runByReadyState';
 import { isRequireTranslateBySitePreferences } from '../../layouts/PageTranslator/PageTranslator.utils/utils';
+import { createEvent, createStore, Store } from 'effector';
 
 // TODO: use builder for this request to ensure types integrity
 // Firstly, we should refactor builder to make it more abstract
@@ -51,6 +52,11 @@ const buildSelectTranslatorOptions = (
 	enableTranslateFromContextMenu: mode === 'contextMenu',
 });
 
+type PageData = {
+	language: string | null;
+};
+
+// TODO: eliminate `getState` calls
 export class ContentScript {
 	public static async main() {
 		const config = new ClientConfig();
@@ -66,6 +72,10 @@ export class ContentScript {
 
 	private pageTranslator: PageTranslator | null = null;
 	private selectTranslator: SelectTranslator | null = null;
+	private pageData: Store<PageData> | null = null;
+	private readonly pageDataControl = {
+		updatedLanguage: createEvent<string>(),
+	} as const;
 
 	// TODO: review code inside
 	// TODO: split this method
@@ -77,11 +87,21 @@ export class ContentScript {
 
 		// Define helper
 		const detectPageLanguage = () =>
-			getPageLanguage(config.pageTranslator.detectLanguageByContent).then((lang) =>
-				lang === null ? undefined : lang,
-			);
+			getPageLanguage(config.pageTranslator.detectLanguageByContent);
 
-		let pageLanguage = await detectPageLanguage();
+		// Analyze page
+		const pageLang = await detectPageLanguage();
+
+		const $pageData = createStore({
+			language: pageLang,
+		});
+
+		$pageData.on(this.pageDataControl.updatedLanguage, (state, language) => ({
+			...state,
+			language,
+		}));
+
+		this.pageData = $pageData;
 
 		this.pageTranslator = new PageTranslator(config.pageTranslator);
 
@@ -97,9 +117,6 @@ export class ContentScript {
 		//
 		//
 
-		// Update global config
-		// config = cfg;
-
 		const $selectTranslator = createSelector(
 			$config,
 			(state) => state.selectTranslator,
@@ -114,6 +131,7 @@ export class ContentScript {
 		$selectTranslator.watch((config) => {
 			if (config.enabled) {
 				if (this.selectTranslator === null) {
+					const pageLanguage = this.pageData?.getState().language || undefined;
 					this.selectTranslator = new SelectTranslator(
 						buildSelectTranslatorOptions(config, {
 							pageLanguage,
@@ -166,6 +184,7 @@ export class ContentScript {
 				this.selectTranslator.stop();
 			}
 
+			const pageLanguage = this.pageData?.getState().language || undefined;
 			this.selectTranslator = new SelectTranslator(
 				buildSelectTranslatorOptions(config, {
 					pageLanguage,
@@ -244,9 +263,10 @@ export class ContentScript {
 
 			// TODO: make it reactive
 			// Update config if language did updated after loading page
-			if (pageLanguage !== actualPageLanguage && actualPageLanguage !== undefined) {
+			const pageLanguage = this.pageData?.getState().language || undefined;
+			if (pageLanguage !== actualPageLanguage && actualPageLanguage !== null) {
 				// Update language state
-				pageLanguage = actualPageLanguage;
+				this.pageDataControl.updatedLanguage(actualPageLanguage);
 
 				// Update config
 				// state.update(config);
@@ -264,10 +284,9 @@ export class ContentScript {
 
 			// Consider site preferences
 			const sitePreferences = await getSitePreferences(pageHost);
-			const isSiteRequireTranslate = isRequireTranslateBySitePreferences(
-				fromLang,
-				sitePreferences,
-			);
+			const isSiteRequireTranslate =
+				fromLang !== null &&
+				isRequireTranslateBySitePreferences(fromLang, sitePreferences);
 			if (isSiteRequireTranslate !== null) {
 				// Never translate this site
 				if (!isSiteRequireTranslate) return;
@@ -276,29 +295,32 @@ export class ContentScript {
 				isNeedAutoTranslate = true;
 			}
 
-			// Consider common language preferences
-			const isLanguageRequireTranslate = await getLanguagePreferences(fromLang);
-			if (isLanguageRequireTranslate !== null) {
-				// Never translate this language
-				if (!isLanguageRequireTranslate) return;
+			if (fromLang !== null) {
+				// Consider common language preferences
 
-				// Otherwise translate
-				isNeedAutoTranslate = true;
-			}
+				const isLanguageRequireTranslate = await getLanguagePreferences(fromLang);
+				if (isLanguageRequireTranslate !== null) {
+					// Never translate this language
+					if (!isLanguageRequireTranslate) return;
 
-			if (isNeedAutoTranslate) {
-				const selectTranslator = selectTranslatorRef.value;
-
-				if (
-					selectTranslator !== null &&
-					selectTranslator.isRun() &&
-					config.selectTranslator.disableWhileTranslatePage
-				) {
-					selectTranslator.stop();
+					// Otherwise translate
+					isNeedAutoTranslate = true;
 				}
 
-				if (this.pageTranslator) {
-					this.pageTranslator.run(fromLang, toLang);
+				if (isNeedAutoTranslate) {
+					const selectTranslator = selectTranslatorRef.value;
+
+					if (
+						selectTranslator !== null &&
+						selectTranslator.isRun() &&
+						config.selectTranslator.disableWhileTranslatePage
+					) {
+						selectTranslator.stop();
+					}
+
+					if (this.pageTranslator) {
+						this.pageTranslator.run(fromLang, toLang);
+					}
 				}
 			}
 		}, 'interactive');
