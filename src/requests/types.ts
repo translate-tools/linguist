@@ -8,7 +8,7 @@ import { ObservableAsyncStorage } from '../modules/ConfigStorage/ConfigStorage';
 
 import { AppConfigType } from '../types/runtime';
 
-import { ContentScript } from '../modules/ContentScript';
+import { PageTranslationContext } from '../modules/ContentScript/PageTranslationContext';
 
 export type RequestHandlerFactoryProps = {
 	config: ObservableAsyncStorage<AppConfigType>;
@@ -21,7 +21,7 @@ export type RequestHandlerFactory = (props: RequestHandlerFactoryProps) => () =>
 export type ClientRequestHandlerFactoryProps = {
 	// TODO: move config to page context
 	$config: Store<AppConfigType>;
-	pageContext: ContentScript;
+	pageContext: PageTranslationContext;
 };
 
 export type ClientRequestHandlerFactory = (
