@@ -120,7 +120,6 @@ export class PageTranslationContext {
 				return (
 					selectTranslator.enabled &&
 					(!selectTranslator.disableWhileTranslatePage ||
-						this.pageTranslator === null ||
 						!this.pageTranslator.isRun())
 				);
 			})
