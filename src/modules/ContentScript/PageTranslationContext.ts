@@ -96,35 +96,36 @@ export class PageTranslationContext {
 		// to avoid appending unnecessary nodes to DOM
 		$selectTranslator.watch((config) => {
 			if (config.enabled) {
-				if (this.selectTranslator === null) {
-					const pageLanguage = this.pageData?.getState().language || undefined;
-					this.selectTranslator = new SelectTranslator(
-						buildSelectTranslatorOptions(config, {
-							pageLanguage,
-						}),
-					);
-				}
+				if (this.selectTranslator !== null) return;
+
+				const pageLanguage = this.pageData?.getState().language || undefined;
+				this.selectTranslator = new SelectTranslator(
+					buildSelectTranslatorOptions(config, {
+						pageLanguage,
+					}),
+				);
 			} else {
-				if (this.selectTranslator !== null) {
-					if (this.selectTranslator.isRun()) {
-						this.selectTranslator.stop();
-					}
-					this.selectTranslator = null;
+				if (this.selectTranslator === null) return;
+
+				if (this.selectTranslator.isRun()) {
+					this.selectTranslator.stop();
 				}
+
+				this.selectTranslator = null;
 			}
 		});
 
-		// Start/stop of SelectTranslator
+		// Start/stop of SelectTranslator by update config
 		$config
 			.map(({ selectTranslator }) => {
 				return (
 					selectTranslator.enabled &&
 					(!selectTranslator.disableWhileTranslatePage ||
+						// TODO: emit event while start/stop page translator and react on it here
 						!this.pageTranslator.isRun())
 				);
 			})
 			.watch((isNeedRunSelectTranslator) => {
-				// TODO: depend on change this state reactively
 				if (this.selectTranslator === null) return;
 
 				if (isNeedRunSelectTranslator) {
@@ -147,6 +148,8 @@ export class PageTranslationContext {
 				this.selectTranslator.stop();
 			}
 
+			// TODO: implement method `setConfig` to not re-create instance
+			// Create instance with new config
 			const pageLanguage = this.pageData?.getState().language || undefined;
 			this.selectTranslator = new SelectTranslator(
 				buildSelectTranslatorOptions(config, {
@@ -166,19 +169,19 @@ export class PageTranslationContext {
 		}).watch((config) => {
 			if (this.pageTranslator === null) return;
 
-			if (this.pageTranslator.isRun()) {
-				const direction = this.pageTranslator.getTranslateDirection();
-				if (direction === null) {
-					throw new TypeError(
-						'Invalid response from getTranslateDirection method',
-					);
-				}
-				this.pageTranslator.stop();
+			if (!this.pageTranslator.isRun()) {
 				this.pageTranslator.updateConfig(config);
-				this.pageTranslator.run(direction.from, direction.to);
-			} else {
-				this.pageTranslator.updateConfig(config);
+				return;
 			}
+
+			const direction = this.pageTranslator.getTranslateDirection();
+			if (direction === null) {
+				throw new TypeError('Invalid response from getTranslateDirection method');
+			}
+
+			this.pageTranslator.stop();
+			this.pageTranslator.updateConfig(config);
+			this.pageTranslator.run(direction.from, direction.to);
 		});
 
 		// Init page translate
