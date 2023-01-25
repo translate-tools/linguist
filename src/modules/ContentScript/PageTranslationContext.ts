@@ -101,6 +101,7 @@ export class PageTranslationContext {
 		}
 	}
 
+	// TODO: test the code
 	private async startTranslation() {
 		const $config = this.$config;
 
@@ -111,6 +112,8 @@ export class PageTranslationContext {
 				updateFilter: updateNotEqualFilter,
 			},
 		);
+
+		// TODO: move whole code to a class `SelectTranslatorManager`
 
 		// Make or delete SelectTranslator
 		// We re-create instance to make able a disable select translator
@@ -127,68 +130,76 @@ export class PageTranslationContext {
 						!this.pageTranslator.isRun())
 				);
 			})
-			.watch((isNeedRunSelectTranslator) => {
-				if (this.selectTranslator === null) return;
-
-				if (isNeedRunSelectTranslator) {
-					if (!this.selectTranslator.isRun()) {
-						this.selectTranslator.start();
-					}
-				} else if (this.selectTranslator.isRun()) {
-					this.selectTranslator.stop();
-				}
-			});
+			.watch(this.manageSelectTranslatorState);
 
 		// Update SelectTranslator
-		$selectTranslator.watch((config) => {
-			if (this.selectTranslator === null || !config.enabled) return;
+		$selectTranslator.watch(this.manageSelectTranslatorConfig);
 
-			const isRunning = this.selectTranslator.isRun();
-
-			// Stop current instance
-			if (isRunning) {
-				this.selectTranslator.stop();
-			}
-
-			// TODO: implement method `setConfig` to not re-create instance
-			// Create instance with new config
-			const pageLanguage = this.pageData?.getState().language || undefined;
-			this.selectTranslator = new SelectTranslator(
-				buildSelectTranslatorOptions(config, {
-					pageLanguage,
-				}),
-			);
-
-			// Run new instance
-			if (isRunning) {
-				this.selectTranslator.start();
-			}
-		});
+		// TODO: move code to class `PageTranslatorManager`
 
 		// Update PageTranslator
 		createSelector($config, (state) => state.pageTranslator, {
 			updateFilter: updateNotEqualFilter,
-		}).watch((config) => {
-			if (this.pageTranslator === null) return;
-
-			if (!this.pageTranslator.isRun()) {
-				this.pageTranslator.updateConfig(config);
-				return;
-			}
-
-			const direction = this.pageTranslator.getTranslateDirection();
-			if (direction === null) {
-				throw new TypeError('Invalid response from getTranslateDirection method');
-			}
-
-			this.pageTranslator.stop();
-			this.pageTranslator.updateConfig(config);
-			this.pageTranslator.run(direction.from, direction.to);
-		});
+		}).watch(this.managePageTranslatorInstance);
 
 		// Init page translate
 		// TODO: add option to define stage to detect language and run auto translate
 		runByReadyState(this.onPageLoaded, 'interactive');
+	}
+
+	private manageSelectTranslatorState(isNeedRunSelectTranslator: boolean) {
+		if (this.selectTranslator === null) return;
+
+		if (isNeedRunSelectTranslator) {
+			if (!this.selectTranslator.isRun()) {
+				this.selectTranslator.start();
+			}
+		} else if (this.selectTranslator.isRun()) {
+			this.selectTranslator.stop();
+		}
+	}
+
+	private manageSelectTranslatorConfig(config: AppConfigType['selectTranslator']) {
+		if (this.selectTranslator === null || !config.enabled) return;
+
+		const isRunning = this.selectTranslator.isRun();
+
+		// Stop current instance
+		if (isRunning) {
+			this.selectTranslator.stop();
+		}
+
+		// TODO: implement method `setConfig` to not re-create instance
+		// Create instance with new config
+		const pageLanguage = this.pageData?.getState().language || undefined;
+		this.selectTranslator = new SelectTranslator(
+			buildSelectTranslatorOptions(config, {
+				pageLanguage,
+			}),
+		);
+
+		// Run new instance
+		if (isRunning) {
+			this.selectTranslator.start();
+		}
+	}
+
+	private managePageTranslatorInstance(config: AppConfigType['pageTranslator']) {
+		if (this.pageTranslator === null) return;
+
+		if (!this.pageTranslator.isRun()) {
+			this.pageTranslator.updateConfig(config);
+			return;
+		}
+
+		const direction = this.pageTranslator.getTranslateDirection();
+		if (direction === null) {
+			throw new TypeError('Invalid response from getTranslateDirection method');
+		}
+
+		this.pageTranslator.stop();
+		this.pageTranslator.updateConfig(config);
+		this.pageTranslator.run(direction.from, direction.to);
 	}
 
 	private onPageLoaded = async () => {
