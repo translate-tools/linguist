@@ -80,6 +80,27 @@ export class PageTranslationContext {
 		await this.startTranslation();
 	}
 
+	private manageSelectTranslatorInstance(config: AppConfigType['selectTranslator']) {
+		if (config.enabled) {
+			if (this.selectTranslator !== null) return;
+
+			const pageLanguage = this.pageData?.getState().language || undefined;
+			this.selectTranslator = new SelectTranslator(
+				buildSelectTranslatorOptions(config, {
+					pageLanguage,
+				}),
+			);
+		} else {
+			if (this.selectTranslator === null) return;
+
+			if (this.selectTranslator.isRun()) {
+				this.selectTranslator.stop();
+			}
+
+			this.selectTranslator = null;
+		}
+	}
+
 	private async startTranslation() {
 		const $config = this.$config;
 
@@ -94,26 +115,7 @@ export class PageTranslationContext {
 		// Make or delete SelectTranslator
 		// We re-create instance to make able a disable select translator
 		// to avoid appending unnecessary nodes to DOM
-		$selectTranslator.watch((config) => {
-			if (config.enabled) {
-				if (this.selectTranslator !== null) return;
-
-				const pageLanguage = this.pageData?.getState().language || undefined;
-				this.selectTranslator = new SelectTranslator(
-					buildSelectTranslatorOptions(config, {
-						pageLanguage,
-					}),
-				);
-			} else {
-				if (this.selectTranslator === null) return;
-
-				if (this.selectTranslator.isRun()) {
-					this.selectTranslator.stop();
-				}
-
-				this.selectTranslator = null;
-			}
-		});
+		$selectTranslator.watch(this.manageSelectTranslatorInstance);
 
 		// Start/stop of SelectTranslator by update config
 		$config
