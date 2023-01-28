@@ -48,10 +48,15 @@ export class PageTranslationContext {
 	 * The translators state source of truth
 	 */
 	private $translatorsState: Store<TranslatorsState>;
+	private $pageData: Store<PageData>;
 
 	private pageTranslator: PageTranslator;
 	constructor($config: Store<AppConfigType>) {
 		this.$config = $config;
+
+		this.$pageData = createStore<PageData>({
+			language: null,
+		});
 
 		this.$translatorsState = createStore<TranslatorsState>(
 			{
@@ -76,8 +81,6 @@ export class PageTranslationContext {
 		return this.selectTranslator;
 	}
 
-	private pageData: Store<PageData> | null = null;
-
 	// TODO: move events to another place
 	private readonly pageDataControl = {
 		updatedLanguage: createEvent<string>(),
@@ -89,6 +92,7 @@ export class PageTranslationContext {
 		return this.pageDataControl;
 	}
 
+	// TODO: move whole logic to page scanner block
 	public async start() {
 		const config = this.$config.getState();
 
@@ -97,16 +101,14 @@ export class PageTranslationContext {
 			config.pageTranslator.detectLanguageByContent,
 		);
 
-		const $pageData = createStore({
-			language: pageLanguage,
-		});
+		if (pageLanguage !== null) {
+			this.pageDataControl.updatedLanguage(pageLanguage);
+		}
 
-		$pageData.on(this.pageDataControl.updatedLanguage, (state, language) => ({
+		this.$pageData.on(this.pageDataControl.updatedLanguage, (state, language) => ({
 			...state,
 			language,
 		}));
-
-		this.pageData = $pageData;
 
 		await this.startTranslation();
 	}
@@ -149,19 +151,24 @@ export class PageTranslationContext {
 			})
 			.watch(textTranslatorStateChanged);
 
+		// TODO: use specific storages instead of common store
 		const $masterStore = combine({
 			config: this.$config,
 			translatorsState: this.$translatorsState,
+			pageData: this.$pageData,
 		});
 
 		// Manage text translation instance
 		$masterStore
-			.map(({ config: { selectTranslator } }) => selectTranslator)
-			.watch((preferences) => {
+			.map(({ config: { selectTranslator }, pageData }) => ({
+				selectTranslator,
+				pageData,
+			}))
+			.watch(({ selectTranslator: preferences, pageData }) => {
 				console.warn('TT prefs', preferences);
 
 				if (preferences.enabled) {
-					const pageLanguage = this.pageData?.getState().language || undefined;
+					const pageLanguage = pageData.language || undefined;
 					const config = buildSelectTranslatorOptions(preferences, {
 						pageLanguage,
 					});
@@ -237,6 +244,7 @@ export class PageTranslationContext {
 			}
 		});
 
+		// TODO: scan page and collect data to a reactive storage
 		// Init page translate
 		// TODO: add option to define stage to detect language and run auto translate
 		runByReadyState(this.onPageLoaded, 'interactive');
@@ -260,7 +268,7 @@ export class PageTranslationContext {
 
 		// TODO: make it reactive
 		// Update config if language did updated after loading page
-		const pageLanguage = this.pageData?.getState().language || undefined;
+		const pageLanguage = this.$pageData?.getState().language || undefined;
 		if (pageLanguage !== actualPageLanguage && actualPageLanguage !== null) {
 			// Update language state
 			this.pageDataControl.updatedLanguage(actualPageLanguage);
