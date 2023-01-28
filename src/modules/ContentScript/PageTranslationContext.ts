@@ -1,4 +1,4 @@
-import { combine, createEvent, createStore, Store, sample } from 'effector';
+import { combine, createEvent, createStore, Store, sample, createEffect } from 'effector';
 
 import { AppConfigType } from '../../types/runtime';
 import { getPageLanguage } from '../../lib/browser';
@@ -112,6 +112,7 @@ export class PageTranslationContext {
 		await this.startTranslation();
 	}
 
+	// TODO: split the code
 	// TODO: test the code
 	private async startTranslation() {
 		// Subscribe on events
@@ -261,23 +262,33 @@ export class PageTranslationContext {
 			},
 		});
 
-		sample({
-			clock: pageLoaded,
-			source: $masterStore,
-		}).watch(async ({ config, translatorsState, pageData }) => {
-			const actualPageLanguage = await getPageLanguage(
+		// Scan page
+		const scanPageFx = createEffect(async (config: AppConfigType) => {
+			const pageLanguage = await getPageLanguage(
 				config.pageTranslator.detectLanguageByContent,
 			);
 
-			// TODO: set language only at one place
-			// Update config if language did updated after loading page
-			if (actualPageLanguage !== null && actualPageLanguage !== pageData.language) {
-				// Update language state
-				this.pageDataControl.updatedLanguage(actualPageLanguage);
-			}
+			return { pageLanguage };
+		});
 
+		// TODO: set language only at one place
+		this.$pageData.on(scanPageFx.doneData, (state, payload) => ({
+			...state,
+			language: payload.pageLanguage,
+		}));
+
+		sample({
+			clock: pageLoaded,
+			source: this.$config,
+		}).map(scanPageFx);
+
+		// Init auto translate page
+		sample({
+			clock: scanPageFx.doneData,
+			source: $masterStore,
+		}).watch(async ({ config, translatorsState, pageData }) => {
 			// Auto translate page
-			const fromLang = actualPageLanguage;
+			const fromLang = pageData.language;
 			const toLang = config.language;
 
 			// Skip if page already in translating
