@@ -1,5 +1,4 @@
 import { combine, createEvent, createStore, Store, sample } from 'effector';
-import { runByReadyState } from 'react-elegant-ui/esm/lib/runByReadyState';
 
 import { AppConfigType } from '../../types/runtime';
 import { getPageLanguage } from '../../lib/browser';
@@ -244,65 +243,71 @@ export class PageTranslationContext {
 			}
 		});
 
+		const updatedDocReadyState = createEvent<DocumentReadyState>();
+		document.addEventListener('readystatechange', () => {
+			updatedDocReadyState(document.readyState);
+		});
+
 		// TODO: scan page and collect data to a reactive storage
-		// Init page translate
 		// TODO: add option to define stage to detect language and run auto translate
-		runByReadyState(this.onPageLoaded, 'interactive');
-	}
+		// Init page translate
+		const pageLoaded = updatedDocReadyState.filter({
+			fn(readyState) {
+				const getReadyStateIndex = (state: DocumentReadyState) =>
+					['loading', 'interactive', 'complete'].indexOf(state);
+				return (
+					getReadyStateIndex(readyState) >= getReadyStateIndex('interactive')
+				);
+			},
+		});
 
-	private onPageLoaded = async () => {
-		const pageHost = location.host;
+		sample({
+			clock: pageLoaded,
+			source: $masterStore,
+		}).watch(async ({ config, translatorsState, pageData }) => {
+			const actualPageLanguage = await getPageLanguage(
+				config.pageTranslator.detectLanguageByContent,
+			);
 
-		// TODO: make it option
-		const isAllowTranslateSameLanguages = true;
+			// TODO: set language only at one place
+			// Update config if language did updated after loading page
+			if (actualPageLanguage !== null && actualPageLanguage !== pageData.language) {
+				// Update language state
+				this.pageDataControl.updatedLanguage(actualPageLanguage);
+			}
 
-		const config = this.$config.getState();
-		const translatorsState = this.$translatorsState.getState();
+			// Auto translate page
+			const fromLang = actualPageLanguage;
+			const toLang = config.language;
 
-		// Skip if page already in translating
-		if (translatorsState.pageTranslation !== null) return;
+			// Skip if page already in translating
+			if (translatorsState.pageTranslation !== null) return;
 
-		const actualPageLanguage = await getPageLanguage(
-			config.pageTranslator.detectLanguageByContent,
-		);
+			// TODO: make it option
+			const isAllowTranslateSameLanguages = true;
 
-		// TODO: make it reactive
-		// Update config if language did updated after loading page
-		const pageLanguage = this.$pageData?.getState().language || undefined;
-		if (pageLanguage !== actualPageLanguage && actualPageLanguage !== null) {
-			// Update language state
-			this.pageDataControl.updatedLanguage(actualPageLanguage);
+			// Skip by language directions
+			if (fromLang === null) return;
+			if (fromLang === toLang && !isAllowTranslateSameLanguages) return;
 
-			// Update config
-			// state.update(config);
-		}
+			let isNeedAutoTranslate = false;
 
-		// Auto translate page
-		const fromLang = actualPageLanguage;
-		const toLang = config.language;
+			// Consider site preferences
+			const pageHost = location.host;
+			const sitePreferences = await getSitePreferences(pageHost);
+			const isSiteRequireTranslate = isRequireTranslateBySitePreferences(
+				fromLang,
+				sitePreferences,
+			);
+			if (isSiteRequireTranslate !== null) {
+				// Never translate this site
+				if (!isSiteRequireTranslate) return;
 
-		// Skip by common causes
-		if (fromLang === undefined) return;
-		if (fromLang === toLang && !isAllowTranslateSameLanguages) return;
+				// Otherwise translate
+				isNeedAutoTranslate = true;
+			}
 
-		let isNeedAutoTranslate = false;
-
-		// Consider site preferences
-		const sitePreferences = await getSitePreferences(pageHost);
-		const isSiteRequireTranslate =
-			fromLang !== null &&
-			isRequireTranslateBySitePreferences(fromLang, sitePreferences);
-		if (isSiteRequireTranslate !== null) {
-			// Never translate this site
-			if (!isSiteRequireTranslate) return;
-
-			// Otherwise translate
-			isNeedAutoTranslate = true;
-		}
-
-		if (fromLang !== null) {
 			// Consider common language preferences
-
 			const isLanguageRequireTranslate = await getLanguagePreferences(fromLang);
 			if (isLanguageRequireTranslate !== null) {
 				// Never translate this language
@@ -318,6 +323,6 @@ export class PageTranslationContext {
 					to: toLang,
 				});
 			}
-		}
-	};
+		});
+	}
 }
