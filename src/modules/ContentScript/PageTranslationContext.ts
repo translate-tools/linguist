@@ -55,8 +55,7 @@ export class PageTranslationContext {
 		// TODO: manage it manually by events everywhere
 		this.$translatorsState = createStore<TranslatorsState>({
 			pageTranslation: null,
-			// TODO: set false by default
-			textTranslation: true,
+			textTranslation: false,
 		});
 
 		const config = $config.getState();
@@ -121,7 +120,6 @@ export class PageTranslationContext {
 			(state, pageTranslation) => ({ ...state, pageTranslation }),
 		);
 
-		// TODO: manage state - enable and disable translator after page translation
 		const updateTextTranslatorState = createEvent<boolean>();
 
 		// TODO: check is possible to toggle
@@ -136,9 +134,8 @@ export class PageTranslationContext {
 			fn: (source, newPageTranslationState) => {
 				const { config, translatorsState } = source;
 
-				// Return current state for disabled page translation
-				if (newPageTranslationState === null)
-					return translatorsState.textTranslation;
+				// Enable text translation
+				if (newPageTranslationState === null) return true;
 
 				// Disable if necessary
 				const isForceDisableTextTranslation =
@@ -243,6 +240,7 @@ export class PageTranslationContext {
 		});
 
 		// TODO: call events to toggle translators states
+		updateTextTranslatorState(true);
 
 		// Init page translate
 		// TODO: add option to define stage to detect language and run auto translate
