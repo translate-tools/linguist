@@ -52,7 +52,6 @@ export class PageTranslationContext {
 	constructor($config: Store<AppConfigType>) {
 		this.$config = $config;
 
-		// TODO: manage it manually by events everywhere
 		this.$translatorsState = createStore<TranslatorsState>({
 			pageTranslation: null,
 			textTranslation: false,
@@ -78,7 +77,6 @@ export class PageTranslationContext {
 	// TODO: move events to another place
 	private readonly pageDataControl = {
 		updatedLanguage: createEvent<string>(),
-		updatedTextTranslationState: createEvent<boolean>(),
 		updatedPageTranslationState: createEvent<PageTranslationOptions | null>(),
 	} as const;
 
@@ -120,36 +118,35 @@ export class PageTranslationContext {
 			(state, pageTranslation) => ({ ...state, pageTranslation }),
 		);
 
-		const updateTextTranslatorState = createEvent<boolean>();
+		// Update text translator state
+		const textTranslatorStateChanged = createEvent<boolean>();
+		this.$translatorsState.on(
+			textTranslatorStateChanged,
+			(state, textTranslation) => ({ ...state, textTranslation }),
+		);
 
-		// TODO: check is possible to toggle
-		this.pageDataControl.updatedTextTranslationState.watch(updateTextTranslatorState);
-
+		const $isTextTranslatorForceDisabled = createStore(false);
 		sample({
-			clock: this.pageDataControl.updatedPageTranslationState,
 			source: {
 				config: this.$config,
 				translatorsState: this.$translatorsState,
 			},
-			fn: (source, newPageTranslationState) => {
-				const { config, translatorsState } = source;
+			fn({ config, translatorsState }) {
+				if (translatorsState.pageTranslation === null) return false;
 
-				// Enable text translation
-				if (newPageTranslationState === null) return true;
-
-				// Disable if necessary
-				const isForceDisableTextTranslation =
-					config.selectTranslator.disableWhileTranslatePage;
-
-				return translatorsState.textTranslation && !isForceDisableTextTranslation;
+				return config.selectTranslator.disableWhileTranslatePage;
 			},
-			target: updateTextTranslatorState,
+			target: $isTextTranslatorForceDisabled,
 		});
 
-		this.$translatorsState.on(
-			updateTextTranslatorState,
-			(state, textTranslation) => ({ ...state, textTranslation }),
-		);
+		combine({
+			config: this.$config,
+			isTextTranslatorForceDisabled: $isTextTranslatorForceDisabled,
+		})
+			.map(({ config, isTextTranslatorForceDisabled }) => {
+				return config.selectTranslator.enabled && !isTextTranslatorForceDisabled;
+			})
+			.watch(textTranslatorStateChanged);
 
 		const $masterStore = combine({
 			config: this.$config,
@@ -240,7 +237,6 @@ export class PageTranslationContext {
 		});
 
 		// TODO: call events to toggle translators states
-		updateTextTranslatorState(true);
 
 		// Init page translate
 		// TODO: add option to define stage to detect language and run auto translate
