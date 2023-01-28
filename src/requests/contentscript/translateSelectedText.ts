@@ -6,6 +6,7 @@ export const [translateSelectedTextFactory, translateSelectedText] = buildTabReq
 		factoryHandler:
 			({ pageContext }) =>
 				async () => {
+				// TODO: move logic to manager
 					const textTranslator = pageContext.getTextTranslator();
 					if (textTranslator === null || !textTranslator.isRun()) return;
 

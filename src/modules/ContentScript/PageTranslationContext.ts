@@ -1,10 +1,8 @@
-import { createEvent, createStore, Store } from 'effector';
+import { combine, createEvent, createStore, Store, sample } from 'effector';
 import { runByReadyState } from 'react-elegant-ui/esm/lib/runByReadyState';
 
 import { AppConfigType } from '../../types/runtime';
 import { getPageLanguage } from '../../lib/browser';
-import { createSelector } from '../../lib/effector/createSelector';
-import { updateNotEqualFilter } from '../../lib/effector/filters';
 
 // Requests
 import { getSitePreferences } from '../../requests/backend/autoTranslation/sitePreferences/getSitePreferences';
@@ -31,12 +29,35 @@ type PageData = {
 	language: string | null;
 };
 
+type PageTranslationOptions = {
+	from: string;
+	to: string;
+};
+
+type TranslatorsState = {
+	pageTranslation: PageTranslationOptions | null;
+	textTranslation: boolean;
+};
+
 // TODO: eliminate `getState` calls
 export class PageTranslationContext {
 	private $config: Store<AppConfigType>;
+
+	/**
+	 * The translators state source of truth
+	 */
+	private $translatorsState: Store<TranslatorsState>;
+
 	private pageTranslator: PageTranslator;
 	constructor($config: Store<AppConfigType>) {
 		this.$config = $config;
+
+		// TODO: manage it manually by events everywhere
+		this.$translatorsState = createStore<TranslatorsState>({
+			pageTranslation: null,
+			// TODO: set false by default
+			textTranslation: true,
+		});
 
 		const config = $config.getState();
 
@@ -54,9 +75,18 @@ export class PageTranslationContext {
 	}
 
 	private pageData: Store<PageData> | null = null;
+
+	// TODO: move events to another place
 	private readonly pageDataControl = {
 		updatedLanguage: createEvent<string>(),
+		updatedTextTranslationState: createEvent<boolean>(),
+		updatedPageTranslationState: createEvent<PageTranslationOptions | null>(),
 	} as const;
+
+	// TODO: encapsulate knobs instead of direct access
+	public getTranslationKnobs() {
+		return this.pageDataControl;
+	}
 
 	public async start() {
 		const config = this.$config.getState();
@@ -80,126 +110,143 @@ export class PageTranslationContext {
 		await this.startTranslation();
 	}
 
+	// TODO: move translation management here
 	// TODO: test the code
 	private async startTranslation() {
-		const $config = this.$config;
+		// TODO: disable translators with order to config changes
 
-		const $selectTranslator = createSelector(
-			$config,
-			(state) => state.selectTranslator,
-			{
-				updateFilter: updateNotEqualFilter,
-			},
+		// Subscribe on events
+		this.$translatorsState.on(
+			this.pageDataControl.updatedPageTranslationState,
+			(state, pageTranslation) => ({ ...state, pageTranslation }),
 		);
 
-		// TODO: move whole code to a class `SelectTranslatorManager`
+		// TODO: manage state - enable and disable translator after page translation
+		const updateTextTranslatorState = createEvent<boolean>();
 
-		// Make or delete SelectTranslator
-		// We re-create instance to make able a disable select translator
-		// to avoid appending unnecessary nodes to DOM
-		$selectTranslator.watch(this.manageSelectTranslatorInstance.bind(this));
+		// TODO: check is possible to toggle
+		this.pageDataControl.updatedTextTranslationState.watch(updateTextTranslatorState);
 
-		// Start/stop of SelectTranslator by update config
-		$config
-			.map(({ selectTranslator }) => {
-				return (
-					selectTranslator.enabled &&
-					(!selectTranslator.disableWhileTranslatePage ||
-						// TODO: emit event while start/stop page translator and react on it here
-						!this.pageTranslator.isRun())
-				);
-			})
-			.watch(this.manageSelectTranslatorState.bind(this));
+		sample({
+			clock: this.pageDataControl.updatedPageTranslationState,
+			source: {
+				config: this.$config,
+				translatorsState: this.$translatorsState,
+			},
+			fn: (source, newPageTranslationState) => {
+				const { config, translatorsState } = source;
 
-		// Update SelectTranslator
-		$selectTranslator.watch(this.manageSelectTranslatorConfig.bind(this));
+				// Return current state for disabled page translation
+				if (newPageTranslationState === null)
+					return translatorsState.textTranslation;
 
-		// TODO: move code to class `PageTranslatorManager`
+				// Disable if necessary
+				const isForceDisableTextTranslation =
+					config.selectTranslator.disableWhileTranslatePage;
 
-		// Update PageTranslator
-		createSelector($config, (state) => state.pageTranslator, {
-			updateFilter: updateNotEqualFilter,
-		}).watch(this.managePageTranslatorInstance.bind(this));
+				return translatorsState.textTranslation && !isForceDisableTextTranslation;
+			},
+			target: updateTextTranslatorState,
+		});
+
+		this.$translatorsState.on(
+			updateTextTranslatorState,
+			(state, textTranslation) => ({ ...state, textTranslation }),
+		);
+
+		const $masterStore = combine({
+			config: this.$config,
+			translatorsState: this.$translatorsState,
+		});
+
+		// Manage text translation instance
+		$masterStore
+			.map(({ config: { selectTranslator } }) => selectTranslator)
+			.watch((preferences) => {
+				console.warn('TT prefs', preferences);
+
+				if (preferences.enabled) {
+					const pageLanguage = this.pageData?.getState().language || undefined;
+					const config = buildSelectTranslatorOptions(preferences, {
+						pageLanguage,
+					});
+
+					if (this.selectTranslator === null) {
+						this.selectTranslator = new SelectTranslator(config);
+					} else {
+						const isRun = this.selectTranslator.isRun();
+						if (isRun) {
+							this.selectTranslator.stop();
+						}
+
+						this.selectTranslator = new SelectTranslator(config);
+
+						if (isRun) {
+							this.selectTranslator.start();
+						}
+					}
+				} else {
+					if (this.selectTranslator === null) return;
+
+					if (this.selectTranslator.isRun()) {
+						this.selectTranslator.stop();
+					}
+
+					this.selectTranslator = null;
+				}
+			});
+
+		// Manage text translation state
+		const $isTextTranslationStarted = this.$translatorsState.map(
+			({ textTranslation }) => textTranslation,
+		);
+		$isTextTranslationStarted.watch((isTranslating) => {
+			console.warn('TT state', isTranslating);
+
+			if (this.selectTranslator === null) return;
+			if (isTranslating === this.selectTranslator.isRun()) return;
+
+			if (isTranslating) {
+				this.selectTranslator.start();
+			} else {
+				this.selectTranslator.stop();
+			}
+		});
+
+		// Manage page translation instance
+		$masterStore.watch(({ config: { pageTranslator: config } }) => {
+			if (!this.pageTranslator.isRun()) {
+				this.pageTranslator.updateConfig(config);
+				return;
+			}
+
+			const direction = this.pageTranslator.getTranslateDirection();
+			if (direction === null) {
+				throw new TypeError('Invalid response from getTranslateDirection method');
+			}
+
+			this.pageTranslator.stop();
+			this.pageTranslator.updateConfig(config);
+			this.pageTranslator.run(direction.from, direction.to);
+		});
+
+		// Manage page translation state
+		$masterStore.watch(({ translatorsState: { pageTranslation } }) => {
+			const shouldTranslate = pageTranslation !== null;
+			if (shouldTranslate === this.pageTranslator.isRun()) return;
+
+			if (pageTranslation !== null) {
+				this.pageTranslator.run(pageTranslation.from, pageTranslation.to);
+			} else {
+				this.pageTranslator.stop();
+			}
+		});
+
+		// TODO: call events to toggle translators states
 
 		// Init page translate
 		// TODO: add option to define stage to detect language and run auto translate
 		runByReadyState(this.onPageLoaded, 'interactive');
-	}
-
-	private manageSelectTranslatorInstance(config: AppConfigType['selectTranslator']) {
-		if (config.enabled) {
-			if (this.selectTranslator !== null) return;
-
-			const pageLanguage = this.pageData?.getState().language || undefined;
-			this.selectTranslator = new SelectTranslator(
-				buildSelectTranslatorOptions(config, {
-					pageLanguage,
-				}),
-			);
-		} else {
-			if (this.selectTranslator === null) return;
-
-			if (this.selectTranslator.isRun()) {
-				this.selectTranslator.stop();
-			}
-
-			this.selectTranslator = null;
-		}
-	}
-
-	private manageSelectTranslatorState(isNeedRunSelectTranslator: boolean) {
-		if (this.selectTranslator === null) return;
-
-		if (isNeedRunSelectTranslator) {
-			if (!this.selectTranslator.isRun()) {
-				this.selectTranslator.start();
-			}
-		} else if (this.selectTranslator.isRun()) {
-			this.selectTranslator.stop();
-		}
-	}
-
-	private manageSelectTranslatorConfig(config: AppConfigType['selectTranslator']) {
-		if (this.selectTranslator === null || !config.enabled) return;
-
-		const isRunning = this.selectTranslator.isRun();
-
-		// Stop current instance
-		if (isRunning) {
-			this.selectTranslator.stop();
-		}
-
-		// TODO: implement method `setConfig` to not re-create instance
-		// Create instance with new config
-		const pageLanguage = this.pageData?.getState().language || undefined;
-		this.selectTranslator = new SelectTranslator(
-			buildSelectTranslatorOptions(config, {
-				pageLanguage,
-			}),
-		);
-
-		// Run new instance
-		if (isRunning) {
-			this.selectTranslator.start();
-		}
-	}
-
-	private managePageTranslatorInstance(config: AppConfigType['pageTranslator']) {
-		if (this.pageTranslator === null) return;
-
-		if (!this.pageTranslator.isRun()) {
-			this.pageTranslator.updateConfig(config);
-			return;
-		}
-
-		const direction = this.pageTranslator.getTranslateDirection();
-		if (direction === null) {
-			throw new TypeError('Invalid response from getTranslateDirection method');
-		}
-
-		this.pageTranslator.stop();
-		this.pageTranslator.updateConfig(config);
-		this.pageTranslator.run(direction.from, direction.to);
 	}
 
 	private onPageLoaded = async () => {
@@ -209,9 +256,10 @@ export class PageTranslationContext {
 		const isAllowTranslateSameLanguages = true;
 
 		const config = this.$config.getState();
+		const translatorsState = this.$translatorsState.getState();
 
 		// Skip if page already in translating
-		if (this.pageTranslator && this.pageTranslator.isRun()) return;
+		if (translatorsState.pageTranslation !== null) return;
 
 		const actualPageLanguage = await getPageLanguage(
 			config.pageTranslator.detectLanguageByContent,
@@ -264,20 +312,10 @@ export class PageTranslationContext {
 			}
 
 			if (isNeedAutoTranslate) {
-				const selectTranslator = this.selectTranslator;
-
-				// TODO: eliminate code duplication. Call one method
-				if (
-					selectTranslator !== null &&
-					selectTranslator.isRun() &&
-					config.selectTranslator.disableWhileTranslatePage
-				) {
-					selectTranslator.stop();
-				}
-
-				if (this.pageTranslator) {
-					this.pageTranslator.run(fromLang, toLang);
-				}
+				this.pageDataControl.updatedPageTranslationState({
+					from: fromLang,
+					to: toLang,
+				});
 			}
 		}
 	};

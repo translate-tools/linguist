@@ -15,12 +15,7 @@ export const [disableTranslatePageFactory, disableTranslatePage] = buildTabReque
 						throw new Error('Page is not translated');
 					}
 
-					domTranslator.stop();
-
-					const textTranslator = pageContext.getTextTranslator();
-					if (textTranslator !== null && !textTranslator.isRun()) {
-						textTranslator.start();
-					}
+					pageContext.getTranslationKnobs().updatedPageTranslationState(null);
 				},
 	},
 );
