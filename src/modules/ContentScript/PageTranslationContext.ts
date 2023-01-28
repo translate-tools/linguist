@@ -3,6 +3,7 @@ import { runByReadyState } from 'react-elegant-ui/esm/lib/runByReadyState';
 
 import { AppConfigType } from '../../types/runtime';
 import { getPageLanguage } from '../../lib/browser';
+import { updateNotEqualFilter } from '../../lib/effector/filters';
 
 // Requests
 import { getSitePreferences } from '../../requests/backend/autoTranslation/sitePreferences/getSitePreferences';
@@ -52,10 +53,13 @@ export class PageTranslationContext {
 	constructor($config: Store<AppConfigType>) {
 		this.$config = $config;
 
-		this.$translatorsState = createStore<TranslatorsState>({
-			pageTranslation: null,
-			textTranslation: false,
-		});
+		this.$translatorsState = createStore<TranslatorsState>(
+			{
+				pageTranslation: null,
+				textTranslation: false,
+			},
+			{ updateFilter: updateNotEqualFilter },
+		);
 
 		const config = $config.getState();
 
@@ -107,11 +111,8 @@ export class PageTranslationContext {
 		await this.startTranslation();
 	}
 
-	// TODO: move translation management here
 	// TODO: test the code
 	private async startTranslation() {
-		// TODO: disable translators with order to config changes
-
 		// Subscribe on events
 		this.$translatorsState.on(
 			this.pageDataControl.updatedPageTranslationState,
@@ -235,8 +236,6 @@ export class PageTranslationContext {
 				this.pageTranslator.stop();
 			}
 		});
-
-		// TODO: call events to toggle translators states
 
 		// Init page translate
 		// TODO: add option to define stage to detect language and run auto translate
