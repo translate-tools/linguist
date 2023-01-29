@@ -249,20 +249,19 @@ export class PageTranslationContext {
 			updatedDocReadyState(document.readyState);
 		});
 
-		// TODO: scan page and collect data to a reactive storage
+		const $docReadyState = createStore(document.readyState);
+		$docReadyState.on(updatedDocReadyState, (_, state) => state);
+
 		// TODO: add option to define stage to detect language and run auto translate
 		// Init page translate
-		const pageLoaded = updatedDocReadyState.filter({
-			fn(readyState) {
-				const getReadyStateIndex = (state: DocumentReadyState) =>
-					['loading', 'interactive', 'complete'].indexOf(state);
-				return (
-					getReadyStateIndex(readyState) >= getReadyStateIndex('interactive')
-				);
-			},
+		const $isPageLoaded = $docReadyState.map((readyState) => {
+			const getReadyStateIndex = (state: DocumentReadyState) =>
+				['loading', 'interactive', 'complete'].indexOf(state);
+
+			return getReadyStateIndex(readyState) >= getReadyStateIndex('interactive');
 		});
 
-		// Scan page
+		// Scan page to collect data
 		const scanPageFx = createEffect(async (config: AppConfigType) => {
 			const pageLanguage = await getPageLanguage(
 				config.pageTranslator.detectLanguageByContent,
@@ -278,9 +277,9 @@ export class PageTranslationContext {
 		}));
 
 		sample({
-			clock: pageLoaded,
+			clock: $isPageLoaded,
 			source: this.$config,
-		}).map(scanPageFx);
+		}).watch(scanPageFx);
 
 		// Init auto translate page
 		sample({
