@@ -82,39 +82,17 @@ export class PageTranslationContext {
 
 	// TODO: move events to another place
 	private readonly pageDataControl = {
-		updatedLanguage: createEvent<string>(),
 		updatedPageTranslationState: createEvent<PageTranslationOptions | null>(),
-	} as const;
+	};
 
 	// TODO: encapsulate knobs instead of direct access
 	public getTranslationKnobs() {
 		return this.pageDataControl;
 	}
 
-	// TODO: move whole logic to page scanner block
-	public async start() {
-		const config = this.$config.getState();
-
-		// Collect page data
-		const pageLanguage = await getPageLanguage(
-			config.pageTranslator.detectLanguageByContent,
-		);
-
-		if (pageLanguage !== null) {
-			this.pageDataControl.updatedLanguage(pageLanguage);
-		}
-
-		this.$pageData.on(this.pageDataControl.updatedLanguage, (state, language) => ({
-			...state,
-			language,
-		}));
-
-		await this.startTranslation();
-	}
-
 	// TODO: split the code
 	// TODO: test the code
-	private async startTranslation() {
+	public async start() {
 		// Subscribe on events
 		this.$translatorsState.on(
 			this.pageDataControl.updatedPageTranslationState,
@@ -270,7 +248,6 @@ export class PageTranslationContext {
 			return { pageLanguage };
 		});
 
-		// TODO: set language only at one place
 		this.$pageData.on(scanPageFx.doneData, (state, payload) => ({
 			...state,
 			language: payload.pageLanguage,
