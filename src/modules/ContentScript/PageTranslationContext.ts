@@ -186,36 +186,7 @@ export class PageTranslationContext {
 			},
 			{ updateFilter: updateNotEqualFilter },
 		);
-	}
 
-	private pageTranslator: PageTranslatorManager | null = null;
-	public getDOMTranslator() {
-		// TODO: remove guard
-		if (this.pageTranslator === null) {
-			throw new Error('Page translator is not created yet');
-		}
-
-		return this.pageTranslator.getDomTranslator();
-	}
-
-	private selectTranslator: SelectTranslatorManager | null = null;
-	public getTextTranslator() {
-		return this.selectTranslator?.getSelectTranslator() ?? null;
-	}
-
-	// TODO: move events to another place
-	private readonly pageDataControl = {
-		updatedPageTranslationState: createEvent<PageTranslationOptions | null>(),
-	};
-
-	// TODO: encapsulate knobs instead of direct access
-	public getTranslationKnobs() {
-		return this.pageDataControl;
-	}
-
-	// TODO: split the code
-	// TODO: test the code
-	public async start() {
 		// Subscribe on events
 		this.$translatorsState.on(
 			this.pageDataControl.updatedPageTranslationState,
@@ -251,8 +222,35 @@ export class PageTranslationContext {
 				return config.selectTranslator.enabled && !isTextTranslatorForceDisabled;
 			})
 			.watch(textTranslatorStateChanged);
+	}
 
-		// TODO: use specific storages instead of common store
+	private pageTranslator: PageTranslatorManager | null = null;
+	public getDOMTranslator() {
+		// TODO: remove guard
+		if (this.pageTranslator === null) {
+			throw new Error('Page translator is not created yet');
+		}
+
+		return this.pageTranslator.getDomTranslator();
+	}
+
+	private selectTranslator: SelectTranslatorManager | null = null;
+	public getTextTranslator() {
+		return this.selectTranslator?.getSelectTranslator() ?? null;
+	}
+
+	// TODO: move events to another place
+	private readonly pageDataControl = {
+		updatedPageTranslationState: createEvent<PageTranslationOptions | null>(),
+	};
+
+	// TODO: encapsulate knobs instead of direct access
+	public getTranslationKnobs() {
+		return this.pageDataControl;
+	}
+
+	// TODO: test the code
+	public async start() {
 		const $masterStore = combine({
 			config: this.$config,
 			translatorsState: this.$translatorsState,
@@ -280,13 +278,14 @@ export class PageTranslationContext {
 		this.pageTranslator = new PageTranslatorManager($pageTranslatorState);
 		this.pageTranslator.start();
 
+		// Watch ready state
+		const $docReadyState = createStore(document.readyState);
 		const updatedDocReadyState = createEvent<DocumentReadyState>();
+		$docReadyState.on(updatedDocReadyState, (_, state) => state);
+
 		document.addEventListener('readystatechange', () => {
 			updatedDocReadyState(document.readyState);
 		});
-
-		const $docReadyState = createStore(document.readyState);
-		$docReadyState.on(updatedDocReadyState, (_, state) => state);
 
 		// TODO: add option to define stage to detect language and run auto translate
 		// Init page translate
@@ -321,19 +320,18 @@ export class PageTranslationContext {
 			clock: scanPageFx.doneData,
 			source: $masterStore,
 		}).watch(async ({ config, translatorsState, pageData }) => {
-			// Auto translate page
-			const fromLang = pageData.language;
-			const toLang = config.language;
-
 			// Skip if page already in translating
 			if (translatorsState.pageTranslation !== null) return;
 
 			// TODO: make it option
 			const isAllowTranslateSameLanguages = true;
 
+			const pageLanguage = pageData.language;
+			const userLanguage = config.language;
+
 			// Skip by language directions
-			if (fromLang === null) return;
-			if (fromLang === toLang && !isAllowTranslateSameLanguages) return;
+			if (pageLanguage === null) return;
+			if (pageLanguage === userLanguage && !isAllowTranslateSameLanguages) return;
 
 			let isNeedAutoTranslate = false;
 
@@ -341,7 +339,7 @@ export class PageTranslationContext {
 			const pageHost = location.host;
 			const sitePreferences = await getSitePreferences(pageHost);
 			const isSiteRequireTranslate = isRequireTranslateBySitePreferences(
-				fromLang,
+				pageLanguage,
 				sitePreferences,
 			);
 			if (isSiteRequireTranslate !== null) {
@@ -353,7 +351,7 @@ export class PageTranslationContext {
 			}
 
 			// Consider common language preferences
-			const isLanguageRequireTranslate = await getLanguagePreferences(fromLang);
+			const isLanguageRequireTranslate = await getLanguagePreferences(pageLanguage);
 			if (isLanguageRequireTranslate !== null) {
 				// Never translate this language
 				if (!isLanguageRequireTranslate) return;
@@ -364,8 +362,8 @@ export class PageTranslationContext {
 
 			if (isNeedAutoTranslate) {
 				this.pageDataControl.updatedPageTranslationState({
-					from: fromLang,
-					to: toLang,
+					from: pageLanguage,
+					to: userLanguage,
 				});
 			}
 		});
