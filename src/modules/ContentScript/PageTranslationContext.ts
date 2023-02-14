@@ -79,6 +79,10 @@ class SelectTranslatorController {
 }
 
 export class PageTranslationContext {
+	private readonly events = {
+		updatePageTranslationState: createEvent<PageTranslationOptions | null>(),
+	};
+
 	private $config: Store<AppConfigType>;
 
 	/**
@@ -102,7 +106,7 @@ export class PageTranslationContext {
 
 		// Subscribe on events
 		this.$translatorsState.on(
-			this.pageDataControl.updatedPageTranslationState,
+			this.events.updatePageTranslationState,
 			(state, pageTranslation) => ({ ...state, pageTranslation }),
 		);
 
@@ -155,11 +159,6 @@ export class PageTranslationContext {
 		return this.controllers.selectTranslator;
 	}
 
-	// TODO: move events to another place
-	private readonly pageDataControl = {
-		updatedPageTranslationState: createEvent<PageTranslationOptions | null>(),
-	};
-
 	// TODO: test the code
 	public async start() {
 		const $masterStore = combine({
@@ -195,7 +194,7 @@ export class PageTranslationContext {
 
 		this.controllers.pageTranslator = new PageTranslatorController(
 			this.pageTranslator,
-			this.pageDataControl.updatedPageTranslationState,
+			this.events.updatePageTranslationState,
 		);
 
 		// Watch ready state
@@ -292,7 +291,7 @@ export class PageTranslationContext {
 		}
 
 		if (isNeedAutoTranslate) {
-			this.pageDataControl.updatedPageTranslationState({
+			this.events.updatePageTranslationState({
 				from: pageLanguage,
 				to: userLanguage,
 			});
