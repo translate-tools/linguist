@@ -7,15 +7,9 @@ export const [disableTranslatePageFactory, disableTranslatePage] = buildTabReque
 			({ pageContext }) =>
 				async () => {
 					const domTranslator = pageContext.getDOMTranslator();
-					if (domTranslator === null) {
-						throw new Error('DOM translator are empty');
+					if (domTranslator !== null) {
+						domTranslator.stopTranslate();
 					}
-
-					if (!domTranslator.isRun()) {
-						throw new Error('Page is not translated');
-					}
-
-					pageContext.getTranslationKnobs().updatedPageTranslationState(null);
 				},
 	},
 );

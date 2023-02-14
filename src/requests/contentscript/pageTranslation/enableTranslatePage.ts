@@ -15,19 +15,10 @@ export const [enableTranslatePageFactory, enableTranslatePageReq] = buildTabRequ
 		factoryHandler:
 			({ pageContext }) =>
 				async ({ from, to }) => {
-				// TODO: move this checks to `PageTranslationContext`
 					const domTranslator = pageContext.getDOMTranslator();
-					if (domTranslator === null) {
-						throw new Error('DOM translator are empty');
+					if (domTranslator !== null) {
+						domTranslator.translate({ from, to });
 					}
-
-					if (domTranslator.isRun()) {
-						throw new Error('Page already translated');
-					}
-
-					pageContext
-						.getTranslationKnobs()
-						.updatedPageTranslationState({ from, to });
 				},
 	},
 );

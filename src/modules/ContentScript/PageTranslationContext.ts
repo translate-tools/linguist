@@ -1,4 +1,12 @@
-import { combine, createEvent, createStore, Store, sample, createEffect } from 'effector';
+import {
+	combine,
+	createEvent,
+	createStore,
+	Store,
+	sample,
+	createEffect,
+	Event,
+} from 'effector';
 
 import { AppConfigType } from '../../types/runtime';
 import { getPageLanguage } from '../../lib/browser';
@@ -25,6 +33,35 @@ type TranslatorsState = {
 	pageTranslation: PageTranslationOptions | null;
 	textTranslation: boolean;
 };
+
+class PageTranslatorController {
+	private manager: PageTranslatorManager;
+	private updateTranslationState: Event<PageTranslationOptions | null>;
+	constructor(
+		manager: PageTranslatorManager,
+		updateTranslationState: Event<PageTranslationOptions | null>,
+	) {
+		this.manager = manager;
+		this.updateTranslationState = updateTranslationState;
+	}
+
+	public translate(options: PageTranslationOptions) {
+		this.updateTranslationState(options);
+	}
+
+	public stopTranslate() {
+		this.updateTranslationState(null);
+	}
+
+	public getStatus() {
+		const domTranslator = this.manager.getDomTranslator();
+		return {
+			isTranslated: domTranslator.isRun(),
+			counters: domTranslator.getStatus(),
+			translateDirection: domTranslator.getTranslateDirection(),
+		};
+	}
+}
 
 export class PageTranslationContext {
 	private $config: Store<AppConfigType>;
@@ -85,14 +122,15 @@ export class PageTranslationContext {
 			.watch(textTranslatorStateChanged);
 	}
 
+	private controllers: {
+		pageTranslator: PageTranslatorController | null;
+	} = {
+		pageTranslator: null,
+	};
+
 	private pageTranslator: PageTranslatorManager | null = null;
 	public getDOMTranslator() {
-		// TODO: remove guard
-		if (this.pageTranslator === null) {
-			throw new Error('Page translator is not created yet');
-		}
-
-		return this.pageTranslator.getDomTranslator();
+		return this.controllers.pageTranslator;
 	}
 
 	private selectTranslator: SelectTranslatorManager | null = null;
@@ -104,11 +142,6 @@ export class PageTranslationContext {
 	private readonly pageDataControl = {
 		updatedPageTranslationState: createEvent<PageTranslationOptions | null>(),
 	};
-
-	// TODO: encapsulate knobs instead of direct access
-	public getTranslationKnobs() {
-		return this.pageDataControl;
-	}
 
 	// TODO: test the code
 	public async start() {
@@ -138,6 +171,11 @@ export class PageTranslationContext {
 
 		this.pageTranslator = new PageTranslatorManager($pageTranslatorState);
 		this.pageTranslator.start();
+
+		this.controllers.pageTranslator = new PageTranslatorController(
+			this.pageTranslator,
+			this.pageDataControl.updatedPageTranslationState,
+		);
 
 		// Watch ready state
 		const $docReadyState = createStore(document.readyState);

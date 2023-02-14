@@ -30,11 +30,7 @@ export const [getPageTranslateStateFactory, getPageTranslateState] = buildTabReq
 						throw new Error('DOM translator are empty');
 					}
 
-					return {
-						isTranslated: domTranslator.isRun(),
-						counters: domTranslator.getStatus(),
-						translateDirection: domTranslator.getTranslateDirection(),
-					};
+					return domTranslator.getStatus();
 				},
 	},
 );
