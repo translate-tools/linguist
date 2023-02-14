@@ -180,53 +180,63 @@ export class PageTranslationContext {
 		sample({
 			clock: scanPageFx.doneData,
 			source: $masterStore,
-		}).watch(async ({ config, translatorsState, pageData }) => {
-			// Skip if page already in translating
-			if (translatorsState.pageTranslation !== null) return;
-
-			// TODO: make it option
-			const isAllowTranslateSameLanguages = true;
-
-			const pageLanguage = pageData.language;
-			const userLanguage = config.language;
-
-			// Skip by language directions
-			if (pageLanguage === null) return;
-			if (pageLanguage === userLanguage && !isAllowTranslateSameLanguages) return;
-
-			let isNeedAutoTranslate = false;
-
-			// Consider site preferences
-			const pageHost = location.host;
-			const sitePreferences = await getSitePreferences(pageHost);
-			const isSiteRequireTranslate = isRequireTranslateBySitePreferences(
-				pageLanguage,
-				sitePreferences,
-			);
-			if (isSiteRequireTranslate !== null) {
-				// Never translate this site
-				if (!isSiteRequireTranslate) return;
-
-				// Otherwise translate
-				isNeedAutoTranslate = true;
-			}
-
-			// Consider common language preferences
-			const isLanguageRequireTranslate = await getLanguagePreferences(pageLanguage);
-			if (isLanguageRequireTranslate !== null) {
-				// Never translate this language
-				if (!isLanguageRequireTranslate) return;
-
-				// Otherwise translate
-				isNeedAutoTranslate = true;
-			}
-
-			if (isNeedAutoTranslate) {
-				this.pageDataControl.updatedPageTranslationState({
-					from: pageLanguage,
-					to: userLanguage,
-				});
-			}
-		});
+		}).watch(this.initTranslation);
 	}
+
+	private initTranslation = async ({
+		config,
+		translatorsState,
+		pageData,
+	}: {
+		config: AppConfigType;
+		translatorsState: TranslatorsState;
+		pageData: PageData;
+	}) => {
+		// Skip if page already in translating
+		if (translatorsState.pageTranslation !== null) return;
+
+		// TODO: make it option
+		const isAllowTranslateSameLanguages = true;
+
+		const pageLanguage = pageData.language;
+		const userLanguage = config.language;
+
+		// Skip by language directions
+		if (pageLanguage === null) return;
+		if (pageLanguage === userLanguage && !isAllowTranslateSameLanguages) return;
+
+		let isNeedAutoTranslate = false;
+
+		// Consider site preferences
+		const pageHost = location.host;
+		const sitePreferences = await getSitePreferences(pageHost);
+		const isSiteRequireTranslate = isRequireTranslateBySitePreferences(
+			pageLanguage,
+			sitePreferences,
+		);
+		if (isSiteRequireTranslate !== null) {
+			// Never translate this site
+			if (!isSiteRequireTranslate) return;
+
+			// Otherwise translate
+			isNeedAutoTranslate = true;
+		}
+
+		// Consider common language preferences
+		const isLanguageRequireTranslate = await getLanguagePreferences(pageLanguage);
+		if (isLanguageRequireTranslate !== null) {
+			// Never translate this language
+			if (!isLanguageRequireTranslate) return;
+
+			// Otherwise translate
+			isNeedAutoTranslate = true;
+		}
+
+		if (isNeedAutoTranslate) {
+			this.pageDataControl.updatedPageTranslationState({
+				from: pageLanguage,
+				to: userLanguage,
+			});
+		}
+	};
 }
