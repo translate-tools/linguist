@@ -63,6 +63,21 @@ class PageTranslatorController {
 	}
 }
 
+class SelectTranslatorController {
+	private manager: SelectTranslatorManager;
+	constructor(manager: SelectTranslatorManager) {
+		this.manager = manager;
+	}
+
+	public translateSelectedText() {
+		const selectTranslator = this.manager.getSelectTranslator();
+		if (selectTranslator === null) return;
+		if (selectTranslator.isRun()) {
+			selectTranslator.translateSelectedText();
+		}
+	}
+}
+
 export class PageTranslationContext {
 	private $config: Store<AppConfigType>;
 
@@ -124,8 +139,10 @@ export class PageTranslationContext {
 
 	private controllers: {
 		pageTranslator: PageTranslatorController | null;
+		selectTranslator: SelectTranslatorController | null;
 	} = {
 		pageTranslator: null,
+		selectTranslator: null,
 	};
 
 	private pageTranslator: PageTranslatorManager | null = null;
@@ -135,7 +152,7 @@ export class PageTranslationContext {
 
 	private selectTranslator: SelectTranslatorManager | null = null;
 	public getTextTranslator() {
-		return this.selectTranslator?.getSelectTranslator() ?? null;
+		return this.controllers.selectTranslator;
 	}
 
 	// TODO: move events to another place
@@ -162,6 +179,10 @@ export class PageTranslationContext {
 
 		this.selectTranslator = new SelectTranslatorManager($selectTranslatorState);
 		this.selectTranslator.start();
+
+		this.controllers.selectTranslator = new SelectTranslatorController(
+			this.selectTranslator,
+		);
 
 		// Init page translator
 		const $pageTranslatorState = $masterStore.map(({ config, translatorsState }) => ({
