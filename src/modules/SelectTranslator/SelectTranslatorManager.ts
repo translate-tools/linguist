@@ -2,17 +2,7 @@ import { Store } from 'effector';
 
 import { AppConfigType } from '../../types/runtime';
 import { PageData } from '../ContentScript/PageTranslationContext';
-import { SelectTranslator, Options as SelectTranslatorOptions } from './SelectTranslator';
-
-export const buildSelectTranslatorOptions = (
-	{ mode, ...options }: AppConfigType['selectTranslator'],
-	{ pageLanguage }: { pageLanguage?: string },
-): SelectTranslatorOptions => ({
-	...options,
-	pageLanguage,
-	quickTranslate: mode === 'quickTranslate',
-	enableTranslateFromContextMenu: mode === 'contextMenu',
-});
+import { SelectTranslator } from './SelectTranslator';
 
 export class SelectTranslatorManager {
 	private $state;
@@ -38,10 +28,13 @@ export class SelectTranslatorManager {
 			console.warn('TT prefs', preferences);
 
 			if (preferences.enabled) {
-				const pageLanguage = pageData.language || undefined;
-				const config = buildSelectTranslatorOptions(preferences, {
-					pageLanguage,
-				});
+				const { mode, ...restPreferences } = preferences;
+				const config = {
+					...restPreferences,
+					pageLanguage: pageData.language || undefined,
+					quickTranslate: mode === 'quickTranslate',
+					enableTranslateFromContextMenu: mode === 'contextMenu',
+				};
 
 				if (this.selectTranslator === null) {
 					this.selectTranslator = new SelectTranslator(config);
