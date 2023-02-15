@@ -25,8 +25,6 @@ export class SelectTranslatorManager {
 	public start() {
 		// Manage text translation instance
 		this.$state.watch(({ config: preferences, pageData }) => {
-			console.warn('TT prefs', preferences);
-
 			if (preferences.enabled) {
 				const { mode, ...restPreferences } = preferences;
 				const config = {
@@ -64,8 +62,6 @@ export class SelectTranslatorManager {
 		// Manage text translation state
 		const $isTextTranslationStarted = this.$state.map(({ enabled }) => enabled);
 		$isTextTranslationStarted.watch((isTranslating) => {
-			console.warn('TT state', isTranslating);
-
 			if (this.selectTranslator === null) return;
 			if (isTranslating === this.selectTranslator.isRun()) return;
 

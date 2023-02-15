@@ -114,7 +114,6 @@ export class PageTranslationContext {
 		return this.controllers.selectTranslator;
 	}
 
-	// TODO: test the code
 	public async start() {
 		const $masterStore = combine({
 			config: this.$config,
