@@ -7,10 +7,10 @@ export const [getPageLanguageFactory, getPageLanguage] = buildTabRequest(
 	{
 		responseValidator: type.union([type.string, type.null]),
 		factoryHandler:
-			({ config }) =>
+			({ $config }) =>
 				async () =>
 					getPageLanguageHelper(
-						config.pageTranslator.detectLanguageByContent,
+						$config.getState().pageTranslator.detectLanguageByContent,
 						true,
 					),
 	},
