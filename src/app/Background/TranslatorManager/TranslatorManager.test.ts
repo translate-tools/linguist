@@ -1,6 +1,6 @@
 import { clearAllMocks } from '../../../lib/tests';
 
-import { TranslatorManager } from '.';
+import { TranslatorManager } from './index';
 
 const createTranslatorMockClass = (translatorName: string) => {
 	return class MockTranslator {

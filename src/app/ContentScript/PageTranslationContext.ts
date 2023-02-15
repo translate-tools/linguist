@@ -9,11 +9,11 @@ import { getSitePreferences } from '../../requests/backend/autoTranslation/siteP
 import { getLanguagePreferences } from '../../requests/backend/autoTranslation/languagePreferences/getLanguagePreferences';
 import { isRequireTranslateBySitePreferences } from '../../layouts/PageTranslator/PageTranslator.utils/utils';
 
-import { SelectTranslatorManager } from '../SelectTranslator/SelectTranslatorManager';
-import { SelectTranslatorController } from '../SelectTranslator/SelectTranslatorController';
+import { SelectTranslatorManager } from './SelectTranslator/SelectTranslatorManager';
+import { SelectTranslatorController } from './SelectTranslator/SelectTranslatorController';
 
-import { PageTranslatorManager } from '../PageTranslator/PageTranslatorManager';
-import { PageTranslatorController } from '../PageTranslator/PageTranslatorController';
+import { PageTranslatorManager } from './PageTranslator/PageTranslatorManager';
+import { PageTranslatorController } from './PageTranslator/PageTranslatorController';
 
 export type PageTranslationOptions = {
 	from: string;

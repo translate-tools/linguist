@@ -1,7 +1,7 @@
 import { Store } from 'effector';
 
-import { AppConfigType } from '../../types/runtime';
-import { PageTranslationOptions } from '../ContentScript/PageTranslationContext';
+import { AppConfigType } from '../../../types/runtime';
+import { PageTranslationOptions } from '../PageTranslationContext';
 import { PageTranslator } from './PageTranslator';
 
 export class PageTranslatorManager {

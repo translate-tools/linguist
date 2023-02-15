@@ -1,6 +1,6 @@
 import { Event } from 'effector';
 
-import { PageTranslationOptions } from '../ContentScript/PageTranslationContext';
+import { PageTranslationOptions } from '../PageTranslationContext';
 import { PageTranslatorManager } from './PageTranslatorManager';
 
 export class PageTranslatorController {

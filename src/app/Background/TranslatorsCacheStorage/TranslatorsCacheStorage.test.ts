@@ -1,5 +1,5 @@
 import { clearAllMocks } from '../../../lib/tests';
-import { TranslatorsCacheStorage } from '.';
+import { TranslatorsCacheStorage } from './index';
 
 beforeEach(clearAllMocks);
 

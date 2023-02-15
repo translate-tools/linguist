@@ -1,4 +1,4 @@
-import { TranslatorsCacheStorage } from '../../modules/Background/TranslatorsCacheStorage';
+import { TranslatorsCacheStorage } from '../../app/Background/TranslatorsCacheStorage';
 import { buildBackendRequest } from '../utils/requestBuilder';
 
 export const [clearCacheFactory, clearCache] = buildBackendRequest('clearCache', {

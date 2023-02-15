@@ -1,17 +1,17 @@
-import { defaultConfig } from '../../config';
+import { defaultConfig } from '../config';
 
-import { AppConfigType } from '../../types/runtime';
-import { isBackgroundContext } from '../../lib/browser';
-import { AppThemeControl } from '../../lib/browser/AppThemeControl';
-import { toggleTranslateItemInContextMenu } from '../../lib/browser/toggleTranslateItemInContextMenu';
-import { migrateAll } from '../../migrations/migrationsList';
-import { clearCache } from '../../requests/backend/clearCache';
+import { AppConfigType } from '../types/runtime';
+import { isBackgroundContext } from '../lib/browser';
+import { AppThemeControl } from '../lib/browser/AppThemeControl';
+import { toggleTranslateItemInContextMenu } from '../lib/browser/toggleTranslateItemInContextMenu';
+import { migrateAll } from '../migrations/migrationsList';
+import { clearCache } from '../requests/backend/clearCache';
 
-import { TextTranslatorStorage } from '../../layouts/TextTranslator/TextTranslator.utils/TextTranslatorStorage';
+import { TextTranslatorStorage } from '../layouts/TextTranslator/TextTranslator.utils/TextTranslatorStorage';
 
-import { ConfigStorage, ObservableAsyncStorage } from '../ConfigStorage/ConfigStorage';
-import { Background, translatorModules } from '../Background';
-import { sendConfigUpdateEvent } from '../ContentScript';
+import { ConfigStorage, ObservableAsyncStorage } from './ConfigStorage/ConfigStorage';
+import { Background, translatorModules } from './Background';
+import { sendConfigUpdateEvent } from './ContentScript';
 import { requestHandlers } from './messages';
 
 /**

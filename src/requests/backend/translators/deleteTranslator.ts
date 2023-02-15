@@ -1,5 +1,5 @@
-import { TranslatorsCacheStorage } from '../../../modules/Background/TranslatorsCacheStorage';
-import { getFormattedCustomTranslatorId } from '../../../modules/Background';
+import { TranslatorsCacheStorage } from '../../../app/Background/TranslatorsCacheStorage';
+import { getFormattedCustomTranslatorId } from '../../../app/Background';
 import { buildBackendRequest } from '../../utils/requestBuilder';
 import { type } from '../../../lib/types';
 

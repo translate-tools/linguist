@@ -1,8 +1,8 @@
 import { TypeOf } from 'io-ts';
 
-import { PageTranslateStateSignature } from '../../../requests/contentscript/pageTranslation/getPageTranslateState';
-import { addRequestHandler, sendBackgroundRequest } from '../../../requests/utils';
-import { tryDecode } from '../../../lib/types';
+import { PageTranslateStateSignature } from '../../../../requests/contentscript/pageTranslation/getPageTranslateState';
+import { addRequestHandler, sendBackgroundRequest } from '../../../../requests/utils';
+import { tryDecode } from '../../../../lib/types';
 
 type CountersObject = TypeOf<typeof PageTranslateStateSignature>;
 
