@@ -13,9 +13,9 @@ export const [enableTranslatePageFactory, enableTranslatePageReq] = buildTabRequ
 		}),
 
 		factoryHandler:
-			({ pageContext }) =>
+			({ pageTranslationContext }) =>
 				async ({ from, to }) => {
-					const domTranslator = pageContext.getDOMTranslator();
+					const domTranslator = pageTranslationContext.getDOMTranslator();
 					if (domTranslator !== null) {
 						domTranslator.translate({ from, to });
 					}

@@ -65,7 +65,7 @@ export class ContentScript {
 		factories.forEach((factory) => {
 			factory({
 				$config,
-				pageContext: pageTranslationContext,
+				pageTranslationContext,
 			});
 		});
 	}

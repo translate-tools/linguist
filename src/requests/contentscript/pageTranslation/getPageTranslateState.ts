@@ -23,9 +23,9 @@ export const [getPageTranslateStateFactory, getPageTranslateState] = buildTabReq
 		}),
 
 		factoryHandler:
-			({ pageContext }) =>
+			({ pageTranslationContext }) =>
 				async () => {
-					const domTranslator = pageContext.getDOMTranslator();
+					const domTranslator = pageTranslationContext.getDOMTranslator();
 					if (domTranslator === null) {
 						throw new Error('DOM translator are empty');
 					}

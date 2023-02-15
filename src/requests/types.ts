@@ -19,9 +19,8 @@ export type RequestHandlerFactoryProps = {
 export type RequestHandlerFactory = (props: RequestHandlerFactoryProps) => () => void;
 
 export type ClientRequestHandlerFactoryProps = {
-	// TODO: move config to page context
 	$config: Store<AppConfigType>;
-	pageContext: PageTranslationContext;
+	pageTranslationContext: PageTranslationContext;
 };
 
 export type ClientRequestHandlerFactory = (
