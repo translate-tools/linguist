@@ -1,6 +1,7 @@
-import browser from 'webextension-polyfill';
 import { colord } from 'colord';
-import { ThemeInfo } from './ThemeInfo';
+import browser from 'webextension-polyfill';
+
+import { ThemeChangeHandler, ThemeInfo } from './ThemeInfo';
 
 // https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme
 export type FirefoxTheme = {
@@ -19,10 +20,26 @@ const isLightText = (theme: FirefoxTheme) => {
 /**
  * Class to explore firefox theme
  */
-export class FirefoxThemeInfo extends ThemeInfo {
+export class FirefoxThemeInfo implements ThemeInfo {
+	private handlers;
+	constructor() {
+		this.handlers = new Set<ThemeChangeHandler>();
+	}
+
+	public subscribe(handler: ThemeChangeHandler) {
+		this.handlers.add(handler);
+	}
+
+	public unsubscribe(handler: ThemeChangeHandler) {
+		this.handlers.delete(handler);
+	}
+
 	private observer = ({ theme }: any) => {
 		const isLightTheme = this.isLightThemePredicate(theme);
-		this.eventManager.emit('updateTheme', [{ isLightTheme }]);
+
+		this.handlers.forEach((handler) => {
+			handler({ isLightTheme });
+		});
 	};
 
 	private isLightThemePredicate = (theme: any) => {

@@ -1,23 +1,15 @@
-import { EventManager } from '../../EventManager';
-
-export type ThemeChangeHandler = (info: { isLightTheme: boolean }) => void;
+export type ThemeData = { isLightTheme: boolean };
+export type ThemeChangeHandler = (info: ThemeData) => void;
 
 /**
- * Basic browser theme info class to get theme data and observe theme changes
+ * Browser theme info class to get theme data and observe theme changes
  */
-export abstract class ThemeInfo {
-	protected eventManager = new EventManager<{ updateTheme: ThemeChangeHandler }>();
+export interface ThemeInfo {
+	isLightTheme: () => Promise<boolean>;
 
-	public subscribe(handler: ThemeChangeHandler) {
-		this.eventManager.subscribe('updateTheme', handler);
-	}
+	startObserve: () => void;
+	stopObserve: () => void;
 
-	public unsubscribe(handler: ThemeChangeHandler) {
-		this.eventManager.unsubscribe('updateTheme', handler);
-	}
-
-	public abstract isLightTheme(): Promise<boolean>;
-
-	public abstract startObserve(): void;
-	public abstract stopObserve(): void;
+	subscribe: (handler: ThemeChangeHandler) => void;
+	unsubscribe: (handler: ThemeChangeHandler) => void;
 }
