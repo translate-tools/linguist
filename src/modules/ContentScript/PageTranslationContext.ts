@@ -15,13 +15,13 @@ import { SelectTranslatorController } from '../SelectTranslator/SelectTranslator
 import { PageTranslatorManager } from '../PageTranslator/PageTranslatorManager';
 import { PageTranslatorController } from '../PageTranslator/PageTranslatorController';
 
-export type PageData = {
-	language: string | null;
-};
-
 export type PageTranslationOptions = {
 	from: string;
 	to: string;
+};
+
+export type PageData = {
+	language: string | null;
 };
 
 type TranslatorsState = {
@@ -37,16 +37,22 @@ export class PageTranslationContext {
 	private $config: Store<AppConfigType>;
 
 	/**
+	 * Collected data about page
+	 */
+	private $pageData: Store<PageData>;
+
+	/**
 	 * The translators state source of truth
 	 */
 	private $translatorsState: Store<TranslatorsState>;
-	private $pageData: Store<PageData>;
 
 	constructor($config: Store<AppConfigType>) {
 		this.$config = $config;
+
 		this.$pageData = createStore<PageData>({
 			language: null,
 		});
+
 		this.$translatorsState = createStore<TranslatorsState>(
 			{
 				pageTranslation: null,
@@ -100,12 +106,10 @@ export class PageTranslationContext {
 		selectTranslator: null,
 	};
 
-	private pageTranslator: PageTranslatorManager | null = null;
 	public getDOMTranslator() {
 		return this.controllers.pageTranslator;
 	}
 
-	private selectTranslator: SelectTranslatorManager | null = null;
 	public getTextTranslator() {
 		return this.controllers.selectTranslator;
 	}
@@ -127,11 +131,13 @@ export class PageTranslationContext {
 			}),
 		);
 
-		this.selectTranslator = new SelectTranslatorManager($selectTranslatorState);
-		this.selectTranslator.start();
+		const selectTranslatorManager = new SelectTranslatorManager(
+			$selectTranslatorState,
+		);
+		selectTranslatorManager.start();
 
 		this.controllers.selectTranslator = new SelectTranslatorController(
-			this.selectTranslator,
+			selectTranslatorManager,
 		);
 
 		// Init page translator
@@ -140,11 +146,11 @@ export class PageTranslationContext {
 			config: config.pageTranslator,
 		}));
 
-		this.pageTranslator = new PageTranslatorManager($pageTranslatorState);
-		this.pageTranslator.start();
+		const pageTranslatorManager = new PageTranslatorManager($pageTranslatorState);
+		pageTranslatorManager.start();
 
 		this.controllers.pageTranslator = new PageTranslatorController(
-			this.pageTranslator,
+			pageTranslatorManager,
 			this.events.updatePageTranslationState,
 		);
 
