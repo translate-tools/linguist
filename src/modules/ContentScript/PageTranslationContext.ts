@@ -1,12 +1,4 @@
-import {
-	combine,
-	createEvent,
-	createStore,
-	Store,
-	sample,
-	createEffect,
-	Event,
-} from 'effector';
+import { combine, createEvent, createStore, Store, sample, createEffect } from 'effector';
 
 import { AppConfigType } from '../../types/runtime';
 import { getPageLanguage } from '../../lib/browser';
@@ -18,7 +10,10 @@ import { getLanguagePreferences } from '../../requests/backend/autoTranslation/l
 import { isRequireTranslateBySitePreferences } from '../../layouts/PageTranslator/PageTranslator.utils/utils';
 
 import { SelectTranslatorManager } from '../SelectTranslator/SelectTranslatorManager';
+import { SelectTranslatorController } from '../SelectTranslator/SelectTranslatorController';
+
 import { PageTranslatorManager } from '../PageTranslator/PageTranslatorManager';
+import { PageTranslatorController } from '../PageTranslator/PageTranslatorController';
 
 export type PageData = {
 	language: string | null;
@@ -33,50 +28,6 @@ type TranslatorsState = {
 	pageTranslation: PageTranslationOptions | null;
 	textTranslation: boolean;
 };
-
-class PageTranslatorController {
-	private manager: PageTranslatorManager;
-	private updateTranslationState: Event<PageTranslationOptions | null>;
-	constructor(
-		manager: PageTranslatorManager,
-		updateTranslationState: Event<PageTranslationOptions | null>,
-	) {
-		this.manager = manager;
-		this.updateTranslationState = updateTranslationState;
-	}
-
-	public translate(options: PageTranslationOptions) {
-		this.updateTranslationState(options);
-	}
-
-	public stopTranslate() {
-		this.updateTranslationState(null);
-	}
-
-	public getStatus() {
-		const domTranslator = this.manager.getDomTranslator();
-		return {
-			isTranslated: domTranslator.isRun(),
-			counters: domTranslator.getStatus(),
-			translateDirection: domTranslator.getTranslateDirection(),
-		};
-	}
-}
-
-class SelectTranslatorController {
-	private manager: SelectTranslatorManager;
-	constructor(manager: SelectTranslatorManager) {
-		this.manager = manager;
-	}
-
-	public translateSelectedText() {
-		const selectTranslator = this.manager.getSelectTranslator();
-		if (selectTranslator === null) return;
-		if (selectTranslator.isRun()) {
-			selectTranslator.translateSelectedText();
-		}
-	}
-}
 
 export class PageTranslationContext {
 	private readonly events = {
