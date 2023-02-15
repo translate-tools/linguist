@@ -8,7 +8,7 @@ import { AppConfigType } from '../../../types/runtime';
 import { RecordValues } from '../../../types/utils';
 
 import { TranslatorsCacheStorage } from '../TranslatorsCacheStorage';
-import { TranslatorsMap } from '../index';
+import { TranslatorsMap } from '..';
 
 export type Config = Pick<AppConfigType, 'translatorModule' | 'scheduler' | 'cache'>;
 

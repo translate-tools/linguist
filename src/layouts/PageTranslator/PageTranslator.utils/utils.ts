@@ -56,14 +56,14 @@ export const isRequireTranslateBySitePreferences = (
 	const result = getTranslatePreferencesForSite(lang, sitePreferences);
 
 	switch (result) {
-	case sitePreferenceOptions.NEVER:
-	case sitePreferenceOptions.NEVER_FOR_THIS_LANGUAGE:
-		return false;
-	case sitePreferenceOptions.ALWAYS:
-	case sitePreferenceOptions.ALWAYS_FOR_THIS_LANGUAGE:
-		return true;
-	default:
-		return null;
+		case sitePreferenceOptions.NEVER:
+		case sitePreferenceOptions.NEVER_FOR_THIS_LANGUAGE:
+			return false;
+		case sitePreferenceOptions.ALWAYS:
+		case sitePreferenceOptions.ALWAYS_FOR_THIS_LANGUAGE:
+			return true;
+		default:
+			return null;
 	}
 };
 
