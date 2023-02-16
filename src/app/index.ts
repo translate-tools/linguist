@@ -10,9 +10,11 @@ import { clearCache } from '../requests/backend/clearCache';
 import { TextTranslatorStorage } from '../layouts/TextTranslator/TextTranslator.utils/TextTranslatorStorage';
 
 import { ConfigStorage, ObservableAsyncStorage } from './ConfigStorage/ConfigStorage';
+
 import { Background, translatorModules } from './Background';
+import { requestHandlers } from './Background/requestHandlers';
+
 import { sendConfigUpdateEvent } from './ContentScript';
-import { requestHandlers } from './messages';
 
 /**
  * Manage global states and application context
