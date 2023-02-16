@@ -1,8 +1,8 @@
 // Storages
-import { ConfigStorageMigration } from '../modules/ConfigStorage/ConfigStorage.migrations';
+import { ConfigStorageMigration } from '../app/ConfigStorage/ConfigStorage.migrations';
 import { PopupWindowStorageMigration } from '../pages/popup/layout/PopupWindow.utils/PopupWindowStorage.migrations';
 import { TextTranslatorStorageMigration } from '../layouts/TextTranslator/TextTranslator.utils/TextTranslatorStorage.migrations';
-import { TranslatorsCacheStorageMigration } from '../modules/Background/TranslatorsCacheStorage/TranslatorsCacheStorage.migrations';
+import { TranslatorsCacheStorageMigration } from '../app/Background/TranslatorsCacheStorage/TranslatorsCacheStorage.migrations';
 import { AutoTranslationMigration } from '../requests/backend/autoTranslation/autoTranslation.migrations';
 
 import {

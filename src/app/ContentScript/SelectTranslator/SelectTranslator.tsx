@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { translate } from '../../requests/backend/translate';
-import { SelectTranslator as SelectTranslatorPopup } from '../../layouts/SelectTranslator/SelectTranslator';
-import { ShadowDOMContainerManager } from '../../lib/ShadowDOMContainerManager';
+import { translate } from '../../../requests/backend/translate';
+import { SelectTranslator as SelectTranslatorPopup } from '../../../layouts/SelectTranslator/SelectTranslator';
+import { ShadowDOMContainerManager } from '../../../lib/ShadowDOMContainerManager';
 
 export interface Options {
 	/**

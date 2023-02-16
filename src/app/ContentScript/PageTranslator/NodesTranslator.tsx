@@ -1,4 +1,4 @@
-import { XMutationObserver } from '../lib/XMutationObserver';
+import { XMutationObserver } from '../../../lib/XMutationObserver';
 
 interface NodeData {
 	/**

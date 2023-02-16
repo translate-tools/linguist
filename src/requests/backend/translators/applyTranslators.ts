@@ -4,7 +4,7 @@ import {
 	DEFAULT_TRANSLATOR,
 	getCustomTranslatorsMapWithFormattedKeys,
 	translatorModules,
-} from '../../../modules/Background';
+} from '../../../app/Background';
 import { buildBackendRequest } from '../../utils/requestBuilder';
 
 import { getTranslators } from './data';

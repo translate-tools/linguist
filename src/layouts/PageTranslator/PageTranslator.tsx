@@ -9,7 +9,7 @@ import { getLanguageNameByCode, getMessage } from '../../lib/language';
 import { MutableValue } from '../../types/utils';
 
 import { TabData } from '../../pages/popup/layout/PopupWindow';
-import { PageTranslateState } from '../../modules/PageTranslator/PageTranslator';
+import { PageTranslateState } from '../../app/ContentScript/PageTranslator/PageTranslator';
 
 import './PageTranslator.css';
 import { Spoiler } from '../../components/Spoiler/Spoiler.bundle/desktop';

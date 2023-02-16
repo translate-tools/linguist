@@ -3,8 +3,8 @@ import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { getCurrentTab, getCurrentTabId } from '../../lib/browser/tabs';
 import { useStateWithProxy } from '../../lib/hooks/useStateWithProxy';
 
-import { PageTranslateState } from '../../modules/PageTranslator/PageTranslator';
-import { translateStateUpdateHandler } from '../../modules/PageTranslator/requests';
+import { PageTranslateState } from '../../app/ContentScript/PageTranslator/PageTranslator';
+import { translateStateUpdateHandler } from '../../app/ContentScript/PageTranslator/requests';
 
 // Requests
 import { addLanguagePreferences } from '../../requests/backend/autoTranslation/languagePreferences/addLanguagePreferences';

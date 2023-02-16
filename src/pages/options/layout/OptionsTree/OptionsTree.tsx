@@ -98,112 +98,112 @@ export const OptionsTree: FC<OptionsTreeProps> = ({
 	const renderOption = useCallback(
 		({ path, optionContent: option }: OptionItem, value: any, error?: string) => {
 			switch (option.type) {
-			case 'Checkbox': {
-				const reverse = option.reverse ?? false;
-				const checked = value === undefined ? undefined : reverse != !!value;
-				return (
-					<Checkbox
-						checked={checked}
-						setChecked={(checked) =>
-							setOptionValueProxy(path, reverse != checked)
-						}
-						label={option.text}
-					/>
-				);
-			}
-			case 'CheckboxGroup': {
-				if (!Array.isArray(value)) {
-					throw new TypeError('value is not array');
+				case 'Checkbox': {
+					const reverse = option.reverse ?? false;
+					const checked = value === undefined ? undefined : reverse != !!value;
+					return (
+						<Checkbox
+							checked={checked}
+							setChecked={(checked) =>
+								setOptionValueProxy(path, reverse != checked)
+							}
+							label={option.text}
+						/>
+					);
 				}
+				case 'CheckboxGroup': {
+					if (!Array.isArray(value)) {
+						throw new TypeError('value is not array');
+					}
 
-				return (
-					<div
-						className={cnOptionsPage('IndentMixin', {
-							horizontal: true,
-						})}
-					>
-						{option.options.map((checkbox, index) => {
-							const optionName = option.valueMap[index];
-							const valueIndex = value.indexOf(optionName);
-							const isExistValue = valueIndex !== -1;
-							const checked =
+					return (
+						<div
+							className={cnOptionsPage('IndentMixin', {
+								horizontal: true,
+							})}
+						>
+							{option.options.map((checkbox, index) => {
+								const optionName = option.valueMap[index];
+								const valueIndex = value.indexOf(optionName);
+								const isExistValue = valueIndex !== -1;
+								const checked =
 									(checkbox.reverse ?? false) !== isExistValue;
-							return (
-								<Checkbox
-									key={index}
-									checked={checked}
-									setChecked={(checked) =>
-										setOptionValueProxy(
-											path,
-											value
-												.filter((val) => val !== optionName)
-												.concat(
-													(checkbox.reverse ?? false) !==
+								return (
+									<Checkbox
+										key={index}
+										checked={checked}
+										setChecked={(checked) =>
+											setOptionValueProxy(
+												path,
+												value
+													.filter((val) => val !== optionName)
+													.concat(
+														(checkbox.reverse ?? false) !==
 															checked
-														? [optionName]
-														: [],
-												),
-										)
-									}
-									label={checkbox.text}
-								/>
-							);
-						})}
-					</div>
-				);
-			}
-			case 'Button':
-				return (
-					<Button
-						view={option.view ?? 'default'}
-						onPress={option.action}
-						disabled={option.disabled}
-					>
-						{option.text}
-					</Button>
-				);
-			case 'InputMultilineFromArray':
-				return (
-					<Textarea
-						autoResize
-						state={error !== undefined ? 'error' : undefined}
-						value={Array.isArray(value) ? value.join('\n') : undefined}
-						spellCheck={false}
-						onChange={(evt) => {
-							const parsedArray = evt.target.value.split('\n');
-							setOptionValueProxy(
-								path,
-								parsedArray.length === 1 && parsedArray[0] === ''
-									? []
-									: parsedArray,
-							);
-						}}
-					/>
-				);
-			case 'InputNumber':
-				return (
-					<Textinput
-						state={error !== undefined ? 'error' : undefined}
-						value={value}
-						spellCheck={false}
-						onChange={(evt) => {
-							const value = evt.target.value;
-							const parsedNumber = +value;
-							setOptionValueProxy(
-								path,
-								isNaN(parsedNumber) ? value : parsedNumber,
-							);
-						}}
-					/>
-				);
-			case 'SelectList':
-				return (
-					<Select
-						options={option.options}
-						value={value}
-						setValue={(newValue) => setOptionValueProxy(path, newValue)}
-					/>
-				);
+															? [optionName]
+															: [],
+													),
+											)
+										}
+										label={checkbox.text}
+									/>
+								);
+							})}
+						</div>
+					);
+				}
+				case 'Button':
+					return (
+						<Button
+							view={option.view ?? 'default'}
+							onPress={option.action}
+							disabled={option.disabled}
+						>
+							{option.text}
+						</Button>
+					);
+				case 'InputMultilineFromArray':
+					return (
+						<Textarea
+							autoResize
+							state={error !== undefined ? 'error' : undefined}
+							value={Array.isArray(value) ? value.join('\n') : undefined}
+							spellCheck={false}
+							onChange={(evt) => {
+								const parsedArray = evt.target.value.split('\n');
+								setOptionValueProxy(
+									path,
+									parsedArray.length === 1 && parsedArray[0] === ''
+										? []
+										: parsedArray,
+								);
+							}}
+						/>
+					);
+				case 'InputNumber':
+					return (
+						<Textinput
+							state={error !== undefined ? 'error' : undefined}
+							value={value}
+							spellCheck={false}
+							onChange={(evt) => {
+								const value = evt.target.value;
+								const parsedNumber = +value;
+								setOptionValueProxy(
+									path,
+									isNaN(parsedNumber) ? value : parsedNumber,
+								);
+							}}
+						/>
+					);
+				case 'SelectList':
+					return (
+						<Select
+							options={option.options}
+							value={value}
+							setValue={(newValue) => setOptionValueProxy(path, newValue)}
+						/>
+					);
 			}
 		},
 		[setOptionValueProxy],

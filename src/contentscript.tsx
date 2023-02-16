@@ -1,3 +1,3 @@
-import { ContentScript } from './modules/ContentScript';
+import { ContentScript } from './app/ContentScript';
 
 ContentScript.main();

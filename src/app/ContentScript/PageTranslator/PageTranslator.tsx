@@ -1,11 +1,11 @@
 import React from 'react';
 
-import { ShadowDOMContainerManager } from '../../lib/ShadowDOMContainerManager';
-import { OriginalTextPopup } from '../../layouts/OriginalTextPopup/OriginalTextPopup';
+import { ShadowDOMContainerManager } from '../../../lib/ShadowDOMContainerManager';
+import { OriginalTextPopup } from '../../../layouts/OriginalTextPopup/OriginalTextPopup';
 
-import { NodesTranslator, Config as NodesTranslatorConfig } from '../NodesTranslator';
+import { NodesTranslator, Config as NodesTranslatorConfig } from './NodesTranslator';
 
-import { translate } from '../../requests/backend/translate';
+import { translate } from '../../../requests/backend/translate';
 import { translateStateUpdate } from './requests';
 
 export type PageTranslateState = {

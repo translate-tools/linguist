@@ -14,7 +14,7 @@ import { AppConfigType } from '../../../types/runtime';
 
 import { getMessage } from '../../../lib/language';
 import { openFileDialog, readAsText, saveFile } from '../../../lib/files';
-import { getFormattedCustomTranslatorId } from '../../../modules/Background';
+import { getFormattedCustomTranslatorId } from '../../../app/Background';
 
 // Requests
 import { clearCache as clearCacheReq } from '../../../requests/backend/clearCache';
