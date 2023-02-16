@@ -5,7 +5,7 @@ import { translateFactory } from '../../requests/backend/translate';
 import { suggestLanguageFactory } from '../../requests/backend/suggestLanguage';
 import { getTranslatorFeaturesFactory } from '../../requests/backend/getTranslatorFeatures';
 import { getUserLanguagePreferencesFactory } from '../../requests/backend/getUserLanguagePreferences';
-import { getTranslatorModulesFactory } from '../../requests/backend/getTranslatorModules';
+import { getAvailableTranslatorsFactory } from '../../requests/backend/translators/getAvailableTranslators';
 import { getConfigFactory } from '../../requests/backend/getConfig';
 import { setConfigFactory } from '../../requests/backend/setConfig';
 import { resetConfigFactory } from '../../requests/backend/resetConfig';
@@ -39,7 +39,7 @@ export const requestHandlers = [
 	suggestLanguageFactory,
 	getTranslatorFeaturesFactory,
 	getUserLanguagePreferencesFactory,
-	getTranslatorModulesFactory,
+	getAvailableTranslatorsFactory,
 	clearCacheFactory,
 	getTTSFactory,
 

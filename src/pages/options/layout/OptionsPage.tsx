@@ -14,17 +14,15 @@ import { AppConfigType } from '../../../types/runtime';
 
 import { getMessage } from '../../../lib/language';
 import { openFileDialog, readAsText, saveFile } from '../../../lib/files';
-import { getFormattedCustomTranslatorId } from '../../../app/Background';
 
 // Requests
 import { clearCache as clearCacheReq } from '../../../requests/backend/clearCache';
 import { getConfig } from '../../../requests/backend/getConfig';
-import { getTranslatorModules } from '../../../requests/backend/getTranslatorModules';
+import { getAvailableTranslators } from '../../../requests/backend/translators/getAvailableTranslators';
 import { ping } from '../../../requests/backend/ping';
 import { resetConfig as resetConfigReq } from '../../../requests/backend/resetConfig';
 import { setConfig as setConfigReq } from '../../../requests/backend/setConfig';
 import { updateConfig as updateConfigReq } from '../../../requests/backend/updateConfig';
-import { getTranslators } from '../../../requests/backend/translators/getTranslators';
 
 import { Button } from '../../../components/Button/Button.bundle/universal';
 import { LayoutFlow } from '../../../components/LayoutFlow/LayoutFlow';
@@ -74,13 +72,7 @@ export const OptionsPage: FC<OptionsPageProps> = ({ messageHideDelay }) => {
 	const updateConfig = useCallback(() => {
 		(async () => {
 			const config = await getConfig();
-			const translatorModules = await getTranslatorModules();
-
-			// Add custom translators
-			const customTranslatorModules = await getTranslators();
-			customTranslatorModules.forEach(({ key, data }) => {
-				translatorModules[getFormattedCustomTranslatorId(key)] = data.name;
-			});
+			const translatorModules = await getAvailableTranslators();
 
 			setConfig(config);
 			setTranslatorModules(translatorModules);

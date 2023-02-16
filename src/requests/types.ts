@@ -12,8 +12,8 @@ import { PageTranslationContext } from '../app/ContentScript/PageTranslationCont
 
 export type RequestHandlerFactoryProps = {
 	config: ObservableAsyncStorage<AppConfigType>;
-	bg: Background;
-	translatorModules: Record<string, TranslatorClass>;
+	backgroundContext: Background;
+	translators: Record<string, TranslatorClass>;
 };
 
 export type RequestHandlerFactory = (props: RequestHandlerFactoryProps) => () => void;

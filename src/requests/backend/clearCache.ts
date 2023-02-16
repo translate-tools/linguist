@@ -3,9 +3,9 @@ import { buildBackendRequest } from '../utils/requestBuilder';
 
 export const [clearCacheFactory, clearCache] = buildBackendRequest('clearCache', {
 	factoryHandler:
-		({ bg }) =>
+		({ backgroundContext }) =>
 			async () => {
-				const translateManager = await bg.getTranslateManager();
+				const translateManager = await backgroundContext.getTranslateManager();
 
 				// Clear for each module
 				const translators = translateManager.getTranslators();

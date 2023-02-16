@@ -33,11 +33,12 @@ export const getCustomTranslatorsClasses = () =>
 export const [applyTranslatorsFactory, applyTranslators] = buildBackendRequest(
 	'applyTranslators',
 	{
-		factoryHandler: ({ bg, config }) => {
+		factoryHandler: ({ backgroundContext, config }) => {
 			const update = async () =>
 				getCustomTranslatorsClasses()
 					.then(async (customTranslators) => {
-						const translateManager = await bg.getTranslateManager();
+						const translateManager =
+							await backgroundContext.getTranslateManager();
 
 						const translatorClasses = {
 							...translatorModules,

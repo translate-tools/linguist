@@ -16,7 +16,7 @@ export const [updateConfigFactory, updateConfig] = buildBackendRequest('updateCo
 	 * Partial update config by paths
 	 */
 	factoryHandler:
-		({ config, bg }) =>
+		({ config, backgroundContext }) =>
 			async (configMap) => {
 			// Get actual config
 				const actualConfig = await config.get();
@@ -43,7 +43,7 @@ export const [updateConfigFactory, updateConfig] = buildBackendRequest('updateCo
 				}
 
 				// Validate translator
-				const translateManager = await bg.getTranslateManager();
+				const translateManager = await backgroundContext.getTranslateManager();
 				if ('translatorModule' in newConfigSegments) {
 					const translators = translateManager.getTranslators();
 					const translatorId = newConfigSegments.translatorModule;
