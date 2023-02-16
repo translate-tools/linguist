@@ -34,38 +34,38 @@ export const [applyTranslatorsFactory, applyTranslators] = buildBackendRequest(
 	'applyTranslators',
 	{
 		factoryHandler: ({ backgroundContext, config }) => {
-			const update = async () =>
-				getCustomTranslatorsClasses()
-					.then(async (customTranslators) => {
-						const translateManager =
-							await backgroundContext.getTranslateManager();
+			const update = async () => {
+				const customTranslators = await getCustomTranslatorsClasses().then(
+					getCustomTranslatorsMapWithFormattedKeys,
+				);
 
-						const translatorClasses = {
-							...translatorModules,
-							...getCustomTranslatorsMapWithFormattedKeys(
-								customTranslators,
-							),
-						};
-						translateManager.setTranslators(translatorClasses);
+				const translatorClasses = {
+					...translatorModules,
+					...customTranslators,
+				};
 
-						return customTranslators;
-					})
-					.then(async (translators) => {
-						const latestConfig = await config.get();
-						const { translatorModule: translatorName } = latestConfig;
+				const latestConfig = await config.get();
+				const { translatorModule: translatorName } = latestConfig;
 
-						const isCustomTranslator = translatorName[0] === '#';
-						if (!isCustomTranslator) return;
+				const isCustomTranslator = translatorName[0] === '#';
+				if (isCustomTranslator) {
+					const customTranslatorName = translatorName.slice(1);
+					const isCurrentTranslatorAvailable =
+						customTranslatorName in translatorClasses;
 
-						// Reset translator to default if custom translator is not available
-						const customTranslatorName = translatorName.slice(1);
-						if (!(customTranslatorName in translators)) {
-							await config.set({
-								...latestConfig,
-								translatorModule: DEFAULT_TRANSLATOR,
-							});
-						}
-					});
+					// Reset translator to default
+					if (!isCurrentTranslatorAvailable) {
+						await config.set({
+							...latestConfig,
+							translatorModule: DEFAULT_TRANSLATOR,
+						});
+					}
+				}
+
+				const translateManager = await backgroundContext.getTranslateManager();
+
+				translateManager.setTranslators(translatorClasses);
+			};
 
 			update();
 
