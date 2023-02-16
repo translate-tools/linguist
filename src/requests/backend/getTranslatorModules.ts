@@ -7,12 +7,12 @@ export const [getTranslatorModulesFactory, getTranslatorModules] = buildBackendR
 	{
 		responseValidator: type.record(type.string, type.string),
 		factoryHandler:
-			({ translatorModules }) =>
+			({ translators }) =>
 				async () => {
 					const modules: Record<string, string> = {};
 
-					for (const key in translatorModules) {
-						modules[key] = translatorModules[key].translatorName;
+					for (const key in translators) {
+						modules[key] = translators[key].translatorName;
 					}
 
 					return modules;

@@ -11,9 +11,9 @@ export const [getTranslatorFeaturesFactory, getTranslatorFeatures] = buildBacken
 		}),
 
 		factoryHandler:
-			({ bg }) =>
+			({ backgroundContext }) =>
 				async () => {
-					const translateManager = await bg.getTranslateManager();
+					const translateManager = await backgroundContext.getTranslateManager();
 					return translateManager.getTranslatorFeatures();
 				},
 	},

@@ -62,9 +62,9 @@ export class App {
 			requestHandlers.forEach((factory) => {
 				factory({
 					config: this.config,
-					bg: this.background,
+					backgroundContext: this.background,
 					// TODO: review usages, maybe add custom translators
-					translatorModules,
+					translators: translatorModules,
 				});
 			});
 		}
