@@ -9,10 +9,13 @@ import { Modal } from '../../../../../components/Modal/Modal.bundle/desktop';
 import { ModalLayout } from '../../../../../components/ModalLayout/ModalLayout';
 
 import { getMessage } from '../../../../../lib/language';
+
+import { CustomTranslator } from '../../../../../requests/backend/translators';
 import { addTranslator } from '../../../../../requests/backend/translators/addTranslator';
 import { deleteTranslator } from '../../../../../requests/backend/translators/deleteTranslator';
 import { getTranslators } from '../../../../../requests/backend/translators/getTranslators';
 import { updateTranslator } from '../../../../../requests/backend/translators/updateTranslator';
+
 import { OptionsModalsContext } from '../../OptionsPage';
 import {
 	EditedCustomTranslator,
@@ -20,12 +23,6 @@ import {
 } from '../TranslatorEditor/TranslatorEditor';
 
 import './TranslatorsManager.css';
-
-export type CustomTranslator = {
-	id: number;
-	name: string;
-	code: string;
-};
 
 const cnTranslatorsManager = cn('TranslatorsManager');
 
@@ -53,9 +50,7 @@ export const TranslatorsManager: FC<{
 	const updateTranslatorsList = useCallback(async () => {
 		updateConfig();
 
-		await getTranslators().then((translators) => {
-			setTranslators(translators.map(({ key: id, data }) => ({ id, ...data })));
-		});
+		await getTranslators().then(setTranslators);
 	}, [updateConfig]);
 
 	const editTranslator = useCallback((translator: CustomTranslator) => {

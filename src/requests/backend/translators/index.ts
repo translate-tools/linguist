@@ -9,6 +9,12 @@ import {
 import { getTranslators } from './data';
 import { loadTranslator } from './utils';
 
+export type CustomTranslator = {
+	id: number;
+	name: string;
+	code: string;
+};
+
 /**
  * Return map with all available translators, where keys is translators id
  */
