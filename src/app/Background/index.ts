@@ -12,8 +12,9 @@ import {
 	createPromiseWithControls,
 	PromiseWithControls,
 } from '../../lib/utils/createPromiseWithControls';
+import { getTranslatorsClasses } from '../../requests/backend/translators';
+
 import { ObservableAsyncStorage } from '../ConfigStorage/ConfigStorage';
-import { getCustomTranslatorsClasses } from '../../requests/backend/translators/applyTranslators';
 import { TranslatorManager } from './TranslatorManager';
 
 export const translatorModules = {
@@ -31,23 +32,6 @@ export const getFormattedCustomTranslatorId = (id: number) => '#' + id;
  * Map where key is identifier of translator and value is translator constructor
  */
 export type TranslatorsMap = Record<string, TranslatorClass>;
-
-/**
- * Receive custom translators map and return new map with formatted keys
- */
-export const getCustomTranslatorsMapWithFormattedKeys = (
-	customTranslators: Record<number, TranslatorClass>,
-) => {
-	const translatorsMap: TranslatorsMap = {};
-	for (const key in customTranslators) {
-		const translatorId = getFormattedCustomTranslatorId(Number(key));
-		const translatorClass = customTranslators[key];
-
-		translatorsMap[translatorId] = translatorClass;
-	}
-
-	return translatorsMap;
-};
 
 /**
  * Background features manager
@@ -99,14 +83,7 @@ export class Background {
 		);
 
 		// Build translators list
-		const translators: TranslatorsMap = await getCustomTranslatorsClasses().then(
-			(customTranslators) => {
-				return {
-					...translatorModules,
-					...getCustomTranslatorsMapWithFormattedKeys(customTranslators),
-				};
-			},
-		);
+		const translators: TranslatorsMap = await getTranslatorsClasses();
 
 		$translateManagerConfig.watch((config) => {
 			if (this.translateManager === null) {

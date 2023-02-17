@@ -1,33 +1,7 @@
-import { TranslatorClass } from '@translate-tools/core/types/Translator';
-
 import { DEFAULT_TRANSLATOR } from '../../../config';
 import { buildBackendRequest } from '../../utils/requestBuilder';
-import {
-	getCustomTranslatorsMapWithFormattedKeys,
-	translatorModules,
-} from '../../../app/Background';
 
-import { getTranslators } from './data';
-import { loadTranslator } from './utils';
-
-export const getCustomTranslatorsClasses = () =>
-	getTranslators({ order: 'asc' }).then(async (translators) => {
-		const translatorsRecord: Record<number, TranslatorClass> = {};
-
-		// Validate and collect translators
-		for (const { key, data: translatorData } of translators) {
-			try {
-				translatorsRecord[key] = loadTranslator(translatorData.code);
-			} catch (error) {
-				console.error(
-					`Translator "${translatorData.name}" (id:${key}) is thrown exception`,
-					error,
-				);
-			}
-		}
-
-		return translatorsRecord;
-	});
+import { getTranslatorsClasses } from '.';
 
 // TODO: move logic to `TranslateSchedulerConfig`
 export const [applyTranslatorsFactory, applyTranslators] = buildBackendRequest(
@@ -35,14 +9,7 @@ export const [applyTranslatorsFactory, applyTranslators] = buildBackendRequest(
 	{
 		factoryHandler: ({ backgroundContext, config }) => {
 			const update = async () => {
-				const customTranslators = await getCustomTranslatorsClasses().then(
-					getCustomTranslatorsMapWithFormattedKeys,
-				);
-
-				const translatorClasses = {
-					...translatorModules,
-					...customTranslators,
-				};
+				const translatorsClasses = await getTranslatorsClasses();
 
 				const latestConfig = await config.get();
 				const { translatorModule: translatorName } = latestConfig;
@@ -51,7 +18,7 @@ export const [applyTranslatorsFactory, applyTranslators] = buildBackendRequest(
 				if (isCustomTranslator) {
 					const customTranslatorName = translatorName.slice(1);
 					const isCurrentTranslatorAvailable =
-						customTranslatorName in translatorClasses;
+						customTranslatorName in translatorsClasses;
 
 					// Reset translator to default
 					if (!isCurrentTranslatorAvailable) {
@@ -64,7 +31,7 @@ export const [applyTranslatorsFactory, applyTranslators] = buildBackendRequest(
 
 				const translateManager = await backgroundContext.getTranslateManager();
 
-				translateManager.setTranslators(translatorClasses);
+				translateManager.setTranslators(translatorsClasses);
 			};
 
 			update();
