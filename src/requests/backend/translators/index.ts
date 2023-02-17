@@ -2,7 +2,7 @@ import { TranslatorClass } from '@translate-tools/core/types/Translator';
 
 import {
 	getFormattedCustomTranslatorId,
-	translatorModules,
+	embeddedTranslators,
 	TranslatorsMap,
 } from '../../../app/Background';
 
@@ -13,7 +13,7 @@ import { loadTranslator } from './utils';
  * Return map with all available translators, where keys is translators id
  */
 export const getTranslatorsClasses = async (): Promise<TranslatorsMap> => {
-	const translatorsMap: Record<string, TranslatorClass> = { ...translatorModules };
+	const translatorsMap: Record<string, TranslatorClass> = { ...embeddedTranslators };
 
 	// Validate and collect custom translators
 	const customTranslators = await getTranslators({ order: 'asc' });

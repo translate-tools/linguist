@@ -17,7 +17,7 @@ import { getTranslatorsClasses } from '../../requests/backend/translators';
 import { ObservableAsyncStorage } from '../ConfigStorage/ConfigStorage';
 import { TranslatorManager } from './TranslatorManager';
 
-export const translatorModules = {
+export const embeddedTranslators = {
 	YandexTranslator,
 	GoogleTranslator,
 	BingTranslatorPublic,
