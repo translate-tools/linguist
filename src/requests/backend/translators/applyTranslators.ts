@@ -1,7 +1,7 @@
 import { DEFAULT_TRANSLATOR } from '../../../config';
 import { buildBackendRequest } from '../../utils/requestBuilder';
 
-import { getTranslatorsClasses } from '.';
+import { getTranslatorsClasses, isCustomTranslatorId } from '.';
 
 // TODO: move logic to `TranslateSchedulerConfig`
 export const [applyTranslatorsFactory, applyTranslators] = buildBackendRequest(
@@ -14,8 +14,9 @@ export const [applyTranslatorsFactory, applyTranslators] = buildBackendRequest(
 				const latestConfig = await config.get();
 				const { translatorModule: translatorName } = latestConfig;
 
-				const isCustomTranslator = translatorName[0] === '#';
+				const isCustomTranslator = isCustomTranslatorId(translatorName);
 				if (isCustomTranslator) {
+					// TODO: debug how it works. Probably we should not slice it
 					const customTranslatorName = translatorName.slice(1);
 					const isCurrentTranslatorAvailable =
 						customTranslatorName in translatorsClasses;

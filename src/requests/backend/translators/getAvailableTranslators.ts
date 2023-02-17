@@ -1,7 +1,5 @@
-import {
-	embeddedTranslators,
-	getFormattedCustomTranslatorId,
-} from '../../../app/Background';
+import { formatToCustomTranslatorId } from '.';
+import { embeddedTranslators } from '../../../app/Background';
 import { type } from '../../../lib/types';
 import { buildBackendRequest } from '../../utils/requestBuilder';
 
@@ -24,7 +22,7 @@ export const [getAvailableTranslatorsFactory, getAvailableTranslators] =
 			// Add custom translators
 			const customTranslators = await db.getTranslators({ order: 'asc' });
 			customTranslators.forEach(({ key, data }) => {
-				translatorsMap[getFormattedCustomTranslatorId(key)] = data.name;
+				translatorsMap[formatToCustomTranslatorId(key)] = data.name;
 			});
 
 			return translatorsMap;

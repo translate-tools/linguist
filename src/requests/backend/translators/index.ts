@@ -1,10 +1,6 @@
 import { TranslatorClass } from '@translate-tools/core/types/Translator';
 
-import {
-	getFormattedCustomTranslatorId,
-	embeddedTranslators,
-	TranslatorsMap,
-} from '../../../app/Background';
+import { embeddedTranslators, TranslatorsMap } from '../../../app/Background';
 
 import { getTranslators } from './data';
 import { loadTranslator } from './utils';
@@ -16,6 +12,16 @@ export type CustomTranslator = {
 };
 
 /**
+ * Format custom translator unique id as key to use with another translators
+ */
+export const formatToCustomTranslatorId = (id: number) => '#' + id;
+
+/**
+ * Detect custom translator id signature
+ */
+export const isCustomTranslatorId = (id: string) => id.startsWith('#');
+
+/**
  * Return map with all available translators, where keys is translators id
  */
 export const getTranslatorsClasses = async (): Promise<TranslatorsMap> => {
@@ -24,7 +30,7 @@ export const getTranslatorsClasses = async (): Promise<TranslatorsMap> => {
 	// Validate and collect custom translators
 	const customTranslators = await getTranslators({ order: 'asc' });
 	for (const { key, data: translatorData } of customTranslators) {
-		const translatorId = getFormattedCustomTranslatorId(key);
+		const translatorId = formatToCustomTranslatorId(key);
 		try {
 			translatorsMap[translatorId] = loadTranslator(translatorData.code);
 		} catch (error) {

@@ -10,9 +10,10 @@ import { LayoutFlow } from '../../../../../components/LayoutFlow/LayoutFlow';
 import { ModalLayout } from '../../../../../components/ModalLayout/ModalLayout';
 import { IModalProps, Modal } from '../../../../../components/Modal/Modal.bundle/desktop';
 
+import { CustomTranslator } from '../../../../../requests/backend/translators';
+
 import { getMessage } from '../../../../../lib/language';
 import { OptionsModalsContext } from '../../OptionsPage';
-import { CustomTranslator } from '../TranslatorsManager/TranslatorsManager';
 
 import './TranslatorEditor.css';
 
