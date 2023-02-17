@@ -1,4 +1,7 @@
-import { getFormattedCustomTranslatorId } from '../../../app/Background';
+import {
+	embeddedTranslators,
+	getFormattedCustomTranslatorId,
+} from '../../../app/Background';
 import { type } from '../../../lib/types';
 import { buildBackendRequest } from '../../utils/requestBuilder';
 
@@ -10,22 +13,20 @@ import * as db from './data';
 export const [getAvailableTranslatorsFactory, getAvailableTranslators] =
 	buildBackendRequest('getAvailableTranslators', {
 		responseValidator: type.record(type.string, type.string),
-		factoryHandler:
-			({ translators }) =>
-				async () => {
-					const translatorsMap: Record<string, string> = {};
+		factoryHandler: () => async () => {
+			const translatorsMap: Record<string, string> = {};
 
-					// Collect embedded translators
-					for (const key in translators) {
-						translatorsMap[key] = translators[key].translatorName;
-					}
+			// Collect embedded translators
+			for (const [key, translatorClass] of Object.entries(embeddedTranslators)) {
+				translatorsMap[key] = translatorClass.translatorName;
+			}
 
-					// Add custom translators
-					const customTranslators = await db.getTranslators({ order: 'asc' });
-					customTranslators.forEach(({ key, data }) => {
-						translatorsMap[getFormattedCustomTranslatorId(key)] = data.name;
-					});
+			// Add custom translators
+			const customTranslators = await db.getTranslators({ order: 'asc' });
+			customTranslators.forEach(({ key, data }) => {
+				translatorsMap[getFormattedCustomTranslatorId(key)] = data.name;
+			});
 
-					return translatorsMap;
-				},
+			return translatorsMap;
+		},
 	});

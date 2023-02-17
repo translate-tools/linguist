@@ -1,5 +1,4 @@
 import { Store } from 'effector';
-import { TranslatorClass } from '@translate-tools/core/types/Translator';
 
 // NOTE: probably should make factory builder which control update props and rebuild factories which require changed props
 
@@ -13,7 +12,6 @@ import { PageTranslationContext } from '../app/ContentScript/PageTranslationCont
 export type RequestHandlerFactoryProps = {
 	config: ObservableAsyncStorage<AppConfigType>;
 	backgroundContext: Background;
-	translators: Record<string, TranslatorClass>;
 };
 
 export type RequestHandlerFactory = (props: RequestHandlerFactoryProps) => () => void;
