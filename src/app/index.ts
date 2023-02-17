@@ -11,7 +11,7 @@ import { TextTranslatorStorage } from '../layouts/TextTranslator/TextTranslator.
 
 import { ConfigStorage, ObservableAsyncStorage } from './ConfigStorage/ConfigStorage';
 
-import { Background, translatorModules } from './Background';
+import { Background } from './Background';
 import { requestHandlers } from './Background/requestHandlers';
 
 import { sendConfigUpdateEvent } from './ContentScript';
@@ -63,8 +63,6 @@ export class App {
 				factory({
 					config: this.config,
 					backgroundContext: this.background,
-					// TODO: review usages, maybe add custom translators
-					translators: translatorModules,
 				});
 			});
 		}

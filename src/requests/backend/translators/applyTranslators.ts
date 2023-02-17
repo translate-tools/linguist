@@ -1,71 +1,38 @@
-import { TranslatorClass } from '@translate-tools/core/types/Translator';
-
-import {
-	DEFAULT_TRANSLATOR,
-	getCustomTranslatorsMapWithFormattedKeys,
-	translatorModules,
-} from '../../../app/Background';
+import { DEFAULT_TRANSLATOR } from '../../../config';
 import { buildBackendRequest } from '../../utils/requestBuilder';
 
-import { getTranslators } from './data';
-import { loadTranslator } from './utils';
-
-export const getCustomTranslatorsClasses = () =>
-	getTranslators({ order: 'asc' }).then(async (translators) => {
-		const translatorsRecord: Record<number, TranslatorClass> = {};
-
-		// Validate and collect translators
-		for (const { key, data: translatorData } of translators) {
-			try {
-				translatorsRecord[key] = loadTranslator(translatorData.code);
-			} catch (error) {
-				console.error(
-					`Translator "${translatorData.name}" (id:${key}) is thrown exception`,
-					error,
-				);
-			}
-		}
-
-		return translatorsRecord;
-	});
+import { getTranslatorsClasses } from '.';
 
 // TODO: move logic to `TranslateSchedulerConfig`
 export const [applyTranslatorsFactory, applyTranslators] = buildBackendRequest(
 	'applyTranslators',
 	{
 		factoryHandler: ({ backgroundContext, config }) => {
-			const update = async () =>
-				getCustomTranslatorsClasses()
-					.then(async (customTranslators) => {
-						const translateManager =
-							await backgroundContext.getTranslateManager();
+			const update = async () => {
+				const translatorsClasses = await getTranslatorsClasses();
 
-						const translatorClasses = {
-							...translatorModules,
-							...getCustomTranslatorsMapWithFormattedKeys(
-								customTranslators,
-							),
-						};
-						translateManager.setTranslators(translatorClasses);
+				const latestConfig = await config.get();
+				const { translatorModule: translatorName } = latestConfig;
 
-						return customTranslators;
-					})
-					.then(async (translators) => {
-						const latestConfig = await config.get();
-						const { translatorModule: translatorName } = latestConfig;
+				const isCustomTranslator = translatorName[0] === '#';
+				if (isCustomTranslator) {
+					const customTranslatorName = translatorName.slice(1);
+					const isCurrentTranslatorAvailable =
+						customTranslatorName in translatorsClasses;
 
-						const isCustomTranslator = translatorName[0] === '#';
-						if (!isCustomTranslator) return;
+					// Reset translator to default
+					if (!isCurrentTranslatorAvailable) {
+						await config.set({
+							...latestConfig,
+							translatorModule: DEFAULT_TRANSLATOR,
+						});
+					}
+				}
 
-						// Reset translator to default if custom translator is not available
-						const customTranslatorName = translatorName.slice(1);
-						if (!(customTranslatorName in translators)) {
-							await config.set({
-								...latestConfig,
-								translatorModule: DEFAULT_TRANSLATOR,
-							});
-						}
-					});
+				const translateManager = await backgroundContext.getTranslateManager();
+
+				translateManager.setTranslators(translatorsClasses);
+			};
 
 			update();
 
