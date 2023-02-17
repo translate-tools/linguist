@@ -22,8 +22,6 @@ export const translatorModules = {
 	BingTranslatorPublic,
 } as const;
 
-export const DEFAULT_TRANSLATOR = 'GoogleTranslator';
-
 /**
  * Format custom translator unique id as key to use with another translators
  */

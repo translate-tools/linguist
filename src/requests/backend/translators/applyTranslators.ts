@@ -1,11 +1,11 @@
 import { TranslatorClass } from '@translate-tools/core/types/Translator';
 
+import { DEFAULT_TRANSLATOR } from '../../../config';
+import { buildBackendRequest } from '../../utils/requestBuilder';
 import {
-	DEFAULT_TRANSLATOR,
 	getCustomTranslatorsMapWithFormattedKeys,
 	translatorModules,
 } from '../../../app/Background';
-import { buildBackendRequest } from '../../utils/requestBuilder';
 
 import { getTranslators } from './data';
 import { loadTranslator } from './utils';
