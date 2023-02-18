@@ -27,10 +27,10 @@ import { updateConfig as updateConfigReq } from '../../../requests/backend/updat
 import { Button } from '../../../components/primitives/Button/Button.bundle/universal';
 import { LayoutFlow } from '../../../components/layouts/LayoutFlow/LayoutFlow';
 import { Page } from '../../../components/layouts/Page/Page';
-import { PageMessages } from '../../../components/layouts/Page/Messages/PageMessages';
+import { ToastMessages } from '../../../components/primitives/ToastMessages/ToastMessages';
+import { useToastMessages } from '../../../components/primitives/ToastMessages/useToastMessages';
 
 import { generateTree } from './OptionsPage.utils/generateTree';
-import { useMessageBroker } from '../../../lib/hooks/useMessageBroker';
 import { isMobileBrowser } from '../../../lib/browser';
 import { OptionsGroup, OptionsTree } from './OptionsTree/OptionsTree';
 import { PageSection } from './PageSection/PageSection';
@@ -84,7 +84,7 @@ export const OptionsPage: FC<OptionsPageProps> = ({ messageHideDelay }) => {
 	// Messages broker
 	//
 
-	const { messages, addMessage, deleteMessage, haltMessages } = useMessageBroker({
+	const { messages, addMessage, deleteMessage, haltMessages } = useToastMessages({
 		hideDelay: messageHideDelay,
 	});
 
@@ -333,7 +333,7 @@ export const OptionsPage: FC<OptionsPageProps> = ({ messageHideDelay }) => {
 						/>
 					</PageSection>
 
-					<PageMessages
+					<ToastMessages
 						messages={messages}
 						haltMessages={haltMessages}
 						deleteMessage={deleteMessage}

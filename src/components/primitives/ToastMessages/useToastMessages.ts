@@ -17,7 +17,7 @@ interface Options {
 /**
  * Messages manager
  */
-export const useMessageBroker = ({ hideDelay = 3000 }: Options) => {
+export const useToastMessages = ({ hideDelay = 3000 }: Options) => {
 	const [messagePointers, setMessagePointers] = useState<symbol[]>([]);
 
 	// Map for keep order

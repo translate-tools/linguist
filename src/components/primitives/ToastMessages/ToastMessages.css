@@ -1,4 +1,4 @@
-.Page-MessagesContainer {
+.ToastMessages {
 	position: fixed;
 	left: 0;
 	top: 0;
@@ -11,11 +11,11 @@
 	overflow: hidden;
 }
 
-.Page-MessagesContainer > *:not(:first-child) {
+.ToastMessages > *:not(:first-child) {
 	margin-top: var(--typography-layout-indent-m-all);
 }
 
-.Page-Message {
+.ToastMessages-Message {
 	cursor: pointer;
 	pointer-events: auto;
 	width: max-content;
@@ -27,16 +27,16 @@
 	opacity: 0.9;
 }
 
-.Page-Message_type_info {
-	background: var(--page-message-type-info-fill-color);
-	color: var(--page-message-type-info-typo-color);
+.ToastMessages-Message_type_info {
+	background: var(--toast-messages-message-type-info-fill-color);
+	color: var(--toast-messages-message-type-info-typo-color);
 }
 
-.Page-Message_type_error {
-	background: var(--page-message-type-error-fill-color);
-	color: var(--page-message-type-error-typo-color);
+.ToastMessages-Message_type_error {
+	background: var(--toast-messages-message-type-error-fill-color);
+	color: var(--toast-messages-message-type-error-typo-color);
 }
 
-.Page-Message:hover {
+.ToastMessages-Message:hover {
 	opacity: 1;
 }

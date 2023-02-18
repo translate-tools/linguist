@@ -1,19 +1,18 @@
 import React, { FC } from 'react';
+import { cn } from '@bem-react/classname';
 
-import { PublicMessage } from '../../../../lib/hooks/useMessageBroker';
+import { PublicMessage } from './useToastMessages';
+import './ToastMessages.css';
 
-import { cnPage } from '../Page';
+const cnToastMessages = cn('ToastMessages');
 
-import './PageMessages.css';
-
-export interface IPageMessagesProps {
+export interface ToastMessagesProps {
 	messages: PublicMessage[];
 	haltMessages: (state: boolean) => void;
 	deleteMessage: (id: symbol) => void;
 }
 
-// TODO: rename to `ToastMessages` and move to controls
-export const PageMessages: FC<IPageMessagesProps> = ({
+export const ToastMessages: FC<ToastMessagesProps> = ({
 	messages,
 	haltMessages,
 	deleteMessage,
@@ -22,7 +21,7 @@ export const PageMessages: FC<IPageMessagesProps> = ({
 		<div>
 			{messages.length === 0 ? undefined : (
 				<div
-					className={cnPage('MessagesContainer')}
+					className={cnToastMessages()}
 					onMouseOver={() => haltMessages(true)}
 					onMouseLeave={() => haltMessages(false)}
 				>
@@ -30,7 +29,7 @@ export const PageMessages: FC<IPageMessagesProps> = ({
 						return (
 							<div
 								key={index}
-								className={cnPage('Message', { type })}
+								className={cnToastMessages('Message', { type })}
 								onClick={() => deleteMessage(id)}
 							>
 								{text}
