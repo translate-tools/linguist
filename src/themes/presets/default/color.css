@@ -119,6 +119,9 @@
 	--button-view-pseudo-fill-color-hovered: rgb(247, 247, 247);
 	--button-view-pseudo-typo-color-base: #000;
 	--button-view-pseudo-typo-color-disabled: rgb(128, 128, 128);
+	--button-view-link-outline-color: #d518da;
+	--button-view-link-typo-color-base: #04b;
+	--button-view-link-typo-color-disabled: rgb(128, 128, 128);
 	--checkbox-outline-color: #d518da;
 	--checkbox-box-fill-color-base: rgb(230, 230, 230);
 	--checkbox-box-fill-color-hover: rgb(217, 217, 217);
@@ -191,11 +194,10 @@
 	--textinput-view-default-typo-color-base: #000;
 	--textinput-view-default-typo-color-disabled: rgb(128, 128, 128);
 	--textinput-view-default-typo-color-error: rgb(224, 0, 0);
-	--page-message-type-info-fill-color: rgb(82, 139, 255);
-	--page-message-type-info-typo-color: #fff;
-	--page-message-type-error-fill-color: rgb(255, 153, 153);
-	--page-message-type-error-typo-color: #000;
-	--select-translator-fill-color: #fcfcfc;
+	--toast-messages-message-type-info-fill-color: rgb(82, 139, 255);
+	--toast-messages-message-type-info-typo-color: #fff;
+	--toast-messages-message-type-error-fill-color: rgb(255, 153, 153);
+	--toast-messages-message-type-error-typo-color: #000;
 	--options-page-section-active-border-color: #1f69ff;
 	--options-page-dialog-fill-color: #f5f5f5;
 	--popup-window-header-fill-color: #f1f1f1;

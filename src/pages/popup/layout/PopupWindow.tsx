@@ -18,14 +18,14 @@ import { getMessage } from '../../../lib/language';
 import { XResizeObserver } from '../../../lib/XResizeObserver';
 import { isMobileBrowser } from '../../../lib/browser';
 
-import { TabsMenu } from '../../../components/TabsMenu/TabsMenu.bundle/desktop';
-import { Icon } from '../../../components/Icon/Icon.bundle/desktop';
+import { TabsMenu } from '../../../components/primitives/TabsMenu/TabsMenu.bundle/desktop';
+import { Icon } from '../../../components/primitives/Icon/Icon.bundle/desktop';
 
-import { Loader } from '../../../components/Loader/Loader';
+import { Loader } from '../../../components/primitives/Loader/Loader';
 import { AppConfigType } from '../../../types/runtime';
 
 import LogoElement from '../../../res/logo-base.svg';
-import { Button } from '../../../components/Button/Button.bundle/desktop';
+import { Button } from '../../../components/primitives/Button/Button.bundle/desktop';
 
 import './PopupWindow.css';
 

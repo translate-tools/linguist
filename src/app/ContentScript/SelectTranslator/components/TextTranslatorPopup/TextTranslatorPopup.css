@@ -1,0 +1,137 @@
+.TextTranslatorPopup {
+	width: max-content;
+	max-width: 100%;
+	padding: var(--typography-layout-indent-l-all);
+	border-radius: var(--typography-layout-border-radius);
+	box-sizing: border-box;
+	font-family: var(--typography-font-family);
+	font-size: var(--typography-layout-size-s-font-size);
+	line-height: var(--typography-layout-size-m-line-height);
+	color: var(--color-typo-primary);
+	background: var(--text-translator-popup-fill-color);
+	border: 1px solid var(--color-control-type-blank-border-color-base);
+
+	/* Define styles explicit to avoid inherit of page styles. Yes, "reset all" is not work for all */
+	text-align: initial;
+	font-weight: normal;
+}
+
+.TextTranslatorPopup > *:not(:first-child) {
+	margin-top: var(--typography-layout-indent-m-all);
+}
+
+/* Button */
+.TextTranslatorPopup .Button {
+	outline: none !important;
+}
+
+/* Head */
+.TextTranslatorPopup-Head:not(.TextTranslatorPopup-Head_mobile) > *:not(:first-child) {
+	margin-left: var(--typography-layout-indent-m-all);
+}
+
+/* Container_direction */
+.TextTranslatorPopup-Container_direction_left {
+	float: left;
+}
+
+.TextTranslatorPopup-Container_direction_right {
+	float: right;
+}
+
+/* Clearfix */
+.TextTranslatorPopup-Clearfix::after {
+	display: block;
+	content: '';
+	clear: both;
+}
+
+/* Content */
+.TextTranslatorPopup-TextContainer {
+	display: flex;
+	border-radius: inherit;
+}
+
+.TextTranslatorPopup-TextContainer::after {
+	display: block;
+	content: '';
+	clear: both;
+}
+
+.TextTranslatorPopup-TextControls {
+	--button-size-m-indent-outer: 2px;
+
+	display: flex;
+	flex-direction: column;
+	gap: var(--typography-layout-indent-s-all);
+	float: left;
+	margin-right: var(--typography-layout-indent-s-all);
+}
+
+.TextTranslatorPopup-TextContainer_text_original {
+	background: #eee;
+	width: min-content;
+	min-width: 100%;
+	box-sizing: border-box;
+}
+
+.TextTranslatorPopup-OriginalText {
+	margin: var(--typography-controls-indent-m);
+	white-space: pre-wrap;
+	max-height: 400px;
+	overflow: auto;
+	scrollbar-width: thin;
+}
+
+.TextTranslatorPopup-Details > summary {
+	margin: 0 5px;
+}
+
+/* Body */
+.TextTranslatorPopup-Body {
+	width: 100%;
+	max-width: 600px;
+	max-height: 400px;
+	overflow-y: auto;
+	font-size: var(--typography-layout-size-s-font-size);
+	white-space: pre-line;
+	line-height: 1.2rem;
+	scrollbar-width: thin;
+	padding-top: 0.3rem;
+}
+
+.TextTranslatorPopup-Body_error {
+	color: var(--color-typo-error);
+}
+
+/* TranslateButton */
+.TextTranslatorPopup-TranslateButton {
+	display: block;
+	opacity: 0.7;
+	width: 1.5rem;
+	height: 1.5rem;
+}
+
+.TextTranslatorPopup-TranslateButton:hover {
+	opacity: 1;
+}
+
+/* Loader */
+.TextTranslatorPopup-Loader {
+	padding: 0.25rem;
+	border: 1px solid var(--color-control-type-blank-border-color-base);
+	border-radius: var(--typography-layout-border-radius);
+	color: var(--color-typo-primary);
+	background: var(--color-container-page-popup-fill-color);
+}
+
+.TextTranslatorPopup-Loader .Loader-Image {
+	width: 2rem;
+	height: 2rem;
+}
+
+.TextTranslatorPopup-MobileHead {
+	margin-bottom: var(--typography-layout-indent-m-all);
+	width: 100%;
+	text-align: right;
+}

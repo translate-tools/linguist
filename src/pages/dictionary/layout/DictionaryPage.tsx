@@ -13,21 +13,21 @@ import { clearTranslations } from '../../../requests/backend/translations/clearT
 import { isTextsContainsSubstring } from '../../../lib/utils';
 import { getLanguageNameByCode, getMessage } from '../../../lib/language';
 import { saveFile } from '../../../lib/files';
-import { useMessageBroker } from '../../../lib/hooks/useMessageBroker';
 import { useConcurrentTTS } from '../../../lib/hooks/useConcurrentTTS';
 import { isMobileBrowser } from '../../../lib/browser';
 
-import { Button } from '../../../components/Button/Button.bundle/desktop';
-import { Select } from '../../../components/Select/Select.bundle/desktop';
-import { Textinput } from '../../../components/Textinput/Textinput.bundle/desktop';
-import { Icon } from '../../../components/Icon/Icon.bundle/desktop';
+import { Button } from '../../../components/primitives/Button/Button.bundle/desktop';
+import { Select } from '../../../components/primitives/Select/Select.bundle/desktop';
+import { Textinput } from '../../../components/primitives/Textinput/Textinput.bundle/desktop';
+import { Icon } from '../../../components/primitives/Icon/Icon.bundle/desktop';
 
-import { Translation } from '../../../components/Translation/Translation';
-import { OptionsPanel } from '../../../components/OptionsPanel/OptionsPanel';
-import { LayoutFlow } from '../../../components/LayoutFlow/LayoutFlow';
+import { TranslationCard } from '../../../components/layouts/TranslationCard/TranslationCard';
+import { Page } from '../../../components/layouts/Page/Page';
+import { LayoutFlow } from '../../../components/layouts/LayoutFlow/LayoutFlow';
+import { ToastMessages } from '../../../components/primitives/ToastMessages/ToastMessages';
+import { useToastMessages } from '../../../components/primitives/ToastMessages/useToastMessages';
 
-import { Page } from '../../../layouts/Page/Page';
-import { PageMessages } from '../../../layouts/Page/Messages/PageMessages';
+import { OptionsPanel } from './OptionsPanel/OptionsPanel';
 
 import './DictionaryPage.css';
 import { ITranslation } from '../../../types/translation/Translation';
@@ -53,7 +53,7 @@ export interface IDictionaryPageProps {
  * Represent favorite translates and translate history
  */
 export const DictionaryPage: FC<IDictionaryPageProps> = ({ confirmDelete = true }) => {
-	const { messages, addMessage, deleteMessage, haltMessages } = useMessageBroker({
+	const { messages, addMessage, deleteMessage, haltMessages } = useToastMessages({
 		hideDelay: 5000,
 	});
 
@@ -234,7 +234,7 @@ export const DictionaryPage: FC<IDictionaryPageProps> = ({ confirmDelete = true 
 		return filtredEntries.map(({ data, key }, idx) => {
 			const { timestamp, translation } = data;
 			return (
-				<Translation
+				<TranslationCard
 					key={key}
 					translation={translation}
 					timestamp={timestamp}
@@ -349,7 +349,7 @@ export const DictionaryPage: FC<IDictionaryPageProps> = ({ confirmDelete = true 
 				</LayoutFlow>
 			</div>
 
-			<PageMessages
+			<ToastMessages
 				messages={messages}
 				haltMessages={haltMessages}
 				deleteMessage={deleteMessage}

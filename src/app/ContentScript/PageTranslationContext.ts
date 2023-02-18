@@ -7,7 +7,7 @@ import { updateNotEqualFilter } from '../../lib/effector/filters';
 // Requests
 import { getSitePreferences } from '../../requests/backend/autoTranslation/sitePreferences/getSitePreferences';
 import { getLanguagePreferences } from '../../requests/backend/autoTranslation/languagePreferences/getLanguagePreferences';
-import { isRequireTranslateBySitePreferences } from '../../layouts/PageTranslator/PageTranslator.utils/utils';
+import { isRequireTranslateBySitePreferences } from '../../pages/popup/tabs/PageTranslator/PageTranslator.utils/utils';
 
 import { SelectTranslatorManager } from './SelectTranslator/SelectTranslatorManager';
 import { SelectTranslatorController } from './SelectTranslator/SelectTranslatorController';

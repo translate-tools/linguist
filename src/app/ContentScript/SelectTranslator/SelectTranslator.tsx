@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { translate } from '../../../requests/backend/translate';
-import { SelectTranslator as SelectTranslatorPopup } from '../../../layouts/SelectTranslator/SelectTranslator';
+import { TextTranslatorPopup } from './components/TextTranslatorPopup/TextTranslatorPopup';
 import { ShadowDOMContainerManager } from '../../../lib/ShadowDOMContainerManager';
 
 export interface Options {
@@ -335,7 +335,7 @@ export class SelectTranslator {
 		const isForceQuickTranslate = enableTranslateFromContextMenu;
 
 		this.shadowRoot.mountComponent(
-			<SelectTranslatorPopup
+			<TextTranslatorPopup
 				closeHandler={this.hidePopup}
 				quickTranslate={isForceQuickTranslate || quickTranslate}
 				{...{

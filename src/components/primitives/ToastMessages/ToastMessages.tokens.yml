@@ -1,0 +1,14 @@
+toastMessages:
+  message:
+    type:
+      info:
+        fillColor:
+          value: 'color({color.project.value} l(+10%))'
+        typoColor:
+          value: '{color.typo.inverse.value}'
+
+      error:
+        fillColor:
+          value: 'color({color.alert.value} l(+20%))'
+        typoColor:
+          value: '{color.typo.primary.value}'

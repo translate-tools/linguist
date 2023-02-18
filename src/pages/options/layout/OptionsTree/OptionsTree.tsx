@@ -3,10 +3,10 @@ import { get, isEqual } from 'lodash';
 
 import { Checkbox } from 'react-elegant-ui/esm/components/Checkbox/Checkbox.bundle/desktop';
 
-import { Button } from '../../../../components/Button/Button.bundle/desktop';
-import { Select } from '../../../../components/Select/Select.bundle/desktop';
-import { Textarea } from '../../../../components/Textarea/Textarea.bundle/desktop';
-import { Textinput } from '../../../../components/Textinput/Textinput.bundle/desktop';
+import { Button } from '../../../../components/primitives/Button/Button.bundle/desktop';
+import { Select } from '../../../../components/primitives/Select/Select.bundle/desktop';
+import { Textarea } from '../../../../components/primitives/Textarea/Textarea.bundle/desktop';
+import { Textinput } from '../../../../components/primitives/Textinput/Textinput.bundle/desktop';
 
 import { AppConfigType } from '../../../../types/runtime';
 
