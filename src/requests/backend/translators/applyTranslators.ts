@@ -1,7 +1,7 @@
 import { DEFAULT_TRANSLATOR } from '../../../config';
 import { buildBackendRequest } from '../../utils/requestBuilder';
 
-import { getTranslatorsClasses } from '.';
+import { getTranslatorsClasses, isCustomTranslatorId } from '.';
 
 // TODO: move logic to `TranslateSchedulerConfig`
 export const [applyTranslatorsFactory, applyTranslators] = buildBackendRequest(
@@ -14,11 +14,9 @@ export const [applyTranslatorsFactory, applyTranslators] = buildBackendRequest(
 				const latestConfig = await config.get();
 				const { translatorModule: translatorName } = latestConfig;
 
-				const isCustomTranslator = translatorName[0] === '#';
-				if (isCustomTranslator) {
-					const customTranslatorName = translatorName.slice(1);
+				if (isCustomTranslatorId(translatorName)) {
 					const isCurrentTranslatorAvailable =
-						customTranslatorName in translatorsClasses;
+						translatorName in translatorsClasses;
 
 					// Reset translator to default
 					if (!isCurrentTranslatorAvailable) {
@@ -30,7 +28,6 @@ export const [applyTranslatorsFactory, applyTranslators] = buildBackendRequest(
 				}
 
 				const translateManager = await backgroundContext.getTranslateManager();
-
 				translateManager.setTranslators(translatorsClasses);
 			};
 

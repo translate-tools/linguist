@@ -24,11 +24,6 @@ export const embeddedTranslators = {
 } as const;
 
 /**
- * Format custom translator unique id as key to use with another translators
- */
-export const getFormattedCustomTranslatorId = (id: number) => '#' + id;
-
-/**
  * Map where key is identifier of translator and value is translator constructor
  */
 export type TranslatorsMap = Record<string, TranslatorClass>;
