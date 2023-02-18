@@ -21,7 +21,7 @@ import { Select } from '../../../components/primitives/Select/Select.bundle/desk
 import { Textinput } from '../../../components/primitives/Textinput/Textinput.bundle/desktop';
 import { Icon } from '../../../components/primitives/Icon/Icon.bundle/desktop';
 
-import { Translation } from '../../../components/layouts/Translation/Translation';
+import { TranslationCard } from '../../../components/layouts/TranslationCard/TranslationCard';
 import { Page } from '../../../components/layouts/Page/Page';
 import { LayoutFlow } from '../../../components/layouts/LayoutFlow/LayoutFlow';
 import { ToastMessages } from '../../../components/primitives/ToastMessages/ToastMessages';
@@ -234,7 +234,7 @@ export const DictionaryPage: FC<IDictionaryPageProps> = ({ confirmDelete = true 
 		return filtredEntries.map(({ data, key }, idx) => {
 			const { timestamp, translation } = data;
 			return (
-				<Translation
+				<TranslationCard
 					key={key}
 					translation={translation}
 					timestamp={timestamp}

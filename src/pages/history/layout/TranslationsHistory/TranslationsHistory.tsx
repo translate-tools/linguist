@@ -9,7 +9,7 @@ import { LayoutFlow } from '../../../../components/layouts/LayoutFlow/LayoutFlow
 import { Textinput } from '../../../../components/primitives/Textinput/Textinput.bundle/desktop';
 import { Icon } from '../../../../components/primitives/Icon/Icon.bundle/desktop';
 
-import { Translation } from '../../../../components/layouts/Translation/Translation';
+import { TranslationCard } from '../../../../components/layouts/TranslationCard/TranslationCard';
 import { BookmarksButton } from '../../../../components/controls/Bookmarks/BookmarksButton';
 
 import { getMessage } from '../../../../lib/language';
@@ -315,7 +315,7 @@ export const TranslationsHistory: FC<TranslationsHistoryProps> = ({
 					{translations.map(({ data, key }) => {
 						const { translation, timestamp } = data;
 						return (
-							<Translation
+							<TranslationCard
 								key={key}
 								translation={translation}
 								timestamp={timestamp}

@@ -8,11 +8,11 @@ import { getLanguageNameByCode } from '../../../lib/language';
 import { Button } from '../../primitives/Button/Button.bundle/desktop';
 import { Icon } from '../../primitives/Icon/Icon.bundle/desktop';
 
-import './Translation.css';
+import './TranslationCard.css';
 
-export const cnTranslation = cn('Translation');
+export const cnTranslationCard = cn('TranslationCard');
 
-export type TranslationEntryProps = {
+export type TranslationCardProps = {
 	translation: ITranslation;
 	timestamp?: number;
 	onPressTTS: (target: 'original' | 'translation') => void;
@@ -20,12 +20,11 @@ export type TranslationEntryProps = {
 	headStartSlot?: ReactNode | ReactNode[];
 };
 
-// TODO: rename to `TranslationCard`
 // TODO: implement text highlighting for search results
 /**
  * Represent translation data
  */
-export const Translation: FC<TranslationEntryProps> = ({
+export const TranslationCard: FC<TranslationCardProps> = ({
 	translation,
 	timestamp,
 	onPressTTS,
@@ -36,21 +35,21 @@ export const Translation: FC<TranslationEntryProps> = ({
 	const layout = isMobileBrowser() ? 'vertical' : 'horizontal';
 
 	return (
-		<div className={cnTranslation({ layout })}>
-			<div className={cnTranslation('Head')}>
-				<div className={cnTranslation('Meta')}>
+		<div className={cnTranslationCard({ layout })}>
+			<div className={cnTranslationCard('Head')}>
+				<div className={cnTranslationCard('Meta')}>
 					{headStartSlot}
 					{timestamp && (
-						<span className={cnTranslation('Date')}>
+						<span className={cnTranslationCard('Date')}>
 							{new Date(timestamp).toLocaleDateString()}
 						</span>
 					)}
 				</div>
-				<div className={cnTranslation('Control')}>{controlPanelSlot}</div>
+				<div className={cnTranslationCard('Control')}>{controlPanelSlot}</div>
 			</div>
-			<div className={cnTranslation('Content')}>
-				<div className={cnTranslation('TextContainer')}>
-					<div className={cnTranslation('TextAction')}>
+			<div className={cnTranslationCard('Content')}>
+				<div className={cnTranslationCard('TextContainer')}>
+					<div className={cnTranslationCard('TextAction')}>
 						<Button
 							onPress={() => {
 								onPressTTS('original');
@@ -61,16 +60,16 @@ export const Translation: FC<TranslationEntryProps> = ({
 							<Icon glyph="volume-up" scalable={false} />
 						</Button>
 
-						<span className={cnTranslation('Lang')}>
+						<span className={cnTranslationCard('Lang')}>
 							{getLanguageNameByCode(translation.from)}
 						</span>
 					</div>
-					<div className={cnTranslation('Text')}>
+					<div className={cnTranslationCard('Text')}>
 						{translation.originalText}
 					</div>
 				</div>
-				<div className={cnTranslation('TextContainer')}>
-					<div className={cnTranslation('TextAction')}>
+				<div className={cnTranslationCard('TextContainer')}>
+					<div className={cnTranslationCard('TextAction')}>
 						<Button
 							onPress={() => {
 								onPressTTS('translation');
@@ -81,11 +80,11 @@ export const Translation: FC<TranslationEntryProps> = ({
 							<Icon glyph="volume-up" scalable={false} />
 						</Button>
 
-						<span className={cnTranslation('Lang')}>
+						<span className={cnTranslationCard('Lang')}>
 							{getLanguageNameByCode(translation.to)}
 						</span>
 					</div>
-					<div className={cnTranslation('Text')}>
+					<div className={cnTranslationCard('Text')}>
 						{translation.translatedText}
 					</div>
 				</div>
