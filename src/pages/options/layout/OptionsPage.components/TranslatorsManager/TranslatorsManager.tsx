@@ -122,16 +122,14 @@ export const TranslatorsManager: FC<{
 				<div className={cnTranslatorsManager({})}>
 					<ModalLayout
 						title={getMessage('translatorsManagerWindow_title')}
-						footer={
-							<>
-								<Button view="action" onPress={addNewTranslator}>
-									{getMessage('translatorsManagerWindow_add')}
-								</Button>
-								<Button onPress={onClose}>
-									{getMessage('translatorsManagerWindow_close')}
-								</Button>
-							</>
-						}
+						footer={[
+							<Button key="add" view="action" onPress={addNewTranslator}>
+								{getMessage('translatorsManagerWindow_add')}
+							</Button>,
+							<Button key="close" onPress={onClose}>
+								{getMessage('translatorsManagerWindow_close')}
+							</Button>,
+						]}
 					>
 						<div className={cnTranslatorsManager('Description')}>
 							{getMessage('translatorsManagerWindow_description') + ' '}

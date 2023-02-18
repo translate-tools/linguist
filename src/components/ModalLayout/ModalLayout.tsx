@@ -21,7 +21,7 @@ export const ModalLayout: FC<{
 
 				{children}
 
-				{footer === undefined ? undefined : (
+				{footer && (
 					<div className={cnModalLayout('Footer')}>
 						<LayoutFlow direction="horizontal" indent="m">
 							{footer}
