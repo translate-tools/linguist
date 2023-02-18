@@ -123,10 +123,10 @@ export const TranslatorsManager: FC<{
 					<ModalLayout
 						title={getMessage('translatorsManagerWindow_title')}
 						footer={[
-							<Button view="action" onPress={addNewTranslator}>
+							<Button key="add" view="action" onPress={addNewTranslator}>
 								{getMessage('translatorsManagerWindow_add')}
 							</Button>,
-							<Button onPress={onClose}>
+							<Button key="close" onPress={onClose}>
 								{getMessage('translatorsManagerWindow_close')}
 							</Button>,
 						]}

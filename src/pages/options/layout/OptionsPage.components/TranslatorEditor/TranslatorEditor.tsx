@@ -79,10 +79,10 @@ export const TranslatorEditor: FC<TranslatorEditorProps> = ({
 			<div className={cnTranslatorsEditor({})}>
 				<ModalLayout
 					footer={[
-						<Button view="action" onPress={onSavePress}>
+						<Button key="save" view="action" onPress={onSavePress}>
 							{getMessage('translatorEditorWindow_save')}
 						</Button>,
-						<Button onPress={onClose as any}>
+						<Button key="close" onPress={onClose as any}>
 							{getMessage('translatorEditorWindow_close')}
 						</Button>,
 					]}
