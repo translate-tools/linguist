@@ -10,17 +10,14 @@ import { theme } from '../../../../../themes/presets/default/desktop';
 import { Popup } from '../../../../../components/primitives/Popup/Popup';
 import { Modal } from '../../../../../components/primitives/Modal/Modal.bundle/desktop';
 
-import './SelectTranslator.css';
-import {
-	SelectTranslatorComponentProps,
-	SelectTranslatorComponent,
-} from './SelectTranslatorComponent';
-import { fixPosToPreventOverflow } from './SelectTranslator.utils/fixPosToPreventOverflow';
+import './TextTranslatorPopup.css';
+import { TextTranslatorComponentProps, TextTranslator } from './TextTranslator';
+import { fixPosToPreventOverflow } from './TextTranslatorPopup.utils/fixPosToPreventOverflow';
 
-export const cnSelectTranslator = cn('SelectTranslator');
+export const cnTextTranslatorPopup = cn('TextTranslatorPopup');
 
-export interface SelectTranslatorProps
-	extends Omit<SelectTranslatorComponentProps, 'updatePopup'> {
+export interface TextTranslatorPopupProps
+	extends Omit<TextTranslatorComponentProps, 'updatePopup'> {
 	x: number;
 	y: number;
 	timeoutForHideButton?: number;
@@ -34,7 +31,7 @@ export interface SelectTranslatorProps
 const themeClassName = cn('Theme')(theme);
 
 // TODO: split styles
-export const SelectTranslator: FC<SelectTranslatorProps> = ({
+export const TextTranslatorPopup: FC<TextTranslatorPopupProps> = ({
 	x,
 	y,
 	zIndex,
@@ -201,7 +198,7 @@ export const SelectTranslator: FC<SelectTranslatorProps> = ({
 	const content = (
 		<div tabIndex={0} ref={containerRef}>
 			{translating ? (
-				<SelectTranslatorComponent {...props} updatePopup={updateHook} />
+				<TextTranslator {...props} updatePopup={updateHook} />
 			) : (
 				<div
 					tabIndex={0}
@@ -216,7 +213,7 @@ export const SelectTranslator: FC<SelectTranslatorProps> = ({
 					onMouseOver={() => toggleAutoclose(false)}
 					onMouseLeave={() => toggleAutoclose(true)}
 				>
-					<LogoElement className={cnSelectTranslator('TranslateButton')} />
+					<LogoElement className={cnTextTranslatorPopup('TranslateButton')} />
 				</div>
 			)}
 		</div>

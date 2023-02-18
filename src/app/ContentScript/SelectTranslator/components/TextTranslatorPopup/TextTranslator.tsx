@@ -16,14 +16,15 @@ import { Icon } from '../../../../../components/primitives/Icon/Icon.bundle/desk
 import { Loader } from '../../../../../components/primitives/Loader/Loader';
 import { BookmarksButton } from '../../../../../components/controls/Bookmarks/BookmarksButton';
 
-import { cnSelectTranslator } from './SelectTranslator';
-import './SelectTranslator.css';
 import { isMobileBrowser } from '../../../../../lib/browser';
 import { addTranslationHistoryEntry } from '../../../../../requests/backend/history/addTranslationHistoryEntry';
 import { TRANSLATION_ORIGIN } from '../../../../../requests/backend/history/constants';
 import { ITranslation } from '../../../../../types/translation/Translation';
 
-export interface SelectTranslatorComponentProps {
+import './TextTranslatorPopup.css';
+import { cnTextTranslatorPopup } from './TextTranslatorPopup';
+
+export interface TextTranslatorComponentProps {
 	detectedLangFirst: boolean;
 	isUseAutoForDetectLang: boolean;
 	rememberDirection: boolean;
@@ -40,7 +41,7 @@ export interface SelectTranslatorComponentProps {
 
 // TODO: improve layout
 // TODO: rename component and move to element dir
-export const SelectTranslatorComponent: FC<SelectTranslatorComponentProps> = ({
+export const TextTranslator: FC<TextTranslatorComponentProps> = ({
 	pageLanguage,
 	detectedLangFirst,
 	isUseAutoForDetectLang,
@@ -145,6 +146,8 @@ export const SelectTranslatorComponent: FC<SelectTranslatorComponentProps> = ({
 				// Try recover last direction
 				if (rememberDirection) {
 					try {
+						// TODO: migrate data to another storage property
+						// TODO: move storage operations to a hook
 						const lastFrom = await browser.storage.local
 							.get('SelectTranslator')
 							.then((store) => {
@@ -314,8 +317,8 @@ export const SelectTranslatorComponent: FC<SelectTranslatorComponentProps> = ({
 		<div
 			className={
 				isMobile
-					? cnSelectTranslator('MobileHead')
-					: cnSelectTranslator('Container', {
+					? cnTextTranslatorPopup('MobileHead')
+					: cnTextTranslatorPopup('Container', {
 						direction: 'right',
 					  })
 			}
@@ -334,10 +337,10 @@ export const SelectTranslatorComponent: FC<SelectTranslatorComponentProps> = ({
 
 	if (translatorFeatures !== undefined && (translatedText !== null || error !== null)) {
 		return (
-			<div className={cnSelectTranslator()}>
+			<div className={cnTextTranslatorPopup()}>
 				<div
-					className={cnSelectTranslator('Head', { mobile: isMobile }, [
-						cnSelectTranslator('Clearfix'),
+					className={cnTextTranslatorPopup('Head', { mobile: isMobile }, [
+						cnTextTranslatorPopup('Clearfix'),
 					])}
 				>
 					{isMobile && closeButton}
@@ -345,7 +348,7 @@ export const SelectTranslatorComponent: FC<SelectTranslatorComponentProps> = ({
 					<div
 						className={
 							!isMobile
-								? cnSelectTranslator('Container', {
+								? cnTextTranslatorPopup('Container', {
 									direction: 'left',
 								  })
 								: undefined
@@ -369,42 +372,46 @@ export const SelectTranslatorComponent: FC<SelectTranslatorComponentProps> = ({
 				{error === null ? (
 					<>
 						<div
-							className={cnSelectTranslator('TextContainer', {
+							className={cnTextTranslatorPopup('TextContainer', {
 								text: 'translation',
 							})}
 						>
-							<div className={cnSelectTranslator('TextControls')}>
+							<div className={cnTextTranslatorPopup('TextControls')}>
 								<Button onPress={ttsTranslate.toggle} view="clear">
 									<Icon glyph="volume-up" scalable={false} />
 								</Button>
 								<BookmarksButton translation={dictionaryData} />
 							</div>
-							<div className={cnSelectTranslator('Body')}>
+							<div className={cnTextTranslatorPopup('Body')}>
 								{translatedText}
 							</div>
 						</div>
 						{!showOriginalText ? undefined : (
 							<div
-								className={cnSelectTranslator('TextContainer', {
+								className={cnTextTranslatorPopup('TextContainer', {
 									text: 'original',
 								})}
 							>
-								<div className={cnSelectTranslator('TextControls')}>
+								<div className={cnTextTranslatorPopup('TextControls')}>
 									<Button onPress={ttsOriginal.toggle} view="clear">
 										<Icon glyph="volume-up" scalable={false} />
 									</Button>
 								</div>
-								<div className={cnSelectTranslator('Body')}>
+								<div className={cnTextTranslatorPopup('Body')}>
 									<details
 										onToggle={updatePopup}
-										className={cnSelectTranslator('Details')}
+										className={cnTextTranslatorPopup('Details')}
 									>
 										<summary>
 											{getMessage(
 												'inlineTranslator_showOriginalText',
 											)}
 										</summary>
-										<p className={cnSelectTranslator('OriginalText')}>
+										<p
+											className={cnTextTranslatorPopup(
+												'OriginalText',
+											)}
+										>
 											{originalText}
 										</p>
 									</details>
@@ -414,7 +421,7 @@ export const SelectTranslatorComponent: FC<SelectTranslatorComponentProps> = ({
 					</>
 				) : (
 					<>
-						<div className={cnSelectTranslator('Body', { error: true })}>
+						<div className={cnTextTranslatorPopup('Body', { error: true })}>
 							{error}
 						</div>
 						<div>
@@ -427,6 +434,6 @@ export const SelectTranslatorComponent: FC<SelectTranslatorComponentProps> = ({
 			</div>
 		);
 	} else {
-		return <Loader className={cnSelectTranslator('Loader')} />;
+		return <Loader className={cnTextTranslatorPopup('Loader')} />;
 	}
 };

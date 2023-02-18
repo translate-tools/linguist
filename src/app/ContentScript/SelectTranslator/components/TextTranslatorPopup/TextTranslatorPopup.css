@@ -1,4 +1,4 @@
-.SelectTranslator {
+.TextTranslatorPopup {
 	width: max-content;
 	max-width: 100%;
 	padding: var(--typography-layout-indent-l-all);
@@ -8,7 +8,7 @@
 	font-size: var(--typography-layout-size-s-font-size);
 	line-height: var(--typography-layout-size-m-line-height);
 	color: var(--color-typo-primary);
-	background: var(--select-translator-fill-color);
+	background: var(--text-translator-popup-fill-color);
 	border: 1px solid var(--color-control-type-blank-border-color-base);
 
 	/* Define styles explicit to avoid inherit of page styles. Yes, "reset all" is not work for all */
@@ -16,49 +16,49 @@
 	font-weight: normal;
 }
 
-.SelectTranslator > *:not(:first-child) {
+.TextTranslatorPopup > *:not(:first-child) {
 	margin-top: var(--typography-layout-indent-m-all);
 }
 
 /* Button */
-.SelectTranslator .Button {
+.TextTranslatorPopup .Button {
 	outline: none !important;
 }
 
 /* Head */
-.SelectTranslator-Head:not(.SelectTranslator-Head_mobile) > *:not(:first-child) {
+.TextTranslatorPopup-Head:not(.TextTranslatorPopup-Head_mobile) > *:not(:first-child) {
 	margin-left: var(--typography-layout-indent-m-all);
 }
 
 /* Container_direction */
-.SelectTranslator-Container_direction_left {
+.TextTranslatorPopup-Container_direction_left {
 	float: left;
 }
 
-.SelectTranslator-Container_direction_right {
+.TextTranslatorPopup-Container_direction_right {
 	float: right;
 }
 
 /* Clearfix */
-.SelectTranslator-Clearfix::after {
+.TextTranslatorPopup-Clearfix::after {
 	display: block;
 	content: '';
 	clear: both;
 }
 
 /* Content */
-.SelectTranslator-TextContainer {
+.TextTranslatorPopup-TextContainer {
 	display: flex;
 	border-radius: inherit;
 }
 
-.SelectTranslator-TextContainer::after {
+.TextTranslatorPopup-TextContainer::after {
 	display: block;
 	content: '';
 	clear: both;
 }
 
-.SelectTranslator-TextControls {
+.TextTranslatorPopup-TextControls {
 	--button-size-m-indent-outer: 2px;
 
 	display: flex;
@@ -68,14 +68,14 @@
 	margin-right: var(--typography-layout-indent-s-all);
 }
 
-.SelectTranslator-TextContainer_text_original {
+.TextTranslatorPopup-TextContainer_text_original {
 	background: #eee;
 	width: min-content;
 	min-width: 100%;
 	box-sizing: border-box;
 }
 
-.SelectTranslator-OriginalText {
+.TextTranslatorPopup-OriginalText {
 	margin: var(--typography-controls-indent-m);
 	white-space: pre-wrap;
 	max-height: 400px;
@@ -83,12 +83,12 @@
 	scrollbar-width: thin;
 }
 
-.SelectTranslator-Details > summary {
+.TextTranslatorPopup-Details > summary {
 	margin: 0 5px;
 }
 
 /* Body */
-.SelectTranslator-Body {
+.TextTranslatorPopup-Body {
 	width: 100%;
 	max-width: 600px;
 	max-height: 400px;
@@ -100,24 +100,24 @@
 	padding-top: 0.3rem;
 }
 
-.SelectTranslator-Body_error {
+.TextTranslatorPopup-Body_error {
 	color: var(--color-typo-error);
 }
 
 /* TranslateButton */
-.SelectTranslator-TranslateButton {
+.TextTranslatorPopup-TranslateButton {
 	display: block;
 	opacity: 0.7;
 	width: 1.5rem;
 	height: 1.5rem;
 }
 
-.SelectTranslator-TranslateButton:hover {
+.TextTranslatorPopup-TranslateButton:hover {
 	opacity: 1;
 }
 
 /* Loader */
-.SelectTranslator-Loader {
+.TextTranslatorPopup-Loader {
 	padding: 0.25rem;
 	border: 1px solid var(--color-control-type-blank-border-color-base);
 	border-radius: var(--typography-layout-border-radius);
@@ -125,12 +125,12 @@
 	background: var(--color-container-page-popup-fill-color);
 }
 
-.SelectTranslator-Loader .Loader-Image {
+.TextTranslatorPopup-Loader .Loader-Image {
 	width: 2rem;
 	height: 2rem;
 }
 
-.SelectTranslator-MobileHead {
+.TextTranslatorPopup-MobileHead {
 	margin-bottom: var(--typography-layout-indent-m-all);
 	width: 100%;
 	text-align: right;
