@@ -4,7 +4,7 @@ import { AppConfigType } from '../types/runtime';
 import { isBackgroundContext } from '../lib/browser';
 import { AppThemeControl } from '../lib/browser/AppThemeControl';
 import { toggleTranslateItemInContextMenu } from '../lib/browser/toggleTranslateItemInContextMenu';
-import { migrateAll } from '../migrations/migrationsList';
+import { migrateAll } from './migrations/migrationsList';
 import { clearCache } from '../requests/backend/clearCache';
 
 import { TextTranslatorStorage } from '../pages/popup/tabs/TextTranslator/TextTranslator.utils/TextTranslatorStorage';
