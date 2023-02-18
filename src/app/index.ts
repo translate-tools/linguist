@@ -7,7 +7,7 @@ import { toggleTranslateItemInContextMenu } from '../lib/browser/toggleTranslate
 import { migrateAll } from '../migrations/migrationsList';
 import { clearCache } from '../requests/backend/clearCache';
 
-import { TextTranslatorStorage } from '../layouts/TextTranslator/TextTranslator.utils/TextTranslatorStorage';
+import { TextTranslatorStorage } from '../pages/popup/tabs/TextTranslator/TextTranslator.utils/TextTranslatorStorage';
 
 import { ConfigStorage, ObservableAsyncStorage } from './ConfigStorage/ConfigStorage';
 

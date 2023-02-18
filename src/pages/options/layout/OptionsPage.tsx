@@ -24,10 +24,10 @@ import { resetConfig as resetConfigReq } from '../../../requests/backend/resetCo
 import { setConfig as setConfigReq } from '../../../requests/backend/setConfig';
 import { updateConfig as updateConfigReq } from '../../../requests/backend/updateConfig';
 
-import { Button } from '../../../components/Button/Button.bundle/universal';
-import { LayoutFlow } from '../../../components/LayoutFlow/LayoutFlow';
-import { Page } from '../../../layouts/Page/Page';
-import { PageMessages } from '../../../layouts/Page/Messages/PageMessages';
+import { Button } from '../../../components/primitives/Button/Button.bundle/universal';
+import { LayoutFlow } from '../../../components/layouts/LayoutFlow/LayoutFlow';
+import { Page } from '../../../components/layouts/Page/Page';
+import { PageMessages } from '../../../components/layouts/Page/Messages/PageMessages';
 
 import { generateTree } from './OptionsPage.utils/generateTree';
 import { useMessageBroker } from '../../../lib/hooks/useMessageBroker';

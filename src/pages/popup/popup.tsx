@@ -19,8 +19,8 @@ import { theme } from '../../themes/presets/default/desktop';
 import '../../polyfills/scrollfix';
 
 // Tabs
-import { TextTranslatorTab } from '../../layouts/TextTranslator/TextTranslator@tab';
-import { PageTranslatorTab } from '../../layouts/PageTranslator/PageTranslator@tab';
+import { TextTranslatorTab } from './tabs/TextTranslator/TextTranslator@tab';
+import { PageTranslatorTab } from './tabs/PageTranslator/PageTranslator@tab';
 import { PopupWindowStorage } from './layout/PopupWindow.utils/PopupWindowStorage';
 
 interface PopupPageProps {

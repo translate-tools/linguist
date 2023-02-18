@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { ShadowDOMContainerManager } from '../../../lib/ShadowDOMContainerManager';
-import { OriginalTextPopup } from '../../../layouts/OriginalTextPopup/OriginalTextPopup';
+import { OriginalTextPopup } from './components/OriginalTextPopup/OriginalTextPopup';
 
 import { NodesTranslator, Config as NodesTranslatorConfig } from './NodesTranslator';
 

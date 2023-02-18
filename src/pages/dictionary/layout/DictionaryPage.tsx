@@ -17,17 +17,17 @@ import { useMessageBroker } from '../../../lib/hooks/useMessageBroker';
 import { useConcurrentTTS } from '../../../lib/hooks/useConcurrentTTS';
 import { isMobileBrowser } from '../../../lib/browser';
 
-import { Button } from '../../../components/Button/Button.bundle/desktop';
-import { Select } from '../../../components/Select/Select.bundle/desktop';
-import { Textinput } from '../../../components/Textinput/Textinput.bundle/desktop';
-import { Icon } from '../../../components/Icon/Icon.bundle/desktop';
+import { Button } from '../../../components/primitives/Button/Button.bundle/desktop';
+import { Select } from '../../../components/primitives/Select/Select.bundle/desktop';
+import { Textinput } from '../../../components/primitives/Textinput/Textinput.bundle/desktop';
+import { Icon } from '../../../components/primitives/Icon/Icon.bundle/desktop';
 
-import { Translation } from '../../../components/Translation/Translation';
-import { OptionsPanel } from '../../../components/OptionsPanel/OptionsPanel';
-import { LayoutFlow } from '../../../components/LayoutFlow/LayoutFlow';
+import { Translation } from '../../../components/layouts/Translation/Translation';
+import { OptionsPanel } from './OptionsPanel/OptionsPanel';
+import { LayoutFlow } from '../../../components/layouts/LayoutFlow/LayoutFlow';
 
-import { Page } from '../../../layouts/Page/Page';
-import { PageMessages } from '../../../layouts/Page/Messages/PageMessages';
+import { Page } from '../../../components/layouts/Page/Page';
+import { PageMessages } from '../../../components/layouts/Page/Messages/PageMessages';
 
 import './DictionaryPage.css';
 import { ITranslation } from '../../../types/translation/Translation';

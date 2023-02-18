@@ -1,12 +1,12 @@
 import React, { FC, useCallback, useContext, useEffect, useState } from 'react';
 import { cn } from '@bem-react/classname';
 
-import { Button } from '../../../../../components/Button/Button.bundle/universal';
-import { Icon } from '../../../../../components/Icon/Icon.bundle/desktop';
-import { LayoutFlow } from '../../../../../components/LayoutFlow/LayoutFlow';
-import { Loader } from '../../../../../components/Loader/Loader';
-import { Modal } from '../../../../../components/Modal/Modal.bundle/desktop';
-import { ModalLayout } from '../../../../../components/ModalLayout/ModalLayout';
+import { Button } from '../../../../../components/primitives/Button/Button.bundle/universal';
+import { Icon } from '../../../../../components/primitives/Icon/Icon.bundle/desktop';
+import { LayoutFlow } from '../../../../../components/layouts/LayoutFlow/LayoutFlow';
+import { Loader } from '../../../../../components/primitives/Loader/Loader';
+import { Modal } from '../../../../../components/primitives/Modal/Modal.bundle/desktop';
+import { ModalLayout } from '../../../../../components/layouts/ModalLayout/ModalLayout';
 
 import { getMessage } from '../../../../../lib/language';
 

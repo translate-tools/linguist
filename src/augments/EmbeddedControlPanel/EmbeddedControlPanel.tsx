@@ -5,7 +5,7 @@ import { cnTheme } from 'react-elegant-ui/esm/theme';
 import './EmbeddedControlPanel.css';
 
 import { theme } from '../../themes/presets/default/desktop';
-import { Button } from '../../components/Button/Button.bundle/desktop';
+import { Button } from '../../components/primitives/Button/Button.bundle/desktop';
 
 import LogoElement from '../../res/logo-base.svg';
 
