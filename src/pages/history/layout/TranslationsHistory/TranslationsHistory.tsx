@@ -10,7 +10,7 @@ import { Textinput } from '../../../../components/primitives/Textinput/Textinput
 import { Icon } from '../../../../components/primitives/Icon/Icon.bundle/desktop';
 
 import { TranslationCard } from '../../../../components/layouts/TranslationCard/TranslationCard';
-import { BookmarksButton } from '../../../../components/controls/Bookmarks/BookmarksButton';
+import { DictionaryButton } from '../../../../components/controls/DictionaryButton/DictionaryButton';
 
 import { getMessage } from '../../../../lib/language';
 import { useDebouncedInput } from '../../../../lib/hooks/useDebouncedInput';
@@ -343,7 +343,7 @@ export const TranslationsHistory: FC<TranslationsHistoryProps> = ({
 								}
 								controlPanelSlot={
 									<>
-										<BookmarksButton translation={translation} />
+										<DictionaryButton translation={translation} />
 										<Button
 											view="clear"
 											size="s"

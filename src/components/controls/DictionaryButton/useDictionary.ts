@@ -14,14 +14,12 @@ import {
 import { ITranslation } from '../../../types/translation/Translation';
 import { isExtensionContext } from '../../../lib/browser';
 
-// TODO: think about consistent name for liked translations: bookmarks, favorites, dictionary entries
-// TODO: rename this hook and components consistent, check i18n texts consistent too
-export const useTranslateFavorite = (translation: ITranslation | null) => {
+export const useDictionary = (translation: ITranslation | null) => {
 	const { from, to, originalText, translatedText } = translation || {};
 
-	const [favId, setFavId] = useState<null | number>(null);
+	const [dictionaryEntryId, setDictionaryEntryId] = useState<null | number>(null);
 
-	const findFavId = useCallback(async () => {
+	const getDictionaryEntryId = useCallback(async () => {
 		if (
 			from === undefined ||
 			to === undefined ||
@@ -38,22 +36,22 @@ export const useTranslateFavorite = (translation: ITranslation | null) => {
 		});
 	}, [from, to, originalText, translatedText]);
 
-	const [isFavorite, setIsFavorite] = useState(favId !== null);
+	const [isInDictionary, setIsInDictionary] = useState(dictionaryEntryId !== null);
 
 	const update = useImmutableCallback(() => {
-		findFavId().then(setFavId);
-	}, [findFavId]);
+		getDictionaryEntryId().then(setDictionaryEntryId);
+	}, [getDictionaryEntryId]);
 
-	const toggleFavorite = useImmutableCallback(() => {
-		const nextState = !isFavorite;
-		setIsFavorite(nextState);
+	const toggle = useImmutableCallback(() => {
+		const nextState = !isInDictionary;
+		setIsInDictionary(nextState);
 
 		if (nextState) {
-			if (favId === null) {
+			if (dictionaryEntryId === null) {
 				(async () => {
-					const id = await findFavId();
+					const id = await getDictionaryEntryId();
 					if (id !== null) {
-						setFavId(id);
+						setDictionaryEntryId(id);
 						return;
 					}
 
@@ -63,7 +61,7 @@ export const useTranslateFavorite = (translation: ITranslation | null) => {
 						originalText === undefined ||
 						translatedText === undefined
 					) {
-						setFavId(null);
+						setDictionaryEntryId(null);
 						return;
 					}
 
@@ -72,23 +70,33 @@ export const useTranslateFavorite = (translation: ITranslation | null) => {
 						to,
 						originalText: originalText.trim(),
 						translatedText: translatedText.trim(),
-					}).then(setFavId);
+					}).then(setDictionaryEntryId);
 				})();
 			}
 		} else {
-			if (favId !== null) {
-				deleteTranslation(favId).then(() => setFavId(null));
+			if (dictionaryEntryId !== null) {
+				deleteTranslation(dictionaryEntryId).then(() =>
+					setDictionaryEntryId(null),
+				);
 			}
 		}
-	}, [favId, findFavId, from, to, isFavorite, originalText, translatedText]);
+	}, [
+		dictionaryEntryId,
+		getDictionaryEntryId,
+		from,
+		to,
+		isInDictionary,
+		originalText,
+		translatedText,
+	]);
 
 	useEffect(() => {
-		findFavId().then(setFavId);
-	}, [findFavId]);
+		getDictionaryEntryId().then(setDictionaryEntryId);
+	}, [getDictionaryEntryId]);
 
 	useEffect(() => {
-		setIsFavorite(favId !== null);
-	}, [favId]);
+		setIsInDictionary(dictionaryEntryId !== null);
+	}, [dictionaryEntryId]);
 
 	// Observe state
 	useEffect(() => {
@@ -98,7 +106,7 @@ export const useTranslateFavorite = (translation: ITranslation | null) => {
 
 		const cleanupFunctions: (() => any)[] = [];
 
-		if (favId === null) {
+		if (dictionaryEntryId === null) {
 			const cleanup = onDictionaryEntryAdd((newTranslation) => {
 				if (translation === null) return;
 
@@ -110,7 +118,7 @@ export const useTranslateFavorite = (translation: ITranslation | null) => {
 
 			cleanupFunctions.push(cleanup);
 		} else {
-			const cleanupOnDelete = onDictionaryEntryDelete(favId, update);
+			const cleanupOnDelete = onDictionaryEntryDelete(dictionaryEntryId, update);
 			cleanupFunctions.push(cleanupOnDelete);
 
 			const cleanupOnClear = onClearDictionary(update);
@@ -120,7 +128,7 @@ export const useTranslateFavorite = (translation: ITranslation | null) => {
 		return () => {
 			cleanupFunctions.map((fn) => fn());
 		};
-	}, [favId, translation, update]);
+	}, [dictionaryEntryId, translation, update]);
 
-	return { isFavorite, toggleFavorite, update };
+	return { has: isInDictionary, toggle, update };
 };
