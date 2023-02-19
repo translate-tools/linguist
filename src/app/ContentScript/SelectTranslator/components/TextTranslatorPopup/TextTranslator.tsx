@@ -14,7 +14,7 @@ import { Button } from '../../../../../components/primitives/Button/Button.bundl
 import { LanguagePanel } from '../../../../../components/controls/LanguagePanel/LanguagePanel';
 import { Icon } from '../../../../../components/primitives/Icon/Icon.bundle/desktop';
 import { Loader } from '../../../../../components/primitives/Loader/Loader';
-import { BookmarksButton } from '../../../../../components/controls/Bookmarks/BookmarksButton';
+import { DictionaryButton } from '../../../../../components/controls/DictionaryButton/DictionaryButton';
 
 import { isMobileBrowser } from '../../../../../lib/browser';
 import { addTranslationHistoryEntry } from '../../../../../requests/backend/history/addTranslationHistoryEntry';
@@ -380,7 +380,7 @@ export const TextTranslator: FC<TextTranslatorComponentProps> = ({
 								<Button onPress={ttsTranslate.toggle} view="clear">
 									<Icon glyph="volume-up" scalable={false} />
 								</Button>
-								<BookmarksButton translation={dictionaryData} />
+								<DictionaryButton translation={dictionaryData} />
 							</div>
 							<div className={cnTextTranslatorPopup('Body')}>
 								{translatedText}

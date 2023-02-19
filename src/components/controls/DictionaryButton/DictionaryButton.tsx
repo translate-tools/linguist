@@ -1,27 +1,32 @@
 import React, { FC } from 'react';
+
 import { ITranslation } from '../../../types/translation/Translation';
 import { Button } from '../../primitives/Button/Button.bundle/universal';
 import { getMessage } from '../../../lib/language';
 import { Icon } from '../../primitives/Icon/Icon.bundle/desktop';
-import { useTranslateFavorite } from './useTranslateFavorite';
 
-export const BookmarksButton: FC<{ translation: ITranslation | null }> = ({
+import { useDictionary } from './useDictionary';
+
+export const DictionaryButton: FC<{ translation: ITranslation | null }> = ({
 	translation,
 }) => {
-	const { isFavorite, toggleFavorite } = useTranslateFavorite(translation);
+	const dictionary = useDictionary(translation);
 
 	return (
 		<Button
 			view="clear"
 			size="s"
 			content="icon"
-			onPress={toggleFavorite}
+			onPress={dictionary.toggle}
 			title={getMessage(
-				isFavorite ? 'bookmarkButton_delete' : 'bookmarkButton_add',
+				dictionary.has ? 'dictionaryButton_delete' : 'dictionaryButton_add',
 			)}
 			disabled={translation === null}
 		>
-			<Icon glyph={isFavorite ? 'bookmark' : 'bookmark-border'} scalable={false} />
+			<Icon
+				glyph={dictionary.has ? 'bookmark' : 'bookmark-border'}
+				scalable={false}
+			/>
 		</Button>
 	);
 };

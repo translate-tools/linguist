@@ -18,7 +18,7 @@ import { LanguagePanel } from '../../../../components/controls/LanguagePanel/Lan
 import { Textarea } from '../../../../components/primitives/Textarea/Textarea.bundle/desktop';
 import { Button } from '../../../../components/primitives/Button/Button.bundle/desktop';
 import { Icon } from '../../../../components/primitives/Icon/Icon.bundle/desktop';
-import { BookmarksButton } from '../../../../components/controls/Bookmarks/BookmarksButton';
+import { DictionaryButton } from '../../../../components/controls/DictionaryButton/DictionaryButton';
 
 import './TextTranslator.css';
 import { addTranslationHistoryEntry } from '../../../../requests/backend/history/addTranslationHistoryEntry';
@@ -422,7 +422,7 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 									>
 										<Icon glyph="volume-up" scalable={false} />
 									</Button>
-									<BookmarksButton translation={dictionaryData} />
+									<DictionaryButton translation={dictionaryData} />
 								</div>
 							}
 						/>
