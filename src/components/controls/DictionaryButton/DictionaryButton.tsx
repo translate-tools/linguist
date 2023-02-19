@@ -19,7 +19,7 @@ export const DictionaryButton: FC<{ translation: ITranslation | null }> = ({
 			content="icon"
 			onPress={dictionary.toggle}
 			title={getMessage(
-				dictionary.has ? 'bookmarkButton_delete' : 'bookmarkButton_add',
+				dictionary.has ? 'dictionaryButton_delete' : 'dictionaryButton_add',
 			)}
 			disabled={translation === null}
 		>
