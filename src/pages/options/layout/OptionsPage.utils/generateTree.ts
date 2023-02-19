@@ -156,7 +156,6 @@ export const generateTree = ({
 							path: 'cache.ignoreCase',
 							optionContent: {
 								type: 'Checkbox',
-								reverse: true,
 								text: getMessage('settings_option_cache_ignoreCase'),
 							},
 						},
