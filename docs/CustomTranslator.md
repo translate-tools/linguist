@@ -111,6 +111,8 @@ class FakeTranslator {
 FakeTranslator;
 ```
 
+### Custom translators
+
 Example of custom translator using [Lingva (Alternative front-end for Google Translate ) API](https://github.com/thedaviddelta/lingva-translate):
 
 ```js
