@@ -1,4 +1,4 @@
-import { langCodes } from '@translate-tools/core/types/Translator';
+import { langCodes } from '@translate-tools/core/util/languages';
 import { getLanguageNameByCode, getMessage } from '../../../../lib/language';
 import { OptionsGroup } from '../OptionsTree/OptionsTree';
 
@@ -156,7 +156,6 @@ export const generateTree = ({
 							path: 'cache.ignoreCase',
 							optionContent: {
 								type: 'Checkbox',
-								reverse: true,
 								text: getMessage('settings_option_cache_ignoreCase'),
 							},
 						},

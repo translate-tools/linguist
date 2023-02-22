@@ -4,18 +4,11 @@ export const [disableTranslatePageFactory, disableTranslatePage] = buildTabReque
 	'disableTranslatePage',
 	{
 		factoryHandler:
-			({ pageTranslator, selectTranslatorRef }) =>
+			({ pageTranslationContext }) =>
 				async () => {
-					if (!pageTranslator.isRun()) {
-						throw new Error('Page is not translated');
-					}
-
-					const selectTranslator = selectTranslatorRef.value;
-
-					pageTranslator.stop();
-
-					if (selectTranslator !== null && !selectTranslator.isRun()) {
-						selectTranslator.start();
+					const domTranslator = pageTranslationContext.getDOMTranslator();
+					if (domTranslator !== null) {
+						domTranslator.stopTranslate();
 					}
 				},
 	},

@@ -2,17 +2,21 @@ import React, { FC, useContext, useEffect, useState } from 'react';
 import { cn } from '@bem-react/classname';
 import { useImmutableCallback } from 'react-elegant-ui/esm/hooks/useImmutableCallback';
 
-import { Button } from '../../../../../components/Button/Button.bundle/universal';
-import { Textinput } from '../../../../../components/Textinput/Textinput.bundle/desktop';
-import { Textarea } from '../../../../../components/Textarea/Textarea.bundle/desktop';
+import { Button } from '../../../../../components/primitives/Button/Button.bundle/universal';
+import { Textinput } from '../../../../../components/primitives/Textinput/Textinput.bundle/desktop';
+import { Textarea } from '../../../../../components/primitives/Textarea/Textarea.bundle/desktop';
 
-import { LayoutFlow } from '../../../../../components/LayoutFlow/LayoutFlow';
-import { ModalLayout } from '../../../../../components/ModalLayout/ModalLayout';
-import { IModalProps, Modal } from '../../../../../components/Modal/Modal.bundle/desktop';
+import { LayoutFlow } from '../../../../../components/layouts/LayoutFlow/LayoutFlow';
+import { ModalLayout } from '../../../../../components/layouts/ModalLayout/ModalLayout';
+import {
+	IModalProps,
+	Modal,
+} from '../../../../../components/primitives/Modal/Modal.bundle/desktop';
+
+import { CustomTranslator } from '../../../../../requests/backend/translators';
 
 import { getMessage } from '../../../../../lib/language';
 import { OptionsModalsContext } from '../../OptionsPage';
-import { CustomTranslator } from '../TranslatorsManager/TranslatorsManager';
 
 import './TranslatorEditor.css';
 
@@ -78,10 +82,10 @@ export const TranslatorEditor: FC<TranslatorEditorProps> = ({
 			<div className={cnTranslatorsEditor({})}>
 				<ModalLayout
 					footer={[
-						<Button view="action" onPress={onSavePress}>
+						<Button key="save" view="action" onPress={onSavePress}>
 							{getMessage('translatorEditorWindow_save')}
 						</Button>,
-						<Button onPress={onClose as any}>
+						<Button key="close" onPress={onClose as any}>
 							{getMessage('translatorEditorWindow_close')}
 						</Button>,
 					]}
@@ -91,7 +95,12 @@ export const TranslatorEditor: FC<TranslatorEditorProps> = ({
 							<div>
 								{getMessage('translatorEditorWindow_translatorName')}
 							</div>
-							<Textinput value={name} setValue={setName} />
+							<Textinput
+								value={name}
+								onChange={(evt) => {
+									setName(evt.target.value);
+								}}
+							/>
 						</LayoutFlow>
 
 						<LayoutFlow direction="vertical" indent="m">

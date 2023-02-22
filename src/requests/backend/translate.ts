@@ -13,12 +13,10 @@ export const [translateFactory, translateRequest] = buildBackendRequest<
 	string
 >('translate', {
 	factoryHandler:
-		({ bg }) =>
+		({ backgroundContext }) =>
 			async ({ text, from, to, options }) => {
-				const scheduler = bg.scheduler;
-				if (scheduler === undefined) {
-					throw new Error('Scheduler is not ready');
-				}
+				const translateManager = await backgroundContext.getTranslateManager();
+				const scheduler = translateManager.getScheduler();
 
 				return scheduler.translate(text, from, to, options);
 			},

@@ -1,16 +1,31 @@
-import { ThemeInfo } from './ThemeInfo';
+import { ThemeChangeHandler, ThemeInfo } from './ThemeInfo';
 
 /**
  * Class to explore browser theme
  */
-export class BrowserThemeInfo extends ThemeInfo {
-	private lightThemeQuery = window.matchMedia('(prefers-color-scheme: light)');
+export class BrowserThemeInfo implements ThemeInfo {
+	private handlers;
+	constructor() {
+		this.handlers = new Set<ThemeChangeHandler>();
+	}
+
+	public subscribe(handler: ThemeChangeHandler) {
+		this.handlers.add(handler);
+	}
+
+	public unsubscribe(handler: ThemeChangeHandler) {
+		this.handlers.delete(handler);
+	}
+
 	private observer = (evt: any) => {
 		const isLightTheme = evt.matches;
 
-		this.eventManager.emit('updateTheme', [{ isLightTheme }]);
+		this.handlers.forEach((handler) => {
+			handler({ isLightTheme });
+		});
 	};
 
+	private lightThemeQuery = window.matchMedia('(prefers-color-scheme: light)');
 	public async isLightTheme(): Promise<boolean> {
 		return this.lightThemeQuery.matches;
 	}

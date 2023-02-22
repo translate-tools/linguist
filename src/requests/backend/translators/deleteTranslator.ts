@@ -1,9 +1,9 @@
-import { TranslatorsCacheStorage } from '../../../modules/Background/TranslatorsCacheStorage';
-import { getTranslatorNameById } from '../../../modules/Background';
+import { TranslatorsCacheStorage } from '../../../app/Background/TranslatorsCacheStorage';
 import { buildBackendRequest } from '../../utils/requestBuilder';
 import { type } from '../../../lib/types';
 
 import * as db from './data';
+import { formatToCustomTranslatorId } from '.';
 import { applyTranslators } from './applyTranslators';
 
 export const [deleteTranslatorFactory, deleteTranslator] = buildBackendRequest(
@@ -18,7 +18,7 @@ export const [deleteTranslatorFactory, deleteTranslator] = buildBackendRequest(
 
 			// Delete translator cache
 			const cache = new TranslatorsCacheStorage(
-				getTranslatorNameById(translatorId),
+				formatToCustomTranslatorId(translatorId),
 			);
 			await cache.clear();
 		},

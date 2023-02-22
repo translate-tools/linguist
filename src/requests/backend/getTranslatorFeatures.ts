@@ -11,15 +11,10 @@ export const [getTranslatorFeaturesFactory, getTranslatorFeatures] = buildBacken
 		}),
 
 		factoryHandler:
-			({ bg }) =>
+			({ backgroundContext }) =>
 				async () => {
-					const translatorInfo = await bg.getTranslatorInfo();
-
-					if (translatorInfo === null) {
-						throw new Error('Translator is not ready');
-					}
-
-					return translatorInfo;
+					const translateManager = await backgroundContext.getTranslateManager();
+					return translateManager.getTranslatorFeatures();
 				},
 	},
 );

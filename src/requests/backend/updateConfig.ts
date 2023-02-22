@@ -16,7 +16,7 @@ export const [updateConfigFactory, updateConfig] = buildBackendRequest('updateCo
 	 * Partial update config by paths
 	 */
 	factoryHandler:
-		({ config, bg }) =>
+		({ config, backgroundContext }) =>
 			async (configMap) => {
 			// Get actual config
 				const actualConfig = await config.get();
@@ -43,14 +43,14 @@ export const [updateConfigFactory, updateConfig] = buildBackendRequest('updateCo
 				}
 
 				// Validate translator
+				const translateManager = await backgroundContext.getTranslateManager();
 				if ('translatorModule' in newConfigSegments) {
-					switch (false) {
-						case newConfigSegments.translatorModule in bg.getTranslators():
-							throw new Error('Custom translator is unavailable');
+					const translators = translateManager.getTranslators();
+					const translatorId = newConfigSegments.translatorModule;
+					if (!(translatorId in translators)) {
+						throw new Error(`Translator "${translatorId}" is unavailable`);
 					}
 				}
-
-				// loadTranslator(data.code);
 
 				if (Object.keys(errors).length > 0) {
 					return {

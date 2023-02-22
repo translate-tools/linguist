@@ -5,8 +5,8 @@ import { isEqual } from 'lodash';
 import {
 	TranslationsHistory,
 	TranslationsHistoryFetcher,
-} from '../../../layouts/History/TranslationsHistory';
-import { Page } from '../../../layouts/Page/Page';
+} from './TranslationsHistory/TranslationsHistory';
+import { Page } from '../../../components/layouts/Page/Page';
 import { ITranslationHistoryEntryWithKey } from '../../../requests/backend/history/data';
 import { getTranslationHistoryEntries } from '../../../requests/backend/history/getHistoryEntries';
 
