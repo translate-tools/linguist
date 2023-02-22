@@ -115,24 +115,23 @@ Example of custom translator using [Lingva (Alternative front-end for Google Tra
 
 ```js
 class LingvaTranslator {
-    // URL list of instance of LingvaTranslate, add more to use fastest one using Promise.race()
-    apiList = ["https://lingva.ml"]
+    // URL of your instance of LingvaTranslate
+    apiPath = "https://lingva.ml";
 
     translate = (text, from, to) => {
-        let promiseList = this.apiList.map(api => fetch(`${api}/api/v1/${from}/${to}/${text}`, {
-            credentials: "omit",
-            headers: {
-                "User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:99.0) Gecko/20100101 Firefox/99.0",
-                Accept: "*/*",
-                "Accept-Language": "en-US,en;q=0.5",
-                "Sec-Fetch-Dest": "empty",
-                "Sec-Fetch-Mode": "cors",
-                "Sec-Fetch-Site": "same-origin"
-            },
-            method: "GET",
-            mode: "cors",
-        }))
-        return Promise.race(promiseList)
+        return fetch(`${this.apiPath}/api/v1/${from}/${to}/${text}`, {
+                credentials: "omit",
+                headers: {
+                    "User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:99.0) Gecko/20100101 Firefox/99.0",
+                    Accept: "*/*",
+                    "Accept-Language": "en-US,en;q=0.5",
+                    "Sec-Fetch-Dest": "empty",
+                    "Sec-Fetch-Mode": "cors",
+                    "Sec-Fetch-Site": "same-origin"
+                },
+                method: "GET",
+                mode: "cors",
+            })
             .then((r) => r.json())
             .then(({ translation }) => translation);
     };
@@ -141,7 +140,7 @@ class LingvaTranslator {
         Promise.all(texts.map((text) => this.translate(text, from, to)));
 
     getLengthLimit = () => 4000;
-    getRequestsTimeout = () => 1000;
+    getRequestsTimeout = () => 300;
     checkLimitExceeding = (text) => {
         const textLength = !Array.isArray(text) ? text.length : text.reduce((len, text) => len + text.length, 0);
 
