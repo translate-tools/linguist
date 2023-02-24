@@ -113,8 +113,15 @@ export class App {
 				toggleTranslateItemInContextMenu(isEnabled);
 			});
 
-		// TODO: enable only when option is enabled in config
 		const translatePageContextMenu = new TranslatePageContextMenu();
-		translatePageContextMenu.enable();
+		$appConfig
+			.map((config) => config.pageTranslator.enableContextMenu)
+			.watch((isPageTranslatorContextMenuEnabled) => {
+				if (isPageTranslatorContextMenuEnabled) {
+					translatePageContextMenu.enable();
+				} else {
+					translatePageContextMenu.disable();
+				}
+			});
 	}
 }

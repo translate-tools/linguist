@@ -36,6 +36,7 @@ export const defaultConfig: AppConfigType = {
 		lazyTranslate: isMobileBrowser() ? false : true,
 		detectLanguageByContent: true,
 		originalTextPopup: false,
+		enableContextMenu: true,
 	},
 	textTranslator: {
 		rememberText: true,
