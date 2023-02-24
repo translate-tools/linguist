@@ -11,6 +11,7 @@ const translateTextHandler = (info: Menus.OnClickData, tab: Tabs.Tab | undefined
 	translateSelectedText(tab.id);
 };
 
+// TODO: convert to a class
 export function toggleTranslateItemInContextMenu(state: boolean) {
 	if (state) {
 		browser.contextMenus.onClicked.addListener(translateTextHandler);
