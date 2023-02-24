@@ -15,7 +15,6 @@ type PageTranslationState = {
 };
 
 // TODO: add i18n texts
-// TODO: add method `disable`
 export class TranslatePageContextMenu {
 	private menuItemId = 'translatePage';
 
@@ -32,19 +31,18 @@ export class TranslatePageContextMenu {
 		this.$tabState.on(this.tabStateUpdated, (_state, payload) => payload);
 	}
 
+	private isEnabled = false;
+	private cleanupCallback: null | (() => void) = null;
 	public enable() {
+		if (this.isEnabled) return;
+		this.isEnabled = true;
+
 		browser.contextMenus.create({
 			id: this.menuItemId,
 			contexts: ['page'],
 			title: 'Translate page',
 			// type: 'checkbox',
 			// checked: false,
-		});
-
-		this.$tabState.watch((state) => {
-			browser.contextMenus.update(this.menuItemId, {
-				title: state.isTranslating ? 'Disable translation' : 'Translate page',
-			});
 		});
 
 		browser.contextMenus.onClicked.addListener(this.onClickMenu);
@@ -57,22 +55,53 @@ export class TranslatePageContextMenu {
 			});
 		};
 
-		browser.tabs.onActivated.addListener((info) => {
+		const onActivated = (info: browser.Tabs.OnActivatedActiveInfoType) => {
 			updateMenuItem(info.tabId);
-		});
+		};
+		browser.tabs.onActivated.addListener(onActivated);
 
-		browser.tabs.onUpdated.addListener((tabId) => {
+		const onUpdated = (tabId: number) => {
 			updateMenuItem(tabId);
-		});
+		};
+		browser.tabs.onUpdated.addListener(onUpdated);
 
-		pageTranslatorStateUpdatedHandler((state, tabId) => {
-			if (tabId === undefined || tabId !== this.$tabState.getState().tabId) return;
+		const unwatchPageTranslatorUpdated = pageTranslatorStateUpdatedHandler(
+			(state, tabId) => {
+				if (tabId === undefined || tabId !== this.$tabState.getState().tabId)
+					return;
 
-			this.tabStateUpdated({
-				tabId,
-				isTranslating: state.isTranslated,
+				this.tabStateUpdated({
+					tabId,
+					isTranslating: state.isTranslated,
+				});
+			},
+		);
+
+		const unwatchMenuItemState = this.$tabState.watch((state) => {
+			browser.contextMenus.update(this.menuItemId, {
+				title: state.isTranslating ? 'Disable translation' : 'Translate page',
 			});
 		});
+
+		this.cleanupCallback = () => {
+			browser.contextMenus.onClicked.removeListener(this.onClickMenu);
+			browser.tabs.onActivated.removeListener(onActivated);
+			browser.tabs.onUpdated.removeListener(onUpdated);
+
+			unwatchPageTranslatorUpdated();
+			unwatchMenuItemState();
+		};
+	}
+
+	public disable() {
+		if (!this.isEnabled) return;
+		this.isEnabled = false;
+
+		browser.contextMenus.remove(this.menuItemId);
+
+		if (this.cleanupCallback !== null) {
+			this.cleanupCallback();
+		}
 	}
 
 	private onClickMenu = async (
