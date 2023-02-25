@@ -16,7 +16,6 @@ type PageTranslationState = {
 	isTranslating: boolean;
 };
 
-// TODO: add i18n texts
 export class TranslatePageContextMenu {
 	private menuItemId = 'translatePage';
 

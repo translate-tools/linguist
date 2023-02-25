@@ -8,8 +8,11 @@ import { ConfigStorageMigration } from '../ConfigStorage.migrations';
 
 import configVersion1 from './config-v1.json';
 import configVersion3 from './config-v3.json';
+import configVersion4 from './config-v4.json';
 
 describe('config migrations', () => {
+	beforeAll(clearAllMocks);
+
 	test('migrate config v0-v3', async () => {
 		// Load data
 		localStorage.setItem('config.Main', JSON.stringify(configVersion1));
@@ -27,12 +30,14 @@ describe('config migrations', () => {
 describe('use config', () => {
 	beforeAll(clearAllMocks);
 
+	const latestConfigObject = configVersion4 as AppConfigType;
+
 	test('config storage set/get', async () => {
-		const configStorage = new ConfigStorage(configVersion3 as AppConfigType);
+		const configStorage = new ConfigStorage(latestConfigObject);
 
 		// Get config
 		const config1 = await configStorage.get();
-		expect(config1).toEqual(configVersion3);
+		expect(config1).toEqual(latestConfigObject);
 
 		const newData = { ...config1, translatorModule: 'testTranslator' };
 		await configStorage.set(newData);
@@ -42,7 +47,7 @@ describe('use config', () => {
 	});
 
 	test.skip('observable storage', async () => {
-		const configStorage = new ConfigStorage(configVersion3 as AppConfigType);
+		const configStorage = new ConfigStorage(latestConfigObject);
 		const observableConfigStorage = new ObservableAsyncStorage(configStorage);
 
 		// Listen config update
