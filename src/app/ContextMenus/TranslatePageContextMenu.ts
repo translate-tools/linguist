@@ -47,11 +47,26 @@ export class TranslatePageContextMenu {
 		browser.contextMenus.onClicked.addListener(this.onClickMenu);
 
 		const updateMenuItem = async (tabId: number) => {
-			const translateState = await getPageTranslateState(tabId);
-			this.tabStateUpdated({
-				tabId,
-				isTranslating: translateState.isTranslated,
+			const tab = await browser.tabs.get(tabId);
+
+			let isVisible = false;
+			if (tab.url !== undefined) {
+				const tabUrl = new URL(tab.url);
+				const isUrlHasHttpProtocol = tabUrl.protocol.startsWith('http');
+				isVisible = isUrlHasHttpProtocol;
+			}
+
+			browser.contextMenus.update(this.menuItemId, {
+				visible: isVisible,
 			});
+
+			if (isVisible) {
+				const translateState = await getPageTranslateState(tabId);
+				this.tabStateUpdated({
+					tabId,
+					isTranslating: translateState.isTranslated,
+				});
+			}
 		};
 
 		const onActivated = (info: browser.Tabs.OnActivatedActiveInfoType) => {
