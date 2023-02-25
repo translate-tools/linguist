@@ -1,6 +1,8 @@
 import { createEvent, createStore } from 'effector';
 import browser from 'webextension-polyfill';
 
+import { getMessage } from '../../lib/language';
+
 import { getPageTranslateState } from '../../requests/contentscript/pageTranslation/getPageTranslateState';
 import { getTranslatorFeatures } from '../../requests/backend/getTranslatorFeatures';
 import { getConfig } from '../../requests/backend/getConfig';
@@ -40,9 +42,7 @@ export class TranslatePageContextMenu {
 		browser.contextMenus.create({
 			id: this.menuItemId,
 			contexts: ['page'],
-			title: 'Translate page',
-			// type: 'checkbox',
-			// checked: false,
+			title: getMessage('contextMenu_translatePage'),
 		});
 
 		browser.contextMenus.onClicked.addListener(this.onClickMenu);
@@ -79,7 +79,9 @@ export class TranslatePageContextMenu {
 
 		const unwatchMenuItemState = this.$tabState.watch((state) => {
 			browser.contextMenus.update(this.menuItemId, {
-				title: state.isTranslating ? 'Disable translation' : 'Translate page',
+				title: state.isTranslating
+					? getMessage('contextMenu_disablePageTranslation')
+					: getMessage('contextMenu_translatePage'),
 			});
 		});
 

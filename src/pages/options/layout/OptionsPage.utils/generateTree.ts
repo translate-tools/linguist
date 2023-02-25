@@ -183,7 +183,9 @@ export const generateTree = ({
 							path: 'pageTranslator.enableContextMenu',
 							optionContent: {
 								type: 'Checkbox',
-								text: 'Enable context menu button',
+								text: getMessage(
+									'settings_option_pageTranslation_enableContextMenu',
+								),
 							},
 						},
 						{
