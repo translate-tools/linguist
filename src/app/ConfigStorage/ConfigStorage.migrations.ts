@@ -76,6 +76,30 @@ const migrations: Migration[] = [
 			});
 		},
 	},
+	{
+		version: 4,
+		async migrate() {
+			const storageName = 'appConfig';
+
+			let { [storageName]: actualData } = await browser.storage.local.get(
+				storageName,
+			);
+			if (typeof actualData !== 'object') {
+				actualData = {};
+			}
+
+			// Write data
+			browser.storage.local.set({
+				[storageName]: {
+					...actualData,
+					pageTranslator: {
+						...actualData?.pageTranslator,
+						enableContextMenu: false,
+					},
+				},
+			});
+		},
+	},
 ];
 
 export const ConfigStorageMigration = createMigrationTask(migrations);

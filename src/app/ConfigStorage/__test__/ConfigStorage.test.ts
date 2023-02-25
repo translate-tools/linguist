@@ -25,6 +25,17 @@ describe('config migrations', () => {
 		expect(appConfig).toEqual(configVersion3);
 		expect(localStorage.getItem('config.Main')).toBeNull();
 	});
+
+	test('migrate config v0-v4', async () => {
+		// Load data
+		localStorage.setItem('config.Main', JSON.stringify(configVersion1));
+
+		// Migrate data
+		await ConfigStorageMigration.migrate(0, 4);
+
+		const { appConfig } = await browser.storage.local.get('appConfig');
+		expect(appConfig).toEqual(configVersion4);
+	});
 });
 
 describe('use config', () => {
