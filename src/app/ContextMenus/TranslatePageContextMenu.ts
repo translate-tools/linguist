@@ -2,7 +2,6 @@ import { createEvent, createStore } from 'effector';
 import browser from 'webextension-polyfill';
 
 import { getMessage } from '../../lib/language';
-import { getCurrentTab } from '../../lib/browser/tabs';
 
 import { getTranslatorFeatures } from '../../requests/backend/getTranslatorFeatures';
 import { getConfig } from '../../requests/backend/getConfig';
@@ -41,13 +40,19 @@ export class TranslatePageContextMenu {
 
 		browser.contextMenus.create({
 			id: this.menuId,
+			viewTypes: ['tab'],
 			contexts: ['page'],
 			title: getMessage('contextMenu_translatePage'),
 		});
 
 		browser.contextMenus.onClicked.addListener(this.onClickMenu);
-		browser.tabs.onActivated.addListener(this.updateMenuItem);
-		browser.tabs.onUpdated.addListener(this.updateMenuItem);
+
+		const onActivated = ({ tabId }: browser.Tabs.OnActivatedActiveInfoType) =>
+			this.updateMenuItem(tabId);
+		browser.tabs.onActivated.addListener(onActivated);
+
+		const onUpdated = (tabId: number) => this.updateMenuItem(tabId);
+		browser.tabs.onUpdated.addListener(onUpdated);
 
 		const unwatchPageTranslatorUpdated = pageTranslatorStateUpdatedHandler(
 			(state, tabId) => {
@@ -71,8 +76,8 @@ export class TranslatePageContextMenu {
 
 		this.cleanupCallback = () => {
 			browser.contextMenus.onClicked.removeListener(this.onClickMenu);
-			browser.tabs.onActivated.removeListener(this.updateMenuItem);
-			browser.tabs.onUpdated.removeListener(this.updateMenuItem);
+			browser.tabs.onActivated.removeListener(onActivated);
+			browser.tabs.onUpdated.removeListener(onUpdated);
 
 			unwatchPageTranslatorUpdated();
 			unwatchMenuItemState();
@@ -90,8 +95,8 @@ export class TranslatePageContextMenu {
 		}
 	}
 
-	private updateMenuItem = async () => {
-		const tab = await getCurrentTab();
+	private updateMenuItem = async (tabId: number) => {
+		const tab = await browser.tabs.get(tabId);
 
 		let isVisible = false;
 		if (tab.url !== undefined) {
@@ -105,9 +110,6 @@ export class TranslatePageContextMenu {
 		});
 
 		if (isVisible) {
-			const tabId = tab.id;
-			if (tabId === undefined) return;
-
 			const translateState = await getPageTranslateState(tabId);
 			this.tabStateUpdated({
 				tabId,
