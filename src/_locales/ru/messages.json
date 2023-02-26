@@ -80,6 +80,12 @@
 	"contextMenu_translateSelectedText": {
 		"message": "Перевести выделенный текст"
 	},
+	"contextMenu_translatePage": {
+		"message": "Перевести страницу"
+	},
+	"contextMenu_disablePageTranslation": {
+		"message": "Выключить перевод страницы"
+	},
 	"dictionaryButton_delete": {
 		"message": "Удалить перевод из словаря"
 	},
@@ -340,6 +346,9 @@
 	},
 	"settings_option_mainPreferences": {
 		"message": "Основные настройки"
+	},
+	"settings_option_pageTranslation_enableContextMenu": {
+		"message": "Включить кнопку в контекстном меню"
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
 		"message": "Переводить только видимую часть текста"

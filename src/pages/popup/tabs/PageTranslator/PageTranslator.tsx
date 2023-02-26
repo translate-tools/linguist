@@ -9,7 +9,7 @@ import { getLanguageNameByCode, getMessage } from '../../../../lib/language';
 import { MutableValue } from '../../../../types/utils';
 
 import { TabData } from '../../layout/PopupWindow';
-import { PageTranslateState } from '../../../../app/ContentScript/PageTranslator/PageTranslator';
+import { PageTranslatorStats } from '../../../../app/ContentScript/PageTranslator/PageTranslator';
 
 import './PageTranslator.css';
 import { Spoiler } from '../../../../components/primitives/Spoiler/Spoiler.bundle/desktop';
@@ -51,7 +51,7 @@ export interface PageTranslatorProps
 
 	toggleTranslate: () => void;
 
-	counters: PageTranslateState;
+	counters: PageTranslatorStats;
 
 	isMobile?: boolean;
 }

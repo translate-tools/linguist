@@ -94,6 +94,7 @@ export const AppConfig = type.type({
 		lazyTranslate: type.boolean,
 		detectLanguageByContent: type.boolean,
 		originalTextPopup: type.boolean,
+		enableContextMenu: type.boolean,
 	}),
 	textTranslator: type.type({
 		rememberText: type.boolean,

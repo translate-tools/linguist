@@ -3,8 +3,8 @@ import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { getCurrentTab, getCurrentTabId } from '../../../../lib/browser/tabs';
 import { useStateWithProxy } from '../../../../lib/hooks/useStateWithProxy';
 
-import { PageTranslateState } from '../../../../app/ContentScript/PageTranslator/PageTranslator';
-import { translateStateUpdateHandler } from '../../../../app/ContentScript/PageTranslator/requests';
+import { PageTranslatorStats } from '../../../../app/ContentScript/PageTranslator/PageTranslator';
+import { pageTranslatorStatsUpdatedHandler } from '../../../../app/ContentScript/PageTranslator/requests/pageTranslatorStatsUpdated';
 
 // Requests
 import { addLanguagePreferences } from '../../../../requests/backend/autoTranslation/languagePreferences/addLanguagePreferences';
@@ -44,7 +44,7 @@ type InitData = {
 	sitePreferencesForLanguage: string;
 
 	isTranslated: boolean;
-	counters: PageTranslateState;
+	counters: PageTranslatorStats;
 	direction: {
 		from: string;
 		to: string;
@@ -264,10 +264,10 @@ export const PageTranslatorTab: TabComponent<InitFn<InitData>> = ({
 	}, [from, isTranslated, tabId, to]);
 
 	// Define counters
-	const [counters, setCounters] = useState<PageTranslateState>(countersInit);
+	const [counters, setCounters] = useState<PageTranslatorStats>(countersInit);
 	useEffect(() => {
 		// Handle updates
-		translateStateUpdateHandler((counters, messageTabId) => {
+		pageTranslatorStatsUpdatedHandler((counters, messageTabId) => {
 			// Skip messages from other tabs
 			if (messageTabId !== tabId) return;
 

@@ -80,6 +80,12 @@
 	"contextMenu_translateSelectedText": {
 		"message": "Translate selected text"
 	},
+	"contextMenu_translatePage": {
+		"message": "Translate page"
+	},
+	"contextMenu_disablePageTranslation": {
+		"message": "Disable page translation"
+	},
 	"dictionaryButton_delete": {
 		"message": "Delete from dictionary"
 	},
@@ -341,6 +347,9 @@
 	},
 	"settings_option_mainPreferences": {
 		"message": "Main settings"
+	},
+	"settings_option_pageTranslation_enableContextMenu": {
+		"message": "Enable context menu button"
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
 		"message": "Only translate visible elements"

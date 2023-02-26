@@ -3,7 +3,7 @@ import { defaultConfig } from '../config';
 import { AppConfigType } from '../types/runtime';
 import { isBackgroundContext } from '../lib/browser';
 import { AppThemeControl } from '../lib/browser/AppThemeControl';
-import { toggleTranslateItemInContextMenu } from '../lib/browser/toggleTranslateItemInContextMenu';
+import { TranslateSelectionContextMenu } from './ContextMenus/TranslateSelectionContextMenu';
 import { migrateAll } from './migrations/migrationsList';
 import { clearCache } from '../requests/backend/clearCache';
 
@@ -15,6 +15,7 @@ import { Background } from './Background';
 import { requestHandlers } from './Background/requestHandlers';
 
 import { sendConfigUpdateEvent } from './ContentScript';
+import { TranslatePageContextMenu } from './ContextMenus/TranslatePageContextMenu';
 
 /**
  * Manage global states and application context
@@ -104,12 +105,30 @@ export class App {
 			});
 
 		// Configure context menu
+		const translateSelectionContextMenu = new TranslateSelectionContextMenu();
 		$appConfig
-			.map((config) => config.selectTranslator)
-			.watch((selectTranslator) => {
-				const { enabled, mode } = selectTranslator;
+			.map((config) => {
+				const { enabled, mode } = config.selectTranslator;
 				const isEnabled = enabled && mode === 'contextMenu';
-				toggleTranslateItemInContextMenu(isEnabled);
+				return isEnabled;
+			})
+			.watch((isEnabled) => {
+				if (isEnabled) {
+					translateSelectionContextMenu.enable();
+				} else {
+					translateSelectionContextMenu.disable();
+				}
+			});
+
+		const translatePageContextMenu = new TranslatePageContextMenu();
+		$appConfig
+			.map((config) => config.pageTranslator.enableContextMenu)
+			.watch((isEnabled) => {
+				if (isEnabled) {
+					translatePageContextMenu.enable();
+				} else {
+					translatePageContextMenu.disable();
+				}
 			});
 	}
 }

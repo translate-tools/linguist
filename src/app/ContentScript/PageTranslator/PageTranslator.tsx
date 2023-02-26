@@ -6,9 +6,9 @@ import { OriginalTextPopup } from './components/OriginalTextPopup/OriginalTextPo
 import { NodesTranslator, Config as NodesTranslatorConfig } from './NodesTranslator';
 
 import { translate } from '../../../requests/backend/translate';
-import { translateStateUpdate } from './requests';
+import { pageTranslatorStatsUpdated } from './requests/pageTranslatorStatsUpdated';
 
-export type PageTranslateState = {
+export type PageTranslatorStats = {
 	resolved: number;
 	rejected: number;
 	pending: number;
@@ -28,7 +28,7 @@ export class PageTranslator {
 	private translateContext = Symbol();
 	private pageTranslator: NodesTranslator | null = null;
 	private pageTranslateDirection: { from: string; to: string } | null = null;
-	private translateState: PageTranslateState = {
+	private translateState: PageTranslatorStats = {
 		resolved: 0,
 		rejected: 0,
 		pending: 0,
@@ -193,7 +193,7 @@ export class PageTranslator {
 
 		const sendUpdate = () => {
 			this.lastSentUpdate = new Date().getTime();
-			translateStateUpdate(this.translateState);
+			pageTranslatorStatsUpdated(this.translateState);
 		};
 
 		const now = new Date().getTime();
