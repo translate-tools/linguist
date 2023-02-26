@@ -14,8 +14,9 @@ export class TranslateSelectionContextMenu {
 		browser.contextMenus.onClicked.addListener(this.onClicked);
 		browser.contextMenus.create({
 			id: this.menuId,
-			title: getMessage('contextMenu_translateSelectedText'),
+			viewTypes: ['tab'],
 			contexts: ['selection'],
+			title: getMessage('contextMenu_translateSelectedText'),
 		});
 	}
 	public disable() {
