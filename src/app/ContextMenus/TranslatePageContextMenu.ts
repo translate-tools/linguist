@@ -2,10 +2,11 @@ import { createEvent, createStore } from 'effector';
 import browser from 'webextension-polyfill';
 
 import { getMessage } from '../../lib/language';
+import { getCurrentTab } from '../../lib/browser/tabs';
 
-import { getPageTranslateState } from '../../requests/contentscript/pageTranslation/getPageTranslateState';
 import { getTranslatorFeatures } from '../../requests/backend/getTranslatorFeatures';
 import { getConfig } from '../../requests/backend/getConfig';
+import { getPageTranslateState } from '../../requests/contentscript/pageTranslation/getPageTranslateState';
 import { disableTranslatePage } from '../../requests/contentscript/pageTranslation/disableTranslatePage';
 import { enableTranslatePage } from '../../requests/contentscript/pageTranslation/enableTranslatePage';
 
@@ -17,7 +18,7 @@ type PageTranslationState = {
 };
 
 export class TranslatePageContextMenu {
-	private menuItemId = 'translatePage';
+	private menuId = 'translatePage';
 
 	private tabStateUpdated;
 	private $tabState;
@@ -39,45 +40,14 @@ export class TranslatePageContextMenu {
 		this.isEnabled = true;
 
 		browser.contextMenus.create({
-			id: this.menuItemId,
+			id: this.menuId,
 			contexts: ['page'],
 			title: getMessage('contextMenu_translatePage'),
 		});
 
 		browser.contextMenus.onClicked.addListener(this.onClickMenu);
-
-		const updateMenuItem = async (tabId: number) => {
-			const tab = await browser.tabs.get(tabId);
-
-			let isVisible = false;
-			if (tab.url !== undefined) {
-				const tabUrl = new URL(tab.url);
-				const isUrlHasHttpProtocol = tabUrl.protocol.startsWith('http');
-				isVisible = isUrlHasHttpProtocol;
-			}
-
-			browser.contextMenus.update(this.menuItemId, {
-				visible: isVisible,
-			});
-
-			if (isVisible) {
-				const translateState = await getPageTranslateState(tabId);
-				this.tabStateUpdated({
-					tabId,
-					isTranslating: translateState.isTranslated,
-				});
-			}
-		};
-
-		const onActivated = (info: browser.Tabs.OnActivatedActiveInfoType) => {
-			updateMenuItem(info.tabId);
-		};
-		browser.tabs.onActivated.addListener(onActivated);
-
-		const onUpdated = (tabId: number) => {
-			updateMenuItem(tabId);
-		};
-		browser.tabs.onUpdated.addListener(onUpdated);
+		browser.tabs.onActivated.addListener(this.updateMenuItem);
+		browser.tabs.onUpdated.addListener(this.updateMenuItem);
 
 		const unwatchPageTranslatorUpdated = pageTranslatorStateUpdatedHandler(
 			(state, tabId) => {
@@ -92,7 +62,7 @@ export class TranslatePageContextMenu {
 		);
 
 		const unwatchMenuItemState = this.$tabState.watch((state) => {
-			browser.contextMenus.update(this.menuItemId, {
+			browser.contextMenus.update(this.menuId, {
 				title: state.isTranslating
 					? getMessage('contextMenu_disablePageTranslation')
 					: getMessage('contextMenu_translatePage'),
@@ -101,8 +71,8 @@ export class TranslatePageContextMenu {
 
 		this.cleanupCallback = () => {
 			browser.contextMenus.onClicked.removeListener(this.onClickMenu);
-			browser.tabs.onActivated.removeListener(onActivated);
-			browser.tabs.onUpdated.removeListener(onUpdated);
+			browser.tabs.onActivated.removeListener(this.updateMenuItem);
+			browser.tabs.onUpdated.removeListener(this.updateMenuItem);
 
 			unwatchPageTranslatorUpdated();
 			unwatchMenuItemState();
@@ -113,18 +83,44 @@ export class TranslatePageContextMenu {
 		if (!this.isEnabled) return;
 		this.isEnabled = false;
 
-		browser.contextMenus.remove(this.menuItemId);
+		browser.contextMenus.remove(this.menuId);
 
 		if (this.cleanupCallback !== null) {
 			this.cleanupCallback();
 		}
 	}
 
+	private updateMenuItem = async () => {
+		const tab = await getCurrentTab();
+
+		let isVisible = false;
+		if (tab.url !== undefined) {
+			const tabUrl = new URL(tab.url);
+			const isUrlHasHttpProtocol = tabUrl.protocol.startsWith('http');
+			isVisible = isUrlHasHttpProtocol;
+		}
+
+		browser.contextMenus.update(this.menuId, {
+			visible: isVisible,
+		});
+
+		if (isVisible) {
+			const tabId = tab.id;
+			if (tabId === undefined) return;
+
+			const translateState = await getPageTranslateState(tabId);
+			this.tabStateUpdated({
+				tabId,
+				isTranslating: translateState.isTranslated,
+			});
+		}
+	};
+
 	private onClickMenu = async (
 		info: browser.Menus.OnClickData,
 		tab: browser.Tabs.Tab | undefined,
 	) => {
-		if (info.menuItemId !== this.menuItemId) return;
+		if (info.menuItemId !== this.menuId) return;
 
 		const tabId = tab?.id;
 		if (tabId === undefined) return;
