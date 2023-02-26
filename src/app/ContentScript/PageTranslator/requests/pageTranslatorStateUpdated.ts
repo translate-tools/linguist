@@ -10,6 +10,6 @@ export const pageTranslatorStateUpdated = (
 export const pageTranslatorStateUpdatedHandler = (
 	handler: (state: PageTranslatorState, tabId?: number) => void,
 ) =>
-	addRequestHandler(eventName, (rawData, sender) => {
-		handler(rawData, sender.tab?.id);
+	addRequestHandler(eventName, (state, sender) => {
+		handler(state, sender.tab?.id);
 	});
