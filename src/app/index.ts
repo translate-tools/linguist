@@ -123,8 +123,8 @@ export class App {
 		const translatePageContextMenu = new TranslatePageContextMenu();
 		$appConfig
 			.map((config) => config.pageTranslator.enableContextMenu)
-			.watch((isPageTranslatorContextMenuEnabled) => {
-				if (isPageTranslatorContextMenuEnabled) {
+			.watch((isEnabled) => {
+				if (isEnabled) {
 					translatePageContextMenu.enable();
 				} else {
 					translatePageContextMenu.disable();
