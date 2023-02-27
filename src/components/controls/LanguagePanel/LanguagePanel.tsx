@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from 'react';
+import React, { FC, useCallback, useEffect, useMemo, useState } from 'react';
 import { cn } from '@bem-react/classname';
 
 import { getLanguageNameByCode, getMessage } from '../../../lib/language';
@@ -61,49 +61,58 @@ export const LanguagePanel: FC<LanguagePanelProps> = ({
 		getPopularLanguages().then(setPopularLanguages);
 	}, []);
 
-	// TODO: memoize it
-	const options = languages
-		.map((value) => ({
-			id: value,
-			content: getLanguageNameByCode(value),
-		}))
-		.sort((language1, language2) => {
-			// The lowest the most used
-			const lang1UsageRate = popularLanguages.indexOf(language1.id);
-			const lang2UsageRate = popularLanguages.indexOf(language2.id);
+	const options = useMemo(
+		() =>
+			languages
+				.map((value) => ({
+					id: value,
+					content: getLanguageNameByCode(value),
+				}))
+				.sort((language1, language2) => {
+					// The lowest the most used
+					const lang1UsageRate = popularLanguages.indexOf(language1.id);
+					const lang2UsageRate = popularLanguages.indexOf(language2.id);
 
-			// Move left the language with lowest index, but not -1
-			if (lang1UsageRate !== -1 || lang2UsageRate !== -1) {
-				if (lang1UsageRate === -1) return 1;
-				if (lang2UsageRate === -1) return -1;
+					// Move left the language with lowest index, but not -1
+					if (lang1UsageRate !== -1 || lang2UsageRate !== -1) {
+						if (lang1UsageRate === -1) return 1;
+						if (lang2UsageRate === -1) return -1;
 
-				return lang1UsageRate < lang2UsageRate ? -1 : 1;
-			}
+						return lang1UsageRate < lang2UsageRate ? -1 : 1;
+					}
 
-			// Sort lexicographically
-			return language1.content > language2.content
-				? 1
-				: language1.content < language2.content
-					? -1
-					: 0;
-		});
+					// Sort lexicographically
+					return language1.content > language2.content
+						? 1
+						: language1.content < language2.content
+							? -1
+							: 0;
+				}),
+		[languages, popularLanguages],
+	);
 
-	const optionsFrom = auto
-		? [{ id: 'auto', content: getLanguageNameByCode('auto') }, ...options]
-		: options;
+	const optionsFrom = useMemo(
+		() =>
+			auto
+				? [{ id: 'auto', content: getLanguageNameByCode('auto') }, ...options]
+				: options,
+		[auto, options],
+	);
 
 	return (
 		<span className={cnLanguagePanel({ view: mobile ? 'wide' : undefined })}>
 			<Select
 				options={optionsFrom}
 				value={fromValue}
-				setValue={(value) => {
-					// TODO: move code to callback
-					if (typeof value !== 'string' || setFrom === undefined) return;
+				setValue={useCallback(
+					(value) => {
+						if (typeof value !== 'string' || setFrom === undefined) return;
 
-					setFrom(value);
-					pickLanguage(value).then(setPopularLanguages);
-				}}
+						setFrom(value);
+						pickLanguage(value).then(setPopularLanguages);
+					},
+					[setFrom],
+				)}
 				className={cnLanguagePanel('Select')}
 			/>
 			<Button
@@ -121,12 +130,15 @@ export const LanguagePanel: FC<LanguagePanelProps> = ({
 			<Select
 				options={options}
 				value={toValue}
-				setValue={(value) => {
-					if (typeof value !== 'string' || setTo === undefined) return;
+				setValue={useCallback(
+					(value) => {
+						if (typeof value !== 'string' || setTo === undefined) return;
 
-					setTo(value);
-					pickLanguage(value).then(setPopularLanguages);
-				}}
+						setTo(value);
+						pickLanguage(value).then(setPopularLanguages);
+					},
+					[setTo],
+				)}
 				className={cnLanguagePanel('Select')}
 			/>
 		</span>
