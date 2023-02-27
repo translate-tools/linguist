@@ -6,7 +6,7 @@ const storageKey = 'recentUsedLanguages';
 const languagesType = type.array(type.string);
 
 // TODO: provide `limitLanguages` argument as option from config
-export const getLanguages = async (limitLanguages = 3): Promise<string[]> => {
+export const getLanguages = async (limitLanguages = 5): Promise<string[]> => {
 	const storageSlice = await browser.storage.local.get(storageKey);
 	const decodeResult = decodeStruct(languagesType, storageSlice[storageKey]);
 	if (decodeResult.errors !== null) return [];
