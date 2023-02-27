@@ -34,6 +34,9 @@ import { applyTranslatorsFactory } from '../../requests/backend/translators/appl
 
 import { historyRequestHandlersFactory } from '../../requests/backend/history';
 
+import { getPopularLanguagesFactory } from '../../requests/backend/popularLanguages/getPopularLanguages';
+import { pickLanguageFactory } from '../../requests/backend/popularLanguages/pickLanguage';
+
 export const requestHandlers = [
 	translateFactory,
 	suggestLanguageFactory,
@@ -68,6 +71,9 @@ export const requestHandlers = [
 	updateTranslatorFactory,
 	getTranslatorsFactory,
 	applyTranslatorsFactory,
+
+	getPopularLanguagesFactory,
+	pickLanguageFactory,
 
 	// Up ping last to give success response only when all request handlers is ready
 	pingFactory,
