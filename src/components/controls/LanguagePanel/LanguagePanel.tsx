@@ -56,15 +56,15 @@ export const LanguagePanel: FC<LanguagePanelProps> = ({
 		}
 	};
 
-	const [popularLanguages, setPopularLanguages] = useState<string[]>([]);
+	const [recentLanguages, setRecentLanguages] = useState<string[]>([]);
 	useEffect(() => {
-		getRecentUsedLanguages().then(setPopularLanguages);
+		getRecentUsedLanguages().then(setRecentLanguages);
 	}, []);
 
 	const upLanguage = useCallback(
 		(lang: string) =>
 			addRecentUsedLanguage(lang).then(() => {
-				getRecentUsedLanguages().then(setPopularLanguages);
+				getRecentUsedLanguages().then(setRecentLanguages);
 			}),
 		[],
 	);
@@ -78,8 +78,8 @@ export const LanguagePanel: FC<LanguagePanelProps> = ({
 				}))
 				.sort((language1, language2) => {
 					// The lowest the most used
-					const lang1UsageRate = popularLanguages.indexOf(language1.id);
-					const lang2UsageRate = popularLanguages.indexOf(language2.id);
+					const lang1UsageRate = recentLanguages.indexOf(language1.id);
+					const lang2UsageRate = recentLanguages.indexOf(language2.id);
 
 					// Move left the language with lowest index, but not -1
 					if (lang1UsageRate !== -1 || lang2UsageRate !== -1) {
@@ -96,7 +96,7 @@ export const LanguagePanel: FC<LanguagePanelProps> = ({
 							? -1
 							: 0;
 				}),
-		[languages, popularLanguages],
+		[languages, recentLanguages],
 	);
 
 	const optionsFrom = useMemo(
