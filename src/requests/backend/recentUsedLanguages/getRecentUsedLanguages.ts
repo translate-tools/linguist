@@ -1,11 +1,9 @@
 import { buildBackendRequest } from '../../utils/requestBuilder';
 import { getLanguages } from '.';
 
-export const [getPopularLanguagesFactory, getPopularLanguages] = buildBackendRequest(
-	'getPopularLanguages',
-	{
+export const [getRecentUsedLanguagesFactory, getRecentUsedLanguages] =
+	buildBackendRequest('getRecentUsedLanguages', {
 		factoryHandler: () => async () => {
 			return getLanguages();
 		},
-	},
-);
+	});

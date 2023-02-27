@@ -7,8 +7,8 @@ import { Button } from '../../primitives/Button/Button.bundle/desktop';
 import { Select } from '../../primitives/Select/Select.bundle/desktop';
 import { Icon } from '../../primitives/Icon/Icon.bundle/desktop';
 
-import { pickLanguage } from '../../../requests/backend/popularLanguages/pickLanguage';
-import { getPopularLanguages } from '../../../requests/backend/popularLanguages/getPopularLanguages';
+import { addRecentUsedLanguage } from '../../../requests/backend/recentUsedLanguages/addRecentUsedLanguage';
+import { getRecentUsedLanguages } from '../../../requests/backend/recentUsedLanguages/getRecentUsedLanguages';
 
 import './LanguagePanel.css';
 
@@ -58,13 +58,13 @@ export const LanguagePanel: FC<LanguagePanelProps> = ({
 
 	const [popularLanguages, setPopularLanguages] = useState<string[]>([]);
 	useEffect(() => {
-		getPopularLanguages().then(setPopularLanguages);
+		getRecentUsedLanguages().then(setPopularLanguages);
 	}, []);
 
 	const upLanguage = useCallback(
 		(lang: string) =>
-			pickLanguage(lang).then(() => {
-				getPopularLanguages().then(setPopularLanguages);
+			addRecentUsedLanguage(lang).then(() => {
+				getRecentUsedLanguages().then(setPopularLanguages);
 			}),
 		[],
 	);
