@@ -61,6 +61,14 @@ export const LanguagePanel: FC<LanguagePanelProps> = ({
 		getPopularLanguages().then(setPopularLanguages);
 	}, []);
 
+	const upLanguage = useCallback(
+		(lang: string) =>
+			pickLanguage(lang).then(() => {
+				getPopularLanguages().then(setPopularLanguages);
+			}),
+		[],
+	);
+
 	const options = useMemo(
 		() =>
 			languages
@@ -78,7 +86,7 @@ export const LanguagePanel: FC<LanguagePanelProps> = ({
 						if (lang1UsageRate === -1) return 1;
 						if (lang2UsageRate === -1) return -1;
 
-						return lang1UsageRate < lang2UsageRate ? -1 : 1;
+						return lang1UsageRate > lang2UsageRate ? -1 : 1;
 					}
 
 					// Sort lexicographically
@@ -109,9 +117,9 @@ export const LanguagePanel: FC<LanguagePanelProps> = ({
 						if (typeof value !== 'string' || setFrom === undefined) return;
 
 						setFrom(value);
-						pickLanguage(value).then(setPopularLanguages);
+						upLanguage(value);
 					},
-					[setFrom],
+					[upLanguage, setFrom],
 				)}
 				className={cnLanguagePanel('Select')}
 			/>
@@ -135,9 +143,9 @@ export const LanguagePanel: FC<LanguagePanelProps> = ({
 						if (typeof value !== 'string' || setTo === undefined) return;
 
 						setTo(value);
-						pickLanguage(value).then(setPopularLanguages);
+						upLanguage(value);
 					},
-					[setTo],
+					[upLanguage, setTo],
 				)}
 				className={cnLanguagePanel('Select')}
 			/>
