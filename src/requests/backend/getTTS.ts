@@ -97,16 +97,22 @@ const TTSMap = {
 // TODO: implement option for select TTS speed
 export const [getTTSFactory, getTTSReq] = buildBackendRequest('getTTS', {
 	factoryHandler:
-		() =>
+		({ config }) =>
 			async ({ text, lang }: { text: string; lang: string }) => {
 			// Fix lang auto to detected language
 				if (lang === 'auto') {
 					lang = (await detectLanguage(text, true)) || 'en';
 				}
 
+				const { ttsModule } = await config.get();
+				if (!(ttsModule in TTSMap)) {
+					throw new Error('TTS module not found');
+				}
+
+				const tts = TTSMap[ttsModule as keyof typeof TTSMap];
 				return Promise.all(
 					splitLongText(text).map((text) =>
-						TTSMap.lingva.getTextToSpeakBlob(text, lang).then(blobToBase64),
+						tts.getTextToSpeakBlob(text, lang).then(blobToBase64),
 					),
 				);
 			},

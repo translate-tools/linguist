@@ -3,10 +3,12 @@ import { getUserLanguage } from './lib/language';
 import { AppConfigType } from './types/runtime';
 
 export const DEFAULT_TRANSLATOR = 'GoogleTranslator';
+export const DEFAULT_TTS = 'lingva';
 
 // Init config
 export const defaultConfig: AppConfigType = {
 	translatorModule: DEFAULT_TRANSLATOR,
+	ttsModule: DEFAULT_TTS,
 	appIcon: 'auto',
 	language: getUserLanguage(),
 	scheduler: {
