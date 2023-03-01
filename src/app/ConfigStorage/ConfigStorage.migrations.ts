@@ -1,5 +1,6 @@
 import browser from 'webextension-polyfill';
 
+import { DEFAULT_TTS } from '../../config';
 import { createMigrationTask, Migration } from '../../lib/migrations/createMigrationTask';
 
 const migrations: Migration[] = [
@@ -91,10 +92,11 @@ const migrations: Migration[] = [
 			// Write data
 			browser.storage.local.set({
 				[storageName]: {
+					ttsModule: DEFAULT_TTS,
 					...actualData,
 					pageTranslator: {
-						...actualData?.pageTranslator,
 						enableContextMenu: false,
+						...actualData?.pageTranslator,
 					},
 				},
 			});
