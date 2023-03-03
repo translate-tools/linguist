@@ -22,3 +22,12 @@ export const getAllTabs = () =>
 			(tabs): (Tabs.Tab & { id: number })[] =>
 				tabs.filter((tab) => tab.id !== undefined) as any,
 		);
+
+export const isValidBrowserTabId = (tabId: undefined | number): tabId is number => {
+	if (tabId === undefined) return false;
+
+	// Exclude non browser tabs (for example, tabs in devtools windows)
+	if (tabId === browser.tabs.TAB_ID_NONE) return false;
+
+	return true;
+};
