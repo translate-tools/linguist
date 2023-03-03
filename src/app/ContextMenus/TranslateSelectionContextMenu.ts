@@ -1,6 +1,9 @@
 import browser, { Menus, Tabs } from 'webextension-polyfill';
 
 import { getMessage } from '../../lib/language';
+import { isFirefox } from '../../lib/browser';
+import { isValidBrowserTabId } from '../../lib/browser/tabs';
+
 import { translateSelectedText } from '../../requests/contentscript/translateSelectedText';
 
 export class TranslateSelectionContextMenu {
@@ -14,9 +17,9 @@ export class TranslateSelectionContextMenu {
 		browser.contextMenus.onClicked.addListener(this.onClicked);
 		browser.contextMenus.create({
 			id: this.menuId,
-			viewTypes: ['tab'],
 			contexts: ['selection'],
 			title: getMessage('contextMenu_translateSelectedText'),
+			...(isFirefox() ? { viewTypes: ['tab'] } : {}),
 		});
 	}
 	public disable() {
@@ -28,7 +31,8 @@ export class TranslateSelectionContextMenu {
 	}
 
 	private onClicked = (info: Menus.OnClickData, tab: Tabs.Tab | undefined) => {
-		if (info.menuItemId !== this.menuId || !tab || !tab.id) return;
+		if (info.menuItemId !== this.menuId || !tab || !isValidBrowserTabId(tab.id))
+			return;
 
 		translateSelectedText(tab.id);
 	};
