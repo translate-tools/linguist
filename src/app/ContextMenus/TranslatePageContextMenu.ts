@@ -3,7 +3,7 @@ import browser from 'webextension-polyfill';
 
 import { getMessage } from '../../lib/language';
 import { isFirefox } from '../../lib/browser';
-import { isValidBrowserTabId } from '../../lib/browser/tabs';
+import { getCurrentTabId, isValidBrowserTabId } from '../../lib/browser/tabs';
 
 import { getTranslatorFeatures } from '../../requests/backend/getTranslatorFeatures';
 import { getConfig } from '../../requests/backend/getConfig';
@@ -145,8 +145,15 @@ export class TranslatePageContextMenu {
 	) => {
 		if (info.menuItemId !== this.menuId) return;
 
-		const tabId = tab?.id;
-		if (!isValidBrowserTabId(tabId)) return;
+		let tabId = tab?.id;
+
+		// Get current tab id if click on non browser tab
+		// It is special case for chromium browsers, that does not support `viewTypes` feature #224
+		if (tabId === browser.tabs.TAB_ID_NONE) {
+			tabId = await getCurrentTabId();
+		}
+
+		if (tabId === undefined) return;
 
 		const isTranslating = this.$tabState.getState().isTranslating;
 
