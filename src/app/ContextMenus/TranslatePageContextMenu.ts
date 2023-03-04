@@ -2,6 +2,8 @@ import { createEvent, createStore } from 'effector';
 import browser from 'webextension-polyfill';
 
 import { getMessage } from '../../lib/language';
+import { isFirefox } from '../../lib/browser';
+import { getCurrentTabId, isValidBrowserTabId } from '../../lib/browser/tabs';
 
 import { getTranslatorFeatures } from '../../requests/backend/getTranslatorFeatures';
 import { getConfig } from '../../requests/backend/getConfig';
@@ -40,9 +42,9 @@ export class TranslatePageContextMenu {
 
 		browser.contextMenus.create({
 			id: this.menuId,
-			viewTypes: ['tab'],
 			contexts: ['page'],
 			title: getMessage('contextMenu_translatePage'),
+			...(isFirefox() ? { viewTypes: ['tab'] } : {}),
 		});
 
 		browser.contextMenus.onClicked.addListener(this.onClickMenu);
@@ -96,7 +98,18 @@ export class TranslatePageContextMenu {
 	}
 
 	private updateMenuItem = async (tabId: number) => {
+		const currentWindow = await browser.windows.getCurrent();
 		const tab = await browser.tabs.get(tabId);
+
+		// Ignore menus from not current page context
+		if (
+			!tab.active ||
+			!isValidBrowserTabId(tabId) ||
+			!tab.windowId ||
+			!currentWindow.id ||
+			tab.windowId !== currentWindow.id
+		)
+			return;
 
 		let isVisible = false;
 		if (tab.url !== undefined) {
@@ -110,11 +123,19 @@ export class TranslatePageContextMenu {
 		});
 
 		if (isVisible) {
-			const translateState = await getPageTranslateState(tabId);
-			this.tabStateUpdated({
-				tabId,
-				isTranslating: translateState.isTranslated,
-			});
+			try {
+				const translateState = await getPageTranslateState(tabId);
+				this.tabStateUpdated({
+					tabId,
+					isTranslating: translateState.isTranslated,
+				});
+			} catch (error) {
+				// Handle case when tab contentscript is not loaded yet
+				// and requests do not handle
+				browser.contextMenus.update(this.menuId, {
+					visible: false,
+				});
+			}
 		}
 	};
 
@@ -124,7 +145,14 @@ export class TranslatePageContextMenu {
 	) => {
 		if (info.menuItemId !== this.menuId) return;
 
-		const tabId = tab?.id;
+		let tabId = tab?.id;
+
+		// Get current tab id if click on non browser tab
+		// It is special case for chromium browsers, that does not support `viewTypes` feature #224
+		if (tabId === browser.tabs.TAB_ID_NONE) {
+			tabId = await getCurrentTabId();
+		}
+
 		if (tabId === undefined) return;
 
 		const isTranslating = this.$tabState.getState().isTranslating;
