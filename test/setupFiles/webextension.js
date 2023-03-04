@@ -1,3 +1,6 @@
+import { Blob } from 'buffer';
+globalThis.Blob = Blob;
+
 require('jest-webextension-mock');
 
 const extBasePath = 'moz-extension://8b413e68-1e0d-4cad-b98e-1eb000799783/';
