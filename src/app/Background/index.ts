@@ -16,6 +16,7 @@ import { getTranslatorsClasses } from '../../requests/backend/translators';
 
 import { ObservableAsyncStorage } from '../ConfigStorage/ConfigStorage';
 import { TranslatorManager } from './TranslatorManager';
+import { TTSManager } from './TTSManager';
 
 export const embeddedTranslators = {
 	YandexTranslator,
@@ -33,8 +34,10 @@ export type TranslatorsMap = Record<string, TranslatorClass>;
  */
 export class Background {
 	private readonly config: ObservableAsyncStorage<AppConfigType>;
+	private ttsManager;
 	constructor(config: ObservableAsyncStorage<AppConfigType>) {
 		this.config = config;
+		this.ttsManager = new TTSManager();
 	}
 
 	private translateManager: TranslatorManager | null = null;
@@ -61,6 +64,10 @@ export class Background {
 		}
 
 		return this.translateManager;
+	}
+
+	public getTTSManager() {
+		return this.ttsManager;
 	}
 
 	public async start() {

@@ -2,33 +2,30 @@ import splitLongText from 'google-tts-api/dist/splitLongText';
 
 import { detectLanguage } from '../../lib/language';
 import { blobToBase64, base64ToBlob } from '../../lib/blob';
-import { GoogleTTS, LingvaTTS } from '../../lib/tts/speakers';
 import { buildBackendRequest } from '../utils/requestBuilder';
-
-const TTSMap = {
-	google: new GoogleTTS(),
-	lingva: new LingvaTTS(),
-} as const;
 
 // TODO: implement option for select TTS speed
 export const [getTTSFactory, getTTSReq] = buildBackendRequest('getTTS', {
 	factoryHandler:
-		({ config }) =>
+		({ config, backgroundContext }) =>
 			async ({ text, lang }: { text: string; lang: string }) => {
 			// Fix lang auto to detected language
 				if (lang === 'auto') {
 					lang = (await detectLanguage(text, true)) || 'en';
 				}
 
-				const { ttsModule } = await config.get();
-				if (!(ttsModule in TTSMap)) {
+				const ttsManager = backgroundContext.getTTSManager();
+				const ttsSpeakers = await ttsManager.getSpeakers();
+
+				const cfg = await config.get();
+				if (!(cfg.ttsModule in ttsSpeakers)) {
 					throw new Error('TTS module not found');
 				}
 
-				const tts = TTSMap[ttsModule as keyof typeof TTSMap];
+				const ttsSpeaker = ttsSpeakers[cfg.ttsModule as keyof typeof ttsSpeakers];
 				return Promise.all(
 					splitLongText(text).map((text) =>
-						tts.getTextToSpeakBlob(text, lang).then(blobToBase64),
+						ttsSpeaker.getTextToSpeakBlob(text, lang).then(blobToBase64),
 					),
 				);
 			},
