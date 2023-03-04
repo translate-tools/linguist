@@ -1,17 +1,17 @@
-interface TTSProviderProps {
+export interface TTSProviderProps {
 	getTextToSpeakBlob(text: string, language: string): Promise<Blob>;
 }
 
-// interface TTSProviderStaticProps {
-// 	getSupportedLanguages(): string[];
-// }
+export interface TTSProviderStaticProps {
+	getSupportedLanguages(): string[];
+}
 
-// type TTSProvider = TTSProviderStaticProps & {
-// 	new(...args: any[]): TTSProviderProps;
-// };
+export type TTSProvider = TTSProviderStaticProps & {
+	new (...args: any[]): TTSProviderProps;
+};
 
 export class GoogleTTS implements TTSProviderProps {
-	getTextToSpeakBlob(text: string, language: string): Promise<Blob> {
+	public getTextToSpeakBlob(text: string, language: string): Promise<Blob> {
 		const url =
 			`https://translate.google.com/translate_tts?ie=UTF-8&tl=${language}&client=dict-chrome-ex&ttsspeed=0.5&q=` +
 			encodeURIComponent(text);
@@ -21,7 +21,7 @@ export class GoogleTTS implements TTSProviderProps {
 			.then((blob) => new Blob([blob], { type: 'audio/mpeg' }));
 	}
 
-	getSupportedLanguages() {
+	public static getSupportedLanguages() {
 		// prettier-ignore
 		return [
 			"af", "sq", "am", "ar", "hy", "as", "ay", "az", "bm", "eu",
@@ -44,7 +44,7 @@ export class GoogleTTS implements TTSProviderProps {
 export class LingvaTTS implements TTSProviderProps {
 	private host = 'https://lingva.ml';
 
-	async getTextToSpeakBlob(text: string, language: string): Promise<Blob> {
+	public async getTextToSpeakBlob(text: string, language: string): Promise<Blob> {
 		return fetch(
 			`${this.host}/api/v1/audio/${encodeURIComponent(
 				language,
@@ -63,7 +63,7 @@ export class LingvaTTS implements TTSProviderProps {
 			});
 	}
 
-	getSupportedLanguages() {
+	public static getSupportedLanguages() {
 		// prettier-ignore
 		return [
 			"af", "sq", "am", "ar", "hy", "as", "ay", "az", "bm", "eu",

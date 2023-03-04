@@ -22,10 +22,11 @@ export const [getTTSFactory, getTTSReq] = buildBackendRequest('getTTS', {
 					throw new Error('TTS module not found');
 				}
 
-				const ttsSpeaker = ttsSpeakers[cfg.ttsModule as keyof typeof ttsSpeakers];
+				const ttsSpeakerClass = ttsSpeakers[cfg.ttsModule];
+				const tts = new ttsSpeakerClass();
 				return Promise.all(
 					splitLongText(text).map((text) =>
-						ttsSpeaker.getTextToSpeakBlob(text, lang).then(blobToBase64),
+						tts.getTextToSpeakBlob(text, lang).then(blobToBase64),
 					),
 				);
 			},
