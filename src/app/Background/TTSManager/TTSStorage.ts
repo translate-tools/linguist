@@ -5,7 +5,7 @@ export type SerializedSpeaker = {
 	code: string;
 };
 
-export type TTSKey = string;
+export type TTSKey = number;
 
 export interface TTSStorageDBSchema extends IDB.DBSchema {
 	speakers: {

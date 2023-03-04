@@ -14,15 +14,10 @@ export const [getTTSFactory, getTTSReq] = buildBackendRequest('getTTS', {
 					lang = (await detectLanguage(text, true)) || 'en';
 				}
 
-				const ttsManager = backgroundContext.getTTSManager();
-				const ttsSpeakers = await ttsManager.getSpeakers();
-
 				const cfg = await config.get();
-				if (!(cfg.ttsModule in ttsSpeakers)) {
-					throw new Error('TTS module not found');
-				}
+				const ttsManager = backgroundContext.getTTSManager();
+				const ttsSpeakerClass = await ttsManager.getSpeaker(cfg.ttsModule);
 
-				const ttsSpeakerClass = ttsSpeakers[cfg.ttsModule];
 				const tts = new ttsSpeakerClass();
 				return Promise.all(
 					splitLongText(text).map((text) =>

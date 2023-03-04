@@ -1,4 +1,4 @@
-import { GoogleTTS, LingvaTTS, TTSProvider } from '../../../lib/tts/speakers';
+import { GoogleTTS, LingvaTTS } from '../../../lib/tts/speakers';
 
 import { SerializedSpeaker, TTSKey, TTSStorage } from './TTSStorage';
 import { tryLoadTTSCode } from './utils';
@@ -16,44 +16,53 @@ export const embeddedSpeakers = {
 
 export const isCustomTTSId = (id: string) => id.startsWith('#');
 export const ttsKeyToId = (key: TTSKey) => '#' + key;
-export const ttsIdToKey = (id: string): TTSKey => (isCustomTTSId(id) ? id.slice(1) : id);
+export const ttsIdToKey = (id: string): TTSKey =>
+	Number(isCustomTTSId(id) ? id.slice(1) : id);
 
-// TODO: implement logic to persistent add, update and remove speakers
+// TODO: implement update speaker
 export class TTSManager {
 	private storage;
 	constructor() {
 		this.storage = new TTSStorage();
 	}
 
+	public async getSpeaker(id: string) {
+		if (!isCustomTTSId(id)) {
+			if (id in embeddedSpeakers) {
+				return embeddedSpeakers[id as keyof typeof embeddedSpeakers].constructor;
+			}
+
+			throw new Error('Not found embedded TTS');
+		}
+
+		const ttsKey = ttsIdToKey(id);
+		const speaker = await this.storage.get(ttsKey);
+		if (speaker === undefined) {
+			throw new Error('Not found custom TTS');
+		}
+
+		const { error, constructor } = tryLoadTTSCode(speaker.code);
+		if (error !== null) {
+			throw new Error(error);
+		}
+
+		return constructor;
+	}
+
 	public async getSpeakers() {
-		const speakers: Record<string, TTSProvider> = Object.fromEntries(
-			Object.entries(embeddedSpeakers).map(([id, { constructor }]) => [
-				id,
-				constructor,
-			]),
+		const speakers: Record<string, string> = Object.fromEntries(
+			Object.entries(embeddedSpeakers).map(([id, { name }]) => [id, name]),
 		);
 
 		// Collect custom speakers
 		const customSpeakers = await this.storage.getAll();
 		for (const customSpeaker of customSpeakers) {
 			const id = ttsKeyToId(customSpeaker.id);
-			const { constructor, error } = tryLoadTTSCode(customSpeaker.data.code);
-
-			if (constructor === null) {
-				console.warn(`Skip translator #${id}`, error);
-				continue;
-			}
-
-			speakers[id] = constructor;
+			speakers[id] = customSpeaker.data.name;
 		}
 
 		return speakers;
 	}
-
-	// TODO: implement method
-	// public async getSpeakersNames() {
-	// 	return embeddedSpeakers;
-	// }
 
 	public async add(speaker: SerializedSpeaker) {
 		const { error } = tryLoadTTSCode(speaker.code);
@@ -65,7 +74,7 @@ export class TTSManager {
 		return ttsKeyToId(key);
 	}
 
-	public async delete(id: TTSKey) {
+	public async delete(id: string) {
 		const key = ttsIdToKey(id);
 		return this.storage.delete(key);
 	}

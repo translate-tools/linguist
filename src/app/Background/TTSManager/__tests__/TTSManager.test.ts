@@ -37,7 +37,7 @@ describe('TTS manager 0', () => {
 			Object.keys(embeddedSpeakers).length + 1,
 		);
 
-		const customTTS = speakers[customTTSId];
+		const customTTS = await ttsManager.getSpeaker(customTTSId);
 		expect(typeof customTTS).toBe('function');
 
 		const tts = new customTTS();
