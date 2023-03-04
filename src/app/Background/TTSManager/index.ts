@@ -19,6 +19,17 @@ export const ttsKeyToId = (key: TTSKey) => '#' + key;
 export const ttsIdToKey = (id: string): TTSKey =>
 	Number(isCustomTTSId(id) ? id.slice(1) : id);
 
+const validateSpeaker = (speaker: SerializedSpeaker) => {
+	if (speaker.name.trim().length === 0) {
+		throw new Error('Name must not be empty');
+	}
+
+	const { error } = tryLoadTTSCode(speaker.code);
+	if (error !== null) {
+		throw new Error(error);
+	}
+};
+
 // TODO: implement update speaker
 export class TTSManager {
 	private storage;
@@ -65,13 +76,15 @@ export class TTSManager {
 	}
 
 	public async add(speaker: SerializedSpeaker) {
-		const { error } = tryLoadTTSCode(speaker.code);
-		if (error !== null) {
-			throw new Error(error);
-		}
-
+		validateSpeaker(speaker);
 		const key = await this.storage.add(speaker);
 		return ttsKeyToId(key);
+	}
+
+	public async update(id: string, speaker: SerializedSpeaker) {
+		validateSpeaker(speaker);
+		const key = ttsIdToKey(id);
+		await this.storage.update(key, speaker);
 	}
 
 	public async delete(id: string) {
