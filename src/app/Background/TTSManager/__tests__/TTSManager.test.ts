@@ -1,4 +1,4 @@
-import { ttsKeyToId, TTSManager } from '..';
+import { embeddedSpeakers, TTSManager } from '..';
 
 const audioSample = require('./audio-sample-uint-array.json');
 const createSampleBlob = () =>
@@ -27,15 +27,16 @@ describe('TTS manager 0', () => {
 	test('use custom TTS with TTSManager', async () => {
 		const ttsManager = new TTSManager();
 
-		const customTTSKey = await ttsManager.add({
+		const customTTSId = await ttsManager.add({
 			name: 'Demo TTS',
 			code: ttsClassSource,
 		});
 
 		const speakers = await ttsManager.getSpeakers();
-		expect(Object.values(speakers).length).toBe(3);
+		expect(Object.values(speakers).length).toBe(
+			Object.keys(embeddedSpeakers).length + 1,
+		);
 
-		const customTTSId = ttsKeyToId(customTTSKey);
 		const customTTS = speakers[customTTSId];
 		expect(typeof customTTS).toBe('function');
 

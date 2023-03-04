@@ -3,13 +3,20 @@ import { GoogleTTS, LingvaTTS, TTSProvider } from '../../../lib/tts/speakers';
 import { SerializedSpeaker, TTSKey, TTSStorage } from './TTSStorage';
 import { tryLoadTTSCode } from './utils';
 
-const embeddedSpeakers = {
-	google: GoogleTTS,
-	lingva: LingvaTTS,
+export const embeddedSpeakers = {
+	google: {
+		name: 'Google translator',
+		constructor: GoogleTTS,
+	},
+	lingva: {
+		name: 'Lingva',
+		constructor: LingvaTTS,
+	},
 } as const;
 
 export const isCustomTTSId = (id: string) => id.startsWith('#');
-export const ttsKeyToId = (id: TTSKey) => '#' + id;
+export const ttsKeyToId = (key: TTSKey) => '#' + key;
+export const ttsIdToKey = (id: string): TTSKey => (isCustomTTSId(id) ? id.slice(1) : id);
 
 // TODO: implement logic to persistent add, update and remove speakers
 export class TTSManager {
@@ -19,7 +26,12 @@ export class TTSManager {
 	}
 
 	public async getSpeakers() {
-		const speakers: Record<string, TTSProvider> = { ...embeddedSpeakers };
+		const speakers: Record<string, TTSProvider> = Object.fromEntries(
+			Object.entries(embeddedSpeakers).map(([id, { constructor }]) => [
+				id,
+				constructor,
+			]),
+		);
 
 		// Collect custom speakers
 		const customSpeakers = await this.storage.getAll();
@@ -49,10 +61,12 @@ export class TTSManager {
 			throw new Error(error);
 		}
 
-		return this.storage.add(speaker);
+		const key = await this.storage.add(speaker);
+		return ttsKeyToId(key);
 	}
 
 	public async delete(id: TTSKey) {
-		return this.storage.delete(id);
+		const key = ttsIdToKey(id);
+		return this.storage.delete(key);
 	}
 }
