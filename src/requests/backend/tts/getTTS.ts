@@ -1,11 +1,11 @@
 import splitLongText from 'google-tts-api/dist/splitLongText';
 
-import { detectLanguage } from '../../lib/language';
-import { blobToBase64, base64ToBlob } from '../../lib/blob';
-import { buildBackendRequest } from '../utils/requestBuilder';
+import { detectLanguage } from '../../../lib/language';
+import { blobToBase64, base64ToBlob } from '../../../lib/blob';
+import { buildBackendRequest } from '../../utils/requestBuilder';
 
 // TODO: implement option for select TTS speed
-export const [getTTSFactory, getTTSReq] = buildBackendRequest('getTTS', {
+export const [getTTSFactory, getTTSReq] = buildBackendRequest('tts.getTTS', {
 	factoryHandler:
 		({ config, backgroundContext }) =>
 			async ({ text, lang }: { text: string; lang: string }) => {

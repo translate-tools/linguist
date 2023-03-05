@@ -23,6 +23,7 @@ import { ping } from '../../../requests/backend/ping';
 import { resetConfig as resetConfigReq } from '../../../requests/backend/resetConfig';
 import { setConfig as setConfigReq } from '../../../requests/backend/setConfig';
 import { updateConfig as updateConfigReq } from '../../../requests/backend/updateConfig';
+import { getSpeakers } from '../../../requests/backend/tts/getSpeakers';
 
 import { Button } from '../../../components/primitives/Button/Button.bundle/universal';
 import { LayoutFlow } from '../../../components/layouts/LayoutFlow/LayoutFlow';
@@ -65,17 +66,19 @@ export const OptionsPage: FC<OptionsPageProps> = ({ messageHideDelay }) => {
 		useState<boolean>(false);
 
 	const [clearCacheProcess, setClearCacheProcess] = useState<boolean>(false);
-	const [translatorModules, setTranslatorModules] = useState<
-		Record<string, string> | undefined
-	>();
+	const [translatorModules, setTranslatorModules] = useState<Record<string, string>>(
+		{},
+	);
+	const [ttsModules, setTTSModules] = useState<Record<string, string>>({});
 
 	const updateConfig = useCallback(() => {
 		(async () => {
-			const config = await getConfig();
-			const translatorModules = await getAvailableTranslators();
+			await Promise.all([
+				getConfig().then(setConfig),
+				getAvailableTranslators().then(setTranslatorModules),
+				getSpeakers().then(setTTSModules),
+			]);
 
-			setConfig(config);
-			setTranslatorModules(translatorModules);
 			setLoaded(true);
 		})();
 	}, []);
@@ -264,6 +267,7 @@ export const OptionsPage: FC<OptionsPageProps> = ({ messageHideDelay }) => {
 		const configTree = generateTree({
 			clearCacheProcess,
 			translatorModules,
+			ttsModules,
 			clearCache,
 			toggleCustomTranslatorsWindow: () => {
 				setIsOpenCustomTranslatorsWindow((value) => !value);
@@ -271,7 +275,7 @@ export const OptionsPage: FC<OptionsPageProps> = ({ messageHideDelay }) => {
 		});
 
 		setConfigTree(configTree);
-	}, [translatorModules, clearCacheProcess, clearCache]);
+	}, [translatorModules, clearCacheProcess, clearCache, ttsModules]);
 
 	//
 	// Render
