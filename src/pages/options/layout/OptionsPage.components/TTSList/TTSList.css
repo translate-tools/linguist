@@ -1,0 +1,34 @@
+.TTSList {
+	max-width: 600px;
+}
+
+@media (min-width: 600px) {
+	.TTSList {
+		min-width: 400px;
+	}
+}
+
+.TTSList-Description {
+	padding: 0.8rem;
+	border-radius: 4px;
+	background: #e6e6e6;
+	margin-bottom: 1rem;
+}
+
+.TTSList-TranslatorEntry {
+	display: flex;
+	flex-flow: row;
+	line-height: 2em;
+}
+
+.TTSList-TranslatorEntryName {
+	width: 100%;
+	padding: 0 0.3rem;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.TTSList-TranslatorEntryControls {
+	min-width: max-content;
+}

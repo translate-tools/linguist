@@ -8,6 +8,7 @@ type Options = {
 	ttsModules: Record<string, string>;
 	clearCache: () => void;
 	toggleCustomTranslatorsWindow: () => void;
+	toggleTTSModulesWindow: () => void;
 };
 
 // TODO: make helper for build options
@@ -34,6 +35,7 @@ export const generateTree = ({
 	ttsModules,
 	clearCache,
 	toggleCustomTranslatorsWindow,
+	toggleTTSModulesWindow,
 }: Options): OptionsGroup[] => {
 	return [
 		{
@@ -70,12 +72,12 @@ export const generateTree = ({
 					},
 				},
 				// TODO: add i18n texts
-				Object.keys(ttsModules).length === 0
-					? undefined
-					: {
-						title: 'Text to speak',
-						groupContent: [
-							{
+				{
+					title: 'Text to speak',
+					groupContent: [
+						Object.keys(ttsModules).length === 0
+							? undefined
+							: {
 								title: 'TTS module',
 								path: 'ttsModule',
 								optionContent: {
@@ -87,9 +89,17 @@ export const generateTree = ({
 										}),
 									),
 								},
+							  },
+						{
+							title: 'Custom TTS modules',
+							optionContent: {
+								type: 'Button',
+								text: 'Manage TTS modules',
+								action: toggleTTSModulesWindow,
 							},
-						],
-					  },
+						},
+					],
+				},
 			],
 		},
 		{

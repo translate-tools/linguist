@@ -30,6 +30,10 @@ const validateSpeaker = (speaker: SerializedSpeaker) => {
 	}
 };
 
+export type CustomTTS = SerializedSpeaker & {
+	id: string;
+};
+
 // TODO: implement update speaker
 export class TTSManager {
 	private storage;
@@ -73,6 +77,15 @@ export class TTSManager {
 		}
 
 		return speakers;
+	}
+
+	public async getCustomSpeakers(): Promise<CustomTTS[]> {
+		const customSpeakers = await this.storage.getAll();
+		return customSpeakers.map(({ id, data: { name, code } }) => ({
+			id: ttsKeyToId(id),
+			name,
+			code,
+		}));
 	}
 
 	public async add(speaker: SerializedSpeaker) {

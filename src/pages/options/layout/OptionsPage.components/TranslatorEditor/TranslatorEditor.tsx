@@ -13,8 +13,6 @@ import {
 	Modal,
 } from '../../../../../components/primitives/Modal/Modal.bundle/desktop';
 
-import { CustomTranslator } from '../../../../../requests/backend/translators';
-
 import { getMessage } from '../../../../../lib/language';
 import { OptionsModalsContext } from '../../OptionsPage';
 
@@ -22,20 +20,22 @@ import './TranslatorEditor.css';
 
 const cnTranslatorsEditor = cn('TranslatorEditor');
 
-export type EditedCustomTranslator = Pick<
-	CustomTranslator,
-	Exclude<keyof CustomTranslator, 'id'>
-> &
-	Partial<Pick<CustomTranslator, 'id'>>;
+// TODO: review a file
+
+// TODO: rename all entities
+export type EditedCustomTranslator = {
+	name: string;
+	code: string;
+};
 
 interface TranslatorEditorProps extends Pick<IModalProps, 'onClose'> {
-	translator: CustomTranslator | null;
+	data: EditedCustomTranslator;
 	onSave: (value: EditedCustomTranslator) => void;
 	error: null | string;
 }
 
 export const TranslatorEditor: FC<TranslatorEditorProps> = ({
-	translator,
+	data,
 	onClose,
 	onSave,
 	error,
@@ -53,14 +53,12 @@ export const TranslatorEditor: FC<TranslatorEditorProps> = ({
 
 	// Init
 	useEffect(() => {
-		if (translator === null) return;
-		setName(translator.name);
-		setCode(translator.code);
-	}, [translator]);
+		if (data === null) return;
+		setName(data.name);
+		setCode(data.code);
+	}, [data]);
 
 	const onSavePress = useImmutableCallback(() => {
-		const { id } = translator || {};
-
 		if (name.trim().length < 1) {
 			setLocalError(
 				getMessage('translatorEditorWindow_message_invalidTranslatorName'),
@@ -69,11 +67,10 @@ export const TranslatorEditor: FC<TranslatorEditorProps> = ({
 		}
 
 		onSave({
-			id,
 			name,
 			code,
 		});
-	}, [code, name, onSave, translator]);
+	}, [code, name, onSave]);
 
 	const actualError = localError || error;
 

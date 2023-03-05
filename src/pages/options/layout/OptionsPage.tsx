@@ -38,6 +38,7 @@ import { PageSection } from './PageSection/PageSection';
 
 import './OptionsPage.css';
 import { TranslatorsManager } from './OptionsPage.components/TranslatorsManager/TranslatorsManager';
+import { TTSList } from './OptionsPage.components/TTSList/TTSList';
 
 export const cnOptionsPage = cn('OptionsPage');
 
@@ -62,14 +63,17 @@ export const OptionsPage: FC<OptionsPageProps> = ({ messageHideDelay }) => {
 	const [configTree, setConfigTree] = useState<OptionsGroup[] | undefined>();
 
 	const windowsStackRef = useRef<HTMLDivElement>(null);
-	const [isOpenCustomTranslatorsWindow, setIsOpenCustomTranslatorsWindow] =
-		useState<boolean>(false);
 
 	const [clearCacheProcess, setClearCacheProcess] = useState<boolean>(false);
+
 	const [translatorModules, setTranslatorModules] = useState<Record<string, string>>(
 		{},
 	);
+	const [isOpenCustomTranslatorsWindow, setIsOpenCustomTranslatorsWindow] =
+		useState(false);
+
 	const [ttsModules, setTTSModules] = useState<Record<string, string>>({});
+	const [isTTSModulesWindowOpen, setIsTTSModulesWindowOpen] = useState(false);
 
 	const updateConfig = useCallback(() => {
 		(async () => {
@@ -272,6 +276,9 @@ export const OptionsPage: FC<OptionsPageProps> = ({ messageHideDelay }) => {
 			toggleCustomTranslatorsWindow: () => {
 				setIsOpenCustomTranslatorsWindow((value) => !value);
 			},
+			toggleTTSModulesWindow: () => {
+				setIsTTSModulesWindowOpen((value) => !value);
+			},
 		});
 
 		setConfigTree(configTree);
@@ -365,6 +372,11 @@ export const OptionsPage: FC<OptionsPageProps> = ({ messageHideDelay }) => {
 					<TranslatorsManager
 						visible={isOpenCustomTranslatorsWindow}
 						onClose={() => setIsOpenCustomTranslatorsWindow(false)}
+						updateConfig={updateConfig}
+					/>
+					<TTSList
+						visible={isTTSModulesWindowOpen}
+						onClose={() => setIsTTSModulesWindowOpen(false)}
 						updateConfig={updateConfig}
 					/>
 				</OptionsModalsContext.Provider>

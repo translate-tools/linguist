@@ -26,6 +26,7 @@ import './TranslatorsManager.css';
 
 const cnTranslatorsManager = cn('TranslatorsManager');
 
+// TODO: review the component
 export const TranslatorsManager: FC<{
 	visible: boolean;
 	onClose: () => void;
@@ -85,14 +86,17 @@ export const TranslatorsManager: FC<{
 
 	const onSave = useCallback(
 		async (translator: EditedCustomTranslator) => {
-			const { id, name, code } = translator;
+			const { name, code } = translator;
 
 			setEditorError(null);
 			try {
-				if (id === undefined) {
+				if (editedTranslator === null) {
 					await addTranslator({ name, code });
 				} else {
-					await updateTranslator({ id, translator: { name, code } });
+					await updateTranslator({
+						id: editedTranslator.id,
+						translator: { name, code },
+					});
 				}
 			} catch (error) {
 				if (error instanceof Error) {
@@ -105,7 +109,7 @@ export const TranslatorsManager: FC<{
 			await updateTranslatorsList();
 			closeEditor();
 		},
-		[closeEditor, updateTranslatorsList],
+		[closeEditor, editedTranslator, updateTranslatorsList],
 	);
 
 	useEffect(() => {
@@ -113,6 +117,11 @@ export const TranslatorsManager: FC<{
 			setIsLoading(false);
 		});
 	}, [updateTranslatorsList]);
+
+	const [emptyData] = useState<EditedCustomTranslator>({
+		name: '',
+		code: '',
+	});
 
 	return (
 		<Modal visible={visible} onClose={onClose} scope={scope} preventBodyScroll>
@@ -205,7 +214,7 @@ export const TranslatorsManager: FC<{
 
 			{isEditorOpened && (
 				<TranslatorEditor
-					translator={editedTranslator}
+					data={editedTranslator || emptyData}
 					onClose={closeEditor}
 					onSave={onSave}
 					error={editorError}
