@@ -71,14 +71,13 @@ export const generateTree = ({
 						})),
 					},
 				},
-				// TODO: add i18n texts
 				{
-					title: 'Text to speak',
+					title: getMessage('settings_option_tts'),
 					groupContent: [
 						Object.keys(ttsModules).length === 0
 							? undefined
 							: {
-								title: 'TTS module',
+								title: getMessage('settings_option_ttsModule'),
 								path: 'ttsModule',
 								optionContent: {
 									type: 'SelectList',
@@ -91,10 +90,12 @@ export const generateTree = ({
 								},
 							  },
 						{
-							title: 'Custom TTS modules',
+							title: getMessage('settings_option_ttsCustomModules'),
 							optionContent: {
 								type: 'Button',
-								text: 'Manage TTS modules',
+								text: getMessage(
+									'settings_option_ttsCustomModules_button',
+								),
 								action: toggleTTSModulesWindow,
 							},
 						},

@@ -34,7 +34,6 @@ export type CustomTTS = SerializedSpeaker & {
 	id: string;
 };
 
-// TODO: implement update speaker
 export class TTSManager {
 	private storage;
 	constructor() {
