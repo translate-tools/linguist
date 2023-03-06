@@ -45,12 +45,12 @@ export const TTSList: FC<{
 		});
 	}, [updateSpeakersList]);
 
+	// Editor
 	const [emptyData] = useState<EditorEntry>({
 		name: '',
 		code: '',
 	});
 
-	// Editor
 	const [editorError, setEditorError] = useState<string | null>(null);
 	const [isEditorOpened, setIsEditorOpened] = useState(false);
 	const [speakerToEdit, setSpeakerToEdit] = useState<CustomTTS | null>(null);

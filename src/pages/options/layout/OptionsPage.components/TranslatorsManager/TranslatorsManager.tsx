@@ -23,7 +23,6 @@ import './TranslatorsManager.css';
 
 const cnTranslatorsManager = cn('TranslatorsManager');
 
-// TODO: review the component
 export const TranslatorsManager: FC<{
 	visible: boolean;
 	onClose: () => void;
@@ -31,25 +30,40 @@ export const TranslatorsManager: FC<{
 }> = ({ visible, onClose, updateConfig }) => {
 	const scope = useContext(OptionsModalsContext);
 
-	const [editorError, setEditorError] = useState<string | null>(null);
-	const [isEditorOpened, setIsEditorOpened] = useState(false);
-	const [editedTranslator, setEditedTranslator] = useState<CustomTranslator | null>(
-		null,
-	);
-
+	// Initializing
 	const [isLoading, setIsLoading] = useState(true);
 	const [translators, setTranslators] = useState<CustomTranslator[]>([]);
-
-	const addNewTranslator = useCallback(() => {
-		setEditedTranslator(null);
-		setIsEditorOpened(true);
-	}, []);
 
 	const updateTranslatorsList = useCallback(async () => {
 		updateConfig();
 
 		await getTranslators().then(setTranslators);
 	}, [updateConfig]);
+
+	useEffect(() => {
+		updateTranslatorsList().then(() => {
+			setIsLoading(false);
+		});
+	}, [updateTranslatorsList]);
+
+	// Editor
+	const [emptyData] = useState<EditorEntry>({
+		name: '',
+		code: '',
+	});
+
+	const [editorError, setEditorError] = useState<string | null>(null);
+	const [isEditorOpened, setIsEditorOpened] = useState(false);
+
+	// TODO: review why we use this state. Could we eliminate it?
+	const [editedTranslator, setEditedTranslator] = useState<CustomTranslator | null>(
+		null,
+	);
+
+	const addNewTranslator = useCallback(() => {
+		setEditedTranslator(null);
+		setIsEditorOpened(true);
+	}, []);
 
 	const editTranslator = useCallback((translator: CustomTranslator) => {
 		setEditedTranslator(translator);
@@ -109,17 +123,6 @@ export const TranslatorsManager: FC<{
 		[closeEditor, editedTranslator, updateTranslatorsList],
 	);
 
-	useEffect(() => {
-		updateTranslatorsList().then(() => {
-			setIsLoading(false);
-		});
-	}, [updateTranslatorsList]);
-
-	const [emptyData] = useState<EditorEntry>({
-		name: '',
-		code: '',
-	});
-
 	return (
 		<Modal visible={visible} onClose={onClose} scope={scope} preventBodyScroll>
 			{isLoading ? (
@@ -153,15 +156,11 @@ export const TranslatorsManager: FC<{
 
 								return (
 									<div
-										className={cnTranslatorsManager(
-											'TranslatorEntry',
-										)}
+										className={cnTranslatorsManager('Entry')}
 										key={id}
 									>
 										<span
-											className={cnTranslatorsManager(
-												'TranslatorEntryName',
-											)}
+											className={cnTranslatorsManager('EntryName')}
 										>
 											{name}
 										</span>
@@ -170,7 +169,7 @@ export const TranslatorsManager: FC<{
 											direction="horizontal"
 											indent="m"
 											className={cnTranslatorsManager(
-												'TranslatorEntryControls',
+												'EntryControls',
 											)}
 										>
 											<Button
