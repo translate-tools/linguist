@@ -16,10 +16,7 @@ import { addCustomSpeaker } from '../../../../../requests/backend/tts/addCustomS
 import { updateCustomSpeaker } from '../../../../../requests/backend/tts/updateCustomSpeaker';
 
 import { OptionsModalsContext } from '../../OptionsPage';
-import {
-	EditedCustomTranslator,
-	TranslatorEditor,
-} from '../TranslatorEditor/TranslatorEditor';
+import { Editor, EditorEntry } from '../Editor/Editor';
 
 import './TTSList.css';
 
@@ -50,7 +47,7 @@ export const TTSList: FC<{
 		});
 	}, [updateSpeakersList]);
 
-	const [emptyData] = useState<EditedCustomTranslator>({
+	const [emptyData] = useState<EditorEntry>({
 		name: '',
 		code: '',
 	});
@@ -88,7 +85,7 @@ export const TTSList: FC<{
 	);
 
 	const onSave = useCallback(
-		async (speaker: EditedCustomTranslator) => {
+		async (speaker: EditorEntry) => {
 			const { name, code } = speaker;
 
 			setEditorError(null);
@@ -182,7 +179,7 @@ export const TTSList: FC<{
 			)}
 
 			{isEditorOpened && (
-				<TranslatorEditor
+				<Editor
 					data={speakerToEdit || emptyData}
 					onClose={closeEditor}
 					onSave={onSave}

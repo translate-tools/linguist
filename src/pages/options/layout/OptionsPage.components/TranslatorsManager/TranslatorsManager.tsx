@@ -17,10 +17,7 @@ import { getTranslators } from '../../../../../requests/backend/translators/getT
 import { updateTranslator } from '../../../../../requests/backend/translators/updateTranslator';
 
 import { OptionsModalsContext } from '../../OptionsPage';
-import {
-	EditedCustomTranslator,
-	TranslatorEditor,
-} from '../TranslatorEditor/TranslatorEditor';
+import { Editor, EditorEntry } from '../Editor/Editor';
 
 import './TranslatorsManager.css';
 
@@ -85,7 +82,7 @@ export const TranslatorsManager: FC<{
 	);
 
 	const onSave = useCallback(
-		async (translator: EditedCustomTranslator) => {
+		async (translator: EditorEntry) => {
 			const { name, code } = translator;
 
 			setEditorError(null);
@@ -118,7 +115,7 @@ export const TranslatorsManager: FC<{
 		});
 	}, [updateTranslatorsList]);
 
-	const [emptyData] = useState<EditedCustomTranslator>({
+	const [emptyData] = useState<EditorEntry>({
 		name: '',
 		code: '',
 	});
@@ -213,7 +210,7 @@ export const TranslatorsManager: FC<{
 			)}
 
 			{isEditorOpened && (
-				<TranslatorEditor
+				<Editor
 					data={editedTranslator || emptyData}
 					onClose={closeEditor}
 					onSave={onSave}

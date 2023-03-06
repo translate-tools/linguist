@@ -1,0 +1,24 @@
+.Editor {
+	width: 600px;
+}
+
+@media (max-width: 600px) {
+	.Editor {
+		max-width: 100%;
+	}
+}
+
+.Editor .Textinput {
+	width: 100%;
+}
+
+.Editor .Textarea-Wrap {
+	min-height: 200px;
+}
+
+.Editor-Error {
+	border-radius: 4px;
+	padding: 0.6rem;
+	background: #e10a0a;
+	color: #fff;
+}

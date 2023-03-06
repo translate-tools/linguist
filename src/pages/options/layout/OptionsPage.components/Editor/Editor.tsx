@@ -16,30 +16,22 @@ import {
 import { getMessage } from '../../../../../lib/language';
 import { OptionsModalsContext } from '../../OptionsPage';
 
-import './TranslatorEditor.css';
+import './Editor.css';
 
-const cnTranslatorsEditor = cn('TranslatorEditor');
+const cnEditor = cn('Editor');
 
-// TODO: review a file
-
-// TODO: rename all entities
-export type EditedCustomTranslator = {
+export type EditorEntry = {
 	name: string;
 	code: string;
 };
 
-interface TranslatorEditorProps extends Pick<IModalProps, 'onClose'> {
-	data: EditedCustomTranslator;
-	onSave: (value: EditedCustomTranslator) => void;
+interface EditorProps extends Pick<IModalProps, 'onClose'> {
+	data: EditorEntry;
+	onSave: (value: EditorEntry) => void;
 	error: null | string;
 }
 
-export const TranslatorEditor: FC<TranslatorEditorProps> = ({
-	data,
-	onClose,
-	onSave,
-	error,
-}) => {
+export const Editor: FC<EditorProps> = ({ data, onClose, onSave, error }) => {
 	const scope = useContext(OptionsModalsContext);
 
 	const [name, setName] = useState('');
@@ -60,9 +52,7 @@ export const TranslatorEditor: FC<TranslatorEditorProps> = ({
 
 	const onSavePress = useImmutableCallback(() => {
 		if (name.trim().length < 1) {
-			setLocalError(
-				getMessage('translatorEditorWindow_message_invalidTranslatorName'),
-			);
+			setLocalError(getMessage('editorWindow_message_invalidName'));
 			return;
 		}
 
@@ -76,22 +66,20 @@ export const TranslatorEditor: FC<TranslatorEditorProps> = ({
 
 	return (
 		<Modal visible={true} onClose={onClose} scope={scope} preventBodyScroll>
-			<div className={cnTranslatorsEditor({})}>
+			<div className={cnEditor({})}>
 				<ModalLayout
 					footer={[
 						<Button key="save" view="action" onPress={onSavePress}>
-							{getMessage('translatorEditorWindow_save')}
+							{getMessage('editorWindow_save')}
 						</Button>,
 						<Button key="close" onPress={onClose as any}>
-							{getMessage('translatorEditorWindow_close')}
+							{getMessage('editorWindow_close')}
 						</Button>,
 					]}
 				>
 					<LayoutFlow direction="vertical" indent="l">
 						<LayoutFlow direction="vertical" indent="m">
-							<div>
-								{getMessage('translatorEditorWindow_translatorName')}
-							</div>
+							<div>{getMessage('editorWindow_data_name')}</div>
 							<Textinput
 								value={name}
 								onChange={(evt) => {
@@ -101,9 +89,7 @@ export const TranslatorEditor: FC<TranslatorEditorProps> = ({
 						</LayoutFlow>
 
 						<LayoutFlow direction="vertical" indent="m">
-							<div>
-								{getMessage('translatorEditorWindow_translatorCode')}
-							</div>
+							<div>{getMessage('editorWindow_data_code')}</div>
 							<Textarea
 								value={code}
 								onChange={(evt) => {
@@ -113,9 +99,7 @@ export const TranslatorEditor: FC<TranslatorEditorProps> = ({
 						</LayoutFlow>
 
 						{actualError && (
-							<div className={cnTranslatorsEditor('Error')}>
-								{actualError}
-							</div>
+							<div className={cnEditor('Error')}>{actualError}</div>
 						)}
 					</LayoutFlow>
 				</ModalLayout>
