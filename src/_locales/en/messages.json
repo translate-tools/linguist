@@ -570,6 +570,33 @@
 	"translatorsManagerWindow_translator_delete": {
 		"message": "Delete"
 	},
+	"ttsManagerWindow_title": {
+		"message": "Text to speech modules"
+	},
+	"ttsManagerWindow_add": {
+		"message": "Add"
+	},
+	"ttsManagerWindow_close": {
+		"message": "Close"
+	},
+	"ttsManagerWindow_emptyTranslatorsListText": {
+		"message": "TTS modules have not been added yet"
+	},
+	"ttsManagerWindow_translator_edit": {
+		"message": "Edit"
+	},
+	"ttsManagerWindow_translator_delete": {
+		"message": "Delete"
+	},
+	"ttsManagerWindow_message_ttsRemoveConfirmation": {
+		"message": "Are you sure about removing speaker \"$tts_name$\"?",
+		"placeholders": {
+			"tts_name": {
+				"content": "$1",
+				"example": "Google TTS"
+			}
+		}
+	},
 	"langCode_aa": {
 		"message": "Afar"
 	},

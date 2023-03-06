@@ -1,6 +1,7 @@
 import React, { FC, useCallback, useContext, useEffect, useState } from 'react';
 import { cn } from '@bem-react/classname';
 
+import { getMessage } from '../../../../../lib/language';
 import { CustomTTS } from '../../../../../app/Background/TTSManager';
 
 import { Button } from '../../../../../components/primitives/Button/Button.bundle/universal';
@@ -69,7 +70,14 @@ export const TTSList: FC<{
 
 	const deleteSpeakerWithConfirmation = useCallback(
 		(speaker: CustomTTS) => {
-			if (!confirm(`Are you sure about delete speaker "${speaker.name}"`)) return;
+			if (
+				!confirm(
+					getMessage('ttsManagerWindow_message_ttsRemoveConfirmation', [
+						speaker.name,
+					]),
+				)
+			)
+				return;
 
 			deleteCustomSpeaker(speaker.id).then(() => {
 				updateSpeakersList();
@@ -110,13 +118,13 @@ export const TTSList: FC<{
 			) : (
 				<div className={cnTTSList({})}>
 					<ModalLayout
-						title={'Text to speech modules'}
+						title={getMessage('ttsManagerWindow_title')}
 						footer={[
 							<Button key="add" view="action" onPress={addNewSpeaker}>
-								Add
+								{getMessage('ttsManagerWindow_add')}
 							</Button>,
 							<Button key="close" onPress={onClose}>
-								Close
+								{getMessage('ttsManagerWindow_close')}
 							</Button>,
 						]}
 					>
@@ -140,7 +148,9 @@ export const TTSList: FC<{
 													editSpeaker(speaker);
 												}}
 											>
-												Edit
+												{getMessage(
+													'ttsManagerWindow_translator_edit',
+												)}
 											</Button>
 											<Button
 												onPress={() => {
@@ -148,7 +158,9 @@ export const TTSList: FC<{
 														speaker,
 													);
 												}}
-												title={'Delete'}
+												title={
+													'ttsManagerWindow_translator_delete'
+												}
 											>
 												<Icon glyph="delete" scalable={false} />
 											</Button>
@@ -160,7 +172,7 @@ export const TTSList: FC<{
 
 						{customSpeakers.length !== 0
 							? undefined
-							: "List are empty. Let's add new module"}
+							: getMessage('ttsManagerWindow_emptyTranslatorsListText')}
 					</ModalLayout>
 				</div>
 			)}

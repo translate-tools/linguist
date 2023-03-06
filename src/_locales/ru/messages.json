@@ -569,6 +569,33 @@
 	"translatorsManagerWindow_translator_delete": {
 		"message": "Удалить"
 	},
+	"ttsManagerWindow_title": {
+		"message": "Модули озвучивания текста"
+	},
+	"ttsManagerWindow_add": {
+		"message": "Добавить"
+	},
+	"ttsManagerWindow_close": {
+		"message": "Закрыть"
+	},
+	"ttsManagerWindow_emptyTranslatorsListText": {
+		"message": "Пользовательские модули TTS еще не добавлены"
+	},
+	"ttsManagerWindow_translator_edit": {
+		"message": "Редактировать"
+	},
+	"ttsManagerWindow_translator_delete": {
+		"message": "Удалить"
+	},
+	"ttsManagerWindow_message_ttsRemoveConfirmation": {
+		"message": "Удалить модуль озвучивания текста \"$tts_name$\"?",
+		"placeholders": {
+			"tts_name": {
+				"content": "$1",
+				"example": "Google TTS"
+			}
+		}
+	},
 	"langCode_aa": {
 		"message": "Афар"
 	},
