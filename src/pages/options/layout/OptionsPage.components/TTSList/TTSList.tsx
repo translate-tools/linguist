@@ -46,13 +46,9 @@ export const TTSList: FC<{
 	}, [updateSpeakersList]);
 
 	// Editor
-	const [emptyData] = useState<EditorEntry>({
-		name: '',
-		code: '',
-	});
-
 	const [editorError, setEditorError] = useState<string | null>(null);
 	const [isEditorOpened, setIsEditorOpened] = useState(false);
+
 	const [speakerToEdit, setSpeakerToEdit] = useState<CustomTTS | null>(null);
 
 	const addNewSpeaker = useCallback(() => {
@@ -171,7 +167,7 @@ export const TTSList: FC<{
 
 			{isEditorOpened && (
 				<Editor
-					data={speakerToEdit || emptyData}
+					data={speakerToEdit}
 					onClose={closeEditor}
 					onSave={onSave}
 					error={editorError}

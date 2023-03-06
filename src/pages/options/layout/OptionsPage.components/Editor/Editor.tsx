@@ -21,17 +21,34 @@ import './Editor.css';
 const cnEditor = cn('Editor');
 
 export type EditorEntry = {
-	name: string;
-	code: string;
+	readonly name: string;
+	readonly code: string;
 };
 
 interface EditorProps extends Pick<IModalProps, 'onClose'> {
-	data: EditorEntry;
+	/**
+	 * When property is not `null`, will used values from object, otherwise empty values
+	 */
+	data: EditorEntry | null;
+	/**
+	 * Call when user save changes
+	 * Provide new object with changes
+	 */
 	onSave: (value: EditorEntry) => void;
 	error: null | string;
 }
 
-export const Editor: FC<EditorProps> = ({ data, onClose, onSave, error }) => {
+export const emptyEditorEntry: EditorEntry = {
+	name: '',
+	code: '',
+};
+
+export const Editor: FC<EditorProps> = ({
+	data = emptyEditorEntry,
+	onClose,
+	onSave,
+	error,
+}) => {
 	const scope = useContext(OptionsModalsContext);
 
 	const [name, setName] = useState('');

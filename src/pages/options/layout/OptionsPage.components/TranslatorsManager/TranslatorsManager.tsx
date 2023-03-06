@@ -47,15 +47,9 @@ export const TranslatorsManager: FC<{
 	}, [updateTranslatorsList]);
 
 	// Editor
-	const [emptyData] = useState<EditorEntry>({
-		name: '',
-		code: '',
-	});
-
 	const [editorError, setEditorError] = useState<string | null>(null);
 	const [isEditorOpened, setIsEditorOpened] = useState(false);
 
-	// TODO: review why we use this state. Could we eliminate it?
 	const [editedTranslator, setEditedTranslator] = useState<CustomTranslator | null>(
 		null,
 	);
@@ -210,7 +204,7 @@ export const TranslatorsManager: FC<{
 
 			{isEditorOpened && (
 				<Editor
-					data={editedTranslator || emptyData}
+					data={editedTranslator}
 					onClose={closeEditor}
 					onSave={onSave}
 					error={editorError}
