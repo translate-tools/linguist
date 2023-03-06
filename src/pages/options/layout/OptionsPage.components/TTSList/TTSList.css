@@ -15,13 +15,13 @@
 	margin-bottom: 1rem;
 }
 
-.TTSList-TranslatorEntry {
+.TTSList-Entry {
 	display: flex;
 	flex-flow: row;
 	line-height: 2em;
 }
 
-.TTSList-TranslatorEntryName {
+.TTSList-EntryName {
 	width: 100%;
 	padding: 0 0.3rem;
 	white-space: nowrap;
@@ -29,6 +29,6 @@
 	overflow: hidden;
 }
 
-.TTSList-TranslatorEntryControls {
+.TTSList-EntryControls {
 	min-width: max-content;
 }

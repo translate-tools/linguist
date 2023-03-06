@@ -22,8 +22,6 @@ import './TTSList.css';
 
 const cnTTSList = cn('TTSList');
 
-// TODO: review the code
-// TODO: rename entities
 export const TTSList: FC<{
 	visible: boolean;
 	onClose: () => void;
@@ -131,22 +129,15 @@ export const TTSList: FC<{
 								const { id, name } = speaker;
 
 								return (
-									<div
-										className={cnTTSList('TranslatorEntry')}
-										key={id}
-									>
-										<span
-											className={cnTTSList('TranslatorEntryName')}
-										>
+									<div className={cnTTSList('Entry')} key={id}>
+										<span className={cnTTSList('EntryName')}>
 											{name}
 										</span>
 
 										<LayoutFlow
 											direction="horizontal"
 											indent="m"
-											className={cnTTSList(
-												'TranslatorEntryControls',
-											)}
+											className={cnTTSList('EntryControls')}
 										>
 											<Button
 												onPress={() => {
