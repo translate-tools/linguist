@@ -57,7 +57,7 @@ describe('TTS manager 0', () => {
 		expect(typeof customTTS).toBe('function');
 
 		const tts = new customTTS();
-		const resultBlob = await tts.getTextToSpeakBlob('Text to speech demo', 'en');
+		const resultBlob = await tts.getAudioBlob('Text to speech demo', 'en');
 		expect(resultBlob).toBeInstanceOf(Blob);
 
 		const expectedBlob = createSampleBlob();

@@ -21,7 +21,7 @@ export const [getTTSFactory, getTTSReq] = buildBackendRequest('tts.getTTS', {
 				const tts = new ttsSpeakerClass();
 				return Promise.all(
 					splitLongText(text).map((text) =>
-						tts.getTextToSpeakBlob(text, lang).then(blobToBase64),
+						tts.getAudioBlob(text, lang).then(blobToBase64),
 					),
 				);
 			},

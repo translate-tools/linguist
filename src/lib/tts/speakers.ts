@@ -1,17 +1,20 @@
 export interface TTSProviderProps {
-	getTextToSpeakBlob(text: string, language: string): Promise<Blob>;
+	getAudioBlob(text: string, language: string): Promise<Blob>;
 }
 
 export interface TTSProviderStaticProps {
 	getSupportedLanguages(): string[];
 }
 
+/**
+ * Text to speech module
+ */
 export type TTSProvider = TTSProviderStaticProps & {
 	new (...args: any[]): TTSProviderProps;
 };
 
 export class GoogleTTS implements TTSProviderProps {
-	public getTextToSpeakBlob(text: string, language: string): Promise<Blob> {
+	public getAudioBlob(text: string, language: string): Promise<Blob> {
 		const url =
 			`https://translate.google.com/translate_tts?ie=UTF-8&tl=${language}&client=dict-chrome-ex&ttsspeed=0.5&q=` +
 			encodeURIComponent(text);
@@ -44,7 +47,7 @@ export class GoogleTTS implements TTSProviderProps {
 export class LingvaTTS implements TTSProviderProps {
 	private host = 'https://lingva.ml';
 
-	public async getTextToSpeakBlob(text: string, language: string): Promise<Blob> {
+	public async getAudioBlob(text: string, language: string): Promise<Blob> {
 		return fetch(
 			`${this.host}/api/v1/audio/${encodeURIComponent(
 				language,
