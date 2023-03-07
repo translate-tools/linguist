@@ -1,5 +1,15 @@
 export interface TTSProviderProps {
-	getAudioBlob(text: string, language: string): Promise<Blob>;
+	/**
+	 * Get blob with audio
+	 * @param text text to speak
+	 * @param language text language
+	 * @param options optional map with preferences to generate audio
+	 */
+	getAudioBlob(
+		text: string,
+		language: string,
+		options?: Record<string, string>,
+	): Promise<Blob>;
 }
 
 export interface TTSProviderStaticProps {
