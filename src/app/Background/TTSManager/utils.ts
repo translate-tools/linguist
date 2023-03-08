@@ -1,4 +1,4 @@
-import { TTSProvider } from '../../../lib/tts/speakers';
+import { TTSProvider } from '@translate-tools/core/esm/tts';
 
 export const loadTTS = (code: string) => {
 	const ttsClass = eval(code);
@@ -16,7 +16,7 @@ export const loadTTS = (code: string) => {
 	}
 
 	// Validate methods
-	const requiredMethods = ['getTextToSpeakBlob'];
+	const requiredMethods = ['getAudioBuffer'];
 
 	requiredMethods.forEach((key) => {
 		if (!(key in instance)) {

@@ -1,9 +1,17 @@
-import { GoogleTTS, LingvaTTS } from '../../../lib/tts/speakers';
+import { GoogleTTS } from '@translate-tools/core/tts/GoogleTTS';
+import { LingvaTTS } from '@translate-tools/core/tts/LingvaTTS';
+import { TTSProvider } from '@translate-tools/core/tts';
 
 import { SerializedSpeaker, TTSKey, TTSStorage } from './TTSStorage';
 import { tryLoadTTSCode } from './utils';
 
-export const embeddedSpeakers = {
+export const embeddedSpeakers: Record<
+	string,
+	{
+		name: string;
+		constructor: TTSProvider;
+	}
+> = {
 	google: {
 		name: 'Google translator',
 		constructor: GoogleTTS,

@@ -1,5 +1,6 @@
-import { clearAllMocks } from '../../../../lib/tests';
+import { TTSProviderProps } from '@translate-tools/core/tts';
 
+import { clearAllMocks } from '../../../../lib/tests';
 import { embeddedSpeakers, TTSManager } from '..';
 
 const audioSample = require('./audio-sample-uint-array.json');
@@ -7,8 +8,11 @@ const createSampleBlob = () =>
 	new Blob([new Uint8Array(audioSample)], { type: 'audio/mpeg' });
 
 const ttsClassSource = `class DemoTTS {
-	getTextToSpeakBlob = async (text, language) => {
-		return new Blob([new Uint8Array(${JSON.stringify(audioSample)})], { type: 'audio/mpeg' });
+	getAudioBuffer = async (text, language) => {
+		return {
+			type: 'audio/mpeg',
+			buffer: (new Uint8Array(${JSON.stringify(audioSample)})).buffer,
+		};
 	}
 
 	static getSupportedLanguages() {
@@ -19,8 +23,11 @@ const ttsClassSource = `class DemoTTS {
 DemoTTS;`;
 
 const ttsDummyClassSource = `class DemoTTS {
-	getTextToSpeakBlob = async (text, language) => {
-		return new Blob([new Uint8Array(${JSON.stringify(audioSample)})], { type: 'audio/mpeg' });
+	getAudioBuffer = async (text, language) => {
+		return {
+			type: 'audio/mpeg',
+			buffer: (new Uint8Array(${JSON.stringify(audioSample)})).buffer,
+		};
 	}
 
 	static getSupportedLanguages() {
@@ -35,9 +42,9 @@ describe('TTS manager 0', () => {
 
 	test('eval demo class', async () => {
 		const ttsClass = eval(ttsClassSource);
-		const tts = new ttsClass();
-		const blob = await tts.getTextToSpeakBlob();
-		expect(blob).toBeInstanceOf(Blob);
+		const tts: TTSProviderProps = new ttsClass();
+		const audio = await tts.getAudioBuffer('', '');
+		expect(audio.buffer).toBeInstanceOf(ArrayBuffer);
 	});
 
 	test('use custom TTS with TTSManager', async () => {
@@ -57,9 +64,10 @@ describe('TTS manager 0', () => {
 		expect(typeof customTTS).toBe('function');
 
 		const tts = new customTTS();
-		const resultBlob = await tts.getAudioBlob('Text to speech demo', 'en');
-		expect(resultBlob).toBeInstanceOf(Blob);
+		const resultBuffer = await tts.getAudioBuffer('Text to speech demo', 'en');
+		expect(resultBuffer.buffer).toBeInstanceOf(ArrayBuffer);
 
+		const resultBlob = new Blob([resultBuffer.buffer], { type: resultBuffer.type });
 		const expectedBlob = createSampleBlob();
 		expect(resultBlob.type).toBe(expectedBlob.type);
 
