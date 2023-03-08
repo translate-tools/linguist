@@ -37,7 +37,7 @@ const ttsDummyClassSource = `class DemoTTS {
 
 DemoTTS;`;
 
-describe('TTS manager 0', () => {
+describe('TTS manager use cases', () => {
 	beforeEach(clearAllMocks);
 
 	test('eval demo class', async () => {
