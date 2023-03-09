@@ -38,7 +38,7 @@ Supported translators out of the box:
 - Yandex
 - Bing
 
-You can also use your own [custom translator](./docs/CustomTranslator.md).
+You can also use your own [custom translator](./docs/CustomTranslator.md), see a [custom translators list](./modules/README.md) to find a ready to use bindings for a most popular translation services.
 
 You control all your data and can download your personal dictionary and other data at any time.
 
