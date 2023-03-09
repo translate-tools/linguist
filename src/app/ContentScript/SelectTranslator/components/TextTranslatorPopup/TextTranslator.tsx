@@ -5,6 +5,7 @@ import { TranslatorFeatures } from '../../../../../pages/popup/layout/PopupWindo
 
 import { detectLanguage, getMessage } from '../../../../../lib/language';
 import { useTTS } from '../../../../../lib/hooks/useTTS';
+import { useTTSLanguages } from '../../../../../lib/hooks/useTTSLanguages';
 
 import { getTranslatorFeatures } from '../../../../../requests/backend/getTranslatorFeatures';
 import { getUserLanguagePreferences } from '../../../../../requests/backend/getUserLanguagePreferences';
@@ -310,6 +311,7 @@ export const TextTranslator: FC<TextTranslatorComponentProps> = ({
 	};
 	const ttsOriginal = useTTS(from ?? null, originalText, TTSSignal);
 	const ttsTranslate = useTTS(to ?? null, translatedText, TTSSignal);
+	const ttsModule = useTTSLanguages();
 
 	const isMobile = useMemo(() => isMobileBrowser(), []);
 
@@ -377,7 +379,14 @@ export const TextTranslator: FC<TextTranslatorComponentProps> = ({
 							})}
 						>
 							<div className={cnTextTranslatorPopup('TextControls')}>
-								<Button onPress={ttsTranslate.toggle} view="clear">
+								<Button
+									onPress={ttsTranslate.toggle}
+									view="clear"
+									disabled={
+										to === undefined ||
+										!ttsModule.isSupportedLanguage(to)
+									}
+								>
 									<Icon glyph="volume-up" scalable={false} />
 								</Button>
 								<DictionaryButton translation={dictionaryData} />
@@ -393,7 +402,14 @@ export const TextTranslator: FC<TextTranslatorComponentProps> = ({
 								})}
 							>
 								<div className={cnTextTranslatorPopup('TextControls')}>
-									<Button onPress={ttsOriginal.toggle} view="clear">
+									<Button
+										onPress={ttsOriginal.toggle}
+										view="clear"
+										disabled={
+											from === undefined ||
+											!ttsModule.isSupportedLanguage(from)
+										}
+									>
 										<Icon glyph="volume-up" scalable={false} />
 									</Button>
 								</div>
