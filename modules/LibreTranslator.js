@@ -51,35 +51,14 @@ class LibreTranslator {
 	};
 
 	static isSupportedAutoFrom = () => true;
+	// prettier-ignore
 	static getSupportedLanguages = () => [
-		'en',
-		'ar',
-		'az',
-		'zh',
-		'cs',
-		'nl',
-		'eo',
-		'fi',
-		'fr',
-		'de',
-		'el',
-		'hi',
-		'hu',
-		'id',
-		'ga',
-		'it',
-		'ja',
-		'ko',
-		'fa',
-		'pl',
-		'pt',
-		'ru',
-		'sk',
-		'es',
-		'sv',
-		'tr',
-		'uk',
-		'vi',
+		"en", "ar", "az", "zh", "cs",
+		"nl", "eo", "fi", "fr", "de",
+		"el", "hi", "hu", "id", "ga",
+		"it", "ja", "ko", "fa", "pl",
+		"pt", "ru", "sk", "es", "sv",
+		"tr", "uk", "vi"
 	];
 }
 

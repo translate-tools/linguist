@@ -30,17 +30,11 @@ class TartuNLP {
 	};
 
 	static isSupportedAutoFrom = () => true;
+
+	// prettier-ignore
 	static getSupportedLanguages = () => [
-		'en',
-		'et',
-		'de',
-		'lt',
-		'lv',
-		'fi',
-		'ru',
-		'no',
-		'hu',
-		'se',
+		"en", "et", "de", "lt", "lv",
+		"fi", "ru", "no", "hu", "se",
 	];
 }
 
