@@ -1,4 +1,4 @@
-import { TTSProvider } from '@translate-tools/core/esm/tts';
+import { TTSProvider } from '@translate-tools/core/tts';
 
 export const loadTTS = (code: string) => {
 	const ttsClass = eval(code);
