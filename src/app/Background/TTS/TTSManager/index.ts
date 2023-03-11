@@ -28,10 +28,11 @@ export const embeddedSpeakers: Record<string, EmbeddedSpeaker> = {
 	},
 };
 
-export const isCustomTTSId = (id: string) => id.startsWith('#');
-export const ttsKeyToId = (key: TTSKey) => '#' + key;
+export const customTTSPrefix = '#custom:';
+export const isCustomTTSId = (id: string) => id.startsWith(customTTSPrefix);
+export const ttsKeyToId = (key: TTSKey) => customTTSPrefix + key;
 export const ttsIdToKey = (id: string): TTSKey =>
-	Number(isCustomTTSId(id) ? id.slice(1) : id);
+	Number(isCustomTTSId(id) ? id.slice(customTTSPrefix.length) : id);
 
 /**
  * Validate speaker structure and throw error if speaker is not valid
