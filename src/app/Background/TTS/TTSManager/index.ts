@@ -3,7 +3,7 @@ import { LingvaTTS } from '@translate-tools/core/tts/LingvaTTS';
 import { TTSProvider } from '@translate-tools/core/tts';
 
 import { SerializedSpeaker, TTSKey, TTSStorage } from '../TTSStorage';
-import { tryLoadTTSCode } from './utils';
+import { tryLoadTTSCode } from './ttsLoader';
 
 export type CustomTTS = SerializedSpeaker & {
 	/**
