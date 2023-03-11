@@ -61,7 +61,7 @@ export class TTSManager {
 	public async getSpeaker(id: string) {
 		if (!isCustomTTSId(id)) {
 			if (id in embeddedSpeakers) {
-				return embeddedSpeakers[id as keyof typeof embeddedSpeakers].constructor;
+				return embeddedSpeakers[id].constructor;
 			}
 
 			throw new Error('Not found embedded TTS');
