@@ -7,18 +7,15 @@ import { buildBackendRequest } from '../../utils/requestBuilder';
 // TODO: implement option for select TTS speed
 export const [getTTSFactory, getTTSReq] = buildBackendRequest('tts.getTTS', {
 	factoryHandler:
-		({ config, backgroundContext }) =>
+		({ backgroundContext }) =>
 			async ({ text, lang }: { text: string; lang: string }) => {
 			// Fix lang auto to detected language
 				if (lang === 'auto') {
 					lang = (await detectLanguage(text, true)) || 'en';
 				}
 
-				const cfg = await config.get();
-				const ttsManager = backgroundContext.getTTSManager();
-				const ttsSpeakerClass = await ttsManager.getSpeaker(cfg.ttsModule);
-
-				const tts = new ttsSpeakerClass();
+				const ttsController = await backgroundContext.getTTSController();
+				const tts = await ttsController.getSpeaker();
 				return Promise.all(
 					splitLongText(text).map((text) =>
 						tts

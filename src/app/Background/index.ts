@@ -17,6 +17,7 @@ import { getTranslatorsClasses } from '../../requests/backend/translators';
 import { ObservableAsyncStorage } from '../ConfigStorage/ConfigStorage';
 import { TranslatorManager } from './TranslatorManager';
 import { TTSManager } from './TTSManager';
+import { TTSController } from './TTSManager/TTSController';
 
 export const embeddedTranslators = {
 	YandexTranslator,
@@ -70,6 +71,17 @@ export class Background {
 		return this.ttsManager;
 	}
 
+	private ttsController: TTSController | null = null;
+	public async getTTSController() {
+		if (this.ttsController === null) {
+			const $config = await this.config.getObservableStore();
+			const config = $config.getState();
+			this.ttsController = new TTSController(this.ttsManager, config.ttsModule);
+		}
+
+		return this.ttsController;
+	}
+
 	public async start() {
 		const $config = await this.config.getObservableStore();
 		const $translateManagerConfig = createSelector(
@@ -87,6 +99,7 @@ export class Background {
 		// Build translators list
 		const translators: TranslatorsMap = await getTranslatorsClasses();
 
+		// Update config of translate manager
 		$translateManagerConfig.watch((config) => {
 			if (this.translateManager === null) {
 				this.translateManager = new TranslatorManager(config, translators);
@@ -100,5 +113,14 @@ export class Background {
 
 			this.translateManager.setConfig(config);
 		});
+
+		// Update TTS module
+		$config
+			.map(({ ttsModule }) => ttsModule)
+			.watch((ttsModule) => {
+				this.getTTSController().then((ttsController) => {
+					ttsController.updateSpeaker(ttsModule);
+				});
+			});
 	}
 }

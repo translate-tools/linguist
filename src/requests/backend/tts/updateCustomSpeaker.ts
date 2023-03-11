@@ -5,10 +5,16 @@ export const [updateCustomSpeakerFactory, updateCustomSpeaker] = buildBackendReq
 	'tts.updateCustomSpeaker',
 	{
 		factoryHandler:
-			({ backgroundContext }) =>
+			({ config, backgroundContext }) =>
 				async ({ id, ...speaker }: SerializedSpeaker & { id: string }) => {
 					const ttsManager = backgroundContext.getTTSManager();
-					return ttsManager.update(id, speaker);
+					await ttsManager.update(id, speaker);
+
+					const { ttsModule } = await config.get();
+					if (ttsModule === id) {
+						const ttsController = await backgroundContext.getTTSController();
+						ttsController.updateSpeaker();
+					}
 				},
 	},
 );
