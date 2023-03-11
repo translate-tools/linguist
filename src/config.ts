@@ -3,7 +3,7 @@ import { getUserLanguage } from './lib/language';
 import { AppConfigType } from './types/runtime';
 
 export const DEFAULT_TRANSLATOR = 'GoogleTranslator';
-export const DEFAULT_TTS = 'lingva';
+export const DEFAULT_TTS = 'google';
 
 // Init config
 export const defaultConfig: AppConfigType = {
