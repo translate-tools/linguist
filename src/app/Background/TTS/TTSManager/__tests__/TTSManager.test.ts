@@ -4,7 +4,7 @@ import path from 'path';
 import { readFileSync } from 'fs';
 
 import { clearAllMocks } from '../../../../../lib/tests';
-import { embeddedSpeakers, TTSManager } from '..';
+import { TTSManager } from '..';
 
 const audioSampleBuffer = readFileSync(path.join(__dirname, 'sample.mp3'));
 const audioSampleBytes = Array.from(new Uint8Array(audioSampleBuffer.buffer));
@@ -60,10 +60,18 @@ describe('TTS manager use cases', () => {
 			code: ttsClassSource,
 		});
 
-		const speakers = await ttsManager.getSpeakers();
-		expect(Object.values(speakers).length).toBe(
-			Object.keys(embeddedSpeakers).length + 1,
-		);
+		await ttsManager.getCustomSpeakers().then((customSpeakers) => {
+			expect(customSpeakers.length).toBe(1);
+		});
+
+		await ttsManager.add({
+			name: 'TTS #2',
+			code: ttsClassSource,
+		});
+
+		await ttsManager.getCustomSpeakers().then((customSpeakers) => {
+			expect(customSpeakers.length).toBe(2);
+		});
 
 		const customTTS = await ttsManager.getSpeaker(customTTSId);
 		expect(typeof customTTS).toBe('function');
