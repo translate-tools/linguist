@@ -1,4 +1,4 @@
-import { SerializedSpeaker } from '../../../app/Background/TTSManager/TTSStorage';
+import { SerializedSpeaker } from '../../../app/Background/TTS/TTSStorage';
 import { buildBackendRequest } from '../../utils/requestBuilder';
 
 export const [addCustomSpeakerFactory, addCustomSpeaker] = buildBackendRequest(

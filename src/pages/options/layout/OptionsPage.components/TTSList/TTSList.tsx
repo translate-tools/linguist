@@ -2,7 +2,7 @@ import React, { FC, useCallback, useContext, useEffect, useState } from 'react';
 import { cn } from '@bem-react/classname';
 
 import { getMessage } from '../../../../../lib/language';
-import { CustomTTS } from '../../../../../app/Background/TTSManager';
+import { CustomTTS } from '../../../../../app/Background/TTS/TTSManager';
 
 import { Button } from '../../../../../components/primitives/Button/Button.bundle/universal';
 import { Icon } from '../../../../../components/primitives/Icon/Icon.bundle/desktop';

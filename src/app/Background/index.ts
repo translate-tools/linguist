@@ -16,8 +16,8 @@ import { getTranslatorsClasses } from '../../requests/backend/translators';
 
 import { ObservableAsyncStorage } from '../ConfigStorage/ConfigStorage';
 import { TranslatorManager } from './TranslatorManager';
-import { TTSManager } from './TTSManager';
-import { TTSController } from './TTSManager/TTSController';
+import { TTSManager } from './TTS/TTSManager';
+import { TTSController } from './TTS/TTSController';
 
 export const embeddedTranslators = {
 	YandexTranslator,

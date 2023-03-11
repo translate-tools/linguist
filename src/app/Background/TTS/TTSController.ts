@@ -1,5 +1,5 @@
 import { TTSProviderProps } from '@translate-tools/core/tts';
-import { TTSManager } from '.';
+import { TTSManager } from './TTSManager';
 
 export class TTSController {
 	private ttsManager;

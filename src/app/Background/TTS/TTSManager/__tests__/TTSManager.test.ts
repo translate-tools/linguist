@@ -3,7 +3,7 @@ import { TTSProviderProps } from '@translate-tools/core/tts';
 import path from 'path';
 import { readFileSync } from 'fs';
 
-import { clearAllMocks } from '../../../../lib/tests';
+import { clearAllMocks } from '../../../../../lib/tests';
 import { embeddedSpeakers, TTSManager } from '..';
 
 const audioSampleBuffer = readFileSync(path.join(__dirname, 'sample.mp3'));
