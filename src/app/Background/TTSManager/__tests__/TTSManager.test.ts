@@ -1,17 +1,22 @@
 import { TTSProviderProps } from '@translate-tools/core/tts';
 
+import path from 'path';
+import { readFileSync } from 'fs';
+
 import { clearAllMocks } from '../../../../lib/tests';
 import { embeddedSpeakers, TTSManager } from '..';
 
-const audioSample = require('./audio-sample-uint-array.json');
+const audioSampleBuffer = readFileSync(path.join(__dirname, 'sample.mp3'));
+const audioSampleBytes = Array.from(new Uint8Array(audioSampleBuffer.buffer));
+
 const createSampleBlob = () =>
-	new Blob([new Uint8Array(audioSample)], { type: 'audio/mpeg' });
+	new Blob([new Uint8Array(audioSampleBytes)], { type: 'audio/mpeg' });
 
 const ttsClassSource = `class DemoTTS {
 	getAudioBuffer = async (text, language) => {
 		return {
 			type: 'audio/mpeg',
-			buffer: (new Uint8Array(${JSON.stringify(audioSample)})).buffer,
+			buffer: (new Uint8Array(${JSON.stringify(audioSampleBytes)})).buffer,
 		};
 	}
 
@@ -26,7 +31,7 @@ const ttsDummyClassSource = `class DemoTTS {
 	getAudioBuffer = async (text, language) => {
 		return {
 			type: 'audio/mpeg',
-			buffer: (new Uint8Array(${JSON.stringify(audioSample)})).buffer,
+			buffer: (new Uint8Array([])).buffer,
 		};
 	}
 
