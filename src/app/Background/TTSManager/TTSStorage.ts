@@ -16,6 +16,9 @@ export interface TTSStorageDBSchema extends IDB.DBSchema {
 
 type DB = IDB.IDBPDatabase<TTSStorageDBSchema>;
 
+/**
+ * Storage implementation to keep custom TTS modules
+ */
 export class TTSStorage {
 	private dbPromise: Promise<DB> | null = null;
 	private async getDB() {

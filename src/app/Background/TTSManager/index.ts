@@ -5,13 +5,19 @@ import { TTSProvider } from '@translate-tools/core/tts';
 import { SerializedSpeaker, TTSKey, TTSStorage } from './TTSStorage';
 import { tryLoadTTSCode } from './utils';
 
-export const embeddedSpeakers: Record<
-	string,
-	{
-		name: string;
-		constructor: TTSProvider;
-	}
-> = {
+export type CustomTTS = SerializedSpeaker & {
+	/**
+	 * Unique module identifier
+	 */
+	id: string;
+};
+
+export type EmbeddedSpeaker = {
+	name: string;
+	constructor: TTSProvider;
+};
+
+export const embeddedSpeakers: Record<string, EmbeddedSpeaker> = {
 	google: {
 		name: 'Google translator',
 		constructor: GoogleTTS,
@@ -20,14 +26,18 @@ export const embeddedSpeakers: Record<
 		name: 'Lingva',
 		constructor: LingvaTTS,
 	},
-} as const;
+};
 
 export const isCustomTTSId = (id: string) => id.startsWith('#');
 export const ttsKeyToId = (key: TTSKey) => '#' + key;
 export const ttsIdToKey = (id: string): TTSKey =>
 	Number(isCustomTTSId(id) ? id.slice(1) : id);
 
-const validateSpeaker = (speaker: SerializedSpeaker) => {
+/**
+ * Validate speaker structure and throw error if speaker is not valid
+ * Ensure the speaker code is correct
+ */
+const speakerValidatorGuard = (speaker: SerializedSpeaker) => {
 	if (speaker.name.trim().length === 0) {
 		throw new Error('Name must not be empty');
 	}
@@ -38,10 +48,9 @@ const validateSpeaker = (speaker: SerializedSpeaker) => {
 	}
 };
 
-export type CustomTTS = SerializedSpeaker & {
-	id: string;
-};
-
+/**
+ * Controller that manage a text to speech modules
+ */
 export class TTSManager {
 	private storage;
 	constructor() {
@@ -96,13 +105,13 @@ export class TTSManager {
 	}
 
 	public async add(speaker: SerializedSpeaker) {
-		validateSpeaker(speaker);
+		speakerValidatorGuard(speaker);
 		const key = await this.storage.add(speaker);
 		return ttsKeyToId(key);
 	}
 
 	public async update(id: string, speaker: SerializedSpeaker) {
-		validateSpeaker(speaker);
+		speakerValidatorGuard(speaker);
 		const key = ttsIdToKey(id);
 		await this.storage.update(key, speaker);
 	}
