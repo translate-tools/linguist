@@ -6,7 +6,7 @@ import { updateNotEqualProps } from '../../lib/effector/reducers';
 
 import { getConfig } from '../../requests/backend/getConfig';
 import { ping } from '../../requests/backend/ping';
-import { onAppConfigUpdated } from '../../requests/common/appConfigUpdate';
+import { onAppConfigUpdated } from '../../requests/global/appConfigUpdate';
 
 export class ClientConfig {
 	private store: Store<AppConfigType> | null = null;

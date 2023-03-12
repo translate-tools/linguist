@@ -6,7 +6,7 @@ import { AppThemeControl } from '../lib/browser/AppThemeControl';
 import { TextTranslatorStorage } from '../pages/popup/tabs/TextTranslator/TextTranslator.utils/TextTranslatorStorage';
 
 import { clearCache } from '../requests/backend/clearCache';
-import { sendAppConfigUpdateEvent } from '../requests/common/appConfigUpdate';
+import { sendAppConfigUpdateEvent } from '../requests/global/appConfigUpdate';
 
 import { TranslateSelectionContextMenu } from './ContextMenus/TranslateSelectionContextMenu';
 import { migrateAll } from './migrations/migrationsList';

@@ -2,7 +2,7 @@ import { useCallback, useEffect, useState } from 'react';
 import { isEqual } from 'lodash';
 
 import { getTTSLanguages } from '../../requests/backend/tts/getTTSLanguages';
-import { onAppConfigUpdated } from '../../requests/common/appConfigUpdate';
+import { onAppConfigUpdated } from '../../requests/global/appConfigUpdate';
 
 import { useIsMounted } from './useIsMounted';
 
