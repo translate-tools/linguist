@@ -1,4 +1,4 @@
-import { TTSProviderProps } from '@translate-tools/core/tts';
+import { TTSProviderProps, TTSProviderStaticProps } from '@translate-tools/core/tts';
 import { TTSManager } from './TTSManager';
 
 export class TTSController {
@@ -9,16 +9,24 @@ export class TTSController {
 		this.speakerId = speakerId;
 	}
 
-	private speaker: Promise<TTSProviderProps> | null = null;
+	private speaker: Promise<{
+		constructor: TTSProviderStaticProps;
+		instance: TTSProviderProps;
+	}> | null = null;
 	public updateSpeaker(speakerId?: string) {
 		if (speakerId !== undefined) {
 			this.speakerId = speakerId;
 		}
 
-		this.speaker = this.ttsManager.getSpeaker(this.speakerId).then((ttsClass) => {
-			const tts = new ttsClass();
-			return tts;
-		});
+		this.speaker = this.ttsManager
+			.getSpeaker(this.speakerId)
+			.then((ttsConstructor) => {
+				const tts = new ttsConstructor();
+				return {
+					constructor: ttsConstructor,
+					instance: tts,
+				};
+			});
 
 		return this.speaker;
 	}

@@ -4,12 +4,11 @@ export const [getTTSLanguagesFactory, getTTSLanguages] = buildBackendRequest(
 	'tts.getTTSLanguages',
 	{
 		factoryHandler:
-			({ config, backgroundContext }) =>
+			({ backgroundContext }) =>
 				async () => {
-					const cfg = await config.get();
-					const ttsManager = backgroundContext.getTTSManager();
-					const ttsSpeakerClass = await ttsManager.getSpeaker(cfg.ttsModule);
-					return ttsSpeakerClass.getSupportedLanguages();
+					const ttsManager = await backgroundContext.getTTSController();
+					const tts = await ttsManager.getSpeaker();
+					return tts.constructor.getSupportedLanguages();
 				},
 	},
 );

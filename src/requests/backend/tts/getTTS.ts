@@ -18,7 +18,7 @@ export const [getTTSFactory, getTTSReq] = buildBackendRequest('tts.getTTS', {
 				const tts = await ttsController.getSpeaker();
 				return Promise.all(
 					splitLongText(text).map((text) =>
-						tts
+						tts.instance
 							.getAudioBuffer(text, lang)
 							.then((audio) =>
 								blobToBase64(new Blob([audio.buffer], { type: audio.type })),
