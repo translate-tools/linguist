@@ -23,8 +23,8 @@ export class ClientConfig {
 			this.store = createStore(state);
 			this.store.on(this.updateData, updateNotEqualProps);
 
-			const unsubscribeRequestHandler = onAppConfigUpdated(() => {
-				getConfig().then(this.updateData);
+			const unsubscribeRequestHandler = onAppConfigUpdated((config) => {
+				this.updateData(config);
 			});
 
 			this.cleanupCallbacks.push(unsubscribeRequestHandler);
