@@ -72,15 +72,14 @@ export const TranslatorsManager: FC<{
 
 	const deleteTranslatorWithConfirmation = useCallback(
 		(translator: CustomTranslator) => {
-			if (
-				!confirm(
-					getMessage(
-						'translatorsManagerWindow_message_translatorRemovingConfirmation',
-						[translator.name],
-					),
-				)
-			)
-				return;
+			const isConfirmed = confirm(
+				getMessage(
+					'translatorsManagerWindow_message_translatorRemovingConfirmation',
+					[translator.name],
+				),
+			);
+
+			if (!isConfirmed) return;
 
 			deleteTranslator(translator.id).then(() => {
 				updateTranslatorsList();

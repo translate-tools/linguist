@@ -70,14 +70,13 @@ export const TTSList: FC<{
 
 	const deleteSpeakerWithConfirmation = useCallback(
 		(speaker: CustomTTS) => {
-			if (
-				!confirm(
-					getMessage('ttsManagerWindow_message_ttsRemoveConfirmation', [
-						speaker.name,
-					]),
-				)
-			)
-				return;
+			const isConfirmed = confirm(
+				getMessage('ttsManagerWindow_message_ttsRemoveConfirmation', [
+					speaker.name,
+				]),
+			);
+
+			if (!isConfirmed) return;
 
 			deleteCustomSpeaker(speaker.id).then(() => {
 				updateSpeakersList();
