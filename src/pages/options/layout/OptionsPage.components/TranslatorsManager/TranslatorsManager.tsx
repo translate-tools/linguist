@@ -17,10 +17,7 @@ import { getTranslators } from '../../../../../requests/backend/translators/getT
 import { updateTranslator } from '../../../../../requests/backend/translators/updateTranslator';
 
 import { OptionsModalsContext } from '../../OptionsPage';
-import {
-	EditedCustomTranslator,
-	TranslatorEditor,
-} from '../TranslatorEditor/TranslatorEditor';
+import { Editor, EditorEntry } from '../Editor/Editor';
 
 import './TranslatorsManager.css';
 
@@ -33,25 +30,34 @@ export const TranslatorsManager: FC<{
 }> = ({ visible, onClose, updateConfig }) => {
 	const scope = useContext(OptionsModalsContext);
 
-	const [editorError, setEditorError] = useState<string | null>(null);
-	const [isEditorOpened, setIsEditorOpened] = useState(false);
-	const [editedTranslator, setEditedTranslator] = useState<CustomTranslator | null>(
-		null,
-	);
-
+	// Initializing
 	const [isLoading, setIsLoading] = useState(true);
 	const [translators, setTranslators] = useState<CustomTranslator[]>([]);
-
-	const addNewTranslator = useCallback(() => {
-		setEditedTranslator(null);
-		setIsEditorOpened(true);
-	}, []);
 
 	const updateTranslatorsList = useCallback(async () => {
 		updateConfig();
 
 		await getTranslators().then(setTranslators);
 	}, [updateConfig]);
+
+	useEffect(() => {
+		updateTranslatorsList().then(() => {
+			setIsLoading(false);
+		});
+	}, [updateTranslatorsList]);
+
+	// Editor
+	const [editorError, setEditorError] = useState<string | null>(null);
+	const [isEditorOpened, setIsEditorOpened] = useState(false);
+
+	const [editedTranslator, setEditedTranslator] = useState<CustomTranslator | null>(
+		null,
+	);
+
+	const addNewTranslator = useCallback(() => {
+		setEditedTranslator(null);
+		setIsEditorOpened(true);
+	}, []);
 
 	const editTranslator = useCallback((translator: CustomTranslator) => {
 		setEditedTranslator(translator);
@@ -66,15 +72,14 @@ export const TranslatorsManager: FC<{
 
 	const deleteTranslatorWithConfirmation = useCallback(
 		(translator: CustomTranslator) => {
-			if (
-				!confirm(
-					getMessage(
-						'translatorsManagerWindow_message_translatorRemovingConfirmation',
-						[translator.name],
-					),
-				)
-			)
-				return;
+			const isConfirmed = confirm(
+				getMessage(
+					'translatorsManagerWindow_message_translatorRemovingConfirmation',
+					[translator.name],
+				),
+			);
+
+			if (!isConfirmed) return;
 
 			deleteTranslator(translator.id).then(() => {
 				updateTranslatorsList();
@@ -84,15 +89,18 @@ export const TranslatorsManager: FC<{
 	);
 
 	const onSave = useCallback(
-		async (translator: EditedCustomTranslator) => {
-			const { id, name, code } = translator;
+		async (translator: EditorEntry) => {
+			const { name, code } = translator;
 
 			setEditorError(null);
 			try {
-				if (id === undefined) {
+				if (editedTranslator === null) {
 					await addTranslator({ name, code });
 				} else {
-					await updateTranslator({ id, translator: { name, code } });
+					await updateTranslator({
+						id: editedTranslator.id,
+						translator: { name, code },
+					});
 				}
 			} catch (error) {
 				if (error instanceof Error) {
@@ -105,14 +113,8 @@ export const TranslatorsManager: FC<{
 			await updateTranslatorsList();
 			closeEditor();
 		},
-		[closeEditor, updateTranslatorsList],
+		[closeEditor, editedTranslator, updateTranslatorsList],
 	);
-
-	useEffect(() => {
-		updateTranslatorsList().then(() => {
-			setIsLoading(false);
-		});
-	}, [updateTranslatorsList]);
 
 	return (
 		<Modal visible={visible} onClose={onClose} scope={scope} preventBodyScroll>
@@ -147,15 +149,11 @@ export const TranslatorsManager: FC<{
 
 								return (
 									<div
-										className={cnTranslatorsManager(
-											'TranslatorEntry',
-										)}
+										className={cnTranslatorsManager('Entry')}
 										key={id}
 									>
 										<span
-											className={cnTranslatorsManager(
-												'TranslatorEntryName',
-											)}
+											className={cnTranslatorsManager('EntryName')}
 										>
 											{name}
 										</span>
@@ -164,7 +162,7 @@ export const TranslatorsManager: FC<{
 											direction="horizontal"
 											indent="m"
 											className={cnTranslatorsManager(
-												'TranslatorEntryControls',
+												'EntryControls',
 											)}
 										>
 											<Button
@@ -204,8 +202,8 @@ export const TranslatorsManager: FC<{
 			)}
 
 			{isEditorOpened && (
-				<TranslatorEditor
-					translator={editedTranslator}
+				<Editor
+					data={editedTranslator}
 					onClose={closeEditor}
 					onSave={onSave}
 					error={editorError}

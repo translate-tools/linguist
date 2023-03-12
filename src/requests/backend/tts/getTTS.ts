@@ -1,33 +1,30 @@
 import splitLongText from 'google-tts-api/dist/splitLongText';
 
-import { detectLanguage } from '../../lib/language';
-import { blobToBase64, base64ToBlob } from '../../lib/blob';
-import { buildBackendRequest } from '../utils/requestBuilder';
+import { detectLanguage } from '../../../lib/language';
+import { blobToBase64, base64ToBlob } from '../../../lib/blob';
+import { buildBackendRequest } from '../../utils/requestBuilder';
 
-// TODO: move getting TTS blob to standalone class
 // TODO: implement option for select TTS speed
-export const [getTTSFactory, getTTSReq] = buildBackendRequest('getTTS', {
+export const [getTTSFactory, getTTSReq] = buildBackendRequest('tts.getTTS', {
 	factoryHandler:
-		() =>
+		({ backgroundContext }) =>
 			async ({ text, lang }: { text: string; lang: string }) => {
 			// Fix lang auto to detected language
 				if (lang === 'auto') {
 					lang = (await detectLanguage(text, true)) || 'en';
 				}
 
-				const ttsEncodedBlobs = await Promise.all(
-					splitLongText(text).map((text) => {
-						const url =
-						`https://translate.google.com/translate_tts?ie=UTF-8&tl=${lang}&client=dict-chrome-ex&ttsspeed=0.5&q=` +
-						encodeURIComponent(text);
-
-						return fetch(url)
-							.then((rsp) => rsp.blob())
-							.then(blobToBase64);
-					}),
+				const ttsController = await backgroundContext.getTTSController();
+				const tts = await ttsController.getSpeaker();
+				return Promise.all(
+					splitLongText(text).map((text) =>
+						tts.instance
+							.getAudioBuffer(text, lang)
+							.then((audio) =>
+								blobToBase64(new Blob([audio.buffer], { type: audio.type })),
+							),
+					),
 				);
-
-				return ttsEncodedBlobs;
 			},
 });
 

@@ -1,7 +1,7 @@
 import { useRef, useEffect, useState, useCallback } from 'react';
 import { useImmutableCallback } from 'react-elegant-ui/esm/hooks/useImmutableCallback';
 
-import { getTTS } from '../../requests/backend/getTTS';
+import { getTTS } from '../../requests/backend/tts/getTTS';
 
 type PlayerSignal = {
 	active: symbol | null;

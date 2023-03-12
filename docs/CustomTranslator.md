@@ -1,26 +1,14 @@
-With Linguist you can use custom translators.
+With custom translator you may use Linguist with your favorite translation service if you not enough an embedded translators.
 
-You may use it to include translators for your favorite translation services and even to use a translator deployed on your local machine.
+All you need to do it
+- Go to Linguist settings in a section "Custom translators"
+- Press button "Manage translators"
+- Press "Add"
+- Input translator name and insert module code
 
-With a custom translator you have control over all HTTP requests from within the extension (except text to speech services at this time).
+## Custom translators list
 
-## WARNING
-
-When you use a custom translator, you insert javascript code which will be evaluated in the browser extension environment.
-
-This means that you MUST trust this code. Never add custom translators with code that you don't understand or don't trust.
-
-Otherwise, hackers may execute any code in your browser - for example, to track your translated texts, have access to any opened site, steal your personal data and read your personal messages or to steal your money using the site of your bank.
-
-## How to use?
-
-To use a custom translator, you have to implement the translator API in javascript and add this code to the options page.
-
-If you can't program, you can ask for help from your friend. If you can, you may share your translator to other people. Just make an issue with your code.
-
-### Custom translators list
-
-You can explore [custom translators list](../modules/README.md) to find translator for you, and to add a new translator to a list.
+You can find a custom translators in a [custom translators list](../modules/README.md).
 
 Read [Offline translation manual](./manuals/OfflineTranslation.md) to get known how to setup offline translation with Linguist.
 

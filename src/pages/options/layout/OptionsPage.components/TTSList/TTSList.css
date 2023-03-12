@@ -1,27 +1,27 @@
-.TranslatorsManager {
+.TTSList {
 	max-width: 600px;
 }
 
 @media (min-width: 600px) {
-	.TranslatorsManager {
+	.TTSList {
 		min-width: 400px;
 	}
 }
 
-.TranslatorsManager-Description {
+.TTSList-Description {
 	padding: 0.8rem;
 	border-radius: 4px;
 	background: #e6e6e6;
 	margin-bottom: 1rem;
 }
 
-.TranslatorsManager-Entry {
+.TTSList-Entry {
 	display: flex;
 	flex-flow: row;
 	line-height: 2em;
 }
 
-.TranslatorsManager-EntryName {
+.TTSList-EntryName {
 	width: 100%;
 	padding: 0 0.3rem;
 	white-space: nowrap;
@@ -29,6 +29,6 @@
 	overflow: hidden;
 }
 
-.TranslatorsManager-EntryControls {
+.TTSList-EntryControls {
 	min-width: max-content;
 }

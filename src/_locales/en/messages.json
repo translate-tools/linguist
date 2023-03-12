@@ -297,6 +297,18 @@
 	"settings_option_appIcon_item_color": {
 		"message": "Color"
 	},
+	"settings_option_tts": {
+		"message": "Text to speech (TTS)"
+	},
+	"settings_option_ttsModule": {
+		"message": "TTS module"
+	},
+	"settings_option_ttsCustomModules": {
+		"message": "Custom TTS modules"
+	},
+	"settings_option_ttsCustomModules_button": {
+		"message": "Manage TTS modules"
+	},
 	"settings_option_translatePreferences": {
 		"message": "Translation preferences"
 	},
@@ -522,19 +534,19 @@
 	"settings_button_reset": {
 		"message": "Reset config"
 	},
-	"translatorEditorWindow_message_invalidTranslatorName": {
+	"editorWindow_message_invalidName": {
 		"message": "Name must contain at least one symbol"
 	},
-	"translatorEditorWindow_save": {
+	"editorWindow_save": {
 		"message": "Save"
 	},
-	"translatorEditorWindow_close": {
+	"editorWindow_close": {
 		"message": "Close"
 	},
-	"translatorEditorWindow_translatorName": {
+	"editorWindow_data_name": {
 		"message": "Name"
 	},
-	"translatorEditorWindow_translatorCode": {
+	"editorWindow_data_code": {
 		"message": "Code"
 	},
 	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
@@ -569,6 +581,33 @@
 	},
 	"translatorsManagerWindow_translator_delete": {
 		"message": "Delete"
+	},
+	"ttsManagerWindow_title": {
+		"message": "Text to speech modules"
+	},
+	"ttsManagerWindow_add": {
+		"message": "Add"
+	},
+	"ttsManagerWindow_close": {
+		"message": "Close"
+	},
+	"ttsManagerWindow_emptyTranslatorsListText": {
+		"message": "TTS modules have not been added yet"
+	},
+	"ttsManagerWindow_translator_edit": {
+		"message": "Edit"
+	},
+	"ttsManagerWindow_translator_delete": {
+		"message": "Delete"
+	},
+	"ttsManagerWindow_message_ttsRemoveConfirmation": {
+		"message": "Are you sure about removing speaker \"$tts_name$\"?",
+		"placeholders": {
+			"tts_name": {
+				"content": "$1",
+				"example": "Google TTS"
+			}
+		}
 	},
 	"langCode_aa": {
 		"message": "Afar"

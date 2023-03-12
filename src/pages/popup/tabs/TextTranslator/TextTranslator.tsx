@@ -7,6 +7,7 @@ import { useImmutableCallback } from 'react-elegant-ui/esm/hooks/useImmutableCal
 
 import { useIsFirstRenderRef } from '../../../../lib/hooks/useIsFirstRenderRef';
 import { useTTS } from '../../../../lib/hooks/useTTS';
+import { useTTSLanguages } from '../../../../lib/hooks/useTTSLanguages';
 import { getLanguageNameByCode, getMessage } from '../../../../lib/language';
 import { MutableValue } from '../../../../types/utils';
 
@@ -123,6 +124,7 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 	};
 	const ttsOriginal = useTTS(from, userInput, TTSSignal);
 	const ttsTranslate = useTTS(to, translation ? translation.text : null, TTSSignal);
+	const ttsModule = useTTSLanguages();
 
 	//
 	// Lang suggestions
@@ -415,7 +417,10 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 							addonAfterControl={
 								<div className={cnTextTranslator('TextActions')}>
 									<Button
-										disabled={userInput.length === 0}
+										disabled={
+											userInput.length === 0 ||
+											!ttsModule.isSupportedLanguage(from)
+										}
 										onPress={ttsOriginal.toggle}
 										view="clear"
 										size="s"
@@ -435,7 +440,11 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 						</div>
 						<div className={cnTextTranslator('TextActions')}>
 							<Button
-								disabled={inTranslateProcess || translation === null}
+								disabled={
+									inTranslateProcess ||
+									translation === null ||
+									!ttsModule.isSupportedLanguage(to)
+								}
 								onPress={ttsTranslate.toggle}
 								view="clear"
 								size="s"

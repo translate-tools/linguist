@@ -4,9 +4,11 @@ import { OptionsGroup } from '../OptionsTree/OptionsTree';
 
 type Options = {
 	clearCacheProcess: boolean;
-	translatorModules: Record<string, string> | undefined;
+	translatorModules: Record<string, string>;
+	ttsModules: Record<string, string>;
 	clearCache: () => void;
 	toggleCustomTranslatorsWindow: () => void;
+	toggleTTSModulesWindow: () => void;
 };
 
 // TODO: make helper for build options
@@ -30,8 +32,10 @@ type Options = {
 export const generateTree = ({
 	clearCacheProcess,
 	translatorModules,
+	ttsModules,
 	clearCache,
 	toggleCustomTranslatorsWindow,
+	toggleTTSModulesWindow,
 }: Options): OptionsGroup[] => {
 	return [
 		{
@@ -67,12 +71,42 @@ export const generateTree = ({
 						})),
 					},
 				},
+				{
+					title: getMessage('settings_option_tts'),
+					groupContent: [
+						Object.keys(ttsModules).length === 0
+							? undefined
+							: {
+								title: getMessage('settings_option_ttsModule'),
+								path: 'ttsModule',
+								optionContent: {
+									type: 'SelectList',
+									options: Object.entries(ttsModules).map(
+										([id, name]) => ({
+											id,
+											content: name,
+										}),
+									),
+								},
+							  },
+						{
+							title: getMessage('settings_option_ttsCustomModules'),
+							optionContent: {
+								type: 'Button',
+								text: getMessage(
+									'settings_option_ttsCustomModules_button',
+								),
+								action: toggleTTSModulesWindow,
+							},
+						},
+					],
+				},
 			],
 		},
 		{
 			title: getMessage('settings_option_translatePreferences'),
 			groupContent: [
-				translatorModules === undefined
+				Object.keys(translatorModules).length === 0
 					? undefined
 					: {
 						title: getMessage('settings_option_translatorModule'),

@@ -45,6 +45,7 @@ export const LangCodeWithAuto = new type.Type<
 export const AppConfig = type.type({
 	language: type.string,
 	translatorModule: type.string,
+	ttsModule: type.string,
 	appIcon: type.union([
 		StringLiteralType('auto'),
 		StringLiteralType('dark'),

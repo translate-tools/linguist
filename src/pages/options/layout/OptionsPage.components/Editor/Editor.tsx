@@ -13,29 +13,38 @@ import {
 	Modal,
 } from '../../../../../components/primitives/Modal/Modal.bundle/desktop';
 
-import { CustomTranslator } from '../../../../../requests/backend/translators';
-
 import { getMessage } from '../../../../../lib/language';
 import { OptionsModalsContext } from '../../OptionsPage';
 
-import './TranslatorEditor.css';
+import './Editor.css';
 
-const cnTranslatorsEditor = cn('TranslatorEditor');
+const cnEditor = cn('Editor');
 
-export type EditedCustomTranslator = Pick<
-	CustomTranslator,
-	Exclude<keyof CustomTranslator, 'id'>
-> &
-	Partial<Pick<CustomTranslator, 'id'>>;
+export type EditorEntry = {
+	readonly name: string;
+	readonly code: string;
+};
 
-interface TranslatorEditorProps extends Pick<IModalProps, 'onClose'> {
-	translator: CustomTranslator | null;
-	onSave: (value: EditedCustomTranslator) => void;
+interface EditorProps extends Pick<IModalProps, 'onClose'> {
+	/**
+	 * When property is not `null`, will used values from object, otherwise empty values
+	 */
+	data: EditorEntry | null;
+	/**
+	 * Call when user save changes
+	 * Provide new object with changes
+	 */
+	onSave: (value: EditorEntry) => void;
 	error: null | string;
 }
 
-export const TranslatorEditor: FC<TranslatorEditorProps> = ({
-	translator,
+export const emptyEditorEntry: EditorEntry = {
+	name: '',
+	code: '',
+};
+
+export const Editor: FC<EditorProps> = ({
+	data = emptyEditorEntry,
 	onClose,
 	onSave,
 	error,
@@ -53,48 +62,41 @@ export const TranslatorEditor: FC<TranslatorEditorProps> = ({
 
 	// Init
 	useEffect(() => {
-		if (translator === null) return;
-		setName(translator.name);
-		setCode(translator.code);
-	}, [translator]);
+		if (data === null) return;
+		setName(data.name);
+		setCode(data.code);
+	}, [data]);
 
 	const onSavePress = useImmutableCallback(() => {
-		const { id } = translator || {};
-
 		if (name.trim().length < 1) {
-			setLocalError(
-				getMessage('translatorEditorWindow_message_invalidTranslatorName'),
-			);
+			setLocalError(getMessage('editorWindow_message_invalidName'));
 			return;
 		}
 
 		onSave({
-			id,
 			name,
 			code,
 		});
-	}, [code, name, onSave, translator]);
+	}, [code, name, onSave]);
 
 	const actualError = localError || error;
 
 	return (
 		<Modal visible={true} onClose={onClose} scope={scope} preventBodyScroll>
-			<div className={cnTranslatorsEditor({})}>
+			<div className={cnEditor({})}>
 				<ModalLayout
 					footer={[
 						<Button key="save" view="action" onPress={onSavePress}>
-							{getMessage('translatorEditorWindow_save')}
+							{getMessage('editorWindow_save')}
 						</Button>,
 						<Button key="close" onPress={onClose as any}>
-							{getMessage('translatorEditorWindow_close')}
+							{getMessage('editorWindow_close')}
 						</Button>,
 					]}
 				>
 					<LayoutFlow direction="vertical" indent="l">
 						<LayoutFlow direction="vertical" indent="m">
-							<div>
-								{getMessage('translatorEditorWindow_translatorName')}
-							</div>
+							<div>{getMessage('editorWindow_data_name')}</div>
 							<Textinput
 								value={name}
 								onChange={(evt) => {
@@ -104,9 +106,7 @@ export const TranslatorEditor: FC<TranslatorEditorProps> = ({
 						</LayoutFlow>
 
 						<LayoutFlow direction="vertical" indent="m">
-							<div>
-								{getMessage('translatorEditorWindow_translatorCode')}
-							</div>
+							<div>{getMessage('editorWindow_data_code')}</div>
 							<Textarea
 								value={code}
 								onChange={(evt) => {
@@ -116,9 +116,7 @@ export const TranslatorEditor: FC<TranslatorEditorProps> = ({
 						</LayoutFlow>
 
 						{actualError && (
-							<div className={cnTranslatorsEditor('Error')}>
-								{actualError}
-							</div>
+							<div className={cnEditor('Error')}>{actualError}</div>
 						)}
 					</LayoutFlow>
 				</ModalLayout>

@@ -23,6 +23,7 @@ import { ping } from '../../../requests/backend/ping';
 import { resetConfig as resetConfigReq } from '../../../requests/backend/resetConfig';
 import { setConfig as setConfigReq } from '../../../requests/backend/setConfig';
 import { updateConfig as updateConfigReq } from '../../../requests/backend/updateConfig';
+import { getSpeakers } from '../../../requests/backend/tts/getSpeakers';
 
 import { Button } from '../../../components/primitives/Button/Button.bundle/universal';
 import { LayoutFlow } from '../../../components/layouts/LayoutFlow/LayoutFlow';
@@ -37,6 +38,7 @@ import { PageSection } from './PageSection/PageSection';
 
 import './OptionsPage.css';
 import { TranslatorsManager } from './OptionsPage.components/TranslatorsManager/TranslatorsManager';
+import { TTSList } from './OptionsPage.components/TTSList/TTSList';
 
 export const cnOptionsPage = cn('OptionsPage');
 
@@ -61,21 +63,26 @@ export const OptionsPage: FC<OptionsPageProps> = ({ messageHideDelay }) => {
 	const [configTree, setConfigTree] = useState<OptionsGroup[] | undefined>();
 
 	const windowsStackRef = useRef<HTMLDivElement>(null);
-	const [isOpenCustomTranslatorsWindow, setIsOpenCustomTranslatorsWindow] =
-		useState<boolean>(false);
 
 	const [clearCacheProcess, setClearCacheProcess] = useState<boolean>(false);
-	const [translatorModules, setTranslatorModules] = useState<
-		Record<string, string> | undefined
-	>();
+
+	const [translatorModules, setTranslatorModules] = useState<Record<string, string>>(
+		{},
+	);
+	const [isOpenCustomTranslatorsWindow, setIsOpenCustomTranslatorsWindow] =
+		useState(false);
+
+	const [ttsModules, setTTSModules] = useState<Record<string, string>>({});
+	const [isTTSModulesWindowOpen, setIsTTSModulesWindowOpen] = useState(false);
 
 	const updateConfig = useCallback(() => {
 		(async () => {
-			const config = await getConfig();
-			const translatorModules = await getAvailableTranslators();
+			await Promise.all([
+				getConfig().then(setConfig),
+				getAvailableTranslators().then(setTranslatorModules),
+				getSpeakers().then(setTTSModules),
+			]);
 
-			setConfig(config);
-			setTranslatorModules(translatorModules);
 			setLoaded(true);
 		})();
 	}, []);
@@ -264,14 +271,18 @@ export const OptionsPage: FC<OptionsPageProps> = ({ messageHideDelay }) => {
 		const configTree = generateTree({
 			clearCacheProcess,
 			translatorModules,
+			ttsModules,
 			clearCache,
 			toggleCustomTranslatorsWindow: () => {
 				setIsOpenCustomTranslatorsWindow((value) => !value);
 			},
+			toggleTTSModulesWindow: () => {
+				setIsTTSModulesWindowOpen((value) => !value);
+			},
 		});
 
 		setConfigTree(configTree);
-	}, [translatorModules, clearCacheProcess, clearCache]);
+	}, [translatorModules, clearCacheProcess, clearCache, ttsModules]);
 
 	//
 	// Render
@@ -361,6 +372,11 @@ export const OptionsPage: FC<OptionsPageProps> = ({ messageHideDelay }) => {
 					<TranslatorsManager
 						visible={isOpenCustomTranslatorsWindow}
 						onClose={() => setIsOpenCustomTranslatorsWindow(false)}
+						updateConfig={updateConfig}
+					/>
+					<TTSList
+						visible={isTTSModulesWindowOpen}
+						onClose={() => setIsTTSModulesWindowOpen(false)}
 						updateConfig={updateConfig}
 					/>
 				</OptionsModalsContext.Provider>

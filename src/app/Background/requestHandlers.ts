@@ -10,7 +10,7 @@ import { getConfigFactory } from '../../requests/backend/getConfig';
 import { setConfigFactory } from '../../requests/backend/setConfig';
 import { resetConfigFactory } from '../../requests/backend/resetConfig';
 import { clearCacheFactory } from '../../requests/backend/clearCache';
-import { getTTSFactory } from '../../requests/backend/getTTS';
+import { ttsRequestHandlers } from '../../requests/backend/tts';
 
 // Auto translation
 import { setSitePreferencesFactory } from '../../requests/backend/autoTranslation/sitePreferences/setSitePreferences';
@@ -44,7 +44,8 @@ export const requestHandlers = [
 	getUserLanguagePreferencesFactory,
 	getAvailableTranslatorsFactory,
 	clearCacheFactory,
-	getTTSFactory,
+
+	...ttsRequestHandlers,
 
 	historyRequestHandlersFactory,
 
