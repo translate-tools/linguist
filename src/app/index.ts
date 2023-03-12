@@ -3,18 +3,19 @@ import { defaultConfig } from '../config';
 import { AppConfigType } from '../types/runtime';
 import { isBackgroundContext } from '../lib/browser';
 import { AppThemeControl } from '../lib/browser/AppThemeControl';
+import { TextTranslatorStorage } from '../pages/popup/tabs/TextTranslator/TextTranslator.utils/TextTranslatorStorage';
+
+import { clearCache } from '../requests/backend/clearCache';
+import { sendAppConfigUpdateEvent } from '../requests/common/appConfigUpdate';
+
 import { TranslateSelectionContextMenu } from './ContextMenus/TranslateSelectionContextMenu';
 import { migrateAll } from './migrations/migrationsList';
-import { clearCache } from '../requests/backend/clearCache';
-
-import { TextTranslatorStorage } from '../pages/popup/tabs/TextTranslator/TextTranslator.utils/TextTranslatorStorage';
 
 import { ConfigStorage, ObservableAsyncStorage } from './ConfigStorage/ConfigStorage';
 
 import { Background } from './Background';
 import { requestHandlers } from './Background/requestHandlers';
 
-import { sendConfigUpdateEvent } from './ContentScript';
 import { TranslatePageContextMenu } from './ContextMenus/TranslatePageContextMenu';
 
 /**
@@ -73,8 +74,8 @@ export class App {
 		const $appConfig = await this.config.getObservableStore();
 
 		// Send update event
-		$appConfig.watch(() => {
-			sendConfigUpdateEvent();
+		$appConfig.watch((config) => {
+			sendAppConfigUpdateEvent(config);
 		});
 
 		// Update icon

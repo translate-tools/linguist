@@ -1,23 +1,7 @@
-import { getAllTabs } from '../../lib/browser/tabs';
-import { sendTabRequest } from '../../requests/utils';
-
 import { ClientConfig } from './ClientConfig';
 import { PageTranslationContext } from './PageTranslationContext';
 
 import { requestHandlers } from './requestHandlers';
-
-// TODO: move to common requests
-/**
- * Send update event to all tabs
- */
-export const sendConfigUpdateEvent = () =>
-	getAllTabs().then((tabs) =>
-		tabs.forEach((tab) =>
-			sendTabRequest(tab.id, 'configUpdated')
-				// Ignore errors
-				.catch(() => {}),
-		),
-	);
 
 export class ContentScript {
 	public static async main() {

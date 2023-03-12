@@ -4,9 +4,9 @@ import { AppConfigType } from '../../types/runtime';
 
 import { updateNotEqualProps } from '../../lib/effector/reducers';
 
-import { addRequestHandler } from '../../requests/utils';
 import { getConfig } from '../../requests/backend/getConfig';
 import { ping } from '../../requests/backend/ping';
+import { onAppConfigUpdated } from '../../requests/common/appConfigUpdate';
 
 export class ClientConfig {
 	private store: Store<AppConfigType> | null = null;
@@ -23,7 +23,7 @@ export class ClientConfig {
 			this.store = createStore(state);
 			this.store.on(this.updateData, updateNotEqualProps);
 
-			const unsubscribeRequestHandler = addRequestHandler('configUpdated', () => {
+			const unsubscribeRequestHandler = onAppConfigUpdated(() => {
 				getConfig().then(this.updateData);
 			});
 
