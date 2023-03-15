@@ -5,18 +5,34 @@
 	margin-inline-start: var(--typography-layout-indent-s-all);
 }
 
-/* OptionSection */
-.OptionsPage-OptionSection > *:not(:first-child) {
-	margin-top: var(--typography-layout-indent-m-all);
+.OptionsPage-OptionContainer > *:not(:last-child) {
+	margin-bottom: var(--typography-layout-indent-m-all);
 }
 
+/* OptionSection */
 .OptionsPage-OptionSection {
+	position: relative;
+	display: grid;
+	grid-template-columns: 200px auto;
+	gap: 1em;
 	padding-left: var(--typography-layout-indent-m-all);
 	border-left: var(--typography-layout-border-width-m) solid transparent;
 }
 
-.OptionsPage-OptionSection_changed {
-	border-color: var(--options-page-section-active-border-color);
+.OptionsPage-OptionSection_changed::before {
+	background: #f2f5ff;
+	display: block;
+	content: '';
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: -1;
+	padding: 0.5em 0;
+	margin-top: -0.5em;
+}
+
+.OptionsPage-OptionTitle {
+	text-align: right;
 }
 
 /* OptionDescription */

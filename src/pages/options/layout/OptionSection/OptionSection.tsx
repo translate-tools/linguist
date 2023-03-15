@@ -23,16 +23,20 @@ export const OptionSection: FC<OptionSection> = ({
 		])}
 	>
 		<div className={cnOptionsPage('OptionSection', { changed })}>
-			{title !== undefined ? (
-				<div className={cnOptionsPage('OptionTitle')}>{title}</div>
-			) : undefined}
-			<div className={cnOptionsPage('OptionContainer')}>{children}</div>
-			{error !== undefined ? (
-				<div className={cnOptionsPage('OptionErrorMessage')}>{error}</div>
-			) : undefined}
-			{description !== undefined ? (
-				<div className={cnOptionsPage('OptionDescription')}>{description}</div>
-			) : undefined}
+			<div className={cnOptionsPage('OptionTitle')}>{title}</div>
+			<div className={cnOptionsPage('OptionContainer')}>
+				{children}
+
+				{error !== undefined ? (
+					<div className={cnOptionsPage('OptionErrorMessage')}>{error}</div>
+				) : undefined}
+
+				{description !== undefined ? (
+					<div className={cnOptionsPage('OptionDescription')}>
+						{description}
+					</div>
+				) : undefined}
+			</div>
 		</div>
 	</div>
 );
