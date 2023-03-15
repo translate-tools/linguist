@@ -80,4 +80,12 @@
 		padding: 0.5em 0;
 		margin-top: -0.5em;
 	}
+
+	.OptionsPage-OptionTitle {
+		margin-inline-start: 1rem;
+	}
+
+	.OptionsPage-OptionContainer {
+		margin-inline-end: 1rem;
+	}
 }
