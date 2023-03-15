@@ -4,6 +4,12 @@
 	max-width: 100%;
 }
 
+@media (max-width: 600px) {
+	.OptionsPage-Page {
+		padding: var(--typography-layout-indent-l-all);
+	}
+}
+
 .OptionsPage-Page_editMode {
 	margin-bottom: 4rem;
 }

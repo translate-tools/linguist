@@ -15,20 +15,6 @@
 	display: grid;
 	grid-template-columns: 200px auto;
 	gap: 1em;
-	padding-left: var(--typography-layout-indent-m-all);
-	border-left: var(--typography-layout-border-width-m) solid transparent;
-}
-
-.OptionsPage-OptionSection_changed::before {
-	background: #f2f5ff;
-	display: block;
-	content: '';
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	z-index: -1;
-	padding: 0.5em 0;
-	margin-top: -0.5em;
 }
 
 .OptionsPage-OptionTitle {
@@ -43,6 +29,55 @@
 }
 
 .OptionsPage-OptionErrorMessage {
-	color: var(--color-typo-error);
+	color: var(--color-typo-alert);
 	font-size: var(--typography-layout-size-s-font-size);
+}
+
+@media (max-width: 600px) {
+	.OptionsPage-OptionSection {
+		display: block;
+	}
+
+	.OptionsPage-OptionContainer {
+		position: relative;
+	}
+
+	/* Highlight option body */
+	.OptionsPage-OptionSection_changed .OptionsPage-OptionContainer::before {
+		background: #f2f5ff;
+		display: block;
+		content: '';
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		z-index: -1;
+		padding: 0.5em;
+		margin: -0.5em;
+	}
+
+	.OptionsPage-OptionTitle {
+		text-align: left;
+		font-weight: bold;
+		margin-block-end: 0.5rem;
+	}
+
+	/* Hide empty title to do not render unnecessary indent */
+	.OptionsPage-OptionTitle:empty {
+		display: none;
+	}
+}
+
+@media (min-width: 600px) {
+	/* Highlight whole option section */
+	.OptionsPage-OptionSection_changed::before {
+		background: #f2f5ff;
+		display: block;
+		content: '';
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		z-index: -1;
+		padding: 0.5em 0;
+		margin-top: -0.5em;
+	}
 }
