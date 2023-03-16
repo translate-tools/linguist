@@ -71,36 +71,6 @@ export const generateTree = ({
 						})),
 					},
 				},
-				{
-					title: getMessage('settings_option_tts'),
-					groupContent: [
-						Object.keys(ttsModules).length === 0
-							? undefined
-							: {
-								title: getMessage('settings_option_ttsModule'),
-								path: 'ttsModule',
-								optionContent: {
-									type: 'SelectList',
-									options: Object.entries(ttsModules).map(
-										([id, name]) => ({
-											id,
-											content: name,
-										}),
-									),
-								},
-							  },
-						{
-							title: getMessage('settings_option_ttsCustomModules'),
-							optionContent: {
-								type: 'Button',
-								text: getMessage(
-									'settings_option_ttsCustomModules_button',
-								),
-								action: toggleTTSModulesWindow,
-							},
-						},
-					],
-				},
 			],
 		},
 		{
@@ -187,7 +157,6 @@ export const generateTree = ({
 							description: getMessage('settings_option_cache_clear_desc'),
 							optionContent: {
 								type: 'Button',
-								view: 'action',
 								text: getMessage('settings_option_cache_clear'),
 								disabled: clearCacheProcess,
 								action: clearCache,
@@ -198,17 +167,34 @@ export const generateTree = ({
 			],
 		},
 		{
-			title: getMessage('settings_option_pageTranslation'),
+			title: getMessage('settings_option_tts'),
 			groupContent: [
+				Object.keys(ttsModules).length === 0
+					? undefined
+					: {
+						title: getMessage('settings_option_ttsModule'),
+						path: 'ttsModule',
+						optionContent: {
+							type: 'SelectList',
+							options: Object.entries(ttsModules).map(([id, name]) => ({
+								id,
+								content: name,
+							})),
+						},
+					  },
 				{
-					path: 'pageTranslator.enableContextMenu',
+					title: getMessage('settings_option_ttsCustomModules'),
 					optionContent: {
-						type: 'Checkbox',
-						text: getMessage(
-							'settings_option_pageTranslation_enableContextMenu',
-						),
+						type: 'Button',
+						text: getMessage('settings_option_ttsCustomModules_button'),
+						action: toggleTTSModulesWindow,
 					},
 				},
+			],
+		},
+		{
+			title: getMessage('settings_option_pageTranslation'),
+			groupContent: [
 				{
 					description: getMessage(
 						'settings_option_pageTranslation_lazyTranslate_desc',
@@ -228,6 +214,15 @@ export const generateTree = ({
 						type: 'Checkbox',
 						text: getMessage(
 							'settings_option_pageTranslation_detectLanguageByContent',
+						),
+					},
+				},
+				{
+					path: 'pageTranslator.enableContextMenu',
+					optionContent: {
+						type: 'Checkbox',
+						text: getMessage(
+							'settings_option_pageTranslation_enableContextMenu',
 						),
 					},
 				},
@@ -268,150 +263,93 @@ export const generateTree = ({
 			title: getMessage('settings_option_selectTranslation'),
 			groupContent: [
 				{
-					title: getMessage('settings_option_mainPreferences'),
-					groupContent: [
-						{
-							path: 'selectTranslator.enabled',
-							optionContent: {
+					path: 'selectTranslator.enabled',
+					optionContent: {
+						type: 'Checkbox',
+						text: getMessage('settings_option_selectTranslation_enable'),
+					},
+				},
+				{
+					title: getMessage('settings_option_selectTranslation_mode'),
+					path: 'selectTranslator.mode',
+					optionContent: {
+						type: 'SelectList',
+						options: ['popupButton', 'quickTranslate', 'contextMenu'].map(
+							(id) => ({
+								id,
+								content: getMessage(
+									`settings_option_selectTranslation_mode_item_${id}`,
+								),
+							}),
+						),
+					},
+				},
+				{
+					title: getMessage('settings_option_selectTranslation_modifiers'),
+					description: getMessage(
+						'settings_option_selectTranslation_modifiers_desc',
+					),
+					path: 'selectTranslator.modifiers',
+					optionContent: {
+						type: 'CheckboxGroup',
+						valueMap: ['ctrlKey', 'altKey', 'shiftKey', 'metaKey'],
+						options: [
+							{
 								type: 'Checkbox',
 								text: getMessage(
-									'settings_option_selectTranslation_enable',
+									'settings_option_selectTranslation_modifiers_key_ctrl',
 								),
 							},
-						},
-						{
-							title: getMessage('settings_option_selectTranslation_mode'),
-							path: 'selectTranslator.mode',
-							optionContent: {
-								type: 'SelectList',
-								options: [
-									'popupButton',
-									'quickTranslate',
-									'contextMenu',
-								].map((id) => ({
-									id,
-									content: getMessage(
-										`settings_option_selectTranslation_mode_item_${id}`,
-									),
-								})),
-							},
-						},
-						{
-							title: getMessage(
-								'settings_option_selectTranslation_modifiers',
-							),
-							description: getMessage(
-								'settings_option_selectTranslation_modifiers_desc',
-							),
-							path: 'selectTranslator.modifiers',
-							optionContent: {
-								type: 'CheckboxGroup',
-								valueMap: ['ctrlKey', 'altKey', 'shiftKey', 'metaKey'],
-								options: [
-									{
-										type: 'Checkbox',
-										text: getMessage(
-											'settings_option_selectTranslation_modifiers_key_ctrl',
-										),
-									},
-									{
-										type: 'Checkbox',
-										text: getMessage(
-											'settings_option_selectTranslation_modifiers_key_alt',
-										),
-									},
-									{
-										type: 'Checkbox',
-										text: getMessage(
-											'settings_option_selectTranslation_modifiers_key_shift',
-										),
-									},
-									{
-										type: 'Checkbox',
-										text: getMessage(
-											'settings_option_selectTranslation_modifiers_key_meta',
-										),
-									},
-								],
-							},
-						},
-						{
-							title: getMessage(
-								'settings_option_selectTranslation_timeoutForHideButton',
-							),
-							description: getMessage(
-								'settings_option_selectTranslation_timeoutForHideButton_desc',
-							),
-							path: 'selectTranslator.timeoutForHideButton',
-							optionContent: {
-								type: 'InputNumber',
-							},
-						},
-						{
-							title: getMessage('settings_option_selectTranslation_zIndex'),
-							description: getMessage(
-								'settings_option_selectTranslation_zIndex_desc',
-							),
-							path: 'selectTranslator.zIndex',
-							optionContent: {
-								type: 'InputNumber',
-							},
-						},
-						{
-							path: 'selectTranslator.disableWhileTranslatePage',
-							optionContent: {
+							{
 								type: 'Checkbox',
 								text: getMessage(
-									'settings_option_selectTranslation_disableWhileTranslatePage',
+									'settings_option_selectTranslation_modifiers_key_alt',
 								),
 							},
-						},
-						{
-							description: getMessage(
-								'settings_option_selectTranslation_showOnceForSelection_desc',
-							),
-							path: 'selectTranslator.showOnceForSelection',
-							optionContent: {
+							{
 								type: 'Checkbox',
 								text: getMessage(
-									'settings_option_selectTranslation_showOnceForSelection',
+									'settings_option_selectTranslation_modifiers_key_shift',
 								),
 							},
-						},
-						{
-							description: getMessage(
-								'settings_option_selectTranslation_strictSelection_desc',
-							),
-							path: 'selectTranslator.strictSelection',
-							optionContent: {
+							{
 								type: 'Checkbox',
 								text: getMessage(
-									'settings_option_selectTranslation_strictSelection',
+									'settings_option_selectTranslation_modifiers_key_meta',
 								),
 							},
-						},
-						{
-							description: getMessage(
-								'settings_option_selectTranslation_focusOnTranslateButton_desc',
-							),
-							path: 'selectTranslator.focusOnTranslateButton',
-							optionContent: {
-								type: 'Checkbox',
-								text: getMessage(
-									'settings_option_selectTranslation_focusOnTranslateButton',
-								),
-							},
-						},
-						{
-							path: 'selectTranslator.showOriginalText',
-							optionContent: {
-								type: 'Checkbox',
-								text: getMessage(
-									'settings_option_selectTranslation_showOriginalText',
-								),
-							},
-						},
-					],
+						],
+					},
+				},
+				{
+					description: getMessage(
+						'settings_option_selectTranslation_strictSelection_desc',
+					),
+					path: 'selectTranslator.strictSelection',
+					optionContent: {
+						type: 'Checkbox',
+						text: getMessage(
+							'settings_option_selectTranslation_strictSelection',
+						),
+					},
+				},
+				{
+					path: 'selectTranslator.disableWhileTranslatePage',
+					optionContent: {
+						type: 'Checkbox',
+						text: getMessage(
+							'settings_option_selectTranslation_disableWhileTranslatePage',
+						),
+					},
+				},
+				{
+					path: 'selectTranslator.showOriginalText',
+					optionContent: {
+						type: 'Checkbox',
+						text: getMessage(
+							'settings_option_selectTranslation_showOriginalText',
+						),
+					},
 				},
 				{
 					title: getMessage(
@@ -450,6 +388,57 @@ export const generateTree = ({
 								text: getMessage(
 									'settings_option_selectTranslation_isUseAutoForDetectLang',
 								),
+							},
+						},
+					],
+				},
+				{
+					title: 'Popup button',
+					groupContent: [
+						{
+							description: getMessage(
+								'settings_option_selectTranslation_showOnceForSelection_desc',
+							),
+							path: 'selectTranslator.showOnceForSelection',
+							optionContent: {
+								type: 'Checkbox',
+								text: getMessage(
+									'settings_option_selectTranslation_showOnceForSelection',
+								),
+							},
+						},
+						{
+							description: getMessage(
+								'settings_option_selectTranslation_focusOnTranslateButton_desc',
+							),
+							path: 'selectTranslator.focusOnTranslateButton',
+							optionContent: {
+								type: 'Checkbox',
+								text: getMessage(
+									'settings_option_selectTranslation_focusOnTranslateButton',
+								),
+							},
+						},
+						{
+							title: getMessage(
+								'settings_option_selectTranslation_timeoutForHideButton',
+							),
+							description: getMessage(
+								'settings_option_selectTranslation_timeoutForHideButton_desc',
+							),
+							path: 'selectTranslator.timeoutForHideButton',
+							optionContent: {
+								type: 'InputNumber',
+							},
+						},
+						{
+							title: getMessage('settings_option_selectTranslation_zIndex'),
+							description: getMessage(
+								'settings_option_selectTranslation_zIndex_desc',
+							),
+							path: 'selectTranslator.zIndex',
+							optionContent: {
+								type: 'InputNumber',
 							},
 						},
 					],
