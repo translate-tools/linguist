@@ -449,51 +449,42 @@ export const generateTree = ({
 			title: getMessage('settings_option_textTranslator'),
 			groupContent: [
 				{
-					title: getMessage('settings_option_mainPreferences'),
-					groupContent: [
-						{
-							description: getMessage(
-								'settings_option_textTranslator_rememberText_desc',
-							),
-							path: 'textTranslator.rememberText',
-							optionContent: {
-								type: 'Checkbox',
-								text: getMessage(
-									'settings_option_textTranslator_rememberText',
-								),
-							},
-						},
-						{
-							path: 'textTranslator.spellCheck',
-							optionContent: {
-								type: 'Checkbox',
-								text: getMessage(
-									'settings_option_textTranslator_spellCheck',
-								),
-							},
-						},
-						{
-							path: 'textTranslator.suggestLanguage',
-							optionContent: {
-								type: 'Checkbox',
-								text: getMessage(
-									'settings_option_textTranslator_suggestLanguage',
-								),
-							},
-						},
-						{
-							description: getMessage(
-								'settings_option_textTranslator_suggestLanguageAlways_desc',
-							),
-							path: 'textTranslator.suggestLanguageAlways',
-							optionContent: {
-								type: 'Checkbox',
-								text: getMessage(
-									'settings_option_textTranslator_suggestLanguageAlways',
-								),
-							},
-						},
-					],
+					description: getMessage(
+						'settings_option_textTranslator_rememberText_desc',
+					),
+					path: 'textTranslator.rememberText',
+					optionContent: {
+						type: 'Checkbox',
+						text: getMessage('settings_option_textTranslator_rememberText'),
+					},
+				},
+				{
+					path: 'textTranslator.spellCheck',
+					optionContent: {
+						type: 'Checkbox',
+						text: getMessage('settings_option_textTranslator_spellCheck'),
+					},
+				},
+				{
+					path: 'textTranslator.suggestLanguage',
+					optionContent: {
+						type: 'Checkbox',
+						text: getMessage(
+							'settings_option_textTranslator_suggestLanguage',
+						),
+					},
+				},
+				{
+					description: getMessage(
+						'settings_option_textTranslator_suggestLanguageAlways_desc',
+					),
+					path: 'textTranslator.suggestLanguageAlways',
+					optionContent: {
+						type: 'Checkbox',
+						text: getMessage(
+							'settings_option_textTranslator_suggestLanguageAlways',
+						),
+					},
 				},
 			],
 		},
