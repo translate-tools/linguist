@@ -48,7 +48,7 @@
 }
 
 .OptionsPage-IndentMixin_vertical > *:not(:first-child) {
-	margin-top: var(--typography-layout-indent-l-all);
+	margin-top: calc(var(--typography-layout-indent-l-all) * 1.5);
 }
 
 /* Components */

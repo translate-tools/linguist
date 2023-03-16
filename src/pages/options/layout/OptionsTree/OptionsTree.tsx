@@ -255,7 +255,14 @@ export const OptionsTree: FC<OptionsTreeProps> = ({
 					) as 1 | 2 | 3 | 4 | 5 | 6;
 
 					return (
-						<PageSection title={item.title} level={localLevel} key={index}>
+						<PageSection
+							title={item.title}
+							level={localLevel}
+							key={index}
+							className={cnOptionsPage(
+								globalLevel > 2 ? 'Subgroup' : 'MainGroup',
+							)}
+						>
 							<div
 								className={cnOptionsPage('Container', {}, [
 									cnOptionsPage('IndentMixin', { vertical: true }),

@@ -89,3 +89,15 @@
 		margin-inline-end: 1rem;
 	}
 }
+
+.OptionsPage-MainGroup:not(:last-child) {
+	margin-bottom: 5rem;
+}
+
+.OptionsPage-Subgroup:not(:first-child) > .OptionsPage-PageSectionTitle {
+	margin-top: 2.5rem;
+}
+
+.OptionsPage-Subgroup > .OptionsPage-PageSectionTitle {
+	margin-bottom: 1rem;
+}
