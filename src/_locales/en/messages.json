@@ -277,7 +277,7 @@
 		"message": "Your language"
 	},
 	"settings_option_userLanguage_desc": {
-		"message": "All texts will be translated to this language by default\n\nLanguage of the interface depends on browser language settings, maybe you can set it here in the future"
+		"message": "Target language to translate texts"
 	},
 	"settings_option_appIcon": {
 		"message": "Extension icon"
@@ -316,22 +316,22 @@
 		"message": "Translation module"
 	},
 	"settings_option_translatorModule_desc": {
-		"message": "The speed and quality of translations and available translation directions depend on the chosen module.\n\nChange the module if it works badly"
+		"message": "Module affect on translations quality and supported languages"
 	},
 	"settings_option_translateScheduler": {
 		"message": "Translation scheduler"
 	},
 	"settings_option_translateScheduler_delay": {
-		"message": "Delay for text accumulation (ms)"
+		"message": "Text accumulation delay"
 	},
 	"settings_option_translateScheduler_delay_desc": {
-		"message": "The translation scheduler tries to decrease the number of requests to the translate services API by accumulating texts to chunks, to send many texts using only one request.\n\nAfter adding text to a chunk, the scheduler will wait some time specified above and after that it sends the chunk to be translated if new texts were not added"
+		"message": "The translation scheduler decrease the number of requests to the translate services API. Scheduler trying to accumulate texts to send as many texts as possible per one request.\n\nScheduler will wait specified time in milliseconds to collect a new texts before start translate"
 	},
 	"settings_option_translateScheduler_retryLimit": {
-		"message": "Number of attempts to retry translation"
+		"message": "Translation retry attempts"
 	},
 	"settings_option_translateScheduler_retryLimit_desc": {
-		"message": "When the translation errors, the scheduler will try again until the limit.\nTo disable the limit set it to a negative number"
+		"message": "Scheduler will retry translate texts for translation errors. This option set limit for retry attempts. Set a negative number, to allow unlimited retries"
 	},
 	"settings_option_cache": {
 		"message": "Cache"
@@ -340,19 +340,19 @@
 		"message": "Enable cache"
 	},
 	"settings_option_cache_enable_desc": {
-		"message": "When enabled, translations will be saved to the local storage and in the future the same translation requests will be translated immediately.\n\nFor example, you can translate a page while having internet and switch between the translated and the original text when you don't have internet"
+		"message": "When cache enabled, translations that been translated once will be translated immediately, even with no internet"
 	},
 	"settings_option_cache_ignoreCase": {
 		"message": "Case insensitive"
 	},
 	"settings_option_cache_ignoreCase_desc": {
-		"message": "With the option enabled, more text will be matched with cache entries, but it can cause artifacts"
+		"message": "When option enabled, will used translations from cache  with not exact match, it may be cause translation artifacts occurs"
 	},
 	"settings_option_cache_clear": {
 		"message": "Clear cache"
 	},
 	"settings_option_cache_clear_desc": {
-		"message": "If you have translated private text and this was cached or you have artifacts, you can clear the translators cache"
+		"message": "Remove cache if you have translation artifacts or to remove secrets"
 	},
 	"settings_option_pageTranslation": {
 		"message": "Page translation"
@@ -514,7 +514,7 @@
 		"message": "Manage translators"
 	},
 	"settings_option_customTranslatorModule_desc": {
-		"message": "You can add custom translators which use your favorite translation services"
+		"message": "Manage custom translators to use your favorite translation services"
 	},
 	"settings_option_customTranslatorModule": {
 		"message": "Custom translators"
