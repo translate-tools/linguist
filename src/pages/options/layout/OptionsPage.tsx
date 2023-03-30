@@ -335,13 +335,15 @@ export const OptionsPage: FC<OptionsPageProps> = ({ messageHideDelay }) => {
 							</LayoutFlow>
 						</div>
 
-						<OptionsTree
-							tree={configTree}
-							errors={errors ?? undefined}
-							config={config}
-							modifiedConfig={modifiedConfig}
-							setOptionValue={setOptionValue}
-						/>
+						<div className={cnOptionsPage('OptionsTree')}>
+							<OptionsTree
+								tree={configTree}
+								errors={errors ?? undefined}
+								config={config}
+								modifiedConfig={modifiedConfig}
+								setOptionValue={setOptionValue}
+							/>
+						</div>
 					</PageSection>
 
 					<ToastMessages

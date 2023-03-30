@@ -1,6 +1,6 @@
 /* Page */
 .OptionsPage-Page {
-	padding: var(--typography-layout-indent-l-all) var(--typography-layout-indent-m-all);
+	padding: var(--typography-layout-indent-l-all) var(--typography-layout-indent-m-all) 0;
 	max-width: 100%;
 }
 
@@ -10,11 +10,12 @@
 	}
 }
 
-.OptionsPage-Page_editMode {
-	margin-bottom: 4rem;
+.OptionsPage-OptionsTree {
+	margin: 4rem 0 !important;
 }
 
 /* ConfirmMenu */
+
 .OptionsPage-ConfirmMenu {
 	position: fixed;
 	border-radius: var(--typography-layout-border-radius);
