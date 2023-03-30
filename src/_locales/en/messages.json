@@ -409,7 +409,7 @@
 		"message": "Enable"
 	},
 	"settings_option_selectTranslation_disableWhileTranslatePage": {
-		"message": "Disable while page is translating"
+		"message": "Disable while translating page"
 	},
 	"settings_option_selectTranslation_header_languageChoice": {
 		"message": "Language settings"
@@ -418,7 +418,7 @@
 		"message": "Prefer detected language of the text instead of the page language"
 	},
 	"settings_option_selectTranslation_detectedLangFirst_desc": {
-		"message": "When enabled, the module will try to detect the language of the selected text. Otherwise the translation direction will be decided using the page language"
+		"message": "When enabled, detected language of the selected text will prefer to page language"
 	},
 	"settings_option_selectTranslation_isUseAutoForDetectLang": {
 		"message": "Enable language auto detection by the translator"
@@ -427,13 +427,13 @@
 		"message": "Use language auto detection by the translator, when the language can't be detected locally"
 	},
 	"settings_option_selectTranslation_rememberDirection": {
-		"message": "Remember the last translation direction language"
+		"message": "Remember most recent selected language of text"
 	},
 	"settings_option_selectTranslation_showOnceForSelection": {
 		"message": "Show translation button once for each text selection"
 	},
 	"settings_option_selectTranslation_showOnceForSelection_desc": {
-		"message": "Button will show only once for each text selection. If you need to show it, select text again"
+		"message": "Button will show only once for each text selection. If you need to show it again, re-select text"
 	},
 	"settings_option_selectTranslation_strictSelection": {
 		"message": "Strict selection"
@@ -457,7 +457,7 @@
 		"message": "Modifiers"
 	},
 	"settings_option_selectTranslation_modifiers_desc": {
-		"message": "Check the keyboard modifiers that should be pressed to show the translation while selecting"
+		"message": "Check the keys that must be pressed on keyboard to show the translation"
 	},
 	"settings_option_selectTranslation_modifiers_key_ctrl": {
 		"message": "ctrl"
@@ -472,25 +472,28 @@
 		"message": "meta"
 	},
 	"settings_option_selectTranslation_timeoutForHideButton": {
-		"message": "Delay for auto hiding the translation button"
+		"message": "Delay to hide button"
 	},
 	"settings_option_selectTranslation_timeoutForHideButton_desc": {
-		"message": "Time in ms to hide the translation button after selecting text.\nPointer hovering on a button will reset the timer.\n\nTo disable auto hiding, set the value lower than 1"
+		"message": "Delay in milliseconds before hide the button when cursor is not hovered.\nCursor hovering on a button will reset the timer.\nTo disable auto hiding, set the value lower than 1"
 	},
 	"settings_option_selectTranslation_zIndex": {
 		"message": "z-index"
 	},
 	"settings_option_selectTranslation_zIndex_desc": {
-		"message": "If other elements on some pages overlap a block with translated text, increase this value"
+		"message": "Increase value if some elements on some pages overlap a popup with translated text"
 	},
 	"settings_option_selectTranslation_focusOnTranslateButton": {
 		"message": "Auto focus on translation button"
 	},
 	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
-		"message": "Focus on translation button after ending the selection. Useful for keyboard control"
+		"message": "Focus a translation button when appears"
 	},
 	"settings_option_selectTranslation_showOriginalText": {
-		"message": "Show original text block"
+		"message": "Show original text"
+	},
+	"settings_option_selectTranslation_showOriginalText_desc": {
+		"message": "Add block with original text to a popup with translation"
 	},
 	"settings_option_textTranslator": {
 		"message": "Text translation"

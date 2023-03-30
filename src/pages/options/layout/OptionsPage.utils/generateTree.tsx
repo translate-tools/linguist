@@ -1,11 +1,14 @@
 import React, { FC } from 'react';
 import { langCodes } from '@translate-tools/core/util/languages';
+
 import {
 	getLanguageNameByCode,
 	getLocalizedNode,
 	getMessage,
 	getUserLanguage,
 } from '../../../../lib/language';
+import { capitalizeString } from '../../../../lib/utils';
+
 import { OptionsGroup } from '../OptionsTree/OptionsTree';
 
 type Options = {
@@ -339,32 +342,37 @@ export const generateTree = ({
 					optionContent: {
 						type: 'CheckboxGroup',
 						valueMap: ['ctrlKey', 'altKey', 'shiftKey', 'metaKey'],
-						options: [
-							{
-								type: 'Checkbox',
-								text: getMessage(
-									'settings_option_selectTranslation_modifiers_key_ctrl',
-								),
-							},
-							{
-								type: 'Checkbox',
-								text: getMessage(
-									'settings_option_selectTranslation_modifiers_key_alt',
-								),
-							},
-							{
-								type: 'Checkbox',
-								text: getMessage(
-									'settings_option_selectTranslation_modifiers_key_shift',
-								),
-							},
-							{
-								type: 'Checkbox',
-								text: getMessage(
-									'settings_option_selectTranslation_modifiers_key_meta',
-								),
-							},
-						],
+						options: (
+							[
+								{
+									type: 'Checkbox',
+									text: getMessage(
+										'settings_option_selectTranslation_modifiers_key_ctrl',
+									),
+								},
+								{
+									type: 'Checkbox',
+									text: getMessage(
+										'settings_option_selectTranslation_modifiers_key_alt',
+									),
+								},
+								{
+									type: 'Checkbox',
+									text: getMessage(
+										'settings_option_selectTranslation_modifiers_key_shift',
+									),
+								},
+								{
+									type: 'Checkbox',
+									text: getMessage(
+										'settings_option_selectTranslation_modifiers_key_meta',
+									),
+								},
+							] as const
+						).map(({ text, ...rest }) => ({
+							text: capitalizeString(text),
+							...rest,
+						})),
 					},
 				},
 				{
@@ -390,6 +398,9 @@ export const generateTree = ({
 				},
 				{
 					path: 'selectTranslator.showOriginalText',
+					description: getMessage(
+						'settings_option_selectTranslation_showOriginalText_desc',
+					),
 					optionContent: {
 						type: 'Checkbox',
 						text: getMessage(
