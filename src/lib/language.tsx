@@ -19,8 +19,39 @@ export const isMessageExist = (messageName: string, substitutions?: string | str
 /**
  * Return localized string
  */
-export const getMessage = (messageName: string, substitutions?: string | string[]) =>
-	getInternationalizedMessage(messageName, substitutions, `*${messageName}`);
+export const getMessage = (
+	messageName: string,
+	substitutions?: string | string[],
+): string => {
+	if (0 === 0) {
+		if (!(globalThis as any)[Symbol.for('localizeJson')]) {
+			const request = new XMLHttpRequest();
+			request.open(
+				'GET',
+				browser.runtime.getURL('_locales/en/messages.json'),
+				false,
+			); // `false` makes the request synchronous
+			request.send(null);
+
+			if (request.status === 200) {
+				(globalThis as any)[Symbol.for('localizeJson')] = JSON.parse(
+					request.responseText,
+				);
+				setTimeout(() => {
+					delete (globalThis as any)[Symbol.for('localizeJson')];
+				}, 2000);
+			} else {
+				throw Error('Cannot get a localization file');
+			}
+		}
+
+		const item = (globalThis as any)[Symbol.for('localizeJson')][messageName];
+		console.log('i18n', item);
+		return item.message;
+	}
+
+	return getInternationalizedMessage(messageName, substitutions, `*${messageName}`);
+};
 
 /**
  * Return `ReactFragment` contains localized string as `ReactNode` segments array where slots replaced to a components from map
