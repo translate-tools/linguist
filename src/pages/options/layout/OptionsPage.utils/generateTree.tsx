@@ -4,6 +4,7 @@ import {
 	getLanguageNameByCode,
 	getLocalizedNode,
 	getMessage,
+	getUserLanguage,
 } from '../../../../lib/language';
 import { OptionsGroup } from '../OptionsTree/OptionsTree';
 
@@ -247,6 +248,9 @@ export const generateTree = ({
 				},
 				{
 					path: 'pageTranslator.enableContextMenu',
+					description: getMessage(
+						'settings_option_pageTranslation_enableContextMenu_desc',
+					),
 					optionContent: {
 						type: 'Checkbox',
 						text: getMessage(
@@ -256,6 +260,9 @@ export const generateTree = ({
 				},
 				{
 					path: 'pageTranslator.originalTextPopup',
+					description: getMessage(
+						'settings_option_pageTranslation_originalTextPopup_desc',
+					),
 					optionContent: {
 						type: 'Checkbox',
 						text: getMessage(
@@ -267,9 +274,15 @@ export const generateTree = ({
 					title: getMessage(
 						'settings_option_pageTranslation_translatableAttributes',
 					),
-					description: getMessage(
-						'settings_option_pageTranslation_translatableAttributes_desc',
-					),
+					description: getLocalizedNode({
+						messageName:
+							'settings_option_pageTranslation_translatableAttributes_desc',
+						slots: {
+							htmlAttributes: buildLink(
+								`https://developer.mozilla.org/${getUserLanguage()}/docs/Web/HTML/Attributes`,
+							),
+						},
+					}),
 					path: 'pageTranslator.translatableAttributes',
 					optionContent: {
 						type: 'InputMultilineFromArray',
@@ -277,9 +290,14 @@ export const generateTree = ({
 				},
 				{
 					title: getMessage('settings_option_pageTranslation_ignoredTags'),
-					description: getMessage(
-						'settings_option_pageTranslation_ignoredTags_desc',
-					),
+					description: getLocalizedNode({
+						messageName: 'settings_option_pageTranslation_ignoredTags_desc',
+						slots: {
+							htmlElements: buildLink(
+								`https://developer.mozilla.org/${getUserLanguage()}/docs/Web/HTML/Element`,
+							),
+						},
+					}),
 					path: 'pageTranslator.ignoredTags',
 					optionContent: {
 						type: 'InputMultilineFromArray',

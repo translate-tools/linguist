@@ -369,32 +369,38 @@
 	"settings_option_pageTranslation_enableContextMenu": {
 		"message": "Enable context menu button"
 	},
+	"settings_option_pageTranslation_enableContextMenu_desc": {
+		"message": "Add button to toggle page translation to a context menu"
+	},
 	"settings_option_pageTranslation_lazyTranslate": {
-		"message": "Only translate visible elements"
+		"message": "Translate only visible elements"
 	},
 	"settings_option_pageTranslation_lazyTranslate_desc": {
-		"message": "With the option disabled, pages will fully translate at once. This option can save network traffic"
+		"message": "When option enabled, only visible elements will translated, it may be useful to save network traffic"
 	},
 	"settings_option_pageTranslation_detectLanguageByContent": {
 		"message": "Detect language by content"
 	},
 	"settings_option_pageTranslation_detectLanguageByContent_desc": {
-		"message": "Try to detect the page language by the text content of the page first. Detect the default language using metadata provided by the page"
+		"message": "Analyze text on web page to detect page language. When disabled will used a language provided in page metadata"
 	},
 	"settings_option_pageTranslation_translatableAttributes": {
 		"message": "Translatable attributes"
 	},
 	"settings_option_pageTranslation_translatableAttributes_desc": {
-		"message": "Only attributes specified here will translated. Specify each name on a new line"
+		"message": "Enter <slot id=htmlAttributes>HTML attribute</slot> names for translation. One attribute per line"
 	},
 	"settings_option_pageTranslation_ignoredTags": {
-		"message": "Ignored tags"
+		"message": "Ignored elements"
 	},
 	"settings_option_pageTranslation_ignoredTags_desc": {
-		"message": "All tags will be translated except those specified here and their children. Specify each name on a new line"
+		"message": "Enter <slot id=htmlElements>HTML element</slot> names that must not be translated. Nested elements will not translated too. One element per line"
 	},
 	"settings_option_pageTranslation_originalTextPopup": {
-		"message": "Show original text by hovering"
+		"message": "Enable popup with original text"
+	},
+	"settings_option_pageTranslation_originalTextPopup_desc": {
+		"message": "Show popup with original text by hover mouse over translated text "
 	},
 	"settings_option_selectTranslation": {
 		"message": "Translation of selected text"
