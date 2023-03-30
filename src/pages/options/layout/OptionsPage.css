@@ -18,7 +18,7 @@
 
 .OptionsPage-ConfirmMenu {
 	position: fixed;
-	border-radius: var(--typography-layout-border-radius);
+	border-radius: calc(var(--typography-layout-border-radius) * 2);
 	padding: var(--typography-layout-indent-m-all);
 	background: var(--options-page-dialog-fill-color);
 	max-width: max-content;
