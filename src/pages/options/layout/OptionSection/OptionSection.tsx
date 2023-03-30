@@ -1,11 +1,11 @@
-import React, { FC } from 'react';
+import React, { FC, ReactNode } from 'react';
 import { cnOptionsPage } from '../OptionsPage';
 
 import './OptionSection.css';
 
 export interface OptionSection {
 	title?: string;
-	description?: string;
+	description?: ReactNode;
 	changed?: boolean;
 	error?: string;
 }

@@ -1,9 +1,10 @@
+import React, { ComponentType, ReactNode } from 'react';
 import browser from 'webextension-polyfill';
 import { isMobileBrowser } from './browser';
 
 export const getUserLanguage = () => browser.i18n.getUILanguage().split('-')[0];
 
-export const getInternationalizedMessage = <T = null>(
+export const getInternationalizedMessage = <T extends unknown = null>(
 	messageName: string,
 	substitutions?: string | string[],
 	emptyResult: T = null as any,
@@ -15,8 +16,48 @@ export const getInternationalizedMessage = <T = null>(
 export const isMessageExist = (messageName: string, substitutions?: string | string[]) =>
 	getInternationalizedMessage(messageName, substitutions, null) !== null;
 
+/**
+ * Return localized string
+ */
 export const getMessage = (messageName: string, substitutions?: string | string[]) =>
 	getInternationalizedMessage(messageName, substitutions, `*${messageName}`);
+
+/**
+ * Return `ReactFragment` contains localized string as `ReactNode` segments array where slots replaced to a components from map
+ */
+export const getLocalizedNode = ({
+	messageName,
+	substitutions,
+	slots,
+}: {
+	messageName: string;
+	substitutions?: string | string[];
+	slots: Record<string, ComponentType>;
+}): ReactNode => {
+	const message = getMessage(messageName, substitutions);
+
+	const parser = new DOMParser();
+	const dom = parser.parseFromString(message, 'text/html');
+	return (
+		<>
+			{Array.from(dom.body.childNodes).map((node, id) => {
+				if (node.nodeType === Node.TEXT_NODE) return node.textContent;
+
+				// Ignore nodes that not are slots
+				if (node.nodeType !== Node.ELEMENT_NODE) return undefined;
+				if (node.nodeName.toLowerCase() !== 'slot') return undefined;
+
+				// Cast to don't use `instanceof`
+				const slot = node as HTMLElement;
+
+				const Component = slots[slot.id];
+				if (!Component) return slot.outerHTML;
+
+				return <Component key={id}>{slot.textContent}</Component>;
+			})}
+		</>
+	);
+};
 
 export function getLanguageNameByCode(
 	langCode: string,

@@ -133,16 +133,6 @@ export const TranslatorsManager: FC<{
 							</Button>,
 						]}
 					>
-						<div className={cnTranslatorsManager('Description')}>
-							{getMessage('translatorsManagerWindow_description') + ' '}
-							<a
-								href="https://github.com/translate-tools/linguist/blob/master/docs/CustomTranslator.md"
-								target="_blank"
-							>
-								{getMessage('translatorsManagerWindow_description_link')}
-							</a>
-						</div>
-
 						<LayoutFlow direction="vertical" indent="m">
 							{translators.map((translatorInfo) => {
 								const { id, name } = translatorInfo;

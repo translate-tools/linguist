@@ -1,5 +1,10 @@
+import React from 'react';
 import { langCodes } from '@translate-tools/core/util/languages';
-import { getLanguageNameByCode, getMessage } from '../../../../lib/language';
+import {
+	getLanguageNameByCode,
+	getLocalizedNode,
+	getMessage,
+} from '../../../../lib/language';
 import { OptionsGroup } from '../OptionsTree/OptionsTree';
 
 type Options = {
@@ -94,9 +99,19 @@ export const generateTree = ({
 					  },
 				{
 					title: getMessage('settings_option_customTranslatorModule'),
-					description: getMessage(
-						'settings_option_customTranslatorModule_desc',
-					),
+					description: getLocalizedNode({
+						messageName: 'settings_option_customTranslatorModule_desc',
+						slots: {
+							docs: ({ children }) => (
+								<a
+									href="https://github.com/translate-tools/linguist/blob/master/docs/CustomTranslator.md"
+									target="_blank"
+								>
+									{children}
+								</a>
+							),
+						},
+					}),
 					optionContent: {
 						type: 'Button',
 						text: getMessage(

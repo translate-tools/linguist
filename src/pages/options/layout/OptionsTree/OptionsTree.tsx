@@ -1,4 +1,4 @@
-import React, { FC, useCallback } from 'react';
+import React, { FC, ReactNode, useCallback } from 'react';
 import { get, isEqual } from 'lodash';
 
 import { Checkbox } from 'react-elegant-ui/esm/components/Checkbox/Checkbox.bundle/desktop';
@@ -52,7 +52,7 @@ export interface OptionButton {
 
 export interface OptionItem {
 	title?: string;
-	description?: string;
+	description?: ReactNode;
 	/**
 	 * Path to option property in object
 	 */

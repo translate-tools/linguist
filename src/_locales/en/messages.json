@@ -514,7 +514,7 @@
 		"message": "Manage translators"
 	},
 	"settings_option_customTranslatorModule_desc": {
-		"message": "Manage custom translators to use your favorite translation services"
+		"message": "Manage custom translators to use your favorite translation services.\nRead more about custom translators <slot id=docs>in the documentation</slot>"
 	},
 	"settings_option_customTranslatorModule": {
 		"message": "Custom translators"
@@ -557,12 +557,6 @@
 				"example": "Google translator"
 			}
 		}
-	},
-	"translatorsManagerWindow_description": {
-		"message": "Read more about custom translators"
-	},
-	"translatorsManagerWindow_description_link": {
-		"message": "in the documentation"
 	},
 	"translatorsManagerWindow_title": {
 		"message": "Custom translators"
