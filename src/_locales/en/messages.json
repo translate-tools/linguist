@@ -301,13 +301,19 @@
 		"message": "Text to speech (TTS)"
 	},
 	"settings_option_ttsModule": {
-		"message": "TTS module"
+		"message": "Text speaker"
+	},
+	"settings_option_ttsModule_desc": {
+		"message": "Module to speak texts"
 	},
 	"settings_option_ttsCustomModules": {
-		"message": "Custom TTS modules"
+		"message": "Custom text speakers"
+	},
+	"settings_option_ttsCustomModules_desc": {
+		"message": "You can add speakers that use your favorite service and voices\nRead more and find a modules in a <slot id=docs>custom speakers documentation</slot>"
 	},
 	"settings_option_ttsCustomModules_button": {
-		"message": "Manage TTS modules"
+		"message": "Manage text speakers"
 	},
 	"settings_option_translatePreferences": {
 		"message": "Translation preferences"
@@ -514,7 +520,7 @@
 		"message": "Manage translators"
 	},
 	"settings_option_customTranslatorModule_desc": {
-		"message": "You can add custom translators for your favorite translation services.\nRead more about custom translators and find a modules <slot id=docs>in the documentation</slot>"
+		"message": "You can add custom translators for your favorite translation services.\nRead more and find a modules in a <slot id=docs>custom translators documentation</slot>"
 	},
 	"settings_option_customTranslatorModule": {
 		"message": "Custom translators"

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { langCodes } from '@translate-tools/core/util/languages';
 import {
 	getLanguageNameByCode,
@@ -30,6 +30,15 @@ type Options = {
 // 	withText: true,
 // 	withDescription: true,
 // })
+
+const buildLink =
+	(url: string): FC =>
+		({ children }) =>
+			(
+				<a href={url} target="_blank">
+					{children}
+				</a>
+			);
 
 /**
  * Generate config tree for render with `OptionsTree`
@@ -102,13 +111,8 @@ export const generateTree = ({
 					description: getLocalizedNode({
 						messageName: 'settings_option_customTranslatorModule_desc',
 						slots: {
-							docs: ({ children }) => (
-								<a
-									href="https://github.com/translate-tools/linguist/blob/master/docs/CustomTranslator.md"
-									target="_blank"
-								>
-									{children}
-								</a>
+							docs: buildLink(
+								'https://github.com/translate-tools/linguist/blob/master/docs/CustomTranslator.md',
 							),
 						},
 					}),
@@ -188,6 +192,7 @@ export const generateTree = ({
 					? undefined
 					: {
 						title: getMessage('settings_option_ttsModule'),
+						description: getMessage('settings_option_ttsModule_desc'),
 						path: 'ttsModule',
 						optionContent: {
 							type: 'SelectList',
@@ -199,6 +204,14 @@ export const generateTree = ({
 					  },
 				{
 					title: getMessage('settings_option_ttsCustomModules'),
+					description: getLocalizedNode({
+						messageName: 'settings_option_ttsCustomModules_desc',
+						slots: {
+							docs: buildLink(
+								'https://github.com/translate-tools/linguist/blob/master/docs/CustomTTS.md',
+							),
+						},
+					}),
 					optionContent: {
 						type: 'Button',
 						text: getMessage('settings_option_ttsCustomModules_button'),
