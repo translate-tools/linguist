@@ -39,7 +39,7 @@ const buildLink =
 	(url: string): FC =>
 		({ children }) =>
 			(
-				<a href={url} target="_blank">
+				<a href={url} target="_blank" rel="noopener">
 					{children}
 				</a>
 			);
