@@ -2,16 +2,19 @@ const { writeFileSync } = require('fs');
 
 const { getLocaleFilenames, getSourceLocale, getLocaleObject } = require('.');
 
-let gptUtils = null;
-const getGPTUtils = async () => {
-	if (gptUtils === null) {
-		gptUtils = new Promise(async (res) => {
+let gptTranslator = null;
+const getGPTTranslator = async () => {
+	if (gptTranslator === null) {
+		gptTranslator = new Promise(async (res) => {
 			const { ChatGPTUtils } = await import('../../ChatGPT.mjs');
-			res(new ChatGPTUtils());
+
+			const translator = (stringifiedJSON, { from, to }) =>
+				`Translate this JSON below from ${from} to ${to} and send me back only JSON with no your comments:\n${stringifiedJSON}`;
+			res(new ChatGPTUtils(translator));
 		});
 	}
 
-	return gptUtils;
+	return gptTranslator;
 };
 
 const syncLocalizationsMessagesWithSource = async (
@@ -30,12 +33,11 @@ const syncLocalizationsMessagesWithSource = async (
 		Object.entries(sourceLocalization.json).filter(([key]) => !(key in filteredJson)),
 	);
 
-	const gptUtils = await getGPTUtils();
-	const translatedMessages = await gptUtils.translateJson(
-		messagesToAdd,
-		sourceLocalization.code,
-		targetLocalization.code,
-	);
+	const gptTranslator = await getGPTTranslator();
+	const translatedMessages = await gptTranslator.handleJson(messagesToAdd, {
+		from: sourceLocalization.code,
+		to: targetLocalization.code,
+	});
 
 	console.warn({ translatedMessages });
 

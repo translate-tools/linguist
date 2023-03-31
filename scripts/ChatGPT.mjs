@@ -45,29 +45,34 @@ export class ChatGPT {
 }
 
 /**
- * Chat GPT utils to work with locales
+ * Chat GPT utils to handle data structures
  */
 export class ChatGPTUtils extends ChatGPT {
 	/**
-	 * String lenght limit for translate per one request
+	 * String length limit for translate per one request
 	 * This limit are soft, it may ignored in some edge cases
 	 */
 	_softLengthLimit = 1000;
 
-	async _translateJsonSlice(jsonSlice, from, to) {
-		const stringifiedJSON = JSON.stringify(jsonSlice, null, '\n');
-		const res = await this.sendMessage(
-			`Translate this JSON below from ${from} to ${to} and send me back only JSON with no your comments:\n${stringifiedJSON}`,
-		);
+	constructor(generateMessage) {
+		super();
+		this._generateMessage = generateMessage;
+	}
 
-		console.log({ translatedSlice: res.text });
+	async _handleJsonSlice(jsonSlice, options) {
+		const stringifiedJSON = JSON.stringify(jsonSlice, null, '\n');
+		const requestMessage = this._generateMessage(stringifiedJSON, options);
+
+		const res = await this.sendMessage(requestMessage);
+
+		console.log({ response: res.text });
 		return JSON.parse(res.text);
 	}
 
 	/**
-	 * Method to translate JSON. It automatically split long objects to translate small parts and then join back
+	 * Method to handle JSON. It automatically split long objects to handle small parts and then join back
 	 */
-	async translateJson(json, from, to) {
+	async handleJson(json, options) {
 		// Return the same object for empty data
 		if (typeof json !== 'object') throw new TypeError('JSON must be object');
 		if (Object.values(json).length === 0) return json;
@@ -94,10 +99,9 @@ export class ChatGPTUtils extends ChatGPT {
 				sliceLen = 0;
 				forceTranslate = false;
 
-				const translatedSlice = await this._translateJsonSlice(
+				const translatedSlice = await this._handleJsonSlice(
 					jsonSlice,
-					from,
-					to,
+					options
 				);
 				Object.assign(translatedJson, translatedSlice);
 			}
