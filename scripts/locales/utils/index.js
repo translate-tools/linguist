@@ -1,5 +1,6 @@
 const { readFileSync, readdirSync } = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
 
 const localesDir = path.resolve(__dirname, '../../../src/_locales');
 
@@ -28,10 +29,26 @@ const getLocaleObject = (filePath) => {
 
 const getSourceLocale = () => getLocaleObject(path.join(localesDir, 'en/messages.json'));
 
+const getChangedLocaleMessageNames = (locale) => {
+	const localeFromTargetBranchRaw = execSync(
+		`git show master:src/_locales/${locale.code}/messages.json`,
+	).toString('utf8');
+	const localeFromTargetBranch = JSON.parse(localeFromTargetBranchRaw);
+
+	return Object.entries(locale.json)
+		.filter(
+			([key, { message }]) =>
+				localeFromTargetBranch[key] === undefined ||
+				message !== localeFromTargetBranch[key].message,
+		)
+		.map(([key]) => key);
+};
+
 module.exports = {
 	localesDir: localesDir,
 	getLocaleFilenames,
 	getJsonFromFile,
 	getLocaleObject,
 	getSourceLocale,
+	getChangedLocaleMessageNames,
 };

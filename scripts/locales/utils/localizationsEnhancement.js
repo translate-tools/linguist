@@ -1,6 +1,10 @@
 const { writeFileSync } = require('fs');
 
-const { getSourceLocale } = require('.');
+const {
+	getLocaleFilenames,
+	getLocaleObject,
+	getChangedLocaleMessageNames,
+} = require('.');
 
 let gptFixer = null;
 const getGPTFixer = async () => {
@@ -17,13 +21,19 @@ const getGPTFixer = async () => {
 	return gptFixer;
 };
 
-// TODO: handle all locales
-// TODO: fix only specified messages
-const fixTyposInLocalizationsFiles = async () => {
-	const localization = getSourceLocale();
+const fixTyposInLocalizationsFile = async (localization, fixAll = false) => {
+	const changedMessageNames = getChangedLocaleMessageNames(localization);
 
 	const jsonSliceToFix = Object.fromEntries(
-		Object.entries(localization.json).filter(([key]) => !key.startsWith('langCode_')),
+		Object.entries(localization.json).filter(([key]) => {
+			// Skip language names
+			if (key.startsWith('langCode_')) return false;
+
+			// Skip not changed messages
+			if (!fixAll && changedMessageNames.indexOf(key) === -1) return false;
+
+			return true;
+		}),
 	);
 
 	const gptFixer = await getGPTFixer();
@@ -34,6 +44,14 @@ const fixTyposInLocalizationsFiles = async () => {
 	// Write changes
 	const stringifiedJSON = JSON.stringify(updatedMessages, null, '\t');
 	writeFileSync(localization.filename, stringifiedJSON);
+};
+
+const fixTyposInLocalizationsFiles = async (fixAll = false) => {
+	const localizationFiles = getLocaleFilenames();
+	for (const localizationFilename of localizationFiles) {
+		const localization = getLocaleObject(localizationFilename);
+		await fixTyposInLocalizationsFile(localization, fixAll);
+	}
 };
 
 module.exports = {
