@@ -33,7 +33,13 @@ const sortLocalizationFile = (filePath) => {
 	writeFileSync(filePath, stringifiedJSON);
 };
 
-const sortLocalizationFiles = () => getLocaleFilenames().forEach(sortLocalizationFile);
+const sortLocalizationFiles = () => {
+	const localizationFiles = getLocaleFilenames();
+
+	for (const filePath of localizationFiles) {
+		sortLocalizationFile(filePath);
+	}
+};
 
 module.exports = {
 	sortLocalizationMessagesInObject,

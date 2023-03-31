@@ -50,13 +50,14 @@ const syncLocalizationsMessagesWithSource = async (
 const syncLocalizationsFilesWithSource = async () => {
 	const sourceLocalization = getSourceLocale();
 	const localizationFiles = getLocaleFilenames();
-	localizationFiles.forEach((filePath) => {
+
+	for (const filePath of localizationFiles) {
 		// Skip source file
 		if (filePath === sourceLocalization.filename) return;
 
 		const targetLocalization = getLocaleObject(filePath);
-		syncLocalizationsMessagesWithSource(sourceLocalization, targetLocalization);
-	});
+		await syncLocalizationsMessagesWithSource(sourceLocalization, targetLocalization);
+	}
 };
 
 module.exports = {
