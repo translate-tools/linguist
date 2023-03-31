@@ -9,7 +9,7 @@ const getGPTFixer = async () => {
 			const { ChatGPTUtils } = await import('../../ChatGPT.mjs');
 
 			const translator = (stringifiedJSON) =>
-				`Fix errors and make text clear in this JSON below and send me back only JSON with no your comments:\n${stringifiedJSON}`;
+				`Fix errors and make text clear in this JSON below and send me back only JSON with no your comments. Do not add dot on end of message:\n${stringifiedJSON}`;
 			res(new ChatGPTUtils(translator));
 		});
 	}
