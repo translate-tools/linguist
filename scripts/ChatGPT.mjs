@@ -65,7 +65,7 @@ export class ChatGPTUtils extends ChatGPT {
 
 		const res = await this.sendMessage(requestMessage);
 
-		console.log({ response: res.text });
+		console.log('handled JSON slice', res.text);
 		return JSON.parse(res.text);
 	}
 
@@ -76,8 +76,6 @@ export class ChatGPTUtils extends ChatGPT {
 		// Return the same object for empty data
 		if (typeof json !== 'object') throw new TypeError('JSON must be object');
 		if (Object.values(json).length === 0) return json;
-
-		console.warn({ json });
 
 		const jsonEntries = Object.entries(json);
 		const translatedJson = {};

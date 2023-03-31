@@ -39,8 +39,6 @@ const syncLocalizationsMessagesWithSource = async (
 		to: targetLocalization.code,
 	});
 
-	console.warn({ translatedMessages });
-
 	// Add messages from source localization
 	const updatedMessages = { ...filteredJson, ...translatedMessages };
 
