@@ -519,16 +519,16 @@
 		"message": "Text to speech (TTS)"
 	},
 	"settings_option_ttsCustomModules": {
-		"message": "Custom text speakers"
+		"message": "Custom TTS"
 	},
 	"settings_option_ttsCustomModules_button": {
-		"message": "Manage text speakers"
+		"message": "Manage TTS modules"
 	},
 	"settings_option_ttsCustomModules_desc": {
-		"message": "You can add speakers that use your favorite service and voices\nRead more and find a modules in a <slot id=docs>custom speakers documentation</slot>"
+		"message": "You can add TTS module that use your favorite service and voices\nRead more and find a modules in a <slot id=docs>custom TTS documentation</slot>"
 	},
 	"settings_option_ttsModule": {
-		"message": "Text speaker"
+		"message": "TTS module"
 	},
 	"settings_option_ttsModule_desc": {
 		"message": "Module to speak texts"
@@ -591,7 +591,7 @@
 		"message": "TTS modules have not been added yet"
 	},
 	"ttsManagerWindow_message_ttsRemoveConfirmation": {
-		"message": "Are you sure about removing speaker \"$tts_name$\"?",
+		"message": "Are you sure about removing TTS \"$tts_name$\"?",
 		"placeholders": {
 			"tts_name": {
 				"content": "$1",
