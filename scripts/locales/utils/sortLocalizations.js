@@ -1,10 +1,10 @@
 const { readFileSync, writeFileSync } = require('fs');
 
-const { getLocaleFilenames } = require('./utils');
+const { getLocaleFilenames } = require('.');
 
 const sortPredicate = (a, b) => (a < b ? -1 : a > b ? 1 : 0);
 
-const sortObject = (object) =>
+const sortLocalizationMessagesInObject = (object) =>
 	Object.fromEntries(
 		Object.entries(object).sort(([keyA], [keyB]) => {
 			const weightA = keyA.startsWith('langCode_') ? 1 : 0;
@@ -23,14 +23,20 @@ const sortObject = (object) =>
 		}),
 	);
 
-getLocaleFilenames().forEach((filePath) => {
+const sortLocalizationFile = (filePath) => {
 	const fileBuffer = readFileSync(filePath, { encoding: 'utf8' });
 	const localeJson = JSON.parse(fileBuffer);
 
-	const sortedJson = sortObject(localeJson);
+	const sortedJson = sortLocalizationMessagesInObject(localeJson);
 
 	const stringifiedJSON = JSON.stringify(sortedJson, null, '\t');
 	writeFileSync(filePath, stringifiedJSON);
-});
+};
 
-module.exports = {};
+const sortLocalizationFiles = () => getLocaleFilenames().forEach(sortLocalizationFile);
+
+module.exports = {
+	sortLocalizationMessagesInObject,
+	sortLocalizationFile,
+	sortLocalizationFiles,
+};
