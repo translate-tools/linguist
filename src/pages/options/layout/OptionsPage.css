@@ -1,17 +1,24 @@
 /* Page */
 .OptionsPage-Page {
-	padding: var(--typography-layout-indent-l-all) var(--typography-layout-indent-m-all);
+	padding: var(--typography-layout-indent-l-all) var(--typography-layout-indent-m-all) 0;
 	max-width: 100%;
 }
 
-.OptionsPage-Page_editMode {
-	margin-bottom: 4rem;
+@media (max-width: 600px) {
+	.OptionsPage-Page {
+		padding: var(--typography-layout-indent-l-all);
+	}
+}
+
+.OptionsPage-OptionsTree {
+	margin: 4rem 0 !important;
 }
 
 /* ConfirmMenu */
+
 .OptionsPage-ConfirmMenu {
 	position: fixed;
-	border-radius: var(--typography-layout-border-radius);
+	border-radius: calc(var(--typography-layout-border-radius) * 2);
 	padding: var(--typography-layout-indent-m-all);
 	background: var(--options-page-dialog-fill-color);
 	max-width: max-content;
@@ -42,7 +49,7 @@
 }
 
 .OptionsPage-IndentMixin_vertical > *:not(:first-child) {
-	margin-top: var(--typography-layout-indent-l-all);
+	margin-top: calc(var(--typography-layout-indent-l-all) * 1.5);
 }
 
 /* Components */

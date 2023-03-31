@@ -5,28 +5,99 @@
 	margin-inline-start: var(--typography-layout-indent-s-all);
 }
 
+.OptionsPage-OptionContainer > *:not(:last-child) {
+	margin-bottom: var(--typography-layout-indent-m-all);
+}
+
 /* OptionSection */
-.OptionsPage-OptionSection > *:not(:first-child) {
-	margin-top: var(--typography-layout-indent-m-all);
-}
-
 .OptionsPage-OptionSection {
-	padding-left: var(--typography-layout-indent-m-all);
-	border-left: var(--typography-layout-border-width-m) solid transparent;
+	position: relative;
+	display: grid;
+	grid-template-columns: 200px auto;
+	gap: 1em;
 }
 
-.OptionsPage-OptionSection_changed {
-	border-color: var(--options-page-section-active-border-color);
+.OptionsPage-OptionTitle {
+	text-align: right;
 }
 
 /* OptionDescription */
 .OptionsPage-OptionDescription {
 	color: var(--color-typo-secondary);
-	font-size: var(--typography-layout-size-s-font-size);
+	font-size: 1rem;
 	white-space: break-spaces;
 }
 
 .OptionsPage-OptionErrorMessage {
-	color: var(--color-typo-error);
+	color: var(--color-typo-alert);
 	font-size: var(--typography-layout-size-s-font-size);
+}
+
+@media (max-width: 600px) {
+	.OptionsPage-OptionSection {
+		display: block;
+	}
+
+	.OptionsPage-OptionContainer {
+		position: relative;
+	}
+
+	/* Highlight option body */
+	.OptionsPage-OptionSection_changed .OptionsPage-OptionContainer::before {
+		background: #f2f5ff;
+		display: block;
+		content: '';
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		z-index: -1;
+		padding: 0.5em;
+		margin: -0.5em;
+	}
+
+	.OptionsPage-OptionTitle {
+		text-align: left;
+		font-weight: bold;
+		margin-block-end: 0.5rem;
+	}
+
+	/* Hide empty title to do not render unnecessary indent */
+	.OptionsPage-OptionTitle:empty {
+		display: none;
+	}
+}
+
+@media (min-width: 600px) {
+	/* Highlight whole option section */
+	.OptionsPage-OptionSection_changed::before {
+		background: #f2f5ff;
+		display: block;
+		content: '';
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		z-index: -1;
+		padding: 0.5em 0;
+		margin-top: -0.5em;
+	}
+
+	.OptionsPage-OptionTitle {
+		margin-inline-start: 1rem;
+	}
+
+	.OptionsPage-OptionContainer {
+		margin-inline-end: 1rem;
+	}
+}
+
+.OptionsPage-MainGroup:not(:last-child) {
+	margin-bottom: 4rem;
+}
+
+.OptionsPage-Subgroup:not(:first-child) > .OptionsPage-PageSectionTitle {
+	margin-top: 2.5rem;
+}
+
+.OptionsPage-Subgroup > .OptionsPage-PageSectionTitle {
+	margin-bottom: 1rem;
 }

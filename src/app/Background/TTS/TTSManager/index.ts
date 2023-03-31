@@ -19,7 +19,7 @@ export type EmbeddedSpeaker = {
 
 export const embeddedSpeakers: Record<string, EmbeddedSpeaker> = {
 	google: {
-		name: 'Google translator',
+		name: 'Google TTS',
 		constructor: GoogleTTS,
 	},
 	lingva: {

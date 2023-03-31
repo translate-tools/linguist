@@ -311,6 +311,12 @@ export const OptionsPage: FC<OptionsPageProps> = ({ messageHideDelay }) => {
 							>
 								<Button
 									view="action"
+									onPress={resetConfig}
+									width={isMobile ? 'max' : undefined}
+								>
+									{getMessage('settings_button_reset')}
+								</Button>
+								<Button
 									onPress={importConfig}
 									width={isMobile ? 'max' : undefined}
 								>
@@ -318,30 +324,24 @@ export const OptionsPage: FC<OptionsPageProps> = ({ messageHideDelay }) => {
 								</Button>
 								{!isMobile && (
 									<Button
-										view="action"
 										onPress={exportConfig}
 										width={isMobile ? 'max' : undefined}
 									>
 										{getMessage('settings_button_export')}
 									</Button>
 								)}
-								<Button
-									view="action"
-									onPress={resetConfig}
-									width={isMobile ? 'max' : undefined}
-								>
-									{getMessage('settings_button_reset')}
-								</Button>
 							</LayoutFlow>
 						</div>
 
-						<OptionsTree
-							tree={configTree}
-							errors={errors ?? undefined}
-							config={config}
-							modifiedConfig={modifiedConfig}
-							setOptionValue={setOptionValue}
-						/>
+						<div className={cnOptionsPage('OptionsTree')}>
+							<OptionsTree
+								tree={configTree}
+								errors={errors ?? undefined}
+								config={config}
+								modifiedConfig={modifiedConfig}
+								setOptionValue={setOptionValue}
+							/>
+						</div>
 					</PageSection>
 
 					<ToastMessages

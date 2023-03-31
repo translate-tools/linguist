@@ -1,4 +1,4 @@
-import React, { FC, useCallback } from 'react';
+import React, { FC, ReactNode, useCallback } from 'react';
 import { get, isEqual } from 'lodash';
 
 import { Checkbox } from 'react-elegant-ui/esm/components/Checkbox/Checkbox.bundle/desktop';
@@ -52,7 +52,7 @@ export interface OptionButton {
 
 export interface OptionItem {
 	title?: string;
-	description?: string;
+	description?: ReactNode;
 	/**
 	 * Path to option property in object
 	 */
@@ -255,7 +255,14 @@ export const OptionsTree: FC<OptionsTreeProps> = ({
 					) as 1 | 2 | 3 | 4 | 5 | 6;
 
 					return (
-						<PageSection title={item.title} level={localLevel} key={index}>
+						<PageSection
+							title={item.title}
+							level={localLevel}
+							key={index}
+							className={cnOptionsPage(
+								globalLevel > 2 ? 'Subgroup' : 'MainGroup',
+							)}
+						>
 							<div
 								className={cnOptionsPage('Container', {}, [
 									cnOptionsPage('IndentMixin', { vertical: true }),

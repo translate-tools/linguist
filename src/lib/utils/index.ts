@@ -16,6 +16,12 @@ export const isTextsContainsSubstring = (
 };
 
 /**
+ * Return the same string but first letter in uppercase
+ */
+export const capitalizeString = (string: string) =>
+	string[0].toUpperCase() + string.slice(1);
+
+/**
  * Check second object contains all properties of first object with equal values
  */
 export const isEqualIntersection = (obj1: any, obj2: any): boolean => {
