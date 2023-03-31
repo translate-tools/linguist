@@ -26,3 +26,4 @@ Run commands with `npm run`
 	- It create messages that does not exists in target locale. Texts will automatically translated, but it need to be reviewed
 	- Locales will sorted
 - `locales:sort` sort all locales files
+- `locales:fixTypos` fix typos in a changed messages (related to a master branch)

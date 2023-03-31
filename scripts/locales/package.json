@@ -2,6 +2,7 @@
 	"name": "locales",
 	"scripts": {
 		"locales:sync": "node ./syncLocalizationsFilesWithSource.js",
-		"locales:sort": "node ./sortLocalizationFiles.js"
+		"locales:sort": "node ./sortLocalizationFiles.js",
+		"locales:fixTypos": "node ./fixTyposInLocalizationsFiles.js"
 	}
 }
