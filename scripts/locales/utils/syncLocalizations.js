@@ -53,7 +53,7 @@ const syncLocalizationsFilesWithSource = async () => {
 
 	for (const filePath of localizationFiles) {
 		// Skip source file
-		if (filePath === sourceLocalization.filename) return;
+		if (filePath === sourceLocalization.filename) continue;
 
 		const targetLocalization = getLocaleObject(filePath);
 		await syncLocalizationsMessagesWithSource(sourceLocalization, targetLocalization);
