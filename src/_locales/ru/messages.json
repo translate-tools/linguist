@@ -344,6 +344,9 @@
 	"settings_option_pageTranslation_enableContextMenu": {
 		"message": "Включить кнопку в контекстном меню"
 	},
+	"settings_option_pageTranslation_enableContextMenu_desc": {
+		"message": "Добавить кнопку для переключения перевода страницы в контекстное меню"
+	},
 	"settings_option_pageTranslation_ignoredTags": {
 		"message": "Черный список тегов"
 	},
@@ -358,6 +361,9 @@
 	},
 	"settings_option_pageTranslation_originalTextPopup": {
 		"message": "Показывать оригинальный текст при наведении"
+	},
+	"settings_option_pageTranslation_originalTextPopup_desc": {
+		"message": "Показать всплывающее окно с исходным текстом при наведении мыши на переведенный текст"
 	},
 	"settings_option_pageTranslation_translatableAttributes": {
 		"message": "Список аттрибутов для перевода"
@@ -443,6 +449,9 @@
 	"settings_option_selectTranslation_showOriginalText": {
 		"message": "Показывать блок с оригинальным текстом"
 	},
+	"settings_option_selectTranslation_showOriginalText_desc": {
+		"message": "Добавить блок с исходным текстом во всплывающее окно с переводом"
+	},
 	"settings_option_selectTranslation_strictSelection": {
 		"message": "Строгое выделение"
 	},
@@ -515,8 +524,14 @@
 	"settings_option_ttsCustomModules_button": {
 		"message": "Управление TTS модулями"
 	},
+	"settings_option_ttsCustomModules_desc": {
+		"message": "Вы можете добавить модули TTS, которые используют ваши любимые сервисы и голоса. Узнайте больше и ищите модули в документации по настройке TTS"
+	},
 	"settings_option_ttsModule": {
 		"message": "TTS модуль"
+	},
+	"settings_option_ttsModule_desc": {
+		"message": "Модуль для озвучивания текстов"
 	},
 	"settings_option_userLanguage": {
 		"message": "Ваш язык"
@@ -544,12 +559,6 @@
 	},
 	"translatorsManagerWindow_close": {
 		"message": "Закрыть"
-	},
-	"translatorsManagerWindow_description": {
-		"message": "Больше информации о пользовательских переводчиках"
-	},
-	"translatorsManagerWindow_description_link": {
-		"message": "в документации"
 	},
 	"translatorsManagerWindow_emptyTranslatorsListText": {
 		"message": "Список пуст. Самое время добавить новый переводчик"

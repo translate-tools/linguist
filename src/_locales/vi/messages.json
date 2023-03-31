@@ -26,8 +26,20 @@
 	"common_translate": {
 		"message": "Dịch thuật"
 	},
+	"contextMenu_disablePageTranslation": {
+		"message": "Tắt dịch trang"
+	},
+	"contextMenu_translatePage": {
+		"message": "Dịch trang"
+	},
 	"contextMenu_translateSelectedText": {
 		"message": "Dịch văn bản đã chọn"
+	},
+	"dictionaryButton_add": {
+		"message": "Thêm vào từ điển"
+	},
+	"dictionaryButton_delete": {
+		"message": "Xóa khỏi từ điển"
 	},
 	"dictionary_button_export": {
 		"message": "Xuất"
@@ -88,6 +100,39 @@
 	},
 	"ext_name": {
 		"message": "Linguist - trình dịch trang web"
+	},
+	"history_control_selectEntry": {
+		"message": "Chọn mục"
+	},
+	"history_controls_clearHistory": {
+		"message": "Xóa lịch sử"
+	},
+	"history_controls_deleteSelected": {
+		"message": "Xóa đã chọn"
+	},
+	"history_controls_selectAll": {
+		"message": "Chọn tất cả các bản dịch"
+	},
+	"history_message_clearHistoryConfirmation": {
+		"message": "Bạn có chắc chắn muốn xóa lịch sử không? Tất cả các mục sẽ bị xóa."
+	},
+	"history_message_deleteEntryConfirmation": {
+		"message": "Bạn có chắc chắn muốn xóa mục này không?"
+	},
+	"history_message_deleteSelectedEntriesConfirmation": {
+		"message": "Bạn có chắc chắn muốn xóa các mục đã chọn ($1)?"
+	},
+	"history_message_emptyEntries": {
+		"message": "Lịch sử rỗng"
+	},
+	"history_message_entriesNotFound": {
+		"message": "Không tìm thấy bản dịch phù hợp với bộ lọc"
+	},
+	"history_pageTitle": {
+		"message": "Lịch sử"
+	},
+	"history_searchPlaceholder": {
+		"message": "Tìm kiếm theo văn bản"
 	},
 	"inlineTranslator_showOriginalText": {
 		"message": "Hiển thị văn bản gốc"
@@ -296,6 +341,12 @@
 	"settings_option_pageTranslation_detectLanguageByContent_desc": {
 		"message": "Trước tiên, hãy thử phát hiện ngôn ngữ trang theo nội dung văn bản của trang. Phát hiện ngôn ngữ mặc định bằng siêu dữ liệu do trang cung cấp"
 	},
+	"settings_option_pageTranslation_enableContextMenu": {
+		"message": "Bật nút menu ngữ cảnh"
+	},
+	"settings_option_pageTranslation_enableContextMenu_desc": {
+		"message": "Thêm nút để chuyển đổi dịch trang web thành menu ngữ cảnh"
+	},
 	"settings_option_pageTranslation_ignoredTags": {
 		"message": "Thẻ bị bỏ qua"
 	},
@@ -310,6 +361,9 @@
 	},
 	"settings_option_pageTranslation_originalTextPopup": {
 		"message": "Hiển thị văn bản gốc bằng cách di chuột qua"
+	},
+	"settings_option_pageTranslation_originalTextPopup_desc": {
+		"message": "Hiển thị cửa sổ pop-up với văn bản gốc khi di chuột qua văn bản đã dịch"
 	},
 	"settings_option_pageTranslation_translatableAttributes": {
 		"message": "Thuộc tính có thể dịch"
@@ -395,6 +449,9 @@
 	"settings_option_selectTranslation_showOriginalText": {
 		"message": "Hiển thị khối văn bản gốc"
 	},
+	"settings_option_selectTranslation_showOriginalText_desc": {
+		"message": "Thêm khối văn bản gốc vào cửa sổ pop-up dịch"
+	},
 	"settings_option_selectTranslation_strictSelection": {
 		"message": "Lựa chọn nghiêm ngặt"
 	},
@@ -458,6 +515,24 @@
 	"settings_option_translatorModule_desc": {
 		"message": "Tốc độ và chất lượng của bản dịch và hướng dẫn dịch có sẵn phụ thuộc vào mô-đun đã chọn.\n\nThay đổi mô-đun nếu nó hoạt động kém"
 	},
+	"settings_option_tts": {
+		"message": "Chuyển văn bản thành giọng nói (TTS)"
+	},
+	"settings_option_ttsCustomModules": {
+		"message": "TTS tùy chỉnh"
+	},
+	"settings_option_ttsCustomModules_button": {
+		"message": "Quản lý các mô-đun TTS"
+	},
+	"settings_option_ttsCustomModules_desc": {
+		"message": "Bạn có thể thêm các mô-đun TTS sử dụng dịch vụ và giọng nói yêu thích của bạn. Đọc thêm và tìm các mô-đun trong tài liệu TTS tùy chỉnh."
+	},
+	"settings_option_ttsModule": {
+		"message": "Mô-đun TTS"
+	},
+	"settings_option_ttsModule_desc": {
+		"message": "Mô-đun để đọc văn bản"
+	},
 	"settings_option_userLanguage": {
 		"message": "Ngôn ngữ của bạn"
 	},
@@ -485,12 +560,6 @@
 	"translatorsManagerWindow_close": {
 		"message": "Đóng"
 	},
-	"translatorsManagerWindow_description": {
-		"message": "Đọc thêm về trình dịch tùy chỉnh"
-	},
-	"translatorsManagerWindow_description_link": {
-		"message": "trong tài liệu"
-	},
 	"translatorsManagerWindow_emptyTranslatorsListText": {
 		"message": "Trình dịch tùy chỉnh chưa được thêm vào"
 	},
@@ -510,6 +579,33 @@
 		"message": "Xoá"
 	},
 	"translatorsManagerWindow_translator_edit": {
+		"message": "Sửa"
+	},
+	"ttsManagerWindow_add": {
+		"message": "Thêm"
+	},
+	"ttsManagerWindow_close": {
+		"message": "Đóng"
+	},
+	"ttsManagerWindow_emptyTranslatorsListText": {
+		"message": "Chưa có mô-đun TTS được thêm"
+	},
+	"ttsManagerWindow_message_ttsRemoveConfirmation": {
+		"message": "Bạn có chắc chắn muốn xóa TTS \"$tts_name$\"?",
+		"placeholders": {
+			"tts_name": {
+				"content": "$1",
+				"example": "Google TTS"
+			}
+		}
+	},
+	"ttsManagerWindow_title": {
+		"message": "Các mô-đun đọc văn bản"
+	},
+	"ttsManagerWindow_translator_delete": {
+		"message": "Xóa"
+	},
+	"ttsManagerWindow_translator_edit": {
 		"message": "Sửa"
 	},
 	"validation_number": {

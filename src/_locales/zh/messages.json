@@ -26,8 +26,20 @@
 	"common_translate": {
 		"message": "翻译"
 	},
+	"contextMenu_disablePageTranslation": {
+		"message": "禁用页面翻译"
+	},
+	"contextMenu_translatePage": {
+		"message": "翻译页面"
+	},
 	"contextMenu_translateSelectedText": {
 		"message": "翻译选择的文本"
+	},
+	"dictionaryButton_add": {
+		"message": "添加到字典"
+	},
+	"dictionaryButton_delete": {
+		"message": "从字典中删除"
 	},
 	"dictionary_button_export": {
 		"message": "导出"
@@ -88,6 +100,39 @@
 	},
 	"ext_name": {
 		"message": "Linguist - 网页翻译器"
+	},
+	"history_control_selectEntry": {
+		"message": "选择条目"
+	},
+	"history_controls_clearHistory": {
+		"message": "清除历史记录"
+	},
+	"history_controls_deleteSelected": {
+		"message": "删除所选"
+	},
+	"history_controls_selectAll": {
+		"message": "选择所有翻译"
+	},
+	"history_message_clearHistoryConfirmation": {
+		"message": "您确定要清除历史记录吗？所有条目都将被删除"
+	},
+	"history_message_deleteEntryConfirmation": {
+		"message": "您确定要删除此条目吗？"
+	},
+	"history_message_deleteSelectedEntriesConfirmation": {
+		"message": "您确定要删除所选条目 ($1) 吗？"
+	},
+	"history_message_emptyEntries": {
+		"message": "历史记录已清除"
+	},
+	"history_message_entriesNotFound": {
+		"message": "未找到满足筛选条件的翻译"
+	},
+	"history_pageTitle": {
+		"message": "历史"
+	},
+	"history_searchPlaceholder": {
+		"message": "按文本搜索"
 	},
 	"inlineTranslator_showOriginalText": {
 		"message": "显示原文"
@@ -296,6 +341,12 @@
 	"settings_option_pageTranslation_detectLanguageByContent_desc": {
 		"message": "首先尝试通过页面的文本内容来检测页面语言。使用页面提供的元数据检测默认语言"
 	},
+	"settings_option_pageTranslation_enableContextMenu": {
+		"message": "启用上下文菜单按钮"
+	},
+	"settings_option_pageTranslation_enableContextMenu_desc": {
+		"message": "添加按钮以将页面翻译切换到上下文菜单"
+	},
 	"settings_option_pageTranslation_ignoredTags": {
 		"message": "忽略的标签"
 	},
@@ -310,6 +361,9 @@
 	},
 	"settings_option_pageTranslation_originalTextPopup": {
 		"message": "悬停显示原文"
+	},
+	"settings_option_pageTranslation_originalTextPopup_desc": {
+		"message": "将鼠标悬停在翻译文本上时显示原始文本的弹出窗口"
 	},
 	"settings_option_pageTranslation_translatableAttributes": {
 		"message": "可翻译的属性"
@@ -395,6 +449,9 @@
 	"settings_option_selectTranslation_showOriginalText": {
 		"message": "显示原始文本块"
 	},
+	"settings_option_selectTranslation_showOriginalText_desc": {
+		"message": "在带有翻译的弹出窗口中添加原始文本块"
+	},
 	"settings_option_selectTranslation_strictSelection": {
 		"message": "严格选择"
 	},
@@ -458,6 +515,24 @@
 	"settings_option_translatorModule_desc": {
 		"message": "翻译的速度、质量以及可用的翻译目标取决于所选模块。\n\n如果模块工作异常，请更换模块"
 	},
+	"settings_option_tts": {
+		"message": "文字转语音 (TTS)"
+	},
+	"settings_option_ttsCustomModules": {
+		"message": "自定义 TTS"
+	},
+	"settings_option_ttsCustomModules_button": {
+		"message": "管理 TTS 模块"
+	},
+	"settings_option_ttsCustomModules_desc": {
+		"message": "您可以添加使用您喜欢的服务和语音的 TTS 模块。在自定义 TTS 文档中了解更多信息并查找模块。"
+	},
+	"settings_option_ttsModule": {
+		"message": "TTS 模块"
+	},
+	"settings_option_ttsModule_desc": {
+		"message": "用于朗读文本的模块"
+	},
 	"settings_option_userLanguage": {
 		"message": "您的语言"
 	},
@@ -485,12 +560,6 @@
 	"translatorsManagerWindow_close": {
 		"message": "关闭"
 	},
-	"translatorsManagerWindow_description": {
-		"message": "阅读有关自定义翻译服务的更多信息"
-	},
-	"translatorsManagerWindow_description_link": {
-		"message": "在文档中"
-	},
 	"translatorsManagerWindow_emptyTranslatorsListText": {
 		"message": "尚未添加自定义翻译服务"
 	},
@@ -510,6 +579,33 @@
 		"message": "删除"
 	},
 	"translatorsManagerWindow_translator_edit": {
+		"message": "编辑"
+	},
+	"ttsManagerWindow_add": {
+		"message": "添加"
+	},
+	"ttsManagerWindow_close": {
+		"message": "关闭"
+	},
+	"ttsManagerWindow_emptyTranslatorsListText": {
+		"message": "尚未添加 TTS 模块"
+	},
+	"ttsManagerWindow_message_ttsRemoveConfirmation": {
+		"message": "确定要删除 TTS 模块“$tts_name$”吗？",
+		"placeholders": {
+			"tts_name": {
+				"content": "$1",
+				"example": "Google TTS"
+			}
+		}
+	},
+	"ttsManagerWindow_title": {
+		"message": "文本转语音模块"
+	},
+	"ttsManagerWindow_translator_delete": {
+		"message": "删除"
+	},
+	"ttsManagerWindow_translator_edit": {
 		"message": "编辑"
 	},
 	"validation_number": {
