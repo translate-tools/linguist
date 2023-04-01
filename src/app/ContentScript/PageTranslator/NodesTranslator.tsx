@@ -290,7 +290,10 @@ export class NodesTranslator {
 		const nodeData = this.nodeStorage.get(node);
 		if (nodeData !== undefined) {
 			// Restore original text
-			node.nodeValue = nodeData.originalText;
+			// TODO: replace to null
+			if (nodeData.originalText !== '') {
+				node.nodeValue = nodeData.originalText;
+			}
 			this.nodeStorage.delete(node);
 		}
 	}
