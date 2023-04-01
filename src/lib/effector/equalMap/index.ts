@@ -1,7 +1,7 @@
 import { Store } from 'effector';
 
 import { createSelector } from '../createSelector';
-import { updateNotEqualFilter } from '../filters';
+import { isNotEqual } from '../filters';
 
 /**
  * Return derived store with mapped data from source store.
@@ -11,5 +11,5 @@ export function equalMap<Type, MappedData>(
 	source: Store<Type>,
 	selector: (value: Type) => MappedData,
 ): Store<MappedData> {
-	return createSelector(source, selector, { updateFilter: updateNotEqualFilter });
+	return createSelector(source, selector, { updateFilter: isNotEqual });
 }

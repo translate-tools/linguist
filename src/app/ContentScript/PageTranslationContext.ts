@@ -2,7 +2,7 @@ import { combine, createEvent, createStore, Store, sample, createEffect } from '
 
 import { AppConfigType } from '../../types/runtime';
 import { getPageLanguage } from '../../lib/browser';
-import { updateNotEqualFilter } from '../../lib/effector/filters';
+import { isNotEqual } from '../../lib/effector/filters';
 
 // Requests
 import { getSitePreferences } from '../../requests/backend/autoTranslation/sitePreferences/getSitePreferences';
@@ -58,7 +58,7 @@ export class PageTranslationContext {
 				pageTranslation: null,
 				textTranslation: false,
 			},
-			{ updateFilter: updateNotEqualFilter },
+			{ updateFilter: isNotEqual },
 		);
 
 		// Subscribe on events
