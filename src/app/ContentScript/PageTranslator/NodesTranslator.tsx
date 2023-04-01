@@ -2,25 +2,29 @@ import { XMutationObserver } from '../../../lib/XMutationObserver';
 
 interface NodeData {
 	/**
-	 * Unique identifier of node
+	 * Unique node identifier
 	 */
 	id: number;
 
 	/**
-	 * With each update of node, this value increase
+	 * Each node update should increase the value
 	 */
 	updateId: number;
 
 	/**
-	 * Context who contains `updateId` when was translate in last time
+	 * Contains `updateId` value at time when start node translation
 	 */
 	translateContext: number;
 
 	/**
-	 * Original text of node, before translate
+	 * Original node text, before start translation
+	 * Contains `null` for node that not been translated yet
 	 */
 	originalText: null | string;
 
+	/**
+	 * Priority to translate node. The bigger the faster will translate
+	 */
 	priority: number;
 }
 
