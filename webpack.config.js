@@ -111,6 +111,12 @@ module.exports = {
 					to: path.join(outputPath, '_locales'),
 				},
 
+				// Static files
+				{
+					from: './src/static',
+					to: path.join(outputPath, 'static'),
+				},
+
 				// Serve static files
 				...[
 					'logo-icon.svg',
