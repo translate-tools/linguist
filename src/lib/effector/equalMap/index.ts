@@ -7,7 +7,7 @@ import { updateNotEqualFilter } from '../filters';
  * Return derived store with mapped data from source store.
  * Derived store will filter updates that equal to a current state (will used deep equality check)
  */
-export function memoMap<Type, MappedData>(
+export function equalMap<Type, MappedData>(
 	source: Store<Type>,
 	selector: (value: Type) => MappedData,
 ): Store<MappedData> {

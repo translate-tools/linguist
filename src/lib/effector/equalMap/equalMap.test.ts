@@ -1,6 +1,6 @@
 import { createEvent, createStore } from 'effector';
 
-import { memoMap } from '.';
+import { equalMap } from '.';
 
 test('mapped store do not updates for data that equal current state', () => {
 	const $store1 = createStore({
@@ -19,7 +19,7 @@ test('mapped store do not updates for data that equal current state', () => {
 	>();
 	$store1.on(updated, (state, payload) => ({ ...state, ...payload }));
 
-	const $subStore = memoMap($store1, ({ foo, bar }) => ({ foo, bar }));
+	const $subStore = equalMap($store1, ({ foo, bar }) => ({ foo, bar }));
 
 	const watcher = jest.fn();
 
