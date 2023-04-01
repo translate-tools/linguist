@@ -19,7 +19,7 @@ interface NodeData {
 	/**
 	 * Original text of node, before translate
 	 */
-	originalText: string;
+	originalText: null | string;
 
 	priority: number;
 }
@@ -228,7 +228,7 @@ export class NodesTranslator {
 			id: this.idCounter++,
 			updateId: 1,
 			translateContext: 0,
-			originalText: '',
+			originalText: null,
 			priority,
 		});
 
@@ -289,9 +289,8 @@ export class NodesTranslator {
 
 		const nodeData = this.nodeStorage.get(node);
 		if (nodeData !== undefined) {
-			// Restore original text
-			// TODO: replace to null
-			if (nodeData.originalText !== '') {
+			// Restore original text if text been replaced
+			if (nodeData.originalText !== null) {
 				node.nodeValue = nodeData.originalText;
 			}
 			this.nodeStorage.delete(node);
