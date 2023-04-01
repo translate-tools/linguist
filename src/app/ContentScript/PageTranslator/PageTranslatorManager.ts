@@ -1,6 +1,7 @@
 import { Store } from 'effector';
 
 import { AppConfigType } from '../../../types/runtime';
+
 import { PageTranslationOptions } from '../PageTranslationContext';
 import { PageTranslator } from './PageTranslator';
 
@@ -27,32 +28,38 @@ export class PageTranslatorManager {
 
 	public start() {
 		// Manage page translation instance
-		this.$state.watch(({ config }) => {
-			if (!this.pageTranslator.isRun()) {
+		this.$state
+			.map(({ config }) => config)
+			.watch((config) => {
+				if (!this.pageTranslator.isRun()) {
+					this.pageTranslator.updateConfig(config);
+					return;
+				}
+
+				const direction = this.pageTranslator.getTranslateDirection();
+				if (direction === null) {
+					throw new TypeError(
+						'Invalid response from getTranslateDirection method',
+					);
+				}
+
+				this.pageTranslator.stop();
 				this.pageTranslator.updateConfig(config);
-				return;
-			}
-
-			const direction = this.pageTranslator.getTranslateDirection();
-			if (direction === null) {
-				throw new TypeError('Invalid response from getTranslateDirection method');
-			}
-
-			this.pageTranslator.stop();
-			this.pageTranslator.updateConfig(config);
-			this.pageTranslator.run(direction.from, direction.to);
-		});
+				this.pageTranslator.run(direction.from, direction.to);
+			});
 
 		// Manage page translation state
-		this.$state.watch(({ state: pageTranslation }) => {
-			const shouldTranslate = pageTranslation !== null;
-			if (shouldTranslate === this.pageTranslator.isRun()) return;
+		this.$state
+			.map(({ state }) => state)
+			.watch((pageTranslation) => {
+				const shouldTranslate = pageTranslation !== null;
+				if (shouldTranslate === this.pageTranslator.isRun()) return;
 
-			if (pageTranslation !== null) {
-				this.pageTranslator.run(pageTranslation.from, pageTranslation.to);
-			} else {
-				this.pageTranslator.stop();
-			}
-		});
+				if (pageTranslation !== null) {
+					this.pageTranslator.run(pageTranslation.from, pageTranslation.to);
+				} else {
+					this.pageTranslator.stop();
+				}
+			});
 	}
 }

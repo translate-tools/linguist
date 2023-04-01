@@ -2,25 +2,29 @@ import { XMutationObserver } from '../../../lib/XMutationObserver';
 
 interface NodeData {
 	/**
-	 * Unique identifier of node
+	 * Unique node identifier
 	 */
 	id: number;
 
 	/**
-	 * With each update of node, this value increase
+	 * Each node update should increase the value
 	 */
 	updateId: number;
 
 	/**
-	 * Context who contains `updateId` when was translate in last time
+	 * Contains `updateId` value at time when start node translation
 	 */
 	translateContext: number;
 
 	/**
-	 * Original text of node, before translate
+	 * Original node text, before start translation
+	 * Contains `null` for node that not been translated yet
 	 */
-	originalText: string;
+	originalText: null | string;
 
+	/**
+	 * Priority to translate node. The bigger the faster will translate
+	 */
 	priority: number;
 }
 
@@ -228,7 +232,7 @@ export class NodesTranslator {
 			id: this.idCounter++,
 			updateId: 1,
 			translateContext: 0,
-			originalText: '',
+			originalText: null,
 			priority,
 		});
 
@@ -289,8 +293,10 @@ export class NodesTranslator {
 
 		const nodeData = this.nodeStorage.get(node);
 		if (nodeData !== undefined) {
-			// Restore original text
-			node.nodeValue = nodeData.originalText;
+			// Restore original text if text been replaced
+			if (nodeData.originalText !== null) {
+				node.nodeValue = nodeData.originalText;
+			}
 			this.nodeStorage.delete(node);
 		}
 	}
