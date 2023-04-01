@@ -3,7 +3,6 @@ import { combine, createEvent, createStore, Store, sample, createEffect } from '
 import { AppConfigType } from '../../types/runtime';
 import { getPageLanguage } from '../../lib/browser';
 import { updateNotEqualFilter } from '../../lib/effector/filters';
-import { memoMap } from '../../lib/effector/memoMap';
 
 // Requests
 import { getSitePreferences } from '../../requests/backend/autoTranslation/sitePreferences/getSitePreferences';
@@ -141,13 +140,10 @@ export class PageTranslationContext {
 		);
 
 		// Init page translator
-		const $pageTranslatorState = memoMap(
-			$masterStore,
-			({ config, translatorsState }) => ({
-				state: translatorsState.pageTranslation,
-				config: config.pageTranslator,
-			}),
-		);
+		const $pageTranslatorState = $masterStore.map(({ config, translatorsState }) => ({
+			state: translatorsState.pageTranslation,
+			config: config.pageTranslator,
+		}));
 
 		const pageTranslatorManager = new PageTranslatorManager($pageTranslatorState);
 		pageTranslatorManager.start();
