@@ -34,17 +34,17 @@ export class PageTranslator {
 		pending: 0,
 	};
 
-	private config: PageTranslatorConfig;
-	private nodesTranslatorConfig: NodesTranslatorConfig;
+	private config: PageTranslatorConfig = {};
+	private nodesTranslatorConfig: NodesTranslatorConfig = {};
 	constructor(config: NodesTranslatorConfig & PageTranslatorConfig) {
+		this.updateConfig(config);
+	}
+
+	public updateConfig(config: NodesTranslatorConfig & PageTranslatorConfig) {
 		const { originalTextPopup, ...nodesTranslatorConfig } = config;
 
 		this.config = { originalTextPopup };
 		this.nodesTranslatorConfig = nodesTranslatorConfig;
-	}
-
-	public updateConfig(config: PageTranslatorConfig) {
-		this.config = config;
 	}
 
 	public isRun() {
