@@ -112,7 +112,8 @@ export class TranslatePageContextMenu {
 			return;
 
 		let isVisible = false;
-		if (tab.url !== undefined) {
+		// url may be `undefined` or empty string (for chromium), we have to ignore both
+		if (tab.url) {
 			const tabUrl = new URL(tab.url);
 			const isUrlHasHttpProtocol = tabUrl.protocol.startsWith('http');
 			isVisible = isUrlHasHttpProtocol;
