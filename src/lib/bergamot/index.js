@@ -134,7 +134,7 @@ export class TranslatorBacking {
 	 */
 	async loadWorker() {
 		const worker = new Worker(
-			browser.runtime.getURL('static/bergamot/translator-worker.js'),
+			browser.runtime.getURL('thirdparty/bergamot/translator-worker.js'),
 		);
 
 		/**

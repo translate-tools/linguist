@@ -113,8 +113,8 @@ module.exports = {
 
 				// Static files
 				{
-					from: './src/static',
-					to: path.join(outputPath, 'static'),
+					from: 'thirdparty/bergamot/{*.js,build/*.{js,wasm}}',
+					to: path.join(outputPath),
 				},
 
 				// Serve static files
