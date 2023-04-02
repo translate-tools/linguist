@@ -1,3 +1,4 @@
+import { detectLanguage } from '../language';
 import { BatchTranslator } from '.';
 
 export class BergamotTranslator {
@@ -9,7 +10,24 @@ export class BergamotTranslator {
 		this.translator = new BatchTranslator({}, undefined);
 	}
 
-	translate = (text: string, from: string, to: string) => {
+	translate = async (text: string, from: string, to: string) => {
+		if (from === 'auto') {
+			const langs = BergamotTranslator.getSupportedLanguages();
+			const detectedLanguage = await detectLanguage(text);
+			if (
+				detectedLanguage !== null &&
+				detectedLanguage !== to &&
+				langs.includes(detectedLanguage)
+			) {
+				from = detectedLanguage;
+			} else {
+				// Use most popular content language or first of list
+				const defaultLang =
+					to !== 'en' ? 'en' : langs.find((lang) => lang !== to);
+				from = defaultLang ?? 'en';
+			}
+		}
+
 		const response = this.translator.translate({
 			from,
 			to,
@@ -34,7 +52,7 @@ export class BergamotTranslator {
 		return textLength - this.getLengthLimit();
 	};
 
-	static isSupportedAutoFrom = () => false;
+	static isSupportedAutoFrom = () => true;
 
 	// prettier-ignore
 	static getSupportedLanguages = () => [
