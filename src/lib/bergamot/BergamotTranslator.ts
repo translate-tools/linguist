@@ -1,8 +1,8 @@
-import { detectLanguage } from '../language';
+import { detectLanguage, getMessage } from '../language';
 import { BatchTranslator } from '.';
 
 export class BergamotTranslator {
-	static translatorName = 'Bergamot - Offline translator';
+	static translatorName = getMessage('common_offlineTranslator', 'Bergamot');
 	static isRequiredKey = () => false;
 
 	private translator;
