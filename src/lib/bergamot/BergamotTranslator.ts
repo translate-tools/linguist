@@ -38,6 +38,7 @@ export class BergamotTranslator {
 
 	// prettier-ignore
 	static getSupportedLanguages = () => [
-		"en", "ru", "de"
+		"fr", "en", "it", "pt", "ru", "cs",
+		"de", "es", "et", "bg", "uk"
 	];
 }
