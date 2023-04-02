@@ -25,7 +25,9 @@ export const buildBackendRequest = <O = void, R = void>(
 		// Call handler directly for invokes from background context
 		if (isBackgroundContext()) {
 			if (localHandler === null) {
-				throw new Error('Request handler is not initialized');
+				throw new Error(
+					`Request handler is not initialized for endpoint "${endpoint}"`,
+				);
 			}
 
 			return localHandler(options);

@@ -2,6 +2,9 @@
 
 import browser from 'webextension-polyfill';
 
+import { getBergamotFile } from '../../requests/backend/bergamot/getBergamotFile';
+import { addBergamotFile } from '../../requests/backend/bergamot/addBergamotFile';
+
 /**
  * @typedef {Object} TranslationRequest
  * @property {String} from
@@ -314,14 +317,38 @@ export class TranslatorBacking {
 							return [part, null];
 
 						try {
-							return [
-								part,
-								await this.fetch(
-									file.name,
-									file.expectedSha256Hash,
-									options,
-								),
-							];
+							// Try get from cache
+							const cachedData = await getBergamotFile({
+								type: part,
+								expectedSha256Hash: file.expectedSha256Hash,
+								direction: { from, to },
+							});
+							if (cachedData !== null) {
+								return [part, cachedData.buffer];
+							}
+
+							const start = performance.now();
+							const arrayBuffer = await this.fetch(
+								file.name,
+								file.expectedSha256Hash,
+								options,
+							);
+							console.warn(
+								'TIME TO LOAD FILE FROM INTERNET',
+								performance.now() - start,
+							);
+
+							// Write cache
+							await addBergamotFile({
+								name: file.name,
+								expectedSha256Hash: file.expectedSha256Hash,
+
+								type: part,
+								direction: { from, to },
+								buffer: arrayBuffer,
+							});
+
+							return [part, arrayBuffer];
 						} catch (cause) {
 							throw new Error(
 								`Could not fetch ${file.name} for ${from}->${to} model`,
