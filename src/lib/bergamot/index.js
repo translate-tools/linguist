@@ -63,6 +63,8 @@ export class SupersededError extends Error {}
  */
 export class CancelledError extends Error {}
 
+const backingStorageName = 'bergamotBacking';
+
 /**
  * Wrapper around bergamot-translator loading and model management.
  */
@@ -232,17 +234,31 @@ export class TranslatorBacking {
 	 * }>}
 	 */
 	async loadModelRegistery() {
+		// TODO: return cache only when fetch failed
+		const { [backingStorageName]: dataFromStorage } = await browser.storage.local.get(
+			backingStorageName,
+		);
+		if (dataFromStorage) {
+			console.warn('GOT FROM CACHE', dataFromStorage);
+			return dataFromStorage;
+		}
+
 		const response = await fetch(this.registryUrl, { credentials: 'omit' });
 		const registry = await response.json();
 
 		// Add 'from' and 'to' keys for each model.
-		return Array.from(Object.entries(registry), ([key, files]) => {
+		const data = Array.from(Object.entries(registry), ([key, files]) => {
 			return {
 				from: key.substring(0, 2),
 				to: key.substring(2, 4),
 				files,
 			};
 		});
+
+		// Write data
+		await browser.storage.local.set({ [backingStorageName]: data });
+
+		return data;
 	}
 
 	/**
