@@ -1,5 +1,9 @@
 /* eslint-disable */
 
+// TODO: introduce interfaces, use it to ensure contracts between workers
+// TODO: improve types, remove any
+// TODO: split file to modules
+
 import browser from 'webextension-polyfill';
 
 import { getBergamotFile } from '../../requests/backend/bergamot/getBergamotFile';
@@ -813,8 +817,8 @@ export class BatchTranslator {
 			models: batch.models.map(({ from, to }) => ({ from, to })),
 			texts: batch.requests.map(({ request: { text, html, qualityScores } }) => ({
 				text: text.toString(),
-				html: !!html,
-				qualityScores: !!qualityScores,
+				html: Boolean(html),
+				qualityScores: Boolean(qualityScores),
 			})),
 		});
 
