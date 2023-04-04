@@ -21,38 +21,6 @@ import { addBergamotFile } from '../../requests/backend/bergamot/addBergamotFile
  */
 
 /**
- * NodeJS compatibility, a thin WebWorker layer around node:worker_threads.
- */
-if (!(typeof window !== 'undefined' && window.Worker)) {
-	globalThis.Worker = class {
-		#worker;
-
-		constructor(url) {
-			this.#worker = new Promise(async (accept) => {
-				const { Worker } = await import(
-					/* webpackIgnore: true */ 'node:worker_threads'
-				);
-				accept(new Worker(url));
-			});
-		}
-
-		addEventListener(eventName, callback) {
-			this.#worker.then((worker) =>
-				worker.on(eventName, (data) => callback({ data })),
-			);
-		}
-
-		postMessage(message) {
-			this.#worker.then((worker) => worker.postMessage(message));
-		}
-
-		terminate() {
-			this.#worker.then((worker) => worker.terminate());
-		}
-	};
-}
-
-/**
  * Thrown when a pending translation is replaced by another newer pending
  * translation.
  */
@@ -65,31 +33,69 @@ export class CancelledError extends Error {}
 
 const backingStorageName = 'bergamotBacking';
 
+type TranslationRequest = {
+	from: string;
+	to: string;
+	text: string;
+	html: boolean;
+	priority?: number;
+	qualityScores?: boolean;
+};
+
+type TranslationResponse = {
+	request: TranslationRequest;
+	target: { text: string };
+};
+
+type LanguagesDirection = { from: string; to: string };
+
+type Model = {
+	from: string;
+	to: string;
+	files: Record<
+		string,
+		{
+			name: string;
+			size: number;
+			expectedSha256Hash: string;
+		}
+	>;
+};
+
+type TranslationModel = Model;
+
+type Registry = Model[];
+
+type BackingOptions = {
+	cacheSize?: number;
+	useNativeIntGemm?: boolean;
+	downloadTimeout?: number;
+	registryUrl?: string;
+	pivotLanguage?: string;
+	onerror?: (err: ErrorEvent) => void;
+};
+
 /**
  * Wrapper around bergamot-translator loading and model management.
  */
 export class TranslatorBacking {
-	/**
-	 * @param {{
-	 *  cacheSize?: number,
-	 *  useNativeIntGemm?: boolean,
-	 *  downloadTimeout?: number,
-	 *  registryUrl?: string
-	 *  pivotLanguage?: string?
-	 *  onerror?: (err: Error)
-	 * }} options
-	 */
-	constructor(options) {
+	private registryUrl;
+	private downloadTimeout;
+	private registry;
+	private buffers;
+	private pivotLanguage;
+	private models;
+	private onerror;
+
+	private options;
+	constructor(options: BackingOptions) {
 		this.options = options || {};
 
 		this.registryUrl =
 			this.options.registryUrl ||
 			'https://bergamot.s3.amazonaws.com/models/index.json';
 
-		this.downloadTimeout =
-			'downloadTimeout' in this.options
-				? parseInt(this.options.downloadTimeout)
-				: 60000;
+		this.downloadTimeout = this.options.downloadTimeout ?? 60000;
 
 		/**
 		 * registry of all available models and their urls
@@ -101,7 +107,16 @@ export class TranslatorBacking {
 		 * Map of downloaded model data files as buffers per model.
 		 * @type {Map<{from:string,to:string}, Promise<Map<string,ArrayBuffer>>>}
 		 */
-		this.buffers = new Map();
+		this.buffers = new Map<
+			string,
+			Promise<{
+				model: ArrayBuffer;
+				vocabs: ArrayBuffer[];
+				shortlist: ArrayBuffer;
+				qualityModel: ArrayBuffer | null;
+				config: Record<string, any>;
+			}>
+		>();
 
 		/**
 		 * @type {string?}
@@ -113,7 +128,7 @@ export class TranslatorBacking {
 		 * A map of language-pairs to a list of models you need for it.
 		 * @type {Map<{from:string,to:string}, Promise<{from:string,to:string}[]>>}
 		 */
-		this.models = new Map();
+		this.models = new Map<string, Promise<TranslationModel[]>>();
 
 		/**
 		 * Error handler for all errors that are async, not tied to a specific
@@ -149,7 +164,7 @@ export class TranslatorBacking {
 		const pending = new Map();
 
 		// Function to send requests
-		const call = (name, ...args) =>
+		const call = (name: string | symbol, ...args: any[]) =>
 			new Promise((accept, reject) => {
 				const id = ++serial;
 				pending.set(id, {
@@ -157,7 +172,9 @@ export class TranslatorBacking {
 					reject,
 					callsite: {
 						// for debugging which call caused the error
-						message: `${name}(${args.map((arg) => String(arg)).join(', ')})`,
+						message: `${String(name)}(${args
+							.map((arg) => String(arg))
+							.join(', ')})`,
 						stack: new Error().stack,
 					},
 				});
@@ -208,9 +225,12 @@ export class TranslatorBacking {
 			exports: new Proxy(
 				{},
 				{
-					get(target, name, receiver) {
+					get(_target, name, _receiver) {
 						// Prevent this object from being marked "then-able"
-						if (name !== 'then') return (...args) => call(name, ...args);
+						if (name !== 'then')
+							return (...args: any[]) => call(name, ...args);
+
+						return undefined;
 					},
 				},
 			),
@@ -233,7 +253,7 @@ export class TranslatorBacking {
 	 *   }[]
 	 * }>}
 	 */
-	async loadModelRegistery() {
+	async loadModelRegistery(): Promise<Registry> {
 		// TODO: return cache only when fetch failed
 		const { [backingStorageName]: dataFromStorage } = await browser.storage.local.get(
 			backingStorageName,
@@ -251,7 +271,16 @@ export class TranslatorBacking {
 			return {
 				from: key.substring(0, 2),
 				to: key.substring(2, 4),
-				files,
+
+				// TODO: validate JSON
+				files: files as Record<
+					string,
+					{
+						name: string;
+						size: number;
+						expectedSha256Hash: string;
+					}
+				>,
 			};
 		});
 
@@ -272,17 +301,24 @@ export class TranslatorBacking {
 	 *   qualityModel: ArrayBuffer?
 	 * }>}
 	 */
-	getTranslationModel({ from, to }, options) {
+	getTranslationModel({ from, to }: LanguagesDirection):
+		| Promise<{
+				model: ArrayBuffer;
+				vocabs: ArrayBuffer[];
+				shortlist: ArrayBuffer;
+				qualityModel: ArrayBuffer | null;
+		  }>
+		| undefined {
 		const key = JSON.stringify({ from, to });
 
 		if (!this.buffers.has(key)) {
-			const promise = this.loadTranslationModel({ from, to }, options);
+			const promise = this.loadTranslationModel({ from, to });
 
 			// set the promise so we return the same promise when its still pending
 			this.buffers.set(key, promise);
 
 			// But if loading fails, remove the promise again so we can try again later
-			promise.catch((err) => this.buffers.delete(key));
+			promise.catch((_err) => this.buffers.delete(key));
 		}
 
 		return this.buffers.get(key);
@@ -302,113 +338,113 @@ export class TranslatorBacking {
 	 *   config: string?
 	 * }>}
 	 */
-	async loadTranslationModel({ from, to }, options) {
+	async loadTranslationModel({ from, to }: LanguagesDirection): Promise<{
+		model: ArrayBuffer;
+		vocabs: ArrayBuffer[];
+		shortlist: ArrayBuffer;
+		qualityModel: ArrayBuffer | null;
+		config: Record<string, any>;
+	}> {
 		performance.mark(`loadTranslationModule.${JSON.stringify({ from, to })}`);
 
 		// Find that model in the registry which will tell us about its files
-		const entries = (await this.registry).filter(
+		const entry = (await this.registry).find(
 			(model) => model.from == from && model.to == to,
 		);
 
-		if (!entries) throw new Error(`No model for '${from}' -> '${to}'`);
+		if (!entry) throw new Error(`No model for '${from}' -> '${to}'`);
 
-		const files = entries[0].files;
+		const files = entry.files;
 
-		const abort = () => reject(new CancelledError('abort signal'));
-
-		// Promise that resolves (or rejects really) when the abort signal hits
-		const escape = new Promise((accept, reject) => {
-			if (options?.signal) options.signal.addEventListener('abort', abort);
-		});
-
-		// Download all files mentioned in the registry entry. Race the promise
-		// of all fetch requests, and a promise that rejects on the abort signal
+		// Download all files mentioned in the registry entry
 		const buffers = Object.fromEntries(
-			await Promise.race([
-				Promise.all(
-					Object.entries(files).map(async ([part, file]) => {
-						// Special case where qualityModel is not part of the model, and this
-						// should also catch the `config` case.
-						if (file === undefined || file.name === undefined)
-							return [part, null];
+			await Promise.all(
+				Object.entries(files).map(async ([part, file]) => {
+					// Special case where qualityModel is not part of the model, and this
+					// should also catch the `config` case.
+					if (file === undefined || file.name === undefined)
+						return [part, null] as const;
 
-						try {
-							// Try get from cache
-							const cachedData = await getBergamotFile({
-								type: part,
-								expectedSha256Hash: file.expectedSha256Hash,
-								direction: { from, to },
-							});
-							if (cachedData !== null) {
-								return [part, cachedData.buffer];
-							}
-
-							const start = performance.now();
-							const arrayBuffer = await this.fetch(
-								file.name,
-								file.expectedSha256Hash,
-								options,
-							);
-							console.warn(
-								'TIME TO LOAD FILE FROM INTERNET',
-								performance.now() - start,
-							);
-
-							// Write cache
-							await addBergamotFile({
-								name: file.name,
-								expectedSha256Hash: file.expectedSha256Hash,
-
-								type: part,
-								direction: { from, to },
-								buffer: arrayBuffer,
-							});
-
-							return [part, arrayBuffer];
-						} catch (cause) {
-							throw new Error(
-								`Could not fetch ${file.name} for ${from}->${to} model`,
-								{ cause },
-							);
+					try {
+						// Try get from cache
+						const cachedData = await getBergamotFile({
+							type: part,
+							expectedSha256Hash: file.expectedSha256Hash,
+							direction: { from, to },
+						});
+						if (cachedData !== null) {
+							return [part, cachedData.buffer] as const;
 						}
-					}),
-				),
-				escape,
-			]),
-		);
 
-		// Nothing to abort now, clean up abort promise
-		if (options?.signal) options.signal.removeEventListener('abort', abort);
+						const start = performance.now();
+						const arrayBuffer = await this.fetch(
+							file.name,
+							file.expectedSha256Hash,
+						);
+						console.warn(
+							'TIME TO LOAD FILE FROM INTERNET',
+							performance.now() - start,
+						);
+
+						// Write cache
+						await addBergamotFile({
+							name: file.name,
+							expectedSha256Hash: file.expectedSha256Hash,
+
+							type: part,
+							direction: { from, to },
+							buffer: arrayBuffer,
+						});
+
+						return [part, arrayBuffer] as const;
+					} catch (cause) {
+						throw new Error(
+							`Could not fetch ${file.name} for ${from}->${to} model`,
+						);
+					}
+				}),
+			),
+		);
 
 		performance.measure(
 			'loadTranslationModel',
 			`loadTranslationModule.${JSON.stringify({ from, to })}`,
 		);
 
-		let vocabs = [];
-
-		if (buffers.vocab) vocabs = [buffers.vocab];
-		else if (buffers.trgvocab && buffers.srcvocab)
+		let vocabs: ArrayBuffer[];
+		if (buffers.vocab) {
+			vocabs = [buffers.vocab];
+		} else if (buffers.trgvocab && buffers.srcvocab) {
 			vocabs = [buffers.srcvocab, buffers.trgvocab];
-		else
+		} else {
 			throw new Error(
 				`Could not identify vocab files for ${from}->${to} model among: ${Array.from(
 					Object.keys(files),
 				).join(' ')}`,
 			);
+		}
 
-		let config = {};
+		let config: Record<string, any> = {};
 
 		// For the Ukrainian models we need to override the gemm-precision
-		if (files.model.name.endsWith('intgemm8.bin'))
+		if (files.model.name.endsWith('intgemm8.bin')) {
 			config['gemm-precision'] = 'int8shiftAll';
+		}
 
 		// If quality estimation is used, we need to turn off skip-cost. Turning
 		// this off causes quite the slowdown.
-		if (files.qualityModel) config['skip-cost'] = false;
+		if (files.qualityModel) {
+			config['skip-cost'] = false;
+		}
 
 		// Allow the registry to also specify marian configuration parameters
-		if (files.config) Object.assign(config, files.config);
+		if (files.config) {
+			Object.assign(config, files.config);
+		}
+
+		if (!buffers.model || !buffers.lex) {
+			throw new Error();
+		}
 
 		// Translate to generic bergamot-translator format that also supports
 		// separate vocabularies for input & output language, and calls 'lex'
@@ -417,7 +453,7 @@ export class TranslatorBacking {
 			model: buffers.model,
 			shortlist: buffers.lex,
 			vocabs,
-			qualityModel: buffers.qualityModel,
+			qualityModel: buffers.qualityModel ?? null,
 			config,
 		};
 	}
@@ -429,7 +465,7 @@ export class TranslatorBacking {
 	 * @param {{signal:AbortSignal}?} extra fetch options
 	 * @returns {Promise<ArrayBuffer>}
 	 */
-	async fetch(url, checksum, extra) {
+	async fetch(url: string, checksum: string) {
 		// Rig up a timeout cancel signal for our fetch
 		const controller = new AbortController();
 		const abort = () => controller.abort();
@@ -439,30 +475,24 @@ export class TranslatorBacking {
 			: null;
 
 		try {
-			// Also maintain the original abort signal
-			if (extra?.signal) extra.signal.addEventListener('abort', abort);
-
-			const options = {
+			const options: RequestInit = {
 				credentials: 'omit',
 				signal: controller.signal,
 			};
 
-			if (checksum) options['integrity'] = `sha256-${this.hexToBase64(checksum)}`;
+			if (checksum) {
+				options['integrity'] = `sha256-${this.hexToBase64(checksum)}`;
+			}
 
 			// Disable the integrity check for NodeJS because of
 			// https://github.com/nodejs/undici/issues/1594
 			if (typeof window === 'undefined') delete options['integrity'];
 
 			// Start downloading the url, using the hex checksum to ask
-			// `fetch()` to verify the download using subresource integrity
-			const response = await fetch(url, options);
-
-			// Finish downloading (or crash due to timeout)
-			return await response.arrayBuffer();
+			// `fetch` to verify the download using subresource integrity
+			return fetch(url, options).then((rsp) => rsp.arrayBuffer());
 		} finally {
 			if (timeout) clearTimeout(timeout);
-
-			if (extra?.signal) extra.signal.removeEventListener('abort', abort);
 		}
 	}
 
@@ -470,15 +500,16 @@ export class TranslatorBacking {
 	 * Converts the hexadecimal hashes from the registry to something we can use with
 	 * the fetch() method.
 	 */
-	hexToBase64(hexstring) {
-		return btoa(
-			hexstring
-				.match(/\w{2}/g)
-				.map(function (a) {
-					return String.fromCharCode(parseInt(a, 16));
-				})
-				.join(''),
-		);
+	hexToBase64(hexstring: string) {
+		const match = hexstring.match(/\w{2}/g);
+		if (match === null) {
+			throw new TypeError('Hex string are invalid');
+		}
+
+		const binaryString = match
+			.map((a) => String.fromCharCode(parseInt(a, 16)))
+			.join('');
+		return btoa(binaryString);
 	}
 
 	/**
@@ -496,7 +527,7 @@ export class TranslatorBacking {
 	 * ```
 	 * @returns {Promise<TranslationModel[]>}
 	 */
-	getModels({ from, to }) {
+	getModels({ from, to }: LanguagesDirection) {
 		const key = JSON.stringify({ from, to });
 
 		// Note that the `this.models` map stores Promises. This so that
@@ -505,7 +536,12 @@ export class TranslatorBacking {
 		// The lookup is async because we need to await `this.registry`
 		if (!this.models.has(key)) this.models.set(key, this.findModels(from, to));
 
-		return this.models.get(key);
+		const model = this.models.get(key);
+		if (!model) {
+			throw new Error('Model not found');
+		}
+
+		return model;
 	}
 
 	/**
@@ -514,12 +550,12 @@ export class TranslatorBacking {
 	 * @param {string} to
 	 * @returns {Promise<TranslationModel[]>}
 	 */
-	async findModels(from, to) {
+	async findModels(from: string, to: string) {
 		const registry = await this.registry;
 
-		let direct = [],
-			outbound = [],
-			inbound = [];
+		let direct: Model[] = [],
+			outbound: Model[] = [],
+			inbound: Model[] = [];
 
 		registry.forEach((model) => {
 			if (model.from === from && model.to === to) direct.push(model);
@@ -537,11 +573,37 @@ export class TranslatorBacking {
 	}
 }
 
+type WorkerObject = {
+	idle: boolean;
+	worker: Worker;
+	exports: any;
+};
+
+type TranslationTask = {
+	id: number;
+	key: string;
+	priority: number;
+	models: TranslationModel[];
+	requests: Array<{
+		request: TranslationRequest;
+		resolve: (response: TranslationResponse) => void;
+		reject: (error: Error) => void;
+	}>;
+};
+
 /**
  * Translator balancing between throughput and latency. Can use multiple worker
  * threads.
  */
 export class BatchTranslator {
+	private backing;
+	private workers: WorkerObject[];
+	private workerLimit;
+	private queue: TranslationTask[];
+	private batchSerial;
+	private batchSize;
+	private onerror;
+
 	/**
 	 * @param {{
 	 *  cacheSize?: number,
@@ -554,7 +616,13 @@ export class BatchTranslator {
 	 *  pivotLanguage?: string?
 	 * }} options
 	 */
-	constructor(options, backing) {
+	constructor(
+		options: BackingOptions & {
+			workers: number;
+			batchSize: number;
+		},
+		backing: TranslatorBacking,
+	) {
 		if (!backing) backing = new TranslatorBacking(options);
 
 		this.backing = backing;
@@ -637,7 +705,7 @@ export class BatchTranslator {
 				try {
 					// Claim a place in the workers array (but mark it busy so
 					// it doesn't get used by any other `notify()` calls).
-					const placeholder = { idle: false };
+					const placeholder: WorkerObject = { idle: false } as WorkerObject;
 					this.workers.push(placeholder);
 
 					// adds `worker` and `exports` props
@@ -648,8 +716,10 @@ export class BatchTranslator {
 				} catch (e) {
 					this.onerror(
 						new Error(
-							`Could not initialise translation worker: ${e.message}`,
-						),
+							`Could not initialise translation worker: ${
+								(e as Error).message
+							}`,
+						) as unknown as ErrorEvent,
 					);
 				}
 			}
@@ -665,10 +735,12 @@ export class BatchTranslator {
 
 			// Put this worker to work, marking as busy
 			worker.idle = false;
-			try {
-				await this.consumeBatch(batch, worker.exports);
-			} catch (e) {
-				batch.requests.forEach(({ reject }) => reject(e));
+			if (batch) {
+				try {
+					await this.consumeBatch(batch, worker.exports);
+				} catch (e) {
+					batch?.requests.forEach(({ reject }) => reject(e as Error));
+				}
 			}
 			worker.idle = true;
 
@@ -691,7 +763,7 @@ export class BatchTranslator {
 	 * @param {TranslationRequest} request
 	 * @returns {Promise<TranslationResponse>}
 	 */
-	translate(request) {
+	translate(request: TranslationRequest): Promise<TranslationResponse> {
 		const { from, to, priority } = request;
 
 		return new Promise(async (resolve, reject) => {
@@ -721,7 +793,7 @@ export class BatchTranslator {
 	 * closed.
 	 * @param {(request:TranslationRequest) => boolean} filter evaluates to true if request should be removed
 	 */
-	remove(filter) {
+	remove(filter: (request: TranslationRequest) => boolean) {
 		const queue = this.queue;
 
 		this.queue = [];
@@ -758,7 +830,21 @@ export class BatchTranslator {
 	 * `translate()` but also used when filtering pending requests.
 	 * @param {{request:TranslateRequest, models:TranslationModel[], key:String, priority:Number?, resolve:(TranslateResponse)=>any, reject:(Error)=>any}}
 	 */
-	enqueue({ key, models, request, resolve, reject, priority }) {
+	enqueue({
+		key,
+		models,
+		request,
+		resolve,
+		reject,
+		priority,
+	}: {
+		request: TranslationRequest;
+		models: TranslationModel[];
+		key: string;
+		priority?: number;
+		resolve: (rsp: TranslationResponse) => void;
+		reject: (Error: Error) => void;
+	}) {
 		if (priority === undefined) priority = 0;
 		// Find a batch in the queue that we can add to
 		// (TODO: can we search backwards? that would speed things up)
@@ -785,7 +871,7 @@ export class BatchTranslator {
 	 * wait for the batch to be done by awaiting this call. You should only
 	 * then reuse the worker otherwise you'll just clog up its message queue.
 	 */
-	async consumeBatch(batch, worker) {
+	async consumeBatch(batch: TranslationTask, worker: Record<string, any>) {
 		performance.mark('BergamotBatchTranslator.start');
 
 		// Make sure the worker has all necessary models loaded. If not, tell it
@@ -813,7 +899,7 @@ export class BatchTranslator {
 
 		// Responses are in! Connect them back to their requests and call their
 		// callbacks.
-		batch.requests.forEach(({ request, resolve, reject }, i) => {
+		batch.requests.forEach(({ request, resolve }, i) => {
 			// TODO: look at response.ok and reject() if it is false
 			resolve({
 				request, // Include request for easy reference? Will allow you
