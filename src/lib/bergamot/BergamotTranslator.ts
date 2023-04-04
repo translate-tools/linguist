@@ -7,7 +7,7 @@ export class BergamotTranslator {
 
 	private translator;
 	constructor() {
-		this.translator = new BatchTranslator({}, undefined);
+		this.translator = new BatchTranslator();
 	}
 
 	translate = async (text: string, from: string, to: string) => {

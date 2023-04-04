@@ -88,7 +88,7 @@ export class TranslatorBacking {
 	private onerror;
 
 	private options;
-	constructor(options: BackingOptions) {
+	constructor(options?: BackingOptions) {
 		this.options = options || {};
 
 		this.registryUrl =
@@ -122,7 +122,7 @@ export class TranslatorBacking {
 		 * @type {string?}
 		 */
 		this.pivotLanguage =
-			'pivotLanguage' in this.options ? options.pivotLanguage : 'en';
+			'pivotLanguage' in this.options ? this.options.pivotLanguage : 'en';
 
 		/**
 		 * A map of language-pairs to a list of models you need for it.
@@ -617,11 +617,13 @@ export class BatchTranslator {
 	 * }} options
 	 */
 	constructor(
-		options: BackingOptions & {
-			workers: number;
-			batchSize: number;
-		},
-		backing: TranslatorBacking,
+		options?: Partial<
+			BackingOptions & {
+				workers: number;
+				batchSize: number;
+			}
+		>,
+		backing?: TranslatorBacking,
 	) {
 		if (!backing) backing = new TranslatorBacking(options);
 
