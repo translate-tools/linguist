@@ -73,6 +73,7 @@ type BackingOptions = {
 	registryUrl?: string;
 	pivotLanguage?: string;
 	onerror?: (err: ErrorEvent) => void;
+	workerUrl?: string;
 };
 
 /**
@@ -149,7 +150,8 @@ export class TranslatorBacking {
 	 */
 	async loadWorker() {
 		const worker = new Worker(
-			browser.runtime.getURL('thirdparty/bergamot/translator-worker.js'),
+			this.options.workerUrl ??
+				browser.runtime.getURL('thirdparty/bergamot/translator-worker.js'),
 		);
 
 		/**
@@ -575,8 +577,10 @@ export class TranslatorBacking {
 
 type WorkerObject = {
 	idle: boolean;
-	worker: Worker;
-	exports: any;
+	controls?: {
+		worker: Worker;
+		exports: Record<any, any>;
+	};
 };
 
 type TranslationTask = {
@@ -597,25 +601,33 @@ type TranslationTask = {
  */
 export class BatchTranslator {
 	private backing;
-	private workers: WorkerObject[];
-	private workerLimit;
-	private queue: TranslationTask[];
-	private batchSerial;
-	private batchSize;
-	private onerror;
 
 	/**
-	 * @param {{
-	 *  cacheSize?: number,
-	 *  useNativeIntGemm?: boolean,
-	 *  workers?: number,
-	 *  batchSize?: number,
-	 *  downloadTimeout?: number,
-	 *  workerUrl?: string,
-	 *  registryUrl?: string
-	 *  pivotLanguage?: string?
-	 * }} options
+	 * List of active workers (and a flag to mark them idle or not)
 	 */
+	private workers: WorkerObject[];
+	private workerLimit;
+
+	/**
+	 * List of batches we push() to & shift() from using `enqueue`.
+	 */
+	private queue: TranslationTask[];
+
+	/**
+	 * batch serial to help keep track of batches when debugging
+	 */
+	private batchSerial;
+
+	/**
+	 * Number of requests in a batch before it is ready to be translated in
+	 * a single call. Bigger is better for throughput (better matrix packing)
+	 * but worse for latency since you'll have to wait for the entire batch
+	 * to be translated.
+	 */
+	private batchSize;
+
+	private onerror;
+
 	constructor(
 		options?: Partial<
 			BackingOptions & {
@@ -625,51 +637,13 @@ export class BatchTranslator {
 		>,
 		backing?: TranslatorBacking,
 	) {
-		if (!backing) backing = new TranslatorBacking(options);
+		this.backing = backing ?? new TranslatorBacking(options);
 
-		this.backing = backing;
-
-		/**
-		 * @type {Array<{idle:Boolean, worker:Proxy}>} List of active workers
-		 * (and a flag to mark them idle or not)
-		 */
 		this.workers = [];
-
-		/**
-		 * Maximum number of workers
-		 * @type {number}
-		 */
 		this.workerLimit = Math.max(options?.workers || 0, 1);
 
-		/**
-		 * List of batches we push() to & shift() from using `enqueue`.
-		 * @type {{
-		 *    id: number,
-		 *    key: string,
-		 *    priority: number,
-		 *    models: TranslationModel[],
-		 *    requests: Array<{
-		 *      request: TranslationRequest,
-		 *      resolve: (response: TranslationResponse),
-		 *      reject: (error: Error)
-		 *    }>
-		 * }}
-		 */
 		this.queue = [];
-
-		/**
-		 * batch serial to help keep track of batches when debugging
-		 * @type {Number}
-		 */
 		this.batchSerial = 0;
-
-		/**
-		 * Number of requests in a batch before it is ready to be translated in
-		 * a single call. Bigger is better for throughput (better matrix packing)
-		 * but worse for latency since you'll have to wait for the entire batch
-		 * to be translated.
-		 * @type {Number}
-		 */
 		this.batchSize = Math.max(options?.batchSize || 8, 1);
 
 		this.onerror =
@@ -678,14 +652,76 @@ export class BatchTranslator {
 	}
 
 	/**
-	 * Destructor that stops and cleans up.
+	 * @example
+	 * ```
+	 * const {target: {text:string}} = await this.translate({
+	 *   from: 'de',
+	 *   to: 'en',
+	 *   text: 'Hallo Welt!',
+	 *   html: false, // optional
+	 *   priority: 0 // optional, like `nice` lower numbers are translated first
+	 * })
+	 * ```
 	 */
-	async delete() {
-		// Empty the queue
-		this.remove(() => true);
+	public translate(request: TranslationRequest): Promise<TranslationResponse> {
+		const { from, to } = request;
 
-		// Terminate the workers
-		this.workers.forEach(({ worker }) => worker.terminate());
+		return new Promise(async (resolve, reject) => {
+			// Batching key: only requests with the same key can be batched
+			// together. Think same translation model, same options.
+			const key = JSON.stringify({ from, to });
+
+			// (Fetching models first because if we would do it between looking
+			// for a batch and making a new one, we end up with a race condition.)
+			const models = await this.backing.getModels(request);
+
+			// Put the request and its callbacks into a fitting batch
+			this.enqueue({ key, models, request, resolve, reject });
+
+			// Tell a worker to pick up the work at some point.
+			this.notify();
+		});
+	}
+
+	/**
+	 * Internal function used to put a request in a batch that still has space.
+	 * Also responsible for keeping the batches in order of priority. Called by
+	 * `translate()` but also used when filtering pending requests.
+	 */
+	private enqueue({
+		key,
+		models,
+		request,
+		resolve,
+		reject,
+	}: {
+		request: TranslationRequest;
+		models: TranslationModel[];
+		key: string;
+		resolve: (rsp: TranslationResponse) => void;
+		reject: (Error: Error) => void;
+	}) {
+		const priority = request.priority ?? 0;
+
+		// Find a batch in the queue that we can add to
+		// TODO: can we search backwards? that would speed things up
+		let batch = this.queue.find((batch) => {
+			return (
+				batch.key === key &&
+				batch.priority === priority &&
+				batch.requests.length < this.batchSize
+			);
+		});
+
+		// No batch or full batch? Queue up a new one
+		if (!batch) {
+			batch = { id: ++this.batchSerial, key, priority, models, requests: [] };
+
+			this.queue.push(batch);
+			this.queue.sort((a, b) => a.priority - b.priority);
+		}
+
+		batch.requests.push({ request, resolve, reject });
 	}
 
 	/**
@@ -694,7 +730,7 @@ export class BatchTranslator {
 	 * calling itself as long as there is work in the queue, but it does not
 	 * hurt to call it multiple times. This function always returns immediately.
 	 */
-	notify() {
+	private notify() {
 		setTimeout(async () => {
 			// Is there work to be done?
 			if (!this.queue.length) return;
@@ -707,11 +743,11 @@ export class BatchTranslator {
 				try {
 					// Claim a place in the workers array (but mark it busy so
 					// it doesn't get used by any other `notify()` calls).
-					const placeholder: WorkerObject = { idle: false } as WorkerObject;
+					const placeholder: WorkerObject = { idle: false };
 					this.workers.push(placeholder);
 
 					// adds `worker` and `exports` props
-					Object.assign(placeholder, await this.backing.loadWorker());
+					placeholder.controls = await this.backing.loadWorker();
 
 					// At this point we know our new worker will be usable.
 					worker = placeholder;
@@ -727,7 +763,7 @@ export class BatchTranslator {
 			}
 
 			// If no worker, that's the end of it.
-			if (!worker) return;
+			if (!worker || !worker.controls) return;
 
 			// Up to this point, this function has not used await, so no
 			// chance that another call stole our batch since we did the check
@@ -739,7 +775,7 @@ export class BatchTranslator {
 			worker.idle = false;
 			if (batch) {
 				try {
-					await this.consumeBatch(batch, worker.exports);
+					await this.consumeBatch(batch, worker.controls.exports);
 				} catch (e) {
 					batch?.requests.forEach(({ reject }) => reject(e as Error));
 				}
@@ -752,128 +788,11 @@ export class BatchTranslator {
 	}
 
 	/**
-	 * The only real public call you need!
-	 * ```
-	 * const {target: {text:string}} = await this.translate({
-	 *   from: 'de',
-	 *   to: 'en',
-	 *   text: 'Hallo Welt!',
-	 *   html: false, // optional
-	 *   priority: 0 // optional, like `nice` lower numbers are translated first
-	 * })
-	 * ```
-	 * @param {TranslationRequest} request
-	 * @returns {Promise<TranslationResponse>}
-	 */
-	translate(request: TranslationRequest): Promise<TranslationResponse> {
-		const { from, to, priority } = request;
-
-		return new Promise(async (resolve, reject) => {
-			try {
-				// Batching key: only requests with the same key can be batched
-				// together. Think same translation model, same options.
-				const key = JSON.stringify({ from, to });
-
-				// (Fetching models first because if we would do it between looking
-				// for a batch and making a new one, we end up with a race condition.)
-				const models = await this.backing.getModels(request);
-
-				// Put the request and its callbacks into a fitting batch
-				this.enqueue({ key, models, request, resolve, reject, priority });
-
-				// Tell a worker to pick up the work at some point.
-				this.notify();
-			} catch (e) {
-				reject(e);
-			}
-		});
-	}
-
-	/**
-	 * Prune pending requests by testing each one of them to whether they're
-	 * still relevant. Used to prune translation requests from tabs that got
-	 * closed.
-	 * @param {(request:TranslationRequest) => boolean} filter evaluates to true if request should be removed
-	 */
-	remove(filter: (request: TranslationRequest) => boolean) {
-		const queue = this.queue;
-
-		this.queue = [];
-
-		queue.forEach((batch) => {
-			batch.requests.forEach(({ request, resolve, reject }) => {
-				if (filter(request)) {
-					// Add error.request property to match response.request for
-					// a resolve() callback. Pretty useful if you don't want to
-					// do all kinds of Funcion.bind() dances.
-					reject(
-						Object.assign(new CancelledError('removed by filter'), {
-							request,
-						}),
-					);
-					return;
-				}
-
-				this.enqueue({
-					key: batch.key,
-					priority: batch.priority,
-					models: batch.models,
-					request,
-					resolve,
-					reject,
-				});
-			});
-		});
-	}
-
-	/**
-	 * Internal function used to put a request in a batch that still has space.
-	 * Also responsible for keeping the batches in order of priority. Called by
-	 * `translate()` but also used when filtering pending requests.
-	 * @param {{request:TranslateRequest, models:TranslationModel[], key:String, priority:Number?, resolve:(TranslateResponse)=>any, reject:(Error)=>any}}
-	 */
-	enqueue({
-		key,
-		models,
-		request,
-		resolve,
-		reject,
-		priority,
-	}: {
-		request: TranslationRequest;
-		models: TranslationModel[];
-		key: string;
-		priority?: number;
-		resolve: (rsp: TranslationResponse) => void;
-		reject: (Error: Error) => void;
-	}) {
-		if (priority === undefined) priority = 0;
-		// Find a batch in the queue that we can add to
-		// (TODO: can we search backwards? that would speed things up)
-		let batch = this.queue.find((batch) => {
-			return (
-				batch.key === key &&
-				batch.priority === priority &&
-				batch.requests.length < this.batchSize
-			);
-		});
-
-		// No batch or full batch? Queue up a new one
-		if (!batch) {
-			batch = { id: ++this.batchSerial, key, priority, models, requests: [] };
-			this.queue.push(batch);
-			this.queue.sort((a, b) => a.priority - b.priority);
-		}
-
-		batch.requests.push({ request, resolve, reject });
-	}
-
-	/**
 	 * Internal method that uses a worker thread to process a batch. You can
 	 * wait for the batch to be done by awaiting this call. You should only
 	 * then reuse the worker otherwise you'll just clog up its message queue.
 	 */
-	async consumeBatch(batch: TranslationTask, worker: Record<string, any>) {
+	private async consumeBatch(batch: TranslationTask, worker: Record<string, any>) {
 		performance.mark('BergamotBatchTranslator.start');
 
 		// Make sure the worker has all necessary models loaded. If not, tell it
@@ -912,5 +831,55 @@ export class BatchTranslator {
 		});
 
 		performance.measure('BergamotBatchTranslator', 'BergamotBatchTranslator.start');
+	}
+
+	/**
+	 * Destructor that stops and cleans up.
+	 */
+	public async delete() {
+		// Empty the queue
+		this.remove(() => true);
+
+		// Terminate the workers
+		this.workers.forEach(({ controls }) => {
+			if (controls) {
+				controls.worker.terminate();
+			}
+		});
+	}
+
+	/**
+	 * Prune pending requests by testing each one of them to whether they're
+	 * still relevant. Used to prune translation requests from tabs that got
+	 * closed.
+	 */
+	public remove(filter: (request: TranslationRequest) => boolean) {
+		const queue = this.queue;
+
+		this.queue = [];
+
+		queue.forEach((batch) => {
+			batch.requests.forEach(({ request, resolve, reject }) => {
+				if (filter(request)) {
+					// Add error.request property to match response.request for
+					// a resolve() callback. Pretty useful if you don't want to
+					// do all kinds of Funcion.bind() dances.
+					reject(
+						Object.assign(new CancelledError('removed by filter'), {
+							request,
+						}),
+					);
+					return;
+				}
+
+				this.enqueue({
+					key: batch.key,
+					models: batch.models,
+					request,
+					resolve,
+					reject,
+				});
+			});
+		});
 	}
 }
