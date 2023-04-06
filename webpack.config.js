@@ -32,6 +32,8 @@ module.exports = {
 	entry: {
 		background: './src/background.ts',
 		contentscript: './src/contentscript.tsx',
+		['thirdparty/bergamot/translator-worker']:
+			'./thirdparty/bergamot/src/translator-worker.ts',
 		['pages/popup/popup']: './src/pages/popup/popup.tsx',
 		['pages/options/options']: './src/pages/options/options.tsx',
 		['pages/dictionary/dictionary']: './src/pages/dictionary/dictionary.tsx',
@@ -113,8 +115,8 @@ module.exports = {
 
 				// Static files
 				{
-					from: 'thirdparty/bergamot/{*.js,build/*.{js,wasm}}',
-					to: path.join(outputPath),
+					from: 'thirdparty/bergamot/build/*.{js,wasm}',
+					to: path.join(outputPath, 'thirdparty/bergamot/[name].[ext]'),
 				},
 
 				// Serve static files

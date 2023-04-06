@@ -8,6 +8,7 @@ import browser from 'webextension-polyfill';
 
 import { getBergamotFile } from '../../requests/backend/bergamot/getBergamotFile';
 import { addBergamotFile } from '../../requests/backend/bergamot/addBergamotFile';
+import { BergamotTranslatorWorkerAPI } from '../../../thirdparty/bergamot/src/translator-worker';
 
 /**
  * @typedef {Object} TranslationRequest
@@ -37,7 +38,7 @@ export class CancelledError extends Error {}
 
 const backingStorageName = 'bergamotBacking';
 
-type TranslationRequest = {
+export type TranslationRequest = {
 	from: string;
 	to: string;
 	text: string;
@@ -239,7 +240,7 @@ export class TranslatorBacking {
 						return undefined;
 					},
 				},
-			),
+			) as BergamotTranslatorWorkerAPI,
 		};
 	}
 
@@ -583,7 +584,7 @@ type WorkerObject = {
 	idle: boolean;
 	controls?: {
 		worker: Worker;
-		exports: Record<any, any>;
+		exports: BergamotTranslatorWorkerAPI;
 	};
 };
 

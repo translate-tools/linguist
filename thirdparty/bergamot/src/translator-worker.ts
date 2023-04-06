@@ -4,124 +4,60 @@
  */
 /* eslint-disable */
 
+export type BergamotTranslatorWorkerAPI = {
+	hasTranslationModel: (model: { from: string; to: string }) => boolean;
+};
+
+export type BergamotTranslatorWorkerOptions = {
+	cacheSize?: number;
+	useNativeIntGemm?: boolean;
+};
+
 /**
  * Wrapper around the dirty bits of Bergamot's WASM bindings.
  */
 
+// TODO: add actual type with onRuntimeInitialized, instantiateWasm, asm...
+
+// Read more: https://github.com/emscripten-core/emscripten/blob/9fdc94ad3e3c89558fd251048e8ae2c2ca408dc1/site/source/docs/api_reference/module.rst
 // Global because importScripts is global.
-var Module = {};
+var Module: Record<string, any> = {};
 
-/**
- * node.js compatibility: Fake GlobalWorkerScope that emulates being inside a
- * WebWorker
- */
-if (typeof self === 'undefined') {
-	global.Module = Module;
+declare global {
+	/**
+	 * Docs: https://github.com/emscripten-core/emscripten/blob/9fdc94ad3e3c89558fd251048e8ae2c2ca408dc1/site/source/docs/api_reference/module.rst
+	 */
+	var Module: Record<string, Function>;
 
-	global.self = new (class GlobalWorkerScope {
-		/** @type {import("node:worker_threads").MessagePort} */
-		#port;
-
-		constructor() {
-			const {
-				parentPort,
-			} = require(/* webpackIgnore: true */ 'node:worker_threads');
-			this.#port = parentPort;
-		}
-
-		/**
-		 * Add event listener to listen for messages posted to the worker.
-		 * @param {string} eventName
-		 * @param {(object)} callback
-		 */
-		addEventListener(eventName, callback) {
-			this.#port.on(eventName, (data) => callback({ data }));
-		}
-
-		/**
-		 * Post message outside, to the owner of the Worker.
-		 * @param {any} message
-		 */
-		postMessage(message) {
-			this.#port.postMessage(message);
-		}
-
-		/**
-		 * @param {...string} scripts - Paths to scripts to import in that order
-		 */
-		importScripts(...scripts) {
-			const { readFileSync } = require(/* webpackIgnore: true */ 'node:fs');
-			const { join } = require(/* webpackIgnore: true */ 'node:path');
-			for (let pathname of scripts) {
-				const script = readFileSync(join(__dirname, pathname), {
-					encoding: 'utf-8',
-				});
-				eval.call(global, script);
-			}
-		}
-
-		/**
-		 * Adds support for local file urls. Assumes anything that doesn't start
-		 * with "http" to be a local path.
-		 * @param {string} url - path or url
-		 * @param {object?} options - See `fetch()` options
-		 * @return {Promise<Response>}
-		 */
-		async fetch(url, options) {
-			if (url.protocol === 'file:') {
-				const {
-					readFile,
-				} = require(/* webpackIgnore: true */ 'node:fs/promises');
-				const buffer = await readFile(url.pathname);
-				const blob = new Blob([buffer]);
-				return new Response(blob, {
-					status: 200,
-					statusText: 'OK',
-					headers: {
-						'Content-Type': 'application/wasm',
-						'Content-Length': blob.size.toString(),
-					},
-				});
-			}
-
-			return await fetch(url, options);
-		}
-
-		get location() {
-			return new URL(`file://${__filename}`);
-		}
-	})();
+	/**
+	 * Synchronous import
+	 * Docs: https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/importScripts
+	 */
+	var importScripts: (...files: string[]) => void;
 }
 
+/**
+ * YAML parser for trivial cases
+ */
 class YAML {
 	/**
 	 * Parses YAML into dictionary. Does not interpret types, all values are a
-	 * string or a list of strings. No support for objects other than the top
-	 * level.
-	 * @param {string} yaml
-	 * @return {{[string]: string | string[]}}
+	 * string. No support for objects other than the top level.
 	 */
-	static parse(yaml) {
-		const out = {};
+	static parse(yaml: string) {
+		const out: Record<string, string> = {};
 
-		yaml.split('\n').reduce((key, line, i) => {
+		yaml.split('\n').forEach((line, i) => {
 			let match;
-			if ((match = line.match(/^\s*-\s+(.+?)$/))) {
-				if (!Array.isArray(out[key]))
-					out[key] = out[key].trim() ? [out[key]] : [];
-				out[key].push(match[1].trim());
-			} else if (
-				(match = line.match(/^\s*([A-Za-z0-9_][A-Za-z0-9_-]*):\s*(.*)$/))
-			) {
-				key = match[1];
+			if ((match = line.match(/^\s*([A-Za-z0-9_][A-Za-z0-9_-]*):\s*(.*)$/))) {
+				const key = match[1];
 				out[key] = match[2].trim();
 			} else if (!line.trim()) {
 				// whitespace, ignore
 			} else {
 				throw Error(`Could not parse line ${i + 1}: "${line}"`);
 			}
-			return key;
-		}, null);
+		});
 
 		return out;
 	}
@@ -129,32 +65,51 @@ class YAML {
 	/**
 	 * Turns an object into a YAML string. No support for objects, only simple
 	 * types and lists of simple types.
-	 * @param {{[string]: string | number | boolean | string[]}} data
-	 * @return {string}
 	 */
-	static stringify(data) {
+	static stringify(data: Record<string, string | number | boolean | string[]>) {
 		return Object.entries(data).reduce((str, [key, value]) => {
-			let valstr = '';
-			if (Array.isArray(value))
-				valstr = value.map((val) => `\n  - ${val}`).join('');
-			else if (
+			let stringifiedValue = '';
+			if (Array.isArray(value)) {
+				// Strings array
+				stringifiedValue = value.map((val) => `\n  - ${val}`).join('');
+			} else if (
 				typeof value === 'number' ||
 				typeof value === 'boolean' ||
 				value.match(/^\d*(\.\d+)?$/)
-			)
-				valstr = `${value}`;
-			else valstr = `${value}`; // Quote?
+			) {
+				// Number
+				stringifiedValue = `${value}`;
+			} else {
+				stringifiedValue = `${value}`; // Quote?
+			}
 
-			return `${str}${key}: ${valstr}\n`;
+			return str + `${key}: ${stringifiedValue}\n`;
 		}, '');
 	}
 }
+
+type TranslationModel = {
+	from: string;
+	to: string;
+	files: Record<
+		string,
+		{
+			name: string;
+			size: number;
+			expectedSha256Hash: string;
+		}
+	>;
+};
+
+type BergamotTranslator = any;
+type BlockingService = any;
+type AlignedMemory = any;
 
 /**
  * Wrapper around the bergamot-translator exported module that hides the need
  * of working with C++ style data structures and does model management.
  */
-class BergamotTranslatorWorker {
+class BergamotTranslatorWorker implements BergamotTranslatorWorkerAPI {
 	/**
 	 * Map of expected symbol -> name of fallback symbol for functions that can
 	 * be swizzled for a faster implementation. Firefox Nightly makes use of
@@ -177,11 +132,16 @@ class BergamotTranslatorWorker {
 	 */
 	static NATIVE_INT_GEMM = 'mozIntGemm';
 
+	private options: BergamotTranslatorWorkerOptions = {};
+	private models: Map<string, Promise<TranslationModel>> = new Map();
+	private module: any;
+	private service: any;
+
 	/**
 	 * Empty because we can't do async constructors yet. It is the
 	 * responsibility of whoever owns this WebWorker to call `initialize()`.
 	 */
-	constructor(options) {}
+	constructor() {}
 
 	/**
 	 * Instantiates a new translation worker with optional options object.
@@ -196,11 +156,11 @@ class BergamotTranslatorWorker {
 	 *                     upper bound. In practice it will use about 1/3th of
 	 *                     the cache specified here. 2^14 is not a bad starting
 	 *                     value.
-	 * @param {{useNativeIntGemm: boolean, cacheSize: number}} options
 	 */
-	async initialize(options) {
+	public async initialize(options?: BergamotTranslatorWorkerOptions) {
 		this.options = options || {};
-		this.models = new Map(); // Map<str,Promise<TranslationModel>>
+		this.models = new Map();
+		console.warn('MODELS', this.models);
 		this.module = await this.loadModule();
 		this.service = await this.loadTranslationService();
 	}
@@ -210,18 +170,21 @@ class BergamotTranslatorWorker {
 	 * fails because it or any of the expected functions is not available, it
 	 * falls back to using the naive implementations that come with the wasm
 	 * binary itself through `linkFallbackIntGemm()`.
-	 * @param {{env: {memory: WebAssembly.Memory}}} info
-	 * @return {{[method:string]: (...any) => any}}
 	 */
-	linkNativeIntGemm(info) {
-		if (!WebAssembly['mozIntGemm']) {
+	private linkNativeIntGemm(info: {
+		env: { memory: WebAssembly.Memory };
+	}): WebAssembly.Exports {
+		const mozIntGemm = WebAssembly['mozIntGemm' as keyof typeof WebAssembly] as
+			| (() => WebAssembly.Module)
+			| undefined;
+		if (!mozIntGemm) {
 			console.warn(
 				'Native gemm requested but not available, falling back to embedded gemm',
 			);
 			return this.linkFallbackIntGemm(info);
 		}
 
-		const instance = new WebAssembly.Instance(WebAssembly['mozIntGemm'](), {
+		const instance = new WebAssembly.Instance(mozIntGemm(), {
 			'': { memory: info['env']['memory'] },
 		});
 
@@ -243,14 +206,14 @@ class BergamotTranslatorWorker {
 	 * Links intgemm functions that are already available in the wasm binary,
 	 * but just exports them under the name that is expected by
 	 * bergamot-translator.
-	 * @param {{env: {memory: WebAssembly.Memory}}} info
-	 * @return {{[method:string]: (...any) => any}}
 	 */
-	linkFallbackIntGemm(info) {
+	linkFallbackIntGemm(_info: {
+		env: { memory: WebAssembly.Memory };
+	}): WebAssembly.Exports {
 		const mapping = Object.entries(
 			BergamotTranslatorWorker.GEMM_TO_FALLBACK_FUNCTIONS_MAP,
 		).map(([key, name]) => {
-			return [key, (...args) => Module['asm'][name](...args)];
+			return [key, (...args: any[]) => Module['asm'][name](...args)];
 		});
 
 		return Object.fromEntries(mapping);
@@ -262,21 +225,27 @@ class BergamotTranslatorWorker {
 	 * and functions exported by bergamot-translator.
 	 * @return {Promise<BergamotTranslator>}
 	 */
-	loadModule() {
-		return new Promise(async (resolve, reject) => {
+	loadModule(): Promise<BergamotTranslator> {
+		return new Promise<BergamotTranslator>(async (resolve, reject) => {
 			try {
 				const response = await self.fetch(
-					new URL('./build/bergamot-translator-worker.wasm', self.location),
+					new URL(
+						'./bergamot-translator-worker.wasm',
+						self.location.toString(),
+					),
 				);
 
 				Object.assign(Module, {
-					instantiateWasm: (info, accept) => {
+					instantiateWasm: (
+						info: WebAssembly.Imports,
+						accept: (instance: WebAssembly.Instance) => any,
+					) => {
 						try {
 							WebAssembly.instantiateStreaming(response, {
 								...info,
 								wasm_gemm: this.options.useNativeIntGemm
-									? this.linkNativeIntGemm(info)
-									: this.linkFallbackIntGemm(info),
+									? this.linkNativeIntGemm(info as any)
+									: this.linkFallbackIntGemm(info as any),
 							})
 								.then(({ instance }) => accept(instance))
 								.catch(reject);
@@ -286,13 +255,14 @@ class BergamotTranslatorWorker {
 						return {};
 					},
 					onRuntimeInitialized: () => {
+						console.warn('MODULE INITIALIZED', Module);
 						resolve(Module);
 					},
 				});
 
 				// Emscripten glue code. Webpack et al. should not mangle the `Module` property name!
 				self.Module = Module;
-				self.importScripts('build/bergamot-translator-worker.js');
+				self.importScripts('bergamot-translator-worker.js');
 			} catch (err) {
 				reject(err);
 			}
@@ -303,7 +273,7 @@ class BergamotTranslatorWorker {
 	 * Internal method. Instantiates a BlockingService()
 	 * @return {BergamotTranslator.BlockingService}
 	 */
-	loadTranslationService() {
+	loadTranslationService(): BlockingService {
 		return new this.module.BlockingService({
 			cacheSize: Math.max(this.options.cacheSize || 0, 0),
 		});
@@ -315,7 +285,7 @@ class BergamotTranslatorWorker {
 	 * @param {{from:string, to:string}}
 	 * @return boolean
 	 */
-	hasTranslationModel({ from, to }) {
+	hasTranslationModel({ from, to }: { from: string; to: string }) {
 		const key = JSON.stringify({ from, to });
 		return this.models.has(key);
 	}
@@ -335,7 +305,18 @@ class BergamotTranslatorWorker {
 	 *   }
 	 * }} buffers
 	 */
-	loadTranslationModel({ from, to }, buffers) {
+	loadTranslationModel(
+		{ from, to }: { from: string; to: string },
+		buffers: {
+			model: ArrayBuffer;
+			shortlist: ArrayBuffer;
+			vocabs: ArrayBuffer[];
+			qualityModel: ArrayBuffer | null;
+			config?: {
+				[key: string]: string;
+			};
+		},
+	) {
 		// This because service_bindings.cpp:prepareVocabsSmartMemories :(
 		const uniqueVocabs = buffers.vocabs.filter((vocab, index, vocabs) => {
 			return !vocabs.slice(0, index).includes(vocab);
@@ -403,7 +384,7 @@ class BergamotTranslatorWorker {
 	 * already deleted.
 	 * @param {{from:string, to:string}}
 	 */
-	freeTranslationModel({ from, to }) {
+	freeTranslationModel({ from, to }: { from: string; to: string }) {
 		const key = JSON.stringify({ from, to });
 
 		if (!this.models.has(key)) return;
@@ -411,7 +392,10 @@ class BergamotTranslatorWorker {
 		const model = this.models.get(key);
 		this.models.delete(key);
 
-		model.delete();
+		if (model) {
+			// TODO: review the type
+			(model as any).delete();
+		}
 	}
 
 	/**
@@ -421,7 +405,10 @@ class BergamotTranslatorWorker {
 	 * @param {number} alignmentSize
 	 * @return {BergamotTranslator.AlignedMemory}
 	 */
-	prepareAlignedMemoryFromBuffer(buffer, alignmentSize) {
+	prepareAlignedMemoryFromBuffer(
+		buffer: ArrayBuffer,
+		alignmentSize: number,
+	): AlignedMemory {
 		const bytes = new Int8Array(buffer);
 		const memory = new this.module.AlignedMemory(bytes.byteLength, alignmentSize);
 		memory.getByteArrayView().set(bytes);
@@ -435,7 +422,13 @@ class BergamotTranslatorWorker {
 	 * @param {{models: {from:string, to:string}[], texts: {text: string, html: boolean}[]}}
 	 * @return {Promise<{target: {text: string}}[]>}
 	 */
-	translate({ models, texts }) {
+	translate({
+		models,
+		texts,
+	}: {
+		models: { from: string; to: string }[];
+		texts: { text: string; html: boolean; qualityScores?: boolean }[];
+	}): { target: { text: string } }[] {
 		// Convert texts array into a std::vector<std::string>.
 		let input = new this.module.VectorString();
 		texts.forEach(({ text }) => input.push_back(text));
@@ -486,7 +479,11 @@ class BergamotTranslatorWorker {
  *  stack: string?
  * }}
  */
-function cloneError(error) {
+function cloneError(error: Error): {
+	name?: string;
+	message?: string;
+	stack?: string;
+} {
 	return {
 		name: error.name,
 		message: error.message,
@@ -498,21 +495,26 @@ function cloneError(error) {
 // first before using it. That happens from outside the worker.)
 const worker = new BergamotTranslatorWorker();
 
-self.addEventListener('message', async function ({ data: { id, name, args } }) {
-	if (!id) console.error('Received message without id', arguments[0]);
+self.addEventListener('message', async function (request) {
+	const {
+		data: { id, name, args },
+	} = request;
+	if (!id) console.error('Received message without id', request);
 
 	try {
-		if (typeof worker[name] !== 'function')
+		if (typeof (worker as any)[name] !== 'function')
 			throw TypeError(`worker[${name}] is not a function`);
 
 		// Using `Promise.resolve` to await any promises that worker[name]
 		// possibly returns.
-		const result = await Promise.resolve(Reflect.apply(worker[name], worker, args));
+		const result = await Promise.resolve(
+			Reflect.apply((worker as any)[name], worker, args),
+		);
 		self.postMessage({ id, result });
 	} catch (error) {
 		self.postMessage({
 			id,
-			error: cloneError(error),
+			error: cloneError(error as Error),
 		});
 	}
 });
