@@ -78,6 +78,14 @@ Do you like Linguist? Talk about it with your friends and colleagues. Let's make
 
 You don't like Linguist? [Make an issue](https://github.com/translate-tools/linguist/issues/new) and suggest improvements.
 
+# Donations
+
+Linguist are completely free and opensource, it does not collect any user data to sell.
+You may support project with your donations to help Linguist to keep independence and high quality.
+
+- Bitcoin: bc1q2krassq0sa2aphkx37zn374lfjnthr5frm6s7y
+- Ethereum: 0x2463d84F46c131886CaE457412e8B6eaBc0b91a7
+
 # Supporters
 
 ![](./assets/jb_beam.svg)
