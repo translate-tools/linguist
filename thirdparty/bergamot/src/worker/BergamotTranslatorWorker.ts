@@ -5,7 +5,7 @@
  * Source: https://github.com/browsermt/bergamot-translator/blob/82c276a15c23a40bc7e21e8a1e0a289a6ce57017/wasm/module/worker/translator-worker.js
  */
 
-import { ModelBuffers, TranslationModel } from '../types';
+import { LanguagesDirection, ModelBuffers, TranslationModel } from '../types';
 import { YAML } from './utils/YAML';
 import { IBergamotTranslatorWorker, BergamotTranslatorWorkerOptions } from './types';
 
@@ -46,7 +46,7 @@ export class BergamotTranslatorWorker implements IBergamotTranslatorWorker {
 	 * be swizzled for a faster implementation. Firefox Nightly makes use of
 	 * this.
 	 */
-	static GEMM_TO_FALLBACK_FUNCTIONS_MAP = {
+	static readonly GEMM_TO_FALLBACK_FUNCTIONS_MAP = {
 		/* eslint-disable camelcase */
 		int8_prepare_a: 'int8PrepareAFallback',
 		int8_prepare_b: 'int8PrepareBFallback',
@@ -57,20 +57,21 @@ export class BergamotTranslatorWorker implements IBergamotTranslatorWorker {
 		int8_multiply_and_add_bias: 'int8MultiplyAndAddBiasFallback',
 		int8_select_columns_of_b: 'int8SelectColumnsOfBFallback',
 		/* eslint-enable camelcase */
-	};
+	} as const;
 
 	/**
 	 * Name of module exported by Firefox Nightly that exports an optimised
 	 * implementation of the symbols mentioned above.
 	 */
-	static NATIVE_INT_GEMM = 'mozIntGemm';
+	static readonly NATIVE_INT_GEMM = 'mozIntGemm';
 
 	private options: BergamotTranslatorWorkerOptions = {};
-	private models: Map<string, Promise<TranslationModel>> = new Map();
-	// @ts-ignore
+	private models = new Map<string, Promise<TranslationModel>>();
+
+	// @ts-ignore lazy initializing in method `initialize`
 	private module: BergamotTranslator;
 
-	// @ts-ignore
+	// @ts-ignore lazy initializing in method `initialize`
 	private service: BlockingService;
 
 	/**
@@ -107,7 +108,7 @@ export class BergamotTranslatorWorker implements IBergamotTranslatorWorker {
 	 * falls back to using the naive implementations that come with the wasm
 	 * binary itself through `linkFallbackIntGemm()`.
 	 */
-	private linkNativeIntGemm(info: {
+	protected linkNativeIntGemm(info: {
 		env: { memory: WebAssembly.Memory };
 	}): WebAssembly.Exports {
 		const mozIntGemm = WebAssembly['mozIntGemm' as keyof typeof WebAssembly] as
@@ -143,7 +144,7 @@ export class BergamotTranslatorWorker implements IBergamotTranslatorWorker {
 	 * but just exports them under the name that is expected by
 	 * bergamot-translator.
 	 */
-	linkFallbackIntGemm(_info: {
+	protected linkFallbackIntGemm(_info: {
 		env: { memory: WebAssembly.Memory };
 	}): WebAssembly.Exports {
 		const mapping = Object.entries(
@@ -161,7 +162,7 @@ export class BergamotTranslatorWorker implements IBergamotTranslatorWorker {
 	 * and functions exported by bergamot-translator.
 	 * @return {Promise<BergamotTranslator>}
 	 */
-	loadModule(): Promise<BergamotTranslator> {
+	protected loadModule(): Promise<BergamotTranslator> {
 		return new Promise<BergamotTranslator>(async (resolve, reject) => {
 			try {
 				const response = await self.fetch(
@@ -210,7 +211,7 @@ export class BergamotTranslatorWorker implements IBergamotTranslatorWorker {
 	 * Internal method. Instantiates a BlockingService()
 	 * @return {BergamotTranslator.BlockingService}
 	 */
-	loadTranslationService(): BlockingService {
+	protected loadTranslationService(): BlockingService {
 		return new this.module.BlockingService({
 			cacheSize: Math.max(this.options.cacheSize || 0, 0),
 		});
@@ -222,7 +223,7 @@ export class BergamotTranslatorWorker implements IBergamotTranslatorWorker {
 	 * @param {{from:string, to:string}}
 	 * @return boolean
 	 */
-	hasTranslationModel({ from, to }: { from: string; to: string }) {
+	public hasTranslationModel({ from, to }: LanguagesDirection) {
 		const key = JSON.stringify({ from, to });
 		return this.models.has(key);
 	}
@@ -242,10 +243,7 @@ export class BergamotTranslatorWorker implements IBergamotTranslatorWorker {
 	 *   }
 	 * }} buffers
 	 */
-	loadTranslationModel(
-		{ from, to }: { from: string; to: string },
-		buffers: ModelBuffers,
-	) {
+	public loadTranslationModel({ from, to }: LanguagesDirection, buffers: ModelBuffers) {
 		// This because service_bindings.cpp:prepareVocabsSmartMemories :(
 		const uniqueVocabs = buffers.vocabs.filter((vocab, index, vocabs) => {
 			return !vocabs.slice(0, index).includes(vocab);
@@ -313,7 +311,7 @@ export class BergamotTranslatorWorker implements IBergamotTranslatorWorker {
 	 * already deleted.
 	 * @param {{from:string, to:string}}
 	 */
-	freeTranslationModel({ from, to }: { from: string; to: string }) {
+	public freeTranslationModel({ from, to }: LanguagesDirection) {
 		const key = JSON.stringify({ from, to });
 
 		if (!this.models.has(key)) return;
@@ -334,7 +332,7 @@ export class BergamotTranslatorWorker implements IBergamotTranslatorWorker {
 	 * @param {number} alignmentSize
 	 * @return {BergamotTranslator.AlignedMemory}
 	 */
-	prepareAlignedMemoryFromBuffer(
+	protected prepareAlignedMemoryFromBuffer(
 		buffer: ArrayBuffer,
 		alignmentSize: number,
 	): AlignedMemory {
@@ -351,11 +349,11 @@ export class BergamotTranslatorWorker implements IBergamotTranslatorWorker {
 	 * @param {{models: {from:string, to:string}[], texts: {text: string, html: boolean}[]}}
 	 * @return {Promise<{target: {text: string}}[]>}
 	 */
-	translate({
+	public translate({
 		models,
 		texts,
 	}: {
-		models: { from: string; to: string }[];
+		models: LanguagesDirection[];
 		texts: { text: string; html: boolean; qualityScores?: boolean }[];
 	}): { target: { text: string } }[] {
 		// Convert texts array into a std::vector<std::string>.

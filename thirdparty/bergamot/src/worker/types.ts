@@ -1,4 +1,4 @@
-import { ModelBuffers } from '../types';
+import { LanguagesDirection, ModelBuffers } from '../types';
 
 export type BergamotTranslatorWorkerOptions = {
 	cacheSize?: number;
@@ -10,13 +10,13 @@ export type BergamotTranslatorWorkerOptions = {
  */
 export type IBergamotTranslatorWorker = {
 	initialize: (options?: BergamotTranslatorWorkerOptions) => Promise<void>;
-	hasTranslationModel: (model: { from: string; to: string }) => boolean;
-	loadTranslationModel: (
-		model: { from: string; to: string },
-		buffers: ModelBuffers,
-	) => void;
+
+	hasTranslationModel: (model: LanguagesDirection) => boolean;
+	loadTranslationModel: (model: LanguagesDirection, buffers: ModelBuffers) => void;
+	freeTranslationModel: (model: LanguagesDirection) => void;
+
 	translate: (request: {
-		models: { from: string; to: string }[];
+		models: LanguagesDirection[];
 		texts: { text: string; html: boolean; qualityScores?: boolean }[];
 	}) => { target: { text: string } }[];
 };
