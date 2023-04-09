@@ -2,7 +2,6 @@
  * This file imported from a bergamot project
  * Source: https://github.com/browsermt/bergamot-translator/blob/82c276a15c23a40bc7e21e8a1e0a289a6ce57017/wasm/module/worker/translator-worker.js
  */
-/* eslint-disable */
 
 export type BergamotTranslatorWorkerAPI = {
 	hasTranslationModel: (model: { from: string; to: string }) => boolean;
@@ -21,18 +20,20 @@ export type BergamotTranslatorWorkerOptions = {
 
 // Read more: https://github.com/emscripten-core/emscripten/blob/9fdc94ad3e3c89558fd251048e8ae2c2ca408dc1/site/source/docs/api_reference/module.rst
 // Global because importScripts is global.
-var Module: Record<string, any> = {};
+const Module: Record<string, any> = {};
 
 declare global {
 	/**
 	 * Docs: https://github.com/emscripten-core/emscripten/blob/9fdc94ad3e3c89558fd251048e8ae2c2ca408dc1/site/source/docs/api_reference/module.rst
 	 */
+	// eslint-disable-next-line no-var
 	var Module: Record<string, Function>;
 
 	/**
 	 * Synchronous import
 	 * Docs: https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/importScripts
 	 */
+	// eslint-disable-next-line no-var
 	var importScripts: (...files: string[]) => void;
 }
 
@@ -116,6 +117,7 @@ class BergamotTranslatorWorker implements BergamotTranslatorWorkerAPI {
 	 * this.
 	 */
 	static GEMM_TO_FALLBACK_FUNCTIONS_MAP = {
+		/* eslint-disable camelcase */
 		int8_prepare_a: 'int8PrepareAFallback',
 		int8_prepare_b: 'int8PrepareBFallback',
 		int8_prepare_b_from_transposed: 'int8PrepareBFromTransposedFallback',
@@ -124,6 +126,7 @@ class BergamotTranslatorWorker implements BergamotTranslatorWorkerAPI {
 		int8_prepare_bias: 'int8PrepareBiasFallback',
 		int8_multiply_and_add_bias: 'int8MultiplyAndAddBiasFallback',
 		int8_select_columns_of_b: 'int8SelectColumnsOfBFallback',
+		/* eslint-enable camelcase */
 	};
 
 	/**
@@ -243,6 +246,7 @@ class BergamotTranslatorWorker implements BergamotTranslatorWorkerAPI {
 						try {
 							WebAssembly.instantiateStreaming(response, {
 								...info,
+								/* eslint-disable-next-line camelcase */
 								wasm_gemm: this.options.useNativeIntGemm
 									? this.linkNativeIntGemm(info as any)
 									: this.linkFallbackIntGemm(info as any),
@@ -337,7 +341,7 @@ class BergamotTranslatorWorker implements BergamotTranslatorWorkerAPI {
 		vocabMemory.forEach((vocab) => vocabs.push_back(vocab));
 
 		// Defaults
-		let modelConfig = YAML.parse(`
+		const modelConfig = YAML.parse(`
             beam-size: 1
             normalize: 1.0
             word-penalty: 0
@@ -430,11 +434,11 @@ class BergamotTranslatorWorker implements BergamotTranslatorWorkerAPI {
 		texts: { text: string; html: boolean; qualityScores?: boolean }[];
 	}): { target: { text: string } }[] {
 		// Convert texts array into a std::vector<std::string>.
-		let input = new this.module.VectorString();
+		const input = new this.module.VectorString();
 		texts.forEach(({ text }) => input.push_back(text));
 
 		// Extracts the texts[].html options into ResponseOption objects
-		let options = new this.module.VectorResponseOptions();
+		const options = new this.module.VectorResponseOptions();
 		texts.forEach(({ html, qualityScores }) =>
 			options.push_back({ alignment: false, html, qualityScores }),
 		);
@@ -495,7 +499,7 @@ function cloneError(error: Error): {
 // first before using it. That happens from outside the worker.)
 const worker = new BergamotTranslatorWorker();
 
-self.addEventListener('message', async function (request) {
+self.addEventListener('message', async function(request) {
 	const {
 		data: { id, name, args },
 	} = request;
