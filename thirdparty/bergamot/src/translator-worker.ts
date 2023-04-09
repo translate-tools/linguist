@@ -1,26 +1,9 @@
 /**
+ * Wrapper around the dirty bits of Bergamot's WASM bindings.
+ *
  * This file imported from a bergamot project
  * Source: https://github.com/browsermt/bergamot-translator/blob/82c276a15c23a40bc7e21e8a1e0a289a6ce57017/wasm/module/worker/translator-worker.js
  */
-
-export type BergamotTranslatorWorkerAPI = {
-	hasTranslationModel: (model: { from: string; to: string }) => boolean;
-};
-
-export type BergamotTranslatorWorkerOptions = {
-	cacheSize?: number;
-	useNativeIntGemm?: boolean;
-};
-
-/**
- * Wrapper around the dirty bits of Bergamot's WASM bindings.
- */
-
-// TODO: add actual type with onRuntimeInitialized, instantiateWasm, asm...
-
-// Read more: https://github.com/emscripten-core/emscripten/blob/9fdc94ad3e3c89558fd251048e8ae2c2ca408dc1/site/source/docs/api_reference/module.rst
-// Global because importScripts is global.
-const Module: Record<string, any> = {};
 
 declare global {
 	/**
@@ -36,6 +19,52 @@ declare global {
 	// eslint-disable-next-line no-var
 	var importScripts: (...files: string[]) => void;
 }
+
+export type ModelBuffers = {
+	model: ArrayBuffer;
+	shortlist: ArrayBuffer;
+	vocabs: ArrayBuffer[];
+	qualityModel: ArrayBuffer | null;
+	config?: Record<string, string>;
+};
+
+export type BergamotTranslatorWorkerOptions = {
+	cacheSize?: number;
+	useNativeIntGemm?: boolean;
+};
+
+/**
+ * Interface of translator instance
+ */
+export type IBergamotTranslatorWorker = {
+	initialize: (options?: BergamotTranslatorWorkerOptions) => Promise<void>;
+	hasTranslationModel: (model: { from: string; to: string }) => boolean;
+	loadTranslationModel: (
+		model: { from: string; to: string },
+		buffers: ModelBuffers,
+	) => void;
+	translate: (request: {
+		models: { from: string; to: string }[];
+		texts: { text: string; html: boolean; qualityScores?: boolean }[];
+	}) => { target: { text: string } }[];
+};
+
+/**
+ * Worker API used with async messages, so any method call are async
+ */
+export type BergamotTranslatorWorkerAPI = {
+	[K in keyof IBergamotTranslatorWorker]: IBergamotTranslatorWorker[K] extends (
+		...args: infer Args
+	) => infer Result
+		? (...args: Args) => Promise<Result>
+		: never;
+};
+
+// TODO: add actual type with onRuntimeInitialized, instantiateWasm, asm...
+
+// Read more: https://github.com/emscripten-core/emscripten/blob/9fdc94ad3e3c89558fd251048e8ae2c2ca408dc1/site/source/docs/api_reference/module.rst
+// Global because importScripts is global.
+const Module: Record<string, any> = {};
 
 /**
  * YAML parser for trivial cases
@@ -110,7 +139,7 @@ type AlignedMemory = any;
  * Wrapper around the bergamot-translator exported module that hides the need
  * of working with C++ style data structures and does model management.
  */
-class BergamotTranslatorWorker implements BergamotTranslatorWorkerAPI {
+class BergamotTranslatorWorker implements IBergamotTranslatorWorker {
 	/**
 	 * Map of expected symbol -> name of fallback symbol for functions that can
 	 * be swizzled for a faster implementation. Firefox Nightly makes use of
@@ -311,15 +340,7 @@ class BergamotTranslatorWorker implements BergamotTranslatorWorkerAPI {
 	 */
 	loadTranslationModel(
 		{ from, to }: { from: string; to: string },
-		buffers: {
-			model: ArrayBuffer;
-			shortlist: ArrayBuffer;
-			vocabs: ArrayBuffer[];
-			qualityModel: ArrayBuffer | null;
-			config?: {
-				[key: string]: string;
-			};
-		},
+		buffers: ModelBuffers,
 	) {
 		// This because service_bindings.cpp:prepareVocabsSmartMemories :(
 		const uniqueVocabs = buffers.vocabs.filter((vocab, index, vocabs) => {

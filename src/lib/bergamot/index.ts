@@ -8,7 +8,10 @@ import browser from 'webextension-polyfill';
 
 import { getBergamotFile } from '../../requests/backend/bergamot/getBergamotFile';
 import { addBergamotFile } from '../../requests/backend/bergamot/addBergamotFile';
-import { BergamotTranslatorWorkerAPI } from '../../../thirdparty/bergamot/src/translator-worker';
+import {
+	BergamotTranslatorWorkerAPI,
+	ModelBuffers,
+} from '../../../thirdparty/bergamot/src/translator-worker';
 
 /**
  * @typedef {Object} TranslationRequest
@@ -80,7 +83,6 @@ type BackingOptions = {
 	onerror?: (err: ErrorEvent) => void;
 	workerUrl?: string;
 };
-
 /**
  * Wrapper around bergamot-translator loading and model management.
  */
@@ -113,16 +115,7 @@ export class TranslatorBacking {
 		 * Map of downloaded model data files as buffers per model.
 		 * @type {Map<{from:string,to:string}, Promise<Map<string,ArrayBuffer>>>}
 		 */
-		this.buffers = new Map<
-			string,
-			Promise<{
-				model: ArrayBuffer;
-				vocabs: ArrayBuffer[];
-				shortlist: ArrayBuffer;
-				qualityModel: ArrayBuffer | null;
-				config: Record<string, any>;
-			}>
-		>();
+		this.buffers = new Map<string, Promise<ModelBuffers>>();
 
 		/**
 		 * @type {string?}
@@ -308,14 +301,7 @@ export class TranslatorBacking {
 	 *   qualityModel: ArrayBuffer?
 	 * }>}
 	 */
-	getTranslationModel({ from, to }: LanguagesDirection):
-		| Promise<{
-				model: ArrayBuffer;
-				vocabs: ArrayBuffer[];
-				shortlist: ArrayBuffer;
-				qualityModel: ArrayBuffer | null;
-		  }>
-		| undefined {
+	getTranslationModel({ from, to }: LanguagesDirection): Promise<ModelBuffers> {
 		const key = JSON.stringify({ from, to });
 
 		if (!this.buffers.has(key)) {
@@ -328,7 +314,12 @@ export class TranslatorBacking {
 			promise.catch((_err) => this.buffers.delete(key));
 		}
 
-		return this.buffers.get(key);
+		const modelPromise = this.buffers.get(key);
+		if (modelPromise === undefined) {
+			throw new Error('Translation model promise not found');
+		}
+
+		return modelPromise;
 	}
 
 	/**
@@ -345,13 +336,7 @@ export class TranslatorBacking {
 	 *   config: string?
 	 * }>}
 	 */
-	async loadTranslationModel({ from, to }: LanguagesDirection): Promise<{
-		model: ArrayBuffer;
-		vocabs: ArrayBuffer[];
-		shortlist: ArrayBuffer;
-		qualityModel: ArrayBuffer | null;
-		config: Record<string, any>;
-	}> {
+	async loadTranslationModel({ from, to }: LanguagesDirection): Promise<ModelBuffers> {
 		performance.mark(`loadTranslationModule.${JSON.stringify({ from, to })}`);
 
 		// Find that model in the registry which will tell us about its files
@@ -797,7 +782,10 @@ export class BatchTranslator {
 	 * wait for the batch to be done by awaiting this call. You should only
 	 * then reuse the worker otherwise you'll just clog up its message queue.
 	 */
-	private async consumeBatch(batch: TranslationTask, worker: Record<string, any>) {
+	private async consumeBatch(
+		batch: TranslationTask,
+		worker: BergamotTranslatorWorkerAPI,
+	) {
 		performance.mark('BergamotBatchTranslator.start');
 
 		// Make sure the worker has all necessary models loaded. If not, tell it
