@@ -61,7 +61,6 @@ export type BergamotTranslatorWorkerAPI = {
 };
 
 // TODO: add actual type with onRuntimeInitialized, instantiateWasm, asm...
-
 // Read more: https://github.com/emscripten-core/emscripten/blob/9fdc94ad3e3c89558fd251048e8ae2c2ca408dc1/site/source/docs/api_reference/module.rst
 // Global because importScripts is global.
 const Module: Record<string, any> = {};
@@ -118,7 +117,7 @@ class YAML {
 	}
 }
 
-type TranslationModel = {
+export type TranslationModel = {
 	from: string;
 	to: string;
 	files: Record<

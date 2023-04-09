@@ -11,6 +11,7 @@ import { addBergamotFile } from '../../requests/backend/bergamot/addBergamotFile
 import {
 	BergamotTranslatorWorkerAPI,
 	ModelBuffers,
+	TranslationModel,
 } from '../../../thirdparty/bergamot/src/translator-worker';
 
 /**
@@ -57,22 +58,7 @@ type TranslationResponse = {
 
 type LanguagesDirection = { from: string; to: string };
 
-type Model = {
-	from: string;
-	to: string;
-	files: Record<
-		string,
-		{
-			name: string;
-			size: number;
-			expectedSha256Hash: string;
-		}
-	>;
-};
-
-type TranslationModel = Model;
-
-type Registry = Model[];
+type Registry = TranslationModel[];
 
 type BackingOptions = {
 	cacheSize?: number;
@@ -545,9 +531,9 @@ export class TranslatorBacking {
 	async findModels(from: string, to: string) {
 		const registry = await this.registry;
 
-		let direct: Model[] = [],
-			outbound: Model[] = [],
-			inbound: Model[] = [];
+		let direct: TranslationModel[] = [],
+			outbound: TranslationModel[] = [],
+			inbound: TranslationModel[] = [];
 
 		registry.forEach((model) => {
 			if (model.from === from && model.to === to) direct.push(model);
