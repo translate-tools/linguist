@@ -12,7 +12,7 @@ import { BergamotTranslatorWorkerAPI } from '../worker/types';
 import { TranslationModel } from '../types';
 import { CancelledError } from './errors';
 
-import { BackingOptions, TranslatorBacking } from './TranslatorBacking';
+import { TranslatorBacking } from './TranslatorBacking';
 
 type TranslationRequest = {
 	from: string;
@@ -82,15 +82,14 @@ export class BatchTranslator {
 	private onerror;
 
 	constructor(
-		options?: Partial<
-			BackingOptions & {
-				workers: number;
-				batchSize: number;
-			}
-		>,
-		backing?: TranslatorBacking,
+		backing: TranslatorBacking,
+		options?: {
+			workers?: number;
+			batchSize?: number;
+			onerror?: (err: Error) => void;
+		},
 	) {
-		this.backing = backing ?? new TranslatorBacking(options);
+		this.backing = backing;
 
 		this.workers = [];
 		this.workerLimit = Math.max(options?.workers || 0, 1);
@@ -210,7 +209,7 @@ export class BatchTranslator {
 							`Could not initialise translation worker: ${
 								(e as Error).message
 							}`,
-						) as unknown as ErrorEvent,
+						),
 					);
 				}
 			}

@@ -1,3 +1,5 @@
+import browser from 'webextension-polyfill';
+
 import { BatchTranslator } from '../../../../thirdparty/bergamot/src/frontend/BatchTranslator';
 
 import { detectLanguage, getMessage } from '../../language';
@@ -9,8 +11,11 @@ export class BergamotTranslator {
 
 	private translator;
 	constructor() {
-		const backing = new TranslatorBackingWithCache();
-		this.translator = new BatchTranslator({}, backing);
+		const workerUrl = browser.runtime.getURL(
+			'thirdparty/bergamot/translator-worker.js',
+		);
+		const backing = new TranslatorBackingWithCache({ workerUrl });
+		this.translator = new BatchTranslator(backing);
 	}
 
 	translate = async (text: string, from: string, to: string) => {

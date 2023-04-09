@@ -8,8 +8,6 @@
 // TODO: introduce interfaces, use it to ensure contracts between workers
 // TODO: improve types, remove any
 
-import browser from 'webextension-polyfill';
-
 import {
 	BergamotTranslatorWorkerAPI,
 	BergamotTranslatorWorkerOptions,
@@ -25,11 +23,11 @@ import {
 type Registry = TranslationModel[];
 
 export type BackingOptions = BergamotTranslatorWorkerOptions & {
-	downloadTimeout?: number;
+	workerUrl: string;
 	registryUrl?: string;
+	downloadTimeout?: number;
 	pivotLanguage?: string;
 	onerror?: (err: ErrorEvent) => void;
-	workerUrl?: string;
 };
 
 /**
@@ -45,8 +43,8 @@ export class TranslatorBacking {
 	private onerror;
 
 	private options;
-	constructor(options?: BackingOptions) {
-		this.options = options || {};
+	constructor(options: BackingOptions) {
+		this.options = options;
 
 		this.registryUrl =
 			this.options.registryUrl ||
@@ -96,10 +94,7 @@ export class TranslatorBacking {
 	 * @return {Promise<{worker:Worker, exports:Proxy<TranslationWorker>}>}
 	 */
 	async loadWorker() {
-		const worker = new Worker(
-			this.options.workerUrl ??
-				browser.runtime.getURL('thirdparty/bergamot/translator-worker.js'),
-		);
+		const worker = new Worker(this.options.workerUrl);
 
 		/**
 		 * Incremental counter to derive request/response ids from.
