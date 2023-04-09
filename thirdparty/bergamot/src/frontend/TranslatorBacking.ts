@@ -3,8 +3,6 @@
  * Source: https://github.com/browsermt/bergamot-translator/blob/82c276a15c23a40bc7e21e8a1e0a289a6ce57017/wasm/module/worker/translator-worker.js
  */
 
-/* eslint-disable */
-
 import {
 	BergamotTranslatorWorkerAPI,
 	BergamotTranslatorWorkerOptions,
@@ -124,7 +122,7 @@ export class TranslatorBacking {
 			});
 
 		// … receive responses
-		worker.addEventListener('message', function ({ data: { id, result, error } }) {
+		worker.addEventListener('message', function({ data: { id, result, error } }) {
 			if (!pending.has(id)) {
 				console.debug('Received message with unknown id:', arguments[0]);
 				throw new Error(
@@ -318,7 +316,7 @@ export class TranslatorBacking {
 			);
 		}
 
-		let config: ModelConfig = {};
+		const config: ModelConfig = {};
 
 		// For the Ukrainian models we need to override the gemm-precision
 		if (files.model.name.endsWith('intgemm8.bin')) {
@@ -447,7 +445,7 @@ export class TranslatorBacking {
 	async findModels(from: string, to: string) {
 		const registry = await this.registry;
 
-		let direct: TranslationModel[] = [],
+		const direct: TranslationModel[] = [],
 			outbound: TranslationModel[] = [],
 			inbound: TranslationModel[] = [];
 
