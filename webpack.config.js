@@ -33,7 +33,7 @@ module.exports = {
 		background: './src/background.ts',
 		contentscript: './src/contentscript.tsx',
 		['thirdparty/bergamot/translator-worker']:
-			'./thirdparty/bergamot/src/translator-worker.ts',
+			'./thirdparty/bergamot/src//worker/translator.worker.ts',
 		['pages/popup/popup']: './src/pages/popup/popup.tsx',
 		['pages/options/options']: './src/pages/options/options.tsx',
 		['pages/dictionary/dictionary']: './src/pages/dictionary/dictionary.tsx',

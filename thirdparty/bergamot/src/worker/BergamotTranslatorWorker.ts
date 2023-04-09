@@ -5,6 +5,10 @@
  * Source: https://github.com/browsermt/bergamot-translator/blob/82c276a15c23a40bc7e21e8a1e0a289a6ce57017/wasm/module/worker/translator-worker.js
  */
 
+import { ModelBuffers, TranslationModel } from '../types';
+import { YAML } from './utils/YAML';
+import { IBergamotTranslatorWorker, BergamotTranslatorWorkerOptions } from './types';
+
 declare global {
 	/**
 	 * Docs: https://github.com/emscripten-core/emscripten/blob/9fdc94ad3e3c89558fd251048e8ae2c2ca408dc1/site/source/docs/api_reference/module.rst
@@ -20,115 +24,10 @@ declare global {
 	var importScripts: (...files: string[]) => void;
 }
 
-export type ModelBuffers = {
-	model: ArrayBuffer;
-	shortlist: ArrayBuffer;
-	vocabs: ArrayBuffer[];
-	qualityModel: ArrayBuffer | null;
-	config?: Record<string, string>;
-};
-
-export type BergamotTranslatorWorkerOptions = {
-	cacheSize?: number;
-	useNativeIntGemm?: boolean;
-};
-
-/**
- * Interface of translator instance
- */
-export type IBergamotTranslatorWorker = {
-	initialize: (options?: BergamotTranslatorWorkerOptions) => Promise<void>;
-	hasTranslationModel: (model: { from: string; to: string }) => boolean;
-	loadTranslationModel: (
-		model: { from: string; to: string },
-		buffers: ModelBuffers,
-	) => void;
-	translate: (request: {
-		models: { from: string; to: string }[];
-		texts: { text: string; html: boolean; qualityScores?: boolean }[];
-	}) => { target: { text: string } }[];
-};
-
-/**
- * Worker API used with async messages, so any method call are async
- */
-export type BergamotTranslatorWorkerAPI = {
-	[K in keyof IBergamotTranslatorWorker]: IBergamotTranslatorWorker[K] extends (
-		...args: infer Args
-	) => infer Result
-		? (...args: Args) => Promise<Result>
-		: never;
-};
-
 // TODO: add actual type with onRuntimeInitialized, instantiateWasm, asm...
 // Read more: https://github.com/emscripten-core/emscripten/blob/9fdc94ad3e3c89558fd251048e8ae2c2ca408dc1/site/source/docs/api_reference/module.rst
 // Global because importScripts is global.
 const Module: Record<string, any> = {};
-
-/**
- * YAML parser for trivial cases
- */
-class YAML {
-	/**
-	 * Parses YAML into dictionary. Does not interpret types, all values are a
-	 * string. No support for objects other than the top level.
-	 */
-	static parse(yaml: string) {
-		const out: Record<string, string> = {};
-
-		yaml.split('\n').forEach((line, i) => {
-			let match;
-			if ((match = line.match(/^\s*([A-Za-z0-9_][A-Za-z0-9_-]*):\s*(.*)$/))) {
-				const key = match[1];
-				out[key] = match[2].trim();
-			} else if (!line.trim()) {
-				// whitespace, ignore
-			} else {
-				throw Error(`Could not parse line ${i + 1}: "${line}"`);
-			}
-		});
-
-		return out;
-	}
-
-	/**
-	 * Turns an object into a YAML string. No support for objects, only simple
-	 * types and lists of simple types.
-	 */
-	static stringify(data: Record<string, string | number | boolean | string[]>) {
-		return Object.entries(data).reduce((str, [key, value]) => {
-			let stringifiedValue = '';
-			if (Array.isArray(value)) {
-				// Strings array
-				stringifiedValue = value.map((val) => `\n  - ${val}`).join('');
-			} else if (
-				typeof value === 'number' ||
-				typeof value === 'boolean' ||
-				value.match(/^\d*(\.\d+)?$/)
-			) {
-				// Number
-				stringifiedValue = `${value}`;
-			} else {
-				stringifiedValue = `${value}`; // Quote?
-			}
-
-			return str + `${key}: ${stringifiedValue}\n`;
-		}, '');
-	}
-}
-
-export type TranslationModel = {
-	from: string;
-	to: string;
-	files: Record<
-		string,
-		{
-			name: string;
-			size: number;
-			expectedSha256Hash: string;
-		}
-	>;
-};
 
 type BlankedType<T, N> = T & { __tag: N };
 
@@ -141,7 +40,7 @@ type AlignedMemory = BlankedType<Record<string, any>, 'AlignedMemory'>;
  * Wrapper around the bergamot-translator exported module that hides the need
  * of working with C++ style data structures and does model management.
  */
-class BergamotTranslatorWorker implements IBergamotTranslatorWorker {
+export class BergamotTranslatorWorker implements IBergamotTranslatorWorker {
 	/**
 	 * Map of expected symbol -> name of fallback symbol for functions that can
 	 * be swizzled for a faster implementation. Firefox Nightly makes use of
@@ -498,53 +397,3 @@ class BergamotTranslatorWorker implements IBergamotTranslatorWorker {
 		return translations;
 	}
 }
-
-/**
- * Because you can't put an Error object in a message. But you can post a
- * generic object!
- * @param {Error} error
- * @return {{
- *  name: string?,
- *  message: string?,
- *  stack: string?
- * }}
- */
-function cloneError(error: Error): {
-	name?: string;
-	message?: string;
-	stack?: string;
-} {
-	return {
-		name: error.name,
-		message: error.message,
-		stack: error.stack,
-	};
-}
-
-// (Constructor doesn't really do anything, we need to call `initialize()`
-// first before using it. That happens from outside the worker.)
-const worker = new BergamotTranslatorWorker();
-
-self.addEventListener('message', async function(request) {
-	const {
-		data: { id, name, args },
-	} = request;
-	if (!id) console.error('Received message without id', request);
-
-	try {
-		if (typeof (worker as any)[name] !== 'function')
-			throw TypeError(`worker[${name}] is not a function`);
-
-		// Using `Promise.resolve` to await any promises that worker[name]
-		// possibly returns.
-		const result = await Promise.resolve(
-			Reflect.apply((worker as any)[name], worker, args),
-		);
-		self.postMessage({ id, result });
-	} catch (error) {
-		self.postMessage({
-			id,
-			error: cloneError(error as Error),
-		});
-	}
-});

@@ -19,7 +19,7 @@ import { TranslatorManager } from './TranslatorManager';
 import { TTSManager } from './TTS/TTSManager';
 import { TTSController } from './TTS/TTSController';
 
-import { BergamotTranslator } from '../../lib/bergamot/BergamotTranslator';
+import { BergamotTranslator } from '../../lib/translators/BergamotTranslator';
 
 export const embeddedTranslators = {
 	BergamotTranslator,

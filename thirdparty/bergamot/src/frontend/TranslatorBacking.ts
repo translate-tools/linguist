@@ -1,3 +1,8 @@
+/**
+ * This file imported from a bergamot project
+ * Source: https://github.com/browsermt/bergamot-translator/blob/82c276a15c23a40bc7e21e8a1e0a289a6ce57017/wasm/module/worker/translator-worker.js
+ */
+
 /* eslint-disable */
 
 // TODO: introduce interfaces, use it to ensure contracts between workers
@@ -8,13 +13,13 @@ import browser from 'webextension-polyfill';
 import {
 	BergamotTranslatorWorkerAPI,
 	BergamotTranslatorWorkerOptions,
-	ModelBuffers,
-	TranslationModel,
-} from '../../../../thirdparty/bergamot/src/translator-worker';
-import { getBergamotFile } from '../../../requests/backend/bergamot/getBergamotFile';
-import { addBergamotFile } from '../../../requests/backend/bergamot/addBergamotFile';
+} from '../worker/types';
 
-import { LanguagesDirection } from '../types';
+// TODO: move to a src
+import { getBergamotFile } from '../../../../src/requests/backend/bergamot/getBergamotFile';
+import { addBergamotFile } from '../../../../src/requests/backend/bergamot/addBergamotFile';
+
+import { LanguagesDirection, ModelBuffers, TranslationModel } from '../types';
 
 const backingStorageName = 'bergamotBacking';
 
