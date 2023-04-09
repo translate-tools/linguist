@@ -1,5 +1,5 @@
 import { detectLanguage, getMessage } from '../language';
-import { BatchTranslator } from '.';
+import { BatchTranslator } from './frontend';
 
 export class BergamotTranslator {
 	static translatorName = getMessage('common_offlineTranslator', 'Bergamot');
