@@ -130,9 +130,12 @@ export type TranslationModel = {
 	>;
 };
 
-type BergamotTranslator = any;
-type BlockingService = any;
-type AlignedMemory = any;
+type BlankedType<T, N> = T & { __tag: N };
+
+// Blanked unknown types, to ensure we use expected types, even if don't know its content
+type BergamotTranslator = BlankedType<Record<string, any>, 'BergamotTranslator'>;
+type BlockingService = BlankedType<Record<string, any>, 'BlockingService'>;
+type AlignedMemory = BlankedType<Record<string, any>, 'AlignedMemory'>;
 
 /**
  * Wrapper around the bergamot-translator exported module that hides the need
@@ -165,8 +168,11 @@ class BergamotTranslatorWorker implements IBergamotTranslatorWorker {
 
 	private options: BergamotTranslatorWorkerOptions = {};
 	private models: Map<string, Promise<TranslationModel>> = new Map();
-	private module: any;
-	private service: any;
+	// @ts-ignore
+	private module: BergamotTranslator;
+
+	// @ts-ignore
+	private service: BlockingService;
 
 	/**
 	 * Empty because we can't do async constructors yet. It is the
@@ -288,7 +294,7 @@ class BergamotTranslatorWorker implements IBergamotTranslatorWorker {
 					},
 					onRuntimeInitialized: () => {
 						console.warn('MODULE INITIALIZED', Module);
-						resolve(Module);
+						resolve(Module as BergamotTranslator);
 					},
 				});
 
