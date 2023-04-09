@@ -43,8 +43,8 @@ export class BergamotTranslator {
 	translateBatch = (texts: string[], from: string, to: string) =>
 		Promise.all(texts.map((text) => this.translate(text, from, to)));
 
-	getLengthLimit = () => 4000;
-	getRequestsTimeout = () => 300;
+	getLengthLimit = () => 5000;
+	getRequestsTimeout = () => 100;
 	checkLimitExceeding = (text: string) => {
 		const textLength = !Array.isArray(text)
 			? text.length
