@@ -15,10 +15,6 @@ import {
 	BergamotTranslatorWorkerOptions,
 } from '../worker/types';
 
-// TODO: move to a src
-import { getBergamotFile } from '../../../../src/requests/backend/bergamot/getBergamotFile';
-import { addBergamotFile } from '../../../../src/requests/backend/bergamot/addBergamotFile';
-
 import {
 	LanguagesDirection,
 	ModelBuffers,
@@ -287,29 +283,9 @@ export class TranslatorBacking {
 		if (file === undefined || file.name === undefined) return [part, null] as const;
 
 		try {
-			// Try get from cache
-			const cachedData = await getBergamotFile({
-				type: part,
-				expectedSha256Hash: file.expectedSha256Hash,
-				direction,
-			});
-			if (cachedData !== null) {
-				return [part, cachedData.buffer] as const;
-			}
-
 			const start = performance.now();
 			const arrayBuffer = await this.fetch(file.name, file.expectedSha256Hash);
 			console.warn('TIME TO LOAD FILE FROM INTERNET', performance.now() - start);
-
-			// Write cache
-			await addBergamotFile({
-				name: file.name,
-				expectedSha256Hash: file.expectedSha256Hash,
-
-				type: part,
-				buffer: arrayBuffer,
-				direction,
-			});
 
 			return [part, arrayBuffer] as const;
 		} catch (cause) {

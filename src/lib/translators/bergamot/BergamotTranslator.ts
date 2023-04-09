@@ -1,5 +1,7 @@
-import { detectLanguage, getMessage } from '../language';
-import { BatchTranslator } from '../../../thirdparty/bergamot/src/frontend/BatchTranslator';
+import { BatchTranslator } from '../../../../thirdparty/bergamot/src/frontend/BatchTranslator';
+
+import { detectLanguage, getMessage } from '../../language';
+import { TranslatorBackingWithCache } from './TranslatorBackingWithCache';
 
 export class BergamotTranslator {
 	static translatorName = getMessage('common_offlineTranslator', 'Bergamot');
@@ -7,7 +9,8 @@ export class BergamotTranslator {
 
 	private translator;
 	constructor() {
-		this.translator = new BatchTranslator();
+		const backing = new TranslatorBackingWithCache();
+		this.translator = new BatchTranslator({}, backing);
 	}
 
 	translate = async (text: string, from: string, to: string) => {
