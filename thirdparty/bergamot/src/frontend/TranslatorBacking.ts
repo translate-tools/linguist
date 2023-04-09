@@ -19,7 +19,12 @@ import {
 import { getBergamotFile } from '../../../../src/requests/backend/bergamot/getBergamotFile';
 import { addBergamotFile } from '../../../../src/requests/backend/bergamot/addBergamotFile';
 
-import { LanguagesDirection, ModelBuffers, TranslationModel } from '../types';
+import {
+	LanguagesDirection,
+	ModelBuffers,
+	TranslationModel,
+	TranslationModelFileReference,
+} from '../types';
 
 const backingStorageName = 'bergamotBacking';
 
@@ -272,55 +277,46 @@ export class TranslatorBacking {
 		return modelPromise;
 	}
 
-	async getModelFiles(files: TranslationModel['files'], direction: LanguagesDirection) {
-		return Object.fromEntries(
-			await Promise.all(
-				Object.entries(files).map(async ([part, file]) => {
-					// Special case where qualityModel is not part of the model, and this
-					// should also catch the `config` case.
-					if (file === undefined || file.name === undefined)
-						return [part, null] as const;
+	async getModelFile(
+		part: string,
+		file: TranslationModelFileReference,
+		direction: LanguagesDirection,
+	) {
+		// Special case where qualityModel is not part of the model, and this
+		// should also catch the `config` case.
+		if (file === undefined || file.name === undefined) return [part, null] as const;
 
-					try {
-						// Try get from cache
-						const cachedData = await getBergamotFile({
-							type: part,
-							expectedSha256Hash: file.expectedSha256Hash,
-							direction,
-						});
-						if (cachedData !== null) {
-							return [part, cachedData.buffer] as const;
-						}
+		try {
+			// Try get from cache
+			const cachedData = await getBergamotFile({
+				type: part,
+				expectedSha256Hash: file.expectedSha256Hash,
+				direction,
+			});
+			if (cachedData !== null) {
+				return [part, cachedData.buffer] as const;
+			}
 
-						const start = performance.now();
-						const arrayBuffer = await this.fetch(
-							file.name,
-							file.expectedSha256Hash,
-						);
-						console.warn(
-							'TIME TO LOAD FILE FROM INTERNET',
-							performance.now() - start,
-						);
+			const start = performance.now();
+			const arrayBuffer = await this.fetch(file.name, file.expectedSha256Hash);
+			console.warn('TIME TO LOAD FILE FROM INTERNET', performance.now() - start);
 
-						// Write cache
-						await addBergamotFile({
-							name: file.name,
-							expectedSha256Hash: file.expectedSha256Hash,
+			// Write cache
+			await addBergamotFile({
+				name: file.name,
+				expectedSha256Hash: file.expectedSha256Hash,
 
-							type: part,
-							buffer: arrayBuffer,
-							direction,
-						});
+				type: part,
+				buffer: arrayBuffer,
+				direction,
+			});
 
-						return [part, arrayBuffer] as const;
-					} catch (cause) {
-						throw new Error(
-							`Could not fetch ${file.name} for ${direction.from}->${direction.to} model`,
-						);
-					}
-				}),
-			),
-		);
+			return [part, arrayBuffer] as const;
+		} catch (cause) {
+			throw new Error(
+				`Could not fetch ${file.name} for ${direction.from}->${direction.to} model`,
+			);
+		}
 	}
 
 	/**
@@ -350,7 +346,13 @@ export class TranslatorBacking {
 		const files = entry.files;
 
 		// Download all files mentioned in the registry entry
-		const buffers = await this.getModelFiles(files, { from, to });
+		const buffers = Object.fromEntries(
+			await Promise.all(
+				Object.entries(files).map(async ([part, file]) => {
+					return this.getModelFile(part, file, { from, to });
+				}),
+			),
+		);
 
 		performance.measure(
 			'loadTranslationModel',
