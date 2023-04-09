@@ -4,4 +4,6 @@ The [bergamot project](https://github.com/browsermt/bergamot-translator) is a ma
 
 ## Build
 
-To build run `make build`. First build may take about 20 minutes.
+To build bergamot WASM module run `make build`. First build may take about 20 minutes.
+
+Directory `src` contains a code of worker that must be compiled with webpack from project root directory.

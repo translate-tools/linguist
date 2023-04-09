@@ -7,7 +7,6 @@ exportBuild:
 buildWasm: prepare
 	- cd bergamot-translator && mkdir build-wasm
 	source bergamot-translator/emsdk/emsdk_env.sh && cd bergamot-translator/build-wasm && emcmake cmake -DCOMPILE_WASM=on -DWORMHOLE=off ../ && emmake make -j2 && bash ../wasm/patch-artifacts-import-gemm-module.sh
-	npx tsc --project ./tsconfig.json
 
 prepare:
 	- git clone https://github.com/browsermt/bergamot-translator.git
