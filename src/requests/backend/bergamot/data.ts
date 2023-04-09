@@ -121,9 +121,8 @@ export const addFile = async (entry: File) => {
 	await transaction.done;
 };
 
-export type FileSearchParams = Pick<
-	FileEntry,
-	'type' | 'direction' | 'expectedSha256Hash'
+export type FileSearchParams = Partial<
+	Pick<FileEntry, 'type' | 'direction' | 'expectedSha256Hash'>
 >;
 export const getFile = async (searchParams: FileSearchParams) => {
 	let file: File | null = null;
