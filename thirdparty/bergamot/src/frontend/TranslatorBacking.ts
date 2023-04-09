@@ -22,8 +22,6 @@ import {
 	TranslationModelFileReference,
 } from '../types';
 
-const backingStorageName = 'bergamotBacking';
-
 type Registry = TranslationModel[];
 
 export type BackingOptions = BergamotTranslatorWorkerOptions & {
@@ -205,20 +203,11 @@ export class TranslatorBacking {
 	 * }>}
 	 */
 	async loadModelRegistery(): Promise<Registry> {
-		// TODO: return cache only when fetch failed
-		const { [backingStorageName]: dataFromStorage } = await browser.storage.local.get(
-			backingStorageName,
-		);
-		if (dataFromStorage) {
-			console.warn('GOT FROM CACHE', dataFromStorage);
-			return dataFromStorage;
-		}
-
 		const response = await fetch(this.registryUrl, { credentials: 'omit' });
 		const registry = await response.json();
 
 		// Add 'from' and 'to' keys for each model.
-		const data = Array.from(Object.entries(registry), ([key, files]) => {
+		return Array.from(Object.entries(registry), ([key, files]) => {
 			return {
 				from: key.substring(0, 2),
 				to: key.substring(2, 4),
@@ -234,11 +223,6 @@ export class TranslatorBacking {
 				>,
 			};
 		});
-
-		// Write data
-		await browser.storage.local.set({ [backingStorageName]: data });
-
-		return data;
 	}
 
 	/**
