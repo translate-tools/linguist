@@ -21,10 +21,12 @@ export type TranslationModel = {
 	files: Record<string, TranslationModelFileReference>;
 };
 
+export type ModelConfig = Record<string, string | boolean>;
+
 export type ModelBuffers = {
 	model: ArrayBuffer;
 	shortlist: ArrayBuffer;
 	vocabs: ArrayBuffer[];
 	qualityModel: ArrayBuffer | null;
-	config?: Record<string, string>;
+	config?: ModelConfig;
 };

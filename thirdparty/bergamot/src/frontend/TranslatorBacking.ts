@@ -5,9 +5,6 @@
 
 /* eslint-disable */
 
-// TODO: introduce interfaces, use it to ensure contracts between workers
-// TODO: improve types, remove any
-
 import {
 	BergamotTranslatorWorkerAPI,
 	BergamotTranslatorWorkerOptions,
@@ -16,6 +13,7 @@ import {
 import {
 	LanguagesDirection,
 	ModelBuffers,
+	ModelConfig,
 	TranslationModel,
 	TranslationModelFileReference,
 } from '../types';
@@ -208,14 +206,7 @@ export class TranslatorBacking {
 				to: key.substring(2, 4),
 
 				// TODO: validate JSON
-				files: files as Record<
-					string,
-					{
-						name: string;
-						size: number;
-						expectedSha256Hash: string;
-					}
-				>,
+				files: files as Record<string, TranslationModelFileReference>,
 			};
 		});
 	}
@@ -327,7 +318,7 @@ export class TranslatorBacking {
 			);
 		}
 
-		let config: Record<string, any> = {};
+		let config: ModelConfig = {};
 
 		// For the Ukrainian models we need to override the gemm-precision
 		if (files.model.name.endsWith('intgemm8.bin')) {

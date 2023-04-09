@@ -3,13 +3,9 @@
  * Source: https://github.com/browsermt/bergamot-translator/blob/82c276a15c23a40bc7e21e8a1e0a289a6ce57017/wasm/module/worker/translator-worker.js
  */
 
-/* eslint-disable */
-
-// TODO: introduce interfaces, use it to ensure contracts between workers
-// TODO: improve types, remove any
-
 import { BergamotTranslatorWorkerAPI } from '../worker/types';
 import { TranslationModel } from '../types';
+
 import { CancelledError } from './errors';
 
 import { TranslatorBacking } from './TranslatorBacking';
