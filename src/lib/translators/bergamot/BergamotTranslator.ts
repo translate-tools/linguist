@@ -17,11 +17,7 @@ export class BergamotTranslator {
 		if (from === 'auto') {
 			const langs = BergamotTranslator.getSupportedLanguages();
 			const detectedLanguage = await detectLanguage(text);
-			if (
-				detectedLanguage !== null &&
-				detectedLanguage !== to &&
-				langs.includes(detectedLanguage)
-			) {
+			if (detectedLanguage !== null && langs.includes(detectedLanguage)) {
 				from = detectedLanguage;
 			} else {
 				// Use most popular content language or first of list
@@ -30,6 +26,8 @@ export class BergamotTranslator {
 				from = defaultLang ?? 'en';
 			}
 		}
+
+		if (from === to) return text;
 
 		const response = this.translator.translate({
 			from,
