@@ -1,15 +1,18 @@
-build: buildWasm exportBuild
+build: buildWorker buildWasm exportWasm
+
+buildWorker:
+	npm install
 	npm run worker:build
 
-exportBuild:
+exportWasm:
 	- mkdir build
 	cp bergamot-translator/build-wasm/bergamot-translator-worker.{js,wasm} build/
 
-buildWasm: prepare
+buildWasm: prepareWasm
 	- cd bergamot-translator && mkdir build-wasm
 	source bergamot-translator/emsdk/emsdk_env.sh && cd bergamot-translator/build-wasm && emcmake cmake -DCOMPILE_WASM=on -DWORMHOLE=off ../ && emmake make -j2 && bash ../wasm/patch-artifacts-import-gemm-module.sh
 
-prepare:
+prepareWasm:
 	- git clone https://github.com/browsermt/bergamot-translator.git
 	- cd bergamot-translator && git clone https://github.com/emscripten-core/emsdk.git
 	cd bergamot-translator/emsdk && ./emsdk install 3.1.8 && ./emsdk activate 3.1.8
