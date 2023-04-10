@@ -1,3 +1,6 @@
+# include docs https://www.gnu.org/software/make/manual/html_node/Include.html
+include .env
+
 build: buildWorker buildWasm exportWasm
 
 buildWorker:
@@ -14,6 +17,7 @@ buildWasm: prepareWasm
 
 prepareWasm:
 	- git clone https://github.com/browsermt/bergamot-translator.git
+	cd bergamot-translator && git checkout "${BERGAMOT_VERSION}"
 	- cd bergamot-translator && git clone https://github.com/emscripten-core/emsdk.git
 	cd bergamot-translator/emsdk && ./emsdk install 3.1.8 && ./emsdk activate 3.1.8
 
