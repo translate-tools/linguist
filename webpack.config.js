@@ -32,8 +32,6 @@ module.exports = {
 	entry: {
 		background: './src/background.ts',
 		contentscript: './src/contentscript.tsx',
-		['thirdparty/bergamot/translator-worker']:
-			'./thirdparty/bergamot/src//worker/translator.worker.ts',
 		['pages/popup/popup']: './src/pages/popup/popup.tsx',
 		['pages/options/options']: './src/pages/options/options.tsx',
 		['pages/dictionary/dictionary']: './src/pages/dictionary/dictionary.tsx',
@@ -113,7 +111,7 @@ module.exports = {
 					to: path.join(outputPath, '_locales'),
 				},
 
-				// Static files
+				// Offline translator
 				{
 					from: 'thirdparty/bergamot/build/*.{js,wasm}',
 					to: path.join(outputPath, 'thirdparty/bergamot/[name].[ext]'),

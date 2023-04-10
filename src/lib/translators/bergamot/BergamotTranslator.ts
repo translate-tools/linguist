@@ -12,7 +12,7 @@ export class BergamotTranslator {
 	private translator;
 	constructor() {
 		const workerUrl = browser.runtime.getURL(
-			'thirdparty/bergamot/translator-worker.js',
+			'thirdparty/bergamot/translator.worker.js',
 		);
 		const backing = new TranslatorBackingWithCache({ workerUrl });
 		this.translator = new BatchTranslator(backing);

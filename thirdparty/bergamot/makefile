@@ -1,4 +1,5 @@
 build: buildWasm exportBuild
+	npm run worker:build
 
 exportBuild:
 	- mkdir build
