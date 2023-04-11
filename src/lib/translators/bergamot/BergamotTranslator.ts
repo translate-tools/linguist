@@ -15,7 +15,11 @@ export class BergamotTranslator {
 			'thirdparty/bergamot/translator.worker.js',
 		);
 		const backing = new TranslatorBackingWithCache({ workerUrl });
-		this.translator = new BatchTranslator(backing);
+		this.translator = new BatchTranslator(backing, {
+			onerror(err) {
+				console.warn('BergamotTranslator: error in BatchTranslator', err);
+			},
+		});
 	}
 
 	translate = async (text: string, from: string, to: string) => {

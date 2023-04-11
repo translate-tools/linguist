@@ -188,11 +188,13 @@ export class BatchTranslator {
 
 			// No worker free, but space for more?
 			if (!worker && this.workers.length < this.workerLimit) {
+				let workerObject: WorkerObject | null = null;
 				try {
 					// Claim a place in the workers array (but mark it busy so
 					// it doesn't get used by any other `notify()` calls).
 					const placeholder: WorkerObject = { idle: false };
 					this.workers.push(placeholder);
+					workerObject = placeholder;
 
 					// adds `worker` and `exports` props
 					placeholder.controls = await this.backing.loadWorker();
@@ -200,13 +202,32 @@ export class BatchTranslator {
 					// At this point we know our new worker will be usable.
 					worker = placeholder;
 				} catch (e) {
-					this.onerror(
-						new Error(
-							`Could not initialise translation worker: ${
-								(e as Error).message
-							}`,
-						),
+					const wrappedError = new Error(
+						`Could not initialise translation worker: ${
+							(e as Error).message
+						}`,
 					);
+
+					this.onerror(wrappedError);
+
+					// Remove worker from a pool
+					if (workerObject !== null) {
+						this.workers = this.workers.filter(
+							(worker) => worker !== workerObject,
+						);
+					}
+
+					// If no workers exists except current, probably we cannot load worker, so it is fatal error
+					// For this case we reject all requests and clear queue
+					if (this.workers.length <= 1) {
+						this.queue.forEach((batch) => {
+							batch.requests.forEach(({ reject }) => {
+								reject(wrappedError);
+							});
+						});
+
+						this.queue = [];
+					}
 				}
 			}
 
