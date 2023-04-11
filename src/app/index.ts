@@ -54,8 +54,8 @@ export class App {
 
 		await this.background.start();
 
-		await this.handleConfigUpdates();
 		await this.setupRequestHandlers();
+		await this.handleConfigUpdates();
 	}
 
 	private async setupRequestHandlers() {
