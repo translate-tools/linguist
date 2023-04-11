@@ -31,6 +31,7 @@ export type BackingOptions = BergamotTranslatorWorkerOptions & {
  */
 export class TranslatorBacking {
 	private registryUrl;
+	private workerUrl;
 	private downloadTimeout;
 	private registry;
 	private buffers;
@@ -39,12 +40,13 @@ export class TranslatorBacking {
 	private onerror;
 
 	private options;
-	constructor(options: BackingOptions) {
+	constructor({ workerUrl, registryUrl, onerror, ...options }: BackingOptions) {
 		this.options = options;
 
 		this.registryUrl =
-			this.options.registryUrl ||
-			'https://bergamot.s3.amazonaws.com/models/index.json';
+			registryUrl || 'https://bergamot.s3.amazonaws.com/models/index.json';
+
+		this.workerUrl = workerUrl;
 
 		this.downloadTimeout = this.options.downloadTimeout ?? 60000;
 
@@ -78,8 +80,7 @@ export class TranslatorBacking {
 		 * @type {(error: Error)}
 		 */
 		this.onerror =
-			this.options.onerror ||
-			((err) => console.error('WASM Translation Worker error:', err));
+			onerror || ((err) => console.error('WASM Translation Worker error:', err));
 	}
 
 	/**
@@ -90,7 +91,7 @@ export class TranslatorBacking {
 	 * @return {Promise<{worker:Worker, exports:Proxy<TranslationWorker>}>}
 	 */
 	async loadWorker() {
-		const worker = new Worker(this.options.workerUrl);
+		const worker = new Worker(this.workerUrl);
 
 		/**
 		 * Incremental counter to derive request/response ids from.

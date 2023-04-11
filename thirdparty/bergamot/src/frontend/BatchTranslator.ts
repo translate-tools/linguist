@@ -202,10 +202,11 @@ export class BatchTranslator {
 					// At this point we know our new worker will be usable.
 					worker = placeholder;
 				} catch (e) {
-					const wrappedError = new Error(
+					const wrappedError = new (Error as any)(
 						`Could not initialise translation worker: ${
 							(e as Error).message
 						}`,
+						{ cause: e },
 					);
 
 					this.onerror(wrappedError);
