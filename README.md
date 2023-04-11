@@ -36,7 +36,7 @@ Supported translators out of the box:
 
 - Google
 - Yandex
-- Bing
+- Bergamot
 
 You can also use your own [custom translator](./docs/CustomTranslator.md), see a [custom translators list](./modules/README.md) to find a ready to use bindings for a most popular translation services.
 
