@@ -1,6 +1,6 @@
 import browser from 'webextension-polyfill';
 
-import { DEFAULT_TTS } from '../../config';
+import { DEFAULT_TRANSLATOR, DEFAULT_TTS } from '../../config';
 import { createMigrationTask, Migration } from '../../lib/migrations/createMigrationTask';
 
 const migrations: Migration[] = [
@@ -98,6 +98,29 @@ const migrations: Migration[] = [
 						enableContextMenu: false,
 						...actualData?.pageTranslator,
 					},
+				},
+			});
+		},
+	},
+	{
+		version: 5,
+		async migrate() {
+			const storageName = 'appConfig';
+
+			let { [storageName]: actualData } = await browser.storage.local.get(
+				storageName,
+			);
+			if (typeof actualData !== 'object') {
+				actualData = {};
+			}
+
+			if (actualData.translatorModule !== 'BingTranslatorPublic') return;
+
+			// Fallback bing translator
+			browser.storage.local.set({
+				[storageName]: {
+					...actualData,
+					translatorModule: DEFAULT_TRANSLATOR,
 				},
 			});
 		},

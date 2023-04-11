@@ -3,7 +3,6 @@ import { isEqual } from 'lodash';
 // Translators
 import { GoogleTranslator } from '@translate-tools/core/translators/GoogleTranslator';
 import { YandexTranslator } from '@translate-tools/core/translators/YandexTranslator';
-import { BingTranslatorPublic } from '@translate-tools/core/translators/unstable/BingTranslatorPublic';
 import { TranslatorClass } from '@translate-tools/core/types/Translator';
 
 import { AppConfigType } from '../../types/runtime';
@@ -22,10 +21,9 @@ import { TTSController } from './TTS/TTSController';
 import { BergamotTranslator } from '../../lib/translators/bergamot/BergamotTranslator';
 
 export const embeddedTranslators = {
-	BergamotTranslator,
-	YandexTranslator,
 	GoogleTranslator,
-	BingTranslatorPublic,
+	YandexTranslator,
+	BergamotTranslator,
 } as const;
 
 /**
