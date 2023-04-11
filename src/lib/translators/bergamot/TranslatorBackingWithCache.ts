@@ -18,7 +18,6 @@ export class TranslatorBackingWithCache extends TranslatorBacking {
 		const { [this.backingStorageName]: dataFromStorage } =
 			await browser.storage.local.get(this.backingStorageName);
 		if (dataFromStorage) {
-			console.warn('GOT FROM CACHE', dataFromStorage);
 			return dataFromStorage;
 		}
 

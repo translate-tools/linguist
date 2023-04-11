@@ -251,10 +251,7 @@ export class TranslatorBacking {
 		if (file === undefined || file.name === undefined) return [part, null] as const;
 
 		try {
-			const start = performance.now();
 			const arrayBuffer = await this.fetch(file.name, file.expectedSha256Hash);
-			console.warn('TIME TO LOAD FILE FROM INTERNET', performance.now() - start);
-
 			return [part, arrayBuffer] as const;
 		} catch (cause) {
 			throw new Error(

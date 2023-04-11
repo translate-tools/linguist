@@ -108,7 +108,7 @@ export const addFile = async (entry: File) => {
 
 	// Write file chunks
 	// We split file to chunks, to support any file size
-	console.warn('File buffer len', buffer.byteLength);
+	console.warn('Add file to bergamot cache. Size: ', buffer.byteLength);
 	for (let offset = 0; offset < buffer.byteLength; offset += maxBufferLen) {
 		const slice = buffer.slice(offset, offset + maxBufferLen);
 		await transaction.objectStore('chunks').put({
@@ -132,7 +132,6 @@ export const getFile = async (searchParams: FileSearchParams) => {
 	const db = await getDB();
 	const transaction = db.transaction(['files', 'chunks'], 'readonly');
 	const startCursor = await transaction.objectStore('files').openCursor(null);
-	const collectAll = performance.now();
 	if (startCursor !== null) {
 		fileSearchLoop: for await (const fileCursor of startCursor) {
 			const fileData = fileCursor.value;
@@ -148,19 +147,13 @@ export const getFile = async (searchParams: FileSearchParams) => {
 				.index('fileId')
 				.iterate(fileCursor.primaryKey);
 			if (chunksStartCursor !== null) {
-				const collectChunks = performance.now();
-
 				// Collect chunks
 				const chunks: FileChunk[] = [];
 				for await (const chunkCursor of chunksStartCursor) {
 					chunks.push(chunkCursor.value);
 				}
 
-				console.log('>> PERF collectChunks', performance.now() - collectChunks);
-
 				if (chunks.length === 0) throw new Error('No file chunks found');
-
-				const start = performance.now();
 
 				// Get buffer
 				let buffer: ArrayBuffer;
@@ -186,8 +179,6 @@ export const getFile = async (searchParams: FileSearchParams) => {
 					buffer = mergedBuffer.buffer;
 				}
 
-				console.log('BUILDING TIME', performance.now() - start);
-
 				// Collect file
 				file = {
 					...fileData,
@@ -198,8 +189,6 @@ export const getFile = async (searchParams: FileSearchParams) => {
 			}
 		}
 	}
-	console.log('>> PERF collectAll', performance.now() - collectAll);
-
 	await transaction.done;
 
 	return file;

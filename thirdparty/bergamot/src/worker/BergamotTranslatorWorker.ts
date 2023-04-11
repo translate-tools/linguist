@@ -97,7 +97,6 @@ export class BergamotTranslatorWorker implements IBergamotTranslatorWorker {
 	public async initialize(options?: BergamotTranslatorWorkerOptions) {
 		this.options = options || {};
 		this.models = new Map();
-		console.warn('MODELS', this.models);
 		this.module = await this.loadModule();
 		this.service = await this.loadTranslationService();
 	}
