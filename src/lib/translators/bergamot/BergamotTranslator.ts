@@ -14,7 +14,17 @@ export class BergamotTranslator {
 		const workerUrl = browser.runtime.getURL(
 			'thirdparty/bergamot/translator.worker.js',
 		);
-		const backing = new TranslatorBackingWithCache({ workerUrl });
+		const backing = new TranslatorBackingWithCache({
+			workerUrl,
+			// This error handler do nothing, but it's required to `translate` method correct handle exceptions
+			// With no error handler here we cannot to catch an error when worker does not exists
+			onerror(err) {
+				console.warn(
+					'BergamotTranslator: error in TranslatorBackingWithCache',
+					err,
+				);
+			},
+		});
 		this.translator = new BatchTranslator(backing, {
 			onerror(err) {
 				console.warn('BergamotTranslator: error in BatchTranslator', err);
