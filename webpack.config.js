@@ -111,6 +111,12 @@ module.exports = {
 					to: path.join(outputPath, '_locales'),
 				},
 
+				// Offline translator
+				{
+					from: 'thirdparty/bergamot/build/*.{js,wasm}',
+					to: path.join(outputPath, 'thirdparty/bergamot/[name].[ext]'),
+				},
+
 				// Serve static files
 				...[
 					'logo-icon.svg',

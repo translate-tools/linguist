@@ -2,11 +2,17 @@ The build scripts are designed to run on unix platform (linux, mac, bsd, etc), i
 
 # Build from sources
 
+To build, run `make build` in root of repository. This command will install dependencies, build third-party libraries, compile linguist for all platforms and will pack it to archives.
+
+To build one target, you can do:
+
 - install dependencies with run `npm install`
+- build third party components `make buildThirdparty`
+	- build may take a lot of time (~30 minutes), you can skip this step if you will not use third party modules like bergamot translator
 - build addon for your platform (see scripts in `packages.json`), for example `npm run build:firefox`
 - find artifacts in `build` directory
 
-Platforms:
+Available platforms:
 
 - firefox
 - chrome

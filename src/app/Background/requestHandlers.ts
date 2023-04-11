@@ -37,6 +37,8 @@ import { historyRequestHandlersFactory } from '../../requests/backend/history';
 import { getRecentUsedLanguagesFactory } from '../../requests/backend/recentUsedLanguages/getRecentUsedLanguages';
 import { addRecentUsedLanguageFactory } from '../../requests/backend/recentUsedLanguages/addRecentUsedLanguage';
 
+import { bergamotHandlersFactory } from '../../requests/backend/bergamot';
+
 export const requestHandlers = [
 	translateFactory,
 	suggestLanguageFactory,
@@ -48,6 +50,8 @@ export const requestHandlers = [
 	...ttsRequestHandlers,
 
 	historyRequestHandlersFactory,
+
+	bergamotHandlersFactory,
 
 	getConfigFactory,
 	setConfigFactory,
