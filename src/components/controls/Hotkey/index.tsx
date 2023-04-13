@@ -104,7 +104,13 @@ export const Hotkey: FC<HotkeyProps> = ({ value, onChange }) => {
 			pressedKeys[keyName] = false;
 			const pressedKeysValues = Object.values(pressedKeys);
 
-			// console.log('up', pressedKeys, pressedKeysValues);
+			// Reset hotkeys
+			if (keyName === 'Escape' && pressedKeysValues.length === 1) {
+				pressedKeys = {};
+				onChange(null);
+			}
+
+			// Record hotkeys
 			if (
 				pressedKeysValues.length > 0 &&
 				pressedKeysValues.every((isPressed) => !isPressed)
