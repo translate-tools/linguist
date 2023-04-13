@@ -95,6 +95,12 @@ export const Hotkey: FC<HotkeyProps> = ({ value, onChange }) => {
 			const keyName = getUnifiedKeyName(evt.code);
 			if (keyName === null) return;
 
+			// Do not record tab key, to keep keyboard navigation works
+			if (keyName === 'Tab') {
+				pressedKeys = {};
+				return;
+			}
+
 			evt.preventDefault();
 			pressedKeys[keyName] = true;
 		};
@@ -103,18 +109,22 @@ export const Hotkey: FC<HotkeyProps> = ({ value, onChange }) => {
 			const keyName = getUnifiedKeyName(evt.code);
 			if (keyName === null) return;
 
-			evt.preventDefault();
-			pressedKeys[keyName] = false;
-			const pressedKeysValues = Object.values(pressedKeys);
-
-			// Reset hotkeys
-			if (keyName === 'Escape' && pressedKeysValues.length === 1) {
+			// Reset keys
+			if (keyName === 'Escape' && Object.values(pressedKeys).length === 1) {
 				pressedKeys = {};
 				onChange(null);
 				return;
 			}
 
-			// Record hotkeys
+			evt.preventDefault();
+
+			// Change state for recorded keys, but do not insert new keys
+			if (pressedKeys[keyName]) {
+				pressedKeys[keyName] = false;
+			}
+
+			// Update hotkeys
+			const pressedKeysValues = Object.values(pressedKeys);
 			if (
 				pressedKeysValues.length > 0 &&
 				pressedKeysValues.every((isPressed) => !isPressed)
