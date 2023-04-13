@@ -78,31 +78,6 @@ const migrations: Migration[] = [
 		},
 	},
 	{
-		version: 4,
-		async migrate() {
-			const storageName = 'appConfig';
-
-			let { [storageName]: actualData } = await browser.storage.local.get(
-				storageName,
-			);
-			if (typeof actualData !== 'object') {
-				actualData = {};
-			}
-
-			// Write data
-			browser.storage.local.set({
-				[storageName]: {
-					ttsModule: DEFAULT_TTS,
-					...actualData,
-					pageTranslator: {
-						enableContextMenu: false,
-						...actualData?.pageTranslator,
-					},
-				},
-			});
-		},
-	},
-	{
 		version: 5,
 		async migrate() {
 			const storageName = 'appConfig';
@@ -114,15 +89,22 @@ const migrations: Migration[] = [
 				actualData = {};
 			}
 
-			if (actualData.translatorModule !== 'BingTranslatorPublic') return;
-
-			// Fallback bing translator
-			browser.storage.local.set({
-				[storageName]: {
-					...actualData,
-					translatorModule: DEFAULT_TRANSLATOR,
+			const updatedConfig = {
+				ttsModule: DEFAULT_TTS,
+				...actualData,
+				pageTranslator: {
+					enableContextMenu: false,
+					toggleTranslationHotkey: null,
+					...actualData?.pageTranslator,
 				},
-			});
+			};
+
+			if (actualData.translatorModule === 'BingTranslatorPublic') {
+				updatedConfig.translatorModule = DEFAULT_TRANSLATOR;
+			}
+
+			// Write data
+			browser.storage.local.set({ [storageName]: updatedConfig });
 		},
 	},
 ];
