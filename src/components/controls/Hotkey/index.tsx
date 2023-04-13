@@ -109,7 +109,9 @@ export const Hotkey: FC<HotkeyProps> = ({ value, onChange }) => {
 				pressedKeysValues.length > 0 &&
 				pressedKeysValues.every((isPressed) => !isPressed)
 			) {
-				const keys = Object.keys(pressedKeys).join('+');
+				const keys = Object.keys(pressedKeys)
+					.sort((a, b) => b.length - a.length)
+					.join('+');
 
 				pressedKeys = {};
 				onChange(keys);
