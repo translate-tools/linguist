@@ -35,3 +35,7 @@ When you change code that touch any user data and interact with browser storages
 The common rule is any code that just transform data should be tested.
 
 You may a not add tests for UI, but should add tests for data.
+
+# Migrations
+
+Migrations must have app version.
