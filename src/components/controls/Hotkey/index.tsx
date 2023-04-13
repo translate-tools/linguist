@@ -20,9 +20,11 @@ export const getUnifiedKeyName = (code: string) => {
 		AudioVolume: 'Volume',
 	};
 
-	// Return key code
-	if (code.startsWith('Key')) {
-		return code.slice(3);
+	// Return literal with removed prefix
+	const literalPrefixes = ['Key', 'Digit'];
+	const literalPrefix = literalPrefixes.find((prefix) => code.startsWith(prefix));
+	if (literalPrefix !== undefined) {
+		return code.slice(literalPrefix.length);
 	}
 
 	// Fix prefix
