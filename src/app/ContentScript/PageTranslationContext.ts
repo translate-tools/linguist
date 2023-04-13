@@ -4,6 +4,8 @@ import { AppConfigType } from '../../types/runtime';
 import { getPageLanguage } from '../../lib/browser';
 import { isNotEqual } from '../../lib/effector/filters';
 
+import { onHotkeysPressed } from '../../components/controls/Hotkey';
+
 // Requests
 import { getSitePreferences } from '../../requests/backend/autoTranslation/sitePreferences/getSitePreferences';
 import { getLanguagePreferences } from '../../requests/backend/autoTranslation/languagePreferences/getLanguagePreferences';
@@ -195,6 +197,46 @@ export class PageTranslationContext {
 			clock: scanPageFx.doneData,
 			source: $masterStore,
 		}).watch(this.initTranslation);
+
+		// Setup hotkeys
+		let hotkeysObserverCleanup: (() => void) | null = null;
+		$masterStore
+			.map(({ config, pageData, translatorsState }) => ({
+				hotkeys: config.pageTranslator.toggleTranslationHotkey,
+				userLanguage: config.language,
+				pageLanguage: pageData.language,
+				isPageTranslated: translatorsState.pageTranslation !== null,
+			}))
+			.watch(({ hotkeys, pageLanguage, userLanguage, isPageTranslated }) => {
+				console.log({ hotkeys });
+
+				// Reset current observer
+				if (hotkeysObserverCleanup) {
+					hotkeysObserverCleanup();
+					hotkeysObserverCleanup = null;
+				}
+
+				if (hotkeys) {
+					hotkeysObserverCleanup = onHotkeysPressed(hotkeys, (e) => {
+						e.preventDefault();
+						console.log('Triggered hotkeys', hotkeys);
+
+						// Toggle translation
+						if (isPageTranslated) {
+							this.events.updatePageTranslationState(null);
+						} else {
+							if (pageLanguage === null) {
+								throw new Error('Page language not set');
+							}
+
+							this.events.updatePageTranslationState({
+								from: pageLanguage,
+								to: userLanguage,
+							});
+						}
+					});
+				}
+			});
 	}
 
 	private initTranslation = async ({

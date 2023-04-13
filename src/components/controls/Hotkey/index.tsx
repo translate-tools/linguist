@@ -41,6 +41,43 @@ export const getUnifiedKeyName = (code: string) => {
 	return code;
 };
 
+// TODO: unpress all keys by unfocus tab or document or change focus
+export const onHotkeysPressed = (
+	hotkeys: string,
+	callback: (event: KeyboardEvent) => void,
+) => {
+	const hotkeysArray = hotkeys.split('+');
+
+	const pressedKeys: Record<string, boolean> = {};
+
+	const onKeyDown = (evt: KeyboardEvent) => {
+		const keyName = getUnifiedKeyName(evt.code);
+		if (keyName === null) return;
+
+		pressedKeys[keyName] = true;
+
+		const isHotkeysPressed =
+			hotkeysArray.length > 0 && hotkeysArray.every((key) => pressedKeys[key]);
+		if (isHotkeysPressed) {
+			callback(evt);
+		}
+	};
+
+	const onKeyUp = (evt: KeyboardEvent) => {
+		const keyName = getUnifiedKeyName(evt.code);
+		if (keyName === null) return;
+
+		pressedKeys[keyName] = false;
+	};
+
+	document.addEventListener('keydown', onKeyDown);
+	document.addEventListener('keyup', onKeyUp);
+	return () => {
+		document.removeEventListener('keydown', onKeyDown);
+		document.removeEventListener('keyup', onKeyUp);
+	};
+};
+
 export const Hotkey: FC<HotkeyProps> = ({ value, onChange }) => {
 	const [isFocus, setIsFocus] = useState(false);
 
