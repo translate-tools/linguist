@@ -250,6 +250,13 @@ export const generateTree = ({
 					},
 				},
 				{
+					path: 'pageTranslator.toggleTranslationHotkey',
+					description: 'Hotkey for toggle translation',
+					optionContent: {
+						type: 'Hotkey',
+					},
+				},
+				{
 					path: 'pageTranslator.enableContextMenu',
 					description: getMessage(
 						'settings_option_pageTranslation_enableContextMenu_desc',
