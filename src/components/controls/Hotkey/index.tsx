@@ -1,6 +1,9 @@
 import React, { FC, useEffect, useState } from 'react';
 import { Textinput } from 'react-elegant-ui/esm/components/Textinput/Textinput.bundle/desktop';
 
+import { LayoutFlow } from '../../layouts/LayoutFlow/LayoutFlow';
+import { Button } from '../../primitives/Button/Button.bundle/universal';
+
 export type HotkeyProps = {
 	value: string | null;
 	onChange: (value: string | null) => void;
@@ -133,15 +136,18 @@ export const Hotkey: FC<HotkeyProps> = ({ value, onChange }) => {
 	}, [isFocus, onChange]);
 
 	return (
-		<Textinput
-			onFocus={() => {
-				setIsFocus(true);
-			}}
-			onBlur={() => {
-				setIsFocus(false);
-			}}
-			value={value ?? ''}
-			placeholder="Press keys"
-		/>
+		<LayoutFlow direction="horizontal" indent="m">
+			<Textinput
+				onFocus={() => {
+					setIsFocus(true);
+				}}
+				onBlur={() => {
+					setIsFocus(false);
+				}}
+				value={value ?? ''}
+				placeholder="Press keys"
+			/>
+			<Button onClick={() => onChange(null)}>Reset</Button>
+		</LayoutFlow>
 	);
 };
