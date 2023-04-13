@@ -208,8 +208,6 @@ export class PageTranslationContext {
 				isPageTranslated: translatorsState.pageTranslation !== null,
 			}))
 			.watch(({ hotkeys, pageLanguage, userLanguage, isPageTranslated }) => {
-				console.log({ hotkeys });
-
 				// Reset current observer
 				if (hotkeysObserverCleanup) {
 					hotkeysObserverCleanup();
@@ -219,8 +217,6 @@ export class PageTranslationContext {
 				if (hotkeys) {
 					hotkeysObserverCleanup = onHotkeysPressed(hotkeys, (e) => {
 						e.preventDefault();
-						console.log('Triggered hotkeys', hotkeys);
-
 						// Toggle translation
 						if (isPageTranslated) {
 							this.events.updatePageTranslationState(null);

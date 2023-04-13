@@ -122,7 +122,6 @@ export const OptionsTree: FC<OptionsTreeProps> = ({
 						<Hotkey
 							value={value}
 							onChange={(value) => {
-								console.warn('HOTKEY: ', value);
 								setOptionValueProxy(path, value);
 							}}
 						/>
