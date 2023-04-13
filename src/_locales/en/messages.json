@@ -29,6 +29,15 @@
 	"common_translate": {
 		"message": "Translate"
 	},
+	"component_hotkey_placeholder": {
+		"message": "Focus to record hotkeys"
+	},
+	"component_hotkey_recordPlaceholder": {
+		"message": "Press keys"
+	},
+	"component_hotkey_resetButton": {
+		"message": "Reset"
+	},
 	"contextMenu_disablePageTranslation": {
 		"message": "Disable page translation"
 	},
@@ -367,6 +376,12 @@
 	},
 	"settings_option_pageTranslation_originalTextPopup_desc": {
 		"message": "Show a popup with original text by hovering the mouse over translated text"
+	},
+	"settings_option_pageTranslation_toggleTranslationHotkey": {
+		"message": "Hotkeys"
+	},
+	"settings_option_pageTranslation_toggleTranslationHotkey_desc": {
+		"message": "Shortcuts to toggle page translation\nPress ESC to reset keys"
 	},
 	"settings_option_pageTranslation_translatableAttributes": {
 		"message": "Translatable attributes."

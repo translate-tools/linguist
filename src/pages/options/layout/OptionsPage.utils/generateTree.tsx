@@ -263,9 +263,12 @@ export const generateTree = ({
 				},
 				{
 					path: 'pageTranslator.toggleTranslationHotkey',
-					title: 'Hotkeys',
-					description:
-						'Shortcuts to toggle page translation\nPress ESC to reset keys',
+					title: getMessage(
+						'settings_option_pageTranslation_toggleTranslationHotkey',
+					),
+					description: getMessage(
+						'settings_option_pageTranslation_toggleTranslationHotkey_desc',
+					),
 					optionContent: {
 						type: 'Hotkey',
 					},

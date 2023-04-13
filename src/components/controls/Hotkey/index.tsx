@@ -5,6 +5,7 @@ import { Textinput } from '../../primitives/Textinput/Textinput.bundle/desktop';
 import { Button } from '../../primitives/Button/Button.bundle/universal';
 
 import { getUnifiedKeyName } from './utils';
+import { getMessage } from '../../../lib/language';
 
 export type HotkeyProps = {
 	value: string | null;
@@ -84,9 +85,15 @@ export const Hotkey: FC<HotkeyProps> = ({ value, onChange }) => {
 					setIsFocus(false);
 				}}
 				value={value ?? ''}
-				placeholder={isFocus ? 'Press keys' : 'Focus to record hotkeys'}
+				placeholder={
+					isFocus
+						? getMessage('component_hotkey_recordPlaceholder')
+						: getMessage('component_hotkey_placeholder')
+				}
 			/>
-			<Button onClick={() => onChange(null)}>Reset</Button>
+			<Button onClick={() => onChange(null)}>
+				{getMessage('component_hotkey_resetButton')}
+			</Button>
 		</LayoutFlow>
 	);
 };
