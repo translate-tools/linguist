@@ -4,7 +4,7 @@ import { AppConfigType } from '../../types/runtime';
 import { getPageLanguage } from '../../lib/browser';
 import { isNotEqual } from '../../lib/effector/filters';
 
-import { onHotkeysPressed } from '../../components/controls/Hotkey';
+import { onHotkeysPressed } from '../../components/controls/Hotkey/utils';
 
 // Requests
 import { getSitePreferences } from '../../requests/backend/autoTranslation/sitePreferences/getSitePreferences';
