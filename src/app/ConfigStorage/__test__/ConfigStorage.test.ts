@@ -28,7 +28,13 @@ describe('config migrations', () => {
 
 	test('migrate config v0-v5', async () => {
 		// Load data
-		localStorage.setItem('config.Main', JSON.stringify(configVersion1));
+		localStorage.setItem(
+			'config.Main',
+			JSON.stringify({
+				...configVersion1,
+				translatorModule: 'BingTranslatorPublic',
+			}),
+		);
 
 		// Migrate data
 		await ConfigStorageMigration.migrate(0, 5);
