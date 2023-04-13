@@ -8,7 +8,7 @@ import { ConfigStorageMigration } from '../ConfigStorage.migrations';
 
 import configVersion1 from './config-v1.json';
 import configVersion3 from './config-v3.json';
-import configVersion4 from './config-v4.json';
+import configVersion5 from './config-v5.json';
 
 describe('config migrations', () => {
 	beforeAll(clearAllMocks);
@@ -26,22 +26,22 @@ describe('config migrations', () => {
 		expect(localStorage.getItem('config.Main')).toBeNull();
 	});
 
-	test('migrate config v0-v4', async () => {
+	test('migrate config v0-v5', async () => {
 		// Load data
 		localStorage.setItem('config.Main', JSON.stringify(configVersion1));
 
 		// Migrate data
-		await ConfigStorageMigration.migrate(0, 4);
+		await ConfigStorageMigration.migrate(0, 5);
 
 		const { appConfig } = await browser.storage.local.get('appConfig');
-		expect(appConfig).toEqual(configVersion4);
+		expect(appConfig).toEqual(configVersion5);
 	});
 });
 
 describe('use config', () => {
 	beforeAll(clearAllMocks);
 
-	const latestConfigObject = configVersion4 as AppConfigType;
+	const latestConfigObject = configVersion5 as AppConfigType;
 
 	test('config storage set/get', async () => {
 		const configStorage = new ConfigStorage(latestConfigObject);
