@@ -146,7 +146,7 @@ export const Hotkey: FC<HotkeyProps> = ({ value, onChange }) => {
 					setIsFocus(false);
 				}}
 				value={value ?? ''}
-				placeholder="Press keys"
+				placeholder={isFocus ? 'Press keys' : 'Focus to record hotkeys'}
 			/>
 			<Button onClick={() => onChange(null)}>Reset</Button>
 		</LayoutFlow>
