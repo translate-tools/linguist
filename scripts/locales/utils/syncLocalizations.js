@@ -45,7 +45,7 @@ const syncLocalizationsMessagesWithSource = async (
 	const languageNames = new Intl.DisplayNames([targetLocalization.code], {
 		type: 'language',
 	});
-	Object.keys(filteredJson).forEach((messageName) => {
+	Object.keys(sourceLocalization.json).forEach((messageName) => {
 		const langCodePrefix = 'langCode_';
 		if (!messageName.startsWith(langCodePrefix)) return;
 
