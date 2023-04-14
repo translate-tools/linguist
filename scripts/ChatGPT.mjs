@@ -7,7 +7,7 @@ export class ChatGPT {
 	/**
 	 * Delay between messages
 	 */
-	_delay = 1000;
+	_delay = 3000;
 
 	constructor() {
 		if (process.env.OPENAI_API_KEY) {
@@ -15,8 +15,6 @@ export class ChatGPT {
 			this.api = new ChatGPTAPI({
 				apiKey: process.env.OPENAI_API_KEY
 			});
-
-			this._delay = 100;
 		} else {
 			console.log('Used unofficial GPT proxy API');
 			this.api = new ChatGPTUnofficialProxyAPI({
