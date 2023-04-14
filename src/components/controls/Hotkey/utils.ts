@@ -51,7 +51,13 @@ export const onHotkeysPressed = (
 
 		const isHotkeysPressed =
 			hotkeysArray.length > 0 && hotkeysArray.every((key) => pressedKeys[key]);
-		if (isHotkeysPressed) {
+
+		// Trigger callback only when pressed exact keys, with no unnecessary keys
+		const isPressedKeysNumberMatch =
+			Object.values(pressedKeys).filter((isPressed) => isPressed).length ===
+			hotkeysArray.length;
+
+		if (isHotkeysPressed && isPressedKeysNumberMatch) {
 			pressedKeys = {};
 			callback(evt);
 		}
