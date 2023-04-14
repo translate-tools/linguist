@@ -39,6 +39,7 @@ export const defaultConfig: AppConfigType = {
 		detectLanguageByContent: true,
 		originalTextPopup: false,
 		enableContextMenu: true,
+		toggleTranslationHotkey: null,
 	},
 	textTranslator: {
 		rememberText: true,

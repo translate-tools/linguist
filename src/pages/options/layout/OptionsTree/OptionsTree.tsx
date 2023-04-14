@@ -7,6 +7,7 @@ import { Button } from '../../../../components/primitives/Button/Button.bundle/d
 import { Select } from '../../../../components/primitives/Select/Select.bundle/desktop';
 import { Textarea } from '../../../../components/primitives/Textarea/Textarea.bundle/desktop';
 import { Textinput } from '../../../../components/primitives/Textinput/Textinput.bundle/desktop';
+import { Hotkey } from '../../../../components/controls/Hotkey';
 
 import { AppConfigType } from '../../../../types/runtime';
 
@@ -50,6 +51,10 @@ export interface OptionButton {
 	action: () => void;
 }
 
+export interface OptionHotkey {
+	type: 'Hotkey';
+}
+
 export interface OptionItem {
 	title?: string;
 	description?: ReactNode;
@@ -63,7 +68,8 @@ export interface OptionItem {
 		| OptionInputMultilineFromArray
 		| OptionCheckbox
 		| OptionCheckboxGroup
-		| OptionButton;
+		| OptionButton
+		| OptionHotkey;
 }
 
 export interface OptionsGroup {
@@ -108,6 +114,16 @@ export const OptionsTree: FC<OptionsTreeProps> = ({
 								setOptionValueProxy(path, reverse != checked)
 							}
 							label={option.text}
+						/>
+					);
+				}
+				case 'Hotkey': {
+					return (
+						<Hotkey
+							value={value}
+							onChange={(value) => {
+								setOptionValueProxy(path, value);
+							}}
 						/>
 					);
 				}

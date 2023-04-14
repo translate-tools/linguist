@@ -29,6 +29,15 @@
 	"common_translate": {
 		"message": "Dịch thuật"
 	},
+	"component_hotkey_placeholder": {
+		"message": "Nhấn để ghi lại phím nóng"
+	},
+	"component_hotkey_recordPlaceholder": {
+		"message": "Nhấn phím"
+	},
+	"component_hotkey_resetButton": {
+		"message": "Đặt lại"
+	},
 	"contextMenu_disablePageTranslation": {
 		"message": "Tắt dịch trang"
 	},
@@ -367,6 +376,12 @@
 	},
 	"settings_option_pageTranslation_originalTextPopup_desc": {
 		"message": "Hiển thị cửa sổ pop-up với văn bản gốc khi di chuột qua văn bản đã dịch"
+	},
+	"settings_option_pageTranslation_toggleTranslationHotkey": {
+		"message": "Phím nóng"
+	},
+	"settings_option_pageTranslation_toggleTranslationHotkey_desc": {
+		"message": "Phím tắt để chuyển đổi dịch trang\nNhấn ESC để đặt lại phím"
 	},
 	"settings_option_pageTranslation_translatableAttributes": {
 		"message": "Thuộc tính có thể dịch"

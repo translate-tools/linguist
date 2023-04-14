@@ -29,6 +29,15 @@
 	"common_translate": {
 		"message": "Перевести"
 	},
+	"component_hotkey_placeholder": {
+		"message": "Нажмите, чтобы записать горячие клавиши"
+	},
+	"component_hotkey_recordPlaceholder": {
+		"message": "Нажмите клавиши"
+	},
+	"component_hotkey_resetButton": {
+		"message": "Сбросить"
+	},
 	"contextMenu_disablePageTranslation": {
 		"message": "Выключить перевод страницы"
 	},
@@ -367,6 +376,12 @@
 	},
 	"settings_option_pageTranslation_originalTextPopup_desc": {
 		"message": "Показать всплывающее окно с исходным текстом при наведении мыши на переведенный текст"
+	},
+	"settings_option_pageTranslation_toggleTranslationHotkey": {
+		"message": "Горячие клавиши"
+	},
+	"settings_option_pageTranslation_toggleTranslationHotkey_desc": {
+		"message": "Сочетания клавиш для переключения перевода страницы\nНажмите ESC для сброса клавиш"
 	},
 	"settings_option_pageTranslation_translatableAttributes": {
 		"message": "Список аттрибутов для перевода"

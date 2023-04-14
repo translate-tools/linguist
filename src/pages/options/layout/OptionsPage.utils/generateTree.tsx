@@ -262,6 +262,18 @@ export const generateTree = ({
 					},
 				},
 				{
+					path: 'pageTranslator.toggleTranslationHotkey',
+					title: getMessage(
+						'settings_option_pageTranslation_toggleTranslationHotkey',
+					),
+					description: getMessage(
+						'settings_option_pageTranslation_toggleTranslationHotkey_desc',
+					),
+					optionContent: {
+						type: 'Hotkey',
+					},
+				},
+				{
 					path: 'pageTranslator.originalTextPopup',
 					description: getMessage(
 						'settings_option_pageTranslation_originalTextPopup_desc',

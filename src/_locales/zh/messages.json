@@ -29,6 +29,15 @@
 	"common_translate": {
 		"message": "翻译"
 	},
+	"component_hotkey_placeholder": {
+		"message": "点击录制快捷键"
+	},
+	"component_hotkey_recordPlaceholder": {
+		"message": "按键"
+	},
+	"component_hotkey_resetButton": {
+		"message": "重置"
+	},
 	"contextMenu_disablePageTranslation": {
 		"message": "禁用页面翻译"
 	},
@@ -367,6 +376,12 @@
 	},
 	"settings_option_pageTranslation_originalTextPopup_desc": {
 		"message": "将鼠标悬停在翻译文本上时显示原始文本的弹出窗口"
+	},
+	"settings_option_pageTranslation_toggleTranslationHotkey": {
+		"message": "热键"
+	},
+	"settings_option_pageTranslation_toggleTranslationHotkey_desc": {
+		"message": "切换页面翻译的快捷方式\n按 ESC 重置键"
 	},
 	"settings_option_pageTranslation_translatableAttributes": {
 		"message": "可翻译的属性"
