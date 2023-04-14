@@ -58,12 +58,20 @@ export const Hotkey: FC<HotkeyProps> = ({ value, onChange }) => {
 				pressedKeysValues.length > 0 &&
 				pressedKeysValues.every((isPressed) => !isPressed)
 			) {
-				const keys = Object.keys(pressedKeys)
-					.sort((a, b) => b.length - a.length)
-					.join('+');
+				const keys = Object.keys(pressedKeys);
+
+				const modifierKey = keys.find((key) => key.length > 1);
+				if (!modifierKey) {
+					pressedKeys = {};
+					onChange(null);
+					return;
+				}
+
+				// Write keys
+				const serializedKeys = keys.sort((a, b) => b.length - a.length).join('+');
 
 				pressedKeys = {};
-				onChange(keys);
+				onChange(serializedKeys);
 			}
 		};
 
