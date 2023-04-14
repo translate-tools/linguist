@@ -10,11 +10,13 @@ import { theme } from '../../../../../themes/presets/default/desktop';
 import { Popup } from '../../../../../components/primitives/Popup/Popup';
 import { Modal } from '../../../../../components/primitives/Modal/Modal.bundle/desktop';
 
-import './TextTranslatorPopup.css';
-import { TextTranslatorComponentProps, TextTranslator } from './TextTranslator';
+import {
+	TextTranslatorComponentProps,
+	TextTranslator,
+} from './TextTranslator/TextTranslator';
 import { fixPosToPreventOverflow } from './TextTranslatorPopup.utils/fixPosToPreventOverflow';
 
-export const cnTextTranslatorPopup = cn('TextTranslatorPopup');
+import './TextTranslatorPopup.css';
 
 export interface TextTranslatorPopupProps
 	extends Omit<TextTranslatorComponentProps, 'updatePopup'> {
@@ -28,7 +30,8 @@ export interface TextTranslatorPopupProps
 	closeHandler: () => void;
 }
 
-const themeClassName = cn('Theme')(theme);
+const cnTheme = cn('Theme');
+const cnTextTranslatorPopup = cn('TextTranslatorPopup');
 
 // TODO: split styles
 export const TextTranslatorPopup: FC<TextTranslatorPopupProps> = ({
@@ -222,9 +225,11 @@ export const TextTranslatorPopup: FC<TextTranslatorPopupProps> = ({
 	// Mobile view
 	if (isMobile && translating) {
 		return (
-			<Modal view="default" visible className={themeClassName} preventBodyScroll>
-				{content}
-			</Modal>
+			<div className={cnTextTranslatorPopup({ mobile: true }, [cnTheme(theme)])}>
+				<Modal view="default" visible preventBodyScroll zIndex={zIndex}>
+					{content}
+				</Modal>
+			</div>
 		);
 	}
 
@@ -232,7 +237,7 @@ export const TextTranslatorPopup: FC<TextTranslatorPopupProps> = ({
 	// We use real component instead virtual because require behavior of `position: absolute` instead `fixed`
 	// and implement this logic for virtual component is harder than use real component
 	return (
-		<>
+		<div className={cnTextTranslatorPopup({}, [cnTheme(theme)])}>
 			{/* Render cursor */}
 			<div style={cursorStyle} ref={cursorRef} />
 
@@ -244,12 +249,11 @@ export const TextTranslatorPopup: FC<TextTranslatorPopupProps> = ({
 				zIndex={zIndex}
 				modifiers={modifiers}
 				onClose={closeHandler}
-				className={themeClassName}
 				view={translating ? 'default' : undefined}
 				UNSTABLE_updatePosition={updateRef}
 			>
 				{content}
 			</Popup>
-		</>
+		</div>
 	);
 };
