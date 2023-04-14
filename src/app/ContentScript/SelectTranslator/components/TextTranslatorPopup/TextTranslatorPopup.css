@@ -135,3 +135,12 @@
 	width: 100%;
 	text-align: right;
 }
+
+/* Mobile overrides */
+.TextTranslatorPopupContainer_mobile .Modal-Table {
+	max-width: 100%;
+}
+
+.TextTranslatorPopupContainer_mobile .Modal-Content {
+	display: block;
+}
