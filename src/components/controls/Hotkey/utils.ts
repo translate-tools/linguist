@@ -47,6 +47,9 @@ export const onHotkeysPressed = (
 		const keyName = getUnifiedKeyName(evt.code);
 		if (keyName === null) return;
 
+		// Do not handle already pressed keys
+		if (pressedKeys[keyName]) return;
+
 		pressedKeys[keyName] = true;
 
 		const isHotkeysPressed =
