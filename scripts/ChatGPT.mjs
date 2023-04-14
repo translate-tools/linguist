@@ -1,4 +1,4 @@
-import { ChatGPTUnofficialProxyAPI } from 'chatgpt';
+import { ChatGPTUnofficialProxyAPI, ChatGPTAPI } from 'chatgpt';
 
 /**
  * Interface to ChatGPT that ensure smooth use
@@ -10,10 +10,20 @@ export class ChatGPT {
 	_delay = 1000;
 
 	constructor() {
-		this.api = new ChatGPTUnofficialProxyAPI({
-			accessToken: process.env.GPT_ACCESS_TOKEN,
-			apiReverseProxyUrl: 'https://bypass.churchless.tech/api/conversation',
-		});
+		if (process.env.OPENAI_API_KEY) {
+			// Prefer official API if env variable provided
+			this.api = new ChatGPTAPI({
+				apiKey: process.env.OPENAI_API_KEY
+			});
+
+			this._delay = 100;
+		} else {
+			console.log('Used unofficial GPT proxy API');
+			this.api = new ChatGPTUnofficialProxyAPI({
+				accessToken: process.env.GPT_ACCESS_TOKEN,
+				apiReverseProxyUrl: 'https://bypass.churchless.tech/api/conversation',
+			});
+		}
 	}
 
 	_queue = [];
