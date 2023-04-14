@@ -296,7 +296,7 @@ export const DictionaryPage: FC<IDictionaryPageProps> = ({ confirmDelete = true 
 						<Textinput
 							placeholder={getMessage('dictionary_searchPlaceholder')}
 							value={search}
-							setValue={setSearch}
+							onInputText={setSearch}
 							className={cnDictionaryPage('SearchControl')}
 							onClearClick={() => setSearch('')}
 							hasClear
