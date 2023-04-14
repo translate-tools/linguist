@@ -30,8 +30,7 @@ export interface TextTranslatorPopupProps
 	closeHandler: () => void;
 }
 
-const themeClassName = cn('Theme')(theme);
-
+const cnTheme = cn('Theme');
 const cnTextTranslatorPopup = cn('TextTranslatorPopup');
 
 // TODO: split styles
@@ -226,13 +225,8 @@ export const TextTranslatorPopup: FC<TextTranslatorPopupProps> = ({
 	// Mobile view
 	if (isMobile && translating) {
 		return (
-			<div className={cnTextTranslatorPopup({ mobile: true })}>
-				<Modal
-					view="default"
-					visible
-					className={themeClassName}
-					preventBodyScroll
-				>
+			<div className={cnTextTranslatorPopup({ mobile: true }, [cnTheme(theme)])}>
+				<Modal view="default" visible preventBodyScroll zIndex={zIndex}>
 					{content}
 				</Modal>
 			</div>
@@ -243,7 +237,7 @@ export const TextTranslatorPopup: FC<TextTranslatorPopupProps> = ({
 	// We use real component instead virtual because require behavior of `position: absolute` instead `fixed`
 	// and implement this logic for virtual component is harder than use real component
 	return (
-		<div className={cnTextTranslatorPopup()}>
+		<div className={cnTextTranslatorPopup({}, [cnTheme(theme)])}>
 			{/* Render cursor */}
 			<div style={cursorStyle} ref={cursorRef} />
 
@@ -255,7 +249,6 @@ export const TextTranslatorPopup: FC<TextTranslatorPopupProps> = ({
 				zIndex={zIndex}
 				modifiers={modifiers}
 				onClose={closeHandler}
-				className={themeClassName}
 				view={translating ? 'default' : undefined}
 				UNSTABLE_updatePosition={updateRef}
 			>
