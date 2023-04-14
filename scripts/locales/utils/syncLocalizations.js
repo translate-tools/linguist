@@ -21,6 +21,11 @@ const syncLocalizationsMessagesWithSource = async (
 	sourceLocalization,
 	targetLocalization,
 ) => {
+	const writeUpdates = (object) => {
+		const stringifiedJSON = JSON.stringify(object, null, '\t');
+		writeFileSync(targetLocalization.filename, stringifiedJSON);
+	};
+
 	// Remove messages that not exists in source
 	const filteredJson = Object.fromEntries(
 		Object.entries(targetLocalization.json).filter(
@@ -29,22 +34,62 @@ const syncLocalizationsMessagesWithSource = async (
 	);
 
 	// Translate messages
-	const messagesToAdd = Object.fromEntries(
-		Object.entries(sourceLocalization.json).filter(([key]) => !(key in filteredJson)),
+	const gptTranslator = await getGPTTranslator();
+
+	const messagesToTranslate = Object.entries(sourceLocalization.json).filter(
+		([key]) => !(key in filteredJson) && !key.startsWith('langCode_'),
 	);
 
-	const gptTranslator = await getGPTTranslator();
-	const translatedMessages = await gptTranslator.handleJson(messagesToAdd, {
-		from: sourceLocalization.code,
-		to: targetLocalization.code,
+	let collectedMessages = { ...filteredJson };
+
+	const languageNames = new Intl.DisplayNames([targetLocalization.code], {
+		type: 'language',
+	});
+	Object.keys(filteredJson).forEach((messageName) => {
+		const langCodePrefix = 'langCode_';
+		if (!messageName.startsWith(langCodePrefix)) return;
+
+		const langCode = messageName.slice(langCodePrefix.length);
+		let langName = languageNames.of(langCode);
+		langName = langName[0].toUpperCase() + langName.slice(1);
+
+		collectedMessages[langCodePrefix + langCode] = {
+			message: langName,
+		};
 	});
 
-	// Add messages from source localization
-	const updatedMessages = { ...filteredJson, ...translatedMessages };
+	writeUpdates(collectedMessages);
 
-	// Write changes
-	const stringifiedJSON = JSON.stringify(updatedMessages, null, '\t');
-	writeFileSync(targetLocalization.filename, stringifiedJSON);
+	const batchSize = 5;
+	for (let offset = 0; offset < messagesToTranslate.length; offset += batchSize) {
+		const messagesEntries = messagesToTranslate.slice(offset, offset + batchSize);
+
+		const messages = Object.fromEntries(messagesEntries);
+
+		try {
+			const translatedMessages = await gptTranslator.handleJson(messages, {
+				from: sourceLocalization.code,
+				to: targetLocalization.code,
+			});
+
+			// Merge messages
+			const updatedMessages = { ...collectedMessages, ...translatedMessages };
+
+			// Write changes
+			writeUpdates(updatedMessages);
+
+			// Remember merged changes
+			collectedMessages = updatedMessages;
+		} catch (err) {
+			// Skip errors and continue translation
+			console.error(
+				`Error while translate slice #${offset / batchSize} for file "${
+					targetLocalization.filename
+				}": `,
+				err,
+			);
+		}
+	}
 };
 
 const syncLocalizationsFilesWithSource = async () => {
