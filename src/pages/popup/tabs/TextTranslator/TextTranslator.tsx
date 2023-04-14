@@ -293,9 +293,7 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 	// Translate by changes
 	const [setTranslateTask] = useDelayCallback();
 	const onTextChange = useCallback(
-		(evt: React.ChangeEvent<HTMLTextAreaElement>) => {
-			const text = evt.target.value;
-
+		(text: string) => {
 			// Clear state
 			if (text.length === 0) {
 				clearState();
@@ -408,7 +406,7 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 							className={cnTextTranslator('Input')}
 							controlProps={{ innerRef: inputControlExternal }}
 							value={userInput}
-							onChange={onTextChange}
+							onInputText={onTextChange}
 							hasClear
 							onClearClick={clearState}
 							spellCheck={spellCheck}

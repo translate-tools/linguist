@@ -263,7 +263,7 @@ export const TranslationsHistory: FC<TranslationsHistoryProps> = ({
 					className={cnTranslationsHistory('Search')}
 					placeholder={getMessage('history_searchPlaceholder')}
 					value={searchInput.value}
-					setValue={searchInput.setValue}
+					onInputText={searchInput.setValue}
 					onClearClick={() => searchInput.setValue('')}
 				/>
 
