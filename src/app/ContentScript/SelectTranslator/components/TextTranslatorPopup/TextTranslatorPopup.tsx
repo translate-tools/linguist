@@ -10,11 +10,13 @@ import { theme } from '../../../../../themes/presets/default/desktop';
 import { Popup } from '../../../../../components/primitives/Popup/Popup';
 import { Modal } from '../../../../../components/primitives/Modal/Modal.bundle/desktop';
 
-import './TextTranslatorPopup.css';
-import { TextTranslatorComponentProps, TextTranslator } from './TextTranslator';
+import {
+	TextTranslatorComponentProps,
+	TextTranslator,
+} from './TextTranslator/TextTranslator';
 import { fixPosToPreventOverflow } from './TextTranslatorPopup.utils/fixPosToPreventOverflow';
 
-export const cnTextTranslatorPopup = cn('TextTranslatorPopup');
+import './TextTranslatorPopup.css';
 
 export interface TextTranslatorPopupProps
 	extends Omit<TextTranslatorComponentProps, 'updatePopup'> {
@@ -30,7 +32,7 @@ export interface TextTranslatorPopupProps
 
 const themeClassName = cn('Theme')(theme);
 
-const cnTextTranslatorPopupContainer = cn('TextTranslatorPopupContainer');
+const cnTextTranslatorPopup = cn('TextTranslatorPopup');
 
 // TODO: split styles
 export const TextTranslatorPopup: FC<TextTranslatorPopupProps> = ({
@@ -224,7 +226,7 @@ export const TextTranslatorPopup: FC<TextTranslatorPopupProps> = ({
 	// Mobile view
 	if (isMobile && translating) {
 		return (
-			<div className={cnTextTranslatorPopupContainer({ mobile: true })}>
+			<div className={cnTextTranslatorPopup({ mobile: true })}>
 				<Modal
 					view="default"
 					visible
@@ -241,7 +243,7 @@ export const TextTranslatorPopup: FC<TextTranslatorPopupProps> = ({
 	// We use real component instead virtual because require behavior of `position: absolute` instead `fixed`
 	// and implement this logic for virtual component is harder than use real component
 	return (
-		<div className={cnTextTranslatorPopupContainer()}>
+		<div className={cnTextTranslatorPopup()}>
 			{/* Render cursor */}
 			<div style={cursorStyle} ref={cursorRef} />
 

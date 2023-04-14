@@ -1,29 +1,31 @@
 import React, { FC, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import browser from 'webextension-polyfill';
+import { cn } from '@bem-react/classname';
 
-import { TranslatorFeatures } from '../../../../../pages/popup/layout/PopupWindow';
+import { TranslatorFeatures } from '../../../../../../pages/popup/layout/PopupWindow';
 
-import { detectLanguage, getMessage } from '../../../../../lib/language';
-import { useTTS } from '../../../../../lib/hooks/useTTS';
-import { useTTSLanguages } from '../../../../../lib/hooks/useTTSLanguages';
+import { detectLanguage, getMessage } from '../../../../../../lib/language';
+import { useTTS } from '../../../../../../lib/hooks/useTTS';
+import { useTTSLanguages } from '../../../../../../lib/hooks/useTTSLanguages';
 
-import { getTranslatorFeatures } from '../../../../../requests/backend/getTranslatorFeatures';
-import { getUserLanguagePreferences } from '../../../../../requests/backend/getUserLanguagePreferences';
+import { getTranslatorFeatures } from '../../../../../../requests/backend/getTranslatorFeatures';
+import { getUserLanguagePreferences } from '../../../../../../requests/backend/getUserLanguagePreferences';
 
 // Components
-import { Button } from '../../../../../components/primitives/Button/Button.bundle/desktop';
-import { LanguagePanel } from '../../../../../components/controls/LanguagePanel/LanguagePanel';
-import { Icon } from '../../../../../components/primitives/Icon/Icon.bundle/desktop';
-import { Loader } from '../../../../../components/primitives/Loader/Loader';
-import { DictionaryButton } from '../../../../../components/controls/DictionaryButton/DictionaryButton';
+import { Button } from '../../../../../../components/primitives/Button/Button.bundle/desktop';
+import { LanguagePanel } from '../../../../../../components/controls/LanguagePanel/LanguagePanel';
+import { Icon } from '../../../../../../components/primitives/Icon/Icon.bundle/desktop';
+import { Loader } from '../../../../../../components/primitives/Loader/Loader';
+import { DictionaryButton } from '../../../../../../components/controls/DictionaryButton/DictionaryButton';
 
-import { isMobileBrowser } from '../../../../../lib/browser';
-import { addTranslationHistoryEntry } from '../../../../../requests/backend/history/addTranslationHistoryEntry';
-import { TRANSLATION_ORIGIN } from '../../../../../requests/backend/history/constants';
-import { ITranslation } from '../../../../../types/translation/Translation';
+import { isMobileBrowser } from '../../../../../../lib/browser';
+import { addTranslationHistoryEntry } from '../../../../../../requests/backend/history/addTranslationHistoryEntry';
+import { TRANSLATION_ORIGIN } from '../../../../../../requests/backend/history/constants';
+import { ITranslation } from '../../../../../../types/translation/Translation';
 
-import './TextTranslatorPopup.css';
-import { cnTextTranslatorPopup } from './TextTranslatorPopup';
+import './TextTranslator.css';
+
+export const cnTextTranslator = cn('TextTranslator');
 
 export interface TextTranslatorComponentProps {
 	detectedLangFirst: boolean;
@@ -319,8 +321,8 @@ export const TextTranslator: FC<TextTranslatorComponentProps> = ({
 		<div
 			className={
 				isMobile
-					? cnTextTranslatorPopup('MobileHead')
-					: cnTextTranslatorPopup('Container', {
+					? cnTextTranslator('MobileHead')
+					: cnTextTranslator('Container', {
 						direction: 'right',
 					  })
 			}
@@ -339,10 +341,10 @@ export const TextTranslator: FC<TextTranslatorComponentProps> = ({
 
 	if (translatorFeatures !== undefined && (translatedText !== null || error !== null)) {
 		return (
-			<div className={cnTextTranslatorPopup()}>
+			<div className={cnTextTranslator()}>
 				<div
-					className={cnTextTranslatorPopup('Head', { mobile: isMobile }, [
-						cnTextTranslatorPopup('Clearfix'),
+					className={cnTextTranslator('Head', { mobile: isMobile }, [
+						cnTextTranslator('Clearfix'),
 					])}
 				>
 					{isMobile && closeButton}
@@ -350,7 +352,7 @@ export const TextTranslator: FC<TextTranslatorComponentProps> = ({
 					<div
 						className={
 							!isMobile
-								? cnTextTranslatorPopup('Container', {
+								? cnTextTranslator('Container', {
 									direction: 'left',
 								  })
 								: undefined
@@ -374,11 +376,11 @@ export const TextTranslator: FC<TextTranslatorComponentProps> = ({
 				{error === null ? (
 					<>
 						<div
-							className={cnTextTranslatorPopup('TextContainer', {
+							className={cnTextTranslator('TextContainer', {
 								text: 'translation',
 							})}
 						>
-							<div className={cnTextTranslatorPopup('TextControls')}>
+							<div className={cnTextTranslator('TextControls')}>
 								<Button
 									onPress={ttsTranslate.toggle}
 									view="clear"
@@ -391,17 +393,17 @@ export const TextTranslator: FC<TextTranslatorComponentProps> = ({
 								</Button>
 								<DictionaryButton translation={dictionaryData} />
 							</div>
-							<div className={cnTextTranslatorPopup('Body')}>
+							<div className={cnTextTranslator('Body')}>
 								{translatedText}
 							</div>
 						</div>
 						{!showOriginalText ? undefined : (
 							<div
-								className={cnTextTranslatorPopup('TextContainer', {
+								className={cnTextTranslator('TextContainer', {
 									text: 'original',
 								})}
 							>
-								<div className={cnTextTranslatorPopup('TextControls')}>
+								<div className={cnTextTranslator('TextControls')}>
 									<Button
 										onPress={ttsOriginal.toggle}
 										view="clear"
@@ -413,21 +415,17 @@ export const TextTranslator: FC<TextTranslatorComponentProps> = ({
 										<Icon glyph="volume-up" scalable={false} />
 									</Button>
 								</div>
-								<div className={cnTextTranslatorPopup('Body')}>
+								<div className={cnTextTranslator('Body')}>
 									<details
 										onToggle={updatePopup}
-										className={cnTextTranslatorPopup('Details')}
+										className={cnTextTranslator('Details')}
 									>
 										<summary>
 											{getMessage(
 												'inlineTranslator_showOriginalText',
 											)}
 										</summary>
-										<p
-											className={cnTextTranslatorPopup(
-												'OriginalText',
-											)}
-										>
+										<p className={cnTextTranslator('OriginalText')}>
 											{originalText}
 										</p>
 									</details>
@@ -437,7 +435,7 @@ export const TextTranslator: FC<TextTranslatorComponentProps> = ({
 					</>
 				) : (
 					<>
-						<div className={cnTextTranslatorPopup('Body', { error: true })}>
+						<div className={cnTextTranslator('Body', { error: true })}>
 							{error}
 						</div>
 						<div>
@@ -450,6 +448,6 @@ export const TextTranslator: FC<TextTranslatorComponentProps> = ({
 			</div>
 		);
 	} else {
-		return <Loader className={cnTextTranslatorPopup('Loader')} />;
+		return <Loader className={cnTextTranslator('Loader')} />;
 	}
 };
