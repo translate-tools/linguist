@@ -185,8 +185,8 @@ export const OptionsTree: FC<OptionsTreeProps> = ({
 							state={error !== undefined ? 'error' : undefined}
 							value={Array.isArray(value) ? value.join('\n') : undefined}
 							spellCheck={false}
-							onChange={(evt) => {
-								const parsedArray = evt.target.value.split('\n');
+							onInputText={(value) => {
+								const parsedArray = value.split('\n');
 								setOptionValueProxy(
 									path,
 									parsedArray.length === 1 && parsedArray[0] === ''
@@ -202,8 +202,7 @@ export const OptionsTree: FC<OptionsTreeProps> = ({
 							state={error !== undefined ? 'error' : undefined}
 							value={value}
 							spellCheck={false}
-							onChange={(evt) => {
-								const value = evt.target.value;
+							onInputText={(value) => {
 								const parsedNumber = +value;
 								setOptionValueProxy(
 									path,

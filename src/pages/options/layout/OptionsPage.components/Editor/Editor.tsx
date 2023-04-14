@@ -97,22 +97,12 @@ export const Editor: FC<EditorProps> = ({
 					<LayoutFlow direction="vertical" indent="l">
 						<LayoutFlow direction="vertical" indent="m">
 							<div>{getMessage('editorWindow_data_name')}</div>
-							<Textinput
-								value={name}
-								onChange={(evt) => {
-									setName(evt.target.value);
-								}}
-							/>
+							<Textinput value={name} onInputText={setName} />
 						</LayoutFlow>
 
 						<LayoutFlow direction="vertical" indent="m">
 							<div>{getMessage('editorWindow_data_code')}</div>
-							<Textarea
-								value={code}
-								onChange={(evt) => {
-									setCode(evt.target.value);
-								}}
-							/>
+							<Textarea value={code} onInputText={setCode} />
 						</LayoutFlow>
 
 						{actualError && (
