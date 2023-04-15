@@ -1,0 +1,1190 @@
+{
+	"common_action_addToDictionary": {
+		"message": "Pridať preklad do slovníka"
+	},
+	"common_action_removeFromDictionary": {
+		"message": "Odstrániť preklad zo slovníka"
+	},
+	"common_bgUnavailable": {
+		"message": "Skript na pozadí nie je k dispozícii"
+	},
+	"common_cancel": {
+		"message": "Zrušiť"
+	},
+	"common_close": {
+		"message": "Zavrieť"
+	},
+	"common_copy": {
+		"message": "Kopírovať"
+	},
+	"common_error": {
+		"message": "Chyba"
+	},
+	"common_offlineTranslator": {
+		"message": "$1 - Offline prekladateľ"
+	},
+	"common_retry": {
+		"message": "Skúsiť znova"
+	},
+	"common_translate": {
+		"message": "Preložiť"
+	},
+	"component_hotkey_placeholder": {
+		"message": "Kliknite pre zaznamenanie klávesových skratiek"
+	},
+	"component_hotkey_recordPlaceholder": {
+		"message": "Stlačte klávesy"
+	},
+	"component_hotkey_resetButton": {
+		"message": "Obnoviť"
+	},
+	"contextMenu_disablePageTranslation": {
+		"message": "Vypnúť preklad stránky"
+	},
+	"contextMenu_translatePage": {
+		"message": "Preložiť stránku"
+	},
+	"contextMenu_translateSelectedText": {
+		"message": "Preložiť vybraný text"
+	},
+	"dictionaryButton_add": {
+		"message": "Pridať do slovníka"
+	},
+	"dictionaryButton_delete": {
+		"message": "Odstrániť zo slovníka"
+	},
+	"dictionary_button_export": {
+		"message": "Exportovať"
+	},
+	"dictionary_button_removeAll": {
+		"message": "Odstrániť všetko"
+	},
+	"dictionary_deleteAll": {
+		"message": "Ste si istí, že chcete vymazať VŠETKY preklady v slovníku?"
+	},
+	"dictionary_deleteConfirmation": {
+		"message": "Ste si istí, že chcete vymazať tento preklad?"
+	},
+	"dictionary_description": {
+		"message": "Ukladajte svoje preklady do slovníka a neskôr ich ľahko vyhľadajte"
+	},
+	"dictionary_emptyDictionary": {
+		"message": "Slovník je prázdny. Začnite ho napĺňať tým, že budete prekladať texty"
+	},
+	"dictionary_filter_from": {
+		"message": "Z jazyka"
+	},
+	"dictionary_filter_to": {
+		"message": "Do"
+	},
+	"dictionary_message_deleteAll_success": {
+		"message": "Všetky preklady boli odstránené"
+	},
+	"dictionary_notFoundEntries": {
+		"message": "Preklady zodpovedajúce týmto filtrom neboli nájdené"
+	},
+	"dictionary_pageTitle": {
+		"message": "Slovník"
+	},
+	"dictionary_resetFilters": {
+		"message": "vynulovať filtre"
+	},
+	"dictionary_searchPlaceholder": {
+		"message": "Vyhľadávať podľa textu"
+	},
+	"editorWindow_close": {
+		"message": "Zavrieť"
+	},
+	"editorWindow_data_code": {
+		"message": "Kód"
+	},
+	"editorWindow_data_name": {
+		"message": "Názov"
+	},
+	"editorWindow_message_invalidName": {
+		"message": "Názov musí obsahovať aspoň jeden symbol"
+	},
+	"editorWindow_save": {
+		"message": "Uložiť"
+	},
+	"ext_description": {
+		"message": "Preklad textu bez obnovenia stránky"
+	},
+	"ext_name": {
+		"message": "Lingvista - prekladač webových stránok"
+	},
+	"history_control_selectEntry": {
+		"message": "Vybrať položku"
+	},
+	"history_controls_clearHistory": {
+		"message": "Vymazať históriu"
+	},
+	"history_controls_deleteSelected": {
+		"message": "Vymazať vybrané"
+	},
+	"history_controls_selectAll": {
+		"message": "Vybrať všetky preklady"
+	},
+	"history_message_clearHistoryConfirmation": {
+		"message": "Ste si istí, že chcete vymazať históriu? Všetky záznamy budú odstránené."
+	},
+	"history_message_deleteEntryConfirmation": {
+		"message": "Ste si istí, že chcete zmazať tento záznam?"
+	},
+	"history_message_deleteSelectedEntriesConfirmation": {
+		"message": "Ste si istí, že chcete vymazať vybrané položky ($1)?"
+	},
+	"history_message_emptyEntries": {
+		"message": "História vyčistená"
+	},
+	"history_message_entriesNotFound": {
+		"message": "Neboli nájdené žiadne preklady, ktoré by spĺňali filter"
+	},
+	"history_pageTitle": {
+		"message": "História"
+	},
+	"history_searchPlaceholder": {
+		"message": "Hľadať podľa textu"
+	},
+	"inlineTranslator_showOriginalText": {
+		"message": "Zobraziť pôvodný text"
+	},
+	"lang_change": {
+		"message": "Zmeniť jazyk"
+	},
+	"lang_detect": {
+		"message": "Automatické zistenie"
+	},
+	"lang_select": {
+		"message": "Vyberte jazyk"
+	},
+	"lang_swap": {
+		"message": "Prehodiť jazyky"
+	},
+	"message_askResetConfig": {
+		"message": "Chcete obnoviť nastavenia?"
+	},
+	"message_cacheFlushed": {
+		"message": "Cache je vyčistená"
+	},
+	"message_changesSaved": {
+		"message": "Zmeny uložené"
+	},
+	"message_error": {
+		"message": "Chyba"
+	},
+	"message_errorOfTranslate": {
+		"message": "Chyba prekladu"
+	},
+	"message_serviceRequiredKey": {
+		"message": "Služba vyžaduje kľúč"
+	},
+	"message_translateOfText": {
+		"message": "Preložené"
+	},
+	"message_unknownError": {
+		"message": "Neznáma chyba"
+	},
+	"pageTranslator_alwaysTranslateLang": {
+		"message": "Vždy prekladať tento jazyk"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disable": {
+		"message": "Zakázať"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
+		"message": "Zakázať pre všetky stránky"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_enable": {
+		"message": "Povoliť"
+	},
+	"pageTranslator_commonPreferences_title": {
+		"message": "Spoločné predvoľby pre tento jazyk"
+	},
+	"pageTranslator_option_autoTranslate": {
+		"message": "Automatický preklad"
+	},
+	"pageTranslator_showOptions": {
+		"message": "Zobraziť možnosti"
+	},
+	"pageTranslator_showOriginal": {
+		"message": "Zobraziť originál"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_always": {
+		"message": "Vždy preložiť"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
+		"message": "Vždy preložiť pre túto jazykovú verziu"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_default": {
+		"message": "Použiť bežné pravidlá"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
+		"message": "Použiť bežné pravidlá pre túto jazykovú verziu"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_never": {
+		"message": "Nikdy neprekladať"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
+		"message": "Nikdy neprekladať pre tento jazyk"
+	},
+	"pageTranslator_sitePreferences_title": {
+		"message": "Vlastnosti pre"
+	},
+	"pageTranslator_translatePage": {
+		"message": "Preložiť stránku"
+	},
+	"pageTranslator_translationReport": {
+		"message": "Hlásenie o preklade"
+	},
+	"pageTranslator_translationReport_queue": {
+		"message": "Rada"
+	},
+	"pageTranslator_translationReport_reject": {
+		"message": "Chyby"
+	},
+	"pageTranslator_translationReport_resolve": {
+		"message": "Preložené"
+	},
+	"popup_tabIdNotFound": {
+		"message": "Karta \"$1\" nebola nájdená"
+	},
+	"popup_tab_translatePage": {
+		"message": "Preklad stránky"
+	},
+	"popup_tab_translateText": {
+		"message": "Preklad textu"
+	},
+	"settings_button_cancel": {
+		"message": "Zrušiť"
+	},
+	"settings_button_export": {
+		"message": "Exportovať konfiguráciu"
+	},
+	"settings_button_import": {
+		"message": "Importovať konfiguráciu"
+	},
+	"settings_button_reset": {
+		"message": "Obnoviť konfiguráciu"
+	},
+	"settings_button_saveChanges": {
+		"message": "Uložiť zmeny"
+	},
+	"settings_message_clearCache_success": {
+		"message": "Cache je vyčistená"
+	},
+	"settings_message_common_invalidValueType": {
+		"message": "Neplatná hodnota"
+	},
+	"settings_message_importConfig_invalidFile": {
+		"message": "Súbor pre import nie je možné spracovať"
+	},
+	"settings_message_importConfig_success": {
+		"message": "Import dokončený"
+	},
+	"settings_message_resetConfig_confirm": {
+		"message": "Chcete obnoviť nastavenia?"
+	},
+	"settings_message_resetConfig_success": {
+		"message": "Nastavenia resetované"
+	},
+	"settings_message_saveChanges_success": {
+		"message": "Zmeny uložené"
+	},
+	"settings_option_appIcon": {
+		"message": "Ikona rozšírenia"
+	},
+	"settings_option_appIcon_desc": {
+		"message": "Ak je vybraná dynamická ikona, farby sa prispôsobia téme prehliadača"
+	},
+	"settings_option_appIcon_item_auto": {
+		"message": "Dynamická"
+	},
+	"settings_option_appIcon_item_color": {
+		"message": "Farba"
+	},
+	"settings_option_appIcon_item_dark": {
+		"message": "Tmavé"
+	},
+	"settings_option_appIcon_item_light": {
+		"message": "Svetlé"
+	},
+	"settings_option_cache": {
+		"message": "Cache"
+	},
+	"settings_option_cache_clear": {
+		"message": "Vyčistiť cache"
+	},
+	"settings_option_cache_clear_desc": {
+		"message": "Odstráňte vyrovnávaciu pamäť, ak máte prekladateľské artefakty alebo musíte odstrániť tajomstvá"
+	},
+	"settings_option_cache_enable": {
+		"message": "Povoliť vyrovnávaciu pamäť"
+	},
+	"settings_option_cache_enable_desc": {
+		"message": "Keď je vyrovnávacia pamäť povolená, preklady, ktoré boli raz preložené, budú k dispozícii okamžite aj bez internetu"
+	},
+	"settings_option_cache_ignoreCase": {
+		"message": "Bez ohľadu na veľkosť písmen"
+	},
+	"settings_option_cache_ignoreCase_desc": {
+		"message": "Ak je táto možnosť zapnutá, preklady z cache sa použijú aj s ne-exaktnými zhodami, čo môže spôsobiť prekladateľské artefakty"
+	},
+	"settings_option_commonSettings": {
+		"message": "Spoločné nastavenia"
+	},
+	"settings_option_customTranslatorModule": {
+		"message": "Vlastné prekladače"
+	},
+	"settings_option_customTranslatorModule_desc": {
+		"message": "Môžete pridať vlastné prekladače pre vaše obľúbené prekladové služby. Viac informácií a moduly nájdete v dokumentácii k <slot id=docs> vlastným prekladačom </slot>."
+	},
+	"settings_option_customTranslatorModule_manageButton": {
+		"message": "Spravovať prekladače"
+	},
+	"settings_option_mainPreferences": {
+		"message": "Hlavné nastavenia"
+	},
+	"settings_option_pageTranslation": {
+		"message": "Preklad stránky"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent": {
+		"message": "Zistiť jazyk podľa obsahu"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent_desc": {
+		"message": "Analyzovať text na webovej stránke pre zistenie jazyka stránky. Ak je zakázané, použije sa jazyk uvedený v metadate stránky"
+	},
+	"settings_option_pageTranslation_enableContextMenu": {
+		"message": "Povoliť tlačidlo kontextového menu"
+	},
+	"settings_option_pageTranslation_enableContextMenu_desc": {
+		"message": "Pridať tlačidlo na prepínanie prekladu stránky do kontextového menu"
+	},
+	"settings_option_pageTranslation_ignoredTags": {
+		"message": "Ignorované prvky"
+	},
+	"settings_option_pageTranslation_ignoredTags_desc": {
+		"message": "Zadajte názvy <slot id=htmlElements>HTML elementov</slot>, ktoré sa nemajú prekladať. Vnorené prvky sa nebudú prekladať. Jeden prvok na riadok."
+	},
+	"settings_option_pageTranslation_lazyTranslate": {
+		"message": "Prekladať iba viditeľné prvky"
+	},
+	"settings_option_pageTranslation_lazyTranslate_desc": {
+		"message": "Ak je táto voľba povolená, budú prekladané iba viditeľné prvky. To môže byť užitočné na úsporu sieťovej prevádzky."
+	},
+	"settings_option_pageTranslation_originalTextPopup": {
+		"message": "Povoliť vyskakovacie okno s pôvodným textom"
+	},
+	"settings_option_pageTranslation_originalTextPopup_desc": {
+		"message": "Zobraziť vyskakovacie okno s originálnym textom pri podržaní myšou nad preloženým textom"
+	},
+	"settings_option_pageTranslation_toggleTranslationHotkey": {
+		"message": "Klávesové skratky"
+	},
+	"settings_option_pageTranslation_toggleTranslationHotkey_desc": {
+		"message": "Skratky na prepínanie prekladu stránky\nStlačte ESC pre reset kláves"
+	},
+	"settings_option_pageTranslation_translatableAttributes": {
+		"message": "Prekladateľné atribúty."
+	},
+	"settings_option_pageTranslation_translatableAttributes_desc": {
+		"message": "Zadajte názvy <slot id = htmlAttributes>HTML atribútov</slot> pre preklad. Jeden atribút na riadok"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters": {
+		"message": "Zobraziť štatistiky prekladu"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters_desc": {
+		"message": "Zobraziť štatistiky prekladu stránky"
+	},
+	"settings_option_selectTranslation": {
+		"message": "Preklad vybraného textu"
+	},
+	"settings_option_selectTranslation_detectedLangFirst": {
+		"message": "Uprednostniť zistený jazyk textu pred jazykom stránky"
+	},
+	"settings_option_selectTranslation_detectedLangFirst_desc": {
+		"message": "Ak je povolené, zistený jazyk vybraného textu bude uprednostnený pred jazykom stránky"
+	},
+	"settings_option_selectTranslation_disableWhileTranslatePage": {
+		"message": "Vypnúť počas prekladania stránky"
+	},
+	"settings_option_selectTranslation_enable": {
+		"message": "Povoliť"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton": {
+		"message": "Automatické zameranie na tlačidlo prekladu"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
+		"message": "Zamerať sa na tlačidlo prekladu, keď sa objaví"
+	},
+	"settings_option_selectTranslation_header_languageChoice": {
+		"message": "Nastavenia jazyka"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang": {
+		"message": "Povoliť automatické rozpoznávanie jazyka prekladačom"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
+		"message": "Použiť automatické rozpoznávanie jazyka prekladačom v prípade, že sa jazyk nedokáže rozpoznať lokálne"
+	},
+	"settings_option_selectTranslation_mode": {
+		"message": "Spúšťač prekladu"
+	},
+	"settings_option_selectTranslation_mode_item_contextMenu": {
+		"message": "Tlačidlo kontextového menu"
+	},
+	"settings_option_selectTranslation_mode_item_popupButton": {
+		"message": "Tlačidlo vyskakovacieho okna"
+	},
+	"settings_option_selectTranslation_mode_item_quickTranslate": {
+		"message": "Rýchle prekladanie výberom"
+	},
+	"settings_option_selectTranslation_modifiers": {
+		"message": "Modifikátory"
+	},
+	"settings_option_selectTranslation_modifiers_desc": {
+		"message": "Vyberte klávesy, ktoré je potrebné stlačiť na klávesnici, aby sa zobrazil preklad"
+	},
+	"settings_option_selectTranslation_modifiers_key_alt": {
+		"message": "alt"
+	},
+	"settings_option_selectTranslation_modifiers_key_ctrl": {
+		"message": "ctrl"
+	},
+	"settings_option_selectTranslation_modifiers_key_meta": {
+		"message": "meta"
+	},
+	"settings_option_selectTranslation_modifiers_key_shift": {
+		"message": "shift"
+	},
+	"settings_option_selectTranslation_rememberDirection": {
+		"message": "Zapamätať si najnovšie zvolený jazyk pre text"
+	},
+	"settings_option_selectTranslation_showOnceForSelection": {
+		"message": "Zobraziť tlačidlo prekladu len raz pre každý výber textu"
+	},
+	"settings_option_selectTranslation_showOnceForSelection_desc": {
+		"message": "Tlačidlo sa bude zobrazovať len raz pre každý výber textu. Ak ho chcete zobraziť znova, musíte text zvoliť znova."
+	},
+	"settings_option_selectTranslation_showOriginalText": {
+		"message": "Zobraziť pôvodný text"
+	},
+	"settings_option_selectTranslation_showOriginalText_desc": {
+		"message": "Pridať blok s pôvodným textom do vyskakovacieho okna s prekladom"
+	},
+	"settings_option_selectTranslation_strictSelection": {
+		"message": "Prísne výber"
+	},
+	"settings_option_selectTranslation_strictSelection_desc": {
+		"message": "Ignorovať výber, ak sa ľavé tlačidlo myši uvoľní mimo bloku, ktorý obsahuje vybraný text"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton": {
+		"message": "Oneskorenie skrytia tlačidla"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton_desc": {
+		"message": "Oneskorenie v milisekundách pred skrytím tlačidla, keď kurzor nie je nad ním. Pohyb kurzora na tlačidle zresetuje časovač. Ak chcete zakázať automatické skrytie, nastavte hodnotu nižšiu ako 1."
+	},
+	"settings_option_selectTranslation_zIndex": {
+		"message": "z-index"
+	},
+	"settings_option_selectTranslation_zIndex_desc": {
+		"message": "Zväčšite hodnotu, ak sa na niektorých stránkach prekrývajú prvky s vyskakovacím oknom s preloženým textom."
+	},
+	"settings_option_textTranslator": {
+		"message": "Preklad textu"
+	},
+	"settings_option_textTranslator_rememberText": {
+		"message": "Zapamätať si preložený text"
+	},
+	"settings_option_textTranslator_rememberText_desc": {
+		"message": "Zapamätať preložený text pre ďalšie otvorenie okna"
+	},
+	"settings_option_textTranslator_spellCheck": {
+		"message": "Povoliť kontrolu pravopisu"
+	},
+	"settings_option_textTranslator_suggestLanguage": {
+		"message": "Navrhnúť zistený jazyk textu"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways": {
+		"message": "Vždy zistiť a navrhnúť jazyk"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways_desc": {
+		"message": "Ak je vypnuté, návrhy jazyka sa zobrazia len vtedy, ak je zdrojový jazyk automaticky zistený."
+	},
+	"settings_option_translatePreferences": {
+		"message": "Prekladové preferencie"
+	},
+	"settings_option_translateScheduler": {
+		"message": "Plánovač prekladu"
+	},
+	"settings_option_translateScheduler_delay": {
+		"message": "Oneskorenie zhromažďovania textu"
+	},
+	"settings_option_translateScheduler_delay_desc": {
+		"message": "Plánovač prekladu znižuje počet požiadaviek na API pre služby prekladu. Plánovač sa snaží nazbierať čo najviac textov, ktoré odosle na jednu požiadavku. Plánovač bude čakať určitý čas v milisekundách na zhromaždenie nových textov pred začatím prekladu."
+	},
+	"settings_option_translateScheduler_retryLimit": {
+		"message": "Počet pokusov o preklad"
+	},
+	"settings_option_translateScheduler_retryLimit_desc": {
+		"message": "Plánovač bude opakovať preklad textov z dôvodu chýb pri preklade. Táto voľba nastavuje limit pre pokusy o opakovanie. Nastavte záporné číslo, aby ste umožnili neobmedzené opakovania"
+	},
+	"settings_option_translatorModule": {
+		"message": "Modul prekladača"
+	},
+	"settings_option_translatorModule_desc": {
+		"message": "Kvalita prekladov a dostupné jazyky pre preklad závisia od prekladača."
+	},
+	"settings_option_tts": {
+		"message": "Text na reč (TTS)"
+	},
+	"settings_option_ttsCustomModules": {
+		"message": "Prispôsobené TTS"
+	},
+	"settings_option_ttsCustomModules_button": {
+		"message": "Spravovať moduly TTS"
+	},
+	"settings_option_ttsCustomModules_desc": {
+		"message": "Môžete pridať moduly TTS, ktoré používajú vašu obľúbenú službu a jazyky. Prečítajte si viac a nájdite moduly v dokumentácii pre vlastné TTS."
+	},
+	"settings_option_ttsModule": {
+		"message": "Modul TTS"
+	},
+	"settings_option_ttsModule_desc": {
+		"message": "Modul na prehováranie textov"
+	},
+	"settings_option_userLanguage": {
+		"message": "Váš jazyk"
+	},
+	"settings_option_userLanguage_desc": {
+		"message": "Cieľový jazyk pre preklad textov"
+	},
+	"settings_pageTitle": {
+		"message": "Nastavenia"
+	},
+	"settings_section_popup": {
+		"message": "Vyskakovacie okno"
+	},
+	"textTranslator_suggestLanguage": {
+		"message": "Zdá sa, že tento jazyk je"
+	},
+	"textTranslator_translateInputPlaceholder": {
+		"message": "Vstupný text"
+	},
+	"textTranslator_translatePlaceholder": {
+		"message": "Preložený text"
+	},
+	"translatorsManagerWindow_add": {
+		"message": "Pridať"
+	},
+	"translatorsManagerWindow_close": {
+		"message": "Zavrieť"
+	},
+	"translatorsManagerWindow_emptyTranslatorsListText": {
+		"message": "Vlastné prekladače ešte neboli pridané"
+	},
+	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
+		"message": "Ste si istý, že chcete odstrániť prekladač \"$translator_name$\"?",
+		"placeholders": {
+			"translator_name": {
+				"content": "$1",
+				"example": "Google prekladač"
+			}
+		}
+	},
+	"translatorsManagerWindow_title": {
+		"message": "Vlastné prekladače"
+	},
+	"translatorsManagerWindow_translator_delete": {
+		"message": "Odstrániť"
+	},
+	"translatorsManagerWindow_translator_edit": {
+		"message": "Upraviť"
+	},
+	"ttsManagerWindow_add": {
+		"message": "Pridať"
+	},
+	"ttsManagerWindow_close": {
+		"message": "Zatvoriť"
+	},
+	"ttsManagerWindow_emptyTranslatorsListText": {
+		"message": "Moduly TTS ešte neboli pridané"
+	},
+	"ttsManagerWindow_message_ttsRemoveConfirmation": {
+		"message": "Naozaj chcete odstrániť TTS \"$tts_name$\"?",
+		"placeholders": {
+			"tts_name": {
+				"content": "$1",
+				"example": "Google TTS"
+			}
+		}
+	},
+	"ttsManagerWindow_title": {
+		"message": "Text na rečové moduly"
+	},
+	"ttsManagerWindow_translator_delete": {
+		"message": "Odstrániť"
+	},
+	"ttsManagerWindow_translator_edit": {
+		"message": "Upraviť"
+	},
+	"validation_number": {
+		"message": "Parameter musí byť číslo."
+	},
+	"validation_numberBetweenRange": {
+		"message": "Parameter musí byť číslo medzi $1 a $2."
+	},
+	"validation_positiveNumber": {
+		"message": "Parameter musí byť kladné číslo."
+	},
+	"langCode_aa": {
+		"message": "Afarčina"
+	},
+	"langCode_ab": {
+		"message": "Abcházčina"
+	},
+	"langCode_ae": {
+		"message": "Avestčina"
+	},
+	"langCode_af": {
+		"message": "Afrikánčina"
+	},
+	"langCode_ak": {
+		"message": "Akančina"
+	},
+	"langCode_am": {
+		"message": "Amharčina"
+	},
+	"langCode_an": {
+		"message": "Aragónčina"
+	},
+	"langCode_ar": {
+		"message": "Arabčina"
+	},
+	"langCode_as": {
+		"message": "Ásamčina"
+	},
+	"langCode_av": {
+		"message": "Avarčina"
+	},
+	"langCode_ay": {
+		"message": "Aymarčina"
+	},
+	"langCode_az": {
+		"message": "Azerbajdžančina"
+	},
+	"langCode_ba": {
+		"message": "Baškirčina"
+	},
+	"langCode_be": {
+		"message": "Bieloruština"
+	},
+	"langCode_bg": {
+		"message": "Bulharčina"
+	},
+	"langCode_bh": {
+		"message": "Bhódžpurčina"
+	},
+	"langCode_bi": {
+		"message": "Bislama"
+	},
+	"langCode_bm": {
+		"message": "Bambarčina"
+	},
+	"langCode_bn": {
+		"message": "Bengálčina"
+	},
+	"langCode_bo": {
+		"message": "Tibetčina"
+	},
+	"langCode_br": {
+		"message": "Bretónčina"
+	},
+	"langCode_bs": {
+		"message": "Bosniačtina"
+	},
+	"langCode_ca": {
+		"message": "Katalánčina"
+	},
+	"langCode_ce": {
+		"message": "Čečenčina"
+	},
+	"langCode_ch": {
+		"message": "Čamorčina"
+	},
+	"langCode_co": {
+		"message": "Korzičtina"
+	},
+	"langCode_cr": {
+		"message": "Krí"
+	},
+	"langCode_cs": {
+		"message": "Čeština"
+	},
+	"langCode_cu": {
+		"message": "Cirkevná slovančina"
+	},
+	"langCode_cv": {
+		"message": "Čuvaština"
+	},
+	"langCode_cy": {
+		"message": "Waleština"
+	},
+	"langCode_da": {
+		"message": "Dánčina"
+	},
+	"langCode_de": {
+		"message": "Nemčina"
+	},
+	"langCode_dv": {
+		"message": "Maldivčina"
+	},
+	"langCode_dz": {
+		"message": "Dzongkha"
+	},
+	"langCode_ee": {
+		"message": "Eweština"
+	},
+	"langCode_el": {
+		"message": "Gréčtina"
+	},
+	"langCode_en": {
+		"message": "Angličtina"
+	},
+	"langCode_eo": {
+		"message": "Esperanto"
+	},
+	"langCode_es": {
+		"message": "Španielčina"
+	},
+	"langCode_et": {
+		"message": "Estónčina"
+	},
+	"langCode_eu": {
+		"message": "Baskičtina"
+	},
+	"langCode_fa": {
+		"message": "Perzština"
+	},
+	"langCode_ff": {
+		"message": "Fulbčina"
+	},
+	"langCode_fi": {
+		"message": "Fínčina"
+	},
+	"langCode_fj": {
+		"message": "Fidžijčina"
+	},
+	"langCode_fo": {
+		"message": "Faerčina"
+	},
+	"langCode_fr": {
+		"message": "Francúzština"
+	},
+	"langCode_fy": {
+		"message": "Západná frízština"
+	},
+	"langCode_ga": {
+		"message": "Írčina"
+	},
+	"langCode_gd": {
+		"message": "Škótska gaelčina"
+	},
+	"langCode_gl": {
+		"message": "Galícijčina"
+	},
+	"langCode_gn": {
+		"message": "Guaraníjčina"
+	},
+	"langCode_gu": {
+		"message": "Gudžarátčina"
+	},
+	"langCode_gv": {
+		"message": "Mančina"
+	},
+	"langCode_ha": {
+		"message": "Hauština"
+	},
+	"langCode_he": {
+		"message": "Hebrejčina"
+	},
+	"langCode_hi": {
+		"message": "Hindčina"
+	},
+	"langCode_ho": {
+		"message": "Hiri motu"
+	},
+	"langCode_hr": {
+		"message": "Chorvátčina"
+	},
+	"langCode_ht": {
+		"message": "Haitská kreolčina"
+	},
+	"langCode_hu": {
+		"message": "Maďarčina"
+	},
+	"langCode_hy": {
+		"message": "Arménčina"
+	},
+	"langCode_hz": {
+		"message": "Herero"
+	},
+	"langCode_ia": {
+		"message": "Interlingua"
+	},
+	"langCode_id": {
+		"message": "Indonézština"
+	},
+	"langCode_ie": {
+		"message": "Interlingue"
+	},
+	"langCode_ig": {
+		"message": "Igboština"
+	},
+	"langCode_ii": {
+		"message": "S’čchuanská iovčina"
+	},
+	"langCode_ik": {
+		"message": "Inupik"
+	},
+	"langCode_io": {
+		"message": "Ido"
+	},
+	"langCode_is": {
+		"message": "Islandčina"
+	},
+	"langCode_it": {
+		"message": "Taliančina"
+	},
+	"langCode_iu": {
+		"message": "Inuktitut"
+	},
+	"langCode_ja": {
+		"message": "Japončina"
+	},
+	"langCode_jv": {
+		"message": "Jávčina"
+	},
+	"langCode_ka": {
+		"message": "Gruzínčina"
+	},
+	"langCode_kg": {
+		"message": "Kongčina"
+	},
+	"langCode_ki": {
+		"message": "Kikujčina"
+	},
+	"langCode_kj": {
+		"message": "Kuaňama"
+	},
+	"langCode_kk": {
+		"message": "Kazaština"
+	},
+	"langCode_kl": {
+		"message": "Grónčina"
+	},
+	"langCode_km": {
+		"message": "Khmérčina"
+	},
+	"langCode_kn": {
+		"message": "Kannadčina"
+	},
+	"langCode_ko": {
+		"message": "Kórejčina"
+	},
+	"langCode_kr": {
+		"message": "Kanurijčina"
+	},
+	"langCode_ks": {
+		"message": "Kašmírčina"
+	},
+	"langCode_ku": {
+		"message": "Kurdčina"
+	},
+	"langCode_kv": {
+		"message": "Komijčina"
+	},
+	"langCode_kw": {
+		"message": "Kornčina"
+	},
+	"langCode_ky": {
+		"message": "Kirgizština"
+	},
+	"langCode_la": {
+		"message": "Latinčina"
+	},
+	"langCode_lb": {
+		"message": "Luxemburčina"
+	},
+	"langCode_lg": {
+		"message": "Gandčina"
+	},
+	"langCode_li": {
+		"message": "Limburčina"
+	},
+	"langCode_ln": {
+		"message": "Lingalčina"
+	},
+	"langCode_lo": {
+		"message": "Laoština"
+	},
+	"langCode_lt": {
+		"message": "Litovčina"
+	},
+	"langCode_lu": {
+		"message": "Lubčina (katanžská)"
+	},
+	"langCode_lv": {
+		"message": "Lotyština"
+	},
+	"langCode_mg": {
+		"message": "Malgaština"
+	},
+	"langCode_mh": {
+		"message": "Marshallčina"
+	},
+	"langCode_mi": {
+		"message": "Maorijčina"
+	},
+	"langCode_mk": {
+		"message": "Macedónčina"
+	},
+	"langCode_ml": {
+		"message": "Malajálamčina"
+	},
+	"langCode_mn": {
+		"message": "Mongolčina"
+	},
+	"langCode_mr": {
+		"message": "Maráthčina"
+	},
+	"langCode_ms": {
+		"message": "Malajčina"
+	},
+	"langCode_mt": {
+		"message": "Maltčina"
+	},
+	"langCode_my": {
+		"message": "Barmčina"
+	},
+	"langCode_na": {
+		"message": "Nauruština"
+	},
+	"langCode_nb": {
+		"message": "Nórčina (bokmal)"
+	},
+	"langCode_nd": {
+		"message": "Ndebelčina (severná)"
+	},
+	"langCode_ne": {
+		"message": "Nepálčina"
+	},
+	"langCode_ng": {
+		"message": "Ndonga"
+	},
+	"langCode_nl": {
+		"message": "Holandčina"
+	},
+	"langCode_nn": {
+		"message": "Nórčina (nynorsk)"
+	},
+	"langCode_no": {
+		"message": "Nórčina"
+	},
+	"langCode_nr": {
+		"message": "Ndebelčina (južná)"
+	},
+	"langCode_nv": {
+		"message": "Navaho"
+	},
+	"langCode_ny": {
+		"message": "Ňandža"
+	},
+	"langCode_oc": {
+		"message": "Okcitánčina"
+	},
+	"langCode_oj": {
+		"message": "Odžibva"
+	},
+	"langCode_om": {
+		"message": "Oromčina"
+	},
+	"langCode_or": {
+		"message": "Uríjčina"
+	},
+	"langCode_os": {
+		"message": "Osetčina"
+	},
+	"langCode_pa": {
+		"message": "Pandžábčina"
+	},
+	"langCode_pi": {
+		"message": "Pálí"
+	},
+	"langCode_pl": {
+		"message": "Poľština"
+	},
+	"langCode_ps": {
+		"message": "Paštčina"
+	},
+	"langCode_pt": {
+		"message": "Portugalčina"
+	},
+	"langCode_qu": {
+		"message": "Kečuánčina"
+	},
+	"langCode_rm": {
+		"message": "Rétorománčina"
+	},
+	"langCode_rn": {
+		"message": "Rundčina"
+	},
+	"langCode_ro": {
+		"message": "Rumunčina"
+	},
+	"langCode_ru": {
+		"message": "Ruština"
+	},
+	"langCode_rw": {
+		"message": "Rwandčina"
+	},
+	"langCode_sa": {
+		"message": "Sanskrit"
+	},
+	"langCode_sc": {
+		"message": "Sardínčina"
+	},
+	"langCode_sd": {
+		"message": "Sindhčina"
+	},
+	"langCode_se": {
+		"message": "Saamčina (severná)"
+	},
+	"langCode_sg": {
+		"message": "Sango"
+	},
+	"langCode_si": {
+		"message": "Sinhalčina"
+	},
+	"langCode_sk": {
+		"message": "Slovenčina"
+	},
+	"langCode_sl": {
+		"message": "Slovinčina"
+	},
+	"langCode_sm": {
+		"message": "Samojčina"
+	},
+	"langCode_sn": {
+		"message": "Šončina"
+	},
+	"langCode_so": {
+		"message": "Somálčina"
+	},
+	"langCode_sq": {
+		"message": "Albánčina"
+	},
+	"langCode_sr": {
+		"message": "Srbčina"
+	},
+	"langCode_ss": {
+		"message": "Svazijčina"
+	},
+	"langCode_st": {
+		"message": "Sothčina (južná)"
+	},
+	"langCode_su": {
+		"message": "Sundčina"
+	},
+	"langCode_sv": {
+		"message": "Švédčina"
+	},
+	"langCode_sw": {
+		"message": "Swahilčina"
+	},
+	"langCode_ta": {
+		"message": "Tamilčina"
+	},
+	"langCode_te": {
+		"message": "Telugčina"
+	},
+	"langCode_tg": {
+		"message": "Tadžičtina"
+	},
+	"langCode_th": {
+		"message": "Thajčina"
+	},
+	"langCode_ti": {
+		"message": "Tigriňa"
+	},
+	"langCode_tk": {
+		"message": "Turkménčina"
+	},
+	"langCode_tl": {
+		"message": "Filipínčina"
+	},
+	"langCode_tn": {
+		"message": "Tswančina"
+	},
+	"langCode_to": {
+		"message": "Tongčina"
+	},
+	"langCode_tr": {
+		"message": "Turečtina"
+	},
+	"langCode_ts": {
+		"message": "Tsongčina"
+	},
+	"langCode_tt": {
+		"message": "Tatárčina"
+	},
+	"langCode_tw": {
+		"message": "Akančina"
+	},
+	"langCode_ty": {
+		"message": "Tahitčina"
+	},
+	"langCode_ug": {
+		"message": "Ujgurčina"
+	},
+	"langCode_uk": {
+		"message": "Ukrajinčina"
+	},
+	"langCode_ur": {
+		"message": "Urdčina"
+	},
+	"langCode_uz": {
+		"message": "Uzbečtina"
+	},
+	"langCode_ve": {
+		"message": "Vendčina"
+	},
+	"langCode_vi": {
+		"message": "Vietnamčina"
+	},
+	"langCode_vo": {
+		"message": "Volapük"
+	},
+	"langCode_wa": {
+		"message": "Valónčina"
+	},
+	"langCode_wo": {
+		"message": "Wolofčina"
+	},
+	"langCode_xh": {
+		"message": "Xhoština"
+	},
+	"langCode_yi": {
+		"message": "Jidiš"
+	},
+	"langCode_yo": {
+		"message": "Jorubčina"
+	},
+	"langCode_za": {
+		"message": "Čuangčina"
+	},
+	"langCode_zh": {
+		"message": "Čínština"
+	},
+	"langCode_zu": {
+		"message": "Zuluština"
+	}
+}

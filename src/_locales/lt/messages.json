@@ -1,0 +1,1190 @@
+{
+	"common_action_addToDictionary": {
+		"message": "Pridėti vertimą į žodyną"
+	},
+	"common_action_removeFromDictionary": {
+		"message": "Pašalinti vertimą iš žodyno"
+	},
+	"common_bgUnavailable": {
+		"message": "Fono skriptas nepasiekiamas"
+	},
+	"common_cancel": {
+		"message": "Atšaukti"
+	},
+	"common_close": {
+		"message": "Uždaryti"
+	},
+	"common_copy": {
+		"message": "Kopijuoti"
+	},
+	"common_error": {
+		"message": "Klaida"
+	},
+	"common_offlineTranslator": {
+		"message": "$1 - Neprisijungęs vertėjas"
+	},
+	"common_retry": {
+		"message": "Bandyti dar kartą"
+	},
+	"common_translate": {
+		"message": "Versti"
+	},
+	"component_hotkey_placeholder": {
+		"message": "Paspauskite, kad įrašytumėte karščiausias klavišų derinius"
+	},
+	"component_hotkey_recordPlaceholder": {
+		"message": "Paspauskite klavišus"
+	},
+	"component_hotkey_resetButton": {
+		"message": "Iš naujo nustatyti"
+	},
+	"contextMenu_disablePageTranslation": {
+		"message": "Išjungti puslapio vertimą"
+	},
+	"contextMenu_translatePage": {
+		"message": "Versti puslapį"
+	},
+	"contextMenu_translateSelectedText": {
+		"message": "Išversti pasirinktą tekstą"
+	},
+	"dictionaryButton_add": {
+		"message": "Pridėti į žodyną"
+	},
+	"dictionaryButton_delete": {
+		"message": "Ištrinti iš žodyno"
+	},
+	"dictionary_button_export": {
+		"message": "Eksportuoti"
+	},
+	"dictionary_button_removeAll": {
+		"message": "Pašalinti viską"
+	},
+	"dictionary_deleteAll": {
+		"message": "Ar tikrai norite ištrinti VISUS žodynų vertimus?"
+	},
+	"dictionary_deleteConfirmation": {
+		"message": "Ar tikrai norite ištrinti šį vertimą?"
+	},
+	"dictionary_description": {
+		"message": "Išsaugokite savo vertimus žodyne, kad vėliau juos surastumėte"
+	},
+	"dictionary_emptyDictionary": {
+		"message": "Žodynas yra tuščias. Pradėkite jį užpildydami vertimais."
+	},
+	"dictionary_filter_from": {
+		"message": "Nuo"
+	},
+	"dictionary_filter_to": {
+		"message": "Į"
+	},
+	"dictionary_message_deleteAll_success": {
+		"message": "Visi vertimai buvo pašalinti"
+	},
+	"dictionary_notFoundEntries": {
+		"message": "Vertimų, atitinkančių šiuos filtrus, nerasta"
+	},
+	"dictionary_pageTitle": {
+		"message": "Žodynas"
+	},
+	"dictionary_resetFilters": {
+		"message": "nustatyti filtrus iš naujo"
+	},
+	"dictionary_searchPlaceholder": {
+		"message": "Ieškoti pagal tekstą"
+	},
+	"editorWindow_close": {
+		"message": "Uždaryti"
+	},
+	"editorWindow_data_code": {
+		"message": "Kodas"
+	},
+	"editorWindow_data_name": {
+		"message": "Pavadinimas"
+	},
+	"editorWindow_message_invalidName": {
+		"message": "Pavadinime turi būti bent vienas simbolis"
+	},
+	"editorWindow_save": {
+		"message": "Išsaugoti"
+	},
+	"ext_description": {
+		"message": "Teksto vertimas be puslapio perkrovimo"
+	},
+	"ext_name": {
+		"message": "Lingvistas - internetinio puslapio vertėjas"
+	},
+	"history_control_selectEntry": {
+		"message": "Pasirinkite įrašą"
+	},
+	"history_controls_clearHistory": {
+		"message": "Valyti istoriją"
+	},
+	"history_controls_deleteSelected": {
+		"message": "Ištrinti pasirinktus"
+	},
+	"history_controls_selectAll": {
+		"message": "Pasirinkti visus vertimus"
+	},
+	"history_message_clearHistoryConfirmation": {
+		"message": "Ar tikrai norite išvalyti istoriją? Visi įrašai bus pašalinti"
+	},
+	"history_message_deleteEntryConfirmation": {
+		"message": "Ar tikrai norite ištrinti šį įrašą?"
+	},
+	"history_message_deleteSelectedEntriesConfirmation": {
+		"message": "Ar tikrai norite ištrinti pasirinktus įrašus ($1)?"
+	},
+	"history_message_emptyEntries": {
+		"message": "Istorija išvalyta"
+	},
+	"history_message_entriesNotFound": {
+		"message": "Nerasta jokių vertimų, atitinkančių filtrą"
+	},
+	"history_pageTitle": {
+		"message": "Istorija"
+	},
+	"history_searchPlaceholder": {
+		"message": "Paieška pagal tekstą"
+	},
+	"inlineTranslator_showOriginalText": {
+		"message": "Rodyti pradinį tekstą"
+	},
+	"lang_change": {
+		"message": "Pakeisti kalbą"
+	},
+	"lang_detect": {
+		"message": "Automatiškai aptikti"
+	},
+	"lang_select": {
+		"message": "Pasirinkti kalbą"
+	},
+	"lang_swap": {
+		"message": "Apkeisti kalbas"
+	},
+	"message_askResetConfig": {
+		"message": "Grąžinti nustatymus į pradines vertes?"
+	},
+	"message_cacheFlushed": {
+		"message": "Atminties talpykla yra išvalyta"
+	},
+	"message_changesSaved": {
+		"message": "Pakeitimai išsaugoti"
+	},
+	"message_error": {
+		"message": "Klaida"
+	},
+	"message_errorOfTranslate": {
+		"message": "Vertimo klaida"
+	},
+	"message_serviceRequiredKey": {
+		"message": "Paslauga reikalauja rakto"
+	},
+	"message_translateOfText": {
+		"message": "Išversta"
+	},
+	"message_unknownError": {
+		"message": "Nežinoma klaida"
+	},
+	"pageTranslator_alwaysTranslateLang": {
+		"message": "Visada versti šią kalbą"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disable": {
+		"message": "Išjungti"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
+		"message": "Išjungti visiems svetainėms"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_enable": {
+		"message": "Įgalinti"
+	},
+	"pageTranslator_commonPreferences_title": {
+		"message": "Bendrosios nuostatos šiai kalbai"
+	},
+	"pageTranslator_option_autoTranslate": {
+		"message": "Automatiškai verti"
+	},
+	"pageTranslator_showOptions": {
+		"message": "Rodyti parinktis"
+	},
+	"pageTranslator_showOriginal": {
+		"message": "Rodyti originalą"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_always": {
+		"message": "Visada versti"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
+		"message": "Visada versti šia kalba"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_default": {
+		"message": "Naudoti bendras taisykles"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
+		"message": "Naudoti bendras taisykles šiai kalbai"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_never": {
+		"message": "Nieko niekada neverti"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
+		"message": "Niekada nereikia versti šia kalba"
+	},
+	"pageTranslator_sitePreferences_title": {
+		"message": "Nuostatos skirtos"
+	},
+	"pageTranslator_translatePage": {
+		"message": "Versti puslapį"
+	},
+	"pageTranslator_translationReport": {
+		"message": "Vertimo ataskaita"
+	},
+	"pageTranslator_translationReport_queue": {
+		"message": "Eilė"
+	},
+	"pageTranslator_translationReport_reject": {
+		"message": "Klaidos"
+	},
+	"pageTranslator_translationReport_resolve": {
+		"message": "Išversta"
+	},
+	"popup_tabIdNotFound": {
+		"message": "Puslapis \"$1\" nerastas"
+	},
+	"popup_tab_translatePage": {
+		"message": "Puslapio vertimas"
+	},
+	"popup_tab_translateText": {
+		"message": "Teksto vertimas"
+	},
+	"settings_button_cancel": {
+		"message": "Atšaukti"
+	},
+	"settings_button_export": {
+		"message": "Eksportuoti konfigūraciją"
+	},
+	"settings_button_import": {
+		"message": "Importuoti konfigūraciją"
+	},
+	"settings_button_reset": {
+		"message": "Iš naujo nustatyti konfigūraciją"
+	},
+	"settings_button_saveChanges": {
+		"message": "Įrašyti pakeitimus"
+	},
+	"settings_message_clearCache_success": {
+		"message": "Vyrojyklė išvalyta"
+	},
+	"settings_message_common_invalidValueType": {
+		"message": "Netinkamas reikšmės tipas"
+	},
+	"settings_message_importConfig_invalidFile": {
+		"message": "Failas importavimui negali būti apdorotas"
+	},
+	"settings_message_importConfig_success": {
+		"message": "Importuota"
+	},
+	"settings_message_resetConfig_confirm": {
+		"message": "Ar norite atstatyti nustatymus?"
+	},
+	"settings_message_resetConfig_success": {
+		"message": "Nustatymai atstatyti"
+	},
+	"settings_message_saveChanges_success": {
+		"message": "Pakeitimai išsaugoti"
+	},
+	"settings_option_appIcon": {
+		"message": "Plėtinio piktograma"
+	},
+	"settings_option_appIcon_desc": {
+		"message": "Pasirinkus dinaminę piktogramą, spalvos bus pritaikytos naršyklės temai"
+	},
+	"settings_option_appIcon_item_auto": {
+		"message": "Dinaminis"
+	},
+	"settings_option_appIcon_item_color": {
+		"message": "Spalva"
+	},
+	"settings_option_appIcon_item_dark": {
+		"message": "Tamsus"
+	},
+	"settings_option_appIcon_item_light": {
+		"message": "Šviesus"
+	},
+	"settings_option_cache": {
+		"message": "Podėlis"
+	},
+	"settings_option_cache_clear": {
+		"message": "Išvalyti podėlį"
+	},
+	"settings_option_cache_clear_desc": {
+		"message": "Pašalinti talpyklą, jei turite vertimo artefaktų arba reikia pašalinti paslaptis"
+	},
+	"settings_option_cache_enable": {
+		"message": "Įjungti talpyklą"
+	},
+	"settings_option_cache_enable_desc": {
+		"message": "Kai talpykla įjungta, vertimai, kurie buvo išversti bent kartą, bus prieinami nedelsiant, net ir be interneto"
+	},
+	"settings_option_cache_ignoreCase": {
+		"message": "Neatsižvelgti į didžiąsias ir mažąsias raides"
+	},
+	"settings_option_cache_ignoreCase_desc": {
+		"message": "Kai ši funkcija įjungta, vertimai iš talpyklos bus naudojami nesutampantys tiksliai, galimi vertimo artefaktai"
+	},
+	"settings_option_commonSettings": {
+		"message": "Bendrosios nuostatos"
+	},
+	"settings_option_customTranslatorModule": {
+		"message": "Individualūs vertėjai"
+	},
+	"settings_option_customTranslatorModule_desc": {
+		"message": "Galite pridėti individualius vertėjus savo mėgstamiausiems vertimo paslaugoms. Sužinokite daugiau ir raskite modulius <slot id=docs>individualių vertėjų dokumentacijoje</slot>."
+	},
+	"settings_option_customTranslatorModule_manageButton": {
+		"message": "Tvarkyti vertėjus"
+	},
+	"settings_option_mainPreferences": {
+		"message": "Pagrindinės nuostatos"
+	},
+	"settings_option_pageTranslation": {
+		"message": "Puslapio vertimas"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent": {
+		"message": "Aptikti kalbą pagal turinį"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent_desc": {
+		"message": "Analizuoti teksto svetainę, kad būtų galima nustatyti puslapio kalbą. Kai išjungta, naudos kalbą, pateiktą svetainės metaduomenyse."
+	},
+	"settings_option_pageTranslation_enableContextMenu": {
+		"message": "Įgalinti kontekstinio meniu mygtuką"
+	},
+	"settings_option_pageTranslation_enableContextMenu_desc": {
+		"message": "Įtraukti mygtuką, skirtą įjungti puslapio vertimą kontekstiniam meniu."
+	},
+	"settings_option_pageTranslation_ignoredTags": {
+		"message": "Nevertimi elementai"
+	},
+	"settings_option_pageTranslation_ignoredTags_desc": {
+		"message": "Įveskite <slot id=htmlElements>HTML elemento</slot> pavadinimus, kurių neturėtumėte versti. Kiti vidiniai elementai taip pat nebus išversti. Vienas elementas per eilutę."
+	},
+	"settings_option_pageTranslation_lazyTranslate": {
+		"message": "Verti tik matomus elementus"
+	},
+	"settings_option_pageTranslation_lazyTranslate_desc": {
+		"message": "Jei ši parinktis įjungta, bus vertimi tik matomi elementai. Tai gali būti naudinga, norint sutaupyti tinklo srautą"
+	},
+	"settings_option_pageTranslation_originalTextPopup": {
+		"message": "Leisti iškylančiąją laukelio su pradiniu tekstu"
+	},
+	"settings_option_pageTranslation_originalTextPopup_desc": {
+		"message": "Rodyti iškylančią žymeklį su originaliu tekstu užvedus pelę ant išversto teksto"
+	},
+	"settings_option_pageTranslation_toggleTranslationHotkey": {
+		"message": "Karštinės klavišai"
+	},
+	"settings_option_pageTranslation_toggleTranslationHotkey_desc": {
+		"message": "Trumpiniai, skirti perjungti puslapio vertimą\nSpustelėkite ESC, kad nustatytumėte klavišus"
+	},
+	"settings_option_pageTranslation_translatableAttributes": {
+		"message": "Vertimiems atributams."
+	},
+	"settings_option_pageTranslation_translatableAttributes_desc": {
+		"message": "Įveskite <slot id=htmlAttributes>HTML atributo</slot> pavadinimus vertimui. Vienas atributas per eilutę"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters": {
+		"message": "Rodyti vertimo statistiką"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters_desc": {
+		"message": "Rodyti puslapio vertimo statistiką"
+	},
+	"settings_option_selectTranslation": {
+		"message": "Pasirinkto teksto vertimas"
+	},
+	"settings_option_selectTranslation_detectedLangFirst": {
+		"message": "Pirmiausia naudoti aptiktą teksto kalbą, o ne puslapio kalbą"
+	},
+	"settings_option_selectTranslation_detectedLangFirst_desc": {
+		"message": "Kai įjungta, tekstui nustatytos kalbos bus pirmenybė teikiama prieš puslapio kalbą"
+	},
+	"settings_option_selectTranslation_disableWhileTranslatePage": {
+		"message": "Išjungti, vertinant puslapį"
+	},
+	"settings_option_selectTranslation_enable": {
+		"message": "Aktyvuoti"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton": {
+		"message": "Automatinis fokusavimas ant vertimo mygtuko"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
+		"message": "Susikaupti ant vertimo mygtuko, kai jis pasirodo"
+	},
+	"settings_option_selectTranslation_header_languageChoice": {
+		"message": "Kalbos nustatymai"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang": {
+		"message": "Įjungti automatinį vertėjo kalbos aptikimą"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
+		"message": "Naudoti automatinį vertėjo kalbos aptikimą, kai vietinių kalbos negali būti nustatyta"
+	},
+	"settings_option_selectTranslation_mode": {
+		"message": "Vertimo aktyvavimo būdas"
+	},
+	"settings_option_selectTranslation_mode_item_contextMenu": {
+		"message": "Kontekstinio meniu mygtukas"
+	},
+	"settings_option_selectTranslation_mode_item_popupButton": {
+		"message": "Iškylančio mygtuko mygtukas"
+	},
+	"settings_option_selectTranslation_mode_item_quickTranslate": {
+		"message": "Greitas vertimas pasirinkimu"
+	},
+	"settings_option_selectTranslation_modifiers": {
+		"message": "Modifikatoriai"
+	},
+	"settings_option_selectTranslation_modifiers_desc": {
+		"message": "Pasirinkite klavišus, kurie turi būti paspausti ant klaviatūros, kad parodytumėte vertimą"
+	},
+	"settings_option_selectTranslation_modifiers_key_alt": {
+		"message": "alt"
+	},
+	"settings_option_selectTranslation_modifiers_key_ctrl": {
+		"message": "ctrl"
+	},
+	"settings_option_selectTranslation_modifiers_key_meta": {
+		"message": "meta"
+	},
+	"settings_option_selectTranslation_modifiers_key_shift": {
+		"message": "shift"
+	},
+	"settings_option_selectTranslation_rememberDirection": {
+		"message": "Atsiminti neseniai pasirinktą teksto kalbą"
+	},
+	"settings_option_selectTranslation_showOnceForSelection": {
+		"message": "Rodyti vertimo mygtuką vieną kartą kiekvienam teksto pasirinkimui"
+	},
+	"settings_option_selectTranslation_showOnceForSelection_desc": {
+		"message": "Mygtukas rodomas tik vieną kartą kiekvienam teksto pasirinkimui. Jei norite jį vėl pamatyti, reikia iš naujo pasirinkti tekstą"
+	},
+	"settings_option_selectTranslation_showOriginalText": {
+		"message": "Rodyti pradinį tekstą"
+	},
+	"settings_option_selectTranslation_showOriginalText_desc": {
+		"message": "Pridėti bloką su pirminiu tekstu į iššokantį vertimo langą"
+	},
+	"settings_option_selectTranslation_strictSelection": {
+		"message": "Griežta atranka"
+	},
+	"settings_option_selectTranslation_strictSelection_desc": {
+		"message": "Ignoruoti atranką, jei kairysis pelės klavišas paleidžiamas už bloko ribų, kuriame yra pasirinktas tekstas"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton": {
+		"message": "Uždelsti mygtuko paslėpimo laiką"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton_desc": {
+		"message": "Delspinigiai milisekundėmis prieš paslėpdami mygtuką, kai žymeklis nėra virš jų. Žymeklio viršuje esantis mygtukas resetuos laikmatiklį. Norint išjungti automatinio paslėpimo funkciją, reikia nustatyti reikšmę mažesnę nei 1"
+	},
+	"settings_option_selectTranslation_zIndex": {
+		"message": "z-indeksas"
+	},
+	"settings_option_selectTranslation_zIndex_desc": {
+		"message": "Padidinkite šią reikšmę, jei kai kurie elementai keletame puslapyje uždengia iššokantį vertimo teksto langą"
+	},
+	"settings_option_textTranslator": {
+		"message": "Teksto vertimas"
+	},
+	"settings_option_textTranslator_rememberText": {
+		"message": "Prisiminti verstinį tekstą"
+	},
+	"settings_option_textTranslator_rememberText_desc": {
+		"message": "Prisiminti išverstą tekstą, kadangi langas bus atvertas kitą kartą"
+	},
+	"settings_option_textTranslator_spellCheck": {
+		"message": "Įjungti rašybos patikrą"
+	},
+	"settings_option_textTranslator_suggestLanguage": {
+		"message": "Siūlyti aptiktą teksto kalbą"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways": {
+		"message": "Visada aptikti ir siūlyti kalbą"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways_desc": {
+		"message": "Kai išjungta, kalbos pasiūlymai pasirodys tik tada, kai šaltinio kalba bus automatiškai nustatyta"
+	},
+	"settings_option_translatePreferences": {
+		"message": "Vertimo nuostatos"
+	},
+	"settings_option_translateScheduler": {
+		"message": "Vertimo tvarkaraštis"
+	},
+	"settings_option_translateScheduler_delay": {
+		"message": "Teksto kaupimo delsa"
+	},
+	"settings_option_translateScheduler_delay_desc": {
+		"message": "Vertimo tvarkyklė mažina užklausų skaičių prie vertimo paslaugų API. Tvarkyklė stengiasi kaupia teksto žinutes ir siųsti kuo daugiau teksto per vieną užklausą. Tvarkyklė laukia nurodyto laiko milisekundėmis, kad surinktų naujus tekstus prieš pradedant vertimus."
+	},
+	"settings_option_translateScheduler_retryLimit": {
+		"message": "Vertimo bandymų limitas"
+	},
+	"settings_option_translateScheduler_retryLimit_desc": {
+		"message": "Tvarkyklė bandys išversti tekstus dar kartą, jei atsiras vertimų klaidų. Ši parinktis nustato ribą bandymams. Norėdami leisti neribotą bandymų skaičių, nustatykite neigiamą skaičių."
+	},
+	"settings_option_translatorModule": {
+		"message": "Vertimo modulis"
+	},
+	"settings_option_translatorModule_desc": {
+		"message": "Vertimo kokybė ir galimi kalbos variantai priklauso nuo vertėjo."
+	},
+	"settings_option_tts": {
+		"message": "Teksto į garsą (TTS)"
+	},
+	"settings_option_ttsCustomModules": {
+		"message": "Individualizuotas TTS"
+	},
+	"settings_option_ttsCustomModules_button": {
+		"message": "Tvarkyti TTS modulius"
+	},
+	"settings_option_ttsCustomModules_desc": {
+		"message": "Galite pridėti TTS modulius, naudojančius jūsų mėgstamą paslaugą ir balsus. Daugiau informacijos ir modulių rasite adaptuotame TTS dokumente."
+	},
+	"settings_option_ttsModule": {
+		"message": "TTS modulis"
+	},
+	"settings_option_ttsModule_desc": {
+		"message": "Modulis, skirtas kalbėti tekstus"
+	},
+	"settings_option_userLanguage": {
+		"message": "Jūsų kalba"
+	},
+	"settings_option_userLanguage_desc": {
+		"message": "Tiksli kalba, į kurią vertimi tekstai"
+	},
+	"settings_pageTitle": {
+		"message": "Nustatymai"
+	},
+	"settings_section_popup": {
+		"message": "Iššokantis langas"
+	},
+	"textTranslator_suggestLanguage": {
+		"message": "Atrodo, kad tai kalba yra"
+	},
+	"textTranslator_translateInputPlaceholder": {
+		"message": "Įveskite tekstą"
+	},
+	"textTranslator_translatePlaceholder": {
+		"message": "Išverstas tekstas"
+	},
+	"translatorsManagerWindow_add": {
+		"message": "Pridėti"
+	},
+	"translatorsManagerWindow_close": {
+		"message": "Uždaryti"
+	},
+	"translatorsManagerWindow_emptyTranslatorsListText": {
+		"message": "Pasirinktinių vertėjų dar nėra pridėta"
+	},
+	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
+		"message": "Ar tikrai norite pašalinti vertėją „$translator_name$“?",
+		"placeholders": {
+			"translator_name": {
+				"content": "$1",
+				"example": "Google vertėjas"
+			}
+		}
+	},
+	"translatorsManagerWindow_title": {
+		"message": "Individualizuoti vertėjai"
+	},
+	"translatorsManagerWindow_translator_delete": {
+		"message": "Ištrinti"
+	},
+	"translatorsManagerWindow_translator_edit": {
+		"message": "Redaguoti"
+	},
+	"ttsManagerWindow_add": {
+		"message": "Pridėti"
+	},
+	"ttsManagerWindow_close": {
+		"message": "Uždaryti"
+	},
+	"ttsManagerWindow_emptyTranslatorsListText": {
+		"message": "Dar nėra pridėta jokių TTS modulių"
+	},
+	"ttsManagerWindow_message_ttsRemoveConfirmation": {
+		"message": "Ar tikrai norite pašalinti TTS \"$tts_name$\"?",
+		"placeholders": {
+			"tts_name": {
+				"content": "$1",
+				"example": "Google TTS"
+			}
+		}
+	},
+	"ttsManagerWindow_title": {
+		"message": "Teksto į garsą moduliai"
+	},
+	"ttsManagerWindow_translator_delete": {
+		"message": "Ištrinti"
+	},
+	"ttsManagerWindow_translator_edit": {
+		"message": "Redaguoti"
+	},
+	"validation_number": {
+		"message": "Parametras turi būti skaičius"
+	},
+	"validation_numberBetweenRange": {
+		"message": "Parametras turi būti skaičius nuo $1 iki $2"
+	},
+	"validation_positiveNumber": {
+		"message": "Parametras turi būti teigiamas skaičius."
+	},
+	"langCode_aa": {
+		"message": "Afarų"
+	},
+	"langCode_ab": {
+		"message": "Abchazų"
+	},
+	"langCode_ae": {
+		"message": "Avestų"
+	},
+	"langCode_af": {
+		"message": "Afrikanų"
+	},
+	"langCode_ak": {
+		"message": "Akanų"
+	},
+	"langCode_am": {
+		"message": "Amharų"
+	},
+	"langCode_an": {
+		"message": "Aragonesų"
+	},
+	"langCode_ar": {
+		"message": "Arabų"
+	},
+	"langCode_as": {
+		"message": "Asamų"
+	},
+	"langCode_av": {
+		"message": "Avarikų"
+	},
+	"langCode_ay": {
+		"message": "Aimarų"
+	},
+	"langCode_az": {
+		"message": "Azerbaidžaniečių"
+	},
+	"langCode_ba": {
+		"message": "Baškirų"
+	},
+	"langCode_be": {
+		"message": "Baltarusių"
+	},
+	"langCode_bg": {
+		"message": "Bulgarų"
+	},
+	"langCode_bh": {
+		"message": "Baučpuri"
+	},
+	"langCode_bi": {
+		"message": "Bislama"
+	},
+	"langCode_bm": {
+		"message": "Bambarų"
+	},
+	"langCode_bn": {
+		"message": "Bengalų"
+	},
+	"langCode_bo": {
+		"message": "Tibetiečių"
+	},
+	"langCode_br": {
+		"message": "Bretonų"
+	},
+	"langCode_bs": {
+		"message": "Bosnių"
+	},
+	"langCode_ca": {
+		"message": "Katalonų"
+	},
+	"langCode_ce": {
+		"message": "Čečėnų"
+	},
+	"langCode_ch": {
+		"message": "Čamorų"
+	},
+	"langCode_co": {
+		"message": "Korsikiečių"
+	},
+	"langCode_cr": {
+		"message": "Kry"
+	},
+	"langCode_cs": {
+		"message": "Čekų"
+	},
+	"langCode_cu": {
+		"message": "Bažnytinė slavų"
+	},
+	"langCode_cv": {
+		"message": "Čiuvašų"
+	},
+	"langCode_cy": {
+		"message": "Valų"
+	},
+	"langCode_da": {
+		"message": "Danų"
+	},
+	"langCode_de": {
+		"message": "Vokiečių"
+	},
+	"langCode_dv": {
+		"message": "Divehų"
+	},
+	"langCode_dz": {
+		"message": "Botijų"
+	},
+	"langCode_ee": {
+		"message": "Evių"
+	},
+	"langCode_el": {
+		"message": "Graikų"
+	},
+	"langCode_en": {
+		"message": "Anglų"
+	},
+	"langCode_eo": {
+		"message": "Esperanto"
+	},
+	"langCode_es": {
+		"message": "Ispanų"
+	},
+	"langCode_et": {
+		"message": "Estų"
+	},
+	"langCode_eu": {
+		"message": "Baskų"
+	},
+	"langCode_fa": {
+		"message": "Persų"
+	},
+	"langCode_ff": {
+		"message": "Fulahų"
+	},
+	"langCode_fi": {
+		"message": "Suomių"
+	},
+	"langCode_fj": {
+		"message": "Fidžių"
+	},
+	"langCode_fo": {
+		"message": "Farerų"
+	},
+	"langCode_fr": {
+		"message": "Prancūzų"
+	},
+	"langCode_fy": {
+		"message": "Vakarų fryzų"
+	},
+	"langCode_ga": {
+		"message": "Airių"
+	},
+	"langCode_gd": {
+		"message": "Škotų (gėlų)"
+	},
+	"langCode_gl": {
+		"message": "Galisų"
+	},
+	"langCode_gn": {
+		"message": "Gvaranių"
+	},
+	"langCode_gu": {
+		"message": "Gudžaratų"
+	},
+	"langCode_gv": {
+		"message": "Meniečių"
+	},
+	"langCode_ha": {
+		"message": "Hausų"
+	},
+	"langCode_he": {
+		"message": "Hebrajų"
+	},
+	"langCode_hi": {
+		"message": "Hindi"
+	},
+	"langCode_ho": {
+		"message": "Hiri motu"
+	},
+	"langCode_hr": {
+		"message": "Kroatų"
+	},
+	"langCode_ht": {
+		"message": "Haičio"
+	},
+	"langCode_hu": {
+		"message": "Vengrų"
+	},
+	"langCode_hy": {
+		"message": "Armėnų"
+	},
+	"langCode_hz": {
+		"message": "Hererų"
+	},
+	"langCode_ia": {
+		"message": "Tarpinė"
+	},
+	"langCode_id": {
+		"message": "Indoneziečių"
+	},
+	"langCode_ie": {
+		"message": "Interkalba"
+	},
+	"langCode_ig": {
+		"message": "Igbų"
+	},
+	"langCode_ii": {
+		"message": "Sičuan ji"
+	},
+	"langCode_ik": {
+		"message": "Inupiakų"
+	},
+	"langCode_io": {
+		"message": "Ido"
+	},
+	"langCode_is": {
+		"message": "Islandų"
+	},
+	"langCode_it": {
+		"message": "Italų"
+	},
+	"langCode_iu": {
+		"message": "Inukitut"
+	},
+	"langCode_ja": {
+		"message": "Japonų"
+	},
+	"langCode_jv": {
+		"message": "Javiečių"
+	},
+	"langCode_ka": {
+		"message": "Gruzinų"
+	},
+	"langCode_kg": {
+		"message": "Kongo"
+	},
+	"langCode_ki": {
+		"message": "Kikujų"
+	},
+	"langCode_kj": {
+		"message": "Kuaniama"
+	},
+	"langCode_kk": {
+		"message": "Kazachų"
+	},
+	"langCode_kl": {
+		"message": "Kalalisut"
+	},
+	"langCode_km": {
+		"message": "Khmerų"
+	},
+	"langCode_kn": {
+		"message": "Kanadų"
+	},
+	"langCode_ko": {
+		"message": "Korėjiečių"
+	},
+	"langCode_kr": {
+		"message": "Kanurių"
+	},
+	"langCode_ks": {
+		"message": "Kašmyrų"
+	},
+	"langCode_ku": {
+		"message": "Kurdų"
+	},
+	"langCode_kv": {
+		"message": "Komi"
+	},
+	"langCode_kw": {
+		"message": "Kornų"
+	},
+	"langCode_ky": {
+		"message": "Kirgizų"
+	},
+	"langCode_la": {
+		"message": "Lotynų"
+	},
+	"langCode_lb": {
+		"message": "Liuksemburgiečių"
+	},
+	"langCode_lg": {
+		"message": "Ganda"
+	},
+	"langCode_li": {
+		"message": "Limburgiečių"
+	},
+	"langCode_ln": {
+		"message": "Ngalų"
+	},
+	"langCode_lo": {
+		"message": "Laosiečių"
+	},
+	"langCode_lt": {
+		"message": "Lietuvių"
+	},
+	"langCode_lu": {
+		"message": "Luba katanga"
+	},
+	"langCode_lv": {
+		"message": "Latvių"
+	},
+	"langCode_mg": {
+		"message": "Malagasų"
+	},
+	"langCode_mh": {
+		"message": "Maršalo Salų"
+	},
+	"langCode_mi": {
+		"message": "Maorių"
+	},
+	"langCode_mk": {
+		"message": "Makedonų"
+	},
+	"langCode_ml": {
+		"message": "Malajalių"
+	},
+	"langCode_mn": {
+		"message": "Mongolų"
+	},
+	"langCode_mr": {
+		"message": "Maratų"
+	},
+	"langCode_ms": {
+		"message": "Malajiečių"
+	},
+	"langCode_mt": {
+		"message": "Maltiečių"
+	},
+	"langCode_my": {
+		"message": "Birmiečių"
+	},
+	"langCode_na": {
+		"message": "Naurų"
+	},
+	"langCode_nb": {
+		"message": "Norvegų bukmolas"
+	},
+	"langCode_nd": {
+		"message": "Šiaurės ndebelų"
+	},
+	"langCode_ne": {
+		"message": "Nepaliečių"
+	},
+	"langCode_ng": {
+		"message": "Ndongų"
+	},
+	"langCode_nl": {
+		"message": "Olandų"
+	},
+	"langCode_nn": {
+		"message": "Naujoji norvegų"
+	},
+	"langCode_no": {
+		"message": "Norvegų"
+	},
+	"langCode_nr": {
+		"message": "Pietų ndebele"
+	},
+	"langCode_nv": {
+		"message": "Navajų"
+	},
+	"langCode_ny": {
+		"message": "Nianjų"
+	},
+	"langCode_oc": {
+		"message": "Očitarų"
+	},
+	"langCode_oj": {
+		"message": "Ojibva"
+	},
+	"langCode_om": {
+		"message": "Oromų"
+	},
+	"langCode_or": {
+		"message": "Odijų"
+	},
+	"langCode_os": {
+		"message": "Osetinų"
+	},
+	"langCode_pa": {
+		"message": "Pendžabų"
+	},
+	"langCode_pi": {
+		"message": "Pali"
+	},
+	"langCode_pl": {
+		"message": "Lenkų"
+	},
+	"langCode_ps": {
+		"message": "Puštūnų"
+	},
+	"langCode_pt": {
+		"message": "Portugalų"
+	},
+	"langCode_qu": {
+		"message": "Kečujų"
+	},
+	"langCode_rm": {
+		"message": "Retoromanų"
+	},
+	"langCode_rn": {
+		"message": "Rundi"
+	},
+	"langCode_ro": {
+		"message": "Rumunų"
+	},
+	"langCode_ru": {
+		"message": "Rusų"
+	},
+	"langCode_rw": {
+		"message": "Kinjaruandų"
+	},
+	"langCode_sa": {
+		"message": "Sanskritas"
+	},
+	"langCode_sc": {
+		"message": "Sardiniečių"
+	},
+	"langCode_sd": {
+		"message": "Sindų"
+	},
+	"langCode_se": {
+		"message": "Šiaurės samių"
+	},
+	"langCode_sg": {
+		"message": "Sango"
+	},
+	"langCode_si": {
+		"message": "Sinhalų"
+	},
+	"langCode_sk": {
+		"message": "Slovakų"
+	},
+	"langCode_sl": {
+		"message": "Slovėnų"
+	},
+	"langCode_sm": {
+		"message": "Samoa"
+	},
+	"langCode_sn": {
+		"message": "Šonų"
+	},
+	"langCode_so": {
+		"message": "Somaliečių"
+	},
+	"langCode_sq": {
+		"message": "Albanų"
+	},
+	"langCode_sr": {
+		"message": "Serbų"
+	},
+	"langCode_ss": {
+		"message": "Svatų"
+	},
+	"langCode_st": {
+		"message": "Pietų Soto"
+	},
+	"langCode_su": {
+		"message": "Sundų"
+	},
+	"langCode_sv": {
+		"message": "Švedų"
+	},
+	"langCode_sw": {
+		"message": "Suahilių"
+	},
+	"langCode_ta": {
+		"message": "Tamilų"
+	},
+	"langCode_te": {
+		"message": "Telugų"
+	},
+	"langCode_tg": {
+		"message": "Tadžikų"
+	},
+	"langCode_th": {
+		"message": "Tajų"
+	},
+	"langCode_ti": {
+		"message": "Tigrajų"
+	},
+	"langCode_tk": {
+		"message": "Turkmėnų"
+	},
+	"langCode_tl": {
+		"message": "Filipiniečių"
+	},
+	"langCode_tn": {
+		"message": "Tsvanų"
+	},
+	"langCode_to": {
+		"message": "Tonganų"
+	},
+	"langCode_tr": {
+		"message": "Turkų"
+	},
+	"langCode_ts": {
+		"message": "Tsongų"
+	},
+	"langCode_tt": {
+		"message": "Totorių"
+	},
+	"langCode_tw": {
+		"message": "Akanų"
+	},
+	"langCode_ty": {
+		"message": "Taitiečių"
+	},
+	"langCode_ug": {
+		"message": "Uigūrų"
+	},
+	"langCode_uk": {
+		"message": "Ukrainiečių"
+	},
+	"langCode_ur": {
+		"message": "Urdų"
+	},
+	"langCode_uz": {
+		"message": "Uzbekų"
+	},
+	"langCode_ve": {
+		"message": "Vendų"
+	},
+	"langCode_vi": {
+		"message": "Vietnamiečių"
+	},
+	"langCode_vo": {
+		"message": "Volapiuko"
+	},
+	"langCode_wa": {
+		"message": "Valonų"
+	},
+	"langCode_wo": {
+		"message": "Volofų"
+	},
+	"langCode_xh": {
+		"message": "Kosų"
+	},
+	"langCode_yi": {
+		"message": "Jidiš"
+	},
+	"langCode_yo": {
+		"message": "Jorubų"
+	},
+	"langCode_za": {
+		"message": "Chuang"
+	},
+	"langCode_zh": {
+		"message": "Kinų"
+	},
+	"langCode_zu": {
+		"message": "Zulų"
+	}
+}

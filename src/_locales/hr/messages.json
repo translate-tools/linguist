@@ -1,0 +1,1190 @@
+{
+	"common_action_addToDictionary": {
+		"message": "Dodaj prijevod u rječnik"
+	},
+	"common_action_removeFromDictionary": {
+		"message": "Ukloni prijevod iz rječnika"
+	},
+	"common_bgUnavailable": {
+		"message": "Skripta pozadine nije dostupna"
+	},
+	"common_cancel": {
+		"message": "Odustani"
+	},
+	"common_close": {
+		"message": "Zatvori"
+	},
+	"common_copy": {
+		"message": "Kopiraj"
+	},
+	"common_error": {
+		"message": "Greška"
+	},
+	"common_offlineTranslator": {
+		"message": "$1 - Offline prevoditelj"
+	},
+	"common_retry": {
+		"message": "Ponovi"
+	},
+	"common_translate": {
+		"message": "Prevedi"
+	},
+	"component_hotkey_placeholder": {
+		"message": "Kliknite za snimanje prečaca"
+	},
+	"component_hotkey_recordPlaceholder": {
+		"message": "Pritisnite tipke"
+	},
+	"component_hotkey_resetButton": {
+		"message": "Resetiraj"
+	},
+	"contextMenu_disablePageTranslation": {
+		"message": "Onemogući prijevod stranice"
+	},
+	"contextMenu_translatePage": {
+		"message": "Prevedi stranicu"
+	},
+	"contextMenu_translateSelectedText": {
+		"message": "Prevedi odabrani tekst"
+	},
+	"dictionaryButton_add": {
+		"message": "Dodaj u rječnik"
+	},
+	"dictionaryButton_delete": {
+		"message": "Izbriši iz rječnika"
+	},
+	"dictionary_button_export": {
+		"message": "Izvoz"
+	},
+	"dictionary_button_removeAll": {
+		"message": "Ukloni sve"
+	},
+	"dictionary_deleteAll": {
+		"message": "Jeste li sigurni da želite izbrisati SVE prijevode u rječniku?"
+	},
+	"dictionary_deleteConfirmation": {
+		"message": "Jeste li sigurni da želite izbrisati ovaj prijevod?"
+	},
+	"dictionary_description": {
+		"message": "Spremite svoje prijevode u rječnik kako biste ih kasnije pronašli"
+	},
+	"dictionary_emptyDictionary": {
+		"message": "Rječnik je prazan. Počnite ga popunjavati tijekom prevođenja nekog teksta"
+	},
+	"dictionary_filter_from": {
+		"message": "Od"
+	},
+	"dictionary_filter_to": {
+		"message": "Na"
+	},
+	"dictionary_message_deleteAll_success": {
+		"message": "Sve prijevode su uklonjeni"
+	},
+	"dictionary_notFoundEntries": {
+		"message": "Nisu pronađeni prijevodi koji odgovaraju ovim filterima"
+	},
+	"dictionary_pageTitle": {
+		"message": "Rječnik"
+	},
+	"dictionary_resetFilters": {
+		"message": "resetiraj filtre"
+	},
+	"dictionary_searchPlaceholder": {
+		"message": "Pretražite po tekstu"
+	},
+	"editorWindow_close": {
+		"message": "Zatvori"
+	},
+	"editorWindow_data_code": {
+		"message": "Kod"
+	},
+	"editorWindow_data_name": {
+		"message": "Ime"
+	},
+	"editorWindow_message_invalidName": {
+		"message": "Ime mora sadržavati barem jedan simbol"
+	},
+	"editorWindow_save": {
+		"message": "Spremi"
+	},
+	"ext_description": {
+		"message": "Pretvorba teksta bez ponovnog učitavanja stranice"
+	},
+	"ext_name": {
+		"message": "Lingvist - prevoditelj web stranica"
+	},
+	"history_control_selectEntry": {
+		"message": "Odaberite unos"
+	},
+	"history_controls_clearHistory": {
+		"message": "Očisti povijest"
+	},
+	"history_controls_deleteSelected": {
+		"message": "Izbriši odabrano"
+	},
+	"history_controls_selectAll": {
+		"message": "Odaberi sve prijevode"
+	},
+	"history_message_clearHistoryConfirmation": {
+		"message": "Jeste li sigurni da želite izbrisati povijest? Svi unosi će biti uklonjeni."
+	},
+	"history_message_deleteEntryConfirmation": {
+		"message": "Jeste li sigurni da želite izbrisati ovaj unos?"
+	},
+	"history_message_deleteSelectedEntriesConfirmation": {
+		"message": "Jeste li sigurni da želite izbrisati odabrane unose ($1)?"
+	},
+	"history_message_emptyEntries": {
+		"message": "Povijest izbrisana"
+	},
+	"history_message_entriesNotFound": {
+		"message": "Nema pronađenih prijevoda koji zadovoljavaju filter"
+	},
+	"history_pageTitle": {
+		"message": "Povijest"
+	},
+	"history_searchPlaceholder": {
+		"message": "Traži po tekstu"
+	},
+	"inlineTranslator_showOriginalText": {
+		"message": "Prikaži izvorni tekst"
+	},
+	"lang_change": {
+		"message": "Promijeni jezik"
+	},
+	"lang_detect": {
+		"message": "Automatsko otkrivanje"
+	},
+	"lang_select": {
+		"message": "Odabir jezika"
+	},
+	"lang_swap": {
+		"message": "Zamijeni jezike"
+	},
+	"message_askResetConfig": {
+		"message": "Poništi postavke?"
+	},
+	"message_cacheFlushed": {
+		"message": "Predmemorija je očišćena"
+	},
+	"message_changesSaved": {
+		"message": "Promjene su spremljene"
+	},
+	"message_error": {
+		"message": "Greška"
+	},
+	"message_errorOfTranslate": {
+		"message": "Greška pri prevođenju"
+	},
+	"message_serviceRequiredKey": {
+		"message": "Usluga zahtijeva ključ"
+	},
+	"message_translateOfText": {
+		"message": "Prevedeno"
+	},
+	"message_unknownError": {
+		"message": "Nepoznata pogreška"
+	},
+	"pageTranslator_alwaysTranslateLang": {
+		"message": "Uvijek prevedi ovaj jezik"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disable": {
+		"message": "Onemogući"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
+		"message": "Onemogući za sve stranice"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_enable": {
+		"message": "Omogući"
+	},
+	"pageTranslator_commonPreferences_title": {
+		"message": "Opće postavke za ovaj jezik"
+	},
+	"pageTranslator_option_autoTranslate": {
+		"message": "Automatski prijevod"
+	},
+	"pageTranslator_showOptions": {
+		"message": "Prikaži opcije"
+	},
+	"pageTranslator_showOriginal": {
+		"message": "Prikaži izvorni tekst"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_always": {
+		"message": "Uvijek prevedi"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
+		"message": "Uvijek prevedi za ovaj jezik"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_default": {
+		"message": "Koristi uobičajena pravila"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
+		"message": "Koristi uobičajena pravila za ovaj jezik"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_never": {
+		"message": "Nikad ne prevodi"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
+		"message": "Nikad ne prevodi za ovaj jezik"
+	},
+	"pageTranslator_sitePreferences_title": {
+		"message": "Postavke za"
+	},
+	"pageTranslator_translatePage": {
+		"message": "Prevedi stranicu"
+	},
+	"pageTranslator_translationReport": {
+		"message": "Izvještaj o prijevodu"
+	},
+	"pageTranslator_translationReport_queue": {
+		"message": "Red"
+	},
+	"pageTranslator_translationReport_reject": {
+		"message": "Pogreške"
+	},
+	"pageTranslator_translationReport_resolve": {
+		"message": "Prevedeno"
+	},
+	"popup_tabIdNotFound": {
+		"message": "Kartica \"$1\" nije pronađena"
+	},
+	"popup_tab_translatePage": {
+		"message": "Prijevod stranice"
+	},
+	"popup_tab_translateText": {
+		"message": "Prijevod teksta"
+	},
+	"settings_button_cancel": {
+		"message": "Otkazati"
+	},
+	"settings_button_export": {
+		"message": "Izvoz konfiguracije"
+	},
+	"settings_button_import": {
+		"message": "Uvoz konfiguracije"
+	},
+	"settings_button_reset": {
+		"message": "Resetiraj konfiguraciju"
+	},
+	"settings_button_saveChanges": {
+		"message": "Spremi promjene"
+	},
+	"settings_message_clearCache_success": {
+		"message": "Predmemorija je obrisana"
+	},
+	"settings_message_common_invalidValueType": {
+		"message": "Neispravna vrijednost"
+	},
+	"settings_message_importConfig_invalidFile": {
+		"message": "Datoteka za uvoz se ne može obraditi"
+	},
+	"settings_message_importConfig_success": {
+		"message": "Uvoz je završen"
+	},
+	"settings_message_resetConfig_confirm": {
+		"message": "Želite li resetirati postavke?"
+	},
+	"settings_message_resetConfig_success": {
+		"message": "Postavke su resetirane"
+	},
+	"settings_message_saveChanges_success": {
+		"message": "Promjene su spremljene"
+	},
+	"settings_option_appIcon": {
+		"message": "Ikona proširenja"
+	},
+	"settings_option_appIcon_desc": {
+		"message": "Kada se odabere dinamička ikona, boje će se prilagoditi temi preglednika"
+	},
+	"settings_option_appIcon_item_auto": {
+		"message": "Dinamička"
+	},
+	"settings_option_appIcon_item_color": {
+		"message": "Boja"
+	},
+	"settings_option_appIcon_item_dark": {
+		"message": "Tamno"
+	},
+	"settings_option_appIcon_item_light": {
+		"message": "Svijetlo"
+	},
+	"settings_option_cache": {
+		"message": "Predmemorija"
+	},
+	"settings_option_cache_clear": {
+		"message": "Brisanje predmemorije"
+	},
+	"settings_option_cache_clear_desc": {
+		"message": "Uklonite predmemoriju ako imate artefakte prijevoda ili trebate ukloniti tajne podatke"
+	},
+	"settings_option_cache_enable": {
+		"message": "Omogućite predmemoriju"
+	},
+	"settings_option_cache_enable_desc": {
+		"message": "Kada je predmemorija omogućena, prijevodi koji su jednom prevedeni bit će odmah dostupni, čak i bez interneta"
+	},
+	"settings_option_cache_ignoreCase": {
+		"message": "Bez razlike u veličini slova"
+	},
+	"settings_option_cache_ignoreCase_desc": {
+		"message": "Kada je omogućeno, prijevodi iz predmemorije bit će upotrebljeni s ne točnim poklapanjima, što može uzrokovati artefakte prijevoda"
+	},
+	"settings_option_commonSettings": {
+		"message": "Opće postavke"
+	},
+	"settings_option_customTranslatorModule": {
+		"message": "Prilagođeni prevoditelji"
+	},
+	"settings_option_customTranslatorModule_desc": {
+		"message": "Možete dodati prilagođene prevoditelje za svoje omiljene usluge prijevoda. Pročitajte više i pronađite module u dokumentaciji <slot id=docs>prilagođenih prevoditelja</slot>."
+	},
+	"settings_option_customTranslatorModule_manageButton": {
+		"message": "Upravljanje prevoditeljima"
+	},
+	"settings_option_mainPreferences": {
+		"message": "Glavne postavke"
+	},
+	"settings_option_pageTranslation": {
+		"message": "Prijevod stranice"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent": {
+		"message": "Otkrivanje jezika prema sadržaju"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent_desc": {
+		"message": "Analizirajte tekst na web stranici kako biste otkrili jezik stranice. Kad je onemogućeno, koristit će se jezik koji je naveden u metapodacima stranice."
+	},
+	"settings_option_pageTranslation_enableContextMenu": {
+		"message": "Omogući kontekstni izbornik gumba"
+	},
+	"settings_option_pageTranslation_enableContextMenu_desc": {
+		"message": "Dodajte gumb za prebacivanje prijevoda stranice u kontekstni izbornik"
+	},
+	"settings_option_pageTranslation_ignoredTags": {
+		"message": "Ignorirani elementi"
+	},
+	"settings_option_pageTranslation_ignoredTags_desc": {
+		"message": "Unesite nazive <slot id=htmlElements>HTML elemenata</slot> koje ne treba prevesti. Ugniježđeni elementi također se neće prevesti. Jedan element po liniji."
+	},
+	"settings_option_pageTranslation_lazyTranslate": {
+		"message": "Prevedi samo vidljive elemente"
+	},
+	"settings_option_pageTranslation_lazyTranslate_desc": {
+		"message": "Kada je ova opcija omogućena, prevest će se samo vidljivi elementi. To može biti korisno za uštedu mrežnog prometa."
+	},
+	"settings_option_pageTranslation_originalTextPopup": {
+		"message": "Omogući skočni prozor s izvornim tekstom"
+	},
+	"settings_option_pageTranslation_originalTextPopup_desc": {
+		"message": "Prikaži skočni prozor s izvornim tekstom kada se mišem pređe preko prevedenog teksta"
+	},
+	"settings_option_pageTranslation_toggleTranslationHotkey": {
+		"message": "Prečaci"
+	},
+	"settings_option_pageTranslation_toggleTranslationHotkey_desc": {
+		"message": "Prečaci za uključivanje/isključivanje prijevoda stranice\nPritisnite ESC za resetiranje tipki"
+	},
+	"settings_option_pageTranslation_translatableAttributes": {
+		"message": "Prevedive značajke."
+	},
+	"settings_option_pageTranslation_translatableAttributes_desc": {
+		"message": "Umetnite nazive <slot id=htmlAttributes>HTML atributa</slot> koji se prevode. Jedan atribut po retku"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters": {
+		"message": "Prikaži statistiku prijevoda"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters_desc": {
+		"message": "Prikaži statistiku za prijevod stranice"
+	},
+	"settings_option_selectTranslation": {
+		"message": "Prijevod odabranog teksta"
+	},
+	"settings_option_selectTranslation_detectedLangFirst": {
+		"message": "Preferiraj otkriveni jezik teksta umjesto jezika stranice"
+	},
+	"settings_option_selectTranslation_detectedLangFirst_desc": {
+		"message": "Kada je omogućeno, otkriveni jezik odabranog teksta bit će preferiran u odnosu na jezik stranice"
+	},
+	"settings_option_selectTranslation_disableWhileTranslatePage": {
+		"message": "Onemogući tijekom prevođenja stranice"
+	},
+	"settings_option_selectTranslation_enable": {
+		"message": "Omogući"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton": {
+		"message": "Automatski fokusiraj na gumb za prijevod"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
+		"message": "Fokusiraj na gumb za prijevod kada se pojavi"
+	},
+	"settings_option_selectTranslation_header_languageChoice": {
+		"message": "Postavke jezika"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang": {
+		"message": "Omogući automatsko prepoznavanje jezika od strane prevoditelja"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
+		"message": "Koristite automatsko prepoznavanje jezika od strane prevoditelja kada se jezik ne može lokalno prepoznati"
+	},
+	"settings_option_selectTranslation_mode": {
+		"message": "Pokretač prijevoda"
+	},
+	"settings_option_selectTranslation_mode_item_contextMenu": {
+		"message": "Gumb izbornika konteksta"
+	},
+	"settings_option_selectTranslation_mode_item_popupButton": {
+		"message": "Skočni gumb"
+	},
+	"settings_option_selectTranslation_mode_item_quickTranslate": {
+		"message": "Brzo prevođenje odabirom"
+	},
+	"settings_option_selectTranslation_modifiers": {
+		"message": "Modifikatori"
+	},
+	"settings_option_selectTranslation_modifiers_desc": {
+		"message": "Odaberite tipke koje treba pritisnuti na tipkovnici za prikaz prijevoda"
+	},
+	"settings_option_selectTranslation_modifiers_key_alt": {
+		"message": "alt"
+	},
+	"settings_option_selectTranslation_modifiers_key_ctrl": {
+		"message": "ctrl"
+	},
+	"settings_option_selectTranslation_modifiers_key_meta": {
+		"message": "meta"
+	},
+	"settings_option_selectTranslation_modifiers_key_shift": {
+		"message": "shift"
+	},
+	"settings_option_selectTranslation_rememberDirection": {
+		"message": "Zapamti najčešće odabran jezik teksta"
+	},
+	"settings_option_selectTranslation_showOnceForSelection": {
+		"message": "Prikaži gumb za prijevod samo jednom po odabiru teksta"
+	},
+	"settings_option_selectTranslation_showOnceForSelection_desc": {
+		"message": "Gumb će se prikazati samo jednom za svaki odabir teksta. Ako ga želite ponovno prikazati, ponovno odaberite tekst."
+	},
+	"settings_option_selectTranslation_showOriginalText": {
+		"message": "Prikaži izvorni tekst"
+	},
+	"settings_option_selectTranslation_showOriginalText_desc": {
+		"message": "Dodaj blok s izvornim tekstom u iskačući prozor s prijevodom"
+	},
+	"settings_option_selectTranslation_strictSelection": {
+		"message": "Strogi odabir"
+	},
+	"settings_option_selectTranslation_strictSelection_desc": {
+		"message": "Zanemarite odabir ako se lijeva tipka miša otpusti izvan bloka koji sadrži odabrani tekst"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton": {
+		"message": "Kašnjenje za skrivanje gumba"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton_desc": {
+		"message": "Kašnjenje u milisekundama prije skrivanja gumba kada se kursor ne preklapa s njim. Preklapanje kursora na gumb resetira tajmer. Da biste onemogućili automatsko skrivanje, postavite vrijednost manju od 1."
+	},
+	"settings_option_selectTranslation_zIndex": {
+		"message": "z-indeks"
+	},
+	"settings_option_selectTranslation_zIndex_desc": {
+		"message": "Povećajte vrijednost ako se neki elementi na nekim stranicama preklapaju s iskačućim prozorom prevedenog teksta."
+	},
+	"settings_option_textTranslator": {
+		"message": "Prevođenje teksta"
+	},
+	"settings_option_textTranslator_rememberText": {
+		"message": "Zapamti prevedeni tekst"
+	},
+	"settings_option_textTranslator_rememberText_desc": {
+		"message": "Zapamti prevedeni tekst za sljedeći put otvaranja prozora"
+	},
+	"settings_option_textTranslator_spellCheck": {
+		"message": "Omogući provjeru pravopisa"
+	},
+	"settings_option_textTranslator_suggestLanguage": {
+		"message": "Predloži otkriveni jezik teksta"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways": {
+		"message": "Uvijek otkrij i predloži jezik"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways_desc": {
+		"message": "Kada je onemogućeno, prijedlozi jezika će se pojaviti samo kada se izvorni jezik automatski otkrije"
+	},
+	"settings_option_translatePreferences": {
+		"message": "Postavke prijevoda"
+	},
+	"settings_option_translateScheduler": {
+		"message": "Raspored prijevoda"
+	},
+	"settings_option_translateScheduler_delay": {
+		"message": "Kašnjenje nakupljanja teksta"
+	},
+	"settings_option_translateScheduler_delay_desc": {
+		"message": "Raspored prijevoda smanjuje broj zahtjeva za API uslugama prijevoda. Raspored pokušava akumulirati tekstove kako bi poslao što više tekstova u jednom zahtjevu. Raspored će čekati određeno vrijeme u milisekundama da sakupi nove tekstove prije nego počne s prijevodom."
+	},
+	"settings_option_translateScheduler_retryLimit": {
+		"message": "Broj pokušaja ponovnog prijevoda"
+	},
+	"settings_option_translateScheduler_retryLimit_desc": {
+		"message": "Rasporeditelj će pokušati ponovno prevesti tekstove zbog grešaka u prijevodu. Ova opcija postavlja ograničenje za broj pokušaja ponovnog prevođenja. Postavite negativan broj za neograničene pokušaje."
+	},
+	"settings_option_translatorModule": {
+		"message": "Modul prevoditelja"
+	},
+	"settings_option_translatorModule_desc": {
+		"message": "Kvaliteta prijevoda i dostupni jezici za prijevod ovise o prevoditelju."
+	},
+	"settings_option_tts": {
+		"message": "Tekst u govor (TTS)"
+	},
+	"settings_option_ttsCustomModules": {
+		"message": "Prilagođeni TTS"
+	},
+	"settings_option_ttsCustomModules_button": {
+		"message": "Upravljajte TTS modulima"
+	},
+	"settings_option_ttsCustomModules_desc": {
+		"message": "Možete dodati TTS module koji koriste vašu omiljenu uslugu i glasove. Pročitajte više i pronađite module u dokumentaciji za prilagođeni TTS."
+	},
+	"settings_option_ttsModule": {
+		"message": "TTS modul"
+	},
+	"settings_option_ttsModule_desc": {
+		"message": "Modul za izgovor teksta"
+	},
+	"settings_option_userLanguage": {
+		"message": "Vaš jezik"
+	},
+	"settings_option_userLanguage_desc": {
+		"message": "Ciljni jezik za prijevod tekstova"
+	},
+	"settings_pageTitle": {
+		"message": "Postavke"
+	},
+	"settings_section_popup": {
+		"message": "Iskačući prozor"
+	},
+	"textTranslator_suggestLanguage": {
+		"message": "Izgleda da je taj jezik"
+	},
+	"textTranslator_translateInputPlaceholder": {
+		"message": "Unesite tekst"
+	},
+	"textTranslator_translatePlaceholder": {
+		"message": "Prevedeni tekst"
+	},
+	"translatorsManagerWindow_add": {
+		"message": "Dodaj"
+	},
+	"translatorsManagerWindow_close": {
+		"message": "Zatvori"
+	},
+	"translatorsManagerWindow_emptyTranslatorsListText": {
+		"message": "Prilagođeni prevoditelji još nisu dodani"
+	},
+	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
+		"message": "Jeste li sigurni da želite ukloniti prevoditelja \"$translator_name$\"?",
+		"placeholders": {
+			"translator_name": {
+				"content": "$1",
+				"example": "Google prevoditelj"
+			}
+		}
+	},
+	"translatorsManagerWindow_title": {
+		"message": "Prilagođeni prevoditelji"
+	},
+	"translatorsManagerWindow_translator_delete": {
+		"message": "Izbriši"
+	},
+	"translatorsManagerWindow_translator_edit": {
+		"message": "Uredi"
+	},
+	"ttsManagerWindow_add": {
+		"message": "Dodaj"
+	},
+	"ttsManagerWindow_close": {
+		"message": "Zatvori"
+	},
+	"ttsManagerWindow_emptyTranslatorsListText": {
+		"message": "Moduli govornog sintetizatora još nisu dodani"
+	},
+	"ttsManagerWindow_message_ttsRemoveConfirmation": {
+		"message": "Jeste li sigurni da želite ukloniti TTS \"$tts_name$\"?",
+		"placeholders": {
+			"tts_name": {
+				"content": "$1",
+				"example": "Google TTS"
+			}
+		}
+	},
+	"ttsManagerWindow_title": {
+		"message": "Moduli teksta u govoru"
+	},
+	"ttsManagerWindow_translator_delete": {
+		"message": "Izbriši"
+	},
+	"ttsManagerWindow_translator_edit": {
+		"message": "Uredi"
+	},
+	"validation_number": {
+		"message": "Parametar mora biti broj"
+	},
+	"validation_numberBetweenRange": {
+		"message": "Parametar mora biti broj između $1 i $2"
+	},
+	"validation_positiveNumber": {
+		"message": "Parametar mora biti pozitivan broj."
+	},
+	"langCode_aa": {
+		"message": "Afarski"
+	},
+	"langCode_ab": {
+		"message": "Abhaski"
+	},
+	"langCode_ae": {
+		"message": "Avestički"
+	},
+	"langCode_af": {
+		"message": "Afrikaans"
+	},
+	"langCode_ak": {
+		"message": "Akanski"
+	},
+	"langCode_am": {
+		"message": "Amharski"
+	},
+	"langCode_an": {
+		"message": "Aragonski"
+	},
+	"langCode_ar": {
+		"message": "Arapski"
+	},
+	"langCode_as": {
+		"message": "Asamski"
+	},
+	"langCode_av": {
+		"message": "Avarski"
+	},
+	"langCode_ay": {
+		"message": "Ajmarski"
+	},
+	"langCode_az": {
+		"message": "Azerbajdžanski"
+	},
+	"langCode_ba": {
+		"message": "Baškirski"
+	},
+	"langCode_be": {
+		"message": "Bjeloruski"
+	},
+	"langCode_bg": {
+		"message": "Bugarski"
+	},
+	"langCode_bh": {
+		"message": "Bhojpuri"
+	},
+	"langCode_bi": {
+		"message": "Bislama"
+	},
+	"langCode_bm": {
+		"message": "Bambara"
+	},
+	"langCode_bn": {
+		"message": "Bangla"
+	},
+	"langCode_bo": {
+		"message": "Tibetski"
+	},
+	"langCode_br": {
+		"message": "Bretonski"
+	},
+	"langCode_bs": {
+		"message": "Bosanski"
+	},
+	"langCode_ca": {
+		"message": "Katalonski"
+	},
+	"langCode_ce": {
+		"message": "Čečenski"
+	},
+	"langCode_ch": {
+		"message": "Chamorro"
+	},
+	"langCode_co": {
+		"message": "Korzički"
+	},
+	"langCode_cr": {
+		"message": "Cree"
+	},
+	"langCode_cs": {
+		"message": "Češki"
+	},
+	"langCode_cu": {
+		"message": "Crkvenoslavenski"
+	},
+	"langCode_cv": {
+		"message": "Čuvaški"
+	},
+	"langCode_cy": {
+		"message": "Velški"
+	},
+	"langCode_da": {
+		"message": "Danski"
+	},
+	"langCode_de": {
+		"message": "Njemački"
+	},
+	"langCode_dv": {
+		"message": "Divehi"
+	},
+	"langCode_dz": {
+		"message": "Dzongkha"
+	},
+	"langCode_ee": {
+		"message": "Ewe"
+	},
+	"langCode_el": {
+		"message": "Grčki"
+	},
+	"langCode_en": {
+		"message": "Engleski"
+	},
+	"langCode_eo": {
+		"message": "Esperanto"
+	},
+	"langCode_es": {
+		"message": "Španjolski"
+	},
+	"langCode_et": {
+		"message": "Estonski"
+	},
+	"langCode_eu": {
+		"message": "Baskijski"
+	},
+	"langCode_fa": {
+		"message": "Perzijski"
+	},
+	"langCode_ff": {
+		"message": "Fula"
+	},
+	"langCode_fi": {
+		"message": "Finski"
+	},
+	"langCode_fj": {
+		"message": "Fidžijski"
+	},
+	"langCode_fo": {
+		"message": "Ferojski"
+	},
+	"langCode_fr": {
+		"message": "Francuski"
+	},
+	"langCode_fy": {
+		"message": "Zapadnofrizijski"
+	},
+	"langCode_ga": {
+		"message": "Irski"
+	},
+	"langCode_gd": {
+		"message": "Škotski gaelski"
+	},
+	"langCode_gl": {
+		"message": "Galicijski"
+	},
+	"langCode_gn": {
+		"message": "Gvaranski"
+	},
+	"langCode_gu": {
+		"message": "Gudžaratski"
+	},
+	"langCode_gv": {
+		"message": "Manski"
+	},
+	"langCode_ha": {
+		"message": "Hausa"
+	},
+	"langCode_he": {
+		"message": "Hebrejski"
+	},
+	"langCode_hi": {
+		"message": "Hindski"
+	},
+	"langCode_ho": {
+		"message": "Hiri motu"
+	},
+	"langCode_hr": {
+		"message": "Hrvatski"
+	},
+	"langCode_ht": {
+		"message": "Haićanski kreolski"
+	},
+	"langCode_hu": {
+		"message": "Mađarski"
+	},
+	"langCode_hy": {
+		"message": "Armenski"
+	},
+	"langCode_hz": {
+		"message": "Herero"
+	},
+	"langCode_ia": {
+		"message": "Interlingua"
+	},
+	"langCode_id": {
+		"message": "Indonezijski"
+	},
+	"langCode_ie": {
+		"message": "Interligua"
+	},
+	"langCode_ig": {
+		"message": "Igbo"
+	},
+	"langCode_ii": {
+		"message": "Sichuan ji"
+	},
+	"langCode_ik": {
+		"message": "Inupiaq"
+	},
+	"langCode_io": {
+		"message": "Ido"
+	},
+	"langCode_is": {
+		"message": "Islandski"
+	},
+	"langCode_it": {
+		"message": "Talijanski"
+	},
+	"langCode_iu": {
+		"message": "Inuktitut"
+	},
+	"langCode_ja": {
+		"message": "Japanski"
+	},
+	"langCode_jv": {
+		"message": "Javanski"
+	},
+	"langCode_ka": {
+		"message": "Gruzijski"
+	},
+	"langCode_kg": {
+		"message": "Kongo"
+	},
+	"langCode_ki": {
+		"message": "Kikuyu"
+	},
+	"langCode_kj": {
+		"message": "Kuanyama"
+	},
+	"langCode_kk": {
+		"message": "Kazaški"
+	},
+	"langCode_kl": {
+		"message": "Kalaallisut"
+	},
+	"langCode_km": {
+		"message": "Kmerski"
+	},
+	"langCode_kn": {
+		"message": "Karnatački"
+	},
+	"langCode_ko": {
+		"message": "Korejski"
+	},
+	"langCode_kr": {
+		"message": "Kanuri"
+	},
+	"langCode_ks": {
+		"message": "Kašmirski"
+	},
+	"langCode_ku": {
+		"message": "Kurdski"
+	},
+	"langCode_kv": {
+		"message": "Komi"
+	},
+	"langCode_kw": {
+		"message": "Kornski"
+	},
+	"langCode_ky": {
+		"message": "Kirgiski"
+	},
+	"langCode_la": {
+		"message": "Latinski"
+	},
+	"langCode_lb": {
+		"message": "Luksemburški"
+	},
+	"langCode_lg": {
+		"message": "Ganda"
+	},
+	"langCode_li": {
+		"message": "Limburški"
+	},
+	"langCode_ln": {
+		"message": "Lingala"
+	},
+	"langCode_lo": {
+		"message": "Laoski"
+	},
+	"langCode_lt": {
+		"message": "Litavski"
+	},
+	"langCode_lu": {
+		"message": "Luba-katanga"
+	},
+	"langCode_lv": {
+		"message": "Latvijski"
+	},
+	"langCode_mg": {
+		"message": "Malgaški"
+	},
+	"langCode_mh": {
+		"message": "Maršalski"
+	},
+	"langCode_mi": {
+		"message": "Maorski"
+	},
+	"langCode_mk": {
+		"message": "Makedonski"
+	},
+	"langCode_ml": {
+		"message": "Malajalamski"
+	},
+	"langCode_mn": {
+		"message": "Mongolski"
+	},
+	"langCode_mr": {
+		"message": "Marathski"
+	},
+	"langCode_ms": {
+		"message": "Malajski"
+	},
+	"langCode_mt": {
+		"message": "Malteški"
+	},
+	"langCode_my": {
+		"message": "Burmanski"
+	},
+	"langCode_na": {
+		"message": "Nauru"
+	},
+	"langCode_nb": {
+		"message": "Norveški bokmål"
+	},
+	"langCode_nd": {
+		"message": "Sjeverni ndebele"
+	},
+	"langCode_ne": {
+		"message": "Nepalski"
+	},
+	"langCode_ng": {
+		"message": "Ndonga"
+	},
+	"langCode_nl": {
+		"message": "Nizozemski"
+	},
+	"langCode_nn": {
+		"message": "Norveški nynorsk"
+	},
+	"langCode_no": {
+		"message": "Norveški"
+	},
+	"langCode_nr": {
+		"message": "Južni ndebele"
+	},
+	"langCode_nv": {
+		"message": "Navajo"
+	},
+	"langCode_ny": {
+		"message": "Njandža"
+	},
+	"langCode_oc": {
+		"message": "Okcitanski"
+	},
+	"langCode_oj": {
+		"message": "Ojibwa"
+	},
+	"langCode_om": {
+		"message": "Oromski"
+	},
+	"langCode_or": {
+		"message": "Orijski"
+	},
+	"langCode_os": {
+		"message": "Osetski"
+	},
+	"langCode_pa": {
+		"message": "Pandžapski"
+	},
+	"langCode_pi": {
+		"message": "Pali"
+	},
+	"langCode_pl": {
+		"message": "Poljski"
+	},
+	"langCode_ps": {
+		"message": "Paštunski"
+	},
+	"langCode_pt": {
+		"message": "Portugalski"
+	},
+	"langCode_qu": {
+		"message": "Kečuanski"
+	},
+	"langCode_rm": {
+		"message": "Retoromanski"
+	},
+	"langCode_rn": {
+		"message": "Rundi"
+	},
+	"langCode_ro": {
+		"message": "Rumunjski"
+	},
+	"langCode_ru": {
+		"message": "Ruski"
+	},
+	"langCode_rw": {
+		"message": "Kinyarwanda"
+	},
+	"langCode_sa": {
+		"message": "Sanskrtski"
+	},
+	"langCode_sc": {
+		"message": "Sardski"
+	},
+	"langCode_sd": {
+		"message": "Sindski"
+	},
+	"langCode_se": {
+		"message": "Sjeverni sami"
+	},
+	"langCode_sg": {
+		"message": "Sango"
+	},
+	"langCode_si": {
+		"message": "Sinhaleški"
+	},
+	"langCode_sk": {
+		"message": "Slovački"
+	},
+	"langCode_sl": {
+		"message": "Slovenski"
+	},
+	"langCode_sm": {
+		"message": "Samoanski"
+	},
+	"langCode_sn": {
+		"message": "Shona"
+	},
+	"langCode_so": {
+		"message": "Somalski"
+	},
+	"langCode_sq": {
+		"message": "Albanski"
+	},
+	"langCode_sr": {
+		"message": "Srpski"
+	},
+	"langCode_ss": {
+		"message": "Svati"
+	},
+	"langCode_st": {
+		"message": "Sesotski"
+	},
+	"langCode_su": {
+		"message": "Sundanski"
+	},
+	"langCode_sv": {
+		"message": "Švedski"
+	},
+	"langCode_sw": {
+		"message": "Svahili"
+	},
+	"langCode_ta": {
+		"message": "Tamilski"
+	},
+	"langCode_te": {
+		"message": "Teluški"
+	},
+	"langCode_tg": {
+		"message": "Tadžički"
+	},
+	"langCode_th": {
+		"message": "Tajlandski"
+	},
+	"langCode_ti": {
+		"message": "Tigrinja"
+	},
+	"langCode_tk": {
+		"message": "Turkmenski"
+	},
+	"langCode_tl": {
+		"message": "Filipinski"
+	},
+	"langCode_tn": {
+		"message": "Cvana"
+	},
+	"langCode_to": {
+		"message": "Tonganski"
+	},
+	"langCode_tr": {
+		"message": "Turski"
+	},
+	"langCode_ts": {
+		"message": "Tsonga"
+	},
+	"langCode_tt": {
+		"message": "Tatarski"
+	},
+	"langCode_tw": {
+		"message": "Akanski"
+	},
+	"langCode_ty": {
+		"message": "Tahićanski"
+	},
+	"langCode_ug": {
+		"message": "Ujgurski"
+	},
+	"langCode_uk": {
+		"message": "Ukrajinski"
+	},
+	"langCode_ur": {
+		"message": "Urdski"
+	},
+	"langCode_uz": {
+		"message": "Uzbečki"
+	},
+	"langCode_ve": {
+		"message": "Venda"
+	},
+	"langCode_vi": {
+		"message": "Vijetnamski"
+	},
+	"langCode_vo": {
+		"message": "Volapük"
+	},
+	"langCode_wa": {
+		"message": "Valonski"
+	},
+	"langCode_wo": {
+		"message": "Volof"
+	},
+	"langCode_xh": {
+		"message": "Xhosa"
+	},
+	"langCode_yi": {
+		"message": "Jidiš"
+	},
+	"langCode_yo": {
+		"message": "Jorupski"
+	},
+	"langCode_za": {
+		"message": "Zhuang"
+	},
+	"langCode_zh": {
+		"message": "Kineski"
+	},
+	"langCode_zu": {
+		"message": "Zulu"
+	}
+}
