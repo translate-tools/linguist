@@ -59,6 +59,36 @@
 	"dictionary_button_removeAll": {
 		"message": "Eemalda kõik"
 	},
+	"dictionary_deleteAll": {
+		"message": "Kas olete kindel, et soovite kustutada kõik sõnastiku tõlked?"
+	},
+	"dictionary_deleteConfirmation": {
+		"message": "Kas olete kindel, et soovite selle tõlke kustutada?"
+	},
+	"dictionary_description": {
+		"message": "Hoidke oma tõlked sõnastikus, et neid hiljem leida."
+	},
+	"dictionary_emptyDictionary": {
+		"message": "Sõnastik on tühi. Alustage teksti tõlkimist ja täitke see."
+	},
+	"dictionary_filter_from": {
+		"message": "Alates"
+	},
+	"dictionary_filter_to": {
+		"message": "Kuni"
+	},
+	"dictionary_message_deleteAll_success": {
+		"message": "Kõik tõlked on eemaldatud"
+	},
+	"dictionary_notFoundEntries": {
+		"message": "Filtreid vastavaid tõlkeid ei leitud"
+	},
+	"dictionary_pageTitle": {
+		"message": "Sõnastik"
+	},
+	"dictionary_resetFilters": {
+		"message": "Lähtesta filtrid"
+	},
 	"dictionary_searchPlaceholder": {
 		"message": "Otsi teksti järgi"
 	},
@@ -239,6 +269,36 @@
 	"settings_button_saveChanges": {
 		"message": "Salvesta muudatused"
 	},
+	"settings_message_clearCache_success": {
+		"message": "Vahemälu on tühjendatud"
+	},
+	"settings_message_common_invalidValueType": {
+		"message": "Vigane väärtus"
+	},
+	"settings_message_importConfig_invalidFile": {
+		"message": "Faili importimine pole võimalik"
+	},
+	"settings_message_importConfig_success": {
+		"message": "Importimine on tehtud"
+	},
+	"settings_message_resetConfig_confirm": {
+		"message": "Kas soovid seadeid lähtestada?"
+	},
+	"settings_message_resetConfig_success": {
+		"message": "Seaded on lähtestatud"
+	},
+	"settings_message_saveChanges_success": {
+		"message": "Muudatused on salvestatud"
+	},
+	"settings_option_appIcon": {
+		"message": "Laienduse ikoon"
+	},
+	"settings_option_appIcon_desc": {
+		"message": "Dünaamilise ikooni valimisel kohanduvad värvid brauseri teemaga"
+	},
+	"settings_option_appIcon_item_auto": {
+		"message": "Dünaamiline"
+	},
 	"settings_option_appIcon_item_color": {
 		"message": "Värv"
 	},
@@ -359,6 +419,36 @@
 	"settings_option_selectTranslation_header_languageChoice": {
 		"sõnum": "Keelte seaded"
 	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang": {
+		"message": "Luba tõlkijal keele automaatne tuvastamine"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
+		"message": "Kasuta tõlkija automaatset keele tuvastamist, kui keelt ei saa kohapeal tuvastada"
+	},
+	"settings_option_selectTranslation_mode": {
+		"message": "Tõlke käivitaja"
+	},
+	"settings_option_selectTranslation_mode_item_contextMenu": {
+		"message": "Kontekstimenüü nupp"
+	},
+	"settings_option_selectTranslation_mode_item_popupButton": {
+		"message": "Hüpiknupp"
+	},
+	"settings_option_selectTranslation_mode_item_quickTranslate": {
+		"message": "Kiire tõlge valikuga"
+	},
+	"settings_option_selectTranslation_modifiers": {
+		"message": "Modifikaatorid"
+	},
+	"settings_option_selectTranslation_modifiers_desc": {
+		"message": "Valige klahvid, mida tuleb klaviatuuril vajutada, et tõlget näidata"
+	},
+	"settings_option_selectTranslation_modifiers_key_alt": {
+		"message": "alt"
+	},
+	"settings_option_selectTranslation_modifiers_key_ctrl": {
+		"message": "ctrl"
+	},
 	"settings_option_selectTranslation_modifiers_key_meta": {
 		"message": "meta"
 	},
@@ -418,6 +508,36 @@
 	},
 	"settings_option_textTranslator_suggestLanguageAlways_desc": {
 		"message": "Kui see on keelatud, ilmuvad keelesoovitused ainult siis, kui allikakeel tuvastatakse automaatselt"
+	},
+	"settings_option_translatePreferences": {
+		"message": "Tõlke-eelistused"
+	},
+	"settings_option_translateScheduler": {
+		"message": "Tõlkekava"
+	},
+	"settings_option_translateScheduler_delay": {
+		"message": "Teksti kogumise viivitus"
+	},
+	"settings_option_translateScheduler_delay_desc": {
+		"message": "Tõlkekava vähendab päringute arvu tõlkeseadmetele API-le. Kava üritab tekste koguda, et saata võimalikult palju tekste ühe päringuga. Kava ootab uute tekstide kogumiseks määratud aja millisekundites enne tõlkimise alustamist."
+	},
+	"settings_option_translateScheduler_retryLimit": {
+		"message": "Tõlkekatse kordused"
+	},
+	"settings_option_translateScheduler_retryLimit_desc": {
+		"message": "Kava proovib tekstide tõlkimisel esinevaid vigu uuesti tõlkida. See valik seab limiidi katse kordustele. Piiranguteta katsete lubamiseks seadistage negatiivne number."
+	},
+	"settings_option_translatorModule": {
+		"message": "Tõlkemoodul"
+	},
+	"settings_option_translatorModule_desc": {
+		"message": "Tõlgete kvaliteet ja saadaolevad keeled sõltuvad tõlkijast."
+	},
+	"settings_option_tts": {
+		"message": "Tekst-kõne (TTS)"
+	},
+	"settings_option_ttsCustomModules": {
+		"message": "Kohandatud TTS"
 	},
 	"settings_option_ttsCustomModules_button": {
 		"sõnum": "Halda TTS mooduleid"

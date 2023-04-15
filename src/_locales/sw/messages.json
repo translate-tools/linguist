@@ -1,25 +1,4 @@
 {
-	"TTSManagerWindow_emptyTranslatorsListText": {
-		"message": "Moduli ya TTS haijaongezwa bado"
-	},
-	"TTSManagerWindow_message_ttsRemoveConfirmation": {
-		"message": "Je! Una uhakika wa kuondoa TTS \"$tts_name$\"?",
-		"placeholders": {
-			"tts_name": {
-				"content": "$1",
-				"example": "Google TTS"
-			}
-		}
-	},
-	"TTSManagerWindow_title": {
-		"message": "Moduli za maandishi hadi hotuba"
-	},
-	"TTSManagerWindow_translator_delete": {
-		"message": "Futa"
-	},
-	"TTSManagerWindow_translator_edit": {
-		"message": "Hariri"
-	},
 	"common_action_addToDictionary": {
 		"message": "Ongeza tafsiri kwenye kamusi"
 	},
@@ -440,6 +419,66 @@
 	"settings_option_selectTranslation_header_languageChoice": {
 		"message": "Mipangilio ya lugha"
 	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang": {
+		"message": "Washa uchunguzi wa lugha otomatiki kwa mkalimani"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
+		"message": "Tumia uchunguzi wa lugha otomatiki kwa mkalimani wakati lugha haiwezi kugunduliwa kwenye kifaa chako."
+	},
+	"settings_option_selectTranslation_mode": {
+		"message": "Kichocheo cha Tafsiri"
+	},
+	"settings_option_selectTranslation_mode_item_contextMenu": {
+		"message": "Kitufe cha menyu ya muktadha"
+	},
+	"settings_option_selectTranslation_mode_item_popupButton": {
+		"message": "Kitufe cha popup"
+	},
+	"settings_option_selectTranslation_mode_item_quickTranslate": {
+		"message": "Tafsiri haraka kwa kuchagua"
+	},
+	"settings_option_selectTranslation_modifiers": {
+		"message": "Vibadilishi"
+	},
+	"settings_option_selectTranslation_modifiers_desc": {
+		"message": "Chagua funguo ambazo lazima zipigwe kwenye keyboard ili kuonyesha tafsiri"
+	},
+	"settings_option_selectTranslation_modifiers_key_alt": {
+		"message": "alt"
+	},
+	"settings_option_selectTranslation_modifiers_key_ctrl": {
+		"message": "ctrl"
+	},
+	"settings_option_selectTranslation_modifiers_key_meta": {
+		"message": "meta"
+	},
+	"settings_option_selectTranslation_modifiers_key_shift": {
+		"message": "shift"
+	},
+	"settings_option_selectTranslation_rememberDirection": {
+		"message": "Kumbuka lugha iliyochaguliwa zaidi ya hivi karibuni ya maandishi"
+	},
+	"settings_option_selectTranslation_showOnceForSelection": {
+		"message": "Onyesha kifungo cha tafsiri mara moja kwa kila uteuzi wa maandishi"
+	},
+	"settings_option_selectTranslation_showOnceForSelection_desc": {
+		"message": "Kifungo kitaonyeshwa mara moja tu kwa kila uteuzi wa maandishi. Ikiwa unahitaji kuionyesha tena, chagua tena maandishi"
+	},
+	"settings_option_selectTranslation_showOriginalText": {
+		"message": "Onyesha maandishi ya awali"
+	},
+	"settings_option_selectTranslation_showOriginalText_desc": {
+		"message": "Ongeza kizuizi na maandishi ya awali kwenye dirisha la tafsiri"
+	},
+	"settings_option_selectTranslation_strictSelection": {
+		"message": "Chaguo kali la uteuzi"
+	},
+	"settings_option_selectTranslation_strictSelection_desc": {
+		"message": "Puuza uteuzi iwapo kitufe cha kushoto cha panya kitatolewa nje ya kibodi ambacho kina maandishi yaliyochaguliwa"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton": {
+		"message": "Kuchelewesha kuficha kifungo"
+	},
 	"settings_option_selectTranslation_timeoutForHideButton_desc": {
 		"message": "Kuchelewa kwa mili sekunde kabla ya kuficha kitufe wakati kursor haipo juu yake. Kursori ukielekezwa kwenye kitufe itarejesha timer. Kukataa kuficha kiotomatiki, weka thamani ndogo kuliko 1"
 	},
@@ -565,6 +604,27 @@
 	},
 	"ttsManagerWindow_close": {
 		"message": "Funga"
+	},
+	"ttsManagerWindow_emptyTranslatorsListText": {
+		"message": "Vipengele vya TTS havijatolewa bado"
+	},
+	"ttsManagerWindow_message_ttsRemoveConfirmation": {
+		"message": "Je! Uko uhakika wa kuondoa TTS \"$ tts_name $ \"?",
+		"placeholders": {
+			"tts_name": {
+				"content": "$1",
+				"example": "Google TTS"
+			}
+		}
+	},
+	"ttsManagerWindow_title": {
+		"message": "Moduli za maandishi hadi hotuba"
+	},
+	"ttsManagerWindow_translator_delete": {
+		"message": "Futa"
+	},
+	"ttsManagerWindow_translator_edit": {
+		"message": "Hariri"
 	},
 	"validation_number": {
 		"message": "Parameta lazima iwe nambari"

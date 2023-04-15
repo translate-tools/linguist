@@ -509,6 +509,36 @@
 	"settings_option_textTranslator_suggestLanguageAlways_desc": {
 		"message": "Wenn deaktiviert, werden Sprachvorschläge nur angezeigt, wenn die Quellsprache automatisch erkannt wird."
 	},
+	"settings_option_translatePreferences": {
+		"message": "Übersetzungseinstellungen"
+	},
+	"settings_option_translateScheduler": {
+		"message": "Übersetzungsterminplaner"
+	},
+	"settings_option_translateScheduler_delay": {
+		"message": "Textakkumulationsverzögerung"
+	},
+	"settings_option_translateScheduler_delay_desc": {
+		"message": "Der Übersetzungsterminplaner verringert die Anzahl der Anfragen an die API für Übersetzungsdienste. Der Terminplaner versucht, Texte zu sammeln, um so viele Texte wie möglich pro Anfrage zu senden. Der Terminplaner wartet die angegebene Zeit in Millisekunden ab, um neue Texte zu sammeln, bevor er mit der Übersetzung beginnt."
+	},
+	"settings_option_translateScheduler_retryLimit": {
+		"message": "Übersetzungs-Wiederholungsversuche"
+	},
+	"settings_option_translateScheduler_retryLimit_desc": {
+		"message": "Der Terminplaner wird versuchen, Texte aufgrund von Übersetzungsfehlern erneut zu übersetzen. Diese Option legt eine Grenze für die Wiederholungsversuche fest. Geben Sie eine negative Zahl ein, um unbegrenzte Wiederholungen zuzulassen."
+	},
+	"settings_option_translatorModule": {
+		"message": "Übersetzermodul"
+	},
+	"settings_option_translatorModule_desc": {
+		"message": "Die Qualität der Übersetzungen und die verfügbaren Sprachen für die Übersetzung hängen vom Übersetzer ab."
+	},
+	"settings_option_tts": {
+		"message": "Text-to-Speech (TTS)"
+	},
+	"settings_option_ttsCustomModules": {
+		"message": "Benutzerdefinierte TTS"
+	},
 	"settings_option_ttsCustomModules_button": {
 		"message": "TTS-Module verwalten"
 	},

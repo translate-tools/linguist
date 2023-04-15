@@ -389,6 +389,66 @@
 	"settings_option_pageTranslation_translatableAttributes_desc": {
 		"message": "Voer <slot id=htmlAttributes>HTML-attribuut</slot>-namen in voor vertaling. Eén attribuut per regel"
 	},
+	"settings_option_popupTab_pageTranslator_showCounters": {
+		"message": "Toon vertalingsstatistieke"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters_desc": {
+		"message": "Vertoon statistieke vir bladsyvertaling"
+	},
+	"settings_option_selectTranslation": {
+		"message": "Geselekteerde tekst vertaling"
+	},
+	"settings_option_selectTranslation_detectedLangFirst": {
+		"message": "Voorkeur vir opgespoorde taal van die teks in plaas van die bladtaal"
+	},
+	"settings_option_selectTranslation_detectedLangFirst_desc": {
+		"message": "Wanneer geaktiveer, sal die opgespoorde taal van die geselekteerde teks bo die bladtaal verkies word"
+	},
+	"settings_option_selectTranslation_disableWhileTranslatePage": {
+		"message": "Deaktiveer terwyl blad vertaal word"
+	},
+	"settings_option_selectTranslation_enable": {
+		"message": "Aktiveer"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton": {
+		"message": "Outomatiese fokus op vertalingsknoppie"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
+		"message": "Richt de focus op de vertaal knop wanneer deze verschijnt"
+	},
+	"settings_option_selectTranslation_header_languageChoice": {
+		"message": "Taal instellingen"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang": {
+		"message": "Automatische taaldetectie inschakelen door de vertaler"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
+		"message": "Gebruik automatische taaldetectie door de vertaler wanneer de taal lokaal niet kan worden gedetecteerd"
+	},
+	"settings_option_selectTranslation_mode": {
+		"message": "Vertaal trigger"
+	},
+	"settings_option_selectTranslation_mode_item_contextMenu": {
+		"message": "Contextmenu knop"
+	},
+	"settings_option_selectTranslation_mode_item_popupButton": {
+		"message": "Popupknop"
+	},
+	"settings_option_selectTranslation_mode_item_quickTranslate": {
+		"message": "Snelle vertaling door selectie"
+	},
+	"settings_option_selectTranslation_modifiers": {
+		"message": "Modifiers"
+	},
+	"settings_option_selectTranslation_modifiers_desc": {
+		"message": "Selecteer de toetsen die op het toetsenbord moeten worden ingedrukt om de vertaling weer te geven"
+	},
+	"settings_option_selectTranslation_modifiers_key_alt": {
+		"message": "alt"
+	},
+	"settings_option_selectTranslation_modifiers_key_ctrl": {
+		"message": "ctrl"
+	},
 	"settings_option_selectTranslation_modifiers_key_meta": {
 		"message": "meta"
 	},

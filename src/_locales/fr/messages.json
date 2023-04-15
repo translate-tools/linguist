@@ -179,6 +179,21 @@
 	"message_serviceRequiredKey": {
 		"message": "Le service requiert une clé"
 	},
+	"message_translateOfText": {
+		"message": "Traduit"
+	},
+	"message_unknownError": {
+		"message": "Erreur inconnue"
+	},
+	"pageTranslator_alwaysTranslateLang": {
+		"message": "Toujours traduire cette langue"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disable": {
+		"message": "Désactiver"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
+		"message": "Désactiver pour tous les sites"
+	},
 	"pageTranslator_commonPreferences_autoTranslate_enable": {
 		"message": "Activer"
 	},
@@ -193,6 +208,21 @@
 	},
 	"pageTranslator_showOriginal": {
 		"message": "Afficher l'original"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_always": {
+		"message": "Toujours traduire"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
+		"message": "Toujours traduire pour cette langue"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_default": {
+		"message": "Utiliser les règles communes"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
+		"message": "Utiliser les règles communes pour cette langue"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_never": {
+		"message": "Ne jamais traduire"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
 		"message": "Ne jamais traduire pour cette langue"
@@ -359,6 +389,96 @@
 	"settings_option_pageTranslation_translatableAttributes_desc": {
 		"message": "Entrez les noms des <slot id=htmlAttributes>attributs HTML</slot> à traduire. Un attribut par ligne"
 	},
+	"settings_option_popupTab_pageTranslator_showCounters": {
+		"message": "Afficher les statistiques de traduction"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters_desc": {
+		"message": "Afficher les statistiques pour la traduction de la page"
+	},
+	"settings_option_selectTranslation": {
+		"message": "Traduction du texte sélectionné"
+	},
+	"settings_option_selectTranslation_detectedLangFirst": {
+		"message": "Préférer la langue détectée du texte plutôt que la langue de la page"
+	},
+	"settings_option_selectTranslation_detectedLangFirst_desc": {
+		"message": "Lorsqu'elle est activée, la langue détectée du texte sélectionné sera préférée à la langue de la page"
+	},
+	"settings_option_selectTranslation_disableWhileTranslatePage": {
+		"message": "Désactiver pendant la traduction de la page"
+	},
+	"settings_option_selectTranslation_enable": {
+		"message": "Activer"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton": {
+		"message": "Mise au point automatique sur le bouton de traduction"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
+		"message": "Se concentrer sur le bouton de traduction lorsqu'il apparaît"
+	},
+	"settings_option_selectTranslation_header_languageChoice": {
+		"message": "Paramètres de langue"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang": {
+		"message": "Activer la détection automatique de la langue par le traducteur"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
+		"message": "Utiliser la détection automatique de la langue par le traducteur lorsque la langue ne peut pas être détectée localement"
+	},
+	"settings_option_selectTranslation_mode": {
+		"message": "Déclencheur de traduction"
+	},
+	"settings_option_selectTranslation_mode_item_contextMenu": {
+		"message": "Bouton du menu contextuel"
+	},
+	"settings_option_selectTranslation_mode_item_popupButton": {
+		"message": "Bouton de pop-up"
+	},
+	"settings_option_selectTranslation_mode_item_quickTranslate": {
+		"message": "Traduction rapide par sélection"
+	},
+	"settings_option_selectTranslation_modifiers": {
+		"message": "Modificateurs"
+	},
+	"settings_option_selectTranslation_modifiers_desc": {
+		"message": "Sélectionnez les touches qui doivent être pressées sur le clavier pour afficher la traduction"
+	},
+	"settings_option_selectTranslation_modifiers_key_alt": {
+		"message": "alt"
+	},
+	"settings_option_selectTranslation_modifiers_key_ctrl": {
+		"message": "ctrl"
+	},
+	"settings_option_selectTranslation_modifiers_key_meta": {
+		"message": "méta"
+	},
+	"settings_option_selectTranslation_modifiers_key_shift": {
+		"message": "majuscule"
+	},
+	"settings_option_selectTranslation_rememberDirection": {
+		"message": "Se souvenir de la langue la plus récente sélectionnée du texte"
+	},
+	"settings_option_selectTranslation_showOnceForSelection": {
+		"message": "Afficher le bouton de traduction une fois pour chaque sélection de texte"
+	},
+	"settings_option_selectTranslation_showOnceForSelection_desc": {
+		"message": "Le bouton ne s'affichera qu'une seule fois pour chaque sélection de texte. Si vous devez l'afficher à nouveau, sélectionnez à nouveau le texte"
+	},
+	"settings_option_selectTranslation_showOriginalText": {
+		"message": "Afficher le texte original"
+	},
+	"settings_option_selectTranslation_showOriginalText_desc": {
+		"message": "Ajouter un bloc avec le texte original à une fenêtre contextuelle avec la traduction"
+	},
+	"settings_option_selectTranslation_strictSelection": {
+		"message": "Sélection stricte"
+	},
+	"settings_option_selectTranslation_strictSelection_desc": {
+		"message": "Ignorer la sélection si le bouton gauche de la souris est relâché en dehors d'un bloc contenant du texte sélectionné"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton": {
+		"message": "Délai pour masquer le bouton"
+	},
 	"settings_option_selectTranslation_timeoutForHideButton_desc": {
 		"message": "Délai en millisecondes avant de masquer le bouton lorsque le curseur n'est pas survolé. Le survol du curseur sur un bouton réinitialisera le minuteur. Pour désactiver la fonction de masquage automatique, définissez la valeur à une valeur inférieure à 1"
 	},
@@ -418,6 +538,36 @@
 	},
 	"settings_option_ttsCustomModules": {
 		"message": "Modules TTS personnalisés"
+	},
+	"settings_option_ttsCustomModules_button": {
+		"message": "Gérer les modules TTS"
+	},
+	"settings_option_ttsCustomModules_desc": {
+		"message": "Vous pouvez ajouter des modules TTS qui utilisent votre service et vos voix préférées. En savoir plus et trouver des modules dans la documentation TTS personnalisée."
+	},
+	"settings_option_ttsModule": {
+		"message": "Module TTS"
+	},
+	"settings_option_ttsModule_desc": {
+		"message": "Module pour lire les textes"
+	},
+	"settings_option_userLanguage": {
+		"message": "Votre langue"
+	},
+	"settings_option_userLanguage_desc": {
+		"message": "La langue cible pour traduire les textes"
+	},
+	"settings_pageTitle": {
+		"message": "Paramètres"
+	},
+	"settings_section_popup": {
+		"message": "Popup"
+	},
+	"textTranslator_suggestLanguage": {
+		"message": "Il semble que cette langue soit"
+	},
+	"textTranslator_translateInputPlaceholder": {
+		"message": "Texte d'entrée"
 	},
 	"textTranslator_translatePlaceholder": {
 		"message": "Texte traduit"

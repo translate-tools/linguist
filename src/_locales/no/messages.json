@@ -359,6 +359,36 @@
 	"settings_option_pageTranslation_enableContextMenu_desc": {
 		"message": "Legg til knapp for å slå på/av sideoversettelse til kontekstmeny"
 	},
+	"settings_option_pageTranslation_ignoredTags": {
+		"message": "Ignorerte elementer"
+	},
+	"settings_option_pageTranslation_ignoredTags_desc": {
+		"message": "Skriv inn navn på <slot id=htmlElements>HTML-elementer</slot> som ikke skal oversettes. Innleide elementer vil heller ikke bli oversatt. Ett element per linje."
+	},
+	"settings_option_pageTranslation_lazyTranslate": {
+		"message": "Oversett bare synlige elementer"
+	},
+	"settings_option_pageTranslation_lazyTranslate_desc": {
+		"message": "Når dette alternativet er aktivert, vil bare synlige elementer bli oversatt. Dette kan være nyttig for å spare nettverkstrafikk."
+	},
+	"settings_option_pageTranslation_originalTextPopup": {
+		"message": "Aktiver popup med originaltekst"
+	},
+	"settings_option_pageTranslation_originalTextPopup_desc": {
+		"message": "Vis en popup med originaltekst ved å sveve musen over oversatt tekst"
+	},
+	"settings_option_pageTranslation_toggleTranslationHotkey": {
+		"message": "Snarveier"
+	},
+	"settings_option_pageTranslation_toggleTranslationHotkey_desc": {
+		"message": "Snarveier for å slå av/på sideoversettelse\nTrykk ESC for å tilbakestille nøkler"
+	},
+	"settings_option_pageTranslation_translatableAttributes": {
+		"message": "Oversettable attributter."
+	},
+	"settings_option_pageTranslation_translatableAttributes_desc": {
+		"message": "Skriv inn <slot id=htmlAttributes>HTML-attributt</slot>-navn for oversettelse. Én attributt per linje"
+	},
 	"settings_option_popupTab_pageTranslator_showCounters": {
 		"message": "Vis oversettelsesstatistikk"
 	},
@@ -388,6 +418,36 @@
 	},
 	"settings_option_selectTranslation_header_languageChoice": {
 		"message": "Språkinnstillinger"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang": {
+		"message": "Aktiver automatisk språkgjenkjenning av oversetteren"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
+		"message": "Bruk automatisk språkgjenkjenning av oversetteren når språket ikke kan gjenkjennes lokalt"
+	},
+	"settings_option_selectTranslation_mode": {
+		"message": "Oversettelse utløser"
+	},
+	"settings_option_selectTranslation_mode_item_contextMenu": {
+		"message": "Kontekstmenyknapp"
+	},
+	"settings_option_selectTranslation_mode_item_popupButton": {
+		"message": "Popup-knapp"
+	},
+	"settings_option_selectTranslation_mode_item_quickTranslate": {
+		"message": "Rask oversettelse ved valg"
+	},
+	"settings_option_selectTranslation_modifiers": {
+		"message": "Modifikatorer"
+	},
+	"settings_option_selectTranslation_modifiers_desc": {
+		"message": "Velg tastene som må trykkes på tastaturet for å vise oversettelsen"
+	},
+	"settings_option_selectTranslation_modifiers_key_alt": {
+		"message": "alt"
+	},
+	"settings_option_selectTranslation_modifiers_key_ctrl": {
+		"message": "ctrl"
 	},
 	"settings_option_selectTranslation_modifiers_key_meta": {
 		"message": "meta"

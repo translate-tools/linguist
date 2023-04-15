@@ -419,6 +419,66 @@
 	"settings_option_selectTranslation_header_languageChoice": {
 		"message": "Kieliasetukset"
 	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang": {
+		"message": "Ota käyttöön kääntäjän automaattinen kielen tunnistus"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
+		"message": "Käytä kääntäjän automaattista kielen tunnistusta, kun kieltä ei voida tunnistaa paikallisesti."
+	},
+	"settings_option_selectTranslation_mode": {
+		"message": "Käännöslaukaisin"
+	},
+	"settings_option_selectTranslation_mode_item_contextMenu": {
+		"message": "Kontekstivalikon painike"
+	},
+	"settings_option_selectTranslation_mode_item_popupButton": {
+		"message": "Ponnahdusikkunan painike"
+	},
+	"settings_option_selectTranslation_mode_item_quickTranslate": {
+		"message": "Nopea käännös valinnalla"
+	},
+	"settings_option_selectTranslation_modifiers": {
+		"message": "Muokkaajat"
+	},
+	"settings_option_selectTranslation_modifiers_desc": {
+		"message": "Valitse näppäimet, jotka on painettava näppäimistöllä, jotta käännös näytetään."
+	},
+	"settings_option_selectTranslation_modifiers_key_alt": {
+		"message": "alt"
+	},
+	"settings_option_selectTranslation_modifiers_key_ctrl": {
+		"message": "ctrl"
+	},
+	"settings_option_selectTranslation_modifiers_key_meta": {
+		"message": "meta"
+	},
+	"settings_option_selectTranslation_modifiers_key_shift": {
+		"message": "shift"
+	},
+	"settings_option_selectTranslation_rememberDirection": {
+		"message": "Muista viimeisin valittu tekstin kieli."
+	},
+	"settings_option_selectTranslation_showOnceForSelection": {
+		"message": "Näytä käännöspainike vain kerran jokaiselle tekstin valinnalle."
+	},
+	"settings_option_selectTranslation_showOnceForSelection_desc": {
+		"message": "Painike näkyy vain kerran jokaiselle tekstin valinnalle. Jos haluat näyttää sen uudelleen, valitse teksti uudelleen."
+	},
+	"settings_option_selectTranslation_showOriginalText": {
+		"message": "Näytä alkuperäinen teksti."
+	},
+	"settings_option_selectTranslation_showOriginalText_desc": {
+		"message": "Lisää lohko alkuperäisellä tekstillä popup-ikkunaan käännöksen kanssa."
+	},
+	"settings_option_selectTranslation_strictSelection": {
+		"message": "Tarkka valinta."
+	},
+	"settings_option_selectTranslation_strictSelection_desc": {
+		"message": "Ohita valinta, jos vasen hiiren painike vapautetaan tekstiä sisältävän lohkon ulkopuolella"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton": {
+		"message": "Viive piilottaaksesi nappi"
+	},
 	"settings_option_selectTranslation_timeoutForHideButton_desc": {
 		"message": "Viive millisekunteina ennen kuin nappi piilotetaan, kun kursori ei ole päällä. Nappiin kohdistuva kursorin liike nollaa ajastimen. Automaattisen piilotuksen poistamiseksi aseta arvo pienemmäksi kuin 1"
 	},

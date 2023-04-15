@@ -359,6 +359,66 @@
 	"settings_option_pageTranslation_enableContextMenu_desc": {
 		"message": "పేజీ అనువాదం టాగిల్ చేయడానికి ఒక కంటెక్స్ట్ మెనూకు బటన్ జోడించండి"
 	},
+	"settings_option_pageTranslation_ignoredTags": {
+		"message": "అణిమాలు పరిగణలో ఉండకుండా"
+	},
+	"settings_option_pageTranslation_ignoredTags_desc": {
+		"message": "అనేక <slot id=htmlElements>HTML element</slot> పేర్లు లైన్ ఒక పరిమితి ఉన్నట్లు అనుసరించి, అవి అనువదించబడదు. భద్రపరచబడిన అణిమాలు అనువదించబడకపోవటం కొరకు మంచిది."
+	},
+	"settings_option_pageTranslation_lazyTranslate": {
+		"message": "కనపడిన అంశాలను మాత్రమే అనువదించండి"
+	},
+	"settings_option_pageTranslation_lazyTranslate_desc": {
+		"message": "ఈ ఎంపిక ప్రారంభించినప్పుడే, కనపడిన అంశాలు మాత్రమే అనువదించబడతాయి. నెట్వర్క్ ట్రాఫిక్ సేవ్ చేయడానికి ఈ ఎంపిక ఉపయోగమైనట్లు కావచ్చు."
+	},
+	"settings_option_pageTranslation_originalTextPopup": {
+		"message": "మూల వచనంతో పాప్ అనువర్తనం సక్షిపెట్టించండి"
+	},
+	"settings_option_pageTranslation_originalTextPopup_desc": {
+		"message": "అనువదించిన వచనం మీద మౌస్ ను ఉంచినప్పుడు మూల వచనంతో ఒక పాప్ చూపించండి"
+	},
+	"settings_option_pageTranslation_toggleTranslationHotkey": {
+		"message": "హాట్ కీలులు"
+	},
+	"settings_option_pageTranslation_toggleTranslationHotkey_desc": {
+		"message": "పేజీ అనువాదం టాగిల్ చేయడానికి షార్ట్‌కట్లు\nకీలకాలను రీసెట్ చేయడానికి ESC నొక్కండి"
+	},
+	"settings_option_pageTranslation_translatableAttributes": {
+		"message": "అనువాదం చేయవచ్చున్న విశేషణాలు."
+	},
+	"settings_option_pageTranslation_translatableAttributes_desc": {
+		"message": "<slot id=htmlAttributes>HTML విశేషణ</slot> పేర్లను అనువాదం చేయాలి. ఒక విశేషణ ఒక వరుస కోసం"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters": {
+		"message": "అనువాద గణాంకాలు చూపించు"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters_desc": {
+		"message": "పేజీ అనువాదం కోసం గణాంకాలు ప్రదర్శించు"
+	},
+	"settings_option_selectTranslation": {
+		"message": "ఎంచుకున్న వచనం అనువాదం"
+	},
+	"settings_option_selectTranslation_detectedLangFirst": {
+		"message": "పేజీ భాషలకు మార్పులేనందువలన ఎంచుకున్న వచనాన్ని గుర్తించండి"
+	},
+	"settings_option_selectTranslation_detectedLangFirst_desc": {
+		"message": "ప్రారంభం చేయబడిందా, ఎంచుకున్న వచనంలో దొరకిన భాషను పేజీ భాషకు మార్పు చేసి ఉంటుంది"
+	},
+	"settings_option_selectTranslation_disableWhileTranslatePage": {
+		"message": "పేజీ అనువాదన చేయడానికి ఆఫ్ చేయండి"
+	},
+	"settings_option_selectTranslation_enable": {
+		"message": "ప్రారంభం చేయి"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton": {
+		"message": "అనువాదన బటన్‌కు స్వయంచాలక ఫోకస్"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
+		"message": "అనువాద బటన్ కనిపిస్తే దానిపై ఫోకస్ చేయండి"
+	},
+	"settings_option_selectTranslation_header_languageChoice": {
+		"message": "భాషా సెట్టింగులు"
+	},
 	"settings_option_selectTranslation_isUseAutoForDetectLang": {
 		"message": "అనువాదకు ఆటోమేటిక్ భాషా గురించి తెలియజేయండి"
 	},
@@ -448,6 +508,36 @@
 	},
 	"settings_option_textTranslator_suggestLanguageAlways_desc": {
 		"message": "ఆఫ్టో గుర్తించబడిన మూల భాష ఉన్నప్పటికీ మాతృభాషను సూచించినప్పటికీ మాతృభాషను సలహాలు మాత్రం కనిపిస్తాయి, అని అంటే ఈ అంశం నిలిపేందుకు చూడవచ్చు"
+	},
+	"settings_option_translatePreferences": {
+		"message": "అనువాద ప్రాధాన్యతలు"
+	},
+	"settings_option_translateScheduler": {
+		"message": "అనువాదం షెడ్యూలర్"
+	},
+	"settings_option_translateScheduler_delay": {
+		"message": "టెక్స్ట్ కలెక్షన్ దిగుమతి"
+	},
+	"settings_option_translateScheduler_delay_desc": {
+		"message": "అనువాద షెడ్యూలర్ అనేక అభ్యంతల కోసం అనురోధాల సేవల API కొరకు అనురోధాల సంఖ్యను తక్షణ తగ్గించుకోవడం కోసం కొన్ని టెక్స్ట్ నుండి ప్రతి అనురోధంకు చాలా టెక్స్ట్లు కలెక్ట్ చేసుకోవడానికి షెడ్యూలర్ ప్రయత్నిస్తుంది. అనువాద ప్రారంభం చేయడానికి కొన్ని క్షణాల కోసం కొత్త టెక్స్ట్లు కలెక్ట్ చేయడానికి షెడ్యూలర్ కొందికే వేచి ఉండదు"
+	},
+	"settings_option_translateScheduler_retryLimit": {
+		"message": "అనువాద మళీపోవడాలు ప్రయత్నాలు"
+	},
+	"settings_option_translateScheduler_retryLimit_desc": {
+		"message": "సెట్టింగ్స్ నుండి అనువాద లోపాల కొనసాగేలా, షెడ్యూలర్ అనువాదకు మళ్లీ ప్రయత్నించుకున్న మాట్లాడాలు నిర్ణయించే ఒక పరిమితిని సెట్ చేయడం వల్ల అదనపు ఫలితం కనబడుతుంది. సరైన అనువాదకు అందుబాటులో ఉన్న భాషలు అనువాదన యొక్క గురుత్వం పైన నిర్భయం అవుతుంది. అమరికలో ఎక్కువ ప్రయాసం చేయడానికి ఒక కొన్ని సంఖ్య సెట్ చేయడం వల్ల అపరిమిత ప్రయత్నాలు అనుమతించవచ్చు"
+	},
+	"settings_option_translatorModule": {
+		"message": "అనువాదకు మాడ్యూల్"
+	},
+	"settings_option_translatorModule_desc": {
+		"message": "అనువాదనలో లభించే భాషలు మరియు అనువాదన యొక్క గురుత్వం అనువాదకు పైన నిర్భయం చేయబడుతుంది."
+	},
+	"settings_option_tts": {
+		"message": "టెక్స్ట్ టు స్పీచ్ (TTS)"
+	},
+	"settings_option_ttsCustomModules": {
+		"message": "కస్టమ్ TTS"
 	},
 	"settings_option_ttsCustomModules_button": {
 		"message": "TTS మాడ్యూల్స్ నిర్వహించండి"

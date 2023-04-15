@@ -359,6 +359,36 @@
 	"settings_option_pageTranslation_enableContextMenu_desc": {
 		"message": "Idagdag ang button upang paganahin ang pagsasalin ng pahina sa isang context menu"
 	},
+	"settings_option_pageTranslation_ignoredTags": {
+		"message": "Ignored na elemento"
+	},
+	"settings_option_pageTranslation_ignoredTags_desc": {
+		"message": "Ilagay ang mga pangalan ng <slot id=htmlElements>elemento ng HTML</slot> na hindi dapat isalin. Hindi rin isasalin ang mga nakalinya sa mga elemento. Isang elemento sa bawat linya."
+	},
+	"settings_option_pageTranslation_lazyTranslate": {
+		"message": "Isalin lamang ang mga nakikitang elemento"
+	},
+	"settings_option_pageTranslation_lazyTranslate_desc": {
+		"message": "Kapag pinagana ang opsiyong ito, isasalin lamang ang mga nakikita. Maaaring magamit ito upang makatipid ng network traffic."
+	},
+	"settings_option_pageTranslation_originalTextPopup": {
+		"message": "Paganahin ang popup na may orihinal na teksto"
+	},
+	"settings_option_pageTranslation_originalTextPopup_desc": {
+		"message": "Ipakita ang isang popup na nagtatampok ng orihinal na teksto kapag hinawakan ang mouse sa isinaling teksto."
+	},
+	"settings_option_pageTranslation_toggleTranslationHotkey": {
+		"message": "Mga hotkey"
+	},
+	"settings_option_pageTranslation_toggleTranslationHotkey_desc": {
+		"message": "Mga shortcut para sa pagpapalit ng pagsasalin ng pahina\nPindutin ang ESC upang i-reset ang mga key"
+	},
+	"settings_option_pageTranslation_translatableAttributes": {
+		"message": "Mga maaring isalin na attribute."
+	},
+	"settings_option_pageTranslation_translatableAttributes_desc": {
+		"message": "Ipasok ang mga pangalan ng <slot id=htmlAttributes>HTML attribute</slot> para sa pagsasalin. Isa lamang na attribute bawat linya."
+	},
 	"settings_option_popupTab_pageTranslator_showCounters": {
 		"message": "Ipakita ang mga estadistika ng pagsasalin"
 	},
@@ -388,6 +418,36 @@
 	},
 	"settings_option_selectTranslation_header_languageChoice": {
 		"message": "Mga setting ng wika"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang": {
+		"message": "Paganahin ang awtomatikong pagtukoy ng wika ng tagasalin"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
+		"message": "Gamitin ang awtomatikong pagtukoy ng wika ng tagasalin kung hindi ito maaaring agad tukuyin sa lokasyon"
+	},
+	"settings_option_selectTranslation_mode": {
+		"message": "Tagapag-trigger ng pagsasalin"
+	},
+	"settings_option_selectTranslation_mode_item_contextMenu": {
+		"message": "Button sa konteksto ng menu"
+	},
+	"settings_option_selectTranslation_mode_item_popupButton": {
+		"message": "Popup button"
+	},
+	"settings_option_selectTranslation_mode_item_quickTranslate": {
+		"message": "Mabilis na pagsasalin sa pamamagitan ng pagpili"
+	},
+	"settings_option_selectTranslation_modifiers": {
+		"message": "Mga modifier"
+	},
+	"settings_option_selectTranslation_modifiers_desc": {
+		"message": "Pumili ng mga susi na dapat pindutin sa keyboard upang ipakita ang pagsasalin"
+	},
+	"settings_option_selectTranslation_modifiers_key_alt": {
+		"message": "alt"
+	},
+	"settings_option_selectTranslation_modifiers_key_ctrl": {
+		"message": "ctrl"
 	},
 	"settings_option_selectTranslation_modifiers_key_meta": {
 		"message": "meta"
@@ -448,6 +508,36 @@
 	},
 	"settings_option_textTranslator_suggestLanguageAlways_desc": {
 		"message": "Kapag hindi pinagana, ang mga rekomendasyon sa wika ay magpapakita lamang kapag nagawa nang auto detection ang wika ng pinagmulan"
+	},
+	"settings_option_translatePreferences": {
+		"message": "Mga kagustuhan sa pagsasalin"
+	},
+	"settings_option_translateScheduler": {
+		"message": "Tagapag-ayos ng pagsasalin"
+	},
+	"settings_option_translateScheduler_delay": {
+		"message": "Pagkaantala ng pag-accumulate ng teksto"
+	},
+	"settings_option_translateScheduler_delay_desc": {
+		"message": "Ang translation scheduler ay nagbabawas ng bilang ng mga kahilingan sa API ng mga serbisyo sa pagsasalin. Sinisikap ng scheduler na magtipon ng mga teksto upang ipadala bilang maraming teksto hanggang sa maabot ang isa lamang na kahilingan. Maghihintay ang scheduler para sa nakatakdang panahon sa milliseconds upang magtipon ng mga bagong teksto bago simulan ang pagsasalin."
+	},
+	"settings_option_translateScheduler_retryLimit": {
+		"message": "Mga pagtatangka sa muling pagsasalin"
+	},
+	"settings_option_translateScheduler_retryLimit_desc": {
+		"message": "Uulitin ng scheduler ang pagsasalin ng mga teksto para sa mga error sa pagsasalin. Naglalagay ng limitasyon sa mga pagtatangka ng pag-uulit ang opsyon na ito. Maglagay ng negatibong numero upang payagan ang walang hanggang mga pagtatangka ng pag-uulit."
+	},
+	"settings_option_translatorModule": {
+		"message": "Module ng tagasalin"
+	},
+	"settings_option_translatorModule_desc": {
+		"message": "Depende sa tagasalin ang kalidad ng mga pagsasalin at ang mga magagamit na wika para sa pagsasalin."
+	},
+	"settings_option_tts": {
+		"message": "Teksto patungo sa tunog (TTS)"
+	},
+	"settings_option_ttsCustomModules": {
+		"message": "Pasadyang TTS"
 	},
 	"settings_option_ttsCustomModules_button": {
 		"message": "Pamahalaan ang mga module ng TTS"

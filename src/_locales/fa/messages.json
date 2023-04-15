@@ -359,6 +359,36 @@
 	"settings_option_pageTranslation_enableContextMenu_desc": {
 		"message": "افزودن دکمه برای فعالسازی ترجمه صفحه در منوی context"
 	},
+	"settings_option_pageTranslation_ignoredTags": {
+		"message": "عناصر نادیده گرفته شده"
+	},
+	"settings_option_pageTranslation_ignoredTags_desc": {
+		"message": "نام <slot id=htmlElements>عناصر HTML</slot> را که نباید ترجمه شوند وارد کنید. عناصر تو در تو نیز ترجمه نخواهند شد. هر عنصر در یک خط."
+	},
+	"settings_option_pageTranslation_lazyTranslate": {
+		"message": "ترجمه فقط عناصر قابل مشاهده"
+	},
+	"settings_option_pageTranslation_lazyTranslate_desc": {
+		"message": "هنگام فعال کردن این گزینه، فقط عناصر قابل مشاهده ترجمه خواهند شد. این ممکن است برای صرفه جویی در ترافیک شبکه مفید باشد."
+	},
+	"settings_option_pageTranslation_originalTextPopup": {
+		"message": "فعال کردن پنجره با متن اصلی"
+	},
+	"settings_option_pageTranslation_originalTextPopup_desc": {
+		"message": "نشان دادن پنجره با متن اصلی با حرکت ماوس روی متن ترجمه شده"
+	},
+	"settings_option_pageTranslation_toggleTranslationHotkey": {
+		"message": "کلیدهای میانبر"
+	},
+	"settings_option_pageTranslation_toggleTranslationHotkey_desc": {
+		"message": "کلیدهای میانبر برای روشن یا خاموش کردن ترجمه صفحه. برای بازنشانی کلیدها، دکمه ESC را فشار دهید"
+	},
+	"settings_option_pageTranslation_translatableAttributes": {
+		"message": "صفات قابل ترجمه."
+	},
+	"settings_option_pageTranslation_translatableAttributes_desc": {
+		"message": "نام‌های <slot id=htmlAttributes>صفت HTML</slot> برای ترجمه وارد کنید. هر صفت را در یک خط جداگانه وارد کنید."
+	},
 	"settings_option_popupTab_pageTranslator_showCounters": {
 		"message": "نمایش آمار ترجمه"
 	},
@@ -388,6 +418,36 @@
 	},
 	"settings_option_selectTranslation_header_languageChoice": {
 		"message": "تنظیمات زبان"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang": {
+		"message": "فعال کردن شناسایی زبان خودکار توسط مترجم"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
+		"message": "استفاده از شناسایی زبان خودکار توسط مترجم هنگامی که زبان به صورت محلی شناسایی نمی شود"
+	},
+	"settings_option_selectTranslation_mode": {
+		"message": "دکمه فعال سازی ترجمه"
+	},
+	"settings_option_selectTranslation_mode_item_contextMenu": {
+		"message": "دکمه منوی راست کلیک"
+	},
+	"settings_option_selectTranslation_mode_item_popupButton": {
+		"message": "دکمه پاپ آپ"
+	},
+	"settings_option_selectTranslation_mode_item_quickTranslate": {
+		"message": "ترجمه سریع با انتخاب"
+	},
+	"settings_option_selectTranslation_modifiers": {
+		"message": "اصلاح‌کننده ها"
+	},
+	"settings_option_selectTranslation_modifiers_desc": {
+		"message": "انتخاب کلیدهایی که باید روی صفحه کلید فشار داده شود تا ترجمه نشان داده شود"
+	},
+	"settings_option_selectTranslation_modifiers_key_alt": {
+		"message": "alt"
+	},
+	"settings_option_selectTranslation_modifiers_key_ctrl": {
+		"message": "ctrl"
 	},
 	"settings_option_selectTranslation_modifiers_key_meta": {
 		"message": "متا"

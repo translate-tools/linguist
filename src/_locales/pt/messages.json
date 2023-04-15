@@ -359,6 +359,36 @@
 	"settings_option_pageTranslation_enableContextMenu_desc": {
 		"message": "Adicionar botão para alternar a tradução da página em um menu de contexto"
 	},
+	"settings_option_pageTranslation_ignoredTags": {
+		"message": "Elementos ignorados"
+	},
+	"settings_option_pageTranslation_ignoredTags_desc": {
+		"message": "Digite os nomes dos elementos <slot id=htmlElements>HTML</slot> que não devem ser traduzidos. Elementos aninhados também não serão traduzidos. Um elemento por linha."
+	},
+	"settings_option_pageTranslation_lazyTranslate": {
+		"message": "Traduzir apenas elementos visíveis"
+	},
+	"settings_option_pageTranslation_lazyTranslate_desc": {
+		"message": "Quando essa opção estiver ativada, apenas elementos visíveis serão traduzidos. Isso pode ser útil para economizar tráfego de rede"
+	},
+	"settings_option_pageTranslation_originalTextPopup": {
+		"message": "Ativar pop-up com texto original"
+	},
+	"settings_option_pageTranslation_originalTextPopup_desc": {
+		"message": "Mostra um pop-up com o texto original ao passar o mouse sobre o texto traduzido"
+	},
+	"settings_option_pageTranslation_toggleTranslationHotkey": {
+		"message": "Teclas de atalho"
+	},
+	"settings_option_pageTranslation_toggleTranslationHotkey_desc": {
+		"message": "Atalhos para ativar/desativar a tradução da página\nPressione ESC para redefinir as teclas"
+	},
+	"settings_option_pageTranslation_translatableAttributes": {
+		"message": "Atributos traduzíveis."
+	},
+	"settings_option_pageTranslation_translatableAttributes_desc": {
+		"message": "Digite os nomes dos <slot id=htmlAttributes>atributos HTML</slot> para tradução. Um atributo por linha"
+	},
 	"settings_option_popupTab_pageTranslator_showCounters": {
 		"message": "Mostrar estatísticas de tradução"
 	},
@@ -388,6 +418,66 @@
 	},
 	"settings_option_selectTranslation_header_languageChoice": {
 		"message": "Configurações de idioma"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang": {
+		"message": "Ativar a detecção automática de idioma pelo tradutor"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
+		"message": "Usar a detecção automática de idioma pelo tradutor quando o idioma não pode ser detectado localmente"
+	},
+	"settings_option_selectTranslation_mode": {
+		"message": "Gatilho de tradução"
+	},
+	"settings_option_selectTranslation_mode_item_contextMenu": {
+		"message": "Botão de menu de contexto"
+	},
+	"settings_option_selectTranslation_mode_item_popupButton": {
+		"message": "Botão pop-up"
+	},
+	"settings_option_selectTranslation_mode_item_quickTranslate": {
+		"message": "Tradução rápida por seleção"
+	},
+	"settings_option_selectTranslation_modifiers": {
+		"message": "Modificadores"
+	},
+	"settings_option_selectTranslation_modifiers_desc": {
+		"message": "Selecione as teclas que devem ser pressionadas no teclado para exibir a tradução"
+	},
+	"settings_option_selectTranslation_modifiers_key_alt": {
+		"message": "alt"
+	},
+	"settings_option_selectTranslation_modifiers_key_ctrl": {
+		"message": "ctrl"
+	},
+	"settings_option_selectTranslation_modifiers_key_meta": {
+		"message": "meta"
+	},
+	"settings_option_selectTranslation_modifiers_key_shift": {
+		"message": "shift"
+	},
+	"settings_option_selectTranslation_rememberDirection": {
+		"message": "Lembrar idioma mais recente selecionado do texto"
+	},
+	"settings_option_selectTranslation_showOnceForSelection": {
+		"message": "Mostrar botão de tradução apenas uma vez para cada seleção de texto"
+	},
+	"settings_option_selectTranslation_showOnceForSelection_desc": {
+		"message": "O botão será mostrado apenas uma vez para cada seleção de texto. Se precisar mostrá-lo novamente, selecione o texto novamente"
+	},
+	"settings_option_selectTranslation_showOriginalText": {
+		"message": "Mostrar texto original"
+	},
+	"settings_option_selectTranslation_showOriginalText_desc": {
+		"message": "Adicionar bloco com texto original a uma janela pop-up com tradução"
+	},
+	"settings_option_selectTranslation_strictSelection": {
+		"message": "Seleção rigorosa"
+	},
+	"settings_option_selectTranslation_strictSelection_desc": {
+		"message": "Ignorar a seleção se o botão esquerdo do mouse for liberado fora de um bloco que contém texto selecionado"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton": {
+		"message": "Atraso para ocultar o botão"
 	},
 	"settings_option_selectTranslation_timeoutForHideButton_desc": {
 		"message": "Atraso em milissegundos antes de ocultar o botão quando o cursor não está sobre ele. Passar o cursor sobre um botão redefinirá o temporizador. Para desativar o auto-ocultamento, defina o valor como menor que 1"

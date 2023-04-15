@@ -119,6 +119,36 @@
 	"history_controls_clearHistory": {
 		"message": "ಇತಿಹಾಸವನ್ನು ಅಳಿಸಿ"
 	},
+	"history_controls_deleteSelected": {
+		"message": "ಆಯ್ಕೆಮಾಡಿದವುಗಳನ್ನು ಅಳಿಸಿ"
+	},
+	"history_controls_selectAll": {
+		"message": "ಎಲ್ಲಾ ಅನುವಾದಗಳನ್ನು ಆಯ್ಕೆ ಮಾಡಿ"
+	},
+	"history_message_clearHistoryConfirmation": {
+		"message": "ನೀವು ನಿಜವಾಗಿಯೂ ಹಿಂದೆಗೆಯಲು ಖಚಿತರಾಗಿದ್ದೀರಾ? ಎಲ್ಲಾ ಪರಿವರ್ತನೆಗಳು ತೆಗೆದುಹಾಕಲಾಗುತ್ತವೆ"
+	},
+	"history_message_deleteEntryConfirmation": {
+		"message": "ಈ ಪ್ರವೇಶವನ್ನು ನಿರ್ಧಾರವಾಗಿ ಅಳಿಸಲು ನೀವು ಖಚಿತರಾಗಿದ್ದೀರಾ?"
+	},
+	"history_message_deleteSelectedEntriesConfirmation": {
+		"message": "ಆಯ್ಕೆಮಾಡಲಾದ ಪರಿವರ್ತನೆಗಳನ್ನು ($1) ಅಳಿಸಲು ಖಚಿತರಾಗಿದ್ದೀರಾ?"
+	},
+	"history_message_emptyEntries": {
+		"message": "ಹಿಂದಿನ ಪರಿವರ್ತನೆಗಳು ತೆಗೆದುಹಾಕಲಾಗಿವೆ"
+	},
+	"history_message_entriesNotFound": {
+		"message": "ಫಿಲ್ಟರ್ ಪೂರೈಕವನ್ನು ಸಂತೋಷವಾಗಿ ಪೂರ್ತಿಯಾಗಿಸಿದ ಪರಿವರ್ತನೆಗಳು ಸಿಗಲಿಲ್ಲ"
+	},
+	"history_pageTitle": {
+		"message": "ಹಿಂದಿನ ಪರಿವರ್ತನೆಗಳು"
+	},
+	"history_searchPlaceholder": {
+		"message": "ಪಠ್ಯದೊಂದಿಗೆ ಹುಡುಕಿ"
+	},
+	"inlineTranslator_showOriginalText": {
+		"message": "ಮೂಲ ಪಠ್ಯ ತೋರಿಸಿ"
+	},
 	"lang_change": {
 		"message": "ಭಾಷೆಯನ್ನು ಬದಲಾಯಿಸಿ"
 	},
@@ -448,6 +478,36 @@
 	},
 	"settings_option_selectTranslation_timeoutForHideButton": {
 		"message": "ಬಟನ್ ಮರೆಹೋಗುವುದಕ್ಕೆ ವಿಲಂಬ"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton_desc": {
+		"message": "ಕರ್ಸರ್ ಹೋಗದ ಕಾಲದಲ್ಲಿ ಬಟನ್ ಮರೆಯಲು ಮಿಲಿಸೆಕಂಡಿನಲ್ಲಿ ವಿಲಾಸವನ್ನು ವಿಲಾಸವಾಗಿ ಹೊಂದಿಸಿ. ಬಟನ್ ಮೇಲೆ ಕರ್ಸರ್ ಹೋದರೆ ಟೈಮರ್ ರಿಸೆಟ್ ಆಗುತ್ತದೆ. ಸ್ವಯಂ ಮಾಯ್ಚ್ಚಾದಷ್ಟು ಕಾಲದ ಕಾಲಾವಧಿಯನ್ನು ಅಡ್ಡಿಮಾಡಲು, 1 ಕ್ಕಿಂತ ಕಡಿಮೆ ಮೌಲ್ಯವನ್ನು ಸೆಟ್ ಮಾಡಿ"
+	},
+	"settings_option_selectTranslation_zIndex": {
+		"message": "ಜೆಡ್-ಇಂಡೆಕ್ಸ್"
+	},
+	"settings_option_selectTranslation_zIndex_desc": {
+		"message": "ಕೆಲವು ಪುಟಗಳ ಮೇಲೆ ಕೆಲವು ಘಟನೆಗಳು ಭಾಷಾಂತರಿಸಲು ಹಾಕಿದ popup ಯ ಮೇಲೆ ಒಂದು ಮೌಲ್ಯವನ್ನು ಹೆಚ್ಚಿಸಿ"
+	},
+	"settings_option_textTranslator": {
+		"message": "ಪಠ್ಯ ಅನುವಾದಕ"
+	},
+	"settings_option_textTranslator_rememberText": {
+		"message": "ಅನುವಾದಿತ ಪಠ್ಯವನ್ನು ನೆನಪಿನಲ್ಲಿಟ್ಟಿಕೊಳ್ಳಿ"
+	},
+	"settings_option_textTranslator_rememberText_desc": {
+		"message": "ಪರವಾಗಿ ಬಾಗಿಲು ತೆರೆಯಲು ಮುಂಚೆ ಅನುವಾದಿತ ಪಠ್ಯವನ್ನು ನೆನಪಿನಲ್ಲಿಟ್ಟಿಕೊಳ್ಳಿ"
+	},
+	"settings_option_textTranslator_spellCheck": {
+		"message": "ಸ್ಪೆಲ್ ಚೆಕ್ ಸಕ್ಷಮಗೊಳಿಸಿ"
+	},
+	"settings_option_textTranslator_suggestLanguage": {
+		"message": "ಗುರುತಿಸಲಾದ ಪಠ್ಯ ಭಾಷೆಯನ್ನು ಸೂಚಿಸಿ"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways": {
+		"message": "ಯಾವಾಗಲೂ ಸೂಚಿಸುವ ಭಾಷೆಯನ್ನು ಸ್ಥಾಪಿಸಿ"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways_desc": {
+		"message": "ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಲಾದಾಗ, ಮೂಲ ಭಾಷೆಯನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಗುರುತಿಸಲಾಗುವ ಸಂದರ್ಭದಲ್ಲಿ ಭಾಷೆಯ ಸೂಚನೆಗಳು ಕಾಣಿಸಿಕೊಳ್ಳುವುವು"
 	},
 	"settings_option_translatePreferences": {
 		"message": "ಅನುವಾದ ಆದರ್ಶಗಳು"

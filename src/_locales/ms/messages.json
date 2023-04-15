@@ -209,6 +209,36 @@
 	"pageTranslator_showOriginal": {
 		"message": "Tunjukkan asal"
 	},
+	"pageTranslator_sitePreferences_autoTranslate_always": {
+		"message": "Sentiasa terjemahkan"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
+		"message": "Sentiasa terjemahkan untuk bahasa ini"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_default": {
+		"message": "Gunakan peraturan biasa"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
+		"message": "Gunakan peraturan biasa untuk bahasa ini"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_never": {
+		"message": "Jangan pernah terjemahkan"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
+		"message": "Jangan pernah terjemahkan untuk bahasa ini"
+	},
+	"pageTranslator_sitePreferences_title": {
+		"message": "Keutamaan untuk"
+	},
+	"pageTranslator_translatePage": {
+		"message": "Terjemahkan halaman"
+	},
+	"pageTranslator_translationReport": {
+		"message": "Laporan Terjemahan"
+	},
+	"pageTranslator_translationReport_queue": {
+		"message": "Antrian"
+	},
 	"pageTranslator_translationReport_reject": {
 		"message": "Ralat"
 	},
@@ -389,6 +419,36 @@
 	"settings_option_selectTranslation_header_languageChoice": {
 		"message": "Tetapan Bahasa"
 	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang": {
+		"message": "Aktifkan pengesanan bahasa automatik oleh penterjemah"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
+		"message": "Gunakan pengesanan bahasa automatik oleh penterjemah apabila bahasa tidak dapat dikesan secara tempatan"
+	},
+	"settings_option_selectTranslation_mode": {
+		"message": "Pencetus terjemahan"
+	},
+	"settings_option_selectTranslation_mode_item_contextMenu": {
+		"message": "Butang menu konteks"
+	},
+	"settings_option_selectTranslation_mode_item_popupButton": {
+		"message": "Butang popup"
+	},
+	"settings_option_selectTranslation_mode_item_quickTranslate": {
+		"message": "Terjemahan Cepat melalui Pemilihan"
+	},
+	"settings_option_selectTranslation_modifiers": {
+		"message": "Pemodifikasi"
+	},
+	"settings_option_selectTranslation_modifiers_desc": {
+		"message": "Pilih kunci yang harus ditekan pada keyboard untuk menampilkan terjemahan"
+	},
+	"settings_option_selectTranslation_modifiers_key_alt": {
+		"message": "alt"
+	},
+	"settings_option_selectTranslation_modifiers_key_ctrl": {
+		"message": "ctrl"
+	},
 	"settings_option_selectTranslation_modifiers_key_meta": {
 		"message": "meta"
 	},
@@ -418,6 +478,66 @@
 	},
 	"settings_option_selectTranslation_timeoutForHideButton": {
 		"message": "Lengah untuk menyembunyikan butang"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton_desc": {
+		"message": "Lebihan milisaat sebelum menyembunyikan butang apabila kursor tidak dihover. Kursor yang melayang pada butang akan menetapkan semula pemasa. Untuk melumpuhkan pengasingan automatik, set nilai kurang dari 1"
+	},
+	"settings_option_selectTranslation_zIndex": {
+		"message": "z-indeks"
+	},
+	"settings_option_selectTranslation_zIndex_desc": {
+		"message": "Tingkatkan nilai jika beberapa elemen pada beberapa halaman tindih dengan popup teks terjemahan"
+	},
+	"settings_option_textTranslator": {
+		"message": "Terjemahan teks"
+	},
+	"settings_option_textTranslator_rememberText": {
+		"message": "Ingati teks terjemahan"
+	},
+	"settings_option_textTranslator_rememberText_desc": {
+		"message": "Ingati teks terjemahan untuk masa hadapan apabila tetingkap dibuka semula"
+	},
+	"settings_option_textTranslator_spellCheck": {
+		"message": "Dayakan semak ejaan"
+	},
+	"settings_option_textTranslator_suggestLanguage": {
+		"message": "Cadangkan bahasa teks dikesan"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways": {
+		"message": "Sentiasa mengesan dan mencadangkan bahasa"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways_desc": {
+		"message": "Apabila dilumpuhkan, cadangan bahasa hanya akan muncul apabila bahasa asal dikesan secara automatik"
+	},
+	"settings_option_translatePreferences": {
+		"message": "Keutamaan Terjemahan"
+	},
+	"settings_option_translateScheduler": {
+		"message": "Jadual Pengalihbahasaan"
+	},
+	"settings_option_translateScheduler_delay": {
+		"message": "Lengah pengumpulan teks"
+	},
+	"settings_option_translateScheduler_delay_desc": {
+		"message": "Penjadual pengalihbahasaan mengurangkan bilangan permintaan kepada API perkhidmatan pengalihbahasaan. Penjadual cuba mengumpul teks untuk dihantar sebanyak mungkin per satu permintaan. Penjadual akan menunggu masa yang ditetapkan dalam millisecond untuk mengumpul teks baru sebelum memulakan pengalihbahasaan."
+	},
+	"settings_option_translateScheduler_retryLimit": {
+		"message": "Percubaan semula pengalihbahasaan"
+	},
+	"settings_option_translateScheduler_retryLimit_desc": {
+		"message": "Penjadual akan mencuba semula mengalihbahasaan teks bagi kesilapan pengalihbahasaan. Pilihan ini menetapkan had bagi percubaan semula. Tetapkan nombor negatif untuk membenarkan percubaan tak terhad"
+	},
+	"settings_option_translatorModule": {
+		"message": "Modul pengalihbahasaan"
+	},
+	"settings_option_translatorModule_desc": {
+		"message": "Kualiti terjemahan dan bahasa yang tersedia untuk diterjemahkan bergantung kepada penterjemah."
+	},
+	"settings_option_tts": {
+		"message": "Teks ke ucapan (TTS)"
+	},
+	"settings_option_ttsCustomModules": {
+		"message": "TTS Kustom"
 	},
 	"settings_option_ttsCustomModules_button": {
 		"message": "Urus Modul TTS"

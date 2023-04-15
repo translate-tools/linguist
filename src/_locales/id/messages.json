@@ -59,6 +59,36 @@
 	"dictionary_button_removeAll": {
 		"message": "Hapus semua"
 	},
+	"dictionary_deleteAll": {
+		"message": "Apakah Anda yakin ingin menghapus SEMUA terjemahan dalam kamus?"
+	},
+	"dictionary_deleteConfirmation": {
+		"message": "Apakah Anda yakin ingin menghapus terjemahan ini?"
+	},
+	"dictionary_description": {
+		"message": "Simpan terjemahan Anda dalam kamus agar mudah ditemukan nanti"
+	},
+	"dictionary_emptyDictionary": {
+		"message": "Kamus kosong. Mulai mengisi saat menerjemahkan teks"
+	},
+	"dictionary_filter_from": {
+		"message": "Dari"
+	},
+	"dictionary_filter_to": {
+		"message": "Ke"
+	},
+	"dictionary_message_deleteAll_success": {
+		"message": "Semua terjemahan telah dihapus"
+	},
+	"dictionary_notFoundEntries": {
+		"message": "Terjemahan yang cocok dengan filter ini tidak ditemukan"
+	},
+	"dictionary_pageTitle": {
+		"message": "Kamus"
+	},
+	"dictionary_resetFilters": {
+		"message": "reset filter"
+	},
 	"dictionary_searchPlaceholder": {
 		"message": "Cari berdasarkan teks"
 	},
@@ -88,6 +118,36 @@
 	},
 	"history_controls_clearHistory": {
 		"message": "Hapus riwayat"
+	},
+	"history_controls_deleteSelected": {
+		"message": "Hapus yang dipilih"
+	},
+	"history_controls_selectAll": {
+		"message": "Pilih semua terjemahan"
+	},
+	"history_message_clearHistoryConfirmation": {
+		"message": "Apakah kamu yakin ingin menghapus riwayat? Semua entri akan dihapus"
+	},
+	"history_message_deleteEntryConfirmation": {
+		"message": "Apakah kamu yakin ingin menghapus entri ini?"
+	},
+	"history_message_deleteSelectedEntriesConfirmation": {
+		"message": "Apakah kamu yakin ingin menghapus entri yang dipilih ($1)?"
+	},
+	"history_message_emptyEntries": {
+		"message": "Riwayat kosong"
+	},
+	"history_message_entriesNotFound": {
+		"message": "Tidak ada terjemahan yang ditemukan yang memenuhi filter"
+	},
+	"history_pageTitle": {
+		"message": "Riwayat"
+	},
+	"history_searchPlaceholder": {
+		"message": "Cari berdasarkan teks"
+	},
+	"inlineTranslator_showOriginalText": {
+		"message": "Tampilkan teks asli"
 	},
 	"lang_change": {
 		"message": "Ubah bahasa"
@@ -299,6 +359,126 @@
 	"settings_option_pageTranslation_enableContextMenu_desc": {
 		"message": "Tambahkan tombol untuk mengaktifkan terjemahan halaman ke menu konteks"
 	},
+	"settings_option_pageTranslation_ignoredTags": {
+		"message": "Elemen yang diabaikan"
+	},
+	"settings_option_pageTranslation_ignoredTags_desc": {
+		"message": "Masukkan nama-nama elemen <slot id=htmlElements>HTML</slot> yang tidak boleh diterjemahkan. Elemen bersarang juga tidak akan diterjemahkan. Satu elemen per baris."
+	},
+	"settings_option_pageTranslation_lazyTranslate": {
+		"message": "Terjemahkan hanya elemen yang terlihat"
+	},
+	"settings_option_pageTranslation_lazyTranslate_desc": {
+		"message": "Ketika opsi ini diaktifkan, hanya elemen yang terlihat yang akan diterjemahkan. Hal ini bisa berguna untuk menghemat penggunaan jaringan."
+	},
+	"settings_option_pageTranslation_originalTextPopup": {
+		"message": "Aktifkan pop-up dengan teks asli"
+	},
+	"settings_option_pageTranslation_originalTextPopup_desc": {
+		"message": "Tampilkan pop-up dengan teks asli dengan mengarahkan kursor ke teks yang telah diterjemahkan."
+	},
+	"settings_option_pageTranslation_toggleTranslationHotkey": {
+		"message": "Hotkeys"
+	},
+	"settings_option_pageTranslation_toggleTranslationHotkey_desc": {
+		"message": "Pintasan untuk mengaktifkan terjemahan halaman\nTekan ESC untuk menyetel ulang tombol"
+	},
+	"settings_option_pageTranslation_translatableAttributes": {
+		"message": "Atribut yang dapat diterjemahkan."
+	},
+	"settings_option_pageTranslation_translatableAttributes_desc": {
+		"message": "Masukkan nama atribut <slot id=htmlAttributes>HTML</slot> untuk diterjemahkan. Satu atribut per baris"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters": {
+		"message": "Tampilkan statistik terjemahan"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters_desc": {
+		"message": "Menampilkan statistik untuk terjemahan halaman"
+	},
+	"settings_option_selectTranslation": {
+		"message": "Terjemahan teks yang dipilih"
+	},
+	"settings_option_selectTranslation_detectedLangFirst": {
+		"message": "Lebih suka bahasa yang dideteksi dari teks daripada bahasa halaman"
+	},
+	"settings_option_selectTranslation_detectedLangFirst_desc": {
+		"message": "Jika diaktifkan, bahasa yang dideteksi dari teks yang dipilih akan disukai daripada bahasa halaman"
+	},
+	"settings_option_selectTranslation_disableWhileTranslatePage": {
+		"message": "Nonaktifkan saat menerjemahkan halaman"
+	},
+	"settings_option_selectTranslation_enable": {
+		"message": "Aktifkan"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton": {
+		"message": "Auto-fokus pada tombol terjemahan"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
+		"message": "Fokus pada tombol terjemahan ketika muncul"
+	},
+	"settings_option_selectTranslation_header_languageChoice": {
+		"message": "Pengaturan bahasa"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang": {
+		"message": "Mengaktifkan deteksi bahasa otomatis oleh penerjemah"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
+		"message": "Gunakan deteksi bahasa otomatis oleh penerjemah saat bahasa tidak dapat dideteksi secara lokal"
+	},
+	"settings_option_selectTranslation_mode": {
+		"message": "Pemicu terjemahan"
+	},
+	"settings_option_selectTranslation_mode_item_contextMenu": {
+		"message": "Tombol menu konteks"
+	},
+	"settings_option_selectTranslation_mode_item_popupButton": {
+		"message": "Tombol popup"
+	},
+	"settings_option_selectTranslation_mode_item_quickTranslate": {
+		"message": "Terjemahan cepat dengan memilih"
+	},
+	"settings_option_selectTranslation_modifiers": {
+		"message": "Modifikasi"
+	},
+	"settings_option_selectTranslation_modifiers_desc": {
+		"message": "Pilih tombol yang harus ditekan pada keyboard untuk menampilkan terjemahan"
+	},
+	"settings_option_selectTranslation_modifiers_key_alt": {
+		"message": "alt"
+	},
+	"settings_option_selectTranslation_modifiers_key_ctrl": {
+		"message": "ctrl"
+	},
+	"settings_option_selectTranslation_modifiers_key_meta": {
+		"message": "meta"
+	},
+	"settings_option_selectTranslation_modifiers_key_shift": {
+		"message": "shift"
+	},
+	"settings_option_selectTranslation_rememberDirection": {
+		"message": "Ingat bahasa teks terakhir yang dipilih"
+	},
+	"settings_option_selectTranslation_showOnceForSelection": {
+		"message": "Tampilkan tombol terjemahan hanya sekali untuk setiap seleksi teks"
+	},
+	"settings_option_selectTranslation_showOnceForSelection_desc": {
+		"message": "Tombol akan ditampilkan hanya sekali untuk setiap seleksi teks. Jika diperlukan untuk menampilkannya lagi, pilih ulang teks"
+	},
+	"settings_option_selectTranslation_showOriginalText": {
+		"message": "Tampilkan teks asli"
+	},
+	"settings_option_selectTranslation_showOriginalText_desc": {
+		"message": "Tambahkan blok dengan teks asli ke popup dengan terjemahan"
+	},
+	"settings_option_selectTranslation_strictSelection": {
+		"message": "Seleksi ketat"
+	},
+	"settings_option_selectTranslation_strictSelection_desc": {
+		"message": "Abaikan pilihan jika tombol kiri mouse dilepas di luar blok yang berisi teks yang dipilih"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton": {
+		"message": "Penundaan untuk menyembunyikan tombol"
+	},
 	"settings_option_selectTranslation_timeoutForHideButton_desc": {
 		"message": "Jeda dalam milidetik sebelum tombol disembunyikan ketika kursor tidak di atasnya. Mengarahkan kursor pada tombol akan mengatur ulang penghitung waktu. Untuk menonaktifkan pengaturan otomatis penyembunyian, atur nilai lebih rendah dari 1"
 	},
@@ -424,6 +604,36 @@
 	},
 	"ttsManagerWindow_close": {
 		"message": "Tutup"
+	},
+	"ttsManagerWindow_emptyTranslatorsListText": {
+		"message": "Modul TTS belum ditambahkan"
+	},
+	"ttsManagerWindow_message_ttsRemoveConfirmation": {
+		"message": "Apakah Anda yakin ingin menghapus TTS \"$tts_name$\"?",
+		"placeholders": {
+			"tts_name": {
+				"content": "$1",
+				"example": "Google TTS"
+			}
+		}
+	},
+	"ttsManagerWindow_title": {
+		"message": "Modul teks ke ucapan"
+	},
+	"ttsManagerWindow_translator_delete": {
+		"message": "Hapus"
+	},
+	"ttsManagerWindow_translator_edit": {
+		"message": "Edit"
+	},
+	"validation_number": {
+		"message": "Parameter harus berupa angka"
+	},
+	"validation_numberBetweenRange": {
+		"message": "Parameter harus berupa angka antara $1 dan $2"
+	},
+	"validation_positiveNumber": {
+		"message": "Parameter harus berupa bilangan positif"
 	},
 	"langCode_aa": {
 		"message": "Afar"

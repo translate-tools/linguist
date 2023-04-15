@@ -419,6 +419,66 @@
 	"settings_option_selectTranslation_header_languageChoice": {
 		"message": "Nyelvi beállítások"
 	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang": {
+		"message": "Automatikus nyelvfelismerés engedélyezése a fordítónál"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
+		"message": "Az automatikus nyelvfelismerés használata a fordítónál, amikor a nyelvet helyileg nem lehet észlelni"
+	},
+	"settings_option_selectTranslation_mode": {
+		"message": "Fordítás indító"
+	},
+	"settings_option_selectTranslation_mode_item_contextMenu": {
+		"message": "Kontextus menü gomb"
+	},
+	"settings_option_selectTranslation_mode_item_popupButton": {
+		"message": "Felugró ablak gomb"
+	},
+	"settings_option_selectTranslation_mode_item_quickTranslate": {
+		"message": "Gyors fordítás kijelöléssel"
+	},
+	"settings_option_selectTranslation_modifiers": {
+		"message": "Módosítók"
+	},
+	"settings_option_selectTranslation_modifiers_desc": {
+		"message": "Válassza ki a billentyűket, amelyeket meg kell nyomni a billentyűzeten a fordítás megjelenítéséhez"
+	},
+	"settings_option_selectTranslation_modifiers_key_alt": {
+		"message": "Alt"
+	},
+	"settings_option_selectTranslation_modifiers_key_ctrl": {
+		"message": "Ctrl"
+	},
+	"settings_option_selectTranslation_modifiers_key_meta": {
+		"message": "meta"
+	},
+	"settings_option_selectTranslation_modifiers_key_shift": {
+		"message": "shift"
+	},
+	"settings_option_selectTranslation_rememberDirection": {
+		"message": "Az utolsó kiválasztott szöveg nyelve legyen emlékezve"
+	},
+	"settings_option_selectTranslation_showOnceForSelection": {
+		"message": "A fordítás gombot csak egyszer mutasd meg minden kijelölt szövegre vonatkozóan"
+	},
+	"settings_option_selectTranslation_showOnceForSelection_desc": {
+		"message": "A gombot csak egyszer mutatjuk meg minden kijelölt szövegre vonatkozóan. Ha újra meg szeretnék mutatni, jelölje ki újra a szöveget."
+	},
+	"settings_option_selectTranslation_showOriginalText": {
+		"message": "Mutassa az eredeti szöveget is"
+	},
+	"settings_option_selectTranslation_showOriginalText_desc": {
+		"message": "Adjon hozzá egy blokkot az eredeti szöveggel a fordítás felugró ablakához"
+	},
+	"settings_option_selectTranslation_strictSelection": {
+		"message": "Szigorú kijelölés"
+	},
+	"settings_option_selectTranslation_strictSelection_desc": {
+		"message": "Figyelmen kívül hagyja a kiválasztást, ha a bal egérgombot azon kívül engedik fel, hogy a kijelölt szöveget tartalmazó blokkban van"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton": {
+		"message": "Késleltetés a gomb elrejtéséhez"
+	},
 	"settings_option_selectTranslation_timeoutForHideButton_desc": {
 		"message": "Késleltetés milliszekundumban a gomb elrejtése előtt, amikor az egér nem áll rajta. Az egérrel való rámutatás visszaállítja az időzítőt. Az automatikus elrejtés letiltásához állítsa az értéket 1-nél kisebbre"
 	},
