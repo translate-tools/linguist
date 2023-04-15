@@ -44,6 +44,7 @@ const syncLocalizationsMessagesWithSource = async (
 				typeof value.message === 'string' && value.message.trim().length > 0;
 			if (!isMessageNotEmpty) return false;
 
+			// Check placeholders
 			if (value.placeholders) {
 				const placeholdersKeys =
 					typeof value.placeholders === 'object'
@@ -53,10 +54,24 @@ const syncLocalizationsMessagesWithSource = async (
 				// Remove messages with empty placeholders
 				if (placeholdersKeys.length === 0) return false;
 
+				// Remove messages that does not use defined placeholders
 				const isMessageContainsAllPlaceholders = placeholdersKeys.every(
 					(placeholder) => value.message.includes(`$` + placeholder + `$`),
 				);
 				if (!isMessageContainsAllPlaceholders) return false;
+
+				// Reject by corrupted placeholders
+				const sourcePlaceholders = sourceLocalization.json[key].placeholders;
+				if (typeof sourcePlaceholders !== 'object') return false;
+
+				const isPlaceholdersStructureValid = Object.entries(
+					sourcePlaceholders,
+				).every(([sourceName, sourceValue]) => {
+					const placeholder = value.placeholders[sourceName];
+					return placeholder && placeholder.content === sourceValue.content;
+				});
+
+				if (!isPlaceholdersStructureValid) return false;
 			}
 
 			return true;
