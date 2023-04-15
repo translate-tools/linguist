@@ -1,4 +1,4 @@
-import { ChatGPTUnofficialProxyAPI } from 'chatgpt';
+import { ChatGPTUnofficialProxyAPI, ChatGPTAPI } from 'chatgpt';
 
 /**
  * Interface to ChatGPT that ensure smooth use
@@ -7,13 +7,27 @@ export class ChatGPT {
 	/**
 	 * Delay between messages
 	 */
-	_delay = 1000;
+	_delay = 3000;
+
+	_rpmLimit = 60;
 
 	constructor() {
-		this.api = new ChatGPTUnofficialProxyAPI({
-			accessToken: process.env.GPT_ACCESS_TOKEN,
-			apiReverseProxyUrl: 'https://bypass.churchless.tech/api/conversation',
-		});
+		if (process.env.OPENAI_API_KEY) {
+			// Prefer official API if env variable provided
+			this.api = new ChatGPTAPI({
+				apiKey: process.env.OPENAI_API_KEY
+			});
+
+
+			// Set delay by RPM limit
+			this._delay = 60 / this._rpmLimit * 1000;
+		} else {
+			console.log('Used unofficial GPT proxy API');
+			this.api = new ChatGPTUnofficialProxyAPI({
+				accessToken: process.env.OPENAI_ACCESS_TOKEN,
+				apiReverseProxyUrl: 'https://bypass.churchless.tech/api/conversation',
+			});
+		}
 	}
 
 	_queue = [];
@@ -36,8 +50,15 @@ export class ChatGPT {
 			if (this._queue.length === 0) break;
 
 			const task = this._queue.pop();
+			const requestTime = performance.now();
 			await this.api.sendMessage(task.message).then(task.resolve, task.reject);
-			await new Promise((res) => setTimeout(res, this._delay));
+
+			// Await to fit in RPM limits https://platform.openai.com/docs/guides/rate-limits/overview
+			const awaitedTime = performance.now() - requestTime;
+			const timeToDelay = this._delay - awaitedTime;
+			if (timeToDelay > 0) {
+				await new Promise((res) => setTimeout(res, this._delay));
+			}
 		}
 
 		this._isQueueWorkerRun = false;

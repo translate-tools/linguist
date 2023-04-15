@@ -1,0 +1,1190 @@
+{
+	"common_action_addToDictionary": {
+		"message": "Idagdag ang pagsasalin sa diksiyonaryo"
+	},
+	"common_action_removeFromDictionary": {
+		"message": "Alisin ang pagsasalin mula sa diksiyonaryo"
+	},
+	"common_bgUnavailable": {
+		"message": "Ang background script ay hindi magagamit"
+	},
+	"common_cancel": {
+		"message": "Kanselahin"
+	},
+	"common_close": {
+		"message": "Isara"
+	},
+	"common_copy": {
+		"message": "Kopyahin"
+	},
+	"common_error": {
+		"message": "Error"
+	},
+	"common_offlineTranslator": {
+		"message": "$1 - Offline na tagasalin"
+	},
+	"common_retry": {
+		"message": "Ulitin"
+	},
+	"common_translate": {
+		"message": "Isalin"
+	},
+	"component_hotkey_placeholder": {
+		"message": "I-click para i-record ang mga hotkeys"
+	},
+	"component_hotkey_recordPlaceholder": {
+		"message": "Pindutin ang mga keys"
+	},
+	"component_hotkey_resetButton": {
+		"message": "I-reset"
+	},
+	"contextMenu_disablePageTranslation": {
+		"message": "Huwag mag-translate ng pahina"
+	},
+	"contextMenu_translatePage": {
+		"message": "I-translate ang pahina"
+	},
+	"contextMenu_translateSelectedText": {
+		"message": "I-translate ang piniling teksto"
+	},
+	"dictionaryButton_add": {
+		"message": "Idagdag sa diksiyunaryo"
+	},
+	"dictionaryButton_delete": {
+		"message": "Tanggalin mula sa diksiyunaryo"
+	},
+	"dictionary_button_export": {
+		"message": "I-export"
+	},
+	"dictionary_button_removeAll": {
+		"message": "Alisin lahat"
+	},
+	"dictionary_deleteAll": {
+		"message": "Sigurado ka bang gusto mong burahin ang LAHAT ng mga pagsasalin sa diksyunaryo?"
+	},
+	"dictionary_deleteConfirmation": {
+		"message": "Sigurado ka bang gusto mong burahin ang pagsasaling ito?"
+	},
+	"dictionary_description": {
+		"message": "I-save ang iyong mga pagsasalin sa diksyunaryo upang mahanap ito mamaya"
+	},
+	"dictionary_emptyDictionary": {
+		"message": "Ang diksyunaryo ay walang laman. Simulan ang pagpuno nito habang nagtutumbas ng teksto"
+	},
+	"dictionary_filter_from": {
+		"message": "Mula"
+	},
+	"dictionary_filter_to": {
+		"message": "Hanggang"
+	},
+	"dictionary_message_deleteAll_success": {
+		"message": "Lahat ng mga pagsasalin ay tinanggal"
+	},
+	"dictionary_notFoundEntries": {
+		"message": "Wala pang mga pagsasaling tumutugma sa mga filter na ito"
+	},
+	"dictionary_pageTitle": {
+		"message": "Diksyunaryo"
+	},
+	"dictionary_resetFilters": {
+		"message": "i-reset ang mga filter"
+	},
+	"dictionary_searchPlaceholder": {
+		"message": "Maghanap gamit ang teksto"
+	},
+	"editorWindow_close": {
+		"message": "Isara"
+	},
+	"editorWindow_data_code": {
+		"message": "Kodigo"
+	},
+	"editorWindow_data_name": {
+		"message": "Pangalan"
+	},
+	"editorWindow_message_invalidName": {
+		"message": "Ang pangalan ay dapat naglalaman ng hindi bababa sa isang simbolo"
+	},
+	"editorWindow_save": {
+		"message": "I-save"
+	},
+	"ext_description": {
+		"message": "Pagsasalin ng teksto nang hindi kailangan mag-refresh ng pahina"
+	},
+	"ext_name": {
+		"message": "Linguist - tagasalin para sa web page"
+	},
+	"history_control_selectEntry": {
+		"message": "Pumili ng entry"
+	},
+	"history_controls_clearHistory": {
+		"message": "Burahin ang kasaysayan"
+	},
+	"history_controls_deleteSelected": {
+		"message": "Burahin ang napiling mga item"
+	},
+	"history_controls_selectAll": {
+		"message": "Pumili ng lahat ng mga pagsasalin"
+	},
+	"history_message_clearHistoryConfirmation": {
+		"message": "Sigurado ka bang gusto mong burahin ang kasaysayan? Lahat ng mga entry ay mawawala"
+	},
+	"history_message_deleteEntryConfirmation": {
+		"message": "Sigurado ka bang gusto mong burahin ang entry na ito?"
+	},
+	"history_message_deleteSelectedEntriesConfirmation": {
+		"message": "Sigurado ka bang gusto mong burahin ang mga napiling entries ($1)?"
+	},
+	"history_message_emptyEntries": {
+		"message": "Kasaysayan ay malinis na"
+	},
+	"history_message_entriesNotFound": {
+		"message": "Walang mga pagsasalin na nakita na nagbibigay-pugay sa filter"
+	},
+	"history_pageTitle": {
+		"message": "Kasaysayan"
+	},
+	"history_searchPlaceholder": {
+		"message": "Maghanap gamit ang teksto"
+	},
+	"inlineTranslator_showOriginalText": {
+		"message": "Ipakita ang orihinal na teksto"
+	},
+	"lang_change": {
+		"message": "Baguhin ang Wika"
+	},
+	"lang_detect": {
+		"message": "Auto detect"
+	},
+	"lang_select": {
+		"message": "Pumili ng Wika"
+	},
+	"lang_swap": {
+		"message": "Palitan ang Mga Wika"
+	},
+	"message_askResetConfig": {
+		"message": "I-reset ang mga setting?"
+	},
+	"message_cacheFlushed": {
+		"message": "Ang cache ay nalilinis"
+	},
+	"message_changesSaved": {
+		"message": "Mga Pagbabago ay na-save"
+	},
+	"message_error": {
+		"message": "Error"
+	},
+	"message_errorOfTranslate": {
+		"message": "Error sa Pag-translate"
+	},
+	"message_serviceRequiredKey": {
+		"message": "Kailangan ng key ang serbisyo"
+	},
+	"message_translateOfText": {
+		"message": "Isinalin"
+	},
+	"message_unknownError": {
+		"message": "Hindi kilalang error"
+	},
+	"pageTranslator_alwaysTranslateLang": {
+		"message": "Palaging isalin ang wika na ito"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disable": {
+		"message": "Huwag paganahin"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
+		"message": "Huwag paganahin para sa lahat ng mga site"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_enable": {
+		"message": "Paganahin"
+	},
+	"pageTranslator_commonPreferences_title": {
+		"message": "Karaniwang mga nais ng wika na ito"
+	},
+	"pageTranslator_option_autoTranslate": {
+		"message": "Awtomatikong isalin"
+	},
+	"pageTranslator_showOptions": {
+		"message": "Ipakita ang mga opsyon"
+	},
+	"pageTranslator_showOriginal": {
+		"message": "Ipakita ang orihinal"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_always": {
+		"message": "Laging isalin"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
+		"message": "Laging isalin para sa wika na ito"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_default": {
+		"message": "Gamitin ang karaniwang patakaran"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
+		"message": "Gamitin ang karaniwang patakaran para sa wika na ito"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_never": {
+		"message": "Huwag kailanman isalin"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
+		"message": "Huwag kailanman isalin para sa wika na ito"
+	},
+	"pageTranslator_sitePreferences_title": {
+		"message": "Mga nais ng"
+	},
+	"pageTranslator_translatePage": {
+		"message": "Isalin ang pahina"
+	},
+	"pageTranslator_translationReport": {
+		"message": "Ulat sa pagsasalin"
+	},
+	"pageTranslator_translationReport_queue": {
+		"message": "Linya"
+	},
+	"pageTranslator_translationReport_reject": {
+		"message": "Mga Error"
+	},
+	"pageTranslator_translationReport_resolve": {
+		"message": "Naitranslate na"
+	},
+	"popup_tabIdNotFound": {
+		"message": "Ang Tab \"$1\" ay hindi natagpuan"
+	},
+	"popup_tab_translatePage": {
+		"message": "Pagsasalin ng Pahina"
+	},
+	"popup_tab_translateText": {
+		"message": "Pagsasalin ng Teksto"
+	},
+	"settings_button_cancel": {
+		"message": " kanselahin"
+	},
+	"settings_button_export": {
+		"message": "I-export ang config"
+	},
+	"settings_button_import": {
+		"message": "Mag-angkat ng config"
+	},
+	"settings_button_reset": {
+		"message": "I-reset ang config"
+	},
+	"settings_button_saveChanges": {
+		"message": "I-save ang mga pagbabago"
+	},
+	"settings_message_clearCache_success": {
+		"message": "Ang cache ay nagreset"
+	},
+	"settings_message_common_invalidValueType": {
+		"message": "Hindi wastong uri ng halaga"
+	},
+	"settings_message_importConfig_invalidFile": {
+		"message": "Hindi ma-handle ang file para sa pag-import"
+	},
+	"settings_message_importConfig_success": {
+		"message": "Nakaimport na"
+	},
+	"settings_message_resetConfig_confirm": {
+		"message": "Gusto mo bang i-reset ang mga setting?"
+	},
+	"settings_message_resetConfig_success": {
+		"message": "Mga setting ay nireset"
+	},
+	"settings_message_saveChanges_success": {
+		"message": "Mga pagbabago ay na-save"
+	},
+	"settings_option_appIcon": {
+		"message": "Icon ng Extension"
+	},
+	"settings_option_appIcon_desc": {
+		"message": "Kapag ang dynamic icon ay pinili, ang kulay ay mag-a-adapt sa tema ng browser."
+	},
+	"settings_option_appIcon_item_auto": {
+		"message": "Dynamic"
+	},
+	"settings_option_appIcon_item_color": {
+		"message": "Kulay"
+	},
+	"settings_option_appIcon_item_dark": {
+		"message": "Madilim"
+	},
+	"settings_option_appIcon_item_light": {
+		"message": "Maliwanag"
+	},
+	"settings_option_cache": {
+		"message": "Cache"
+	},
+	"settings_option_cache_clear": {
+		"message": "Linisin ang cache"
+	},
+	"settings_option_cache_clear_desc": {
+		"message": "Tanggalin ang cache kung mayroong mga pangungusap na hindi naaangkop sa pagsasalin o kailangan alisin ang mga lihim"
+	},
+	"settings_option_cache_enable": {
+		"message": "Paganahin ang cache"
+	},
+	"settings_option_cache_enable_desc": {
+		"message": "Kapag pinaganahan ang cache, magiging agad na magagamit ang mga pagsasalin na naisalin na dati, kahit walang internet"
+	},
+	"settings_option_cache_ignoreCase": {
+		"message": "Hindi sensitibo sa titik"
+	},
+	"settings_option_cache_ignoreCase_desc": {
+		"message": "Kapag pinaganahan, ang mga pagsasalin mula sa cache ay gagamitin sa mga hindi eksaktong katugmang salita, na maaaring magdulot ng mga hindi tumpak na pagsasalin"
+	},
+	"settings_option_commonSettings": {
+		"message": "Mga karaniwang setting"
+	},
+	"settings_option_customTranslatorModule": {
+		"message": "Mga custom na tagasalin"
+	},
+	"settings_option_customTranslatorModule_desc": {
+		"message": "Maaari kang magdagdag ng custom na mga tagasalin para sa iyong paboritong serbisyong pagpapakabanal. Magbasa pa at hanapin ang mga modulong ito sa <slot id=docs> dokumentasyon sa custom na mga tagasalin </slot>."
+	},
+	"settings_option_customTranslatorModule_manageButton": {
+		"message": "Pamahalaan ang mga tagasalin"
+	},
+	"settings_option_mainPreferences": {
+		"message": "Mga pangunahing setting"
+	},
+	"settings_option_pageTranslation": {
+		"message": "Pagsasalin ng pahina"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent": {
+		"message": "Alamin ang wika sa pamamagitan ng nilalaman"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent_desc": {
+		"message": "Pag-aralan ang teksto sa web page upang alamin ang wika ng page. Kapag hindi pinagana, gagamitin ang wika na nasa metadata ng page."
+	},
+	"settings_option_pageTranslation_enableContextMenu": {
+		"message": "Paganahin ang button ng context menu"
+	},
+	"settings_option_pageTranslation_enableContextMenu_desc": {
+		"message": "Idagdag ang button upang paganahin ang pagsasalin ng pahina sa isang context menu"
+	},
+	"settings_option_pageTranslation_ignoredTags": {
+		"message": "Ignored na elemento"
+	},
+	"settings_option_pageTranslation_ignoredTags_desc": {
+		"message": "Ilagay ang mga pangalan ng <slot id=htmlElements>elemento ng HTML</slot> na hindi dapat isalin. Hindi rin isasalin ang mga nakalinya sa mga elemento. Isang elemento sa bawat linya."
+	},
+	"settings_option_pageTranslation_lazyTranslate": {
+		"message": "Isalin lamang ang mga nakikitang elemento"
+	},
+	"settings_option_pageTranslation_lazyTranslate_desc": {
+		"message": "Kapag pinagana ang opsiyong ito, isasalin lamang ang mga nakikita. Maaaring magamit ito upang makatipid ng network traffic."
+	},
+	"settings_option_pageTranslation_originalTextPopup": {
+		"message": "Paganahin ang popup na may orihinal na teksto"
+	},
+	"settings_option_pageTranslation_originalTextPopup_desc": {
+		"message": "Ipakita ang isang popup na nagtatampok ng orihinal na teksto kapag hinawakan ang mouse sa isinaling teksto."
+	},
+	"settings_option_pageTranslation_toggleTranslationHotkey": {
+		"message": "Mga hotkey"
+	},
+	"settings_option_pageTranslation_toggleTranslationHotkey_desc": {
+		"message": "Mga shortcut para sa pagpapalit ng pagsasalin ng pahina\nPindutin ang ESC upang i-reset ang mga key"
+	},
+	"settings_option_pageTranslation_translatableAttributes": {
+		"message": "Mga maaring isalin na attribute."
+	},
+	"settings_option_pageTranslation_translatableAttributes_desc": {
+		"message": "Ipasok ang mga pangalan ng <slot id=htmlAttributes>HTML attribute</slot> para sa pagsasalin. Isa lamang na attribute bawat linya."
+	},
+	"settings_option_popupTab_pageTranslator_showCounters": {
+		"message": "Ipakita ang mga estadistika ng pagsasalin"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters_desc": {
+		"message": "Magpakita ng mga estadistika para sa pagsasalin ng pahina"
+	},
+	"settings_option_selectTranslation": {
+		"message": "Pagsasalin ng napiling teksto"
+	},
+	"settings_option_selectTranslation_detectedLangFirst": {
+		"message": "Gustuhin ang nadiskubreng wika ng teksto kaysa sa wika ng pahina"
+	},
+	"settings_option_selectTranslation_detectedLangFirst_desc": {
+		"message": "Kapag pinagana, ang nadiskubreng wika ng napiling teksto ay pipiliin sa halip ng wika ng pahina"
+	},
+	"settings_option_selectTranslation_disableWhileTranslatePage": {
+		"message": "I-disable habang nagtutuloy-tuloy ang pagsasalin ng pahina"
+	},
+	"settings_option_selectTranslation_enable": {
+		"message": "Paganahin"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton": {
+		"message": "Auto-focus sa pindutan ng pagsasalin"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
+		"message": "Nakatuon sa pindutan ng pagsasalin kapag lumitaw"
+	},
+	"settings_option_selectTranslation_header_languageChoice": {
+		"message": "Mga setting ng wika"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang": {
+		"message": "Paganahin ang awtomatikong pagtukoy ng wika ng tagasalin"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
+		"message": "Gamitin ang awtomatikong pagtukoy ng wika ng tagasalin kung hindi ito maaaring agad tukuyin sa lokasyon"
+	},
+	"settings_option_selectTranslation_mode": {
+		"message": "Tagapag-trigger ng pagsasalin"
+	},
+	"settings_option_selectTranslation_mode_item_contextMenu": {
+		"message": "Button sa konteksto ng menu"
+	},
+	"settings_option_selectTranslation_mode_item_popupButton": {
+		"message": "Popup button"
+	},
+	"settings_option_selectTranslation_mode_item_quickTranslate": {
+		"message": "Mabilis na pagsasalin sa pamamagitan ng pagpili"
+	},
+	"settings_option_selectTranslation_modifiers": {
+		"message": "Mga modifier"
+	},
+	"settings_option_selectTranslation_modifiers_desc": {
+		"message": "Pumili ng mga susi na dapat pindutin sa keyboard upang ipakita ang pagsasalin"
+	},
+	"settings_option_selectTranslation_modifiers_key_alt": {
+		"message": "alt"
+	},
+	"settings_option_selectTranslation_modifiers_key_ctrl": {
+		"message": "ctrl"
+	},
+	"settings_option_selectTranslation_modifiers_key_meta": {
+		"message": "meta"
+	},
+	"settings_option_selectTranslation_modifiers_key_shift": {
+		"message": "shift"
+	},
+	"settings_option_selectTranslation_rememberDirection": {
+		"message": "Tandaan ang pinakarecenteng napiling wika ng teksto"
+	},
+	"settings_option_selectTranslation_showOnceForSelection": {
+		"message": "Ipakita ang button ng pagsasalin sa bawat pagpili ng teksto"
+	},
+	"settings_option_selectTranslation_showOnceForSelection_desc": {
+		"message": "Ang button ay magpapakita lamang sa bawat pagpili ng teksto. Kung kailangan mong ipakita ito ulit, piliin muli ang teksto"
+	},
+	"settings_option_selectTranslation_showOriginalText": {
+		"message": "Ipakita ang orihinal na teksto"
+	},
+	"settings_option_selectTranslation_showOriginalText_desc": {
+		"message": "Magdagdag ng block na naglalaman ng orihinal na teksto sa popup ng pagsasalin"
+	},
+	"settings_option_selectTranslation_strictSelection": {
+		"message": "Mahigpit na pagpili"
+	},
+	"settings_option_selectTranslation_strictSelection_desc": {
+		"message": "Balewalain ang pagpili kung lalabas ng block na naglalaman ng piniling teksto ang pag-release ng kaliwang button ng mouse."
+	},
+	"settings_option_selectTranslation_timeoutForHideButton": {
+		"message": "Pag-antala sa pagtatago ng button"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton_desc": {
+		"message": "Delay sa mga millisecond bago itago ang button kapag hindi nakadagan sa cursor. Ang pagdadagan ng cursor sa isang button ay magrereset ng timer. Upang hindi mag-auto-hide, mag-set ng value na lower than 1"
+	},
+	"settings_option_selectTranslation_zIndex": {
+		"message": "z-index"
+	},
+	"settings_option_selectTranslation_zIndex_desc": {
+		"message": "Taasan ang value kung may mga elemento sa ilang pahina na nag-o-overlap sa popup na may naisalin na teksto"
+	},
+	"settings_option_textTranslator": {
+		"message": "Pagsasalin ng Teksto"
+	},
+	"settings_option_textTranslator_rememberText": {
+		"message": "Tandaan ang naisalin na teksto"
+	},
+	"settings_option_textTranslator_rememberText_desc": {
+		"message": "Tandaan ang naisalin na teksto para sa susunod na pagbubukas ng window"
+	},
+	"settings_option_textTranslator_spellCheck": {
+		"message": "Paganahin ang Spell check"
+	},
+	"settings_option_textTranslator_suggestLanguage": {
+		"message": "Mag-suggest ng natukoy na wika ng teksto"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways": {
+		"message": "Palaging tukuyin at magrekomenda ng wika"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways_desc": {
+		"message": "Kapag hindi pinagana, ang mga rekomendasyon sa wika ay magpapakita lamang kapag nagawa nang auto detection ang wika ng pinagmulan"
+	},
+	"settings_option_translatePreferences": {
+		"message": "Mga kagustuhan sa pagsasalin"
+	},
+	"settings_option_translateScheduler": {
+		"message": "Tagapag-ayos ng pagsasalin"
+	},
+	"settings_option_translateScheduler_delay": {
+		"message": "Pagkaantala ng pag-accumulate ng teksto"
+	},
+	"settings_option_translateScheduler_delay_desc": {
+		"message": "Ang translation scheduler ay nagbabawas ng bilang ng mga kahilingan sa API ng mga serbisyo sa pagsasalin. Sinisikap ng scheduler na magtipon ng mga teksto upang ipadala bilang maraming teksto hanggang sa maabot ang isa lamang na kahilingan. Maghihintay ang scheduler para sa nakatakdang panahon sa milliseconds upang magtipon ng mga bagong teksto bago simulan ang pagsasalin."
+	},
+	"settings_option_translateScheduler_retryLimit": {
+		"message": "Mga pagtatangka sa muling pagsasalin"
+	},
+	"settings_option_translateScheduler_retryLimit_desc": {
+		"message": "Uulitin ng scheduler ang pagsasalin ng mga teksto para sa mga error sa pagsasalin. Naglalagay ng limitasyon sa mga pagtatangka ng pag-uulit ang opsyon na ito. Maglagay ng negatibong numero upang payagan ang walang hanggang mga pagtatangka ng pag-uulit."
+	},
+	"settings_option_translatorModule": {
+		"message": "Module ng tagasalin"
+	},
+	"settings_option_translatorModule_desc": {
+		"message": "Depende sa tagasalin ang kalidad ng mga pagsasalin at ang mga magagamit na wika para sa pagsasalin."
+	},
+	"settings_option_tts": {
+		"message": "Teksto patungo sa tunog (TTS)"
+	},
+	"settings_option_ttsCustomModules": {
+		"message": "Pasadyang TTS"
+	},
+	"settings_option_ttsCustomModules_button": {
+		"message": "Pamahalaan ang mga module ng TTS"
+	},
+	"settings_option_ttsCustomModules_desc": {
+		"message": "Maaari kang magdagdag ng mga module ng TTS na gumagamit ng iyong paboritong serbisyo at boses. Basahin pa at hanapin ang mga module sa dokumentasyon ng pasadyang TTS."
+	},
+	"settings_option_ttsModule": {
+		"message": "Module ng TTS"
+	},
+	"settings_option_ttsModule_desc": {
+		"message": "Module upang magbigkas ng teksto"
+	},
+	"settings_option_userLanguage": {
+		"message": "Iyong wika"
+	},
+	"settings_option_userLanguage_desc": {
+		"message": "Target na wika para isalin ang mga teksto"
+	},
+	"settings_pageTitle": {
+		"message": "Mga Setting"
+	},
+	"settings_section_popup": {
+		"message": "Popup"
+	},
+	"textTranslator_suggestLanguage": {
+		"message": "Mukhang iyon ay wika ng"
+	},
+	"textTranslator_translateInputPlaceholder": {
+		"message": "Tekstong input"
+	},
+	"textTranslator_translatePlaceholder": {
+		"message": "Naisalin na tekst"
+	},
+	"translatorsManagerWindow_add": {
+		"message": "Magdagdag"
+	},
+	"translatorsManagerWindow_close": {
+		"message": "Isara"
+	},
+	"translatorsManagerWindow_emptyTranslatorsListText": {
+		"message": "Walang idinagdag pa na mga pasadyang tagasalin"
+	},
+	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
+		"message": "Sigurado ka ba sa pagtanggal ng tagasalin na \"$translator_name$\"?",
+		"placeholders": {
+			"translator_name": {
+				"content": "$1",
+				"example": "Google tagasalin"
+			}
+		}
+	},
+	"translatorsManagerWindow_title": {
+		"message": "Mga Pasadyang Tagasalin"
+	},
+	"translatorsManagerWindow_translator_delete": {
+		"message": "Tanggalin"
+	},
+	"translatorsManagerWindow_translator_edit": {
+		"message": "I-edit"
+	},
+	"ttsManagerWindow_add": {
+		"message": "Magdagdag"
+	},
+	"ttsManagerWindow_close": {
+		"message": "Isara"
+	},
+	"ttsManagerWindow_emptyTranslatorsListText": {
+		"message": "Ang mga module ng TTS ay hindi pa idinagdag"
+	},
+	"ttsManagerWindow_message_ttsRemoveConfirmation": {
+		"message": "Sigurado ka bang tatanggalin ang TTS na \"$tts_name$\"?",
+		"placeholders": {
+			"tts_name": {
+				"content": "$1",
+				"example": "Google TTS"
+			}
+		}
+	},
+	"ttsManagerWindow_title": {
+		"message": "Mga module ng teksto patungong salita"
+	},
+	"ttsManagerWindow_translator_delete": {
+		"message": "Tanggalin"
+	},
+	"ttsManagerWindow_translator_edit": {
+		"message": "I-edit"
+	},
+	"validation_number": {
+		"message": "Ang parametre ay dapat na numero"
+	},
+	"validation_numberBetweenRange": {
+		"message": "Ang parameter ay dapat na numero sa pagitan ng $1 at $2"
+	},
+	"validation_positiveNumber": {
+		"message": "Ang parameter ay dapat na positibong numero."
+	},
+	"langCode_aa": {
+		"message": "Afar"
+	},
+	"langCode_ab": {
+		"message": "Abkhazian"
+	},
+	"langCode_ae": {
+		"message": "Ae"
+	},
+	"langCode_af": {
+		"message": "Afrikaans"
+	},
+	"langCode_ak": {
+		"message": "Akan"
+	},
+	"langCode_am": {
+		"message": "Amharic"
+	},
+	"langCode_an": {
+		"message": "Aragonese"
+	},
+	"langCode_ar": {
+		"message": "Arabic"
+	},
+	"langCode_as": {
+		"message": "Assamese"
+	},
+	"langCode_av": {
+		"message": "Avaric"
+	},
+	"langCode_ay": {
+		"message": "Aymara"
+	},
+	"langCode_az": {
+		"message": "Azerbaijani"
+	},
+	"langCode_ba": {
+		"message": "Bashkir"
+	},
+	"langCode_be": {
+		"message": "Belarusian"
+	},
+	"langCode_bg": {
+		"message": "Bulgarian"
+	},
+	"langCode_bh": {
+		"message": "Bhojpuri"
+	},
+	"langCode_bi": {
+		"message": "Bislama"
+	},
+	"langCode_bm": {
+		"message": "Bambara"
+	},
+	"langCode_bn": {
+		"message": "Bangla"
+	},
+	"langCode_bo": {
+		"message": "Tibetan"
+	},
+	"langCode_br": {
+		"message": "Breton"
+	},
+	"langCode_bs": {
+		"message": "Bosnian"
+	},
+	"langCode_ca": {
+		"message": "Catalan"
+	},
+	"langCode_ce": {
+		"message": "Chechen"
+	},
+	"langCode_ch": {
+		"message": "Chamorro"
+	},
+	"langCode_co": {
+		"message": "Corsican"
+	},
+	"langCode_cr": {
+		"message": "Cr"
+	},
+	"langCode_cs": {
+		"message": "Czech"
+	},
+	"langCode_cu": {
+		"message": "Church Slavic"
+	},
+	"langCode_cv": {
+		"message": "Chuvash"
+	},
+	"langCode_cy": {
+		"message": "Welsh"
+	},
+	"langCode_da": {
+		"message": "Danish"
+	},
+	"langCode_de": {
+		"message": "German"
+	},
+	"langCode_dv": {
+		"message": "Divehi"
+	},
+	"langCode_dz": {
+		"message": "Dzongkha"
+	},
+	"langCode_ee": {
+		"message": "Ewe"
+	},
+	"langCode_el": {
+		"message": "Greek"
+	},
+	"langCode_en": {
+		"message": "Ingles"
+	},
+	"langCode_eo": {
+		"message": "Esperanto"
+	},
+	"langCode_es": {
+		"message": "Spanish"
+	},
+	"langCode_et": {
+		"message": "Estonian"
+	},
+	"langCode_eu": {
+		"message": "Basque"
+	},
+	"langCode_fa": {
+		"message": "Persian"
+	},
+	"langCode_ff": {
+		"message": "Fulah"
+	},
+	"langCode_fi": {
+		"message": "Finnish"
+	},
+	"langCode_fj": {
+		"message": "Fijian"
+	},
+	"langCode_fo": {
+		"message": "Faroese"
+	},
+	"langCode_fr": {
+		"message": "French"
+	},
+	"langCode_fy": {
+		"message": "Kanlurang Frisian"
+	},
+	"langCode_ga": {
+		"message": "Irish"
+	},
+	"langCode_gd": {
+		"message": "Scottish Gaelic"
+	},
+	"langCode_gl": {
+		"message": "Galician"
+	},
+	"langCode_gn": {
+		"message": "Guarani"
+	},
+	"langCode_gu": {
+		"message": "Gujarati"
+	},
+	"langCode_gv": {
+		"message": "Manx"
+	},
+	"langCode_ha": {
+		"message": "Hausa"
+	},
+	"langCode_he": {
+		"message": "Hebrew"
+	},
+	"langCode_hi": {
+		"message": "Hindi"
+	},
+	"langCode_ho": {
+		"message": "Ho"
+	},
+	"langCode_hr": {
+		"message": "Croatian"
+	},
+	"langCode_ht": {
+		"message": "Haitian"
+	},
+	"langCode_hu": {
+		"message": "Hungarian"
+	},
+	"langCode_hy": {
+		"message": "Armenian"
+	},
+	"langCode_hz": {
+		"message": "Herero"
+	},
+	"langCode_ia": {
+		"message": "Interlingua"
+	},
+	"langCode_id": {
+		"message": "Indonesian"
+	},
+	"langCode_ie": {
+		"message": "Interlingue"
+	},
+	"langCode_ig": {
+		"message": "Igbo"
+	},
+	"langCode_ii": {
+		"message": "Sichuan Yi"
+	},
+	"langCode_ik": {
+		"message": "Ik"
+	},
+	"langCode_io": {
+		"message": "Ido"
+	},
+	"langCode_is": {
+		"message": "Icelandic"
+	},
+	"langCode_it": {
+		"message": "Italian"
+	},
+	"langCode_iu": {
+		"message": "Inuktitut"
+	},
+	"langCode_ja": {
+		"message": "Japanese"
+	},
+	"langCode_jv": {
+		"message": "Javanese"
+	},
+	"langCode_ka": {
+		"message": "Georgian"
+	},
+	"langCode_kg": {
+		"message": "Kongo"
+	},
+	"langCode_ki": {
+		"message": "Kikuyu"
+	},
+	"langCode_kj": {
+		"message": "Kuanyama"
+	},
+	"langCode_kk": {
+		"message": "Kazakh"
+	},
+	"langCode_kl": {
+		"message": "Kalaallisut"
+	},
+	"langCode_km": {
+		"message": "Khmer"
+	},
+	"langCode_kn": {
+		"message": "Kannada"
+	},
+	"langCode_ko": {
+		"message": "Korean"
+	},
+	"langCode_kr": {
+		"message": "Kanuri"
+	},
+	"langCode_ks": {
+		"message": "Kashmiri"
+	},
+	"langCode_ku": {
+		"message": "Kurdish"
+	},
+	"langCode_kv": {
+		"message": "Komi"
+	},
+	"langCode_kw": {
+		"message": "Cornish"
+	},
+	"langCode_ky": {
+		"message": "Kirghiz"
+	},
+	"langCode_la": {
+		"message": "Latin"
+	},
+	"langCode_lb": {
+		"message": "Luxembourgish"
+	},
+	"langCode_lg": {
+		"message": "Ganda"
+	},
+	"langCode_li": {
+		"message": "Limburgish"
+	},
+	"langCode_ln": {
+		"message": "Lingala"
+	},
+	"langCode_lo": {
+		"message": "Lao"
+	},
+	"langCode_lt": {
+		"message": "Lithuanian"
+	},
+	"langCode_lu": {
+		"message": "Luba-Katanga"
+	},
+	"langCode_lv": {
+		"message": "Latvian"
+	},
+	"langCode_mg": {
+		"message": "Malagasy"
+	},
+	"langCode_mh": {
+		"message": "Marshallese"
+	},
+	"langCode_mi": {
+		"message": "Māori"
+	},
+	"langCode_mk": {
+		"message": "Macedonian"
+	},
+	"langCode_ml": {
+		"message": "Malayalam"
+	},
+	"langCode_mn": {
+		"message": "Mongolian"
+	},
+	"langCode_mr": {
+		"message": "Marathi"
+	},
+	"langCode_ms": {
+		"message": "Malay"
+	},
+	"langCode_mt": {
+		"message": "Maltese"
+	},
+	"langCode_my": {
+		"message": "Burmese"
+	},
+	"langCode_na": {
+		"message": "Nauru"
+	},
+	"langCode_nb": {
+		"message": "Norwegian Bokmål"
+	},
+	"langCode_nd": {
+		"message": "Hilagang Ndebele"
+	},
+	"langCode_ne": {
+		"message": "Nepali"
+	},
+	"langCode_ng": {
+		"message": "Ndonga"
+	},
+	"langCode_nl": {
+		"message": "Dutch"
+	},
+	"langCode_nn": {
+		"message": "Norwegian Nynorsk"
+	},
+	"langCode_no": {
+		"message": "Norwegian"
+	},
+	"langCode_nr": {
+		"message": "South Ndebele"
+	},
+	"langCode_nv": {
+		"message": "Navajo"
+	},
+	"langCode_ny": {
+		"message": "Nyanja"
+	},
+	"langCode_oc": {
+		"message": "Occitan"
+	},
+	"langCode_oj": {
+		"message": "Oj"
+	},
+	"langCode_om": {
+		"message": "Oromo"
+	},
+	"langCode_or": {
+		"message": "Odia"
+	},
+	"langCode_os": {
+		"message": "Ossetic"
+	},
+	"langCode_pa": {
+		"message": "Punjabi"
+	},
+	"langCode_pi": {
+		"message": "Pi"
+	},
+	"langCode_pl": {
+		"message": "Polish"
+	},
+	"langCode_ps": {
+		"message": "Pashto"
+	},
+	"langCode_pt": {
+		"message": "Portuguese"
+	},
+	"langCode_qu": {
+		"message": "Quechua"
+	},
+	"langCode_rm": {
+		"message": "Romansh"
+	},
+	"langCode_rn": {
+		"message": "Rundi"
+	},
+	"langCode_ro": {
+		"message": "Romanian"
+	},
+	"langCode_ru": {
+		"message": "Russian"
+	},
+	"langCode_rw": {
+		"message": "Kinyarwanda"
+	},
+	"langCode_sa": {
+		"message": "Sanskrit"
+	},
+	"langCode_sc": {
+		"message": "Sardinian"
+	},
+	"langCode_sd": {
+		"message": "Sindhi"
+	},
+	"langCode_se": {
+		"message": "Hilagang Sami"
+	},
+	"langCode_sg": {
+		"message": "Sango"
+	},
+	"langCode_si": {
+		"message": "Sinhala"
+	},
+	"langCode_sk": {
+		"message": "Slovak"
+	},
+	"langCode_sl": {
+		"message": "Slovenian"
+	},
+	"langCode_sm": {
+		"message": "Samoan"
+	},
+	"langCode_sn": {
+		"message": "Shona"
+	},
+	"langCode_so": {
+		"message": "Somali"
+	},
+	"langCode_sq": {
+		"message": "Albanian"
+	},
+	"langCode_sr": {
+		"message": "Serbian"
+	},
+	"langCode_ss": {
+		"message": "Swati"
+	},
+	"langCode_st": {
+		"message": "Katimugang Sotho"
+	},
+	"langCode_su": {
+		"message": "Sundanese"
+	},
+	"langCode_sv": {
+		"message": "Swedish"
+	},
+	"langCode_sw": {
+		"message": "Swahili"
+	},
+	"langCode_ta": {
+		"message": "Tamil"
+	},
+	"langCode_te": {
+		"message": "Telugu"
+	},
+	"langCode_tg": {
+		"message": "Tajik"
+	},
+	"langCode_th": {
+		"message": "Thai"
+	},
+	"langCode_ti": {
+		"message": "Tigrinya"
+	},
+	"langCode_tk": {
+		"message": "Turkmen"
+	},
+	"langCode_tl": {
+		"message": "Filipino"
+	},
+	"langCode_tn": {
+		"message": "Tswana"
+	},
+	"langCode_to": {
+		"message": "Tongan"
+	},
+	"langCode_tr": {
+		"message": "Turkish"
+	},
+	"langCode_ts": {
+		"message": "Tsonga"
+	},
+	"langCode_tt": {
+		"message": "Tatar"
+	},
+	"langCode_tw": {
+		"message": "Akan"
+	},
+	"langCode_ty": {
+		"message": "Tahitian"
+	},
+	"langCode_ug": {
+		"message": "Uyghur"
+	},
+	"langCode_uk": {
+		"message": "Ukranian"
+	},
+	"langCode_ur": {
+		"message": "Urdu"
+	},
+	"langCode_uz": {
+		"message": "Uzbek"
+	},
+	"langCode_ve": {
+		"message": "Venda"
+	},
+	"langCode_vi": {
+		"message": "Vietnamese"
+	},
+	"langCode_vo": {
+		"message": "Volapük"
+	},
+	"langCode_wa": {
+		"message": "Walloon"
+	},
+	"langCode_wo": {
+		"message": "Wolof"
+	},
+	"langCode_xh": {
+		"message": "Xhosa"
+	},
+	"langCode_yi": {
+		"message": "Yiddish"
+	},
+	"langCode_yo": {
+		"message": "Yoruba"
+	},
+	"langCode_za": {
+		"message": "Za"
+	},
+	"langCode_zh": {
+		"message": "Chinese"
+	},
+	"langCode_zu": {
+		"message": "Zulu"
+	}
+}

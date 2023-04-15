@@ -1,0 +1,1190 @@
+{
+	"common_action_addToDictionary": {
+		"message": "إضافة الترجمة إلى القاموس"
+	},
+	"common_action_removeFromDictionary": {
+		"message": "إزالة الترجمة من القاموس"
+	},
+	"common_bgUnavailable": {
+		"message": "لا يتوفر سيناريو الخلفية"
+	},
+	"common_cancel": {
+		"message": "إلغاء"
+	},
+	"common_close": {
+		"message": "إغلاق"
+	},
+	"common_copy": {
+		"message": "نسخ"
+	},
+	"common_error": {
+		"message": "خطأ"
+	},
+	"common_offlineTranslator": {
+		"message": "$1 - مترجم دون اتصال"
+	},
+	"common_retry": {
+		"message": "إعادة المحاولة"
+	},
+	"common_translate": {
+		"message": "ترجمة"
+	},
+	"component_hotkey_placeholder": {
+		"message": "انقر لتسجيل مفاتيح الاختصار"
+	},
+	"component_hotkey_recordPlaceholder": {
+		"message": "اضغط على المفاتيح"
+	},
+	"component_hotkey_resetButton": {
+		"message": "إعادة تعيين"
+	},
+	"contextMenu_disablePageTranslation": {
+		"message": "تعطيل ترجمة الصفحة"
+	},
+	"contextMenu_translatePage": {
+		"message": "ترجمة الصفحة"
+	},
+	"contextMenu_translateSelectedText": {
+		"message": "ترجمة النص المحدد"
+	},
+	"dictionaryButton_add": {
+		"message": "أضف إلى القاموس"
+	},
+	"dictionaryButton_delete": {
+		"message": "حذف من القاموس"
+	},
+	"dictionary_button_export": {
+		"message": "تصدير"
+	},
+	"dictionary_button_removeAll": {
+		"message": "إزالة الكل"
+	},
+	"dictionary_deleteAll": {
+		"message": "هل أنت متأكد من حذف جميع الترجمات في القاموس؟"
+	},
+	"dictionary_deleteConfirmation": {
+		"message": "هل أنت متأكد من حذف هذه الترجمة؟"
+	},
+	"dictionary_description": {
+		"message": "احتفظ بترجماتك في القاموس للعثور عليها لاحقًا"
+	},
+	"dictionary_emptyDictionary": {
+		"message": "القاموس فارغ. ابدأ في ملء القاموس أثناء ترجمة بعض النصوص"
+	},
+	"dictionary_filter_from": {
+		"message": "من"
+	},
+	"dictionary_filter_to": {
+		"message": "إلى"
+	},
+	"dictionary_message_deleteAll_success": {
+		"message": "تمت إزالة جميع الترجمات"
+	},
+	"dictionary_notFoundEntries": {
+		"message": "لم يتم العثور على ترجمات تطابق هذه الفلاتر"
+	},
+	"dictionary_pageTitle": {
+		"message": "القاموس"
+	},
+	"dictionary_resetFilters": {
+		"message": "إعادة تعيين الفلاتر"
+	},
+	"dictionary_searchPlaceholder": {
+		"message": "البحث عن طريق النص"
+	},
+	"editorWindow_close": {
+		"message": "إغلاق"
+	},
+	"editorWindow_data_code": {
+		"message": "الرمز"
+	},
+	"editorWindow_data_name": {
+		"message": "الاسم"
+	},
+	"editorWindow_message_invalidName": {
+		"message": "يجب أن يحتوي الاسم على رمز واحد على الأقل"
+	},
+	"editorWindow_save": {
+		"message": "حفظ"
+	},
+	"ext_description": {
+		"message": "ترجمة النص بدون إعادة تحميل الصفحة"
+	},
+	"ext_name": {
+		"message": "لغوي - مترجم صفحات الويب"
+	},
+	"history_control_selectEntry": {
+		"message": "اختر إدخالًا"
+	},
+	"history_controls_clearHistory": {
+		"message": "مسح التاريخ"
+	},
+	"history_controls_deleteSelected": {
+		"message": "حذف المحدد"
+	},
+	"history_controls_selectAll": {
+		"message": "تحديد كل الترجمات"
+	},
+	"history_message_clearHistoryConfirmation": {
+		"message": "هل أنت متأكد من حذف السجل؟ سيتم حذف جميع الإدخالات"
+	},
+	"history_message_deleteEntryConfirmation": {
+		"message": "هل أنت متأكد من حذف هذا الإدخال؟"
+	},
+	"history_message_deleteSelectedEntriesConfirmation": {
+		"message": "هل أنت متأكد من حذف الإدخالات المحددة ($1)؟"
+	},
+	"history_message_emptyEntries": {
+		"message": "تم مسح السجل"
+	},
+	"history_message_entriesNotFound": {
+		"message": "لم يتم العثور على ترجمات تستوفي الشرط المحدد"
+	},
+	"history_pageTitle": {
+		"message": "السجل"
+	},
+	"history_searchPlaceholder": {
+		"message": "البحث بالنص"
+	},
+	"inlineTranslator_showOriginalText": {
+		"message": "إظهار النص الأصلي"
+	},
+	"lang_change": {
+		"message": "تغيير اللغة"
+	},
+	"lang_detect": {
+		"message": "الكشف التلقائي"
+	},
+	"lang_select": {
+		"message": "اختر اللغة"
+	},
+	"lang_swap": {
+		"message": "تبديل اللغات"
+	},
+	"message_askResetConfig": {
+		"message": "إعادة تعيين الإعدادات؟"
+	},
+	"message_cacheFlushed": {
+		"message": "تم مسح الذاكرة المؤقتة"
+	},
+	"message_changesSaved": {
+		"message": "تم حفظ التغييرات"
+	},
+	"message_error": {
+		"message": "خطأ"
+	},
+	"message_errorOfTranslate": {
+		"message": "خطأ في الترجمة"
+	},
+	"message_serviceRequiredKey": {
+		"message": "يتطلب الخدمة مفتاح"
+	},
+	"message_translateOfText": {
+		"message": "تم الترجمة"
+	},
+	"message_unknownError": {
+		"message": "خطأ غير معروف"
+	},
+	"pageTranslator_alwaysTranslateLang": {
+		"message": "ترجم هذه اللغة دائمًا"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disable": {
+		"message": "تعطيل"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
+		"message": "تعطيل لجميع المواقع"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_enable": {
+		"message": "تمكين"
+	},
+	"pageTranslator_commonPreferences_title": {
+		"message": "تفضيلات شائعة لهذه اللغة"
+	},
+	"pageTranslator_option_autoTranslate": {
+		"message": "الترجمة التلقائية"
+	},
+	"pageTranslator_showOptions": {
+		"message": "إظهار الخيارات"
+	},
+	"pageTranslator_showOriginal": {
+		"message": "عرض الأصلي"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_always": {
+		"message": "ترجم دائمًا"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
+		"message": "ترجم دائمًا لهذه اللغة"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_default": {
+		"message": "استخدم القواعد الشائعة"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
+		"message": "استخدم القواعد الشائعة لهذه اللغة"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_never": {
+		"message": "لا تترجم"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
+		"message": "لا تترجم لهذه اللغة"
+	},
+	"pageTranslator_sitePreferences_title": {
+		"message": "تفضيلات"
+	},
+	"pageTranslator_translatePage": {
+		"message": "ترجم الصفحة"
+	},
+	"pageTranslator_translationReport": {
+		"message": "تقرير الترجمة"
+	},
+	"pageTranslator_translationReport_queue": {
+		"message": "قائمة الانتظار"
+	},
+	"pageTranslator_translationReport_reject": {
+		"message": "أخطاء"
+	},
+	"pageTranslator_translationReport_resolve": {
+		"message": "تم ترجمتها"
+	},
+	"popup_tabIdNotFound": {
+		"message": "العلامة التبويب \"$1\" غير موجودة"
+	},
+	"popup_tab_translatePage": {
+		"message": "ترجمة الصفحة"
+	},
+	"popup_tab_translateText": {
+		"message": "ترجمة النص"
+	},
+	"settings_button_cancel": {
+		"message": "إلغاء"
+	},
+	"settings_button_export": {
+		"message": "تصدير التكوين"
+	},
+	"settings_button_import": {
+		"message": "استيراد التكوين"
+	},
+	"settings_button_reset": {
+		"message": "إعادة تعيين التكوين"
+	},
+	"settings_button_saveChanges": {
+		"message": "حفظ التغييرات"
+	},
+	"settings_message_clearCache_success": {
+		"message": "تم مسح الذاكرة المؤقتة"
+	},
+	"settings_message_common_invalidValueType": {
+		"message": "قيمة غير صالحة"
+	},
+	"settings_message_importConfig_invalidFile": {
+		"message": "لا يمكن التعامل مع ملف الاستيراد"
+	},
+	"settings_message_importConfig_success": {
+		"message": "تم الاستيراد بنجاح"
+	},
+	"settings_message_resetConfig_confirm": {
+		"message": "هل تريد إعادة تعيين الإعدادات؟"
+	},
+	"settings_message_resetConfig_success": {
+		"message": "تم إعادة تعيين الإعدادات"
+	},
+	"settings_message_saveChanges_success": {
+		"message": "تم حفظ التغييرات"
+	},
+	"settings_option_appIcon": {
+		"message": "أيقونة الامتداد"
+	},
+	"settings_option_appIcon_desc": {
+		"message": "عند اختيار الأيقونة الديناميكية، سيتم تكييف الألوان مع نسق المتصفح"
+	},
+	"settings_option_appIcon_item_auto": {
+		"message": "ديناميكي"
+	},
+	"settings_option_appIcon_item_color": {
+		"message": "اللون"
+	},
+	"settings_option_appIcon_item_dark": {
+		"message": "داكن"
+	},
+	"settings_option_appIcon_item_light": {
+		"message": "فاتح"
+	},
+	"settings_option_cache": {
+		"message": "التخزين المؤقت (Cache)"
+	},
+	"settings_option_cache_clear": {
+		"message": "مسح التخزين المؤقت (Clear cache)"
+	},
+	"settings_option_cache_clear_desc": {
+		"message": "إزالة التخزين المؤقت إذا كان هناك أخطاء في الترجمة أو إذا كنت بحاجة لإزالة البيانات السرية"
+	},
+	"settings_option_cache_enable": {
+		"message": "تمكين التخزين المؤقت (Enable cache)"
+	},
+	"settings_option_cache_enable_desc": {
+		"message": "عند تمكين التخزين المؤقت، ستصبح الترجمات التي تم ترجمتها مرة واحدة متاحة على الفور حتى بدون اتصال بالإنترنت"
+	},
+	"settings_option_cache_ignoreCase": {
+		"message": "غير حساس لحالة الأحرف (Case insensitive)"
+	},
+	"settings_option_cache_ignoreCase_desc": {
+		"message": "عند التمكين، سيتم استخدام الترجمات من التخزين المؤقت مع الحالات التي لا تتطابق فيها الترجمة بشكل دقيق، مما قد يؤدي إلى وجود أخطاء في الترجمة"
+	},
+	"settings_option_commonSettings": {
+		"message": "إعدادات عامة"
+	},
+	"settings_option_customTranslatorModule": {
+		"message": "المترجمون المخصصون"
+	},
+	"settings_option_customTranslatorModule_desc": {
+		"message": "يمكنك إضافة مترجمين مخصصين لخدمات الترجمة المفضلة لديك. اقرأ المزيد وابحث عن الوحدات في <slot id=docs>وثائق المترجمين المخصصين</slot>."
+	},
+	"settings_option_customTranslatorModule_manageButton": {
+		"message": "إدارة المترجمين"
+	},
+	"settings_option_mainPreferences": {
+		"message": "الإعدادات الرئيسية"
+	},
+	"settings_option_pageTranslation": {
+		"message": "ترجمة الصفحة"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent": {
+		"message": "الكشف عن اللغة حسب المحتوى"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent_desc": {
+		"message": "تحليل النص على صفحة الويب للكشف عن لغة الصفحة. عند التعطيل، سيتم استخدام اللغة الموجودة في بيانات تعريف الصفحة."
+	},
+	"settings_option_pageTranslation_enableContextMenu": {
+		"message": "تمكين زر قائمة السياق"
+	},
+	"settings_option_pageTranslation_enableContextMenu_desc": {
+		"message": "إضافة زر لتحويل الصفحة إلى قائمة السياق"
+	},
+	"settings_option_pageTranslation_ignoredTags": {
+		"message": "العناصر المتجاهلة"
+	},
+	"settings_option_pageTranslation_ignoredTags_desc": {
+		"message": "أدخل أسماء <slot id=htmlElements>عناصر HTML</slot> التي يجب ألا يتم ترجمتها. لن يتم ترجمة العناصر المتداخلة أيضًا. عنصر واحد في كل سطر."
+	},
+	"settings_option_pageTranslation_lazyTranslate": {
+		"message": "ترجم فقط العناصر المرئية"
+	},
+	"settings_option_pageTranslation_lazyTranslate_desc": {
+		"message": "عند تفعيل هذا الخيار، سيتم ترجمة العناصر المرئية فقط. قد يكون هذا مفيدًا لتوفير حركة المرور عبر الشبكة"
+	},
+	"settings_option_pageTranslation_originalTextPopup": {
+		"message": "تمكين البوب ​​آب بالنص الأصلي"
+	},
+	"settings_option_pageTranslation_originalTextPopup_desc": {
+		"message": "إظهار بوب ​​آب بالنص الأصلي عند تحويم الماوس فوق النص المترجم"
+	},
+	"settings_option_pageTranslation_toggleTranslationHotkey": {
+		"message": "اختصارات لوحة المفاتيح"
+	},
+	"settings_option_pageTranslation_toggleTranslationHotkey_desc": {
+		"message": "اختصارات لتبديل ترجمة الصفحة\nاضغط على ESC لإعادة المفاتيح"
+	},
+	"settings_option_pageTranslation_translatableAttributes": {
+		"message": "السمات المترجمة."
+	},
+	"settings_option_pageTranslation_translatableAttributes_desc": {
+		"message": "أدخل أسماء <slot id=htmlAttributes>سمات HTML</slot> للترجمة. سمة واحدة في كل سطر"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters": {
+		"message": "عرض إحصاءات الترجمة"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters_desc": {
+		"message": "عرض الإحصاءات لترجمة الصفحة"
+	},
+	"settings_option_selectTranslation": {
+		"message": "ترجمة النص المحدد"
+	},
+	"settings_option_selectTranslation_detectedLangFirst": {
+		"message": "الأولوية للغة النص المكتشف بدلاً من لغة الصفحة"
+	},
+	"settings_option_selectTranslation_detectedLangFirst_desc": {
+		"message": "عند التمكين، سيتم إعطاء الأولوية للغة النص المحدد على لغة الصفحة"
+	},
+	"settings_option_selectTranslation_disableWhileTranslatePage": {
+		"message": "تعطيل ترجمة النص المحدد أثناء ترجمة الصفحة"
+	},
+	"settings_option_selectTranslation_enable": {
+		"message": "تمكين"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton": {
+		"message": "التركيز التلقائي على زر الترجمة"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
+		"message": "التركيز على زر الترجمة عند ظهوره"
+	},
+	"settings_option_selectTranslation_header_languageChoice": {
+		"message": "إعدادات اللغة"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang": {
+		"message": "تمكين الكشف التلقائي عن اللغة بواسطة المترجم"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
+		"message": "استخدم الكشف التلقائي عن اللغة بواسطة المترجم عندما لا يمكن الكشف عن اللغة محليًا"
+	},
+	"settings_option_selectTranslation_mode": {
+		"message": "زر المترجم"
+	},
+	"settings_option_selectTranslation_mode_item_contextMenu": {
+		"message": "زر قائمة السياق"
+	},
+	"settings_option_selectTranslation_mode_item_popupButton": {
+		"message": "زر البوب ​​آب"
+	},
+	"settings_option_selectTranslation_mode_item_quickTranslate": {
+		"message": "الترجمة السريعة عن طريق التحديد"
+	},
+	"settings_option_selectTranslation_modifiers": {
+		"message": "التعديلات"
+	},
+	"settings_option_selectTranslation_modifiers_desc": {
+		"message": "حدد المفاتيح التي يجب الضغط عليها على لوحة المفاتيح لعرض الترجمة"
+	},
+	"settings_option_selectTranslation_modifiers_key_alt": {
+		"message": "alt"
+	},
+	"settings_option_selectTranslation_modifiers_key_ctrl": {
+		"message": "ctrl"
+	},
+	"settings_option_selectTranslation_modifiers_key_meta": {
+		"message": "التعريفات الرئيسية"
+	},
+	"settings_option_selectTranslation_modifiers_key_shift": {
+		"message": "التحول"
+	},
+	"settings_option_selectTranslation_rememberDirection": {
+		"message": "تذكر أخر اتجاه للغة المحددة في النص"
+	},
+	"settings_option_selectTranslation_showOnceForSelection": {
+		"message": "إظهار زر الترجمة مرة واحدة لكل تحديد للنص"
+	},
+	"settings_option_selectTranslation_showOnceForSelection_desc": {
+		"message": "سيتم عرض الزر مرة واحدة فقط لكل تحديد نص. إذا كنت بحاجة لإظهاره مرة أخرى ، يرجى إعادة تحديد النص"
+	},
+	"settings_option_selectTranslation_showOriginalText": {
+		"message": "عرض النص الأصلي"
+	},
+	"settings_option_selectTranslation_showOriginalText_desc": {
+		"message": "إضافة كتلة من النص الأصلي إلى النافذة المنبثقة مع الترجمة"
+	},
+	"settings_option_selectTranslation_strictSelection": {
+		"message": "تحديد دقيق"
+	},
+	"settings_option_selectTranslation_strictSelection_desc": {
+		"message": "تجاهل التحديد إذا تم الافراج عن زر الماوس الأيسر خارج البلوك الذي يحتوي على النص المحدد"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton": {
+		"message": "تأخير لإخفاء الزر"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton_desc": {
+		"message": "تأخير بالمللي ثانية قبل إخفاء الزر عندما لا يتم تحويل المؤشر عليه. سيؤدي تحويل المؤشر على الزر إلى إعادة تعيين المؤقت. لتعطيل الإخفاء التلقائي ، اجعل القيمة أقل من 1"
+	},
+	"settings_option_selectTranslation_zIndex": {
+		"message": "z-index"
+	},
+	"settings_option_selectTranslation_zIndex_desc": {
+		"message": "زيادة القيمة إذا كانت بعض العناصر على بعض الصفحات تتداخل مع النافذة المنبثقة للنص المترجم"
+	},
+	"settings_option_textTranslator": {
+		"message": "ترجمة النص"
+	},
+	"settings_option_textTranslator_rememberText": {
+		"message": "تذكر النص المترجم"
+	},
+	"settings_option_textTranslator_rememberText_desc": {
+		"message": "تذكر النص المترجم للمرة القادمة التي يتم فيها فتح النافذة"
+	},
+	"settings_option_textTranslator_spellCheck": {
+		"message": "تمكين التدقيق الإملائي"
+	},
+	"settings_option_textTranslator_suggestLanguage": {
+		"message": "اقترح لغة النص المكتشفة"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways": {
+		"message": "الكشف وتوصية اللغة دائمًا"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways_desc": {
+		"message": "عند تعطيله، ستظهر اقتراحات اللغة فقط عند كشف اللغة المصدر تلقائيًا"
+	},
+	"settings_option_translatePreferences": {
+		"message": "تفضيلات الترجمة"
+	},
+	"settings_option_translateScheduler": {
+		"message": "جدولة الترجمة"
+	},
+	"settings_option_translateScheduler_delay": {
+		"message": "تأخير تراكم النصوص"
+	},
+	"settings_option_translateScheduler_delay_desc": {
+		"message": "يقلل جدول الترجمة من عدد الطلبات إلى خدمات API الترجمة. يحاول جدول الترجمة تراكم النصوص لإرسال أكبر عدد ممكن من النصوص في طلب واحد. سينتظر جدول الترجمة لفترة محددة بالمللي ثانية لجمع نصوص جديدة قبل بدء الترجمة."
+	},
+	"settings_option_translateScheduler_retryLimit": {
+		"message": "محاولات إعادة الترجمة"
+	},
+	"settings_option_translateScheduler_retryLimit_desc": {
+		"message": "سيعيد جدول الترجمة محاولة ترجمة النصوص في حالة وجود أخطاء في الترجمة. تحدد هذه الخيارات الحد الأقصى لمحاولات إعادة الترجمة. تعيين رقم سلبي للسماح بعدد غير محدود من المحاولات."
+	},
+	"settings_option_translatorModule": {
+		"message": "وحدة الترجمة"
+	},
+	"settings_option_translatorModule_desc": {
+		"message": "جودة الترجمة واللغات المتاحة للترجمة تعتمد على المترجم."
+	},
+	"settings_option_tts": {
+		"message": "النص إلى كلام (TTS)"
+	},
+	"settings_option_ttsCustomModules": {
+		"message": "TTS مخصص"
+	},
+	"settings_option_ttsCustomModules_button": {
+		"message": "إدارة وحدات TTS المخصصة"
+	},
+	"settings_option_ttsCustomModules_desc": {
+		"message": "يمكنك إضافة وحدات TTS التي تستخدم خدمتك وأصواتك المفضلة. قراءة المزيد والعثور على الوحدات في وثائق TTS المخصصة."
+	},
+	"settings_option_ttsModule": {
+		"message": "وحدة TTS"
+	},
+	"settings_option_ttsModule_desc": {
+		"message": "وحدة للتحدث بالنصوص"
+	},
+	"settings_option_userLanguage": {
+		"message": "لغتك"
+	},
+	"settings_option_userLanguage_desc": {
+		"message": "اللغة المستهدفة لترجمة النصوص"
+	},
+	"settings_pageTitle": {
+		"message": "الإعدادات"
+	},
+	"settings_section_popup": {
+		"message": "النافذة المنبثقة"
+	},
+	"textTranslator_suggestLanguage": {
+		"message": "يبدو أن هذه اللغة هي"
+	},
+	"textTranslator_translateInputPlaceholder": {
+		"message": "نص الإدخال"
+	},
+	"textTranslator_translatePlaceholder": {
+		"message": "النص المترجم"
+	},
+	"translatorsManagerWindow_add": {
+		"message": "إضافة"
+	},
+	"translatorsManagerWindow_close": {
+		"message": "إغلاق"
+	},
+	"translatorsManagerWindow_emptyTranslatorsListText": {
+		"message": "لم يتم إضافة مترجمين مخصصين بعد"
+	},
+	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
+		"message": "هل أنت متأكد من حذف المترجم \"$translator_name$\"؟",
+		"placeholders": {
+			"translator_name": {
+				"content": "$1",
+				"example": "مترجم Google"
+			}
+		}
+	},
+	"translatorsManagerWindow_title": {
+		"message": "مترجمون مخصصون"
+	},
+	"translatorsManagerWindow_translator_delete": {
+		"message": "حذف"
+	},
+	"translatorsManagerWindow_translator_edit": {
+		"message": "تحرير"
+	},
+	"ttsManagerWindow_add": {
+		"message": "إضافة"
+	},
+	"ttsManagerWindow_close": {
+		"message": "إغلاق"
+	},
+	"ttsManagerWindow_emptyTranslatorsListText": {
+		"message": "لم يتم إضافة وحدات TTS بعد"
+	},
+	"ttsManagerWindow_message_ttsRemoveConfirmation": {
+		"message": "هل أنت متأكد من رغبتك في إزالة TTS \"$tts_name$\"؟",
+		"placeholders": {
+			"tts_name": {
+				"content": "$1",
+				"example": "Google TTS"
+			}
+		}
+	},
+	"ttsManagerWindow_title": {
+		"message": "وحدات التحويل النصي إلى كلام (TTS)"
+	},
+	"ttsManagerWindow_translator_delete": {
+		"message": "حذف"
+	},
+	"ttsManagerWindow_translator_edit": {
+		"message": "تحرير"
+	},
+	"validation_number": {
+		"message": "يجب أن يكون المعامل قيمة رقمية"
+	},
+	"validation_numberBetweenRange": {
+		"message": "يجب أن يكون المعامل قيمة رقمية بين $1 و $2"
+	},
+	"validation_positiveNumber": {
+		"message": "يجب أن يكون المعامل قيمة رقمية موجبة."
+	},
+	"langCode_aa": {
+		"message": "الأفارية"
+	},
+	"langCode_ab": {
+		"message": "الأبخازية"
+	},
+	"langCode_ae": {
+		"message": "الأفستية"
+	},
+	"langCode_af": {
+		"message": "الأفريقانية"
+	},
+	"langCode_ak": {
+		"message": "الأكانية"
+	},
+	"langCode_am": {
+		"message": "الأمهرية"
+	},
+	"langCode_an": {
+		"message": "الأراغونية"
+	},
+	"langCode_ar": {
+		"message": "العربية"
+	},
+	"langCode_as": {
+		"message": "الأسامية"
+	},
+	"langCode_av": {
+		"message": "الأوارية"
+	},
+	"langCode_ay": {
+		"message": "الأيمارا"
+	},
+	"langCode_az": {
+		"message": "الأذربيجانية"
+	},
+	"langCode_ba": {
+		"message": "الباشكيرية"
+	},
+	"langCode_be": {
+		"message": "البيلاروسية"
+	},
+	"langCode_bg": {
+		"message": "البلغارية"
+	},
+	"langCode_bh": {
+		"message": "البهوجبورية"
+	},
+	"langCode_bi": {
+		"message": "البيسلامية"
+	},
+	"langCode_bm": {
+		"message": "البامبارا"
+	},
+	"langCode_bn": {
+		"message": "البنغالية"
+	},
+	"langCode_bo": {
+		"message": "التبتية"
+	},
+	"langCode_br": {
+		"message": "البريتونية"
+	},
+	"langCode_bs": {
+		"message": "البوسنية"
+	},
+	"langCode_ca": {
+		"message": "الكتالانية"
+	},
+	"langCode_ce": {
+		"message": "الشيشانية"
+	},
+	"langCode_ch": {
+		"message": "التشامورو"
+	},
+	"langCode_co": {
+		"message": "الكورسيكية"
+	},
+	"langCode_cr": {
+		"message": "الكرى"
+	},
+	"langCode_cs": {
+		"message": "التشيكية"
+	},
+	"langCode_cu": {
+		"message": "سلافية كنسية"
+	},
+	"langCode_cv": {
+		"message": "التشوفاشي"
+	},
+	"langCode_cy": {
+		"message": "الويلزية"
+	},
+	"langCode_da": {
+		"message": "الدانمركية"
+	},
+	"langCode_de": {
+		"message": "الألمانية"
+	},
+	"langCode_dv": {
+		"message": "المالديفية"
+	},
+	"langCode_dz": {
+		"message": "الزونخاية"
+	},
+	"langCode_ee": {
+		"message": "الإيوي"
+	},
+	"langCode_el": {
+		"message": "اليونانية"
+	},
+	"langCode_en": {
+		"message": "الإنجليزية"
+	},
+	"langCode_eo": {
+		"message": "الإسبرانتو"
+	},
+	"langCode_es": {
+		"message": "الإسبانية"
+	},
+	"langCode_et": {
+		"message": "الإستونية"
+	},
+	"langCode_eu": {
+		"message": "الباسكية"
+	},
+	"langCode_fa": {
+		"message": "الفارسية"
+	},
+	"langCode_ff": {
+		"message": "الفولانية"
+	},
+	"langCode_fi": {
+		"message": "الفنلندية"
+	},
+	"langCode_fj": {
+		"message": "الفيجية"
+	},
+	"langCode_fo": {
+		"message": "الفاروية"
+	},
+	"langCode_fr": {
+		"message": "الفرنسية"
+	},
+	"langCode_fy": {
+		"message": "الفريزيان"
+	},
+	"langCode_ga": {
+		"message": "الأيرلندية"
+	},
+	"langCode_gd": {
+		"message": "الغيلية الأسكتلندية"
+	},
+	"langCode_gl": {
+		"message": "الجاليكية"
+	},
+	"langCode_gn": {
+		"message": "الغوارانية"
+	},
+	"langCode_gu": {
+		"message": "الغوجاراتية"
+	},
+	"langCode_gv": {
+		"message": "المنكية"
+	},
+	"langCode_ha": {
+		"message": "الهوسا"
+	},
+	"langCode_he": {
+		"message": "العبرية"
+	},
+	"langCode_hi": {
+		"message": "الهندية"
+	},
+	"langCode_ho": {
+		"message": "الهيري موتو"
+	},
+	"langCode_hr": {
+		"message": "الكرواتية"
+	},
+	"langCode_ht": {
+		"message": "الكريولية الهايتية"
+	},
+	"langCode_hu": {
+		"message": "الهنغارية"
+	},
+	"langCode_hy": {
+		"message": "الأرمنية"
+	},
+	"langCode_hz": {
+		"message": "الهيريرو"
+	},
+	"langCode_ia": {
+		"message": "اللّغة الوسيطة"
+	},
+	"langCode_id": {
+		"message": "الإندونيسية"
+	},
+	"langCode_ie": {
+		"message": "الإنترلينج"
+	},
+	"langCode_ig": {
+		"message": "الإيجبو"
+	},
+	"langCode_ii": {
+		"message": "السيتشيون يي"
+	},
+	"langCode_ik": {
+		"message": "الإينبياك"
+	},
+	"langCode_io": {
+		"message": "الإيدو"
+	},
+	"langCode_is": {
+		"message": "الأيسلندية"
+	},
+	"langCode_it": {
+		"message": "الإيطالية"
+	},
+	"langCode_iu": {
+		"message": "الإينكتيتت"
+	},
+	"langCode_ja": {
+		"message": "اليابانية"
+	},
+	"langCode_jv": {
+		"message": "الجاوية"
+	},
+	"langCode_ka": {
+		"message": "الجورجية"
+	},
+	"langCode_kg": {
+		"message": "الكونغو"
+	},
+	"langCode_ki": {
+		"message": "الكيكيو"
+	},
+	"langCode_kj": {
+		"message": "الكيونياما"
+	},
+	"langCode_kk": {
+		"message": "الكازاخستانية"
+	},
+	"langCode_kl": {
+		"message": "الكالاليست"
+	},
+	"langCode_km": {
+		"message": "الخميرية"
+	},
+	"langCode_kn": {
+		"message": "الكانادا"
+	},
+	"langCode_ko": {
+		"message": "الكورية"
+	},
+	"langCode_kr": {
+		"message": "الكانوري"
+	},
+	"langCode_ks": {
+		"message": "الكشميرية"
+	},
+	"langCode_ku": {
+		"message": "الكردية"
+	},
+	"langCode_kv": {
+		"message": "الكومي"
+	},
+	"langCode_kw": {
+		"message": "الكورنية"
+	},
+	"langCode_ky": {
+		"message": "القيرغيزية"
+	},
+	"langCode_la": {
+		"message": "اللاتينية"
+	},
+	"langCode_lb": {
+		"message": "اللكسمبورغية"
+	},
+	"langCode_lg": {
+		"message": "الغاندا"
+	},
+	"langCode_li": {
+		"message": "الليمبورغية"
+	},
+	"langCode_ln": {
+		"message": "اللينجالا"
+	},
+	"langCode_lo": {
+		"message": "اللاوية"
+	},
+	"langCode_lt": {
+		"message": "الليتوانية"
+	},
+	"langCode_lu": {
+		"message": "اللوبا كاتانغا"
+	},
+	"langCode_lv": {
+		"message": "اللاتفية"
+	},
+	"langCode_mg": {
+		"message": "الملغاشي"
+	},
+	"langCode_mh": {
+		"message": "المارشالية"
+	},
+	"langCode_mi": {
+		"message": "الماورية"
+	},
+	"langCode_mk": {
+		"message": "المقدونية"
+	},
+	"langCode_ml": {
+		"message": "المالايالامية"
+	},
+	"langCode_mn": {
+		"message": "المنغولية"
+	},
+	"langCode_mr": {
+		"message": "الماراثية"
+	},
+	"langCode_ms": {
+		"message": "الماليزية"
+	},
+	"langCode_mt": {
+		"message": "المالطية"
+	},
+	"langCode_my": {
+		"message": "البورمية"
+	},
+	"langCode_na": {
+		"message": "النورو"
+	},
+	"langCode_nb": {
+		"message": "النرويجية بوكمال"
+	},
+	"langCode_nd": {
+		"message": "النديبيل الشمالية"
+	},
+	"langCode_ne": {
+		"message": "النيبالية"
+	},
+	"langCode_ng": {
+		"message": "الندونجا"
+	},
+	"langCode_nl": {
+		"message": "الهولندية"
+	},
+	"langCode_nn": {
+		"message": "النرويجية نينورسك"
+	},
+	"langCode_no": {
+		"message": "النرويجية"
+	},
+	"langCode_nr": {
+		"message": "النديبيل الجنوبي"
+	},
+	"langCode_nv": {
+		"message": "النافاجو"
+	},
+	"langCode_ny": {
+		"message": "النيانجا"
+	},
+	"langCode_oc": {
+		"message": "الأوكسيتانية"
+	},
+	"langCode_oj": {
+		"message": "الأوجيبوا"
+	},
+	"langCode_om": {
+		"message": "الأورومية"
+	},
+	"langCode_or": {
+		"message": "الأورية"
+	},
+	"langCode_os": {
+		"message": "الأوسيتيك"
+	},
+	"langCode_pa": {
+		"message": "البنجابية"
+	},
+	"langCode_pi": {
+		"message": "البالية"
+	},
+	"langCode_pl": {
+		"message": "البولندية"
+	},
+	"langCode_ps": {
+		"message": "البشتو"
+	},
+	"langCode_pt": {
+		"message": "البرتغالية"
+	},
+	"langCode_qu": {
+		"message": "الكويتشوا"
+	},
+	"langCode_rm": {
+		"message": "الرومانشية"
+	},
+	"langCode_rn": {
+		"message": "الرندي"
+	},
+	"langCode_ro": {
+		"message": "الرومانية"
+	},
+	"langCode_ru": {
+		"message": "الروسية"
+	},
+	"langCode_rw": {
+		"message": "الكينيارواندا"
+	},
+	"langCode_sa": {
+		"message": "السنسكريتية"
+	},
+	"langCode_sc": {
+		"message": "السردينية"
+	},
+	"langCode_sd": {
+		"message": "السندية"
+	},
+	"langCode_se": {
+		"message": "سامي الشمالية"
+	},
+	"langCode_sg": {
+		"message": "السانجو"
+	},
+	"langCode_si": {
+		"message": "السنهالية"
+	},
+	"langCode_sk": {
+		"message": "السلوفاكية"
+	},
+	"langCode_sl": {
+		"message": "السلوفانية"
+	},
+	"langCode_sm": {
+		"message": "الساموائية"
+	},
+	"langCode_sn": {
+		"message": "الشونا"
+	},
+	"langCode_so": {
+		"message": "الصومالية"
+	},
+	"langCode_sq": {
+		"message": "الألبانية"
+	},
+	"langCode_sr": {
+		"message": "الصربية"
+	},
+	"langCode_ss": {
+		"message": "السواتي"
+	},
+	"langCode_st": {
+		"message": "السوتو الجنوبية"
+	},
+	"langCode_su": {
+		"message": "السوندانية"
+	},
+	"langCode_sv": {
+		"message": "السويدية"
+	},
+	"langCode_sw": {
+		"message": "السواحلية"
+	},
+	"langCode_ta": {
+		"message": "التاميلية"
+	},
+	"langCode_te": {
+		"message": "التيلوغوية"
+	},
+	"langCode_tg": {
+		"message": "الطاجيكية"
+	},
+	"langCode_th": {
+		"message": "التايلاندية"
+	},
+	"langCode_ti": {
+		"message": "التغرينية"
+	},
+	"langCode_tk": {
+		"message": "التركمانية"
+	},
+	"langCode_tl": {
+		"message": "الفلبينية"
+	},
+	"langCode_tn": {
+		"message": "التسوانية"
+	},
+	"langCode_to": {
+		"message": "التونغية"
+	},
+	"langCode_tr": {
+		"message": "التركية"
+	},
+	"langCode_ts": {
+		"message": "السونجا"
+	},
+	"langCode_tt": {
+		"message": "التترية"
+	},
+	"langCode_tw": {
+		"message": "الأكانية"
+	},
+	"langCode_ty": {
+		"message": "التاهيتية"
+	},
+	"langCode_ug": {
+		"message": "الأويغورية"
+	},
+	"langCode_uk": {
+		"message": "الأوكرانية"
+	},
+	"langCode_ur": {
+		"message": "الأوردية"
+	},
+	"langCode_uz": {
+		"message": "الأوزبكية"
+	},
+	"langCode_ve": {
+		"message": "الفيندا"
+	},
+	"langCode_vi": {
+		"message": "الفيتنامية"
+	},
+	"langCode_vo": {
+		"message": "لغة الفولابوك"
+	},
+	"langCode_wa": {
+		"message": "الولونية"
+	},
+	"langCode_wo": {
+		"message": "الولوفية"
+	},
+	"langCode_xh": {
+		"message": "الخوسا"
+	},
+	"langCode_yi": {
+		"message": "اليديشية"
+	},
+	"langCode_yo": {
+		"message": "اليوروبا"
+	},
+	"langCode_za": {
+		"message": "الزهيونج"
+	},
+	"langCode_zh": {
+		"message": "الصينية"
+	},
+	"langCode_zu": {
+		"message": "الزولو"
+	}
+}

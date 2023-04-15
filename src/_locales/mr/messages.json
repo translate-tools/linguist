@@ -1,0 +1,1190 @@
+{
+	"common_action_addToDictionary": {
+		"message": "शब्दकोशात भाषांतर जोडा"
+	},
+	"common_action_removeFromDictionary": {
+		"message": "शब्दकोशातून भाषांतर काढा"
+	},
+	"common_bgUnavailable": {
+		"message": "पारंपारिक स्क्रिप्ट अणुपलब्ध आहे"
+	},
+	"common_cancel": {
+		"message": "रद्द करा"
+	},
+	"common_close": {
+		"message": "बंद करा"
+	},
+	"common_copy": {
+		"message": "नकल"
+	},
+	"common_error": {
+		"message": "त्रुटी"
+	},
+	"common_offlineTranslator": {
+		"message": "$1 - ऑफलाइन अनुवादक"
+	},
+	"common_retry": {
+		"message": "पुन्हा प्रयत्न करा"
+	},
+	"common_translate": {
+		"message": "अनुवाद करा"
+	},
+	"component_hotkey_placeholder": {
+		"message": "हॉटकी नोंदण्यासाठी क्लिक करा"
+	},
+	"component_hotkey_recordPlaceholder": {
+		"message": "की प्रेस करा"
+	},
+	"component_hotkey_resetButton": {
+		"message": "रीसेट"
+	},
+	"contextMenu_disablePageTranslation": {
+		"message": "पृष्ठ अनुवाद बंद करा"
+	},
+	"contextMenu_translatePage": {
+		"message": "पृष्ठ अनुवाद करा"
+	},
+	"contextMenu_translateSelectedText": {
+		"message": "चुनलेला मजकूर अनुवाद करा"
+	},
+	"dictionaryButton_add": {
+		"message": "शब्दकोशामध्ये जोडा"
+	},
+	"dictionaryButton_delete": {
+		"message": "शब्दकोशातून हटवा"
+	},
+	"dictionary_button_export": {
+		"message": "निर्यात करा"
+	},
+	"dictionary_button_removeAll": {
+		"message": "सर्व हटवा"
+	},
+	"dictionary_deleteAll": {
+		"message": "शब्दकोशातील सर्व अनुवाद डिलीट करायचे आहेस का?"
+	},
+	"dictionary_deleteConfirmation": {
+		"message": "तुम्ही या अनुवादाचे डिलीट करायचे आहात का?"
+	},
+	"dictionary_description": {
+		"message": "तुमच्या अनुवादांची माहिती नंतर शोधण्यासाठी त्यांचे शब्दकोशात ठेवा"
+	},
+	"dictionary_emptyDictionary": {
+		"message": "शब्दकोश रिक्त आहे. काही वाक्य अनुवाद करताना तो भरण्याची प्रारंभ करा"
+	},
+	"dictionary_filter_from": {
+		"message": "पासून"
+	},
+	"dictionary_filter_to": {
+		"message": "त्यासाठी"
+	},
+	"dictionary_message_deleteAll_success": {
+		"message": "सर्व अनुवाद साफ केले गेले आहेत"
+	},
+	"dictionary_notFoundEntries": {
+		"message": "या फिल्टरमध्ये प्रतिसाद मिळाले नाहीत"
+	},
+	"dictionary_pageTitle": {
+		"message": "शब्दकोश"
+	},
+	"dictionary_resetFilters": {
+		"message": "फिल्टर सहाय्यक रीसेट करा"
+	},
+	"dictionary_searchPlaceholder": {
+		"message": "टेक्स्ट दर्शवून शोधा"
+	},
+	"editorWindow_close": {
+		"message": "बंद करा"
+	},
+	"editorWindow_data_code": {
+		"message": "कोड"
+	},
+	"editorWindow_data_name": {
+		"message": "नाव"
+	},
+	"editorWindow_message_invalidName": {
+		"message": "नावात कमीत कमी एक संकेत असणे आवश्यक आहे"
+	},
+	"editorWindow_save": {
+		"message": "जतन करा"
+	},
+	"ext_description": {
+		"message": "पृष्ठ पुन्हा लोड केल्याशिवाय मजकूर भाषांतर"
+	},
+	"ext_name": {
+		"message": "Linguist - वेब पेज भाषांतरकर्ता"
+	},
+	"history_control_selectEntry": {
+		"message": "नोंदी निवडा"
+	},
+	"history_controls_clearHistory": {
+		"message": "इतिहास साफ करा"
+	},
+	"history_controls_deleteSelected": {
+		"message": "निवडलेले हटवा"
+	},
+	"history_controls_selectAll": {
+		"message": "सर्व भाषांची निवड करा"
+	},
+	"history_message_clearHistoryConfirmation": {
+		"message": "इतिहास साफ करायचं आहे का? सर्व प्रविष्टी हटविल्या जातील"
+	},
+	"history_message_deleteEntryConfirmation": {
+		"message": "ही प्रविष्टी हटवायची आहे का?"
+	},
+	"history_message_deleteSelectedEntriesConfirmation": {
+		"message": "निवडलेल्या प्रविष्टी ($1) हटवायच्या आहेत का?"
+	},
+	"history_message_emptyEntries": {
+		"message": "इतिहास साफ केले आहे"
+	},
+	"history_message_entriesNotFound": {
+		"message": "फिल्टर अनुसार कोणतीही भाषांतरे सापडली नाहीत"
+	},
+	"history_pageTitle": {
+		"message": "इतिहास"
+	},
+	"history_searchPlaceholder": {
+		"message": "मजकूर शोधा"
+	},
+	"inlineTranslator_showOriginalText": {
+		"message": "मूळ मजकूर दाखवा"
+	},
+	"lang_change": {
+		"message": "भाषा बदला"
+	},
+	"lang_detect": {
+		"message": "स्वयंपाक शोध"
+	},
+	"lang_select": {
+		"message": "भाषा निवडा"
+	},
+	"lang_swap": {
+		"message": "भाषा बदला"
+	},
+	"message_askResetConfig": {
+		"message": "सेटिंग reset करायची आहे?"
+	},
+	"message_cacheFlushed": {
+		"message": "कॅश निस्खलन केले गेले आहे"
+	},
+	"message_changesSaved": {
+		"message": "बदल साठवले गेले आहेत"
+	},
+	"message_error": {
+		"message": "त्रुटी"
+	},
+	"message_errorOfTranslate": {
+		"message": "अनुवाद त्रुटी"
+	},
+	"message_serviceRequiredKey": {
+		"message": "सेवा की आवश्यक आहे"
+	},
+	"message_translateOfText": {
+		"message": "भाषांतरित"
+	},
+	"message_unknownError": {
+		"message": "अज्ञात त्रुटी"
+	},
+	"pageTranslator_alwaysTranslateLang": {
+		"message": "हे भाषा नेहमी भाषांतर करा"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disable": {
+		"message": "निष्क्रिय करा"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
+		"message": "सर्व साइटसाठी निष्क्रिय करा"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_enable": {
+		"message": "सक्षम करा"
+	},
+	"pageTranslator_commonPreferences_title": {
+		"message": "या भाषेसाठी सामान्य प्राधान्ये"
+	},
+	"pageTranslator_option_autoTranslate": {
+		"message": "ऑटो अनुवाद"
+	},
+	"pageTranslator_showOptions": {
+		"message": "पर्याय दाखवा"
+	},
+	"pageTranslator_showOriginal": {
+		"message": "मूल दाखवा"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_always": {
+		"message": "हमेशा अनुवाद करें"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
+		"message": "या भाषेसाठी हमेशा अनुवाद करा"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_default": {
+		"message": "सामान्य नियम वापरा"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
+		"message": "या भाषेसाठी सामान्य नियम वापरा"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_never": {
+		"message": "कधीही अनुवाद करू नका"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
+		"message": "या भाषेसाठी कधीही अनुवाद करू नका"
+	},
+	"pageTranslator_sitePreferences_title": {
+		"message": "संच प्राधान्ये"
+	},
+	"pageTranslator_translatePage": {
+		"message": "पृष्ठ अनुवाद करा"
+	},
+	"pageTranslator_translationReport": {
+		"message": "अनुवादाची अहवाल"
+	},
+	"pageTranslator_translationReport_queue": {
+		"message": "कतार"
+	},
+	"pageTranslator_translationReport_reject": {
+		"message": "त्रुटी"
+	},
+	"pageTranslator_translationReport_resolve": {
+		"message": "भाषांतरित"
+	},
+	"popup_tabIdNotFound": {
+		"message": "\"$1\" टॅब सापडत नाही"
+	},
+	"popup_tab_translatePage": {
+		"message": "पृष्ठ भाषांतरण"
+	},
+	"popup_tab_translateText": {
+		"message": "मजकूर भाषांतरण"
+	},
+	"settings_button_cancel": {
+		"message": "रद्द करा"
+	},
+	"settings_button_export": {
+		"message": "कॉन्फिग निर्यात करा"
+	},
+	"settings_button_import": {
+		"message": "कॉन्फिग आयात करा"
+	},
+	"settings_button_reset": {
+		"message": "कॉन्फिग रीसेट करा"
+	},
+	"settings_button_saveChanges": {
+		"message": "बदल सेव्ह करा"
+	},
+	"settings_message_clearCache_success": {
+		"message": "कॅशे साफ झाले आहे"
+	},
+	"settings_message_common_invalidValueType": {
+		"message": "अवैध मूल्य"
+	},
+	"settings_message_importConfig_invalidFile": {
+		"message": "आयात करण्यासाठी फाइल हंगाम नाही"
+	},
+	"settings_message_importConfig_success": {
+		"message": "आयात पूर्ण झाला"
+	},
+	"settings_message_resetConfig_confirm": {
+		"message": "तुम्ही सेटिंग्ज रिसेट करायचं आहे का?"
+	},
+	"settings_message_resetConfig_success": {
+		"message": "सेटिंग्ज रीसेट केले"
+	},
+	"settings_message_saveChanges_success": {
+		"message": "बदल साठविले"
+	},
+	"settings_option_appIcon": {
+		"message": "एक्सटेंशन आयकॉन"
+	},
+	"settings_option_appIcon_desc": {
+		"message": "जेव्हा डायनॅमिक आयकॉन निवडले जाते तेव्हा रंग ब्राउझर थीमवर अनुकूलित केले जाणार आहेत"
+	},
+	"settings_option_appIcon_item_auto": {
+		"message": "डायनॅमिक"
+	},
+	"settings_option_appIcon_item_color": {
+		"message": "रंग"
+	},
+	"settings_option_appIcon_item_dark": {
+		"message": "डार्क"
+	},
+	"settings_option_appIcon_item_light": {
+		"message": "लाइट"
+	},
+	"settings_option_cache": {
+		"message": "कॅश"
+	},
+	"settings_option_cache_clear": {
+		"message": "कॅश साफ करा"
+	},
+	"settings_option_cache_clear_desc": {
+		"message": "जर आपल्याकडे भाषांतर अर्टिफॅक्टस असतील किंवा सीक्रेट्स काढण्याची गरज असेल तर कॅश हटवा"
+	},
+	"settings_option_cache_enable": {
+		"message": "कॅश सक्षम करा"
+	},
+	"settings_option_cache_enable_desc": {
+		"message": "कॅश सक्षम झाल्यास, एकदा भाषांतर केल्या जाणाऱ्या थोडयाशी उपलब्ध होणार्‍या, इंटरनेट नसूनही"
+	},
+	"settings_option_cache_ignoreCase": {
+		"message": "केस संवेदनशील"
+	},
+	"settings_option_cache_ignoreCase_desc": {
+		"message": "सक्षम केल्यास, अ-अंशक संबंधित भाषांतर वापरले जातील, जे भाषांतर अर्टिफैक्ट सारखी परिणामं देऊ शकतात"
+	},
+	"settings_option_commonSettings": {
+		"message": "सामान्य सेटिंग्ज"
+	},
+	"settings_option_customTranslatorModule": {
+		"message": "कस्टम अनुवादक"
+	},
+	"settings_option_customTranslatorModule_desc": {
+		"message": "<slot id=docs>कस्टम अनुवादक दस्तऐवज</slot> मध्ये अधिक वाचा आणि मॉड्यूल शोधा, आपल्या मनपसंद अनुवाद सेवांसाठी कस्टम अनुवादक जोडू शकता."
+	},
+	"settings_option_customTranslatorModule_manageButton": {
+		"message": "अनुवादक व्यवस्थापित करा"
+	},
+	"settings_option_mainPreferences": {
+		"message": "मुख्य सेटिंग्ज"
+	},
+	"settings_option_pageTranslation": {
+		"message": "पृष्ठ भाषांतरण"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent": {
+		"message": "सामग्रीवरून भाषा शोधा"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent_desc": {
+		"message": "पृष्ठ भाषा ओळखण्यासाठी वेब पृष्ठावरील मजकूर विश्लेषण करा. अक्षम करल्यास पृष्ठ मेटाडेटात प्रदान केलेली एक भाषा वापरली जाईल"
+	},
+	"settings_option_pageTranslation_enableContextMenu": {
+		"message": "संदर्भ मेनू बटण सक्षम करा"
+	},
+	"settings_option_pageTranslation_enableContextMenu_desc": {
+		"message": "संदर्भ मेनूच्या एक बटण जोडा आणि पृष्ठ भाषांतरण टॉगल करण्यासाठी ते सक्षम करा"
+	},
+	"settings_option_pageTranslation_ignoredTags": {
+		"message": "अनदेखीत घटक"
+	},
+	"settings_option_pageTranslation_ignoredTags_desc": {
+		"message": "<slot id=htmlElements>HTML घटक</slot> नावे ट्रांसलेट करण्याची आवश्यकता नाही. नेस्टेड घटकांची ट्रांसलेशनही होईल. प्रत्येक घटक प्रत्येक पंक्तीमध्ये एक."
+	},
+	"settings_option_pageTranslation_lazyTranslate": {
+		"message": "फक्त दृश्यमान घटक ट्रांसलेट करा"
+	},
+	"settings_option_pageTranslation_lazyTranslate_desc": {
+		"message": "जेव्हा या पर्याय सक्षम केला जातो, फक्त दृश्यमान घटक ट्रांसलेट केले जातील. हे नेटवर्क ट्रॅफिक बचावण्यासाठी उपयुक्त असू शकते"
+	},
+	"settings_option_pageTranslation_originalTextPopup": {
+		"message": "मूळ वाक्य पॉपअप सक्षम करा"
+	},
+	"settings_option_pageTranslation_originalTextPopup_desc": {
+		"message": "अनुवादित मजकूरावर माउस ओळखता मूळ मजकूर प्रदर्शित करा"
+	},
+	"settings_option_pageTranslation_toggleTranslationHotkey": {
+		"message": "हॉटकी"
+	},
+	"settings_option_pageTranslation_toggleTranslationHotkey_desc": {
+		"message": "पृष्ठ अनुवाद संचालित करण्यासाठी शॉर्टकट्स\nESC दाबून बंद करण्यासाठी"
+	},
+	"settings_option_pageTranslation_translatableAttributes": {
+		"message": "अनुवाद योग्य गुण"
+	},
+	"settings_option_pageTranslation_translatableAttributes_desc": {
+		"message": "अनुवादासाठी <slot id=htmlAttributes>HTML गुण</slot> नावे प्रविष्ट करा. प्रत्येक गुण एक पंक्तीमध्ये"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters": {
+		"message": "अनुवाद सांख्यिकी दर्शवा"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters_desc": {
+		"message": "पृष्ठ अनुवादासाठी आकडेवारी दाखवा"
+	},
+	"settings_option_selectTranslation": {
+		"message": "निवडलेले मजकूर अनुवाद"
+	},
+	"settings_option_selectTranslation_detectedLangFirst": {
+		"message": "फटक्याच्या भाषेचा भाषा प्रतिष्ठापित करण्यापेक्षा पहिलं फटक्याची भाषा ओळखली जाईल"
+	},
+	"settings_option_selectTranslation_detectedLangFirst_desc": {
+		"message": "सक्षम केल्यास, निवडलेल्या मजकूरची ओळख करण्यासाठी फटक्याची ओळखली जाईल ज्यापेक्षा पृष्ठ भाषा प्रतिष्ठापित केली जाईल"
+	},
+	"settings_option_selectTranslation_disableWhileTranslatePage": {
+		"message": "पृष्ठ अनुवाद करताना निष्क्रिय करा"
+	},
+	"settings_option_selectTranslation_enable": {
+		"message": "सक्षम करा"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton": {
+		"message": "ऑटो-फोकस ट्रांसलेशन बटणावर"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
+		"message": "जेव्हा ट्रांसलेशन बटण दिसेल तेव्हा त्यावर फोकस करा"
+	},
+	"settings_option_selectTranslation_header_languageChoice": {
+		"message": "भाषा सेटिंग्ज"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang": {
+		"message": "अनुवादक द्वारा स्वचालित भाषा पत्ता लगवड केल्यास सक्षम करा"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
+		"message": "स्थानिकपणे भाषा संचार नाही ओळखली जाऊ शकतात तेव्हा अनुवादक द्वारा स्वचालित भाषा पत्ता लगवड करा"
+	},
+	"settings_option_selectTranslation_mode": {
+		"message": "अनुवाद ट्रिगर"
+	},
+	"settings_option_selectTranslation_mode_item_contextMenu": {
+		"message": "संदर्भ मेनू बटण"
+	},
+	"settings_option_selectTranslation_mode_item_popupButton": {
+		"message": "पॉपअप बटण"
+	},
+	"settings_option_selectTranslation_mode_item_quickTranslate": {
+		"message": "निवड करण्यासही जलद भाषांतर"
+	},
+	"settings_option_selectTranslation_modifiers": {
+		"message": "संशोधके"
+	},
+	"settings_option_selectTranslation_modifiers_desc": {
+		"message": "भाषांतर दाखवण्यासाठी टाकणे आवश्यक झटका निवडा"
+	},
+	"settings_option_selectTranslation_modifiers_key_alt": {
+		"message": "ऑल्ट"
+	},
+	"settings_option_selectTranslation_modifiers_key_ctrl": {
+		"message": "कण्ट्रोल"
+	},
+	"settings_option_selectTranslation_modifiers_key_meta": {
+		"message": "मेटा"
+	},
+	"settings_option_selectTranslation_modifiers_key_shift": {
+		"message": "शिफ्ट"
+	},
+	"settings_option_selectTranslation_rememberDirection": {
+		"message": "पाठाच्या सर्वात अलीकडील निवडलेल्या भाषेचे आठावा आठवडा"
+	},
+	"settings_option_selectTranslation_showOnceForSelection": {
+		"message": "प्रत्येक पाठ निवडीसाठी एकदा अनुवाद बटण दाखवा"
+	},
+	"settings_option_selectTranslation_showOnceForSelection_desc": {
+		"message": "बटण प्रत्येक पाठ निवडीसाठी फक्त एकदा दाखवला जाईल. आपण तो पुन्हा दाखवणे गरजेचे असल्यास, पाठ निवडा"
+	},
+	"settings_option_selectTranslation_showOriginalText": {
+		"message": "मूल टेक्स्ट दर्शवा"
+	},
+	"settings_option_selectTranslation_showOriginalText_desc": {
+		"message": "अनुवाद सह पॉपअपमध्ये मूल टेक्स्ट संच जोडा"
+	},
+	"settings_option_selectTranslation_strictSelection": {
+		"message": "कडणवती निवड"
+	},
+	"settings_option_selectTranslation_strictSelection_desc": {
+		"message": "निवडलेला टेक्स्ट आढळण्याच्या ब्लॉकमध्ये नसल्यास, डावे क्लिकच्या बाहेर रिलीझ केल्यास निवड वगळता येईल असे करा"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton": {
+		"message": "बटण लपविण्यासाठी वेळाची विलंब"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton_desc": {
+		"message": "जेव्हा कर्सर हवामान केलेला नसेल तेव्हा बटण सुटल्याची वेळ मिळविण्यासाठी विलंब. बटणवर कर्सर हवामान करणे टाइमर पुन्हा सेट करते. स्वयंचलित सुटका बंद करण्यासाठी, 1 पेक्षा किमान मूल्य सेट करा"
+	},
+	"settings_option_selectTranslation_zIndex": {
+		"message": "z-इंडेक्स"
+	},
+	"settings_option_selectTranslation_zIndex_desc": {
+		"message": "जर काही पृष्ठांवरील काही घटक अनुवादित मजकूरांच्या पॉपअपशी आडवतात तर या मूल्याची मूल्यमापन वाढवा"
+	},
+	"settings_option_textTranslator": {
+		"message": "मजकूर अनुवादक"
+	},
+	"settings_option_textTranslator_rememberText": {
+		"message": "अनुवादित मजकूर आठवा"
+	},
+	"settings_option_textTranslator_rememberText_desc": {
+		"message": "विंग्यापासून अनुवाद केलेला मजकूर आणि आगामी प्रवेशद्वार उघडल्यास नक्कीच आठवा"
+	},
+	"settings_option_textTranslator_spellCheck": {
+		"message": "स्पेल चेक सक्षम करा"
+	},
+	"settings_option_textTranslator_suggestLanguage": {
+		"message": "हलवलेले मजकूर भाषा सुचवा"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways": {
+		"message": "नेहमी भाषा ओळखली आणि सुचवली जाणारी असते"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways_desc": {
+		"message": "अक्षम केल्यास, भाषा सुचवणे केवळ स्वत: ओळखलेली स्रोत भाषेत होईल"
+	},
+	"settings_option_translatePreferences": {
+		"message": "भाषांतर निवड"
+	},
+	"settings_option_translateScheduler": {
+		"message": "भाषांतर वेळापत्रक"
+	},
+	"settings_option_translateScheduler_delay": {
+		"message": "टेक्स्ट संचय थांबवणे"
+	},
+	"settings_option_translateScheduler_delay_desc": {
+		"message": "भाषांतर सेवा API वरील विनंत्यांची संख्या कमी करण्यासाठी भाषांतर वेळापत्रक वापरले जाते. शेड्यूलर एकाच विनंतीतचे जास्त टेक्स्ट पाठविण्यासाठी पाठविलेले मजकूर तपासण्यासाठी पुढे टेक्स्टांची संचय घेतेजो तो संचय थांबवले जाईल."
+	},
+	"settings_option_translateScheduler_retryLimit": {
+		"message": "भाषांतर पुन्हा प्रयत्न"
+	},
+	"settings_option_translateScheduler_retryLimit_desc": {
+		"message": "संचालक अनुवाद त्रुटीसाठी मजकूर अनुवाद पुन्हा प्रयत्न करेल. हे पर्याय संचालक प्रयत्नांची सीमा ठेवते. अमर्यादित प्रयत्न सोडविण्यासाठी एक ऋणात्मक क्रमांक ठेवा"
+	},
+	"settings_option_translatorModule": {
+		"message": "अनुवादक मॉड्यूल"
+	},
+	"settings_option_translatorModule_desc": {
+		"message": "अनुवादांची गुणवत्ता आणि उपलब्ध भाषांची संख्या अनुवादकाशी संबंधित आहे."
+	},
+	"settings_option_tts": {
+		"message": "मजकूर टू शीट (TTS)"
+	},
+	"settings_option_ttsCustomModules": {
+		"message": "कस्टम TTS"
+	},
+	"settings_option_ttsCustomModules_button": {
+		"message": "TTS मॉड्यूल व्यवस्थापित करा"
+	},
+	"settings_option_ttsCustomModules_desc": {
+		"message": "आपण आपल्या आवडत्या सेवेसह आणि आवाजांसह TTS मॉड्यूल जोडू शकता. कस्टम TTS दस्तऐवजात अधिक वाचा आणि मॉड्यूल शोधा."
+	},
+	"settings_option_ttsModule": {
+		"message": "TTS मॉड्यूल"
+	},
+	"settings_option_ttsModule_desc": {
+		"message": "मजकूरी बोलण्यासाठी मॉड्यूल"
+	},
+	"settings_option_userLanguage": {
+		"message": "आपली भाषा"
+	},
+	"settings_option_userLanguage_desc": {
+		"message": "टेक्स्ट अनुवाद करण्यासाठी लक्षित भाषा"
+	},
+	"settings_pageTitle": {
+		"message": "सेटिंग्ज"
+	},
+	"settings_section_popup": {
+		"message": "पॉप-अप"
+	},
+	"textTranslator_suggestLanguage": {
+		"message": "ते भाषा आहे हे दिसतं"
+	},
+	"textTranslator_translateInputPlaceholder": {
+		"message": "इनपुट टेक्स्ट"
+	},
+	"textTranslator_translatePlaceholder": {
+		"message": "अनुवादित मजकूर"
+	},
+	"translatorsManagerWindow_add": {
+		"message": "जोडा"
+	},
+	"translatorsManagerWindow_close": {
+		"message": "बंद करा"
+	},
+	"translatorsManagerWindow_emptyTranslatorsListText": {
+		"message": "सानुकूल अनुवादक अजून जोडले नाहीत"
+	},
+	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
+		"message": "\"$translator_name$\" अनुवादक काढून टाकण्यासंदर्भात आहात का?",
+		"placeholders": {
+			"translator_name": {
+				"content": "$1",
+				"example": "Google अनुवादक"
+			}
+		}
+	},
+	"translatorsManagerWindow_title": {
+		"message": "कस्टम अनुवादक"
+	},
+	"translatorsManagerWindow_translator_delete": {
+		"message": "हटवा"
+	},
+	"translatorsManagerWindow_translator_edit": {
+		"message": "संपादित करा"
+	},
+	"ttsManagerWindow_add": {
+		"message": "जोडा"
+	},
+	"ttsManagerWindow_close": {
+		"message": "बंद करा"
+	},
+	"ttsManagerWindow_emptyTranslatorsListText": {
+		"message": "TTS मॉड्यूल अजून जोडले गेले नाहीत"
+	},
+	"ttsManagerWindow_message_ttsRemoveConfirmation": {
+		"message": "\"$tts_name$\" TTS काढण्यासाठी खात्री आहे?",
+		"placeholders": {
+			"tts_name": {
+				"content": "$1",
+				"example": "Google TTS"
+			}
+		}
+	},
+	"ttsManagerWindow_title": {
+		"message": "मजकूर ते वाक्‍य बदलवणारे मॉड्यूल"
+	},
+	"ttsManagerWindow_translator_delete": {
+		"message": "काढून टाका"
+	},
+	"ttsManagerWindow_translator_edit": {
+		"message": "संपादित करा"
+	},
+	"validation_number": {
+		"message": "पॅरामीटर एक नंबर असणे आवश्यक आहे"
+	},
+	"validation_numberBetweenRange": {
+		"message": "पॅरामीटर $1 आणि $2  या दरम्यान असलेलं एक नंबर असणे आवश्यक आहे"
+	},
+	"validation_positiveNumber": {
+		"message": "पॅरामीटर एक सकारात्मक नंबर असणे आवश्यक आहे."
+	},
+	"langCode_aa": {
+		"message": "अफार"
+	},
+	"langCode_ab": {
+		"message": "अबखेजियन"
+	},
+	"langCode_ae": {
+		"message": "अवेस्तन"
+	},
+	"langCode_af": {
+		"message": "अफ्रिकान्स"
+	},
+	"langCode_ak": {
+		"message": "अकान"
+	},
+	"langCode_am": {
+		"message": "अम्हारिक"
+	},
+	"langCode_an": {
+		"message": "अर्गोनीज"
+	},
+	"langCode_ar": {
+		"message": "अरबी"
+	},
+	"langCode_as": {
+		"message": "आसामी"
+	},
+	"langCode_av": {
+		"message": "अ‍ॅव्हेरिक"
+	},
+	"langCode_ay": {
+		"message": "ऐमरा"
+	},
+	"langCode_az": {
+		"message": "अझरबैजानी"
+	},
+	"langCode_ba": {
+		"message": "बष्किर"
+	},
+	"langCode_be": {
+		"message": "बेलारुशियन"
+	},
+	"langCode_bg": {
+		"message": "बल्गेरियन"
+	},
+	"langCode_bh": {
+		"message": "भोजपुरी"
+	},
+	"langCode_bi": {
+		"message": "बिस्लामा"
+	},
+	"langCode_bm": {
+		"message": "बाम्बारा"
+	},
+	"langCode_bn": {
+		"message": "बंगाली"
+	},
+	"langCode_bo": {
+		"message": "तिबेटी"
+	},
+	"langCode_br": {
+		"message": "ब्रेतॉन"
+	},
+	"langCode_bs": {
+		"message": "बोस्नियन"
+	},
+	"langCode_ca": {
+		"message": "कातालान"
+	},
+	"langCode_ce": {
+		"message": "चेचेन"
+	},
+	"langCode_ch": {
+		"message": "कॅमोरो"
+	},
+	"langCode_co": {
+		"message": "कॉर्सिकन"
+	},
+	"langCode_cr": {
+		"message": "क्री"
+	},
+	"langCode_cs": {
+		"message": "झेक"
+	},
+	"langCode_cu": {
+		"message": "चर्च स्लाव्हिक"
+	},
+	"langCode_cv": {
+		"message": "चूवाश"
+	},
+	"langCode_cy": {
+		"message": "वेल्श"
+	},
+	"langCode_da": {
+		"message": "डॅनिश"
+	},
+	"langCode_de": {
+		"message": "जर्मन"
+	},
+	"langCode_dv": {
+		"message": "दिवेही"
+	},
+	"langCode_dz": {
+		"message": "झोंगखा"
+	},
+	"langCode_ee": {
+		"message": "एवे"
+	},
+	"langCode_el": {
+		"message": "ग्रीक"
+	},
+	"langCode_en": {
+		"message": "इंग्रजी"
+	},
+	"langCode_eo": {
+		"message": "एस्परान्टो"
+	},
+	"langCode_es": {
+		"message": "स्पॅनिश"
+	},
+	"langCode_et": {
+		"message": "इस्टोनियन"
+	},
+	"langCode_eu": {
+		"message": "बास्क"
+	},
+	"langCode_fa": {
+		"message": "फारसी"
+	},
+	"langCode_ff": {
+		"message": "फुलाह"
+	},
+	"langCode_fi": {
+		"message": "फिन्निश"
+	},
+	"langCode_fj": {
+		"message": "फिजियन"
+	},
+	"langCode_fo": {
+		"message": "फरोइज"
+	},
+	"langCode_fr": {
+		"message": "फ्रेंच"
+	},
+	"langCode_fy": {
+		"message": "पश्चिमी फ्रिशियन"
+	},
+	"langCode_ga": {
+		"message": "आयरिश"
+	},
+	"langCode_gd": {
+		"message": "स्कॉटिश गेलिक"
+	},
+	"langCode_gl": {
+		"message": "गॅलिशियन"
+	},
+	"langCode_gn": {
+		"message": "गुआरनी"
+	},
+	"langCode_gu": {
+		"message": "गुजराती"
+	},
+	"langCode_gv": {
+		"message": "मांक्स"
+	},
+	"langCode_ha": {
+		"message": "हौसा"
+	},
+	"langCode_he": {
+		"message": "हिब्रू"
+	},
+	"langCode_hi": {
+		"message": "हिंदी"
+	},
+	"langCode_ho": {
+		"message": "हिरी मॉटू"
+	},
+	"langCode_hr": {
+		"message": "क्रोएशियन"
+	},
+	"langCode_ht": {
+		"message": "हैतीयन क्रेओल"
+	},
+	"langCode_hu": {
+		"message": "हंगेरियन"
+	},
+	"langCode_hy": {
+		"message": "आर्मेनियन"
+	},
+	"langCode_hz": {
+		"message": "हरेरो"
+	},
+	"langCode_ia": {
+		"message": "इंटरलिंग्वा"
+	},
+	"langCode_id": {
+		"message": "इंडोनेशियन"
+	},
+	"langCode_ie": {
+		"message": "इन्टरलिंग"
+	},
+	"langCode_ig": {
+		"message": "ईग्बो"
+	},
+	"langCode_ii": {
+		"message": "सिचुआन यी"
+	},
+	"langCode_ik": {
+		"message": "इनूपियाक"
+	},
+	"langCode_io": {
+		"message": "इडौ"
+	},
+	"langCode_is": {
+		"message": "आईसलँडिक"
+	},
+	"langCode_it": {
+		"message": "इटालियन"
+	},
+	"langCode_iu": {
+		"message": "इनुक्तीटुट"
+	},
+	"langCode_ja": {
+		"message": "जपानी"
+	},
+	"langCode_jv": {
+		"message": "जावानीज"
+	},
+	"langCode_ka": {
+		"message": "जॉर्जियन"
+	},
+	"langCode_kg": {
+		"message": "काँगो"
+	},
+	"langCode_ki": {
+		"message": "किकुयू"
+	},
+	"langCode_kj": {
+		"message": "क्वान्यामा"
+	},
+	"langCode_kk": {
+		"message": "कझाक"
+	},
+	"langCode_kl": {
+		"message": "कलाल्लिसत"
+	},
+	"langCode_km": {
+		"message": "ख्मेर"
+	},
+	"langCode_kn": {
+		"message": "कन्नड"
+	},
+	"langCode_ko": {
+		"message": "कोरियन"
+	},
+	"langCode_kr": {
+		"message": "कनुरी"
+	},
+	"langCode_ks": {
+		"message": "काश्मीरी"
+	},
+	"langCode_ku": {
+		"message": "कुर्दिश"
+	},
+	"langCode_kv": {
+		"message": "कोमी"
+	},
+	"langCode_kw": {
+		"message": "कोर्निश"
+	},
+	"langCode_ky": {
+		"message": "किरगीझ"
+	},
+	"langCode_la": {
+		"message": "लॅटिन"
+	},
+	"langCode_lb": {
+		"message": "लक्झेंबर्गिश"
+	},
+	"langCode_lg": {
+		"message": "गांडा"
+	},
+	"langCode_li": {
+		"message": "लिंबूर्गिश"
+	},
+	"langCode_ln": {
+		"message": "लिंगाला"
+	},
+	"langCode_lo": {
+		"message": "लाओ"
+	},
+	"langCode_lt": {
+		"message": "लिथुआनियन"
+	},
+	"langCode_lu": {
+		"message": "ल्यूबा-कटांगा"
+	},
+	"langCode_lv": {
+		"message": "लात्व्हियन"
+	},
+	"langCode_mg": {
+		"message": "मलागसी"
+	},
+	"langCode_mh": {
+		"message": "मार्शलीज"
+	},
+	"langCode_mi": {
+		"message": "माओरी"
+	},
+	"langCode_mk": {
+		"message": "मॅसेडोनियन"
+	},
+	"langCode_ml": {
+		"message": "मल्याळम"
+	},
+	"langCode_mn": {
+		"message": "मंगोलियन"
+	},
+	"langCode_mr": {
+		"message": "मराठी"
+	},
+	"langCode_ms": {
+		"message": "मलय"
+	},
+	"langCode_mt": {
+		"message": "माल्टिज्"
+	},
+	"langCode_my": {
+		"message": "बर्मी"
+	},
+	"langCode_na": {
+		"message": "नउरू"
+	},
+	"langCode_nb": {
+		"message": "नॉर्वेजियन बोकमाल"
+	},
+	"langCode_nd": {
+		"message": "उत्तर देबेली"
+	},
+	"langCode_ne": {
+		"message": "नेपाळी"
+	},
+	"langCode_ng": {
+		"message": "डोंगा"
+	},
+	"langCode_nl": {
+		"message": "डच"
+	},
+	"langCode_nn": {
+		"message": "नॉर्वेजियन न्योर्स्क"
+	},
+	"langCode_no": {
+		"message": "नोर्वेजियन"
+	},
+	"langCode_nr": {
+		"message": "दक्षिणात्य देबेली"
+	},
+	"langCode_nv": {
+		"message": "नावाजो"
+	},
+	"langCode_ny": {
+		"message": "न्यान्जा"
+	},
+	"langCode_oc": {
+		"message": "ऑक्सितान"
+	},
+	"langCode_oj": {
+		"message": "ओजिब्वा"
+	},
+	"langCode_om": {
+		"message": "ओरोमो"
+	},
+	"langCode_or": {
+		"message": "उडिया"
+	},
+	"langCode_os": {
+		"message": "ओस्सेटिक"
+	},
+	"langCode_pa": {
+		"message": "पंजाबी"
+	},
+	"langCode_pi": {
+		"message": "पाली"
+	},
+	"langCode_pl": {
+		"message": "पोलिश"
+	},
+	"langCode_ps": {
+		"message": "पश्तो"
+	},
+	"langCode_pt": {
+		"message": "पोर्तुगीज"
+	},
+	"langCode_qu": {
+		"message": "क्वेचुआ"
+	},
+	"langCode_rm": {
+		"message": "रोमान्श"
+	},
+	"langCode_rn": {
+		"message": "रुन्दी"
+	},
+	"langCode_ro": {
+		"message": "रोमानियन"
+	},
+	"langCode_ru": {
+		"message": "रशियन"
+	},
+	"langCode_rw": {
+		"message": "किन्यार्वान्डा"
+	},
+	"langCode_sa": {
+		"message": "संस्कृत"
+	},
+	"langCode_sc": {
+		"message": "सर्दिनियन"
+	},
+	"langCode_sd": {
+		"message": "सिंधी"
+	},
+	"langCode_se": {
+		"message": "उत्तरी सामी"
+	},
+	"langCode_sg": {
+		"message": "सांगो"
+	},
+	"langCode_si": {
+		"message": "सिंहला"
+	},
+	"langCode_sk": {
+		"message": "स्लोव्हाक"
+	},
+	"langCode_sl": {
+		"message": "स्लोव्हेनियन"
+	},
+	"langCode_sm": {
+		"message": "सामोअन"
+	},
+	"langCode_sn": {
+		"message": "शोना"
+	},
+	"langCode_so": {
+		"message": "सोमाली"
+	},
+	"langCode_sq": {
+		"message": "अल्बानियन"
+	},
+	"langCode_sr": {
+		"message": "सर्बियन"
+	},
+	"langCode_ss": {
+		"message": "स्वाती"
+	},
+	"langCode_st": {
+		"message": "दक्षिणी सोथो"
+	},
+	"langCode_su": {
+		"message": "सुंदानीज"
+	},
+	"langCode_sv": {
+		"message": "स्वीडिश"
+	},
+	"langCode_sw": {
+		"message": "स्वाहिली"
+	},
+	"langCode_ta": {
+		"message": "तामिळ"
+	},
+	"langCode_te": {
+		"message": "तेलगू"
+	},
+	"langCode_tg": {
+		"message": "ताजिक"
+	},
+	"langCode_th": {
+		"message": "थाई"
+	},
+	"langCode_ti": {
+		"message": "तिग्रिन्या"
+	},
+	"langCode_tk": {
+		"message": "तुर्कमेन"
+	},
+	"langCode_tl": {
+		"message": "फिलिपिनो"
+	},
+	"langCode_tn": {
+		"message": "त्स्वाना"
+	},
+	"langCode_to": {
+		"message": "टोंगन"
+	},
+	"langCode_tr": {
+		"message": "तुर्की"
+	},
+	"langCode_ts": {
+		"message": "सोंगा"
+	},
+	"langCode_tt": {
+		"message": "तातर"
+	},
+	"langCode_tw": {
+		"message": "अकान"
+	},
+	"langCode_ty": {
+		"message": "ताहितीयन"
+	},
+	"langCode_ug": {
+		"message": "उइगुर"
+	},
+	"langCode_uk": {
+		"message": "युक्रेनियन"
+	},
+	"langCode_ur": {
+		"message": "उर्दू"
+	},
+	"langCode_uz": {
+		"message": "उझ्बेक"
+	},
+	"langCode_ve": {
+		"message": "व्हेंदा"
+	},
+	"langCode_vi": {
+		"message": "व्हिएतनामी"
+	},
+	"langCode_vo": {
+		"message": "ओलापुक"
+	},
+	"langCode_wa": {
+		"message": "वालून"
+	},
+	"langCode_wo": {
+		"message": "वोलोफ"
+	},
+	"langCode_xh": {
+		"message": "खोसा"
+	},
+	"langCode_yi": {
+		"message": "यिद्दिश"
+	},
+	"langCode_yo": {
+		"message": "योरुबा"
+	},
+	"langCode_za": {
+		"message": "झुआंग"
+	},
+	"langCode_zh": {
+		"message": "चीनी"
+	},
+	"langCode_zu": {
+		"message": "झुलू"
+	}
+}

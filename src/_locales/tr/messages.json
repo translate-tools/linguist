@@ -1,0 +1,1190 @@
+{
+	"common_action_addToDictionary": {
+		"message": "Sözlüğe çeviri ekle"
+	},
+	"common_action_removeFromDictionary": {
+		"message": "Sözlükten çeviriyi kaldır"
+	},
+	"common_bgUnavailable": {
+		"message": "Arka plan betiği kullanılamıyor"
+	},
+	"common_cancel": {
+		"message": "İptal"
+	},
+	"common_close": {
+		"message": "Kapat"
+	},
+	"common_copy": {
+		"message": "Kopyala"
+	},
+	"common_error": {
+		"message": "Hata"
+	},
+	"common_offlineTranslator": {
+		"message": "$1 - Çevrimdışı çevirmen"
+	},
+	"common_retry": {
+		"message": "Tekrar dene"
+	},
+	"common_translate": {
+		"message": "Çevir"
+	},
+	"component_hotkey_placeholder": {
+		"message": "Kısayolları kaydetmek için tıklayın"
+	},
+	"component_hotkey_recordPlaceholder": {
+		"message": "Tuşlara basın"
+	},
+	"component_hotkey_resetButton": {
+		"message": "Sıfırla"
+	},
+	"contextMenu_disablePageTranslation": {
+		"message": "Sayfa çevirisini devre dışı bırak"
+	},
+	"contextMenu_translatePage": {
+		"message": "Sayfayı çevir"
+	},
+	"contextMenu_translateSelectedText": {
+		"message": "Seçili metni çevir"
+	},
+	"dictionaryButton_add": {
+		"message": "Sözlüğe ekle"
+	},
+	"dictionaryButton_delete": {
+		"message": "Sözlükten sil"
+	},
+	"dictionary_button_export": {
+		"message": "Dışa aktar"
+	},
+	"dictionary_button_removeAll": {
+		"message": "Tümünü kaldır"
+	},
+	"dictionary_deleteAll": {
+		"message": "Tüm çevirileri sözlükten silmek istediğinizden emin misiniz?"
+	},
+	"dictionary_deleteConfirmation": {
+		"message": "Bu çeviriyi silmek istediğinizden emin misiniz?"
+	},
+	"dictionary_description": {
+		"message": "Çevirilerinizi sözlükte tutun ve daha sonra bulun"
+	},
+	"dictionary_emptyDictionary": {
+		"message": "Sözlük boş. Bir metin çevirirken doldurmaya başlayın"
+	},
+	"dictionary_filter_from": {
+		"message": "Kaynak"
+	},
+	"dictionary_filter_to": {
+		"message": "Hedef"
+	},
+	"dictionary_message_deleteAll_success": {
+		"message": "Tüm çeviriler silindi"
+	},
+	"dictionary_notFoundEntries": {
+		"message": "Bu filtrelerle eşleşen çeviri bulunamadı"
+	},
+	"dictionary_pageTitle": {
+		"message": "Sözlük"
+	},
+	"dictionary_resetFilters": {
+		"message": "filtreleri sıfırla"
+	},
+	"dictionary_searchPlaceholder": {
+		"message": "Metin ile arayın"
+	},
+	"editorWindow_close": {
+		"message": "Kapat"
+	},
+	"editorWindow_data_code": {
+		"message": "Kod"
+	},
+	"editorWindow_data_name": {
+		"message": "İsim"
+	},
+	"editorWindow_message_invalidName": {
+		"message": "İsim en az bir sembol içermelidir"
+	},
+	"editorWindow_save": {
+		"message": "Kaydet"
+	},
+	"ext_description": {
+		"message": "Sayfa yenilemeden metin çevirisi"
+	},
+	"ext_name": {
+		"message": "Linguist - web sayfası çevirmeni"
+	},
+	"history_control_selectEntry": {
+		"message": "Giriş seçin"
+	},
+	"history_controls_clearHistory": {
+		"message": "Geçmişi temizle"
+	},
+	"history_controls_deleteSelected": {
+		"message": "Seçilenleri Sil"
+	},
+	"history_controls_selectAll": {
+		"message": "Tüm Çevirileri Seç"
+	},
+	"history_message_clearHistoryConfirmation": {
+		"message": "Geçmişi temizlemek istediğinize emin misiniz? Tüm girdiler silinecektir"
+	},
+	"history_message_deleteEntryConfirmation": {
+		"message": "Bu girdiyi silmek istediğinize emin misiniz?"
+	},
+	"history_message_deleteSelectedEntriesConfirmation": {
+		"message": "Seçili girdileri ($1) silmek istediğinize emin misiniz?"
+	},
+	"history_message_emptyEntries": {
+		"message": "Geçmiş temizlendi"
+	},
+	"history_message_entriesNotFound": {
+		"message": "Filtreyi karşılayan çeviri bulunamadı"
+	},
+	"history_pageTitle": {
+		"message": "Geçmiş"
+	},
+	"history_searchPlaceholder": {
+		"message": "Metne göre ara"
+	},
+	"inlineTranslator_showOriginalText": {
+		"message": "Orijinal metni göster"
+	},
+	"lang_change": {
+		"message": "Dil Değiştir"
+	},
+	"lang_detect": {
+		"message": "Otomatik Algıla"
+	},
+	"lang_select": {
+		"message": "Dil Seç"
+	},
+	"lang_swap": {
+		"message": "Dilleri Değiştir"
+	},
+	"message_askResetConfig": {
+		"message": "Ayarları Sıfırlamak İstiyor musunuz?"
+	},
+	"message_cacheFlushed": {
+		"message": "Önbellek temizlendi"
+	},
+	"message_changesSaved": {
+		"message": "Değişiklikler kaydedildi"
+	},
+	"message_error": {
+		"message": "Hata"
+	},
+	"message_errorOfTranslate": {
+		"message": "Çeviri hatası"
+	},
+	"message_serviceRequiredKey": {
+		"message": "Hizmet anahtarı gerekiyor"
+	},
+	"message_translateOfText": {
+		"message": "Çevrildi"
+	},
+	"message_unknownError": {
+		"message": "Bilinmeyen hata"
+	},
+	"pageTranslator_alwaysTranslateLang": {
+		"message": "Bu dili her zaman çevir"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disable": {
+		"message": "Devre dışı bırak"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
+		"message": "Tüm siteler için devre dışı bırak"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_enable": {
+		"message": "Etkinleştir"
+	},
+	"pageTranslator_commonPreferences_title": {
+		"message": "Bu dil için ortak tercihler"
+	},
+	"pageTranslator_option_autoTranslate": {
+		"message": "Otomatik çeviri"
+	},
+	"pageTranslator_showOptions": {
+		"message": "Seçenekleri göster"
+	},
+	"pageTranslator_showOriginal": {
+		"message": "Orijinali göster"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_always": {
+		"message": "Her zaman çevir"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
+		"message": "Bu dil için her zaman çevir"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_default": {
+		"message": "Ortak kuralları kullan"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
+		"message": "Bu dil için ortak kuralları kullan"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_never": {
+		"message": "Asla çevirme"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
+		"message": "Bu dil için asla çevirme"
+	},
+	"pageTranslator_sitePreferences_title": {
+		"message": "İçin tercihler"
+	},
+	"pageTranslator_translatePage": {
+		"message": "Sayfayı çevir"
+	},
+	"pageTranslator_translationReport": {
+		"message": "Çeviri raporu"
+	},
+	"pageTranslator_translationReport_queue": {
+		"message": "Sıra"
+	},
+	"pageTranslator_translationReport_reject": {
+		"message": "Hatalar"
+	},
+	"pageTranslator_translationReport_resolve": {
+		"message": "Çevrildi"
+	},
+	"popup_tabIdNotFound": {
+		"message": "\"$1\" sekmesi bulunamadı"
+	},
+	"popup_tab_translatePage": {
+		"message": "Sayfa çevirisi"
+	},
+	"popup_tab_translateText": {
+		"message": "Metin çevirisi"
+	},
+	"settings_button_cancel": {
+		"message": "İptal"
+	},
+	"settings_button_export": {
+		"message": "Yapılandırmayı Dışa Aktar"
+	},
+	"settings_button_import": {
+		"message": "Yapılandırmayı İçe Aktar"
+	},
+	"settings_button_reset": {
+		"message": "Yapılandırmayı Sıfırla"
+	},
+	"settings_button_saveChanges": {
+		"message": "Değişiklikleri Kaydet"
+	},
+	"settings_message_clearCache_success": {
+		"message": "Önbellek temizlendi"
+	},
+	"settings_message_common_invalidValueType": {
+		"message": "Geçersiz değer"
+	},
+	"settings_message_importConfig_invalidFile": {
+		"message": "İçe aktarma dosyası işlenemiyor"
+	},
+	"settings_message_importConfig_success": {
+		"message": "İçe aktarma işlemi tamamlandı"
+	},
+	"settings_message_resetConfig_confirm": {
+		"message": "Ayarları sıfırlamak istiyor musunuz?"
+	},
+	"settings_message_resetConfig_success": {
+		"message": "Ayarlar sıfırlandı"
+	},
+	"settings_message_saveChanges_success": {
+		"message": "Değişiklikler kaydedildi"
+	},
+	"settings_option_appIcon": {
+		"message": "Uzantı simgesi"
+	},
+	"settings_option_appIcon_desc": {
+		"message": "Dinamik simge seçildiğinde, renkler tarayıcı temasına uyacak şekilde ayarlanır"
+	},
+	"settings_option_appIcon_item_auto": {
+		"message": "Dinamik"
+	},
+	"settings_option_appIcon_item_color": {
+		"message": "Renk"
+	},
+	"settings_option_appIcon_item_dark": {
+		"message": "Koyu"
+	},
+	"settings_option_appIcon_item_light": {
+		"message": "Açık"
+	},
+	"settings_option_cache": {
+		"message": "Önbellek"
+	},
+	"settings_option_cache_clear": {
+		"message": "Önbelleği Temizle"
+	},
+	"settings_option_cache_clear_desc": {
+		"message": "Çeviri kalıntılarına sahipseniz veya şifreleri kaldırmak isterseniz önbelleği temizleyin"
+	},
+	"settings_option_cache_enable": {
+		"message": "Önbelleği etkinleştir"
+	},
+	"settings_option_cache_enable_desc": {
+		"message": "Önbellek etkinleştirildiğinde, bir kez çevrilen çeviriler internet olmadan hemen kullanılabilir hale gelir"
+	},
+	"settings_option_cache_ignoreCase": {
+		"message": "Büyük/küçük harf duyarsızlığı"
+	},
+	"settings_option_cache_ignoreCase_desc": {
+		"message": "Etkinleştirildiğinde, önbellekten çeviriler kesin olmayan eşleşmelerle kullanılır ve bu çeviri kalıntılarına neden olabilir"
+	},
+	"settings_option_commonSettings": {
+		"message": "Ortak ayarlar"
+	},
+	"settings_option_customTranslatorModule": {
+		"message": "Özel çevirmenler"
+	},
+	"settings_option_customTranslatorModule_desc": {
+		"message": "Favori çeviri hizmetleriniz için özel çevirmenler ekleyebilirsiniz. Daha fazla bilgi için <slot id=docs>özel çevirmenler belgelerine</slot> bakın."
+	},
+	"settings_option_customTranslatorModule_manageButton": {
+		"message": "Çevirmenleri yönet"
+	},
+	"settings_option_mainPreferences": {
+		"message": "Ana ayarlar"
+	},
+	"settings_option_pageTranslation": {
+		"message": "Sayfa çevirisi"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent": {
+		"message": "İçerikle dil tespiti yap"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent_desc": {
+		"message": "Sayfa dili tespiti için web sayfasındaki metni analiz edin. Devre dışı bırakıldığında, sayfa meta verilerinde sağlanan bir dili kullanır."
+	},
+	"settings_option_pageTranslation_enableContextMenu": {
+		"message": "İçerik menüsü düğmesini etkinleştir"
+	},
+	"settings_option_pageTranslation_enableContextMenu_desc": {
+		"message": "Sayfa çevirisini açıp kapamak için bir içerik menüsüne düğme ekleyin."
+	},
+	"settings_option_pageTranslation_ignoredTags": {
+		"message": "Yoksayılan öğeler"
+	},
+	"settings_option_pageTranslation_ignoredTags_desc": {
+		"message": "Çevrilmemesi gereken <slot id=htmlElements>HTML elementi</slot> adlarını girin. İç içe geçmiş öğeler de çevrilmeyecektir. Satır başına bir öğe."
+	},
+	"settings_option_pageTranslation_lazyTranslate": {
+		"message": "Yalnızca görünür öğeleri çevir"
+	},
+	"settings_option_pageTranslation_lazyTranslate_desc": {
+		"message": "Bu seçenek etkinleştirildiğinde, yalnızca görünür öğeler çevrilecektir. Bu, ağ trafiğini kaydetmek için faydalı olabilir"
+	},
+	"settings_option_pageTranslation_originalTextPopup": {
+		"message": "Orijinal metinle açılır pencereyi etkinleştir"
+	},
+	"settings_option_pageTranslation_originalTextPopup_desc": {
+		"message": "Çevrilmiş metnin üzerine fareyi getirerek, orijinal metni gösteren bir açılır pencere göster"
+	},
+	"settings_option_pageTranslation_toggleTranslationHotkey": {
+		"message": "Kısayol Tuşları"
+	},
+	"settings_option_pageTranslation_toggleTranslationHotkey_desc": {
+		"message": "Sayfa çevirisini açıp kapatmak için kısayol tuşları\nTuşları sıfırlamak için ESC tuşuna basın"
+	},
+	"settings_option_pageTranslation_translatableAttributes": {
+		"message": "Çevrilebilir öznitelikler."
+	},
+	"settings_option_pageTranslation_translatableAttributes_desc": {
+		"message": "Çeviri için <slot id=htmlAttributes>HTML öznitelikleri</slot> adlarını girin. Her satıra bir öznitelik"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters": {
+		"message": "Çeviri istatistiklerini göster"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters_desc": {
+		"message": "Sayfa çevirisi için istatistikleri göster"
+	},
+	"settings_option_selectTranslation": {
+		"message": "Seçili metin çevirisi"
+	},
+	"settings_option_selectTranslation_detectedLangFirst": {
+		"message": "Sayfa dilinin yerine metnin tespit edilen dilini tercih et"
+	},
+	"settings_option_selectTranslation_detectedLangFirst_desc": {
+		"message": "Etkinleştirildiğinde, seçili metnin tespit edilen dili, sayfa dilinden öncelikli olarak tercih edilecektir"
+	},
+	"settings_option_selectTranslation_disableWhileTranslatePage": {
+		"message": "Sayfayı çevirirken devre dışı bırakın"
+	},
+	"settings_option_selectTranslation_enable": {
+		"message": "Etkinleştir"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton": {
+		"message": "Otomatik olarak çeviri düğmesine odaklan"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
+		"message": "Göründüğünde çeviri düğmesine odaklanın"
+	},
+	"settings_option_selectTranslation_header_languageChoice": {
+		"message": "Dil ayarları"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang": {
+		"message": "Çevirmen tarafından otomatik dil algılama özelliğini etkinleştirin"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
+		"message": "Yerel olarak dil tespit edilemediğinde, çevirmen tarafından otomatik dil algılama özelliğini kullanın"
+	},
+	"settings_option_selectTranslation_mode": {
+		"message": "Çeviri tetikleyici"
+	},
+	"settings_option_selectTranslation_mode_item_contextMenu": {
+		"message": "Bağlam menüsü düğmesi"
+	},
+	"settings_option_selectTranslation_mode_item_popupButton": {
+		"message": "Açılır düğme"
+	},
+	"settings_option_selectTranslation_mode_item_quickTranslate": {
+		"message": "Seçimle hızlı çeviri"
+	},
+	"settings_option_selectTranslation_modifiers": {
+		"message": "Değiştiriciler"
+	},
+	"settings_option_selectTranslation_modifiers_desc": {
+		"message": "Çevirinin görüntülenmesi için klavyede basılması gereken tuşları seçin"
+	},
+	"settings_option_selectTranslation_modifiers_key_alt": {
+		"message": "alt"
+	},
+	"settings_option_selectTranslation_modifiers_key_ctrl": {
+		"message": "ctrl"
+	},
+	"settings_option_selectTranslation_modifiers_key_meta": {
+		"message": "meta"
+	},
+	"settings_option_selectTranslation_modifiers_key_shift": {
+		"message": "shift"
+	},
+	"settings_option_selectTranslation_rememberDirection": {
+		"message": "Metnin en son seçilen dilini hatırla"
+	},
+	"settings_option_selectTranslation_showOnceForSelection": {
+		"message": "Her metin seçimi için çeviri butonunu yalnızca bir kez göster"
+	},
+	"settings_option_selectTranslation_showOnceForSelection_desc": {
+		"message": "Buton her metin seçimi için yalnızca bir kez gösterilecektir. Tekrar gösterilmesi gerekiyorsa, metni yeniden seçin"
+	},
+	"settings_option_selectTranslation_showOriginalText": {
+		"message": "Orijinal metni göster"
+	},
+	"settings_option_selectTranslation_showOriginalText_desc": {
+		"message": "Çeviri için açılır pencereye orijinal metni de ekleyin"
+	},
+	"settings_option_selectTranslation_strictSelection": {
+		"message": "Sıkı seçim"
+	},
+	"settings_option_selectTranslation_strictSelection_desc": {
+		"message": "Seçilen metin içeren bloğun dışında sol fare düğmesi bırakılırsa seçimi yok sayın"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton": {
+		"message": "Düğmeyi gizleme gecikmesi"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton_desc": {
+		"message": "Fare imleci üzerinde gezinilmediğinde düğmenin gizlenmesi için milisaniye cinsinden gecikme. Düğmeye fare imleciyle gelinmesi süresince süre sıfırlanır. Otomatik gizlemeyi devre dışı bırakmak için değeri 1'den daha düşük ayarlayın."
+	},
+	"settings_option_selectTranslation_zIndex": {
+		"message": "z-index"
+	},
+	"settings_option_selectTranslation_zIndex_desc": {
+		"message": "Bazı sayfalarda bazı öğelerin çevrilmiş metin içeren açılır pencereyi örtmesi durumunda değeri artırın."
+	},
+	"settings_option_textTranslator": {
+		"message": "Metin çevirisi"
+	},
+	"settings_option_textTranslator_rememberText": {
+		"message": "Çevrilmiş metni hatırla"
+	},
+	"settings_option_textTranslator_rememberText_desc": {
+		"message": "Çevrilen metni bir sonraki pencere açıldığında hatırla"
+	},
+	"settings_option_textTranslator_spellCheck": {
+		"message": "Yazım denetimini etkinleştir"
+	},
+	"settings_option_textTranslator_suggestLanguage": {
+		"message": "Algılanan metin dilini öner"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways": {
+		"message": "Dilini her zaman algıla ve öner"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways_desc": {
+		"message": "Devre dışı bırakıldığında, dil önerileri sadece kaynak dil otomatik olarak algılandığında görüntülenecektir"
+	},
+	"settings_option_translatePreferences": {
+		"message": "Çeviri tercihleri"
+	},
+	"settings_option_translateScheduler": {
+		"message": "Çeviri zamanlayıcısı"
+	},
+	"settings_option_translateScheduler_delay": {
+		"message": "Metin biriktirme gecikmesi"
+	},
+	"settings_option_translateScheduler_delay_desc": {
+		"message": "Çeviri zamanlayıcısı, çeviri hizmetleri API'sına yönelik talep sayısını azaltır. Zamanlayıcı, mümkün olan en fazla metni tek bir istekte göndermek için metin biriktirmeye çalışır. Zamanlayıcı, yeni metinleri toplamaya başlamadan önce belirtilen süre boyunca milisaniye cinsinden bekleyecektir."
+	},
+	"settings_option_translateScheduler_retryLimit": {
+		"message": "Çeviri yeniden deneme sayısı"
+	},
+	"settings_option_translateScheduler_retryLimit_desc": {
+		"message": "Çeviri programı, çeviri hataları için metinleri yeniden çevirmeyi deneyecektir. Bu seçenek yeniden deneme girişimleri için bir sınır belirler. Sınırsız denemelere izin vermek için negatif bir sayı ayarlayın."
+	},
+	"settings_option_translatorModule": {
+		"message": "Çeviri modülü"
+	},
+	"settings_option_translatorModule_desc": {
+		"message": "Çevirilerin kalitesi ve çevrilebilen diller, çevirmene bağlıdır."
+	},
+	"settings_option_tts": {
+		"message": "Metin okuma (TTS)"
+	},
+	"settings_option_ttsCustomModules": {
+		"message": "Özel TTS"
+	},
+	"settings_option_ttsCustomModules_button": {
+		"message": "TTS modüllerini yönet"
+	},
+	"settings_option_ttsCustomModules_desc": {
+		"message": "Favori servislerinizi ve sesleri kullanan TTS modülleri ekleyebilirsiniz. Özel TTS belgelerinde daha fazla bilgi edinin ve modülleri bulun."
+	},
+	"settings_option_ttsModule": {
+		"message": "TTS modülü"
+	},
+	"settings_option_ttsModule_desc": {
+		"message": "Metinleri okumak için modül"
+	},
+	"settings_option_userLanguage": {
+		"message": "Sizin diliniz"
+	},
+	"settings_option_userLanguage_desc": {
+		"message": "Metinleri çevirmek için hedef dil"
+	},
+	"settings_pageTitle": {
+		"message": "Ayarlar"
+	},
+	"settings_section_popup": {
+		"message": "Açılır pencere"
+	},
+	"textTranslator_suggestLanguage": {
+		"message": "Bu dil gibi görünüyor"
+	},
+	"textTranslator_translateInputPlaceholder": {
+		"message": "Giriş metni"
+	},
+	"textTranslator_translatePlaceholder": {
+		"message": "Çevrilmiş metin"
+	},
+	"translatorsManagerWindow_add": {
+		"message": "Ekle"
+	},
+	"translatorsManagerWindow_close": {
+		"message": "Kapat"
+	},
+	"translatorsManagerWindow_emptyTranslatorsListText": {
+		"message": "Özel çevirmenler henüz eklenmedi"
+	},
+	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
+		"message": "\"$translator_name$\" çevirmenini kaldırmak istediğinizden emin misiniz?",
+		"placeholders": {
+			"translator_name": {
+				"content": "$1",
+				"example": "Google çevirmen"
+			}
+		}
+	},
+	"translatorsManagerWindow_title": {
+		"message": "Özel Çevirmenler"
+	},
+	"translatorsManagerWindow_translator_delete": {
+		"message": "Sil"
+	},
+	"translatorsManagerWindow_translator_edit": {
+		"message": "Düzenle"
+	},
+	"ttsManagerWindow_add": {
+		"message": "Ekle"
+	},
+	"ttsManagerWindow_close": {
+		"message": "Kapat"
+	},
+	"ttsManagerWindow_emptyTranslatorsListText": {
+		"message": "TTS modülleri henüz eklenmedi"
+	},
+	"ttsManagerWindow_message_ttsRemoveConfirmation": {
+		"message": "\"$tts_name$\" TTS'yi kaldırmak istediğinizden emin misiniz?",
+		"placeholders": {
+			"tts_name": {
+				"content": "$1",
+				"example": "Google TTS"
+			}
+		}
+	},
+	"ttsManagerWindow_title": {
+		"message": "Metin okuma modülleri"
+	},
+	"ttsManagerWindow_translator_delete": {
+		"message": "Sil"
+	},
+	"ttsManagerWindow_translator_edit": {
+		"message": "Düzenle"
+	},
+	"validation_number": {
+		"message": "Parametre bir sayı olmalı"
+	},
+	"validation_numberBetweenRange": {
+		"message": "Parametre $1 ile $2 arasında bir sayı olmalı"
+	},
+	"validation_positiveNumber": {
+		"message": "Parametre pozitif bir sayı olmalıdır."
+	},
+	"langCode_aa": {
+		"message": "Afar"
+	},
+	"langCode_ab": {
+		"message": "Abhazca"
+	},
+	"langCode_ae": {
+		"message": "Avestçe"
+	},
+	"langCode_af": {
+		"message": "Afrikaanca"
+	},
+	"langCode_ak": {
+		"message": "Akan"
+	},
+	"langCode_am": {
+		"message": "Amharca"
+	},
+	"langCode_an": {
+		"message": "Aragonca"
+	},
+	"langCode_ar": {
+		"message": "Arapça"
+	},
+	"langCode_as": {
+		"message": "Assamca"
+	},
+	"langCode_av": {
+		"message": "Avar dili"
+	},
+	"langCode_ay": {
+		"message": "Aymara"
+	},
+	"langCode_az": {
+		"message": "Azerbaycan dili"
+	},
+	"langCode_ba": {
+		"message": "Başkırtça"
+	},
+	"langCode_be": {
+		"message": "Belarusça"
+	},
+	"langCode_bg": {
+		"message": "Bulgarca"
+	},
+	"langCode_bh": {
+		"message": "Arayanice"
+	},
+	"langCode_bi": {
+		"message": "Bislama"
+	},
+	"langCode_bm": {
+		"message": "Bambara"
+	},
+	"langCode_bn": {
+		"message": "Bengalce"
+	},
+	"langCode_bo": {
+		"message": "Tibetçe"
+	},
+	"langCode_br": {
+		"message": "Bretonca"
+	},
+	"langCode_bs": {
+		"message": "Boşnakça"
+	},
+	"langCode_ca": {
+		"message": "Katalanca"
+	},
+	"langCode_ce": {
+		"message": "Çeçence"
+	},
+	"langCode_ch": {
+		"message": "Çamorro dili"
+	},
+	"langCode_co": {
+		"message": "Korsikaca"
+	},
+	"langCode_cr": {
+		"message": "Krice"
+	},
+	"langCode_cs": {
+		"message": "Çekçe"
+	},
+	"langCode_cu": {
+		"message": "Kilise Slavcası"
+	},
+	"langCode_cv": {
+		"message": "Çuvaşça"
+	},
+	"langCode_cy": {
+		"message": "Galce"
+	},
+	"langCode_da": {
+		"message": "Danca"
+	},
+	"langCode_de": {
+		"message": "Almanca"
+	},
+	"langCode_dv": {
+		"message": "Divehi dili"
+	},
+	"langCode_dz": {
+		"message": "Dzongkha"
+	},
+	"langCode_ee": {
+		"message": "Ewe"
+	},
+	"langCode_el": {
+		"message": "Yunanca"
+	},
+	"langCode_en": {
+		"message": "İngilizce"
+	},
+	"langCode_eo": {
+		"message": "Esperanto"
+	},
+	"langCode_es": {
+		"message": "İspanyolca"
+	},
+	"langCode_et": {
+		"message": "Estonca"
+	},
+	"langCode_eu": {
+		"message": "Baskça"
+	},
+	"langCode_fa": {
+		"message": "Farsça"
+	},
+	"langCode_ff": {
+		"message": "Fula dili"
+	},
+	"langCode_fi": {
+		"message": "Fince"
+	},
+	"langCode_fj": {
+		"message": "Fiji dili"
+	},
+	"langCode_fo": {
+		"message": "Faroe dili"
+	},
+	"langCode_fr": {
+		"message": "Fransızca"
+	},
+	"langCode_fy": {
+		"message": "Batı Frizcesi"
+	},
+	"langCode_ga": {
+		"message": "İrlandaca"
+	},
+	"langCode_gd": {
+		"message": "İskoç Gaelcesi"
+	},
+	"langCode_gl": {
+		"message": "Galiçyaca"
+	},
+	"langCode_gn": {
+		"message": "Guarani dili"
+	},
+	"langCode_gu": {
+		"message": "Güceratça"
+	},
+	"langCode_gv": {
+		"message": "Man dili"
+	},
+	"langCode_ha": {
+		"message": "Hausa dili"
+	},
+	"langCode_he": {
+		"message": "İbranice"
+	},
+	"langCode_hi": {
+		"message": "Hintçe"
+	},
+	"langCode_ho": {
+		"message": "Hiri Motu"
+	},
+	"langCode_hr": {
+		"message": "Hırvatça"
+	},
+	"langCode_ht": {
+		"message": "Haiti Kreyolu"
+	},
+	"langCode_hu": {
+		"message": "Macarca"
+	},
+	"langCode_hy": {
+		"message": "Ermenice"
+	},
+	"langCode_hz": {
+		"message": "Herero dili"
+	},
+	"langCode_ia": {
+		"message": "İnterlingua"
+	},
+	"langCode_id": {
+		"message": "Endonezce"
+	},
+	"langCode_ie": {
+		"message": "Interlingue"
+	},
+	"langCode_ig": {
+		"message": "İbo dili"
+	},
+	"langCode_ii": {
+		"message": "Sichuan Yi"
+	},
+	"langCode_ik": {
+		"message": "İnyupikçe"
+	},
+	"langCode_io": {
+		"message": "Ido"
+	},
+	"langCode_is": {
+		"message": "İzlandaca"
+	},
+	"langCode_it": {
+		"message": "İtalyanca"
+	},
+	"langCode_iu": {
+		"message": "İnuktitut dili"
+	},
+	"langCode_ja": {
+		"message": "Japonca"
+	},
+	"langCode_jv": {
+		"message": "Cava dili"
+	},
+	"langCode_ka": {
+		"message": "Gürcüce"
+	},
+	"langCode_kg": {
+		"message": "Kongo dili"
+	},
+	"langCode_ki": {
+		"message": "Kikuyu"
+	},
+	"langCode_kj": {
+		"message": "Kuanyama"
+	},
+	"langCode_kk": {
+		"message": "Kazakça"
+	},
+	"langCode_kl": {
+		"message": "Grönland dili"
+	},
+	"langCode_km": {
+		"message": "Khmer dili"
+	},
+	"langCode_kn": {
+		"message": "Kannada dili"
+	},
+	"langCode_ko": {
+		"message": "Korece"
+	},
+	"langCode_kr": {
+		"message": "Kanuri dili"
+	},
+	"langCode_ks": {
+		"message": "Keşmir dili"
+	},
+	"langCode_ku": {
+		"message": "Kürtçe"
+	},
+	"langCode_kv": {
+		"message": "Komi"
+	},
+	"langCode_kw": {
+		"message": "Kernevekçe"
+	},
+	"langCode_ky": {
+		"message": "Kırgızca"
+	},
+	"langCode_la": {
+		"message": "Latince"
+	},
+	"langCode_lb": {
+		"message": "Lüksemburgca"
+	},
+	"langCode_lg": {
+		"message": "Ganda"
+	},
+	"langCode_li": {
+		"message": "Limburgca"
+	},
+	"langCode_ln": {
+		"message": "Lingala"
+	},
+	"langCode_lo": {
+		"message": "Lao dili"
+	},
+	"langCode_lt": {
+		"message": "Litvanca"
+	},
+	"langCode_lu": {
+		"message": "Luba-Katanga"
+	},
+	"langCode_lv": {
+		"message": "Letonca"
+	},
+	"langCode_mg": {
+		"message": "Malgaşça"
+	},
+	"langCode_mh": {
+		"message": "Marshall Adaları dili"
+	},
+	"langCode_mi": {
+		"message": "Maori dili"
+	},
+	"langCode_mk": {
+		"message": "Makedonca"
+	},
+	"langCode_ml": {
+		"message": "Malayalam dili"
+	},
+	"langCode_mn": {
+		"message": "Moğolca"
+	},
+	"langCode_mr": {
+		"message": "Marathi dili"
+	},
+	"langCode_ms": {
+		"message": "Malayca"
+	},
+	"langCode_mt": {
+		"message": "Maltaca"
+	},
+	"langCode_my": {
+		"message": "Birman dili"
+	},
+	"langCode_na": {
+		"message": "Nauru dili"
+	},
+	"langCode_nb": {
+		"message": "Norveççe Bokmål"
+	},
+	"langCode_nd": {
+		"message": "Kuzey Ndebele"
+	},
+	"langCode_ne": {
+		"message": "Nepalce"
+	},
+	"langCode_ng": {
+		"message": "Ndonga"
+	},
+	"langCode_nl": {
+		"message": "Felemenkçe"
+	},
+	"langCode_nn": {
+		"message": "Norveççe Nynorsk"
+	},
+	"langCode_no": {
+		"message": "Norveççe"
+	},
+	"langCode_nr": {
+		"message": "Güney Ndebele"
+	},
+	"langCode_nv": {
+		"message": "Navaho dili"
+	},
+	"langCode_ny": {
+		"message": "Nyanja"
+	},
+	"langCode_oc": {
+		"message": "Oksitan dili"
+	},
+	"langCode_oj": {
+		"message": "Ojibva dili"
+	},
+	"langCode_om": {
+		"message": "Oromo dili"
+	},
+	"langCode_or": {
+		"message": "Oriya dili"
+	},
+	"langCode_os": {
+		"message": "Osetçe"
+	},
+	"langCode_pa": {
+		"message": "Pencapça"
+	},
+	"langCode_pi": {
+		"message": "Pali"
+	},
+	"langCode_pl": {
+		"message": "Lehçe"
+	},
+	"langCode_ps": {
+		"message": "Peştuca"
+	},
+	"langCode_pt": {
+		"message": "Portekizce"
+	},
+	"langCode_qu": {
+		"message": "Keçuva dili"
+	},
+	"langCode_rm": {
+		"message": "Romanşça"
+	},
+	"langCode_rn": {
+		"message": "Kirundi"
+	},
+	"langCode_ro": {
+		"message": "Rumence"
+	},
+	"langCode_ru": {
+		"message": "Rusça"
+	},
+	"langCode_rw": {
+		"message": "Kinyarwanda"
+	},
+	"langCode_sa": {
+		"message": "Sanskrit"
+	},
+	"langCode_sc": {
+		"message": "Sardunya dili"
+	},
+	"langCode_sd": {
+		"message": "Sindhi dili"
+	},
+	"langCode_se": {
+		"message": "Kuzey Laponcası"
+	},
+	"langCode_sg": {
+		"message": "Sango"
+	},
+	"langCode_si": {
+		"message": "Sinhali dili"
+	},
+	"langCode_sk": {
+		"message": "Slovakça"
+	},
+	"langCode_sl": {
+		"message": "Slovence"
+	},
+	"langCode_sm": {
+		"message": "Samoa dili"
+	},
+	"langCode_sn": {
+		"message": "Şona dili"
+	},
+	"langCode_so": {
+		"message": "Somalice"
+	},
+	"langCode_sq": {
+		"message": "Arnavutça"
+	},
+	"langCode_sr": {
+		"message": "Sırpça"
+	},
+	"langCode_ss": {
+		"message": "Sisvati"
+	},
+	"langCode_st": {
+		"message": "Güney Sotho dili"
+	},
+	"langCode_su": {
+		"message": "Sunda dili"
+	},
+	"langCode_sv": {
+		"message": "İsveççe"
+	},
+	"langCode_sw": {
+		"message": "Svahili dili"
+	},
+	"langCode_ta": {
+		"message": "Tamilce"
+	},
+	"langCode_te": {
+		"message": "Telugu dili"
+	},
+	"langCode_tg": {
+		"message": "Tacikçe"
+	},
+	"langCode_th": {
+		"message": "Tayca"
+	},
+	"langCode_ti": {
+		"message": "Tigrinya dili"
+	},
+	"langCode_tk": {
+		"message": "Türkmence"
+	},
+	"langCode_tl": {
+		"message": "Filipince"
+	},
+	"langCode_tn": {
+		"message": "Setsvana"
+	},
+	"langCode_to": {
+		"message": "Tonga dili"
+	},
+	"langCode_tr": {
+		"message": "Türkçe"
+	},
+	"langCode_ts": {
+		"message": "Tsonga"
+	},
+	"langCode_tt": {
+		"message": "Tatarca"
+	},
+	"langCode_tw": {
+		"message": "Akan"
+	},
+	"langCode_ty": {
+		"message": "Tahiti dili"
+	},
+	"langCode_ug": {
+		"message": "Uygurca"
+	},
+	"langCode_uk": {
+		"message": "Ukraynaca"
+	},
+	"langCode_ur": {
+		"message": "Urduca"
+	},
+	"langCode_uz": {
+		"message": "Özbekçe"
+	},
+	"langCode_ve": {
+		"message": "Venda dili"
+	},
+	"langCode_vi": {
+		"message": "Vietnamca"
+	},
+	"langCode_vo": {
+		"message": "Volapük"
+	},
+	"langCode_wa": {
+		"message": "Valonca"
+	},
+	"langCode_wo": {
+		"message": "Volofça"
+	},
+	"langCode_xh": {
+		"message": "Zosa dili"
+	},
+	"langCode_yi": {
+		"message": "Yidiş"
+	},
+	"langCode_yo": {
+		"message": "Yorubaca"
+	},
+	"langCode_za": {
+		"message": "Zhuangca"
+	},
+	"langCode_zh": {
+		"message": "Çince"
+	},
+	"langCode_zu": {
+		"message": "Zuluca"
+	}
+}

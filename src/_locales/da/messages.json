@@ -1,0 +1,1190 @@
+{
+	"common_action_addToDictionary": {
+		"message": "Tilføj oversættelse til ordbog"
+	},
+	"common_action_removeFromDictionary": {
+		"message": "Fjern oversættelse fra ordbog"
+	},
+	"common_bgUnavailable": {
+		"message": "Baggrundsskript er utilgængeligt"
+	},
+	"common_cancel": {
+		"message": "Afbestille"
+	},
+	"common_close": {
+		"message": "Luk"
+	},
+	"common_copy": {
+		"message": "Kopi"
+	},
+	"common_error": {
+		"message": "Fejl"
+	},
+	"common_offlineTranslator": {
+		"message": "$1 - Offline oversætter"
+	},
+	"common_retry": {
+		"message": "Prøv igen"
+	},
+	"common_translate": {
+		"message": "Oversæt"
+	},
+	"component_hotkey_placeholder": {
+		"message": "Klik for at optage genvejstaster"
+	},
+	"component_hotkey_recordPlaceholder": {
+		"message": "Tryk på tasterne"
+	},
+	"component_hotkey_resetButton": {
+		"message": "Nulstil"
+	},
+	"contextMenu_disablePageTranslation": {
+		"message": "Deaktiver sideoversættelse"
+	},
+	"contextMenu_translatePage": {
+		"message": "Oversæt side"
+	},
+	"contextMenu_translateSelectedText": {
+		"message": "Oversæt valgt tekst"
+	},
+	"dictionaryButton_add": {
+		"message": "Tilføj til ordbog"
+	},
+	"dictionaryButton_delete": {
+		"message": "Slet fra ordbog"
+	},
+	"dictionary_button_export": {
+		"message": "Eksporter"
+	},
+	"dictionary_button_removeAll": {
+		"message": "Fjern alle"
+	},
+	"dictionary_deleteAll": {
+		"message": "Er du sikker på, at du vil slette ALLE oversættelser i ordbogen?"
+	},
+	"dictionary_deleteConfirmation": {
+		"message": "Er du sikker på, at du vil slette denne oversættelse?"
+	},
+	"dictionary_description": {
+		"message": "Gem dine oversættelser i ordbogen for at finde dem senere"
+	},
+	"dictionary_emptyDictionary": {
+		"message": "Ordbogen er tom. Begynd at fylde den op ved at oversætte noget tekst"
+	},
+	"dictionary_filter_from": {
+		"message": "Fra"
+	},
+	"dictionary_filter_to": {
+		"message": "Til"
+	},
+	"dictionary_message_deleteAll_success": {
+		"message": "Alle oversættelser blev fjernet"
+	},
+	"dictionary_notFoundEntries": {
+		"message": "Der blev ikke fundet oversættelser, der matcher disse filtre"
+	},
+	"dictionary_pageTitle": {
+		"message": "Ordbog"
+	},
+	"dictionary_resetFilters": {
+		"message": "nulstil filtre"
+	},
+	"dictionary_searchPlaceholder": {
+		"message": "Søg efter tekst"
+	},
+	"editorWindow_close": {
+		"message": "Luk"
+	},
+	"editorWindow_data_code": {
+		"message": "Kode"
+	},
+	"editorWindow_data_name": {
+		"message": "Navn"
+	},
+	"editorWindow_message_invalidName": {
+		"message": "Navnet skal indeholde mindst ét symbol"
+	},
+	"editorWindow_save": {
+		"message": "Gem"
+	},
+	"ext_description": {
+		"message": "Tekstoversættelse uden sidegenindlæsning"
+	},
+	"ext_name": {
+		"message": "Lingvist - webstedsoversætter"
+	},
+	"history_control_selectEntry": {
+		"message": "Vælg post"
+	},
+	"history_controls_clearHistory": {
+		"message": "Ryd historik"
+	},
+	"history_controls_deleteSelected": {
+		"message": "Slet valgte"
+	},
+	"history_controls_selectAll": {
+		"message": "Vælg alle oversættelser"
+	},
+	"history_message_clearHistoryConfirmation": {
+		"message": "Er du sikker på, at du vil rydde historikken? Alle poster vil blive fjernet"
+	},
+	"history_message_deleteEntryConfirmation": {
+		"message": "Er du sikker på, at du vil slette denne post?"
+	},
+	"history_message_deleteSelectedEntriesConfirmation": {
+		"message": "Er du sikker på, at du vil slette valgte elementer ($1)?"
+	},
+	"history_message_emptyEntries": {
+		"message": "Historik ryddet"
+	},
+	"history_message_entriesNotFound": {
+		"message": "Ingen oversættelser fundet, der opfylder filtret"
+	},
+	"history_pageTitle": {
+		"message": "Historik"
+	},
+	"history_searchPlaceholder": {
+		"message": "Søg efter tekst"
+	},
+	"inlineTranslator_showOriginalText": {
+		"message": "Vis oprindelig tekst"
+	},
+	"lang_change": {
+		"message": "Skift sprog"
+	},
+	"lang_detect": {
+		"message": "Automatisk detektion"
+	},
+	"lang_select": {
+		"message": "Vælg sprog"
+	},
+	"lang_swap": {
+		"message": "Byt sprog"
+	},
+	"message_askResetConfig": {
+		"message": "Nulstil indstillinger?"
+	},
+	"message_cacheFlushed": {
+		"message": "Cachen er ryddet"
+	},
+	"message_changesSaved": {
+		"message": "Ændringerne er gemt"
+	},
+	"message_error": {
+		"message": "Fejl"
+	},
+	"message_errorOfTranslate": {
+		"message": "Oversættelsesfejl"
+	},
+	"message_serviceRequiredKey": {
+		"message": "Tjenesten kræver en nøgle"
+	},
+	"message_translateOfText": {
+		"message": "Oversat"
+	},
+	"message_unknownError": {
+		"message": "Ukendt fejl"
+	},
+	"pageTranslator_alwaysTranslateLang": {
+		"message": "Oversæt altid dette sprog"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disable": {
+		"message": "Deaktiver"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
+		"message": "Deaktiver for alle sider"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_enable": {
+		"message": "Aktiver"
+	},
+	"pageTranslator_commonPreferences_title": {
+		"message": "Fælles præferencer for dette sprog"
+	},
+	"pageTranslator_option_autoTranslate": {
+		"message": "Auto-oversæt"
+	},
+	"pageTranslator_showOptions": {
+		"message": "Vis muligheder"
+	},
+	"pageTranslator_showOriginal": {
+		"message": "Vis original"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_always": {
+		"message": "Oversæt altid"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
+		"message": "Oversæt altid for dette sprog"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_default": {
+		"message": "Brug fælles regler"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
+		"message": "Brug fælles regler for dette sprog"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_never": {
+		"message": "Oversæt aldrig"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
+		"message": "Aldrig oversæt for dette sprog"
+	},
+	"pageTranslator_sitePreferences_title": {
+		"message": "Indstillinger for"
+	},
+	"pageTranslator_translatePage": {
+		"message": "Oversæt side"
+	},
+	"pageTranslator_translationReport": {
+		"message": "Oversættelsesrapport"
+	},
+	"pageTranslator_translationReport_queue": {
+		"message": "Kø"
+	},
+	"pageTranslator_translationReport_reject": {
+		"message": "Fejl"
+	},
+	"pageTranslator_translationReport_resolve": {
+		"message": "Oversat"
+	},
+	"popup_tabIdNotFound": {
+		"message": "Fanen \"$1\" blev ikke fundet"
+	},
+	"popup_tab_translatePage": {
+		"message": "Sideoversættelse"
+	},
+	"popup_tab_translateText": {
+		"message": "Tekstoversættelse"
+	},
+	"settings_button_cancel": {
+		"message": "Annuller"
+	},
+	"settings_button_export": {
+		"message": "Eksporter konfiguration"
+	},
+	"settings_button_import": {
+		"message": "Importer konfiguration"
+	},
+	"settings_button_reset": {
+		"message": "Nulstil konfiguration"
+	},
+	"settings_button_saveChanges": {
+		"message": "Gem ændringer"
+	},
+	"settings_message_clearCache_success": {
+		"message": "Cache er ryddet"
+	},
+	"settings_message_common_invalidValueType": {
+		"message": "Ugyldig værdi"
+	},
+	"settings_message_importConfig_invalidFile": {
+		"message": "Filen til import kan ikke håndteres"
+	},
+	"settings_message_importConfig_success": {
+		"message": "Import udført"
+	},
+	"settings_message_resetConfig_confirm": {
+		"message": "Vil du nulstille indstillingerne?"
+	},
+	"settings_message_resetConfig_success": {
+		"message": "Indstillinger nulstillet"
+	},
+	"settings_message_saveChanges_success": {
+		"message": "Ændringer gemt"
+	},
+	"settings_option_appIcon": {
+		"message": "Udvidelsesikon"
+	},
+	"settings_option_appIcon_desc": {
+		"message": "Når det dynamiske ikon er valgt, vil farverne tilpasses browserens tema"
+	},
+	"settings_option_appIcon_item_auto": {
+		"message": "Dynamisk"
+	},
+	"settings_option_appIcon_item_color": {
+		"message": "Farve"
+	},
+	"settings_option_appIcon_item_dark": {
+		"message": "Mørk"
+	},
+	"settings_option_appIcon_item_light": {
+		"message": "Lys"
+	},
+	"settings_option_cache": {
+		"message": "Cache"
+	},
+	"settings_option_cache_clear": {
+		"message": "Ryd cache"
+	},
+	"settings_option_cache_clear_desc": {
+		"message": "Fjern cache, hvis du har oversættelsesfejl eller skal fjerne hemmeligheder"
+	},
+	"settings_option_cache_enable": {
+		"message": "Aktivér cache"
+	},
+	"settings_option_cache_enable_desc": {
+		"message": "Når cache er aktiveret, vil oversættelser, der er blevet oversat én gang, være tilgængelige med det samme, selv uden internetforbindelse."
+	},
+	"settings_option_cache_ignoreCase": {
+		"message": "Ikke case-sensitiv"
+	},
+	"settings_option_cache_ignoreCase_desc": {
+		"message": "Når dette er aktiveret, vil oversættelser fra cache blive brugt med ikke-præcise match, hvilket kan forårsage oversættelsesfejl."
+	},
+	"settings_option_commonSettings": {
+		"message": "Almindelige indstillinger"
+	},
+	"settings_option_customTranslatorModule": {
+		"message": "Brugerdefinerede oversættere"
+	},
+	"settings_option_customTranslatorModule_desc": {
+		"message": "Du kan tilføje brugerdefinerede oversættere til dine foretrukne oversættelsestjenester. Læs mere og find moduler i <slot id=docs>brugerdefineret oversætter dokumentation</slot>."
+	},
+	"settings_option_customTranslatorModule_manageButton": {
+		"message": "Administrer oversættere"
+	},
+	"settings_option_mainPreferences": {
+		"message": "Hovedindstillinger"
+	},
+	"settings_option_pageTranslation": {
+		"message": "Sideoversættelse"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent": {
+		"message": "Registrér sprog efter indhold"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent_desc": {
+		"message": "Analyser tekst på webside for at registrere sidesprog. Når deaktiveret, bruger det et sprog, der er angivet i sidemetadataen."
+	},
+	"settings_option_pageTranslation_enableContextMenu": {
+		"message": "Aktivér kontekstmenuknap"
+	},
+	"settings_option_pageTranslation_enableContextMenu_desc": {
+		"message": "Tilføj knap til at skifte sideoversættelse til en kontekstmenu"
+	},
+	"settings_option_pageTranslation_ignoredTags": {
+		"message": "Ignorerede elementer"
+	},
+	"settings_option_pageTranslation_ignoredTags_desc": {
+		"message": "Indtast <slot id=htmlElements>HTML element</slot>-navne, der ikke må oversættes. Indlejrede elementer vil heller ikke blive oversat. Ét element per linje."
+	},
+	"settings_option_pageTranslation_lazyTranslate": {
+		"message": "Oversæt kun synlige elementer"
+	},
+	"settings_option_pageTranslation_lazyTranslate_desc": {
+		"message": "Når denne indstilling er aktiveret, vil kun synlige elementer blive oversat. Dette kan være nyttigt for at spare netværkstrafik"
+	},
+	"settings_option_pageTranslation_originalTextPopup": {
+		"message": "Aktivér popup med original tekst"
+	},
+	"settings_option_pageTranslation_originalTextPopup_desc": {
+		"message": "Vis en pop op med originalteksten ved at holde musen over oversat tekst"
+	},
+	"settings_option_pageTranslation_toggleTranslationHotkey": {
+		"message": "Genvejstaster"
+	},
+	"settings_option_pageTranslation_toggleTranslationHotkey_desc": {
+		"message": "Genvejstaster til at slå sideoversættelse til/fra\nTryk ESC for at nulstille tasterne"
+	},
+	"settings_option_pageTranslation_translatableAttributes": {
+		"message": "Oversættelige attributter."
+	},
+	"settings_option_pageTranslation_translatableAttributes_desc": {
+		"message": "Indtast <slot id=htmlAttributes>HTML-attribut</slot>-navne til oversættelse. Én attribut pr. linje"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters": {
+		"message": "Vis oversættelsesstatistik"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters_desc": {
+		"message": "Vis statistik for sidesprog"
+	},
+	"settings_option_selectTranslation": {
+		"message": "Valgt tekstoversættelse"
+	},
+	"settings_option_selectTranslation_detectedLangFirst": {
+		"message": "Foretræk genkendt sprog for teksten i stedet for sidesproget"
+	},
+	"settings_option_selectTranslation_detectedLangFirst_desc": {
+		"message": "Når det er aktiveret, vil det genkendte sprog for den valgte tekst blive foretrukket frem for sidesproget"
+	},
+	"settings_option_selectTranslation_disableWhileTranslatePage": {
+		"message": "Deaktiver mens du oversætter side"
+	},
+	"settings_option_selectTranslation_enable": {
+		"message": "Aktiver"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton": {
+		"message": "Auto-fokuser på oversættelsesknappen"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
+		"message": "Fokuser på oversættelsesknappen, når den vises"
+	},
+	"settings_option_selectTranslation_header_languageChoice": {
+		"message": "Sprogindstillinger"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang": {
+		"message": "Aktivér automatisk sproggenkendelse af oversætteren"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
+		"message": "Brug automatisk sproggenkendelse af oversætteren, når sproget ikke kan genkendes lokalt"
+	},
+	"settings_option_selectTranslation_mode": {
+		"message": "Oversættelsestrigger"
+	},
+	"settings_option_selectTranslation_mode_item_contextMenu": {
+		"message": "Kontekstmenuknap"
+	},
+	"settings_option_selectTranslation_mode_item_popupButton": {
+		"message": "Popup-knap"
+	},
+	"settings_option_selectTranslation_mode_item_quickTranslate": {
+		"message": "Hurtig oversættelse ved valg"
+	},
+	"settings_option_selectTranslation_modifiers": {
+		"message": "Modifikatorer"
+	},
+	"settings_option_selectTranslation_modifiers_desc": {
+		"message": "Vælg tasterne, der skal trykkes på tastaturet for at vise oversættelsen"
+	},
+	"settings_option_selectTranslation_modifiers_key_alt": {
+		"message": "alt"
+	},
+	"settings_option_selectTranslation_modifiers_key_ctrl": {
+		"message": "ctrl"
+	},
+	"settings_option_selectTranslation_modifiers_key_meta": {
+		"message": "meta"
+	},
+	"settings_option_selectTranslation_modifiers_key_shift": {
+		"message": "skift"
+	},
+	"settings_option_selectTranslation_rememberDirection": {
+		"message": "Husk senest valgte sprog til tekst"
+	},
+	"settings_option_selectTranslation_showOnceForSelection": {
+		"message": "Vis oversættelsesknappen kun én gang for hver tekstmarkering"
+	},
+	"settings_option_selectTranslation_showOnceForSelection_desc": {
+		"message": "Knappen vises kun én gang for hver tekstmarkering. Hvis du skal vise den igen, skal du markere teksten igen."
+	},
+	"settings_option_selectTranslation_showOriginalText": {
+		"message": "Vis original tekst"
+	},
+	"settings_option_selectTranslation_showOriginalText_desc": {
+		"message": "Tilføj blok med original tekst til en pop op med oversættelse"
+	},
+	"settings_option_selectTranslation_strictSelection": {
+		"message": "Strikt udvælgelse"
+	},
+	"settings_option_selectTranslation_strictSelection_desc": {
+		"message": "Ignorer udvælgelsen hvis venstre museknap frigives uden for en blok, der indeholder valgt tekst"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton": {
+		"message": "Forsinkelse for at skjule knappen"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton_desc": {
+		"message": "Forsinkelse i millisekunder, inden knappen skjules, når markøren ikke er placeret på den. Markøroversigt over en knap vil nulstille timeren. For at deaktivere automatisk skjulning, skal værdien sættes lavere end 1"
+	},
+	"settings_option_selectTranslation_zIndex": {
+		"message": "z-indeks"
+	},
+	"settings_option_selectTranslation_zIndex_desc": {
+		"message": "Øg værdien, hvis nogle elementer på nogle sider overlapper en popup med oversat tekst"
+	},
+	"settings_option_textTranslator": {
+		"message": "Tekstoversættelse"
+	},
+	"settings_option_textTranslator_rememberText": {
+		"message": "Husk oversat tekst"
+	},
+	"settings_option_textTranslator_rememberText_desc": {
+		"message": "Husk oversat tekst til næste gang vinduet åbnes"
+	},
+	"settings_option_textTranslator_spellCheck": {
+		"message": "Aktivér stavekontrol"
+	},
+	"settings_option_textTranslator_suggestLanguage": {
+		"message": "Foreslå påvist tekstsprog"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways": {
+		"message": "Altid opdag og foreslå sprog"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways_desc": {
+		"message": "Når deaktiveret, vil sprogforslag kun vises, når kildesproget automatisk opdages"
+	},
+	"settings_option_translatePreferences": {
+		"message": "Oversættelsespræferencer"
+	},
+	"settings_option_translateScheduler": {
+		"message": "Oversættelsesplanlægger"
+	},
+	"settings_option_translateScheduler_delay": {
+		"message": "Tekstakkumuleringsforsinkelse"
+	},
+	"settings_option_translateScheduler_delay_desc": {
+		"message": "Oversættelsesplanlæggeren mindsker antallet af anmodninger til oversættelsesservice-API'et. Planlæggeren forsøger at akkumulere tekster for at sende så mange tekster som muligt pr. en anmodning. Planlæggeren vil vente i det angivne tidsrum i millisekunder for at samle nye tekster, før den begynder at oversætte."
+	},
+	"settings_option_translateScheduler_retryLimit": {
+		"message": "Antal oversættelsesforsøg"
+	},
+	"settings_option_translateScheduler_retryLimit_desc": {
+		"message": "Planlæggeren vil forsøge at oversætte tekster igen i tilfælde af oversættelsesfejl. Denne indstilling begrænser antallet af forsøg på genoversættelse. Indtast et negativt tal for at tillade ubegrænsede forsøg"
+	},
+	"settings_option_translatorModule": {
+		"message": "Oversættermodul"
+	},
+	"settings_option_translatorModule_desc": {
+		"message": "Oversættelseskvaliteten og de tilgængelige sprog afhænger af oversætteren."
+	},
+	"settings_option_tts": {
+		"message": "Tekst til tale (TTS)"
+	},
+	"settings_option_ttsCustomModules": {
+		"message": "Brugerdefineret TTS"
+	},
+	"settings_option_ttsCustomModules_button": {
+		"message": "Administrer TTS-moduler"
+	},
+	"settings_option_ttsCustomModules_desc": {
+		"message": "Du kan tilføje TTS-moduler, der bruger dine foretrukne tjenester og stemmer. Læs mere og find moduler i dokumentationen for brugerdefineret TTS."
+	},
+	"settings_option_ttsModule": {
+		"message": "TTS-modul"
+	},
+	"settings_option_ttsModule_desc": {
+		"message": "Modul til at tale tekst"
+	},
+	"settings_option_userLanguage": {
+		"message": "Dit sprog"
+	},
+	"settings_option_userLanguage_desc": {
+		"message": "Målsprog til at oversætte tekster"
+	},
+	"settings_pageTitle": {
+		"message": "Indstillinger"
+	},
+	"settings_section_popup": {
+		"message": "Popup"
+	},
+	"textTranslator_suggestLanguage": {
+		"message": "Det ser ud til, at sproget er"
+	},
+	"textTranslator_translateInputPlaceholder": {
+		"message": "Indtast tekst"
+	},
+	"textTranslator_translatePlaceholder": {
+		"message": "Oversat tekst"
+	},
+	"translatorsManagerWindow_add": {
+		"message": "Tilføj"
+	},
+	"translatorsManagerWindow_close": {
+		"message": "Luk"
+	},
+	"translatorsManagerWindow_emptyTranslatorsListText": {
+		"message": "Brugerdefinerede oversættere er endnu ikke tilføjet"
+	},
+	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
+		"message": "Er du sikker på, at du vil fjerne oversætteren \"$translator_name$\"?",
+		"placeholders": {
+			"translator_name": {
+				"content": "$1",
+				"example": "Google-oversætter"
+			}
+		}
+	},
+	"translatorsManagerWindow_title": {
+		"message": "Tilpassede oversættere"
+	},
+	"translatorsManagerWindow_translator_delete": {
+		"message": "Slet"
+	},
+	"translatorsManagerWindow_translator_edit": {
+		"message": "Rediger"
+	},
+	"ttsManagerWindow_add": {
+		"message": "Tilføj"
+	},
+	"ttsManagerWindow_close": {
+		"message": "Luk"
+	},
+	"ttsManagerWindow_emptyTranslatorsListText": {
+		"message": "TTS-moduler er endnu ikke tilføjet"
+	},
+	"ttsManagerWindow_message_ttsRemoveConfirmation": {
+		"message": "Er du sikker på at fjerne TTS \"$tts_name$\"?",
+		"placeholders": {
+			"tts_name": {
+				"content": "$1",
+				"example": "Google TTS"
+			}
+		}
+	},
+	"ttsManagerWindow_title": {
+		"message": "Tekst til tale-moduler"
+	},
+	"ttsManagerWindow_translator_delete": {
+		"message": "Slet"
+	},
+	"ttsManagerWindow_translator_edit": {
+		"message": "Rediger"
+	},
+	"validation_number": {
+		"message": "Parametret skal være et tal"
+	},
+	"validation_numberBetweenRange": {
+		"message": "Parametret skal være et tal mellem $1 og $2"
+	},
+	"validation_positiveNumber": {
+		"message": "Parametret skal være et positivt tal."
+	},
+	"langCode_aa": {
+		"message": "Afar"
+	},
+	"langCode_ab": {
+		"message": "Abkhasisk"
+	},
+	"langCode_ae": {
+		"message": "Avestan"
+	},
+	"langCode_af": {
+		"message": "Afrikaans"
+	},
+	"langCode_ak": {
+		"message": "Akan"
+	},
+	"langCode_am": {
+		"message": "Amharisk"
+	},
+	"langCode_an": {
+		"message": "Aragonesisk"
+	},
+	"langCode_ar": {
+		"message": "Arabisk"
+	},
+	"langCode_as": {
+		"message": "Assamesisk"
+	},
+	"langCode_av": {
+		"message": "Avarisk"
+	},
+	"langCode_ay": {
+		"message": "Aymara"
+	},
+	"langCode_az": {
+		"message": "Aserbajdsjansk"
+	},
+	"langCode_ba": {
+		"message": "Bashkir"
+	},
+	"langCode_be": {
+		"message": "Belarusisk"
+	},
+	"langCode_bg": {
+		"message": "Bulgarsk"
+	},
+	"langCode_bh": {
+		"message": "Bhojpuri"
+	},
+	"langCode_bi": {
+		"message": "Bislama"
+	},
+	"langCode_bm": {
+		"message": "Bambara"
+	},
+	"langCode_bn": {
+		"message": "Bengali"
+	},
+	"langCode_bo": {
+		"message": "Tibetansk"
+	},
+	"langCode_br": {
+		"message": "Bretonsk"
+	},
+	"langCode_bs": {
+		"message": "Bosnisk"
+	},
+	"langCode_ca": {
+		"message": "Catalansk"
+	},
+	"langCode_ce": {
+		"message": "Tjetjensk"
+	},
+	"langCode_ch": {
+		"message": "Chamorro"
+	},
+	"langCode_co": {
+		"message": "Korsikansk"
+	},
+	"langCode_cr": {
+		"message": "Cree"
+	},
+	"langCode_cs": {
+		"message": "Tjekkisk"
+	},
+	"langCode_cu": {
+		"message": "Kirkeslavisk"
+	},
+	"langCode_cv": {
+		"message": "Chuvash"
+	},
+	"langCode_cy": {
+		"message": "Walisisk"
+	},
+	"langCode_da": {
+		"message": "Dansk"
+	},
+	"langCode_de": {
+		"message": "Tysk"
+	},
+	"langCode_dv": {
+		"message": "Divehi"
+	},
+	"langCode_dz": {
+		"message": "Dzongkha"
+	},
+	"langCode_ee": {
+		"message": "Ewe"
+	},
+	"langCode_el": {
+		"message": "Græsk"
+	},
+	"langCode_en": {
+		"message": "Engelsk"
+	},
+	"langCode_eo": {
+		"message": "Esperanto"
+	},
+	"langCode_es": {
+		"message": "Spansk"
+	},
+	"langCode_et": {
+		"message": "Estisk"
+	},
+	"langCode_eu": {
+		"message": "Baskisk"
+	},
+	"langCode_fa": {
+		"message": "Persisk"
+	},
+	"langCode_ff": {
+		"message": "Fulah"
+	},
+	"langCode_fi": {
+		"message": "Finsk"
+	},
+	"langCode_fj": {
+		"message": "Fijiansk"
+	},
+	"langCode_fo": {
+		"message": "Færøsk"
+	},
+	"langCode_fr": {
+		"message": "Fransk"
+	},
+	"langCode_fy": {
+		"message": "Vestfrisisk"
+	},
+	"langCode_ga": {
+		"message": "Irsk"
+	},
+	"langCode_gd": {
+		"message": "Skotsk gælisk"
+	},
+	"langCode_gl": {
+		"message": "Galicisk"
+	},
+	"langCode_gn": {
+		"message": "Guarani"
+	},
+	"langCode_gu": {
+		"message": "Gujarati"
+	},
+	"langCode_gv": {
+		"message": "Manx"
+	},
+	"langCode_ha": {
+		"message": "Hausa"
+	},
+	"langCode_he": {
+		"message": "Hebraisk"
+	},
+	"langCode_hi": {
+		"message": "Hindi"
+	},
+	"langCode_ho": {
+		"message": "Hirimotu"
+	},
+	"langCode_hr": {
+		"message": "Kroatisk"
+	},
+	"langCode_ht": {
+		"message": "Haitisk"
+	},
+	"langCode_hu": {
+		"message": "Ungarsk"
+	},
+	"langCode_hy": {
+		"message": "Armensk"
+	},
+	"langCode_hz": {
+		"message": "Herero"
+	},
+	"langCode_ia": {
+		"message": "Interlingua"
+	},
+	"langCode_id": {
+		"message": "Indonesisk"
+	},
+	"langCode_ie": {
+		"message": "Interlingue"
+	},
+	"langCode_ig": {
+		"message": "Igbo"
+	},
+	"langCode_ii": {
+		"message": "Sichuan yi"
+	},
+	"langCode_ik": {
+		"message": "Inupiaq"
+	},
+	"langCode_io": {
+		"message": "Ido"
+	},
+	"langCode_is": {
+		"message": "Islandsk"
+	},
+	"langCode_it": {
+		"message": "Italiensk"
+	},
+	"langCode_iu": {
+		"message": "Inuktitut"
+	},
+	"langCode_ja": {
+		"message": "Japansk"
+	},
+	"langCode_jv": {
+		"message": "Javanesisk"
+	},
+	"langCode_ka": {
+		"message": "Georgisk"
+	},
+	"langCode_kg": {
+		"message": "Kongo"
+	},
+	"langCode_ki": {
+		"message": "Kikuyu"
+	},
+	"langCode_kj": {
+		"message": "Kuanyama"
+	},
+	"langCode_kk": {
+		"message": "Kasakhisk"
+	},
+	"langCode_kl": {
+		"message": "Grønlandsk"
+	},
+	"langCode_km": {
+		"message": "Khmer"
+	},
+	"langCode_kn": {
+		"message": "Kannada"
+	},
+	"langCode_ko": {
+		"message": "Koreansk"
+	},
+	"langCode_kr": {
+		"message": "Kanuri"
+	},
+	"langCode_ks": {
+		"message": "Kashmiri"
+	},
+	"langCode_ku": {
+		"message": "Kurdisk"
+	},
+	"langCode_kv": {
+		"message": "Komi"
+	},
+	"langCode_kw": {
+		"message": "Cornisk"
+	},
+	"langCode_ky": {
+		"message": "Kirgisisk"
+	},
+	"langCode_la": {
+		"message": "Latin"
+	},
+	"langCode_lb": {
+		"message": "Luxembourgsk"
+	},
+	"langCode_lg": {
+		"message": "Ganda"
+	},
+	"langCode_li": {
+		"message": "Limburgsk"
+	},
+	"langCode_ln": {
+		"message": "Lingala"
+	},
+	"langCode_lo": {
+		"message": "Lao"
+	},
+	"langCode_lt": {
+		"message": "Litauisk"
+	},
+	"langCode_lu": {
+		"message": "Luba-Katanga"
+	},
+	"langCode_lv": {
+		"message": "Lettisk"
+	},
+	"langCode_mg": {
+		"message": "Malagassisk"
+	},
+	"langCode_mh": {
+		"message": "Marshallese"
+	},
+	"langCode_mi": {
+		"message": "Maori"
+	},
+	"langCode_mk": {
+		"message": "Makedonsk"
+	},
+	"langCode_ml": {
+		"message": "Malayalam"
+	},
+	"langCode_mn": {
+		"message": "Mongolsk"
+	},
+	"langCode_mr": {
+		"message": "Marathisk"
+	},
+	"langCode_ms": {
+		"message": "Malajisk"
+	},
+	"langCode_mt": {
+		"message": "Maltesisk"
+	},
+	"langCode_my": {
+		"message": "Burmesisk"
+	},
+	"langCode_na": {
+		"message": "Nauru"
+	},
+	"langCode_nb": {
+		"message": "Bokmål"
+	},
+	"langCode_nd": {
+		"message": "Nordndebele"
+	},
+	"langCode_ne": {
+		"message": "Nepalesisk"
+	},
+	"langCode_ng": {
+		"message": "Ndonga"
+	},
+	"langCode_nl": {
+		"message": "Nederlandsk"
+	},
+	"langCode_nn": {
+		"message": "Nynorsk"
+	},
+	"langCode_no": {
+		"message": "Norsk"
+	},
+	"langCode_nr": {
+		"message": "Sydndebele"
+	},
+	"langCode_nv": {
+		"message": "Navajo"
+	},
+	"langCode_ny": {
+		"message": "Nyanja"
+	},
+	"langCode_oc": {
+		"message": "Occitansk"
+	},
+	"langCode_oj": {
+		"message": "Ojibwa"
+	},
+	"langCode_om": {
+		"message": "Oromo"
+	},
+	"langCode_or": {
+		"message": "Oriya"
+	},
+	"langCode_os": {
+		"message": "Ossetisk"
+	},
+	"langCode_pa": {
+		"message": "Punjabisk"
+	},
+	"langCode_pi": {
+		"message": "Pali"
+	},
+	"langCode_pl": {
+		"message": "Polsk"
+	},
+	"langCode_ps": {
+		"message": "Pashto"
+	},
+	"langCode_pt": {
+		"message": "Portugisisk"
+	},
+	"langCode_qu": {
+		"message": "Quechua"
+	},
+	"langCode_rm": {
+		"message": "Rætoromansk"
+	},
+	"langCode_rn": {
+		"message": "Rundi"
+	},
+	"langCode_ro": {
+		"message": "Rumænsk"
+	},
+	"langCode_ru": {
+		"message": "Russisk"
+	},
+	"langCode_rw": {
+		"message": "Kinyarwanda"
+	},
+	"langCode_sa": {
+		"message": "Sanskrit"
+	},
+	"langCode_sc": {
+		"message": "Sardinsk"
+	},
+	"langCode_sd": {
+		"message": "Sindhi"
+	},
+	"langCode_se": {
+		"message": "Nordsamisk"
+	},
+	"langCode_sg": {
+		"message": "Sango"
+	},
+	"langCode_si": {
+		"message": "Singalesisk"
+	},
+	"langCode_sk": {
+		"message": "Slovakisk"
+	},
+	"langCode_sl": {
+		"message": "Slovensk"
+	},
+	"langCode_sm": {
+		"message": "Samoansk"
+	},
+	"langCode_sn": {
+		"message": "Shona"
+	},
+	"langCode_so": {
+		"message": "Somali"
+	},
+	"langCode_sq": {
+		"message": "Albansk"
+	},
+	"langCode_sr": {
+		"message": "Serbisk"
+	},
+	"langCode_ss": {
+		"message": "Swati"
+	},
+	"langCode_st": {
+		"message": "Sydsotho"
+	},
+	"langCode_su": {
+		"message": "Sundanesisk"
+	},
+	"langCode_sv": {
+		"message": "Svensk"
+	},
+	"langCode_sw": {
+		"message": "Swahili"
+	},
+	"langCode_ta": {
+		"message": "Tamil"
+	},
+	"langCode_te": {
+		"message": "Telugu"
+	},
+	"langCode_tg": {
+		"message": "Tadsjikisk"
+	},
+	"langCode_th": {
+		"message": "Thai"
+	},
+	"langCode_ti": {
+		"message": "Tigrinya"
+	},
+	"langCode_tk": {
+		"message": "Turkmensk"
+	},
+	"langCode_tl": {
+		"message": "Filippinsk"
+	},
+	"langCode_tn": {
+		"message": "Tswana"
+	},
+	"langCode_to": {
+		"message": "Tongansk"
+	},
+	"langCode_tr": {
+		"message": "Tyrkisk"
+	},
+	"langCode_ts": {
+		"message": "Tsonga"
+	},
+	"langCode_tt": {
+		"message": "Tatarisk"
+	},
+	"langCode_tw": {
+		"message": "Akan"
+	},
+	"langCode_ty": {
+		"message": "Tahitiansk"
+	},
+	"langCode_ug": {
+		"message": "Uygurisk"
+	},
+	"langCode_uk": {
+		"message": "Ukrainsk"
+	},
+	"langCode_ur": {
+		"message": "Urdu"
+	},
+	"langCode_uz": {
+		"message": "Usbekisk"
+	},
+	"langCode_ve": {
+		"message": "Venda"
+	},
+	"langCode_vi": {
+		"message": "Vietnamesisk"
+	},
+	"langCode_vo": {
+		"message": "Volapyk"
+	},
+	"langCode_wa": {
+		"message": "Vallonsk"
+	},
+	"langCode_wo": {
+		"message": "Wolof"
+	},
+	"langCode_xh": {
+		"message": "Xhosa"
+	},
+	"langCode_yi": {
+		"message": "Jiddisch"
+	},
+	"langCode_yo": {
+		"message": "Yoruba"
+	},
+	"langCode_za": {
+		"message": "Zhuang"
+	},
+	"langCode_zh": {
+		"message": "Kinesisk"
+	},
+	"langCode_zu": {
+		"message": "Zulu"
+	}
+}

@@ -1,0 +1,1190 @@
+{
+	"common_action_addToDictionary": {
+		"message": "ডিকশনারীতে অনুবাদ যোগ করুন"
+	},
+	"common_action_removeFromDictionary": {
+		"message": "ডিকশনারী থেকে অনুবাদ সরান"
+	},
+	"common_bgUnavailable": {
+		"message": "ব্যাকগ্রাউন্ড স্ক্রিপ্ট অনুপলব্ধ"
+	},
+	"common_cancel": {
+		"message": "বাতিল"
+	},
+	"common_close": {
+		"message": "বন্ধ করুন"
+	},
+	"common_copy": {
+		"message": "কপি"
+	},
+	"common_error": {
+		"message": "ত্রুটি"
+	},
+	"common_offlineTranslator": {
+		"message": "$1 - অফলাইন অনুবাদক"
+	},
+	"common_retry": {
+		"message": "আবার চেষ্টা করুন"
+	},
+	"common_translate": {
+		"message": "অনুবাদ করুন"
+	},
+	"component_hotkey_placeholder": {
+		"message": "হটকি রেকর্ড করতে ক্লিক করুন"
+	},
+	"component_hotkey_recordPlaceholder": {
+		"message": "কীগুলি চাপুন"
+	},
+	"component_hotkey_resetButton": {
+		"message": "রিসেট"
+	},
+	"contextMenu_disablePageTranslation": {
+		"message": "পৃষ্ঠা অনুবাদ নিষ্ক্রিয় করুন"
+	},
+	"contextMenu_translatePage": {
+		"message": "পৃষ্ঠা অনুবাদ করুন"
+	},
+	"contextMenu_translateSelectedText": {
+		"message": "নির্বাচিত পাঠ্য অনুবাদ করুন"
+	},
+	"dictionaryButton_add": {
+		"message": "ডিকশনারীতে যোগ করুন"
+	},
+	"dictionaryButton_delete": {
+		"message": "ডিকশনারী থেকে মুছে ফেলুন"
+	},
+	"dictionary_button_export": {
+		"message": "নির্যাতন"
+	},
+	"dictionary_button_removeAll": {
+		"message": "সমস্ত মুছুন"
+	},
+	"dictionary_deleteAll": {
+		"message": "আপনি কি নিশ্চিত যে অভিধানে সমস্ত অনুবাদগুলি মুছতে চান?"
+	},
+	"dictionary_deleteConfirmation": {
+		"message": "আপনি কি এই অনুবাদটি মুছতে চান?"
+	},
+	"dictionary_description": {
+		"message": "আপনার অনুবাদগুলি ডিকশনারিতে রাখুন এবং পরবর্তীতে তাদের খুঁজে পান"
+	},
+	"dictionary_emptyDictionary": {
+		"message": "ডিকশনারি খালি। কিছু লেখা অনুবাদ করে তার মধ্যে পূরণ শুরু করুন"
+	},
+	"dictionary_filter_from": {
+		"message": "হইতে"
+	},
+	"dictionary_filter_to": {
+		"message": "পর্যন্ত"
+	},
+	"dictionary_message_deleteAll_success": {
+		"message": "সমস্ত অনুবাদগুলি সরানো হয়েছে"
+	},
+	"dictionary_notFoundEntries": {
+		"message": "এই ফিল্টার মিলে কোনও অনুবাদ পাওয়া যায়নি"
+	},
+	"dictionary_pageTitle": {
+		"message": "ডিকশনারি"
+	},
+	"dictionary_resetFilters": {
+		"message": "ফিল্টার রিসেট করুন"
+	},
+	"dictionary_searchPlaceholder": {
+		"message": "টেক্সট দিয়ে অনুসন্ধান করুন"
+	},
+	"editorWindow_close": {
+		"message": "বন্ধ করুন"
+	},
+	"editorWindow_data_code": {
+		"message": "কোড"
+	},
+	"editorWindow_data_name": {
+		"message": "নাম"
+	},
+	"editorWindow_message_invalidName": {
+		"message": "নামটি কমপক্ষে একটি চিহ্ন অবশ্যই থাকতে হবে"
+	},
+	"editorWindow_save": {
+		"message": "সংরক্ষণ করুন"
+	},
+	"ext_description": {
+		"message": "পৃষ্ঠা রিলোড ছাড়াই লেখা অনুবাদ করুন"
+	},
+	"ext_name": {
+		"message": "লিঙ্গুইস্ট - ওয়েব পেজ অনুবাদক"
+	},
+	"history_control_selectEntry": {
+		"message": "এন্ট্রি নির্বাচন করুন"
+	},
+	"history_controls_clearHistory": {
+		"message": "ইতিহাস মুছুন"
+	},
+	"history_controls_deleteSelected": {
+		"message": "নির্বাচিতগুলি মুছে ফেলুন"
+	},
+	"history_controls_selectAll": {
+		"message": "সমস্ত অনুবাদগুলি নির্বাচন করুন"
+	},
+	"history_message_clearHistoryConfirmation": {
+		"message": "আপনি কি নিশ্চিত যে, ইতিহাস মুছতে চান? সমস্ত এন্ট্রি অপসারিত হবে"
+	},
+	"history_message_deleteEntryConfirmation": {
+		"message": "আপনি কি নিশ্চিত যে এই এন্ট্রিটি মুছতে চান?"
+	},
+	"history_message_deleteSelectedEntriesConfirmation": {
+		"message": "আপনি কি নিশ্চিত যে, নির্বাচিত এন্ট্রিগুলি ($1) মুছতে চান?"
+	},
+	"history_message_emptyEntries": {
+		"message": "ইতিহাস পরিষ্কার"
+	},
+	"history_message_entriesNotFound": {
+		"message": "ফিল্টার সন্ধান করে কোনও অনুবাদ পাওয়া যায়নি"
+	},
+	"history_pageTitle": {
+		"message": "ইতিহাস"
+	},
+	"history_searchPlaceholder": {
+		"message": "টেক্সট দ্বারা অনুসন্ধান করুন"
+	},
+	"inlineTranslator_showOriginalText": {
+		"message": "মূল পাঠ্য দেখান"
+	},
+	"lang_change": {
+		"message": "ভাষা পরিবর্তন"
+	},
+	"lang_detect": {
+		"message": "অটো সনাক্তকরণ"
+	},
+	"lang_select": {
+		"message": "ভাষা নির্বাচন"
+	},
+	"lang_swap": {
+		"message": "ভাষা বদলান"
+	},
+	"message_askResetConfig": {
+		"message": "সেটিংস রিসেট করতে চান?"
+	},
+	"message_cacheFlushed": {
+		"message": "ক্যাশ সাফ করা হয়েছে"
+	},
+	"message_changesSaved": {
+		"message": "পরিবর্তন সংরক্ষিত হয়েছে"
+	},
+	"message_error": {
+		"message": "ত্রুটি"
+	},
+	"message_errorOfTranslate": {
+		"message": "অনুবাদ ত্রুটি"
+	},
+	"message_serviceRequiredKey": {
+		"message": "সেবা একটি চাবি প্রয়োজন"
+	},
+	"message_translateOfText": {
+		"message": "অনুবাদ হয়েছে"
+	},
+	"message_unknownError": {
+		"message": "অজানা সমস্যা"
+	},
+	"pageTranslator_alwaysTranslateLang": {
+		"message": "সর্বদা এই ভাষা অনুবাদ করুন"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disable": {
+		"message": "অক্ষম করুন"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
+		"message": "সমস্ত সাইটের জন্য অক্ষম করুন"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_enable": {
+		"message": "সক্ষম করুন"
+	},
+	"pageTranslator_commonPreferences_title": {
+		"message": "এই ভাষার জন্য সাধারণ পছন্দসমূহ"
+	},
+	"pageTranslator_option_autoTranslate": {
+		"message": "অটো অনুবাদ"
+	},
+	"pageTranslator_showOptions": {
+		"message": "বিকল্পগুলি দেখান"
+	},
+	"pageTranslator_showOriginal": {
+		"message": "মূল দেখান"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_always": {
+		"message": "সর্বদা অনুবাদ করুন"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
+		"message": "এই ভাষার জন্য সর্বদা অনুবাদ করুন"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_default": {
+		"message": "সাধারণ নিয়মগুলি ব্যবহার করুন"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
+		"message": "এই ভাষার জন্য সাধারণ নিয়মগুলি ব্যবহার করুন"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_never": {
+		"message": "কখনও অনুবাদ করবেন না"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
+		"message": "এই ভাষার জন্য কখনও অনুবাদ করবেন না"
+	},
+	"pageTranslator_sitePreferences_title": {
+		"message": "পছন্দসমূহ জন্য"
+	},
+	"pageTranslator_translatePage": {
+		"message": "পৃষ্ঠা অনুবাদ করুন"
+	},
+	"pageTranslator_translationReport": {
+		"message": "অনুবাদ রিপোর্ট"
+	},
+	"pageTranslator_translationReport_queue": {
+		"message": "কিউ"
+	},
+	"pageTranslator_translationReport_reject": {
+		"message": "ত্রুটিসম্পন্ন"
+	},
+	"pageTranslator_translationReport_resolve": {
+		"message": "অনুবাদ করা হয়েছে"
+	},
+	"popup_tabIdNotFound": {
+		"message": "ট্যাব \"$1\" পাওয়া যায়নি"
+	},
+	"popup_tab_translatePage": {
+		"message": "পৃষ্ঠা অনুবাদ"
+	},
+	"popup_tab_translateText": {
+		"message": "লেখা অনুবাদ"
+	},
+	"settings_button_cancel": {
+		"message": "বাতিল"
+	},
+	"settings_button_export": {
+		"message": "কনফিগ এক্সপোর্ট করুন"
+	},
+	"settings_button_import": {
+		"message": "কনফিগ আমদানি করুন"
+	},
+	"settings_button_reset": {
+		"message": "কনফিগ রিসেট করুন"
+	},
+	"settings_button_saveChanges": {
+		"message": "পরিবর্তন সংরক্ষণ করুন"
+	},
+	"settings_message_clearCache_success": {
+		"message": "ক্যাশ সাফ হয়েছে"
+	},
+	"settings_message_common_invalidValueType": {
+		"message": "অবৈধ মান"
+	},
+	"settings_message_importConfig_invalidFile": {
+		"message": "আমদানির জন্য ফাইল হ্যান্ডেল করা যাবে না"
+	},
+	"settings_message_importConfig_success": {
+		"message": "আমদানি সম্পন্ন"
+	},
+	"settings_message_resetConfig_confirm": {
+		"message": "আপনি কি সেটিংস রিসেট করতে চান?"
+	},
+	"settings_message_resetConfig_success": {
+		"message": "সেটিংস রিসেট"
+	},
+	"settings_message_saveChanges_success": {
+		"message": "পরিবর্তনগুলি সংরক্ষিত হয়েছে"
+	},
+	"settings_option_appIcon": {
+		"message": "এক্সটেনশন আইকন"
+	},
+	"settings_option_appIcon_desc": {
+		"message": "ডায়নামিক আইকন নির্বাচিত হলে, রঙগুলি ব্রাউজার থিমের অনুযায়ী অভিবিন্যস্ত হবে"
+	},
+	"settings_option_appIcon_item_auto": {
+		"message": "ডায়নামিক"
+	},
+	"settings_option_appIcon_item_color": {
+		"message": "রঙ"
+	},
+	"settings_option_appIcon_item_dark": {
+		"message": "অন্ধকার"
+	},
+	"settings_option_appIcon_item_light": {
+		"message": "আলো"
+	},
+	"settings_option_cache": {
+		"message": "সিস্টেম ক্যাশ"
+	},
+	"settings_option_cache_clear": {
+		"message": "ক্যাশ মুছুন"
+	},
+	"settings_option_cache_clear_desc": {
+		"message": "যদি অনুবাদ সংশোধনী আপনার থাকে বা আপনি সিক্রেট মুছে ফেলতে চান তখন ক্যাশ মুছুন"
+	},
+	"settings_option_cache_enable": {
+		"message": "ক্যাশ সক্ষম করুন"
+	},
+	"settings_option_cache_enable_desc": {
+		"message": "যখন ক্যাশ সক্ষম হয়, একবার অনুবাদ করা হয়ে থাকা অনুবাদগুলি ইন্টারনেট না থাকে একান্তভাবে ব্যবহার করা যাবে"
+	},
+	"settings_option_cache_ignoreCase": {
+		"message": "কেস ইনসেনসিটিভ"
+	},
+	"settings_option_cache_ignoreCase_desc": {
+		"message": "যখন এনেবল হয়, ক্যাশ থেকে অনুবাদ অমিল ম্যাচিং দিয়ে ব্যবহৃত হবে যা অনুবাদ সংশোধনী উত্পন্ন করতে পারে।"
+	},
+	"settings_option_commonSettings": {
+		"message": "সাধারণ সেটিংস"
+	},
+	"settings_option_customTranslatorModule": {
+		"message": "কাস্টম অনুবাদক"
+	},
+	"settings_option_customTranslatorModule_desc": {
+		"message": "<slot id=docs>কাস্টম অনুবাদক নথিপত্র</slot> এ আরও পড়ুন এবং মডিউল খুঁজুন।"
+	},
+	"settings_option_customTranslatorModule_manageButton": {
+		"message": "অনুবাদক পরিচালনা করুন"
+	},
+	"settings_option_mainPreferences": {
+		"message": "প্রধান সেটিংস"
+	},
+	"settings_option_pageTranslation": {
+		"message": "পৃষ্ঠার অনুবাদ"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent": {
+		"message": "বিষয়বস্তু দ্বারা ভাষা সনাক্তকরণ করুন"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent_desc": {
+		"message": "পৃষ্ঠার টেক্সট বিশ্লেষণ করে পৃষ্ঠার ভাষা সনাক্ত করুন। অক্ষম থাকলে পৃষ্ঠার মেটাডেটায় উল্লেখিত ভাষা ব্যবহার করা হবে।"
+	},
+	"settings_option_pageTranslation_enableContextMenu": {
+		"message": "সংশ্লিষ্ট মেনু বোতাম সক্ষম করুন"
+	},
+	"settings_option_pageTranslation_enableContextMenu_desc": {
+		"message": "একটি সন্দর্ভ মেনুতে পৃষ্ঠা অনুবাদ চালু / বন্ধ করার বাটন যুক্ত করুন"
+	},
+	"settings_option_pageTranslation_ignoredTags": {
+		"message": "অগ্রাহ্য উপাদানসমূহ"
+	},
+	"settings_option_pageTranslation_ignoredTags_desc": {
+		"message": "অনুবাদ করা না উচিত <slot id=htmlElements>HTML উপাদান</slot> নাম। নেস্টেড উপাদানগুলি সমূহও অনুবাদ করা হবে না। একটি উপাদান প্রতি একটি লাইন।"
+	},
+	"settings_option_pageTranslation_lazyTranslate": {
+		"message": "শুধুমাত্র দেখা যাবে উপাদান অনুবাদ করা"
+	},
+	"settings_option_pageTranslation_lazyTranslate_desc": {
+		"message": "এই বিকল্পটি চালু করা হলে, কেবল দেখা যাবে উপাদানগুলি অনুবাদ করা হবে। এটি নেটওয়ার্ক ট্রাফিক বাঁচানোর জন্য দরকারি হতে পারে"
+	},
+	"settings_option_pageTranslation_originalTextPopup": {
+		"message": "মূল পাঠের পপআপ সক্ষম করুন"
+	},
+	"settings_option_pageTranslation_originalTextPopup_desc": {
+		"message": "অনুবাদ করা পাঠের উপর হাঁটানোর মাধ্যমে মূল পাঠের একটি পপআপ দেখান।"
+	},
+	"settings_option_pageTranslation_toggleTranslationHotkey": {
+		"message": "হটকী"
+	},
+	"settings_option_pageTranslation_toggleTranslationHotkey_desc": {
+		"message": "পৃষ্ঠা অনুবাদ চালু/বন্ধ করতে শর্টকাট\nESC চাপানোর জন্য রিসেট করুন"
+	},
+	"settings_option_pageTranslation_translatableAttributes": {
+		"message": "অনুবাদযোগ্য বৈশিষ্ট্যসমূহ।"
+	},
+	"settings_option_pageTranslation_translatableAttributes_desc": {
+		"message": "<slot id=htmlAttributes>HTML বৈশিষ্ট্য</slot> অনুবাদের জন্য নাম লিখুন। একটি বৈশিষ্ট্য প্রতি লাইনে"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters": {
+		"message": "অনুবাদ পরিসংখ্যান দেখান"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters_desc": {
+		"message": "পৃষ্ঠা অনুবাদের জন্য পরিসংখ্যান প্রদর্শন করুন"
+	},
+	"settings_option_selectTranslation": {
+		"message": "নির্বাচিত টেক্সট অনুবাদ"
+	},
+	"settings_option_selectTranslation_detectedLangFirst": {
+		"message": "পৃষ্ঠার ভাষার পরিবর্তে পাঠ্যের সনাক্তকৃত ভাষাটি উপস্থাপন করুন"
+	},
+	"settings_option_selectTranslation_detectedLangFirst_desc": {
+		"message": "চালুকরে হলে, নির্বাচিত টেক্সটের সনাক্তকৃত ভাষাটি পৃষ্ঠার ভাষার পরিবর্তে উপস্থাপন করা হবে"
+	},
+	"settings_option_selectTranslation_disableWhileTranslatePage": {
+		"message": "পৃষ্ঠা অনুবাদ করার সময় নিষ্ক্রিয় করুন"
+	},
+	"settings_option_selectTranslation_enable": {
+		"message": "চালু করুন"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton": {
+		"message": "অনুবাদ বাটনে অটো-ফোকাস করুন"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
+		"message": "অনুবাদ বাটন দেখা দিলে উপরে ফোকাস দিন"
+	},
+	"settings_option_selectTranslation_header_languageChoice": {
+		"message": "ভাষার সেটিংস"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang": {
+		"message": "অনুবাদক দ্বারা স্বয়ংক্রিয় ভাষা সনাক্তকরণ সক্ষম করুন"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
+		"message": "স্থানীয়ভাবে ভাষা সনাক্তকরণ করা যায় না যখন অনুবাদক দ্বারা স্বয়ংক্রিয় ভাষা সনাক্তকরণটি ব্যবহৃত হয়"
+	},
+	"settings_option_selectTranslation_mode": {
+		"message": "অনুবাদ ট্রিগার"
+	},
+	"settings_option_selectTranslation_mode_item_contextMenu": {
+		"message": "সন্দর্ভ মেনু বাটন"
+	},
+	"settings_option_selectTranslation_mode_item_popupButton": {
+		"message": "পপআপ বাটন"
+	},
+	"settings_option_selectTranslation_mode_item_quickTranslate": {
+		"message": "সঙ্গে দ্রুত অনুবাদ"
+	},
+	"settings_option_selectTranslation_modifiers": {
+		"message": "মডিফায়ার"
+	},
+	"settings_option_selectTranslation_modifiers_desc": {
+		"message": "অনুবাদ প্রদর্শনের জন্য কী চাপা আবশ্যক সেট করুন"
+	},
+	"settings_option_selectTranslation_modifiers_key_alt": {
+		"message": "alt"
+	},
+	"settings_option_selectTranslation_modifiers_key_ctrl": {
+		"message": "ctrl"
+	},
+	"settings_option_selectTranslation_modifiers_key_meta": {
+		"message": "মেটা"
+	},
+	"settings_option_selectTranslation_modifiers_key_shift": {
+		"message": "শিফট"
+	},
+	"settings_option_selectTranslation_rememberDirection": {
+		"message": "টেক্সটের সর্বশেষ নির্বাচিত ভাষা মনে রাখুন"
+	},
+	"settings_option_selectTranslation_showOnceForSelection": {
+		"message": "প্রতিটি টেক্সট নির্বাচনের জন্য অনুবাদ বাটন একবার দেখান"
+	},
+	"settings_option_selectTranslation_showOnceForSelection_desc": {
+		"message": "বাটনটি একবার শুধুমাত্র প্রতিটি টেক্সট নির্বাচনের জন্য দেখানো হবে। আবার দেখাতে হলে, টেক্সটটি পুনরায় নির্বাচন করুন"
+	},
+	"settings_option_selectTranslation_showOriginalText": {
+		"message": "মূল টেক্সট দেখান"
+	},
+	"settings_option_selectTranslation_showOriginalText_desc": {
+		"message": "অনুবাদ সহ পপ-আপে মূল টেক্সট যোগ করুন"
+	},
+	"settings_option_selectTranslation_strictSelection": {
+		"message": "সম্পূর্ণ নির্বাচন"
+	},
+	"settings_option_selectTranslation_strictSelection_desc": {
+		"message": "বাম মাউস বাটনটি নির্ভর করে যদি বের করা হয় একটি ব্লকের বাইরে যেখানে নির্বাচিত টেক্সট রয়েছে, তবে নির্বাচনটি উপেক্ষা করুন"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton": {
+		"message": "বাটন লুকানোর জন্য বিলম্ব"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton_desc": {
+		"message": "কার্সর না হোভার করলে বাটন লুকানোর আগের মিলিসেকেন্ডের বিলম্ব। একটি বাটনে কার্সর স্থাপন করলে টাইমার রিসেট হবে। অটো লুকানোর বন্ধ করতে, 1-এর চেয়ে কম মান সেট করুন"
+	},
+	"settings_option_selectTranslation_zIndex": {
+		"message": "জেড ইনডেক্স"
+	},
+	"settings_option_selectTranslation_zIndex_desc": {
+		"message": "প্রস্তুত করা নন থেকে কিছু পৃষ্ঠাগুলিতে কিছু উপাদান ওভারল্যাপ করলে অনুবাদ পাপআপ এর জেড ইনডেক্স বাড়ান"
+	},
+	"settings_option_textTranslator": {
+		"message": "মাত্রাভাষা অনুবাদ"
+	},
+	"settings_option_textTranslator_rememberText": {
+		"message": "অনুবাদিত পাঠ্য মনে রাখুন"
+	},
+	"settings_option_textTranslator_rememberText_desc": {
+		"message": "অনুবাদিত পাঠ্য সংরক্ষণ করুন, পরবর্তী সময়ে উইন্ডো খোলা হলে আবার ব্যবহার করার জন্য"
+	},
+	"settings_option_textTranslator_spellCheck": {
+		"message": "বানান চেক সক্ষম করুন"
+	},
+	"settings_option_textTranslator_suggestLanguage": {
+		"message": "পরিচিত লেখার ভাষা প্রস্তাব করুন"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways": {
+		"message": "সর্বদা ভাষা চিহ্নিত করে এবং পরামর্শ দেওয়া হবে"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways_desc": {
+		"message": "অক্ষম করা হলে, ভাষা পরামর্শগুলি কেবলমাত্র যখন উৎস ভাষা অটোমেটিকভাবে চিহ্নিত হবে তখন প্রদর্শিত হবে"
+	},
+	"settings_option_translatePreferences": {
+		"message": "অনুবাদ পছন্দসমূহ"
+	},
+	"settings_option_translateScheduler": {
+		"message": "অনুবাদ সময়সূচী"
+	},
+	"settings_option_translateScheduler_delay": {
+		"message": "লেখার সংগ্রহ বিলম্ব"
+	},
+	"settings_option_translateScheduler_delay_desc": {
+		"message": "অনুবাদ সময়সূচীটি অনুবাদ সেবা এপিআইর জন্য অনুরোধের সংখ্যা কমাতে হয়। সমস্ত লেখাগুলি একবারে যত লেখা প্রেরণ করা যায় তাই সমস্ত লেখা প্রেরণের পূর্বে নতুন লেখা সংগ্রহ করতে সময় দেওয়া হবে। অনুবাদ শুরু করার আগে নতুন লেখা সংগ্রহ করতে সময় দিয়ে থাকবে"
+	},
+	"settings_option_translateScheduler_retryLimit": {
+		"message": "অনুবাদ পুনরাবৃত্তি প্রচেষ্টাসমূহ"
+	},
+	"settings_option_translateScheduler_retryLimit_desc": {
+		"message": "অনুবাদ সমস্যার জন্য অনুবাদ সময়সূচী লেখাগুলি পুনরাবৃত্তি করবে। এই বিকল্পটি পুনরাবৃত্তি প্রচেষ্টাগুলির জন্য একটি সীমা সেট করে। সীমাটি নির্দিষ্ট করার জন্য একটি ঋণাত্মক সংখ্যা সেট করুন, অসীম পুনরাবৃত্তিগুলি সম্পূর্ণ করার জন্য একটি ঋণাত্মক সংখ্যা সেট করুন"
+	},
+	"settings_option_translatorModule": {
+		"message": "অনুবাদক মডিউল"
+	},
+	"settings_option_translatorModule_desc": {
+		"message": "অনুবাদের মান এবং অনুবাদের জন্য উপলভ্য ভাষা অনুসরণকারীর উপর নির্ভর করে।"
+	},
+	"settings_option_tts": {
+		"message": "টেক্সট টু স্পিচ (TTS)"
+	},
+	"settings_option_ttsCustomModules": {
+		"message": "কাস্টম TTS"
+	},
+	"settings_option_ttsCustomModules_button": {
+		"message": "টিটিএস মডিউল পরিচালনা করুন"
+	},
+	"settings_option_ttsCustomModules_desc": {
+		"message": "আপনি আপনার পছন্দের সেবা এবং ভয়েস ব্যবহার করে টিটিএস মডিউল যুক্ত করতে পারেন। কাস্টম টিটিএস ডকুমেন্টেশনে আরও পড়ুন এবং মডিউল খুঁজুন।"
+	},
+	"settings_option_ttsModule": {
+		"message": "টিটিএস মডিউল"
+	},
+	"settings_option_ttsModule_desc": {
+		"message": "পাঠ্যগুলি বক্সে প্রদর্শিত করার জন্য মডিউল"
+	},
+	"settings_option_userLanguage": {
+		"message": "আপনার ভাষা"
+	},
+	"settings_option_userLanguage_desc": {
+		"message": "পাঠ্যগুলি অনুবাদ করার লক্ষ্যভাবের ভাষা"
+	},
+	"settings_pageTitle": {
+		"message": "সেটিংস"
+	},
+	"settings_section_popup": {
+		"message": "পপআপ"
+	},
+	"textTranslator_suggestLanguage": {
+		"message": "এই ভাষাটি হলো"
+	},
+	"textTranslator_translateInputPlaceholder": {
+		"message": "ইনপুট টেক্সট"
+	},
+	"textTranslator_translatePlaceholder": {
+		"message": "অনুবাদিত লেখা"
+	},
+	"translatorsManagerWindow_add": {
+		"message": "যোগ করুন"
+	},
+	"translatorsManagerWindow_close": {
+		"message": "বন্ধ করুন"
+	},
+	"translatorsManagerWindow_emptyTranslatorsListText": {
+		"message": "এখনও কাস্টম অনুবাদক যোগ করা হয়নি"
+	},
+	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
+		"message": "\"$translator_name$\" অনুবাদকটি সরানো নিশ্চিত তথ্য?",
+		"placeholders": {
+			"translator_name": {
+				"content": "$1",
+				"example": "Google translator"
+			}
+		}
+	},
+	"translatorsManagerWindow_title": {
+		"message": "কাস্টম অনুবাদক"
+	},
+	"translatorsManagerWindow_translator_delete": {
+		"message": "মুছে ফেলুন"
+	},
+	"translatorsManagerWindow_translator_edit": {
+		"message": "সম্পাদনা করুন"
+	},
+	"ttsManagerWindow_add": {
+		"message": "যোগ করুন"
+	},
+	"ttsManagerWindow_close": {
+		"message": "বন্ধ করুন"
+	},
+	"ttsManagerWindow_emptyTranslatorsListText": {
+		"message": "টি টি এস মডিউলগুলি এখনো যোগ করা হয়নি"
+	},
+	"ttsManagerWindow_message_ttsRemoveConfirmation": {
+		"message": "\"$tts_name$\" টি টি এস অপসারণ করতে আপনি কি নিশ্চিত?",
+		"placeholders": {
+			"tts_name": {
+				"content": "$1",
+				"example": "Google TTS"
+			}
+		}
+	},
+	"ttsManagerWindow_title": {
+		"message": "টেক্সট টু স্পিচ মডিউলসগুলি"
+	},
+	"ttsManagerWindow_translator_delete": {
+		"message": "মুছুন"
+	},
+	"ttsManagerWindow_translator_edit": {
+		"message": "সম্পাদনা করুন"
+	},
+	"validation_number": {
+		"message": "প্যারামিটারটি একটি সংখ্যা হতে হবে"
+	},
+	"validation_numberBetweenRange": {
+		"message": "প্যারামিটারটি $1 এবং $2 এর মধ্যে একটি সংখ্যা হতে হবে"
+	},
+	"validation_positiveNumber": {
+		"message": "প্যারামিটারটি একটি ধনাত্মক সংখ্যা হতে হবে।"
+	},
+	"langCode_aa": {
+		"message": "আফার"
+	},
+	"langCode_ab": {
+		"message": "আবখাজিয়ান"
+	},
+	"langCode_ae": {
+		"message": "আবেস্তীয়"
+	},
+	"langCode_af": {
+		"message": "আফ্রিকান"
+	},
+	"langCode_ak": {
+		"message": "আকান"
+	},
+	"langCode_am": {
+		"message": "আমহারিক"
+	},
+	"langCode_an": {
+		"message": "আর্গোনিজ"
+	},
+	"langCode_ar": {
+		"message": "আরবী"
+	},
+	"langCode_as": {
+		"message": "অসমীয়া"
+	},
+	"langCode_av": {
+		"message": "আভেরিক"
+	},
+	"langCode_ay": {
+		"message": "আয়মারা"
+	},
+	"langCode_az": {
+		"message": "আজারবাইজানী"
+	},
+	"langCode_ba": {
+		"message": "বাশকির"
+	},
+	"langCode_be": {
+		"message": "বেলারুশিয়"
+	},
+	"langCode_bg": {
+		"message": "বুলগেরিয়"
+	},
+	"langCode_bh": {
+		"message": "ভোজপুরি"
+	},
+	"langCode_bi": {
+		"message": "বিসলামা"
+	},
+	"langCode_bm": {
+		"message": "বামবারা"
+	},
+	"langCode_bn": {
+		"message": "বাংলা"
+	},
+	"langCode_bo": {
+		"message": "তিব্বতি"
+	},
+	"langCode_br": {
+		"message": "ব্রেটন"
+	},
+	"langCode_bs": {
+		"message": "বসনীয়"
+	},
+	"langCode_ca": {
+		"message": "কাতালান"
+	},
+	"langCode_ce": {
+		"message": "চেচেন"
+	},
+	"langCode_ch": {
+		"message": "চামোরো"
+	},
+	"langCode_co": {
+		"message": "কর্সিকান"
+	},
+	"langCode_cr": {
+		"message": "ক্রি"
+	},
+	"langCode_cs": {
+		"message": "চেক"
+	},
+	"langCode_cu": {
+		"message": "চার্চ স্লাভিক"
+	},
+	"langCode_cv": {
+		"message": "চুবাস"
+	},
+	"langCode_cy": {
+		"message": "ওয়েলশ"
+	},
+	"langCode_da": {
+		"message": "ডেনিশ"
+	},
+	"langCode_de": {
+		"message": "জার্মান"
+	},
+	"langCode_dv": {
+		"message": "দিবেহি"
+	},
+	"langCode_dz": {
+		"message": "জোংখা"
+	},
+	"langCode_ee": {
+		"message": "ইউয়ি"
+	},
+	"langCode_el": {
+		"message": "গ্রিক"
+	},
+	"langCode_en": {
+		"message": "ইংরেজি"
+	},
+	"langCode_eo": {
+		"message": "এস্পেরান্তো"
+	},
+	"langCode_es": {
+		"message": "স্প্যানিশ"
+	},
+	"langCode_et": {
+		"message": "এস্তোনীয়"
+	},
+	"langCode_eu": {
+		"message": "বাস্ক"
+	},
+	"langCode_fa": {
+		"message": "ফার্সি"
+	},
+	"langCode_ff": {
+		"message": "ফুলাহ্"
+	},
+	"langCode_fi": {
+		"message": "ফিনিশ"
+	},
+	"langCode_fj": {
+		"message": "ফিজিয়ান"
+	},
+	"langCode_fo": {
+		"message": "ফেরোইস"
+	},
+	"langCode_fr": {
+		"message": "ফরাসি"
+	},
+	"langCode_fy": {
+		"message": "পশ্চিম ফ্রিসিয়ান"
+	},
+	"langCode_ga": {
+		"message": "আইরিশ"
+	},
+	"langCode_gd": {
+		"message": "স্কটিশ-গ্যেলিক"
+	},
+	"langCode_gl": {
+		"message": "গ্যালিশিয়"
+	},
+	"langCode_gn": {
+		"message": "গুয়ারানি"
+	},
+	"langCode_gu": {
+		"message": "গুজরাটি"
+	},
+	"langCode_gv": {
+		"message": "ম্যাঙ্কস"
+	},
+	"langCode_ha": {
+		"message": "হাউসা"
+	},
+	"langCode_he": {
+		"message": "হিব্রু"
+	},
+	"langCode_hi": {
+		"message": "হিন্দি"
+	},
+	"langCode_ho": {
+		"message": "হিরি মোতু"
+	},
+	"langCode_hr": {
+		"message": "ক্রোয়েশীয়"
+	},
+	"langCode_ht": {
+		"message": "হাইতিয়ান ক্রেওল"
+	},
+	"langCode_hu": {
+		"message": "হাঙ্গেরীয়"
+	},
+	"langCode_hy": {
+		"message": "আর্মেনিয়"
+	},
+	"langCode_hz": {
+		"message": "হেরেরো"
+	},
+	"langCode_ia": {
+		"message": "ইন্টারলিঙ্গুয়া"
+	},
+	"langCode_id": {
+		"message": "ইন্দোনেশীয়"
+	},
+	"langCode_ie": {
+		"message": "ইন্টারলিঙ্গ"
+	},
+	"langCode_ig": {
+		"message": "ইগ্‌বো"
+	},
+	"langCode_ii": {
+		"message": "সিচুয়ান য়ি"
+	},
+	"langCode_ik": {
+		"message": "ইনুপিয়াক"
+	},
+	"langCode_io": {
+		"message": "ইডো"
+	},
+	"langCode_is": {
+		"message": "আইসল্যান্ডীয়"
+	},
+	"langCode_it": {
+		"message": "ইতালিয়"
+	},
+	"langCode_iu": {
+		"message": "ইনুক্টিটুট"
+	},
+	"langCode_ja": {
+		"message": "জাপানি"
+	},
+	"langCode_jv": {
+		"message": "জাভানিজ"
+	},
+	"langCode_ka": {
+		"message": "জর্জিয়ান"
+	},
+	"langCode_kg": {
+		"message": "কঙ্গো"
+	},
+	"langCode_ki": {
+		"message": "কিকুয়ু"
+	},
+	"langCode_kj": {
+		"message": "কোয়ানিয়ামা"
+	},
+	"langCode_kk": {
+		"message": "কাজাখ"
+	},
+	"langCode_kl": {
+		"message": "কালাল্লিসুট"
+	},
+	"langCode_km": {
+		"message": "খমের"
+	},
+	"langCode_kn": {
+		"message": "কন্নড়"
+	},
+	"langCode_ko": {
+		"message": "কোরিয়ান"
+	},
+	"langCode_kr": {
+		"message": "কানুরি"
+	},
+	"langCode_ks": {
+		"message": "কাশ্মীরি"
+	},
+	"langCode_ku": {
+		"message": "কুর্দিশ"
+	},
+	"langCode_kv": {
+		"message": "কোমি"
+	},
+	"langCode_kw": {
+		"message": "কর্ণিশ"
+	},
+	"langCode_ky": {
+		"message": "কির্গিজ"
+	},
+	"langCode_la": {
+		"message": "লাতিন"
+	},
+	"langCode_lb": {
+		"message": "লুক্সেমবার্গীয়"
+	},
+	"langCode_lg": {
+		"message": "গান্ডা"
+	},
+	"langCode_li": {
+		"message": "লিম্বুর্গিশ"
+	},
+	"langCode_ln": {
+		"message": "লিঙ্গালা"
+	},
+	"langCode_lo": {
+		"message": "লাও"
+	},
+	"langCode_lt": {
+		"message": "লিথুয়েনীয়"
+	},
+	"langCode_lu": {
+		"message": "লুবা-কাটাঙ্গা"
+	},
+	"langCode_lv": {
+		"message": "লাত্‌ভীয়"
+	},
+	"langCode_mg": {
+		"message": "মালাগাসি"
+	},
+	"langCode_mh": {
+		"message": "মার্শালিজ"
+	},
+	"langCode_mi": {
+		"message": "মাওরি"
+	},
+	"langCode_mk": {
+		"message": "ম্যাসিডোনীয়"
+	},
+	"langCode_ml": {
+		"message": "মালায়ালাম"
+	},
+	"langCode_mn": {
+		"message": "মঙ্গোলিয়"
+	},
+	"langCode_mr": {
+		"message": "মারাঠি"
+	},
+	"langCode_ms": {
+		"message": "মালয়"
+	},
+	"langCode_mt": {
+		"message": "মল্টিয়"
+	},
+	"langCode_my": {
+		"message": "বর্মি"
+	},
+	"langCode_na": {
+		"message": "নাউরু"
+	},
+	"langCode_nb": {
+		"message": "নরওয়েজিয়ান বোকমাল"
+	},
+	"langCode_nd": {
+		"message": "উত্তর এন্দেবেলে"
+	},
+	"langCode_ne": {
+		"message": "নেপালী"
+	},
+	"langCode_ng": {
+		"message": "এন্দোঙ্গা"
+	},
+	"langCode_nl": {
+		"message": "ওলন্দাজ"
+	},
+	"langCode_nn": {
+		"message": "নরওয়েজিয়ান নিনর্স্ক"
+	},
+	"langCode_no": {
+		"message": "নরওয়েজীয়"
+	},
+	"langCode_nr": {
+		"message": "দক্ষিণ এনডেবেলে"
+	},
+	"langCode_nv": {
+		"message": "নাভাজো"
+	},
+	"langCode_ny": {
+		"message": "নায়াঞ্জা"
+	},
+	"langCode_oc": {
+		"message": "অক্সিটান"
+	},
+	"langCode_oj": {
+		"message": "ওজিবওয়া"
+	},
+	"langCode_om": {
+		"message": "অরোমো"
+	},
+	"langCode_or": {
+		"message": "ওড়িয়া"
+	},
+	"langCode_os": {
+		"message": "ওসেটিক"
+	},
+	"langCode_pa": {
+		"message": "পাঞ্জাবী"
+	},
+	"langCode_pi": {
+		"message": "পালি"
+	},
+	"langCode_pl": {
+		"message": "পোলিশ"
+	},
+	"langCode_ps": {
+		"message": "পাশতু"
+	},
+	"langCode_pt": {
+		"message": "পর্তুগীজ"
+	},
+	"langCode_qu": {
+		"message": "কেচুয়া"
+	},
+	"langCode_rm": {
+		"message": "রোমান্স"
+	},
+	"langCode_rn": {
+		"message": "রুন্দি"
+	},
+	"langCode_ro": {
+		"message": "রোমানীয়"
+	},
+	"langCode_ru": {
+		"message": "রুশ"
+	},
+	"langCode_rw": {
+		"message": "কিনয়ারোয়ান্ডা"
+	},
+	"langCode_sa": {
+		"message": "সংস্কৃত"
+	},
+	"langCode_sc": {
+		"message": "সার্ডিনিয়ান"
+	},
+	"langCode_sd": {
+		"message": "সিন্ধি"
+	},
+	"langCode_se": {
+		"message": "উত্তরাঞ্চলীয় সামি"
+	},
+	"langCode_sg": {
+		"message": "সাঙ্গো"
+	},
+	"langCode_si": {
+		"message": "সিংহলী"
+	},
+	"langCode_sk": {
+		"message": "স্লোভাক"
+	},
+	"langCode_sl": {
+		"message": "স্লোভেনীয়"
+	},
+	"langCode_sm": {
+		"message": "সামোয়ান"
+	},
+	"langCode_sn": {
+		"message": "শোনা"
+	},
+	"langCode_so": {
+		"message": "সোমালি"
+	},
+	"langCode_sq": {
+		"message": "আলবেনীয়"
+	},
+	"langCode_sr": {
+		"message": "সার্বীয়"
+	},
+	"langCode_ss": {
+		"message": "সোয়াতি"
+	},
+	"langCode_st": {
+		"message": "দক্ষিন সোথো"
+	},
+	"langCode_su": {
+		"message": "সুদানী"
+	},
+	"langCode_sv": {
+		"message": "সুইডিশ"
+	},
+	"langCode_sw": {
+		"message": "সোয়াহিলি"
+	},
+	"langCode_ta": {
+		"message": "তামিল"
+	},
+	"langCode_te": {
+		"message": "তেলুগু"
+	},
+	"langCode_tg": {
+		"message": "তাজিক"
+	},
+	"langCode_th": {
+		"message": "থাই"
+	},
+	"langCode_ti": {
+		"message": "তিগরিনিয়া"
+	},
+	"langCode_tk": {
+		"message": "তুর্কমেনী"
+	},
+	"langCode_tl": {
+		"message": "ফিলিপিনো"
+	},
+	"langCode_tn": {
+		"message": "সোয়ানা"
+	},
+	"langCode_to": {
+		"message": "টোঙ্গান"
+	},
+	"langCode_tr": {
+		"message": "তুর্কী"
+	},
+	"langCode_ts": {
+		"message": "সঙ্গা"
+	},
+	"langCode_tt": {
+		"message": "তাতার"
+	},
+	"langCode_tw": {
+		"message": "আকান"
+	},
+	"langCode_ty": {
+		"message": "তাহিতিয়ান"
+	},
+	"langCode_ug": {
+		"message": "উইঘুর"
+	},
+	"langCode_uk": {
+		"message": "ইউক্রেনীয়"
+	},
+	"langCode_ur": {
+		"message": "উর্দু"
+	},
+	"langCode_uz": {
+		"message": "উজবেক"
+	},
+	"langCode_ve": {
+		"message": "ভেন্ডা"
+	},
+	"langCode_vi": {
+		"message": "ভিয়েতনামী"
+	},
+	"langCode_vo": {
+		"message": "ভোলাপুক"
+	},
+	"langCode_wa": {
+		"message": "ওয়ালুন"
+	},
+	"langCode_wo": {
+		"message": "ওলোফ"
+	},
+	"langCode_xh": {
+		"message": "জোসা"
+	},
+	"langCode_yi": {
+		"message": "ইদ্দিশ"
+	},
+	"langCode_yo": {
+		"message": "ইওরুবা"
+	},
+	"langCode_za": {
+		"message": "ঝু্য়াঙ"
+	},
+	"langCode_zh": {
+		"message": "চীনা"
+	},
+	"langCode_zu": {
+		"message": "জুলু"
+	}
+}

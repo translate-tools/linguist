@@ -8,8 +8,16 @@ const getGPTTranslator = async () => {
 		gptTranslator = new Promise(async (res) => {
 			const { ChatGPTUtils } = await import('../../ChatGPT.mjs');
 
+			const languageNames = new Intl.DisplayNames(['en'], {
+				type: 'language',
+			});
+
 			const translator = (stringifiedJSON, { from, to }) =>
-				`Translate this JSON below from ${from} to ${to} and send me back only JSON with no your comments:\n${stringifiedJSON}`;
+				`Translate this JSON below from ${languageNames.of(
+					from,
+				)} to ${languageNames.of(
+					to,
+				)} and send me back only JSON with no your comments. Try hard to send me back valid JSON. Never translate "message" key in JSON, but translate its value:\n${stringifiedJSON}`;
 			res(new ChatGPTUtils(translator));
 		});
 	}
@@ -21,30 +29,112 @@ const syncLocalizationsMessagesWithSource = async (
 	sourceLocalization,
 	targetLocalization,
 ) => {
-	// Remove messages that not exists in source
+	const writeUpdates = (object) => {
+		const stringifiedJSON = JSON.stringify(object, null, '\t');
+		writeFileSync(targetLocalization.filename, stringifiedJSON);
+	};
+
+	// Remove messages that not exists in source and invalid messages
 	const filteredJson = Object.fromEntries(
-		Object.entries(targetLocalization.json).filter(
-			([key]) => key in sourceLocalization.json,
-		),
+		Object.entries(targetLocalization.json).filter(([key, value]) => {
+			const isExistsInSource = key in sourceLocalization.json;
+			if (!isExistsInSource) return false;
+
+			const isMessageNotEmpty =
+				typeof value.message === 'string' && value.message.trim().length > 0;
+			if (!isMessageNotEmpty) return false;
+
+			// Check placeholders
+			if (value.placeholders) {
+				const placeholdersKeys =
+					typeof value.placeholders === 'object'
+						? Object.keys(value.placeholders)
+						: [];
+
+				// Remove messages with empty placeholders
+				if (placeholdersKeys.length === 0) return false;
+
+				// Remove messages that does not use defined placeholders
+				const isMessageContainsAllPlaceholders = placeholdersKeys.every(
+					(placeholder) => value.message.includes(`$` + placeholder + `$`),
+				);
+				if (!isMessageContainsAllPlaceholders) return false;
+
+				// Reject by corrupted placeholders
+				const sourcePlaceholders = sourceLocalization.json[key].placeholders;
+				if (typeof sourcePlaceholders !== 'object') return false;
+
+				const isPlaceholdersStructureValid = Object.entries(
+					sourcePlaceholders,
+				).every(([sourceName, sourceValue]) => {
+					const placeholder = value.placeholders[sourceName];
+					return placeholder && placeholder.content === sourceValue.content;
+				});
+
+				if (!isPlaceholdersStructureValid) return false;
+			}
+
+			return true;
+		}),
 	);
 
 	// Translate messages
-	const messagesToAdd = Object.fromEntries(
-		Object.entries(sourceLocalization.json).filter(([key]) => !(key in filteredJson)),
+	const gptTranslator = await getGPTTranslator();
+
+	const messagesToTranslate = Object.entries(sourceLocalization.json).filter(
+		([key]) => !(key in filteredJson) && !key.startsWith('langCode_'),
 	);
 
-	const gptTranslator = await getGPTTranslator();
-	const translatedMessages = await gptTranslator.handleJson(messagesToAdd, {
-		from: sourceLocalization.code,
-		to: targetLocalization.code,
+	let collectedMessages = { ...filteredJson };
+
+	const languageNames = new Intl.DisplayNames([targetLocalization.code], {
+		type: 'language',
+	});
+	Object.keys(sourceLocalization.json).forEach((messageName) => {
+		const langCodePrefix = 'langCode_';
+		if (!messageName.startsWith(langCodePrefix)) return;
+
+		const langCode = messageName.slice(langCodePrefix.length);
+		let langName = languageNames.of(langCode);
+		langName = langName[0].toUpperCase() + langName.slice(1);
+
+		collectedMessages[langCodePrefix + langCode] = {
+			message: langName,
+		};
 	});
 
-	// Add messages from source localization
-	const updatedMessages = { ...filteredJson, ...translatedMessages };
+	writeUpdates(collectedMessages);
 
-	// Write changes
-	const stringifiedJSON = JSON.stringify(updatedMessages, null, '\t');
-	writeFileSync(targetLocalization.filename, stringifiedJSON);
+	const batchSize = 5;
+	for (let offset = 0; offset < messagesToTranslate.length; offset += batchSize) {
+		const messagesEntries = messagesToTranslate.slice(offset, offset + batchSize);
+
+		const messages = Object.fromEntries(messagesEntries);
+
+		try {
+			const translatedMessages = await gptTranslator.handleJson(messages, {
+				from: sourceLocalization.code,
+				to: targetLocalization.code,
+			});
+
+			// Merge messages
+			const updatedMessages = { ...collectedMessages, ...translatedMessages };
+
+			// Write changes
+			writeUpdates(updatedMessages);
+
+			// Remember merged changes
+			collectedMessages = updatedMessages;
+		} catch (err) {
+			// Skip errors and continue translation
+			console.error(
+				`Error while translate slice #${offset / batchSize} for file "${
+					targetLocalization.filename
+				}": `,
+				err,
+			);
+		}
+	}
 };
 
 const syncLocalizationsFilesWithSource = async () => {

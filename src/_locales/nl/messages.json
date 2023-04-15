@@ -1,0 +1,1190 @@
+{
+	"common_action_addToDictionary": {
+		"message": "Voeg vertaling toe aan woordenboek"
+	},
+	"common_action_removeFromDictionary": {
+		"message": "Verwijder vertaling uit woordenboek"
+	},
+	"common_bgUnavailable": {
+		"message": "Achtergrondscript is niet beschikbaar"
+	},
+	"common_cancel": {
+		"message": "Annuleren"
+	},
+	"common_close": {
+		"message": "Sluiten"
+	},
+	"common_copy": {
+		"message": "Kopiëren"
+	},
+	"common_error": {
+		"message": "Fout"
+	},
+	"common_offlineTranslator": {
+		"message": "$1 - Offline vertaler"
+	},
+	"common_retry": {
+		"message": "Opnieuw proberen"
+	},
+	"common_translate": {
+		"message": "Vertalen"
+	},
+	"component_hotkey_placeholder": {
+		"message": "Klik om sneltoetsen op te nemen"
+	},
+	"component_hotkey_recordPlaceholder": {
+		"message": "Toetsen indrukken"
+	},
+	"component_hotkey_resetButton": {
+		"message": "Resetten"
+	},
+	"contextMenu_disablePageTranslation": {
+		"message": "Paginavertaling uitschakelen"
+	},
+	"contextMenu_translatePage": {
+		"message": "Pagina vertalen"
+	},
+	"contextMenu_translateSelectedText": {
+		"message": "Geselecteerde tekst vertalen"
+	},
+	"dictionaryButton_add": {
+		"message": "Toevoegen aan woordenboek"
+	},
+	"dictionaryButton_delete": {
+		"message": "Verwijderen uit woordenboek"
+	},
+	"dictionary_button_export": {
+		"message": "Exporteren"
+	},
+	"dictionary_button_removeAll": {
+		"message": "Alles verwijderen"
+	},
+	"dictionary_deleteAll": {
+		"message": "Weet u zeker dat u ALLE vertalingen uit het woordenboek wilt verwijderen?"
+	},
+	"dictionary_deleteConfirmation": {
+		"message": "Weet u zeker dat u deze vertaling wilt verwijderen?"
+	},
+	"dictionary_description": {
+		"message": "Bewaar uw vertalingen in het woordenboek om ze later terug te vinden"
+	},
+	"dictionary_emptyDictionary": {
+		"message": "Woordenboek is leeg. Begin met het vullen ervan tijdens het vertalen van tekst"
+	},
+	"dictionary_filter_from": {
+		"message": "Van"
+	},
+	"dictionary_filter_to": {
+		"message": "Naar"
+	},
+	"dictionary_message_deleteAll_success": {
+		"message": "Alle vertalingen zijn verwijderd"
+	},
+	"dictionary_notFoundEntries": {
+		"message": "Geen vertalingen gevonden die overeenkomen met deze filters"
+	},
+	"dictionary_pageTitle": {
+		"message": "Woordenboek"
+	},
+	"dictionary_resetFilters": {
+		"message": "filters resetten"
+	},
+	"dictionary_searchPlaceholder": {
+		"message": "Zoeken op tekst"
+	},
+	"editorWindow_close": {
+		"message": "Sluiten"
+	},
+	"editorWindow_data_code": {
+		"message": "Code"
+	},
+	"editorWindow_data_name": {
+		"message": "Naam"
+	},
+	"editorWindow_message_invalidName": {
+		"message": "Naam moet ten minste één symbool bevatten"
+	},
+	"editorWindow_save": {
+		"message": "Opslaan"
+	},
+	"ext_description": {
+		"message": "Tekstvertaling zonder pagina-herladen"
+	},
+	"ext_name": {
+		"message": "Linguïst - webpagina-vertaler"
+	},
+	"history_control_selectEntry": {
+		"message": "Selecteer item"
+	},
+	"history_controls_clearHistory": {
+		"message": "Geschiedenis wissen"
+	},
+	"history_controls_deleteSelected": {
+		"message": "Geselecteerde verwijderen"
+	},
+	"history_controls_selectAll": {
+		"message": "Selecteer alle vertalingen"
+	},
+	"history_message_clearHistoryConfirmation": {
+		"message": "Weet u zeker dat u de geschiedenis wilt wissen? Alle items worden verwijderd"
+	},
+	"history_message_deleteEntryConfirmation": {
+		"message": "Weet u zeker dat u dit item wilt verwijderen?"
+	},
+	"history_message_deleteSelectedEntriesConfirmation": {
+		"message": "Weet u zeker dat u geselecteerde items ($1) wilt verwijderen?"
+	},
+	"history_message_emptyEntries": {
+		"message": "Geschiedenis is gewist"
+	},
+	"history_message_entriesNotFound": {
+		"message": "Geen vertalingen gevonden die aan de filter voldoen"
+	},
+	"history_pageTitle": {
+		"message": "Geschiedenis"
+	},
+	"history_searchPlaceholder": {
+		"message": "Zoeken op tekst"
+	},
+	"inlineTranslator_showOriginalText": {
+		"message": "Originele tekst tonen"
+	},
+	"lang_change": {
+		"message": "Verander taal"
+	},
+	"lang_detect": {
+		"message": "Automatisch detecteren"
+	},
+	"lang_select": {
+		"message": "Selecteer taal"
+	},
+	"lang_swap": {
+		"message": "Talen omwisselen"
+	},
+	"message_askResetConfig": {
+		"message": "Instellingen resetten?"
+	},
+	"message_cacheFlushed": {
+		"message": "De cache is geleegd"
+	},
+	"message_changesSaved": {
+		"message": "Wijzigingen opgeslagen"
+	},
+	"message_error": {
+		"message": "Fout"
+	},
+	"message_errorOfTranslate": {
+		"message": "Vertalingsfout"
+	},
+	"message_serviceRequiredKey": {
+		"message": "Service vereist een sleutel"
+	},
+	"message_translateOfText": {
+		"message": "Vertaald"
+	},
+	"message_unknownError": {
+		"message": "Onbekende fout"
+	},
+	"pageTranslator_alwaysTranslateLang": {
+		"message": "Deze taal altijd vertalen"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disable": {
+		"message": "Uitschakelen"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
+		"message": "Voor alle sites uitschakelen"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_enable": {
+		"message": "Inschakelen"
+	},
+	"pageTranslator_commonPreferences_title": {
+		"message": "Gemeenschappelijke voorkeuren voor deze taal"
+	},
+	"pageTranslator_option_autoTranslate": {
+		"message": "Automatisch vertalen"
+	},
+	"pageTranslator_showOptions": {
+		"message": "Opties weergeven"
+	},
+	"pageTranslator_showOriginal": {
+		"message": "Origineel weergeven"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_always": {
+		"message": "Altijd vertalen"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
+		"message": "Altijd vertalen voor deze taal"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_default": {
+		"message": "Gebruik gemeenschappelijke regels"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
+		"message": "Gebruik gemeenschappelijke regels voor deze taal"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_never": {
+		"message": "Nooit vertalen"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
+		"message": "Nooit vertalen voor deze taal"
+	},
+	"pageTranslator_sitePreferences_title": {
+		"message": "Voorkeuren voor"
+	},
+	"pageTranslator_translatePage": {
+		"message": "Pagina vertalen"
+	},
+	"pageTranslator_translationReport": {
+		"message": "Vertaalrapport"
+	},
+	"pageTranslator_translationReport_queue": {
+		"message": "Wachtrij"
+	},
+	"pageTranslator_translationReport_reject": {
+		"message": "Fouten"
+	},
+	"pageTranslator_translationReport_resolve": {
+		"message": "Vertaald"
+	},
+	"popup_tabIdNotFound": {
+		"message": "Tab \"$1\" is niet gevonden"
+	},
+	"popup_tab_translatePage": {
+		"message": "Pagina-vertaling"
+	},
+	"popup_tab_translateText": {
+		"message": "Tekst-vertaling"
+	},
+	"settings_button_cancel": {
+		"message": "Annuleren"
+	},
+	"settings_button_export": {
+		"message": "Configuratie exporteren"
+	},
+	"settings_button_import": {
+		"message": "Configuratie importeren"
+	},
+	"settings_button_reset": {
+		"message": "Configuratie resetten"
+	},
+	"settings_button_saveChanges": {
+		"message": "Wijzigingen opslaan"
+	},
+	"settings_message_clearCache_success": {
+		"message": "Cache is gewist"
+	},
+	"settings_message_common_invalidValueType": {
+		"message": "Ongeldige waarde"
+	},
+	"settings_message_importConfig_invalidFile": {
+		"message": "Bestand voor import kan niet worden verwerkt"
+	},
+	"settings_message_importConfig_success": {
+		"message": "Importeren voltooid"
+	},
+	"settings_message_resetConfig_confirm": {
+		"message": "Wilt u de instellingen resetten?"
+	},
+	"settings_message_resetConfig_success": {
+		"message": "Instellingen gereset"
+	},
+	"settings_message_saveChanges_success": {
+		"message": "Wijzigingen opgeslagen"
+	},
+	"settings_option_appIcon": {
+		"message": "Extensiepictogram"
+	},
+	"settings_option_appIcon_desc": {
+		"message": "Bij het selecteren van het dynamische pictogram worden kleuren aangepast aan het browserthema"
+	},
+	"settings_option_appIcon_item_auto": {
+		"message": "Dynamisch"
+	},
+	"settings_option_appIcon_item_color": {
+		"message": "Kleur"
+	},
+	"settings_option_appIcon_item_dark": {
+		"message": "Donker"
+	},
+	"settings_option_appIcon_item_light": {
+		"message": "Licht"
+	},
+	"settings_option_cache": {
+		"message": "Cache"
+	},
+	"settings_option_cache_clear": {
+		"message": "Cache wissen"
+	},
+	"settings_option_cache_clear_desc": {
+		"message": "Verwijder de cache als je vertaalartefacten hebt of geheimen wilt verwijderen"
+	},
+	"settings_option_cache_enable": {
+		"message": "Cache inschakelen"
+	},
+	"settings_option_cache_enable_desc": {
+		"message": "Wanneer de cache is ingeschakeld, zijn vertalingen die één keer zijn vertaald direct beschikbaar, zelfs zonder internetverbinding"
+	},
+	"settings_option_cache_ignoreCase": {
+		"message": "Hoofdlettergevoeligheid negeren"
+	},
+	"settings_option_cache_ignoreCase_desc": {
+		"message": "Bij inschakeling worden vertalingen uit de cache gebruikt met niet-exacte overeenkomsten, wat kan leiden tot vertaalartefacten"
+	},
+	"settings_option_commonSettings": {
+		"message": "Algemene instellingen"
+	},
+	"settings_option_customTranslatorModule": {
+		"message": "Aangepaste vertalers"
+	},
+	"settings_option_customTranslatorModule_desc": {
+		"message": "U kunt aangepaste vertalers toevoegen voor uw favoriete vertaaldiensten. Lees meer en vind modules in de <slot id=docs>documentatie over aangepaste vertalers</slot>."
+	},
+	"settings_option_customTranslatorModule_manageButton": {
+		"message": "Vertalers beheren"
+	},
+	"settings_option_mainPreferences": {
+		"message": "Belangrijkste instellingen"
+	},
+	"settings_option_pageTranslation": {
+		"message": "Paginavertaling"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent": {
+		"message": "Taal detecteren op basis van inhoud"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent_desc": {
+		"message": "Analyseer de tekst op de webpagina om de paginataal te detecteren. Wanneer uitgeschakeld, wordt een taal gebruikt die wordt verstrekt in de metagegevens van de pagina."
+	},
+	"settings_option_pageTranslation_enableContextMenu": {
+		"message": "Contextmenu-knop inschakelen"
+	},
+	"settings_option_pageTranslation_enableContextMenu_desc": {
+		"message": "Voeg knop toe om paginavertaling aan een contextmenu toe te voegen"
+	},
+	"settings_option_pageTranslation_ignoredTags": {
+		"message": "Genegeerde elementen"
+	},
+	"settings_option_pageTranslation_ignoredTags_desc": {
+		"message": "Voer namen van <slot id=htmlElements>HTML-elementen</slot> in die niet vertaald moeten worden. Geneste elementen worden ook niet vertaald. Eén element per regel."
+	},
+	"settings_option_pageTranslation_lazyTranslate": {
+		"message": "Alleen zichtbare elementen vertalen"
+	},
+	"settings_option_pageTranslation_lazyTranslate_desc": {
+		"message": "Wanneer deze optie is ingeschakeld, worden alleen zichtbare elementen vertaald. Dit kan handig zijn om netwerkverkeer te besparen."
+	},
+	"settings_option_pageTranslation_originalTextPopup": {
+		"message": "Pop-up met originele tekst inschakelen"
+	},
+	"settings_option_pageTranslation_originalTextPopup_desc": {
+		"message": "Toon een pop-up met de oorspronkelijke tekst door de muis over de vertaalde tekst te laten zweven."
+	},
+	"settings_option_pageTranslation_toggleTranslationHotkey": {
+		"message": "Sneltoetsen"
+	},
+	"settings_option_pageTranslation_toggleTranslationHotkey_desc": {
+		"message": "Sneltoetsen om paginavertaling in- en uit te schakelen\nDruk op ESC om de toetsen te resetten"
+	},
+	"settings_option_pageTranslation_translatableAttributes": {
+		"message": "Vertaalbare attributen."
+	},
+	"settings_option_pageTranslation_translatableAttributes_desc": {
+		"message": "Voer <slot id=htmlAttributes>HTML-attribuut</slot>-namen in voor vertaling. Eén attribuut per regel"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters": {
+		"message": "Toon vertalingsstatistieke"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters_desc": {
+		"message": "Vertoon statistieke vir bladsyvertaling"
+	},
+	"settings_option_selectTranslation": {
+		"message": "Geselekteerde tekst vertaling"
+	},
+	"settings_option_selectTranslation_detectedLangFirst": {
+		"message": "Voorkeur vir opgespoorde taal van die teks in plaas van die bladtaal"
+	},
+	"settings_option_selectTranslation_detectedLangFirst_desc": {
+		"message": "Wanneer geaktiveer, sal die opgespoorde taal van die geselekteerde teks bo die bladtaal verkies word"
+	},
+	"settings_option_selectTranslation_disableWhileTranslatePage": {
+		"message": "Deaktiveer terwyl blad vertaal word"
+	},
+	"settings_option_selectTranslation_enable": {
+		"message": "Aktiveer"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton": {
+		"message": "Outomatiese fokus op vertalingsknoppie"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
+		"message": "Richt de focus op de vertaal knop wanneer deze verschijnt"
+	},
+	"settings_option_selectTranslation_header_languageChoice": {
+		"message": "Taal instellingen"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang": {
+		"message": "Automatische taaldetectie inschakelen door de vertaler"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
+		"message": "Gebruik automatische taaldetectie door de vertaler wanneer de taal lokaal niet kan worden gedetecteerd"
+	},
+	"settings_option_selectTranslation_mode": {
+		"message": "Vertaal trigger"
+	},
+	"settings_option_selectTranslation_mode_item_contextMenu": {
+		"message": "Contextmenu knop"
+	},
+	"settings_option_selectTranslation_mode_item_popupButton": {
+		"message": "Popupknop"
+	},
+	"settings_option_selectTranslation_mode_item_quickTranslate": {
+		"message": "Snelle vertaling door selectie"
+	},
+	"settings_option_selectTranslation_modifiers": {
+		"message": "Modifiers"
+	},
+	"settings_option_selectTranslation_modifiers_desc": {
+		"message": "Selecteer de toetsen die op het toetsenbord moeten worden ingedrukt om de vertaling weer te geven"
+	},
+	"settings_option_selectTranslation_modifiers_key_alt": {
+		"message": "alt"
+	},
+	"settings_option_selectTranslation_modifiers_key_ctrl": {
+		"message": "ctrl"
+	},
+	"settings_option_selectTranslation_modifiers_key_meta": {
+		"message": "meta"
+	},
+	"settings_option_selectTranslation_modifiers_key_shift": {
+		"message": "shift"
+	},
+	"settings_option_selectTranslation_rememberDirection": {
+		"message": "Onthoud de meest recent geselecteerde taal van de tekst"
+	},
+	"settings_option_selectTranslation_showOnceForSelection": {
+		"message": "Toon vertaalbutton één keer per tekstselectie"
+	},
+	"settings_option_selectTranslation_showOnceForSelection_desc": {
+		"message": "De button zal slechts eenmaal worden weergegeven per selectie van de tekst. Indien je deze opnieuw wilt zien, dien je de tekst opnieuw te selecteren"
+	},
+	"settings_option_selectTranslation_showOriginalText": {
+		"message": "Toon originele tekst"
+	},
+	"settings_option_selectTranslation_showOriginalText_desc": {
+		"message": "Voeg een blok met de originele tekst toe aan een pop-up met de vertaling"
+	},
+	"settings_option_selectTranslation_strictSelection": {
+		"message": "Strikte selectie"
+	},
+	"settings_option_selectTranslation_strictSelection_desc": {
+		"message": "Negeer de selectie als de linker muisknop wordt losgelaten buiten een blok dat geselecteerde tekst bevat"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton": {
+		"message": "Vertraging om de knop te verbergen"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton_desc": {
+		"message": "Vertraging in milliseconden voordat de knop wordt verborgen wanneer de cursor niet is aangewezen. Het aanwijzen van de cursor op een knop zal de timer resetten. Om automatisch verbergen uit te schakelen, stel de waarde lager dan 1 in."
+	},
+	"settings_option_selectTranslation_zIndex": {
+		"message": "z-index"
+	},
+	"settings_option_selectTranslation_zIndex_desc": {
+		"message": "Verhoog de waarde als sommige elementen op sommige pagina's overlappen met een popup met vertaalde tekst"
+	},
+	"settings_option_textTranslator": {
+		"message": "Tekstvertaling"
+	},
+	"settings_option_textTranslator_rememberText": {
+		"message": "Herinner vertaalde tekst"
+	},
+	"settings_option_textTranslator_rememberText_desc": {
+		"message": "Onthoud vertaalde tekst voor de volgende keer dat het venster wordt geopend"
+	},
+	"settings_option_textTranslator_spellCheck": {
+		"message": "Spellingscontrole inschakelen"
+	},
+	"settings_option_textTranslator_suggestLanguage": {
+		"message": "Voorgestelde gedetecteerde teksttaal"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways": {
+		"message": "Altijd taal detecteren en suggereren"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways_desc": {
+		"message": "Wanneer uitgeschakeld, verschijnen taalsuggesties alleen wanneer de brontaal automatisch is gedetecteerd."
+	},
+	"settings_option_translatePreferences": {
+		"message": "Vertaalvoorkeuren"
+	},
+	"settings_option_translateScheduler": {
+		"message": "Vertaalplanner"
+	},
+	"settings_option_translateScheduler_delay": {
+		"message": "Tekstaccumulatiedelay"
+	},
+	"settings_option_translateScheduler_delay_desc": {
+		"message": "De vertaalplanner vermindert het aantal verzoeken aan de API's voor vertaaldiensten. De planner probeert teksten te accumuleren om zoveel mogelijk teksten per verzoek te verzenden. De planner wacht op de opgegeven tijd in milliseconden om nieuwe teksten te verzamelen voordat hij begint met vertalen."
+	},
+	"settings_option_translateScheduler_retryLimit": {
+		"message": "Vertaalpogingen herhalen"
+	},
+	"settings_option_translateScheduler_retryLimit_desc": {
+		"message": "De planner zal teksten blijven proberen te vertalen bij vertaalfouten. Deze optie stelt een limiet in voor het aantal pogingen. Stel een negatief getal in om onbeperkte pogingen toe te staan."
+	},
+	"settings_option_translatorModule": {
+		"message": "Vertaalmodule"
+	},
+	"settings_option_translatorModule_desc": {
+		"message": "De kwaliteit van vertalingen en de beschikbare talen voor vertaling zijn afhankelijk van de vertaler."
+	},
+	"settings_option_tts": {
+		"message": "Tekst naar spraak (TTS)"
+	},
+	"settings_option_ttsCustomModules": {
+		"message": "Aangepaste TTS"
+	},
+	"settings_option_ttsCustomModules_button": {
+		"message": "Beheer TTS-modules"
+	},
+	"settings_option_ttsCustomModules_desc": {
+		"message": "U kunt TTS-modules toevoegen die uw favoriete service en stemmen gebruiken. Lees meer en vind modules in de aangepaste TTS-documentatie."
+	},
+	"settings_option_ttsModule": {
+		"message": "TTS-module"
+	},
+	"settings_option_ttsModule_desc": {
+		"message": "Module om teksten uit te spreken"
+	},
+	"settings_option_userLanguage": {
+		"message": "Uw taal"
+	},
+	"settings_option_userLanguage_desc": {
+		"message": "Doeltaal om teksten te vertalen"
+	},
+	"settings_pageTitle": {
+		"message": "Instellingen"
+	},
+	"settings_section_popup": {
+		"message": "Pop-up"
+	},
+	"textTranslator_suggestLanguage": {
+		"message": "Het lijkt erop dat de taal is"
+	},
+	"textTranslator_translateInputPlaceholder": {
+		"message": "Invoertekst"
+	},
+	"textTranslator_translatePlaceholder": {
+		"message": "Vertaalde tekst"
+	},
+	"translatorsManagerWindow_add": {
+		"message": "Toevoegen"
+	},
+	"translatorsManagerWindow_close": {
+		"message": "Sluiten"
+	},
+	"translatorsManagerWindow_emptyTranslatorsListText": {
+		"message": "Aangepaste vertalers zijn nog niet toegevoegd"
+	},
+	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
+		"message": "Weet u zeker dat u vertaler \"$translator_name$\" wilt verwijderen?",
+		"placeholders": {
+			"translator_name": {
+				"content": "$1",
+				"example": "Google vertaler"
+			}
+		}
+	},
+	"translatorsManagerWindow_title": {
+		"message": "Aangepaste vertalers"
+	},
+	"translatorsManagerWindow_translator_delete": {
+		"message": "Verwijderen"
+	},
+	"translatorsManagerWindow_translator_edit": {
+		"message": "Bewerken"
+	},
+	"ttsManagerWindow_add": {
+		"message": "Toevoegen"
+	},
+	"ttsManagerWindow_close": {
+		"message": "Sluiten"
+	},
+	"ttsManagerWindow_emptyTranslatorsListText": {
+		"message": "TTS-modules zijn nog niet toegevoegd"
+	},
+	"ttsManagerWindow_message_ttsRemoveConfirmation": {
+		"message": "Weet u zeker dat u TTS \"$tts_name$\" wilt verwijderen?",
+		"placeholders": {
+			"tts_name": {
+				"content": "$1",
+				"example": "Google TTS"
+			}
+		}
+	},
+	"ttsManagerWindow_title": {
+		"message": "Tekst naar spraak modules"
+	},
+	"ttsManagerWindow_translator_delete": {
+		"message": "Verwijderen"
+	},
+	"ttsManagerWindow_translator_edit": {
+		"message": "Bewerken"
+	},
+	"validation_number": {
+		"message": "De parameter moet een getal zijn"
+	},
+	"validation_numberBetweenRange": {
+		"message": "De parameter moet een getal zijn tussen $1 en $2"
+	},
+	"validation_positiveNumber": {
+		"message": "De parameter moet een positief getal zijn."
+	},
+	"langCode_aa": {
+		"message": "Afar"
+	},
+	"langCode_ab": {
+		"message": "Abchazisch"
+	},
+	"langCode_ae": {
+		"message": "Avestisch"
+	},
+	"langCode_af": {
+		"message": "Afrikaans"
+	},
+	"langCode_ak": {
+		"message": "Akan"
+	},
+	"langCode_am": {
+		"message": "Amhaars"
+	},
+	"langCode_an": {
+		"message": "Aragonees"
+	},
+	"langCode_ar": {
+		"message": "Arabisch"
+	},
+	"langCode_as": {
+		"message": "Assamees"
+	},
+	"langCode_av": {
+		"message": "Avarisch"
+	},
+	"langCode_ay": {
+		"message": "Aymara"
+	},
+	"langCode_az": {
+		"message": "Azerbeidzjaans"
+	},
+	"langCode_ba": {
+		"message": "Basjkiers"
+	},
+	"langCode_be": {
+		"message": "Belarussisch"
+	},
+	"langCode_bg": {
+		"message": "Bulgaars"
+	},
+	"langCode_bh": {
+		"message": "Bhojpuri"
+	},
+	"langCode_bi": {
+		"message": "Bislama"
+	},
+	"langCode_bm": {
+		"message": "Bambara"
+	},
+	"langCode_bn": {
+		"message": "Bengaals"
+	},
+	"langCode_bo": {
+		"message": "Tibetaans"
+	},
+	"langCode_br": {
+		"message": "Bretons"
+	},
+	"langCode_bs": {
+		"message": "Bosnisch"
+	},
+	"langCode_ca": {
+		"message": "Catalaans"
+	},
+	"langCode_ce": {
+		"message": "Tsjetsjeens"
+	},
+	"langCode_ch": {
+		"message": "Chamorro"
+	},
+	"langCode_co": {
+		"message": "Corsicaans"
+	},
+	"langCode_cr": {
+		"message": "Cree"
+	},
+	"langCode_cs": {
+		"message": "Tsjechisch"
+	},
+	"langCode_cu": {
+		"message": "Kerkslavisch"
+	},
+	"langCode_cv": {
+		"message": "Tsjoevasjisch"
+	},
+	"langCode_cy": {
+		"message": "Welsh"
+	},
+	"langCode_da": {
+		"message": "Deens"
+	},
+	"langCode_de": {
+		"message": "Duits"
+	},
+	"langCode_dv": {
+		"message": "Divehi"
+	},
+	"langCode_dz": {
+		"message": "Dzongkha"
+	},
+	"langCode_ee": {
+		"message": "Ewe"
+	},
+	"langCode_el": {
+		"message": "Grieks"
+	},
+	"langCode_en": {
+		"message": "Engels"
+	},
+	"langCode_eo": {
+		"message": "Esperanto"
+	},
+	"langCode_es": {
+		"message": "Spaans"
+	},
+	"langCode_et": {
+		"message": "Estisch"
+	},
+	"langCode_eu": {
+		"message": "Baskisch"
+	},
+	"langCode_fa": {
+		"message": "Perzisch"
+	},
+	"langCode_ff": {
+		"message": "Fulah"
+	},
+	"langCode_fi": {
+		"message": "Fins"
+	},
+	"langCode_fj": {
+		"message": "Fijisch"
+	},
+	"langCode_fo": {
+		"message": "Faeröers"
+	},
+	"langCode_fr": {
+		"message": "Frans"
+	},
+	"langCode_fy": {
+		"message": "Fries"
+	},
+	"langCode_ga": {
+		"message": "Iers"
+	},
+	"langCode_gd": {
+		"message": "Schots-Gaelisch"
+	},
+	"langCode_gl": {
+		"message": "Galicisch"
+	},
+	"langCode_gn": {
+		"message": "Guaraní"
+	},
+	"langCode_gu": {
+		"message": "Gujarati"
+	},
+	"langCode_gv": {
+		"message": "Manx"
+	},
+	"langCode_ha": {
+		"message": "Hausa"
+	},
+	"langCode_he": {
+		"message": "Hebreeuws"
+	},
+	"langCode_hi": {
+		"message": "Hindi"
+	},
+	"langCode_ho": {
+		"message": "Hiri Motu"
+	},
+	"langCode_hr": {
+		"message": "Kroatisch"
+	},
+	"langCode_ht": {
+		"message": "Haïtiaans Creools"
+	},
+	"langCode_hu": {
+		"message": "Hongaars"
+	},
+	"langCode_hy": {
+		"message": "Armeens"
+	},
+	"langCode_hz": {
+		"message": "Herero"
+	},
+	"langCode_ia": {
+		"message": "Interlingua"
+	},
+	"langCode_id": {
+		"message": "Indonesisch"
+	},
+	"langCode_ie": {
+		"message": "Interlingue"
+	},
+	"langCode_ig": {
+		"message": "Igbo"
+	},
+	"langCode_ii": {
+		"message": "Yi"
+	},
+	"langCode_ik": {
+		"message": "Inupiaq"
+	},
+	"langCode_io": {
+		"message": "Ido"
+	},
+	"langCode_is": {
+		"message": "IJslands"
+	},
+	"langCode_it": {
+		"message": "Italiaans"
+	},
+	"langCode_iu": {
+		"message": "Inuktitut"
+	},
+	"langCode_ja": {
+		"message": "Japans"
+	},
+	"langCode_jv": {
+		"message": "Javaans"
+	},
+	"langCode_ka": {
+		"message": "Georgisch"
+	},
+	"langCode_kg": {
+		"message": "Kongo"
+	},
+	"langCode_ki": {
+		"message": "Gikuyu"
+	},
+	"langCode_kj": {
+		"message": "Kuanyama"
+	},
+	"langCode_kk": {
+		"message": "Kazachs"
+	},
+	"langCode_kl": {
+		"message": "Groenlands"
+	},
+	"langCode_km": {
+		"message": "Khmer"
+	},
+	"langCode_kn": {
+		"message": "Kannada"
+	},
+	"langCode_ko": {
+		"message": "Koreaans"
+	},
+	"langCode_kr": {
+		"message": "Kanuri"
+	},
+	"langCode_ks": {
+		"message": "Kasjmiri"
+	},
+	"langCode_ku": {
+		"message": "Koerdisch"
+	},
+	"langCode_kv": {
+		"message": "Komi"
+	},
+	"langCode_kw": {
+		"message": "Cornish"
+	},
+	"langCode_ky": {
+		"message": "Kirgizisch"
+	},
+	"langCode_la": {
+		"message": "Latijn"
+	},
+	"langCode_lb": {
+		"message": "Luxemburgs"
+	},
+	"langCode_lg": {
+		"message": "Luganda"
+	},
+	"langCode_li": {
+		"message": "Limburgs"
+	},
+	"langCode_ln": {
+		"message": "Lingala"
+	},
+	"langCode_lo": {
+		"message": "Laotiaans"
+	},
+	"langCode_lt": {
+		"message": "Litouws"
+	},
+	"langCode_lu": {
+		"message": "Luba-Katanga"
+	},
+	"langCode_lv": {
+		"message": "Lets"
+	},
+	"langCode_mg": {
+		"message": "Malagassisch"
+	},
+	"langCode_mh": {
+		"message": "Marshallees"
+	},
+	"langCode_mi": {
+		"message": "Maori"
+	},
+	"langCode_mk": {
+		"message": "Macedonisch"
+	},
+	"langCode_ml": {
+		"message": "Malayalam"
+	},
+	"langCode_mn": {
+		"message": "Mongools"
+	},
+	"langCode_mr": {
+		"message": "Marathi"
+	},
+	"langCode_ms": {
+		"message": "Maleis"
+	},
+	"langCode_mt": {
+		"message": "Maltees"
+	},
+	"langCode_my": {
+		"message": "Birmaans"
+	},
+	"langCode_na": {
+		"message": "Nauruaans"
+	},
+	"langCode_nb": {
+		"message": "Noors - Bokmål"
+	},
+	"langCode_nd": {
+		"message": "Noord-Ndebele"
+	},
+	"langCode_ne": {
+		"message": "Nepalees"
+	},
+	"langCode_ng": {
+		"message": "Ndonga"
+	},
+	"langCode_nl": {
+		"message": "Nederlands"
+	},
+	"langCode_nn": {
+		"message": "Noors - Nynorsk"
+	},
+	"langCode_no": {
+		"message": "Noors"
+	},
+	"langCode_nr": {
+		"message": "Zuid-Ndbele"
+	},
+	"langCode_nv": {
+		"message": "Navajo"
+	},
+	"langCode_ny": {
+		"message": "Nyanja"
+	},
+	"langCode_oc": {
+		"message": "Occitaans"
+	},
+	"langCode_oj": {
+		"message": "Ojibwa"
+	},
+	"langCode_om": {
+		"message": "Afaan Oromo"
+	},
+	"langCode_or": {
+		"message": "Odia"
+	},
+	"langCode_os": {
+		"message": "Ossetisch"
+	},
+	"langCode_pa": {
+		"message": "Punjabi"
+	},
+	"langCode_pi": {
+		"message": "Pali"
+	},
+	"langCode_pl": {
+		"message": "Pools"
+	},
+	"langCode_ps": {
+		"message": "Pasjtoe"
+	},
+	"langCode_pt": {
+		"message": "Portugees"
+	},
+	"langCode_qu": {
+		"message": "Quechua"
+	},
+	"langCode_rm": {
+		"message": "Reto-Romaans"
+	},
+	"langCode_rn": {
+		"message": "Kirundi"
+	},
+	"langCode_ro": {
+		"message": "Roemeens"
+	},
+	"langCode_ru": {
+		"message": "Russisch"
+	},
+	"langCode_rw": {
+		"message": "Kinyarwanda"
+	},
+	"langCode_sa": {
+		"message": "Sanskriet"
+	},
+	"langCode_sc": {
+		"message": "Sardijns"
+	},
+	"langCode_sd": {
+		"message": "Sindhi"
+	},
+	"langCode_se": {
+		"message": "Noord-Samisch"
+	},
+	"langCode_sg": {
+		"message": "Sango"
+	},
+	"langCode_si": {
+		"message": "Singalees"
+	},
+	"langCode_sk": {
+		"message": "Slowaaks"
+	},
+	"langCode_sl": {
+		"message": "Sloveens"
+	},
+	"langCode_sm": {
+		"message": "Samoaans"
+	},
+	"langCode_sn": {
+		"message": "Shona"
+	},
+	"langCode_so": {
+		"message": "Somalisch"
+	},
+	"langCode_sq": {
+		"message": "Albanees"
+	},
+	"langCode_sr": {
+		"message": "Servisch"
+	},
+	"langCode_ss": {
+		"message": "Swazi"
+	},
+	"langCode_st": {
+		"message": "Zuid-Sotho"
+	},
+	"langCode_su": {
+		"message": "Soendanees"
+	},
+	"langCode_sv": {
+		"message": "Zweeds"
+	},
+	"langCode_sw": {
+		"message": "Swahili"
+	},
+	"langCode_ta": {
+		"message": "Tamil"
+	},
+	"langCode_te": {
+		"message": "Telugu"
+	},
+	"langCode_tg": {
+		"message": "Tadzjieks"
+	},
+	"langCode_th": {
+		"message": "Thai"
+	},
+	"langCode_ti": {
+		"message": "Tigrinya"
+	},
+	"langCode_tk": {
+		"message": "Turkmeens"
+	},
+	"langCode_tl": {
+		"message": "Filipijns"
+	},
+	"langCode_tn": {
+		"message": "Tswana"
+	},
+	"langCode_to": {
+		"message": "Tongaans"
+	},
+	"langCode_tr": {
+		"message": "Turks"
+	},
+	"langCode_ts": {
+		"message": "Tsonga"
+	},
+	"langCode_tt": {
+		"message": "Tataars"
+	},
+	"langCode_tw": {
+		"message": "Akan"
+	},
+	"langCode_ty": {
+		"message": "Tahitiaans"
+	},
+	"langCode_ug": {
+		"message": "Oeigoers"
+	},
+	"langCode_uk": {
+		"message": "Oekraïens"
+	},
+	"langCode_ur": {
+		"message": "Urdu"
+	},
+	"langCode_uz": {
+		"message": "Oezbeeks"
+	},
+	"langCode_ve": {
+		"message": "Venda"
+	},
+	"langCode_vi": {
+		"message": "Vietnamees"
+	},
+	"langCode_vo": {
+		"message": "Volapük"
+	},
+	"langCode_wa": {
+		"message": "Waals"
+	},
+	"langCode_wo": {
+		"message": "Wolof"
+	},
+	"langCode_xh": {
+		"message": "Xhosa"
+	},
+	"langCode_yi": {
+		"message": "Jiddisch"
+	},
+	"langCode_yo": {
+		"message": "Yoruba"
+	},
+	"langCode_za": {
+		"message": "Zhuang"
+	},
+	"langCode_zh": {
+		"message": "Chinees"
+	},
+	"langCode_zu": {
+		"message": "Zoeloe"
+	}
+}

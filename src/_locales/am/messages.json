@@ -1,0 +1,1190 @@
+{
+	"common_action_addToDictionary": {
+		"message": "ትርጉም ወደ መዝሙር መጨመር"
+	},
+	"common_action_removeFromDictionary": {
+		"message": "ትርጉም ወደ መዝሙር ማውጫ አውጥቶው"
+	},
+	"common_bgUnavailable": {
+		"message": "የዳሰሳ ስህተት አይገኝም"
+	},
+	"common_cancel": {
+		"message": "ተወው"
+	},
+	"common_close": {
+		"message": "ዝጋ"
+	},
+	"common_copy": {
+		"message": "ኮፕይ"
+	},
+	"common_error": {
+		"message": "ስህተት"
+	},
+	"common_offlineTranslator": {
+		"message": "$1 - የማስተላለፉ ቻርተር ጥቂት ይደረጋል"
+	},
+	"common_retry": {
+		"message": "ድጋሚ አስተዋጽኦ"
+	},
+	"common_translate": {
+		"message": "ትርጉም"
+	},
+	"component_hotkey_placeholder": {
+		"message": "ሁሉንም የማይጠቀሙ ሂደቶችን ማጥፋት ይችላሉ"
+	},
+	"component_hotkey_recordPlaceholder": {
+		"message": "ሂደቶችን ጠቀማቸው"
+	},
+	"component_hotkey_resetButton": {
+		"message": "ነጥለው ይክፈሉ"
+	},
+	"contextMenu_disablePageTranslation": {
+		"message": "የገለልተኛ ዕይታ ተዋግቶ ይጠቀሙ"
+	},
+	"contextMenu_translatePage": {
+		"message": "የገለልተኛ ዕይታ ትርጉም ይችላሉ"
+	},
+	"contextMenu_translateSelectedText": {
+		"message": "የተሰራው ጽሑፍን በቀላሉ ትርጉም"
+	},
+	"dictionaryButton_add": {
+		"message": "ማስቀመጥ"
+	},
+	"dictionaryButton_delete": {
+		"message": "ከመደበቅ ያስወግዱ"
+	},
+	"dictionary_button_export": {
+		"message": "ላኩ"
+	},
+	"dictionary_button_removeAll": {
+		"message": "ሁሉንም ከመደበቅ ያስወግዱ"
+	},
+	"dictionary_deleteAll": {
+		"message": "የመታወቂያ መግባቢያዎን በመሞከር እንዳይገኝም ነው። እርግጠኛ ነዎት?"
+	},
+	"dictionary_deleteConfirmation": {
+		"message": "የእርስዎ ስምዎን ይጠብቁ ዘንድ እርግጠኛ ነዎት?"
+	},
+	"dictionary_description": {
+		"message": "የትርጉም ቋንቋዎን በመነጠቅ የትርጉም መደብደብን ለመድረስ ይጠቀሙ"
+	},
+	"dictionary_emptyDictionary": {
+		"message": "የሚታወቅ መታወቂያ የለም። በተጨማሪ ጽሑፍ ተጠቅመው ማታ መጀመሪያ ያስጨንቁ"
+	},
+	"dictionary_filter_from": {
+		"message": "ከ"
+	},
+	"dictionary_filter_to": {
+		"message": "To"
+	},
+	"dictionary_message_deleteAll_success": {
+		"message": "All translations were removed"
+	},
+	"dictionary_notFoundEntries": {
+		"message": "Translations matching these filters not found"
+	},
+	"dictionary_pageTitle": {
+		"message": "Dictionary"
+	},
+	"dictionary_resetFilters": {
+		"message": "reset filters"
+	},
+	"dictionary_searchPlaceholder": {
+		"message": "በጽሁፎ መፍለግ ይፈልጋሉ"
+	},
+	"editorWindow_close": {
+		"message": "ዝጋ"
+	},
+	"editorWindow_data_code": {
+		"message": "ኮድ"
+	},
+	"editorWindow_data_name": {
+		"message": "ስም"
+	},
+	"editorWindow_message_invalidName": {
+		"message": "ስም ከአምስት ምልክቶች በታች አያስፈልጉም"
+	},
+	"editorWindow_save": {
+		"message": "አስቀምጥ"
+	},
+	"ext_description": {
+		"message": "የጽሁፍ ትርጉም ከጫካ እያደረገ አይደለም"
+	},
+	"ext_name": {
+		"message": "ሊንግዱስት - የድረ-ገጽ ትርጉም መተግበሪያ"
+	},
+	"history_control_selectEntry": {
+		"message": "መለየት ይምረጡ"
+	},
+	"history_controls_clearHistory": {
+		"message": "ታይቷ እንዳይቀር ከሚለው ስርዎ ታይቷን አጥፋ"
+	},
+	"history_controls_deleteSelected": {
+		"message": "ተመርጧል አስተያየቶችን"
+	},
+	"history_controls_selectAll": {
+		"message": "ሁሉንም ተመርጧ"
+	},
+	"history_message_clearHistoryConfirmation": {
+		"message": "እርግጠኛውን ከሆነ? ሁሉንም ቀጥታ ቦታዎች ያስወጡት ይፈልጋሉ?"
+	},
+	"history_message_deleteEntryConfirmation": {
+		"message": "በዚህ ቦታ ያሉትን መጫን እርግጠኛ ነዎት?"
+	},
+	"history_message_deleteSelectedEntriesConfirmation": {
+		"message": "አስተያየቶች ($1) የተመረጡትን ቦታዎችን እርግጠኛ ነዎት?"
+	},
+	"history_message_emptyEntries": {
+		"message": "ታሪክ አግኝቶታል"
+	},
+	"history_message_entriesNotFound": {
+		"message": "ትርጉም መጠቀሚያ የለውም"
+	},
+	"history_pageTitle": {
+		"message": "ታሪክ"
+	},
+	"history_searchPlaceholder": {
+		"message": "በጽሑፍ ይፈልጉ"
+	},
+	"inlineTranslator_showOriginalText": {
+		"message": "የመጀመሪያ ጽሑፍ አሳይ"
+	},
+	"lang_change": {
+		"message": "ቋንቋ ቀይር"
+	},
+	"lang_detect": {
+		"message": "መልስ አያይዘው"
+	},
+	"lang_select": {
+		"message": "ቋንቋ ማረጋገጫ"
+	},
+	"lang_swap": {
+		"message": "ቋንቋዎች ቀይር"
+	},
+	"message_askResetConfig": {
+		"message": "የተጠየቁ ቅንብሮችን ነፃ ድላለሁ?"
+	},
+	"message_cacheFlushed": {
+		"message": "ካርቺ የተዘጋጀ ነው"
+	},
+	"message_changesSaved": {
+		"message": "ለማድረግ ተሳክቷል"
+	},
+	"message_error": {
+		"message": "ስህተት"
+	},
+	"message_errorOfTranslate": {
+		"message": "ትርጉም ስህተት"
+	},
+	"message_serviceRequiredKey": {
+		"message": "አገልግሎት ከፍተኛ ቁልፍ ይላኩ"
+	},
+	"message_translateOfText": {
+		"message": "ተቀብል"
+	},
+	"message_unknownError": {
+		"message": "ያልተመረጡ ስህተት"
+	},
+	"pageTranslator_alwaysTranslateLang": {
+		"message": "ይሁን መተርጎሚያ ይተርጉ ይሆናል"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disable": {
+		"message": "እንዳይሰራ ይችላል"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
+		"message": "ሁሉንም ግን ይሰራ"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_enable": {
+		"message": "እንዲሁም ተጠቃሚ ተከታታይ ማድረግ"
+	},
+	"pageTranslator_commonPreferences_title": {
+		"message": "የይለፍ ቋንቋ አጠቃላይ መረጃዎች"
+	},
+	"pageTranslator_option_autoTranslate": {
+		"message": "እንዲሁም ተጠቃሚ ተከታታይ"
+	},
+	"pageTranslator_showOptions": {
+		"message": "አማራጮች አሳይ"
+	},
+	"pageTranslator_showOriginal": {
+		"message": "የቅርብ ነገር አሳይ"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_always": {
+		"message": "ይተርጎሚያ ይሁን መተርጎሚያ ይሰዳል"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
+		"message": "ይተርጎሚያ ይሁን ይሰሙን ለዚህ ቋንቋ"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_default": {
+		"message": "የአጠቃላይ ምናሌ ይጠቀማል"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
+		"message": "የአጠቃላይ ምናሌ ይጠቀማል ለዚህ ቋንቋ"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_never": {
+		"message": "አይተርጎም"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
+		"message": "ይህ ቋንቋ ለመተርጎም አይፈልግም"
+	},
+	"pageTranslator_sitePreferences_title": {
+		"message": "መረጃዎች"
+	},
+	"pageTranslator_translatePage": {
+		"message": "ገፅታችንን በጣም ተቀብለን"
+	},
+	"pageTranslator_translationReport": {
+		"message": "ትርጉም ማስታወቂያ"
+	},
+	"pageTranslator_translationReport_queue": {
+		"message": "በሙሉ ውስጥ"
+	},
+	"pageTranslator_translationReport_reject": {
+		"message": "ስህተት"
+	},
+	"pageTranslator_translationReport_resolve": {
+		"message": "ተጠቃሚ ነው"
+	},
+	"popup_tabIdNotFound": {
+		"message": "ትእዛዝ \"$1\" አልተገኘም"
+	},
+	"popup_tab_translatePage": {
+		"message": "ገፅ ትርጉም"
+	},
+	"popup_tab_translateText": {
+		"message": "ጽሑፍ ትርጉም"
+	},
+	"settings_button_cancel": {
+		"message": "ይቅር"
+	},
+	"settings_button_export": {
+		"message": "የተሳካ መረጃ አስተካክል"
+	},
+	"settings_button_import": {
+		"message": "የተሳካ መረጃ አስገባ"
+	},
+	"settings_button_reset": {
+		"message": "መቀየሪያ አድስ"
+	},
+	"settings_button_saveChanges": {
+		"message": "ሁሉንም ማስተካከል"
+	},
+	"settings_message_clearCache_success": {
+		"message": "ተጠቃሚ የካርቦት መረጃ ተወፋዮች ተሰርዟል"
+	},
+	"settings_message_common_invalidValueType": {
+		"message": "የማጥፋት ዘዴ የተሳሳተ አይነት ነው"
+	},
+	"settings_message_importConfig_invalidFile": {
+		"message": "የአስተካክል ልዩ ፋይል መተግበሪያ ለመሆን አልተቻለም"
+	},
+	"settings_message_importConfig_success": {
+		"message": "አስተካክሎ ተሳክቷል"
+	},
+	"settings_message_resetConfig_confirm": {
+		"message": "ይፈልጋሉ ይደግመሙ?"
+	},
+	"settings_message_resetConfig_success": {
+		"message": "ተሳክቷል የተሻሻለ እቃዎች"
+	},
+	"settings_message_saveChanges_success": {
+		"message": "ማስቀመጫዎች ተወስዷል"
+	},
+	"settings_option_appIcon": {
+		"message": "በተለያዩ ቁርጥ አካባቢ"
+	},
+	"settings_option_appIcon_desc": {
+		"message": "በየትኛውም ቦታ መመርመር ተቋማት ከብሪታኒ ያሉትን በቀላሉ ለማድረግ ይህን ስንት አካባቢ ምረጥ"
+	},
+	"settings_option_appIcon_item_auto": {
+		"message": "ከባህር የተነበበ"
+	},
+	"settings_option_appIcon_item_color": {
+		"message": "ቀለም"
+	},
+	"settings_option_appIcon_item_dark": {
+		"message": "ጥቅም"
+	},
+	"settings_option_appIcon_item_light": {
+		"message": "ብርሃን"
+	},
+	"settings_option_cache": {
+		"message": "ካርቦ (Cache)"
+	},
+	"settings_option_cache_clear": {
+		"message": "ማስተዳደር አጥፋ"
+	},
+	"settings_option_cache_clear_desc": {
+		"message": "እዚህ ከተመለከተ ቻናል, እርስዎ ለውጦች ሲል የተዘጋጀ የትርጉም ስርዝ ለመወጣት ወይም የምርጫ ሳልሆነ ያልሆኑ ወሰኖችን በመስራት ያስቀምጥ"
+	},
+	"settings_option_cache_enable": {
+		"message": "ካርቦ አስቀምጥ"
+	},
+	"settings_option_cache_enable_desc": {
+		"message": "ካርቦ በርቷል የተሳነውን ትርጉም በመስራት ማስተዳደር ይቻላል ። በዚህ ቦታ ከተሳነው ትርጉም ሳታገኘው የሚታወቀው ስርዝ ያለው የተግባር ጥሪ በዚሁ ቦታ ይታያል"
+	},
+	"settings_option_cache_ignoreCase": {
+		"message": "ማስቀመጥ ያልተገኘ"
+	},
+	"settings_option_cache_ignoreCase_desc": {
+		"message": "ከታወቀ በኋላ, ከካርቦ የተመለከተ ትርጉም ወደ አንድ የተሳነው ተመራቂ ብቻ በመገናኛ ጊዜ ይጠቀሙ። ይህ በባህላዊ ተግባር ምሳሌ የለዎትም"
+	},
+	"settings_option_commonSettings": {
+		"message": "አጠቃላይ ቅንብሮች"
+	},
+	"settings_option_customTranslatorModule": {
+		"message": "የተሳካ ተርጓሚዎች"
+	},
+	"settings_option_customTranslatorModule_desc": {
+		"message": "የእርስዎ የተሳካ ተርጓሚዎችን ለመጨረስ ከ<slot id=docs>የተሳካ ተርጓሚ ኢንዱስትሪ</slot> አመልክቶ ይጫኑ።"
+	},
+	"settings_option_customTranslatorModule_manageButton": {
+		"message": "ተርጓሚውን አስተዳደር"
+	},
+	"settings_option_mainPreferences": {
+		"message": "ዋስትና ቅንብሮች"
+	},
+	"settings_option_pageTranslation": {
+		"message": "ገጽ ትርጓሜ"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent": {
+		"message": "በይዘን ስጥራዊ ቋንቋ መለየት"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent_desc": {
+		"message": "የድረ-ገጽ ጽሑፍን ማሳያ ለመለየት ይፈልጋሉ። በከፍተኛ ይዘት የገጽ መታወቂያ ያግኙ።"
+	},
+	"settings_option_pageTranslation_enableContextMenu": {
+		"message": "ከመረጡ ቅርብ መንገድ ጋር አድርገናል"
+	},
+	"settings_option_pageTranslation_enableContextMenu_desc": {
+		"message": "ማስተካከል ጠቋሚውን በድርጅቱ ላይ መቀየሪያ ተከላ ያክላል"
+	},
+	"settings_option_pageTranslation_ignoredTags": {
+		"message": "ተጨማሪ የማይረዳት ዓምድን"
+	},
+	"settings_option_pageTranslation_ignoredTags_desc": {
+		"message": "ስልክ <slot id=htmlElements>HTML ዓምድ</slot> ስምዎች ያልረዳባቸውን ነጥብ ያስገቡ። የተመሳሳይ አማራጮች ከአሁን በኋላ አልተለየንም።"
+	},
+	"settings_option_pageTranslation_lazyTranslate": {
+		"message": "በሚታየው አማራጭ ተርጉም ይገባል"
+	},
+	"settings_option_pageTranslation_lazyTranslate_desc": {
+		"message": "ከሚታየው አማራጭ ተርጉም የተደረገ አማራጮች በመሆን ይተርጉማል። ይህ መረጃ ከተገባው ነጥብ ተገባው።"
+	},
+	"settings_option_pageTranslation_originalTextPopup": {
+		"message": "የነባሪ ፍለጋ ያንብቡ"
+	},
+	"settings_option_pageTranslation_originalTextPopup_desc": {
+		"message": "በመሣሪያዎ የተሰማሩ የነባሪ ፍለጋዎች በማንበብ ያሳውቁ"
+	},
+	"settings_option_pageTranslation_toggleTranslationHotkey": {
+		"message": "ሆቴል ቁልፍ"
+	},
+	"settings_option_pageTranslation_toggleTranslationHotkey_desc": {
+		"message": "የገፅ ትርጉም ማንቀሳቀስ አነስተኛ ቁልፍ\nእስካሁን ESC ቁልፍዎን እንደገና ይሰርዝ"
+	},
+	"settings_option_pageTranslation_translatableAttributes": {
+		"message": "ትርጉሞች የተመለከተ ባህሪዎች."
+	},
+	"settings_option_pageTranslation_translatableAttributes_desc": {
+		"message": "<slot id=htmlAttributes>HTML attribute</slot> ስምዎን ለትርጉማችን ያስገቡ። አንድ ባህል በመጠቀማቸው ይተርጉ"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters": {
+		"message": "ትርጉም ሪፖርተር የሚያሳይ"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters_desc": {
+		"message": "የገለጹ መተግበሪያዎችን አያድርጉም"
+	},
+	"settings_option_selectTranslation": {
+		"message": "የተመረጡ ጽሑፍ ትርጉም"
+	},
+	"settings_option_selectTranslation_detectedLangFirst": {
+		"message": "ቃላት የተሰራ ቋንቋ ብቻ ያስፈልጋል ከገላጭ ቋንቋ ጋር"
+	},
+	"settings_option_selectTranslation_detectedLangFirst_desc": {
+		"message": "ከኢንግሊዘኛ እና ከትርጉሜ ቋንቋ ጋር ነባሪ ቋንቋዎችን የሚያሳይ ጥቅል ይሰጣል"
+	},
+	"settings_option_selectTranslation_disableWhileTranslatePage": {
+		"message": "ገላጭ ትርጉም ስላደረጉ አድርግ"
+	},
+	"settings_option_selectTranslation_enable": {
+		"message": "አትክልት"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton": {
+		"message": "ከትርጉሜ በፊት የተመለከተ በመስመር አትቀምስ"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
+		"message": "ጥሩ ትርጉም አውቶት የሚገባውን አዝራሮች ይዘት እየተመለከቱ ይጠቀሙ"
+	},
+	"settings_option_selectTranslation_header_languageChoice": {
+		"message": "ቋንቋ ቅንጅቶች"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang": {
+		"message": "ትርጉም የተጠቀሰው ቋንቋ ከተማዎች ለመሰረታዊ ቀንብር እየተገባ"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
+		"message": "የትርጉም ቋንቋ ማረጋገጫ በመተግበሪያ ከተማዎች በሚያስፈልጋቸው የትርጉም ቋንቋ በማግኘት እየተገባ"
+	},
+	"settings_option_selectTranslation_mode": {
+		"message": "ትርጉም አግባቢ"
+	},
+	"settings_option_selectTranslation_mode_item_contextMenu": {
+		"message": "የብርሀን ማናቸውንም ጥቅስ ያስተካክሉ አግባቢ መሆኑን መስራት እየተቻለ"
+	},
+	"settings_option_selectTranslation_mode_item_popupButton": {
+		"message": "የብርሀን ማናቸውንም አዝራር ቦታ እንዲሁም ብንይን ማሳያ መሆኑን መስራት እየተቻለ"
+	},
+	"settings_option_selectTranslation_mode_item_quickTranslate": {
+		"message": "በቀላሉ በማብራሪዎ ውስጥ ትርጉም ለማድረስ የብርሀን ማናቸውንም ቀንብር መሆኑን መስራት እየተቻለ"
+	},
+	"settings_option_selectTranslation_modifiers": {
+		"message": "አማራጮች"
+	},
+	"settings_option_selectTranslation_modifiers_desc": {
+		"message": "የትርጉም ቀንብሮች ለመሰረታዊ ቀንብር ሳይንሳዊ መሆኑን መስራት እየተቻለ"
+	},
+	"settings_option_selectTranslation_modifiers_key_alt": {
+		"message": "alt"
+	},
+	"settings_option_selectTranslation_modifiers_key_ctrl": {
+		"message": "ቆርጥሪው"
+	},
+	"settings_option_selectTranslation_modifiers_key_meta": {
+		"message": "መታ"
+	},
+	"settings_option_selectTranslation_modifiers_key_shift": {
+		"message": "ሽፍንጭ"
+	},
+	"settings_option_selectTranslation_rememberDirection": {
+		"message": "የመጨመሩ ትርጉም ቋንቋ ማስተላለፍ"
+	},
+	"settings_option_selectTranslation_showOnceForSelection": {
+		"message": "ለህል ቁልፍ ያስተላለፉ በስተቀር አይሰራም"
+	},
+	"settings_option_selectTranslation_showOnceForSelection_desc": {
+		"message": "አዝራሮቹ የሚቀርቡበት ህልፍ ቁልፍ ወይም ቅኝት አንድ እየሰራ ነው ወይም እያለ በመጀመሪያ አዘራሮቹ ስለሚጠቁ ነው"
+	},
+	"settings_option_selectTranslation_showOriginalText": {
+		"message": "የመጀመሪያ ጽሑፍ አሳይ"
+	},
+	"settings_option_selectTranslation_showOriginalText_desc": {
+		"message": "ለተሳካ ቀላልና በጥቅም የመጀመሪያ ጽሑፍ አሳይ"
+	},
+	"settings_option_selectTranslation_strictSelection": {
+		"message": "ትክክለኛ ምርጫ"
+	},
+	"settings_option_selectTranslation_strictSelection_desc": {
+		"message": "የተሳሳተ ክፍል ጠቋሚ ጥቅል: ከታች ያለው የተመረተባት ጽሑፍ አልተከፈለም ሲሆን ይቅርብ"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton": {
+		"message": "ተጨማሪ ለማዋል የመጣው ግምገማ"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton_desc": {
+		"message": "በሰንደቅዓት ያልተጠቀሰ ቦታ የሚያስተላልፉ ስራዎች ስርዝ ታይምን በመስተካከል ምንም ማድረግ አይችልም። በእርስዎ አካባቢ በመሃከል ምንም ማድረግ አይችልም።"
+	},
+	"settings_option_selectTranslation_zIndex": {
+		"message": "z-መስመር"
+	},
+	"settings_option_selectTranslation_zIndex_desc": {
+		"message": "በሚቆጠሩበት ክፍልዎ ላይ የሚያተርፉ ስራዎችን የተሻለ ትርጉም ማውጫ ከማባላት የያዘ እስከመቼም አይገለጽም።"
+	},
+	"settings_option_textTranslator": {
+		"message": "የጽሁፍ ትርጉም"
+	},
+	"settings_option_textTranslator_rememberText": {
+		"message": "የተሻለ ትርጉም ለመስጠት"
+	},
+	"settings_option_textTranslator_rememberText_desc": {
+		"message": "የተሻለ ትርጉም በመጀመሪያ ያስገቡ"
+	},
+	"settings_option_textTranslator_spellCheck": {
+		"message": "የምልክት ማድረግ አድርግ"
+	},
+	"settings_option_textTranslator_suggestLanguage": {
+		"message": "የተጠቃሚ የቋንቋ ትርጉም ግንኙነት ይደርስ"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways": {
+		"message": "በጥያቄ ቋንቋ ተከታይ እና ተዛራት እንዲያግዝዘው"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways_desc": {
+		"message": "ከማያ ማያስገባት ቋንቋ አይቀርም በሁሉም ምረቃዎች ጥያቄ ተዛራት እንዲተከታይ መሰረት ይችላሉ"
+	},
+	"settings_option_translatePreferences": {
+		"message": "የትርጉም መረጃዎች መሰብሰብ"
+	},
+	"settings_option_translateScheduler": {
+		"message": "የትርጉም ዘዴ መስመር"
+	},
+	"settings_option_translateScheduler_delay": {
+		"message": "የጽሁፍ አስተማማኝ ደብቅ ጊዜ"
+	},
+	"settings_option_translateScheduler_delay_desc": {
+		"message": "የትርጉም ዘዴ በሚገባበት ጊዜ API የትርጉም አስተማማኝ ደብቅን ለመከፋፈል መስመሩ ተጠቀሙ። የትርጉም ዘዴ የጽሁፉን ጥቅም እንዲሁም ከምሳ ጊዜ በላይ ያሉ ጽሁፍን ይላኩ"
+	},
+	"settings_option_translateScheduler_retryLimit": {
+		"message": "የትርጉም ዘዴ የድጋሚ ቁጥር"
+	},
+	"settings_option_translateScheduler_retryLimit_desc": {
+		"message": "የትርጉም ዘዴ የድጋሚ መጠቀሚያዎችን በመተግበሪያ ላይ የሚያስፈልጉ የድጋሚ ቁጥሮችን ለመከፋፈል መስመሩ ተጠቀሙ። የሚታወቅ ጥቅም የለም"
+	},
+	"settings_option_translatorModule": {
+		"message": "የትርጉም ሞጁል"
+	},
+	"settings_option_translatorModule_desc": {
+		"message": "ከታማሚዎች ጋር የተሳካ ትርጓሜ እና የትርጓሜ ቋንቋዎች በመጠቀም የሚታወቀው ሁኔታ ይጠቀሙ."
+	},
+	"settings_option_tts": {
+		"message": "የጽሑፍ ድርጅቶች (TTS)"
+	},
+	"settings_option_ttsCustomModules": {
+		"message": "የብሶቻቸው የTTS"
+	},
+	"settings_option_ttsCustomModules_button": {
+		"message": "እቅድ ያስፈልጉ TTS ሞጁሎች"
+	},
+	"settings_option_ttsCustomModules_desc": {
+		"message": "ከዚያም በኋላቸው፣ የዜና ድርጅቶችን በየደረጃዎችዎ በመጠቀም እንዲሁም ለየት ያሉ ሞጁሎችን ያክላሉ፤ በእርስዎ ትርጉም ከሆኑ ተጨማሪ የ TTS ሞጁሎች መረጃዎችን ተጨማሪ ማግኘት ይችላሉ።"
+	},
+	"settings_option_ttsModule": {
+		"message": "TTS ሞጁል"
+	},
+	"settings_option_ttsModule_desc": {
+		"message": "የጽሑፍ ጽሁፎችን መናገል ያስፈልጋል"
+	},
+	"settings_option_userLanguage": {
+		"message": "የተጠቃሚዎች ቋንቋ"
+	},
+	"settings_option_userLanguage_desc": {
+		"message": "የጽሑፍ ይሁኑ ቋንቋ"
+	},
+	"settings_pageTitle": {
+		"message": "ቅንብሮች"
+	},
+	"settings_section_popup": {
+		"message": "ፖፕን ሀቅ"
+	},
+	"textTranslator_suggestLanguage": {
+		"message": "ይህ ቋንቋ ነው"
+	},
+	"textTranslator_translateInputPlaceholder": {
+		"message": "የጽሑፍ ቅድመ ፍለጋ"
+	},
+	"textTranslator_translatePlaceholder": {
+		"message": "ትርጉም ያስተካክል"
+	},
+	"translatorsManagerWindow_add": {
+		"message": "አክል"
+	},
+	"translatorsManagerWindow_close": {
+		"message": "ዝጋ"
+	},
+	"translatorsManagerWindow_emptyTranslatorsListText": {
+		"message": "የግል ተጠቃሚዎች መቀጣጥል ማድረግ አልቻለሁ"
+	},
+	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
+		"message": "\"$translator_name$\" ተጠቅመው እስካሁን እንዳሉ ማስወገድ እስክፈልጉ ይፈልጋሉ?",
+		"placeholders": {
+			"translator_name": {
+				"content": "$1",
+				"example": "Google translator"
+			}
+		}
+	},
+	"translatorsManagerWindow_title": {
+		"message": "የግል ተጠቃሚዎች"
+	},
+	"translatorsManagerWindow_translator_delete": {
+		"message": "አጥፋ"
+	},
+	"translatorsManagerWindow_translator_edit": {
+		"message": "አርትዖት"
+	},
+	"ttsManagerWindow_add": {
+		"message": "አክል"
+	},
+	"ttsManagerWindow_close": {
+		"message": "ዝጋ"
+	},
+	"ttsManagerWindow_emptyTranslatorsListText": {
+		"message": "ብዙ ጥቅሞች በማስተማሩ በመጨመር አይደለም"
+	},
+	"ttsManagerWindow_message_ttsRemoveConfirmation": {
+		"message": "እርግጠኛ ነዎት \"$tts_name$\" TTS-ን ከሚያደርጉ እባክዎ እርግጠኛ ነው?",
+		"placeholders": {
+			"tts_name": {
+				"content": "$1",
+				"example": "Google TTS"
+			}
+		}
+	},
+	"ttsManagerWindow_title": {
+		"message": "የጽሑፍ ወይም የኢንተርኔት ቅርጸት መስመር"
+	},
+	"ttsManagerWindow_translator_delete": {
+		"message": "አጥፋ"
+	},
+	"ttsManagerWindow_translator_edit": {
+		"message": "አስተካክል"
+	},
+	"validation_number": {
+		"message": "የምዝገባ አማራጭ ቁጥር ነው"
+	},
+	"validation_numberBetweenRange": {
+		"message": "የምዝገባ አማራጭ ቁጥር $1 እና $2 መቶች የተሻለ ነው"
+	},
+	"validation_positiveNumber": {
+		"message": "የምዝገባ አማራጭ ቁጥር የሚያከናውን ቁጥር ነው"
+	},
+	"langCode_aa": {
+		"message": "አፋርኛ"
+	},
+	"langCode_ab": {
+		"message": "አብሐዚኛ"
+	},
+	"langCode_ae": {
+		"message": "አቬስታን"
+	},
+	"langCode_af": {
+		"message": "አፍሪካንኛ"
+	},
+	"langCode_ak": {
+		"message": "አካንኛ"
+	},
+	"langCode_am": {
+		"message": "አማርኛ"
+	},
+	"langCode_an": {
+		"message": "አራጎንስ"
+	},
+	"langCode_ar": {
+		"message": "ዓረብኛ"
+	},
+	"langCode_as": {
+		"message": "አሳሜዛዊ"
+	},
+	"langCode_av": {
+		"message": "አቫሪክ"
+	},
+	"langCode_ay": {
+		"message": "አያማርኛ"
+	},
+	"langCode_az": {
+		"message": "አዘርባጃንኛ"
+	},
+	"langCode_ba": {
+		"message": "ባስኪርኛ"
+	},
+	"langCode_be": {
+		"message": "ቤላራሻኛ"
+	},
+	"langCode_bg": {
+		"message": "ቡልጋሪኛ"
+	},
+	"langCode_bh": {
+		"message": "ቦጁሪ"
+	},
+	"langCode_bi": {
+		"message": "ቢስላምኛ"
+	},
+	"langCode_bm": {
+		"message": "ባምባርኛ"
+	},
+	"langCode_bn": {
+		"message": "ቤንጋሊኛ"
+	},
+	"langCode_bo": {
+		"message": "ቲቤታንኛ"
+	},
+	"langCode_br": {
+		"message": "ብሬቶንኛ"
+	},
+	"langCode_bs": {
+		"message": "ቦስኒያንኛ"
+	},
+	"langCode_ca": {
+		"message": "ካታላንኛ"
+	},
+	"langCode_ce": {
+		"message": "ችችን"
+	},
+	"langCode_ch": {
+		"message": "ቻሞሮ"
+	},
+	"langCode_co": {
+		"message": "ኮርሲካኛ"
+	},
+	"langCode_cr": {
+		"message": "ክሪ"
+	},
+	"langCode_cs": {
+		"message": "ቼክኛ"
+	},
+	"langCode_cu": {
+		"message": "ቸርች ስላቪክ"
+	},
+	"langCode_cv": {
+		"message": "ቹቫሽ"
+	},
+	"langCode_cy": {
+		"message": "ወልሽ"
+	},
+	"langCode_da": {
+		"message": "ዴኒሽ"
+	},
+	"langCode_de": {
+		"message": "ጀርመን"
+	},
+	"langCode_dv": {
+		"message": "ዲቬሂ"
+	},
+	"langCode_dz": {
+		"message": "ድዞንግኻኛ"
+	},
+	"langCode_ee": {
+		"message": "ኢዊ"
+	},
+	"langCode_el": {
+		"message": "ግሪክኛ"
+	},
+	"langCode_en": {
+		"message": "እንግሊዝኛ"
+	},
+	"langCode_eo": {
+		"message": "ኤስፐራንቶ"
+	},
+	"langCode_es": {
+		"message": "ስፓንሽኛ"
+	},
+	"langCode_et": {
+		"message": "ኢስቶኒያንኛ"
+	},
+	"langCode_eu": {
+		"message": "ባስክኛ"
+	},
+	"langCode_fa": {
+		"message": "ፐርሺያኛ"
+	},
+	"langCode_ff": {
+		"message": "ፉላህ"
+	},
+	"langCode_fi": {
+		"message": "ፊኒሽ"
+	},
+	"langCode_fj": {
+		"message": "ፊጂኛ"
+	},
+	"langCode_fo": {
+		"message": "ፋሮኛ"
+	},
+	"langCode_fr": {
+		"message": "ፈረንሳይኛ"
+	},
+	"langCode_fy": {
+		"message": "ምዕራባዊ ፍሪሲኛ"
+	},
+	"langCode_ga": {
+		"message": "አይሪሽ"
+	},
+	"langCode_gd": {
+		"message": "የስኮቲሽ ጌልክኛ"
+	},
+	"langCode_gl": {
+		"message": "ጋሊሺያ"
+	},
+	"langCode_gn": {
+		"message": "ጓራኒኛ"
+	},
+	"langCode_gu": {
+		"message": "ጉጃርቲኛ"
+	},
+	"langCode_gv": {
+		"message": "ማንክስኛ"
+	},
+	"langCode_ha": {
+		"message": "ሃውሳኛ"
+	},
+	"langCode_he": {
+		"message": "ዕብራይስጥ﻿"
+	},
+	"langCode_hi": {
+		"message": "ሒንዱኛ"
+	},
+	"langCode_ho": {
+		"message": "Ho"
+	},
+	"langCode_hr": {
+		"message": "ክሮሽያንኛ"
+	},
+	"langCode_ht": {
+		"message": "ሃይትኛ"
+	},
+	"langCode_hu": {
+		"message": "ሀንጋሪኛ"
+	},
+	"langCode_hy": {
+		"message": "አርመናዊ"
+	},
+	"langCode_hz": {
+		"message": "ሄሬሮ"
+	},
+	"langCode_ia": {
+		"message": "ኢንቴርሊንጓ"
+	},
+	"langCode_id": {
+		"message": "ኢንዶኔዥኛ"
+	},
+	"langCode_ie": {
+		"message": "እንተርሊንግወ"
+	},
+	"langCode_ig": {
+		"message": "ኢግቦኛ"
+	},
+	"langCode_ii": {
+		"message": "ሲቹንዪኛ"
+	},
+	"langCode_ik": {
+		"message": "እኑፒያቅኛ"
+	},
+	"langCode_io": {
+		"message": "ኢዶ"
+	},
+	"langCode_is": {
+		"message": "አይስላንድኛ"
+	},
+	"langCode_it": {
+		"message": "ጣሊያንኛ"
+	},
+	"langCode_iu": {
+		"message": "እኑክቲቱትኛ"
+	},
+	"langCode_ja": {
+		"message": "ጃፓንኛ"
+	},
+	"langCode_jv": {
+		"message": "ጃቫንኛ"
+	},
+	"langCode_ka": {
+		"message": "ጆርጂያን"
+	},
+	"langCode_kg": {
+		"message": "ኮንጎኛ"
+	},
+	"langCode_ki": {
+		"message": "ኪኩዩ"
+	},
+	"langCode_kj": {
+		"message": "ኩንያማ"
+	},
+	"langCode_kk": {
+		"message": "ካዛክኛ"
+	},
+	"langCode_kl": {
+		"message": "ካላሊሱትኛ"
+	},
+	"langCode_km": {
+		"message": "ክህመርኛ"
+	},
+	"langCode_kn": {
+		"message": "ካናዳኛ"
+	},
+	"langCode_ko": {
+		"message": "ኮሪያኛ"
+	},
+	"langCode_kr": {
+		"message": "ካኑሪ"
+	},
+	"langCode_ks": {
+		"message": "ካሽሚርኛ"
+	},
+	"langCode_ku": {
+		"message": "ኩርድሽኛ"
+	},
+	"langCode_kv": {
+		"message": "ኮሚ"
+	},
+	"langCode_kw": {
+		"message": "ኮርኒሽ"
+	},
+	"langCode_ky": {
+		"message": "ኪርጊዝኛ"
+	},
+	"langCode_la": {
+		"message": "ላቲንኛ"
+	},
+	"langCode_lb": {
+		"message": "ሉክዘምበርኛ"
+	},
+	"langCode_lg": {
+		"message": "ጋንዳኛ"
+	},
+	"langCode_li": {
+		"message": "ሊምቡርጊሽ"
+	},
+	"langCode_ln": {
+		"message": "ሊንጋላኛ"
+	},
+	"langCode_lo": {
+		"message": "ላኦኛ"
+	},
+	"langCode_lt": {
+		"message": "ሉቴንያንኛ"
+	},
+	"langCode_lu": {
+		"message": "ሉባ ካታንጋ"
+	},
+	"langCode_lv": {
+		"message": "ላትቪያን"
+	},
+	"langCode_mg": {
+		"message": "ማላጋስኛ"
+	},
+	"langCode_mh": {
+		"message": "ማርሻሌዝኛ"
+	},
+	"langCode_mi": {
+		"message": "ማኦሪኛ"
+	},
+	"langCode_mk": {
+		"message": "ማሴዶንኛ"
+	},
+	"langCode_ml": {
+		"message": "ማላያላምኛ"
+	},
+	"langCode_mn": {
+		"message": "ሞንጎሊያኛ"
+	},
+	"langCode_mr": {
+		"message": "ማራቲኛ"
+	},
+	"langCode_ms": {
+		"message": "ማላይኛ"
+	},
+	"langCode_mt": {
+		"message": "ማልቲስኛ"
+	},
+	"langCode_my": {
+		"message": "ቡርማኛ"
+	},
+	"langCode_na": {
+		"message": "ናኡሩ"
+	},
+	"langCode_nb": {
+		"message": "የኖርዌይ ቦክማል"
+	},
+	"langCode_nd": {
+		"message": "ሰሜን ንዴብሌ"
+	},
+	"langCode_ne": {
+		"message": "ኔፓሊኛ"
+	},
+	"langCode_ng": {
+		"message": "ንዶንጋ"
+	},
+	"langCode_nl": {
+		"message": "ደች"
+	},
+	"langCode_nn": {
+		"message": "የኖርዌይ ናይኖርስክ"
+	},
+	"langCode_no": {
+		"message": "ኖርዌጂያን"
+	},
+	"langCode_nr": {
+		"message": "ደቡብ ንደቤሌ"
+	},
+	"langCode_nv": {
+		"message": "ናቫጆ"
+	},
+	"langCode_ny": {
+		"message": "ንያንጃ"
+	},
+	"langCode_oc": {
+		"message": "ኦኪታንኛ"
+	},
+	"langCode_oj": {
+		"message": "Oj"
+	},
+	"langCode_om": {
+		"message": "ኦሮሞኛ"
+	},
+	"langCode_or": {
+		"message": "ኦዲያኛ"
+	},
+	"langCode_os": {
+		"message": "ኦሴቲክ"
+	},
+	"langCode_pa": {
+		"message": "ፑንጃብኛ"
+	},
+	"langCode_pi": {
+		"message": "Pi"
+	},
+	"langCode_pl": {
+		"message": "ፖሊሽኛ"
+	},
+	"langCode_ps": {
+		"message": "ፓሽቶኛ"
+	},
+	"langCode_pt": {
+		"message": "ፖርቹጋልኛ"
+	},
+	"langCode_qu": {
+		"message": "ኵቿኛ"
+	},
+	"langCode_rm": {
+		"message": "ሮማንሽ"
+	},
+	"langCode_rn": {
+		"message": "ሩንዲኛ"
+	},
+	"langCode_ro": {
+		"message": "ሮማኒያን"
+	},
+	"langCode_ru": {
+		"message": "ራሽያኛ"
+	},
+	"langCode_rw": {
+		"message": "ኪንያርዋንድኛ"
+	},
+	"langCode_sa": {
+		"message": "ሳንስክሪትኛ"
+	},
+	"langCode_sc": {
+		"message": "ሳርዲንያንኛ"
+	},
+	"langCode_sd": {
+		"message": "ሲንድሂኛ"
+	},
+	"langCode_se": {
+		"message": "ሰሜናዊ ሳሚ"
+	},
+	"langCode_sg": {
+		"message": "ሳንጎኛ"
+	},
+	"langCode_si": {
+		"message": "ሲንሃልኛ"
+	},
+	"langCode_sk": {
+		"message": "ስሎቫክኛ"
+	},
+	"langCode_sl": {
+		"message": "ስሎቪኛ"
+	},
+	"langCode_sm": {
+		"message": "ሳሞአኛ"
+	},
+	"langCode_sn": {
+		"message": "ሾናኛ"
+	},
+	"langCode_so": {
+		"message": "ሱማልኛ"
+	},
+	"langCode_sq": {
+		"message": "አልባንያንኛ"
+	},
+	"langCode_sr": {
+		"message": "ሰርብያኛ"
+	},
+	"langCode_ss": {
+		"message": "ስዋቲኛ"
+	},
+	"langCode_st": {
+		"message": "ደቡባዊ ሶቶ"
+	},
+	"langCode_su": {
+		"message": "ሱዳንኛ"
+	},
+	"langCode_sv": {
+		"message": "ስዊድንኛ"
+	},
+	"langCode_sw": {
+		"message": "ስዋሂሊኛ"
+	},
+	"langCode_ta": {
+		"message": "ታሚልኛ"
+	},
+	"langCode_te": {
+		"message": "ተሉጉኛ"
+	},
+	"langCode_tg": {
+		"message": "ታጂኪኛ"
+	},
+	"langCode_th": {
+		"message": "ታይኛ"
+	},
+	"langCode_ti": {
+		"message": "ትግርኛ"
+	},
+	"langCode_tk": {
+		"message": "ቱርክሜንኛ"
+	},
+	"langCode_tl": {
+		"message": "ፊሊፒንኛ"
+	},
+	"langCode_tn": {
+		"message": "ጽዋናዊኛ"
+	},
+	"langCode_to": {
+		"message": "ቶንጋኛ"
+	},
+	"langCode_tr": {
+		"message": "ቱርክኛ"
+	},
+	"langCode_ts": {
+		"message": "ጾንጋኛ"
+	},
+	"langCode_tt": {
+		"message": "ታታርኛ"
+	},
+	"langCode_tw": {
+		"message": "አካንኛ"
+	},
+	"langCode_ty": {
+		"message": "ታሂታንኛ"
+	},
+	"langCode_ug": {
+		"message": "ኡዊግሁርኛ"
+	},
+	"langCode_uk": {
+		"message": "ዩክሬንኛ"
+	},
+	"langCode_ur": {
+		"message": "ኡርዱኛ"
+	},
+	"langCode_uz": {
+		"message": "ኡዝቤክኛ"
+	},
+	"langCode_ve": {
+		"message": "ቬንዳ"
+	},
+	"langCode_vi": {
+		"message": "ቪየትናምኛ"
+	},
+	"langCode_vo": {
+		"message": "ቮላፑክኛ"
+	},
+	"langCode_wa": {
+		"message": "ዋሎን"
+	},
+	"langCode_wo": {
+		"message": "ዎሎፍኛ"
+	},
+	"langCode_xh": {
+		"message": "ዞሳኛ"
+	},
+	"langCode_yi": {
+		"message": "ይዲሽኛ"
+	},
+	"langCode_yo": {
+		"message": "ዮሩባዊኛ"
+	},
+	"langCode_za": {
+		"message": "ዡዋንግኛ"
+	},
+	"langCode_zh": {
+		"message": "ቻይንኛ"
+	},
+	"langCode_zu": {
+		"message": "ዙሉኛ"
+	}
+}
