@@ -24,7 +24,7 @@ export class ChatGPT {
 		} else {
 			console.log('Used unofficial GPT proxy API');
 			this.api = new ChatGPTUnofficialProxyAPI({
-				accessToken: process.env.GPT_ACCESS_TOKEN,
+				accessToken: process.env.OPENAI_ACCESS_TOKEN,
 				apiReverseProxyUrl: 'https://bypass.churchless.tech/api/conversation',
 			});
 		}
