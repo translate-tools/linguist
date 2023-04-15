@@ -8,8 +8,16 @@ const getGPTTranslator = async () => {
 		gptTranslator = new Promise(async (res) => {
 			const { ChatGPTUtils } = await import('../../ChatGPT.mjs');
 
+			const languageNames = new Intl.DisplayNames(['en'], {
+				type: 'language',
+			});
+
 			const translator = (stringifiedJSON, { from, to }) =>
-				`Translate this JSON below from ${from} to ${to} and send me back only JSON with no your comments:\n${stringifiedJSON}`;
+				`Translate this JSON below from ${languageNames.of(
+					from,
+				)} to ${languageNames.of(
+					to,
+				)} and send me back only JSON with no your comments. Try hard to send me back valid JSON. Never translate "message" key in JSON, but translate its value:\n${stringifiedJSON}`;
 			res(new ChatGPTUtils(translator));
 		});
 	}
@@ -26,11 +34,33 @@ const syncLocalizationsMessagesWithSource = async (
 		writeFileSync(targetLocalization.filename, stringifiedJSON);
 	};
 
-	// Remove messages that not exists in source
+	// Remove messages that not exists in source and invalid messages
 	const filteredJson = Object.fromEntries(
-		Object.entries(targetLocalization.json).filter(
-			([key]) => key in sourceLocalization.json,
-		),
+		Object.entries(targetLocalization.json).filter(([key, value]) => {
+			const isExistsInSource = key in sourceLocalization.json;
+			if (!isExistsInSource) return false;
+
+			const isMessageNotEmpty =
+				typeof value.message === 'string' && value.message.trim().length > 0;
+			if (!isMessageNotEmpty) return false;
+
+			if (value.placeholders) {
+				const placeholdersKeys =
+					typeof value.placeholders === 'object'
+						? Object.keys(value.placeholders)
+						: [];
+
+				// Remove messages with empty placeholders
+				if (placeholdersKeys.length === 0) return false;
+
+				const isMessageContainsAllPlaceholders = placeholdersKeys.every(
+					(placeholder) => value.message.includes(`$` + placeholder + `$`),
+				);
+				if (!isMessageContainsAllPlaceholders) return false;
+			}
+
+			return true;
+		}),
 	);
 
 	// Translate messages
