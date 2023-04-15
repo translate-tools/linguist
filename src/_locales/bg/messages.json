@@ -1,0 +1,1160 @@
+{
+	"common_action_addToDictionary": {
+		"message": "Добавяне на превода в речника"
+	},
+	"common_action_removeFromDictionary": {
+		"message": "Премахване на превода от речника"
+	},
+	"common_bgUnavailable": {
+		"message": "Скриптът за фона не е наличен"
+	},
+	"common_cancel": {
+		"message": "Отказ"
+	},
+	"common_close": {
+		"message": "Затваряне"
+	},
+	"common_copy": {
+		"message": "Копиране"
+	},
+	"common_error": {
+		"message": "Грешка"
+	},
+	"common_offlineTranslator": {
+		"message": "$1 - Преводач без интернет"
+	},
+	"common_retry": {
+		"message": "Опитайте отново"
+	},
+	"common_translate": {
+		"message": "Превеждане"
+	},
+	"component_hotkey_placeholder": {
+		"message": "Кликнете, за да запишете горещи клавиши"
+	},
+	"component_hotkey_recordPlaceholder": {
+		"message": "Натиснете клавиши"
+	},
+	"component_hotkey_resetButton": {
+		"message": "Нулиране"
+	},
+	"contextMenu_disablePageTranslation": {
+		"message": "Изключване на превода на страницата"
+	},
+	"contextMenu_translatePage": {
+		"message": "Превеждане на страницата"
+	},
+	"contextMenu_translateSelectedText": {
+		"message": "Превеждане на избрания текст"
+	},
+	"dictionaryButton_add": {
+		"message": "Добавяне в речника"
+	},
+	"dictionaryButton_delete": {
+		"message": "Изтриване от речника"
+	},
+	"dictionary_button_export": {
+		"message": "Експортиране"
+	},
+	"dictionary_button_removeAll": {
+		"message": "Премахване на всички"
+	},
+	"dictionary_deleteAll": {
+		"message": "Сигурни ли сте, че искате да изтриете ВСИЧКИ преводи в речника?"
+	},
+	"dictionary_deleteConfirmation": {
+		"message": "Сигурни ли сте, че искате да изтриете този превод?"
+	},
+	"dictionary_description": {
+		"message": "Запазете преводите си в речника, за да ги намерите по-късно"
+	},
+	"dictionary_emptyDictionary": {
+		"message": "Речникът е празен. Започнете да го попълвате, докато превеждате текст."
+	},
+	"dictionary_filter_from": {
+		"message": "От"
+	},
+	"dictionary_filter_to": {
+		"message": "До"
+	},
+	"dictionary_message_deleteAll_success": {
+		"message": "Всички преводи бяха премахнати"
+	},
+	"dictionary_notFoundEntries": {
+		"message": "Не бяха намерени преводи, отговарящи на тези филтри"
+	},
+	"dictionary_pageTitle": {
+		"message": "Речник"
+	},
+	"dictionary_resetFilters": {
+		"message": "нулиране на филтрите"
+	},
+	"dictionary_searchPlaceholder": {
+		"message": "Търсене по текст"
+	},
+	"editorWindow_close": {
+		"message": "Затвори"
+	},
+	"editorWindow_data_code": {
+		"message": "Код"
+	},
+	"editorWindow_data_name": {
+		"message": "Име"
+	},
+	"editorWindow_message_invalidName": {
+		"message": "Името трябва да съдържа поне един символ"
+	},
+	"editorWindow_save": {
+		"message": "Запази"
+	},
+	"ext_description": {
+		"message": "Превод на текст без презареждане на страницата"
+	},
+	"ext_name": {
+		"message": "Лингвист - преводач на уеб страници"
+	},
+	"history_control_selectEntry": {
+		"message": "Избери запис"
+	},
+	"history_controls_clearHistory": {
+		"message": "Изчисти историята"
+	},
+	"history_controls_deleteSelected": {
+		"message": "Изтриване на избраните"
+	},
+	"history_controls_selectAll": {
+		"message": "Избор на всички преводи"
+	},
+	"history_message_clearHistoryConfirmation": {
+		"message": "Сигурни ли сте, че искате да изчистите историята? Всички записи ще бъдат премахнати."
+	},
+	"history_message_deleteEntryConfirmation": {
+		"message": "Сигурни ли сте, че искате да изтриете този запис?"
+	},
+	"history_message_deleteSelectedEntriesConfirmation": {
+		"message": "Сигурни ли сте, че искате да изтриете избраните записи ($1)?"
+	},
+	"history_message_emptyEntries": {
+		"message": "Историята е изчистена"
+	},
+	"history_message_entriesNotFound": {
+		"message": "Не са намерени преводи, отговарящи на филтъра"
+	},
+	"history_pageTitle": {
+		"message": "История"
+	},
+	"history_searchPlaceholder": {
+		"message": "Търсене по текст"
+	},
+	"inlineTranslator_showOriginalText": {
+		"message": "Покажи оригиналния текст"
+	},
+	"lang_change": {
+		"message": "Промяна на езика"
+	},
+	"lang_detect": {
+		"message": "Автоматично откриване"
+	},
+	"lang_select": {
+		"message": "Изберете език"
+	},
+	"lang_swap": {
+		"message": "Размяна на езиците"
+	},
+	"message_askResetConfig": {
+		"message": "Искате ли да нулирате настройките?"
+	},
+	"message_cacheFlushed": {
+		"message": "Кешът е изчистен"
+	},
+	"message_changesSaved": {
+		"message": "Промените са запазени"
+	},
+	"message_error": {
+		"message": "Грешка"
+	},
+	"message_errorOfTranslate": {
+		"message": "Грешка при превода"
+	},
+	"message_serviceRequiredKey": {
+		"message": "Службата изисква ключ"
+	},
+	"message_translateOfText": {
+		"message": "Преведено"
+	},
+	"message_unknownError": {
+		"message": "Неизвестна грешка"
+	},
+	"pageTranslator_alwaysTranslateLang": {
+		"message": "Винаги превеждай на този език"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disable": {
+		"message": "Деактивиране"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
+		"message": "Деактивиране за всички сайтове"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_enable": {
+		"message": "Активиране"
+	},
+	"pageTranslator_commonPreferences_title": {
+		"message": "Общи настройки за този език"
+	},
+	"pageTranslator_option_autoTranslate": {
+		"message": "Автоматично превеждане"
+	},
+	"pageTranslator_showOptions": {
+		"message": "Показване на опциите"
+	},
+	"pageTranslator_showOriginal": {
+		"message": "Показване на оригинала"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_always": {
+		"message": "Винаги превеждай"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
+		"message": "Винаги превеждай за този език"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_default": {
+		"message": "Използвай общите правила"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
+		"message": "Използвай общите правила за този език"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_never": {
+		"message": "Никога не превеждай"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
+		"message": "Никога не превеждай за този език"
+	},
+	"pageTranslator_sitePreferences_title": {
+		"message": "Настройки за"
+	},
+	"pageTranslator_translatePage": {
+		"message": "Преведи страницата"
+	},
+	"pageTranslator_translationReport": {
+		"message": "Доклад за превода"
+	},
+	"pageTranslator_translationReport_queue": {
+		"message": "Опашка"
+	},
+	"pageTranslator_translationReport_reject": {
+		"message": "Грешки"
+	},
+	"pageTranslator_translationReport_resolve": {
+		"message": "Преведено"
+	},
+	"popup_tabIdNotFound": {
+		"message": "Раздел \"$1\" не е намерен"
+	},
+	"popup_tab_translatePage": {
+		"message": "Превод на страница"
+	},
+	"popup_tab_translateText": {
+		"message": "Превод на текст"
+	},
+	"settings_button_cancel": {
+		"message": "Отказ"
+	},
+	"settings_button_export": {
+		"message": "Експортиране на конфигурация"
+	},
+	"settings_button_import": {
+		"message": "Импортиране на конфигурация"
+	},
+	"settings_button_reset": {
+		"message": "Нулиране на конфигурация"
+	},
+	"settings_button_saveChanges": {
+		"message": "Запазване на промените"
+	},
+	"settings_message_clearCache_success": {
+		"message": "Кешът е изчистен"
+	},
+	"settings_message_common_invalidValueType": {
+		"message": "Невалидна стойност"
+	},
+	"settings_message_importConfig_invalidFile": {
+		"message": "Файлът за импорт не може да бъде обработен"
+	},
+	"settings_message_importConfig_success": {
+		"message": "Импортирането е завършено"
+	},
+	"settings_message_resetConfig_confirm": {
+		"message": "Желаете ли да нулирате настройките?"
+	},
+	"settings_message_resetConfig_success": {
+		"message": "Настройките са нулирани"
+	},
+	"settings_message_saveChanges_success": {
+		"message": "Промените са запазени"
+	},
+	"settings_option_appIcon": {
+		"message": "Икона на разширението"
+	},
+	"settings_option_appIcon_desc": {
+		"message": "При избор на динамичната икона, цветовете ще бъдат адаптирани към темата на браузъра"
+	},
+	"settings_option_appIcon_item_auto": {
+		"message": "Динамично"
+	},
+	"settings_option_appIcon_item_color": {
+		"message": "Цвят"
+	},
+	"settings_option_appIcon_item_dark": {
+		"message": "Тъмен"
+	},
+	"settings_option_appIcon_item_light": {
+		"message": "Светъл"
+	},
+	"settings_option_cache": {
+		"message": "Кеш"
+	},
+	"settings_option_cache_clear": {
+		"message": "Изчисти кеша"
+	},
+	"settings_option_cache_clear_desc": {
+		"message": "Премахни кеша, ако имате проблеми с превода или трябва да премахнете тайни данни"
+	},
+	"settings_option_cache_enable": {
+		"message": "Включи кеша"
+	},
+	"settings_option_cache_enable_desc": {
+		"message": "Когато е включен кеша, преводите, които са били преведени веднъж, ще бъдат налични веднага, дори без интернет"
+	},
+	"settings_option_cache_ignoreCase": {
+		"message": "Без да разчита на регистъра"
+	},
+	"settings_option_cache_ignoreCase_desc": {
+		"message": "Когато е включено, преводите от кеша ще бъдат използвани и с непълни съвпадения, което може да доведе до проблеми при превода"
+	},
+	"settings_option_commonSettings": {
+		"message": "Общи настройки"
+	},
+	"settings_option_customTranslatorModule": {
+		"message": "Персонализирани преводачи"
+	},
+	"settings_option_customTranslatorModule_desc": {
+		"message": "Можете да добавите персонализирани преводачи за своите любими услуги за превод. Прочетете повече и намерете модули в <slot id=docs>документацията за персонализирани преводачи</slot>."
+	},
+	"settings_option_customTranslatorModule_manageButton": {
+		"message": "Управление на преводачите"
+	},
+	"settings_option_mainPreferences": {
+		"message": "Основни настройки"
+	},
+	"settings_option_pageTranslation": {
+		"message": "Превод на страница"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent": {
+		"message": "Засичане на езика по съдържание"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent_desc": {
+		"message": "Анализиране на текста на уеб страницата, за да се засече езикът на страницата. Когато е забранено, ще се използва език, предоставен в метаданните на страницата."
+	},
+	"settings_option_pageTranslation_enableContextMenu": {
+		"message": "Разрешаване на бутон за контекстно меню"
+	},
+	"settings_option_pageTranslation_enableContextMenu_desc": {
+		"message": "Добавете бутон за превключване на превода на страницата в контекстно меню"
+	},
+	"settings_option_pageTranslation_ignoredTags": {
+		"message": "Игнорирани елементи"
+	},
+	"settings_option_pageTranslation_ignoredTags_desc": {
+		"message": "Въведете имена на <slot id=htmlElements>HTML елементи</slot>, които не трябва да се превеждат. Вложените елементи също няма да се превеждат. По един елемент на ред."
+	},
+	"settings_option_pageTranslation_lazyTranslate": {
+		"message": "Превеждайте само видимите елементи"
+	},
+	"settings_option_pageTranslation_lazyTranslate_desc": {
+		"message": "Когато тази опция е активирана, само видимите елементи ще бъдат преведени. Това може да бъде полезно, за да се спести мрежов трафик."
+	},
+	"settings_option_pageTranslation_originalTextPopup": {
+		"message": "Активиране на изскачащ прозорец с оригиналния текст"
+	},
+	"settings_option_pageTranslation_originalTextPopup_desc": {
+		"message": "Показване на изскачащ прозорец с оригиналния текст, като преминавате с мишката върху преведения текст"
+	},
+	"settings_option_pageTranslation_toggleTranslationHotkey": {
+		"message": "Горещи клавиши"
+	},
+	"settings_option_pageTranslation_toggleTranslationHotkey_desc": {
+		"message": "Клавиши за превключване на превода на страницата\nНатиснете ESC, за да нулирате клавишите"
+	},
+	"settings_option_pageTranslation_translatableAttributes": {
+		"message": "Преводими атрибути."
+	},
+	"settings_option_pageTranslation_translatableAttributes_desc": {
+		"message": "Въведете имената на <slot id=htmlAttributes>атрибутите на HTML</slot>, които трябва да бъдат преведени. По един атрибут на ред."
+	},
+	"settings_option_popupTab_pageTranslator_showCounters": {
+		"message": "Показване на статистиката за превода"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters_desc": {
+		"message": "Показване на статистиката за превода на страницата"
+	},
+	"settings_option_selectTranslation": {
+		"message": "Превод на избран текст"
+	},
+	"settings_option_selectTranslation_detectedLangFirst": {
+		"message": "Предпочитане на открития език на текста вместо на езика на страницата"
+	},
+	"settings_option_selectTranslation_detectedLangFirst_desc": {
+		"message": "Когато е активирано, откритият език на избрания текст ще се предпочита пред езика на страницата."
+	},
+	"settings_option_selectTranslation_disableWhileTranslatePage": {
+		"message": "Изключване по време на превеждане на страницата"
+	},
+	"settings_option_selectTranslation_enable": {
+		"message": "Включване"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton": {
+		"message": "Автоматично фокусиране на бутона за превод"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
+		"message": "Фокусирайте върху бутона за превод, когато се появи"
+	},
+	"settings_option_selectTranslation_header_languageChoice": {
+		"message": "Настройки на езика"
+	},
+	"settings_option_selectTranslation_modifiers_key_meta": {
+		"message": "мета"
+	},
+	"settings_option_selectTranslation_modifiers_key_shift": {
+		"message": "шифт"
+	},
+	"settings_option_selectTranslation_rememberDirection": {
+		"message": "Запомнете най-скорошно избран език на текста"
+	},
+	"settings_option_selectTranslation_showOnceForSelection": {
+		"message": "Покажи бутон за превод само веднъж за всяко избрано отделно текстово поле"
+	},
+	"settings_option_selectTranslation_showOnceForSelection_desc": {
+		"message": "Бутонът ще се покаже само веднъж за всяко избрано текстово поле. Ако искате да го покажете отново, моля повторно изберете текст."
+	},
+	"settings_option_selectTranslation_showOriginalText": {
+		"message": "Показване на оригиналния текст"
+	},
+	"settings_option_selectTranslation_showOriginalText_desc": {
+		"message": "Добавете блок с оригиналния текст към изскачащ прозорец с превода"
+	},
+	"settings_option_selectTranslation_strictSelection": {
+		"message": "Строго избиране"
+	},
+	"settings_option_selectTranslation_strictSelection_desc": {
+		"message": "Игнорирайте избора, ако левият бутон на мишката се освободи извън блок, който съдържа избран текст"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton": {
+		"message": "Забавяне за скриване на бутона"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton_desc": {
+		"message": "Забавяне в милисекунди преди скриване на бутона, когато курсорът не се намира върху него. Преместването на курсора върху бутона ще нулира таймера. За да деактивирате автоматичното скриване, задайте стойност по-малка от 1"
+	},
+	"settings_option_selectTranslation_zIndex": {
+		"message": "z-index"
+	},
+	"settings_option_selectTranslation_zIndex_desc": {
+		"message": "Увеличете стойността, ако някои елементи на страниците се застъпват с изскачащ прозорец с преведен текст"
+	},
+	"settings_option_textTranslator": {
+		"message": "Превод на текст"
+	},
+	"settings_option_textTranslator_rememberText": {
+		"message": "Запомняне на преведен текст"
+	},
+	"settings_option_textTranslator_rememberText_desc": {
+		"message": "Запомняне на преведен текст за следващия път, когато прозорецът бъде отворен"
+	},
+	"settings_option_textTranslator_spellCheck": {
+		"message": "Активиране на проверка на правописа"
+	},
+	"settings_option_textTranslator_suggestLanguage": {
+		"message": "Предложение за езика на открития текст"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways": {
+		"message": "Винаги откривайте и предлагайте език"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways_desc": {
+		"message": "Когато е деактивирано, предложенията за езика ще се появят само когато езикът на източника бъде автоматично открит"
+	},
+	"settings_option_translatePreferences": {
+		"message": "Преводни предпочитания"
+	},
+	"settings_option_translateScheduler": {
+		"message": "График за превеждане"
+	},
+	"settings_option_translateScheduler_delay": {
+		"message": "Забавяне на натрупването на текста"
+	},
+	"settings_option_translateScheduler_delay_desc": {
+		"message": "Графикът за превеждане намалява броя на заявките към услугите за превод. Графикът се опитва да натрупа колкото се може повече текстове и да ги изпрати като една заявка. Графикът ще изчака зададеното време в милисекунди, за да събере нови текстове, преди да започне да превежда."
+	},
+	"settings_option_translateScheduler_retryLimit": {
+		"message": "Опити за превеждане"
+	},
+	"settings_option_translateScheduler_retryLimit_desc": {
+		"message": "Графикът за превеждане ще опита да преведе текстовете отново при грешки при превода. Тази настройка задава лимит за броя опити за превеждане. Задайте отрицателно число, за да разрешите неограничени опити."
+	},
+	"settings_option_translatorModule": {
+		"message": "Модул за преводач"
+	},
+	"settings_option_translatorModule_desc": {
+		"message": "Качеството на преводите и наличните езици за превод зависят от преводача."
+	},
+	"settings_option_tts": {
+		"message": "Текст към реч (TTS)"
+	},
+	"settings_option_ttsCustomModules": {
+		"message": "Персонализиран TTS"
+	},
+	"settings_option_ttsCustomModules_button": {
+		"message": "Управление на модули за TTS"
+	},
+	"settings_option_ttsCustomModules_desc": {
+		"message": "Можете да добавите модули за TTS, които използват любимите ви услуги и гласове. Прочетете повече и намерете модули в документацията за персонализиран TTS."
+	},
+	"settings_option_ttsModule": {
+		"message": "TTS модул"
+	},
+	"settings_option_ttsModule_desc": {
+		"message": "Модул за говорене на текстове"
+	},
+	"settings_option_userLanguage": {
+		"message": "Вашият език"
+	},
+	"settings_option_userLanguage_desc": {
+		"message": "Целеви език за превод на текстове"
+	},
+	"settings_pageTitle": {
+		"message": "Настройки"
+	},
+	"settings_section_popup": {
+		"message": "Изскачащ прозорец"
+	},
+	"textTranslator_suggestLanguage": {
+		"message": "Изглежда, че този език е"
+	},
+	"textTranslator_translateInputPlaceholder": {
+		"message": "Входен текст"
+	},
+	"textTranslator_translatePlaceholder": {
+		"message": "Преведен текст"
+	},
+	"translatorsManagerWindow_add": {
+		"message": "Добавяне"
+	},
+	"translatorsManagerWindow_close": {
+		"message": "Затваряне"
+	},
+	"translatorsManagerWindow_emptyTranslatorsListText": {
+		"message": "Не са добавени персонализирани преводачи все още"
+	},
+	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
+		"message": "Сигурни ли сте, че искате да премахнете преводач \"$translator_name$\"?",
+		"placeholders": {
+			"translator_name": {
+				"content": "$1",
+				"example": "Google преводач"
+			}
+		}
+	},
+	"translatorsManagerWindow_title": {
+		"message": "Персонализирани преводачи"
+	},
+	"translatorsManagerWindow_translator_delete": {
+		"message": "Изтриване"
+	},
+	"translatorsManagerWindow_translator_edit": {
+		"message": "Редактиране"
+	},
+	"ttsManagerWindow_add": {
+		"message": "Добавяне"
+	},
+	"ttsManagerWindow_close": {
+		"message": "Затваряне"
+	},
+	"ttsManagerWindow_emptyTranslatorsListText": {
+		"message": "TTS модулите все още не са добавени"
+	},
+	"ttsManagerWindow_message_ttsRemoveConfirmation": {
+		"message": "Сигурни ли сте, че искате да премахнете TTS \"$tts_name$\"?",
+		"placeholders": {
+			"tts_name": {
+				"content": "$1",
+				"example": "Google TTS"
+			}
+		}
+	},
+	"ttsManagerWindow_title": {
+		"message": "Модули за текст към реч"
+	},
+	"ttsManagerWindow_translator_delete": {
+		"message": "Изтрий"
+	},
+	"ttsManagerWindow_translator_edit": {
+		"message": "Редактирай"
+	},
+	"validation_number": {
+		"message": "Параметърът трябва да бъде число"
+	},
+	"validation_numberBetweenRange": {
+		"message": "Параметърът трябва да бъде число между $1 и $2"
+	},
+	"validation_positiveNumber": {
+		"message": "Параметърът трябва да бъде положително число."
+	},
+	"langCode_aa": {
+		"message": "Афарски"
+	},
+	"langCode_ab": {
+		"message": "Абхазки"
+	},
+	"langCode_ae": {
+		"message": "Авестски"
+	},
+	"langCode_af": {
+		"message": "Африканс"
+	},
+	"langCode_ak": {
+		"message": "Акан"
+	},
+	"langCode_am": {
+		"message": "Амхарски"
+	},
+	"langCode_an": {
+		"message": "Арагонски"
+	},
+	"langCode_ar": {
+		"message": "Арабски"
+	},
+	"langCode_as": {
+		"message": "Асамски"
+	},
+	"langCode_av": {
+		"message": "Аварски"
+	},
+	"langCode_ay": {
+		"message": "Аймара"
+	},
+	"langCode_az": {
+		"message": "Азербайджански"
+	},
+	"langCode_ba": {
+		"message": "Башкирски"
+	},
+	"langCode_be": {
+		"message": "Беларуски"
+	},
+	"langCode_bg": {
+		"message": "Български"
+	},
+	"langCode_bh": {
+		"message": "Боджпури"
+	},
+	"langCode_bi": {
+		"message": "Бислама"
+	},
+	"langCode_bm": {
+		"message": "Бамбара"
+	},
+	"langCode_bn": {
+		"message": "Бенгалски"
+	},
+	"langCode_bo": {
+		"message": "Тибетски"
+	},
+	"langCode_br": {
+		"message": "Бретонски"
+	},
+	"langCode_bs": {
+		"message": "Босненски"
+	},
+	"langCode_ca": {
+		"message": "Каталонски"
+	},
+	"langCode_ce": {
+		"message": "Чеченски"
+	},
+	"langCode_ch": {
+		"message": "Чаморо"
+	},
+	"langCode_co": {
+		"message": "Корсикански"
+	},
+	"langCode_cr": {
+		"message": "Крии"
+	},
+	"langCode_cs": {
+		"message": "Чешки"
+	},
+	"langCode_cu": {
+		"message": "Църковнославянски"
+	},
+	"langCode_cv": {
+		"message": "Чувашки"
+	},
+	"langCode_cy": {
+		"message": "Уелски"
+	},
+	"langCode_da": {
+		"message": "Датски"
+	},
+	"langCode_de": {
+		"message": "Немски"
+	},
+	"langCode_dv": {
+		"message": "Дивехи"
+	},
+	"langCode_dz": {
+		"message": "Дзонгкха"
+	},
+	"langCode_ee": {
+		"message": "Еве"
+	},
+	"langCode_el": {
+		"message": "Гръцки"
+	},
+	"langCode_en": {
+		"message": "Английски"
+	},
+	"langCode_eo": {
+		"message": "Есперанто"
+	},
+	"langCode_es": {
+		"message": "Испански"
+	},
+	"langCode_et": {
+		"message": "Естонски"
+	},
+	"langCode_eu": {
+		"message": "Баски"
+	},
+	"langCode_fa": {
+		"message": "Персийски"
+	},
+	"langCode_ff": {
+		"message": "Фула"
+	},
+	"langCode_fi": {
+		"message": "Фински"
+	},
+	"langCode_fj": {
+		"message": "Фиджийски"
+	},
+	"langCode_fo": {
+		"message": "Фарьорски"
+	},
+	"langCode_fr": {
+		"message": "Френски"
+	},
+	"langCode_fy": {
+		"message": "Западнофризийски"
+	},
+	"langCode_ga": {
+		"message": "Ирландски"
+	},
+	"langCode_gd": {
+		"message": "Шотландски келтски"
+	},
+	"langCode_gl": {
+		"message": "Галисийски"
+	},
+	"langCode_gn": {
+		"message": "Гуарани"
+	},
+	"langCode_gu": {
+		"message": "Гуджарати"
+	},
+	"langCode_gv": {
+		"message": "Манкски"
+	},
+	"langCode_ha": {
+		"message": "Хауса"
+	},
+	"langCode_he": {
+		"message": "Иврит"
+	},
+	"langCode_hi": {
+		"message": "Хинди"
+	},
+	"langCode_ho": {
+		"message": "Хири моту"
+	},
+	"langCode_hr": {
+		"message": "Хърватски"
+	},
+	"langCode_ht": {
+		"message": "Хаитянски креолски"
+	},
+	"langCode_hu": {
+		"message": "Унгарски"
+	},
+	"langCode_hy": {
+		"message": "Арменски"
+	},
+	"langCode_hz": {
+		"message": "Хереро"
+	},
+	"langCode_ia": {
+		"message": "Интерлингва"
+	},
+	"langCode_id": {
+		"message": "Индонезийски"
+	},
+	"langCode_ie": {
+		"message": "Оксидентал"
+	},
+	"langCode_ig": {
+		"message": "Игбо"
+	},
+	"langCode_ii": {
+		"message": "Съчуански йи"
+	},
+	"langCode_ik": {
+		"message": "Инупиак"
+	},
+	"langCode_io": {
+		"message": "Идо"
+	},
+	"langCode_is": {
+		"message": "Исландски"
+	},
+	"langCode_it": {
+		"message": "Италиански"
+	},
+	"langCode_iu": {
+		"message": "Инуктитут"
+	},
+	"langCode_ja": {
+		"message": "Японски"
+	},
+	"langCode_jv": {
+		"message": "Явански"
+	},
+	"langCode_ka": {
+		"message": "Грузински"
+	},
+	"langCode_kg": {
+		"message": "Конгоански"
+	},
+	"langCode_ki": {
+		"message": "Кикую"
+	},
+	"langCode_kj": {
+		"message": "Кваняма"
+	},
+	"langCode_kk": {
+		"message": "Казахски"
+	},
+	"langCode_kl": {
+		"message": "Гренландски"
+	},
+	"langCode_km": {
+		"message": "Кхмерски"
+	},
+	"langCode_kn": {
+		"message": "Каннада"
+	},
+	"langCode_ko": {
+		"message": "Корейски"
+	},
+	"langCode_kr": {
+		"message": "Канури"
+	},
+	"langCode_ks": {
+		"message": "Кашмирски"
+	},
+	"langCode_ku": {
+		"message": "Кюрдски"
+	},
+	"langCode_kv": {
+		"message": "Коми"
+	},
+	"langCode_kw": {
+		"message": "Корнуолски"
+	},
+	"langCode_ky": {
+		"message": "Киргизки"
+	},
+	"langCode_la": {
+		"message": "Латински"
+	},
+	"langCode_lb": {
+		"message": "Люксембургски"
+	},
+	"langCode_lg": {
+		"message": "Ганда"
+	},
+	"langCode_li": {
+		"message": "Лимбургски"
+	},
+	"langCode_ln": {
+		"message": "Лингала"
+	},
+	"langCode_lo": {
+		"message": "Лаоски"
+	},
+	"langCode_lt": {
+		"message": "Литовски"
+	},
+	"langCode_lu": {
+		"message": "Луба-катанга"
+	},
+	"langCode_lv": {
+		"message": "Латвийски"
+	},
+	"langCode_mg": {
+		"message": "Малгашки"
+	},
+	"langCode_mh": {
+		"message": "Маршалезе"
+	},
+	"langCode_mi": {
+		"message": "Маорски"
+	},
+	"langCode_mk": {
+		"message": "Македонски"
+	},
+	"langCode_ml": {
+		"message": "Малаялам"
+	},
+	"langCode_mn": {
+		"message": "Монголски"
+	},
+	"langCode_mr": {
+		"message": "Марати"
+	},
+	"langCode_ms": {
+		"message": "Малайски"
+	},
+	"langCode_mt": {
+		"message": "Малтийски"
+	},
+	"langCode_my": {
+		"message": "Бирмански"
+	},
+	"langCode_na": {
+		"message": "Науру"
+	},
+	"langCode_nb": {
+		"message": "Норвежки (букмол)"
+	},
+	"langCode_nd": {
+		"message": "Северен ндебеле"
+	},
+	"langCode_ne": {
+		"message": "Непалски"
+	},
+	"langCode_ng": {
+		"message": "Ндонга"
+	},
+	"langCode_nl": {
+		"message": "Нидерландски"
+	},
+	"langCode_nn": {
+		"message": "Норвежки (нюношк)"
+	},
+	"langCode_no": {
+		"message": "Норвежки"
+	},
+	"langCode_nr": {
+		"message": "Южен ндебеле"
+	},
+	"langCode_nv": {
+		"message": "Навахо"
+	},
+	"langCode_ny": {
+		"message": "Нянджа"
+	},
+	"langCode_oc": {
+		"message": "Окситански"
+	},
+	"langCode_oj": {
+		"message": "Оджибва"
+	},
+	"langCode_om": {
+		"message": "Оромо"
+	},
+	"langCode_or": {
+		"message": "Ория"
+	},
+	"langCode_os": {
+		"message": "Осетински"
+	},
+	"langCode_pa": {
+		"message": "Пенджабски"
+	},
+	"langCode_pi": {
+		"message": "Пали"
+	},
+	"langCode_pl": {
+		"message": "Полски"
+	},
+	"langCode_ps": {
+		"message": "Пущу"
+	},
+	"langCode_pt": {
+		"message": "Португалски"
+	},
+	"langCode_qu": {
+		"message": "Кечуа"
+	},
+	"langCode_rm": {
+		"message": "Реторомански"
+	},
+	"langCode_rn": {
+		"message": "Рунди"
+	},
+	"langCode_ro": {
+		"message": "Румънски"
+	},
+	"langCode_ru": {
+		"message": "Руски"
+	},
+	"langCode_rw": {
+		"message": "Киняруанда"
+	},
+	"langCode_sa": {
+		"message": "Санскрит"
+	},
+	"langCode_sc": {
+		"message": "Сардински"
+	},
+	"langCode_sd": {
+		"message": "Синдхи"
+	},
+	"langCode_se": {
+		"message": "Северносаамски"
+	},
+	"langCode_sg": {
+		"message": "Санго"
+	},
+	"langCode_si": {
+		"message": "Синхалски"
+	},
+	"langCode_sk": {
+		"message": "Словашки"
+	},
+	"langCode_sl": {
+		"message": "Словенски"
+	},
+	"langCode_sm": {
+		"message": "Самоански"
+	},
+	"langCode_sn": {
+		"message": "Шона"
+	},
+	"langCode_so": {
+		"message": "Сомалийски"
+	},
+	"langCode_sq": {
+		"message": "Албански"
+	},
+	"langCode_sr": {
+		"message": "Сръбски"
+	},
+	"langCode_ss": {
+		"message": "Свати"
+	},
+	"langCode_st": {
+		"message": "Сото"
+	},
+	"langCode_su": {
+		"message": "Сундански"
+	},
+	"langCode_sv": {
+		"message": "Шведски"
+	},
+	"langCode_sw": {
+		"message": "Суахили"
+	},
+	"langCode_ta": {
+		"message": "Тамилски"
+	},
+	"langCode_te": {
+		"message": "Телугу"
+	},
+	"langCode_tg": {
+		"message": "Таджикски"
+	},
+	"langCode_th": {
+		"message": "Тайски"
+	},
+	"langCode_ti": {
+		"message": "Тигриня"
+	},
+	"langCode_tk": {
+		"message": "Туркменски"
+	},
+	"langCode_tl": {
+		"message": "Филипински"
+	},
+	"langCode_tn": {
+		"message": "Тсвана"
+	},
+	"langCode_to": {
+		"message": "Тонгански"
+	},
+	"langCode_tr": {
+		"message": "Турски"
+	},
+	"langCode_ts": {
+		"message": "Цонга"
+	},
+	"langCode_tt": {
+		"message": "Татарски"
+	},
+	"langCode_tw": {
+		"message": "Акан"
+	},
+	"langCode_ty": {
+		"message": "Таитянски"
+	},
+	"langCode_ug": {
+		"message": "Уйгурски"
+	},
+	"langCode_uk": {
+		"message": "Украински"
+	},
+	"langCode_ur": {
+		"message": "Урду"
+	},
+	"langCode_uz": {
+		"message": "Узбекски"
+	},
+	"langCode_ve": {
+		"message": "Венда"
+	},
+	"langCode_vi": {
+		"message": "Виетнамски"
+	},
+	"langCode_vo": {
+		"message": "Волапюк"
+	},
+	"langCode_wa": {
+		"message": "Валонски"
+	},
+	"langCode_wo": {
+		"message": "Волоф"
+	},
+	"langCode_xh": {
+		"message": "Кхоса"
+	},
+	"langCode_yi": {
+		"message": "Идиш"
+	},
+	"langCode_yo": {
+		"message": "Йоруба"
+	},
+	"langCode_za": {
+		"message": "Зуанг"
+	},
+	"langCode_zh": {
+		"message": "Китайски"
+	},
+	"langCode_zu": {
+		"message": "Зулуски"
+	}
+}

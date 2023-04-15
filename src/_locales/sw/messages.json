@@ -1,0 +1,1130 @@
+{
+	"TTSManagerWindow_emptyTranslatorsListText": {
+		"message": "Moduli ya TTS haijaongezwa bado"
+	},
+	"TTSManagerWindow_message_ttsRemoveConfirmation": {
+		"message": "Je! Una uhakika wa kuondoa TTS \"$tts_name$\"?",
+		"placeholders": {
+			"tts_name": {
+				"content": "$1",
+				"example": "Google TTS"
+			}
+		}
+	},
+	"TTSManagerWindow_title": {
+		"message": "Moduli za maandishi hadi hotuba"
+	},
+	"TTSManagerWindow_translator_delete": {
+		"message": "Futa"
+	},
+	"TTSManagerWindow_translator_edit": {
+		"message": "Hariri"
+	},
+	"common_action_addToDictionary": {
+		"message": "Ongeza tafsiri kwenye kamusi"
+	},
+	"common_action_removeFromDictionary": {
+		"message": "Ondoa tafsiri kutoka kwenye kamusi"
+	},
+	"common_bgUnavailable": {
+		"message": "Hati ya mandharinyuma haipatikani"
+	},
+	"common_cancel": {
+		"message": "Ghairi"
+	},
+	"common_close": {
+		"message": "Funga"
+	},
+	"common_copy": {
+		"message": "Nakili"
+	},
+	"common_error": {
+		"message": "Hitilafu"
+	},
+	"common_offlineTranslator": {
+		"message": "$1 - Mtafsiri wa nje mtandaoni"
+	},
+	"common_retry": {
+		"message": "Jaribu tena"
+	},
+	"common_translate": {
+		"message": "Tafsiri"
+	},
+	"component_hotkey_placeholder": {
+		"message": "Bonyeza ili kurekodi funguo za mkato"
+	},
+	"component_hotkey_recordPlaceholder": {
+		"message": "Bonyeza funguo"
+	},
+	"component_hotkey_resetButton": {
+		"message": "Rudisha upya"
+	},
+	"contextMenu_disablePageTranslation": {
+		"message": "Zima tafsiri ya ukurasa"
+	},
+	"contextMenu_translatePage": {
+		"message": "Tafsiri ukurasa"
+	},
+	"contextMenu_translateSelectedText": {
+		"message": "Tafsiri maandishi yaliyochaguliwa"
+	},
+	"dictionaryButton_add": {
+		"message": "Ongeza kwenye kamusi"
+	},
+	"dictionaryButton_delete": {
+		"message": "Futa kutoka kwenye kamusi"
+	},
+	"dictionary_button_export": {
+		"message": "Nje"
+	},
+	"dictionary_button_removeAll": {
+		"message": "Ondoa yote"
+	},
+	"dictionary_deleteAll": {
+		"message": "Je, una uhakika unataka kufuta Tafsiri ZOTE katika kamusi?"
+	},
+	"dictionary_deleteConfirmation": {
+		"message": "Je, una uhakika unataka kufuta tafsiri hii?"
+	},
+	"dictionary_description": {
+		"message": "Hifadhi tafsiri zako katika kamusi ili uweze kuzipata baadaye"
+	},
+	"dictionary_emptyDictionary": {
+		"message": "Kamusi ni tupu. Anza kujaza wakati wa kutafsiri maandishi yoyote"
+	},
+	"dictionary_filter_from": {
+		"message": "Kutoka"
+	},
+	"dictionary_filter_to": {
+		"message": "Kwenda"
+	},
+	"dictionary_message_deleteAll_success": {
+		"message": "Tafsiri zote zimeondolewa"
+	},
+	"dictionary_notFoundEntries": {
+		"message": "Hakuna tafsiri inayolingana na vigezo hivi"
+	},
+	"dictionary_pageTitle": {
+		"message": "Kamusi"
+	},
+	"dictionary_resetFilters": {
+		"message": "Rudisha filters"
+	},
+	"dictionary_searchPlaceholder": {
+		"message": "Tafuta kwa maandishi"
+	},
+	"editorWindow_close": {
+		"message": "Funga"
+	},
+	"editorWindow_data_code": {
+		"message": "Kodi"
+	},
+	"editorWindow_data_name": {
+		"message": "Jina"
+	},
+	"editorWindow_message_invalidName": {
+		"message": "Jina lazima liwe na angalau herufi moja"
+	},
+	"editorWindow_save": {
+		"message": "Hifadhi"
+	},
+	"ext_description": {
+		"message": "Tafsiri ya maandishi bila kupakia upya ukurasa"
+	},
+	"ext_name": {
+		"message": "Mtaalamu wa Lugha - Mtafsiri wa Tovuti"
+	},
+	"history_control_selectEntry": {
+		"message": "Chagua kuingia"
+	},
+	"history_controls_clearHistory": {
+		"message": "Futa historia"
+	},
+	"history_controls_deleteSelected": {
+		"message": "Futa yaliyochaguliwa"
+	},
+	"history_controls_selectAll": {
+		"message": "Chagua tafsiri zote"
+	},
+	"history_message_clearHistoryConfirmation": {
+		"message": "Una uhakika unataka kufuta historia? Kuingia vyote vitafutwa"
+	},
+	"history_message_deleteEntryConfirmation": {
+		"message": "Una uhakika unataka kufuta kuingia hii?"
+	},
+	"history_message_deleteSelectedEntriesConfirmation": {
+		"message": "Una uhakika unataka kufuta kuingia zilizochaguliwa ($1)?"
+	},
+	"history_message_emptyEntries": {
+		"message": "Historia safi"
+	},
+	"history_message_entriesNotFound": {
+		"message": "Hakuna tafsiri iliyopatikana inayokidhi kichujio"
+	},
+	"history_pageTitle": {
+		"message": "Historia"
+	},
+	"history_searchPlaceholder": {
+		"message": "Tafuta kwa maandishi"
+	},
+	"inlineTranslator_showOriginalText": {
+		"message": "Onyesha maandishi ya awali"
+	},
+	"lang_change": {
+		"message": "Badilisha lugha"
+	},
+	"lang_detect": {
+		"message": "Gundua moja kwa moja"
+	},
+	"lang_select": {
+		"message": "Chagua lugha"
+	},
+	"lang_swap": {
+		"message": "Geuza lugha"
+	},
+	"message_askResetConfig": {
+		"message": "Weka upya vipimo?"
+	},
+	"message_cacheFlushed": {
+		"message": "Akiba imefutwa"
+	},
+	"message_changesSaved": {
+		"message": "Mabadiliko yamehifadhiwa"
+	},
+	"message_error": {
+		"message": "Kosa"
+	},
+	"message_errorOfTranslate": {
+		"message": "Kosa la kutafsiri"
+	},
+	"message_serviceRequiredKey": {
+		"message": "Huduma inahitaji muhimu"
+	},
+	"message_translateOfText": {
+		"message": "Imetafsiriwa"
+	},
+	"message_unknownError": {
+		"message": "Hitilafu isiyojulikana"
+	},
+	"pageTranslator_alwaysTranslateLang": {
+		"message": "Daima itafsiri lugha hii"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disable": {
+		"message": "Zima"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
+		"message": "Zima kwa tovuti zote"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_enable": {
+		"message": "Wezesha"
+	},
+	"pageTranslator_commonPreferences_title": {
+		"message": "Mapendekezo ya kawaida kwa lugha hii"
+	},
+	"pageTranslator_option_autoTranslate": {
+		"message": "Tafsiri moja kwa moja"
+	},
+	"pageTranslator_showOptions": {
+		"message": "Onyesha chaguzi"
+	},
+	"pageTranslator_showOriginal": {
+		"message": "Onyesha asili"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_always": {
+		"message": "Daima tafsiri"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
+		"message": "Daima tafsiri kwa lugha hii"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_default": {
+		"message": "Tumia sheria za kawaida"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
+		"message": "Tumia sheria za kawaida kwa lugha hii"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_never": {
+		"message": "Kamwe usitafsiri"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
+		"message": "Kamwe usitafsiri kwa lugha hii"
+	},
+	"pageTranslator_sitePreferences_title": {
+		"message": "Mapendekezo ya"
+	},
+	"pageTranslator_translatePage": {
+		"message": "Tafsiri ukurasa"
+	},
+	"pageTranslator_translationReport": {
+		"message": "Ripoti ya tafsiri"
+	},
+	"pageTranslator_translationReport_queue": {
+		"message": "Orodha"
+	},
+	"pageTranslator_translationReport_reject": {
+		"message": "Makosa"
+	},
+	"pageTranslator_translationReport_resolve": {
+		"message": "Imetafsiriwa"
+	},
+	"popup_tabIdNotFound": {
+		"message": "Tab \"$1\" haipatikani"
+	},
+	"popup_tab_translatePage": {
+		"message": "Tafsiri Ukurasa"
+	},
+	"popup_tab_translateText": {
+		"message": "Tafsiri Matini"
+	},
+	"settings_button_cancel": {
+		"message": "Ghairi"
+	},
+	"settings_button_export": {
+		"message": "Safirisha config"
+	},
+	"settings_button_import": {
+		"message": "Ingiza config"
+	},
+	"settings_button_reset": {
+		"message": "Rekebisha config"
+	},
+	"settings_button_saveChanges": {
+		"message": "Hifadhi mabadiliko"
+	},
+	"settings_message_clearCache_success": {
+		"message": "Kache imefutwa"
+	},
+	"settings_message_common_invalidValueType": {
+		"message": "Thamani batili"
+	},
+	"settings_message_importConfig_invalidFile": {
+		"message": "Faili ya kuagiza haiwezi kushughulikiwa"
+	},
+	"settings_message_importConfig_success": {
+		"message": "Kuagiza imemalizika"
+	},
+	"settings_message_resetConfig_confirm": {
+		"message": "Je, unataka kurudisha mipangilio?"
+	},
+	"settings_message_resetConfig_success": {
+		"message": "Mipangilio imebadilishwa"
+	},
+	"settings_message_saveChanges_success": {
+		"message": "Mabadiliko yameshikwa"
+	},
+	"settings_option_appIcon": {
+		"message": "Ikoni ya upanuzi"
+	},
+	"settings_option_appIcon_desc": {
+		"message": "Wakati ikoni ya kitambulisho inachaguliwa, rangi zitafaa kwa mandhari ya kivinjari"
+	},
+	"settings_option_appIcon_item_auto": {
+		"message": "Dinamiki"
+	},
+	"settings_option_appIcon_item_color": {
+		"message": "Rangi"
+	},
+	"settings_option_appIcon_item_dark": {
+		"message": "Giza"
+	},
+	"settings_option_appIcon_item_light": {
+		"message": "Mwanga"
+	},
+	"settings_option_cache": {
+		"message": "Hifadhi"
+	},
+	"settings_option_cache_clear": {
+		"message": "Ondoa hifadhi"
+	},
+	"settings_option_cache_clear_desc": {
+		"message": "Ondoa hifadhi ikiwa una masharti ya tafsiri au unahitaji kuondoa siri"
+	},
+	"settings_option_cache_enable": {
+		"message": "Wezesha hifadhi"
+	},
+	"settings_option_cache_enable_desc": {
+		"message": "Wakati hifadhi imeamilishwa, tafsiri ambazo zimefasiriwa mara moja zitapatikana mara moja, hata bila ya intaneti"
+	},
+	"settings_option_cache_ignoreCase": {
+		"message": "Sio makini na herufi kubwa/kidogo"
+	},
+	"settings_option_cache_ignoreCase_desc": {
+		"message": "Wakati umewezeshwa, tafsiri kutoka cache zitatumiwa kwa mechi zisizo sahihi, ambayo inaweza kusababisha masharti ya tafsiri"
+	},
+	"settings_option_commonSettings": {
+		"message": "Mipangilio ya Kawaida"
+	},
+	"settings_option_customTranslatorModule": {
+		"message": "Watafsiri wa Desturi"
+	},
+	"settings_option_customTranslatorModule_desc": {
+		"message": "Unaweza kuongeza watafsiri wa desturi kwa huduma yako pendwa ya tafsiri. Soma zaidi na utafute moduli katika <slot id=docs>hati za watafsiri wa desturi</slot>."
+	},
+	"settings_option_customTranslatorModule_manageButton": {
+		"message": "Simamia Watafsiri"
+	},
+	"settings_option_mainPreferences": {
+		"message": "Mipangilio Mkuu"
+	},
+	"settings_option_pageTranslation": {
+		"message": "Tafsiri ya Ukurasa"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent": {
+		"message": "Gundua lugha kwa maudhui"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent_desc": {
+		"message": "Analyze text on web page to detect page language. When disabled will use a language provided in page metadata"
+	},
+	"settings_option_pageTranslation_enableContextMenu": {
+		"message": "Wezesha kitufe cha Menyu ya Mazingira"
+	},
+	"settings_option_pageTranslation_enableContextMenu_desc": {
+		"message": "Ongeza kitufe cha kuwasha au kuzima tafsiri ya ukurasa kwenye menyu ya muktadha"
+	},
+	"settings_option_pageTranslation_ignoredTags": {
+		"message": "Vipengele vilivyopuuzwa"
+	},
+	"settings_option_pageTranslation_ignoredTags_desc": {
+		"message": "Ingiza majina ya <slot id=htmlElements>vipengele vya HTML</slot> ambavyo havisitahili kutafsiriwa. Vipengele vilivyofichwa ndivyo vivyo hivyo havitafsiriwi. Kipengele kimoja kila mstari."
+	},
+	"settings_option_pageTranslation_lazyTranslate": {
+		"message": "Tafsiri vipengele vinavyoonekana tu"
+	},
+	"settings_option_pageTranslation_lazyTranslate_desc": {
+		"message": "Wakati huu ukiwezeshwa, vipengele vinavyoonekana tu vitatafsiriwa. Hii inaweza kuwa muhimu kuhifadhi trafiki ya mtandao"
+	},
+	"settings_option_pageTranslation_originalTextPopup": {
+		"message": "Wezesha kidirisha cha maandishi asilia"
+	},
+	"settings_option_pageTranslation_originalTextPopup_desc": {
+		"message": "Onyesha kidirisha cha maandishi asilia kwa kubonyeza juu ya maandishi yaliyotafsiriwa"
+	},
+	"settings_option_pageTranslation_toggleTranslationHotkey": {
+		"message": "Vidirisha vya funguo za mkato"
+	},
+	"settings_option_pageTranslation_toggleTranslationHotkey_desc": {
+		"message": "Vidukizo vya kubadilisha tafsiri ya ukurasa\nBonyeza ESC ili kurudisha vitufe"
+	},
+	"settings_option_pageTranslation_translatableAttributes": {
+		"message": "Sifa zinazoweza kutafsiriwa."
+	},
+	"settings_option_pageTranslation_translatableAttributes_desc": {
+		"message": "Ingiza majina ya <slot id = htmlAttributes>sifa za HTML</slot> kwa ajili ya tafsiri. Sifa moja kwa kila mstari"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters": {
+		"message": "Onyesha takwimu za tafsiri"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters_desc": {
+		"message": "Onyesha takwimu kwa ajili ya tafsiri ya ukurasa"
+	},
+	"settings_option_selectTranslation": {
+		"message": "Tafsiri maandishi yaliyochaguliwa"
+	},
+	"settings_option_selectTranslation_detectedLangFirst": {
+		"message": "Takwimu ya lugha inayotambulika badala ya lugha ya ukurasa"
+	},
+	"settings_option_selectTranslation_detectedLangFirst_desc": {
+		"message": "Wakati unawezeshwa, lugha iliyotambuliwa ya maandishi yaliyochaguliwa itapewa kipaumbele kuliko lugha ya ukurasa"
+	},
+	"settings_option_selectTranslation_disableWhileTranslatePage": {
+		"message": "Zima wakati wa kutafsiri ukurasa"
+	},
+	"settings_option_selectTranslation_enable": {
+		"message": "Wezesha"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton": {
+		"message": "Auto-lenga kitufe cha tafsiri"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
+		"message": "Lenga kwenye kitufe cha tafsiri unapoonekana"
+	},
+	"settings_option_selectTranslation_header_languageChoice": {
+		"message": "Mipangilio ya lugha"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton_desc": {
+		"message": "Kuchelewa kwa mili sekunde kabla ya kuficha kitufe wakati kursor haipo juu yake. Kursori ukielekezwa kwenye kitufe itarejesha timer. Kukataa kuficha kiotomatiki, weka thamani ndogo kuliko 1"
+	},
+	"settings_option_selectTranslation_zIndex": {
+		"message": "z-index"
+	},
+	"settings_option_selectTranslation_zIndex_desc": {
+		"message": "Ongeza thamani ikiwa baadhi ya vitu kwenye baadhi ya kurasa zinapita juu ya dirisha ya kubuka yenye maandishi yaliyotafsiriwa"
+	},
+	"settings_option_textTranslator": {
+		"message": "Tafsiri ya maandishi"
+	},
+	"settings_option_textTranslator_rememberText": {
+		"message": "Kumbuka maandishi yaliyotafsiriwa"
+	},
+	"settings_option_textTranslator_rememberText_desc": {
+		"message": "Kumbuka maandishi yaliyotafsiriwa kwa mara inayofuata dirisha linapofunguliwa"
+	},
+	"settings_option_textTranslator_spellCheck": {
+		"message": "Wezesha ukaguzi wa sarufi"
+	},
+	"settings_option_textTranslator_suggestLanguage": {
+		"message": "Pendekeza lugha ya maandishi yaliyogunduliwa"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways": {
+		"message": "Daima kuchunguza na kupendekeza lugha"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways_desc": {
+		"message": "Ukiwa umefungwa, mapendekezo ya lugha yataonekana tu wakati lugha ya chanzo inagunduliwa kiotomatiki"
+	},
+	"settings_option_translatePreferences": {
+		"message": "Mapendeleo ya Tafsiri"
+	},
+	"settings_option_translateScheduler": {
+		"message": "Mpangilio wa Tafsiri"
+	},
+	"settings_option_translateScheduler_delay": {
+		"message": "Kuchelewa kwa Kukusanya Maandishi"
+	},
+	"settings_option_translateScheduler_delay_desc": {
+		"message": "Mpangilio wa tafsiri hupunguza idadi ya maombi kwenye huduma API za tafsiri. Mpangilio hufanya kazi ya kukusanya maandishi ili kuyatuma kama maandiko mengi iwezekanavyo kwa ombi moja. Mpangilio utasubiri wakati uliowekwa katika millisekunde kukusanya maandishi mapya kabla ya kuanza kutafsiri"
+	},
+	"settings_option_translateScheduler_retryLimit": {
+		"message": "Jaribu tena kwa Utafsiri"
+	},
+	"settings_option_translateScheduler_retryLimit_desc": {
+		"message": "Mpangilio utajaribu tena kutafsiri maandishi kwa makosa ya tafsiri. Chaguo hili linaweka kikomo cha jaribio la tena. Weka nambari hasi kuwezesha majaribio yasiyokuwa na kikomo"
+	},
+	"settings_option_translatorModule": {
+		"message": "Moduli ya Mtafsiri"
+	},
+	"settings_option_translatorModule_desc": {
+		"message": "Ubora wa tafsiri na lugha zinazopatikana kwa tafsiri hutegemea mkalimani."
+	},
+	"settings_option_tts": {
+		"message": "Maandishi kwenda sauti (TTS)"
+	},
+	"settings_option_ttsCustomModules": {
+		"message": "TTS ya Kibinafsi"
+	},
+	"settings_option_ttsCustomModules_button": {
+		"message": "Sima moduli za TTS"
+	},
+	"settings_option_ttsCustomModules_desc": {
+		"message": "Unaweza kuongeza moduli za TTS zinazotumia huduma na sauti yako unayopenda. Soma zaidi na upate moduli katika hati ya maandishi ya TTS ya desturi."
+	},
+	"settings_option_ttsModule": {
+		"message": "Moduli ya TTS"
+	},
+	"settings_option_ttsModule_desc": {
+		"message": "Moduli ya kuzungumza maandiko"
+	},
+	"settings_option_userLanguage": {
+		"message": "Lugha yako"
+	},
+	"settings_option_userLanguage_desc": {
+		"message": "Lugha inayolengwa kutafsiri maandishi"
+	},
+	"settings_pageTitle": {
+		"message": "Mipangilio"
+	},
+	"settings_section_popup": {
+		"message": "Kupambazuka"
+	},
+	"textTranslator_suggestLanguage": {
+		"message": "Inaonekana lugha hiyo ni"
+	},
+	"textTranslator_translateInputPlaceholder": {
+		"message": "Ingiza maandishi"
+	},
+	"textTranslator_translatePlaceholder": {
+		"message": "Maandishi yaliyotafsiriwa"
+	},
+	"translatorsManagerWindow_add": {
+		"message": "Ongeza"
+	},
+	"translatorsManagerWindow_close": {
+		"message": "Funga"
+	},
+	"translatorsManagerWindow_emptyTranslatorsListText": {
+		"message": "Watafsiri wa desturi hawajaongezwa bado"
+	},
+	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
+		"message": "Je! Una uhakika wa kuondoa mkalimani \"$translator_name$\"?",
+		"placeholders": {
+			"translator_name": {
+				"content": "$1",
+				"example": "Mkalimani wa Google"
+			}
+		}
+	},
+	"translatorsManagerWindow_title": {
+		"message": "Watafsiri wa desturi"
+	},
+	"translatorsManagerWindow_translator_delete": {
+		"message": "Futa"
+	},
+	"translatorsManagerWindow_translator_edit": {
+		"message": "Hariri"
+	},
+	"ttsManagerWindow_add": {
+		"message": "Ongeza"
+	},
+	"ttsManagerWindow_close": {
+		"message": "Funga"
+	},
+	"validation_number": {
+		"message": "Parameta lazima iwe nambari"
+	},
+	"validation_numberBetweenRange": {
+		"message": "Parameta lazima iwe nambari kati ya $1 na $2"
+	},
+	"validation_positiveNumber": {
+		"message": "Parameta lazima iwe nambari chanya."
+	},
+	"langCode_aa": {
+		"message": "Kiafar"
+	},
+	"langCode_ab": {
+		"message": "Kiabkhazi"
+	},
+	"langCode_ae": {
+		"message": "Ae"
+	},
+	"langCode_af": {
+		"message": "Kiafrikana"
+	},
+	"langCode_ak": {
+		"message": "Kiakani"
+	},
+	"langCode_am": {
+		"message": "Kiamhari"
+	},
+	"langCode_an": {
+		"message": "Kiaragoni"
+	},
+	"langCode_ar": {
+		"message": "Kiarabu"
+	},
+	"langCode_as": {
+		"message": "Kiassam"
+	},
+	"langCode_av": {
+		"message": "Kiavari"
+	},
+	"langCode_ay": {
+		"message": "Kiaymara"
+	},
+	"langCode_az": {
+		"message": "Kiazerbaijani"
+	},
+	"langCode_ba": {
+		"message": "Kibashkiri"
+	},
+	"langCode_be": {
+		"message": "Kibelarusi"
+	},
+	"langCode_bg": {
+		"message": "Kibulgaria"
+	},
+	"langCode_bh": {
+		"message": "Kibhojpuri"
+	},
+	"langCode_bi": {
+		"message": "Kibislama"
+	},
+	"langCode_bm": {
+		"message": "Kibambara"
+	},
+	"langCode_bn": {
+		"message": "Kibengali"
+	},
+	"langCode_bo": {
+		"message": "Kitibeti"
+	},
+	"langCode_br": {
+		"message": "Kibretoni"
+	},
+	"langCode_bs": {
+		"message": "Kibosnia"
+	},
+	"langCode_ca": {
+		"message": "Kikatalani"
+	},
+	"langCode_ce": {
+		"message": "Kichechenia"
+	},
+	"langCode_ch": {
+		"message": "Kichamorro"
+	},
+	"langCode_co": {
+		"message": "Kikosikani"
+	},
+	"langCode_cr": {
+		"message": "Cr"
+	},
+	"langCode_cs": {
+		"message": "Kicheki"
+	},
+	"langCode_cu": {
+		"message": "Kislovakia cha Kanisa"
+	},
+	"langCode_cv": {
+		"message": "Kichuvash"
+	},
+	"langCode_cy": {
+		"message": "Kiwelisi"
+	},
+	"langCode_da": {
+		"message": "Kidenmaki"
+	},
+	"langCode_de": {
+		"message": "Kijerumani"
+	},
+	"langCode_dv": {
+		"message": "Kidivehi"
+	},
+	"langCode_dz": {
+		"message": "Kizongkha"
+	},
+	"langCode_ee": {
+		"message": "Kiewe"
+	},
+	"langCode_el": {
+		"message": "Kigiriki"
+	},
+	"langCode_en": {
+		"message": "Kiingereza"
+	},
+	"langCode_eo": {
+		"message": "Kiesperanto"
+	},
+	"langCode_es": {
+		"message": "Kihispania"
+	},
+	"langCode_et": {
+		"message": "Kiestonia"
+	},
+	"langCode_eu": {
+		"message": "Kibaski"
+	},
+	"langCode_fa": {
+		"message": "Kiajemi"
+	},
+	"langCode_ff": {
+		"message": "Kifulani"
+	},
+	"langCode_fi": {
+		"message": "Kifini"
+	},
+	"langCode_fj": {
+		"message": "Kifiji"
+	},
+	"langCode_fo": {
+		"message": "Kifaroe"
+	},
+	"langCode_fr": {
+		"message": "Kifaransa"
+	},
+	"langCode_fy": {
+		"message": "Kifrisia cha Magharibi"
+	},
+	"langCode_ga": {
+		"message": "Kiayalandi"
+	},
+	"langCode_gd": {
+		"message": "Kigaeli cha Uskoti"
+	},
+	"langCode_gl": {
+		"message": "Kigalisi"
+	},
+	"langCode_gn": {
+		"message": "Kiguarani"
+	},
+	"langCode_gu": {
+		"message": "Kigujarati"
+	},
+	"langCode_gv": {
+		"message": "Kimanx"
+	},
+	"langCode_ha": {
+		"message": "Kihausa"
+	},
+	"langCode_he": {
+		"message": "Kiebrania"
+	},
+	"langCode_hi": {
+		"message": "Kihindi"
+	},
+	"langCode_ho": {
+		"message": "Ho"
+	},
+	"langCode_hr": {
+		"message": "Kikorasia"
+	},
+	"langCode_ht": {
+		"message": "Kihaiti"
+	},
+	"langCode_hu": {
+		"message": "Kihungaria"
+	},
+	"langCode_hy": {
+		"message": "Kiarmenia"
+	},
+	"langCode_hz": {
+		"message": "Kiherero"
+	},
+	"langCode_ia": {
+		"message": "Kiintalingua"
+	},
+	"langCode_id": {
+		"message": "Kiindonesia"
+	},
+	"langCode_ie": {
+		"message": "Lugha ya kisayansi"
+	},
+	"langCode_ig": {
+		"message": "Kiigbo"
+	},
+	"langCode_ii": {
+		"message": "Kiyi cha Sichuan"
+	},
+	"langCode_ik": {
+		"message": "Ik"
+	},
+	"langCode_io": {
+		"message": "Kiido"
+	},
+	"langCode_is": {
+		"message": "Kiisilandi"
+	},
+	"langCode_it": {
+		"message": "Kiitaliano"
+	},
+	"langCode_iu": {
+		"message": "Kiinuktituti"
+	},
+	"langCode_ja": {
+		"message": "Kijapani"
+	},
+	"langCode_jv": {
+		"message": "Kijava"
+	},
+	"langCode_ka": {
+		"message": "Kijojia"
+	},
+	"langCode_kg": {
+		"message": "Kikongo"
+	},
+	"langCode_ki": {
+		"message": "Kikikuyu"
+	},
+	"langCode_kj": {
+		"message": "Kikwanyama"
+	},
+	"langCode_kk": {
+		"message": "Kikazakh"
+	},
+	"langCode_kl": {
+		"message": "Kikalaallisut"
+	},
+	"langCode_km": {
+		"message": "Kikambodia"
+	},
+	"langCode_kn": {
+		"message": "Kikannada"
+	},
+	"langCode_ko": {
+		"message": "Kikorea"
+	},
+	"langCode_kr": {
+		"message": "Kikanuri"
+	},
+	"langCode_ks": {
+		"message": "Kikashmiri"
+	},
+	"langCode_ku": {
+		"message": "Kikurdi"
+	},
+	"langCode_kv": {
+		"message": "Kikomi"
+	},
+	"langCode_kw": {
+		"message": "Kikorni"
+	},
+	"langCode_ky": {
+		"message": "Kikyrgyz"
+	},
+	"langCode_la": {
+		"message": "Kilatini"
+	},
+	"langCode_lb": {
+		"message": "Kilasembagi"
+	},
+	"langCode_lg": {
+		"message": "Kiganda"
+	},
+	"langCode_li": {
+		"message": "Limburgish"
+	},
+	"langCode_ln": {
+		"message": "Kilingala"
+	},
+	"langCode_lo": {
+		"message": "Kilaosi"
+	},
+	"langCode_lt": {
+		"message": "Kilithuania"
+	},
+	"langCode_lu": {
+		"message": "Kiluba-Katanga"
+	},
+	"langCode_lv": {
+		"message": "Kilatvia"
+	},
+	"langCode_mg": {
+		"message": "Kimalagasi"
+	},
+	"langCode_mh": {
+		"message": "Kimashale"
+	},
+	"langCode_mi": {
+		"message": "Kimaori"
+	},
+	"langCode_mk": {
+		"message": "Kimacedonia"
+	},
+	"langCode_ml": {
+		"message": "Kimalayalamu"
+	},
+	"langCode_mn": {
+		"message": "Kimongolia"
+	},
+	"langCode_mr": {
+		"message": "Kimarathi"
+	},
+	"langCode_ms": {
+		"message": "Kimalei"
+	},
+	"langCode_mt": {
+		"message": "Kimalta"
+	},
+	"langCode_my": {
+		"message": "Kiburma"
+	},
+	"langCode_na": {
+		"message": "Kinauru"
+	},
+	"langCode_nb": {
+		"message": "Kinorwe cha Bokmal"
+	},
+	"langCode_nd": {
+		"message": "Kindebele cha Kaskazini"
+	},
+	"langCode_ne": {
+		"message": "Kinepali"
+	},
+	"langCode_ng": {
+		"message": "Kindonga"
+	},
+	"langCode_nl": {
+		"message": "Kiholanzi"
+	},
+	"langCode_nn": {
+		"message": "Kinorwe cha Nynorsk"
+	},
+	"langCode_no": {
+		"message": "Kinorwe"
+	},
+	"langCode_nr": {
+		"message": "Kindebele"
+	},
+	"langCode_nv": {
+		"message": "Kinavajo"
+	},
+	"langCode_ny": {
+		"message": "Kinyanja"
+	},
+	"langCode_oc": {
+		"message": "Kiokitani"
+	},
+	"langCode_oj": {
+		"message": "Oj"
+	},
+	"langCode_om": {
+		"message": "Kioromo"
+	},
+	"langCode_or": {
+		"message": "Kioriya"
+	},
+	"langCode_os": {
+		"message": "Kiosetia"
+	},
+	"langCode_pa": {
+		"message": "Kipunjabi"
+	},
+	"langCode_pi": {
+		"message": "Pi"
+	},
+	"langCode_pl": {
+		"message": "Kipolandi"
+	},
+	"langCode_ps": {
+		"message": "Kipashto"
+	},
+	"langCode_pt": {
+		"message": "Kireno"
+	},
+	"langCode_qu": {
+		"message": "Kikechua"
+	},
+	"langCode_rm": {
+		"message": "Kiromanshi"
+	},
+	"langCode_rn": {
+		"message": "Kirundi"
+	},
+	"langCode_ro": {
+		"message": "Kiromania"
+	},
+	"langCode_ru": {
+		"message": "Kirusi"
+	},
+	"langCode_rw": {
+		"message": "Kinyarwanda"
+	},
+	"langCode_sa": {
+		"message": "Kisanskriti"
+	},
+	"langCode_sc": {
+		"message": "Kisardinia"
+	},
+	"langCode_sd": {
+		"message": "Kisindhi"
+	},
+	"langCode_se": {
+		"message": "Kisami cha Kaskazini"
+	},
+	"langCode_sg": {
+		"message": "Kisango"
+	},
+	"langCode_si": {
+		"message": "Kisinhala"
+	},
+	"langCode_sk": {
+		"message": "Kislovakia"
+	},
+	"langCode_sl": {
+		"message": "Kislovenia"
+	},
+	"langCode_sm": {
+		"message": "Kisamoa"
+	},
+	"langCode_sn": {
+		"message": "Kishona"
+	},
+	"langCode_so": {
+		"message": "Kisomali"
+	},
+	"langCode_sq": {
+		"message": "Kialbania"
+	},
+	"langCode_sr": {
+		"message": "Kiserbia"
+	},
+	"langCode_ss": {
+		"message": "Kiswati"
+	},
+	"langCode_st": {
+		"message": "Kisotho"
+	},
+	"langCode_su": {
+		"message": "Kisunda"
+	},
+	"langCode_sv": {
+		"message": "Kiswidi"
+	},
+	"langCode_sw": {
+		"message": "Kiswahili"
+	},
+	"langCode_ta": {
+		"message": "Kitamili"
+	},
+	"langCode_te": {
+		"message": "Kitelugu"
+	},
+	"langCode_tg": {
+		"message": "Kitajiki"
+	},
+	"langCode_th": {
+		"message": "Kithai"
+	},
+	"langCode_ti": {
+		"message": "Kitigrinya"
+	},
+	"langCode_tk": {
+		"message": "Kiturukimeni"
+	},
+	"langCode_tl": {
+		"message": "Kifilipino"
+	},
+	"langCode_tn": {
+		"message": "Kitswana"
+	},
+	"langCode_to": {
+		"message": "Kitonga"
+	},
+	"langCode_tr": {
+		"message": "Kituruki"
+	},
+	"langCode_ts": {
+		"message": "Kitsonga"
+	},
+	"langCode_tt": {
+		"message": "Kitatari"
+	},
+	"langCode_tw": {
+		"message": "Kiakani"
+	},
+	"langCode_ty": {
+		"message": "Kitahiti"
+	},
+	"langCode_ug": {
+		"message": "Kiuyghur"
+	},
+	"langCode_uk": {
+		"message": "Kiukraini"
+	},
+	"langCode_ur": {
+		"message": "Kiurdu"
+	},
+	"langCode_uz": {
+		"message": "Kiuzbeki"
+	},
+	"langCode_ve": {
+		"message": "Kivenda"
+	},
+	"langCode_vi": {
+		"message": "Kivietinamu"
+	},
+	"langCode_vo": {
+		"message": "Kivolapuk"
+	},
+	"langCode_wa": {
+		"message": "Kiwaloon"
+	},
+	"langCode_wo": {
+		"message": "Kiwolofu"
+	},
+	"langCode_xh": {
+		"message": "Kixhosa"
+	},
+	"langCode_yi": {
+		"message": "Kiyiddi"
+	},
+	"langCode_yo": {
+		"message": "Kiyoruba"
+	},
+	"langCode_za": {
+		"message": "Za"
+	},
+	"langCode_zh": {
+		"message": "Kichina"
+	},
+	"langCode_zu": {
+		"message": "Kizulu"
+	}
+}

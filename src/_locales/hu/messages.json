@@ -1,0 +1,1130 @@
+{
+	"common_action_addToDictionary": {
+		"message": "Fordítás hozzáadása a szótárhoz"
+	},
+	"common_action_removeFromDictionary": {
+		"message": "Fordítás eltávolítása a szótárból"
+	},
+	"common_bgUnavailable": {
+		"message": "A háttérprogram nem elérhető"
+	},
+	"common_cancel": {
+		"message": "Mégse"
+	},
+	"common_close": {
+		"message": "Bezárás"
+	},
+	"common_copy": {
+		"message": "Másolás"
+	},
+	"common_error": {
+		"message": "Hiba"
+	},
+	"common_offlineTranslator": {
+		"message": "$1 - Offline fordító"
+	},
+	"common_retry": {
+		"message": "Újra"
+	},
+	"common_translate": {
+		"message": "Fordítás"
+	},
+	"component_hotkey_placeholder": {
+		"message": "Kattintson a billentyűkombináció rögzítéséhez"
+	},
+	"component_hotkey_recordPlaceholder": {
+		"message": "Nyomja meg a billentyűket"
+	},
+	"component_hotkey_resetButton": {
+		"message": "Visszaállítás"
+	},
+	"contextMenu_disablePageTranslation": {
+		"message": "Oldal fordításának letiltása"
+	},
+	"contextMenu_translatePage": {
+		"message": "Oldal fordítása"
+	},
+	"contextMenu_translateSelectedText": {
+		"message": "Kijelölt szöveg fordítása"
+	},
+	"dictionaryButton_add": {
+		"message": "Hozzáadás a szótárhoz"
+	},
+	"dictionaryButton_delete": {
+		"message": "Törlés a szótárból"
+	},
+	"dictionary_button_export": {
+		"message": "Exportálás"
+	},
+	"dictionary_button_removeAll": {
+		"message": "Minden eltávolítása"
+	},
+	"dictionary_deleteAll": {
+		"message": "Biztos benne, hogy törölni szeretné az összes fordítást a szótárból?"
+	},
+	"dictionary_deleteConfirmation": {
+		"message": "Biztos benne, hogy törölni szeretné ezt a fordítást?"
+	},
+	"dictionary_description": {
+		"message": "Tartsa meg fordításait a szótárban, hogy később könnyebben megtalálja őket"
+	},
+	"dictionary_emptyDictionary": {
+		"message": "A szótár üres. Kezdje el feltölteni, amikor fordít egy szöveget"
+	},
+	"dictionary_filter_from": {
+		"message": "Miből"
+	},
+	"dictionary_filter_to": {
+		"message": "Mire"
+	},
+	"dictionary_message_deleteAll_success": {
+		"message": "Az összes fordítás eltávolításra került"
+	},
+	"dictionary_notFoundEntries": {
+		"message": "Ezen szűrőknek megfelelő fordítások nem találhatók"
+	},
+	"dictionary_pageTitle": {
+		"message": "Szótár"
+	},
+	"dictionary_resetFilters": {
+		"message": "szűrők visszaállítása"
+	},
+	"dictionary_searchPlaceholder": {
+		"message": "Szöveg szerinti keresés"
+	},
+	"editorWindow_close": {
+		"message": "Bezárás"
+	},
+	"editorWindow_data_code": {
+		"message": "Kód"
+	},
+	"editorWindow_data_name": {
+		"message": "Név"
+	},
+	"editorWindow_message_invalidName": {
+		"message": "A név legalább egy szimbólumot tartalmaznia kell"
+	},
+	"editorWindow_save": {
+		"message": "Mentés"
+	},
+	"ext_description": {
+		"message": "Szövegfordítás az oldal újratöltése nélkül"
+	},
+	"ext_name": {
+		"message": "Lingvista - weboldal fordító"
+	},
+	"history_control_selectEntry": {
+		"message": "Elem kiválasztása"
+	},
+	"history_controls_clearHistory": {
+		"message": "Előzmények törlése"
+	},
+	"history_controls_deleteSelected": {
+		"message": "Kijelölt elemek törlése"
+	},
+	"history_controls_selectAll": {
+		"message": "Minden fordítás kijelölése"
+	},
+	"history_message_clearHistoryConfirmation": {
+		"message": "Biztosan törli a teljes előzményeket? Az összes bejegyzés törlődni fog."
+	},
+	"history_message_deleteEntryConfirmation": {
+		"message": "Biztosan törli ezt az elemet?"
+	},
+	"history_message_deleteSelectedEntriesConfirmation": {
+		"message": "Biztosan törli a kijelölt elemeket ($1)?"
+	},
+	"history_message_emptyEntries": {
+		"message": "Az előzmények törölve"
+	},
+	"history_message_entriesNotFound": {
+		"message": "Nem található fordítás a szűrésnek megfelelően"
+	},
+	"history_pageTitle": {
+		"message": "Előzmények"
+	},
+	"history_searchPlaceholder": {
+		"message": "Szöveg szerinti keresés"
+	},
+	"inlineTranslator_showOriginalText": {
+		"message": "Eredeti szöveg megjelenítése"
+	},
+	"lang_change": {
+		"message": "Nyelv változtatása"
+	},
+	"lang_detect": {
+		"message": "Automatikus észlelés"
+	},
+	"lang_select": {
+		"message": "Nyelv kiválasztása"
+	},
+	"lang_swap": {
+		"message": "Nyelvek cseréje"
+	},
+	"message_askResetConfig": {
+		"message": "Beállítások visszaállítása?"
+	},
+	"message_cacheFlushed": {
+		"message": "A gyorsítótár törölve lett"
+	},
+	"message_changesSaved": {
+		"message": "Változások mentve"
+	},
+	"message_error": {
+		"message": "Hiba"
+	},
+	"message_errorOfTranslate": {
+		"message": "Fordítási hiba"
+	},
+	"message_serviceRequiredKey": {
+		"message": "A szolgáltatás kulcsot igényel"
+	},
+	"message_translateOfText": {
+		"message": "Lefordítva"
+	},
+	"message_unknownError": {
+		"message": "Ismeretlen hiba"
+	},
+	"pageTranslator_alwaysTranslateLang": {
+		"message": "Mindenkor fordítsa le ezt a nyelvet"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disable": {
+		"message": "Letiltás"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
+		"message": "Letiltás az összes weboldalon"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_enable": {
+		"message": "Engedélyezés"
+	},
+	"pageTranslator_commonPreferences_title": {
+		"message": "Általános beállítások ehhez a nyelvhez"
+	},
+	"pageTranslator_option_autoTranslate": {
+		"message": "Automatikus fordítás"
+	},
+	"pageTranslator_showOptions": {
+		"message": "Beállítások megjelenítése"
+	},
+	"pageTranslator_showOriginal": {
+		"message": "Eredeti megjelenítése"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_always": {
+		"message": "Mindig fordítson"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
+		"message": "Mindig fordítsa le erre a nyelvre"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_default": {
+		"message": "Általános szabályok használata"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
+		"message": "Általános szabályok használata erre a nyelvre"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_never": {
+		"message": "Soha ne fordítson"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
+		"message": "Soha ne fordítsa le erre a nyelvre"
+	},
+	"pageTranslator_sitePreferences_title": {
+		"message": "Beállítások"
+	},
+	"pageTranslator_translatePage": {
+		"message": "Oldal lefordítása"
+	},
+	"pageTranslator_translationReport": {
+		"message": "Fordítási jelentés"
+	},
+	"pageTranslator_translationReport_queue": {
+		"message": "Várakozó"
+	},
+	"pageTranslator_translationReport_reject": {
+		"message": "Hibák"
+	},
+	"pageTranslator_translationReport_resolve": {
+		"message": "Lefordítva"
+	},
+	"popup_tabIdNotFound": {
+		"message": "A(z) \"$1\" fül nem található"
+	},
+	"popup_tab_translatePage": {
+		"message": "Oldal lefordítása"
+	},
+	"popup_tab_translateText": {
+		"message": "Szöveg lefordítása"
+	},
+	"settings_button_cancel": {
+		"message": "Mégse"
+	},
+	"settings_button_export": {
+		"message": "Konfiguráció exportálása"
+	},
+	"settings_button_import": {
+		"message": "Konfiguráció importálása"
+	},
+	"settings_button_reset": {
+		"message": "Konfiguráció visszaállítása"
+	},
+	"settings_button_saveChanges": {
+		"message": "Változások mentése"
+	},
+	"settings_message_clearCache_success": {
+		"message": "A gyorsítótár törölve."
+	},
+	"settings_message_common_invalidValueType": {
+		"message": "Érvénytelen érték."
+	},
+	"settings_message_importConfig_invalidFile": {
+		"message": "A fájlt nem lehet importálni."
+	},
+	"settings_message_importConfig_success": {
+		"message": "Az importálás kész."
+	},
+	"settings_message_resetConfig_confirm": {
+		"message": "Biztosan vissza akarod állítani a beállításokat?"
+	},
+	"settings_message_resetConfig_success": {
+		"message": "A beállítások visszaállítva."
+	},
+	"settings_message_saveChanges_success": {
+		"message": "Módosítások mentve."
+	},
+	"settings_option_appIcon": {
+		"message": "Bővítmény ikon"
+	},
+	"settings_option_appIcon_desc": {
+		"message": "Ha a dinamikus ikont választja, a színek a böngésző téma szerint lesznek adaptálva."
+	},
+	"settings_option_appIcon_item_auto": {
+		"message": "Dinamikus"
+	},
+	"settings_option_appIcon_item_color": {
+		"message": "Szín"
+	},
+	"settings_option_appIcon_item_dark": {
+		"message": "Sötét"
+	},
+	"settings_option_appIcon_item_light": {
+		"message": "Világos"
+	},
+	"settings_option_cache": {
+		"message": "Gyorsítótár"
+	},
+	"settings_option_cache_clear": {
+		"message": "Gyorsítótár törlése"
+	},
+	"settings_option_cache_clear_desc": {
+		"message": "A gyorsítótár eltávolítása, ha fordítási artefaktusok vannak, vagy titkokat kell eltávolítani."
+	},
+	"settings_option_cache_enable": {
+		"message": "Gyorsítótár engedélyezése"
+	},
+	"settings_option_cache_enable_desc": {
+		"message": "Amikor a gyorsítótár engedélyezve van, a már egyszer lefordított szövegek azonnal elérhetővé válnak, még internetkapcsolat nélkül is."
+	},
+	"settings_option_cache_ignoreCase": {
+		"message": "Nem tesz különbséget a kis- és nagybetűk között"
+	},
+	"settings_option_cache_ignoreCase_desc": {
+		"message": "Ha engedélyezve van, akkor a gyorsítótárból származó fordításokat nem pontos egyezésekkel használjuk, ami fordítási artefaktusokhoz vezethet."
+	},
+	"settings_option_commonSettings": {
+		"message": "Általános beállítások"
+	},
+	"settings_option_customTranslatorModule": {
+		"message": "Egyéni fordítók"
+	},
+	"settings_option_customTranslatorModule_desc": {
+		"message": "Hozzáadhat egyéni fordítókat kedvenc fordítási szolgáltatásaihoz. Olvassa el a <slot id=docs>egyéni fordítók dokumentációját</slot>, és keressen modulokat."
+	},
+	"settings_option_customTranslatorModule_manageButton": {
+		"message": "Fordítók kezelése"
+	},
+	"settings_option_mainPreferences": {
+		"message": "Főbeállítások"
+	},
+	"settings_option_pageTranslation": {
+		"message": "Oldal fordítása"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent": {
+		"message": "Nyelv automatikus felismerése"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent_desc": {
+		"message": "Elemzi a weboldalon található szöveget, hogy azonosítsa az oldal nyelvét. Ha letiltva van, akkor az oldal metaadatainak nyelve lesz használva."
+	},
+	"settings_option_pageTranslation_enableContextMenu": {
+		"message": "A kontextusmenü gomb engedélyezése"
+	},
+	"settings_option_pageTranslation_enableContextMenu_desc": {
+		"message": "Gomb hozzáadása a lap fordításának kapcsolásához egy kontextusmenüben."
+	},
+	"settings_option_pageTranslation_ignoredTags": {
+		"message": "Figyelmen kívül hagyott elemek"
+	},
+	"settings_option_pageTranslation_ignoredTags_desc": {
+		"message": "<slot id=htmlElements>HTML elem</slot> nevek megadása, melyeket nem szabad lefordítani. A beágyazott elemeket se fogjuk lefordítani. Egy elem soronként."
+	},
+	"settings_option_pageTranslation_lazyTranslate": {
+		"message": "Csak a látható elemek fordítása"
+	},
+	"settings_option_pageTranslation_lazyTranslate_desc": {
+		"message": "Ha engedélyezve van ez az opció, csak a látható elemek lesznek lefordítva. Ez hasznos lehet a hálózati forgalom megtakarításához."
+	},
+	"settings_option_pageTranslation_originalTextPopup": {
+		"message": "Felugró ablak engedélyezése az eredeti szöveggel"
+	},
+	"settings_option_pageTranslation_originalTextPopup_desc": {
+		"message": "Az eredeti szöveget felugró ablakként jeleníti meg, ha a fordított szövegen az egérrel állunk"
+	},
+	"settings_option_pageTranslation_toggleTranslationHotkey": {
+		"message": "Gyorsbillentyűk"
+	},
+	"settings_option_pageTranslation_toggleTranslationHotkey_desc": {
+		"message": "Parancsikont nyomva oldal fordítása ki/be kapcsolása\nNyomja meg az ESC billentyűt a gombok alapértelmezett beállításainak visszaállításához"
+	},
+	"settings_option_pageTranslation_translatableAttributes": {
+		"message": "Fordítható attribútumok."
+	},
+	"settings_option_pageTranslation_translatableAttributes_desc": {
+		"message": "<slot id = htmlAttributes>HTML-attribútum</slot> nevek megadása fordításhoz. Egy attribútum soronként."
+	},
+	"settings_option_popupTab_pageTranslator_showCounters": {
+		"message": "Statisztikák megjelenítése a fordításokhoz"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters_desc": {
+		"message": "Oldalak fordításának statisztikáinak megjelenítése"
+	},
+	"settings_option_selectTranslation": {
+		"message": "Kijelölt szöveg fordítása"
+	},
+	"settings_option_selectTranslation_detectedLangFirst": {
+		"message": "Azonosított nyelv használata a kijelölt szövegnél az oldal nyelve helyett"
+	},
+	"settings_option_selectTranslation_detectedLangFirst_desc": {
+		"message": "Ha engedélyezett, akkor azonosított nyelvet fogja preferálni a kijelölt szövegnél az oldal nyelve helyett"
+	},
+	"settings_option_selectTranslation_disableWhileTranslatePage": {
+		"message": "Letiltás az oldalak fordítása közben"
+	},
+	"settings_option_selectTranslation_enable": {
+		"message": "Engedélyezés"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton": {
+		"message": "Automatikus fókusz az fordítás gombra"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
+		"message": "Fókuszáljon a fordítás gombra, amikor megjelenik"
+	},
+	"settings_option_selectTranslation_header_languageChoice": {
+		"message": "Nyelvi beállítások"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton_desc": {
+		"message": "Késleltetés milliszekundumban a gomb elrejtése előtt, amikor az egér nem áll rajta. Az egérrel való rámutatás visszaállítja az időzítőt. Az automatikus elrejtés letiltásához állítsa az értéket 1-nél kisebbre"
+	},
+	"settings_option_selectTranslation_zIndex": {
+		"message": "z-index"
+	},
+	"settings_option_selectTranslation_zIndex_desc": {
+		"message": "Növelje az értéket, ha egyes elemek néhány oldalon átfedik a lefordított szöveget tartalmazó felugró ablakot"
+	},
+	"settings_option_textTranslator": {
+		"message": "Szöveg fordítása"
+	},
+	"settings_option_textTranslator_rememberText": {
+		"message": "Emlékezzen a lefordított szövegre"
+	},
+	"settings_option_textTranslator_rememberText_desc": {
+		"message": "Emlékezze meg a lefordított szöveget a következő alkalommal, amikor az ablakot megnyitja"
+	},
+	"settings_option_textTranslator_spellCheck": {
+		"message": "Helyesírás-ellenőrzés engedélyezése"
+	},
+	"settings_option_textTranslator_suggestLanguage": {
+		"message": "Javasolja a megállapított szöveg nyelvét"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways": {
+		"message": "Mindig észlelje és javasolja a nyelvet"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways_desc": {
+		"message": "Ha letiltva van, akkor a nyelvjavaslatok csak akkor jelennek meg, ha az forrásnyelv automatikusan felismerésre kerül"
+	},
+	"settings_option_translatePreferences": {
+		"message": "Fordítási előnyök"
+	},
+	"settings_option_translateScheduler": {
+		"message": "Fordítási ütemező"
+	},
+	"settings_option_translateScheduler_delay": {
+		"message": "Szöveg gyűjtési késleltetés"
+	},
+	"settings_option_translateScheduler_delay_desc": {
+		"message": "A fordítási ütemező csökkenti a fordítási szolgáltatás API-jának kéréseinek számát. Az ütemező igyekszik összegyűjteni a szövegeket, hogy egyetlen kérésben lehetőleg minél több szöveget küldjön el. Az ütemező megvárja a megadott időt milliszekundumokban, hogy új szövegeket gyűjtsön be, mielőtt elkezdené a fordítást."
+	},
+	"settings_option_translateScheduler_retryLimit": {
+		"message": "Fordítási újrapróbálkozások"
+	},
+	"settings_option_translateScheduler_retryLimit_desc": {
+		"message": "Az ütemező újra fogja próbálni a fordítást a fordítási hibák miatt. Ezzel az opcióval korlátozható az újrapróbálkozások száma. Állítsa be a negatív számot, ha korlátlan újrapróbálkozás engedélyezett."
+	},
+	"settings_option_translatorModule": {
+		"message": "Fordító modul"
+	},
+	"settings_option_translatorModule_desc": {
+		"message": "A fordítások minősége és a rendelkezésre álló fordítási nyelvek a fordítótól függnek."
+	},
+	"settings_option_tts": {
+		"message": "Szöveg hangra (TTS)"
+	},
+	"settings_option_ttsCustomModules": {
+		"message": "Egyedi TTS"
+	},
+	"settings_option_ttsCustomModules_button": {
+		"message": "Kezelje a TTS modulokat"
+	},
+	"settings_option_ttsCustomModules_desc": {
+		"message": "Hozzáadhat TTS modulokat, amelyek kedvenc szolgáltatásait és hangjait használják. Olvassa el többet és találjon modulokat a testreszabott TTS dokumentációban."
+	},
+	"settings_option_ttsModule": {
+		"message": "TTS modul"
+	},
+	"settings_option_ttsModule_desc": {
+		"message": "Modul a szövegek beszédre alakításához"
+	},
+	"settings_option_userLanguage": {
+		"message": "Az Ön nyelve"
+	},
+	"settings_option_userLanguage_desc": {
+		"message": "Cél nyelv a szövegek fordításához"
+	},
+	"settings_pageTitle": {
+		"message": "Beállítások"
+	},
+	"settings_section_popup": {
+		"message": "Felugró ablak"
+	},
+	"textTranslator_suggestLanguage": {
+		"message": "Úgy tűnik, hogy az adott nyelv"
+	},
+	"textTranslator_translateInputPlaceholder": {
+		"message": "Bemeneti szöveg"
+	},
+	"textTranslator_translatePlaceholder": {
+		"message": "Lefordított szöveg"
+	},
+	"translatorsManagerWindow_add": {
+		"message": "Hozzáadás"
+	},
+	"translatorsManagerWindow_close": {
+		"message": "Bezárás"
+	},
+	"translatorsManagerWindow_emptyTranslatorsListText": {
+		"message": "Egyéni fordítók még nincsenek hozzáadva"
+	},
+	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
+		"message": "Biztosan eltávolítani a(z) \"$translator_name$\" fordítót?",
+		"placeholders": {
+			"translator_name": {
+				"content": "$1",
+				"example": "Google fordító"
+			}
+		}
+	},
+	"translatorsManagerWindow_title": {
+		"message": "Egyéni fordítók"
+	},
+	"translatorsManagerWindow_translator_delete": {
+		"message": "Törlés"
+	},
+	"translatorsManagerWindow_translator_edit": {
+		"message": "Szerkesztés"
+	},
+	"ttsManagerWindow_add": {
+		"message": "Hozzáadás"
+	},
+	"ttsManagerWindow_close": {
+		"message": "Bezárás"
+	},
+	"ttsManagerWindow_emptyTranslatorsListText": {
+		"message": "A TTS modulok még nincsenek hozzáadva"
+	},
+	"ttsManagerWindow_message_ttsRemoveConfirmation": {
+		"message": "Biztosan eltávolítja a(z) \"$tts_name$\" TTS-t?",
+		"placeholders": {
+			"tts_name": {
+				"content": "$1",
+				"example": "Google TTS"
+			}
+		}
+	},
+	"ttsManagerWindow_title": {
+		"message": "Szöveg hangra konvertáló modulok"
+	},
+	"ttsManagerWindow_translator_delete": {
+		"message": "Törlés"
+	},
+	"ttsManagerWindow_translator_edit": {
+		"message": "Szerkesztés"
+	},
+	"validation_number": {
+		"message": "A paraméter egy szám kell legyen"
+	},
+	"validation_numberBetweenRange": {
+		"message": "A paraméternek $1 és $2 közötti számnak kell lennie"
+	},
+	"validation_positiveNumber": {
+		"message": "A paraméternek pozitív számnak kell lennie."
+	},
+	"langCode_aa": {
+		"message": "Afar"
+	},
+	"langCode_ab": {
+		"message": "Abház"
+	},
+	"langCode_ae": {
+		"message": "Avesztán"
+	},
+	"langCode_af": {
+		"message": "Afrikaans"
+	},
+	"langCode_ak": {
+		"message": "Akan"
+	},
+	"langCode_am": {
+		"message": "Amhara"
+	},
+	"langCode_an": {
+		"message": "Aragonéz"
+	},
+	"langCode_ar": {
+		"message": "Arab"
+	},
+	"langCode_as": {
+		"message": "Asszámi"
+	},
+	"langCode_av": {
+		"message": "Avar"
+	},
+	"langCode_ay": {
+		"message": "Ajmara"
+	},
+	"langCode_az": {
+		"message": "Azerbajdzsáni"
+	},
+	"langCode_ba": {
+		"message": "Baskír"
+	},
+	"langCode_be": {
+		"message": "Belarusz"
+	},
+	"langCode_bg": {
+		"message": "Bolgár"
+	},
+	"langCode_bh": {
+		"message": "Bodzspuri"
+	},
+	"langCode_bi": {
+		"message": "Bislama"
+	},
+	"langCode_bm": {
+		"message": "Bambara"
+	},
+	"langCode_bn": {
+		"message": "Bangla"
+	},
+	"langCode_bo": {
+		"message": "Tibeti"
+	},
+	"langCode_br": {
+		"message": "Breton"
+	},
+	"langCode_bs": {
+		"message": "Bosnyák"
+	},
+	"langCode_ca": {
+		"message": "Katalán"
+	},
+	"langCode_ce": {
+		"message": "Csecsen"
+	},
+	"langCode_ch": {
+		"message": "Csamoró"
+	},
+	"langCode_co": {
+		"message": "Korzikai"
+	},
+	"langCode_cr": {
+		"message": "Krí"
+	},
+	"langCode_cs": {
+		"message": "Cseh"
+	},
+	"langCode_cu": {
+		"message": "Egyházi szláv"
+	},
+	"langCode_cv": {
+		"message": "Csuvas"
+	},
+	"langCode_cy": {
+		"message": "Walesi"
+	},
+	"langCode_da": {
+		"message": "Dán"
+	},
+	"langCode_de": {
+		"message": "Német"
+	},
+	"langCode_dv": {
+		"message": "Divehi"
+	},
+	"langCode_dz": {
+		"message": "Dzsonga"
+	},
+	"langCode_ee": {
+		"message": "Eve"
+	},
+	"langCode_el": {
+		"message": "Görög"
+	},
+	"langCode_en": {
+		"message": "Angol"
+	},
+	"langCode_eo": {
+		"message": "Eszperantó"
+	},
+	"langCode_es": {
+		"message": "Spanyol"
+	},
+	"langCode_et": {
+		"message": "Észt"
+	},
+	"langCode_eu": {
+		"message": "Baszk"
+	},
+	"langCode_fa": {
+		"message": "Perzsa"
+	},
+	"langCode_ff": {
+		"message": "Fulani"
+	},
+	"langCode_fi": {
+		"message": "Finn"
+	},
+	"langCode_fj": {
+		"message": "Fidzsi"
+	},
+	"langCode_fo": {
+		"message": "Feröeri"
+	},
+	"langCode_fr": {
+		"message": "Francia"
+	},
+	"langCode_fy": {
+		"message": "Nyugati fríz"
+	},
+	"langCode_ga": {
+		"message": "Ír"
+	},
+	"langCode_gd": {
+		"message": "Skóciai kelta"
+	},
+	"langCode_gl": {
+		"message": "Gallego"
+	},
+	"langCode_gn": {
+		"message": "Guarani"
+	},
+	"langCode_gu": {
+		"message": "Gudzsaráti"
+	},
+	"langCode_gv": {
+		"message": "Man-szigeti"
+	},
+	"langCode_ha": {
+		"message": "Hausza"
+	},
+	"langCode_he": {
+		"message": "Héber"
+	},
+	"langCode_hi": {
+		"message": "Hindi"
+	},
+	"langCode_ho": {
+		"message": "Hiri motu"
+	},
+	"langCode_hr": {
+		"message": "Horvát"
+	},
+	"langCode_ht": {
+		"message": "Haiti kreol"
+	},
+	"langCode_hu": {
+		"message": "Magyar"
+	},
+	"langCode_hy": {
+		"message": "Örmény"
+	},
+	"langCode_hz": {
+		"message": "Herero"
+	},
+	"langCode_ia": {
+		"message": "Interlingva"
+	},
+	"langCode_id": {
+		"message": "Indonéz"
+	},
+	"langCode_ie": {
+		"message": "Interlingue"
+	},
+	"langCode_ig": {
+		"message": "Igbó"
+	},
+	"langCode_ii": {
+		"message": "Szecsuán ji"
+	},
+	"langCode_ik": {
+		"message": "Inupiak"
+	},
+	"langCode_io": {
+		"message": "Idó"
+	},
+	"langCode_is": {
+		"message": "Izlandi"
+	},
+	"langCode_it": {
+		"message": "Olasz"
+	},
+	"langCode_iu": {
+		"message": "Inuktitut"
+	},
+	"langCode_ja": {
+		"message": "Japán"
+	},
+	"langCode_jv": {
+		"message": "Jávai"
+	},
+	"langCode_ka": {
+		"message": "Grúz"
+	},
+	"langCode_kg": {
+		"message": "Kongo"
+	},
+	"langCode_ki": {
+		"message": "Kikuju"
+	},
+	"langCode_kj": {
+		"message": "Kuanyama"
+	},
+	"langCode_kk": {
+		"message": "Kazah"
+	},
+	"langCode_kl": {
+		"message": "Grönlandi"
+	},
+	"langCode_km": {
+		"message": "Khmer"
+	},
+	"langCode_kn": {
+		"message": "Kannada"
+	},
+	"langCode_ko": {
+		"message": "Koreai"
+	},
+	"langCode_kr": {
+		"message": "Kanuri"
+	},
+	"langCode_ks": {
+		"message": "Kasmíri"
+	},
+	"langCode_ku": {
+		"message": "Kurd"
+	},
+	"langCode_kv": {
+		"message": "Komi"
+	},
+	"langCode_kw": {
+		"message": "Korni"
+	},
+	"langCode_ky": {
+		"message": "Kirgiz"
+	},
+	"langCode_la": {
+		"message": "Latin"
+	},
+	"langCode_lb": {
+		"message": "Luxemburgi"
+	},
+	"langCode_lg": {
+		"message": "Ganda"
+	},
+	"langCode_li": {
+		"message": "Limburgi"
+	},
+	"langCode_ln": {
+		"message": "Lingala"
+	},
+	"langCode_lo": {
+		"message": "Lao"
+	},
+	"langCode_lt": {
+		"message": "Litván"
+	},
+	"langCode_lu": {
+		"message": "Luba-katanga"
+	},
+	"langCode_lv": {
+		"message": "Lett"
+	},
+	"langCode_mg": {
+		"message": "Malgas"
+	},
+	"langCode_mh": {
+		"message": "Marshalli"
+	},
+	"langCode_mi": {
+		"message": "Maori"
+	},
+	"langCode_mk": {
+		"message": "Macedón"
+	},
+	"langCode_ml": {
+		"message": "Malajálam"
+	},
+	"langCode_mn": {
+		"message": "Mongol"
+	},
+	"langCode_mr": {
+		"message": "Maráthi"
+	},
+	"langCode_ms": {
+		"message": "Maláj"
+	},
+	"langCode_mt": {
+		"message": "Máltai"
+	},
+	"langCode_my": {
+		"message": "Burmai"
+	},
+	"langCode_na": {
+		"message": "Naurui"
+	},
+	"langCode_nb": {
+		"message": "Norvég (bokmål)"
+	},
+	"langCode_nd": {
+		"message": "Északi ndebele"
+	},
+	"langCode_ne": {
+		"message": "Nepáli"
+	},
+	"langCode_ng": {
+		"message": "Ndonga"
+	},
+	"langCode_nl": {
+		"message": "Holland"
+	},
+	"langCode_nn": {
+		"message": "Norvég (nynorsk)"
+	},
+	"langCode_no": {
+		"message": "Norvég"
+	},
+	"langCode_nr": {
+		"message": "Déli ndebele"
+	},
+	"langCode_nv": {
+		"message": "Navahó"
+	},
+	"langCode_ny": {
+		"message": "Nyandzsa"
+	},
+	"langCode_oc": {
+		"message": "Okszitán"
+	},
+	"langCode_oj": {
+		"message": "Ojibva"
+	},
+	"langCode_om": {
+		"message": "Oromo"
+	},
+	"langCode_or": {
+		"message": "Odia"
+	},
+	"langCode_os": {
+		"message": "Oszét"
+	},
+	"langCode_pa": {
+		"message": "Pandzsábi"
+	},
+	"langCode_pi": {
+		"message": "Pali"
+	},
+	"langCode_pl": {
+		"message": "Lengyel"
+	},
+	"langCode_ps": {
+		"message": "Pastu"
+	},
+	"langCode_pt": {
+		"message": "Portugál"
+	},
+	"langCode_qu": {
+		"message": "Kecsua"
+	},
+	"langCode_rm": {
+		"message": "Rétoromán"
+	},
+	"langCode_rn": {
+		"message": "Kirundi"
+	},
+	"langCode_ro": {
+		"message": "Román"
+	},
+	"langCode_ru": {
+		"message": "Orosz"
+	},
+	"langCode_rw": {
+		"message": "Kinyarvanda"
+	},
+	"langCode_sa": {
+		"message": "Szanszkrit"
+	},
+	"langCode_sc": {
+		"message": "Szardíniai"
+	},
+	"langCode_sd": {
+		"message": "Szindhi"
+	},
+	"langCode_se": {
+		"message": "Északi számi"
+	},
+	"langCode_sg": {
+		"message": "Szangó"
+	},
+	"langCode_si": {
+		"message": "Szingaléz"
+	},
+	"langCode_sk": {
+		"message": "Szlovák"
+	},
+	"langCode_sl": {
+		"message": "Szlovén"
+	},
+	"langCode_sm": {
+		"message": "Szamoai"
+	},
+	"langCode_sn": {
+		"message": "Sona"
+	},
+	"langCode_so": {
+		"message": "Szomáli"
+	},
+	"langCode_sq": {
+		"message": "Albán"
+	},
+	"langCode_sr": {
+		"message": "Szerb"
+	},
+	"langCode_ss": {
+		"message": "Sziszuati"
+	},
+	"langCode_st": {
+		"message": "Déli szeszotó"
+	},
+	"langCode_su": {
+		"message": "Szundanéz"
+	},
+	"langCode_sv": {
+		"message": "Svéd"
+	},
+	"langCode_sw": {
+		"message": "Szuahéli"
+	},
+	"langCode_ta": {
+		"message": "Tamil"
+	},
+	"langCode_te": {
+		"message": "Telugu"
+	},
+	"langCode_tg": {
+		"message": "Tadzsik"
+	},
+	"langCode_th": {
+		"message": "Thai"
+	},
+	"langCode_ti": {
+		"message": "Tigrinya"
+	},
+	"langCode_tk": {
+		"message": "Türkmén"
+	},
+	"langCode_tl": {
+		"message": "Filippínó"
+	},
+	"langCode_tn": {
+		"message": "Szecsuáni"
+	},
+	"langCode_to": {
+		"message": "Tongai"
+	},
+	"langCode_tr": {
+		"message": "Török"
+	},
+	"langCode_ts": {
+		"message": "Conga"
+	},
+	"langCode_tt": {
+		"message": "Tatár"
+	},
+	"langCode_tw": {
+		"message": "Akan"
+	},
+	"langCode_ty": {
+		"message": "Tahiti"
+	},
+	"langCode_ug": {
+		"message": "Ujgur"
+	},
+	"langCode_uk": {
+		"message": "Ukrán"
+	},
+	"langCode_ur": {
+		"message": "Urdu"
+	},
+	"langCode_uz": {
+		"message": "Üzbég"
+	},
+	"langCode_ve": {
+		"message": "Venda"
+	},
+	"langCode_vi": {
+		"message": "Vietnámi"
+	},
+	"langCode_vo": {
+		"message": "Volapük"
+	},
+	"langCode_wa": {
+		"message": "Vallon"
+	},
+	"langCode_wo": {
+		"message": "Volof"
+	},
+	"langCode_xh": {
+		"message": "Xhosza"
+	},
+	"langCode_yi": {
+		"message": "Jiddis"
+	},
+	"langCode_yo": {
+		"message": "Joruba"
+	},
+	"langCode_za": {
+		"message": "Zsuang"
+	},
+	"langCode_zh": {
+		"message": "Kínai"
+	},
+	"langCode_zu": {
+		"message": "Zulu"
+	}
+}
