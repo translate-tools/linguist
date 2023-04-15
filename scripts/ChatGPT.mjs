@@ -9,12 +9,18 @@ export class ChatGPT {
 	 */
 	_delay = 3000;
 
+	_rpmLimit = 60;
+
 	constructor() {
 		if (process.env.OPENAI_API_KEY) {
 			// Prefer official API if env variable provided
 			this.api = new ChatGPTAPI({
 				apiKey: process.env.OPENAI_API_KEY
 			});
+
+
+			// Set delay by RPM limit
+			this._delay = 60 / this._rpmLimit * 1000;
 		} else {
 			console.log('Used unofficial GPT proxy API');
 			this.api = new ChatGPTUnofficialProxyAPI({
@@ -44,8 +50,15 @@ export class ChatGPT {
 			if (this._queue.length === 0) break;
 
 			const task = this._queue.pop();
+			const requestTime = performance.now();
 			await this.api.sendMessage(task.message).then(task.resolve, task.reject);
-			await new Promise((res) => setTimeout(res, this._delay));
+
+			// Await to fit in RPM limits https://platform.openai.com/docs/guides/rate-limits/overview
+			const awaitedTime = performance.now() - requestTime;
+			const timeToDelay = this._delay - awaitedTime;
+			if (timeToDelay > 0) {
+				await new Promise((res) => setTimeout(res, this._delay));
+			}
 		}
 
 		this._isQueueWorkerRun = false;
