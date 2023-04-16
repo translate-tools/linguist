@@ -1,6 +1,6 @@
 import browser from 'webextension-polyfill';
 
-import { detectLanguage } from '../language';
+import { detectLanguage, isValidLanguage } from '../language';
 
 /**
  * Helper to detect platform
@@ -32,7 +32,8 @@ export function getPageLanguageFromMeta() {
 		if (pageLangRaw !== null) {
 			const match = pageLangRaw.match(/^([a-z]+)(-[a-zA-Z]+)?$/);
 			if (match !== null) {
-				return match[1];
+				const language = match[1];
+				return isValidLanguage(language) ? language : null;
 			}
 		}
 	}

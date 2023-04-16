@@ -1,5 +1,7 @@
 import React, { ComponentType, ReactNode } from 'react';
 import browser from 'webextension-polyfill';
+import { langCodes } from '@translate-tools/core/util/languages';
+
 import { isMobileBrowser } from './browser';
 
 export const getUserLanguage = () => browser.i18n.getUILanguage().split('-')[0];
@@ -97,3 +99,6 @@ export const detectLanguage = async (text: string, reliableOnly = false) => {
 		return sortedLangs.length > 0 ? sortedLangs[0].language : null;
 	});
 };
+
+export const isValidLanguage = (language: string) =>
+	(langCodes as readonly string[]).includes(language);
