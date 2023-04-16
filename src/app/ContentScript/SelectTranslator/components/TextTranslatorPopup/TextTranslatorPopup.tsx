@@ -237,23 +237,25 @@ export const TextTranslatorPopup: FC<TextTranslatorPopupProps> = ({
 	// We use real component instead virtual because require behavior of `position: absolute` instead `fixed`
 	// and implement this logic for virtual component is harder than use real component
 	return (
-		<div className={cnTextTranslatorPopup({}, [cnTheme(theme)])}>
+		<>
 			{/* Render cursor */}
 			<div style={cursorStyle} ref={cursorRef} />
 
-			{/* Render popup which attached to cursor */}
-			<Popup
-				target="anchor"
-				anchor={cursorRef}
-				visible={true}
-				zIndex={zIndex}
-				modifiers={modifiers}
-				onClose={closeHandler}
-				view={translating ? 'default' : undefined}
-				UNSTABLE_updatePosition={updateRef}
-			>
-				{content}
-			</Popup>
-		</div>
+			{/* Render popup attached to cursor */}
+			<div className={cnTextTranslatorPopup({}, [cnTheme(theme)])}>
+				<Popup
+					target="anchor"
+					anchor={cursorRef}
+					visible={true}
+					zIndex={zIndex}
+					modifiers={modifiers}
+					onClose={closeHandler}
+					view={translating ? 'default' : undefined}
+					UNSTABLE_updatePosition={updateRef}
+				>
+					{content}
+				</Popup>
+			</div>
+		</>
 	);
 };
