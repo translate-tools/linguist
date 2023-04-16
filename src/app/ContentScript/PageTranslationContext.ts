@@ -9,6 +9,7 @@ import { onHotkeysPressed } from '../../components/controls/Hotkey/utils';
 // Requests
 import { getSitePreferences } from '../../requests/backend/autoTranslation/sitePreferences/getSitePreferences';
 import { getLanguagePreferences } from '../../requests/backend/autoTranslation/languagePreferences/getLanguagePreferences';
+import { getTranslatorFeatures } from '../../requests/backend/getTranslatorFeatures';
 import { isRequireTranslateBySitePreferences } from '../../pages/popup/tabs/PageTranslator/PageTranslator.utils/utils';
 
 import { SelectTranslatorManager } from './SelectTranslator/SelectTranslatorManager';
@@ -285,10 +286,17 @@ export class PageTranslationContext {
 		}
 
 		if (isNeedAutoTranslate) {
-			this.events.updatePageTranslationState({
-				from: pageLanguage,
-				to: userLanguage,
-			});
+			const { supportedLanguages } = await getTranslatorFeatures();
+			const isLanguagesSupportedByTranslator = [pageLanguage, userLanguage].every(
+				(language) => supportedLanguages.includes(language),
+			);
+
+			if (isLanguagesSupportedByTranslator) {
+				this.events.updatePageTranslationState({
+					from: pageLanguage,
+					to: userLanguage,
+				});
+			}
 		}
 	};
 }
