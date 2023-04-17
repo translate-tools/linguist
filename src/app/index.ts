@@ -1,8 +1,12 @@
+import { createEvent, createStore, Store } from 'effector';
+import browser from 'webextension-polyfill';
+
 import { defaultConfig } from '../config';
 
 import { AppConfigType } from '../types/runtime';
-import { isBackgroundContext } from '../lib/browser';
+import { isBackgroundContext, isChromium } from '../lib/browser';
 import { AppThemeControl } from '../lib/browser/AppThemeControl';
+import { getAllTabs } from '../lib/browser/tabs';
 import { TextTranslatorStorage } from '../pages/popup/tabs/TextTranslator/TextTranslator.utils/TextTranslatorStorage';
 
 import { clearCache } from '../requests/backend/clearCache';
@@ -18,6 +22,8 @@ import { requestHandlers } from './Background/requestHandlers';
 
 import { TranslatePageContextMenu } from './ContextMenus/TranslatePageContextMenu';
 
+type OnInstalledData = null | browser.Runtime.OnInstalledDetailsType;
+
 /**
  * Manage global states and application context
  */
@@ -26,6 +32,12 @@ export class App {
 	 * Run application
 	 */
 	public static async main() {
+		const onInstalled = createEvent<browser.Runtime.OnInstalledDetailsType>();
+		browser.runtime.onInstalled.addListener(onInstalled);
+
+		const $onInstalledData = createStore<OnInstalledData>(null);
+		$onInstalledData.on(onInstalled, (_, onInstalledData) => onInstalledData);
+
 		// Migrate data
 		await migrateAll();
 
@@ -33,15 +45,29 @@ export class App {
 		const observableConfig = new ObservableAsyncStorage(config);
 		const background = new Background(observableConfig);
 
-		const app = new App(observableConfig, background);
+		const app = new App({
+			config: observableConfig,
+			background,
+			$onInstalledData,
+		});
 		await app.start();
 	}
 
-	private readonly background: Background;
 	private readonly config: ObservableAsyncStorage<AppConfigType>;
-	constructor(config: ObservableAsyncStorage<AppConfigType>, background: Background) {
+	private readonly background: Background;
+	private readonly $onInstalledData: Store<OnInstalledData>;
+	constructor({
+		config,
+		background,
+		$onInstalledData,
+	}: {
+		config: ObservableAsyncStorage<AppConfigType>;
+		background: Background;
+		$onInstalledData: Store<OnInstalledData>;
+	}) {
 		this.config = config;
 		this.background = background;
+		this.$onInstalledData = $onInstalledData;
 	}
 
 	private isStarted = false;
@@ -56,6 +82,8 @@ export class App {
 
 		await this.setupRequestHandlers();
 		await this.handleConfigUpdates();
+
+		this.$onInstalledData.watch(this.onInstalled);
 	}
 
 	private async setupRequestHandlers() {
@@ -132,4 +160,28 @@ export class App {
 				}
 			});
 	}
+
+	private onInstalled = async (details: OnInstalledData) => {
+		if (details === null) return;
+
+		// Inject content scripts for chrome, to make page translation available just after install
+		if (isChromium()) {
+			const tabs = await getAllTabs();
+			tabs.forEach((tab) => {
+				if (tab.status === 'unloaded') return;
+
+				// Ignore special URLs
+				if (
+					!tab.url ||
+					tab.url.startsWith('chrome://') ||
+					tab.url.startsWith('https://chrome.google.com')
+				)
+					return;
+
+				['common.js', 'contentscript.js'].forEach((file) => {
+					browser.tabs.executeScript(tab.id, { file });
+				});
+			});
+		}
+	};
 }
