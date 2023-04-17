@@ -1,3 +1,4 @@
+import { createEvent, createStore, Store } from 'effector';
 import browser from 'webextension-polyfill';
 
 import { defaultConfig } from '../config';
@@ -5,6 +6,7 @@ import { defaultConfig } from '../config';
 import { AppConfigType } from '../types/runtime';
 import { isBackgroundContext, isChromium } from '../lib/browser';
 import { AppThemeControl } from '../lib/browser/AppThemeControl';
+import { getAllTabs } from '../lib/browser/tabs';
 import { TextTranslatorStorage } from '../pages/popup/tabs/TextTranslator/TextTranslator.utils/TextTranslatorStorage';
 
 import { clearCache } from '../requests/backend/clearCache';
@@ -19,8 +21,6 @@ import { Background } from './Background';
 import { requestHandlers } from './Background/requestHandlers';
 
 import { TranslatePageContextMenu } from './ContextMenus/TranslatePageContextMenu';
-import { getAllTabs } from '../lib/browser/tabs';
-import { createEvent, createStore, Store } from 'effector';
 
 type OnInstalledData = null | browser.Runtime.OnInstalledDetailsType;
 
