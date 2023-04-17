@@ -1,7 +1,9 @@
+import browser from 'webextension-polyfill';
+
 import { defaultConfig } from '../config';
 
 import { AppConfigType } from '../types/runtime';
-import { isBackgroundContext } from '../lib/browser';
+import { isBackgroundContext, isChromium } from '../lib/browser';
 import { AppThemeControl } from '../lib/browser/AppThemeControl';
 import { TextTranslatorStorage } from '../pages/popup/tabs/TextTranslator/TextTranslator.utils/TextTranslatorStorage';
 
@@ -17,6 +19,12 @@ import { Background } from './Background';
 import { requestHandlers } from './Background/requestHandlers';
 
 import { TranslatePageContextMenu } from './ContextMenus/TranslatePageContextMenu';
+import { getAllTabs } from '../lib/browser/tabs';
+import { createEvent, createStore, Store } from 'effector';
+
+type ExtensionData = {
+	onInstalledData: null | browser.Runtime.OnInstalledDetailsType;
+};
 
 /**
  * Manage global states and application context
@@ -26,6 +34,18 @@ export class App {
 	 * Run application
 	 */
 	public static async main() {
+		const $extensionData = createStore<ExtensionData>({
+			onInstalledData: null,
+		});
+
+		const onInstalled = createEvent<browser.Runtime.OnInstalledDetailsType>();
+		browser.runtime.onInstalled.addListener(onInstalled);
+
+		$extensionData.on(onInstalled, (state, onInstalledData) => ({
+			...state,
+			onInstalledData,
+		}));
+
 		// Migrate data
 		await migrateAll();
 
@@ -33,14 +53,20 @@ export class App {
 		const observableConfig = new ObservableAsyncStorage(config);
 		const background = new Background(observableConfig);
 
-		const app = new App(observableConfig, background);
+		const app = new App(observableConfig, $extensionData, background);
 		await app.start();
 	}
 
-	private readonly background: Background;
 	private readonly config: ObservableAsyncStorage<AppConfigType>;
-	constructor(config: ObservableAsyncStorage<AppConfigType>, background: Background) {
+	private readonly $extensionData: Store<ExtensionData>;
+	private readonly background: Background;
+	constructor(
+		config: ObservableAsyncStorage<AppConfigType>,
+		$extensionData: Store<ExtensionData>,
+		background: Background,
+	) {
 		this.config = config;
+		this.$extensionData = $extensionData;
 		this.background = background;
 	}
 
@@ -56,6 +82,32 @@ export class App {
 
 		await this.setupRequestHandlers();
 		await this.handleConfigUpdates();
+
+		if (isChromium()) {
+			this.$extensionData
+				.map(({ onInstalledData }) => onInstalledData)
+				.watch(async (details) => {
+					console.warn('Inject CS 2', details);
+
+					const tabs = await getAllTabs();
+					tabs.forEach((tab) => {
+						if (tab.status === 'unloaded') return;
+						if (
+							!tab.url ||
+							tab.url.startsWith('chrome://') ||
+							tab.url.startsWith('https://chrome.google.com')
+						)
+							return;
+
+						console.log(tab);
+						['common.js', 'contentscript.js'].forEach((file) => {
+							browser.tabs.executeScript(tab.id, {
+								file,
+							});
+						});
+					});
+				});
+		}
 	}
 
 	private async setupRequestHandlers() {
