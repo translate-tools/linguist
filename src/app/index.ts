@@ -22,9 +22,7 @@ import { TranslatePageContextMenu } from './ContextMenus/TranslatePageContextMen
 import { getAllTabs } from '../lib/browser/tabs';
 import { createEvent, createStore, Store } from 'effector';
 
-type ExtensionData = {
-	onInstalledData: null | browser.Runtime.OnInstalledDetailsType;
-};
+type OnInstalledData = null | browser.Runtime.OnInstalledDetailsType;
 
 /**
  * Manage global states and application context
@@ -34,17 +32,11 @@ export class App {
 	 * Run application
 	 */
 	public static async main() {
-		const $extensionData = createStore<ExtensionData>({
-			onInstalledData: null,
-		});
-
 		const onInstalled = createEvent<browser.Runtime.OnInstalledDetailsType>();
 		browser.runtime.onInstalled.addListener(onInstalled);
 
-		$extensionData.on(onInstalled, (state, onInstalledData) => ({
-			...state,
-			onInstalledData,
-		}));
+		const $onInstalledData = createStore<OnInstalledData>(null);
+		$onInstalledData.on(onInstalled, (_, onInstalledData) => onInstalledData);
 
 		// Migrate data
 		await migrateAll();
@@ -53,21 +45,29 @@ export class App {
 		const observableConfig = new ObservableAsyncStorage(config);
 		const background = new Background(observableConfig);
 
-		const app = new App(observableConfig, $extensionData, background);
+		const app = new App({
+			config: observableConfig,
+			background,
+			$onInstalledData,
+		});
 		await app.start();
 	}
 
 	private readonly config: ObservableAsyncStorage<AppConfigType>;
-	private readonly $extensionData: Store<ExtensionData>;
 	private readonly background: Background;
-	constructor(
-		config: ObservableAsyncStorage<AppConfigType>,
-		$extensionData: Store<ExtensionData>,
-		background: Background,
-	) {
+	private readonly $onInstalledData: Store<OnInstalledData>;
+	constructor({
+		config,
+		background,
+		$onInstalledData,
+	}: {
+		config: ObservableAsyncStorage<AppConfigType>;
+		background: Background;
+		$onInstalledData: Store<OnInstalledData>;
+	}) {
 		this.config = config;
-		this.$extensionData = $extensionData;
 		this.background = background;
+		this.$onInstalledData = $onInstalledData;
 	}
 
 	private isStarted = false;
@@ -84,29 +84,27 @@ export class App {
 		await this.handleConfigUpdates();
 
 		if (isChromium()) {
-			this.$extensionData
-				.map(({ onInstalledData }) => onInstalledData)
-				.watch(async (details) => {
-					console.warn('Inject CS 2', details);
+			this.$onInstalledData.watch(async (details) => {
+				console.warn('Inject CS 2', details);
 
-					const tabs = await getAllTabs();
-					tabs.forEach((tab) => {
-						if (tab.status === 'unloaded') return;
-						if (
-							!tab.url ||
-							tab.url.startsWith('chrome://') ||
-							tab.url.startsWith('https://chrome.google.com')
-						)
-							return;
+				const tabs = await getAllTabs();
+				tabs.forEach((tab) => {
+					if (tab.status === 'unloaded') return;
+					if (
+						!tab.url ||
+						tab.url.startsWith('chrome://') ||
+						tab.url.startsWith('https://chrome.google.com')
+					)
+						return;
 
-						console.log(tab);
-						['common.js', 'contentscript.js'].forEach((file) => {
-							browser.tabs.executeScript(tab.id, {
-								file,
-							});
+					console.log(tab);
+					['common.js', 'contentscript.js'].forEach((file) => {
+						browser.tabs.executeScript(tab.id, {
+							file,
 						});
 					});
 				});
+			});
 		}
 	}
 
