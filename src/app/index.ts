@@ -165,7 +165,7 @@ export class App {
 		if (details === null) return;
 
 		// Inject content scripts for chrome, to make page translation available just after install
-		if (isChromium() && details.reason === 'install') {
+		if (isChromium()) {
 			const tabs = await getAllTabs();
 			tabs.forEach((tab) => {
 				if (tab.status === 'unloaded') return;
