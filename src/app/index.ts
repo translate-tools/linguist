@@ -83,29 +83,7 @@ export class App {
 		await this.setupRequestHandlers();
 		await this.handleConfigUpdates();
 
-		if (isChromium()) {
-			this.$onInstalledData.watch(async (details) => {
-				console.warn('Inject CS 2', details);
-
-				const tabs = await getAllTabs();
-				tabs.forEach((tab) => {
-					if (tab.status === 'unloaded') return;
-					if (
-						!tab.url ||
-						tab.url.startsWith('chrome://') ||
-						tab.url.startsWith('https://chrome.google.com')
-					)
-						return;
-
-					console.log(tab);
-					['common.js', 'contentscript.js'].forEach((file) => {
-						browser.tabs.executeScript(tab.id, {
-							file,
-						});
-					});
-				});
-			});
-		}
+		this.$onInstalledData.watch(this.onInstalled);
 	}
 
 	private async setupRequestHandlers() {
@@ -182,4 +160,28 @@ export class App {
 				}
 			});
 	}
+
+	private onInstalled = async (details: OnInstalledData) => {
+		if (details === null) return;
+
+		// Inject content scripts for chrome, to make page translation available just after install
+		if (isChromium() && details.reason === 'install') {
+			const tabs = await getAllTabs();
+			tabs.forEach((tab) => {
+				if (tab.status === 'unloaded') return;
+
+				// Ignore special URLs
+				if (
+					!tab.url ||
+					tab.url.startsWith('chrome://') ||
+					tab.url.startsWith('https://chrome.google.com')
+				)
+					return;
+
+				['common.js', 'contentscript.js'].forEach((file) => {
+					browser.tabs.executeScript(tab.id, { file });
+				});
+			});
+		}
+	};
 }
