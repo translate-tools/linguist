@@ -2,7 +2,6 @@ import React, { FC, useCallback, useEffect, useRef, useState } from 'react';
 import { Checkbox } from 'react-elegant-ui/esm/components/Checkbox/Checkbox.bundle/desktop';
 import { Spinner } from 'react-elegant-ui/esm/components/Spinner/Spinner.bundle/desktop';
 import InfiniteScroll from 'react-infinite-scroller';
-
 import { cn } from '@bem-react/classname';
 
 import { DictionaryButton } from '../../../../components/controls/DictionaryButton/DictionaryButton';

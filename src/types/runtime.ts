@@ -1,5 +1,4 @@
 import { TypeOf } from 'io-ts';
-
 import { langCode, langCodeWithAuto } from '@translate-tools/core/types/Translator';
 import { langCodes } from '@translate-tools/core/util/languages';
 

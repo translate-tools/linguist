@@ -1,5 +1,4 @@
 import React, { FC, useCallback, useMemo } from 'react';
-
 import { cn } from '@bem-react/classname';
 
 import { PageTranslatorStats } from '../../../../app/ContentScript/PageTranslator/PageTranslator';

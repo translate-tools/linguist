@@ -8,7 +8,6 @@ import React, {
 	useState,
 } from 'react';
 import { get, isEqual } from 'lodash';
-
 import { cn } from '@bem-react/classname';
 
 import { LayoutFlow } from '../../../components/layouts/LayoutFlow/LayoutFlow';

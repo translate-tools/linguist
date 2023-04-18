@@ -12,7 +12,6 @@ import {
 	PaneItem,
 	TabsPanes,
 } from 'react-elegant-ui/esm/components/TabsPanes/TabsPanes.bundle/desktop';
-
 import { cn } from '@bem-react/classname';
 
 import { Button } from '../../../components/primitives/Button/Button.bundle/desktop';

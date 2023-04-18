@@ -1,6 +1,5 @@
 import { readFileSync } from 'fs';
 import path from 'path';
-
 import { TTSProviderProps } from '@translate-tools/core/tts';
 
 import { clearAllMocks } from '../../../../../lib/tests';

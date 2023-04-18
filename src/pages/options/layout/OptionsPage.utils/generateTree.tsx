@@ -1,5 +1,4 @@
 import React, { FC } from 'react';
-
 import { langCodes } from '@translate-tools/core/util/languages';
 
 import {

@@ -1,5 +1,4 @@
 import React, { FC, useCallback, useContext, useEffect, useState } from 'react';
-
 import { cn } from '@bem-react/classname';
 
 import { LayoutFlow } from '../../../../../components/layouts/LayoutFlow/LayoutFlow';

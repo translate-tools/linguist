@@ -1,6 +1,5 @@
 import React, { FC, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { isKeyCode, Keys } from 'react-elegant-ui/esm/lib/keyboard';
-
 import { cn } from '@bem-react/classname';
 
 import { Modal } from '../../../../../components/primitives/Modal/Modal.bundle/desktop';

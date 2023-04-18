@@ -1,5 +1,4 @@
 import { isEqual } from 'lodash';
-
 // Translators
 import { GoogleTranslator } from '@translate-tools/core/translators/GoogleTranslator';
 import { YandexTranslator } from '@translate-tools/core/translators/YandexTranslator';

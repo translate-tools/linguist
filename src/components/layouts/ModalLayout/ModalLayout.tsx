@@ -1,5 +1,4 @@
 import React, { FC, ReactNode } from 'react';
-
 import { cn } from '@bem-react/classname';
 
 import { LayoutFlow } from '../LayoutFlow/LayoutFlow';

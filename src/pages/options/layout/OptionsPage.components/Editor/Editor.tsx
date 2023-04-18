@@ -1,6 +1,5 @@
 import React, { FC, useContext, useEffect, useState } from 'react';
 import { useImmutableCallback } from 'react-elegant-ui/esm/hooks/useImmutableCallback';
-
 import { cn } from '@bem-react/classname';
 
 import { LayoutFlow } from '../../../../../components/layouts/LayoutFlow/LayoutFlow';

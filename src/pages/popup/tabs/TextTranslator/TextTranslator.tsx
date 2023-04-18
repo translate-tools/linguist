@@ -2,7 +2,6 @@ import React, { FC, Ref, useCallback, useEffect, useMemo, useRef, useState } fro
 import ReactDOM from 'react-dom';
 import { useDelayCallback } from 'react-elegant-ui/esm/hooks/useDelayCallback';
 import { useImmutableCallback } from 'react-elegant-ui/esm/hooks/useImmutableCallback';
-
 import { cn } from '@bem-react/classname';
 
 import { DictionaryButton } from '../../../../components/controls/DictionaryButton/DictionaryButton';
