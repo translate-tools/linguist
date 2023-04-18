@@ -1,8 +1,7 @@
 # directories
 node_modules
-build
-thirdparty
+/thirdparty
 
 # Artifacts
 src/themes/presets/{*,**}/*.css
-build
+/build
