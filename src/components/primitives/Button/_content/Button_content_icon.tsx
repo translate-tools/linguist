@@ -1,9 +1,8 @@
 import React from 'react';
+import { cnButton, IButtonProps } from 'react-elegant-ui/esm/components/Button/Button';
+import { IButtonDesktopRegistry } from 'react-elegant-ui/esm/components/Button/Button.registry/desktop';
 import { withHOCConstructor } from 'react-elegant-ui/esm/lib/compose';
 import { useComponentRegistry } from 'react-elegant-ui/esm/lib/di';
-
-import { IButtonProps, cnButton } from 'react-elegant-ui/esm/components/Button/Button';
-import { IButtonDesktopRegistry } from 'react-elegant-ui/esm/components/Button/Button.registry/desktop';
 
 import './Button_content_icon.css';
 

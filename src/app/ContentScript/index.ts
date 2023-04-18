@@ -1,6 +1,5 @@
 import { ClientConfig } from './ClientConfig';
 import { PageTranslationContext } from './PageTranslationContext';
-
 import { requestHandlers } from './requestHandlers';
 
 export class ContentScript {

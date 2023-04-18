@@ -2,13 +2,11 @@ import React, { FC, useCallback, useEffect, useMemo, useState } from 'react';
 import { cn } from '@bem-react/classname';
 
 import { getLanguageNameByCode, getMessage } from '../../../lib/language';
-
-import { Button } from '../../primitives/Button/Button.bundle/desktop';
-import { Select } from '../../primitives/Select/Select.bundle/desktop';
-import { Icon } from '../../primitives/Icon/Icon.bundle/desktop';
-
 import { addRecentUsedLanguage } from '../../../requests/backend/recentUsedLanguages/addRecentUsedLanguage';
 import { getRecentUsedLanguages } from '../../../requests/backend/recentUsedLanguages/getRecentUsedLanguages';
+import { Button } from '../../primitives/Button/Button.bundle/desktop';
+import { Icon } from '../../primitives/Icon/Icon.bundle/desktop';
+import { Select } from '../../primitives/Select/Select.bundle/desktop';
 
 import './LanguagePanel.css';
 

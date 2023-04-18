@@ -1,5 +1,6 @@
-import { buildBackendRequest } from '../../utils/requestBuilder';
 import { type } from '../../../lib/types';
+import { buildBackendRequest } from '../../utils/requestBuilder';
+
 import { pushLanguage } from '.';
 
 export const [addRecentUsedLanguageFactory, addRecentUsedLanguage] = buildBackendRequest(

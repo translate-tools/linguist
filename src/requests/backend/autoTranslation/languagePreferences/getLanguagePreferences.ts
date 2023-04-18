@@ -1,4 +1,5 @@
 import { buildBackendRequest } from '../../../utils/requestBuilder';
+
 import { getLanguage } from './utils';
 
 export const [getLanguagePreferencesFactory, getLanguagePreferencesReq] =

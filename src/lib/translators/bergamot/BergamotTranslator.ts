@@ -1,8 +1,8 @@
 import browser from 'webextension-polyfill';
 
 import { BatchTranslator } from '../../../../thirdparty/bergamot/src/frontend/BatchTranslator';
-
 import { detectLanguage, getMessage } from '../../language';
+
 import { TranslatorBackingWithCache } from './TranslatorBackingWithCache';
 
 export class BergamotTranslator {

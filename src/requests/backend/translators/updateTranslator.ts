@@ -1,10 +1,10 @@
-import { buildBackendRequest } from '../../utils/requestBuilder';
 import { type } from '../../../lib/types';
+import { buildBackendRequest } from '../../utils/requestBuilder';
 
+import { applyTranslators } from './applyTranslators';
 import * as db from './data';
 import { TranslatorEntry } from './data';
 import { loadTranslator } from './utils';
-import { applyTranslators } from './applyTranslators';
 
 export const [updateTranslatorFactory, updateTranslator] = buildBackendRequest(
 	'updateTranslator',

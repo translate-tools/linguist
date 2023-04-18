@@ -1,7 +1,8 @@
 // Scroll fix for https://bugzilla.mozilla.org/show_bug.cgi?id=1474932
-import './scrollfix.css';
-import { XResizeObserver } from '../../lib/XResizeObserver';
 import { XMutationObserver } from '../../lib/XMutationObserver';
+import { XResizeObserver } from '../../lib/XResizeObserver';
+
+import './scrollfix.css';
 
 // TODO: rewrite this. It not clearly
 /**

@@ -1,8 +1,9 @@
-import { ThemeChangeHandler, getBrowserThemeInfo } from './Theme';
+import { AppConfigType } from '../../types/runtime';
+
+import { setAppIcon } from './setAppIcon';
+import { getBrowserThemeInfo, ThemeChangeHandler } from './Theme';
 import { BrowserThemeInfo } from './Theme/BrowserThemeInfo';
 import { FirefoxThemeInfo } from './Theme/FirefoxThemeInfo';
-import { AppConfigType } from '../../types/runtime';
-import { setAppIcon } from './setAppIcon';
 
 export class AppThemeControl {
 	private browserThemeInfo: BrowserThemeInfo | FirefoxThemeInfo;

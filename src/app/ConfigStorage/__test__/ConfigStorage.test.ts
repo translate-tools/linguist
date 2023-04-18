@@ -5,7 +5,6 @@ import { AppConfigType } from '../../../types/runtime';
 
 import { ConfigStorage, ObservableAsyncStorage } from '../ConfigStorage';
 import { ConfigStorageMigration } from '../ConfigStorage.migrations';
-
 import configVersion1 from './config-v1.json';
 import configVersion3 from './config-v3.json';
 import configVersion5 from './config-v5.json';

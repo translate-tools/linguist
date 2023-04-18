@@ -1,9 +1,9 @@
 import browser from 'webextension-polyfill';
 
 import { clearAllMocks } from '../../../../../../lib/tests';
-import { TextTranslatorStorageMigration } from '../TextTranslatorStorage.migrations';
-import { TextTranslatorStorage } from '../TextTranslatorStorage';
 
+import { TextTranslatorStorage } from '../TextTranslatorStorage';
+import { TextTranslatorStorageMigration } from '../TextTranslatorStorage.migrations';
 import dataSampleV1 from './TextTranslatorData-v1.sample.json';
 import dataSampleV2 from './TextTranslatorData-v2.sample.json';
 

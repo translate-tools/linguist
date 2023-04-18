@@ -1,5 +1,6 @@
 import { getAllTabs } from '../../lib/browser/tabs';
 import { AppConfigType } from '../../types/runtime';
+
 import { addRequestHandler, sendBackgroundRequest, sendTabRequest } from '../utils';
 
 export const appConfigUpdateEventName = 'global.appConfigUpdate';

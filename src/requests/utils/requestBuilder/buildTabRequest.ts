@@ -1,12 +1,12 @@
 import * as t from 'io-ts';
 
+import { tryDecode } from '../../../lib/types';
 import {
 	ClientRequestHandlerFactory,
 	ClientRequestHandlerFactoryProps,
 } from '../../types';
-import { tryDecode } from '../../../lib/types';
 
-import { sendTabRequest, addRequestHandler } from '..';
+import { addRequestHandler, sendTabRequest } from '..';
 
 type TabOptions<O = any, R = any> = {
 	factoryHandler: (

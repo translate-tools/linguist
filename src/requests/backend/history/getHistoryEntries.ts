@@ -1,9 +1,9 @@
-import { buildBackendRequest } from '../../utils/requestBuilder';
 import { type } from '../../../lib/types';
+import { buildBackendRequest } from '../../utils/requestBuilder';
 
 import {
-	TranslationHistoryEntryWithKeyType,
 	getEntries,
+	TranslationHistoryEntryWithKeyType,
 	TranslationHistoryFetcherOptions,
 } from './data';
 

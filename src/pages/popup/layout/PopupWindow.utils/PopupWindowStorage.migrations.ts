@@ -1,4 +1,5 @@
 import { createMigrationTask } from '../../../../lib/migrations/createMigrationTask';
+
 import { PopupWindowStorage } from './PopupWindowStorage';
 
 export const PopupWindowStorageMigration = createMigrationTask([

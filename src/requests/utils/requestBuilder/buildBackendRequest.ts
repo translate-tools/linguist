@@ -1,10 +1,10 @@
 import * as t from 'io-ts';
 
-import { RequestHandlerFactory, RequestHandlerFactoryProps } from '../../types';
-import { tryDecode } from '../../../lib/types';
 import { isBackgroundContext } from '../../../lib/browser';
+import { tryDecode } from '../../../lib/types';
+import { RequestHandlerFactory, RequestHandlerFactoryProps } from '../../types';
 
-import { sendBackgroundRequest, addRequestHandler } from '..';
+import { addRequestHandler, sendBackgroundRequest } from '..';
 
 type BackgroundOptions<O = any, R = any> = {
 	factoryHandler: (props: RequestHandlerFactoryProps) => (options: O) => Promise<R>;

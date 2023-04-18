@@ -1,7 +1,7 @@
 import browser from 'webextension-polyfill';
 
-import { decodeStruct, type } from '../../../lib/types';
 import { createMigrationTask } from '../../../lib/migrations/createMigrationTask';
+import { decodeStruct, type } from '../../../lib/types';
 
 export const migrationsForMigrationsStorage = createMigrationTask([
 	{

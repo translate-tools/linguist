@@ -1,9 +1,10 @@
 import { cloneDeep, set } from 'lodash';
 
-import { checkTypeByPath, type } from '../../lib/types';
 import { getMessage } from '../../lib/language';
-import { buildBackendRequest } from '../utils/requestBuilder';
+import { checkTypeByPath, type } from '../../lib/types';
 import { AppConfig } from '../../types/runtime';
+
+import { buildBackendRequest } from '../utils/requestBuilder';
 
 export const [updateConfigFactory, updateConfig] = buildBackendRequest('updateConfig', {
 	requestValidator: type.record(type.string, type.unknown),

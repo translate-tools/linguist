@@ -1,9 +1,8 @@
 import browser, { Menus, Tabs } from 'webextension-polyfill';
 
-import { getMessage } from '../../lib/language';
 import { isFirefox } from '../../lib/browser';
 import { isValidBrowserTabId } from '../../lib/browser/tabs';
-
+import { getMessage } from '../../lib/language';
 import { translateSelectedText } from '../../requests/contentscript/translateSelectedText';
 
 export class TranslateSelectionContextMenu {

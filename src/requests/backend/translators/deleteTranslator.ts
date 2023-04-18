@@ -1,10 +1,10 @@
 import { TranslatorsCacheStorage } from '../../../app/Background/TranslatorsCacheStorage';
-import { buildBackendRequest } from '../../utils/requestBuilder';
 import { type } from '../../../lib/types';
+import { buildBackendRequest } from '../../utils/requestBuilder';
 
+import { applyTranslators } from './applyTranslators';
 import * as db from './data';
 import { formatToCustomTranslatorId } from '.';
-import { applyTranslators } from './applyTranslators';
 
 export const [deleteTranslatorFactory, deleteTranslator] = buildBackendRequest(
 	'deleteTranslator',

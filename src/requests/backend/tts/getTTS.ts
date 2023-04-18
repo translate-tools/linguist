@@ -1,7 +1,7 @@
 import splitLongText from 'google-tts-api/dist/splitLongText';
 
+import { base64ToBlob, blobToBase64 } from '../../../lib/blob';
 import { detectLanguage } from '../../../lib/language';
-import { blobToBase64, base64ToBlob } from '../../../lib/blob';
 import { buildBackendRequest } from '../../utils/requestBuilder';
 
 // TODO: implement option for select TTS speed

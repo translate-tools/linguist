@@ -1,6 +1,7 @@
-import { buildBackendRequest } from '../utils/requestBuilder';
 import { type } from '../../lib/types';
 import { ArrayOfStrings } from '../../types/runtime';
+
+import { buildBackendRequest } from '../utils/requestBuilder';
 
 export const [getTranslatorFeaturesFactory, getTranslatorFeatures] = buildBackendRequest(
 	'getTranslatorFeatures',

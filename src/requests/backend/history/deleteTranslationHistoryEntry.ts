@@ -1,5 +1,5 @@
-import { buildBackendRequest } from '../../utils/requestBuilder';
 import { type } from '../../../lib/types';
+import { buildBackendRequest } from '../../utils/requestBuilder';
 
 import { deleteEntry } from './data';
 

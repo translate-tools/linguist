@@ -1,22 +1,20 @@
 import React, { FC, useCallback, useContext, useEffect, useState } from 'react';
 import { cn } from '@bem-react/classname';
 
-import { getMessage } from '../../../../../lib/language';
 import { CustomTTS } from '../../../../../app/Background/TTS/TTSManager';
-
+import { LayoutFlow } from '../../../../../components/layouts/LayoutFlow/LayoutFlow';
+import { ModalLayout } from '../../../../../components/layouts/ModalLayout/ModalLayout';
 import { Button } from '../../../../../components/primitives/Button/Button.bundle/universal';
 import { Icon } from '../../../../../components/primitives/Icon/Icon.bundle/desktop';
-import { LayoutFlow } from '../../../../../components/layouts/LayoutFlow/LayoutFlow';
 import { Loader } from '../../../../../components/primitives/Loader/Loader';
 import { Modal } from '../../../../../components/primitives/Modal/Modal.bundle/desktop';
-import { ModalLayout } from '../../../../../components/layouts/ModalLayout/ModalLayout';
-
-import { getCustomSpeakers } from '../../../../../requests/backend/tts/getCustomSpeakers';
-import { deleteCustomSpeaker } from '../../../../../requests/backend/tts/deleteCustomSpeaker';
+import { getMessage } from '../../../../../lib/language';
 import { addCustomSpeaker } from '../../../../../requests/backend/tts/addCustomSpeaker';
+import { deleteCustomSpeaker } from '../../../../../requests/backend/tts/deleteCustomSpeaker';
+import { getCustomSpeakers } from '../../../../../requests/backend/tts/getCustomSpeakers';
 import { updateCustomSpeaker } from '../../../../../requests/backend/tts/updateCustomSpeaker';
-
 import { OptionsModalsContext } from '../../OptionsPage';
+
 import { Editor, EditorEntry } from '../Editor/Editor';
 
 import './TTSList.css';

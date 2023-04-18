@@ -1,10 +1,9 @@
 import React, { FC, ReactNode } from 'react';
 import { cn } from '@bem-react/classname';
 
-import { ITranslation } from '../../../types/translation/Translation';
 import { isMobileBrowser } from '../../../lib/browser';
 import { getLanguageNameByCode } from '../../../lib/language';
-
+import { ITranslation } from '../../../types/translation/Translation';
 import { Button } from '../../primitives/Button/Button.bundle/desktop';
 import { Icon } from '../../primitives/Icon/Icon.bundle/desktop';
 

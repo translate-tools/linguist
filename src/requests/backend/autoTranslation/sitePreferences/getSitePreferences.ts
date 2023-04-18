@@ -1,7 +1,7 @@
-import { buildBackendRequest } from '../../../utils/requestBuilder';
 import { type } from '../../../../lib/types';
+import { buildBackendRequest } from '../../../utils/requestBuilder';
 
-import { getPreferences, dataSignature } from './utils';
+import { dataSignature, getPreferences } from './utils';
 
 export const [getSitePreferencesFactory, getSitePreferencesReq] = buildBackendRequest(
 	'getSitePreferences',

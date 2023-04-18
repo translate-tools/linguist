@@ -1,11 +1,11 @@
 import React, { FC, useEffect, useState } from 'react';
 
+import { getMessage } from '../../../lib/language';
 import { LayoutFlow } from '../../layouts/LayoutFlow/LayoutFlow';
-import { Textinput } from '../../primitives/Textinput/Textinput.bundle/desktop';
 import { Button } from '../../primitives/Button/Button.bundle/universal';
+import { Textinput } from '../../primitives/Textinput/Textinput.bundle/desktop';
 
 import { getUnifiedKeyName } from './utils';
-import { getMessage } from '../../../lib/language';
 
 export type HotkeyProps = {
 	value: string | null;

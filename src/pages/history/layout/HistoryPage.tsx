@@ -1,14 +1,15 @@
 import React, { FC, useCallback, useLayoutEffect, useState } from 'react';
-import { cn } from '@bem-react/classname';
 import { isEqual } from 'lodash';
+import { cn } from '@bem-react/classname';
+
+import { Page } from '../../../components/layouts/Page/Page';
+import { ITranslationHistoryEntryWithKey } from '../../../requests/backend/history/data';
+import { getTranslationHistoryEntries } from '../../../requests/backend/history/getHistoryEntries';
 
 import {
 	TranslationsHistory,
 	TranslationsHistoryFetcher,
 } from './TranslationsHistory/TranslationsHistory';
-import { Page } from '../../../components/layouts/Page/Page';
-import { ITranslationHistoryEntryWithKey } from '../../../requests/backend/history/data';
-import { getTranslationHistoryEntries } from '../../../requests/backend/history/getHistoryEntries';
 
 import './HistoryPage.css';
 

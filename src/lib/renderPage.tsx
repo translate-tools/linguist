@@ -1,9 +1,9 @@
+// Resources
+import '../polyfills/scrollfix';
+
 import React, { ComponentType } from 'react';
 import ReactDOM from 'react-dom';
 import { configureRootTheme, ThemeWhitepaper } from 'react-elegant-ui/esm/theme';
-
-// Resources
-import '../polyfills/scrollfix';
 
 type Options = {
 	title?: string;

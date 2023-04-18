@@ -8,24 +8,21 @@ import React, {
 	useRef,
 	useState,
 } from 'react';
-import { cn } from '@bem-react/classname';
 import {
 	PaneItem,
 	TabsPanes,
 } from 'react-elegant-ui/esm/components/TabsPanes/TabsPanes.bundle/desktop';
+import { cn } from '@bem-react/classname';
 
+import { Button } from '../../../components/primitives/Button/Button.bundle/desktop';
+import { Icon } from '../../../components/primitives/Icon/Icon.bundle/desktop';
+import { Loader } from '../../../components/primitives/Loader/Loader';
+import { TabsMenu } from '../../../components/primitives/TabsMenu/TabsMenu.bundle/desktop';
+import { isMobileBrowser } from '../../../lib/browser';
 import { getMessage } from '../../../lib/language';
 import { XResizeObserver } from '../../../lib/XResizeObserver';
-import { isMobileBrowser } from '../../../lib/browser';
-
-import { TabsMenu } from '../../../components/primitives/TabsMenu/TabsMenu.bundle/desktop';
-import { Icon } from '../../../components/primitives/Icon/Icon.bundle/desktop';
-
-import { Loader } from '../../../components/primitives/Loader/Loader';
-import { AppConfigType } from '../../../types/runtime';
-
 import LogoElement from '../../../res/logo-base.svg';
-import { Button } from '../../../components/primitives/Button/Button.bundle/desktop';
+import { AppConfigType } from '../../../types/runtime';
 
 import './PopupWindow.css';
 

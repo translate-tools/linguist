@@ -1,6 +1,6 @@
 import { buildBackendRequest } from '../../utils/requestBuilder';
 
-import { getFile, FileSearchParams } from './data';
+import { FileSearchParams, getFile } from './data';
 
 export const [getBergamotFileFactory, getBergamotFile] = buildBackendRequest(
 	'getBergamotFile',

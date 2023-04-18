@@ -1,4 +1,5 @@
 import browser from 'webextension-polyfill';
+
 import { AppConfigType } from '../../types/runtime';
 
 export type AppIcon = Exclude<AppConfigType['appIcon'], 'auto'>;

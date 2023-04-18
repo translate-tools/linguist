@@ -1,14 +1,12 @@
 import React, { FC, ReactNode, useCallback } from 'react';
+import { Checkbox } from 'react-elegant-ui/esm/components/Checkbox/Checkbox.bundle/desktop';
 import { get, isEqual } from 'lodash';
 
-import { Checkbox } from 'react-elegant-ui/esm/components/Checkbox/Checkbox.bundle/desktop';
-
+import { Hotkey } from '../../../../components/controls/Hotkey';
 import { Button } from '../../../../components/primitives/Button/Button.bundle/desktop';
 import { Select } from '../../../../components/primitives/Select/Select.bundle/desktop';
 import { Textarea } from '../../../../components/primitives/Textarea/Textarea.bundle/desktop';
 import { Textinput } from '../../../../components/primitives/Textinput/Textinput.bundle/desktop';
-import { Hotkey } from '../../../../components/controls/Hotkey';
-
 import { AppConfigType } from '../../../../types/runtime';
 
 import { OptionSection } from '../OptionSection/OptionSection';

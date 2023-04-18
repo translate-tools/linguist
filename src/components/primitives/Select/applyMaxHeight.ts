@@ -1,7 +1,7 @@
 // Imported from yandex-ui. Source: https://github.com/bem/yandex-ui/
 
-import { Modifier, ModifierArguments, detectOverflow } from '@popperjs/core';
 import getBasePlacement from 'react-elegant-ui/esm/hooks/behavior/usePopper/utils';
+import { detectOverflow, Modifier, ModifierArguments } from '@popperjs/core';
 
 export type ApplyMaxHeightOptions = {
 	/**

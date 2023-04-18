@@ -1,8 +1,9 @@
 import React from 'react';
 
-import { translate } from '../../../requests/backend/translate';
-import { TextTranslatorPopup } from './components/TextTranslatorPopup/TextTranslatorPopup';
 import { ShadowDOMContainerManager } from '../../../lib/ShadowDOMContainerManager';
+import { translate } from '../../../requests/backend/translate';
+
+import { TextTranslatorPopup } from './components/TextTranslatorPopup/TextTranslatorPopup';
 
 export interface Options {
 	/**

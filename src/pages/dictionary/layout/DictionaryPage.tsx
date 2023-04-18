@@ -1,36 +1,32 @@
 import React, { FC, useCallback, useEffect, useMemo, useState } from 'react';
-import { cn } from '@bem-react/classname';
-import Papa from 'papaparse';
 import { useImmutableCallback } from 'react-elegant-ui/esm/hooks/useImmutableCallback';
-
+import Papa from 'papaparse';
+import { cn } from '@bem-react/classname';
 import { langCodes } from '@translate-tools/core/util/languages';
 
-import { getTranslations } from '../../../requests/backend/translations/getTranslations';
-import { ITranslationEntryWithKey } from '../../../requests/backend/translations/data';
-import { deleteTranslation } from '../../../requests/backend/translations/deleteTranslation';
-import { clearTranslations } from '../../../requests/backend/translations/clearTranslations';
-
-import { isTextsContainsSubstring } from '../../../lib/utils';
-import { getLanguageNameByCode, getMessage } from '../../../lib/language';
-import { saveFile } from '../../../lib/files';
-import { useConcurrentTTS } from '../../../lib/hooks/useConcurrentTTS';
-import { isMobileBrowser } from '../../../lib/browser';
-
+import { LayoutFlow } from '../../../components/layouts/LayoutFlow/LayoutFlow';
+import { Page } from '../../../components/layouts/Page/Page';
+import { TranslationCard } from '../../../components/layouts/TranslationCard/TranslationCard';
 import { Button } from '../../../components/primitives/Button/Button.bundle/desktop';
+import { Icon } from '../../../components/primitives/Icon/Icon.bundle/desktop';
 import { Select } from '../../../components/primitives/Select/Select.bundle/desktop';
 import { Textinput } from '../../../components/primitives/Textinput/Textinput.bundle/desktop';
-import { Icon } from '../../../components/primitives/Icon/Icon.bundle/desktop';
-
-import { TranslationCard } from '../../../components/layouts/TranslationCard/TranslationCard';
-import { Page } from '../../../components/layouts/Page/Page';
-import { LayoutFlow } from '../../../components/layouts/LayoutFlow/LayoutFlow';
 import { ToastMessages } from '../../../components/primitives/ToastMessages/ToastMessages';
 import { useToastMessages } from '../../../components/primitives/ToastMessages/useToastMessages';
+import { isMobileBrowser } from '../../../lib/browser';
+import { saveFile } from '../../../lib/files';
+import { useConcurrentTTS } from '../../../lib/hooks/useConcurrentTTS';
+import { getLanguageNameByCode, getMessage } from '../../../lib/language';
+import { isTextsContainsSubstring } from '../../../lib/utils';
+import { clearTranslations } from '../../../requests/backend/translations/clearTranslations';
+import { ITranslationEntryWithKey } from '../../../requests/backend/translations/data';
+import { deleteTranslation } from '../../../requests/backend/translations/deleteTranslation';
+import { getTranslations } from '../../../requests/backend/translations/getTranslations';
+import { ITranslation } from '../../../types/translation/Translation';
 
 import { OptionsPanel } from './OptionsPanel/OptionsPanel';
 
 import './DictionaryPage.css';
-import { ITranslation } from '../../../types/translation/Translation';
 
 export const cnDictionaryPage = cn('DictionaryPage');
 

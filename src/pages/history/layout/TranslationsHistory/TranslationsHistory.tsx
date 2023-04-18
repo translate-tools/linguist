@@ -1,25 +1,21 @@
 import React, { FC, useCallback, useEffect, useRef, useState } from 'react';
-import { cn } from '@bem-react/classname';
-import InfiniteScroll from 'react-infinite-scroller';
-
-import { Spinner } from 'react-elegant-ui/esm/components/Spinner/Spinner.bundle/desktop';
 import { Checkbox } from 'react-elegant-ui/esm/components/Checkbox/Checkbox.bundle/desktop';
-import { Button } from '../../../../components/primitives/Button/Button.bundle/universal';
-import { LayoutFlow } from '../../../../components/layouts/LayoutFlow/LayoutFlow';
-import { Textinput } from '../../../../components/primitives/Textinput/Textinput.bundle/desktop';
-import { Icon } from '../../../../components/primitives/Icon/Icon.bundle/desktop';
+import { Spinner } from 'react-elegant-ui/esm/components/Spinner/Spinner.bundle/desktop';
+import InfiniteScroll from 'react-infinite-scroller';
+import { cn } from '@bem-react/classname';
 
-import { TranslationCard } from '../../../../components/layouts/TranslationCard/TranslationCard';
 import { DictionaryButton } from '../../../../components/controls/DictionaryButton/DictionaryButton';
-
-import { getMessage } from '../../../../lib/language';
-import { useDebouncedInput } from '../../../../lib/hooks/useDebouncedInput';
-import { useConfirm } from '../../../../lib/hooks/useConfirm';
+import { LayoutFlow } from '../../../../components/layouts/LayoutFlow/LayoutFlow';
+import { TranslationCard } from '../../../../components/layouts/TranslationCard/TranslationCard';
+import { Button } from '../../../../components/primitives/Button/Button.bundle/universal';
+import { Icon } from '../../../../components/primitives/Icon/Icon.bundle/desktop';
+import { Textinput } from '../../../../components/primitives/Textinput/Textinput.bundle/desktop';
 import { useConcurrentTTS } from '../../../../lib/hooks/useConcurrentTTS';
+import { useConfirm } from '../../../../lib/hooks/useConfirm';
+import { useDebouncedInput } from '../../../../lib/hooks/useDebouncedInput';
 import { useKeyboardModifiers } from '../../../../lib/hooks/useKeyboardModifiers';
-
+import { getMessage } from '../../../../lib/language';
 import { clearTranslationHistory } from '../../../../requests/backend/history/clearTranslationHistory';
-
 import {
 	ITranslationHistoryEntryWithKey,
 	TranslationHistoryFetcherOptions,

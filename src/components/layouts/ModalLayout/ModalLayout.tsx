@@ -1,8 +1,9 @@
-import React, { ReactNode, FC } from 'react';
+import React, { FC, ReactNode } from 'react';
 import { cn } from '@bem-react/classname';
 
-import './ModalLayout.css';
 import { LayoutFlow } from '../LayoutFlow/LayoutFlow';
+
+import './ModalLayout.css';
 
 export const cnModalLayout = cn('ModalLayout');
 

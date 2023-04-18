@@ -2,7 +2,7 @@ import { TypeOf } from 'io-ts';
 import browser from 'webextension-polyfill';
 
 import { tryDecode, type } from '../../../../../lib/types';
-import { LangCodeWithAuto, LangCode } from '../../../../../types/runtime';
+import { LangCode, LangCodeWithAuto } from '../../../../../types/runtime';
 
 const storageSignature = type.union([
 	type.type({

@@ -1,4 +1,5 @@
 import browser from 'webextension-polyfill';
+
 import { decodeStruct, type } from '../../../lib/types';
 
 const storageKey = 'recentUsedLanguages';

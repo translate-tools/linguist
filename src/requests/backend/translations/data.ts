@@ -1,11 +1,11 @@
 import * as IDB from 'idb/with-async-ittr';
 
+import { ExtractSchemeFromIDBConstructor, getIDBPlan } from '../../../lib/idb/manager';
 import { type } from '../../../lib/types';
-import { getIDBPlan, ExtractSchemeFromIDBConstructor } from '../../../lib/idb/manager';
 import { isEqualIntersection } from '../../../lib/utils';
+import { ITranslation, TranslationType } from '../../../types/translation/Translation';
 import { DeepPartial } from '../../../types/utils';
 
-import { ITranslation, TranslationType } from '../../../types/translation/Translation';
 import { IDBTranslationSchemes } from './idb/schema';
 
 export type ITranslationEntry = {

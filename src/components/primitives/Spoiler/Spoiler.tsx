@@ -1,4 +1,4 @@
-import React, { ReactNode, FC, ReactEventHandler, useCallback } from 'react';
+import React, { FC, ReactEventHandler, ReactNode, useCallback } from 'react';
 
 export interface ISpoilerProps {
 	title: ReactNode;

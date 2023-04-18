@@ -1,13 +1,13 @@
+import React, { FC } from 'react';
+import {
+	cnButton,
+	IButtonProps as IButtonPropsDefault,
+} from 'react-elegant-ui/esm/components/Button/Button';
+import { IButtonRegistry } from 'react-elegant-ui/esm/components/Button/Button.registry';
 import { useComponentRegistry } from 'react-elegant-ui/esm/lib/di';
+import { Defaultize } from 'react-elegant-ui/esm/types/utility-types';
 import { usePress } from '@react-aria/interactions';
 import { mergeProps } from '@react-aria/utils';
-import React, { FC } from 'react';
-import { IButtonRegistry } from 'react-elegant-ui/esm/components/Button/Button.registry';
-import {
-	IButtonProps as IButtonPropsDefault,
-	cnButton,
-} from 'react-elegant-ui/esm/components/Button/Button';
-import { Defaultize } from 'react-elegant-ui/esm/types/utility-types';
 
 import './Button.css';
 

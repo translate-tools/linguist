@@ -1,18 +1,16 @@
 import React, { FC, useCallback, useEffect, useMemo, useRef, useState } from 'react';
-
-import { cn } from '@bem-react/classname';
 import { isKeyCode, Keys } from 'react-elegant-ui/esm/lib/keyboard';
+import { cn } from '@bem-react/classname';
 
+import { Modal } from '../../../../../components/primitives/Modal/Modal.bundle/desktop';
+import { Popup } from '../../../../../components/primitives/Popup/Popup';
 import { isMobileBrowser } from '../../../../../lib/browser';
 import LogoElement from '../../../../../res/logo-icon.svg';
-
 import { theme } from '../../../../../themes/presets/default/desktop';
-import { Popup } from '../../../../../components/primitives/Popup/Popup';
-import { Modal } from '../../../../../components/primitives/Modal/Modal.bundle/desktop';
 
 import {
-	TextTranslatorComponentProps,
 	TextTranslator,
+	TextTranslatorComponentProps,
 } from './TextTranslator/TextTranslator';
 import { fixPosToPreventOverflow } from './TextTranslatorPopup.utils/fixPosToPreventOverflow';
 
