@@ -5,20 +5,19 @@ import { GoogleTranslator } from '@translate-tools/core/translators/GoogleTransl
 import { YandexTranslator } from '@translate-tools/core/translators/YandexTranslator';
 import { TranslatorClass } from '@translate-tools/core/types/Translator';
 
-import { AppConfigType } from '../../types/runtime';
 import { createSelector } from '../../lib/effector/createSelector';
+import { BergamotTranslator } from '../../lib/translators/bergamot/BergamotTranslator';
 import {
 	createPromiseWithControls,
 	PromiseWithControls,
 } from '../../lib/utils/createPromiseWithControls';
 import { getTranslatorsClasses } from '../../requests/backend/translators';
+import { AppConfigType } from '../../types/runtime';
 
 import { ObservableAsyncStorage } from '../ConfigStorage/ConfigStorage';
 import { TranslatorManager } from './TranslatorManager';
-import { TTSManager } from './TTS/TTSManager';
 import { TTSController } from './TTS/TTSController';
-
-import { BergamotTranslator } from '../../lib/translators/bergamot/BergamotTranslator';
+import { TTSManager } from './TTS/TTSManager';
 
 export const embeddedTranslators = {
 	GoogleTranslator,

@@ -1,15 +1,14 @@
 import { createEvent, createStore } from 'effector';
 import browser from 'webextension-polyfill';
 
-import { getMessage } from '../../lib/language';
 import { isFirefox } from '../../lib/browser';
 import { getCurrentTabId, isValidBrowserTabId } from '../../lib/browser/tabs';
-
-import { getTranslatorFeatures } from '../../requests/backend/getTranslatorFeatures';
+import { getMessage } from '../../lib/language';
 import { getConfig } from '../../requests/backend/getConfig';
-import { getPageTranslateState } from '../../requests/contentscript/pageTranslation/getPageTranslateState';
+import { getTranslatorFeatures } from '../../requests/backend/getTranslatorFeatures';
 import { disableTranslatePage } from '../../requests/contentscript/pageTranslation/disableTranslatePage';
 import { enableTranslatePage } from '../../requests/contentscript/pageTranslation/enableTranslatePage';
+import { getPageTranslateState } from '../../requests/contentscript/pageTranslation/getPageTranslateState';
 
 import { pageTranslatorStateUpdatedHandler } from '../ContentScript/PageTranslator/requests/pageTranslatorStateUpdated';
 

@@ -1,14 +1,13 @@
 export * from 'react-elegant-ui/esm/components/Select/Select.registry/desktop';
 
-import { Registry } from 'react-elegant-ui/esm/lib/di';
-
+import { Popup } from 'react-elegant-ui/esm/components/Popup/Popup.bundle/desktop';
 import { cnSelect } from 'react-elegant-ui/esm/components/Select/Select';
+import { regObjects as regObjectsBasic } from 'react-elegant-ui/esm/components/Select/Select.registry/desktop';
 import { withDefaultProps } from 'react-elegant-ui/esm/hocs/withDefaultProps';
 import { applyMinWidth } from 'react-elegant-ui/esm/hooks/behavior/usePopper/modifiers/applyMinWidth';
-import { applyMaxHeight } from '../applyMaxHeight';
-import { regObjects as regObjectsBasic } from 'react-elegant-ui/esm/components/Select/Select.registry/desktop';
+import { Registry } from 'react-elegant-ui/esm/lib/di';
 
-import { Popup } from 'react-elegant-ui/esm/components/Popup/Popup.bundle/desktop';
+import { applyMaxHeight } from '../applyMaxHeight';
 
 export const regObjects: typeof regObjectsBasic = {
 	...regObjectsBasic, // Desktop features

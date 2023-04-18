@@ -1,4 +1,5 @@
 import React, { FC, RefObject } from 'react';
+
 import { cn } from '@bem-react/classname';
 
 import { Popup } from '../../../../../components/primitives/Popup/Popup';

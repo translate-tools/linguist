@@ -1,8 +1,8 @@
-import { buildBackendRequest } from '../../utils/requestBuilder';
 import { type } from '../../../lib/types';
+import { TranslationType } from '../../../types/translation/Translation';
+import { buildBackendRequest } from '../../utils/requestBuilder';
 
 import { addEntry } from './data';
-import { TranslationType } from '../../../types/translation/Translation';
 import { notifyDictionaryEntryAdd } from '.';
 
 export const [addTranslationFactory, addTranslation] = buildBackendRequest(

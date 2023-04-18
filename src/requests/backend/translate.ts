@@ -1,7 +1,7 @@
 import { langCode, langCodeWithAuto } from '@translate-tools/core/types/Translator';
+import { ITranslateOptions } from '@translate-tools/core/util/Scheduler/IScheduler';
 
 import { buildBackendRequest } from '../utils/requestBuilder';
-import { ITranslateOptions } from '@translate-tools/core/util/Scheduler/IScheduler';
 
 export const [translateFactory, translateRequest] = buildBackendRequest<
 	{

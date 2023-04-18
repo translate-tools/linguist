@@ -1,11 +1,11 @@
 import { TypeOf } from 'io-ts';
 import browser from 'webextension-polyfill';
 
-import { decodeStruct, type } from '../../../lib/types';
 import {
 	MigrationsMap,
 	MigrationsStorage,
 } from '../../../lib/migrations/MigrationsExecutor/MigrationsStorage';
+import { decodeStruct, type } from '../../../lib/types';
 
 import { migrationsForMigrationsStorage } from './AppMigrationsStorage.migrations';
 

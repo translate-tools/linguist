@@ -1,5 +1,6 @@
 import React, { ComponentType, ReactNode } from 'react';
 import browser from 'webextension-polyfill';
+
 import { langCodes } from '@translate-tools/core/util/languages';
 
 import { isMobileBrowser } from './browser';

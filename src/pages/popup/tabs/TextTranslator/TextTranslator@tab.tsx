@@ -1,10 +1,11 @@
 import React, { useContext, useEffect, useMemo, useRef, useState } from 'react';
 import { useDelayCallback } from 'react-elegant-ui/esm/hooks/useDelayCallback';
+
 import { useFocusVisible } from '@react-aria/interactions';
 
 import { translate as sendTranslateRequest } from '../../../../requests/backend/translate';
+import { InitFn, PopupWindowContext, TabComponent } from '../../layout/PopupWindow';
 
-import { InitFn, TabComponent, PopupWindowContext } from '../../layout/PopupWindow';
 import { TextTranslator, TextTranslatorProps, TranslationState } from './TextTranslator';
 import {
 	TextTranslatorData,

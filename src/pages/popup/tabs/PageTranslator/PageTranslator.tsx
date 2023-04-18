@@ -1,18 +1,17 @@
 import React, { FC, useCallback, useMemo } from 'react';
+
 import { cn } from '@bem-react/classname';
 
+import { PageTranslatorStats } from '../../../../app/ContentScript/PageTranslator/PageTranslator';
+import { LanguagePanel } from '../../../../components/controls/LanguagePanel/LanguagePanel';
 import { Button } from '../../../../components/primitives/Button/Button.bundle/desktop';
 import { Select } from '../../../../components/primitives/Select/Select.bundle/desktop';
-import { LanguagePanel } from '../../../../components/controls/LanguagePanel/LanguagePanel';
-
+import { Spoiler } from '../../../../components/primitives/Spoiler/Spoiler.bundle/desktop';
 import { getLanguageNameByCode, getMessage } from '../../../../lib/language';
 import { MutableValue } from '../../../../types/utils';
-
 import { TabData } from '../../layout/PopupWindow';
-import { PageTranslatorStats } from '../../../../app/ContentScript/PageTranslator/PageTranslator';
 
 import './PageTranslator.css';
-import { Spoiler } from '../../../../components/primitives/Spoiler/Spoiler.bundle/desktop';
 
 export const cnPageTranslator = cn('PageTranslator');
 

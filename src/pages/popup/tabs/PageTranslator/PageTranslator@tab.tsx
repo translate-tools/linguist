@@ -1,35 +1,32 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 
-import { getCurrentTab, getCurrentTabId } from '../../../../lib/browser/tabs';
-import { useStateWithProxy } from '../../../../lib/hooks/useStateWithProxy';
-
 import { PageTranslatorStats } from '../../../../app/ContentScript/PageTranslator/PageTranslator';
 import { pageTranslatorStatsUpdatedHandler } from '../../../../app/ContentScript/PageTranslator/requests/pageTranslatorStatsUpdated';
-
+import { getCurrentTab, getCurrentTabId } from '../../../../lib/browser/tabs';
+import { useStateWithProxy } from '../../../../lib/hooks/useStateWithProxy';
 // Requests
 import { addLanguagePreferences } from '../../../../requests/backend/autoTranslation/languagePreferences/addLanguagePreferences';
 import { deleteLanguagePreferences } from '../../../../requests/backend/autoTranslation/languagePreferences/deleteLanguagePreferences';
 import { getLanguagePreferences } from '../../../../requests/backend/autoTranslation/languagePreferences/getLanguagePreferences';
+import { deleteSitePreferences } from '../../../../requests/backend/autoTranslation/sitePreferences/deleteSitePreferences';
 import { getSitePreferences } from '../../../../requests/backend/autoTranslation/sitePreferences/getSitePreferences';
 import { setSitePreferences } from '../../../../requests/backend/autoTranslation/sitePreferences/setSitePreferences';
-import { deleteSitePreferences } from '../../../../requests/backend/autoTranslation/sitePreferences/deleteSitePreferences';
 import { getPageLanguage } from '../../../../requests/contentscript/getPageLanguage';
-
-import { getPageTranslateState } from '../../../../requests/contentscript/pageTranslation/getPageTranslateState';
-import { enableTranslatePage } from '../../../../requests/contentscript/pageTranslation/enableTranslatePage';
 import { disableTranslatePage } from '../../../../requests/contentscript/pageTranslation/disableTranslatePage';
-
+import { enableTranslatePage } from '../../../../requests/contentscript/pageTranslation/enableTranslatePage';
+import { getPageTranslateState } from '../../../../requests/contentscript/pageTranslation/getPageTranslateState';
 import { InitFn, TabComponent } from '../../layout/PopupWindow';
+
 import {
 	languagePreferenceOptions,
 	PageTranslator,
 	sitePreferenceOptions,
 } from './PageTranslator';
+import { PageTranslationStorage } from './PageTranslator.utils/PageTranslationStorage';
 import {
 	getTranslatePreferencesForSite,
 	mapLanguagePreferences,
 } from './PageTranslator.utils/utils';
-import { PageTranslationStorage } from './PageTranslator.utils/PageTranslationStorage';
 
 export type SitePrefs = ReturnType<typeof getSitePreferences> extends Promise<infer T>
 	? T

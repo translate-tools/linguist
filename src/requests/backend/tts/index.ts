@@ -1,9 +1,9 @@
-import { getTTSFactory } from './getTTS';
-import { getTTSLanguagesFactory } from './getTTSLanguages';
-import { getCustomSpeakersFactory } from './getCustomSpeakers';
-import { getSpeakersFactory } from './getSpeakers';
 import { addCustomSpeakerFactory } from './addCustomSpeaker';
 import { deleteCustomSpeakerFactory } from './deleteCustomSpeaker';
+import { getCustomSpeakersFactory } from './getCustomSpeakers';
+import { getSpeakersFactory } from './getSpeakers';
+import { getTTSFactory } from './getTTS';
+import { getTTSLanguagesFactory } from './getTTSLanguages';
 import { updateCustomSpeakerFactory } from './updateCustomSpeaker';
 
 export const ttsRequestHandlers = [

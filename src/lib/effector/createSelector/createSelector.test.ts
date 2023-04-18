@@ -1,6 +1,7 @@
 import { createEvent, createStore } from 'effector';
-import { reshape } from 'patronum';
 import { isEqual } from 'lodash';
+import { reshape } from 'patronum';
+
 import { createSelector } from '.';
 
 type UpdateData = Partial<{

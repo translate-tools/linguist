@@ -1,14 +1,14 @@
 // Storages
-import { ConfigStorageMigration } from '../ConfigStorage/ConfigStorage.migrations';
+import {
+	PersistentMigrationsExecutor,
+	PersistentMigrationTask,
+} from '../../lib/migrations/MigrationsExecutor/PersistentMigrationsExecutor';
 import { PopupWindowStorageMigration } from '../../pages/popup/layout/PopupWindow.utils/PopupWindowStorage.migrations';
 import { TextTranslatorStorageMigration } from '../../pages/popup/tabs/TextTranslator/TextTranslator.utils/TextTranslatorStorage.migrations';
-import { TranslatorsCacheStorageMigration } from '../Background/TranslatorsCacheStorage/TranslatorsCacheStorage.migrations';
 import { AutoTranslationMigration } from '../../requests/backend/autoTranslation/autoTranslation.migrations';
 
-import {
-	PersistentMigrationTask,
-	PersistentMigrationsExecutor,
-} from '../../lib/migrations/MigrationsExecutor/PersistentMigrationsExecutor';
+import { TranslatorsCacheStorageMigration } from '../Background/TranslatorsCacheStorage/TranslatorsCacheStorage.migrations';
+import { ConfigStorageMigration } from '../ConfigStorage/ConfigStorage.migrations';
 import { AppMigrationsStorage } from './App/AppMigrationsStorage';
 
 const migrationsList: PersistentMigrationTask[] = [

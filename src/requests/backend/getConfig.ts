@@ -1,5 +1,6 @@
-import { buildBackendRequest } from '../utils/requestBuilder';
 import { AppConfig } from '../../types/runtime';
+
+import { buildBackendRequest } from '../utils/requestBuilder';
 
 export const [getConfigFactory, getConfig] = buildBackendRequest('getConfig', {
 	responseValidator: AppConfig,

@@ -1,5 +1,5 @@
-import { buildTabRequest } from '../../utils/requestBuilder';
 import { type } from '../../../lib/types';
+import { buildTabRequest } from '../../utils/requestBuilder';
 
 export const PageTranslateStateSignature = type.type({
 	resolved: type.number,

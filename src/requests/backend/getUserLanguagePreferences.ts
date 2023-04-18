@@ -1,5 +1,6 @@
-import { buildBackendRequest } from '../utils/requestBuilder';
 import { type } from '../../lib/types';
+
+import { buildBackendRequest } from '../utils/requestBuilder';
 
 export const [getUserLanguagePreferencesFactory, getUserLanguagePreferences] =
 	buildBackendRequest('getUserLanguagePreferences', {

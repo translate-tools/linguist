@@ -2,7 +2,6 @@ import { DBSchema } from 'idb/with-async-ittr';
 
 import { IDBConstructor } from '../../../../../lib/idb/manager';
 import { decodeStruct, type } from '../../../../../lib/types';
-
 import { ITranslationEntry } from '../../data';
 
 export type IDBTranslationsSchemaV2 = DBSchema & {

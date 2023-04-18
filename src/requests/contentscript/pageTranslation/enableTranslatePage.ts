@@ -1,8 +1,8 @@
 import { langCode, langCodeWithAuto } from '@translate-tools/core/types/Translator';
 
-import { buildTabRequest } from '../../utils/requestBuilder';
 import { type } from '../../../lib/types';
-import { LangCodeWithAuto, LangCode } from '../../../types/runtime';
+import { LangCode, LangCodeWithAuto } from '../../../types/runtime';
+import { buildTabRequest } from '../../utils/requestBuilder';
 
 export const [enableTranslatePageFactory, enableTranslatePageReq] = buildTabRequest(
 	'enableTranslatePage',

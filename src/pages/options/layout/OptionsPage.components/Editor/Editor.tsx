@@ -1,18 +1,17 @@
 import React, { FC, useContext, useEffect, useState } from 'react';
-import { cn } from '@bem-react/classname';
 import { useImmutableCallback } from 'react-elegant-ui/esm/hooks/useImmutableCallback';
 
-import { Button } from '../../../../../components/primitives/Button/Button.bundle/universal';
-import { Textinput } from '../../../../../components/primitives/Textinput/Textinput.bundle/desktop';
-import { Textarea } from '../../../../../components/primitives/Textarea/Textarea.bundle/desktop';
+import { cn } from '@bem-react/classname';
 
 import { LayoutFlow } from '../../../../../components/layouts/LayoutFlow/LayoutFlow';
 import { ModalLayout } from '../../../../../components/layouts/ModalLayout/ModalLayout';
+import { Button } from '../../../../../components/primitives/Button/Button.bundle/universal';
 import {
 	IModalProps,
 	Modal,
 } from '../../../../../components/primitives/Modal/Modal.bundle/desktop';
-
+import { Textarea } from '../../../../../components/primitives/Textarea/Textarea.bundle/desktop';
+import { Textinput } from '../../../../../components/primitives/Textinput/Textinput.bundle/desktop';
 import { getMessage } from '../../../../../lib/language';
 import { OptionsModalsContext } from '../../OptionsPage';
 

@@ -1,8 +1,8 @@
-import browser from 'webextension-polyfill';
 import { createEvent, createStore, Store } from 'effector';
+import browser from 'webextension-polyfill';
 
-import { decodeStruct } from '../../lib/types';
 import { updateNotEqualProps } from '../../lib/effector/reducers';
+import { decodeStruct } from '../../lib/types';
 import { AppConfig, AppConfigType } from '../../types/runtime';
 
 export interface AsyncStorage<T> {

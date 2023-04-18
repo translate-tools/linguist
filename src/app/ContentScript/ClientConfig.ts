@@ -1,12 +1,10 @@
-import { createStore, createEvent, Store } from 'effector';
-
-import { AppConfigType } from '../../types/runtime';
+import { createEvent, createStore, Store } from 'effector';
 
 import { updateNotEqualProps } from '../../lib/effector/reducers';
-
 import { getConfig } from '../../requests/backend/getConfig';
 import { ping } from '../../requests/backend/ping';
 import { onAppConfigUpdated } from '../../requests/global/appConfigUpdate';
+import { AppConfigType } from '../../types/runtime';
 
 export class ClientConfig {
 	private store: Store<AppConfigType> | null = null;

@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+
 import { cnOptionsPage } from '../OptionsPage';
 
 import './PageSection.css';

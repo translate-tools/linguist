@@ -1,27 +1,25 @@
+import '../../polyfills/scrollfix';
+
 import React, { FC, useCallback, useEffect, useMemo, useState } from 'react';
 import ReactDOM from 'react-dom';
 import { configureRootTheme } from 'react-elegant-ui/esm/theme';
 
-// Requests
-import { ping as pingClient } from '../../requests/contentscript/ping';
-import { ping as pingBackend } from '../../requests/backend/ping';
-import { getConfig } from '../../requests/backend/getConfig';
-import { getTranslatorFeatures } from '../../requests/backend/getTranslatorFeatures';
-
 import { isMobileBrowser } from '../../lib/browser';
 import { getMessage } from '../../lib/language';
+import { getConfig } from '../../requests/backend/getConfig';
+import { getTranslatorFeatures } from '../../requests/backend/getTranslatorFeatures';
+import { ping as pingBackend } from '../../requests/backend/ping';
+// Requests
+import { ping as pingClient } from '../../requests/contentscript/ping';
+// Resources
+import { theme } from '../../themes/presets/default/desktop';
 import { AppConfigType } from '../../types/runtime';
 
 import { IPopupWindowTab, PopupWindow, TranslatorFeatures } from './layout/PopupWindow';
-
-// Resources
-import { theme } from '../../themes/presets/default/desktop';
-import '../../polyfills/scrollfix';
-
+import { PopupWindowStorage } from './layout/PopupWindow.utils/PopupWindowStorage';
+import { PageTranslatorTab } from './tabs/PageTranslator/PageTranslator@tab';
 // Tabs
 import { TextTranslatorTab } from './tabs/TextTranslator/TextTranslator@tab';
-import { PageTranslatorTab } from './tabs/PageTranslator/PageTranslator@tab';
-import { PopupWindowStorage } from './layout/PopupWindow.utils/PopupWindowStorage';
 
 interface PopupPageProps {
 	rootElement: HTMLElement;

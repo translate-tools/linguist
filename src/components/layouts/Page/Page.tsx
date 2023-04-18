@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+
 import { cn } from '@bem-react/classname';
 
 import { Loader } from '../../primitives/Loader/Loader';

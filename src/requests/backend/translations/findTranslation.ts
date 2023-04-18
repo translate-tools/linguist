@@ -1,6 +1,6 @@
-import { buildBackendRequest } from '../../utils/requestBuilder';
 import { type } from '../../../lib/types';
 import { TranslationType } from '../../../types/translation/Translation';
+import { buildBackendRequest } from '../../utils/requestBuilder';
 
 import { findEntry } from './data';
 

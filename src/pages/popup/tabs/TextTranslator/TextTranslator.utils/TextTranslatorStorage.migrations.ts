@@ -1,10 +1,10 @@
 import browser from 'webextension-polyfill';
 
-import { decodeStruct, type } from '../../../../../lib/types';
 import {
 	createMigrationTask,
 	Migration,
 } from '../../../../../lib/migrations/createMigrationTask';
+import { decodeStruct, type } from '../../../../../lib/types';
 
 const dataStructureVersions = {
 	0: type.union([

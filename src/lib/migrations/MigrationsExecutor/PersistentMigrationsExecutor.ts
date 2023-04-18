@@ -1,5 +1,4 @@
 import { MigrationTask } from '../createMigrationTask';
-
 import { MigrationsStorage } from './MigrationsStorage';
 
 export type PersistentMigrationTask = {

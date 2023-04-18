@@ -1,6 +1,7 @@
+import { tryDecode } from '../../../../lib/types';
 import { PageTranslateStateSignature } from '../../../../requests/contentscript/pageTranslation/getPageTranslateState';
 import { addRequestHandler, sendBackgroundRequest } from '../../../../requests/utils';
-import { tryDecode } from '../../../../lib/types';
+
 import { PageTranslatorStats } from '../PageTranslator';
 
 const eventName = 'pageTranslatorStatsUpdated';

@@ -2,25 +2,19 @@ import { createEvent, createStore, Store } from 'effector';
 import browser from 'webextension-polyfill';
 
 import { defaultConfig } from '../config';
-
-import { AppConfigType } from '../types/runtime';
 import { isBackgroundContext, isChromium } from '../lib/browser';
 import { AppThemeControl } from '../lib/browser/AppThemeControl';
 import { getAllTabs } from '../lib/browser/tabs';
 import { TextTranslatorStorage } from '../pages/popup/tabs/TextTranslator/TextTranslator.utils/TextTranslatorStorage';
-
 import { clearCache } from '../requests/backend/clearCache';
 import { sendAppConfigUpdateEvent } from '../requests/global/appConfigUpdate';
-
-import { TranslateSelectionContextMenu } from './ContextMenus/TranslateSelectionContextMenu';
-import { migrateAll } from './migrations/migrationsList';
-
-import { ConfigStorage, ObservableAsyncStorage } from './ConfigStorage/ConfigStorage';
-
+import { AppConfigType } from '../types/runtime';
 import { Background } from './Background';
 import { requestHandlers } from './Background/requestHandlers';
-
+import { ConfigStorage, ObservableAsyncStorage } from './ConfigStorage/ConfigStorage';
 import { TranslatePageContextMenu } from './ContextMenus/TranslatePageContextMenu';
+import { TranslateSelectionContextMenu } from './ContextMenus/TranslateSelectionContextMenu';
+import { migrateAll } from './migrations/migrationsList';
 
 type OnInstalledData = null | browser.Runtime.OnInstalledDetailsType;
 

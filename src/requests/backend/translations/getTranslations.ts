@@ -1,6 +1,7 @@
-import { buildBackendRequest } from '../../utils/requestBuilder';
 import { type } from '../../../lib/types';
-import { TranslationEntryWithKeyType, getEntries } from './data';
+import { buildBackendRequest } from '../../utils/requestBuilder';
+
+import { getEntries, TranslationEntryWithKeyType } from './data';
 
 export const [getTranslationsFactory, getTranslations] = buildBackendRequest(
 	'getTranslations',

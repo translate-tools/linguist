@@ -1,8 +1,9 @@
 import browser from 'webextension-polyfill';
 
-import { SiteData, getPreferences, setPreferences } from './sitePreferences/utils';
-import { addLanguage } from './languagePreferences/utils';
 import { createMigrationTask } from '../../../lib/migrations/createMigrationTask';
+
+import { addLanguage } from './languagePreferences/utils';
+import { getPreferences, setPreferences, SiteData } from './sitePreferences/utils';
 
 export const AutoTranslationMigration = createMigrationTask([
 	{

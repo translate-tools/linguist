@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
-import { useTTS } from './useTTS';
 import { useImmutableCallback } from 'react-elegant-ui/esm/hooks/useImmutableCallback';
+
+import { useTTS } from './useTTS';
 
 /**
  * Create TTS instance to speak few texts by call hook

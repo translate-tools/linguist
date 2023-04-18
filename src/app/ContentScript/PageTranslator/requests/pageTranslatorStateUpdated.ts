@@ -1,4 +1,5 @@
 import { addRequestHandler, sendBackgroundRequest } from '../../../../requests/utils';
+
 import { PageTranslatorState } from '../PageTranslatorController';
 
 const eventName = 'pageTranslatorStateUpdated';

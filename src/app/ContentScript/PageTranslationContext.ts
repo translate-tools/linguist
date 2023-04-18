@@ -1,22 +1,19 @@
-import { combine, createEvent, createStore, Store, sample, createEffect } from 'effector';
-
-import { AppConfigType } from '../../types/runtime';
-import { getPageLanguage } from '../../lib/browser';
-import { isNotEqual } from '../../lib/effector/filters';
+import { combine, createEffect, createEvent, createStore, sample, Store } from 'effector';
 
 import { onHotkeysPressed } from '../../components/controls/Hotkey/utils';
-
+import { getPageLanguage } from '../../lib/browser';
+import { isNotEqual } from '../../lib/effector/filters';
+import { isRequireTranslateBySitePreferences } from '../../pages/popup/tabs/PageTranslator/PageTranslator.utils/utils';
+import { getLanguagePreferences } from '../../requests/backend/autoTranslation/languagePreferences/getLanguagePreferences';
 // Requests
 import { getSitePreferences } from '../../requests/backend/autoTranslation/sitePreferences/getSitePreferences';
-import { getLanguagePreferences } from '../../requests/backend/autoTranslation/languagePreferences/getLanguagePreferences';
 import { getTranslatorFeatures } from '../../requests/backend/getTranslatorFeatures';
-import { isRequireTranslateBySitePreferences } from '../../pages/popup/tabs/PageTranslator/PageTranslator.utils/utils';
+import { AppConfigType } from '../../types/runtime';
 
-import { SelectTranslatorManager } from './SelectTranslator/SelectTranslatorManager';
-import { SelectTranslatorController } from './SelectTranslator/SelectTranslatorController';
-
-import { PageTranslatorManager } from './PageTranslator/PageTranslatorManager';
 import { PageTranslatorController } from './PageTranslator/PageTranslatorController';
+import { PageTranslatorManager } from './PageTranslator/PageTranslatorManager';
+import { SelectTranslatorController } from './SelectTranslator/SelectTranslatorController';
+import { SelectTranslatorManager } from './SelectTranslator/SelectTranslatorManager';
 
 export type PageTranslationOptions = {
 	from: string;
@@ -105,9 +102,9 @@ export class PageTranslationContext {
 		pageTranslator: PageTranslatorController | null;
 		selectTranslator: SelectTranslatorController | null;
 	} = {
-		pageTranslator: null,
-		selectTranslator: null,
-	};
+			pageTranslator: null,
+			selectTranslator: null,
+		};
 
 	public getDOMTranslator() {
 		return this.controllers.pageTranslator;

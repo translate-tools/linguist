@@ -1,4 +1,5 @@
 import { Blob } from 'buffer';
+
 globalThis.Blob = Blob;
 
 require('jest-webextension-mock');
