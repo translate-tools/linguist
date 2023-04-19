@@ -29,7 +29,7 @@ class TartuNLP {
 		return textLength - this.getLengthLimit();
 	};
 
-	static isSupportedAutoFrom = () => true;
+	static isSupportedAutoFrom = () => false;
 
 	// prettier-ignore
 	static getSupportedLanguages = () => [
