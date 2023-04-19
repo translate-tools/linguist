@@ -4,7 +4,7 @@ build: buildThirdparty
 dev: buildThirdparty
 	npm run build:dev
 
-buildThirdparty:
+buildThirdparty: prepare
 	cd thirdparty/bergamot && make build
 
 prepare:
