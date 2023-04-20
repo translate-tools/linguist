@@ -10,7 +10,7 @@
 		"clean": "rm -rf ./build",
 		"packAll": "cd build && ../scripts/zipAll.sh && cd ..",
 		"test:buildArchives": "cd build && ../scripts/testBuildArchives.sh && cd ..",
-		"build:all": "npm run clean && mkdir build && npm run build:firefox && npm run build:chromium && npm run build:chrome && npm run packAll && npm run test:buildArchives",
+		"build:all": "npm run clean && npm run build:firefox && npm run build:chromium && npm run build:chrome && npm run packAll && npm run test:buildArchives",
 		"build:dev": "EXT_TARGET=firefox webpack-cli -wc ./webpack.config.js",
 		"build:tokens": "themekit build -c themekit.config.json",
 		"build:firefox": "NODE_ENV=production EXT_TARGET=firefox webpack-cli -c ./webpack.config.js",
