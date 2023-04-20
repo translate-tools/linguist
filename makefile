@@ -1,3 +1,5 @@
+SHELL=/bin/bash
+
 build: buildThirdparty
 	npm run build:all
 
