@@ -25,9 +25,7 @@ jobs:
         run: npm test
 
       - name: Build
-        run: |
-          npm run build:all
-          exit 9
+        run: bash -c 'npm run build:all && exit 9'
         
       - name: Build CRX file for chromium
         working-directory: './build'
