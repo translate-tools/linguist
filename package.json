@@ -14,7 +14,7 @@
 		"build:dev": "EXT_TARGET=firefox webpack-cli -wc ./webpack.config.js",
 		"build:tokens": "themekit build -c themekit.config.json",
 		"build:firefox": "NODE_ENV=production EXT_TARGET=firefox webpack-cli -c ./webpack.config.js",
-		"build:chromium": "NODE_ENV=production EXT_TARGET=chromium webpack build --config ./webpack.config.js --stats verbose",
+		"build:chromium": "NODE_ENV=production EXT_TARGET=chromium webpack build --config ./webpack.config.js --progress --stats verbose",
 		"build:chrome": "NODE_ENV=production EXT_TARGET=chrome webpack-cli -c ./webpack.config.js",
 		"run:mobile-firefox": "ADB_DEVICE_TO_DEBUG=$(cat .ADB_DEVICE) && cd build/dev/firefox && web-ext run -t firefox-android --adb-device \"$ADB_DEVICE_TO_DEBUG\" --firefox-apk org.mozilla.fenix",
 		"release:patch": "npm version patch",

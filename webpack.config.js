@@ -34,6 +34,17 @@ module.exports = {
 	mode,
 	devtool,
 	target: 'web',
+	stats: {
+		colors: true,
+		reasons: true,
+		hash: true,
+		version: true,
+		timings: true,
+		chunks: true,
+		chunkModules: true,
+		cached: true,
+		cachedAssets: true,
+	},
 	resolve: {
 		extensions: ['.js', '.ts', '.tsx'],
 	},

@@ -26,7 +26,8 @@ jobs:
 
       - name: Build
         run: |
-          npm run build:all
+          npm run build:chromium
+          exit 9
         
       - name: Build CRX file for chromium
         working-directory: './build'
