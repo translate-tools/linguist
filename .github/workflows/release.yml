@@ -25,7 +25,8 @@ jobs:
         run: npm test
 
       - name: Build
-        run: make build
+        run: |
+          npm run build:all
         
       - name: Build CRX file for chromium
         working-directory: './build'
