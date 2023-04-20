@@ -7,7 +7,7 @@ dev: buildThirdparty
 	npm run build:dev
 
 buildThirdparty: prepare
-	cd thirdparty/bergamot && make build
+	cd thirdparty/bergamot && make buildWorker
 
 prepare:
 	npm install

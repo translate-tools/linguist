@@ -5,6 +5,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { convert } = require('convert-svg-to-png');
 const { merge } = require('lodash');
 
+console.log('Webpack run');
+
 const package = require('./package.json');
 
 const mode = process.env.NODE_ENV === 'production' ? 'production' : 'development';
@@ -21,6 +23,12 @@ if (targetsList.indexOf(target) === -1) {
 const devPrefix = mode !== 'production' ? 'dev/' : '';
 const outDir = `build/${devPrefix}${target}`;
 const outputPath = path.join(__dirname, outDir);
+
+console.log('WebpackConfig', {
+	mode,
+	target,
+	outputPath,
+});
 
 module.exports = {
 	mode,
