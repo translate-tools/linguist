@@ -131,10 +131,10 @@ module.exports = {
 				},
 
 				// Offline translator
-				{
-					from: 'thirdparty/bergamot/build/*.{js,wasm}',
-					to: path.join(outputPath, 'thirdparty/bergamot/[name].[ext]'),
-				},
+				// {
+				// 	from: 'thirdparty/bergamot/build/*.{js,wasm}',
+				// 	to: path.join(outputPath, 'thirdparty/bergamot/[name].[ext]'),
+				// },
 
 				// Serve static files
 				...[
