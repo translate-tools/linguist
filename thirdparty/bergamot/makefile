@@ -9,7 +9,7 @@ buildWorker:
 
 exportWasm:
 	- mkdir build
-	cp bergamot-translator/build-wasm/bergamot-translator-worker.{js,wasm} build/
+	bash -c 'cp bergamot-translator/build-wasm/bergamot-translator-worker.{js,wasm} build/'
 
 buildWasm: prepareWasm
 	- cd bergamot-translator && mkdir build-wasm
