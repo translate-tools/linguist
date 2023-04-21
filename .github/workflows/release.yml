@@ -25,7 +25,7 @@ jobs:
         run: npm test
 
       - name: Build
-        run: npm run build:all
+        run: ((npm run build:all)2>&1 | tee -a log1); echo '>>> DEBUG LOG:' && cat log1
 
       - name: Break
         run: ls -al . && ls -al ./build && sleep 5 && echo "End" && exit 4

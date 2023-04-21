@@ -1,4 +1,4 @@
-#! /usr/bin/sh
+#!/bin/sh
 
 # Script to make zip files for all directories from the current directory
 

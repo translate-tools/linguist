@@ -2,7 +2,7 @@ const path = require('path');
 const fs = require('fs');
 const CopyPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const { convert } = require('convert-svg-to-png');
+// const { convert } = require('convert-svg-to-png');
 const { merge } = require('lodash');
 
 console.log('Webpack run');
@@ -137,32 +137,32 @@ module.exports = {
 				// },
 
 				// Serve static files
-				...[
-					'logo-icon.svg',
-					'logo-icon-simple-dark.svg',
-					'logo-icon-simple-light.svg',
-				].map((filename) => ({
-					from: './src/res/' + filename,
-					to: path.join(outputPath, 'static', filename),
-				})),
+				// ...[
+				// 	'logo-icon.svg',
+				// 	'logo-icon-simple-dark.svg',
+				// 	'logo-icon-simple-light.svg',
+				// ].map((filename) => ({
+				// 	from: './src/res/' + filename,
+				// 	to: path.join(outputPath, 'static', filename),
+				// })),
 
-				//  Convert svg to png files for use as addon logotypes (chromium is not support svg logotypes)
-				...[
-					'logo-icon.svg',
-					'logo-icon-simple-dark.svg',
-					'logo-icon-simple-light.svg',
-				].map((file) => ({
-					from: './src/res/' + file,
-					to: path.join(
-						outputPath,
-						'static',
-						'logo',
-						file.replace(/\.svg$/, '.png'),
-					),
-					transform(content) {
-						return convert(content, { width: 512, height: 512 });
-					},
-				})),
+				// //  Convert svg to png files for use as addon logotypes (chromium is not support svg logotypes)
+				// ...[
+				// 	'logo-icon.svg',
+				// 	'logo-icon-simple-dark.svg',
+				// 	'logo-icon-simple-light.svg',
+				// ].map((file) => ({
+				// 	from: './src/res/' + file,
+				// 	to: path.join(
+				// 		outputPath,
+				// 		'static',
+				// 		'logo',
+				// 		file.replace(/\.svg$/, '.png'),
+				// 	),
+				// 	transform(content) {
+				// 		return convert(content, { width: 512, height: 512 });
+				// 	},
+				// })),
 			],
 		}),
 	],
