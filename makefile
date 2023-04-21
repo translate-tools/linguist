@@ -10,6 +10,18 @@ prepare:
 	npm install
 
 # 
+# Main targets
+# 
+buildAll: buildThirdparty
+	make dockerBuildContainer
+	make dockerRunContainer
+
+buildThirdparty:
+	cd ./thirdparty/bergamot
+	make dockerBuildContainer
+	make dockerRunContainer
+
+# 
 # Docker
 # 
 dockerBuildContainer:
