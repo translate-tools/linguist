@@ -1,4 +1,4 @@
-#! /usr/bin/sh
+#!/bin/sh
 
 # Script to unpack build archives and test extensions
 
