@@ -18,14 +18,14 @@ jobs:
         with:
           node-version: '14'
 
-      - name: Test change build dir owner
-        run: sudo chown -R $(id -u):$(id -g) .
+      - name: Run tests
+        run: npm test
 
-        # - name: Run tests
-        #   run: npm test
-
-        # - name: Compile third party with docker
-        #   run: cd thirdparty/bergamot && make dockerBuildContainer && make dockerRunContainer
+      - name: Compile third party with docker
+        working-directory: './thirdparty/bergamot'
+        run: |
+          make dockerBuildContainer
+          make dockerRunContainer
 
       - name: Build docker image
         run: make dockerBuildContainer
@@ -45,7 +45,8 @@ jobs:
           echo "$CHROMIUM_CRX_PEM" > ./crx.pem
           npx crx pack chromium -o linguist.crx -p ./crx.pem
           ls -al ./
-        
+
+        # Place to stop for DRY run
       - name: Build XPI file for firefox
         working-directory: './build'
         env:
@@ -55,9 +56,6 @@ jobs:
           mkdir ./AMO
           npx web-ext sign --api-key "$AMO_KEY" --api-secret "$AMO_SECRET" --id "{e3fc2d33-09fc-4fe8-9331-d0a464698035}" --source-dir ./firefox --artifacts-dir ./AMO
           mv AMO/*.xpi AMO/linguist.xpi
-
-      - name: Break
-        run: pwd && ls -alR && exit 4
 
       - name: Publish release on GitHub
         uses: softprops/action-gh-release@v1
