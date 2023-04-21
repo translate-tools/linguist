@@ -25,3 +25,17 @@ prepareWasm:
 
 clean:
 	rm -rf ./build
+
+# 
+# Docker tasks to unify build process
+# 
+
+dockerContainerBuild:
+	docker build . -t v/bergamot
+
+dockerContainerCompile: clean
+	docker run -it -v $(pwd):/out --user node v/bergamot make dockerBuild
+
+dockerBuild:
+	make build
+	cp -R ./build /out/build
