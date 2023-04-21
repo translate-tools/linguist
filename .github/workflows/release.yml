@@ -25,19 +25,17 @@ jobs:
         #   run: npm test
 
       - name: Build docker image
-        run: docker build . -t v/linguist
+        run: make dockerBuildContainer
 
         # Test build in docker
       - name: Build app with docker
-        run: |
-          docker run -v $(pwd):/usr/src/app --user `id -u` --cap-add=SYS_ADMIN v/linguist bash -c 'echo "USER: $(id -u): $(whoami)" && ls -al && npm run build:all'
+        run: make dockerMakeBuild
 
       - name: Compile third party with docker
-        run: |
-          docker run -v $(pwd):/usr/src/app --user `id -u` --cap-add=SYS_ADMIN v/linguist bash -c 'cd thirdparty/bergamot && make build'
+        run: cd thirdparty/bergamot && make dockerContainerBuild && make dockerContainerCompile
 
       - name: Break
-        run: ls -al . && ls -al ./build && sleep 5 && echo "End" && exit 4
+        run: pwd && ls -al . && ls -al ./build && echo "End" && exit 4
         
       - name: Build CRX file for chromium
         working-directory: './build'
