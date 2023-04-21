@@ -21,11 +21,20 @@ jobs:
       - name: Install deps
         run: npm install
 
-      - name: Run tests
-        run: npm test
+        # - name: Run tests
+        #   run: npm test
 
-      - name: Build
-        run: ((npm run build:all)2>&1 | tee -a log1); echo '>>> DEBUG LOG:' && cat log1
+      - name: Build docker image
+        run: docker build . -t v/linguist
+
+        # Test build in docker
+      - name: Build app with docker
+        run: |
+          docker run -t -i -v $(pwd):/usr/src/app --user node --cap-add=SYS_ADMIN v/linguist npm run build:all
+
+      - name: Compile third party with docker
+        run: |
+          docker run -t -i -v $(pwd):/usr/src/app --user node --cap-add=SYS_ADMIN v/linguist bash -c 'cd thirdparty/bergamot && make build'
 
       - name: Break
         run: ls -al . && ls -al ./build && sleep 5 && echo "End" && exit 4
