@@ -21,17 +21,14 @@ jobs:
         # - name: Run tests
         #   run: npm test
 
+      - name: Compile third party with docker
+        run: cd thirdparty/bergamot && make dockerBuildContainer && make dockerRunContainer
+
       - name: Build docker image
         run: make dockerBuildContainer
 
       - name: Build app with docker
         run: make dockerRunContainer
-
-      - name: Compile third party with docker
-        run: cd thirdparty/bergamot && make dockerBuildContainer && make dockerRunContainer
-
-      - name: Break
-        run: pwd && ls -al . && ls -al ./build && echo "End" && exit 4
         
       - name: Build CRX file for chromium
         working-directory: './build'
@@ -51,6 +48,9 @@ jobs:
           mkdir ./AMO
           npx web-ext sign --api-key "$AMO_KEY" --api-secret "$AMO_SECRET" --id "{e3fc2d33-09fc-4fe8-9331-d0a464698035}" --source-dir ./firefox --artifacts-dir ./AMO
           mv AMO/*.xpi AMO/linguist.xpi
+
+      - name: Break
+        run: pwd && ls -alR && exit 4
 
       - name: Publish release on GitHub
         uses: softprops/action-gh-release@v1

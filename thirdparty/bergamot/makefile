@@ -34,7 +34,7 @@ dockerBuildContainer:
 	docker build . -t v/bergamot
 
 dockerRunContainer: clean
-	docker run -it -v `pwd`:/out --user node v/bergamot make dockerBuild
+	docker run -v `pwd`:/out --user node v/bergamot make dockerBuild
 
 dockerBuild:
 	make build
