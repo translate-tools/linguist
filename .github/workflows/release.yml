@@ -29,10 +29,10 @@ jobs:
 
         # Test build in docker
       - name: Build app with docker
-        run: make dockerMakeBuild
+        run: make dockerRunContainer
 
       - name: Compile third party with docker
-        run: cd thirdparty/bergamot && make dockerContainerBuild && make dockerContainerCompile
+        run: cd thirdparty/bergamot && make dockerBuildContainer && make dockerRunContainer
 
       - name: Break
         run: pwd && ls -al . && ls -al ./build && echo "End" && exit 4

@@ -30,11 +30,11 @@ clean:
 # Docker tasks to unify build process
 # 
 
-dockerContainerBuild:
+dockerBuildContainer:
 	docker build . -t v/bergamot
 
-dockerContainerCompile: clean
-	docker run -it -v $(pwd):/out --user node v/bergamot make dockerBuild
+dockerRunContainer: clean
+	docker run -it -v `pwd`:/out --user node v/bergamot make dockerBuild
 
 dockerBuild:
 	make build
