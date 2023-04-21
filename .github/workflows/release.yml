@@ -18,16 +18,12 @@ jobs:
         with:
           node-version: '14'
 
-      - name: Install deps
-        run: npm install
-
         # - name: Run tests
         #   run: npm test
 
       - name: Build docker image
         run: make dockerBuildContainer
 
-        # Test build in docker
       - name: Build app with docker
         run: make dockerRunContainer
 

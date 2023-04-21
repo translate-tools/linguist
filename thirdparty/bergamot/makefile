@@ -38,4 +38,4 @@ dockerRunContainer: clean
 
 dockerBuild:
 	make build
-	cp -R ./build /out/build
+	sudo cp -R ./build /out/build

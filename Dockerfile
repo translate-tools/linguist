@@ -9,6 +9,10 @@ RUN apt-get install -y gconf-service libasound2 libatk1.0-0 libc6 libcairo2 libc
 # Sys utils
 RUN apt-get install -y zip gzip tar cmake
 
+# Setup sudo
+RUN apt-get install -y sudo && echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+RUN usermod -aG sudo node
+
 COPY . .
 RUN chown -R node:node .
 
