@@ -22,7 +22,7 @@ const getGPTTranslator = async () => {
 					from,
 				)} to ${languageNames.of(
 					to,
-				)} and send me back only JSON with no your comments. Try hard to send me back valid JSON. Never translate "message" key in JSON, but translate its value:\n${stringifiedJSON}`;
+				)} and send me back only JSON with no your comments. Try hard to send me back valid JSON. Never translate a word "Linguist". Never translate "message" key in JSON, but translate its value:\n${stringifiedJSON}`;
 			res(new ChatGPTUtils(translator));
 		});
 	}
