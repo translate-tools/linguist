@@ -1,6 +1,11 @@
 const { writeFileSync } = require('fs');
 
-const { getLocaleFilenames, getSourceLocale, getLocaleObject } = require('.');
+const {
+	getLocaleFilenames,
+	getSourceLocale,
+	getLocaleObject,
+	getChangedLocaleMessageNames,
+} = require('.');
 
 let gptTranslator = null;
 const getGPTTranslator = async () => {
@@ -17,7 +22,7 @@ const getGPTTranslator = async () => {
 					from,
 				)} to ${languageNames.of(
 					to,
-				)} and send me back only JSON with no your comments. Try hard to send me back valid JSON. Never translate "message" key in JSON, but translate its value:\n${stringifiedJSON}`;
+				)} and send me back only JSON with no your comments. Try hard to send me back valid JSON. Never translate a word "Linguist". Never translate "message" key in JSON, but translate its value:\n${stringifiedJSON}`;
 			res(new ChatGPTUtils(translator));
 		});
 	}
@@ -28,6 +33,7 @@ const getGPTTranslator = async () => {
 const syncLocalizationsMessagesWithSource = async (
 	sourceLocalization,
 	targetLocalization,
+	changedMessagesNames,
 ) => {
 	const writeUpdates = (object) => {
 		const stringifiedJSON = JSON.stringify(object, null, '\t');
@@ -82,7 +88,11 @@ const syncLocalizationsMessagesWithSource = async (
 	const gptTranslator = await getGPTTranslator();
 
 	const messagesToTranslate = Object.entries(sourceLocalization.json).filter(
-		([key]) => !(key in filteredJson) && !key.startsWith('langCode_'),
+		([key]) => {
+			if (changedMessagesNames.includes(key)) return true;
+
+			return !(key in filteredJson) && !key.startsWith('langCode_');
+		},
 	);
 
 	let collectedMessages = { ...filteredJson };
@@ -141,12 +151,17 @@ const syncLocalizationsFilesWithSource = async () => {
 	const sourceLocalization = getSourceLocale();
 	const localizationFiles = getLocaleFilenames();
 
+	const changedMessages = getChangedLocaleMessageNames(sourceLocalization);
 	for (const filePath of localizationFiles) {
 		// Skip source file
 		if (filePath === sourceLocalization.filename) continue;
 
 		const targetLocalization = getLocaleObject(filePath);
-		await syncLocalizationsMessagesWithSource(sourceLocalization, targetLocalization);
+		await syncLocalizationsMessagesWithSource(
+			sourceLocalization,
+			targetLocalization,
+			changedMessages,
+		);
 	}
 };
 
