@@ -17,15 +17,14 @@ Customize Linguist as you wish
 Unlike other browser extensions, Linguist is not just a wrapper over Google Translator Widget, it's complete and independent translation system. This is why Linguist so powerful and flexible. With Linguist you completely control your data and how Linguist works for you.
 
 Some features you can control with Linguist
+
 - Control web pages auto translation by language and by domain name
 - Pick service that will translate your texts
-	- You may use popular services like Google, Yandex, DeepL, Reverso, Bing
-	- You may use offline translator that will translate texts on your device (not send to internet at all)
-	- You may use custom translators modules to use your own translation service. Read more: https://github.com/translate-tools/linguist/blob/master/docs/CustomTranslator.md
+  - You may use popular services like Google, Yandex, DeepL, Reverso, Bing
+  - You may use offline translator that will translate texts on your device (not send to internet at all)
+  - You may use custom translators modules to use your own translation service. Read more: https://github.com/translate-tools/linguist/blob/master/docs/CustomTranslator.md
 - Pick service to speak texts
 - Customize user interface and available features
-
- Some unique features 
 
 Privacy
 Linguist are free, open source, and never collect your personal data.
