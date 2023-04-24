@@ -14,9 +14,9 @@ Offline translation and privacy
 Linguist can translate texts even without the internet - a feature that no other extension has. The offline translator allows you to translate texts on your device without sending any private messages over the internet, ensuring your privacy. Simply enable the feature on the options page to maintain your privacy while translating work emails and personal messages.
 
 Customize Linguist as you wish
-Unlike other browser extensions, Linguist is not just a wrapper over the Google Translator Widget; it's a complete and independent translation system. This is why Linguist is so powerful and flexible. With Linguist, you completely control your data and how Linguist works for you.
+Unlike other browser extensions, Linguist is not just a wrapper over the Google Translator Widget; it's a complete and independent translation system. This is why Linguist is not limited in what features may be implemented. Linguist is the leading extension for translating pages. Join Linguist and start using the most advanced features now and always stay at the forefront of technological progress in future.
 
-Some features you can control with Linguist:
+You have complete control over your data and how Linguist works for you:
 
 - Control web pages auto-translation by language and domain name
 - Choose a service that will translate your texts
