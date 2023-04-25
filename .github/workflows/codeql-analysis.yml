@@ -37,6 +37,9 @@ jobs:
       - name: Run tests
         run: npm test
 
+      - name: Build app and lint build
+        run: npm run build:all
+
   analyze:
     name: Analyze
     runs-on: ubuntu-latest
