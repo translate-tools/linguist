@@ -1,4 +1,5 @@
 const { writeFileSync } = require('fs');
+const { isEqual } = require('lodash');
 
 const {
 	getLocaleFilenames,
@@ -151,17 +152,51 @@ const syncLocalizationsFilesWithSource = async () => {
 	const sourceLocalization = getSourceLocale();
 	const localizationFiles = getLocaleFilenames();
 
+	const recheckAttempts = 5;
+	const filesWithChanges = [];
+
 	const changedMessages = getChangedLocaleMessageNames(sourceLocalization);
 	for (const filePath of localizationFiles) {
 		// Skip source file
 		if (filePath === sourceLocalization.filename) continue;
 
-		const targetLocalization = getLocaleObject(filePath);
-		await syncLocalizationsMessagesWithSource(
-			sourceLocalization,
-			targetLocalization,
-			changedMessages,
-		);
+		let latestObject = null;
+		for (
+			let recheckAttemptNumber = 0;
+			recheckAttemptNumber <= recheckAttempts;
+			recheckAttemptNumber++
+		) {
+			const targetLocalization = getLocaleObject(filePath);
+			await syncLocalizationsMessagesWithSource(
+				sourceLocalization,
+				targetLocalization,
+				changedMessages,
+			);
+
+			const actualLocalizationData = getLocaleObject(filePath).json;
+
+			// Check changes. If no have changes, then we successful translate all messages
+			if (latestObject !== null && recheckAttemptNumber > 0) {
+				const isObjectHaveChanges = !isEqual(
+					latestObject,
+					actualLocalizationData,
+				);
+
+				if (!isObjectHaveChanges) break;
+
+				// Add file to array to report
+				if (recheckAttemptNumber >= recheckAttempts) {
+					filesWithChanges.push(filePath);
+				}
+			}
+
+			latestObject = actualLocalizationData;
+		}
+	}
+
+	if (filesWithChanges.length > 0) {
+		console.error('Files that exceed attempts to fix changes', filesWithChanges);
+		throw new Error('Some files been not translated correctly');
 	}
 };
 
