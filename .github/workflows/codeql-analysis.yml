@@ -15,6 +15,8 @@ on:
   schedule:
     - cron: '43 4 * * 6'
 
+  workflow_dispatch:
+
 jobs:
   tests:
     name: Tests
@@ -32,20 +34,18 @@ jobs:
       - name: Run tests
         run: npm test
 
-      # Build third party
-      - name: Pack third party code to archive, to calc files hash
-        working-directory: './thirdparty/bergamot'
-        run: tar -cf hashArchive.tar src package.json package-lock.json rollup.config.mjs tsconfig.json makefile Dockerfile .dockerignore
-
+        # TODO: get known how to specify glob paths like `thirdparty/bergamot/{*,**/*}` to depends on all files
+        # Docs: https://github.com/actions/cache
       - name: Cache bergamot
         id: cache-bergamot
         uses: actions/cache@v3
         with:
-          path: |
-            thirdparty/bergamot/build/*.{js,wasm}
-            thirdparty/bergamot/bergamot-translator
+          path: thirdparty/bergamot/build/*
+          # TODO: add month to key, to deprecate old cache `date -u +'%m.%G'`
+          # Try this approach: https://stackoverflow.com/questions/57968497/how-do-i-set-an-env-var-with-a-bash-expression-in-github-actions
+          # If it will works fine, we can try use directory git hash as key
           # cache strategy https://github.com/actions/cache/blob/main/caching-strategies.md#updating-cache-for-any-change-in-the-dependencies
-          key: ${{ runner.os }}-cache-bergamot-${{ hashFiles('thirdparty/bergamot/hashArchive.tar') }}
+          key: ${{ runner.os }}-cache-bergamot-${{ hashFiles('thirdparty/bergamot/*', 'thirdparty/bergamot/src/**/*.ts') }}
 
       - name: Compile third party with docker
         if: steps.cache-bergamot.outputs.cache-hit != 'true'
@@ -54,13 +54,11 @@ jobs:
           make dockerBuildContainer
           make dockerRunContainer
 
-      # Build the code
-      - name: Build docker image
-        run: make dockerBuildContainer
-
       # We build with docker, because Github actions cannot to make correct build due to deps (puppeteer to convert images, etc)
       - name: Build app with docker and lint build
-        run: make dockerRunContainer
+        run: |
+          make dockerBuildContainer
+          make dockerRunContainer
 
   analyze:
     name: Analyze
