@@ -32,6 +32,11 @@ jobs:
       - name: Run tests
         run: npm test
 
+      # Build third party
+      - name: Pack third party code to archive, to calc files hash
+        working-directory: './thirdparty/bergamot'
+        run: tar -cf hashArchive.tar src package.json package-lock.json rollup.config.mjs tsconfig.json makefile Dockerfile .dockerignore
+
       - name: Cache bergamot
         id: cache-bergamot
         uses: actions/cache@v3
@@ -40,7 +45,7 @@ jobs:
             thirdparty/bergamot/build/*.{js,wasm}
             thirdparty/bergamot/bergamot-translator
           # cache strategy https://github.com/actions/cache/blob/main/caching-strategies.md#updating-cache-for-any-change-in-the-dependencies
-          key: ${{ runner.os }}-cache-bergamot-${{ hashFiles('thirdparty/bergamot/{*,**/*}') }}
+          key: ${{ runner.os }}-cache-bergamot-${{ hashFiles('thirdparty/bergamot/hashArchive.tar') }}
 
       - name: Compile third party with docker
         if: steps.cache-bergamot.outputs.cache-hit != 'true'
@@ -49,6 +54,7 @@ jobs:
           make dockerBuildContainer
           make dockerRunContainer
 
+      # Build the code
       - name: Build docker image
         run: make dockerBuildContainer
 
