@@ -58,9 +58,11 @@ It is for making life a little more comfortable, for all users of the internet.
 
 # Screenshots
 
-![](./assets/screen1.png)
-![](./assets/screen2.png)
-![](./assets/screen3.png)
+![](./assets/screenshots/SelectedTextTranslation.png)
+![](./assets/screenshots/FullPageTranslation.png)
+![](./assets/screenshots/TextTranslation.png)
+![](./assets/screenshots/Preferences.png)
+![](./assets/screenshots/Dictionary.png)
 
 # Development
 
