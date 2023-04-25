@@ -32,6 +32,23 @@ jobs:
       - name: Run tests
         run: npm test
 
+      - name: Cache bergamot
+        id: cache-bergamot
+        uses: actions/cache@v3
+        with:
+          path: |
+            thirdparty/bergamot/build/*.{js,wasm}
+            thirdparty/bergamot/bergamot-translator
+          # cache strategy https://github.com/actions/cache/blob/main/caching-strategies.md#updating-cache-for-any-change-in-the-dependencies
+          key: ${{ runner.os }}-cache-bergamot-${{ hashFiles('thirdparty/bergamot/{*,**/*}') }}
+
+      - name: Compile third party with docker
+        if: steps.cache-bergamot.outputs.cache-hit != 'true'
+        working-directory: './thirdparty/bergamot'
+        run: |
+          make dockerBuildContainer
+          make dockerRunContainer
+
       - name: Build docker image
         run: make dockerBuildContainer
 
