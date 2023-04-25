@@ -1,3 +1,4 @@
+import { isLanguageCodeISO639v2 } from '@translate-tools/core/util/languages';
 import {
 	IScheduler,
 	Scheduler,
@@ -36,7 +37,9 @@ export class TranslatorManager<Translators extends TranslatorsMap = TranslatorsM
 	public getTranslatorFeatures() {
 		const translatorClass = this.getTranslatorClass();
 		return {
-			supportedLanguages: translatorClass.getSupportedLanguages(),
+			supportedLanguages: translatorClass
+				.getSupportedLanguages()
+				.filter((lang) => isLanguageCodeISO639v2(lang)),
 			isSupportAutodetect: translatorClass.isSupportedAutoFrom(),
 		};
 	}
