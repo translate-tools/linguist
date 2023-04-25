@@ -4,11 +4,6 @@
 # You may wish to alter this file to override the set of languages analyzed,
 # or to provide custom queries or build logic.
 #
-# ******** NOTE ********
-# We have attempted to detect the languages in your repository. Please check
-# the `language` matrix defined below to confirm you have the correct set of
-# supported CodeQL languages.
-#
 name: "CodeQL"
 
 on:
@@ -37,8 +32,12 @@ jobs:
       - name: Run tests
         run: npm test
 
-      - name: Build app and lint build
-        run: npm run build:all
+      - name: Build docker image
+        run: make dockerBuildContainer
+
+      # We build with docker, because Github actions cannot to make correct build due to deps (puppeteer to convert images, etc)
+      - name: Build app with docker and lint build
+        run: make dockerRunContainer
 
   analyze:
     name: Analyze
