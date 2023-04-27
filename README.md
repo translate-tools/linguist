@@ -53,18 +53,17 @@ To try it on a chromium browser, download the normal extension for Chrome.
 
 # Development
 
-See [development docs](./docs/Development.md) to get info how to build and debug the addon.
+See [development docs](./docs/Development.md) to get info how to build and debug.
 
 You can improve Linguist, [make issues](https://github.com/translate-tools/linguist/issues/new) and suggest features or tell us about unknown bugs. 
 
+Contribute to Linguist, see ["help wanted" label](https://github.com/translate-tools/linguist/labels/help%20wanted) to find a hot issues.
 
 # Support
 
 Do you like Linguist? Tell about it to your friends and colleagues. Let's make it popular.
 
 You need some feature or you don't like a Linguist? [Make an issue](https://github.com/translate-tools/linguist/issues/new) and suggest improvements.
-
-Contribute to Linguist, see ["help wanted" label](https://github.com/translate-tools/linguist/labels/help%20wanted) to find a hot issues.
 
 Help us translate Linguist to your language. Read the [internationalization guide](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization) and make a pull request.
 
