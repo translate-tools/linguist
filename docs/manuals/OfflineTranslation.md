@@ -1,11 +1,13 @@
 # Offline translation
 
-You can use offline translation with [custom translators](../CustomTranslator.md) start of Linguist version 4.0.
+Starting from version 5.0, Linguist has an embedded offline translator called "Bergamot". To use it, simply choose this translator on the preferences page.
 
-To do it, you should deploy locally any service for translate text and implement JS binding for Linguist.
+You can also use offline translation with [custom translators](../CustomTranslator.md) starting from Linguist version 4.0.
+
+To do this, you need to deploy any service locally for translating text and implement a JS binding for Linguist.
 
 ## LibreTranslate
 
-You may use [LibreTranslate project](https://github.com/LibreTranslate/LibreTranslate) to deploy machine translation service locally or on your own server.
+You can use the [LibreTranslate project](https://github.com/LibreTranslate/LibreTranslate) to deploy a machine translation service locally or on your own server.
 
-After deploy (or found trusted server), add custom translator [LibreTranslator](../../modules/LibreTranslator.js) and replace `apiPath` value to actual URL of LibreTranslate instance.
+After deployment (or finding a trusted server), add the custom translator [LibreTranslator](../../modules/LibreTranslator.js) and replace the `apiPath` value with the actual URL of the LibreTranslate instance.

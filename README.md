@@ -1,6 +1,27 @@
-Linguist is a powerful browser extension for translating pages and text, which is ready to replace your favorite translation service.
+Linguist is a powerful browser extension that is ready to replace your favorite translation service.
 
-It may use any translation service and extends it with a great user interface with many features.
+Translate web pages, highlighted text, Netflix subtitles, private messages, speak the translated text, and save important translations to your personal dictionary to learn words in 130 languages.
+
+# Why Linguist?
+
+Unlike other browser extensions, Linguist is not just a wrapper over the Google Translator Widget; it's a full-featured and independent translation system. This is why with Linguist you can be private and translate texts offline on your device and use any translation service, [even your own](./docs/CustomTranslator.md) like ChatGPT. See a [custom translators list](./modules/README.md) to find bindings for the most popular translation services.
+
+Linguist is free, open-source, respects your privacy, and does not collect your personal data.
+
+# Features
+
+Most important features
+- Modular translators system
+	- You can use any translation service like Google, Yandex, Bing, DeepL, ChatGPT, etc.
+	- [Custom translators](./docs/CustomTranslator.md): you can use your own translator module
+	- Offline translation. With embedded [Bergamot translator](https://github.com/browsermt/bergamot-translator), you can translate texts right on your device. Keep your privacy
+- All-in-one translation solution
+	- Full-page translation with flexible auto-translation configuration
+	- Highlighted text translation
+	- Translate any text input
+- Dictionary with saved translations
+- Translations history, to remember recently translated words
+- Text-to-speech (TTS)
 
 # Installation
 
@@ -18,70 +39,37 @@ If you have another browser, check out the [GitHub Releases page](https://github
 
 This addon can be used on mobile browsers with [Firefox Nightly](https://play.google.com/store/apps/details?id=org.mozilla.fenix) (Recommended), or with any chromium browser that supports extensions.
 
-To try it on Firefox, you must add the [Linguist add-on](https://addons.mozilla.org/addon/linguist-translator/) to a [custom add-on collection](https://www.ghacks.net/2020/10/01/you-can-now-install-any-add-on-in-firefox-nightly-for-android-but-it-is-complicated/) and using this collection to install the extension.
+To try it on Firefox, you have to add the [Linguist add-on](https://addons.mozilla.org/addon/linguist-translator/) to a [custom add-on collection](https://www.ghacks.net/2020/10/01/you-can-now-install-any-add-on-in-firefox-nightly-for-android-but-it-is-complicated/) and use this collection to install the extension.
 
 To try it on a chromium browser, download the normal extension for Chrome.
 
-# Features
-
-Linguist is very convenient to use.
-
-- Supports all translation services in the world (read [custom translators](./docs/CustomTranslator.md) or [Offline translation manual](./docs/manuals/OfflineTranslation.md))
-- Real time page translations without reloading
-- Translate selected text segments
-- Translate any text you entered
-- Dictionary to keep important translations
-
-Supported translators out of the box:
-
-- Google
-- Yandex
-- Bergamot
-
-You can also use your own [custom translator](./docs/CustomTranslator.md), see a [custom translators list](./modules/README.md) to find a ready to use bindings for a most popular translation services.
-
-You control all your data and can download your personal dictionary and other data at any time.
-
-Linguist cares about your traffic and uses a cache. If you translate a page or a phrase once, you can do it again at any time, even without an internet connection. The cache may be disabled if you want to translate private data.
-
-# Why it better than online translation services?
-
-When you use a translation service, you can't translate pages which require authorization, because online services can only translate public pages. Also, online services collect your personal data, track you and give you only one translator, but linguist may use any translation service. It may even use a local translation service that translates your data on your PC without any internet.
-
-# Why it better than other translation extensions?
-
-It's free, open source, [supports all translation services](./docs/CustomTranslator.md) and does not collect your personal data.
-
-This extension allows you to not only translate text on pages, but also translate entered text, keep these important translations for yourself and speak text. It's like your personal translator on the internet.
-
-It is for making life a little more comfortable, for all users of the internet.
-
 # Screenshots
 
-![](./assets/screen1.png)
-![](./assets/screen2.png)
-![](./assets/screen3.png)
+![](./assets/screenshots/SelectedTextTranslation.png)
+![](./assets/screenshots/FullPageTranslation.png)
+![](./assets/screenshots/TextTranslation.png)
+![](./assets/screenshots/Preferences.png)
+![](./assets/screenshots/Dictionary.png)
 
 # Development
 
-See [ROADMAP.md](./ROADMAP.md) to getting know development plans.
+See [development docs](./docs/Development.md) to get info on how to build and debug.
 
-See [development docs](./docs/Development.md) to get info how to build and debug the addon.
+You can improve Linguist, [make issues](https://github.com/translate-tools/linguist/issues/new) and suggest features or report bugs.
 
-You can improve Linguist, [make issues](https://github.com/translate-tools/linguist/issues/new) and suggest features or tell us about unknown bugs. You can also look at ["help wanted" label](https://github.com/translate-tools/linguist/labels/help%20wanted) to solve problems together.
-
-Help us translate Linguist to your language. Read the [internationalization guide](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization) and make a pull request.
+Contribute to Linguist, see the ["help wanted" label](https://github.com/translate-tools/linguist/labels/help%20wanted) to find hot issues.
 
 # Support
 
-Do you like Linguist? Talk about it with your friends and colleagues. Let's make it popular.
+Do you like Linguist? Tell your friends and colleagues about it. Let's make it popular.
 
-You don't like Linguist? [Make an issue](https://github.com/translate-tools/linguist/issues/new) and suggest improvements.
+Do you need a feature or don't like Linguist? [Make an issue](https://github.com/translate-tools/linguist/issues/new) and suggest improvements.
+
+Help us translate Linguist into your language. Read the [internationalization guide](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization) and make a pull request.
 
 # Donations
 
-Linguist are completely free and opensource, it does not collect any user data to sell.
-You may support project with your donations to help Linguist to keep independence and high quality.
+Linguist is completely free and open-source, and it does not collect any user data to sell. You can support the project with your donations to help Linguist maintain its independence and high quality.
 
 - Bitcoin: bc1q2krassq0sa2aphkx37zn374lfjnthr5frm6s7y
 - Ethereum: 0x2463d84F46c131886CaE457412e8B6eaBc0b91a7

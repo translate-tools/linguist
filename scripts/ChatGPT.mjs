@@ -1,4 +1,4 @@
-import { ChatGPTUnofficialProxyAPI, ChatGPTAPI } from 'chatgpt';
+import { ChatGPTAPI, ChatGPTUnofficialProxyAPI } from 'chatgpt';
 
 /**
  * Interface to ChatGPT that ensure smooth use
@@ -11,7 +11,7 @@ export class ChatGPT {
 
 	_rpmLimit = 60;
 
-	constructor() {
+	constructor(generateMessage) {
 		if (process.env.OPENAI_API_KEY) {
 			// Prefer official API if env variable provided
 			this.api = new ChatGPTAPI({
@@ -28,12 +28,16 @@ export class ChatGPT {
 				apiReverseProxyUrl: 'https://bypass.churchless.tech/api/conversation',
 			});
 		}
+
+		this._generateMessage = generateMessage;
 	}
 
 	_queue = [];
-	async sendMessage(message) {
+	async sendMessage(message, options) {
+		const preparedMessage = this._generateMessage ? this._generateMessage(message, options) : message;
+
 		return new Promise((resolve, reject) => {
-			this._queue.unshift({ resolve, reject, message });
+			this._queue.unshift({ resolve, reject, message: preparedMessage });
 			this._handleQueue();
 		});
 	}
@@ -76,15 +80,12 @@ export class ChatGPTUtils extends ChatGPT {
 	_softLengthLimit = 1000;
 
 	constructor(generateMessage) {
-		super();
-		this._generateMessage = generateMessage;
+		super(generateMessage);
 	}
 
 	async _handleJsonSlice(jsonSlice, options) {
 		const stringifiedJSON = JSON.stringify(jsonSlice, null, '\n');
-		const requestMessage = this._generateMessage(stringifiedJSON, options);
-
-		const res = await this.sendMessage(requestMessage);
+		const res = await this.sendMessage(stringifiedJSON, options);
 
 		console.log('handled JSON slice', res.text);
 		return JSON.parse(res.text);
