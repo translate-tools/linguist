@@ -14,7 +14,7 @@ Most important features
 - Modular translators system
 	- You can use any translation service like Google, Yandex, Bing, DeepL, ChatGPT, etc.
 	- [Custom translators](./docs/CustomTranslator.md): you can use your own translator module
-	- Offline translation. With embedded Bergamot translator, you can translate texts right on your device. Keep your privacy
+	- Offline translation. With embedded [Bergamot translator](https://github.com/browsermt/bergamot-translator), you can translate texts right on your device. Keep your privacy
 - All-in-one translation solution
 	- Full-page translation with flexible auto-translation configuration
 	- Highlighted text translation
