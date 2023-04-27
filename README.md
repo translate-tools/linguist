@@ -53,8 +53,6 @@ To try it on a chromium browser, download the normal extension for Chrome.
 
 # Development
 
-See [ROADMAP.md](./ROADMAP.md) to getting know development plans.
-
 See [development docs](./docs/Development.md) to get info how to build and debug the addon.
 
 You can improve Linguist, [make issues](https://github.com/translate-tools/linguist/issues/new) and suggest features or tell us about unknown bugs. 
