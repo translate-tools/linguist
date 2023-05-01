@@ -4,7 +4,7 @@ Translate web pages, highlighted text, Netflix subtitles, private messages, spea
 
 # Why Linguist?
 
-Unlike other browser extensions, Linguist is not just a wrapper over the Google Translator Widget; it's a full-featured and independent translation system. This is why with Linguist you can be private and translate texts offline on your device and use any translation service, [even your own](./docs/CustomTranslator.md) like ChatGPT. See a [custom translators list](./modules/README.md) to find bindings for the most popular translation services.
+Unlike other browser extensions, Linguist is not just a wrapper over the Google Translator Widget; it's a full-featured and independent translation system. This is why with Linguist you can be private and translate texts offline on your device and use any translation service, [even your own](./docs/CustomTranslator.md) like ChatGPT. See a [custom translators list](https://github.com/translate-tools/linguist-translators) to find bindings for the most popular translation services.
 
 Linguist is free, open-source, respects your privacy, and does not collect your personal data.
 
