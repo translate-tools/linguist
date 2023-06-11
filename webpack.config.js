@@ -2,7 +2,7 @@ const path = require('path');
 const fs = require('fs');
 const CopyPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const { convert } = require('convert-svg-to-png');
+const sharp = require('sharp');
 const { merge } = require('lodash');
 
 console.log('Webpack run');
@@ -160,7 +160,7 @@ module.exports = {
 						file.replace(/\.svg$/, '.png'),
 					),
 					transform(content) {
-						return convert(content, { width: 512, height: 512 });
+						return sharp(content).resize(512, 512).toBuffer();
 					},
 				})),
 			],
