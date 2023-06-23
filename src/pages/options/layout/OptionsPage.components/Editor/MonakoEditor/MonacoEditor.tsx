@@ -79,6 +79,7 @@ export const MonacoEditor: FC<MonacoEditorProps> = ({ value, setValue }) => {
 			monacoEditor.dispose();
 		};
 
+		// Hook runs only once to initialize component
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
