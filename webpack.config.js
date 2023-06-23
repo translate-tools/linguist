@@ -217,6 +217,13 @@ module.exports = {
 				],
 			},
 			{
+				test: /\.ttf$/,
+				loader: 'file-loader',
+				options: {
+					publicPath: '/',
+				},
+			},
+			{
 				test: /\.svg$/,
 				use: ['@svgr/webpack'],
 			},

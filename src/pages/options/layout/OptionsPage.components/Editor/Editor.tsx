@@ -9,14 +9,15 @@ import {
 	IModalProps,
 	Modal,
 } from '../../../../../components/primitives/Modal/Modal.bundle/desktop';
-import { Textarea } from '../../../../../components/primitives/Textarea/Textarea.bundle/desktop';
 import { Textinput } from '../../../../../components/primitives/Textinput/Textinput.bundle/desktop';
 import { getMessage } from '../../../../../lib/language';
 import { OptionsModalsContext } from '../../OptionsPage';
 
+import { MonacoEditor } from './MonakoEditor/MonacoEditor';
+
 import './Editor.css';
 
-const cnEditor = cn('Editor');
+export const cnEditor = cn('Editor');
 
 export type EditorEntry = {
 	readonly name: string;
@@ -80,8 +81,14 @@ export const Editor: FC<EditorProps> = ({
 	const actualError = localError || error;
 
 	return (
-		<Modal visible={true} onClose={onClose} scope={scope} preventBodyScroll>
-			<div className={cnEditor({})}>
+		<Modal
+			className={cnEditor({})}
+			visible={true}
+			onClose={onClose}
+			scope={scope}
+			preventBodyScroll
+		>
+			<div className={cnEditor('Container')}>
 				<ModalLayout
 					footer={[
 						<Button key="save" view="action" onPress={onSavePress}>
@@ -99,8 +106,7 @@ export const Editor: FC<EditorProps> = ({
 						</LayoutFlow>
 
 						<LayoutFlow direction="vertical" indent="m">
-							<div>{getMessage('editorWindow_data_code')}</div>
-							<Textarea value={code} onInputText={setCode} />
+							<MonacoEditor value={code} setValue={setCode} />
 						</LayoutFlow>
 
 						{actualError && (

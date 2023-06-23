@@ -1,10 +1,14 @@
-.Editor {
-	width: 600px;
+.Editor-Container {
+	--editor-code-height: 80vh;
+
+	width: 900px;
 }
 
-@media (max-width: 600px) {
-	.Editor {
-		max-width: 100%;
+@media (max-width: 950px) {
+	.Editor-Container {
+		--editor-code-height: 70vh;
+
+		width: 95vw;
 	}
 }
 
@@ -12,8 +16,9 @@
 	width: 100%;
 }
 
-.Editor .Textarea-Wrap {
-	min-height: 200px;
+.Editor-Code {
+	min-height: var(--editor-code-height);
+	max-height: var(--editor-code-height);
 }
 
 .Editor-Error {
