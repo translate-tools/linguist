@@ -4,6 +4,7 @@ const CopyPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const sharp = require('sharp');
 const { merge } = require('lodash');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 console.log('Webpack run');
 
@@ -19,6 +20,9 @@ const targetsList = ['firefox', 'chromium', 'chrome'];
 if (targetsList.indexOf(target) === -1) {
 	throw new Error(`Invalid target "${target}" in EXT_TARGET`);
 }
+
+const isBundleAnalyzingEnabled =
+	Boolean(process.env.DEBUG) || process.env.NODE_ENV !== 'production';
 
 const devPrefix = mode !== 'production' ? 'dev/' : '';
 const outDir = `build/${devPrefix}${target}`;
@@ -76,6 +80,7 @@ module.exports = {
 	},
 	plugins: [
 		new MiniCssExtractPlugin({}),
+		...(isBundleAnalyzingEnabled ? [new BundleAnalyzerPlugin()] : []),
 		new CopyPlugin({
 			patterns: [
 				// Manifest
