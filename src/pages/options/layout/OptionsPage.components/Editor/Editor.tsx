@@ -1,22 +1,21 @@
-import React, { FC, useContext, useEffect, useState } from 'react';
+import React, { FC, useContext, useEffect, useRef, useState } from 'react';
 import { useImmutableCallback } from 'react-elegant-ui/esm/hooks/useImmutableCallback';
 import { cn } from '@bem-react/classname';
 
-import { LayoutFlow } from '../../../../../components/layouts/LayoutFlow/LayoutFlow';
-import { ModalLayout } from '../../../../../components/layouts/ModalLayout/ModalLayout';
 import { Button } from '../../../../../components/primitives/Button/Button.bundle/universal';
 import {
 	IModalProps,
 	Modal,
 } from '../../../../../components/primitives/Modal/Modal.bundle/desktop';
-import { Textarea } from '../../../../../components/primitives/Textarea/Textarea.bundle/desktop';
 import { Textinput } from '../../../../../components/primitives/Textinput/Textinput.bundle/desktop';
 import { getMessage } from '../../../../../lib/language';
 import { OptionsModalsContext } from '../../OptionsPage';
 
+import { EditorObject, MonacoEditor } from './MonakoEditor/MonacoEditor';
+
 import './Editor.css';
 
-const cnEditor = cn('Editor');
+export const cnEditor = cn('Editor');
 
 export type EditorEntry = {
 	readonly name: string;
@@ -79,35 +78,50 @@ export const Editor: FC<EditorProps> = ({
 
 	const actualError = localError || error;
 
+	// Update dimensions
+	const editorObjectRef = useRef<EditorObject>(null);
+	useEffect(() => {
+		const editorObject = editorObjectRef.current;
+		if (!editorObject) return;
+
+		editorObject.updateDimensions();
+	}, [actualError]);
+
 	return (
-		<Modal visible={true} onClose={onClose} scope={scope} preventBodyScroll>
-			<div className={cnEditor({})}>
-				<ModalLayout
-					footer={[
-						<Button key="save" view="action" onPress={onSavePress}>
-							{getMessage('editorWindow_save')}
-						</Button>,
-						<Button key="close" onPress={onClose as any}>
-							{getMessage('editorWindow_close')}
-						</Button>,
-					]}
-				>
-					<LayoutFlow direction="vertical" indent="l">
-						<LayoutFlow direction="vertical" indent="m">
-							<div>{getMessage('editorWindow_data_name')}</div>
-							<Textinput value={name} onInputText={setName} />
-						</LayoutFlow>
+		<Modal
+			className={cnEditor({})}
+			visible={true}
+			onClose={onClose}
+			scope={scope}
+			preventBodyScroll
+		>
+			<div className={cnEditor('Container')}>
+				<div className={cnEditor('Name')}>
+					<Textinput
+						value={name}
+						onInputText={setName}
+						placeholder={getMessage('editorWindow_data_name')}
+					/>
+				</div>
 
-						<LayoutFlow direction="vertical" indent="m">
-							<div>{getMessage('editorWindow_data_code')}</div>
-							<Textarea value={code} onInputText={setCode} />
-						</LayoutFlow>
+				<div className={cnEditor('EditorContainer')}>
+					<MonacoEditor
+						value={code}
+						setValue={setCode}
+						editorObjectRef={editorObjectRef}
+					/>
+				</div>
 
-						{actualError && (
-							<div className={cnEditor('Error')}>{actualError}</div>
-						)}
-					</LayoutFlow>
-				</ModalLayout>
+				{actualError && <div className={cnEditor('Error')}>{actualError}</div>}
+
+				<div className={cnEditor('Controls')}>
+					<Button key="save" view="action" onPress={onSavePress}>
+						{getMessage('editorWindow_save')}
+					</Button>
+					<Button key="close" onPress={onClose as any}>
+						{getMessage('editorWindow_close')}
+					</Button>
+				</div>
 			</div>
 		</Modal>
 	);

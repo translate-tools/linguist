@@ -1,19 +1,41 @@
-.Editor {
-	width: 600px;
+.Editor .Modal-Content {
+	display: flex;
+	min-height: calc(100vh - var(--modal-size-m-content-indent) * 2);
+	box-sizing: border-box;
+	padding: 1rem;
 }
 
-@media (max-width: 600px) {
-	.Editor {
-		max-width: 100%;
+.Editor-Container {
+	display: flex;
+	flex-direction: column;
+	width: 900px;
+	gap: 0.5rem;
+	min-height: 300px;
+}
+
+@media (max-width: 950px) {
+	.Editor-Container {
+		width: 95vw;
 	}
+}
+
+.Editor-Controls {
+	display: flex;
+	gap: 0.5rem;
+	justify-content: right;
 }
 
 .Editor .Textinput {
 	width: 100%;
 }
 
-.Editor .Textarea-Wrap {
-	min-height: 200px;
+.Editor-EditorContainer {
+	display: flex;
+	flex-grow: 5;
+}
+
+.Editor-Code {
+	width: 100%;
 }
 
 .Editor-Error {
