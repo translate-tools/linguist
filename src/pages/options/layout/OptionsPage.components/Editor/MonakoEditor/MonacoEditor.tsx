@@ -1,5 +1,5 @@
 import React, { FC, useEffect, useRef } from 'react';
-import { editor, languages } from 'monaco-editor-core/esm/vs/editor/editor.api';
+import { editor, languages } from 'monaco-editor-core';
 
 import { isMobileBrowser } from '../../../../../../lib/browser';
 
