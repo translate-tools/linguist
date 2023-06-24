@@ -10,6 +10,7 @@
 	flex-direction: column;
 	width: 900px;
 	gap: 0.5rem;
+	min-height: 300px;
 }
 
 @media (max-width: 950px) {
