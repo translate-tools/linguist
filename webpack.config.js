@@ -11,20 +11,19 @@ console.log('Webpack run');
 const package = require('./package.json');
 
 const mode = process.env.NODE_ENV === 'production' ? 'production' : 'development';
-const devtool = mode === 'production' ? undefined : 'inline-source-map';
+const isProduction = mode === 'production';
+
 const target = process.env.EXT_TARGET;
-const isFastBuild =
-	process.env.NODE_ENV !== 'production' && process.env.FAST_BUILD === 'on';
+const devtool = isProduction ? undefined : 'inline-source-map';
+const isFastBuild = !isProduction && process.env.FAST_BUILD === 'on';
+const isBundleAnalyzingEnabled = Boolean(process.env.DEBUG) || !isProduction;
 
 const targetsList = ['firefox', 'chromium', 'chrome'];
 if (targetsList.indexOf(target) === -1) {
 	throw new Error(`Invalid target "${target}" in EXT_TARGET`);
 }
 
-const isBundleAnalyzingEnabled =
-	Boolean(process.env.DEBUG) || process.env.NODE_ENV !== 'production';
-
-const devPrefix = mode !== 'production' ? 'dev/' : '';
+const devPrefix = isProduction ? '' : 'dev/';
 const outDir = `build/${devPrefix}${target}`;
 const outputPath = path.join(__dirname, outDir);
 
