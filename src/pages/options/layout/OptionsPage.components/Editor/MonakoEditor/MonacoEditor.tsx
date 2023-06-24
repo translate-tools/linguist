@@ -1,13 +1,10 @@
 import React, { FC, useEffect, useRef } from 'react';
-// We use typescript config of `monaco-editor` package, to do not maintain own fork
-// Types for `typescript` config is not defined. Just ignore it
-// @ts-ignore
-import { language as tslanguage } from 'monaco-editor/esm/vs/basic-languages/typescript/typescript';
-import { editor, languages } from 'monaco-editor-core';
+import { editor, languages } from 'monaco-editor-core/esm/vs/editor/editor.api';
 
 import { isMobileBrowser } from '../../../../../../lib/browser';
 
 import { cnEditor } from '../Editor';
+import { language as tslanguage } from './languages/typescript';
 
 // Configure monako
 languages.register({
