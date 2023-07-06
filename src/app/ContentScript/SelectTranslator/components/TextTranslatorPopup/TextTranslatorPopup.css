@@ -3,6 +3,10 @@
 	position: absolute;
 }
 
+.TextTranslatorPopup {
+	pointer-events: all;
+}
+
 /* TranslateButton */
 .TextTranslatorPopup-TranslateButton {
 	display: block;
