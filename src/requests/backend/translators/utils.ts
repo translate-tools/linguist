@@ -1,5 +1,5 @@
-import { TranslatorClass } from '@translate-tools/core/types/Translator';
-import { BaseTranslator as ExternalBaseTranslator } from '@translate-tools/core/util/BaseTranslator';
+import { BaseTranslator as ExternalBaseTranslator } from '@translate-tools/core/translators/BaseTranslator';
+import { TranslatorConstructor } from '@translate-tools/core/translators/Translator';
 
 export const loadTranslator = (code: string) => {
 	// TODO: remove `BaseTranslator`
@@ -51,5 +51,5 @@ export const loadTranslator = (code: string) => {
 		}
 	});
 
-	return translatorClass as TranslatorClass;
+	return translatorClass as TranslatorConstructor;
 };

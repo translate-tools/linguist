@@ -1,8 +1,8 @@
 import { isEqual } from 'lodash';
 // Translators
 import { GoogleTranslator } from '@translate-tools/core/translators/GoogleTranslator';
+import { TranslatorConstructor } from '@translate-tools/core/translators/Translator';
 import { YandexTranslator } from '@translate-tools/core/translators/YandexTranslator';
-import { TranslatorClass } from '@translate-tools/core/types/Translator';
 
 import { createSelector } from '../../lib/effector/createSelector';
 import { BergamotTranslator } from '../../lib/translators/bergamot/BergamotTranslator';
@@ -27,7 +27,7 @@ export const embeddedTranslators = {
 /**
  * Map where key is identifier of translator and value is translator constructor
  */
-export type TranslatorsMap = Record<string, TranslatorClass>;
+export type TranslatorsMap = Record<string, TranslatorConstructor>;
 
 /**
  * Background features manager

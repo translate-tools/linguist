@@ -1,6 +1,6 @@
 import React, { ComponentType, ReactNode } from 'react';
 import browser from 'webextension-polyfill';
-import { langCodes } from '@translate-tools/core/util/languages';
+import { isLanguageCodeISO639v1 } from '@translate-tools/core/languages';
 
 import { isMobileBrowser } from './browser';
 
@@ -100,5 +100,4 @@ export const detectLanguage = async (text: string, reliableOnly = false) => {
 	});
 };
 
-export const isValidLanguage = (language: string) =>
-	(langCodes as readonly string[]).includes(language);
+export const isValidLanguage = (language: string) => isLanguageCodeISO639v1(language);

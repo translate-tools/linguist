@@ -1,9 +1,9 @@
-import { isLanguageCodeISO639v2 } from '@translate-tools/core/util/languages';
+import { isLanguageCodeISO639v1 } from '@translate-tools/core/languages';
 import {
 	IScheduler,
 	Scheduler,
 	SchedulerWithCache,
-} from '@translate-tools/core/util/Scheduler';
+} from '@translate-tools/core/scheduling';
 
 import { AppConfigType } from '../../../types/runtime';
 import { RecordValues } from '../../../types/utils';
@@ -39,7 +39,7 @@ export class TranslatorManager<Translators extends TranslatorsMap = TranslatorsM
 		return {
 			supportedLanguages: translatorClass
 				.getSupportedLanguages()
-				.filter((lang) => isLanguageCodeISO639v2(lang)),
+				.filter((lang) => isLanguageCodeISO639v1(lang)),
 			isSupportAutodetect: translatorClass.isSupportedAutoFrom(),
 		};
 	}

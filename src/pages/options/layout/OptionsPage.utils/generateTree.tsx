@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { langCodes } from '@translate-tools/core/util/languages';
+import { getLanguageCodesISO639 } from '@translate-tools/core/languages';
 
 import {
 	getLanguageNameByCode,
@@ -10,6 +10,8 @@ import {
 import { capitalizeString } from '../../../../lib/utils';
 
 import { OptionsGroup } from '../OptionsTree/OptionsTree';
+
+const langCodes = getLanguageCodesISO639('v1');
 
 type Options = {
 	clearCacheProcess: boolean;
