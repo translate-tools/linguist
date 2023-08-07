@@ -1,4 +1,4 @@
-import { TranslatorClass } from '@translate-tools/core/types/Translator';
+import { TranslatorConstructor } from '@translate-tools/core/translators/Translator';
 
 import { embeddedTranslators, TranslatorsMap } from '../../../app/Background';
 
@@ -25,7 +25,9 @@ export const isCustomTranslatorId = (id: string) => id.startsWith('#');
  * Return map with all available translators, where keys is translators id
  */
 export const getTranslatorsClasses = async (): Promise<TranslatorsMap> => {
-	const translatorsMap: Record<string, TranslatorClass> = { ...embeddedTranslators };
+	const translatorsMap: Record<string, TranslatorConstructor> = {
+		...embeddedTranslators,
+	};
 
 	// Validate and collect custom translators
 	const customTranslators = await getTranslators({ order: 'asc' });

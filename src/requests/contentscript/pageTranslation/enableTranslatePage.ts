@@ -1,4 +1,4 @@
-import { langCode, langCodeWithAuto } from '@translate-tools/core/types/Translator';
+import { langCode, langCodeWithAuto } from '@translate-tools/core/translators/Translator';
 
 import { type } from '../../../lib/types';
 import { LangCode, LangCodeWithAuto } from '../../../types/runtime';

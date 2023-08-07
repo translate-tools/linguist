@@ -2,7 +2,7 @@ import React, { FC, useCallback, useEffect, useMemo, useState } from 'react';
 import { useImmutableCallback } from 'react-elegant-ui/esm/hooks/useImmutableCallback';
 import Papa from 'papaparse';
 import { cn } from '@bem-react/classname';
-import { langCodes } from '@translate-tools/core/util/languages';
+import { getLanguageCodesISO639 } from '@translate-tools/core/languages';
 
 import { LayoutFlow } from '../../../components/layouts/LayoutFlow/LayoutFlow';
 import { Page } from '../../../components/layouts/Page/Page';
@@ -29,6 +29,8 @@ import { OptionsPanel } from './OptionsPanel/OptionsPanel';
 import './DictionaryPage.css';
 
 export const cnDictionaryPage = cn('DictionaryPage');
+
+const langCodes = getLanguageCodesISO639('v1');
 
 // TODO: implement as option
 export interface IDictionaryPageProps {

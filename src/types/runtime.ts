@@ -1,6 +1,6 @@
 import { TypeOf } from 'io-ts';
-import { langCode, langCodeWithAuto } from '@translate-tools/core/types/Translator';
-import { langCodes } from '@translate-tools/core/util/languages';
+import { isLanguageCodeISO639v1 } from '@translate-tools/core/languages';
+import { langCode, langCodeWithAuto } from '@translate-tools/core/translators/Translator';
 
 import { StringLiteralType, type } from '../lib/types';
 
@@ -18,9 +18,9 @@ export const ArrayOfStrings = new type.Type<string[], string[], unknown>(
 export const LangCode = new type.Type<langCode, langCode, unknown>(
 	'LangCode',
 	(input: unknown): input is langCode =>
-		typeof input === 'string' && langCodes.findIndex((i) => i === input) > -1,
+		typeof input === 'string' && isLanguageCodeISO639v1(input),
 	(input, context) =>
-		typeof input === 'string' && langCodes.findIndex((i) => i === input) > -1
+		typeof input === 'string' && isLanguageCodeISO639v1(input)
 			? type.success(input as langCode)
 			: type.failure(input, context),
 	type.identity,
@@ -33,11 +33,9 @@ export const LangCodeWithAuto = new type.Type<
 >(
 	'LangCodeWithAuto',
 	(input: unknown): input is langCodeWithAuto =>
-		input === 'auto' ||
-		(typeof input === 'string' && langCodes.findIndex((i) => i === input) > -1),
+		input === 'auto' || (typeof input === 'string' && isLanguageCodeISO639v1(input)),
 	(input, context) =>
-		input === 'auto' ||
-		(typeof input === 'string' && langCodes.findIndex((i) => i === input) > -1)
+		input === 'auto' || (typeof input === 'string' && isLanguageCodeISO639v1(input))
 			? type.success(input as langCodeWithAuto)
 			: type.failure(input, context),
 	type.identity,
