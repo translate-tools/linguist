@@ -5,7 +5,6 @@ import { TranslatorConstructor } from '@translate-tools/core/translators/Transla
 import { YandexTranslator } from '@translate-tools/core/translators/YandexTranslator';
 
 import { createSelector } from '../../lib/effector/createSelector';
-import { BergamotTranslator } from '../../lib/translators/bergamot/BergamotTranslator';
 import {
 	createPromiseWithControls,
 	PromiseWithControls,
@@ -21,7 +20,6 @@ import { TTSManager } from './TTS/TTSManager';
 export const embeddedTranslators = {
 	GoogleTranslator,
 	YandexTranslator,
-	BergamotTranslator,
 } as const;
 
 /**

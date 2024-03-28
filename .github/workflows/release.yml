@@ -24,12 +24,6 @@ jobs:
       - name: Run tests
         run: npm test
 
-      - name: Compile third party with docker
-        working-directory: './thirdparty/bergamot'
-        run: |
-          make dockerBuildContainer
-          make dockerRunContainer
-
       - name: Build docker image
         run: make dockerBuildContainer
 

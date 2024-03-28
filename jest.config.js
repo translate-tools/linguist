@@ -23,6 +23,4 @@ module.exports = {
 		'fake-indexeddb/auto',
 		'./test/setupFiles/webextension.js',
 	],
-
-	modulePathIgnorePatterns: ['<rootDir>/thirdparty/'],
 };

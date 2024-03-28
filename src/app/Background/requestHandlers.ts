@@ -6,7 +6,6 @@ import { deleteSitePreferencesFactory } from '../../requests/backend/autoTransla
 import { getSitePreferencesFactory } from '../../requests/backend/autoTranslation/sitePreferences/getSitePreferences';
 // Auto translation
 import { setSitePreferencesFactory } from '../../requests/backend/autoTranslation/sitePreferences/setSitePreferences';
-import { bergamotHandlersFactory } from '../../requests/backend/bergamot';
 import { clearCacheFactory } from '../../requests/backend/clearCache';
 import { getConfigFactory } from '../../requests/backend/getConfig';
 import { getTranslatorFeaturesFactory } from '../../requests/backend/getTranslatorFeatures';
@@ -44,8 +43,6 @@ export const requestHandlers = [
 	...ttsRequestHandlers,
 
 	historyRequestHandlersFactory,
-
-	bergamotHandlersFactory,
 
 	getConfigFactory,
 	setConfigFactory,

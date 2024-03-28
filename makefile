@@ -12,12 +12,7 @@ prepare:
 # 
 # Main targets
 # 
-buildAll: buildThirdparty
-	make dockerBuildContainer
-	make dockerRunContainer
-
-buildThirdparty:
-	cd ./thirdparty/bergamot
+buildAll:
 	make dockerBuildContainer
 	make dockerRunContainer
 

@@ -2,13 +2,11 @@ The build scripts are designed to run on unix platform (linux, mac, bsd, etc), i
 
 # Build from sources
 
-To clear build, install docker and run `make buildAll` in root of repository. This command will install dependencies, build third-party libraries, compile linguist for all platforms and will pack it to archives.
+To clear build, install docker and run `make buildAll` in root of repository. This command will install dependencies and compile linguist for all platforms and will pack it to archives.
 
 To build browser extension for one target:
 
 - install dependencies with run `npm install`
-- build third party components `make buildThirdparty`
-	- build may take a lot of time (~30 minutes), you can skip this step if you will not use third party modules like bergamot translator
 - build browser extension for your platform (see scripts in `packages.json`), for example `npm run build:firefox`
 - find artifacts in `build` directory
 
