@@ -1,3 +1,5 @@
+[![CodeQL](https://github.com/translate-tools/linguist/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/translate-tools/linguist/actions/workflows/codeql-analysis.yml)
+
 Linguist is a powerful browser extension that is ready to replace your favorite translation service.
 
 Translate web pages, highlighted text, Netflix subtitles, private messages, speak the translated text, and save important translations to your personal dictionary to learn words in 130 languages.
