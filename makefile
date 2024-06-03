@@ -24,11 +24,11 @@ buildAll: buildThirdparty
 	${DOCKER_COMPOSE} run linguist make buildFirefox buildChromium buildChrome
 
 buildFirefox:
-	NODE_ENV=production EXT_TARGET=firefox webpack-cli -c ./webpack.config.js
+	NODE_ENV=production EXT_TARGET=firefox npx webpack-cli -c ./webpack.config.js
 buildChromium:
-	NODE_ENV=production EXT_TARGET=chromium webpack-cli -c ./webpack.config.js
+	NODE_ENV=production EXT_TARGET=chromium npx webpack-cli -c ./webpack.config.js
 buildChrome:
-	NODE_ENV=production EXT_TARGET=chrome webpack-cli -c ./webpack.config.js
+	NODE_ENV=production EXT_TARGET=chrome npx webpack-cli -c ./webpack.config.js
 
 packAll:
 	cd build && ../scripts/zipAll.sh
