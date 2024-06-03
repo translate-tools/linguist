@@ -16,9 +16,24 @@ runs:
       run: |
         cp .env.example .env
 
-    - name: Compile third party with docker
+    - name: Restore third party artifacts
+      id: cache-thirdparty-restore
+      uses: actions/cache/restore@v4
+      with:
+        path: ./thirdparty/bergamot/build
+        key: ${{ runner.os }}-${{ hashFiles('./thirdparty/bergamot/**') }}
+
+    - name: Compile third party artifacts with docker
+      if: steps.cache-thirdparty-restore.outputs.cache-hit != 'true'
       shell: bash
       run: make buildThirdparty
+
+    - name: Save third party artifacts
+      id: cache-thirdparty-save
+      uses: actions/cache/save@v4
+      with:
+        path: ./thirdparty/bergamot/build
+        key: ${{ steps.cache-thirdparty-restore.outputs.cache-primary-key }}
 
     - name: Build app
       shell: bash
