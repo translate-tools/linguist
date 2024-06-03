@@ -11,6 +11,11 @@ runs:
       shell: bash
       run: npm install
 
+    - name: Configure files
+      shell: bash
+      run: |
+        cp .env.example .env
+
     - name: Compile third party with docker
       shell: bash
       run: make buildThirdparty
