@@ -3,6 +3,7 @@ export
 
 prepare:
 	npm install
+	mkdir -p .local/docker-volumes/bergamot-translator && chmod -R 777 .local/docker-volumes
 
 dev: prepare
 	npm run build:dev
