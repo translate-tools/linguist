@@ -3,7 +3,6 @@ export
 
 prepare:
 	npm install
-	mkdir -p .local/docker-volumes/bergamot-translator && chmod -R 777 .local/docker-volumes
 
 dev: prepare
 	npm run build:dev
@@ -16,8 +15,8 @@ build: clean prepare
 	${MAKE} buildAll packAll lintBuilds
 
 buildThirdparty:
-	mkdir -p ./thirdparty/bergamot/build
-	chmod 777 ./thirdparty/bergamot/build
+	mkdir -p .local/docker-volumes/bergamot-translator && chmod -R 777 .local/docker-volumes
+	mkdir -p ./thirdparty/bergamot/build && chmod 777 ./thirdparty/bergamot/build
 	${DOCKER_COMPOSE} run bergamot make build
 
 buildAll: buildThirdparty
