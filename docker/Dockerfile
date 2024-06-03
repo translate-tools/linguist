@@ -1,5 +1,5 @@
 FROM node:14
-WORKDIR /usr/src/app
+WORKDIR /mnt/builder
 
 RUN apt-get update
 
@@ -14,6 +14,7 @@ RUN apt-get install -y sudo && echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoe
 RUN usermod -aG sudo node
 
 COPY . .
+RUN mkdir -p thirdparty/bergamot/build
 RUN chown -R node:node .
 
 USER node

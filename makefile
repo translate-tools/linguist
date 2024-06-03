@@ -1,4 +1,5 @@
 SHELL=/bin/bash
+DOCKER_COMPOSE=docker-compose
 
 build: prepare
 	npm run build:all
@@ -13,26 +14,13 @@ prepare:
 # Main targets
 # 
 buildAll: buildThirdparty
-	make dockerBuildContainer
-	make dockerRunContainer
-
+	mkdir -p ./build
+	${DOCKER_COMPOSE} run linguist make dockerBuild
+	
 buildThirdparty:
-	cd ./thirdparty/bergamot
-	make dockerBuildContainer
-	make dockerRunContainer
+	mkdir -p ./thirdparty/bergamot/build
+	${DOCKER_COMPOSE} run bergamot make build
 
-# 
-# Docker
-# 
-dockerBuildContainer:
-	docker build . -t v/linguist
-
-dockerRunContainer:
-	npm run clean
-	# set current user id, to allow access to shared files
-	# use `--cap-add=SYS_ADMIN` to allow run puppeteer
-	docker run -v `pwd`:/out --user node --cap-add=SYS_ADMIN v/linguist make dockerBuild
-
+# TODO: replace one target to multiple
 dockerBuild:
-	make build
-	sudo cp -R ./build /out/build
+	npm run build:firefox

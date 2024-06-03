@@ -10,11 +10,11 @@ buildWorker:
 	npm run worker:build
 
 exportWasm:
-	- mkdir build
+	mkdir -p build
 	cp bergamot-translator/build-wasm/bergamot-translator-worker.{js,wasm} build/
 
 buildWasm: prepareWasm
-	- cd bergamot-translator && mkdir build-wasm
+	cd bergamot-translator && mkdir -p build-wasm
 	source bergamot-translator/emsdk/emsdk_env.sh && cd bergamot-translator/build-wasm && emcmake cmake -DCOMPILE_WASM=on -DWORMHOLE=off ../ && emmake make -j2 && bash ../wasm/patch-artifacts-import-gemm-module.sh
 
 prepareWasm:
@@ -25,17 +25,3 @@ prepareWasm:
 
 clean:
 	rm -rf ./build
-
-# 
-# Docker tasks to unify build process
-# 
-
-dockerBuildContainer:
-	docker build . -t v/bergamot
-
-dockerRunContainer: clean
-	docker run -v `pwd`:/out --user node v/bergamot make dockerBuild
-
-dockerBuild:
-	make build
-	sudo cp -R ./build /out/build
