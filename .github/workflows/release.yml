@@ -16,7 +16,15 @@ jobs:
       - uses: actions/checkout@v2
       - uses: ./.github/actions/build
 
-        # Place to stop for DRY run
+      - name: Build CRX file for chromium
+        working-directory: "./build"
+        env:
+          CHROMIUM_CRX_PEM: ${{ secrets.CHROMIUM_CRX_PEM }}
+        run: |
+          echo "$CHROMIUM_CRX_PEM" > ./crx.pem
+          npx crx pack chromium -o linguist.crx -p ./crx.pem
+          ls -al ./
+
       - name: Build XPI file for firefox
         working-directory: "./build"
         env:
