@@ -16,10 +16,12 @@ build: clean prepare
 
 buildThirdparty:
 	mkdir -p ./thirdparty/bergamot/build
+	chmod 777 ./thirdparty/bergamot/build
 	${DOCKER_COMPOSE} run bergamot make build
 
 buildAll: buildThirdparty
 	mkdir -p ./build
+	chmod 777 -p ./build
 	${DOCKER_COMPOSE} run linguist make buildFirefox buildChromium buildChrome
 
 buildFirefox:
