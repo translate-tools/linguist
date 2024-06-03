@@ -15,12 +15,18 @@ prepare:
 # 
 buildAll: buildThirdparty
 	mkdir -p ./build
-	${DOCKER_COMPOSE} run linguist make dockerBuild
+	${DOCKER_COMPOSE} run linguist make buildFirefox buildChromium buildChrome packAll
 	
 buildThirdparty:
 	mkdir -p ./thirdparty/bergamot/build
 	${DOCKER_COMPOSE} run bergamot make build
 
-# TODO: replace one target to multiple
-dockerBuild:
+buildFirefox:
 	npm run build:firefox
+buildChromium:
+	npm run build:chromium
+buildChrome:
+	npm run build:chrome
+
+packAll:
+	npm run packAll && npm run test:buildArchives
