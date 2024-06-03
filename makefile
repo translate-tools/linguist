@@ -7,9 +7,12 @@ prepare:
 dev: prepare
 	npm run build:dev
 
+clean:
+	rm -rf ./build
+
 # Build section
-build: prepare buildThirdparty
-	${MAKE} buildAll
+build: clean prepare
+	${MAKE} buildAll packAll lintBuilds
 
 buildThirdparty:
 	mkdir -p ./thirdparty/bergamot/build
@@ -17,14 +20,17 @@ buildThirdparty:
 
 buildAll: buildThirdparty
 	mkdir -p ./build
-	${DOCKER_COMPOSE} run linguist make buildFirefox buildChromium buildChrome packAll
+	${DOCKER_COMPOSE} run linguist make buildFirefox buildChromium buildChrome
 
 buildFirefox:
-	npm run build:firefox
+	NODE_ENV=production EXT_TARGET=firefox webpack-cli -c ./webpack.config.js
 buildChromium:
-	npm run build:chromium
+	NODE_ENV=production EXT_TARGET=chromium webpack-cli -c ./webpack.config.js
 buildChrome:
-	npm run build:chrome
+	NODE_ENV=production EXT_TARGET=chrome webpack-cli -c ./webpack.config.js
 
 packAll:
-	npm run packAll && npm run test:buildArchives
+	cd build && ../scripts/zipAll.sh
+
+lintBuilds:
+	cd build && ../scripts/testBuildArchives.sh
