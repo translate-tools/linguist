@@ -1,0 +1,30 @@
+name: Build Linguist for all platforms
+description: ""
+runs:
+  using: composite
+  steps:
+    - uses: actions/setup-node@v2
+      with:
+        node-version: "14"
+
+    - name: Install packages
+      shell: bash
+      run: npm install
+
+    - name: Compile third party with docker
+      shell: bash
+      run: make buildThirdparty
+
+    - name: Build app
+      shell: bash
+      run: make build
+
+    - name: Build CRX file for chromium
+      shell: bash
+      working-directory: "./build"
+      env:
+        CHROMIUM_CRX_PEM: ${{ secrets.CHROMIUM_CRX_PEM }}
+      run: |
+        echo "$CHROMIUM_CRX_PEM" > ./crx.pem
+        npx crx pack chromium -o linguist.crx -p ./crx.pem
+        ls -al ./

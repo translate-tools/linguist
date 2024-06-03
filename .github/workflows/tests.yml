@@ -16,3 +16,5 @@ jobs:
 
       - name: Run tests
         run: npm test
+
+      - uses: ./.github/actions/build
