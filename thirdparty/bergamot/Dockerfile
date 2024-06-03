@@ -9,7 +9,7 @@ RUN apt-get install -y cmake
 RUN apt-get install -y sudo && echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 RUN usermod -aG sudo node
 
-RUN mkdir -p bergamot-translator
+RUN mkdir -p build bergamot-translator
 
 COPY . .
 RUN chown -R node:node .
