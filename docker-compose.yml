@@ -12,7 +12,7 @@ services:
       - SYS_ADMIN
 
   bergamot:
-    user: '1000'
+    user: root
     build:
       context: ./thirdparty/bergamot
     volumes:
