@@ -15,6 +15,7 @@ build: clean prepare
 	${MAKE} buildAll packAll lintBuilds
 
 buildThirdparty:
+	mkdir -p ./.local/docker-volumes/bergamot-translator && chmod -R 777 ./.local/docker-volumes && chown -R 1000:1000 ./.local/docker-volumes
 	mkdir -p ./thirdparty/bergamot/build && chmod 777 ./thirdparty/bergamot/build
 	${DOCKER_COMPOSE} run bergamot make build
 

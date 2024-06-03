@@ -12,16 +12,11 @@ services:
       - SYS_ADMIN
 
   bergamot:
-    user: node
+    user: '1000'
     build:
       context: ./thirdparty/bergamot
     volumes:
       - ./thirdparty/bergamot/build:/mnt/bergamot/build
-      - bergamot-translator:/mnt/bergamot/bergamot-translator
+      - ./.local/docker-volumes/bergamot-translator:/mnt/bergamot/bergamot-translator
     cap_add:
       - SYS_ADMIN
-
-volumes:
-  # Persistent cache for fast builds in dev environment
-  bergamot-translator:
-    driver: local
