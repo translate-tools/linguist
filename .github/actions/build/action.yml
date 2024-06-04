@@ -37,4 +37,4 @@ runs:
 
     - name: Build app
       shell: bash
-      run: make prepare buildAll packAll lintBuilds
+      run: make prepare buildFirefox packAll lintBuilds
