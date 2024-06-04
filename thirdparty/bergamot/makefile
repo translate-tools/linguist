@@ -7,7 +7,6 @@ build: buildWorker buildWasm exportWasm
 
 buildWorker:
 	npm install
-	ls -al && ls -al build
 	npm run worker:build
 
 exportWasm:

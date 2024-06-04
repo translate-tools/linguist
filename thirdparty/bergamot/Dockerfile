@@ -13,7 +13,6 @@ RUN mkdir -p build bergamot-translator
 
 COPY . .
 RUN chown -R node:node .
-RUN ls -al && ls -al build
 
 USER node
 
