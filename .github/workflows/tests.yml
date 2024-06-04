@@ -23,7 +23,7 @@ jobs:
         uses: actions/cache/restore@v4
         with:
           path: ./thirdparty/bergamot/build
-          key: dbg1-${{ runner.os }}-${{ hashFiles('./thirdparty/bergamot/**') }}
+          key: ${{ runner.os }}-${{ hashFiles('./thirdparty/bergamot/**') }}
 
       - name: Compile third party artifacts with docker
         if: steps.cache-thirdparty-restore.outputs.cache-hit != 'true'
