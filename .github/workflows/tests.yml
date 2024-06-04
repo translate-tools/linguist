@@ -16,4 +16,26 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: ./.github/actions/build
+      - uses: ./.github/actions/prepare-build
+
+      - name: Restore third party artifacts
+        id: cache-thirdparty-restore
+        uses: actions/cache/restore@v4
+        with:
+          path: ./thirdparty/bergamot/build
+          key: dbg1-${{ runner.os }}-${{ hashFiles('./thirdparty/bergamot/**') }}
+
+      - name: Compile third party artifacts with docker
+        if: steps.cache-thirdparty-restore.outputs.cache-hit != 'true'
+        shell: bash
+        run: make buildThirdparty
+
+      - name: Save third party artifacts
+        id: cache-thirdparty-save
+        uses: actions/cache/save@v4
+        with:
+          path: ./thirdparty/bergamot/build
+          key: ${{ steps.cache-thirdparty-restore.outputs.cache-primary-key }}
+
+      - name: Build some targets for test
+        run: make prepare buildFirefox packAll lintBuilds

@@ -14,7 +14,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - uses: ./.github/actions/build
+      - uses: ./.github/actions/prepare-build
+
+      - name: Build all targets
+        run: make build
 
       - name: Build CRX file for chromium
         working-directory: "./build"
