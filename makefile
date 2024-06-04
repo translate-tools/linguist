@@ -11,14 +11,13 @@ clean:
 	rm -rf ./build
 
 # Build section
-build: clean prepare
-	${MAKE} buildAll packAll lintBuilds
+build: clean prepare buildThirdparty buildAll packAll lintBuilds
 
 buildThirdparty:
 	mkdir -p ./thirdparty/bergamot/build && chmod 777 ./thirdparty/bergamot/build
 	${DOCKER_COMPOSE} run bergamot make build
 
-buildAll: buildThirdparty
+buildAll:
 	mkdir -p ./build
 	chmod 777 ./build
 	${DOCKER_COMPOSE} run linguist make buildFirefox buildChromium buildChrome

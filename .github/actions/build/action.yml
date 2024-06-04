@@ -20,10 +20,8 @@ runs:
       id: cache-thirdparty-restore
       uses: actions/cache/restore@v4
       with:
-        path: |
-          ./thirdparty/bergamot/build
-          ./.local/docker-volumes/bergamot-translator
-        key: ${{ runner.os }}-test1-${{ hashFiles('./thirdparty/bergamot/**', './.local/docker-volumes/bergamot-translator/**') }}
+        path: ./thirdparty/bergamot/build
+        key: dbg1-${{ runner.os }}-${{ hashFiles('./thirdparty/bergamot/**') }}
 
     - name: Compile third party artifacts with docker
       if: steps.cache-thirdparty-restore.outputs.cache-hit != 'true'
@@ -34,11 +32,9 @@ runs:
       id: cache-thirdparty-save
       uses: actions/cache/save@v4
       with:
-        path: |
-          ./thirdparty/bergamot/build
-          ./.local/docker-volumes/bergamot-translator
+        path: ./thirdparty/bergamot/build
         key: ${{ steps.cache-thirdparty-restore.outputs.cache-primary-key }}
 
     - name: Build app
       shell: bash
-      run: make build
+      run: make prepare buildAll packAll lintBuilds
