@@ -3,13 +3,7 @@ description: ""
 runs:
   using: composite
   steps:
-    - uses: actions/setup-node@v2
-      with:
-        node-version: "14"
-
-    - name: Install packages
-      shell: bash
-      run: npm install
+    - uses: ./.github/actions/init
 
     - name: Configure files
       shell: bash
