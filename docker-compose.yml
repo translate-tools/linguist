@@ -4,7 +4,6 @@ services:
     user: node
     build:
       context: .
-      dockerfile: Dockerfile
     volumes:
       - ./build:/mnt/builder/build
       - ./thirdparty/bergamot/build:/mnt/builder/thirdparty/bergamot/build
