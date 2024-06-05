@@ -3,7 +3,7 @@ name: Release
 on:
   push:
     tags:
-      - 'v*.*.*'
+      - "v*.*.*"
 
   workflow_dispatch:
 
@@ -14,34 +14,13 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
-        with:
-          node-version: '14'
+      - uses: ./.github/actions/prepare-build
 
-      - name: Install packages
-        run: npm install
+      - name: Build all targets
+        run: make build
 
-      - name: Run tests
-        run: npm test
-
-      - name: Compile third party with docker
-        working-directory: './thirdparty/bergamot'
-        run: |
-          make dockerBuildContainer
-          make dockerRunContainer
-
-      - name: Build docker image
-        run: make dockerBuildContainer
-
-      - name: Build app with docker
-        run: make dockerRunContainer
-        
-      - name: Change build dir owner
-        working-directory: './build'
-        run: sudo chown -R $(id -u):$(id -g) .
-        
       - name: Build CRX file for chromium
-        working-directory: './build'
+        working-directory: "./build"
         env:
           CHROMIUM_CRX_PEM: ${{ secrets.CHROMIUM_CRX_PEM }}
         run: |
@@ -49,9 +28,8 @@ jobs:
           npx crx pack chromium -o linguist.crx -p ./crx.pem
           ls -al ./
 
-        # Place to stop for DRY run
       - name: Build XPI file for firefox
-        working-directory: './build'
+        working-directory: "./build"
         env:
           AMO_KEY: ${{ secrets.AMO_KEY }}
           AMO_SECRET: ${{ secrets.AMO_SECRET }}
@@ -68,19 +46,19 @@ jobs:
             build/AMO/linguist.xpi
             build/linguist.crx
             build/*.zip
-            
+
       - name: Build static files for GitHub Pages
-        working-directory: './build'
+        working-directory: "./build"
         run: |
           mkdir ./site
           node ../scripts/genCrxUpdateManifest.js > ./site/chromium_updates.xml
           # TODO: build index.html with landing page
-      
+
       - name: Deploy to GitHub Pages
         uses: Cecilapp/GitHub-Pages-deploy@v3
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           email: noreply@example.com
-          build_dir: './build/site'
+          build_dir: "./build/site"
           branch: gh-pages

@@ -2,25 +2,26 @@ The build scripts are designed to run on unix platform (linux, mac, bsd, etc), i
 
 # Build from sources
 
-To clear build, install docker and run `make buildAll` in root of repository. This command will install dependencies, build third-party libraries, compile linguist for all platforms and will pack it to archives.
+Prerequisites:
+- UNIX-like OS
+- Installed make
+- Installed docker
 
-To build browser extension for one target:
-
-- install dependencies with run `npm install`
-- build third party components `make buildThirdparty`
-	- build may take a lot of time (~30 minutes), you can skip this step if you will not use third party modules like bergamot translator
-- build browser extension for your platform (see scripts in `packages.json`), for example `npm run build:firefox`
-- find artifacts in `build` directory
+Instructions:
+- Create `.env` file. You may copy file `.env.config` and configure it with your options
+- To build all code, create packages, and check it with linter just run `make build`
+- To make build only for specific platform, you may run `make` with specific target like `buildFirefox`, `buildChromium`, etc (see `makefile` for details)
+	- You must build a third party code with `make buildThirdparty` before run specific target. Example: `make prepare buildThirdparty buildFirefox`
+- Artifacts is placed in `build` directory
 
 Available platforms:
-
 - firefox
 - chrome
 - chromium: special build with auto updates not from google store
 
 # Development
 
-To development, you can run `npm run build:dev`.
+You may run development mode with `make dev`.
 
 If you change a theme tokens, you also have to compile a theme files: `npm run build:tokens`
 

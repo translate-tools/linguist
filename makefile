@@ -1,38 +1,36 @@
-SHELL=/bin/bash
-
-build: prepare
-	npm run build:all
-
-dev: prepare
-	npm run build:dev
+include .env
+export
 
 prepare:
 	npm install
 
-# 
-# Main targets
-# 
-buildAll: buildThirdparty
-	make dockerBuildContainer
-	make dockerRunContainer
+dev: prepare
+	npm run build:dev
+
+clean:
+	rm -rf ./build
+
+# Build section
+build: clean prepare buildThirdparty buildAll packAll lintBuilds
 
 buildThirdparty:
-	cd ./thirdparty/bergamot
-	make dockerBuildContainer
-	make dockerRunContainer
+	mkdir -p ./thirdparty/bergamot/build && chmod 777 ./thirdparty/bergamot/build
+	${DOCKER_COMPOSE} run bergamot make build
 
-# 
-# Docker
-# 
-dockerBuildContainer:
-	docker build . -t v/linguist
+buildAll:
+	mkdir -p ./build
+	chmod 777 ./build
+	${DOCKER_COMPOSE} run linguist make buildFirefox buildChromium buildChrome
 
-dockerRunContainer:
-	npm run clean
-	# set current user id, to allow access to shared files
-	# use `--cap-add=SYS_ADMIN` to allow run puppeteer
-	docker run -v `pwd`:/out --user node --cap-add=SYS_ADMIN v/linguist make dockerBuild
+buildFirefox:
+	NODE_ENV=production EXT_TARGET=firefox npx webpack-cli -c ./webpack.config.js
+buildChromium:
+	NODE_ENV=production EXT_TARGET=chromium npx webpack-cli -c ./webpack.config.js
+buildChrome:
+	NODE_ENV=production EXT_TARGET=chrome npx webpack-cli -c ./webpack.config.js
 
-dockerBuild:
-	make build
-	sudo cp -R ./build /out/build
+packAll:
+	cd build && ../scripts/zipAll.sh
+
+lintBuilds:
+	cd build && ../scripts/testBuildArchives.sh

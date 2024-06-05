@@ -1,0 +1,22 @@
+version: "3"
+services:
+  linguist:
+    user: node
+    build:
+      context: .
+    volumes:
+      - ./build:/mnt/builder/build
+      - ./thirdparty/bergamot/build:/mnt/builder/thirdparty/bergamot/build
+
+  bergamot:
+    user: node
+    build:
+      context: ./thirdparty/bergamot
+    volumes:
+      - ./thirdparty/bergamot/build:/mnt/bergamot/build
+      - bergamot-translator:/mnt/bergamot/bergamot-translator
+
+volumes:
+  # Persistent cache for fast builds in dev environment
+  bergamot-translator:
+    driver: local
