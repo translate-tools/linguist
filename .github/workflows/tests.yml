@@ -14,9 +14,6 @@ jobs:
 
   build:
     runs-on: ubuntu-latest
-    container:
-      image: ubuntu-latest
-      options: --user root
     steps:
       - uses: actions/checkout@v4
       - uses: ./.github/actions/prepare-build
