@@ -14,6 +14,9 @@
 		"prettify": "prettier --write \"{*,**/*}.{ts,tsx,js,jsx}\" && eslint --fix \"{*,**/*}.{ts,tsx,js,jsx}\" && stylelint --fix \"{*,**/*}.css\"",
 		"prepare": "husky install"
 	},
+	"engines": {
+		"node": ">=20"
+	},
 	"dependencies": {
 		"@bem-react/classname": "^1.5.10",
 		"@bem-react/core": "^3.0.1",
