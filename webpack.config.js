@@ -18,7 +18,7 @@ const devtool = isProduction ? undefined : 'inline-source-map';
 const isFastBuild = !isProduction && process.env.FAST_BUILD === 'on';
 const isBundleAnalyzingEnabled = Boolean(process.env.DEBUG) || !isProduction;
 
-const targetsList = ['firefox', 'chromium', 'chrome'];
+const targetsList = ['firefox', 'firefox-standalone', 'chromium', 'chrome'];
 if (targetsList.indexOf(target) === -1) {
 	throw new Error(`Invalid target "${target}" in EXT_TARGET`);
 }
