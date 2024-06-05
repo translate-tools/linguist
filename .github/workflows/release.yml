@@ -38,6 +38,14 @@ jobs:
           npx web-ext sign --api-key "$AMO_KEY" --api-secret "$AMO_SECRET" --id "{e3fc2d33-09fc-4fe8-9331-d0a464698035}" --source-dir ./firefox --artifacts-dir ./AMO
           mv AMO/*.xpi AMO/linguist.xpi
 
+      - name: Archive build files
+        uses: actions/upload-artifact@v4
+        id: upload-build-artifacts
+        if: always()
+        with:
+          name: build-files
+          path: build
+
       - name: Publish release on GitHub
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
