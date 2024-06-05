@@ -39,3 +39,10 @@ jobs:
 
       - name: Build some targets for test
         run: make prepare buildFirefox packAll lintBuilds
+
+      - name: Archive build files
+        uses: actions/upload-artifact@v4
+        id: upload-build-artifacts
+        with:
+          name: build-files
+          path: build
