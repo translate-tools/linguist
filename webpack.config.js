@@ -18,7 +18,7 @@ const devtool = isProduction ? undefined : 'inline-source-map';
 const isFastBuild = !isProduction && process.env.FAST_BUILD === 'on';
 const isBundleAnalyzingEnabled = Boolean(process.env.DEBUG) || !isProduction;
 
-const targetsList = ['firefox', 'chromium', 'chrome'];
+const targetsList = ['firefox', 'firefox-standalone', 'chromium', 'chrome'];
 if (targetsList.indexOf(target) === -1) {
 	throw new Error(`Invalid target "${target}" in EXT_TARGET`);
 }
@@ -106,6 +106,22 @@ module.exports = {
 								.toString();
 							const targetManifest = JSON.parse(rawTargetManifest);
 							manifest = merge(manifest, targetManifest);
+						}
+
+						// Patch manifest with production overrides
+						const productionOverridesMap = {
+							'firefox-standalone': {
+								// eslint-disable-next-line camelcase
+								browser_specific_settings: {
+									gecko: {
+										id: '{e3fc2d33-09fc-4fe8-9331-d0a464698035}',
+									},
+								},
+							},
+						};
+						if (isProduction && target in productionOverridesMap) {
+							const productionOverrides = productionOverridesMap[target];
+							manifest = merge(manifest, productionOverrides);
 						}
 
 						// Set version

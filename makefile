@@ -20,10 +20,12 @@ buildThirdparty:
 buildAll:
 	mkdir -p ./build
 	chmod 777 ./build
-	${DOCKER_COMPOSE} run linguist make buildFirefox buildChromium buildChrome
+	${DOCKER_COMPOSE} run linguist make buildFirefox buildFirefoxStandalone buildChromium buildChrome
 
 buildFirefox:
 	NODE_ENV=production EXT_TARGET=firefox npx webpack-cli -c ./webpack.config.js
+buildFirefoxStandalone:
+	NODE_ENV=production EXT_TARGET=firefox-standalone npx webpack-cli -c ./webpack.config.js
 buildChromium:
 	NODE_ENV=production EXT_TARGET=chromium npx webpack-cli -c ./webpack.config.js
 buildChrome:
