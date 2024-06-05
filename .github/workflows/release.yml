@@ -11,16 +11,13 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    container:
-      image: ubuntu:latest
-      options: --user root
 
     steps:
       - uses: actions/checkout@v2
       - uses: ./.github/actions/prepare-build
 
       - name: Debug
-        run: id
+        run: sudo id
 
       - name: Build all targets
         run: make build
@@ -40,8 +37,7 @@ jobs:
           AMO_KEY: ${{ secrets.AMO_KEY }}
           AMO_SECRET: ${{ secrets.AMO_SECRET }}
         run: |
-          ls -al && ls -al firefox-standalone
-          chmod -R 777 .
+          sudo chown -R $(id -u):$(id -g) .
           ls -al && ls -al firefox-standalone
           mkdir ./AMO
           npx web-ext sign --channel unlisted --api-key "$AMO_KEY" --api-secret "$AMO_SECRET" --source-dir ./firefox-standalone --artifacts-dir ./AMO
