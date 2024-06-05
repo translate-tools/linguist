@@ -38,7 +38,7 @@ jobs:
           AMO_SECRET: ${{ secrets.AMO_SECRET }}
         run: |
           ls -al && ls -al firefox-standalone
-          chown -R $(id -u):$(id -g) . || chmod -R 777 .
+          chmod -R 777 .
           ls -al && ls -al firefox-standalone
           mkdir ./AMO
           npx web-ext sign --channel unlisted --api-key "$AMO_KEY" --api-secret "$AMO_SECRET" --source-dir ./firefox-standalone --artifacts-dir ./AMO
