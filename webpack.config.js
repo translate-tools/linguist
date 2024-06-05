@@ -110,14 +110,6 @@ module.exports = {
 
 						// Patch manifest with production overrides
 						const productionOverridesMap = {
-							firefox: {
-								// eslint-disable-next-line camelcase
-								browser_specific_settings: {
-									gecko: {
-										id: '{e5b6e4ac-ec96-44f5-b257-e4d3c8291b41}',
-									},
-								},
-							},
 							'firefox-standalone': {
 								// eslint-disable-next-line camelcase
 								browser_specific_settings: {
