@@ -35,7 +35,7 @@ jobs:
           AMO_SECRET: ${{ secrets.AMO_SECRET }}
         run: |
           mkdir ./AMO
-          npx web-ext sign --api-key "$AMO_KEY" --api-secret "$AMO_SECRET" --id "{e3fc2d33-09fc-4fe8-9331-d0a464698035}" --source-dir ./firefox-standalone --artifacts-dir ./AMO
+          npx web-ext sign --api-key "$AMO_KEY" --api-secret "$AMO_SECRET" --source-dir ./firefox-standalone --artifacts-dir ./AMO
           mv AMO/*.xpi AMO/linguist.xpi
 
       - name: Archive build files
