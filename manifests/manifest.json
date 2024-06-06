@@ -15,7 +15,7 @@
 		}
 	],
 	"content_security_policy": {
-		"extension_pages": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+		"extension_pages": "script-src 'self'; object-src 'self'"
 	},
 	"content_scripts": [
 		{
