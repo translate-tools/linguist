@@ -10,6 +10,7 @@ Prerequisites:
 Instructions:
 - Create `.env` file. You may copy file `.env.config` and configure it with your options
 - To build all code, create packages, and check it with linter just run `make build`
+	- If you build from a platform other than amd64, you may have problems with build a third party code. To resolve a problem, you have to build code in environment that are compatible with amd64. You may [enable emulation](https://stackoverflow.com/questions/65612411/forcing-docker-to-use-linux-amd64-platform-by-default-on-macos), if you use docker - set variable `export DOCKER_DEFAULT_PLATFORM=linux/amd64` or provide option `platform: linux/amd64` to a `docker-compose.yml` file
 - To make build only for specific platform, you may run `make` with specific target like `buildFirefox`, `buildChromium`, etc (see `makefile` for details)
 	- You must build a third party code with `make buildThirdparty` before run specific target. Example: `make prepare buildThirdparty buildFirefox`
 - Artifacts is placed in `build` directory
