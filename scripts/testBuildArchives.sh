@@ -4,7 +4,7 @@
 
 testDir=tests
 
-for packageArchive in `find -maxdepth 1 -type f -name '*.zip' -print`;
+for packageArchive in `find . -maxdepth 1 -type f -name '*.zip' -print`;
 do
 	unpackDir="$testDir/$(basename -s .zip "$packageArchive")"
 
