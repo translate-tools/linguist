@@ -1,25 +1,29 @@
 {
-	"manifest_version": 2,
-	"version": "2",
+	"manifest_version": 3,
 	"default_locale": "en",
 	"name": "__MSG_ext_name__",
 	"description": "__MSG_ext_description__",
 	"icons": {
 		"512": "static/logo/logo-icon.png"
 	},
-	"permissions": ["<all_urls>", "storage", "tabs", "contextMenus"],
-	"web_accessible_resources": ["common.css", "contentscript.css"],
-	"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
-	"background": {
-		"scripts": ["common.js", "background.js"]
+	"permissions": ["storage", "tabs", "contextMenus"],
+	"host_permissions": ["<all_urls>"],
+	"web_accessible_resources": [
+		{
+			"resources": ["common.css", "contentscript.css"],
+			"matches": ["*://*/*"]
+		}
+	],
+	"content_security_policy": {
+		"extension_pages": "script-src 'self' 'unsafe-eval'; object-src 'self'"
 	},
 	"content_scripts": [
 		{
-			"matches": ["<all_urls>"],
-			"js": ["common.js", "contentscript.js"]
+			"matches": ["*://*/*"],
+			"js": ["contentscript.js"]
 		}
 	],
-	"browser_action": {
+	"action": {
 		"default_popup": "pages/popup/popup.html",
 		"default_title": "__MSG_ext_name__",
 		"default_icon": "static/logo/logo-icon-simple-dark.png"

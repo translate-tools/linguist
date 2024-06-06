@@ -20,7 +20,7 @@ export const getAppIconPath = (icon: AppIcon, absolutePath = false) => {
  */
 export const setAppIcon = (icon: AppIcon) => {
 	const iconPath = getAppIconPath(icon);
-	browser.browserAction.setIcon({
+	browser.action.setIcon({
 		path: {
 			32: iconPath,
 		},

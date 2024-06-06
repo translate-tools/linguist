@@ -1,3 +1,7 @@
 {
-	"update_url": "https://translate-tools.github.io/linguist/chromium_updates.xml"
+	"update_url": "https://translate-tools.github.io/linguist/chromium_updates.xml",
+	"background": {
+		"service_worker": "background.worker.js",
+		"type": "module"
+	}
 }

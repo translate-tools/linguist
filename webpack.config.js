@@ -52,7 +52,7 @@ module.exports = {
 		extensions: ['.js', '.ts', '.tsx'],
 	},
 	entry: {
-		background: './src/background.ts',
+		'background.worker': './src/background.worker.ts',
 		contentscript: './src/contentscript.tsx',
 		['pages/popup/popup']: './src/pages/popup/popup.tsx',
 		['pages/options/options']: './src/pages/options/options.tsx',
@@ -62,21 +62,21 @@ module.exports = {
 	output: {
 		path: outputPath,
 	},
-	optimization: {
-		splitChunks: {
-			cacheGroups: {
-				commons: {
-					name: 'common',
-					chunks: 'all',
-					minChunks: 2,
-					enforce: true,
-					// TODO: replace me to predicate which prevent split css files from pages to common chunk
-					// it must prevent split CHUNKS, but not modules, cuz if one module from chunk split - all other will join
-					test: /[\\/](node_modules|core|themes|lib|modules|requests|polyfills|components|layers)[\\/]/,
-				},
-			},
-		},
-	},
+	// optimization: {
+	// 	splitChunks: {
+	// 		cacheGroups: {
+	// 			commons: {
+	// 				name: 'common',
+	// 				chunks: 'all',
+	// 				minChunks: 2,
+	// 				enforce: true,
+	// 				// TODO: replace me to predicate which prevent split css files from pages to common chunk
+	// 				// it must prevent split CHUNKS, but not modules, cuz if one module from chunk split - all other will join
+	// 				test: /[\\/](node_modules|core|themes|lib|modules|requests|polyfills|components|layers)[\\/]/,
+	// 			},
+	// 		},
+	// 	},
+	// },
 	plugins: [
 		new MiniCssExtractPlugin({}),
 		...(isBundleAnalyzingEnabled ? [new BundleAnalyzerPlugin()] : []),
