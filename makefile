@@ -15,12 +15,12 @@ build: clean prepare buildThirdparty buildAll packAll lintBuilds
 
 buildThirdparty:
 	mkdir -p ./thirdparty/bergamot/build && chmod 777 ./thirdparty/bergamot/build
-	${DOCKER_COMPOSE} run bergamot make build
+	${DOCKER_COMPOSE} run --rm bergamot make build
 
 buildAll:
 	mkdir -p ./build
 	chmod 777 ./build
-	${DOCKER_COMPOSE} run linguist make buildFirefox buildFirefoxStandalone buildChromium buildChrome
+	${DOCKER_COMPOSE} run --rm linguist make buildFirefox buildFirefoxStandalone buildChromium buildChrome
 
 buildFirefox:
 	NODE_ENV=production EXT_TARGET=firefox npx webpack-cli -c ./webpack.config.js
