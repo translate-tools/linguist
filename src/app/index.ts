@@ -2,7 +2,7 @@ import { createEvent, createStore, Store } from 'effector';
 import browser from 'webextension-polyfill';
 
 import { defaultConfig } from '../config';
-import { isBackgroundContext, isChromium } from '../lib/browser';
+import { isBackgroundContext, isChromium, isFirefox } from '../lib/browser';
 import { AppThemeControl } from '../lib/browser/AppThemeControl';
 import { getAllTabs } from '../lib/browser/tabs';
 import { TextTranslatorStorage } from '../pages/popup/tabs/TextTranslator/TextTranslator.utils/TextTranslatorStorage';
@@ -31,6 +31,15 @@ export class App {
 
 		const $onInstalledData = createStore<OnInstalledData>(null);
 		$onInstalledData.on(onInstalled, (_, onInstalledData) => onInstalledData);
+
+		// Request permissions for users after install
+		if (isFirefox()) {
+			onInstalled.watch(() => {
+				browser.tabs.create({
+					url: browser.runtime.getURL('pages/permissions/permissions.html'),
+				});
+			});
+		}
 
 		// Migrate data
 		await migrateAll();

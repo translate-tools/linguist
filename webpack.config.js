@@ -58,6 +58,7 @@ module.exports = {
 		['pages/options/options']: './src/pages/options/options.tsx',
 		['pages/dictionary/dictionary']: './src/pages/dictionary/dictionary.tsx',
 		['pages/history/history']: './src/pages/history/history.tsx',
+		['pages/permissions/permissions']: './src/pages/permissions/permissions.tsx',
 	},
 	output: {
 		path: outputPath,
@@ -139,6 +140,7 @@ module.exports = {
 					'pages/options/options.html',
 					'pages/dictionary/dictionary.html',
 					'pages/history/history.html',
+					'pages/permissions/permissions.html',
 				].map((file) => ({
 					from: './src/' + file,
 					to: path.join(outputPath, file),
