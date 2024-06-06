@@ -582,7 +582,13 @@
 		"message": "કસ્ટમ અનુવાદકો હજી સુધી ઉમેરવામાં ના આવ્યા છે"
 	},
 	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
-		"message": "\"$translator_name$\" અનુવાદક કાઢવા માટે ખરેખર ખરેખર ખરેખર ખરેખર ખરેખર ખરેખર ખરેખર ખરેખર ખરેખર ખરેખર ખરેખર ખરેખર ખરેખર ખરેખર ખરેખર ખરેખર ખરેખર ખરેખર ખરેખર ખરેખર ખરેખર ખરેખર ખરેખર ખરેખર ખરેખર ખરેખર છો"
+		"message": "\"$translator_name$\" અનુવાદક કાઢવા માટે ખરેખર ખરેખર ખરેખર ખરેખર ખરેખર ખરેખર ખરેખર ખરેખર ખરેખર ખરેખર ખરેખર ખરેખર ખરેખર ખરેખર ખરેખર ખરેખર ખરેખર ખરેખર ખરેખર ખરેખર ખરેખર ખરેખર ખરેખર ખરેખર ખરેખર ખરેખર છો",
+		"placeholders": {
+			"translator_name": {
+				"content": "$1",
+				"example": "Google translator"
+			}
+		}
 	},
 	"translatorsManagerWindow_title": {
 		"message": "કસ્ટમ અનુવાદકો"
