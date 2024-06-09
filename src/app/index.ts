@@ -2,7 +2,7 @@ import { createEvent, createStore, Store } from 'effector';
 import browser from 'webextension-polyfill';
 
 import { defaultConfig } from '../config';
-import { isBackgroundContext, isChromium, isFirefox } from '../lib/browser';
+import { isChromium, isFirefox } from '../lib/browser';
 import { AppThemeControl } from '../lib/browser/AppThemeControl';
 import { getAllTabs } from '../lib/browser/tabs';
 import { TextTranslatorStorage } from '../pages/popup/tabs/TextTranslator/TextTranslator.utils/TextTranslatorStorage';
@@ -79,6 +79,15 @@ export class App {
 			throw new Error('Application already started');
 		}
 
+		console.log('Hello. App is started now');
+
+		async function runHeartbeat() {
+			console.log('Heart beat');
+			await browser.storage.local.set({ 'last-heartbeat': new Date().getTime() });
+		}
+
+		runHeartbeat().then(() => setInterval(runHeartbeat, 1000 * 2));
+
 		this.isStarted = true;
 
 		await this.background.start();
@@ -91,14 +100,12 @@ export class App {
 
 	private async setupRequestHandlers() {
 		// Prevent run it again on other pages, such as options page
-		if (isBackgroundContext()) {
-			requestHandlers.forEach((factory) => {
-				factory({
-					config: this.config,
-					backgroundContext: this.background,
-				});
+		requestHandlers.forEach((factory) => {
+			factory({
+				config: this.config,
+				backgroundContext: this.background,
 			});
-		}
+		});
 	}
 
 	private async handleConfigUpdates() {
@@ -181,8 +188,9 @@ export class App {
 				)
 					return;
 
-				['common.js', 'contentscript.js'].forEach((file) => {
-					browser.tabs.executeScript(tab.id, { file });
+				browser.scripting.executeScript({
+					target: { tabId: tab.id },
+					files: ['contentscript.js'],
 				});
 			});
 		}

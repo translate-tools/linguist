@@ -17,24 +17,25 @@ export class BrowserThemeInfo implements ThemeInfo {
 		this.handlers.delete(handler);
 	}
 
-	private observer = (evt: any) => {
-		const isLightTheme = evt.matches;
+	// TODO: run in offscreen
+	// private observer = (evt: any) => {
+	// 	const isLightTheme = evt.matches;
 
-		this.handlers.forEach((handler) => {
-			handler({ isLightTheme });
-		});
-	};
+	// 	this.handlers.forEach((handler) => {
+	// 		handler({ isLightTheme });
+	// 	});
+	// };
 
-	private lightThemeQuery = window.matchMedia('(prefers-color-scheme: light)');
+	// private lightThemeQuery = window.matchMedia('(prefers-color-scheme: light)');
 	public async isLightTheme(): Promise<boolean> {
-		return this.lightThemeQuery.matches;
+		return true;
 	}
 
 	public startObserve() {
-		this.lightThemeQuery.addEventListener('change', this.observer);
+		// this.lightThemeQuery.addEventListener('change', this.observer);
 	}
 
 	public stopObserve() {
-		this.lightThemeQuery.removeEventListener('change', this.observer);
+		// this.lightThemeQuery.removeEventListener('change', this.observer);
 	}
 }

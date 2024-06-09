@@ -182,7 +182,7 @@ module.exports = {
 						file.replace(/\.svg$/, '.png'),
 					),
 					transform(content) {
-						return sharp(content).resize(512, 512).toBuffer();
+						return sharp(content).resize(32, 32).toBuffer();
 					},
 				})),
 			],

@@ -6,7 +6,7 @@
 	"icons": {
 		"512": "static/logo/logo-icon.png"
 	},
-	"permissions": ["storage", "tabs", "contextMenus"],
+	"permissions": ["storage", "tabs", "contextMenus", "scripting"],
 	"host_permissions": ["<all_urls>"],
 	"web_accessible_resources": [
 		{

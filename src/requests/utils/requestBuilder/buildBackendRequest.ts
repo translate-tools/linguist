@@ -34,6 +34,7 @@ export const buildBackendRequest = <O = void, R = void>(
 		}
 
 		// Send request
+		console.warn('Sent request: ', endpoint);
 		return sendBackgroundRequest(endpoint, options).then((response): R => {
 			// Validate request props
 			if (responseValidator !== undefined) {
@@ -53,6 +54,8 @@ export const buildBackendRequest = <O = void, R = void>(
 			if (requestValidator !== undefined) {
 				tryDecode(requestValidator, reqProps);
 			}
+
+			console.warn('Request handler: ', endpoint);
 
 			return handler(reqProps);
 		});
