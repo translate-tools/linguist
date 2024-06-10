@@ -97,8 +97,10 @@ export class App {
 
 		this.$onInstalledData.watch(this.onInstalled);
 
+		// TODO: add more reasons
+		// We may have only one offscreen document
 		(browser as any).offscreen.createDocument({
-			url: 'offscreen-documents/worker/worker.html',
+			url: 'offscreen-documents/main/main.html',
 			reasons: [(browser as any).offscreen.Reason.WORKERS],
 			justification: 'Web worker proxy',
 		});

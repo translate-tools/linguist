@@ -56,6 +56,9 @@ module.exports = {
 		contentscript: './src/contentscript.tsx',
 		['offscreen-documents/worker/worker']:
 			'./src/offscreen-documents/worker/worker.ts',
+		['offscreen-documents/main/main']: './src/offscreen-documents/main/main.ts',
+		['offscreen-documents/translator/translator']:
+			'./src/offscreen-documents/translator/translator.ts',
 		['pages/popup/popup']: './src/pages/popup/popup.tsx',
 		['pages/options/options']: './src/pages/options/options.tsx',
 		['pages/dictionary/dictionary']: './src/pages/dictionary/dictionary.tsx',
@@ -143,6 +146,8 @@ module.exports = {
 					'pages/dictionary/dictionary.html',
 					'pages/history/history.html',
 					'pages/permissions/permissions.html',
+					'offscreen-documents/main/main.html',
+					'offscreen-documents/translator/translator.html',
 					'offscreen-documents/worker/worker.html',
 				].map((file) => ({
 					from: './src/' + file,

@@ -1,9 +1,9 @@
 import { TranslatorConstructor } from '@translate-tools/core/translators/Translator';
 
 import { embeddedTranslators, TranslatorsMap } from '../../../app/Background';
+import { getCustomTranslatorClass } from '../../../lib/translators/customTranslators/utils';
 
 import { getTranslators } from './data';
-import { loadTranslator } from './utils';
 
 export type CustomTranslator = {
 	id: number;
@@ -34,7 +34,7 @@ export const getTranslatorsClasses = async (): Promise<TranslatorsMap> => {
 	for (const { key, data: translatorData } of customTranslators) {
 		const translatorId = formatToCustomTranslatorId(key);
 		try {
-			translatorsMap[translatorId] = loadTranslator(translatorData.code);
+			translatorsMap[translatorId] = getCustomTranslatorClass(translatorData.code);
 		} catch (error) {
 			console.error(
 				`Translator "${translatorData.name}" (id:${key}) is thrown exception`,
