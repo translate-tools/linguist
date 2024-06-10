@@ -96,6 +96,12 @@ export class App {
 		await this.handleConfigUpdates();
 
 		this.$onInstalledData.watch(this.onInstalled);
+
+		(browser as any).offscreen.createDocument({
+			url: 'offscreen-documents/worker/worker.html',
+			reasons: [(browser as any).offscreen.Reason.WORKERS],
+			justification: 'Web worker proxy',
+		});
 	}
 
 	private async setupRequestHandlers() {

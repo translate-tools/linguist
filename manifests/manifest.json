@@ -6,16 +6,22 @@
 	"icons": {
 		"512": "static/logo/logo-icon.png"
 	},
-	"permissions": ["storage", "tabs", "contextMenus", "scripting"],
+	"permissions": ["storage", "tabs", "contextMenus", "scripting", "offscreen"],
 	"host_permissions": ["<all_urls>"],
 	"web_accessible_resources": [
 		{
-			"resources": ["common.css", "contentscript.css"],
+			"resources": [
+				"common.css",
+				"thirdparty/bergamot/bergamot-translator-worker.wasm",
+				"thirdparty/bergamot/bergamot-translator-worker.js",
+				"thirdparty/bergamot/translator.worker.js",
+				"contentscript.css"
+			],
 			"matches": ["*://*/*"]
 		}
 	],
 	"content_security_policy": {
-		"extension_pages": "script-src 'self'; object-src 'self'"
+		"extension_pages": "default-src 'self' 'wasm-unsafe-eval'; connect-src *"
 	},
 	"content_scripts": [
 		{

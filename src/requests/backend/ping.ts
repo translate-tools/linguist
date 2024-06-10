@@ -2,7 +2,10 @@ import { makePing } from '../utils/makePing';
 import { buildBackendRequest } from '../utils/requestBuilder';
 
 export const [pingFactory, pingReq] = buildBackendRequest('ping', {
-	factoryHandler: () => async () => 'pong' as const,
+	factoryHandler: () => async () => {
+		console.log('Send PONG');
+		return 'pong' as const;
+	},
 });
 
 export const ping = (options?: { timeout?: number; delay?: number }) => {
@@ -10,5 +13,8 @@ export const ping = (options?: { timeout?: number; delay?: number }) => {
 
 	return makePing(pingReq, timeout, delay)
 		.then(() => true)
-		.catch(() => false);
+		.catch((err) => {
+			console.error('PING ERR', err);
+			return false;
+		});
 };

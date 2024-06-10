@@ -54,6 +54,8 @@ module.exports = {
 	entry: {
 		'background.worker': './src/background.worker.ts',
 		contentscript: './src/contentscript.tsx',
+		['offscreen-documents/worker/worker']:
+			'./src/offscreen-documents/worker/worker.ts',
 		['pages/popup/popup']: './src/pages/popup/popup.tsx',
 		['pages/options/options']: './src/pages/options/options.tsx',
 		['pages/dictionary/dictionary']: './src/pages/dictionary/dictionary.tsx',
@@ -141,6 +143,7 @@ module.exports = {
 					'pages/dictionary/dictionary.html',
 					'pages/history/history.html',
 					'pages/permissions/permissions.html',
+					'offscreen-documents/worker/worker.html',
 				].map((file) => ({
 					from: './src/' + file,
 					to: path.join(outputPath, file),
