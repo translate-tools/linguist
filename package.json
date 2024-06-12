@@ -8,9 +8,7 @@
 		"test": "jest",
 		"test-fast": "TEST_FAST=true jest --maxWorkers=4",
 		"build:dev": "EXT_TARGET=firefox webpack-cli -wc ./webpack.config.js",
-		"build:dev-fast": "FAST_BUILD=on EXT_TARGET=firefox webpack-cli -wc ./webpack.config.js",
 		"build:tokens": "themekit build -c themekit.config.json",
-		"run:mobile-firefox": "ADB_DEVICE_TO_DEBUG=$(cat .ADB_DEVICE) && cd build/dev/firefox && web-ext run -t firefox-android --adb-device \"$ADB_DEVICE_TO_DEBUG\" --firefox-apk org.mozilla.fenix",
 		"release:patch": "npm version patch",
 		"prettify": "prettier --write \"{*,**/*}.{ts,tsx,js,jsx}\" && eslint --fix \"{*,**/*}.{ts,tsx,js,jsx}\" && stylelint --fix \"{*,**/*}.css\"",
 		"prepare": "husky install"

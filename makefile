@@ -11,6 +11,9 @@ devFirefox: prepare
 devChromium: prepare
 	FAST_BUILD=on EXT_TARGET=chromium npx webpack-cli -wc ./webpack.config.js
 
+devAndroidFirefox:
+	cd build/dev/firefox && npx web-ext run -t firefox-android --adb-device "${ADB_DEVICE_TO_DEBUG}" --firefox-apk org.mozilla.fenix
+
 clean:
 	rm -rf ./build
 
