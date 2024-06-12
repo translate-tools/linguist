@@ -79,21 +79,10 @@ export class App {
 		await this.handleConfigUpdates();
 
 		this.$onInstalledData.watch(this.onInstalled);
-
-		if (isChromium()) {
-			// TODO: add more reasons
-			// We may have only one offscreen document
-			(browser as any).offscreen.createDocument({
-				url: 'offscreen-documents/main/main.html',
-				reasons: [(browser as any).offscreen.Reason.WORKERS],
-				justification: 'Web worker proxy',
-			});
-		} else {
-			customTranslatorsFactory();
-		}
 	}
 
 	private async setupRequestHandlers() {
+		// TODO: debug this condition and remove or move on top
 		// Prevent run it again on other pages, such as options page
 		if (!isFirefox() || isBackgroundContext()) {
 			requestHandlers.forEach((factory) => {
@@ -102,6 +91,35 @@ export class App {
 					backgroundContext: this.background,
 				});
 			});
+		}
+
+		// Setup sandboxed iframes
+		if (isChromium()) {
+			// Currently `offscreen` API is non standard, so we cast type
+			const offscreen = (browser as any).offscreen;
+
+			// We may have only one offscreen document, but we need more,
+			// so we create only one "main" document, that creates embedded iframes
+			try {
+				offscreen.createDocument({
+					url: 'offscreen-documents/main/main.html',
+					reasons: [
+						offscreen.Reason.WORKERS,
+						offscreen.Reason.IFRAME_SCRIPTING,
+						offscreen.Reason.MATCH_MEDIA,
+					],
+					justification:
+						'Main offscreen document, to run WASM and custom translators code in sandbox',
+				});
+			} catch (error) {
+				if (
+					!(error instanceof Error) ||
+					!error.message.startsWith('Only a single offscreen')
+				)
+					throw error;
+			}
+		} else {
+			customTranslatorsFactory();
 		}
 	}
 
