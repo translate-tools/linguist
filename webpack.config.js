@@ -3,7 +3,7 @@ const fs = require('fs');
 const CopyPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const sharp = require('sharp');
-const { merge } = require('lodash');
+const { mergeWith } = require('lodash');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 console.log('Webpack run');
@@ -26,6 +26,13 @@ if (targetsList.indexOf(target) === -1) {
 const devPrefix = isProduction ? '' : 'dev/';
 const outDir = `build/${devPrefix}${target}`;
 const outputPath = path.join(__dirname, outDir);
+
+// https://lodash.com/docs/4.17.15#mergeWith
+function mergeCustomizer(objValue, srcValue) {
+	if (Array.isArray(objValue) && Array.isArray(srcValue)) {
+		return objValue.concat(srcValue);
+	}
+}
 
 console.log('WebpackConfig', {
 	mode,
@@ -85,7 +92,13 @@ module.exports = {
 	// },
 	plugins: [
 		new MiniCssExtractPlugin({}),
-		...(isBundleAnalyzingEnabled ? [new BundleAnalyzerPlugin()] : []),
+		...(isBundleAnalyzingEnabled
+			? [
+				new BundleAnalyzerPlugin({
+					analyzerPort: 8888 + 10 + targetsList.indexOf(target),
+				}),
+			  ]
+			: []),
 		new CopyPlugin({
 			patterns: [
 				// Manifest
@@ -111,7 +124,11 @@ module.exports = {
 								.readFileSync(targetManifestPath)
 								.toString();
 							const targetManifest = JSON.parse(rawTargetManifest);
-							manifest = merge(manifest, targetManifest);
+							manifest = mergeWith(
+								manifest,
+								targetManifest,
+								mergeCustomizer,
+							);
 						}
 
 						// Patch manifest with production overrides
@@ -127,7 +144,11 @@ module.exports = {
 						};
 						if (isProduction && target in productionOverridesMap) {
 							const productionOverrides = productionOverridesMap[target];
-							manifest = merge(manifest, productionOverrides);
+							manifest = mergeWith(
+								manifest,
+								productionOverrides,
+								mergeCustomizer,
+							);
 						}
 
 						// Set version

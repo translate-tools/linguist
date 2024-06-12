@@ -6,6 +6,10 @@ prepare:
 
 dev: prepare
 	npm run build:dev
+devFirefox: prepare
+	FAST_BUILD=on EXT_TARGET=firefox npx webpack-cli -wc ./webpack.config.js
+devChromium: prepare
+	FAST_BUILD=on EXT_TARGET=chromium npx webpack-cli -wc ./webpack.config.js
 
 clean:
 	rm -rf ./build
