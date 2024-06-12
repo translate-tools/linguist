@@ -52,4 +52,6 @@ browser.runtime.onMessage.addListener((rawMessage) => {
 			return Promise.resolve();
 		}
 	}
+
+	return;
 });
