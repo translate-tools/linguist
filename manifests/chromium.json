@@ -3,5 +3,13 @@
 	"background": {
 		"service_worker": "background.worker.js",
 		"type": "module"
+	},
+	"permissions": ["offscreen"],
+	"content_security_policy": {
+		"extension_pages": "default-src 'self' 'wasm-unsafe-eval'; connect-src *; style-src 'self' 'unsafe-inline' *;",
+		"sandbox": "default-src 'self' 'wasm-unsafe-eval' 'unsafe-eval'; sandbox allow-scripts; script-src 'self' 'unsafe-eval' 'unsafe-inline'; frame-ancestors *; connect-src *;"
+	},
+	"sandbox": {
+		"pages": ["offscreen-documents/translator/translator.html"]
 	}
 }

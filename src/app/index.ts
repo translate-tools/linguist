@@ -2,7 +2,7 @@ import { createEvent, createStore, Store } from 'effector';
 import browser from 'webextension-polyfill';
 
 import { defaultConfig } from '../config';
-import { isChromium, isFirefox } from '../lib/browser';
+import { isBackgroundContext, isChromium, isFirefox } from '../lib/browser';
 import { AppThemeControl } from '../lib/browser/AppThemeControl';
 import { getAllTabs } from '../lib/browser/tabs';
 import { TextTranslatorStorage } from '../pages/popup/tabs/TextTranslator/TextTranslator.utils/TextTranslatorStorage';
@@ -97,23 +97,27 @@ export class App {
 
 		this.$onInstalledData.watch(this.onInstalled);
 
-		// TODO: add more reasons
-		// We may have only one offscreen document
-		(browser as any).offscreen.createDocument({
-			url: 'offscreen-documents/main/main.html',
-			reasons: [(browser as any).offscreen.Reason.WORKERS],
-			justification: 'Web worker proxy',
-		});
+		if (isChromium()) {
+			// TODO: add more reasons
+			// We may have only one offscreen document
+			(browser as any).offscreen.createDocument({
+				url: 'offscreen-documents/main/main.html',
+				reasons: [(browser as any).offscreen.Reason.WORKERS],
+				justification: 'Web worker proxy',
+			});
+		}
 	}
 
 	private async setupRequestHandlers() {
 		// Prevent run it again on other pages, such as options page
-		requestHandlers.forEach((factory) => {
-			factory({
-				config: this.config,
-				backgroundContext: this.background,
+		if (isBackgroundContext()) {
+			requestHandlers.forEach((factory) => {
+				factory({
+					config: this.config,
+					backgroundContext: this.background,
+				});
 			});
-		});
+		}
 	}
 
 	private async handleConfigUpdates() {

@@ -6,7 +6,7 @@
 	"icons": {
 		"512": "static/logo/logo-icon.png"
 	},
-	"permissions": ["storage", "tabs", "contextMenus", "scripting", "offscreen"],
+	"permissions": ["storage", "tabs", "contextMenus", "scripting"],
 	"host_permissions": ["<all_urls>"],
 	"web_accessible_resources": [
 		{
@@ -20,13 +20,6 @@
 			"matches": ["*://*/*"]
 		}
 	],
-	"content_security_policy": {
-		"extension_pages": "default-src 'self' 'wasm-unsafe-eval'; connect-src *; style-src 'self' 'unsafe-inline' *;",
-		"sandbox": "default-src 'self' 'wasm-unsafe-eval' 'unsafe-eval'; sandbox allow-scripts; script-src 'self' 'unsafe-eval' 'unsafe-inline'; frame-ancestors *; connect-src *;"
-	},
-	"sandbox": {
-		"pages": ["offscreen-documents/translator/translator.html"]
-	},
 	"content_scripts": [
 		{
 			"matches": ["*://*/*"],
