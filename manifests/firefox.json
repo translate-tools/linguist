@@ -1,6 +1,6 @@
 {
 	"manifest_version": 2,
-	"permissions": ["storage", "<all_urls>"],
+	"permissions": ["<all_urls>"],
 	"web_accessible_resources": [
 		"common.css",
 		"thirdparty/bergamot/bergamot-translator-worker.wasm",

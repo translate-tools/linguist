@@ -1,5 +1,6 @@
 import { Connection, connectToChild } from 'penpal';
 
+import { isChromium } from '../../../lib/browser';
 import { TranslatorWorkerApi } from '../../../offscreen-documents/translator';
 import { buildBackendRequest } from '../../utils/requestBuilder';
 
@@ -38,7 +39,7 @@ export const customTranslatorCreate = buildBackendRequest<
 				// Connect controller
 				const controller = connectToChild<TranslatorWorkerApi>({
 					iframe,
-					// childOrigin: '*',
+					childOrigin: isChromium() ? '*' : undefined,
 					// timeout: 5000,
 					debug: true,
 				});

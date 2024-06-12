@@ -6,20 +6,15 @@
 import { customTranslatorsFactory } from '../../requests/offscreen/customTranslators';
 
 // TODO: add types validation between all requests
-
-export const runTranslatorsSandbox = () => {
-	console.log('runTranslatorsSandbox is in run');
-
+document.addEventListener('DOMContentLoaded', async () => {
+	console.log('Main is run');
 	customTranslatorsFactory();
-};
-// document.addEventListener('DOMContentLoaded', async () => {
-// 	console.log('Main is run');
-// 	// const iframe1 = document.createElement('iframe', {});
-// 	// iframe1.src = '/offscreen-documents/worker/worker.html';
-// 	// iframe1.setAttribute(
-// 	// 	'sandbox',
-// 	// 	'allow-same-origin allow-scripts allow-popups allow-forms',
-// 	// );
-// 	// document.body.appendChild(iframe1);
 
-// });
+	const workerIframe = document.createElement('iframe', {});
+	workerIframe.src = '/offscreen-documents/worker/worker.html';
+	workerIframe.setAttribute(
+		'sandbox',
+		'allow-same-origin allow-scripts allow-popups allow-forms',
+	);
+	document.body.appendChild(workerIframe);
+});

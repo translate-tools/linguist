@@ -2,7 +2,7 @@ import { createEvent, createStore, Store } from 'effector';
 import browser from 'webextension-polyfill';
 
 import { defaultConfig } from '../config';
-import { isBackgroundContext, isChromium } from '../lib/browser';
+import { isBackgroundContext, isChromium, isFirefox } from '../lib/browser';
 import { AppThemeControl } from '../lib/browser/AppThemeControl';
 import { getAllTabs } from '../lib/browser/tabs';
 import { TextTranslatorStorage } from '../pages/popup/tabs/TextTranslator/TextTranslator.utils/TextTranslatorStorage';
@@ -113,7 +113,7 @@ export class App {
 
 	private async setupRequestHandlers() {
 		// Prevent run it again on other pages, such as options page
-		if (isBackgroundContext()) {
+		if (!isFirefox() || isBackgroundContext()) {
 			requestHandlers.forEach((factory) => {
 				factory({
 					config: this.config,
