@@ -24,7 +24,7 @@ export const setAppIcon = (icon: AppIcon) => {
 	console.log({ iconPath });
 	(isFirefox() ? browser.browserAction : browser.action).setIcon({
 		path: {
-			32: iconPath,
+			128: iconPath,
 		},
 	});
 };
