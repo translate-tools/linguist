@@ -71,15 +71,6 @@ export class App {
 			throw new Error('Application already started');
 		}
 
-		console.log('Hello. App is started now');
-
-		async function runHeartbeat() {
-			console.log('Heart beat');
-			await browser.storage.local.set({ 'last-heartbeat': new Date().getTime() });
-		}
-
-		runHeartbeat().then(() => setInterval(runHeartbeat, 1000 * 2));
-
 		this.isStarted = true;
 
 		await this.background.start();
