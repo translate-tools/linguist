@@ -70,7 +70,6 @@ module.exports = {
 		['pages/options/options']: './src/pages/options/options.tsx',
 		['pages/dictionary/dictionary']: './src/pages/dictionary/dictionary.tsx',
 		['pages/history/history']: './src/pages/history/history.tsx',
-		['pages/permissions/permissions']: './src/pages/permissions/permissions.tsx',
 	},
 	output: {
 		path: outputPath,
@@ -166,7 +165,6 @@ module.exports = {
 					'pages/options/options.html',
 					'pages/dictionary/dictionary.html',
 					'pages/history/history.html',
-					'pages/permissions/permissions.html',
 					'offscreen-documents/main/main.html',
 					'offscreen-documents/translator/translator.html',
 					'offscreen-documents/worker/worker.html',

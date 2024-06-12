@@ -33,15 +33,6 @@ export class App {
 		const $onInstalledData = createStore<OnInstalledData>(null);
 		$onInstalledData.on(onInstalled, (_, onInstalledData) => onInstalledData);
 
-		// Request permissions for users after install
-		// if (isFirefox()) {
-		// 	onInstalled.watch(() => {
-		// 		browser.tabs.create({
-		// 			url: browser.runtime.getURL('pages/permissions/permissions.html'),
-		// 		});
-		// 	});
-		// }
-
 		// Migrate data
 		await migrateAll();
 
