@@ -1,13 +1,11 @@
-import browser from 'webextension-polyfill';
+import { customTranslatorsApi } from '../../../requests/offscreen/customTranslators';
 
 import { CustomTranslatorController } from './CustomTranslatorController';
 
 export const validateTranslatorCode = async (code: string) => {
+	console.log('Call customTranslator.create');
 	// TODO: remove translator after check
-	await browser.runtime.sendMessage({
-		action: 'customTranslator.create',
-		data: { code },
-	});
+	await customTranslatorsApi.create({ code });
 };
 
 export const getCustomTranslatorClass = (code: string) => {

@@ -11,7 +11,9 @@ export type RequestHandlerFactoryProps = {
 	backgroundContext: Background;
 };
 
-export type RequestHandlerFactory = (props: RequestHandlerFactoryProps) => () => void;
+export type RequestHandlerFactory<T = RequestHandlerFactoryProps> = (
+	props: T,
+) => () => void;
 
 export type ClientRequestHandlerFactoryProps = {
 	$config: Store<AppConfigType>;

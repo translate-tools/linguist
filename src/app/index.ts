@@ -2,12 +2,13 @@ import { createEvent, createStore, Store } from 'effector';
 import browser from 'webextension-polyfill';
 
 import { defaultConfig } from '../config';
-import { isBackgroundContext, isChromium, isFirefox } from '../lib/browser';
+import { isBackgroundContext, isChromium } from '../lib/browser';
 import { AppThemeControl } from '../lib/browser/AppThemeControl';
 import { getAllTabs } from '../lib/browser/tabs';
 import { TextTranslatorStorage } from '../pages/popup/tabs/TextTranslator/TextTranslator.utils/TextTranslatorStorage';
 import { clearCache } from '../requests/backend/clearCache';
 import { sendAppConfigUpdateEvent } from '../requests/global/appConfigUpdate';
+import { customTranslatorsFactory } from '../requests/offscreen/customTranslators';
 import { AppConfigType } from '../types/runtime';
 import { Background } from './Background';
 import { requestHandlers } from './Background/requestHandlers';
@@ -33,13 +34,13 @@ export class App {
 		$onInstalledData.on(onInstalled, (_, onInstalledData) => onInstalledData);
 
 		// Request permissions for users after install
-		if (isFirefox()) {
-			onInstalled.watch(() => {
-				browser.tabs.create({
-					url: browser.runtime.getURL('pages/permissions/permissions.html'),
-				});
-			});
-		}
+		// if (isFirefox()) {
+		// 	onInstalled.watch(() => {
+		// 		browser.tabs.create({
+		// 			url: browser.runtime.getURL('pages/permissions/permissions.html'),
+		// 		});
+		// 	});
+		// }
 
 		// Migrate data
 		await migrateAll();
@@ -105,6 +106,8 @@ export class App {
 				reasons: [(browser as any).offscreen.Reason.WORKERS],
 				justification: 'Web worker proxy',
 			});
+		} else {
+			customTranslatorsFactory();
 		}
 	}
 

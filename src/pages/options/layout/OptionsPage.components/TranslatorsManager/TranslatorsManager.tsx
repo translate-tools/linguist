@@ -103,6 +103,7 @@ export const TranslatorsManager: FC<{
 			} catch (error) {
 				if (error instanceof Error) {
 					setEditorError(error.message);
+					console.error(error);
 				}
 
 				return;

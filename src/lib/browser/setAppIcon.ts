@@ -1,4 +1,5 @@
 import browser from 'webextension-polyfill';
+import { isFirefox } from '@react-aria/utils';
 
 import { AppConfigType } from '../../types/runtime';
 
@@ -21,7 +22,7 @@ export const getAppIconPath = (icon: AppIcon, absolutePath = false) => {
 export const setAppIcon = (icon: AppIcon) => {
 	const iconPath = getAppIconPath(icon);
 	console.log({ iconPath });
-	browser.action.setIcon({
+	(isFirefox() ? browser.browserAction : browser.action).setIcon({
 		path: {
 			32: iconPath,
 		},

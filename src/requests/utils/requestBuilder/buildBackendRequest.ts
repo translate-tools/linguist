@@ -6,8 +6,8 @@ import { RequestHandlerFactory, RequestHandlerFactoryProps } from '../../types';
 
 import { addRequestHandler, sendBackgroundRequest } from '..';
 
-type BackgroundOptions<O = any, R = any> = {
-	factoryHandler: (props: RequestHandlerFactoryProps) => (options: O) => Promise<R>;
+type BackgroundOptions<O = any, R = any, C = RequestHandlerFactoryProps> = {
+	factoryHandler: (props: C) => (options: O) => Promise<R>;
 	requestValidator?: t.Type<O, O>;
 	responseValidator?: t.Type<R, R>;
 };
@@ -15,9 +15,9 @@ type BackgroundOptions<O = any, R = any> = {
 /**
  * Factory for building requests which ensure its types
  */
-export const buildBackendRequest = <O = void, R = void>(
+export const buildBackendRequest = <O = void, R = void, C = RequestHandlerFactoryProps>(
 	endpoint: string,
-	{ factoryHandler, requestValidator, responseValidator }: BackgroundOptions<O, R>,
+	{ factoryHandler, requestValidator, responseValidator }: BackgroundOptions<O, R, C>,
 ) => {
 	let localHandler: ((options: O) => Promise<R>) | null = null;
 
@@ -45,7 +45,7 @@ export const buildBackendRequest = <O = void, R = void>(
 		});
 	};
 
-	const factory: RequestHandlerFactory = (factoryProps) => {
+	const factory: RequestHandlerFactory<C> = (factoryProps) => {
 		const handler = factoryHandler(factoryProps);
 
 		localHandler = handler;

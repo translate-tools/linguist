@@ -7,30 +7,12 @@
 		"512": "static/logo/logo-icon.png"
 	},
 	"permissions": ["storage", "tabs", "contextMenus", "scripting"],
-	"host_permissions": ["<all_urls>"],
-	"web_accessible_resources": [
-		{
-			"resources": [
-				"common.css",
-				"thirdparty/bergamot/bergamot-translator-worker.wasm",
-				"thirdparty/bergamot/bergamot-translator-worker.js",
-				"thirdparty/bergamot/translator.worker.js",
-				"contentscript.css"
-			],
-			"matches": ["*://*/*"]
-		}
-	],
 	"content_scripts": [
 		{
 			"matches": ["*://*/*"],
 			"js": ["contentscript.js"]
 		}
 	],
-	"action": {
-		"default_popup": "pages/popup/popup.html",
-		"default_title": "__MSG_ext_name__",
-		"default_icon": "static/logo/logo-icon-simple-dark.png"
-	},
 	"options_ui": {
 		"page": "pages/options/options.html",
 		"open_in_tab": true

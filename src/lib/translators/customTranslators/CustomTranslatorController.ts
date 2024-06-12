@@ -1,5 +1,6 @@
-import browser from 'webextension-polyfill';
 import { BaseTranslator } from '@translate-tools/core/translators/BaseTranslator';
+
+import { customTranslatorsApi } from '../../../requests/offscreen/customTranslators';
 
 export class CustomTranslatorController extends BaseTranslator {
 	private readonly translatorId: Promise<string>;
@@ -11,35 +12,26 @@ export class CustomTranslatorController extends BaseTranslator {
 		this.translatorId = Promise.resolve().then(async () => {
 			await new Promise((res) => setTimeout(res, 1000));
 
-			return browser.runtime.sendMessage({
-				action: 'customTranslator.create',
-				data: { code },
-			});
+			return customTranslatorsApi.create({ code });
 		});
 	}
 
 	public translate(...args: any[]): Promise<string> {
 		return this.translatorId.then((translatorId) =>
-			browser.runtime.sendMessage({
-				action: 'customTranslator.call',
-				data: {
-					id: translatorId,
-					method: 'translate',
-					args: args,
-				},
+			customTranslatorsApi.call({
+				id: translatorId,
+				method: 'translate',
+				args: args,
 			}),
 		);
 	}
 
 	public translateBatch(...args: any[]): Promise<string[]> {
 		return this.translatorId.then((translatorId) =>
-			browser.runtime.sendMessage({
-				action: 'customTranslator.call',
-				data: {
-					id: translatorId,
-					method: 'translateBatch',
-					args: args,
-				},
+			customTranslatorsApi.call({
+				id: translatorId,
+				method: 'translateBatch',
+				args: args,
 			}),
 		);
 	}

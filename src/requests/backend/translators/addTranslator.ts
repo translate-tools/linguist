@@ -11,6 +11,7 @@ export const [addTranslatorFactory, addTranslator] = buildBackendRequest(
 		requestValidator: TranslatorEntry,
 
 		factoryHandler: () => async (data) => {
+			console.log('addTranslatorFactory received request');
 			await validateTranslatorCode(data.code);
 
 			await db.addTranslator(data);
