@@ -52,6 +52,20 @@ browser.runtime.onMessage.addListener((rawMessage) => {
 
 			return Promise.resolve();
 		}
+		case 'offscreenWorker.terminate': {
+			const { workerId } = message.data;
+
+			const worker = workers.get(workerId);
+			if (!worker) {
+				console.error('Not found worker', workerId);
+				return;
+			}
+
+			worker.terminate();
+			workers.delete(workerId);
+
+			return Promise.resolve();
+		}
 	}
 
 	return;

@@ -78,7 +78,14 @@ export class OffscreenWorker implements Worker {
 	};
 
 	public terminate() {
-		throw new Error('Method "terminate" is not implemented yet for OffscreenWorker');
+		this.workerId.then((workerId) => {
+			browser.runtime.sendMessage(
+				serialize({
+					action: 'offscreenWorker.terminate',
+					data: { workerId },
+				}),
+			);
+		});
 	}
 
 	public dispatchEvent(_event: Event): boolean {
