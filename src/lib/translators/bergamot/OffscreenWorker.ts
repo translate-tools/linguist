@@ -14,12 +14,19 @@ export class OffscreenWorker implements Worker {
 			data: { url },
 		});
 
-		this.workerId.then((id) => console.log('Response from worker', id));
+		let workerId: string | null = null;
+		this.workerId.then((id) => {
+			workerId = id;
+			console.log('Response from worker', id);
+		});
 
 		browser.runtime.onMessage.addListener((rawMessage) => {
 			const message = unserialize(rawMessage);
 			switch (message.action) {
 				case 'offscreenWorkerClient.event': {
+					// Skip messages addressed to another instances
+					if (workerId === null || workerId !== message.data.workerId) return;
+
 					console.log('EVENT offscreenWorkerClient.event', message);
 					const listeners = this.listeners[message.data.name];
 					if (!listeners) return;

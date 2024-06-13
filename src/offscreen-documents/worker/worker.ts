@@ -25,6 +25,7 @@ browser.runtime.onMessage.addListener((rawMessage) => {
 						serialize({
 							action: 'offscreenWorkerClient.event',
 							data: {
+								workerId,
 								name: eventName,
 								data: event.data,
 							},
