@@ -1,6 +1,7 @@
 import browser from 'webextension-polyfill';
 
-import { serialize, unserialize } from '../../serializer';
+import { offscreenWorkerApi } from '../../../requests/offscreen/offscreenWorker';
+import { unserialize } from '../../serializer';
 
 export class OffscreenWorker implements Worker {
 	public onmessage: Worker['onmessage'] = null;
@@ -9,10 +10,7 @@ export class OffscreenWorker implements Worker {
 
 	private workerId: Promise<string>;
 	constructor(url: string) {
-		this.workerId = browser.runtime.sendMessage({
-			action: 'offscreenWorker.create',
-			data: { url },
-		});
+		this.workerId = offscreenWorkerApi.create({ url });
 
 		let workerId: string | null = null;
 		this.workerId.then((id) => {
@@ -43,12 +41,7 @@ export class OffscreenWorker implements Worker {
 
 	public postMessage(args: any) {
 		this.workerId.then((workerId) => {
-			browser.runtime.sendMessage(
-				serialize({
-					action: 'offscreenWorker.postMessage',
-					data: { workerId, args },
-				}),
-			);
+			offscreenWorkerApi.postMessage({ workerId, args });
 		});
 	}
 
@@ -75,12 +68,7 @@ export class OffscreenWorker implements Worker {
 
 	public terminate() {
 		this.workerId.then((workerId) => {
-			browser.runtime.sendMessage(
-				serialize({
-					action: 'offscreenWorker.terminate',
-					data: { workerId },
-				}),
-			);
+			offscreenWorkerApi.terminate({ workerId });
 		});
 	}
 
