@@ -7,6 +7,7 @@ import {
 	TranslationModelFileReference,
 } from '../../../../thirdparty/bergamot/src/types';
 import { addBergamotFile } from '../../../requests/backend/bergamot/addBergamotFile';
+import { getBergamotFile } from '../../../requests/backend/bergamot/getBergamotFile';
 
 export class TranslatorBackingWithCache extends TranslatorBacking {
 	private readonly backingStorageName = 'bergamotBacking';
@@ -32,15 +33,15 @@ export class TranslatorBackingWithCache extends TranslatorBacking {
 		file: TranslationModelFileReference,
 		direction: LanguagesDirection,
 	) {
-		// // Try get from cache
-		// const cachedData = await getBergamotFile({
-		// 	type: part,
-		// 	expectedSha256Hash: file.expectedSha256Hash,
-		// 	direction,
-		// });
-		// if (cachedData !== null) {
-		// 	return [part, cachedData.buffer] as const;
-		// }
+		// Try get from cache
+		const cachedData = await getBergamotFile({
+			type: part,
+			expectedSha256Hash: file.expectedSha256Hash,
+			direction,
+		});
+		if (cachedData !== null) {
+			return [part, cachedData.buffer] as const;
+		}
 
 		// Load data
 		const result = await super.getModelFile(part, file, direction);

@@ -1,6 +1,5 @@
 import * as t from 'io-ts';
 
-import { isBackgroundContext } from '../../../lib/browser';
 import { tryDecode } from '../../../lib/types';
 import { RequestHandlerFactory, RequestHandlerFactoryProps } from '../../types';
 
@@ -19,11 +18,21 @@ export const buildBackendRequest = <O = void, R = void, C = RequestHandlerFactor
 	endpoint: string,
 	{ factoryHandler, requestValidator, responseValidator }: BackgroundOptions<O, R, C>,
 ) => {
+	const registeredListenersUrls = new Set<string>();
 	let localHandler: ((options: O) => Promise<R>) | null = null;
 
 	const hook = (options: O) => {
-		// Call handler directly for invokes from background context
-		if (isBackgroundContext()) {
+		// TODO: throw exceptions for attempts to call not ready handlers
+		// Request listeners respond to requests from any frames except its own,
+		// so if request sent from the same frame the listener set, no response will be sent
+		// For this special case we call handler directly, instead of sent request.
+		// We also should wait at least one request handler been registered, before call local handler,
+		// because if no request handlers registered, then handler is not configured and does not ready to call
+		const isExistsListenersInAnotherUrl = Array.from(
+			registeredListenersUrls.values(),
+		).some((url) => url !== location.href);
+		const isHandlerReady = registeredListenersUrls.size > 0;
+		if (isHandlerReady && !isExistsListenersInAnotherUrl) {
 			if (localHandler === null) {
 				throw new Error(
 					`Request handler is not initialized for endpoint "${endpoint}"`,
@@ -48,6 +57,9 @@ export const buildBackendRequest = <O = void, R = void, C = RequestHandlerFactor
 	const factory: RequestHandlerFactory<C> = (factoryProps) => {
 		const handler = factoryHandler(factoryProps);
 
+		const listenerUrl = location.href;
+		registeredListenersUrls.add(listenerUrl);
+
 		localHandler = handler;
 		const cleanup = addRequestHandler(endpoint, async (reqProps) => {
 			// Validate request props
@@ -61,6 +73,7 @@ export const buildBackendRequest = <O = void, R = void, C = RequestHandlerFactor
 		});
 
 		return () => {
+			registeredListenersUrls.delete(listenerUrl);
 			localHandler = null;
 			cleanup();
 		};
