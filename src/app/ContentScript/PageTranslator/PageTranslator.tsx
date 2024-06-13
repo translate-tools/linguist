@@ -135,7 +135,7 @@ export class PageTranslator {
 	}
 
 	private readonly shadowRoot = new ShadowDOMContainerManager({
-		styles: ['common.css', 'contentscript.css'],
+		styles: ['contentscript.css'],
 	});
 
 	private showOriginalTextHandler = (evt: MouseEvent) => {
