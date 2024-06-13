@@ -1,14 +1,7 @@
 {
 	"manifest_version": 2,
 	"permissions": ["<all_urls>"],
-	"web_accessible_resources": [
-		"thirdparty/bergamot/bergamot-translator-worker.wasm",
-		"thirdparty/bergamot/bergamot-translator-worker.js",
-		"thirdparty/bergamot/translator.worker.js",
-		"offscreen-documents/translator/translator.html",
-		"offscreen-documents/translator/translator.js",
-		"contentscript.css"
-	],
+	"web_accessible_resources": ["contentscript.css"],
 	"content_security_policy": "script-src 'self' 'unsafe-eval';",
 	"browser_action": {
 		"theme_icons": [

@@ -13,14 +13,7 @@
 	},
 	"web_accessible_resources": [
 		{
-			"resources": [
-				"thirdparty/bergamot/bergamot-translator-worker.wasm",
-				"thirdparty/bergamot/bergamot-translator-worker.js",
-				"thirdparty/bergamot/translator.worker.js",
-				"offscreen-documents/translator/translator.html",
-				"offscreen-documents/translator/translator.js",
-				"contentscript.css"
-			],
+			"resources": ["contentscript.css"],
 			"matches": ["*://*/*"]
 		}
 	],
