@@ -17,7 +17,6 @@ export class OffscreenWorker implements Worker {
 		let workerId: string | null = null;
 		this.workerId.then((id) => {
 			workerId = id;
-			console.log('Response from worker', id);
 		});
 
 		browser.runtime.onMessage.addListener((rawMessage) => {
@@ -27,11 +26,9 @@ export class OffscreenWorker implements Worker {
 					// Skip messages addressed to another instances
 					if (workerId === null || workerId !== message.data.workerId) return;
 
-					console.log('EVENT offscreenWorkerClient.event', message);
 					const listeners = this.listeners[message.data.name];
 					if (!listeners) return;
 
-					console.log('Listeners to notify: ', listeners);
 					listeners.forEach((listener) =>
 						listener({ data: message.data.data }),
 					);
@@ -45,7 +42,6 @@ export class OffscreenWorker implements Worker {
 	}
 
 	public postMessage(args: any) {
-		console.warn('DBG: postMessage to virtual worker', args);
 		this.workerId.then((workerId) => {
 			browser.runtime.sendMessage(
 				serialize({
