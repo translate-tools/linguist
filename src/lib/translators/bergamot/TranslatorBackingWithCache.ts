@@ -65,9 +65,9 @@ export class TranslatorBackingWithCache extends TranslatorBacking {
 		return result;
 	}
 
-	protected createWorker = (url: string) => {
+	protected createWorker = (url: string): Worker => {
 		if (isChromium()) {
-			return new OffscreenWorker(url) as unknown as Worker;
+			return new OffscreenWorker(url);
 		} else {
 			return new Worker(url);
 		}

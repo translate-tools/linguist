@@ -2,7 +2,11 @@ import browser from 'webextension-polyfill';
 
 import { serialize, unserialize } from '../../serializer';
 
-export class OffscreenWorker {
+export class OffscreenWorker implements Worker {
+	public onmessage: Worker['onmessage'] = null;
+	public onmessageerror: Worker['onmessageerror'] = null;
+	public onerror: Worker['onerror'] = null;
+
 	private workerId: Promise<string>;
 	constructor(url: string) {
 		this.workerId = browser.runtime.sendMessage({
@@ -46,10 +50,33 @@ export class OffscreenWorker {
 	}
 
 	private listeners: Record<string, Set<(...args: any[]) => any>> = {};
-	public addEventListener(eventName: string, callback: () => any) {
+	public addEventListener: Worker['addEventListener'] = (
+		eventName: string,
+		callback: (...args: any) => any,
+	) => {
 		const listenersSet = this.listeners[eventName] ?? new Set();
 		listenersSet.add(callback);
 
 		this.listeners[eventName] = listenersSet;
+	};
+
+	public removeEventListener: Worker['removeEventListener'] = (
+		eventName: string,
+		callback: (...args: any) => any,
+	) => {
+		const listenersSet = this.listeners[eventName] ?? new Set();
+		listenersSet.delete(callback);
+
+		this.listeners[eventName] = listenersSet;
+	};
+
+	public terminate() {
+		throw new Error('Method "terminate" is not implemented yet for OffscreenWorker');
+	}
+
+	public dispatchEvent(_event: Event): boolean {
+		throw new Error(
+			'Method "dispatchEvent" is not implemented yet for OffscreenWorker',
+		);
 	}
 }
