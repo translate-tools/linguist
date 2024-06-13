@@ -1,7 +1,10 @@
 import { Connection, connectToChild } from 'penpal';
 
 import { isChromium } from '../../../lib/browser';
-import { TranslatorWorkerApi } from '../../../offscreen-documents/translator';
+import {
+	CustomTranslatorInfo,
+	TranslatorWorkerApi,
+} from '../../../offscreen-documents/translator';
 import { buildBackendRequest } from '../../utils/requestBuilder';
 
 type CustomTranslatorsContext = {
@@ -16,7 +19,7 @@ type CustomTranslatorsContext = {
 
 export const customTranslatorCreate = buildBackendRequest<
 	{ code: string },
-	string,
+	{ id: string; info: CustomTranslatorInfo },
 	CustomTranslatorsContext
 >('customTranslator.create', {
 	factoryHandler:
@@ -24,20 +27,15 @@ export const customTranslatorCreate = buildBackendRequest<
 			async ({ code }) => {
 			// Create iframe
 				const iframe = document.createElement('iframe', {});
-				// iframe.src = 'https://example.com';
 				iframe.setAttribute('sandbox', 'allow-scripts');
 				document.body.appendChild(iframe);
 				iframe.src = '/offscreen-documents/translator/translator.html';
-
-				// setTimeout(() => {
-				// 	iframe.src = 'offscreen-documents/translator/translator.html';
-				// }, 500);
 
 				// Connect controller
 				const controller = connectToChild<TranslatorWorkerApi>({
 					iframe,
 					childOrigin: isChromium() ? '*' : undefined,
-					// timeout: 5000,
+					timeout: 5000,
 					debug: true,
 				});
 
@@ -49,8 +47,8 @@ export const customTranslatorCreate = buildBackendRequest<
 
 				try {
 					const { init } = await controller.promise;
-					await init(code);
-					return id;
+					const info = await init(code);
+					return { id, info };
 				} catch (error) {
 					iframe.remove();
 					customTranslators.delete(id);

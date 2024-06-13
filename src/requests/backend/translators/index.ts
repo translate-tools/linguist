@@ -34,7 +34,9 @@ export const getTranslatorsClasses = async (): Promise<TranslatorsMap> => {
 	for (const { key, data: translatorData } of customTranslators) {
 		const translatorId = formatToCustomTranslatorId(key);
 		try {
-			translatorsMap[translatorId] = getCustomTranslatorClass(translatorData.code);
+			translatorsMap[translatorId] = await getCustomTranslatorClass(
+				translatorData.code,
+			);
 		} catch (error) {
 			console.error(
 				`Translator "${translatorData.name}" (id:${key}) is thrown exception`,

@@ -1,23 +1,35 @@
 import { BaseTranslator } from '@translate-tools/core/translators/BaseTranslator';
 
+import { CustomTranslatorInfo } from '../../../offscreen-documents/translator';
 import { customTranslatorsApi } from '../../../requests/offscreen/customTranslators';
 
 export class CustomTranslatorController extends BaseTranslator {
-	private readonly translatorId: Promise<string>;
-	constructor(code: string) {
+	private readonly config;
+	constructor(code: string, info: CustomTranslatorInfo) {
 		super();
 
-		// TODO: fix order of code loading to remove timeout
-		// TODO: init translator lazy, after first call for translation
-		this.translatorId = Promise.resolve().then(async () => {
-			await new Promise((res) => setTimeout(res, 1000));
+		this.config = {
+			code,
+			info,
+		};
+	}
 
-			return customTranslatorsApi.create({ code });
-		});
+	private translatorId: Promise<string> | null = null;
+	private init() {
+		if (this.translatorId === null) {
+			this.translatorId = Promise.resolve().then(async () => {
+				const { id } = await customTranslatorsApi.create({
+					code: this.config.code,
+				});
+				return id;
+			});
+		}
+
+		return this.translatorId;
 	}
 
 	public translate(...args: any[]): Promise<string> {
-		return this.translatorId.then((translatorId) =>
+		return this.init().then((translatorId) =>
 			customTranslatorsApi.call({
 				id: translatorId,
 				method: 'translate',
@@ -27,7 +39,7 @@ export class CustomTranslatorController extends BaseTranslator {
 	}
 
 	public translateBatch(...args: any[]): Promise<string[]> {
-		return this.translatorId.then((translatorId) =>
+		return this.init().then((translatorId) =>
 			customTranslatorsApi.call({
 				id: translatorId,
 				method: 'translateBatch',
@@ -37,15 +49,10 @@ export class CustomTranslatorController extends BaseTranslator {
 	}
 
 	public getLengthLimit(): number {
-		return 5000;
+		return this.config.info.maxTextLength;
 	}
 
 	public getRequestsTimeout(): number {
-		return 50;
+		return this.config.info.timeout;
 	}
-
-	// TODO: load features info for custom translator before create constructor and then override default parameters
-	public static getSupportedLanguages = () => {
-		return ['en', 'ru', 'de'];
-	};
 }

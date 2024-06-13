@@ -1,5 +1,12 @@
 export type TranslatorWorkerApi = {
-	init(code: string): void;
+	init(code: string): CustomTranslatorInfo;
 	translate(text: string, from: string, to: string): string;
 	translateBatch(texts: string[], from: string, to: string): string[];
+};
+
+export type CustomTranslatorInfo = {
+	autoFrom: boolean;
+	maxTextLength: number;
+	timeout: number;
+	supportedLanguages: string[];
 };

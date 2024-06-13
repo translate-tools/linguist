@@ -22,13 +22,7 @@ export const loadTranslator = (code: string) => {
 	}
 
 	// Validate methods
-	const requiredMethods = [
-		'translate',
-		'translateBatch',
-		'checkLimitExceeding',
-		'getLengthLimit',
-		'getRequestsTimeout',
-	];
+	const requiredMethods = ['translate', 'translateBatch', 'getLengthLimit'];
 
 	requiredMethods.forEach((key) => {
 		if (!(key in instance)) {

@@ -8,10 +8,16 @@ export const validateTranslatorCode = async (code: string) => {
 	await customTranslatorsApi.create({ code });
 };
 
-export const getCustomTranslatorClass = (code: string) => {
+export const getCustomTranslatorClass = async (code: string) => {
+	// TODO: remove translator after check
+	const meta = await customTranslatorsApi.create({ code });
+
 	return class extends CustomTranslatorController {
 		constructor() {
-			super(code);
+			super(code, meta.info);
 		}
+
+		static getSupportedLanguages = () => meta.info.supportedLanguages;
+		static isSupportedAutoFrom = () => meta.info.autoFrom;
 	};
 };
