@@ -20,8 +20,7 @@ browser.runtime.onMessage.addListener((rawMessage) => {
 
 					if (!('data' in event)) return;
 
-					// @ts-ignore
-					chrome.runtime.sendMessage(
+					browser.runtime.sendMessage(
 						serialize({
 							action: 'offscreenWorkerClient.event',
 							data: {
