@@ -59,7 +59,7 @@ module.exports = {
 		extensions: ['.js', '.ts', '.tsx'],
 	},
 	entry: {
-		'background.worker': './src/background.worker.ts',
+		'background-script': './src/background-script.ts',
 		contentscript: './src/contentscript.tsx',
 		['offscreen-documents/worker/worker']:
 			'./src/offscreen-documents/worker/worker.ts',
