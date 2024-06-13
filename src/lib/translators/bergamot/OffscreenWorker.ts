@@ -10,6 +10,7 @@ export class OffscreenWorker implements Worker {
 	public onerror: Worker['onerror'] = null;
 
 	private workerId: Promise<string>;
+	private requestsHandlerCleanup;
 	constructor(url: string) {
 		this.workerId = offscreenWorkerApi.create({ url });
 
@@ -27,8 +28,7 @@ export class OffscreenWorker implements Worker {
 			requestsContext.workerId = id;
 		});
 
-		// TODO: destroy factory by terminate call
-		offscreenWorkerEventFactory(requestsContext);
+		this.requestsHandlerCleanup = offscreenWorkerEventFactory(requestsContext);
 	}
 
 	public postMessage(args: any) {
@@ -61,6 +61,7 @@ export class OffscreenWorker implements Worker {
 	public terminate() {
 		this.workerId.then((workerId) => {
 			offscreenWorkerApi.terminate({ workerId });
+			this.requestsHandlerCleanup();
 		});
 	}
 
