@@ -8,6 +8,9 @@ import {
 } from '../../../../thirdparty/bergamot/src/types';
 import { addBergamotFile } from '../../../requests/backend/bergamot/addBergamotFile';
 import { getBergamotFile } from '../../../requests/backend/bergamot/getBergamotFile';
+import { isChromium } from '../../browser';
+
+import { OffscreenWorker } from './OffscreenWorker';
 
 export class TranslatorBackingWithCache extends TranslatorBacking {
 	private readonly backingStorageName = 'bergamotBacking';
@@ -61,4 +64,12 @@ export class TranslatorBackingWithCache extends TranslatorBacking {
 
 		return result;
 	}
+
+	protected createWorker = (url: string) => {
+		if (isChromium()) {
+			return new OffscreenWorker(url) as unknown as Worker;
+		} else {
+			return new Worker(url);
+		}
+	};
 }
