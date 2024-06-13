@@ -7,6 +7,7 @@ import { addRequestHandler, sendBackgroundRequest } from '..';
 
 type BackgroundOptions<O = any, R = any, C = RequestHandlerFactoryProps> = {
 	factoryHandler: (props: C) => (options: O) => Promise<R>;
+	filter?: (props: C) => (options: O) => boolean;
 	requestValidator?: t.Type<O, O>;
 	responseValidator?: t.Type<R, R>;
 };
@@ -16,10 +17,18 @@ type BackgroundOptions<O = any, R = any, C = RequestHandlerFactoryProps> = {
  */
 export const buildBackendRequest = <O = void, R = void, C = RequestHandlerFactoryProps>(
 	endpoint: string,
-	{ factoryHandler, requestValidator, responseValidator }: BackgroundOptions<O, R, C>,
+	{
+		factoryHandler,
+		filter,
+		requestValidator,
+		responseValidator,
+	}: BackgroundOptions<O, R, C>,
 ) => {
 	const registeredListenersUrls = new Set<string>();
-	let localHandler: ((options: O) => Promise<R>) | null = null;
+	let preparedRequestHandler: {
+		handler: (options: O) => Promise<R>;
+		filter?: (options: O) => boolean;
+	} | null = null;
 
 	const hook = (options: O) => {
 		// TODO: throw exceptions for attempts to call not ready handlers
@@ -33,13 +42,21 @@ export const buildBackendRequest = <O = void, R = void, C = RequestHandlerFactor
 		).some((url) => url !== location.href);
 		const isHandlerReady = registeredListenersUrls.size > 0;
 		if (isHandlerReady && !isExistsListenersInAnotherUrl) {
-			if (localHandler === null) {
+			if (preparedRequestHandler === null) {
 				throw new Error(
 					`Request handler is not initialized for endpoint "${endpoint}"`,
 				);
 			}
 
-			return localHandler(options);
+			if (preparedRequestHandler.filter) {
+				const shouldBeHandled = preparedRequestHandler.filter(options);
+				if (!shouldBeHandled)
+					throw new Error(
+						`Request handler available only in the same frame where request sent, but request rejected by filter`,
+					);
+			}
+
+			return preparedRequestHandler.handler(options);
 		}
 
 		// Send request
@@ -55,26 +72,37 @@ export const buildBackendRequest = <O = void, R = void, C = RequestHandlerFactor
 	};
 
 	const factory: RequestHandlerFactory<C> = (factoryProps) => {
-		const handler = factoryHandler(factoryProps);
+		const requestFilter = filter ? filter(factoryProps) : undefined;
+		const requestHandler = factoryHandler(factoryProps);
 
 		const listenerUrl = location.href;
 		registeredListenersUrls.add(listenerUrl);
 
-		localHandler = handler;
-		const cleanup = addRequestHandler(endpoint, async (reqProps) => {
-			// Validate request props
-			if (requestValidator !== undefined) {
-				tryDecode(requestValidator, reqProps);
+		preparedRequestHandler = {
+			handler: requestHandler,
+			filter: requestFilter,
+		};
+		const cleanup = addRequestHandler(endpoint, (reqProps) => {
+			if (requestFilter) {
+				const shouldBeHandled = requestFilter(reqProps);
+				if (!shouldBeHandled) return;
 			}
 
-			console.warn('Request handler: ', endpoint);
+			return Promise.resolve().then(async () => {
+				// Validate request props
+				if (requestValidator !== undefined) {
+					tryDecode(requestValidator, reqProps);
+				}
 
-			return handler(reqProps);
+				console.warn('Request handler: ', endpoint);
+
+				return requestHandler(reqProps);
+			});
 		});
 
 		return () => {
 			registeredListenersUrls.delete(listenerUrl);
-			localHandler = null;
+			preparedRequestHandler = null;
 			cleanup();
 		};
 	};

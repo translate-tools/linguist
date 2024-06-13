@@ -1,7 +1,8 @@
-import browser from 'webextension-polyfill';
-
 import { offscreenWorkerApi } from '../../../requests/offscreen/offscreenWorker';
-import { unserialize } from '../../serializer';
+import {
+	OffscreenWorkerContext,
+	offscreenWorkerEventFactory,
+} from '../../../requests/offscreen/offscreenWorker/offscreenWorkerEvent';
 
 export class OffscreenWorker implements Worker {
 	public onmessage: Worker['onmessage'] = null;
@@ -12,31 +13,22 @@ export class OffscreenWorker implements Worker {
 	constructor(url: string) {
 		this.workerId = offscreenWorkerApi.create({ url });
 
-		let workerId: string | null = null;
+		const requestsContext: OffscreenWorkerContext = {
+			workerId: null,
+			onMessage: (name, data) => {
+				const listeners = this.listeners[name];
+				if (!listeners) return;
+
+				listeners.forEach((listener) => listener({ data }));
+			},
+		};
+
 		this.workerId.then((id) => {
-			workerId = id;
+			requestsContext.workerId = id;
 		});
 
-		browser.runtime.onMessage.addListener((rawMessage) => {
-			const message = unserialize(rawMessage);
-			switch (message.action) {
-				case 'offscreenWorkerClient.event': {
-					// Skip messages addressed to another instances
-					if (workerId === null || workerId !== message.data.workerId) return;
-
-					const listeners = this.listeners[message.data.name];
-					if (!listeners) return;
-
-					listeners.forEach((listener) =>
-						listener({ data: message.data.data }),
-					);
-
-					return Promise.resolve();
-				}
-			}
-
-			return;
-		});
+		// TODO: destroy factory by terminate call
+		offscreenWorkerEventFactory(requestsContext);
 	}
 
 	public postMessage(args: any) {

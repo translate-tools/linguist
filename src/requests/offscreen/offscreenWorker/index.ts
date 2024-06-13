@@ -1,7 +1,7 @@
-import browser from 'webextension-polyfill';
-
 import { serialize, unserialize } from '../../../lib/serializer';
 import { buildBackendRequest } from '../../utils/requestBuilder';
+
+import { sendEventToOffscreenWorker } from './offscreenWorkerEvent';
 
 type OffscreenWorkerContext = {
 	workers: Map<string, Worker>;
@@ -18,23 +18,17 @@ const offscreenWorkerCreate = buildBackendRequest<
 				const workerId = String(new Date().getTime());
 				const worker = new Worker(url);
 
-				// TODO: call remote hook instead of direct call
 				(['message', 'error', 'messageerror'] as const).forEach((eventName) => {
 					worker.addEventListener(eventName, (event) => {
 						console.log('Event on worker', eventName, event);
 
 						if (!('data' in event)) return;
 
-						browser.runtime.sendMessage(
-							serialize({
-								action: 'offscreenWorkerClient.event',
-								data: {
-									workerId,
-									name: eventName,
-									data: event.data,
-								},
-							}),
-						);
+						sendEventToOffscreenWorker({
+							workerId,
+							name: eventName,
+							data: event.data,
+						});
 					});
 				});
 
