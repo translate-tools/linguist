@@ -25,10 +25,7 @@ export const customTranslatorCreate = buildBackendRequest<
 			// Create iframe
 				const iframe = document.createElement('iframe', {});
 				// iframe.src = 'https://example.com';
-				iframe.setAttribute(
-					'sandbox',
-					'allow-same-origin allow-scripts allow-popups allow-forms',
-				);
+				iframe.setAttribute('sandbox', 'allow-scripts');
 				document.body.appendChild(iframe);
 				iframe.src = '/offscreen-documents/translator/translator.html';
 

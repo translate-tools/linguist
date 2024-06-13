@@ -12,9 +12,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 	const workerIframe = document.createElement('iframe', {});
 	workerIframe.src = '/offscreen-documents/worker/worker.html';
-	workerIframe.setAttribute(
-		'sandbox',
-		'allow-same-origin allow-scripts allow-popups allow-forms',
-	);
+	workerIframe.setAttribute('sandbox', 'allow-scripts');
 	document.body.appendChild(workerIframe);
 });
