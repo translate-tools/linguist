@@ -2,22 +2,25 @@ import { customTranslatorsApi } from '../../../requests/offscreen/customTranslat
 
 import { CustomTranslatorController } from './CustomTranslatorController';
 
+export const getTranslatorInfo = async (code: string) => {
+	const { id, info } = await customTranslatorsApi.create({ code });
+	await customTranslatorsApi.delete({ id });
+	return info;
+};
+
 export const validateTranslatorCode = async (code: string) => {
-	console.log('Call customTranslator.create');
-	// TODO: remove translator after check
-	await customTranslatorsApi.create({ code });
+	await getTranslatorInfo(code);
 };
 
 export const getCustomTranslatorClass = async (code: string) => {
-	// TODO: remove translator after check
-	const meta = await customTranslatorsApi.create({ code });
+	const translatorInfo = await getTranslatorInfo(code);
 
 	return class extends CustomTranslatorController {
 		constructor() {
-			super(code, meta.info);
+			super(code, translatorInfo);
 		}
 
-		static getSupportedLanguages = () => meta.info.supportedLanguages;
-		static isSupportedAutoFrom = () => meta.info.autoFrom;
+		static getSupportedLanguages = () => translatorInfo.supportedLanguages;
+		static isSupportedAutoFrom = () => translatorInfo.autoFrom;
 	};
 };

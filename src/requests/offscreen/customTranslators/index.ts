@@ -57,6 +57,23 @@ export const customTranslatorCreate = buildBackendRequest<
 			},
 });
 
+export const customTranslatorDelete = buildBackendRequest<
+	{ id: string },
+	void,
+	CustomTranslatorsContext
+>('customTranslator.call', {
+	factoryHandler:
+		({ customTranslators }) =>
+			async ({ id }) => {
+				const translator = customTranslators.get(id);
+				if (!translator) throw new Error('Not found translator with provided id');
+
+				translator.controller.destroy();
+				translator.iframe.remove();
+				customTranslators.delete(id);
+			},
+});
+
 export const customTranslatorCall = buildBackendRequest<
 	{ id: string; method: string; args: any[] },
 	any,
@@ -79,6 +96,7 @@ export const customTranslatorCall = buildBackendRequest<
 
 export const customTranslatorsApi = {
 	create: customTranslatorCreate[1],
+	delete: customTranslatorDelete[1],
 	call: customTranslatorCall[1],
 };
 
@@ -91,7 +109,7 @@ export const customTranslatorsFactory = () => {
 		}
 	> = new Map();
 
-	[customTranslatorCreate, customTranslatorCall].forEach(([apiFactory]) =>
-		apiFactory({ customTranslators }),
+	[customTranslatorCreate, customTranslatorDelete, customTranslatorCall].forEach(
+		([apiFactory]) => apiFactory({ customTranslators }),
 	);
 };
