@@ -36,6 +36,7 @@ export const getTranslatorsClasses = async (): Promise<TranslatorsMap> => {
 		try {
 			translatorsMap[translatorId] = await getCustomTranslatorClass(
 				translatorData.code,
+				translatorId,
 			);
 		} catch (error) {
 			console.error(

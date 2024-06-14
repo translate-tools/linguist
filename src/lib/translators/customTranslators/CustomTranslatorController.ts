@@ -5,12 +5,13 @@ import { customTranslatorsApi } from '../../../requests/offscreen/customTranslat
 
 export class CustomTranslatorController extends BaseTranslator {
 	private readonly config;
-	constructor(code: string, info: CustomTranslatorInfo) {
+	constructor(code: string, { info, id }: { info: CustomTranslatorInfo; id?: string }) {
 		super();
 
 		this.config = {
 			code,
 			info,
+			id,
 		};
 	}
 
@@ -20,6 +21,7 @@ export class CustomTranslatorController extends BaseTranslator {
 			this.translatorId = Promise.resolve().then(async () => {
 				const { id } = await customTranslatorsApi.create({
 					code: this.config.code,
+					uniqueName: this.config.id,
 				});
 				return id;
 			});

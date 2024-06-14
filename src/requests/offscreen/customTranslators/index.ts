@@ -11,6 +11,7 @@ type CustomTranslatorsContext = {
 	customTranslators: Map<
 		string,
 		{
+			uniqueName?: string;
 			iframe: HTMLIFrameElement;
 			controller: Connection<TranslatorWorkerApi>;
 		}
@@ -18,14 +19,28 @@ type CustomTranslatorsContext = {
 };
 
 export const customTranslatorCreate = buildBackendRequest<
-	{ code: string },
+	{ code: string; uniqueName?: string },
 	{ id: string; info: CustomTranslatorInfo },
 	CustomTranslatorsContext
 >('customTranslator.create', {
 	factoryHandler:
 		({ customTranslators }) =>
-			async ({ code }) => {
-			// Create iframe
+			async ({ code, uniqueName }) => {
+			// Delete current instance if exists
+				if (uniqueName) {
+					const currentInstance = Array.from(customTranslators.entries()).find(
+						([_id, info]) => info.uniqueName === uniqueName,
+					);
+					if (currentInstance) {
+						const [instanceId, translator] = currentInstance;
+
+						translator.controller.destroy();
+						translator.iframe.remove();
+						customTranslators.delete(instanceId);
+					}
+				}
+
+				// Create iframe
 				const iframe = document.createElement('iframe', {});
 				iframe.setAttribute('sandbox', 'allow-scripts');
 				document.body.appendChild(iframe);
@@ -41,6 +56,7 @@ export const customTranslatorCreate = buildBackendRequest<
 
 				const id = String(new Date().getTime());
 				customTranslators.set(id, {
+					uniqueName,
 					iframe,
 					controller,
 				});

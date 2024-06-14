@@ -12,12 +12,12 @@ export const validateTranslatorCode = async (code: string) => {
 	await getTranslatorInfo(code);
 };
 
-export const getCustomTranslatorClass = async (code: string) => {
+export const getCustomTranslatorClass = async (code: string, id?: string) => {
 	const translatorInfo = await getTranslatorInfo(code);
 
 	return class extends CustomTranslatorController {
 		constructor() {
-			super(code, translatorInfo);
+			super(code, { info: translatorInfo, id });
 		}
 
 		static getSupportedLanguages = () => translatorInfo.supportedLanguages;
