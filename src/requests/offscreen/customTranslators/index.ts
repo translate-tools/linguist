@@ -61,7 +61,7 @@ export const customTranslatorDelete = buildBackendRequest<
 	{ id: string },
 	void,
 	CustomTranslatorsContext
->('customTranslator.call', {
+>('customTranslator.delete', {
 	factoryHandler:
 		({ customTranslators }) =>
 			async ({ id }) => {
