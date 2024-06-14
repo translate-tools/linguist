@@ -73,26 +73,7 @@ export class App {
 
 		this.isStarted = true;
 
-		await this.background.start();
-
-		await this.setupRequestHandlers();
-		await this.handleConfigUpdates();
-
-		this.$onInstalledData.watch(this.onInstalled);
-	}
-
-	private async setupRequestHandlers() {
-		// TODO: debug this condition and remove or move on top
-		// Prevent run it again on other pages, such as options page
-		if (!isFirefox() || isBackgroundContext()) {
-			requestHandlers.forEach((factory) => {
-				factory({
-					config: this.config,
-					backgroundContext: this.background,
-				});
-			});
-		}
-
+		// TODO: move to some method
 		// Setup sandboxed iframes
 		if (isChromium()) {
 			// Currently `offscreen` API is non standard, so we cast type
@@ -120,6 +101,26 @@ export class App {
 			}
 		} else {
 			customTranslatorsFactory();
+		}
+
+		await this.background.start();
+
+		await this.setupRequestHandlers();
+		await this.handleConfigUpdates();
+
+		this.$onInstalledData.watch(this.onInstalled);
+	}
+
+	private async setupRequestHandlers() {
+		// TODO: debug this condition and remove or move on top
+		// Prevent run it again on other pages, such as options page
+		if (!isFirefox() || isBackgroundContext()) {
+			requestHandlers.forEach((factory) => {
+				factory({
+					config: this.config,
+					backgroundContext: this.background,
+				});
+			});
 		}
 	}
 
