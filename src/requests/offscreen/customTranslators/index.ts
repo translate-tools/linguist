@@ -1,6 +1,6 @@
 import { Connection, connectToChild } from 'penpal';
 
-import { isChromium } from '../../../lib/browser';
+import { isFirefox } from '../../../lib/browser';
 import {
 	CustomTranslatorInfo,
 	TranslatorWorkerApi,
@@ -42,14 +42,17 @@ export const customTranslatorCreate = buildBackendRequest<
 
 				// Create iframe
 				const iframe = document.createElement('iframe', {});
-				iframe.setAttribute('sandbox', 'allow-scripts');
+				iframe.setAttribute(
+					'sandbox',
+					isFirefox() ? 'allow-same-origin allow-scripts' : 'allow-scripts',
+				);
 				document.body.appendChild(iframe);
 				iframe.src = '/offscreen-documents/translator/translator.html';
 
 				// Connect controller
 				const controller = connectToChild<TranslatorWorkerApi>({
 					iframe,
-					childOrigin: isChromium() ? '*' : undefined,
+					childOrigin: '*',
 					timeout: 5000,
 					debug: true,
 				});
