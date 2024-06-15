@@ -160,8 +160,6 @@ const PopupPage: FC<PopupPageProps> = ({ rootElement }) => {
 
 	const minWidth = useMemo(() => (isMobileBrowser() ? undefined : 450), []);
 
-	console.log({ error });
-
 	return (
 		<PopupWindow
 			rootElement={rootElement}

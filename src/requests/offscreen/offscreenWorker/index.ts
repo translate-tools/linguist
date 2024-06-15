@@ -18,10 +18,10 @@ const offscreenWorkerCreate = buildBackendRequest<
 				const workerId = String(new Date().getTime());
 				const worker = new Worker(url);
 
+				workers.set(workerId, worker);
+
 				(['message', 'error', 'messageerror'] as const).forEach((eventName) => {
 					worker.addEventListener(eventName, (event) => {
-						console.log('Event on worker', eventName, event);
-
 						if (!('data' in event)) return;
 
 						sendEventToOffscreenWorker({
@@ -32,9 +32,6 @@ const offscreenWorkerCreate = buildBackendRequest<
 					});
 				});
 
-				workers.set(workerId, worker);
-
-				console.log('OFFSCREEN: Created worker', workerId);
 				return workerId;
 			},
 });

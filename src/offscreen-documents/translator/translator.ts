@@ -6,8 +6,6 @@ import { CustomTranslatorsParentFrameApi } from '../../requests/offscreen/custom
 
 import { CustomTranslatorInfo, TranslatorWorkerApi } from '.';
 
-console.log('Translator in run');
-
 let translator: TranslatorInstanceMembers | null = null;
 const connection = connectToParent<CustomTranslatorsParentFrameApi>({
 	methods: {

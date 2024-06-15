@@ -21,7 +21,6 @@ export const makePing = (
 						// Stop loop
 						breakFlag = true;
 					} else {
-						console.error('PING ERR 2', response);
 						throw new Error('Incorrect ping response');
 					}
 				})

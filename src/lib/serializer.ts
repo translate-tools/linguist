@@ -25,8 +25,6 @@ export const unserialize = (value: any): any => {
 	}
 
 	if (value['___type'] && value.data) {
-		console.warn('CATCH SPECIAL VALUE', value);
-
 		switch (value['___type']) {
 			case 'ArrayBuffer':
 				return new Uint8Array(value.data).buffer;
