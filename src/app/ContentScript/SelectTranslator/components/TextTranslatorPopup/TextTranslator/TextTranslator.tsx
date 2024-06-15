@@ -101,6 +101,7 @@ export const TextTranslator: FC<TextTranslatorComponentProps> = ({
 
 				setTranslatedText(null);
 				setError(error);
+				console.error(error);
 			})
 			.finally(() => {
 				if (context !== translateContext.current) return;

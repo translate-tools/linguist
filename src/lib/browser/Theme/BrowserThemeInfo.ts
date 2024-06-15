@@ -1,3 +1,5 @@
+import { themeUpdateFactory } from '../../../requests/offscreen/theme';
+
 import { ThemeChangeHandler, ThemeInfo } from './ThemeInfo';
 
 /**
@@ -17,24 +19,26 @@ export class BrowserThemeInfo implements ThemeInfo {
 		this.handlers.delete(handler);
 	}
 
-	private observer = (evt: any) => {
-		const isLightTheme = evt.matches;
-
-		this.handlers.forEach((handler) => {
-			handler({ isLightTheme });
-		});
-	};
-
-	private lightThemeQuery = window.matchMedia('(prefers-color-scheme: light)');
+	private isLight = true;
 	public async isLightTheme(): Promise<boolean> {
-		return this.lightThemeQuery.matches;
+		return this.isLight;
 	}
 
+	private cleanupRequestsHandler: (() => void) | null = null;
 	public startObserve() {
-		this.lightThemeQuery.addEventListener('change', this.observer);
+		this.cleanupRequestsHandler = themeUpdateFactory({
+			onChange: (isLightTheme) => {
+				this.isLight = isLightTheme;
+				this.handlers.forEach((handler) => {
+					handler({ isLightTheme });
+				});
+			},
+		});
 	}
 
 	public stopObserve() {
-		this.lightThemeQuery.removeEventListener('change', this.observer);
+		if (this.cleanupRequestsHandler) {
+			this.cleanupRequestsHandler();
+		}
 	}
 }

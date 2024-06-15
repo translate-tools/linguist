@@ -3,10 +3,10 @@ const fs = require('fs');
 const CopyPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const sharp = require('sharp');
-const { merge } = require('lodash');
+const { mergeWith } = require('lodash');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
-console.log('Webpack run');
+console.log('Webpack started');
 
 const package = require('./package.json');
 
@@ -16,7 +16,7 @@ const isProduction = mode === 'production';
 const target = process.env.EXT_TARGET;
 const devtool = isProduction ? undefined : 'inline-source-map';
 const isFastBuild = !isProduction && process.env.FAST_BUILD === 'on';
-const isBundleAnalyzingEnabled = Boolean(process.env.DEBUG) || !isProduction;
+const isBundleAnalyzingEnabled = !isProduction || Boolean(process.env.DEBUG);
 
 const targetsList = ['firefox', 'firefox-standalone', 'chromium', 'chrome'];
 if (targetsList.indexOf(target) === -1) {
@@ -27,11 +27,21 @@ const devPrefix = isProduction ? '' : 'dev/';
 const outDir = `build/${devPrefix}${target}`;
 const outputPath = path.join(__dirname, outDir);
 
+// https://lodash.com/docs/4.17.15#mergeWith
+function mergeCustomizer(objValue, srcValue) {
+	if (Array.isArray(objValue) && Array.isArray(srcValue)) {
+		return objValue.concat(srcValue);
+	}
+}
+
 console.log('WebpackConfig', {
 	mode,
 	target,
 	outputPath,
 });
+
+const offscreenDocuments = ['main', 'worker', 'translator'];
+const pages = ['popup', 'options', 'dictionary', 'history'];
 
 module.exports = {
 	mode,
@@ -52,34 +62,33 @@ module.exports = {
 		extensions: ['.js', '.ts', '.tsx'],
 	},
 	entry: {
-		background: './src/background.ts',
+		'background-script': './src/background-script.ts',
 		contentscript: './src/contentscript.tsx',
-		['pages/popup/popup']: './src/pages/popup/popup.tsx',
-		['pages/options/options']: './src/pages/options/options.tsx',
-		['pages/dictionary/dictionary']: './src/pages/dictionary/dictionary.tsx',
-		['pages/history/history']: './src/pages/history/history.tsx',
+		...Object.fromEntries(
+			offscreenDocuments.map((name) => [
+				`offscreen-documents/${name}/${name}`,
+				`./src/offscreen-documents/${name}/${name}.ts`,
+			]),
+		),
+		...Object.fromEntries(
+			pages.map((name) => [
+				`pages/${name}/${name}`,
+				`./src/pages/${name}/${name}.tsx`,
+			]),
+		),
 	},
 	output: {
 		path: outputPath,
 	},
-	optimization: {
-		splitChunks: {
-			cacheGroups: {
-				commons: {
-					name: 'common',
-					chunks: 'all',
-					minChunks: 2,
-					enforce: true,
-					// TODO: replace me to predicate which prevent split css files from pages to common chunk
-					// it must prevent split CHUNKS, but not modules, cuz if one module from chunk split - all other will join
-					test: /[\\/](node_modules|core|themes|lib|modules|requests|polyfills|components|layers)[\\/]/,
-				},
-			},
-		},
-	},
 	plugins: [
 		new MiniCssExtractPlugin({}),
-		...(isBundleAnalyzingEnabled ? [new BundleAnalyzerPlugin()] : []),
+		...(isBundleAnalyzingEnabled
+			? [
+				new BundleAnalyzerPlugin({
+					analyzerPort: 8888 + 10 + targetsList.indexOf(target),
+				}),
+			  ]
+			: []),
 		new CopyPlugin({
 			patterns: [
 				// Manifest
@@ -105,7 +114,11 @@ module.exports = {
 								.readFileSync(targetManifestPath)
 								.toString();
 							const targetManifest = JSON.parse(rawTargetManifest);
-							manifest = merge(manifest, targetManifest);
+							manifest = mergeWith(
+								manifest,
+								targetManifest,
+								mergeCustomizer,
+							);
 						}
 
 						// Patch manifest with production overrides
@@ -121,7 +134,11 @@ module.exports = {
 						};
 						if (isProduction && target in productionOverridesMap) {
 							const productionOverrides = productionOverridesMap[target];
-							manifest = merge(manifest, productionOverrides);
+							manifest = mergeWith(
+								manifest,
+								productionOverrides,
+								mergeCustomizer,
+							);
 						}
 
 						// Set version
@@ -135,10 +152,10 @@ module.exports = {
 
 				// HTML pages
 				...[
-					'pages/popup/popup.html',
-					'pages/options/options.html',
-					'pages/dictionary/dictionary.html',
-					'pages/history/history.html',
+					...offscreenDocuments.map(
+						(name) => `offscreen-documents/${name}/${name}.html`,
+					),
+					...pages.map((name) => `pages/${name}/${name}.html`),
 				].map((file) => ({
 					from: './src/' + file,
 					to: path.join(outputPath, file),
@@ -180,7 +197,7 @@ module.exports = {
 						file.replace(/\.svg$/, '.png'),
 					),
 					transform(content) {
-						return sharp(content).resize(512, 512).toBuffer();
+						return sharp(content).resize(128, 128).toBuffer();
 					},
 				})),
 			],

@@ -83,6 +83,10 @@ export class TranslatorBacking {
 			onerror || ((err) => console.error('WASM Translation Worker error:', err));
 	}
 
+	protected createWorker = (url: string) => {
+		return new Worker(url);
+	}
+
 	/**
 	 * Loads a worker thread, and wraps it in a message passing proxy. I.e. it
 	 * exposes the entire interface of TranslationWorker here, and all calls
@@ -91,7 +95,7 @@ export class TranslatorBacking {
 	 * @return {Promise<{worker:Worker, exports:Proxy<TranslationWorker>}>}
 	 */
 	async loadWorker() {
-		const worker = new Worker(this.workerUrl);
+		const worker = this.createWorker(this.workerUrl);
 
 		/**
 		 * Incremental counter to derive request/response ids from.
@@ -123,7 +127,7 @@ export class TranslatorBacking {
 			});
 
 		// … receive responses
-		worker.addEventListener('message', function({ data: { id, result, error } }) {
+		worker.addEventListener('message', function ({ data: { id, result, error } }) {
 			if (!pending.has(id)) {
 				console.debug('Received message with unknown id:', arguments[0]);
 				throw new Error(

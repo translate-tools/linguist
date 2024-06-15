@@ -6,6 +6,13 @@ prepare:
 
 dev: prepare
 	npm run build:dev
+devFirefox: prepare
+	EXT_TARGET=firefox npx webpack-cli -wc ./webpack.config.js
+devChromium: prepare
+	EXT_TARGET=chromium npx webpack-cli -wc ./webpack.config.js
+
+devAndroidFirefox:
+	cd build/dev/firefox && npx web-ext run -t firefox-android --adb-device "${ADB_DEVICE_TO_DEBUG}" --firefox-apk org.mozilla.fenix
 
 clean:
 	rm -rf ./build

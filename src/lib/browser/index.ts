@@ -44,7 +44,9 @@ export function getPageLanguageFromMeta() {
 export const isFirefox = () => /firefox/i.test(navigator.userAgent);
 export const isChromium = () => /chrome/i.test(navigator.userAgent);
 export const isBackgroundContext = () =>
-	location.pathname === '/_generated_background_page.html';
+	['background-script.js', '_generated_background_page.html'].some(
+		(path) => location.href === browser.runtime.getURL(path),
+	);
 
 const extensionHostname = new URL(browser.runtime.getURL('')).host;
 export const isExtensionContext = location.host === extensionHostname;

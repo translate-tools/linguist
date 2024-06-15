@@ -10,7 +10,9 @@ type RequestHandler = (data: any, sender: Runtime.MessageSender) => void | Promi
 export function addRequestHandler(action: string, handler: RequestHandler) {
 	// Wrapper which handle only messages for this endpoint
 	const wrapper = (message: any, sender: Runtime.MessageSender) => {
-		if (!(message instanceof Object) || message.action !== action) return;
+		if (!(message instanceof Object) || message.action !== action) {
+			return;
+		}
 
 		return handler(message.data, sender);
 	};

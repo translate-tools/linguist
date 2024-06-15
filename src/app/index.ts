@@ -2,12 +2,13 @@ import { createEvent, createStore, Store } from 'effector';
 import browser from 'webextension-polyfill';
 
 import { defaultConfig } from '../config';
-import { isBackgroundContext, isChromium } from '../lib/browser';
+import { isBackgroundContext, isChromium, isFirefox } from '../lib/browser';
 import { AppThemeControl } from '../lib/browser/AppThemeControl';
 import { getAllTabs } from '../lib/browser/tabs';
 import { TextTranslatorStorage } from '../pages/popup/tabs/TextTranslator/TextTranslator.utils/TextTranslatorStorage';
 import { clearCache } from '../requests/backend/clearCache';
 import { sendAppConfigUpdateEvent } from '../requests/global/appConfigUpdate';
+import { customTranslatorsFactory } from '../requests/offscreen/customTranslators';
 import { AppConfigType } from '../types/runtime';
 import { Background } from './Background';
 import { requestHandlers } from './Background/requestHandlers';
@@ -72,6 +73,7 @@ export class App {
 
 		this.isStarted = true;
 
+		await this.setupOffscreenDocuments();
 		await this.background.start();
 
 		await this.setupRequestHandlers();
@@ -80,9 +82,41 @@ export class App {
 		this.$onInstalledData.watch(this.onInstalled);
 	}
 
+	private async setupOffscreenDocuments() {
+		// Setup sandboxed iframes
+		if (isChromium()) {
+			// Currently `offscreen` API is non standard, so we cast type
+			const offscreen = (browser as any).offscreen;
+
+			// We may have only one offscreen document, but we need more,
+			// so we create only one "main" document, that creates embedded iframes
+			try {
+				offscreen.createDocument({
+					url: 'offscreen-documents/main/main.html',
+					reasons: [
+						offscreen.Reason.WORKERS,
+						offscreen.Reason.IFRAME_SCRIPTING,
+						offscreen.Reason.MATCH_MEDIA,
+					],
+					justification:
+						'Main offscreen document, to run WASM and custom translators code in sandbox',
+				});
+			} catch (error) {
+				if (
+					!(error instanceof Error) ||
+					!error.message.startsWith('Only a single offscreen')
+				)
+					throw error;
+			}
+		} else {
+			customTranslatorsFactory();
+		}
+	}
+
 	private async setupRequestHandlers() {
+		// TODO: debug this condition and remove or move on top
 		// Prevent run it again on other pages, such as options page
-		if (isBackgroundContext()) {
+		if (!isFirefox() || isBackgroundContext()) {
 			requestHandlers.forEach((factory) => {
 				factory({
 					config: this.config,
@@ -172,8 +206,9 @@ export class App {
 				)
 					return;
 
-				['common.js', 'contentscript.js'].forEach((file) => {
-					browser.tabs.executeScript(tab.id, { file });
+				browser.scripting.executeScript({
+					target: { tabId: tab.id },
+					files: ['contentscript.js'],
 				});
 			});
 		}
