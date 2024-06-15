@@ -37,7 +37,7 @@ type Options = {
 // 	withDescription: true,
 // })
 
-const buildLink =
+export const buildLink =
 	(url: string): FC =>
 		({ children }) =>
 			(
@@ -585,15 +585,14 @@ export const generateTree = ({
 
 		// TODO: localize
 		{
-			title: 'History',
+			title: getMessage('settings_section_history'),
 			groupContent: [
 				{
-					description:
-						'When enabled, any translation will be recorded to a history page',
+					description: getMessage('settings_option_history_enable_desc'),
 					path: 'history.enabled',
 					optionContent: {
 						type: 'Checkbox',
-						text: 'Enable history',
+						text: getMessage('settings_option_history_enable'),
 					},
 				},
 			],

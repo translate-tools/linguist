@@ -146,6 +146,9 @@
 	"history_searchPlaceholder": {
 		"message": "Search by text"
 	},
+	"history_notification_disabled": {
+		"message": "History recording is disabled, so new entries will not appear. You may change it in <slot id=preferences>preferences</slot>"
+	},
 	"inlineTranslator_showOriginalText": {
 		"message": "Show original text"
 	},
@@ -562,6 +565,15 @@
 	},
 	"settings_section_popup": {
 		"message": "Popup"
+	},
+	"settings_section_history": {
+		"message": "History"
+	},
+	"settings_option_history_enable": {
+		"message": "Enable history"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "When enabled, any translation will be recorded to a history page"
 	},
 	"textTranslator_suggestLanguage": {
 		"message": "It looks like that language is"

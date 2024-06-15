@@ -15,13 +15,14 @@ import { useConcurrentTTS } from '../../../../lib/hooks/useConcurrentTTS';
 import { useConfirm } from '../../../../lib/hooks/useConfirm';
 import { useDebouncedInput } from '../../../../lib/hooks/useDebouncedInput';
 import { useKeyboardModifiers } from '../../../../lib/hooks/useKeyboardModifiers';
-import { getMessage } from '../../../../lib/language';
+import { getLocalizedNode, getMessage } from '../../../../lib/language';
 import { clearTranslationHistory } from '../../../../requests/backend/history/clearTranslationHistory';
 import {
 	ITranslationHistoryEntryWithKey,
 	TranslationHistoryFetcherOptions,
 } from '../../../../requests/backend/history/data';
 import { deleteTranslationHistoryEntry } from '../../../../requests/backend/history/deleteTranslationHistoryEntry';
+import { buildLink } from '../../../options/layout/OptionsPage.utils/generateTree';
 
 import './TranslationsHistory.css';
 
@@ -259,9 +260,12 @@ export const TranslationsHistory: FC<TranslationsHistoryProps> = ({
 			<LayoutFlow indent="xl">
 				{!isHistoryEnabled && (
 					<Notification type="default">
-						History recording is disabled, so new entries will not appear. You
-						may change it in{' '}
-						<a href="/pages/options/options.html">preferences</a>
+						{getLocalizedNode({
+							messageName: 'history_notification_disabled',
+							slots: {
+								preferences: buildLink(`/pages/options/options.html`),
+							},
+						})}
 					</Notification>
 				)}
 				<Textinput
