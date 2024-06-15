@@ -34,10 +34,24 @@ export const getTranslatorsClasses = async (): Promise<TranslatorsMap> => {
 	for (const { key, data: translatorData } of customTranslators) {
 		const translatorId = formatToCustomTranslatorId(key);
 		try {
-			translatorsMap[translatorId] = await getCustomTranslatorClass(
-				translatorData.code,
-				translatorId,
-			);
+			// TODO: fix loading order and remove retries
+			const timeout = 1000 * 10;
+			const startTime = new Date().getTime();
+			while (true) {
+				try {
+					translatorsMap[translatorId] = await getCustomTranslatorClass(
+						translatorData.code,
+					);
+					break;
+				} catch (error) {
+					const timeFromStart = new Date().getTime() - startTime;
+					if (timeFromStart < timeout) {
+						continue;
+					} else {
+						throw error;
+					}
+				}
+			}
 		} catch (error) {
 			console.error(
 				`Translator "${translatorData.name}" (id:${key}) is thrown exception`,
