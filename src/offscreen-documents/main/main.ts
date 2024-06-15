@@ -6,21 +6,26 @@
 import { customTranslatorsFactory } from '../../requests/offscreen/customTranslators';
 import { themeUpdate } from '../../requests/offscreen/theme';
 
-document.addEventListener('DOMContentLoaded', async () => {
-	console.log('Main is run');
-	customTranslatorsFactory();
-
+const createOffscreenWorker = () => {
 	const workerIframe = document.createElement('iframe', {});
 	workerIframe.src = '/offscreen-documents/worker/worker.html';
 	// We set `allow-same-origin` here, to let iframe use extension API for messaging, instead of message with parent with postMessage and just forward messages with extension api here.
 	// This iframe contain only trusted code, so we should not have any problems
 	workerIframe.setAttribute('sandbox', 'allow-same-origin allow-scripts');
 	document.body.appendChild(workerIframe);
+};
 
+const setupThemeListener = () => {
 	const lightThemeQuery = window.matchMedia('(prefers-color-scheme: light)');
-	themeUpdate({ isLight: lightThemeQuery.matches });
-
 	lightThemeQuery.addEventListener('change', (evt) => {
 		themeUpdate({ isLight: evt.matches });
 	});
+
+	themeUpdate({ isLight: lightThemeQuery.matches });
+};
+
+document.addEventListener('DOMContentLoaded', async () => {
+	createOffscreenWorker();
+	customTranslatorsFactory();
+	setupThemeListener();
 });
