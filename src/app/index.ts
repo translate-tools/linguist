@@ -73,7 +73,16 @@ export class App {
 
 		this.isStarted = true;
 
-		// TODO: move to some method
+		await this.setupOffscreenDocuments();
+		await this.background.start();
+
+		await this.setupRequestHandlers();
+		await this.handleConfigUpdates();
+
+		this.$onInstalledData.watch(this.onInstalled);
+	}
+
+	private async setupOffscreenDocuments() {
 		// Setup sandboxed iframes
 		if (isChromium()) {
 			// Currently `offscreen` API is non standard, so we cast type
@@ -102,13 +111,6 @@ export class App {
 		} else {
 			customTranslatorsFactory();
 		}
-
-		await this.background.start();
-
-		await this.setupRequestHandlers();
-		await this.handleConfigUpdates();
-
-		this.$onInstalledData.watch(this.onInstalled);
 	}
 
 	private async setupRequestHandlers() {
