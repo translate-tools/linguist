@@ -559,7 +559,6 @@ export const generateTree = ({
 			],
 		},
 
-		// TODO: localize
 		{
 			title: getMessage('settings_section_history'),
 			groupContent: [
