@@ -9,12 +9,13 @@ import { LayoutFlow } from '../../../../components/layouts/LayoutFlow/LayoutFlow
 import { TranslationCard } from '../../../../components/layouts/TranslationCard/TranslationCard';
 import { Button } from '../../../../components/primitives/Button/Button.bundle/universal';
 import { Icon } from '../../../../components/primitives/Icon/Icon.bundle/desktop';
+import { Notification } from '../../../../components/primitives/Notification/Notification.bundle/universal';
 import { Textinput } from '../../../../components/primitives/Textinput/Textinput.bundle/desktop';
 import { useConcurrentTTS } from '../../../../lib/hooks/useConcurrentTTS';
 import { useConfirm } from '../../../../lib/hooks/useConfirm';
 import { useDebouncedInput } from '../../../../lib/hooks/useDebouncedInput';
 import { useKeyboardModifiers } from '../../../../lib/hooks/useKeyboardModifiers';
-import { getMessage } from '../../../../lib/language';
+import { buildLink, getLocalizedNode, getMessage } from '../../../../lib/language';
 import { clearTranslationHistory } from '../../../../requests/backend/history/clearTranslationHistory';
 import {
 	ITranslationHistoryEntryWithKey,
@@ -34,6 +35,7 @@ export type TranslationsHistoryProps = {
 	translations: ITranslationHistoryEntryWithKey[];
 	hasMoreTranslations: boolean;
 	requestTranslations: TranslationsHistoryFetcher;
+	isHistoryEnabled: boolean;
 };
 
 const TRANSLATIONS_PER_PAGE = 100;
@@ -41,6 +43,7 @@ export const TranslationsHistory: FC<TranslationsHistoryProps> = ({
 	translations,
 	hasMoreTranslations,
 	requestTranslations,
+	isHistoryEnabled,
 }) => {
 	const searchInput = useDebouncedInput('');
 	const search = searchInput.debouncedValue;
@@ -254,6 +257,16 @@ export const TranslationsHistory: FC<TranslationsHistoryProps> = ({
 	return (
 		<div className={cnTranslationsHistory()}>
 			<LayoutFlow indent="xl">
+				{!isHistoryEnabled && (
+					<Notification type="default">
+						{getLocalizedNode({
+							messageName: 'history_notification_disabled',
+							slots: {
+								preferences: buildLink(`/pages/options/options.html`),
+							},
+						})}
+					</Notification>
+				)}
 				<Textinput
 					hasClear
 					className={cnTranslationsHistory('Search')}

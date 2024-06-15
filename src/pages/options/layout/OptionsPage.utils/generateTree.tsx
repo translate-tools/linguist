@@ -1,7 +1,7 @@
-import React, { FC } from 'react';
 import { getLanguageCodesISO639 } from '@translate-tools/core/languages';
 
 import {
+	buildLink,
 	getLanguageNameByCode,
 	getLocalizedNode,
 	getMessage,
@@ -21,30 +21,6 @@ type Options = {
 	toggleCustomTranslatorsWindow: () => void;
 	toggleTTSModulesWindow: () => void;
 };
-
-// TODO: make helper for build options
-
-// option({
-// 	type: 'Checkbox',
-// 	path: 'selectTranslator.showOriginalText',
-// 	withText: true,
-// 	withDescription: true,
-// })
-
-// checkbox({
-// 	path: 'selectTranslator.showOriginalText',
-// 	withText: true,
-// 	withDescription: true,
-// })
-
-const buildLink =
-	(url: string): FC =>
-		({ children }) =>
-			(
-				<a href={url} target="_blank" rel="noopener">
-					{children}
-				</a>
-			);
 
 /**
  * Generate config tree for render with `OptionsTree`
@@ -579,6 +555,20 @@ export const generateTree = ({
 							},
 						},
 					],
+				},
+			],
+		},
+
+		{
+			title: getMessage('settings_section_history'),
+			groupContent: [
+				{
+					description: getMessage('settings_option_history_enable_desc'),
+					path: 'history.enabled',
+					optionContent: {
+						type: 'Checkbox',
+						text: getMessage('settings_option_history_enable'),
+					},
 				},
 			],
 		},

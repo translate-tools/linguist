@@ -1,8 +1,9 @@
-import React, { FC, useCallback, useLayoutEffect, useState } from 'react';
+import React, { FC, useCallback, useEffect, useLayoutEffect, useState } from 'react';
 import { isEqual } from 'lodash';
 import { cn } from '@bem-react/classname';
 
 import { Page } from '../../../components/layouts/Page/Page';
+import { getConfig } from '../../../requests/backend/getConfig';
 import { ITranslationHistoryEntryWithKey } from '../../../requests/backend/history/data';
 import { getTranslationHistoryEntries } from '../../../requests/backend/history/getHistoryEntries';
 
@@ -36,13 +37,21 @@ export const HistoryPage: FC = () => {
 		});
 	}, []);
 
+	const [isHistoryEnabled, setIsHistoryEnabled] = useState<null | boolean>(null);
+	useEffect(() => {
+		getConfig().then((config) => {
+			setIsHistoryEnabled(config.history.enabled);
+		});
+	}, []);
+
 	// Wait render nested components with new props
 	const [isLoaded, setIsLoaded] = useState(false);
 	useLayoutEffect(() => {
-		if (translations !== null) {
-			setIsLoaded(true);
-		}
-	}, [translations]);
+		if (isHistoryEnabled === null) return;
+		if (translations === null) return;
+
+		setIsLoaded(true);
+	}, [translations, isHistoryEnabled]);
 
 	return (
 		<Page loading={!isLoaded} renderWhileLoading>
@@ -52,6 +61,7 @@ export const HistoryPage: FC = () => {
 						translations: translations || [],
 						hasMoreTranslations,
 						requestTranslations,
+						isHistoryEnabled: Boolean(isHistoryEnabled),
 					}}
 				/>
 			</div>

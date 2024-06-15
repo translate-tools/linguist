@@ -1,4 +1,4 @@
-import React, { ComponentType, ReactNode } from 'react';
+import React, { ComponentType, FC, ReactNode } from 'react';
 import browser from 'webextension-polyfill';
 import { isLanguageCodeISO639v1 } from '@translate-tools/core/languages';
 
@@ -101,3 +101,12 @@ export const detectLanguage = async (text: string, reliableOnly = false) => {
 };
 
 export const isValidLanguage = (language: string) => isLanguageCodeISO639v1(language);
+
+export const buildLink =
+	(url: string): FC =>
+		({ children }) =>
+			(
+				<a href={url} target="_blank" rel="noopener">
+					{children}
+				</a>
+			);

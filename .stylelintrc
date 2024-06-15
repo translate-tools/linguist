@@ -4,8 +4,7 @@
     "stylelint-no-unsupported-browser-features"
   ],
   "rules": {
-    "indentation": "tab",
-    "max-empty-lines": 2,
+    "selector-class-pattern": null,
     "no-descending-specificity": null,
     "plugin/no-unsupported-browser-features": [
       true,

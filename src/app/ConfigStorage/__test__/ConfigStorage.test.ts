@@ -8,6 +8,7 @@ import { ConfigStorageMigration } from '../ConfigStorage.migrations';
 import configVersion1 from './config-v1.json';
 import configVersion3 from './config-v3.json';
 import configVersion5 from './config-v5.json';
+import configVersion6 from './config-v6.json';
 
 describe('config migrations', () => {
 	beforeAll(clearAllMocks);
@@ -46,7 +47,7 @@ describe('config migrations', () => {
 describe('use config', () => {
 	beforeAll(clearAllMocks);
 
-	const latestConfigObject = configVersion5 as AppConfigType;
+	const latestConfigObject = configVersion6 as AppConfigType;
 
 	test('config storage set/get', async () => {
 		const configStorage = new ConfigStorage(latestConfigObject);
