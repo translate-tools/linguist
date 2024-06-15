@@ -6,7 +6,7 @@ const sharp = require('sharp');
 const { mergeWith } = require('lodash');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
-console.log('Webpack run');
+console.log('Webpack started');
 
 const package = require('./package.json');
 
@@ -16,7 +16,7 @@ const isProduction = mode === 'production';
 const target = process.env.EXT_TARGET;
 const devtool = isProduction ? undefined : 'inline-source-map';
 const isFastBuild = !isProduction && process.env.FAST_BUILD === 'on';
-const isBundleAnalyzingEnabled = Boolean(process.env.DEBUG) || !isProduction;
+const isBundleAnalyzingEnabled = !isProduction || Boolean(process.env.DEBUG);
 
 const targetsList = ['firefox', 'firefox-standalone', 'chromium', 'chrome'];
 if (targetsList.indexOf(target) === -1) {
@@ -40,6 +40,9 @@ console.log('WebpackConfig', {
 	outputPath,
 });
 
+const offscreenDocuments = ['main', 'worker', 'translator'];
+const pages = ['popup', 'options', 'dictionary', 'history'];
+
 module.exports = {
 	mode,
 	devtool,
@@ -61,15 +64,18 @@ module.exports = {
 	entry: {
 		'background-script': './src/background-script.ts',
 		contentscript: './src/contentscript.tsx',
-		['offscreen-documents/worker/worker']:
-			'./src/offscreen-documents/worker/worker.ts',
-		['offscreen-documents/main/main']: './src/offscreen-documents/main/main.ts',
-		['offscreen-documents/translator/translator']:
-			'./src/offscreen-documents/translator/translator.ts',
-		['pages/popup/popup']: './src/pages/popup/popup.tsx',
-		['pages/options/options']: './src/pages/options/options.tsx',
-		['pages/dictionary/dictionary']: './src/pages/dictionary/dictionary.tsx',
-		['pages/history/history']: './src/pages/history/history.tsx',
+		...Object.fromEntries(
+			offscreenDocuments.map((name) => [
+				`offscreen-documents/${name}/${name}`,
+				`./src/offscreen-documents/${name}/${name}.ts`,
+			]),
+		),
+		...Object.fromEntries(
+			pages.map((name) => [
+				`pages/${name}/${name}`,
+				`./src/pages/${name}/${name}.tsx`,
+			]),
+		),
 	},
 	output: {
 		path: outputPath,
@@ -146,13 +152,10 @@ module.exports = {
 
 				// HTML pages
 				...[
-					'pages/popup/popup.html',
-					'pages/options/options.html',
-					'pages/dictionary/dictionary.html',
-					'pages/history/history.html',
-					'offscreen-documents/main/main.html',
-					'offscreen-documents/translator/translator.html',
-					'offscreen-documents/worker/worker.html',
+					...offscreenDocuments.map(
+						(name) => `offscreen-documents/${name}/${name}.html`,
+					),
+					...pages.map((name) => `pages/${name}/${name}.html`),
 				].map((file) => ({
 					from: './src/' + file,
 					to: path.join(outputPath, file),
