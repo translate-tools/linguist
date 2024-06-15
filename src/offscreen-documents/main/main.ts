@@ -4,8 +4,8 @@
  */
 
 import { customTranslatorsFactory } from '../../requests/offscreen/customTranslators';
+import { themeUpdate } from '../../requests/offscreen/theme';
 
-// TODO: add types validation between all requests
 document.addEventListener('DOMContentLoaded', async () => {
 	console.log('Main is run');
 	customTranslatorsFactory();
@@ -16,4 +16,11 @@ document.addEventListener('DOMContentLoaded', async () => {
 	// This iframe contain only trusted code, so we should not have any problems
 	workerIframe.setAttribute('sandbox', 'allow-same-origin allow-scripts');
 	document.body.appendChild(workerIframe);
+
+	const lightThemeQuery = window.matchMedia('(prefers-color-scheme: light)');
+	themeUpdate({ isLight: lightThemeQuery.matches });
+
+	lightThemeQuery.addEventListener('change', (evt) => {
+		themeUpdate({ isLight: evt.matches });
+	});
 });
