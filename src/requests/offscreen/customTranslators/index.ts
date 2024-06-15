@@ -59,7 +59,7 @@ export const customTranslatorCreate = buildBackendRequest<
 									status: response.status,
 									statusText: response.statusText,
 									headers: Object.fromEntries(
-										Array.from((response.headers as any).entries() as []),
+										Array.from(response.headers.entries()),
 									),
 								};
 							});

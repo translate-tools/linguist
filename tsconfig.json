@@ -2,7 +2,7 @@
 	"compilerOptions": {
 		"module": "esnext",
 		"moduleResolution": "node",
-		"target": "es5",
+		"target": "esnext",
 		"esModuleInterop": true,
 		"strict": true,
 		"alwaysStrict": true,
@@ -23,7 +23,7 @@
 		"preserveConstEnums": true,
 		"removeComments": false,
 		"sourceMap": true,
-		"lib": ["es2020", "dom"],
+		"lib": ["esnext", "dom", "dom.iterable"],
 		"rootDir": ".",
 		"jsx": "react",
 		"allowJs": true,
