@@ -1,7 +1,7 @@
-import React, { FC } from 'react';
 import { getLanguageCodesISO639 } from '@translate-tools/core/languages';
 
 import {
+	buildLink,
 	getLanguageNameByCode,
 	getLocalizedNode,
 	getMessage,
@@ -21,30 +21,6 @@ type Options = {
 	toggleCustomTranslatorsWindow: () => void;
 	toggleTTSModulesWindow: () => void;
 };
-
-// TODO: make helper for build options
-
-// option({
-// 	type: 'Checkbox',
-// 	path: 'selectTranslator.showOriginalText',
-// 	withText: true,
-// 	withDescription: true,
-// })
-
-// checkbox({
-// 	path: 'selectTranslator.showOriginalText',
-// 	withText: true,
-// 	withDescription: true,
-// })
-
-export const buildLink =
-	(url: string): FC =>
-		({ children }) =>
-			(
-				<a href={url} target="_blank" rel="noopener">
-					{children}
-				</a>
-			);
 
 /**
  * Generate config tree for render with `OptionsTree`

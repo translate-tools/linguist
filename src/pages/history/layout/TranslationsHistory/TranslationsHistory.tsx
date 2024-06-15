@@ -15,14 +15,13 @@ import { useConcurrentTTS } from '../../../../lib/hooks/useConcurrentTTS';
 import { useConfirm } from '../../../../lib/hooks/useConfirm';
 import { useDebouncedInput } from '../../../../lib/hooks/useDebouncedInput';
 import { useKeyboardModifiers } from '../../../../lib/hooks/useKeyboardModifiers';
-import { getLocalizedNode, getMessage } from '../../../../lib/language';
+import { buildLink, getLocalizedNode, getMessage } from '../../../../lib/language';
 import { clearTranslationHistory } from '../../../../requests/backend/history/clearTranslationHistory';
 import {
 	ITranslationHistoryEntryWithKey,
 	TranslationHistoryFetcherOptions,
 } from '../../../../requests/backend/history/data';
 import { deleteTranslationHistoryEntry } from '../../../../requests/backend/history/deleteTranslationHistoryEntry';
-import { buildLink } from '../../../options/layout/OptionsPage.utils/generateTree';
 
 import './TranslationsHistory.css';
 
