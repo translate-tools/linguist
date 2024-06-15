@@ -52,7 +52,6 @@ export const customTranslatorCreate = buildBackendRequest<
 					iframe,
 					childOrigin: '*',
 					timeout: 5000,
-					debug: true,
 					methods: {
 						fetch: (url: string, options: RequestInit) => {
 							return fetch(url, options).then(async (response) => {
