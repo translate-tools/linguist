@@ -1,6 +1,5 @@
 import { Connection, connectToChild } from 'penpal';
 
-import { isFirefox } from '../../../lib/browser';
 import {
 	CustomTranslatorInfo,
 	TranslatorWorkerApi,
@@ -42,10 +41,7 @@ export const customTranslatorCreate = buildBackendRequest<
 
 				// Create iframe
 				const iframe = document.createElement('iframe', {});
-				iframe.setAttribute(
-					'sandbox',
-					isFirefox() ? 'allow-same-origin allow-scripts' : 'allow-scripts',
-				);
+				iframe.setAttribute('sandbox', 'allow-scripts');
 				document.body.appendChild(iframe);
 				iframe.src = '/offscreen-documents/translator/translator.html';
 
@@ -55,6 +51,20 @@ export const customTranslatorCreate = buildBackendRequest<
 					childOrigin: '*',
 					timeout: 5000,
 					debug: true,
+					methods: {
+						fetch: (url: string, options: RequestInit) => {
+							return fetch(url, options).then(async (response) => {
+								return {
+									body: await response.blob(),
+									status: response.status,
+									statusText: response.statusText,
+									headers: Object.fromEntries(
+										Array.from((response.headers as any).entries() as []),
+									),
+								};
+							});
+						},
+					},
 				});
 
 				const id = String(new Date().getTime());

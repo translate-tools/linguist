@@ -3,12 +3,12 @@ import { TranslatorInstanceMembers } from '@translate-tools/core/translators/Tra
 
 import { loadTranslator } from '../../lib/translators/customTranslators/loadTranslator';
 
-import { CustomTranslatorInfo } from '.';
+import { CustomTranslatorInfo, ParentApi } from '.';
 
 console.log('Translator in run');
 
 let translator: TranslatorInstanceMembers | null = null;
-connectToParent({
+const connection = connectToParent<ParentApi>({
 	methods: {
 		async init(code: string) {
 			const translatorClass = loadTranslator(code);
@@ -33,3 +33,10 @@ connectToParent({
 		},
 	},
 });
+
+(window as any).fetch = async (input: string, init = {}) =>
+	connection.promise.then((api) =>
+		api
+			.fetch(input, init)
+			.then(({ body, ...options }) => new Response(body, options)),
+	);
