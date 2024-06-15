@@ -10,9 +10,14 @@ export const [addTranslationHistoryEntryFactory, addTranslationHistoryEntry] =
 			translation: TranslationType,
 			origin: type.string,
 		}),
-		responseValidator: type.number,
+		responseValidator: type.union([type.number, type.null]),
 
-		factoryHandler: () => (data) => {
-			return addEntry({ ...data, timestamp: Date.now() });
-		},
+		factoryHandler:
+			({ config }) =>
+				async (data) => {
+					const { history } = await config.get();
+					if (!history.enabled) return null;
+
+					return addEntry({ ...data, timestamp: Date.now() });
+				},
 	});

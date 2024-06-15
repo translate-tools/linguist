@@ -65,6 +65,9 @@ export const defaultConfig: AppConfigType = {
 	popup: {
 		rememberLastTab: true,
 	},
+	history: {
+		enabled: true,
+	},
 	popupTab: {
 		pageTranslator: {
 			showCounters: true,

@@ -582,5 +582,21 @@ export const generateTree = ({
 				},
 			],
 		},
+
+		// TODO: localize
+		{
+			title: 'History',
+			groupContent: [
+				{
+					description:
+						'When enabled, any translation will be recorded to a history page',
+					path: 'history.enabled',
+					optionContent: {
+						type: 'Checkbox',
+						text: 'Enable history',
+					},
+				},
+			],
+		},
 	];
 };

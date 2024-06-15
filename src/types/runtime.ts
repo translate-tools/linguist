@@ -106,6 +106,9 @@ export const AppConfig = type.type({
 	popup: type.type({
 		rememberLastTab: type.boolean,
 	}),
+	history: type.type({
+		enabled: type.boolean,
+	}),
 	popupTab: type.type({
 		pageTranslator: type.type({
 			showCounters: type.boolean,
