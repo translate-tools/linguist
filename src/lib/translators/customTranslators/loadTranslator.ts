@@ -1,12 +1,6 @@
-import { BaseTranslator as ExternalBaseTranslator } from '@translate-tools/core/translators/BaseTranslator';
 import { TranslatorConstructor } from '@translate-tools/core/translators/Translator';
 
 export const loadTranslator = (code: string) => {
-	// TODO: remove `BaseTranslator`
-	// Define API variables which available for custom translators
-	// @ts-ignore
-	const BaseTranslator = ExternalBaseTranslator;
-
 	const translatorClass = eval(code);
 
 	if (typeof translatorClass !== 'function') {
