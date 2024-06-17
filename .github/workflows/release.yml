@@ -19,6 +19,9 @@ jobs:
       - name: Set variables
         run: echo "PROJECT_VERSION=$(jq -r .version package.json)" >> $GITHUB_ENV
 
+      - name: Test variables
+        run: echo ${{ env.PROJECT_VERSION }}
+
       - name: Build all targets
         run: |
           make build
@@ -33,15 +36,15 @@ jobs:
           npx crx pack chromium -o linguist.crx -p ./crx.pem
           ls -al ./
 
-      - name: Build XPI file for firefox-standalone
-        working-directory: "./build"
-        env:
-          AMO_KEY: ${{ secrets.AMO_KEY }}
-          AMO_SECRET: ${{ secrets.AMO_SECRET }}
-        run: |
-          mkdir ./AMO
-          npx web-ext sign --channel unlisted --api-key "$AMO_KEY" --api-secret "$AMO_SECRET" --source-dir ./firefox-standalone --artifacts-dir ./AMO
-          mv AMO/*.xpi AMO/linguist.xpi
+      # - name: Build XPI file for firefox-standalone
+      #   working-directory: "./build"
+      #   env:
+      #     AMO_KEY: ${{ secrets.AMO_KEY }}
+      #     AMO_SECRET: ${{ secrets.AMO_SECRET }}
+      #   run: |
+      #     mkdir ./AMO
+      #     npx web-ext sign --channel unlisted --api-key "$AMO_KEY" --api-secret "$AMO_SECRET" --source-dir ./firefox-standalone --artifacts-dir ./AMO
+      #     mv AMO/*.xpi AMO/linguist.xpi
 
       - name: Archive build files
         uses: actions/upload-artifact@v4
