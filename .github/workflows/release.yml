@@ -51,11 +51,15 @@ jobs:
           name: build-files
           path: build
 
+        # Read docs on https://github.com/softprops/action-gh-release
       - name: Publish release on GitHub
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: ${{ env.PROJECT_VERSION }}
-          name: ${{ env.PROJECT_VERSION }}
+          # Use tag name from `package.json`
+          tag_name: v${{ env.PROJECT_VERSION }}
+          name: v${{ env.PROJECT_VERSION }}
+          # Use current commit hash, instead of main branch
+          target_commitish: ${{ github.sha }}
           files: |
             build/AMO/linguist.xpi
             build/linguist.crx
