@@ -16,6 +16,9 @@ jobs:
       - uses: actions/checkout@v2
       - uses: ./.github/actions/prepare-build
 
+      - name: Set variables
+        run: echo "PROJECT_VERSION=$(jq -r .version package.json)" >> $GITHUB_ENV
+
       - name: Build all targets
         run: |
           make build
@@ -48,10 +51,17 @@ jobs:
           name: build-files
           path: build
 
+        # Read docs on https://github.com/softprops/action-gh-release
       - name: Publish release on GitHub
         uses: softprops/action-gh-release@v1
-        if: startsWith(github.ref, 'refs/tags/')
         with:
+          # Use tag name from `package.json`
+          # WARNING: source code in release will be bound to this tag,
+          # so if any changes in code been inserted, we must create another version and tag
+          tag_name: v${{ env.PROJECT_VERSION }}
+          name: v${{ env.PROJECT_VERSION }}
+          # Use current commit hash, instead of main branch
+          target_commitish: ${{ github.sha }}
           files: |
             build/AMO/linguist.xpi
             build/linguist.crx
