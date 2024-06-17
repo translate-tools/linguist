@@ -1,0 +1,26 @@
+{
+	"manifest_version": 3,
+	"permissions": ["offscreen"],
+	"host_permissions": ["<all_urls>"],
+	"content_security_policy": {
+		"extension_pages": "default-src 'self' 'wasm-unsafe-eval'; connect-src *; style-src 'self' 'unsafe-inline' *"
+	},
+	"sandbox": {
+		"pages": ["offscreen-documents/translator/translator.html"]
+	},
+	"web_accessible_resources": [
+		{
+			"resources": ["contentscript.css"],
+			"matches": ["*://*/*"]
+		}
+	],
+	"background": {
+		"service_worker": "background-script.js",
+		"type": "module"
+	},
+	"action": {
+		"default_popup": "pages/popup/popup.html",
+		"default_title": "__MSG_ext_name__",
+		"default_icon": "static/logo/logo-icon-simple-dark.png"
+	}
+}
