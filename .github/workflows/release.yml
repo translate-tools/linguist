@@ -50,7 +50,6 @@ jobs:
 
       - name: Publish release on GitHub
         uses: softprops/action-gh-release@v1
-        if: startsWith(github.ref, 'refs/tags/')
         with:
           files: |
             build/AMO/linguist.xpi
