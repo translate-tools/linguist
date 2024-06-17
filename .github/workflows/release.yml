@@ -56,6 +56,8 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           # Use tag name from `package.json`
+          # WARNING: source code in release will be bound to this tag,
+          # so if any changes in code been inserted, we must create another version and tag
           tag_name: v${{ env.PROJECT_VERSION }}
           name: v${{ env.PROJECT_VERSION }}
           # Use current commit hash, instead of main branch
