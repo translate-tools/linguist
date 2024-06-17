@@ -16,6 +16,12 @@ jobs:
       - uses: actions/checkout@v2
       - uses: ./.github/actions/prepare-build
 
+      - name: Set variables
+        run: echo "PROJECT_VERSION=$(jq -r .version package.json)" >> $GITHUB_ENV
+
+      - name: Test variables
+        run: echo ${{ env.PROJECT_VERSION }}
+
       - name: Build all targets
         run: |
           make build
@@ -51,6 +57,8 @@ jobs:
       - name: Publish release on GitHub
         uses: softprops/action-gh-release@v1
         with:
+          tag_name: ${{ env.PROJECT_VERSION }}
+          name: ${{ env.PROJECT_VERSION }}
           files: |
             build/AMO/linguist.xpi
             build/linguist.crx
