@@ -20,7 +20,7 @@ jobs:
         run: echo "PROJECT_VERSION=$(jq -r .version package.json)" >> $GITHUB_ENV
 
       - name: Test variables
-        run: echo ${{ env.PROJECT_VERSION }} ${{ github.sha }}
+        run: echo ${{ env.PROJECT_VERSION }}
 
       - name: Build all targets
         run: |
@@ -45,6 +45,7 @@ jobs:
       #     mkdir ./AMO
       #     npx web-ext sign --channel unlisted --api-key "$AMO_KEY" --api-secret "$AMO_SECRET" --source-dir ./firefox-standalone --artifacts-dir ./AMO
       #     mv AMO/*.xpi AMO/linguist.xpi
+
       - name: Archive build files
         uses: actions/upload-artifact@v4
         id: upload-build-artifacts
