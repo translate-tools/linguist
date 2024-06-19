@@ -86,18 +86,14 @@ export class App {
 		// Setup sandboxed iframes
 		if (isChromium()) {
 			// Currently `offscreen` API is non standard, so we cast type
-			const offscreen = (browser as any).offscreen;
+			const offscreen = (globalThis as any).chrome.offscreen;
 
 			// We may have only one offscreen document, but we need more,
 			// so we create only one "main" document, that creates embedded iframes
 			try {
 				offscreen.createDocument({
 					url: 'offscreen-documents/main/main.html',
-					reasons: [
-						offscreen.Reason.WORKERS,
-						offscreen.Reason.IFRAME_SCRIPTING,
-						offscreen.Reason.MATCH_MEDIA,
-					],
+					reasons: ['WORKERS', 'IFRAME_SCRIPTING', 'MATCH_MEDIA'],
 					justification:
 						'Main offscreen document, to run WASM and custom translators code in sandbox',
 				});
