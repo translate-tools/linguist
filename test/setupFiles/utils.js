@@ -18,7 +18,6 @@ const addRandomDelaysForMethods = (object, methods) => {
 				return Promise.resolve().then(async () => {
 					const delay = getRandomInt(20);
 
-					console.log('Wait a delay', delay);
 					await new Promise((res) => setTimeout(res, delay));
 
 					return object(...args);
