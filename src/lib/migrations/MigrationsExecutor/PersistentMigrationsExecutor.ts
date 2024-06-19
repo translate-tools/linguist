@@ -76,6 +76,11 @@ export class PersistentMigrationsExecutor {
 
 			await migration.migrate(currentVersion, latestVersion);
 
+			const { hooks = {} } = migration;
+			if (hooks.onComplete) {
+				await hooks.onComplete();
+			}
+
 			// Update storage version
 			migrationsVersions[name] = latestVersion;
 			await this.storage.setMigrationsVersions(migrationsVersions);

@@ -13,6 +13,10 @@ export type Migration = {
 	migrate: (previousVersion: number) => Promise<void>;
 };
 
+export type MigrationHooks = {
+	onComplete?: () => Promise<void>;
+};
+
 /**
  * Task to migrate from one version to another
  * Task may execute several migrations, so it may take a time
@@ -29,12 +33,17 @@ export type MigrationTask = {
 	 * WARNING: previous version may contain `0` in case when data structure run migration first time
 	 */
 	migrate: (previousVersion: number, currentVersion: number) => Promise<void>;
+
+	hooks?: MigrationHooks;
 };
 
 /**
  * Build migration task from migrations list
  */
-export const createMigrationTask = (migrations: Migration[]): MigrationTask => {
+export const createMigrationTask = (
+	migrations: Migration[],
+	hooks?: MigrationHooks,
+): MigrationTask => {
 	const sortedMigrations = migrations.sort(
 		(migration1, migration2) => migration1.version - migration2.version,
 	);
@@ -47,6 +56,7 @@ export const createMigrationTask = (migrations: Migration[]): MigrationTask => {
 
 	return {
 		version: lastMigrationVersion,
+		hooks,
 		migrate: async (fromVersion: number, toVersion: number) => {
 			const migrationsToApply = sortedMigrations.filter(
 				(migration) =>
