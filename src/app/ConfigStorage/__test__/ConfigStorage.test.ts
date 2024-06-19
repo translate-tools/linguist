@@ -7,13 +7,15 @@ import { ConfigStorage, ObservableAsyncStorage } from '../ConfigStorage';
 import { ConfigStorageMigration } from '../ConfigStorage.migrations';
 import configVersion1 from './config-v1.json';
 import configVersion3 from './config-v3.json';
-import configVersion5 from './config-v5.json';
 import configVersion6 from './config-v6.json';
+
+const latestVersion = 6;
+const latestConfigSample = configVersion6;
 
 describe('config migrations', () => {
 	beforeAll(clearAllMocks);
 
-	test('migrate config v0-v3', async () => {
+	test('migrate config from v0 to v3', async () => {
 		// Load data
 		localStorage.setItem('config.Main', JSON.stringify(configVersion1));
 
@@ -26,7 +28,7 @@ describe('config migrations', () => {
 		expect(localStorage.getItem('config.Main')).toBeNull();
 	});
 
-	test('migrate config v0-v5', async () => {
+	test('migrate config v0 to latest version', async () => {
 		// Load data
 		localStorage.setItem(
 			'config.Main',
@@ -37,17 +39,43 @@ describe('config migrations', () => {
 		);
 
 		// Migrate data
-		await ConfigStorageMigration.migrate(0, 5);
+		await ConfigStorageMigration.migrate(0, latestVersion);
 
 		const { appConfig } = await browser.storage.local.get('appConfig');
-		expect(appConfig).toEqual(configVersion5);
+		expect(appConfig).toEqual(latestConfigSample);
+	});
+
+	describe(`race condition detection`, () => {
+		beforeEach(clearAllMocks);
+
+		for (let attempt = 1; attempt <= 5; attempt++) {
+			test(`Detection race conditions. Attempt #${attempt}`, async () => {
+				// Load data
+				localStorage.setItem(
+					'config.Main',
+					JSON.stringify({
+						...configVersion1,
+						translatorModule: 'BingTranslatorPublic',
+					}),
+				);
+
+				// Migrate part of data
+				await ConfigStorageMigration.migrate(0, 5);
+
+				// Migrate another part of data
+				await ConfigStorageMigration.migrate(5, latestVersion);
+
+				const { appConfig } = await browser.storage.local.get('appConfig');
+				expect(appConfig).toEqual(latestConfigSample);
+			});
+		}
 	});
 });
 
 describe('use config', () => {
 	beforeAll(clearAllMocks);
 
-	const latestConfigObject = configVersion6 as AppConfigType;
+	const latestConfigObject = latestConfigSample as AppConfigType;
 
 	test('config storage set/get', async () => {
 		const configStorage = new ConfigStorage(latestConfigObject);
