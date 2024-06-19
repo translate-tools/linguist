@@ -29,7 +29,7 @@ const migrations: Migration[] = [
 				const mergedData = { ...actualData, ...storageData };
 
 				// Write data
-				browser.storage.local.set({
+				await browser.storage.local.set({
 					[storageNameV2]: mergedData,
 				});
 			}
@@ -63,7 +63,7 @@ const migrations: Migration[] = [
 			}
 
 			// Write data
-			browser.storage.local.set({
+			await browser.storage.local.set({
 				[storageNameV2]: {
 					...newData,
 					selectTranslator: {
@@ -104,7 +104,7 @@ const migrations: Migration[] = [
 			}
 
 			// Write data
-			browser.storage.local.set({ [storageName]: updatedConfig });
+			await browser.storage.local.set({ [storageName]: updatedConfig });
 		},
 	},
 	{
