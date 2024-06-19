@@ -1,7 +1,9 @@
 import browser from 'webextension-polyfill';
 
-import { DEFAULT_TRANSLATOR, DEFAULT_TTS } from '../../config';
+import { DEFAULT_TRANSLATOR, DEFAULT_TTS, defaultConfig } from '../../config';
 import { createMigrationTask, Migration } from '../../lib/migrations/createMigrationTask';
+import { decodeStruct } from '../../lib/types';
+import { AppConfig } from '../../types/runtime';
 
 const migrations: Migration[] = [
 	{
@@ -29,7 +31,7 @@ const migrations: Migration[] = [
 				const mergedData = { ...actualData, ...storageData };
 
 				// Write data
-				browser.storage.local.set({
+				await browser.storage.local.set({
 					[storageNameV2]: mergedData,
 				});
 			}
@@ -63,7 +65,7 @@ const migrations: Migration[] = [
 			}
 
 			// Write data
-			browser.storage.local.set({
+			await browser.storage.local.set({
 				[storageNameV2]: {
 					...newData,
 					selectTranslator: {
@@ -104,7 +106,7 @@ const migrations: Migration[] = [
 			}
 
 			// Write data
-			browser.storage.local.set({ [storageName]: updatedConfig });
+			await browser.storage.local.set({ [storageName]: updatedConfig });
 		},
 	},
 	{
@@ -131,6 +133,24 @@ const migrations: Migration[] = [
 			await browser.storage.local.set({ [storageName]: updatedConfig });
 		},
 	},
+	{
+		version: 7,
+		async migrate() {
+			// Empty migration, to bump migration number and to trigger hook for repair config
+		},
+	},
 ];
 
-export const ConfigStorageMigration = createMigrationTask(migrations);
+export const ConfigStorageMigration = createMigrationTask(migrations, {
+	onComplete: async () => {
+		// Repair config if necessary
+		const storageName = 'appConfig';
+		const { [storageName]: config } = await browser.storage.local.get(storageName);
+
+		const { errors } = decodeStruct(AppConfig, config);
+		if (errors === null) return;
+
+		console.warn('Config object is invalid, fallback to default config', errors);
+		await browser.storage.local.set({ [storageName]: defaultConfig });
+	},
+});

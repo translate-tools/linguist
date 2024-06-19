@@ -13,3 +13,9 @@ globalThis.location = new URL('/_generated_background_page.html', extBasePath);
 globalThis.navigator = {
 	userAgent: 'node.js',
 };
+
+const { addRandomDelaysForMethods } = require('./utils');
+
+// Add random delays for async operations,
+// to make tests closer to reality
+chrome.storage.local = addRandomDelaysForMethods(chrome.storage.local, ['get', 'set']);
