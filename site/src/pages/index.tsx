@@ -1,5 +1,6 @@
 // import { Button } from 'react-elegant-ui/components/Button/Button.bundle/desktop';
 // import { theme } from 'react-elegant-ui/theme/presets/default/index';
+import React from 'react';
 import { clsx } from 'clsx';
 import {
 	Button,
@@ -11,7 +12,9 @@ import {
 	Text,
 	VStack,
 } from '@chakra-ui/react';
+// @ts-ignore
 import chrome from '@site/static/icons/chrome.png';
+// @ts-ignore
 import firefox from '@site/static/icons/firefox.png';
 
 import Logo from '../components/logo.svg';
