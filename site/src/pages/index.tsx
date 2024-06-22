@@ -12,15 +12,11 @@ import {
 	Text,
 	VStack,
 } from '@chakra-ui/react';
-// @ts-ignore
-import chrome from '@site/static/icons/chrome.png';
-// @ts-ignore
-import firefox from '@site/static/icons/firefox.png';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
 import Logo from '../components/logo.svg';
 import theme from '../components/theme';
 
-// import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './index.module.css';
 
 // const theme = extendBaseTheme({
@@ -30,7 +26,11 @@ import styles from './index.module.css';
 // });
 
 export default function Home(): JSX.Element {
-	// const { siteConfig } = useDocusaurusContext();
+	const { siteConfig } = useDocusaurusContext();
+
+	const getUrl = (path: string) =>
+		[siteConfig.baseUrl, path].join('/').replace(/\/{2,}/g, '/');
+
 	return (
 		<main>
 			<ChakraBaseProvider theme={theme}>
@@ -82,7 +82,10 @@ export default function Home(): JSX.Element {
 									<HStack w="100%">
 										<Button
 											leftIcon={
-												<Image src={chrome} boxSize="2em" />
+												<Image
+													src={getUrl('icons/chrome.png')}
+													boxSize="2em"
+												/>
 											}
 											variant="action"
 											size="lg"
@@ -95,7 +98,10 @@ export default function Home(): JSX.Element {
 										</Button>
 										<Button
 											leftIcon={
-												<Image src={firefox} boxSize="2em" />
+												<Image
+													src={getUrl('icons/firefox.png')}
+													boxSize="2em"
+												/>
 											}
 											variant="action"
 											size="lg"
@@ -110,7 +116,7 @@ export default function Home(): JSX.Element {
 								</VStack>
 
 								<Image
-									src="/screenshots/text-translation-popup.png"
+									src={getUrl('screenshots/text-translation-popup.png')}
 									maxW={600}
 								/>
 							</HStack>
@@ -128,7 +134,9 @@ export default function Home(): JSX.Element {
 										className={styles.Feature}
 									>
 										<div className={clsx(styles.FeatureImage)}>
-											<img src="/screenshots/settings.png" />
+											<img
+												src={getUrl('screenshots/settings.png')}
+											/>
 										</div>
 										<VStack
 											className={clsx(styles.FeatureDescription)}
@@ -159,7 +167,11 @@ export default function Home(): JSX.Element {
 										className={styles.Feature}
 									>
 										<div className={clsx(styles.FeatureImage)}>
-											<img src="/screenshots/page-translation.png" />
+											<img
+												src={getUrl(
+													'screenshots/page-translation.png',
+												)}
+											/>
 										</div>
 										<VStack
 											className={clsx(styles.FeatureDescription)}
@@ -187,7 +199,11 @@ export default function Home(): JSX.Element {
 										className={styles.Feature}
 									>
 										<div className={clsx(styles.FeatureImage)}>
-											<img src="/screenshots/selected-text-translation.png" />
+											<img
+												src={getUrl(
+													'screenshots/selected-text-translation.png',
+												)}
+											/>
 										</div>
 										<VStack
 											className={clsx(styles.FeatureDescription)}
@@ -214,7 +230,11 @@ export default function Home(): JSX.Element {
 										className={styles.Feature}
 									>
 										<div className={clsx(styles.FeatureImage)}>
-											<img src="/screenshots/text-translation.png" />
+											<img
+												src={getUrl(
+													'screenshots/text-translation.png',
+												)}
+											/>
 										</div>
 										<VStack
 											className={clsx(styles.FeatureDescription)}
@@ -239,7 +259,9 @@ export default function Home(): JSX.Element {
 										className={styles.Feature}
 									>
 										<div className={clsx(styles.FeatureImage)}>
-											<img src="/screenshots/dictionary.png" />
+											<img
+												src={getUrl('screenshots/dictionary.png')}
+											/>
 										</div>
 										<VStack
 											className={clsx(styles.FeatureDescription)}
@@ -271,7 +293,11 @@ export default function Home(): JSX.Element {
 										className={styles.Feature}
 									>
 										<div className={clsx(styles.FeatureImage)}>
-											<img src="/screenshots/custom-translators.png" />
+											<img
+												src={getUrl(
+													'screenshots/custom-translators.png',
+												)}
+											/>
 										</div>
 										<VStack
 											className={clsx(styles.FeatureDescription)}
@@ -324,13 +350,13 @@ export default function Home(): JSX.Element {
 					</VStack>
 
 					<div className={clsx(styles.Gallery)}>
-						<img src="/screenshots/Dictionary.png" />
+						<img src={getUrl('screenshots/Dictionary.png')} />
 					</div>
 					<div className={clsx(styles.Description)}></div>
 					<div className={clsx(styles.Features)} style={{ display: 'none' }}>
 						<div className={clsx(styles.Feature)}>
 							<div className={clsx(styles.FeatureImage)}>
-								<img src="/screenshots/page-translation.png" />
+								<img src={getUrl('screenshots/page-translation.png')} />
 							</div>
 							<div className={clsx(styles.FeatureDescription)}>
 								<h2>Offline translation</h2>
@@ -339,7 +365,7 @@ export default function Home(): JSX.Element {
 						</div>
 						<div className={clsx(styles.Feature)}>
 							<div className={clsx(styles.FeatureImage)}>
-								<img src="/screenshots/Dictionary.png" />
+								<img src={getUrl('screenshots/Dictionary.png')} />
 							</div>
 							<div className={clsx(styles.FeatureDescription)}>
 								<h2>Offline translation</h2>
@@ -348,7 +374,7 @@ export default function Home(): JSX.Element {
 						</div>
 						<div className={clsx(styles.Feature)}>
 							<div className={clsx(styles.FeatureImage)}>
-								<img src="/screenshots/Dictionary.png" />
+								<img src={getUrl('screenshots/Dictionary.png')} />
 							</div>
 							<div className={clsx(styles.FeatureDescription)}>
 								<h2>Offline translation</h2>
