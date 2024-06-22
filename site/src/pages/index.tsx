@@ -1,5 +1,3 @@
-// import { Button } from 'react-elegant-ui/components/Button/Button.bundle/desktop';
-// import { theme } from 'react-elegant-ui/theme/presets/default/index';
 import React from 'react';
 import { clsx } from 'clsx';
 import {
@@ -18,12 +16,6 @@ import Logo from '../components/logo.svg';
 import theme from '../components/theme';
 
 import styles from './index.module.css';
-
-// const theme = extendBaseTheme({
-// 	components: {
-// 		Button: chakraTheme.components.Button,
-// 	},
-// });
 
 export default function Home(): JSX.Element {
 	const { siteConfig } = useDocusaurusContext();
