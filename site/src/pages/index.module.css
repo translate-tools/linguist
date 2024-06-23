@@ -19,6 +19,7 @@ button img {
 	border-radius: 6px;
 	overflow: hidden;
 	display: flex;
+	border: 3px solid #00000012;
 }
 
 .FeatureDescription {
@@ -55,7 +56,6 @@ button img {
 .TopScreen {
 	padding-inline: 2rem;
 	background: #fff4fe;
-	min-height: 100vh;
 }
 
 .PageContainer {
