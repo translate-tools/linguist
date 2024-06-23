@@ -10,7 +10,6 @@ import {
 	Text,
 	VStack,
 } from '@chakra-ui/react';
-import Head from '@docusaurus/Head';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
 import Logo from '../components/logo.svg';
@@ -26,9 +25,6 @@ export default function Home(): JSX.Element {
 
 	return (
 		<main>
-			<Head>
-				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-			</Head>
 			<ChakraBaseProvider theme={theme}>
 				<VStack w="100%" spacing={0}>
 					<VStack w="100%" className={clsx(styles.TopScreen)}>
