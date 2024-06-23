@@ -159,7 +159,7 @@ export default function Home(): JSX.Element {
 											className={styles.Feature}
 										>
 											<div className={clsx(styles.FeatureImage)}>
-												<img
+												<Image
 													src={getUrl(
 														'screenshots/settings.png',
 													)}
@@ -197,7 +197,7 @@ export default function Home(): JSX.Element {
 											className={styles.Feature}
 										>
 											<div className={clsx(styles.FeatureImage)}>
-												<img
+												<Image
 													src={getUrl(
 														'screenshots/page-translation.png',
 													)}
@@ -232,7 +232,7 @@ export default function Home(): JSX.Element {
 											className={styles.Feature}
 										>
 											<div className={clsx(styles.FeatureImage)}>
-												<img
+												<Image
 													src={getUrl(
 														'screenshots/selected-text-translation.png',
 													)}
@@ -265,7 +265,7 @@ export default function Home(): JSX.Element {
 											className={styles.Feature}
 										>
 											<div className={clsx(styles.FeatureImage)}>
-												<img
+												<Image
 													src={getUrl(
 														'screenshots/text-translation.png',
 													)}
@@ -297,7 +297,7 @@ export default function Home(): JSX.Element {
 											className={styles.Feature}
 										>
 											<div className={clsx(styles.FeatureImage)}>
-												<img
+												<Image
 													src={getUrl(
 														'screenshots/dictionary.png',
 													)}
@@ -335,7 +335,7 @@ export default function Home(): JSX.Element {
 											className={styles.Feature}
 										>
 											<div className={clsx(styles.FeatureImage)}>
-												<img
+												<Image
 													src={getUrl(
 														'screenshots/custom-translators.png',
 													)}
