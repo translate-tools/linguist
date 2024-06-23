@@ -4,7 +4,7 @@ import { Button, HStack, Icon, Image, Link, Text, VStack } from '@chakra-ui/reac
 
 import Logo from './logo.svg';
 
-import styles from './landing.module.css';
+import styles from './Landing.module.css';
 
 export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 	const getUrl = (path: string) => [baseUrl, path].join('/').replace(/\/{2,}/g, '/');
