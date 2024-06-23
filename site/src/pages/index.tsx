@@ -47,7 +47,7 @@ export default function Home(): JSX.Element {
 									},
 								}}
 							>
-								<Link variant="base" href="#">
+								<Link variant="base" href="#features">
 									Features
 								</Link>
 								{/* <Link variant="base" href="#">Docs</Link> */}
@@ -120,7 +120,7 @@ export default function Home(): JSX.Element {
 						</HStack>
 						<VStack w="100%" alignItems="start" spacing="10rem">
 							<VStack w="100%" alignItems="start">
-								<Text as="h2" fontSize={32}>
+								<Text id="features" as="h2" fontSize={32}>
 									Features
 								</Text>
 
