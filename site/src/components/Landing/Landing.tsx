@@ -104,229 +104,221 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 				w="100%"
 				alignItems="center"
 				spacing={0}
-				py="4rem"
+				py="3rem"
 				className={clsx(styles.Features)}
 			>
-				<div className={clsx(styles.PageContainer)}>
-					<VStack w="100%" alignItems="start" spacing="10rem">
-						<VStack w="100%" alignItems="start">
-							<Text id="features" as="h2" fontSize={32}>
-								Features
-							</Text>
+				<VStack
+					w="100%"
+					alignItems="start"
+					spacing="8rem"
+					className={clsx(styles.PageContainer)}
+				>
+					<VStack w="100%" alignItems="start" spacing="2rem">
+						<Text id="features" as="h2" fontSize={32}>
+							Features
+						</Text>
 
-							<VStack w="100%" alignItems="start" spacing={20}>
-								<HStack
+						<VStack w="100%" alignItems="start" spacing="2rem">
+							<HStack
+								alignItems="start"
+								spacing={8}
+								className={styles.Feature}
+							>
+								<div className={clsx(styles.FeatureImage)}>
+									<Image src={getUrl('screenshots/settings.png')} />
+								</div>
+								<VStack
+									className={clsx(styles.FeatureDescription)}
 									alignItems="start"
-									spacing={8}
-									className={styles.Feature}
+									spacing={6}
 								>
-									<div className={clsx(styles.FeatureImage)}>
-										<Image src={getUrl('screenshots/settings.png')} />
-									</div>
-									<VStack
-										className={clsx(styles.FeatureDescription)}
-										alignItems="start"
-										spacing={6}
-									>
-										<Text as="h2" fontSize={26}>
-											Offline translation and privacy
-										</Text>
-										<Text variant="description">
-											Linguist can translate texts even without the
-											internet - a feature that no other extension
-											has. The offline translator allows you to
-											translate texts on your device without sending
-											any private messages over the internet,
-											ensuring your privacy. Simply enable the
-											feature on the options page to maintain your
-											privacy while translating work emails and
-											personal messages.
-										</Text>
-									</VStack>
-								</HStack>
+									<Text as="h2" fontSize={26}>
+										Offline translation and privacy
+									</Text>
+									<Text variant="description">
+										Linguist can translate texts even without the
+										internet - a feature that no other extension has.
+										The offline translator allows you to translate
+										texts on your device without sending any private
+										messages over the internet, ensuring your privacy.
+										Simply enable the feature on the options page to
+										maintain your privacy while translating work
+										emails and personal messages.
+									</Text>
+								</VStack>
+							</HStack>
 
-								<HStack
+							<HStack
+								alignItems="start"
+								spacing={8}
+								className={styles.Feature}
+							>
+								<div className={clsx(styles.FeatureImage)}>
+									<Image
+										src={getUrl('screenshots/page-translation.png')}
+									/>
+								</div>
+								<VStack
+									className={clsx(styles.FeatureDescription)}
 									alignItems="start"
-									spacing={8}
-									className={styles.Feature}
+									spacing={6}
 								>
-									<div className={clsx(styles.FeatureImage)}>
-										<Image
-											src={getUrl(
-												'screenshots/page-translation.png',
-											)}
-										/>
-									</div>
-									<VStack
-										className={clsx(styles.FeatureDescription)}
-										alignItems="start"
-										spacing={6}
-									>
-										<Text as="h2" fontSize={26}>
-											Full page translation
-										</Text>
-										<Text variant="description">
-											Fast and high quality whole page translation
-											in one click, even for a private pages that
-											need login. Flexible configuration for auto
-											translation based on domain name and
-											languages. Translation is available by hotkey.
-											You may see an original text by hover on it.
-										</Text>
-									</VStack>
-								</HStack>
+									<Text as="h2" fontSize={26}>
+										Full page translation
+									</Text>
+									<Text variant="description">
+										Fast and high quality whole page translation in
+										one click, even for a private pages that need
+										login. Flexible configuration for auto translation
+										based on domain name and languages. Translation is
+										available by hotkey. You may see an original text
+										by hover on it.
+									</Text>
+								</VStack>
+							</HStack>
 
-								<HStack
+							<HStack
+								alignItems="start"
+								spacing={8}
+								className={styles.Feature}
+							>
+								<div className={clsx(styles.FeatureImage)}>
+									<Image
+										src={getUrl(
+											'screenshots/selected-text-translation.png',
+										)}
+									/>
+								</div>
+								<VStack
+									className={clsx(styles.FeatureDescription)}
 									alignItems="start"
-									spacing={8}
-									className={styles.Feature}
+									spacing={6}
 								>
-									<div className={clsx(styles.FeatureImage)}>
-										<Image
-											src={getUrl(
-												'screenshots/selected-text-translation.png',
-											)}
-										/>
-									</div>
-									<VStack
-										className={clsx(styles.FeatureDescription)}
-										alignItems="start"
-										spacing={6}
-									>
-										<Text as="h2" fontSize={26}>
-											Translation for selected text
-										</Text>
-										<Text variant="description">
-											Encountering unfamiliar words while reading an
-											online article? Just select text on the page
-											and click the button to translate it. You can
-											speak the translated and original text, and
-											save the translation to your dictionary.
-										</Text>
-									</VStack>
-								</HStack>
+									<Text as="h2" fontSize={26}>
+										Translation for selected text
+									</Text>
+									<Text variant="description">
+										Encountering unfamiliar words while reading an
+										online article? Just select text on the page and
+										click the button to translate it. You can speak
+										the translated and original text, and save the
+										translation to your dictionary.
+									</Text>
+								</VStack>
+							</HStack>
 
-								<HStack
+							<HStack
+								alignItems="start"
+								spacing={8}
+								className={styles.Feature}
+							>
+								<div className={clsx(styles.FeatureImage)}>
+									<Image
+										src={getUrl('screenshots/text-translation.png')}
+									/>
+								</div>
+								<VStack
+									className={clsx(styles.FeatureDescription)}
 									alignItems="start"
-									spacing={8}
-									className={styles.Feature}
+									spacing={6}
 								>
-									<div className={clsx(styles.FeatureImage)}>
-										<Image
-											src={getUrl(
-												'screenshots/text-translation.png',
-											)}
-										/>
-									</div>
-									<VStack
-										className={clsx(styles.FeatureDescription)}
-										alignItems="start"
-										spacing={6}
-									>
-										<Text as="h2" fontSize={26}>
-											Text translation always at hand
-										</Text>
-										<Text variant="description">
-											If you need to translate any text - just click
-											the Linguist button to open the pop-up window.
-											No more tabs with translation services, just
-											use Linguist.
-										</Text>
-									</VStack>
-								</HStack>
+									<Text as="h2" fontSize={26}>
+										Text translation always at hand
+									</Text>
+									<Text variant="description">
+										If you need to translate any text - just click the
+										Linguist button to open the pop-up window. No more
+										tabs with translation services, just use Linguist.
+									</Text>
+								</VStack>
+							</HStack>
 
-								<HStack
+							<HStack
+								alignItems="start"
+								spacing={8}
+								className={styles.Feature}
+							>
+								<div className={clsx(styles.FeatureImage)}>
+									<Image src={getUrl('screenshots/dictionary.png')} />
+								</div>
+								<VStack
+									className={clsx(styles.FeatureDescription)}
 									alignItems="start"
-									spacing={8}
-									className={styles.Feature}
+									spacing={6}
 								>
-									<div className={clsx(styles.FeatureImage)}>
-										<Image
-											src={getUrl('screenshots/dictionary.png')}
-										/>
-									</div>
-									<VStack
-										className={clsx(styles.FeatureDescription)}
-										alignItems="start"
-										spacing={6}
-									>
-										<Text as="h2" fontSize={26}>
-											Make your own personal knowledge base
-										</Text>
-										<Text variant="description">
-											Any translated text is saved in the history,
-											and you can add your favorite translations to
-											your dictionary. You can search for
-											translations in both your dictionary and
-											history, and even filter your translations by
-											language. The dictionary feature is available
-											even when you are offline, making it an ideal
-											tool for language learners or travelers who
-											require constant access to their word lists.
-										</Text>
-									</VStack>
-								</HStack>
+									<Text as="h2" fontSize={26}>
+										Make your own personal knowledge base
+									</Text>
+									<Text variant="description">
+										Any translated text is saved in the history, and
+										you can add your favorite translations to your
+										dictionary. You can search for translations in
+										both your dictionary and history, and even filter
+										your translations by language. The dictionary
+										feature is available even when you are offline,
+										making it an ideal tool for language learners or
+										travelers who require constant access to their
+										word lists.
+									</Text>
+								</VStack>
+							</HStack>
 
-								<HStack
+							<HStack
+								alignItems="start"
+								spacing={8}
+								className={styles.Feature}
+							>
+								<div className={clsx(styles.FeatureImage)}>
+									<Image
+										src={getUrl('screenshots/custom-translators.png')}
+									/>
+								</div>
+								<VStack
+									className={clsx(styles.FeatureDescription)}
 									alignItems="start"
-									spacing={8}
-									className={styles.Feature}
+									spacing={6}
 								>
-									<div className={clsx(styles.FeatureImage)}>
-										<Image
-											src={getUrl(
-												'screenshots/custom-translators.png',
-											)}
-										/>
-									</div>
-									<VStack
-										className={clsx(styles.FeatureDescription)}
-										alignItems="start"
-										spacing={6}
-									>
-										<Text as="h2" fontSize={26}>
-											Custom translators
-										</Text>
-										<Text variant="description">
-											Unlike other browser extensions, Linguist is
-											not just a wrapper over the Google Translator
-											Widget; it's a complete and independent
-											translation system. If you are not satisfied
-											with embedded translators, you may use
-											Linguist with your favorite translation
-											service, just by add a custom translator. Read
-											more about in{' '}
-											<Link href="https://github.com/translate-tools/linguist/blob/master/docs/CustomTranslator.md">
-												docs
-											</Link>
-											.
-										</Text>
-									</VStack>
-								</HStack>
-							</VStack>
-						</VStack>
-
-						<VStack w="100%" alignItems="start">
-							<Text as="h2" fontSize={32}>
-								Open source
-							</Text>
-
-							<Text variant="description">
-								Linguist is completely free,{' '}
-								<Link href="https://github.com/translate-tools/linguist">
-									open-source
-								</Link>
-								, and it does not collect any user data to sell. You may{' '}
-								<Link href="https://github.com/translate-tools/linguist#donations">
-									support the project
-								</Link>{' '}
-								with your donations to help Linguist maintain its
-								independence and high quality. Share Linguist with your
-								friends, to make it popular together!
-							</Text>
+									<Text as="h2" fontSize={26}>
+										Custom translators
+									</Text>
+									<Text variant="description">
+										Unlike other browser extensions, Linguist is not
+										just a wrapper over the Google Translator Widget;
+										it's a complete and independent translation
+										system. If you are not satisfied with embedded
+										translators, you may use Linguist with your
+										favorite translation service, just by add a custom
+										translator. Read more about in{' '}
+										<Link href="https://github.com/translate-tools/linguist/blob/master/docs/CustomTranslator.md">
+											docs
+										</Link>
+										.
+									</Text>
+								</VStack>
+							</HStack>
 						</VStack>
 					</VStack>
-				</div>
+
+					<VStack w="100%" alignItems="start" spacing="2rem">
+						<Text as="h2" fontSize={32}>
+							Open source
+						</Text>
+
+						<Text variant="description">
+							Linguist is completely free,{' '}
+							<Link href="https://github.com/translate-tools/linguist">
+								open-source
+							</Link>
+							, and it does not collect any user data to sell. You may{' '}
+							<Link href="https://github.com/translate-tools/linguist#donations">
+								support the project
+							</Link>{' '}
+							with your donations to help Linguist maintain its independence
+							and high quality. Share Linguist with your friends, to make it
+							popular together!
+						</Text>
+					</VStack>
+				</VStack>
 			</VStack>
 		</VStack>
 	);
