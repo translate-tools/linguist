@@ -64,11 +64,11 @@ export default function Home(): JSX.Element {
 							<HStack spacing={10}>
 								<VStack>
 									{/* <Text as="h1" fontSize="xxl">Linguist is a privacy focused translation</Text> */}
-									<Text as="h1" fontSize="xxl">
+									<Text as="h1" fontSize="38px">
 										Linguist is a privacy focused, full‑featured
 										translation solution
 									</Text>
-									<Text fontSize="xl" maxW={750}>
+									<Text fontSize="24px" maxW={750}>
 										Translate web pages, highlighted text, Netflix
 										subtitles and private messages. Speak the
 										translated text, and save important translations
@@ -143,7 +143,7 @@ export default function Home(): JSX.Element {
 											<Text as="h2" fontSize={26}>
 												Offline translation and privacy
 											</Text>
-											<Text>
+											<Text variant="description">
 												Linguist can translate texts even without
 												the internet - a feature that no other
 												extension has. The offline translator
@@ -178,7 +178,7 @@ export default function Home(): JSX.Element {
 											<Text as="h2" fontSize={26}>
 												Full page translation
 											</Text>
-											<Text>
+											<Text variant="description">
 												Fast and high quality whole page
 												translation in one click, even for a
 												private pages that need login. Flexible
@@ -210,7 +210,7 @@ export default function Home(): JSX.Element {
 											<Text as="h2" fontSize={26}>
 												Translation for selected text
 											</Text>
-											<Text>
+											<Text variant="description">
 												Encountering unfamiliar words while
 												reading an online article? Just select
 												text on the page and click the button to
@@ -241,7 +241,7 @@ export default function Home(): JSX.Element {
 											<Text as="h2" fontSize={26}>
 												Text translation always at hand
 											</Text>
-											<Text>
+											<Text variant="description">
 												If you need to translate any text - just
 												click the Linguist button to open the
 												pop-up window. No more tabs with
@@ -268,7 +268,7 @@ export default function Home(): JSX.Element {
 											<Text as="h2" fontSize={26}>
 												Make your own personal knowledge base
 											</Text>
-											<Text>
+											<Text variant="description">
 												Any translated text is saved in the
 												history, and you can add your favorite
 												translations to your dictionary. You can
@@ -304,7 +304,7 @@ export default function Home(): JSX.Element {
 											<Text as="h2" fontSize={26}>
 												Custom translators
 											</Text>
-											<Text>
+											<Text variant="description">
 												Unlike other browser extensions, Linguist
 												is not just a wrapper over the Google
 												Translator Widget; it's a complete and
@@ -328,7 +328,7 @@ export default function Home(): JSX.Element {
 									Open source
 								</Text>
 
-								<Text>
+								<Text variant="description">
 									Linguist is completely free,{' '}
 									<Link href="https://github.com/translate-tools/linguist">
 										open-source

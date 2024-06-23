@@ -55,6 +55,13 @@ const theme = extendTheme({
 				variant: 'accent',
 			},
 		},
+		Text: {
+			variants: {
+				description: {
+					fontSize: '20px',
+				},
+			},
+		},
 	},
 });
 
