@@ -47,6 +47,7 @@ const theme = extendTheme({
 					color: '#a2006a',
 					textDecoration: 'underline dotted',
 					'&:hover': {
+						color: '#a2006a',
 						textDecoration: 'underline',
 					},
 				},
