@@ -318,6 +318,20 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 							popular together!
 						</Text>
 					</VStack>
+
+					<VStack w="100%" alignItems="start" spacing="2rem">
+						<Text as="h2" fontSize={32}>
+							Support
+						</Text>
+
+						<Text variant="description">
+							Contact{' '}
+							<Link href="mailto:support@linguister.io">
+								support@linguister.io
+							</Link>{' '}
+							for support.
+						</Text>
+					</VStack>
 				</VStack>
 			</VStack>
 		</VStack>
