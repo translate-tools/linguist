@@ -1,4 +1,3 @@
-import { readFileSync } from 'fs';
 import type { Config } from '@docusaurus/types';
 
 const config: Config = {
@@ -25,8 +24,6 @@ const config: Config = {
 			},
 		],
 	],
-
-	ssrTemplate: readFileSync('./ssr-template.htm', { encoding: 'utf8' }),
 } satisfies Config;
 
 export default config;
