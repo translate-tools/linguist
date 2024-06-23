@@ -26,7 +26,6 @@ export default function Home(): JSX.Element {
 	return (
 		<main>
 			<ChakraBaseProvider theme={theme}>
-				<div className={clsx(styles.Head)}></div>
 				<div className={clsx(styles.Page)}>
 					<VStack paddingBottom={10}>
 						<HStack w="100%" px={10}>
@@ -345,42 +344,7 @@ export default function Home(): JSX.Element {
 							</VStack>
 						</VStack>
 					</VStack>
-
-					<div className={clsx(styles.Gallery)}>
-						<img src={getUrl('screenshots/Dictionary.png')} />
-					</div>
-					<div className={clsx(styles.Description)}></div>
-					<div className={clsx(styles.Features)} style={{ display: 'none' }}>
-						<div className={clsx(styles.Feature)}>
-							<div className={clsx(styles.FeatureImage)}>
-								<img src={getUrl('screenshots/page-translation.png')} />
-							</div>
-							<div className={clsx(styles.FeatureDescription)}>
-								<h2>Offline translation</h2>
-								Feature description here
-							</div>
-						</div>
-						<div className={clsx(styles.Feature)}>
-							<div className={clsx(styles.FeatureImage)}>
-								<img src={getUrl('screenshots/Dictionary.png')} />
-							</div>
-							<div className={clsx(styles.FeatureDescription)}>
-								<h2>Offline translation</h2>
-								Feature description here
-							</div>
-						</div>
-						<div className={clsx(styles.Feature)}>
-							<div className={clsx(styles.FeatureImage)}>
-								<img src={getUrl('screenshots/Dictionary.png')} />
-							</div>
-							<div className={clsx(styles.FeatureDescription)}>
-								<h2>Offline translation</h2>
-								Feature description here
-							</div>
-						</div>
-					</div>
 				</div>
-				<div className={clsx(styles.Footer)}></div>
 			</ChakraBaseProvider>
 		</main>
 	);
