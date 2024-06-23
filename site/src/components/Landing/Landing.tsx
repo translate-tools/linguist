@@ -334,6 +334,11 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 					</VStack>
 				</VStack>
 			</VStack>
+			<HStack py="3rem">
+				<Text>
+					Created by <Link href="https://fluidminds.org">FluidMinds team</Link>.
+				</Text>
+			</HStack>
 		</VStack>
 	);
 };
