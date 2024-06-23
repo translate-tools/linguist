@@ -5,7 +5,6 @@ const theme = extendTheme({
 	styles: {
 		global: {
 			body: {
-				bg: '#fff4fe',
 				fontFamily:
 					'-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif',
 			},

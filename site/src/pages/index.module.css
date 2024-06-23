@@ -13,11 +13,6 @@ button img {
 	gap: 1rem;
 }
 
-.Feature {
-	display: flex;
-	gap: 1rem;
-}
-
 .FeatureImage {
 	flex: 1;
 	max-width: 500px;
@@ -54,15 +49,15 @@ button img {
 }
 
 .Features {
-	display: flex;
-	flex-direction: column;
-	gap: 1rem;
+	padding-inline: 2rem;
 }
 
-.Gallery img {
-	display: none;
+.TopScreen {
+	padding-inline: 2rem;
+	background: #fff4fe;
+	min-height: 100vh;
 }
 
-.Gallery {
-	display: none;
+.PageContainer {
+	max-width: 1200px;
 }
