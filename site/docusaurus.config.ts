@@ -3,7 +3,7 @@ import type { Config } from '@docusaurus/types';
 const config: Config = {
 	title: 'Linguist Translate',
 	tagline: 'Privacy focused translation',
-	favicon: 'img/favicon.ico',
+	favicon: 'favicon.svg',
 
 	// Set the production url of your site here
 	url: 'https://linguister.io',
