@@ -37,7 +37,17 @@ button img {
 	order: 2;
 } */
 
-@media (width <= 600px) {
+@media (width <= 980px) {
+	.TopScreenImage {
+		display: none;
+	}
+
+	.TopScreenContent {
+		flex-direction: column !important;
+	}
+}
+
+@media (width <= 900px) {
 	.Feature {
 		flex-direction: column !important;
 		gap: 1em;
@@ -46,6 +56,16 @@ button img {
 	.FeatureImage {
 		max-width: 100%;
 		order: 2;
+	}
+}
+
+@media (width <= 600px) {
+	.HeroContainer.HeroContainer {
+		padding-block: 3rem;
+	}
+
+	.ButtonsGroup {
+		flex-direction: column !important;
 	}
 }
 

@@ -10,6 +10,7 @@ import {
 	Text,
 	VStack,
 } from '@chakra-ui/react';
+import Head from '@docusaurus/Head';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
 import Logo from '../components/logo.svg';
@@ -25,6 +26,9 @@ export default function Home(): JSX.Element {
 
 	return (
 		<main>
+			<Head>
+				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+			</Head>
 			<ChakraBaseProvider theme={theme}>
 				<VStack w="100%" spacing={0}>
 					<VStack w="100%" className={clsx(styles.TopScreen)}>
@@ -67,8 +71,11 @@ export default function Home(): JSX.Element {
 							py={20}
 							className={clsx(styles.HeroContainer, styles.PageContainer)}
 						>
-							<HStack spacing={10}>
-								<VStack>
+							<HStack
+								spacing={10}
+								className={clsx(styles.TopScreenContent)}
+							>
+								<VStack alignItems="start">
 									{/* <Text as="h1" fontSize="xxl">Linguist is a privacy focused translation</Text> */}
 									<Text as="h1" fontSize="38px">
 										Linguist is a privacy focused, full‑featured
@@ -82,7 +89,10 @@ export default function Home(): JSX.Element {
 										offline.
 									</Text>
 
-									<HStack w="100%">
+									<HStack
+										w="100%"
+										className={clsx(styles.ButtonsGroup)}
+									>
 										<Button
 											leftIcon={
 												<Image
@@ -119,8 +129,10 @@ export default function Home(): JSX.Element {
 								</VStack>
 
 								<Image
+									className={clsx(styles.TopScreenImage)}
 									src={getUrl('screenshots/text-translation-popup.png')}
 									maxW={600}
+									minW={400}
 								/>
 							</HStack>
 						</HStack>
