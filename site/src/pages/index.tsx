@@ -47,10 +47,15 @@ export default function Home(): JSX.Element {
 									},
 								}}
 							>
-								<Link href="#">Features</Link>
-								{/* <Link href="#">Docs</Link> */}
-								{/* <Link href="#">Blog</Link> */}
-								<Link href="https://github.com/translate-tools/linguist">
+								<Link variant="base" href="#">
+									Features
+								</Link>
+								{/* <Link variant="base" href="#">Docs</Link> */}
+								{/* <Link variant="base" href="#">Blog</Link> */}
+								<Link
+									variant="base"
+									href="https://github.com/translate-tools/linguist"
+								>
 									GitHub
 								</Link>
 							</HStack>
@@ -81,7 +86,7 @@ export default function Home(): JSX.Element {
 											}
 											variant="action"
 											size="lg"
-											as={Link}
+											as="a"
 											target="_blank"
 											href="https://chrome.google.com/webstore/detail/gbefmodhlophhakmoecijeppjblibmie"
 											px={4}
@@ -97,7 +102,7 @@ export default function Home(): JSX.Element {
 											}
 											variant="action"
 											size="lg"
-											as={Link}
+											as="a"
 											target="_blank"
 											href="https://addons.mozilla.org/addon/linguist-translator/"
 											px={4}

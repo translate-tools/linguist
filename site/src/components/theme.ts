@@ -41,6 +41,20 @@ const theme = extendTheme({
 				// colorScheme: 'green', // default is gray
 			},
 		},
+		Link: {
+			variants: {
+				accent: {
+					color: '#a2006a',
+					textDecoration: 'underline dotted',
+					'&:hover': {
+						textDecoration: 'underline',
+					},
+				},
+			},
+			defaultProps: {
+				variant: 'accent',
+			},
+		},
 	},
 });
 
