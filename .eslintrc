@@ -25,6 +25,16 @@
 		"plugin:import/typescript"
 	],
 	"rules": {
+		"import/no-unresolved": [
+			"error",
+			{
+				"ignore": [
+					"^@theme",
+					"^@docusaurus",
+					"^@site"
+				]
+			}
+		],
 		"import/no-useless-path-segments": [
 			"error",
 			{
@@ -33,8 +43,18 @@
 		],
 		"import/export": "off",
 		"import/namespace": "warn",
-		"import/no-duplicates": ["error", { "prefer-inline": true }],
-		"import/newline-after-import": ["error", { "count": 1 }],
+		"import/no-duplicates": [
+			"error",
+			{
+				"prefer-inline": true
+			}
+		],
+		"import/newline-after-import": [
+			"error",
+			{
+				"count": 1
+			}
+		],
 		"unused-imports/no-unused-imports": "error",
 		"simple-import-sort/imports": [
 			"error",
@@ -42,25 +62,42 @@
 				// docs: https://github.com/lydell/eslint-plugin-simple-import-sort#custom-grouping
 				"groups": [
 					// Side effect imports.
-					["^\\u0000"],
+					[
+						"^\\u0000"
+					],
 					// Node.js builtins prefixed with `node:`.
-					["^node:"],
+					[
+						"^node:"
+					],
 					// Packages.
 					// Things that start with a letter (or digit or underscore), or `@` followed by a letter.
-					["^react", "^\\w", "^@\\w"],
+					[
+						"^react",
+						"^\\w",
+						"^@\\w"
+					],
 					// Absolute imports and other imports such as Vue-style `@/foo`.
 					// Anything not matched in another group.
-					["^"],
+					[
+						"^"
+					],
 					// Relative imports.
-					["^../../"],
+					[
+						"^../../"
+					],
 					// Anything that starts with a dot.
-					["^../", "^./", "^\\."],
+					[
+						"^../",
+						"^./",
+						"^\\."
+					],
 					// Global CSS files at bottom
-					["\\.css$"]
+					[
+						"\\.css$"
+					]
 				]
 			}
 		],
-
 		// TODO: find option for specify immutable objects for improve consistency
 		// for example in `src/hooks/useLiveRef.ts` required as deps a `forceUpdate`
 		// but setter from `useState` is never required
@@ -71,7 +108,10 @@
 				"additionalHooks": "(useEqualMemo|useImmutableCallback|useIsomorphicLayoutEffect)"
 			}
 		],
-		"function-call-argument-newline": ["error", "consistent"],
+		"function-call-argument-newline": [
+			"error",
+			"consistent"
+		],
 		"no-var": "error",
 		"no-bitwise": "error",
 		"no-multi-spaces": "error",
@@ -81,7 +121,9 @@
 		"prefer-const": "error",
 		// off cuz eslint is dumb: https://stackoverflow.com/questions/63818415/react-was-used-before-it-was-defined
 		"no-use-before-define": "off",
-		"@typescript-eslint/no-use-before-define": ["error"],
+		"@typescript-eslint/no-use-before-define": [
+			"error"
+		],
 		"valid-jsdoc": 0,
 		// Codestyle
 		"indent": [
@@ -94,10 +136,16 @@
 		"camelcase": [
 			"error",
 			{
-				"allow": ["^UNSAFE_", "^UNSTABLE_"]
+				"allow": [
+					"^UNSAFE_",
+					"^UNSTABLE_"
+				]
 			}
 		],
-		"arrow-parens": ["error", "always"],
+		"arrow-parens": [
+			"error",
+			"always"
+		],
 		"operator-linebreak": [
 			"error",
 			"after",

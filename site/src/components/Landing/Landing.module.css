@@ -1,0 +1,64 @@
+.PageContainer {
+	max-width: 1200px;
+}
+
+.TopScreen {
+	padding-inline: 2rem;
+	background: #fff4fe;
+}
+
+.Features {
+	padding-inline: 2rem;
+}
+
+.FeatureImage {
+	flex: 1;
+	max-width: 500px;
+	border-radius: 6px;
+	overflow: hidden;
+	display: flex;
+	border: 3px solid #00000012;
+}
+
+.FeatureDescription {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	gap: 0.6rem;
+}
+
+.FeatureDescription h2 {
+	margin: 0;
+}
+
+@media (width <= 600px) {
+	.HeroContainer.HeroContainer {
+		padding-block: 3rem;
+	}
+
+	.ButtonsGroup.ButtonsGroup {
+		flex-direction: column;
+	}
+}
+
+@media (width <= 900px) {
+	.Feature.Feature {
+		flex-direction: column;
+		gap: 0.5em;
+	}
+
+	.FeatureImage {
+		max-width: 100%;
+		order: 2;
+	}
+}
+
+@media (width <= 980px) {
+	.TopScreenImage {
+		display: none;
+	}
+
+	.TopScreenContent.TopScreenContent {
+		flex-direction: column;
+	}
+}
