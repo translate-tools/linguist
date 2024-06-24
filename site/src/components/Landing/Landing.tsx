@@ -1,6 +1,7 @@
 import React from 'react';
 import { clsx } from 'clsx';
 import { Button, HStack, Icon, Image, Link, Text, VStack } from '@chakra-ui/react';
+import { buildPathGetter } from '@site/src/utils/url';
 
 import { useAnalyticsContext } from '../Analytics/useAnalyticsContext';
 import Logo from './logo.svg';
@@ -8,7 +9,7 @@ import Logo from './logo.svg';
 import styles from './Landing.module.css';
 
 export const Landing = ({ baseUrl }: { baseUrl: string }) => {
-	const getUrl = (path: string) => [baseUrl, path].join('/').replace(/\/{2,}/g, '/');
+	const getUrl = buildPathGetter(baseUrl);
 
 	const { trackEvent } = useAnalyticsContext();
 
