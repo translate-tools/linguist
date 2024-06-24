@@ -26,5 +26,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           email: noreply@example.com
-          build_dir: "./build"
+          build_dir: "./site/build"
           branch: gh-pages
