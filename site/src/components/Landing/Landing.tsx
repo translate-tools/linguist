@@ -282,6 +282,7 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 									</Text>
 									<Text variant="description">
 										<Trans
+											t={t}
 											i18nKey="features.items.customTranslators.content"
 											components={[
 												<Link href="https://github.com/translate-tools/linguist/blob/master/docs/CustomTranslator.md" />,
@@ -300,6 +301,7 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 
 						<Text variant="description">
 							<Trans
+								t={t}
 								i18nKey="sections.opensource.content"
 								components={[
 									<Link href="https://github.com/translate-tools/linguist" />,
@@ -316,6 +318,7 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 
 						<Text variant="description">
 							<Trans
+								t={t}
 								i18nKey="sections.support.content"
 								components={[
 									<Link href="mailto:support@linguister.io">
@@ -338,6 +341,7 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 			>
 				<Text>
 					<Trans
+						t={t}
 						i18nKey="sections.createdBy.content"
 						components={[
 							<Link href="https://fluidminds.org">FluidMinds team</Link>,
