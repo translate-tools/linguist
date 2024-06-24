@@ -1,44 +1,11 @@
-import React, { FC, PropsWithChildren, useEffect } from 'react';
-import Plausible from 'plausible-tracker';
+import React, { FC, PropsWithChildren } from 'react';
 import { ChakraBaseProvider } from '@chakra-ui/react';
 import Head from '@docusaurus/Head';
 
+import { AnalyticsProvider } from '../Analytics/AnalyticsProvider';
 import theme from '../theme';
 
 export const PageLayout: FC<PropsWithChildren> = ({ children }) => {
-	useEffect(() => {
-		const plausible = Plausible({
-			domain: 'linguister.io',
-			apiHost: 'https://pulse2.vitonsky.net',
-		});
-
-		plausible.enableAutoPageviews();
-		plausible.enableAutoOutboundTracking();
-
-		// Track clicks
-		document.body.addEventListener('click', (event: MouseEvent) => {
-			// Explore click targets to find a link element
-			const targets = event?.composedPath() || [event.target];
-			for (const target of targets) {
-				if (!(target instanceof HTMLAnchorElement)) continue;
-
-				const timestamp = performance.now();
-				plausible.trackEvent('Link click', {
-					props: {
-						// Current location
-						location: location.toString(),
-						url: target.href,
-						text: target.innerText,
-						// Time since visit page
-						timestamp: timestamp,
-						timestampSeconds: timestamp / 1000,
-					},
-				});
-				break;
-			}
-		});
-	});
-
 	return (
 		<ChakraBaseProvider theme={theme}>
 			<Head>
@@ -61,7 +28,14 @@ export const PageLayout: FC<PropsWithChildren> = ({ children }) => {
 					}}
 				/>
 			</Head>
-			{children}
+			<AnalyticsProvider
+				options={{
+					domain: 'linguister.io',
+					apiHost: 'https://pulse2.vitonsky.net',
+				}}
+			>
+				{children}
+			</AnalyticsProvider>
 		</ChakraBaseProvider>
 	);
 };
