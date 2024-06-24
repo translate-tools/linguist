@@ -12,6 +12,7 @@ import {
 	VStack,
 } from '@chakra-ui/react';
 import { buildPathGetter } from '@site/src/utils/url';
+import { languages } from '@site/supportedLanguages';
 
 import { useAnalyticsContext } from '../Analytics/useAnalyticsContext';
 import Logo from './logo.svg';
@@ -65,13 +66,11 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 							}}
 							variant="unstyled"
 						>
-							{['en', 'es', 'fr', 'it', 'de', 'ru', 'zh', 'ja'].map(
-								(lang) => (
-									<option key={lang} value={lang}>
-										{getLanguageName(lang)}
-									</option>
-								),
-							)}
+							{languages.map((lang) => (
+								<option key={lang} value={lang}>
+									{getLanguageName(lang)}
+								</option>
+							))}
 						</Select>
 						<Link variant="base" href="#features">
 							{t('navigation.features.content')}
