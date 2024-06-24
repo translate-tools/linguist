@@ -325,11 +325,15 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 						</Text>
 
 						<Text variant="description">
-							Contact{' '}
+							For support contact{' '}
 							<Link href="mailto:support@linguister.io">
 								support@linguister.io
+							</Link>
+							. If you have bug -{' '}
+							<Link href="https://github.com/translate-tools/linguist/issues/new/choose">
+								create issue
 							</Link>{' '}
-							for support.
+							on GitHub.
 						</Text>
 					</VStack>
 				</VStack>
