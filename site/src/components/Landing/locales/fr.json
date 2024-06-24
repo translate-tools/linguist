@@ -1,0 +1,60 @@
+{
+	"navigation": {
+		"features": {
+			"content": "Caractéristiques"
+		},
+		"github": {
+			"content": "GitHub"
+		}
+	},
+	"install": {
+		"chrome": "Installer google Chrome",
+		"firefox": "Installer pour Firefox"
+	},
+	"sections": {
+		"hero": {
+			"title": "Le linguiste est de la vie privée axée complète de solutions de traduction.",
+			"description": "Traduire des pages web, le texte en surbrillance, Netflix sous-titres, et les messages privés. Parler de la traduction du texte et sauvegardez les traductions à votre dictionnaire personnel pour apprendre des mots, même en mode hors connexion."
+		},
+		"opensource": {
+			"title": "Open source",
+			"content": "Le linguiste est totalement gratuit, <0>open-source</0>, et il ne collecte pas les données de l'utilisateur à vendre.<br><br>Vous pouvez <1>soutenir le projet</1> avec vos dons pour aider le Linguiste maintenir son indépendance et de haute qualité. Partager Linguiste avec vos amis à le rendre populaire ensemble!"
+		},
+		"support": {
+			"title": "Soutien",
+			"content": "Pour contacter le support <0/>. Si vous avez des bug <1>créer un problème</1> sur GitHub."
+		},
+		"createdBy": {
+			"content": "Créé par <0/>."
+		}
+	},
+	"features": {
+		"title": "Caractéristiques",
+		"items": {
+			"offlineTranslation": {
+				"title": "Hors de la traduction et de la vie privée",
+				"content": "Le linguiste peut traduire des textes, même sans internet - une fonction qu'aucune autre extension est. Le mode hors connexion translator vous permet de traduire des textes sur votre appareil sans envoyer de messages privés sur internet, sur le respect de votre vie privée. Il suffit d'activer la fonctionnalité sur la page options de maintenir votre vie privée lors de la traduction de travail d'e-mails et messages personnels."
+			},
+			"fullPageTranslation": {
+				"title": "Pleine page de traduction",
+				"content": "Rapide et de haute qualité, toute page de traduction en un clic, même pour les pages privées qui ont besoin de la connexion. Souplesse de configuration pour l'auto-traduction basée sur les noms de domaine et des langues. La traduction est disponible par raccourci clavier. Vous pouvez voir le texte original en planant au-dessus d'elle."
+			},
+			"selectedTextTranslation": {
+				"title": "La traduction du texte sélectionné",
+				"content": "La rencontre des mots inconnus lors de la lecture d'un article en ligne? Il suffit de sélectionner le texte sur la page et cliquez sur le bouton traduire. Vous pouvez parler de la traduction et le texte original et sauver la traduction de votre dictionnaire."
+			},
+			"textTranslation": {
+				"title": "La traduction du texte toujours à portée de main",
+				"content": "Si vous avez besoin de traduire un texte, il suffit de cliquez sur le Linguiste bouton pour ouvrir la fenêtre pop-up. Pas plus d'onglets avec des services de traduction, il suffit d'utiliser le Linguiste."
+			},
+			"knowledgeBase": {
+				"title": "Faire votre propre base de connaissances",
+				"content": "Toute traduction de texte est enregistré dans l'histoire, et vous pouvez ajouter votre favori traductions au dictionnaire. Vous pouvez rechercher des traductions à la fois dans votre dictionnaire et de l'histoire, et même filtrer les traductions de la langue. Le dictionnaire de la fonction est disponible même lorsque vous êtes hors ligne, un outil idéal pour les apprenants de la langue ou les voyageurs qui ont besoin d'un accès constant à leurs listes de mots."
+			},
+			"customTranslators": {
+				"title": "Personnalisé traducteurs",
+				"content": "Contrairement à d'autres extensions de navigateur, le Linguiste n'est pas juste un wrapper sur le Traducteur de Google Widget; c'est un indépendant et complet système de traduction. Si vous n'êtes pas satisfait avec embedded traducteurs, vous pouvez utiliser le Linguiste avec votre favori un service de traduction par l'ajout d'un personnalisé du traducteur. Lire plus à ce sujet dans <0>docs</0>."
+			}
+		}
+	}
+}
