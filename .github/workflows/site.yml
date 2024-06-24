@@ -1,0 +1,30 @@
+name: Site
+
+on:
+  push:
+  workflow_dispatch:
+
+# TODO: run only for changes in `site` directory
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ./.github/actions/prepare-build
+
+      - name: Build site
+        working-directory: "./site"
+        run: |
+          npm install
+          npm run build
+
+      - name: Deploy to GitHub Pages
+        if: github.ref == 'refs/heads/master'
+        uses: Cecilapp/GitHub-Pages-deploy@v3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          email: noreply@example.com
+          build_dir: "./build"
+          branch: gh-pages
