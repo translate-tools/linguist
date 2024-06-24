@@ -12,7 +12,7 @@ export const PageLayout: FC<PropsWithChildren> = ({ children }) => {
 				<script
 					defer
 					data-domain="linguister.io"
-					src="https://pulse2.vitonsky.net/js/script.js"
+					src="https://pulse2.vitonsky.net/js/script.outbound-links.js"
 				></script>
 				<script
 					async
