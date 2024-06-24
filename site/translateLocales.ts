@@ -1,3 +1,5 @@
+import crypto from 'crypto';
+import { existsSync } from 'fs';
 import path from 'path';
 import { Scheduler } from '@translate-tools/core/scheduling/Scheduler';
 import { YandexTranslator } from '@translate-tools/core/translators/YandexTranslator';
@@ -44,14 +46,37 @@ const localesDirectories = ['./src/components/Landing/locales'];
 		const source = await readFile(
 			path.join(localesDir, sourceLanguage + '.json'),
 		).then((buffer) => JSON.parse(buffer.toString()));
+
+		const cacheFilename = path.resolve('./.locales-cache.json');
+		const translationCache = existsSync(cacheFilename)
+			? await readFile(cacheFilename).then((buffer) =>
+				JSON.parse(buffer.toString()),
+			  )
+			: {};
+
+		const sourceDataHash = crypto
+			.createHash('sha512')
+			.update(JSON.stringify(source, null, '\t'))
+			.digest('hex');
 		const langs = languages.filter((lang) => lang !== sourceLanguage);
 		for (const lang of langs) {
+			if (translationCache[lang] === sourceDataHash) {
+				console.log(
+					`Skip translation for "${lang}", since already have translated version`,
+				);
+				continue;
+			}
+
 			console.log(`Translate messages for "${lang}"`);
 			const translatedObject = await translateObject(source, sourceLanguage, lang);
 			await writeFile(
 				path.join(localesDir, lang + '.json'),
 				JSON.stringify(translatedObject, null, '\t'),
 			);
+
+			// Sync cache
+			translationCache[lang] = sourceDataHash;
+			await writeFile(cacheFilename, JSON.stringify(translationCache, null, '\t'));
 		}
 	}
 })();
