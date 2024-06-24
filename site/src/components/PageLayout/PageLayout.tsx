@@ -1,3 +1,5 @@
+import '../i18n';
+
 import React, { FC, PropsWithChildren } from 'react';
 import { ChakraBaseProvider } from '@chakra-ui/react';
 import Head from '@docusaurus/Head';

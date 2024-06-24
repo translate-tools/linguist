@@ -4,14 +4,15 @@ import { clsx } from 'clsx';
 import { Button, HStack, Icon, Image, Link, Text, VStack } from '@chakra-ui/react';
 import { buildPathGetter } from '@site/src/utils/url';
 
-import './i18n';
 import { useAnalyticsContext } from '../Analytics/useAnalyticsContext';
+import enLocale from './locales/en.json';
 import Logo from './logo.svg';
 
 import styles from './Landing.module.css';
 
 export const Landing = ({ baseUrl }: { baseUrl: string }) => {
-	const { t } = useTranslation();
+	const { t, i18n } = useTranslation('landing');
+	i18n.addResourceBundle('en', 'landing', enLocale);
 
 	const getUrl = buildPathGetter(baseUrl);
 
