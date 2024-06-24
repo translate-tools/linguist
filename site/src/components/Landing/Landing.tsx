@@ -2,12 +2,15 @@ import React from 'react';
 import { clsx } from 'clsx';
 import { Button, HStack, Icon, Image, Link, Text, VStack } from '@chakra-ui/react';
 
+import { useAnalyticsContext } from '../Analytics/useAnalyticsContext';
 import Logo from './logo.svg';
 
 import styles from './Landing.module.css';
 
 export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 	const getUrl = (path: string) => [baseUrl, path].join('/').replace(/\/{2,}/g, '/');
+
+	const { trackEvent } = useAnalyticsContext();
 
 	return (
 		<VStack w="100%" spacing={0}>
@@ -68,6 +71,11 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 									target="_blank"
 									href="https://chrome.google.com/webstore/detail/gbefmodhlophhakmoecijeppjblibmie"
 									px={4}
+									onClick={() => {
+										trackEvent('Download link: Click', {
+											target: 'chrome',
+										});
+									}}
 								>
 									Install for Chrome
 								</Button>
@@ -84,6 +92,11 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 									target="_blank"
 									href="https://addons.mozilla.org/addon/linguist-translator/"
 									px={4}
+									onClick={() => {
+										trackEvent('Download link: Click', {
+											target: 'firefox',
+										});
+									}}
 								>
 									Install for Firefox
 								</Button>
