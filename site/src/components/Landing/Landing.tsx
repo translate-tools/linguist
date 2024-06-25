@@ -1,18 +1,33 @@
 import React from 'react';
 import { Trans, useTranslation } from 'react-i18next';
 import { clsx } from 'clsx';
-import { Button, HStack, Icon, Image, Link, Text, VStack } from '@chakra-ui/react';
+import {
+	Button,
+	HStack,
+	Icon,
+	Image,
+	Link,
+	Select,
+	Text,
+	VStack,
+} from '@chakra-ui/react';
 import { buildPathGetter } from '@site/src/utils/url';
+import { languages } from '@site/supportedLanguages';
 
 import { useAnalyticsContext } from '../Analytics/useAnalyticsContext';
-import enLocale from './locales/en.json';
 import Logo from './logo.svg';
 
 import styles from './Landing.module.css';
 
+const getLanguageName = (lang: string) => {
+	const languageName = new Intl.DisplayNames([lang], {
+		type: 'language',
+	}).of(lang);
+
+	return languageName.slice(0, 1).toUpperCase() + languageName.slice(1);
+};
 export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 	const { t, i18n } = useTranslation('landing');
-	i18n.addResourceBundle('en', 'landing', enLocale);
 
 	const getUrl = buildPathGetter(baseUrl);
 
@@ -22,18 +37,41 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 		<VStack w="100%" spacing={0}>
 			<VStack w="100%" className={clsx(styles.TopScreen)}>
 				<HStack w="100%" className={clsx(styles.Head, styles.PageContainer)}>
-					<Icon as={Logo} h="24px" w="auto" boxSizing="content-box" py="1rem" />
+					<Icon
+						as={Logo}
+						h="24px"
+						w="auto"
+						boxSizing="content-box"
+						py="1rem"
+						marginRight="auto"
+					/>
 
 					<HStack
-						marginLeft="auto"
+						marginLeft="1rem"
+						overflowX="auto"
 						py="1rem"
 						spacing={6}
+						whiteSpace="nowrap"
 						sx={{
 							'& > a': {
 								fontWeight: '500',
 							},
 						}}
 					>
+						<Select
+							minWidth="max-content"
+							value={i18n.language}
+							onChange={({ target }) => {
+								i18n.changeLanguage(target.value);
+							}}
+							variant="unstyled"
+						>
+							{languages.map((lang) => (
+								<option key={lang} value={lang}>
+									{getLanguageName(lang)}
+								</option>
+							))}
+						</Select>
 						<Link variant="base" href="#features">
 							{t('navigation.features.content')}
 						</Link>

@@ -1,0 +1,60 @@
+{
+	"navigation": {
+		"features": {
+			"content": "Recursos"
+		},
+		"github": {
+			"content": "GitHub"
+		}
+	},
+	"install": {
+		"chrome": "Instalar o google Chrome",
+		"firefox": "Instalação do Firefox"
+	},
+	"sections": {
+		"hero": {
+			"title": "Lingüista é um privacidade focada, completa solução de tradução.",
+			"description": "Traduza páginas da web, texto realçado, Netflix legendas e mensagens privadas. Falar o texto traduzido e salvar importantes traduções ao seu dicionário pessoal para aprender palavras, mesmo off-line."
+		},
+		"opensource": {
+			"title": "Código aberto",
+			"content": "Lingüista é completamente livre, <0>open-source</0>, e não recolhe quaisquer dados do usuário para vender.<br><br>Você pode <1>apoiar o projeto</1> com as doações para ajudar a Linguista manter a sua independência e de alta qualidade. Compartilhar Lingüista com seus amigos para torná-lo popular juntos!"
+		},
+		"support": {
+			"title": "Suporte",
+			"content": "Para contato de suporte <0/>. Se você tem um bug - <1>criar problema</1> no GitHub."
+		},
+		"createdBy": {
+			"content": "Criado por <0/>."
+		}
+	},
+	"features": {
+		"title": "Recursos",
+		"items": {
+			"offlineTranslation": {
+				"title": "Off-line e tradução de privacidade",
+				"content": "O linguista pode traduzir textos, mesmo sem a internet, um recurso que nenhum outro ramal. O tradutor offline permite-lhe traduzir textos no seu dispositivo sem a necessidade de envio de mensagens privadas através da internet, garantindo sua privacidade. Basta habilitar o recurso na página opções para manter sua privacidade durante a tradução de trabalho, e-mails e mensagens pessoais."
+			},
+			"fullPageTranslation": {
+				"title": "Página completa tradução",
+				"content": "Rápido e de alta qualidade página inteira de tradução em um clique, mesmo para particulares páginas que precisam de login. Configuração flexível para auto-tradução com base no nome de domínio e línguas. A tradução está disponível através da tecla de atalho. Você pode ver o texto original pairando sobre ele."
+			},
+			"selectedTextTranslation": {
+				"title": "Tradução para o texto selecionado",
+				"content": "Encontrar palavras desconhecidas durante a leitura de um artigo on-line? Apenas selecione o texto na página e clique no botão para traduzi-lo. Você pode falar traduzido e texto original e salvar a tradução para o dicionário."
+			},
+			"textTranslation": {
+				"title": "Tradução de texto sempre à mão",
+				"content": "Se você precisa traduzir qualquer texto, clique com o Lingüista botão para abrir a janela pop-up. Não mais guias com serviços de tradução, basta usar o Lingüista."
+			},
+			"knowledgeBase": {
+				"title": "Fazer a sua própria base de dados de conhecimento",
+				"content": "Qualquer texto traduzido é guardado na história, e você pode adicionar seus favoritos traduções ao dicionário. Você pode procurar por traduções no dicionário e história, e até mesmo filtrar suas traduções da língua. O recurso de dicionário está disponível, mesmo quando você estiver off-line, tornando-o uma ferramenta ideal para estudantes de idiomas ou viajantes que necessitam de constante acesso às suas listas de palavras."
+			},
+			"customTranslators": {
+				"title": "Personalizado tradutores",
+				"content": "Ao contrário de outras extensões de navegador, Linguista não é apenas um wrapper sobre o Google Translator Widget; é uma completa e independente sistema de tradução. Se você não estiver satisfeito com o embedded tradutores, você pode usar o Lingüista com o seu favorito serviço de tradução por adicionar um tradutor. Leia mais sobre isso em <0>docs</0>."
+			}
+		}
+	}
+}
