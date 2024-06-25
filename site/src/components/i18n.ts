@@ -4,6 +4,8 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 import ChainedBackend from 'i18next-chained-backend';
 import resourcesToBackend from 'i18next-resources-to-backend';
 
+import defaultLanguageNsLanding from './Landing/locales/en.json';
+
 // eslint-disable-next-line import/no-named-as-default-member
 i18n.use(ChainedBackend)
 	.use(LanguageDetector)
@@ -19,5 +21,7 @@ i18n.use(ChainedBackend)
 			escapeValue: false, // react already safes from xss
 		},
 	});
+
+i18n.addResourceBundle('en', 'landing', defaultLanguageNsLanding);
 
 export default i18n;
