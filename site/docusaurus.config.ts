@@ -20,7 +20,13 @@ const config: Config = {
 				// 	path: '../docs',
 				// 	include: ['*.md', '*.mdx'],
 				// },
-				blog: false,
+				blog: {
+					blogTitle: 'Linguist Translate blog',
+					blogDescription:
+						'A blog of Linguist Translate, the privacy focused translation in your browser',
+					postsPerPage: 'ALL',
+					blogSidebarCount: 0,
+				},
 			},
 		],
 	],
