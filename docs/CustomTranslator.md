@@ -8,7 +8,7 @@ All you need to do it
 
 ## Custom translators list
 
-You can find a custom translators in a [custom translators list](../modules/README.md).
+You can find a custom translators in a [custom translators list](https://github.com/translate-tools/linguist-translators).
 
 Read [Offline translation manual](./manuals/OfflineTranslation.md) to get known how to setup offline translation with Linguist.
 
