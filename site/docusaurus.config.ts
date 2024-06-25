@@ -30,6 +30,36 @@ const config: Config = {
 			},
 		],
 	],
+
+	themeConfig: {
+		image: '/screenshots/page-translation.png',
+		colorMode: {
+			defaultMode: 'light',
+			disableSwitch: true,
+			respectPrefersColorScheme: true,
+		},
+		navbar: {
+			logo: {
+				alt: 'Linguist Translate',
+				src: '/logo.svg',
+				srcDark: 'img/logo_dark.svg',
+				href: '/',
+				target: '_self',
+				width: 100,
+			},
+			items: [
+				{
+					href: 'https://github.com/translate-tools/linguist',
+					label: 'GitHub',
+					position: 'right',
+					target: '_blank',
+				},
+			],
+		},
+		footer: {
+			copyright: `Copyright © ${new Date().getFullYear()} FluidMinds team. Built with Docusaurus.`,
+		},
+	},
 } satisfies Config;
 
 export default config;
