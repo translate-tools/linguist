@@ -1,14 +1,23 @@
 import React, { PropsWithChildren, useCallback, useEffect, useState } from 'react';
 import Plausible from 'plausible-tracker';
 import { PlausibleInitOptions } from 'plausible-tracker/build/main/lib/tracker';
+import Head from '@docusaurus/Head';
 
 import { analyticsContext, IAnalyticsContext } from './useAnalyticsContext';
 
+export type AnalyticsProviderProps = PropsWithChildren<{
+	plausible: PlausibleInitOptions;
+	googleAnalytics: {
+		tagId: string;
+	};
+}>;
+
 export const AnalyticsProvider = ({
-	options,
+	plausible: plausibleOptions,
+	googleAnalytics,
 	children,
-}: PropsWithChildren<{ options: PlausibleInitOptions }>) => {
-	const [plausible] = useState(() => Plausible(options));
+}: AnalyticsProviderProps) => {
+	const [plausible] = useState(() => Plausible(plausibleOptions));
 
 	const trackEvent: IAnalyticsContext['trackEvent'] = useCallback(
 		(eventName, props) => {
@@ -51,6 +60,25 @@ export const AnalyticsProvider = ({
 
 	return (
 		<analyticsContext.Provider value={{ trackEvent }}>
+			<Head>
+				<script
+					async
+					src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalytics.tagId}`}
+				></script>
+				<script
+					dangerouslySetInnerHTML={{
+						__html: `
+						window.dataLayer = window.dataLayer || [];
+						function gtag(){dataLayer.push(arguments);}
+						gtag('js', new Date());
+
+						gtag('config', '${googleAnalytics.tagId}');
+					`
+							.replace(/\t/g, '')
+							.trim(),
+					}}
+				/>
+			</Head>
 			{children}
 		</analyticsContext.Provider>
 	);
