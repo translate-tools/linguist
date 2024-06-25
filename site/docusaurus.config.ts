@@ -15,11 +15,10 @@ const config: Config = {
 		[
 			'@docusaurus/preset-classic',
 			{
-				docs: false,
-				// docs: {
-				// 	path: '../docs',
-				// 	include: ['*.md', '*.mdx'],
-				// },
+				docs: {
+					path: '../docs',
+					include: ['{*,**/*}.md', '{*,**/*}.mdx'],
+				},
 				blog: {
 					blogTitle: 'Linguist Translate blog',
 					blogDescription:
@@ -48,6 +47,18 @@ const config: Config = {
 				width: 100,
 			},
 			items: [
+				{
+					to: '/blog',
+					label: 'Blog',
+					position: 'right',
+					target: '_self',
+				},
+				{
+					to: '/docs',
+					label: 'Docs',
+					position: 'right',
+					target: '_self',
+				},
 				{
 					href: 'https://github.com/translate-tools/linguist',
 					label: 'GitHub',
