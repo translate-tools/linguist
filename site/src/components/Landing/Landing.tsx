@@ -78,6 +78,9 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 						<Link variant="base" href="/blog">
 							{t('navigation.blog.content')}
 						</Link>
+						<Link variant="base" href="/docs">
+							{t('navigation.docs.content')}
+						</Link>
 						<Link
 							variant="base"
 							href="https://github.com/translate-tools/linguist"
