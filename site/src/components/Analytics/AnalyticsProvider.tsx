@@ -65,20 +65,20 @@ export const AnalyticsProvider = ({
 					async
 					src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalytics.tagId}`}
 				></script>
-				<script
-					dangerouslySetInnerHTML={{
-						__html: `
+			</Head>
+			<script
+				dangerouslySetInnerHTML={{
+					__html: `
 						window.dataLayer = window.dataLayer || [];
 						function gtag(){dataLayer.push(arguments);}
 						gtag('js', new Date());
 
 						gtag('config', '${googleAnalytics.tagId}');
 					`
-							.replace(/\t/g, '')
-							.trim(),
-					}}
-				/>
-			</Head>
+						.replace(/\t/g, '')
+						.trim(),
+				}}
+			/>
 			{children}
 		</analyticsContext.Provider>
 	);
