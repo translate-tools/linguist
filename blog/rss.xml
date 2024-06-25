@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>Linguist Translate Blog</title>
+        <link>https://linguister.io/blog</link>
+        <description>Linguist Translate Blog</description>
+        <lastBuildDate>Tue, 25 Jun 2024 16:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>en</language>
+        <item>
+            <title><![CDATA[Release 6.0.0]]></title>
+            <link>https://linguister.io/blog/release/6.0.0</link>
+            <guid>https://linguister.io/blog/release/6.0.0</guid>
+            <pubDate>Tue, 25 Jun 2024 16:00:00 GMT</pubDate>
+            <description><![CDATA[Manifest V3 and sandboxed translators]]></description>
+            <content:encoded><![CDATA[<p>Key changes in <a href="https://github.com/translate-tools/linguist/releases/tag/v6.0.0" target="_blank" rel="noopener noreferrer">new release</a>.</p>
+<ul>
+<li>Chrome extension moved to a Manifest v3</li>
+<li>Custom translators code now run in sandboxed iframe with no access to addon API</li>
+<li>New option to disable translation history recording <a href="https://github.com/translate-tools/linguist/issues/151" target="_blank" rel="noopener noreferrer">https://github.com/translate-tools/linguist/issues/151</a></li>
+<li>Minor bug fixes and improvements, see <a href="https://github.com/translate-tools/linguist/milestone/7?closed=1" target="_blank" rel="noopener noreferrer">milestone</a></li>
+</ul>
+<p><strong>Full Changelog</strong>: <a href="https://github.com/translate-tools/linguist/compare/v5.0.17...6.0.0" target="_blank" rel="noopener noreferrer">https://github.com/translate-tools/linguist/compare/v5.0.17...6.0.0</a></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="improved-security">Improved security<a class="hash-link" aria-label="Direct link to Improved security" title="Direct link to Improved security" href="https://linguister.io/blog/release/6.0.0#improved-security">​</a></h2>
+<p>Now custom translators executes in sandboxed context, so they no have access to addon API.</p>
+<p>Users now may use custom translators with lower trust level. Custom translator still may sent requests to any domains from your browser, and still may mine on your hardware as any other software, but custom translator can't inspect content on pages and do other things that browser extensions do.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="manifest-v3">Manifest V3<a class="hash-link" aria-label="Direct link to Manifest V3" title="Direct link to Manifest V3" href="https://linguister.io/blog/release/6.0.0#manifest-v3">​</a></h2>
+<p>A chrome <a href="https://developer.chrome.com/blog/resuming-the-transition-to-mv3/#the_phase-out_timeline" target="_blank" rel="noopener noreferrer">announced</a> they will deprecate and disable extensions with manifest v2 soon. So Linguist migrate to manifest v3 on Chrome and stay on manifest v2 on Firefox.</p>
+<p>Due to some limitations of Manifest V3, Linguist may not work on too old browsers like Chrome 109 and older.</p>]]></content:encoded>
+            <author>rob@vitonsky.net (Robert Vitonsky)</author>
+            <category>release</category>
+        </item>
+    </channel>
+</rss>
