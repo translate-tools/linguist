@@ -69,10 +69,16 @@ Help us translate Linguist into your language. Read the [internationalization gu
 
 # Donations
 
-Linguist is completely free and open-source, and it does not collect any user data to sell. You can support the project with your donations to help Linguist maintain its independence and high quality.
+Linguist is completely free and open-source, and it does not collect any user data to sell.
 
-- Bitcoin: bc1q2krassq0sa2aphkx37zn374lfjnthr5frm6s7y
-- Ethereum: 0x2463d84F46c131886CaE457412e8B6eaBc0b91a7
+You can support the project with your donations to help Linguist maintain its independence and high quality.
+
+Also, you can donate to vote with money for issues prioritization, to add some feature or fix some bug as soon as possible. Just donate and sent transaction details and your feature request or issue number to email [support@linguister.io](mailto:support@linguister.io) or right in issue comments if you wish. We will start work on your request as soon as possible, for significant donations.
+
+- Monero (XMR): 861w7WuFGecR7SMpuf7GX9BBUgGJb1Xdx8z5pCpMrKY2ZeZAzS3mwZeQeJGV5RPpu35fr5dURSm587ewpHYGzNuGKGroQnD
+- Bitcoin (BTC): bc1q2krassq0sa2aphkx37zn374lfjnthr5frm6s7y
+- Ethereum (ETH): 0x2463d84F46c131886CaE457412e8B6eaBc0b91a7
+- Tether USDT (ERC-20): 0x2463d84F46c131886CaE457412e8B6eaBc0b91a7
 
 # Supporters
 
