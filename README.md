@@ -45,11 +45,12 @@ To try it on a chromium browser, download the normal extension for Chrome.
 
 # Screenshots
 
-![](./assets/screenshots/SelectedTextTranslation.png)
-![](./assets/screenshots/FullPageTranslation.png)
-![](./assets/screenshots/TextTranslation.png)
-![](./assets/screenshots/Preferences.png)
-![](./assets/screenshots/Dictionary.png)
+See more info on https://linguister.io
+
+![](./site/static/screenshots/page-translation.png)
+![](./site/static/screenshots/text-translation.png)
+![](./site/static/screenshots/selected-text-translation.png)
+![](./site/static/screenshots/settings.png)
 
 # Development
 
