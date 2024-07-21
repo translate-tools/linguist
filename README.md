@@ -59,26 +59,19 @@ You can improve Linguist, [make issues](https://github.com/translate-tools/lingu
 
 Contribute to Linguist, see the ["help wanted" label](https://github.com/translate-tools/linguist/labels/help%20wanted) to find hot issues.
 
-# Support
-
-Do you like Linguist? Tell your friends and colleagues about it. Let's make it popular.
-
-Do you need a feature or don't like Linguist? [Make an issue](https://github.com/translate-tools/linguist/issues/new) and suggest improvements.
-
-Help us translate Linguist into your language. Read the [internationalization guide](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization) and make a pull request.
-
 # Donations
 
 Linguist is completely free, open-source, and does not collect any user data to sell.
 
 You can support the project to help it maintain independence and high quality:
 - tell others about Linguist
-- help us by trying to reproduce [unconfirmed bug reports](https://github.com/translate-tools/linguist/labels/recheck)
-- do graphic design for the software
-- help us address bugs if you know Typescript
 - [suggest](https://github.com/translate-tools/linguist/issues/new) new ideas and elegant ways to make Linguist better
+- help us translate Linguist into your language. Read the [internationalization guide](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization) and send us pull request
+- do graphic design for the software
+- help us by trying to reproduce [unconfirmed bug reports](https://github.com/translate-tools/linguist/labels/recheck)
+- help us address bugs if you know Typescript
 
-Also, you can donate us, to vote with money for goals prioritization, to add some feature or fix some bug as soon as possible. Just donate with any method below, then sent transaction details and issue number or feature request description to email [support@linguister.io](mailto:support@linguister.io) (or right in issue comments if you wish). For significant donations, we will start work on your request as soon as possible.
+Also, you can donate us, to vote with money for goals prioritization, to add some feature or fix some bug as soon as possible. Just donate with any method below, then send transaction details and issue number or feature request description to email [support@linguister.io](mailto:support@linguister.io) (or right in issue comments if you wish). For significant donations, we will start work on your request as soon as possible.
 
 - Monero (XMR): 861w7WuFGecR7SMpuf7GX9BBUgGJb1Xdx8z5pCpMrKY2ZeZAzS3mwZeQeJGV5RPpu35fr5dURSm587ewpHYGzNuGKGroQnD
 - Bitcoin (BTC): bc1q2krassq0sa2aphkx37zn374lfjnthr5frm6s7y
