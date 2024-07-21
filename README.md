@@ -75,8 +75,8 @@ Also, you can donate to us to vote with money for goal prioritization, to add so
 
 - Monero (XMR): 861w7WuFGecR7SMpuf7GX9BBUgGJb1Xdx8z5pCpMrKY2ZeZAzS3mwZeQeJGV5RPpu35fr5dURSm587ewpHYGzNuGKGroQnD
 - Bitcoin (BTC): bc1q2krassq0sa2aphkx37zn374lfjnthr5frm6s7y
-- Ethereum (ETH): 0x2463d84F46c131886CaE457412e8B6eaBc0b91a7
-- Tether USDT (ERC-20): 0x2463d84F46c131886CaE457412e8B6eaBc0b91a7
+- Ethereum (ETH), Tether USDT (ERC-20): 0x2463d84F46c131886CaE457412e8B6eaBc0b91a7
+- Tron (TRC), Tether USDT (TRC-20): TQezzyzkfMCPJRdnYxNXrUfPj3s7kDeMBL
 
 # Supporters
 
