@@ -7,11 +7,7 @@ import { translate } from '../../../requests/backend/translate';
 import { OriginalTextPopup } from './components/OriginalTextPopup/OriginalTextPopup';
 import { pageTranslatorStatsUpdated } from './requests/pageTranslatorStatsUpdated';
 
-export type PageTranslatorStats = {
-	resolved: number;
-	rejected: number;
-	pending: number;
-};
+export type PageTranslatorStats = { resolved: number; rejected: number; pending: number };
 
 function isBlockElement(element: Element) {
 	const blockTypes = ['block', 'flex', 'grid', 'table', 'table-row', 'list-item'];
@@ -32,7 +28,6 @@ export class PageTranslator {
 		rejected: 0,
 		pending: 0,
 	};
-
 	private config: PageTranslatorConfig = {};
 	private nodesTranslatorConfig: NodesTranslatorConfig = {};
 	constructor(config: NodesTranslatorConfig & PageTranslatorConfig) {
@@ -72,23 +67,20 @@ export class PageTranslator {
 			if (localContext !== this.translateContext) {
 				throw new Error('Outdated context');
 			}
-
 			localTranslateState.pending++;
 			this.translateStateUpdate();
-
+			//hscii
 			return translate(text, from, to, { priority })
 				.then((translatedText) => {
 					if (localContext === this.translateContext) {
 						localTranslateState.resolved++;
 					}
-
 					return translatedText;
 				})
 				.catch((reason) => {
 					if (localContext === this.translateContext) {
 						localTranslateState.rejected++;
 					}
-
 					throw reason;
 				})
 				.finally(() => {

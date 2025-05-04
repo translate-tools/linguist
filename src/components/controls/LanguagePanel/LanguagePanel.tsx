@@ -39,26 +39,21 @@ export const LanguagePanel: FC<LanguagePanelProps> = ({
 }) => {
 	const fromValue = from !== undefined ? from : auto ? 'auto' : languages[0];
 	const toValue = to !== undefined ? to : languages[0];
-
 	const swapLanguages = () => {
 		if (fromValue === 'auto') return;
-
 		if (swapHandler !== undefined) {
 			swapHandler({ from: toValue, to: fromValue });
 			return;
 		}
-
 		if (setFrom !== undefined && setTo !== undefined) {
 			setFrom(toValue);
 			setTo(fromValue);
 		}
 	};
-
 	const [recentLanguages, setRecentLanguages] = useState<string[]>([]);
 	useEffect(() => {
 		getRecentUsedLanguages().then(setRecentLanguages);
 	}, []);
-
 	const upLanguage = useCallback(
 		(lang: string) =>
 			addRecentUsedLanguage(lang).then(() => {
@@ -66,27 +61,20 @@ export const LanguagePanel: FC<LanguagePanelProps> = ({
 			}),
 		[],
 	);
-
 	const options = useMemo(
 		() =>
 			languages
-				.map((value) => ({
-					id: value,
-					content: getLanguageNameByCode(value),
-				}))
+				.map((value) => ({ id: value, content: getLanguageNameByCode(value) }))
 				.sort((language1, language2) => {
 					// The lowest the most used
 					const lang1UsageRate = recentLanguages.indexOf(language1.id);
 					const lang2UsageRate = recentLanguages.indexOf(language2.id);
-
 					// Move left the language with lowest index, but not -1
 					if (lang1UsageRate !== -1 || lang2UsageRate !== -1) {
 						if (lang1UsageRate === -1) return 1;
 						if (lang2UsageRate === -1) return -1;
-
 						return lang1UsageRate > lang2UsageRate ? -1 : 1;
 					}
-
 					// Sort lexicographically
 					return language1.content > language2.content
 						? 1
@@ -113,7 +101,6 @@ export const LanguagePanel: FC<LanguagePanelProps> = ({
 				setValue={useCallback(
 					(value) => {
 						if (typeof value !== 'string' || setFrom === undefined) return;
-
 						setFrom(value);
 						upLanguage(value);
 					},
@@ -139,7 +126,6 @@ export const LanguagePanel: FC<LanguagePanelProps> = ({
 				setValue={useCallback(
 					(value) => {
 						if (typeof value !== 'string' || setTo === undefined) return;
-
 						setTo(value);
 						upLanguage(value);
 					},
