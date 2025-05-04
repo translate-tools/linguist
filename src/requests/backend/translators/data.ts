@@ -12,7 +12,6 @@ export interface DBSchema extends IDB.DBSchema {
 	translators: { key: number; value: ITranslatorEntry };
 }
 type DB = IDB.IDBPDatabase<DBSchema>;
-
 let DBInstance: null | DB = null;
 const getDB = async () => {
 	const DBName = 'translators';

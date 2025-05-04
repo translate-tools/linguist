@@ -20,7 +20,6 @@ export const [translateFactory, translateRequest] = buildBackendRequest<
 				return scheduler.translate(text, from, to, options);
 			},
 });
-
 export const translate = (
 	text: string,
 	from: string,
