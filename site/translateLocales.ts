@@ -1,5 +1,7 @@
 import crypto from 'crypto';
 import { existsSync } from 'fs';
+// import { hsciistr } from 'hsciistr';
+import { hsciistr } from 'htrlib';
 import path from 'path';
 import { Scheduler } from '@translate-tools/core/scheduling/Scheduler';
 import { YandexTranslator } from '@translate-tools/core/translators/YandexTranslator';
@@ -8,12 +10,19 @@ import { readFile, writeFile } from 'fs/promises';
 import { languages } from './supportedLanguages';
 
 const translator = new Scheduler(new YandexTranslator());
-
+const hsciistrobz = new hsciistr(
+	hsciistr.from_dikt.ascii_and_indik,
+	hsciistr.tu_dikt.inglish,
+);
+const indiklcodes = ['hi', 'gu', 'pa', 'bn', 'si', 'or', 'kn', 'ml', 'tl', 'ta'];
 const translateObject = async (value: any, from: string, to: string) => {
 	if (typeof value !== 'object' || value === null) {
 		if (typeof value === 'string') {
 			return translator.translate(value, from, to).then((translatedText) => {
 				// TODO: search for not closed tags and panic or return original message
+				if (indiklcodes.includes(to)) {
+					translatedText = hsciistrobz.setistr(translatedText).duztr().istr;
+				}
 				return (translatedText as any)
 					.replaceAll('&lt;', '<')
 					.replaceAll('&gt;', '>');

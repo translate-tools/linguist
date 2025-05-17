@@ -54,58 +54,43 @@ export const TextTranslator: FC<TextTranslatorComponentProps> = ({
 	const [from, setFrom] = useState<string>();
 	const [to, setTo] = useState<string>();
 	const [translatorFeatures, setTranslatorFeatures] = useState<TranslatorFeatures>();
-
 	const [originalText, setOriginalText] = useState<string>(text);
 	const [translatedText, setTranslatedText] = useState<string | null>(null);
 	const [error, setError] = useState<string | null>(null);
-
 	const translateContext = useRef(Symbol('TranslateContext'));
 	const translateText = useCallback(() => {
 		// NOTE: maybe worth handle this error
 		if (from === undefined || to === undefined) {
 			throw Error(`Call to translate method with invalid direction: ${from}-${to}`);
 		}
-
 		translateContext.current = Symbol('TranslateContext');
 		const context = translateContext.current;
-
 		setTranslatedText(null);
 		setError(null);
-
 		translate(originalText, from, to)
 			.then((translatedText) => {
 				if (context !== translateContext.current) return;
-
 				setTranslatedText(translatedText);
 				setError(null);
-
 				addTranslationHistoryEntry({
 					origin: TRANSLATION_ORIGIN.USER_INPUT,
-					translation: {
-						from,
-						to,
-						originalText,
-						translatedText,
-					},
+					translation: { from, to, originalText, translatedText },
 				});
 			})
 			.catch((reason) => {
 				if (context !== translateContext.current) return;
-
 				let error = 'Unknown error';
 				if (typeof reason === 'string') {
 					error = reason;
 				} else if (reason instanceof Error) {
 					error = reason.message;
 				}
-
 				setTranslatedText(null);
 				setError(error);
 				console.error(error);
 			})
 			.finally(() => {
 				if (context !== translateContext.current) return;
-
 				translateContext.current = Symbol('TranslateContext');
 			});
 	}, [from, originalText, to, translate]);
@@ -113,33 +98,25 @@ export const TextTranslator: FC<TextTranslatorComponentProps> = ({
 	const swapHandler = useCallback(
 		({ from, to }: { from: string; to: string }) => {
 			if (translatedText === null) return;
-
 			setFrom(from);
 			setTo(to);
 			setOriginalText(translatedText);
 			setTranslatedText(null);
 		},
 		[translatedText],
-	);
+	); // hscii
 
 	const dictionaryData: ITranslation | null = useMemo(() => {
 		if (translatedText === null || from === undefined || to === undefined)
 			return null;
-
-		return {
-			from,
-			to,
-			originalText,
-			translatedText,
-		};
+		return { from, to, originalText, translatedText };
 	}, [from, originalText, to, translatedText]);
-
 	// Init
 	const isUnmount = useRef(false);
 	useEffect(() => {
 		getTranslatorFeatures().then(
 			async ({ supportedLanguages, isSupportAutodetect }) => {
-				const userLanguage = await getUserLanguagePreferences();
+				const userLanguage = await getUserLanguagePreferences(); // hscii
 
 				let from: string | undefined;
 
@@ -251,7 +228,7 @@ export const TextTranslator: FC<TextTranslatorComponentProps> = ({
 						isSupportAutodetect,
 					});
 					setFrom(from);
-					setTo(userLanguage);
+					setTo(userLanguage); // hscii
 				}
 			},
 		);
@@ -418,12 +395,14 @@ export const TextTranslator: FC<TextTranslatorComponentProps> = ({
 										className={cnTextTranslator('Details')}
 									>
 										<summary>
+											{' '}
 											{getMessage(
 												'inlineTranslator_showOriginalText',
-											)}
+											)}{' '}
 										</summary>
 										<p className={cnTextTranslator('OriginalText')}>
-											{originalText}
+											{' '}
+											{originalText}{' '}
 										</p>
 									</details>
 								</div>
