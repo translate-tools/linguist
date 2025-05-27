@@ -8,7 +8,7 @@ export default function Root({ children }) {
 			googleAnalytics={{ tagId: 'G-NGGDLX42RQ' }}
 			plausible={{
 				domain: 'linguister.io',
-				apiHost: 'https://pulse2.vitonsky.net',
+				apiHost: 'https://uxt.vitonsky.net',
 			}}
 		>
 			{children}
