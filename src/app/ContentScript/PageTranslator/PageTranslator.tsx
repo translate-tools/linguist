@@ -1,6 +1,5 @@
 import React from 'react';
 import { Config as NodesTranslatorConfig, NodesTranslator } from 'domtranslator';
-// import { hsciistr } from 'hsciistr';
 import { hsciistr } from 'htrlib';
 
 import { ShadowDOMContainerManager } from '../../../lib/ShadowDOMContainerManager';

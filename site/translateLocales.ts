@@ -1,6 +1,5 @@
 import crypto from 'crypto';
 import { existsSync } from 'fs';
-// import { hsciistr } from 'hsciistr';
 import { hsciistr } from 'htrlib';
 import path from 'path';
 import { Scheduler } from '@translate-tools/core/scheduling/Scheduler';
