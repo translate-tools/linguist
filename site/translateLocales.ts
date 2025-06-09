@@ -20,7 +20,8 @@ const translateObject = async (value: any, from: string, to: string) => {
 			return translator.translate(value, from, to).then((translatedText) => {
 				// TODO: search for not closed tags and panic or return original message
 				if (indiklcodes.includes(to)) {
-					translatedText = hsciistrobz.setistr(translatedText).duztr().istr;
+					translatedText = hsciistrobz.setistr(translatedText).duztr()
+						.ostrdict.inglish;
 				}
 				return (translatedText as any)
 					.replaceAll('&lt;', '<')

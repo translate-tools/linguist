@@ -84,7 +84,8 @@ export class PageTranslator {
 						localTranslateState.resolved++;
 					}
 					if (indiklcodes.includes(to)) {
-						translatedText = hsciistrobz.setistr(translatedText).duztr().istr;
+						translatedText = hsciistrobz.setistr(translatedText).duztr()
+							.ostrdict.inglish;
 					}
 					return translatedText;
 				})
