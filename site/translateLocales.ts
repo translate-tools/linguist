@@ -13,7 +13,7 @@ const hsciistrobz = new hsciistr(
 	hsciistr.from_dikt.ascii_and_indik,
 	hsciistr.tu_dikt.inglish,
 );
-const indiklcodes = ['hi', 'gu', 'pa', 'bn', 'si', 'or', 'kn', 'ml', 'tl', 'ta'];
+const indiklcodes = ['hi', 'gu', 'pa', 'bn', 'si', 'or', 'kn', 'ml', 'te', 'ta'];
 const translateObject = async (value: any, from: string, to: string) => {
 	if (typeof value !== 'object' || value === null) {
 		if (typeof value === 'string') {

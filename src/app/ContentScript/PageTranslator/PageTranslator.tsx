@@ -74,7 +74,7 @@ export class PageTranslator {
 				'or',
 				'kn',
 				'ml',
-				'tl',
+				'te',
 				'ta',
 			];
 
