@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import { useDelayCallback } from 'react-elegant-ui/esm/hooks/useDelayCallback';
 import { useImmutableCallback } from 'react-elegant-ui/esm/hooks/useImmutableCallback';
 import { hsciistr } from 'htrlib';
-import { Hsciifontpicker } from 'libhsciifp';
 import { cn } from '@bem-react/classname';
 
 import { DictionaryButton } from '../../../../components/controls/DictionaryButton/DictionaryButton';
@@ -384,7 +383,6 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 					preventFocusOnPress={isFocusOnInput}
 					mobile={isMobile}
 				/>
-				<Hsciifontpicker />
 			</div>
 			<div className={cnTextTranslator('InputContainer')}>
 				<div className={cnTextTranslator('InputContainerWrapper')}>

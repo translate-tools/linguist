@@ -12,6 +12,7 @@ import {
 	PaneItem,
 	TabsPanes,
 } from 'react-elegant-ui/esm/components/TabsPanes/TabsPanes.bundle/desktop';
+import { Hsciifontpicker } from 'libhsciifp';
 import { cn } from '@bem-react/classname';
 
 import { Button } from '../../../components/primitives/Button/Button.bundle/desktop';
@@ -298,6 +299,7 @@ export const PopupWindow: FC<PopupWindowProps> = ({
 			<div className={cnPopupWindow('Header')}>
 				<div className={cnPopupWindow('Logo')}>
 					<LogoElement />
+					<Hsciifontpicker />
 				</div>
 				<div className={cnPopupWindow('HeaderMenu')}>
 					<Button

@@ -36,7 +36,7 @@ const contentScriptRequiredTabs: IPopupWindowTab[] = [
 	},
 ];
 
-const tabsOrder = ['translatePage', 'translateText'];
+const tabsOrder = ['translatePage', 'translateText', 'Hsciifontpicker'];
 
 const PopupPage: FC<PopupPageProps> = ({ rootElement }) => {
 	const [tabs, setTabs] = useState<IPopupWindowTab[]>();
