@@ -12,9 +12,9 @@ import {
 	PaneItem,
 	TabsPanes,
 } from 'react-elegant-ui/esm/components/TabsPanes/TabsPanes.bundle/desktop';
-import { Hsciifontpicker } from 'libhsciifp';
 import { cn } from '@bem-react/classname';
 
+import { Hsciifontpicker } from '../../../components/Hsciifontpicker';
 import { Button } from '../../../components/primitives/Button/Button.bundle/desktop';
 import { Icon } from '../../../components/primitives/Icon/Icon.bundle/desktop';
 import { Loader } from '../../../components/primitives/Loader/Loader';
@@ -22,7 +22,7 @@ import { TabsMenu } from '../../../components/primitives/TabsMenu/TabsMenu.bundl
 import { isMobileBrowser } from '../../../lib/browser';
 import { getMessage } from '../../../lib/language';
 import { XResizeObserver } from '../../../lib/XResizeObserver';
-import LogoElement from '../../../res/logo-base.svg';
+// import LogoElement from '../../../res/logo-base.svg';
 import { AppConfigType } from '../../../types/runtime';
 
 import './PopupWindow.css';
@@ -298,8 +298,9 @@ export const PopupWindow: FC<PopupWindowProps> = ({
 		<div className={cnPopupWindow({ view: isMobile ? 'mobile' : undefined })}>
 			<div className={cnPopupWindow('Header')}>
 				<div className={cnPopupWindow('Logo')}>
-					<LogoElement />
+					linguist84_8aiueohcg_4xvqj
 					<Hsciifontpicker />
+					abcdefghijklmnopqrstuvwxyz__BCDGJKNQRSTZ__LYVWPF__AEHIMOUX
 				</div>
 				<div className={cnPopupWindow('HeaderMenu')}>
 					<Button
