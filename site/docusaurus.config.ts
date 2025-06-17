@@ -68,7 +68,7 @@ const config: Config = {
 			],
 		},
 		footer: {
-			copyright: `Copyright © ${new Date().getFullYear()} FluidMinds team. Built with Docusaurus.`,
+			copyright: `Copyright © ${new Date().getFullYear()} PrimeBits. Built with Docusaurus.`,
 		},
 	},
 } satisfies Config;

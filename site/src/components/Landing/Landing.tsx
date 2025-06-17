@@ -383,15 +383,13 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 					},
 				}}
 			>
-				<Text>
-					<Trans
-						t={t}
-						i18nKey="sections.createdBy.content"
-						components={[
-							<Link href="https://fluidminds.org">FluidMinds team</Link>,
-						]}
+				<Link href="https://primebits.org">
+					<Image
+						src="https://primebits.org/badges/built-by.svg"
+						maxWidth="100px"
+						alt="Created by PrimeBits"
 					/>
-				</Text>
+				</Link>
 			</HStack>
 		</VStack>
 	);
