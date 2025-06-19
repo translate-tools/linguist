@@ -10,15 +10,9 @@ export const [addTranslationFactory, addTranslation] = buildBackendRequest(
 	{
 		requestValidator: TranslationType,
 		responseValidator: type.number,
-
 		factoryHandler: () => async (translation) => {
-			const id = await addEntry({
-				translation,
-				timestamp: new Date().getTime(),
-			});
-
+			const id = await addEntry({ translation, timestamp: new Date().getTime() });
 			notifyDictionaryEntryAdd(translation);
-
 			return id;
 		},
 	},

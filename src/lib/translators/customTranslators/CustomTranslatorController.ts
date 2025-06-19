@@ -7,14 +7,8 @@ export class CustomTranslatorController extends BaseTranslator {
 	private readonly config;
 	constructor(code: string, { info, id }: { info: CustomTranslatorInfo; id?: string }) {
 		super();
-
-		this.config = {
-			code,
-			info,
-			id,
-		};
+		this.config = { code, info, id };
 	}
-
 	private translatorId: Promise<string> | null = null;
 	private init() {
 		if (this.translatorId === null) {
@@ -26,10 +20,8 @@ export class CustomTranslatorController extends BaseTranslator {
 				return id;
 			});
 		}
-
 		return this.translatorId;
 	}
-
 	public translate(...args: any[]): Promise<string> {
 		return this.init().then((translatorId) =>
 			customTranslatorsApi.call({
@@ -39,7 +31,6 @@ export class CustomTranslatorController extends BaseTranslator {
 			}),
 		);
 	}
-
 	public translateBatch(...args: any[]): Promise<string[]> {
 		return this.init().then((translatorId) =>
 			customTranslatorsApi.call({
@@ -49,11 +40,9 @@ export class CustomTranslatorController extends BaseTranslator {
 			}),
 		);
 	}
-
 	public getLengthLimit(): number {
 		return this.config.info.maxTextLength;
 	}
-
 	public getRequestsTimeout(): number {
 		return this.config.info.timeout;
 	}

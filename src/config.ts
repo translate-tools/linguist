@@ -62,15 +62,7 @@ export const defaultConfig: AppConfigType = {
 		showOriginalText: true,
 		isUseAutoForDetectLang: true,
 	},
-	popup: {
-		rememberLastTab: true,
-	},
-	history: {
-		enabled: true,
-	},
-	popupTab: {
-		pageTranslator: {
-			showCounters: true,
-		},
-	},
+	popup: { rememberLastTab: true },
+	history: { enabled: true },
+	popupTab: { pageTranslator: { showCounters: true } },
 };

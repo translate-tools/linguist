@@ -10,7 +10,6 @@ export interface OptionSection {
 	changed?: boolean;
 	error?: string;
 }
-
 export const OptionSection: FC<OptionSection> = ({
 	title,
 	description,
@@ -27,14 +26,13 @@ export const OptionSection: FC<OptionSection> = ({
 			<div className={cnOptionsPage('OptionTitle')}>{title}</div>
 			<div className={cnOptionsPage('OptionContainer')}>
 				{children}
-
 				{error !== undefined ? (
 					<div className={cnOptionsPage('OptionErrorMessage')}>{error}</div>
 				) : undefined}
-
 				{description !== undefined ? (
 					<div className={cnOptionsPage('OptionDescription')}>
-						{description}
+						{' '}
+						{description}{' '}
 					</div>
 				) : undefined}
 			</div>

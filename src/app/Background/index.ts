@@ -48,10 +48,8 @@ export class Background {
 			if (this.translateManagerPromise === null) {
 				const promiseWithControls =
 					createPromiseWithControls<TranslatorManager>();
-
 				// Set promise
 				this.translateManagerPromise = promiseWithControls;
-
 				// Clear promise
 				promiseWithControls.promise.finally(() => {
 					if (promiseWithControls === this.translateManagerPromise) {
@@ -59,17 +57,13 @@ export class Background {
 					}
 				});
 			}
-
 			return this.translateManagerPromise.promise;
 		}
-
 		return this.translateManager;
 	}
-
 	public getTTSManager() {
 		return this.ttsManager;
 	}
-
 	private ttsController: TTSController | null = null;
 	public async getTTSController() {
 		if (this.ttsController === null) {
@@ -77,10 +71,8 @@ export class Background {
 			const config = $config.getState();
 			this.ttsController = new TTSController(this.ttsManager, config.ttsModule);
 		}
-
 		return this.ttsController;
 	}
-
 	public async start() {
 		const $config = await this.config.getObservableStore();
 		const $translateManagerConfig = createSelector(
@@ -90,29 +82,22 @@ export class Background {
 				translatorModule,
 				cache,
 			}),
-			{
-				updateFilter: (update, state) => !isEqual(update, state),
-			},
+			{ updateFilter: (update, state) => !isEqual(update, state) },
 		);
-
 		// Build translators list
 		const translators: TranslatorsMap = await getTranslatorsClasses();
-
 		// Update config of translate manager
 		$translateManagerConfig.watch((config) => {
 			if (this.translateManager === null) {
 				this.translateManager = new TranslatorManager(config, translators);
-
 				// Return a scheduler instance for awaiters
 				if (this.translateManagerPromise !== null) {
 					this.translateManagerPromise.resolve(this.translateManager);
 				}
 				return;
 			}
-
 			this.translateManager.setConfig(config);
 		});
-
 		// Update TTS module
 		$config
 			.map(({ ttsModule }) => ttsModule)

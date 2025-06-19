@@ -22,15 +22,11 @@ export class TranslatorBackingWithCache extends TranslatorBacking {
 		if (dataFromStorage) {
 			return dataFromStorage;
 		}
-
 		const modelRegistry = await super.loadModelRegistery();
-
 		// Write data
 		await browser.storage.local.set({ [this.backingStorageName]: modelRegistry });
-
 		return modelRegistry;
 	}
-
 	async getModelFile(
 		part: string,
 		file: TranslationModelFileReference,
@@ -45,26 +41,21 @@ export class TranslatorBackingWithCache extends TranslatorBacking {
 		if (cachedData !== null) {
 			return [part, cachedData.buffer] as const;
 		}
-
 		// Load data
 		const result = await super.getModelFile(part, file, direction);
-
 		// Write cache
 		const buffer = result[1];
 		if (buffer !== null) {
 			await addBergamotFile({
 				name: file.name,
 				expectedSha256Hash: file.expectedSha256Hash,
-
 				type: part,
 				buffer,
 				direction,
 			});
 		}
-
 		return result;
 	}
-
 	protected createWorker = (url: string): Worker => {
 		if (isChromium()) {
 			return new OffscreenWorker(url);

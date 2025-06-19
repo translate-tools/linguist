@@ -36,27 +36,17 @@ export interface PageTranslatorProps
 		// TODO: use literals
 		MutableValue<'sitePreferences', string>,
 		MutableValue<'languagePreferences', string> {
-	/**
-	 * Features of translator module
-	 */
+	/** * Features of translator module */
 	translatorFeatures: TabData['translatorFeatures'];
-
 	hostname: string;
-
 	showCounters?: boolean;
-
 	isTranslated: boolean;
-
 	toggleTranslate: () => void;
-
 	counters: PageTranslatorStats;
-
 	isMobile?: boolean;
 }
 
-/**
- * Component represent UI for translate current page
- */
+/** * Component represent UI for translate current page */
 export const PageTranslator: FC<PageTranslatorProps> = ({
 	translatorFeatures,
 	from,
@@ -72,10 +62,8 @@ export const PageTranslator: FC<PageTranslatorProps> = ({
 	toggleTranslate,
 	isTranslated,
 	counters,
-
 	isShowOptions,
 	setIsShowOptions,
-
 	isMobile,
 }) => {
 	const actionBtnText = getMessage(
@@ -153,9 +141,7 @@ export const PageTranslator: FC<PageTranslatorProps> = ({
 			<div
 				className={cnPageTranslator(
 					'PageTranslation',
-					{
-						view: isMobile ? 'mobile' : undefined,
-					},
+					{ view: isMobile ? 'mobile' : undefined },
 					[
 						cnPageTranslator('Container', {
 							indent: isMobile ? 'vertical' : 'horizontal',
@@ -169,17 +155,18 @@ export const PageTranslator: FC<PageTranslatorProps> = ({
 					size={isMobile ? 'l' : 'm'}
 					className={cnPageTranslator('TranslateButton', { fill: isMobile })}
 				>
-					{actionBtnText}
+					{' '}
+					{actionBtnText}{' '}
 				</Button>
 				<div className={cnPageTranslator('LangPanel')}>
 					<LanguagePanel
 						auto={translatorFeatures.isSupportAutodetect}
-						languages={translatorFeatures.supportedLanguages}
 						from={from}
-						to={to}
 						setFrom={setFrom}
-						setTo={setTo}
 						mobile={isMobile}
+						languages={translatorFeatures.supportedLanguages}
+						to={to}
+						setTo={setTo}
 					/>
 				</div>
 			</div>
@@ -202,7 +189,8 @@ export const PageTranslator: FC<PageTranslatorProps> = ({
 						</h4>
 						<div className={cnPageTranslator('OptionBody')}>
 							<span className={cnPageTranslator('OptionTitle')}>
-								{getMessage('pageTranslator_option_autoTranslate')}
+								{' '}
+								{getMessage('pageTranslator_option_autoTranslate')}{' '}
 							</span>
 							<span className={cnPageTranslator('OptionValue')}>
 								<Select
@@ -238,13 +226,15 @@ export const PageTranslator: FC<PageTranslatorProps> = ({
 			{showCounters ? (
 				<>
 					<h4 className={cnPageTranslator('Header')}>
-						{getMessage('pageTranslator_translationReport')}
+						{' '}
+						{getMessage('pageTranslator_translationReport')}{' '}
 					</h4>
 					<div className={cnPageTranslator('CounterContainer')}>
 						<span className={cnPageTranslator('Counter')}>
 							{getMessage('pageTranslator_translationReport_resolve')}
 							<span className={cnPageTranslator('CounterContent')}>
-								{counters !== undefined ? counters.resolved : 0}
+								{' '}
+								{counters !== undefined ? counters.resolved : 0}{' '}
 							</span>
 						</span>
 						<span className={cnPageTranslator('Counter')}>
@@ -262,7 +252,6 @@ export const PageTranslator: FC<PageTranslatorProps> = ({
 					</div>
 				</>
 			) : (
-				// Placeholder
 				<div className={cnPageTranslator('Placeholder')} />
 			)}
 		</div>

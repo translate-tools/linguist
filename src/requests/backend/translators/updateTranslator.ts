@@ -9,16 +9,11 @@ import { TranslatorEntry } from './data';
 export const [updateTranslatorFactory, updateTranslator] = buildBackendRequest(
 	'updateTranslator',
 	{
-		requestValidator: type.type({
-			id: type.number,
-			translator: TranslatorEntry,
-		}),
-
+		requestValidator: type.type({ id: type.number, translator: TranslatorEntry }),
 		factoryHandler:
 			() =>
 				async ({ id, translator }) => {
 					await validateTranslatorCode(translator.code);
-
 					await db.updateTranslator(id, translator);
 					await applyTranslators();
 				},

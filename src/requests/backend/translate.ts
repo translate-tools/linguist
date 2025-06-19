@@ -17,11 +17,9 @@ export const [translateFactory, translateRequest] = buildBackendRequest<
 			async ({ text, from, to, options }) => {
 				const translateManager = await backgroundContext.getTranslateManager();
 				const scheduler = translateManager.getScheduler();
-
 				return scheduler.translate(text, from, to, options);
 			},
 });
-
 export const translate = (
 	text: string,
 	from: string,

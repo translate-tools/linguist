@@ -10,12 +10,10 @@ export const [deleteTranslatorFactory, deleteTranslator] = buildBackendRequest(
 	'deleteTranslator',
 	{
 		requestValidator: type.number,
-
 		factoryHandler: () => async (translatorId) => {
 			// Delete translator
 			await db.deleteTranslator(translatorId);
 			await applyTranslators();
-
 			// Delete translator cache
 			const cache = new TranslatorsCacheStorage(
 				formatToCustomTranslatorId(translatorId),

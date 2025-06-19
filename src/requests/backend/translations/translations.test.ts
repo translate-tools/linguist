@@ -23,7 +23,6 @@ test('translations data CRUD operations', async () => {
 				translatedText: 'text ' + (index + 1),
 			},
 		}));
-
 	// TODO: report to `fake-indexeddb` bug about concurrent inserting problems
 	const identifiers: number[] = [];
 	for (const translation of translations) {
@@ -83,11 +82,9 @@ describe('translations data migrations', () => {
 
 	test('migrate from version 1 to latest', async () => {
 		await initDBWithVersion1();
-
 		const entriesWithKeys = await translationsStore.getEntries(undefined, undefined, {
 			order: 'asc',
 		});
-
 		entriesWithKeys.forEach(({ data }, index) => {
 			const mappedData = {
 				date: data.timestamp,

@@ -1,6 +1,5 @@
 const { writeFileSync, existsSync, readFileSync } = require('fs');
 const path = require('path');
-
 const { getLocaleFilenames, getLocaleObject } = require('.');
 
 let gptTranslator = null;
@@ -8,11 +7,7 @@ const getGPTTranslator = async () => {
 	if (gptTranslator === null) {
 		gptTranslator = new Promise(async (res) => {
 			const { ChatGPTUtils } = await import('../../ChatGPT.mjs');
-
-			const languageNames = new Intl.DisplayNames(['en'], {
-				type: 'language',
-			});
-
+			const languageNames = new Intl.DisplayNames(['en'], { type: 'language' });
 			const translator = (text, { from, to }) =>
 				`Translate this text below from ${languageNames.of(
 					from,
@@ -22,15 +17,12 @@ const getGPTTranslator = async () => {
 			res(new ChatGPTUtils(translator));
 		});
 	}
-
 	return gptTranslator;
 };
-
 const descriptionsDir = path.resolve(
 	path.join(__dirname, '../../../assets/stores/description'),
 );
 const getDescriptionFilenameByCode = (code) => path.join(descriptionsDir, code + '.md');
-
 const translateDescription = async (descriptionSourceLanguage, descriptionLanguage) => {
 	const writeUpdates = (lang, data) => {
 		writeFileSync(getDescriptionFilenameByCode(lang), data);
@@ -113,7 +105,6 @@ const translateDescriptions = async () => {
 				console.log(`Skip "${lang}", because it is maintained language`);
 				return false;
 			}
-
 			if (process.env.STRATEGY === 'ADD_NEW') {
 				const filePath = getDescriptionFilenameByCode(lang);
 				const isFileExists = existsSync(filePath);
@@ -121,10 +112,8 @@ const translateDescriptions = async () => {
 					console.log(`Skip "${lang}", because file exists (strategy ADD_NEW)`);
 					return false;
 				}
-
 				return true;
 			}
-
 			return true;
 		});
 

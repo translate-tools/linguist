@@ -15,9 +15,7 @@ import { ITranslation } from '../../../types/translation/Translation';
 
 export const useDictionary = (translation: ITranslation | null) => {
 	const { from, to, originalText, translatedText } = translation || {};
-
 	const [dictionaryEntryId, setDictionaryEntryId] = useState<null | number>(null);
-
 	const getDictionaryEntryId = useCallback(async () => {
 		if (
 			from === undefined ||
@@ -26,7 +24,6 @@ export const useDictionary = (translation: ITranslation | null) => {
 			translatedText === undefined
 		)
 			return null;
-
 		return findTranslation({
 			from,
 			to,
@@ -34,17 +31,13 @@ export const useDictionary = (translation: ITranslation | null) => {
 			translatedText: translatedText.trim(),
 		});
 	}, [from, to, originalText, translatedText]);
-
 	const [isInDictionary, setIsInDictionary] = useState(dictionaryEntryId !== null);
-
 	const update = useImmutableCallback(() => {
 		getDictionaryEntryId().then(setDictionaryEntryId);
 	}, [getDictionaryEntryId]);
-
 	const toggle = useImmutableCallback(() => {
 		const nextState = !isInDictionary;
 		setIsInDictionary(nextState);
-
 		if (nextState) {
 			if (dictionaryEntryId === null) {
 				(async () => {
@@ -53,7 +46,6 @@ export const useDictionary = (translation: ITranslation | null) => {
 						setDictionaryEntryId(id);
 						return;
 					}
-
 					if (
 						from === undefined ||
 						to === undefined ||
@@ -63,7 +55,6 @@ export const useDictionary = (translation: ITranslation | null) => {
 						setDictionaryEntryId(null);
 						return;
 					}
-
 					addTranslation({
 						from,
 						to,
@@ -92,42 +83,33 @@ export const useDictionary = (translation: ITranslation | null) => {
 	useEffect(() => {
 		getDictionaryEntryId().then(setDictionaryEntryId);
 	}, [getDictionaryEntryId]);
-
 	useEffect(() => {
 		setIsInDictionary(dictionaryEntryId !== null);
 	}, [dictionaryEntryId]);
-
 	// Observe state
 	useEffect(() => {
 		// TODO: implement observing for content scripts
 		// Don't observe state for content scripts
 		if (!isExtensionContext) return;
-
 		const cleanupFunctions: (() => any)[] = [];
-
 		if (dictionaryEntryId === null) {
 			const cleanup = onDictionaryEntryAdd((newTranslation) => {
 				if (translation === null) return;
-
 				const isEqualData = isEqual(newTranslation, translation);
 				if (isEqualData) {
 					update();
 				}
 			});
-
 			cleanupFunctions.push(cleanup);
 		} else {
 			const cleanupOnDelete = onDictionaryEntryDelete(dictionaryEntryId, update);
 			cleanupFunctions.push(cleanupOnDelete);
-
 			const cleanupOnClear = onClearDictionary(update);
 			cleanupFunctions.push(cleanupOnClear);
 		}
-
 		return () => {
 			cleanupFunctions.map((fn) => fn());
 		};
 	}, [dictionaryEntryId, translation, update]);
-
 	return { has: isInDictionary, toggle, update };
 };

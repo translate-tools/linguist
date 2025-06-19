@@ -6,40 +6,29 @@ export const isTextsContainsSubstring = (
 	ignoreCase: boolean = true,
 ) => {
 	const textToSearch = ignoreCase ? substring.toLowerCase() : substring;
-
 	const isSomeTextMatch = texts.some((text) => {
 		const transformedText = ignoreCase ? text.toLowerCase() : text;
 		return transformedText.includes(textToSearch);
 	});
-
 	return isSomeTextMatch;
 };
-
-/**
- * Return the same string but first letter in uppercase
- */
+/** * Return the same string but first letter in uppercase */
 export const capitalizeString = (string: string) =>
 	string[0].toUpperCase() + string.slice(1);
-
-/**
- * Check second object contains all properties of first object with equal values
- */
+/** * Check second object contains all properties of first object with equal values */
 export const isEqualIntersection = (obj1: any, obj2: any): boolean => {
 	// Compare primitive values
 	if (typeof obj1 !== 'object' && typeof obj2 !== 'object') {
 		return obj1 === obj2;
 	}
-
 	const xIsArray = Array.isArray(obj1);
 	const yIsArray = Array.isArray(obj2);
-
 	// Compare arrays
 	if (xIsArray && yIsArray) {
 		return isEqual(obj1, obj2);
 	} else if (xIsArray || yIsArray) {
 		return false;
 	}
-
 	// Compare objects
 	return Object.keys(obj1).every((key) => isEqualIntersection(obj1[key], obj2[key]));
 };
