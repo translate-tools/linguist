@@ -13,43 +13,29 @@ export type ITranslationEntry = {
 	timestamp: number;
 	translator?: string;
 };
-
 export type ITranslationEntryWithKey = { key: number; data: ITranslationEntry };
-
 export const TranslationEntryType = type.intersection([
-	type.type({
-		translation: TranslationType,
-		timestamp: type.number,
-	}),
-	type.partial({
-		translator: type.union([type.string, type.undefined]),
-	}),
+	type.type({ translation: TranslationType, timestamp: type.number }),
+	type.partial({ translator: type.union([type.string, type.undefined]) }),
 ]);
-
 export const TranslationEntryWithKeyType = type.type({
 	key: type.number,
 	data: TranslationEntryType,
 });
-
 export const translationsStoreName = 'translations';
-
 const translationsIDBPlan = getIDBPlan(IDBTranslationSchemes);
-
 let DBInstance: null | IDB.IDBPDatabase<
 	ExtractSchemeFromIDBConstructor<typeof translationsIDBPlan>
 > = null;
 const getDB = async () => {
 	const DBName = 'translations';
-
 	if (DBInstance === null) {
 		DBInstance = await IDB.openDB(DBName, translationsIDBPlan.latestVersion, {
 			upgrade: translationsIDBPlan.upgrade,
 		});
 	}
-
 	return DBInstance;
 };
-
 export const closeDB = () => {
 	if (DBInstance !== null) {
 		DBInstance.close();
@@ -108,13 +94,9 @@ export const getEntries = async (
 	options?: { order: 'desc' | 'asc' },
 ) => {
 	const { order = 'desc' } = options ?? {};
-
 	const db = await getDB();
-
 	const transaction = await db.transaction(translationsStoreName, 'readonly');
-
 	const entries: ITranslationEntryWithKey[] = [];
-
 	let isJumped = false;
 	let counter = 0;
 	const startCursor = await transaction.store.openCursor(
@@ -129,20 +111,13 @@ export const getEntries = async (
 				isJumped = true;
 				continue;
 			}
-
 			// Stop by limit
 			if (limit !== undefined && ++counter > limit) break;
-
 			// Add entry
-			entries.push({
-				key: cursor.primaryKey,
-				data: cursor.value,
-			});
+			entries.push({ key: cursor.primaryKey, data: cursor.value });
 		}
 	}
-
 	await transaction.done;
-
 	return entries;
 };
 
@@ -156,7 +131,6 @@ export const findEntry = async (entryPropsToSearch: DeepPartial<ITranslationEntr
 	if (originalText === undefined) {
 		throw new Error('Parameter `originalText` is required to search');
 	}
-
 	// TODO: search not only by index
 	// Find
 	const index = await transaction
@@ -164,18 +138,12 @@ export const findEntry = async (entryPropsToSearch: DeepPartial<ITranslationEntr
 		.index('originalText');
 	for await (const cursor of index.iterate(originalText)) {
 		const currentEntry = cursor.value;
-
 		const isMatchEntryProps = isEqualIntersection(entryPropsToSearch, currentEntry);
 		if (isMatchEntryProps) {
-			result = {
-				key: cursor.primaryKey,
-				data: currentEntry,
-			};
+			result = { key: cursor.primaryKey, data: currentEntry };
 			break;
 		}
 	}
-
 	await transaction.done;
-
 	return result;
 };

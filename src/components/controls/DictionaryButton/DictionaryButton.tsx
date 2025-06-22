@@ -11,7 +11,6 @@ export const DictionaryButton: FC<{ translation: ITranslation | null }> = ({
 	translation,
 }) => {
 	const dictionary = useDictionary(translation);
-
 	return (
 		<Button
 			view="clear"

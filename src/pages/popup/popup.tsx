@@ -26,10 +26,7 @@ interface PopupPageProps {
 }
 
 const baseTabs: IPopupWindowTab[] = [
-	{
-		id: 'translateText',
-		component: TextTranslatorTab,
-	},
+	{ id: 'translateText', component: TextTranslatorTab },
 ];
 
 const contentScriptRequiredTabs: IPopupWindowTab[] = [
@@ -39,7 +36,7 @@ const contentScriptRequiredTabs: IPopupWindowTab[] = [
 	},
 ];
 
-const tabsOrder = ['translatePage', 'translateText'];
+const tabsOrder = ['translatePage', 'translateText', 'Hsciifontpicker'];
 
 const PopupPage: FC<PopupPageProps> = ({ rootElement }) => {
 	const [tabs, setTabs] = useState<IPopupWindowTab[]>();
@@ -92,7 +89,6 @@ const PopupPage: FC<PopupPageProps> = ({ rootElement }) => {
 	// Init
 	useEffect(() => {
 		const tabs: IPopupWindowTab[] = [];
-
 		Promise.all([
 			// Contentscript may be not available, it's ok for special pages
 			pingClient({ timeout: 200 }).then((isSuccess) => {
@@ -100,18 +96,14 @@ const PopupPage: FC<PopupPageProps> = ({ rootElement }) => {
 					tabs.push(...contentScriptRequiredTabs);
 				}
 			}),
-
 			// Background is required
 			pingBackend({ timeout: 1000 }).then((isSuccess) => {
 				if (!isSuccess) {
 					throw new Error(getMessage('common_bgUnavailable'));
 				}
-
 				tabs.push(...baseTabs);
-
 				// Set config
 				getConfig().then(setConfig);
-
 				// Set features
 				getTranslatorFeatures().then(setTranslatorFeatures);
 			}),
@@ -121,7 +113,6 @@ const PopupPage: FC<PopupPageProps> = ({ rootElement }) => {
 				const sortedTabs = tabs.sort(
 					(a, b) => tabsOrder.indexOf(a.id) - tabsOrder.indexOf(b.id),
 				);
-
 				setTabs(sortedTabs);
 			})
 			.catch((reason) => {
@@ -137,10 +128,8 @@ const PopupPage: FC<PopupPageProps> = ({ rootElement }) => {
 	useEffect(() => {
 		// Skip pre init state
 		if (tabs === undefined || config === undefined) return;
-
 		const firstTabId = tabs[0].id;
 		const tabsHash = getTabsHash();
-
 		if (!config.popup.rememberLastTab || tabsHash === null) {
 			setActiveTabProxy(firstTabId);
 		} else {
@@ -157,9 +146,7 @@ const PopupPage: FC<PopupPageProps> = ({ rootElement }) => {
 			});
 		}
 	}, [config, getTabsHash, popupStorage, setActiveTabProxy, tabs]);
-
 	const minWidth = useMemo(() => (isMobileBrowser() ? undefined : 450), []);
-
 	return (
 		<PopupWindow
 			rootElement={rootElement}
@@ -173,16 +160,13 @@ const PopupPage: FC<PopupPageProps> = ({ rootElement }) => {
 		/>
 	);
 };
-
 function renderPage() {
 	const rootElement = document.body.querySelector('#root');
 	if (rootElement !== null && rootElement instanceof HTMLElement) {
 		ReactDOM.render(<PopupPage rootElement={rootElement} />, rootElement);
 	}
 }
-
 configureRootTheme({ theme, root: document.documentElement });
-
 // For universal render
 if (document.readyState == 'loading') {
 	document.addEventListener('DOMContentLoaded', renderPage);

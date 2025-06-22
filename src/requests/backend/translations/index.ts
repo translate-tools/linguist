@@ -1,5 +1,4 @@
 // TODO: rework to use events generated on `browser.runtime.getBackgroundPage()`
-
 import { ITranslation } from '../../../types/translation/Translation';
 import { addRequestHandler, sendBackgroundRequest } from '../../utils';
 
@@ -19,7 +18,6 @@ const ignoreError = (error: any) => {
 			console.log('IGNORE', error);
 			return;
 		}
-
 		throw error;
 	}
 };

@@ -82,3 +82,7 @@ Also, you can donate to us to vote with money for goal prioritization, to add so
 # Supporters
 
 ![](./assets/jb_beam.svg)
+
+# others
+[synonyms](https://docs.google.com/spreadsheets/d/1NatLQlQGA0nqk_cqnY2rdfeQDwZk7ARax6DFz1QnQgA/edit?usp=sharing)
+

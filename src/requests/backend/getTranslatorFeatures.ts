@@ -10,7 +10,6 @@ export const [getTranslatorFeaturesFactory, getTranslatorFeatures] = buildBacken
 			supportedLanguages: ArrayOfStrings,
 			isSupportAutodetect: type.boolean,
 		}),
-
 		factoryHandler:
 			({ backgroundContext }) =>
 				async () => {

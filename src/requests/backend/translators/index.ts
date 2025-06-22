@@ -5,25 +5,12 @@ import { getCustomTranslatorClass } from '../../../lib/translators/customTransla
 
 import { getTranslators } from './data';
 
-export type CustomTranslator = {
-	id: number;
-	name: string;
-	code: string;
-};
-
-/**
- * Format custom translator unique id as key to use with another translators
- */
+export type CustomTranslator = { id: number; name: string; code: string };
+/** * Format custom translator unique id as key to use with another translators */
 export const formatToCustomTranslatorId = (id: number) => '#' + id;
-
-/**
- * Detect custom translator id signature
- */
+/** * Detect custom translator id signature */
 export const isCustomTranslatorId = (id: string) => id.startsWith('#');
-
-/**
- * Return map with all available translators, where keys is translators id
- */
+/** * Return map with all available translators, where keys is translators id */
 export const getTranslatorsClasses = async (): Promise<TranslatorsMap> => {
 	const translatorsMap: Record<string, TranslatorConstructor> = {
 		...embeddedTranslators,
@@ -59,6 +46,5 @@ export const getTranslatorsClasses = async (): Promise<TranslatorsMap> => {
 			);
 		}
 	}
-
 	return translatorsMap;
 };
