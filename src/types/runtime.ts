@@ -45,12 +45,6 @@ export const AppConfig = type.type({
 	language: type.string,
 	translatorModule: type.string,
 	ttsModule: type.string,
-	appIcon: type.union([
-		StringLiteralType('auto'),
-		StringLiteralType('dark'),
-		StringLiteralType('light'),
-		StringLiteralType('color'),
-	]),
 	scheduler: type.type({
 		useCache: type.boolean,
 		translateRetryAttemptLimit: type.number,

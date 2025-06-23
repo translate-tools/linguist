@@ -7,10 +7,9 @@ import { ConfigStorage, ObservableAsyncStorage } from '../ConfigStorage';
 import { ConfigStorageMigration } from '../ConfigStorage.migrations';
 import configVersion1 from './config-v1.json';
 import configVersion3 from './config-v3.json';
-import configVersion6 from './config-v6.json';
+import latestConfigSample from './config-v8.json';
 
-const latestVersion = 6;
-const latestConfigSample = configVersion6;
+const latestVersion = 8;
 
 describe('config migrations', () => {
 	beforeAll(clearAllMocks);

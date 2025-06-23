@@ -139,6 +139,28 @@ const migrations: Migration[] = [
 			// Empty migration, to bump migration number and to trigger hook for repair config
 		},
 	},
+	{
+		version: 8,
+		async migrate() {
+			const storageName = 'appConfig';
+
+			let { [storageName]: actualData } = await browser.storage.local.get(
+				storageName,
+			);
+			if (typeof actualData !== 'object') {
+				actualData = {};
+			}
+
+			const updatedConfig = {
+				...actualData,
+			};
+
+			delete updatedConfig['appIcon'];
+
+			// Write data
+			await browser.storage.local.set({ [storageName]: updatedConfig });
+		},
+	},
 ];
 
 export const ConfigStorageMigration = createMigrationTask(migrations, {
