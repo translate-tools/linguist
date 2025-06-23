@@ -9,7 +9,6 @@ export const DEFAULT_TTS = 'google';
 export const defaultConfig: AppConfigType = {
 	translatorModule: DEFAULT_TRANSLATOR,
 	ttsModule: DEFAULT_TTS,
-	appIcon: 'auto',
 	language: getUserLanguage(),
 	scheduler: {
 		useCache: true,

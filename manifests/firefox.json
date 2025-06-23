@@ -7,15 +7,8 @@
 		"scripts": ["background-script.js"]
 	},
 	"browser_action": {
-		"theme_icons": [
-			{
-				"light": "static/logo/logo-icon-simple-light.png",
-				"dark": "static/logo/logo-icon-simple-dark.png",
-				"size": 128
-			}
-		],
 		"default_popup": "pages/popup/popup.html",
 		"default_title": "__MSG_ext_name__",
-		"default_icon": "static/logo/logo-icon-simple-dark.png"
+		"default_icon": "static/logo.png"
 	}
 }

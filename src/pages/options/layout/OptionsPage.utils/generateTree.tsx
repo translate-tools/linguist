@@ -55,18 +55,6 @@ export const generateTree = ({
 							),
 					},
 				},
-				{
-					title: getMessage('settings_option_appIcon'),
-					description: getMessage('settings_option_appIcon_desc'),
-					path: 'appIcon',
-					optionContent: {
-						type: 'SelectList',
-						options: ['auto', 'dark', 'light', 'color'].map((id) => ({
-							id,
-							content: getMessage(`settings_option_appIcon_item_${id}`),
-						})),
-					},
-				},
 			],
 		},
 		{
