@@ -57,19 +57,24 @@ export class TextTranslatorStorage {
 			throw new TypeError('Cant merge with null');
 		}
 
-		const mergedData = { ...actualData, ...data } as TextTranslatorData;
-
-		return this.setData(mergedData);
+		await this.setData({
+			...actualData,
+			...data,
+		} as TextTranslatorData);
 	};
 
-	public clear = async () => this.setData(null);
+	public clear = async () => {
+		await this.setData(null);
+	};
 
 	public forgetText = async () => {
 		const data = await this.getData();
 
-		if (data !== null) {
-			data.translate = null;
-			await this.setData(data);
-		}
+		if (data === null) return;
+
+		await this.setData({
+			...data,
+			translate: null,
+		});
 	};
 }
