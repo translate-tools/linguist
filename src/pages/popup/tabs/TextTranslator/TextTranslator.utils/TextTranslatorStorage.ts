@@ -53,9 +53,7 @@ export class TextTranslatorStorage {
 		const actualData = await this.getData();
 
 		// Protect from null
-		if (typeof actualData === null) {
-			throw new TypeError('Cant merge with null');
-		}
+		if (actualData === null) throw new TypeError('Cant merge with null');
 
 		await this.setData({
 			...actualData,
