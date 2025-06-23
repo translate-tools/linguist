@@ -3,7 +3,6 @@ import browser from 'webextension-polyfill';
 
 import { defaultConfig } from '../config';
 import { isBackgroundContext, isChromium, isFirefox } from '../lib/browser';
-import { AppThemeControl } from '../lib/browser/AppThemeControl';
 import { getAllTabs } from '../lib/browser/tabs';
 import { TextTranslatorStorage } from '../pages/popup/tabs/TextTranslator/TextTranslator.utils/TextTranslatorStorage';
 import { clearCache } from '../requests/backend/clearCache';
@@ -129,14 +128,6 @@ export class App {
 		$appConfig.watch((config) => {
 			sendAppConfigUpdateEvent(config);
 		});
-
-		// Update icon
-		const appThemeControl = new AppThemeControl();
-		$appConfig
-			.map((config) => config.appIcon)
-			.watch((appIcon) => {
-				appThemeControl.setAppIconPreferences(appIcon);
-			});
 
 		// Clear cache while disable
 		$appConfig
