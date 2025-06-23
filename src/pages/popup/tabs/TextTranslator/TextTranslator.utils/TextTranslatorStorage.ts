@@ -34,11 +34,9 @@ export class TextTranslatorStorage {
 		const { [storeName]: tabData } = await browser.storage.local.get(storeName);
 
 		const { defaultData } = this;
-		if (tabData !== undefined) {
-			return tryDecode(storageSignature, tabData, defaultData);
-		} else {
-			return defaultData;
-		}
+		if (tabData === undefined) return defaultData;
+
+		return tryDecode(storageSignature, tabData, defaultData);
 	};
 
 	public setData = async (data: TextTranslatorData) => {
@@ -53,23 +51,26 @@ export class TextTranslatorStorage {
 		const actualData = await this.getData();
 
 		// Protect from null
-		if (typeof actualData === null) {
-			throw new TypeError('Cant merge with null');
-		}
+		if (actualData === null) throw new TypeError('Cant merge with null');
 
-		const mergedData = { ...actualData, ...data } as TextTranslatorData;
-
-		return this.setData(mergedData);
+		await this.setData({
+			...actualData,
+			...data,
+		} as TextTranslatorData);
 	};
 
-	public clear = async () => this.setData(null);
+	public clear = async () => {
+		await this.setData(null);
+	};
 
 	public forgetText = async () => {
 		const data = await this.getData();
 
-		if (data !== null) {
-			data.translate = null;
-			this.setData(data);
-		}
+		if (data === null) return;
+
+		await this.setData({
+			...data,
+			translate: null,
+		});
 	};
 }
