@@ -34,11 +34,9 @@ export class TextTranslatorStorage {
 		const { [storeName]: tabData } = await browser.storage.local.get(storeName);
 
 		const { defaultData } = this;
-		if (tabData !== undefined) {
-			return tryDecode(storageSignature, tabData, defaultData);
-		} else {
-			return defaultData;
-		}
+		if (tabData === undefined) return defaultData;
+
+		return tryDecode(storageSignature, tabData, defaultData);
 	};
 
 	public setData = async (data: TextTranslatorData) => {
