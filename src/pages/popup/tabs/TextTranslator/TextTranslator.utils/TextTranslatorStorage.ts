@@ -69,7 +69,7 @@ export class TextTranslatorStorage {
 
 		if (data !== null) {
 			data.translate = null;
-			this.setData(data);
+			await this.setData(data);
 		}
 	};
 }
