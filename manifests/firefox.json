@@ -7,13 +7,6 @@
 		"scripts": ["background-script.js"]
 	},
 	"browser_action": {
-		"theme_icons": [
-			{
-				"light": "static/logo.png",
-				"dark": "static/logo.png",
-				"size": 128
-			}
-		],
 		"default_popup": "pages/popup/popup.html",
 		"default_title": "__MSG_ext_name__",
 		"default_icon": "static/logo.png"
