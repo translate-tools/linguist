@@ -1,7 +1,7 @@
-import { isMobileBrowser } from './lib/browser';
-import { getUserLanguage } from './lib/language';
+import { isMobileBrowser } from '../lib/browser';
+import { getUserLanguage } from '../lib/language';
+import { AppConfigType } from '../types/runtime';
 import noTranslateSelectors from './no-translate-selectors.txt';
-import { AppConfigType } from './types/runtime';
 
 export const DEFAULT_TRANSLATOR = 'GoogleTranslator';
 export const DEFAULT_TTS = 'google';
