@@ -138,7 +138,17 @@ export class PageTranslator {
 							// Only listed attributes will be translated
 							translatableAttributes: this.config.translatableAttributes,
 							// Any elements not included in list will be translated
-							ignoredSelectors: this.config.ignoredTags,
+							ignoredSelectors: (this.config.ignoredTags ?? []).filter(
+								(selector) => {
+									// Skip comments
+									if (selector.startsWith('!')) return false;
+
+									// Skip empty strings
+									if (selector.trim().length === 0) return false;
+
+									return true;
+								},
+							),
 						}),
 					},
 				),
