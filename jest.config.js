@@ -24,5 +24,9 @@ module.exports = {
 		'./test/setupFiles/webextension.js',
 	],
 
+	transform: {
+		'\\.txt$': '<rootDir>/test/jest-transform-txt.js',
+	},
+
 	modulePathIgnorePatterns: ['<rootDir>/thirdparty/'],
 };
