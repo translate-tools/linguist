@@ -175,11 +175,16 @@ const migrations: Migration[] = [
 				actualData = {};
 			}
 
+			// Delete deprecated option
+			const pageTranslatorConfig = actualData?.pageTranslator ?? {};
+			delete pageTranslatorConfig['ignoredTags'];
+
 			const updatedConfig = {
 				...actualData,
 				pageTranslator: {
-					...actualData?.pageTranslator,
-					ignoredTags: noTranslateSelectors.split('\n'),
+					...pageTranslatorConfig,
+					// Set new default
+					excludeSelectors: noTranslateSelectors.split('\n'),
 				},
 			};
 

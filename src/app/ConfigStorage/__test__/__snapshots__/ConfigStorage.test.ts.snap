@@ -12,7 +12,7 @@ exports[`config migrations migrate config v0 to latest version 1`] = `
   "pageTranslator": {
     "detectLanguageByContent": true,
     "enableContextMenu": false,
-    "ignoredTags": [
+    "excludeSelectors": [
       "! Basic tags",
       "meta",
       "link",
@@ -132,7 +132,7 @@ exports[`config migrations race condition detection Detection race conditions. A
   "pageTranslator": {
     "detectLanguageByContent": true,
     "enableContextMenu": false,
-    "ignoredTags": [
+    "excludeSelectors": [
       "! Basic tags",
       "meta",
       "link",
@@ -252,7 +252,7 @@ exports[`config migrations race condition detection Detection race conditions. A
   "pageTranslator": {
     "detectLanguageByContent": true,
     "enableContextMenu": false,
-    "ignoredTags": [
+    "excludeSelectors": [
       "! Basic tags",
       "meta",
       "link",
@@ -372,7 +372,7 @@ exports[`config migrations race condition detection Detection race conditions. A
   "pageTranslator": {
     "detectLanguageByContent": true,
     "enableContextMenu": false,
-    "ignoredTags": [
+    "excludeSelectors": [
       "! Basic tags",
       "meta",
       "link",
@@ -492,7 +492,7 @@ exports[`config migrations race condition detection Detection race conditions. A
   "pageTranslator": {
     "detectLanguageByContent": true,
     "enableContextMenu": false,
-    "ignoredTags": [
+    "excludeSelectors": [
       "! Basic tags",
       "meta",
       "link",
@@ -612,7 +612,7 @@ exports[`config migrations race condition detection Detection race conditions. A
   "pageTranslator": {
     "detectLanguageByContent": true,
     "enableContextMenu": false,
-    "ignoredTags": [
+    "excludeSelectors": [
       "! Basic tags",
       "meta",
       "link",

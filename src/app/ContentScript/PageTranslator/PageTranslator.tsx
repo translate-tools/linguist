@@ -31,7 +31,10 @@ function isBlockElement(element: Element) {
 type PageTranslatorConfig = Partial<
 	Pick<
 		AppConfigType['pageTranslator'],
-		'originalTextPopup' | 'translatableAttributes' | 'ignoredTags' | 'lazyTranslate'
+		| 'originalTextPopup'
+		| 'translatableAttributes'
+		| 'excludeSelectors'
+		| 'lazyTranslate'
 	>
 >;
 
@@ -134,7 +137,7 @@ export class PageTranslator {
 							// Only listed attributes will be translated
 							attributesList: this.config.translatableAttributes,
 							// Any elements not included in list will be translated
-							ignoredSelectors: (this.config.ignoredTags ?? []).filter(
+							ignoredSelectors: (this.config.excludeSelectors ?? []).filter(
 								(selector) => {
 									// Skip comments
 									if (selector.startsWith('!')) return false;

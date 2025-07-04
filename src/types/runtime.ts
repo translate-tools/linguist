@@ -83,7 +83,7 @@ export const AppConfig = type.type({
 		]),
 	}),
 	pageTranslator: type.type({
-		ignoredTags: ArrayOfStrings,
+		excludeSelectors: ArrayOfStrings,
 		translatableAttributes: ArrayOfStrings,
 		lazyTranslate: type.boolean,
 		detectLanguageByContent: type.boolean,

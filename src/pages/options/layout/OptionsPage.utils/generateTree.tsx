@@ -270,16 +270,17 @@ export const generateTree = ({
 					},
 				},
 				{
-					title: getMessage('settings_option_pageTranslation_ignoredTags'),
+					title: getMessage('settings_option_pageTranslation_excludeSelectors'),
 					description: getLocalizedNode({
-						messageName: 'settings_option_pageTranslation_ignoredTags_desc',
+						messageName:
+							'settings_option_pageTranslation_excludeSelectors_desc',
 						slots: {
 							htmlElements: buildLink(
 								`https://developer.mozilla.org/${getUserLanguage()}/docs/Web/HTML/Element`,
 							),
 						},
 					}),
-					path: 'pageTranslator.ignoredTags',
+					path: 'pageTranslator.excludeSelectors',
 					optionContent: {
 						type: 'InputMultilineFromArray',
 					},

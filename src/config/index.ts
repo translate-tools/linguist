@@ -23,7 +23,7 @@ export const defaultConfig: AppConfigType = {
 		ignoreCase: true,
 	},
 	pageTranslator: {
-		ignoredTags: noTranslateSelectors.split('\n'),
+		excludeSelectors: noTranslateSelectors.split('\n'),
 		translatableAttributes: ['title', 'alt', 'placeholder', 'label', 'aria-label'],
 		// Temporary solution to fix UX due to bug https://github.com/translate-tools/linguist/issues/75
 		lazyTranslate: isMobileBrowser() ? false : true,
