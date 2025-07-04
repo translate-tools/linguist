@@ -6,11 +6,7 @@ import {
 	NodesTranslator,
 	PersistentDOMTranslator,
 } from 'domtranslator';
-import {
-	configureTranslatableNodePredicate,
-	isElementNode,
-	isTextNode,
-} from 'domtranslator/utils/nodes';
+import { createNodesFilter, isElementNode, isTextNode } from 'domtranslator/utils/nodes';
 
 import { ShadowDOMContainerManager } from '../../../lib/ShadowDOMContainerManager';
 import { translate } from '../../../requests/backend/translate';
@@ -134,9 +130,9 @@ export class PageTranslator {
 							: undefined,
 
 						// Filter will skip nodes that must not be translated
-						filter: configureTranslatableNodePredicate({
+						filter: createNodesFilter({
 							// Only listed attributes will be translated
-							translatableAttributes: this.config.translatableAttributes,
+							attributesList: this.config.translatableAttributes,
 							// Any elements not included in list will be translated
 							ignoredSelectors: (this.config.ignoredTags ?? []).filter(
 								(selector) => {
