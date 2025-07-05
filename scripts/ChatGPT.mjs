@@ -1,3 +1,5 @@
+import 'dotenv/config';
+
 import { ChatGPTAPI, ChatGPTUnofficialProxyAPI } from 'chatgpt';
 
 /**
@@ -15,7 +17,11 @@ export class ChatGPT {
 		if (process.env.OPENAI_API_KEY) {
 			// Prefer official API if env variable provided
 			this.api = new ChatGPTAPI({
-				apiKey: process.env.OPENAI_API_KEY
+				apiKey: process.env.OPENAI_API_KEY,
+				apiBaseUrl: process.env.OPENAI_BASE_URL,
+				completionParams: {
+					model: process.env.OPENAI_MODEL ?? 'openai/gpt-4.1-mini'
+				}
 			});
 
 
