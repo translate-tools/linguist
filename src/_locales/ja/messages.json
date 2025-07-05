@@ -359,10 +359,10 @@
 	"settings_option_pageTranslation_enableContextMenu_desc": {
 		"message": "コンテキストメニューにページ翻訳を切り替えるボタンを追加する"
 	},
-	"settings_option_pageTranslation_ignoredTags": {
+	"settings_option_pageTranslation_excludeSelectors": {
 		"message": "無視される要素"
 	},
-	"settings_option_pageTranslation_ignoredTags_desc": {
+	"settings_option_pageTranslation_excludeSelectors_desc": {
 		"message": "<slot id=htmlElements>翻訳しない</slot>HTML要素の名前を入力してください。ネストされた要素も翻訳されません。一行につき1つの要素。"
 	},
 	"settings_option_pageTranslation_lazyTranslate": {

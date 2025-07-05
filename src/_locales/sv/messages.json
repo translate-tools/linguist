@@ -359,10 +359,10 @@
 	"settings_option_pageTranslation_enableContextMenu_desc": {
 		"message": "Lägg till knapp för att växla översättning av sidan till ett kontextmeny."
 	},
-	"settings_option_pageTranslation_ignoredTags": {
+	"settings_option_pageTranslation_excludeSelectors": {
 		"message": "Ignorerade element"
 	},
-	"settings_option_pageTranslation_ignoredTags_desc": {
+	"settings_option_pageTranslation_excludeSelectors_desc": {
 		"message": "Ange <slot id=htmlElements>HTML-element</slot>-namn som inte ska översättas. Inbäddade element översätts inte heller. Ett element per rad."
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
