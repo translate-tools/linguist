@@ -1,59 +1,69 @@
+import { LLMFetcher } from './LLMFetcher';
 import { isEqualStructures, sliceJsonString } from './utils/json';
-
-export interface LLMFetcher {
-	/**
-	 * Method for request to AI model
-	 */
-	fetch(prompt: string): Promise<string>;
-
-	/**
-	 * Max length of string for prompt
-	 */
-	getLengthLimit(): number;
-
-	/**
-	 * Delay between requests to comply with the requests-per-minute limit.
-	 */
-	getRequestsTimeout(): number;
-}
 
 export class LLMTranslator {
 	constructor(
 		private readonly fetcher: LLMFetcher,
 		private readonly getPrompt: (json: string, from: string, to: string) => string,
+		private readonly config: { concurrency?: number; termsLimit?: number } = {},
 	) {}
 
 	public async translate<T extends {}>(sourceObject: T, from: string, to: string) {
 		const objectSlices = sliceJsonString(
 			JSON.stringify(sourceObject),
 			this.fetcher.getLengthLimit(),
+			this.config.termsLimit ?? 6,
 		);
 
 		// Translate slices
-		const translatedSlices: [string, unknown][] = [];
-		for (const slice of objectSlices) {
-			for (let retry = 0; true; retry++) {
-				try {
-					const translatedSlice = await this.fetcher.fetch(
-						this.getPrompt(slice, from, to),
-					);
-					const sourceObject = JSON.parse(slice);
-					const translatedObject = JSON.parse(translatedSlice);
+		const translatedSlices: [string, unknown][][] = Array(objectSlices.length);
 
-					if (!isEqualStructures(sourceObject, translatedObject))
-						throw new TypeError('Not equal structures');
+		let index = 0;
+		const abort = new AbortController();
+		await Promise.all(
+			Array(this.config.concurrency ?? 3)
+				.fill(null)
+				.map(async () => {
+					while (true) {
+						if (abort.signal.aborted) return;
 
-					translatedSlices.push(...Object.entries(translatedObject));
-					break;
-				} catch (error) {
-					if (retry++ < 3) continue;
+						const currentIndex = index++;
+						const slice = objectSlices[currentIndex];
 
-					throw error;
-				}
-			}
-		}
+						// End of worker
+						if (!slice) return;
 
-		const translatedObject = Object.fromEntries(translatedSlices);
+						for (let retry = 0; true; retry++) {
+							if (abort.signal.aborted) return;
+
+							try {
+								const translatedSlice = await this.fetcher.fetch(
+									this.getPrompt(slice, from, to),
+								);
+								const sourceObject = JSON.parse(slice);
+								const translatedObject = JSON.parse(translatedSlice);
+
+								if (!isEqualStructures(sourceObject, translatedObject)) {
+									throw new TypeError('Not equal structures');
+								}
+
+								translatedSlices[currentIndex] =
+									Object.entries(translatedObject);
+								break;
+							} catch (error) {
+								if (retry++ < 3) continue;
+
+								throw error;
+							}
+						}
+					}
+				}),
+		).catch((error) => {
+			abort.abort(error);
+			throw error;
+		});
+
+		const translatedObject = Object.fromEntries(translatedSlices.flat());
 		if (!isEqualStructures(sourceObject, translatedObject))
 			throw new TypeError(
 				'Not equal structures between source object and result object',

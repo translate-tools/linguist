@@ -1,4 +1,8 @@
-export const sliceJsonString = (sourceJson: string, maxLength: number) => {
+export const sliceJsonString = (
+	sourceJson: string,
+	maxLength: number,
+	maxSize?: number,
+) => {
 	const json = JSON.parse(sourceJson);
 	if (typeof json !== 'object' || json === null)
 		throw new TypeError('Json data cannot be split to slices');
@@ -16,7 +20,10 @@ export const sliceJsonString = (sourceJson: string, maxLength: number) => {
 
 		// Fill if fit
 		const candidate = [...result[offset], slice];
-		if (JSON.stringify(Object.fromEntries(candidate)).length <= maxLength) {
+		if (
+			JSON.stringify(Object.fromEntries(candidate)).length <= maxLength &&
+			(!maxSize || result[offset].length < maxSize)
+		) {
 			result[offset] = candidate;
 			continue;
 		}

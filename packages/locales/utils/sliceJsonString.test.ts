@@ -22,3 +22,11 @@ test('Every string fits as many objects as possible', () => {
 		`{"baz":"baz"}`,
 	]);
 });
+
+test('Large object is sliced to fit in size limit', () => {
+	expect(sliceJsonString(`{"foo": "foo", "bar": "bar", "baz": "baz"}`, 30, 1)).toEqual([
+		`{"foo":"foo"}`,
+		`{"bar":"bar"}`,
+		`{"baz":"baz"}`,
+	]);
+});
