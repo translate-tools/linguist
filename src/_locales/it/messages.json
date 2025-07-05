@@ -359,10 +359,10 @@
 	"settings_option_pageTranslation_enableContextMenu_desc": {
 		"message": "Aggiungi pulsante per attivare la traduzione della pagina in un menu contestuale"
 	},
-	"settings_option_pageTranslation_ignoredTags": {
+	"settings_option_pageTranslation_excludeSelectors": {
 		"message": "Elementi ignorati"
 	},
-	"settings_option_pageTranslation_ignoredTags_desc": {
+	"settings_option_pageTranslation_excludeSelectors_desc": {
 		"message": "Inserisci i nomi degli elementi HTML <slot id=htmlElements>HTML</slot> che non devono essere tradotti. Gli elementi nidificati non saranno tradotti. Un elemento per linea."
 	},
 	"settings_option_pageTranslation_lazyTranslate": {

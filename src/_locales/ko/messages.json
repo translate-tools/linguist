@@ -359,10 +359,10 @@
 	"settings_option_pageTranslation_enableContextMenu_desc": {
 		"message": "컨텍스트 메뉴에 페이지 번역을 전환하는 버튼 추가하기"
 	},
-	"settings_option_pageTranslation_ignoredTags": {
+	"settings_option_pageTranslation_excludeSelectors": {
 		"message": "무시할 요소"
 	},
-	"settings_option_pageTranslation_ignoredTags_desc": {
+	"settings_option_pageTranslation_excludeSelectors_desc": {
 		"message": "번역하지 말아야 하는 <slot id=htmlElements>HTML 요소</slot> 이름을 입력하십시오. 중첩된 요소도 번역되지 않습니다. 한 줄에 하나의 요소를 입력하십시오."
 	},
 	"settings_option_pageTranslation_lazyTranslate": {

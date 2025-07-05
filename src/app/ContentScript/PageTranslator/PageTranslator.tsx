@@ -1,8 +1,16 @@
 import React from 'react';
-import { Config as NodesTranslatorConfig, NodesTranslator } from 'domtranslator';
+import {
+	DOMTranslator,
+	INodesTranslator,
+	IntersectionScheduler,
+	NodesTranslator,
+	PersistentDOMTranslator,
+} from 'domtranslator';
+import { createNodesFilter, isElementNode, isTextNode } from 'domtranslator/utils/nodes';
 
 import { ShadowDOMContainerManager } from '../../../lib/ShadowDOMContainerManager';
 import { translate } from '../../../requests/backend/translate';
+import { AppConfigType } from '../../../types/runtime';
 
 import { OriginalTextPopup } from './components/OriginalTextPopup/OriginalTextPopup';
 import { pageTranslatorStatsUpdated } from './requests/pageTranslatorStatsUpdated';
@@ -20,12 +28,24 @@ function isBlockElement(element: Element) {
 	return blockTypes.indexOf(display) !== -1;
 }
 
-type PageTranslatorConfig = { originalTextPopup?: boolean };
+type PageTranslatorConfig = Partial<
+	Pick<
+		AppConfigType['pageTranslator'],
+		| 'originalTextPopup'
+		| 'translatableAttributes'
+		| 'excludeSelectors'
+		| 'lazyTranslate'
+	>
+>;
 
 // TODO: rewrite to augmentation
 export class PageTranslator {
 	private translateContext = Symbol();
-	private pageTranslator: NodesTranslator | null = null;
+
+	private pageTranslator: {
+		persistentDomTranslator: PersistentDOMTranslator;
+		nodesTranslator: INodesTranslator;
+	} | null = null;
 	private pageTranslateDirection: { from: string; to: string } | null = null;
 	private translateState: PageTranslatorStats = {
 		resolved: 0,
@@ -34,16 +54,12 @@ export class PageTranslator {
 	};
 
 	private config: PageTranslatorConfig = {};
-	private nodesTranslatorConfig: NodesTranslatorConfig = {};
-	constructor(config: NodesTranslatorConfig & PageTranslatorConfig) {
+	constructor(config: PageTranslatorConfig) {
 		this.updateConfig(config);
 	}
 
-	public updateConfig(config: NodesTranslatorConfig & PageTranslatorConfig) {
-		const { originalTextPopup, ...nodesTranslatorConfig } = config;
-
-		this.config = { originalTextPopup };
-		this.nodesTranslatorConfig = nodesTranslatorConfig;
+	public updateConfig(config: PageTranslatorConfig) {
+		this.config = { ...this.config, ...config };
 	}
 
 	public isRun() {
@@ -100,11 +116,45 @@ export class PageTranslator {
 		};
 
 		this.pageTranslateDirection = { from, to };
-		this.pageTranslator = new NodesTranslator(
-			translateText,
-			this.nodesTranslatorConfig,
-		);
-		this.pageTranslator.observe(document.documentElement);
+
+		const nodesTranslator = new NodesTranslator(translateText);
+		this.pageTranslator = {
+			nodesTranslator,
+			persistentDomTranslator: new PersistentDOMTranslator(
+				new DOMTranslator(
+					// Nodes will be translated with fake translator,
+					// that is just adds a text prefix to original text
+					nodesTranslator,
+					{
+						// When `scheduler` is provided, a lazy translation mode will be used.
+						// Nodes will be translated only when intersects a viewport
+						scheduler: this.config.lazyTranslate
+							? new IntersectionScheduler()
+							: undefined,
+
+						// Filter will skip nodes that must not be translated
+						filter: createNodesFilter({
+							// Only listed attributes will be translated
+							attributesList: this.config.translatableAttributes,
+							// Any elements not included in list will be translated
+							ignoredSelectors: (this.config.excludeSelectors ?? []).filter(
+								(selector) => {
+									// Skip comments
+									if (selector.startsWith('!')) return false;
+
+									// Skip empty strings
+									if (selector.trim().length === 0) return false;
+
+									return true;
+								},
+							),
+						}),
+					},
+				),
+			),
+		};
+
+		this.pageTranslator.persistentDomTranslator.translate(document.documentElement);
 
 		if (this.config.originalTextPopup) {
 			document.addEventListener('mouseover', this.showOriginalTextHandler);
@@ -116,7 +166,7 @@ export class PageTranslator {
 			throw new Error('Page is not translated');
 		}
 
-		this.pageTranslator.unobserve(document.documentElement);
+		this.pageTranslator.persistentDomTranslator.restore(document.documentElement);
 		this.pageTranslator = null;
 		this.pageTranslateDirection = null;
 
@@ -144,14 +194,17 @@ export class PageTranslator {
 		const getTextOfElement = (element: Node) => {
 			let text = '';
 
-			if (element instanceof Text) {
-				text += this.pageTranslator?.getNodeData(element)?.originalText ?? '';
-			} else if (element instanceof Element) {
+			if (isTextNode(element)) {
+				text +=
+					this.pageTranslator?.nodesTranslator.getState(element)
+						?.originalText ?? '';
+			} else if (isElementNode(element)) {
 				for (const node of Array.from(element.childNodes)) {
-					if (node instanceof Text) {
+					if (isTextNode(node)) {
 						text +=
-							this.pageTranslator?.getNodeData(node)?.originalText ?? '';
-					} else if (node instanceof Element && !isBlockElement(node)) {
+							this.pageTranslator?.nodesTranslator.getState(node)
+								?.originalText ?? '';
+					} else if (isElementNode(node) && !isBlockElement(node)) {
 						text += getTextOfElement(node);
 					} else {
 						break;

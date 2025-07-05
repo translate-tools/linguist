@@ -359,10 +359,10 @@
 	"settings_option_pageTranslation_enableContextMenu_desc": {
 		"message": "Agregar botón para alternar la traducción de la página en un menú contextual"
 	},
-	"settings_option_pageTranslation_ignoredTags": {
+	"settings_option_pageTranslation_excludeSelectors": {
 		"message": "Elementos ignorados"
 	},
-	"settings_option_pageTranslation_ignoredTags_desc": {
+	"settings_option_pageTranslation_excludeSelectors_desc": {
 		"message": "Ingrese los nombres de los elementos <slot id=htmlElements>HTML</slot> que no deben ser traducidos. Los elementos anidados tampoco se traducirán. Un elemento por línea."
 	},
 	"settings_option_pageTranslation_lazyTranslate": {

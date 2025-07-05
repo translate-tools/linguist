@@ -1,6 +1,7 @@
-import { isMobileBrowser } from './lib/browser';
-import { getUserLanguage } from './lib/language';
-import { AppConfigType } from './types/runtime';
+import { isMobileBrowser } from '../lib/browser';
+import { getUserLanguage } from '../lib/language';
+import { AppConfigType } from '../types/runtime';
+import noTranslateSelectors from './no-translate-selectors.txt';
 
 export const DEFAULT_TRANSLATOR = 'GoogleTranslator';
 export const DEFAULT_TTS = 'google';
@@ -22,16 +23,7 @@ export const defaultConfig: AppConfigType = {
 		ignoreCase: true,
 	},
 	pageTranslator: {
-		ignoredTags: [
-			'meta',
-			'link',
-			'script',
-			'noscript',
-			'style',
-			'code',
-			'pre',
-			'textarea',
-		],
+		excludeSelectors: noTranslateSelectors.split('\n'),
 		translatableAttributes: ['title', 'alt', 'placeholder', 'label', 'aria-label'],
 		// Temporary solution to fix UX due to bug https://github.com/translate-tools/linguist/issues/75
 		lazyTranslate: isMobileBrowser() ? false : true,

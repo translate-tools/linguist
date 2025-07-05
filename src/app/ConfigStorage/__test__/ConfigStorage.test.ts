@@ -1,5 +1,6 @@
 import browser from 'webextension-polyfill';
 
+import { defaultConfig } from '../../../config';
 import { clearAllMocks } from '../../../lib/tests';
 import { AppConfigType } from '../../../types/runtime';
 
@@ -7,9 +8,8 @@ import { ConfigStorage, ObservableAsyncStorage } from '../ConfigStorage';
 import { ConfigStorageMigration } from '../ConfigStorage.migrations';
 import configVersion1 from './config-v1.json';
 import configVersion3 from './config-v3.json';
-import latestConfigSample from './config-v8.json';
 
-const latestVersion = 8;
+const latestVersion = 9;
 
 describe('config migrations', () => {
 	beforeAll(clearAllMocks);
@@ -41,7 +41,7 @@ describe('config migrations', () => {
 		await ConfigStorageMigration.migrate(0, latestVersion);
 
 		const { appConfig } = await browser.storage.local.get('appConfig');
-		expect(appConfig).toEqual(latestConfigSample);
+		expect(appConfig).toMatchSnapshot();
 	});
 
 	describe(`race condition detection`, () => {
@@ -65,7 +65,7 @@ describe('config migrations', () => {
 				await ConfigStorageMigration.migrate(5, latestVersion);
 
 				const { appConfig } = await browser.storage.local.get('appConfig');
-				expect(appConfig).toEqual(latestConfigSample);
+				expect(appConfig).toMatchSnapshot();
 			});
 		}
 	});
@@ -74,14 +74,12 @@ describe('config migrations', () => {
 describe('use config', () => {
 	beforeAll(clearAllMocks);
 
-	const latestConfigObject = latestConfigSample as AppConfigType;
-
 	test('config storage set/get', async () => {
-		const configStorage = new ConfigStorage(latestConfigObject);
+		const configStorage = new ConfigStorage(defaultConfig);
 
 		// Get config
 		const config1 = await configStorage.get();
-		expect(config1).toEqual(latestConfigObject);
+		expect(config1).toEqual(defaultConfig);
 
 		const newData = { ...config1, translatorModule: 'testTranslator' };
 		await configStorage.set(newData);
@@ -91,7 +89,7 @@ describe('use config', () => {
 	});
 
 	test.skip('observable storage', async () => {
-		const configStorage = new ConfigStorage(latestConfigObject);
+		const configStorage = new ConfigStorage(defaultConfig);
 		const observableConfigStorage = new ObservableAsyncStorage(configStorage);
 
 		// Listen config update

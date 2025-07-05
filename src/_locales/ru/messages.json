@@ -359,11 +359,11 @@
 	"settings_option_pageTranslation_enableContextMenu_desc": {
 		"message": "Добавить кнопку для переключения перевода страницы в контекстное меню"
 	},
-	"settings_option_pageTranslation_ignoredTags": {
-		"message": "Черный список тегов"
+	"settings_option_pageTranslation_excludeSelectors": {
+		"message": "Селекторы для пропуска перевода"
 	},
-	"settings_option_pageTranslation_ignoredTags_desc": {
-		"message": "Переводятся все теги, кроме указанных в списке"
+	"settings_option_pageTranslation_excludeSelectors_desc": {
+		"message": "Список селекторов CSS, которые будут исключены из перевода. По одному селектору на строку. Если элемент соответствует любому из этих селекторов, он не будет переведен. Атрибуты и вложенные элементы также не будут переведены."
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
 		"message": "Переводить только видимую часть текста"
