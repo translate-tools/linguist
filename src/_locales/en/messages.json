@@ -366,7 +366,7 @@
 		"message": "Selectors to skip translation"
 	},
 	"settings_option_pageTranslation_excludeSelectors_desc": {
-		"message": "List of CSS selectors to skip during translation. One selector per line. If an element matches any of these selectors, it will not be translated. Attributes and nested elements also will not be translated."
+		"message": "List of CSS selectors that will not be translated. One selector per line. If an element matches any of these selectors, it and its attributes and nested elements will not be translated."
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
 		"message": "Translate only visible elements"
