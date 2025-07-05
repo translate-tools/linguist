@@ -2,6 +2,8 @@ import { readFileSync } from 'fs';
 import { resolve } from 'path';
 import { defineConfig } from 'vitest/config';
 
+const testTargets = (process.env.TEST_TARGETS ?? '').split(',');
+
 export default defineConfig({
 	plugins: [
 		{
@@ -17,6 +19,13 @@ export default defineConfig({
 		},
 	],
 	test: {
+		exclude: testTargets.includes('all')
+			? []
+			: [
+				...(testTargets.includes('integration')
+					? []
+					: ['**/*.integration.test.ts']),
+			  ],
 		globals: true,
 		environment: 'jsdom',
 	},
