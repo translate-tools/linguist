@@ -4,6 +4,28 @@ import { BasicLLMFetcher } from './BasicLLMFetcher';
 import { LLMTranslator } from './LLMTranslator';
 import dataSample from './sample.json';
 
+expect.addSnapshotSerializer({
+	test(val) {
+		return (
+			val &&
+			Object.prototype.hasOwnProperty.call(val, 'message') &&
+			val.message !== '*REDACTED*'
+		);
+	},
+	serialize(val, config, indentation, depth, refs, printer) {
+		return printer(
+			{
+				...val,
+				message: '*REDACTED*',
+			},
+			config,
+			indentation,
+			depth,
+			refs,
+		);
+	},
+});
+
 test('Translation for a sample localization file', async () => {
 	const translator = new LLMTranslator(
 		new BasicLLMFetcher(
@@ -14,7 +36,7 @@ test('Translation for a sample localization file', async () => {
 			},
 			{
 				model: process.env.OPENAI_MODEL ?? 'openai/gpt-4.1-mini',
-				temperature: 0,
+				temperature: 1,
 			},
 		),
 		(json, from, to) => {
@@ -38,7 +60,7 @@ test('Translation for a sample localization file', async () => {
 
 		Here is the JSON array of texts: ${json}`;
 		},
-		{ concurrency: 10 },
+		{ concurrency: 20 },
 	);
 
 	await expect(translator.translate(dataSample, 'en', 'ru')).resolves.toMatchSnapshot();

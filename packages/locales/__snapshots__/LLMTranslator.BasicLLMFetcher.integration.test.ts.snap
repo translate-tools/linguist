@@ -1,0 +1,654 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Translation for a sample localization file 1`] = `
+{
+  "common_action_addToDictionary": {
+    "message": "*REDACTED*",
+  },
+  "common_action_removeFromDictionary": {
+    "message": "*REDACTED*",
+  },
+  "common_bgUnavailable": {
+    "message": "*REDACTED*",
+  },
+  "common_cancel": {
+    "message": "*REDACTED*",
+  },
+  "common_close": {
+    "message": "*REDACTED*",
+  },
+  "common_copy": {
+    "message": "*REDACTED*",
+  },
+  "common_error": {
+    "message": "*REDACTED*",
+  },
+  "common_offlineTranslator": {
+    "message": "*REDACTED*",
+  },
+  "common_retry": {
+    "message": "*REDACTED*",
+  },
+  "common_translate": {
+    "message": "*REDACTED*",
+  },
+  "component_hotkey_placeholder": {
+    "message": "*REDACTED*",
+  },
+  "component_hotkey_recordPlaceholder": {
+    "message": "*REDACTED*",
+  },
+  "component_hotkey_resetButton": {
+    "message": "*REDACTED*",
+  },
+  "contextMenu_disablePageTranslation": {
+    "message": "*REDACTED*",
+  },
+  "contextMenu_translatePage": {
+    "message": "*REDACTED*",
+  },
+  "contextMenu_translateSelectedText": {
+    "message": "*REDACTED*",
+  },
+  "dictionaryButton_add": {
+    "message": "*REDACTED*",
+  },
+  "dictionaryButton_delete": {
+    "message": "*REDACTED*",
+  },
+  "dictionary_button_export": {
+    "message": "*REDACTED*",
+  },
+  "dictionary_button_removeAll": {
+    "message": "*REDACTED*",
+  },
+  "dictionary_deleteAll": {
+    "message": "*REDACTED*",
+  },
+  "dictionary_deleteConfirmation": {
+    "message": "*REDACTED*",
+  },
+  "dictionary_description": {
+    "message": "*REDACTED*",
+  },
+  "dictionary_emptyDictionary": {
+    "message": "*REDACTED*",
+  },
+  "dictionary_filter_from": {
+    "message": "*REDACTED*",
+  },
+  "dictionary_filter_to": {
+    "message": "*REDACTED*",
+  },
+  "dictionary_message_deleteAll_success": {
+    "message": "*REDACTED*",
+  },
+  "dictionary_notFoundEntries": {
+    "message": "*REDACTED*",
+  },
+  "dictionary_pageTitle": {
+    "message": "*REDACTED*",
+  },
+  "dictionary_resetFilters": {
+    "message": "*REDACTED*",
+  },
+  "dictionary_searchPlaceholder": {
+    "message": "*REDACTED*",
+  },
+  "editorWindow_close": {
+    "message": "*REDACTED*",
+  },
+  "editorWindow_data_code": {
+    "message": "*REDACTED*",
+  },
+  "editorWindow_data_name": {
+    "message": "*REDACTED*",
+  },
+  "editorWindow_message_invalidName": {
+    "message": "*REDACTED*",
+  },
+  "editorWindow_save": {
+    "message": "*REDACTED*",
+  },
+  "ext_description": {
+    "message": "*REDACTED*",
+  },
+  "ext_name": {
+    "message": "*REDACTED*",
+  },
+  "history_control_selectEntry": {
+    "message": "*REDACTED*",
+  },
+  "history_controls_clearHistory": {
+    "message": "*REDACTED*",
+  },
+  "history_controls_deleteSelected": {
+    "message": "*REDACTED*",
+  },
+  "history_controls_selectAll": {
+    "message": "*REDACTED*",
+  },
+  "history_message_clearHistoryConfirmation": {
+    "message": "*REDACTED*",
+  },
+  "history_message_deleteEntryConfirmation": {
+    "message": "*REDACTED*",
+  },
+  "history_message_deleteSelectedEntriesConfirmation": {
+    "message": "*REDACTED*",
+  },
+  "history_message_emptyEntries": {
+    "message": "*REDACTED*",
+  },
+  "history_message_entriesNotFound": {
+    "message": "*REDACTED*",
+  },
+  "history_notification_disabled": {
+    "message": "*REDACTED*",
+  },
+  "history_pageTitle": {
+    "message": "*REDACTED*",
+  },
+  "history_searchPlaceholder": {
+    "message": "*REDACTED*",
+  },
+  "inlineTranslator_showOriginalText": {
+    "message": "*REDACTED*",
+  },
+  "lang_change": {
+    "message": "*REDACTED*",
+  },
+  "lang_detect": {
+    "message": "*REDACTED*",
+  },
+  "lang_select": {
+    "message": "*REDACTED*",
+  },
+  "lang_swap": {
+    "message": "*REDACTED*",
+  },
+  "message_askResetConfig": {
+    "message": "*REDACTED*",
+  },
+  "message_cacheFlushed": {
+    "message": "*REDACTED*",
+  },
+  "message_changesSaved": {
+    "message": "*REDACTED*",
+  },
+  "message_error": {
+    "message": "*REDACTED*",
+  },
+  "message_errorOfTranslate": {
+    "message": "*REDACTED*",
+  },
+  "message_serviceRequiredKey": {
+    "message": "*REDACTED*",
+  },
+  "message_translateOfText": {
+    "message": "*REDACTED*",
+  },
+  "message_unknownError": {
+    "message": "*REDACTED*",
+  },
+  "pageTranslator_alwaysTranslateLang": {
+    "message": "*REDACTED*",
+  },
+  "pageTranslator_commonPreferences_autoTranslate_disable": {
+    "message": "*REDACTED*",
+  },
+  "pageTranslator_commonPreferences_autoTranslate_disableForAll": {
+    "message": "*REDACTED*",
+  },
+  "pageTranslator_commonPreferences_autoTranslate_enable": {
+    "message": "*REDACTED*",
+  },
+  "pageTranslator_commonPreferences_title": {
+    "message": "*REDACTED*",
+  },
+  "pageTranslator_option_autoTranslate": {
+    "message": "*REDACTED*",
+  },
+  "pageTranslator_showOptions": {
+    "message": "*REDACTED*",
+  },
+  "pageTranslator_showOriginal": {
+    "message": "*REDACTED*",
+  },
+  "pageTranslator_sitePreferences_autoTranslate_always": {
+    "message": "*REDACTED*",
+  },
+  "pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
+    "message": "*REDACTED*",
+  },
+  "pageTranslator_sitePreferences_autoTranslate_default": {
+    "message": "*REDACTED*",
+  },
+  "pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
+    "message": "*REDACTED*",
+  },
+  "pageTranslator_sitePreferences_autoTranslate_never": {
+    "message": "*REDACTED*",
+  },
+  "pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
+    "message": "*REDACTED*",
+  },
+  "pageTranslator_sitePreferences_title": {
+    "message": "*REDACTED*",
+  },
+  "pageTranslator_translatePage": {
+    "message": "*REDACTED*",
+  },
+  "pageTranslator_translationReport": {
+    "message": "*REDACTED*",
+  },
+  "pageTranslator_translationReport_queue": {
+    "message": "*REDACTED*",
+  },
+  "pageTranslator_translationReport_reject": {
+    "message": "*REDACTED*",
+  },
+  "pageTranslator_translationReport_resolve": {
+    "message": "*REDACTED*",
+  },
+  "popup_tabIdNotFound": {
+    "message": "*REDACTED*",
+  },
+  "popup_tab_translatePage": {
+    "message": "*REDACTED*",
+  },
+  "popup_tab_translateText": {
+    "message": "*REDACTED*",
+  },
+  "settings_button_cancel": {
+    "message": "*REDACTED*",
+  },
+  "settings_button_export": {
+    "message": "*REDACTED*",
+  },
+  "settings_button_import": {
+    "message": "*REDACTED*",
+  },
+  "settings_button_reset": {
+    "message": "*REDACTED*",
+  },
+  "settings_button_saveChanges": {
+    "message": "*REDACTED*",
+  },
+  "settings_message_clearCache_success": {
+    "message": "*REDACTED*",
+  },
+  "settings_message_common_invalidValueType": {
+    "message": "*REDACTED*",
+  },
+  "settings_message_importConfig_invalidFile": {
+    "message": "*REDACTED*",
+  },
+  "settings_message_importConfig_success": {
+    "message": "*REDACTED*",
+  },
+  "settings_message_resetConfig_confirm": {
+    "message": "*REDACTED*",
+  },
+  "settings_message_resetConfig_success": {
+    "message": "*REDACTED*",
+  },
+  "settings_message_saveChanges_success": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_appIcon": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_appIcon_desc": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_appIcon_item_auto": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_appIcon_item_color": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_appIcon_item_dark": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_appIcon_item_light": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_cache": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_cache_clear": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_cache_clear_desc": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_cache_enable": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_cache_enable_desc": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_cache_ignoreCase": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_cache_ignoreCase_desc": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_commonSettings": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_customTranslatorModule": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_customTranslatorModule_desc": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_customTranslatorModule_manageButton": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_history_enable": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_history_enable_desc": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_mainPreferences": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_pageTranslation": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_pageTranslation_detectLanguageByContent": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_pageTranslation_detectLanguageByContent_desc": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_pageTranslation_enableContextMenu": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_pageTranslation_enableContextMenu_desc": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_pageTranslation_excludeSelectors": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_pageTranslation_excludeSelectors_desc": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_pageTranslation_lazyTranslate": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_pageTranslation_lazyTranslate_desc": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_pageTranslation_originalTextPopup": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_pageTranslation_originalTextPopup_desc": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_pageTranslation_toggleTranslationHotkey": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_pageTranslation_toggleTranslationHotkey_desc": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_pageTranslation_translatableAttributes": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_pageTranslation_translatableAttributes_desc": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_popupTab_pageTranslator_showCounters": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_popupTab_pageTranslator_showCounters_desc": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_selectTranslation": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_selectTranslation_detectedLangFirst": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_selectTranslation_detectedLangFirst_desc": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_selectTranslation_disableWhileTranslatePage": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_selectTranslation_enable": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_selectTranslation_focusOnTranslateButton": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_selectTranslation_focusOnTranslateButton_desc": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_selectTranslation_header_languageChoice": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_selectTranslation_isUseAutoForDetectLang": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_selectTranslation_mode": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_selectTranslation_mode_item_contextMenu": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_selectTranslation_mode_item_popupButton": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_selectTranslation_mode_item_quickTranslate": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_selectTranslation_modifiers": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_selectTranslation_modifiers_desc": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_selectTranslation_modifiers_key_alt": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_selectTranslation_modifiers_key_ctrl": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_selectTranslation_modifiers_key_meta": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_selectTranslation_modifiers_key_shift": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_selectTranslation_rememberDirection": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_selectTranslation_showOnceForSelection": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_selectTranslation_showOnceForSelection_desc": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_selectTranslation_showOriginalText": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_selectTranslation_showOriginalText_desc": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_selectTranslation_strictSelection": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_selectTranslation_strictSelection_desc": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_selectTranslation_timeoutForHideButton": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_selectTranslation_timeoutForHideButton_desc": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_selectTranslation_zIndex": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_selectTranslation_zIndex_desc": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_textTranslator": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_textTranslator_rememberText": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_textTranslator_rememberText_desc": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_textTranslator_spellCheck": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_textTranslator_suggestLanguage": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_textTranslator_suggestLanguageAlways": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_textTranslator_suggestLanguageAlways_desc": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_translatePreferences": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_translateScheduler": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_translateScheduler_delay": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_translateScheduler_delay_desc": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_translateScheduler_retryLimit": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_translateScheduler_retryLimit_desc": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_translatorModule": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_translatorModule_desc": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_tts": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_ttsCustomModules": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_ttsCustomModules_button": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_ttsCustomModules_desc": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_ttsModule": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_ttsModule_desc": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_userLanguage": {
+    "message": "*REDACTED*",
+  },
+  "settings_option_userLanguage_desc": {
+    "message": "*REDACTED*",
+  },
+  "settings_pageTitle": {
+    "message": "*REDACTED*",
+  },
+  "settings_section_history": {
+    "message": "*REDACTED*",
+  },
+  "settings_section_popup": {
+    "message": "*REDACTED*",
+  },
+  "textTranslator_suggestLanguage": {
+    "message": "*REDACTED*",
+  },
+  "textTranslator_translateInputPlaceholder": {
+    "message": "*REDACTED*",
+  },
+  "textTranslator_translatePlaceholder": {
+    "message": "*REDACTED*",
+  },
+  "translatorsManagerWindow_add": {
+    "message": "*REDACTED*",
+  },
+  "translatorsManagerWindow_close": {
+    "message": "*REDACTED*",
+  },
+  "translatorsManagerWindow_emptyTranslatorsListText": {
+    "message": "*REDACTED*",
+  },
+  "translatorsManagerWindow_message_translatorRemovingConfirmation": {
+    "message": "*REDACTED*",
+    "placeholders": {
+      "translator_name": {
+        "content": "$1",
+        "example": "Google translator",
+      },
+    },
+  },
+  "translatorsManagerWindow_title": {
+    "message": "*REDACTED*",
+  },
+  "translatorsManagerWindow_translator_delete": {
+    "message": "*REDACTED*",
+  },
+  "translatorsManagerWindow_translator_edit": {
+    "message": "*REDACTED*",
+  },
+  "ttsManagerWindow_add": {
+    "message": "*REDACTED*",
+  },
+  "ttsManagerWindow_close": {
+    "message": "*REDACTED*",
+  },
+  "ttsManagerWindow_emptyTranslatorsListText": {
+    "message": "*REDACTED*",
+  },
+  "ttsManagerWindow_message_ttsRemoveConfirmation": {
+    "message": "*REDACTED*",
+    "placeholders": {
+      "tts_name": {
+        "content": "$1",
+        "example": "Google TTS",
+      },
+    },
+  },
+  "ttsManagerWindow_title": {
+    "message": "*REDACTED*",
+  },
+  "ttsManagerWindow_translator_delete": {
+    "message": "*REDACTED*",
+  },
+  "ttsManagerWindow_translator_edit": {
+    "message": "*REDACTED*",
+  },
+  "validation_number": {
+    "message": "*REDACTED*",
+  },
+  "validation_numberBetweenRange": {
+    "message": "*REDACTED*",
+  },
+  "validation_positiveNumber": {
+    "message": "*REDACTED*",
+  },
+}
+`;
