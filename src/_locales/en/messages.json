@@ -362,11 +362,11 @@
 	"settings_option_pageTranslation_enableContextMenu_desc": {
 		"message": "Add button to toggle page translation to a context menu"
 	},
-	"settings_option_pageTranslation_ignoredTags": {
-		"message": "Ignored elements"
+	"settings_option_pageTranslation_excludeSelectors": {
+		"message": "Selectors to skip translation"
 	},
-	"settings_option_pageTranslation_ignoredTags_desc": {
-		"message": "Enter <slot id=htmlElements>HTML element</slot> names that must not be translated. Nested elements will not be translated too. One element per line."
+	"settings_option_pageTranslation_excludeSelectors_desc": {
+		"message": "List of CSS selectors to skip during translation. One selector per line. If an element matches any of these selectors, it will not be translated. Attributes and nested elements also will not be translated."
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
 		"message": "Translate only visible elements"
