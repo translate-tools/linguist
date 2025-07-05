@@ -1,9 +1,10 @@
-import { LLMFetcher, LLMTranslator } from './LLMTranslator';
+import { LLMFetcher } from './LLMFetcher';
+import { LLMTranslator } from './LLMTranslator';
 
-const fetch = jest.fn();
+const fetch = vi.fn();
 
 beforeEach(() => {
-	jest.clearAllMocks();
+	vi.clearAllMocks();
 
 	fetch.mockRestore();
 	fetch.mockImplementation(async (json: string) => {
