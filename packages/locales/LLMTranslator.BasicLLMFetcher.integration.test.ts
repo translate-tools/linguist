@@ -3,6 +3,7 @@ import 'dotenv/config';
 import { BasicLLMFetcher } from './BasicLLMFetcher';
 import { LLMTranslator } from './LLMTranslator';
 import dataSample from './sample.json';
+import { getJsonTranslationPrompt } from './utils/prompts';
 
 expect.addSnapshotSerializer({
 	test(val) {
@@ -39,27 +40,7 @@ test('Translation for a sample localization file', async () => {
 				temperature: 1,
 			},
 		),
-		(json, from, to) => {
-			// use full language name
-			const langFormatter = new Intl.DisplayNames(['en'], { type: 'language' });
-			const originLang = from == 'auto' ? 'auto' : langFormatter.of(from);
-			const targetLang = langFormatter.of(to);
-
-			return `You are a translation service for translate localization files.
-		
-		I will provide a JSON string with text, and your task is to translate all string values (not keys) from language ${originLang} to language ${targetLang}.
-
-		If I specify the source language as 'auto', you should automatically detect it and translate it into the target language I set.
-
-		The JSON object in your response must have the same structure and length as the one in the request. Do not add any explanations — translate strictly according to the content and its context.
-
-		You must never change any key values in object.
-		You can use object keys to understand context.
-
-		Be careful when creating an JSON object; it must be syntactically correct and do not change quotation marks.
-
-		Here is the JSON array of texts: ${json}`;
-		},
+		getJsonTranslationPrompt,
 		{ concurrency: 20 },
 	);
 
