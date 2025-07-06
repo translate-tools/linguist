@@ -64,4 +64,4 @@ test('Translation for a sample localization file', async () => {
 	);
 
 	await expect(translator.translate(dataSample, 'en', 'ru')).resolves.toMatchSnapshot();
-}, 320_000);
+}, 60_000);
