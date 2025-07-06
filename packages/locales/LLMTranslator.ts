@@ -5,7 +5,11 @@ export class LLMTranslator {
 	constructor(
 		private readonly fetcher: LLMFetcher,
 		private readonly getPrompt: (json: string, from: string, to: string) => string,
-		private readonly config: { concurrency?: number; termsLimit?: number } = {},
+		private readonly config: {
+			concurrency?: number;
+			termsLimit?: number;
+			chunkParsingRetriesLimit?: number;
+		} = {},
 	) {}
 
 	public async translate<T extends {}>(sourceObject: T, from: string, to: string) {
@@ -51,7 +55,8 @@ export class LLMTranslator {
 									Object.entries(translatedObject);
 								break;
 							} catch (error) {
-								if (retry++ < 3) continue;
+								if (retry++ < (this.config.chunkParsingRetriesLimit ?? 5))
+									continue;
 
 								throw error;
 							}
