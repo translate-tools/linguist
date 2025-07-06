@@ -1,3 +1,5 @@
+export type ValuesEqualityPredicate = (a: unknown, b: unknown) => boolean;
+
 export const sliceJsonString = (
 	sourceJson: string,
 	maxLength: number,
@@ -42,7 +44,11 @@ export function getType(value: unknown): string {
 	return typeof value;
 }
 
-export function isEqualStructures(a: unknown, b: unknown): boolean {
+export function isEqualStructures(
+	a: unknown,
+	b: unknown,
+	predicate?: ValuesEqualityPredicate,
+): boolean {
 	const typeA = getType(a);
 	const typeB = getType(b);
 	if (typeA !== typeB) return false;
@@ -61,6 +67,7 @@ export function isEqualStructures(a: unknown, b: unknown): boolean {
 				!isEqualStructures(
 					(a as Record<string, unknown>)[key],
 					(b as Record<string, unknown>)[key],
+					predicate,
 				)
 			) {
 				return false;
@@ -74,11 +81,52 @@ export function isEqualStructures(a: unknown, b: unknown): boolean {
 		const arrB = b as unknown[];
 		if (arrA.length !== arrB.length) return false;
 		for (let i = 0; i < arrA.length; i++) {
-			if (!isEqualStructures(arrA[i], arrB[i])) return false;
+			if (!isEqualStructures(arrA[i], arrB[i], predicate)) return false;
 		}
 		return true;
+	}
+
+	if (predicate) {
+		return predicate(a, b);
 	}
 
 	// For primitive types: types must match, values don't matter
 	return true;
 }
+
+/**
+ * Function analyze objects and return patch object
+ * with `subset` of `target` object that is object that completely match with `source,
+ * and `superset` object that contains slice of `source` object that is differ of `target`.
+ *
+ * @param source Source object with actual structure
+ * @param target Object to patch
+ */
+export const getObjectPatch = (
+	source: Record<any, any>,
+	target: Record<any, any>,
+	predicate?: ValuesEqualityPredicate,
+): {
+	/**
+	 * Subset of `target` object with structure equal to `source`
+	 */
+	subset: Record<any, any>;
+	/**
+	 * Part of `source` object that is not present in `subset`
+	 */
+	superset: Record<any, any>;
+} => {
+	const subset = Object.fromEntries(
+		Object.entries(target).filter(([key]) =>
+			isEqualStructures(source[key], target[key], predicate),
+		),
+	);
+	const superset = Object.fromEntries(
+		Object.entries(source).filter(([key]) => key in subset === false),
+	);
+
+	return {
+		subset,
+		superset,
+	};
+};
