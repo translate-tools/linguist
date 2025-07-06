@@ -17,6 +17,8 @@ export const getJsonTranslationPrompt = (json: string, from: string, to: string)
 
 	The JSON object in your response must have the same structure and length as the one in the request. Do not add any explanations — translate strictly according to the content and its context.
 
+	Your response must contain only valid raw JSON text with no any formatting and with no code block.
+
 	# Translation specification
 
 	You must never change any key values in object.
@@ -25,26 +27,6 @@ export const getJsonTranslationPrompt = (json: string, from: string, to: string)
 	You must translate only values in "message" property.
 	
 	Never translate anything except "message" property, it's just a context to help you understand how this "message" will be used.
-
-	For example, you must never translate any texts for keys like "placeholders", "example".
-
-	Let's see next example:
-
-	\`\`\`json
-	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
-		"message": "Are you sure about removing translator \"$translator_name$\"?",
-		"placeholders": {
-			"translator_name": {
-				"content": "$1",
-				"example": "Google translator"
-			}
-		}
-	},
-	\`\`\`
-
-	Here you must translate only "message", but never translate "example" or "content", or anything else.
-
-	Double check that you never translate "example" texts.
 
 	# Translation recommendations
 
