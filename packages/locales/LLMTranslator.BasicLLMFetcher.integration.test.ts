@@ -1,6 +1,7 @@
 import 'dotenv/config';
 
 import { BasicLLMFetcher } from './BasicLLMFetcher';
+import { LLMJsonProcessor } from './LLMJsonProcessor';
 import { LLMTranslator } from './LLMTranslator';
 import dataSample from './sample.json';
 import { getJsonTranslationPrompt } from './utils/prompts';
@@ -29,19 +30,21 @@ expect.addSnapshotSerializer({
 
 test('Translation for a sample localization file', async () => {
 	const translator = new LLMTranslator(
-		new BasicLLMFetcher(
-			{
-				apiKey: process.env.OPENAI_API_KEY as string,
-				baseURL: process.env.OPENAI_BASE_URL,
-				dangerouslyAllowBrowser: true,
-			},
-			{
-				model: process.env.OPENAI_MODEL ?? 'openai/gpt-4.1-mini',
-				temperature: 1,
-			},
+		new LLMJsonProcessor(
+			new BasicLLMFetcher(
+				{
+					apiKey: process.env.OPENAI_API_KEY as string,
+					baseURL: process.env.OPENAI_BASE_URL,
+					dangerouslyAllowBrowser: true,
+				},
+				{
+					model: process.env.OPENAI_MODEL ?? 'openai/gpt-4.1-mini',
+					temperature: 1,
+				},
+			),
+			{ concurrency: 10 },
 		),
 		getJsonTranslationPrompt,
-		{ concurrency: 10 },
 	);
 
 	await expect(translator.translate(dataSample, 'en', 'ru')).resolves.toMatchSnapshot();

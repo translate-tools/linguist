@@ -1,4 +1,5 @@
 import { LLMFetcher } from './LLMFetcher';
+import { LLMJsonProcessor } from './LLMJsonProcessor';
 import { LLMTranslator } from './LLMTranslator';
 import { LocalesManager } from './LocalesManager';
 
@@ -12,7 +13,7 @@ beforeEach(() => {
 });
 
 const translator = new LLMTranslator(
-	{
+	new LLMJsonProcessor({
 		fetch,
 		getLengthLimit() {
 			return 3000;
@@ -20,7 +21,7 @@ const translator = new LLMTranslator(
 		getRequestsTimeout() {
 			return 0;
 		},
-	} satisfies LLMFetcher,
+	} satisfies LLMFetcher),
 	(json, from, to) => json.replaceAll(/:"(.+?)"/g, `:"translated[${from}-${to}] $1"`),
 );
 

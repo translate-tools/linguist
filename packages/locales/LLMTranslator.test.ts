@@ -1,4 +1,5 @@
 import { LLMFetcher } from './LLMFetcher';
+import { LLMJsonProcessor } from './LLMJsonProcessor';
 import { LLMTranslator } from './LLMTranslator';
 
 const fetch = vi.fn();
@@ -14,7 +15,7 @@ beforeEach(() => {
 
 test('Objects can be translated in single request by fetcher with large limits', async () => {
 	const translator = new LLMTranslator(
-		{
+		new LLMJsonProcessor({
 			fetch,
 			getLengthLimit() {
 				return 3000;
@@ -22,7 +23,7 @@ test('Objects can be translated in single request by fetcher with large limits',
 			getRequestsTimeout() {
 				return 0;
 			},
-		} satisfies LLMFetcher,
+		} satisfies LLMFetcher),
 		(json) => json,
 	);
 
@@ -55,7 +56,7 @@ test('Objects can be translated in single request by fetcher with large limits',
 
 test('Objects can be translated in few request by fetcher with small limits', async () => {
 	const translator = new LLMTranslator(
-		{
+		new LLMJsonProcessor({
 			fetch,
 			getLengthLimit() {
 				return 30;
@@ -63,7 +64,7 @@ test('Objects can be translated in few request by fetcher with small limits', as
 			getRequestsTimeout() {
 				return 0;
 			},
-		} satisfies LLMFetcher,
+		} satisfies LLMFetcher),
 		(json) => json,
 	);
 
@@ -97,15 +98,18 @@ test('Objects can be translated in few request by fetcher with small limits', as
 describe('Fetcher errors handling', () => {
 	test('Translator throws error in case with invalid response', async () => {
 		const translator = new LLMTranslator(
-			{
-				fetch: fetch.mockReturnValue(Promise.resolve('Invalid response')),
-				getLengthLimit() {
-					return 3000;
-				},
-				getRequestsTimeout() {
-					return 0;
-				},
-			} satisfies LLMFetcher,
+			new LLMJsonProcessor(
+				{
+					fetch: fetch.mockReturnValue(Promise.resolve('Invalid response')),
+					getLengthLimit() {
+						return 3000;
+					},
+					getRequestsTimeout() {
+						return 0;
+					},
+				} satisfies LLMFetcher,
+				{ chunkParsingRetriesLimit: 3 },
+			),
 			(json) => json,
 		);
 
@@ -130,19 +134,22 @@ describe('Fetcher errors handling', () => {
 
 	test('Translator throws error in case with incomplete response', async () => {
 		const translator = new LLMTranslator(
-			{
-				fetch: fetch.mockImplementation((json) =>
-					JSON.stringify(
-						Object.fromEntries(Object.entries(JSON.parse(json)).slice(1)),
+			new LLMJsonProcessor(
+				{
+					fetch: fetch.mockImplementation((json) =>
+						JSON.stringify(
+							Object.fromEntries(Object.entries(JSON.parse(json)).slice(1)),
+						),
 					),
-				),
-				getLengthLimit() {
-					return 3000;
-				},
-				getRequestsTimeout() {
-					return 0;
-				},
-			} satisfies LLMFetcher,
+					getLengthLimit() {
+						return 3000;
+					},
+					getRequestsTimeout() {
+						return 0;
+					},
+				} satisfies LLMFetcher,
+				{ chunkParsingRetriesLimit: 3 },
+			),
 			(json) => json,
 		);
 
@@ -167,17 +174,20 @@ describe('Fetcher errors handling', () => {
 
 	test('Translator retries requests in case with invalid response', async () => {
 		const translator = new LLMTranslator(
-			{
-				fetch: fetch
-					.mockReturnValueOnce(Promise.resolve('Invalid response'))
-					.mockReturnValueOnce(Promise.resolve('Invalid response')),
-				getLengthLimit() {
-					return 3000;
-				},
-				getRequestsTimeout() {
-					return 0;
-				},
-			} satisfies LLMFetcher,
+			new LLMJsonProcessor(
+				{
+					fetch: fetch
+						.mockReturnValueOnce(Promise.resolve('Invalid response'))
+						.mockReturnValueOnce(Promise.resolve('Invalid response')),
+					getLengthLimit() {
+						return 3000;
+					},
+					getRequestsTimeout() {
+						return 0;
+					},
+				} satisfies LLMFetcher,
+				{ chunkParsingRetriesLimit: 3 },
+			),
 			(json) => json,
 		);
 

@@ -4,6 +4,7 @@ import path from 'path';
 import { z } from 'zod';
 
 import { BasicLLMFetcher } from '../../BasicLLMFetcher';
+import { LLMJsonProcessor } from '../../LLMJsonProcessor';
 import { LLMTranslator } from '../../LLMTranslator';
 import { LocalesManager } from '../../LocalesManager';
 import { getFileVersion } from '../../utils/git';
@@ -78,19 +79,21 @@ command
 
 		const localesManager = new LocalesManager(
 			new LLMTranslator(
-				new BasicLLMFetcher(
-					{
-						apiKey: process.env.OPENAI_API_KEY as string,
-						baseURL: process.env.OPENAI_BASE_URL,
-						dangerouslyAllowBrowser: true,
-					},
-					{
-						model: process.env.OPENAI_MODEL ?? 'openai/gpt-4.1-mini',
-						temperature: 1,
-					},
+				new LLMJsonProcessor(
+					new BasicLLMFetcher(
+						{
+							apiKey: process.env.OPENAI_API_KEY as string,
+							baseURL: process.env.OPENAI_BASE_URL,
+							dangerouslyAllowBrowser: true,
+						},
+						{
+							model: process.env.OPENAI_MODEL ?? 'openai/gpt-4.1-mini',
+							temperature: 1,
+						},
+					),
+					{ concurrency: 10 },
 				),
 				getJsonTranslationPrompt,
-				{ concurrency: 10 },
 			),
 		);
 
