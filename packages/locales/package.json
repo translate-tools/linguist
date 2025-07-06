@@ -1,6 +1,11 @@
 {
 	"name": "locales",
-	"scripts": {},
+	"scripts": {
+		"proofread": "tsx cli proofread -l en ../../src/_locales/",
+		"proofread:all": "tsx cli proofread ../../src/_locales/",
+		"sync": "tsx cli sync en ../../src/_locales/",
+		"update": "npm run proofread && npm run sync"
+	},
 	"version": "1.0.0",
 	"main": "index.js",
 	"description": "",
