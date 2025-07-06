@@ -1,8 +1,13 @@
+export const codeBlock = (code: string, language?: string) =>
+	['```' + (language ?? ''), code, '```'].join('\n');
+
 export const getJsonTranslationPrompt = (json: string, from: string, to: string) => {
 	// use full language name
 	const langFormatter = new Intl.DisplayNames(['en'], { type: 'language' });
 	const originLang = from == 'auto' ? 'auto' : langFormatter.of(from);
 	const targetLang = langFormatter.of(to);
+
+	const prettifiedJson = JSON.stringify(JSON.parse(json), null, 2);
 
 	return `You are a translation service for translate localization files.
 
@@ -22,5 +27,7 @@ export const getJsonTranslationPrompt = (json: string, from: string, to: string)
 
 	Be careful when creating an JSON object; it must be syntactically correct and do not change quotation marks.
 
-	Here is the JSON array of texts: ${json}`;
+	Here is the JSON to translate:
+	${codeBlock(prettifiedJson, 'json')}
+	`;
 };
