@@ -41,8 +41,8 @@ test('Translation for a sample localization file', async () => {
 			},
 		),
 		getJsonTranslationPrompt,
-		{ concurrency: 20 },
+		{ concurrency: 10 },
 	);
 
 	await expect(translator.translate(dataSample, 'en', 'ru')).resolves.toMatchSnapshot();
-}, 60_000);
+}, 120_000);

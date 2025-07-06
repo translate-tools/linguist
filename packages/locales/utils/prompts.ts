@@ -15,7 +15,8 @@ export const getJsonTranslationPrompt = (json: string, from: string, to: string)
 	You must never change any key values in object.
 	You can use object keys to understand context.
 
-	You must translate only string values in "message" property. Never translate anything else.
+	You must translate only values in "message" property.
+	Never translate anything else in other object properties, it's just a context to help you understand how this "message" will be used.
 
 	You may rephrase texts to make it look native for target language, but you must keep the common sense of every "message" according to its context of use.
 
