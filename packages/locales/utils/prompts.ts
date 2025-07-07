@@ -32,6 +32,10 @@ export const getJsonTranslationPrompt = (json: string, from: string, to: string)
 
 	You may rephrase texts to make it look native for target language, but you must keep the common sense of every "message" according to its context of use.
 
+	Keep language professional and clear.
+	Translate text as an educated person, don't use colloquialisms and explicit language.
+	Make sure word forms looks clear and not ridiculous.
+
 	Be careful when creating an JSON object; it must be syntactically correct and do not change quotation marks.
 
 	# Your task

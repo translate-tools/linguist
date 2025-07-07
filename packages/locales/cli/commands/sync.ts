@@ -97,8 +97,14 @@ command
 			),
 		);
 
-		for (const targetLanguage of languages) {
-			console.log('Sync locales file: ', targetLanguage);
+		for (const index in languages) {
+			const targetLanguage = languages[index];
+
+			console.log(
+				`Sync locales "${targetLanguage}" [${Number(index) + 1}/${
+					languages.length
+				}]`,
+			);
 
 			const targetLanguageFilename = path.join(
 				resolvedDir,
