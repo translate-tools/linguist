@@ -3,29 +3,9 @@ import { readdirSync } from 'fs';
 import path from 'path';
 import { z } from 'zod';
 
+import { orderKeysInLocalizationObject } from '../../utils/localeObject';
+
 import { readFile, writeFile } from 'fs/promises';
-
-export const orderKeysInLocalizationObject = (
-	object: Record<any, any>,
-	sortPredicate = (a: any, b: any) => (a < b ? -1 : a > b ? 1 : 0),
-) =>
-	Object.fromEntries(
-		Object.entries(object).sort(([keyA], [keyB]) => {
-			const weightA = keyA.startsWith('langCode_') ? 1 : 0;
-			const weightB = keyB.startsWith('langCode_') ? 1 : 0;
-
-			if (typeof weightA === 'number' || typeof weightB === 'number') {
-				if (typeof weightA === 'number' && typeof weightB === 'number')
-					return weightA === weightB
-						? sortPredicate(keyA, keyB)
-						: sortPredicate(weightA, weightB);
-
-				return typeof weightA === 'number' ? 1 : -1;
-			}
-
-			return sortPredicate(keyA, keyB);
-		}),
-	);
 
 const command = new Command('prettify');
 
