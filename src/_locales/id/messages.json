@@ -140,6 +140,9 @@
 	"history_message_entriesNotFound": {
 		"message": "Tidak ada terjemahan yang ditemukan yang memenuhi filter"
 	},
+	"history_notification_disabled": {
+		"message": "Perekaman riwayat dinonaktifkan, sehingga entri baru tidak akan muncul. Anda dapat mengubahnya di <slot id=preferences>preferensi</slot>"
+	},
 	"history_pageTitle": {
 		"message": "Riwayat"
 	},
@@ -341,6 +344,12 @@
 	"settings_option_customTranslatorModule_manageButton": {
 		"message": "Kelola penerjemah"
 	},
+	"settings_option_history_enable": {
+		"message": "Aktifkan riwayat"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "Saat diaktifkan, setiap terjemahan akan disimpan ke halaman riwayat"
+	},
 	"settings_option_mainPreferences": {
 		"message": "Pengaturan utama"
 	},
@@ -360,10 +369,10 @@
 		"message": "Tambahkan tombol untuk mengaktifkan terjemahan halaman ke menu konteks"
 	},
 	"settings_option_pageTranslation_excludeSelectors": {
-		"message": "Elemen yang diabaikan"
+		"message": "Selector yang tidak diterjemahkan"
 	},
 	"settings_option_pageTranslation_excludeSelectors_desc": {
-		"message": "Masukkan nama-nama elemen <slot id=htmlElements>HTML</slot> yang tidak boleh diterjemahkan. Elemen bersarang juga tidak akan diterjemahkan. Satu elemen per baris."
+		"message": "Daftar selector CSS yang tidak akan diterjemahkan. Satu selector per baris. Jika sebuah elemen cocok dengan salah satu selector ini, elemen tersebut beserta atribut dan elemen nested-nya tidak akan diterjemahkan."
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
 		"message": "Terjemahkan hanya elemen yang terlihat"
@@ -559,6 +568,9 @@
 	},
 	"settings_pageTitle": {
 		"message": "Pengaturan"
+	},
+	"settings_section_history": {
+		"message": "Riwayat"
 	},
 	"settings_section_popup": {
 		"message": "Popup"

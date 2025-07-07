@@ -140,6 +140,9 @@
 	"history_message_entriesNotFound": {
 		"message": "ఫిల్టర్ అనుగుణంగా ఏ అనువాదాలు కనబడవు"
 	},
+	"history_notification_disabled": {
+		"message": "చరిత్ర రికార్డింగ్ నిరాధారితమై ఉంది, అందువల్ల కొత్త నమోదు‌లు కనిపించవు. మీరు దీన్ని <slot id=preferences>అభిరుచులు</slot> లో మార్చవచ్చు"
+	},
 	"history_pageTitle": {
 		"message": "హిస్టరీ"
 	},
@@ -341,6 +344,12 @@
 	"settings_option_customTranslatorModule_manageButton": {
 		"message": "అనువాదకులను నిర్వహించండి"
 	},
+	"settings_option_history_enable": {
+		"message": "చరిత్రను ప్రారంభించండి"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "ప్రారంభించినప్పుడు ఏదైనా అనువాదాన్ని చరిత్ర పేజీలో రికార్డ్ చేస్తుంది"
+	},
 	"settings_option_mainPreferences": {
 		"message": "ప్రధమ సెట్టింగ్స్"
 	},
@@ -360,10 +369,10 @@
 		"message": "పేజీ అనువాదం టాగిల్ చేయడానికి ఒక కంటెక్స్ట్ మెనూకు బటన్ జోడించండి"
 	},
 	"settings_option_pageTranslation_excludeSelectors": {
-		"message": "అణిమాలు పరిగణలో ఉండకుండా"
+		"message": "అనువాదం తప్పించుకునే సెలెక్టర్లు"
 	},
 	"settings_option_pageTranslation_excludeSelectors_desc": {
-		"message": "అనేక <slot id=htmlElements>HTML element</slot> పేర్లు లైన్ ఒక పరిమితి ఉన్నట్లు అనుసరించి, అవి అనువదించబడదు. భద్రపరచబడిన అణిమాలు అనువదించబడకపోవటం కొరకు మంచిది."
+		"message": "అనువాదం చేయబడని CSS సెలెక్టర్ల జాబితా. ప్రతి లైన్లో ఒక సెలెక్టర్. ఎవరైనా ఈ సెలెక్టర్లలో సరిపోతే, ఆ ఎలిమెంట్ మరియు దాని లక్షణాలు మరియు లోపలి భాగాలు అనువాదం చేయబడవు."
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
 		"message": "కనపడిన అంశాలను మాత్రమే అనువదించండి"
@@ -559,6 +568,9 @@
 	},
 	"settings_pageTitle": {
 		"message": "సెట్టింగులు"
+	},
+	"settings_section_history": {
+		"message": "చరిత్ర"
 	},
 	"settings_section_popup": {
 		"message": "పాప్ అప్"

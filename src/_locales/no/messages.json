@@ -140,6 +140,9 @@
 	"history_message_entriesNotFound": {
 		"message": "Ingen oversettelser som tilfredsstiller filteret ble funnet"
 	},
+	"history_notification_disabled": {
+		"message": "Historikkregistrering er deaktivert, så nye oppføringer vil ikke vises. Du kan endre dette i <slot id=preferences>innstillinger</slot>"
+	},
 	"history_pageTitle": {
 		"message": "Historikk"
 	},
@@ -341,6 +344,12 @@
 	"settings_option_customTranslatorModule_manageButton": {
 		"message": "Administrer oversettere"
 	},
+	"settings_option_history_enable": {
+		"message": "Aktiver historikk"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "Når aktivert vil alle oversettelser bli lagret på en historikkside"
+	},
 	"settings_option_mainPreferences": {
 		"message": "Hovedinnstillinger"
 	},
@@ -360,10 +369,10 @@
 		"message": "Legg til knapp for å slå på/av sideoversettelse til kontekstmeny"
 	},
 	"settings_option_pageTranslation_excludeSelectors": {
-		"message": "Ignorerte elementer"
+		"message": "Velgere som skal hoppes over ved oversettelse"
 	},
 	"settings_option_pageTranslation_excludeSelectors_desc": {
-		"message": "Skriv inn navn på <slot id=htmlElements>HTML-elementer</slot> som ikke skal oversettes. Innleide elementer vil heller ikke bli oversatt. Ett element per linje."
+		"message": "Liste over CSS-velgere som ikke vil bli oversatt. Én velger per linje. Hvis et element samsvarer med noen av disse velgerne, vil verken det eller dets attributter og underordnede elementer bli oversatt."
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
 		"message": "Oversett bare synlige elementer"
@@ -559,6 +568,9 @@
 	},
 	"settings_pageTitle": {
 		"message": "Innstillinger"
+	},
+	"settings_section_history": {
+		"message": "Historikk"
 	},
 	"settings_section_popup": {
 		"message": "Popup"

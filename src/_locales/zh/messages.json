@@ -140,6 +140,9 @@
 	"history_message_entriesNotFound": {
 		"message": "未找到满足筛选条件的翻译"
 	},
+	"history_notification_disabled": {
+		"message": "历史记录已禁用，新条目将不会出现。您可以在<slot id=preferences>设置</slot>中更改。"
+	},
 	"history_pageTitle": {
 		"message": "历史"
 	},
@@ -341,6 +344,12 @@
 	"settings_option_customTranslatorModule_manageButton": {
 		"message": "管理翻译服务"
 	},
+	"settings_option_history_enable": {
+		"message": "启用历史记录"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "启用后，所有翻译内容将被记录到历史页面"
+	},
 	"settings_option_mainPreferences": {
 		"message": "主要设置"
 	},
@@ -360,10 +369,10 @@
 		"message": "添加按钮以将页面翻译切换到上下文菜单"
 	},
 	"settings_option_pageTranslation_excludeSelectors": {
-		"message": "忽略的标签"
+		"message": "跳过翻译的选择器"
 	},
 	"settings_option_pageTranslation_excludeSelectors_desc": {
-		"message": "除了此处指定的元素标签及其子标签，所有标签都将被翻译。每行一个名称"
+		"message": "不会被翻译的CSS选择器列表。每行一个选择器。如果元素匹配其中任何一个选择器，元素本身及其属性和嵌套元素将不会被翻译。"
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
 		"message": "仅翻译可视区域内的元素"
@@ -559,6 +568,9 @@
 	},
 	"settings_pageTitle": {
 		"message": "设置"
+	},
+	"settings_section_history": {
+		"message": "历史"
 	},
 	"settings_section_popup": {
 		"message": "弹窗"

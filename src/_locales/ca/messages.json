@@ -140,6 +140,9 @@
 	"history_message_entriesNotFound": {
 		"message": "No s'han trobat traduccions que satisfacin el filtre"
 	},
+	"history_notification_disabled": {
+		"message": "La gravació de l'historial està desactivada, així que no apareixeran entrades noves. Ho pots canviar a <slot id=preferences>preferències</slot>"
+	},
 	"history_pageTitle": {
 		"message": "Historial"
 	},
@@ -341,6 +344,12 @@
 	"settings_option_customTranslatorModule_manageButton": {
 		"message": "Gestionar traductors"
 	},
+	"settings_option_history_enable": {
+		"message": "Activa l'historial"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "Quan està activat, qualsevol traducció quedarà registrada en una pàgina d'historial"
+	},
 	"settings_option_mainPreferences": {
 		"message": "Configuracions principals"
 	},
@@ -360,10 +369,10 @@
 		"message": "Afegeix un botó per alternar la traducció de la pàgina a un menú contextual"
 	},
 	"settings_option_pageTranslation_excludeSelectors": {
-		"message": "Elements ignorats"
+		"message": "Selectors per saltar la traducció"
 	},
 	"settings_option_pageTranslation_excludeSelectors_desc": {
-		"message": "Introduïu els noms dels elements <slot id=htmlElements>HTML</slot> que no s'han de traduir. Els elements aniuats tampoc es traduiran. Un element per línia."
+		"message": "Llista de selectors CSS que no es traduiran. Un selector per línia. Si un element coincideix amb algun d'aquests selectors, aquest element, els seus atributs i elements anidats no seran traduïts."
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
 		"message": "Tradueix només els elements visibles"
@@ -559,6 +568,9 @@
 	},
 	"settings_pageTitle": {
 		"message": "Configuració"
+	},
+	"settings_section_history": {
+		"message": "Historial"
 	},
 	"settings_section_popup": {
 		"message": "Finestra emergent"

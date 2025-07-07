@@ -140,6 +140,9 @@
 	"history_message_entriesNotFound": {
 		"message": "Ingen oversættelser fundet, der opfylder filtret"
 	},
+	"history_notification_disabled": {
+		"message": "Historikoptagelse er deaktiveret, så nye poster vil ikke blive vist. Du kan ændre det i <slot id=preferences>indstillinger</slot>"
+	},
 	"history_pageTitle": {
 		"message": "Historik"
 	},
@@ -341,6 +344,12 @@
 	"settings_option_customTranslatorModule_manageButton": {
 		"message": "Administrer oversættere"
 	},
+	"settings_option_history_enable": {
+		"message": "Aktivér historik"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "Når aktiveret, vil alle oversættelser blive gemt på en historikside"
+	},
 	"settings_option_mainPreferences": {
 		"message": "Hovedindstillinger"
 	},
@@ -360,10 +369,10 @@
 		"message": "Tilføj knap til at skifte sideoversættelse til en kontekstmenu"
 	},
 	"settings_option_pageTranslation_excludeSelectors": {
-		"message": "Ignorerede elementer"
+		"message": "Vælgere, der skal undgås for oversættelse"
 	},
 	"settings_option_pageTranslation_excludeSelectors_desc": {
-		"message": "Indtast <slot id=htmlElements>HTML element</slot>-navne, der ikke må oversættes. Indlejrede elementer vil heller ikke blive oversat. Ét element per linje."
+		"message": "Liste over CSS-vælgere, der ikke vil blive oversat. Én vælger per linje. Hvis et element matcher nogen af disse vælgere, vil det samt dets attributter og indlejrede elementer ikke blive oversat."
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
 		"message": "Oversæt kun synlige elementer"
@@ -559,6 +568,9 @@
 	},
 	"settings_pageTitle": {
 		"message": "Indstillinger"
+	},
+	"settings_section_history": {
+		"message": "Historik"
 	},
 	"settings_section_popup": {
 		"message": "Popup"

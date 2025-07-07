@@ -140,6 +140,9 @@
 	"history_message_entriesNotFound": {
 		"message": "Netika atrasti tulkojumi, kas atbilst filtram"
 	},
+	"history_notification_disabled": {
+		"message": "Vēstures ierakstīšana ir atspējota, tāpēc jauni ieraksti neparādīsies. To var mainīt <slot id=preferences>iestatījumos</slot>"
+	},
 	"history_pageTitle": {
 		"message": "Vēsture"
 	},
@@ -341,6 +344,12 @@
 	"settings_option_customTranslatorModule_manageButton": {
 		"message": "Pārvaldīt tulks"
 	},
+	"settings_option_history_enable": {
+		"message": "Iespējot vēsturi"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "Kad ieslēgts, jebkura tulkošana tiks ierakstīta vēstures lapā"
+	},
 	"settings_option_mainPreferences": {
 		"message": "Galvenie iestatījumi"
 	},
@@ -360,10 +369,10 @@
 		"message": "Pievienojiet pogu, lai iespējotu lapas tulkošanu konteksta izvēlnē."
 	},
 	"settings_option_pageTranslation_excludeSelectors": {
-		"message": "Ignorētie elementi"
+		"message": "Atlasītāji, kurus izlaist tulkošanā"
 	},
 	"settings_option_pageTranslation_excludeSelectors_desc": {
-		"message": "Ievadiet <slot id=htmlElements>HTML elementu</slot> nosaukumus, kuriem nav jātiek tulko tiem. Iekļautie elementi netiks tulkoti arī atsevišķi. Katrs elements jaunā rindā."
+		"message": "CSS atlasītāju saraksts, kurus netiks tulkots. Katrs atlasītājs jaunā rindā. Ja elements atbilst kādam no šiem atlasītājiem, tas, tā atribūti un iekšējie elementi netiks tulkoti."
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
 		"message": "Tulkot tikai redzamās daļas"
@@ -559,6 +568,9 @@
 	},
 	"settings_pageTitle": {
 		"message": "Iestatījumi"
+	},
+	"settings_section_history": {
+		"message": "Vēsture"
 	},
 	"settings_section_popup": {
 		"message": "Uznirstošais logs"

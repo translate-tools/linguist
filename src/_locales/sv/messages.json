@@ -140,6 +140,9 @@
 	"history_message_entriesNotFound": {
 		"message": "Inga översättningar hittades som uppfyller filtret"
 	},
+	"history_notification_disabled": {
+		"message": "Historikregistrering är inaktiverad, så nya poster kommer inte att visas. Du kan ändra det i <slot id=preferences>inställningarna</slot>"
+	},
 	"history_pageTitle": {
 		"message": "Historik"
 	},
@@ -341,6 +344,12 @@
 	"settings_option_customTranslatorModule_manageButton": {
 		"message": "Hantera översättare"
 	},
+	"settings_option_history_enable": {
+		"message": "Aktivera historik"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "När aktiverat kommer alla översättningar att sparas på en historiksida"
+	},
 	"settings_option_mainPreferences": {
 		"message": "Huvudinställningar"
 	},
@@ -360,10 +369,10 @@
 		"message": "Lägg till knapp för att växla översättning av sidan till ett kontextmeny."
 	},
 	"settings_option_pageTranslation_excludeSelectors": {
-		"message": "Ignorerade element"
+		"message": "Väljare att utesluta från översättning"
 	},
 	"settings_option_pageTranslation_excludeSelectors_desc": {
-		"message": "Ange <slot id=htmlElements>HTML-element</slot>-namn som inte ska översättas. Inbäddade element översätts inte heller. Ett element per rad."
+		"message": "Lista över CSS-väljare som inte kommer att översättas. En väljare per rad. Om ett element matchar någon av dessa väljare kommer det, dess attribut och underordnade element inte att översättas."
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
 		"message": "Översätt endast synliga element"
@@ -559,6 +568,9 @@
 	},
 	"settings_pageTitle": {
 		"message": "Inställningar"
+	},
+	"settings_section_history": {
+		"message": "Historik"
 	},
 	"settings_section_popup": {
 		"message": "Popup"

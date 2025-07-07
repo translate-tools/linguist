@@ -140,6 +140,9 @@
 	"history_message_entriesNotFound": {
 		"message": "Nebyly nalezeny žádné překlady odpovídající filtru"
 	},
+	"history_notification_disabled": {
+		"message": "Záznam historie je vypnutý, takže nové položky se nebudou zobrazovat. Můžete to změnit v <slot id=preferences>nastavení</slot>"
+	},
 	"history_pageTitle": {
 		"message": "Historie"
 	},
@@ -341,6 +344,12 @@
 	"settings_option_customTranslatorModule_manageButton": {
 		"message": "Spravovat překladače"
 	},
+	"settings_option_history_enable": {
+		"message": "Povolit historii"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "Po zapnutí bude jakýkoli překlad zaznamenán na stránku historie"
+	},
 	"settings_option_mainPreferences": {
 		"message": "Hlavní nastavení"
 	},
@@ -360,10 +369,10 @@
 		"message": "Přidat tlačítko pro přepínání překladu stránky do kontextového menu"
 	},
 	"settings_option_pageTranslation_excludeSelectors": {
-		"message": "Ignorované prvky"
+		"message": "Selektory pro vynechání překladu"
 	},
 	"settings_option_pageTranslation_excludeSelectors_desc": {
-		"message": "Zadejte názvy <slot id=htmlElements>HTML elementů</slot>, které se nesmí přeložit. Vnořené prvky nebudou přeloženy. Jeden prvek na řádek."
+		"message": "Seznam CSS selektorů, které nebudou přeloženy. Jeden selektor na řádek. Pokud prvek odpovídá některému z těchto selektorů, nebude přeložen ani on, ani jeho atributy či vnořené prvky."
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
 		"message": "Přeložit pouze viditelné prvky"
@@ -559,6 +568,9 @@
 	},
 	"settings_pageTitle": {
 		"message": "Nastavení"
+	},
+	"settings_section_history": {
+		"message": "Historie"
 	},
 	"settings_section_popup": {
 		"message": "Vyskakovací okno"

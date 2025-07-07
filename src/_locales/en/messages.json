@@ -140,14 +140,14 @@
 	"history_message_entriesNotFound": {
 		"message": "No translations found that satisfy the filter"
 	},
+	"history_notification_disabled": {
+		"message": "History recording is disabled, so new entries will not appear. You may change it in <slot id=preferences>preferences</slot>"
+	},
 	"history_pageTitle": {
 		"message": "History"
 	},
 	"history_searchPlaceholder": {
 		"message": "Search by text"
-	},
-	"history_notification_disabled": {
-		"message": "History recording is disabled, so new entries will not appear. You may change it in <slot id=preferences>preferences</slot>"
 	},
 	"inlineTranslator_showOriginalText": {
 		"message": "Show original text"
@@ -343,6 +343,12 @@
 	},
 	"settings_option_customTranslatorModule_manageButton": {
 		"message": "Manage translators"
+	},
+	"settings_option_history_enable": {
+		"message": "Enable history"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "When enabled, any translation will be recorded to a history page"
 	},
 	"settings_option_mainPreferences": {
 		"message": "Main settings"
@@ -563,17 +569,11 @@
 	"settings_pageTitle": {
 		"message": "Settings"
 	},
-	"settings_section_popup": {
-		"message": "Popup"
-	},
 	"settings_section_history": {
 		"message": "History"
 	},
-	"settings_option_history_enable": {
-		"message": "Enable history"
-	},
-	"settings_option_history_enable_desc": {
-		"message": "When enabled, any translation will be recorded to a history page"
+	"settings_section_popup": {
+		"message": "Popup"
 	},
 	"textTranslator_suggestLanguage": {
 		"message": "It looks like that language is"

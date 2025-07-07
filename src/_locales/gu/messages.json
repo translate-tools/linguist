@@ -140,6 +140,9 @@
 	"history_message_entriesNotFound": {
 		"message": "ફિલ્ટર પૂરી કરનાર કોઈ અનુવાદ મળ્યા નથી"
 	},
+	"history_notification_disabled": {
+		"message": "હિસ્ટરી રેકોર્ડિંગ અક્ષમ છે, તેથી નવા પ્રવેશો દેખાશે નહીં. તમે તેને <slot id=preferences>વિકલ્પો</slot> માં બદલાવી શકો છો"
+	},
 	"history_pageTitle": {
 		"message": "ઇતિહાસ"
 	},
@@ -341,6 +344,12 @@
 	"settings_option_customTranslatorModule_manageButton": {
 		"message": "ટ્રાન્સલેટર્સ વ્યવસ્થાપન"
 	},
+	"settings_option_history_enable": {
+		"message": "હિસ્ટરી સક્ષમ કરો"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "જ્યારે સક્ષમ કરવામાં આવે ત્યારે કોઈપણ અનુવાદ હિસ્ટરી પેજ પર રેકોર્ડ કરવામાં આવશે"
+	},
 	"settings_option_mainPreferences": {
 		"message": "મુખ્ય સેટિંગ્સ"
 	},
@@ -360,10 +369,10 @@
 		"message": "પૃષ્ઠ અનુવાદને સંદર્ભ મેનૂમાં ટૉગલ કરવા માટે બટન ઉમેરો"
 	},
 	"settings_option_pageTranslation_excludeSelectors": {
-		"message": "અગમ્ય તત્વો"
+		"message": "અનુવાદ ન કરવાની પસંદગીઓ"
 	},
 	"settings_option_pageTranslation_excludeSelectors_desc": {
-		"message": "ટ્રાન્સલેશન ન કરવાના <slot id=htmlElements>HTML તત્વો</slot>નામ દાખલ કરો જેમનાં ટ્રન્સલેશન ન કરવાનાં હોઈ. નેસ્ટેડ તત્વો પણ ટ્રન્સલેશન નહીં કરવામાં આવશે. પ્રત્યેક તત્વ પ્રતિ લીન હોઈશ."
+		"message": "એવા CSS સિલેક્ટર્સની યાદી જે અનુવાદિત નહીં કરવામાં આવે. પ્રત્યેક લાઇનમાં એક સિલેક્ટર. જો કોઇ તત્વ આ સિલેક્ટરોમાંથી કોઈ એકને મેચ કરે છે, તો તે તત્વ, તેની ગુણધર્મો અને અંદરના તત્વો અનુવાદ ન કરવામાં આવશે."
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
 		"message": "ફક્ત દૃષ્ટિમાં આવેલા તત્વોનું ટ્રાન્સલેશન કરો"
@@ -559,6 +568,9 @@
 	},
 	"settings_pageTitle": {
 		"message": "સેટિંગ્સ"
+	},
+	"settings_section_history": {
+		"message": "હિસ્ટરી"
 	},
 	"settings_section_popup": {
 		"message": "પૉપઅપ"

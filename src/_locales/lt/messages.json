@@ -140,6 +140,9 @@
 	"history_message_entriesNotFound": {
 		"message": "Nerasta jokių vertimų, atitinkančių filtrą"
 	},
+	"history_notification_disabled": {
+		"message": "Istorijos įrašymas išjungtas, todėl nauji įrašai nebus rodomi. Tai galite pakeisti <slot id=preferences>nuostatose</slot>"
+	},
 	"history_pageTitle": {
 		"message": "Istorija"
 	},
@@ -341,6 +344,12 @@
 	"settings_option_customTranslatorModule_manageButton": {
 		"message": "Tvarkyti vertėjus"
 	},
+	"settings_option_history_enable": {
+		"message": "Įjungti istoriją"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "Įjungus bet kuris vertimas bus įrašytas į istorijos puslapį"
+	},
 	"settings_option_mainPreferences": {
 		"message": "Pagrindinės nuostatos"
 	},
@@ -360,10 +369,10 @@
 		"message": "Įtraukti mygtuką, skirtą įjungti puslapio vertimą kontekstiniam meniu."
 	},
 	"settings_option_pageTranslation_excludeSelectors": {
-		"message": "Nevertimi elementai"
+		"message": "Selektoriai, kurių nebūtina versti"
 	},
 	"settings_option_pageTranslation_excludeSelectors_desc": {
-		"message": "Įveskite <slot id=htmlElements>HTML elemento</slot> pavadinimus, kurių neturėtumėte versti. Kiti vidiniai elementai taip pat nebus išversti. Vienas elementas per eilutę."
+		"message": "CSS selektorių sąrašas, kurių vertimas nebus vykdomas. Vienas selektorius per eilutę. Jeigu elementas atitinka bet kurį iš šių selektorių, jis kartu su atributais ir vidiniais elementais nebus verčiamas."
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
 		"message": "Verti tik matomus elementus"
@@ -559,6 +568,9 @@
 	},
 	"settings_pageTitle": {
 		"message": "Nustatymai"
+	},
+	"settings_section_history": {
+		"message": "Istorija"
 	},
 	"settings_section_popup": {
 		"message": "Iššokantis langas"

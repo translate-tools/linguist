@@ -140,6 +140,9 @@
 	"history_message_entriesNotFound": {
 		"message": "फिल्टर अनुसार कोणतीही भाषांतरे सापडली नाहीत"
 	},
+	"history_notification_disabled": {
+		"message": "इतिहास नोंदणी अक्षम केली आहे, त्यामुळे नवीन नोंदी दिसणार नाहीत. तुम्ही <slot id=preferences>प्राधान्ये</slot> येथे याची बदल करू शकता"
+	},
 	"history_pageTitle": {
 		"message": "इतिहास"
 	},
@@ -341,6 +344,12 @@
 	"settings_option_customTranslatorModule_manageButton": {
 		"message": "अनुवादक व्यवस्थापित करा"
 	},
+	"settings_option_history_enable": {
+		"message": "इतिहास सक्षम करा"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "सक्षम केल्यास, कोणतीही भाषांतर इतिहास पृष्ठावर नोंदवली जाईल"
+	},
 	"settings_option_mainPreferences": {
 		"message": "मुख्य सेटिंग्ज"
 	},
@@ -360,10 +369,10 @@
 		"message": "संदर्भ मेनूच्या एक बटण जोडा आणि पृष्ठ भाषांतरण टॉगल करण्यासाठी ते सक्षम करा"
 	},
 	"settings_option_pageTranslation_excludeSelectors": {
-		"message": "अनदेखीत घटक"
+		"message": "भाषांतर वगळण्यासाठी निवडक"
 	},
 	"settings_option_pageTranslation_excludeSelectors_desc": {
-		"message": "<slot id=htmlElements>HTML घटक</slot> नावे ट्रांसलेट करण्याची आवश्यकता नाही. नेस्टेड घटकांची ट्रांसलेशनही होईल. प्रत्येक घटक प्रत्येक पंक्तीमध्ये एक."
+		"message": "CSS निवडकांची यादी जी भाषांतरित केली जाणार नाही. एका ओळीत एक निवडक. जर एखादे घटक या पैकी कोणत्याही निवडकाशी जुळत असेल, तर ते आणि त्याचे गुणधर्म आणि अंतर्गत घटक भाषांतरित केले जाणार नाहीत."
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
 		"message": "फक्त दृश्यमान घटक ट्रांसलेट करा"
@@ -559,6 +568,9 @@
 	},
 	"settings_pageTitle": {
 		"message": "सेटिंग्ज"
+	},
+	"settings_section_history": {
+		"message": "इतिहास"
 	},
 	"settings_section_popup": {
 		"message": "पॉप-अप"
