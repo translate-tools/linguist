@@ -14,6 +14,10 @@ export class LLMJsonProcessor {
 			concurrency?: number;
 			termsLimit?: number;
 			chunkParsingRetriesLimit?: number;
+			backpressureTimeout?: {
+				base: number;
+				max: number;
+			} | null;
 		} = {},
 	) {}
 
@@ -73,13 +77,25 @@ export class LLMJsonProcessor {
 									Object.entries(transformedObject);
 								break;
 							} catch (error) {
-								if (retry++ < (this.config.chunkParsingRetriesLimit ?? 5))
-									await waitTimeWithJitter({
-										base: 100,
-										max: 1000,
-										retry,
-									});
-								continue;
+								if (
+									retry++ < (this.config.chunkParsingRetriesLimit ?? 5)
+								) {
+									if (this.config.backpressureTimeout !== null) {
+										await waitTimeWithJitter({
+											base: 100,
+											max: 1000,
+
+											// Override by user config
+											...this.config.backpressureTimeout,
+
+											retry,
+										});
+									}
+
+									continue;
+								}
+
+								throw error;
 							}
 						}
 					}

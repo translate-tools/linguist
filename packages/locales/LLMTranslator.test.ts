@@ -108,7 +108,7 @@ describe('Fetcher errors handling', () => {
 						return 0;
 					},
 				} satisfies LLMFetcher,
-				{ chunkParsingRetriesLimit: 3 },
+				{ chunkParsingRetriesLimit: 3, backpressureTimeout: null },
 			),
 			(json) => json,
 		);
@@ -148,7 +148,7 @@ describe('Fetcher errors handling', () => {
 						return 0;
 					},
 				} satisfies LLMFetcher,
-				{ chunkParsingRetriesLimit: 3 },
+				{ chunkParsingRetriesLimit: 3, backpressureTimeout: null },
 			),
 			(json) => json,
 		);
@@ -186,7 +186,7 @@ describe('Fetcher errors handling', () => {
 						return 0;
 					},
 				} satisfies LLMFetcher,
-				{ chunkParsingRetriesLimit: 3 },
+				{ chunkParsingRetriesLimit: 3, backpressureTimeout: null },
 			),
 			(json) => json,
 		);
