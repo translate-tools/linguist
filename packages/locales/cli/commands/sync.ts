@@ -1,5 +1,5 @@
 import { Command } from 'commander';
-import { readdirSync } from 'fs';
+import { existsSync, readdirSync } from 'fs';
 import path from 'path';
 import { z } from 'zod';
 
@@ -11,7 +11,7 @@ import { getFileVersion } from '../../utils/git';
 import { orderKeysInLocalizationObject } from '../../utils/localeObject';
 import { getJsonTranslationPrompt } from '../../utils/prompts';
 
-import { readFile, writeFile } from 'fs/promises';
+import { mkdir, readFile, writeFile } from 'fs/promises';
 
 const command = new Command('sync');
 
@@ -92,7 +92,7 @@ command
 							temperature: 1,
 						},
 					),
-					{ concurrency: 10 },
+					{ concurrency: 10, chunkParsingRetriesLimit: 8 },
 				),
 				getJsonTranslationPrompt,
 			),
@@ -101,22 +101,32 @@ command
 		for (const index in languages) {
 			const targetLanguage = languages[index];
 
-			console.log(
-				`Sync locales "${targetLanguage}" [${Number(index) + 1}/${
-					languages.length
-				}]`,
-			);
-
 			const targetLanguageFilename = path.join(
 				resolvedDir,
 				targetLanguage,
 				'messages.json',
 			);
-			const localeObject = options.forceUpdate
-				? {}
-				: await readFile(targetLanguageFilename, {
+
+			const isFileExists = existsSync(targetLanguageFilename);
+
+			console.log(
+				[
+					`Sync locale "${targetLanguage}"`,
+					!isFileExists && '(new)',
+					`[${Number(index) + 1}/${languages.length}]`,
+				]
+					.filter(Boolean)
+					.join(' '),
+			);
+
+			let localeObject = {};
+
+			// Load and parse file content in case file exists and force update is not requested
+			if (isFileExists && !options.forceUpdate) {
+				localeObject = await readFile(targetLanguageFilename, {
 					encoding: 'utf8',
-				  }).then((text) => JSON.parse(text));
+				}).then((text) => JSON.parse(text));
+			}
 
 			const syncedLocale = await localesManager.sync({
 				source: {
@@ -132,6 +142,7 @@ command
 				},
 			});
 
+			await mkdir(path.dirname(targetLanguageFilename), { recursive: true });
 			await writeFile(
 				targetLanguageFilename,
 				JSON.stringify(orderKeysInLocalizationObject(syncedLocale), null, '\t'),
