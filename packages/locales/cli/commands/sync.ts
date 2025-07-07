@@ -8,6 +8,7 @@ import { LLMJsonProcessor } from '../../LLMJsonProcessor';
 import { LLMTranslator } from '../../LLMTranslator';
 import { LocalesManager } from '../../LocalesManager';
 import { getFileVersion } from '../../utils/git';
+import { orderKeysInLocalizationObject } from '../../utils/localeObject';
 import { getJsonTranslationPrompt } from '../../utils/prompts';
 
 import { readFile, writeFile } from 'fs/promises';
@@ -133,7 +134,7 @@ command
 
 			await writeFile(
 				targetLanguageFilename,
-				JSON.stringify(syncedLocale, null, '\t'),
+				JSON.stringify(orderKeysInLocalizationObject(syncedLocale), null, '\t'),
 			);
 		}
 	});

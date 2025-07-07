@@ -5,6 +5,7 @@ import { z } from 'zod';
 
 import { BasicLLMFetcher } from '../../BasicLLMFetcher';
 import { LLMJsonProcessor } from '../../LLMJsonProcessor';
+import { orderKeysInLocalizationObject } from '../../utils/localeObject';
 import { codeBlock } from '../../utils/prompts';
 
 import { readFile, writeFile } from 'fs/promises';
@@ -127,7 +128,10 @@ command
 				},
 			});
 
-			await writeFile(localeFilename, JSON.stringify(fixedTexts, null, '\t'));
+			await writeFile(
+				localeFilename,
+				JSON.stringify(orderKeysInLocalizationObject(fixedTexts), null, '\t'),
+			);
 		}
 	});
 
