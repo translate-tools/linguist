@@ -57,7 +57,7 @@ command
 		});
 
 		if (languages.length === 0) {
-			console.log('No languages to sync');
+			console.log('No locales found');
 			return;
 		}
 

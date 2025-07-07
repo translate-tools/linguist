@@ -13,10 +13,13 @@ const command = new Command('proofread');
 
 command
 	.argument('directory', 'directory where localization files is placed')
-	.option('-l --languages <languages list>', 'comma separated languages list to sync')
+	.option(
+		'-l --languages <languages list>',
+		'comma separated languages list for processing',
+	)
 	.option(
 		'-e --excluded-languages <languages list>',
-		'comma separated languages list to exclude of sync',
+		'comma separated languages list to exclude of processing',
 	)
 	.action(async (dir: string, rawOptions: unknown) => {
 		const options = z
@@ -49,12 +52,18 @@ command
 		});
 
 		if (languages.length === 0) {
-			console.log('No languages to proofread');
+			console.log('No locales found');
 			return;
 		}
 
-		for (const language of languages) {
-			console.log('Proofread locale file', language);
+		for (const index in languages) {
+			const language = languages[index];
+
+			console.log(
+				`Proofread locale "${language}" [${Number(index) + 1}/${
+					languages.length
+				}]`,
+			);
 
 			const jsonProcessor = new LLMJsonProcessor(
 				new BasicLLMFetcher(
