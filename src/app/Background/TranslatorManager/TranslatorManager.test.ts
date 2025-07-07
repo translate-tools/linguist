@@ -4,11 +4,11 @@ import { TranslatorManager } from '.';
 
 const createTranslatorMockClass = (translatorName: string) => {
 	return class MockTranslator {
-		translate = jest.fn((text: string, from: string, to: string) => {
+		translate = vi.fn((text: string, from: string, to: string) => {
 			return Promise.resolve(`${translatorName}["${text}"-${from}-${to}]`);
 		});
 
-		translateBatch = jest.fn((texts: string[], from: string, to: string) => {
+		translateBatch = vi.fn((texts: string[], from: string, to: string) => {
 			return Promise.all(texts.map((text) => this.translate(text, from, to)));
 		});
 

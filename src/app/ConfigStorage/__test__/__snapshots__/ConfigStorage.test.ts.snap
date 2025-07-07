@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`config migrations migrate config v0 to latest version 1`] = `
+exports[`config migrations > migrate config v0 to latest version 1`] = `
 {
   "cache": {
     "ignoreCase": true,
@@ -120,7 +120,7 @@ exports[`config migrations migrate config v0 to latest version 1`] = `
 }
 `;
 
-exports[`config migrations race condition detection Detection race conditions. Attempt #1 1`] = `
+exports[`config migrations > race condition detection > Detection race conditions. Attempt #1 1`] = `
 {
   "cache": {
     "ignoreCase": true,
@@ -240,7 +240,7 @@ exports[`config migrations race condition detection Detection race conditions. A
 }
 `;
 
-exports[`config migrations race condition detection Detection race conditions. Attempt #2 1`] = `
+exports[`config migrations > race condition detection > Detection race conditions. Attempt #2 1`] = `
 {
   "cache": {
     "ignoreCase": true,
@@ -360,7 +360,7 @@ exports[`config migrations race condition detection Detection race conditions. A
 }
 `;
 
-exports[`config migrations race condition detection Detection race conditions. Attempt #3 1`] = `
+exports[`config migrations > race condition detection > Detection race conditions. Attempt #3 1`] = `
 {
   "cache": {
     "ignoreCase": true,
@@ -480,7 +480,7 @@ exports[`config migrations race condition detection Detection race conditions. A
 }
 `;
 
-exports[`config migrations race condition detection Detection race conditions. Attempt #4 1`] = `
+exports[`config migrations > race condition detection > Detection race conditions. Attempt #4 1`] = `
 {
   "cache": {
     "ignoreCase": true,
@@ -600,7 +600,7 @@ exports[`config migrations race condition detection Detection race conditions. A
 }
 `;
 
-exports[`config migrations race condition detection Detection race conditions. Attempt #5 1`] = `
+exports[`config migrations > race condition detection > Detection race conditions. Attempt #5 1`] = `
 {
   "cache": {
     "ignoreCase": true,

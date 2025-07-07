@@ -19,14 +19,25 @@ export default defineConfig({
 		},
 	],
 	test: {
-		exclude: testTargets.includes('all')
-			? []
-			: [
-				...(testTargets.includes('integration')
-					? []
-					: ['**/*.integration.test.ts']),
-			  ],
+		exclude: [
+			'node_modules/**',
+
+			// Optional targets
+			...(testTargets.includes('all')
+				? []
+				: [
+					...(testTargets.includes('integration')
+						? []
+						: ['**/*.integration.test.ts']),
+				  ]),
+		],
 		globals: true,
 		environment: 'jsdom',
+		setupFiles: [
+			'./test/setupFiles/jest.js',
+			'jest-localstorage-mock',
+			'fake-indexeddb/auto',
+			'./test/setupFiles/webextension.js',
+		],
 	},
 });

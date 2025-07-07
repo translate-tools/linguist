@@ -1,7 +1,7 @@
 import { PersistentMigrationsExecutor } from './PersistentMigrationsExecutor';
 
 /**
- * Execute jest tests for `PersistentMigrationsExecutor` implementations
+ * Execute tests for `PersistentMigrationsExecutor` implementations
  *
  * This function exports to provide reference tests for any implementation of `PersistentMigrationsExecutor` or its storage
  */
@@ -9,8 +9,8 @@ export const testPersistentMigrationsExecutor = (
 	createPersistentExecutor: () => PersistentMigrationsExecutor,
 ) => {
 	const getMockedMigrations = () => {
-		const migrateFooStub = jest.fn();
-		const migrateBarStub = jest.fn();
+		const migrateFooStub = vi.fn();
+		const migrateBarStub = vi.fn();
 
 		return [
 			{
@@ -58,7 +58,7 @@ export const testPersistentMigrationsExecutor = (
 		const migrationBar = migrations[1];
 
 		// Migrate foo
-		jest.clearAllMocks();
+		vi.clearAllMocks();
 		migrationFoo.migration.version++;
 
 		await persistentMigrationsExecutor.executeMigrations(migrations);
@@ -66,7 +66,7 @@ export const testPersistentMigrationsExecutor = (
 		expect(migrationBar.migration.migrate).not.toHaveBeenCalled();
 
 		// Migrate bar
-		jest.clearAllMocks();
+		vi.clearAllMocks();
 		migrationBar.migration.version++;
 
 		await persistentMigrationsExecutor.executeMigrations(migrations);
@@ -74,7 +74,7 @@ export const testPersistentMigrationsExecutor = (
 		expect(migrationBar.migration.migrate).toHaveBeenCalled();
 
 		// Migrate foo and bar
-		jest.clearAllMocks();
+		vi.clearAllMocks();
 		migrationFoo.migration.version++;
 		migrationBar.migration.version++;
 
@@ -83,7 +83,7 @@ export const testPersistentMigrationsExecutor = (
 		expect(migrationBar.migration.migrate).toHaveBeenCalled();
 
 		// Downgrade bar version
-		jest.clearAllMocks();
+		vi.clearAllMocks();
 		migrationBar.migration.version = 1;
 
 		await persistentMigrationsExecutor.executeMigrations(migrations);

@@ -1,4 +1,4 @@
-import { Blob } from 'buffer';
+import { Blob } from 'blob-polyfill';
 
 globalThis.Blob = Blob;
 
