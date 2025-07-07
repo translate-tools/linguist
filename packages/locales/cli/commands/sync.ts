@@ -19,7 +19,7 @@ command
 	.argument('language', 'primary language')
 	.argument('directory', 'directory where localization files is placed')
 	.option('-f --force-update', 'force update all localization keys')
-	.option('-b --branch <name>', 'git branch for compare files versions')
+	.option('-r --ref <name>', 'git ref for compare files versions')
 	.option('-l --languages <languages list>', 'comma separated languages list to sync')
 	.option(
 		'-e --excluded-languages <languages list>',
@@ -28,7 +28,7 @@ command
 	.action(async (sourceLanguage: string, dir: string, rawOptions: unknown) => {
 		const options = z
 			.object({
-				branch: z.string().optional(),
+				ref: z.string().optional(),
 				forceUpdate: z.boolean().optional(),
 				languages: z
 					.string()
@@ -75,7 +75,7 @@ command
 		}).then((text) => JSON.parse(text));
 		const sourceLocalePrevRaw = getFileVersion(
 			sourceLocaleFilename,
-			options.branch ?? 'master',
+			options.ref ?? 'master',
 		);
 
 		const localesManager = new LocalesManager(
