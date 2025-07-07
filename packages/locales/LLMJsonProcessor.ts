@@ -1,5 +1,6 @@
 import { LLMFetcher } from './LLMFetcher';
 import { sliceJsonString } from './utils/json';
+import { waitTimeWithJitter } from './utils/time';
 
 /**
  * LLM processor for JSON objects that support object slicing
@@ -73,9 +74,12 @@ export class LLMJsonProcessor {
 								break;
 							} catch (error) {
 								if (retry++ < (this.config.chunkParsingRetriesLimit ?? 5))
-									continue;
-
-								throw error;
+									await waitTimeWithJitter({
+										base: 100,
+										max: 1000,
+										retry,
+									});
+								continue;
 							}
 						}
 					}
