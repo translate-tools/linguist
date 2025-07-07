@@ -1,4 +1,4 @@
-import { execSync } from 'child_process';
+import { execFileSync } from 'child_process';
 import { existsSync, statSync } from 'fs';
 import path from 'path';
 
@@ -25,9 +25,10 @@ export const getFileVersion = (filename: string, ref = 'master') => {
 		const gitDir = findGitDirForPath(filename);
 		if (!gitDir) throw new Error('.git directory is not found');
 
-		const prevVersion = execSync(
-			`git show ${ref}:${filename.slice(path.dirname(gitDir).length + 1)}`,
-		).toString('utf8');
+		const prevVersion = execFileSync('git', [
+			'show',
+			`${ref}:${filename.slice(path.dirname(gitDir).length + 1)}`,
+		]).toString('utf8');
 
 		return prevVersion;
 	} catch (error) {
