@@ -19,6 +19,7 @@
 
 .OptionsPage-OptionTitle {
 	text-align: right;
+	line-height: 140%;
 }
 
 /* OptionDescription */
@@ -26,6 +27,7 @@
 	color: var(--color-typo-secondary);
 	font-size: 1rem;
 	white-space: break-spaces;
+	line-height: 140%;
 }
 
 .OptionsPage-OptionErrorMessage {
@@ -33,7 +35,7 @@
 	font-size: var(--typography-layout-size-s-font-size);
 }
 
-@media (max-width: 600px) {
+@media (width <= 600px) {
 	.OptionsPage-OptionSection {
 		display: block;
 	}
@@ -67,7 +69,7 @@
 	}
 }
 
-@media (min-width: 600px) {
+@media (width >= 600px) {
 	/* Highlight whole option section */
 	.OptionsPage-OptionSection_changed::before {
 		background: #f2f5ff;
