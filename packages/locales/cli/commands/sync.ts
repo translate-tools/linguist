@@ -18,6 +18,7 @@ const command = new Command('sync');
 command
 	.argument('language', 'primary language')
 	.argument('directory', 'directory where localization files is placed')
+	.option('-s --skip-errors', 'ignore errors while translation and go to next locale')
 	.option('-f --force-update', 'force update all localization keys')
 	.option('-r --ref <name>', 'git ref for compare files versions')
 	.option('-l --languages <languages list>', 'comma separated languages list to sync')
@@ -30,6 +31,7 @@ command
 			.object({
 				ref: z.string().optional(),
 				forceUpdate: z.boolean().optional(),
+				skipErrors: z.boolean().optional(),
 				languages: z
 					.string()
 					.transform((str) => str.split(','))
@@ -92,70 +94,88 @@ command
 							temperature: 1,
 						},
 					),
-					{ concurrency: 10, chunkParsingRetriesLimit: 8 },
+					{
+						concurrency: 10,
+						termsLimit: 10,
+						chunkParsingRetriesLimit: options.forceUpdate ? 20 : 8,
+						backpressureTimeout: {
+							base: 100,
+							max: options.forceUpdate ? 3000 : 1000,
+						},
+					},
 				),
 				getJsonTranslationPrompt,
 			),
 		);
 
 		for (const index in languages) {
-			const targetLanguage = languages[index];
+			try {
+				const targetLanguage = languages[index];
 
-			const targetLanguageFilename = path.join(
-				resolvedDir,
-				targetLanguage,
-				'messages.json',
-			);
+				const targetLanguageFilename = path.join(
+					resolvedDir,
+					targetLanguage,
+					'messages.json',
+				);
 
-			const isFileExists = existsSync(targetLanguageFilename);
+				const isFileExists = existsSync(targetLanguageFilename);
 
-			console.log(
-				[
-					`Sync locale "${targetLanguage}"`,
-					!isFileExists && '(new)',
-					`[${Number(index) + 1}/${languages.length}]`,
-				]
-					.filter(Boolean)
-					.join(' '),
-			);
+				console.log(
+					[
+						`Sync locale "${targetLanguage}"`,
+						!isFileExists && '(new)',
+						`[${Number(index) + 1}/${languages.length}]`,
+					]
+						.filter(Boolean)
+						.join(' '),
+				);
 
-			let localeObject = {};
+				let localeObject = {};
 
-			// Load and parse file content in case file exists and force update is not requested
-			if (isFileExists && !options.forceUpdate) {
-				localeObject = await readFile(targetLanguageFilename, {
-					encoding: 'utf8',
-				}).then((text) => JSON.parse(text));
+				// Load and parse file content in case file exists and force update is not requested
+				if (isFileExists && !options.forceUpdate) {
+					localeObject = await readFile(targetLanguageFilename, {
+						encoding: 'utf8',
+					}).then((text) => JSON.parse(text));
+				}
+
+				const syncedLocale = await localesManager.sync({
+					source: {
+						language: sourceLanguage,
+						content: sourceLocale,
+						previous: sourceLocalePrevRaw
+							? JSON.parse(sourceLocalePrevRaw)
+							: undefined,
+					},
+					target: {
+						language: targetLanguage,
+						content: localeObject,
+					},
+					skip(context) {
+						if (context.path[0].startsWith('langCode_')) return true;
+
+						return false;
+					},
+				});
+
+				await mkdir(path.dirname(targetLanguageFilename), { recursive: true });
+				await writeFile(
+					targetLanguageFilename,
+					JSON.stringify(
+						postprocessLocale(syncedLocale, targetLanguage),
+						null,
+						'\t',
+					),
+				);
+			} catch (error) {
+				if (options.skipErrors) {
+					console.log('Error while locale translation', error);
+					console.log('Ignore error, since passed flag --skip-errors');
+					continue;
+				} else {
+					throw error;
+				}
 			}
-
-			const syncedLocale = await localesManager.sync({
-				source: {
-					language: sourceLanguage,
-					content: sourceLocale,
-					previous: sourceLocalePrevRaw
-						? JSON.parse(sourceLocalePrevRaw)
-						: undefined,
-				},
-				target: {
-					language: targetLanguage,
-					content: localeObject,
-				},
-				skip(context) {
-					if (context.path[0].startsWith('langCode_')) return true;
-
-					return false;
-				},
-			});
-
-			await mkdir(path.dirname(targetLanguageFilename), { recursive: true });
-			await writeFile(
-				targetLanguageFilename,
-				JSON.stringify(
-					postprocessLocale(syncedLocale, targetLanguage),
-					null,
-					'\t',
-				),
-			);
 		}
 	});
 
