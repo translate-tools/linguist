@@ -5,7 +5,7 @@ import { z } from 'zod';
 
 import { BasicLLMFetcher } from '../../BasicLLMFetcher';
 import { LLMJsonProcessor } from '../../LLMJsonProcessor';
-import { LLMTranslator } from '../../LLMTranslator';
+import { LLMJsonTranslator } from '../../LLMJsonTranslator';
 import { LocalesManager } from '../../LocalesManager';
 import { getFileVersion } from '../../utils/git';
 import { orderKeysInLocalizationObject } from '../../utils/localeObject';
@@ -79,7 +79,7 @@ command
 		);
 
 		const localesManager = new LocalesManager(
-			new LLMTranslator(
+			new LLMJsonTranslator(
 				new LLMJsonProcessor(
 					new BasicLLMFetcher(
 						{

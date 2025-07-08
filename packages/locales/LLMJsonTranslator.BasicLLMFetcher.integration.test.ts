@@ -2,7 +2,7 @@ import 'dotenv/config';
 
 import { BasicLLMFetcher } from './BasicLLMFetcher';
 import { LLMJsonProcessor } from './LLMJsonProcessor';
-import { LLMTranslator } from './LLMTranslator';
+import { LLMJsonTranslator } from './LLMJsonTranslator';
 import dataSample from './sample.json';
 import { getJsonTranslationPrompt } from './utils/prompts';
 
@@ -29,7 +29,7 @@ expect.addSnapshotSerializer({
 });
 
 test('Translation for a sample localization file', async () => {
-	const translator = new LLMTranslator(
+	const translator = new LLMJsonTranslator(
 		new LLMJsonProcessor(
 			new BasicLLMFetcher(
 				{

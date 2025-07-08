@@ -1,6 +1,6 @@
 import deepmerge from 'deepmerge';
 
-import { LLMTranslator } from './LLMTranslator';
+import { LLMJsonTranslator } from './LLMJsonTranslator';
 import { getObjectPatch } from './utils/json';
 
 type LocaleObject = Record<any, any>;
@@ -11,7 +11,7 @@ type LocaleInfo = {
 };
 
 export class LocalesManager {
-	constructor(private readonly llmTransformer: LLMTranslator) {}
+	constructor(private readonly jsonTranslator: LLMJsonTranslator) {}
 
 	/**
 	 * Sync `target` object with `source` object and translates all changed parts.
@@ -39,7 +39,7 @@ export class LocalesManager {
 		// Find changes between target ans source
 		const patch = getObjectPatch(source.content, target.content);
 
-		const translatedPatch = await this.llmTransformer.translate(
+		const translatedPatch = await this.jsonTranslator.translate(
 			// Translate superset + slice to override,
 			// that has been changed in source object
 			deepmerge(patch.superset, changesToOverride),

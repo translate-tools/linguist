@@ -1,7 +1,7 @@
 import { LLMJsonProcessor } from './LLMJsonProcessor';
 import { isEqualStructures } from './utils/json';
 
-export class LLMTranslator {
+export class LLMJsonTranslator {
 	constructor(
 		private readonly jsonProcessor: LLMJsonProcessor,
 		private readonly getPrompt: (json: string, from: string, to: string) => string,

@@ -1,6 +1,6 @@
 import { LLMFetcher } from './LLMFetcher';
 import { LLMJsonProcessor } from './LLMJsonProcessor';
-import { LLMTranslator } from './LLMTranslator';
+import { LLMJsonTranslator } from './LLMJsonTranslator';
 import { LocalesManager } from './LocalesManager';
 
 const fetch = vi.fn();
@@ -12,7 +12,7 @@ beforeEach(() => {
 	fetch.mockImplementation(async (request: string) => request);
 });
 
-const translator = new LLMTranslator(
+const translator = new LLMJsonTranslator(
 	new LLMJsonProcessor({
 		fetch,
 		getLengthLimit() {
