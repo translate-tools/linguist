@@ -229,5 +229,31 @@ describe('Skip nodes', () => {
 				message: 'lang1 - additionalKey1',
 			},
 		});
+
+		expect(fetch.mock.calls).toStrictEqual([
+			[
+				JSON.stringify({
+					key2: {
+						message: 'translated[lang2-lang1] lang2 - value2',
+					},
+					key3: {
+						message: 'translated[lang2-lang1] lang2 - value3',
+					},
+					nestedObject: {
+						bar: {
+							message: 'translated[lang2-lang1] lang2 - text',
+							baz: {
+								message: 'translated[lang2-lang1] lang2 - text',
+							},
+						},
+						partiallyTranslated: {
+							forTranslation: {
+								message: 'translated[lang2-lang1] lang2 - text',
+							},
+						},
+					},
+				}),
+			],
+		]);
 	});
 });
