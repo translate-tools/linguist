@@ -1,5 +1,8 @@
+import deepmerge from 'deepmerge';
+
 import { LLMFetcher } from './LLMFetcher';
 import { sliceJsonString } from './utils/json';
+import { ObjectFilter, splitObjectByFilter } from './utils/splitObjectByFilter';
 import { waitTimeWithJitter } from './utils/time';
 
 /**
@@ -25,16 +28,22 @@ export class LLMJsonProcessor {
 		sourceObject: T,
 		{
 			prompt,
+			filter,
 			validate,
 			validateSlice,
 		}: {
 			prompt: (json: string) => string;
+			filter?: ObjectFilter;
 			validate?: (sourceObject: any, processedObject: any) => boolean;
 			validateSlice?: (sourceObject: any, processedObject: any) => boolean;
 		},
 	) {
+		const filteredObject = filter
+			? splitObjectByFilter(sourceObject, filter)
+			: { included: sourceObject, excluded: {} };
+
 		const objectSlices = sliceJsonString(
-			JSON.stringify(sourceObject),
+			JSON.stringify(filteredObject.included),
 			this.fetcher.getLengthLimit(),
 			this.config.termsLimit ?? 6,
 		);
@@ -105,7 +114,11 @@ export class LLMJsonProcessor {
 			throw error;
 		});
 
-		const transformedObject = Object.fromEntries(transformedSlices.flat());
+		const transformedObject = deepmerge.all([
+			Object.fromEntries(transformedSlices.flat()),
+			filteredObject.excluded,
+		]);
+
 		if (validate && !validate(sourceObject, transformedObject))
 			throw new TypeError('Invalid result object');
 

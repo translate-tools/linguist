@@ -126,6 +126,12 @@ command
 					${codeBlock(prettifiedJson, 'json')}
 					`;
 				},
+				filter(context) {
+					// Skip language names
+					if (context.path[0].startsWith('langCode_')) return false;
+
+					return true;
+				},
 			});
 
 			await writeFile(
