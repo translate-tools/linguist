@@ -1,0 +1,1184 @@
+{
+	"common_action_addToDictionary": {
+		"message": "Аударманы сөздікке қосу"
+	},
+	"common_action_removeFromDictionary": {
+		"message": "Аударманы сөздіктен алу"
+	},
+	"common_bgUnavailable": {
+		"message": "Фондық скрипт қолжетімсіз"
+	},
+	"common_cancel": {
+		"message": "Бас тарту"
+	},
+	"common_close": {
+		"message": "Жабыңыз"
+	},
+	"common_copy": {
+		"message": "Көшіру"
+	},
+	"common_error": {
+		"message": "Қате"
+	},
+	"common_offlineTranslator": {
+		"message": "$1 - Офлайн аудармашы"
+	},
+	"common_retry": {
+		"message": "Қайтадан әрекет ету"
+	},
+	"common_translate": {
+		"message": "Аудару"
+	},
+	"component_hotkey_placeholder": {
+		"message": "Ыстықкілттерді жазу үшін басыңыз"
+	},
+	"component_hotkey_recordPlaceholder": {
+		"message": "Түймелерді басыңыз"
+	},
+	"component_hotkey_resetButton": {
+		"message": "Қалпына келтіру"
+	},
+	"contextMenu_disablePageTranslation": {
+		"message": "Бетті аударуды өшіру"
+	},
+	"contextMenu_translatePage": {
+		"message": "Бетті аудару"
+	},
+	"contextMenu_translateSelectedText": {
+		"message": "Таңдалған мәтінді аудару"
+	},
+	"dictionaryButton_add": {
+		"message": "Сөздікке қосу"
+	},
+	"dictionaryButton_delete": {
+		"message": "Сөздіктен өшіру"
+	},
+	"dictionary_button_export": {
+		"message": "Экспорттау"
+	},
+	"dictionary_button_removeAll": {
+		"message": "Барлығын жою"
+	},
+	"dictionary_deleteAll": {
+		"message": "Сөздік ішіндегі БАРЛЫҚ аудармаларды жоюға сенімдісіз бе?"
+	},
+	"dictionary_deleteConfirmation": {
+		"message": "Осы аударманы жоюға сенімдісіз бе?"
+	},
+	"dictionary_description": {
+		"message": "Аудармаларыңызды оңай табу үшін сөздікке сақтаңыз"
+	},
+	"dictionary_emptyDictionary": {
+		"message": "Сөздік бос. Аударма кезінде оны толтыра бастаңыз"
+	},
+	"dictionary_filter_from": {
+		"message": "Кімнен"
+	},
+	"dictionary_filter_to": {
+		"message": "Кімге"
+	},
+	"dictionary_message_deleteAll_success": {
+		"message": "Барлық аудармалар жойылды"
+	},
+	"dictionary_notFoundEntries": {
+		"message": "Осы сүзгілерге сәйкес аудармалар табылмады"
+	},
+	"dictionary_pageTitle": {
+		"message": "Сөздік"
+	},
+	"dictionary_resetFilters": {
+		"message": "сүзгілерді қайта орнату"
+	},
+	"dictionary_searchPlaceholder": {
+		"message": "Мәтін бойынша іздеу"
+	},
+	"editorWindow_close": {
+		"message": "Жабу"
+	},
+	"editorWindow_data_code": {
+		"message": "Код"
+	},
+	"editorWindow_data_translatorName": {
+		"message": "Аудармашының аты"
+	},
+	"editorWindow_message_invalidTranslatorName": {
+		"message": "Аудармашының аты кем дегенде бір символдан тұруы керек"
+	},
+	"editorWindow_save": {
+		"message": "Сақтау"
+	},
+	"ext_description": {
+		"message": "Беттер мен мәтіндерді аудару, сөздік, тарих, офлайн және жеке аудармашылар"
+	},
+	"ext_name": {
+		"message": "Linguist - веб-беттерді аударушы"
+	},
+	"history_control_selectEntry": {
+		"message": "Жазбаны таңдау"
+	},
+	"history_controls_clearHistory": {
+		"message": "Тарихты тазалау"
+	},
+	"history_controls_deleteSelected": {
+		"message": "Таңдалғандарын жою"
+	},
+	"history_controls_selectAll": {
+		"message": "Барлық аудармаларды таңдау"
+	},
+	"history_message_clearHistoryConfirmation": {
+		"message": "Тарихты тазалау керек пе? Барлық жазбалар жойылады"
+	},
+	"history_message_deleteEntryConfirmation": {
+		"message": "Бұл жазбаны жоюға сенімдісіз бе?"
+	},
+	"history_message_deleteSelectedEntriesConfirmation": {
+		"message": "Таңдалған жазбаларды ($1) жоюға сенімдісіз бе?"
+	},
+	"history_message_entriesNotFound": {
+		"message": "Фильтрге сәйкес келетін аудармалар табылған жоқ"
+	},
+	"history_message_noEntries": {
+		"message": "Тарих таза"
+	},
+	"history_notification_disabled": {
+		"message": "Тарих жазу өшірілген, сондықтан жаңа жазбалар пайда болмайды. Бұл параметрді <slot id=preferences>параметрлерден</slot> өзгерте аласыз"
+	},
+	"history_pageTitle": {
+		"message": "Тарих"
+	},
+	"history_searchPlaceholder": {
+		"message": "Мәтін арқылы іздеу"
+	},
+	"inlineTranslator_showOriginalText": {
+		"message": "Бастапқы мәтінді көрсету"
+	},
+	"lang_change": {
+		"message": "Тілді өзгерту"
+	},
+	"lang_detect": {
+		"message": "Автоматты анықтау"
+	},
+	"lang_select": {
+		"message": "Тілді таңдау"
+	},
+	"lang_swap": {
+		"message": "Тілдерді ауыстыру"
+	},
+	"message_askResetConfig": {
+		"message": "Параметрлерді қалпына келтіру керек пе?"
+	},
+	"message_cacheFlushed": {
+		"message": "Кэш тазартылды"
+	},
+	"message_changesSaved": {
+		"message": "Өзгерістер сақталды"
+	},
+	"message_error": {
+		"message": "Қате"
+	},
+	"message_errorOfTranslate": {
+		"message": "Аударма қатесі"
+	},
+	"message_serviceRequiredKey": {
+		"message": "Қызмет кілтін талап етеді"
+	},
+	"message_translateOfText": {
+		"message": "Аударылды"
+	},
+	"message_unknownError": {
+		"message": "Белгісіз қате"
+	},
+	"pageTranslator_alwaysTranslateLang": {
+		"message": "Бұл тілді әрқашан аудару"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disable": {
+		"message": "Өшіру"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
+		"message": "Барлық сайттар үшін өшіру"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_enable": {
+		"message": "Қосу"
+	},
+	"pageTranslator_commonPreferences_title": {
+		"message": "Бұл тіл үшін жалпы параметрлер"
+	},
+	"pageTranslator_option_autoTranslate": {
+		"message": "Автоматты аудару"
+	},
+	"pageTranslator_showOptions": {
+		"message": "Параметрлерді көрсету"
+	},
+	"pageTranslator_showOriginal": {
+		"message": "Түпнұсқасын көрсету"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_always": {
+		"message": "Әрқашан аудару"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
+		"message": "Әрдайым осы тіл үшін аудару"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_default": {
+		"message": "Жалпы ережелерді пайдалану"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
+		"message": "Осы тіл үшін жалпы ережелерді пайдалану"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_never": {
+		"message": "Ешқашан аудармау"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
+		"message": "Осы тіл үшін ешқашан аудармау"
+	},
+	"pageTranslator_sitePreferences_title": {
+		"message": "Таңдаулар"
+	},
+	"pageTranslator_translatePage": {
+		"message": "Бетті аудару"
+	},
+	"pageTranslator_translationReport": {
+		"message": "Аударма есебі"
+	},
+	"pageTranslator_translationReport_queue": {
+		"message": "Кезек"
+	},
+	"pageTranslator_translationReport_reject": {
+		"message": "Қателер"
+	},
+	"pageTranslator_translationReport_resolve": {
+		"message": "Аударылған"
+	},
+	"popup_tabIdNotFound": {
+		"message": "Таб \"$1\" табылмады"
+	},
+	"popup_tab_translatePage": {
+		"message": "Бетті аудару"
+	},
+	"popup_tab_translateText": {
+		"message": "Мәтінді аудару"
+	},
+	"settings_button_cancel": {
+		"message": "Бас тарту"
+	},
+	"settings_button_export": {
+		"message": "Баптауларды экспорттау"
+	},
+	"settings_button_import": {
+		"message": "Баптауларды импорттау"
+	},
+	"settings_button_reset": {
+		"message": "Баптауларды қалпына келтіру"
+	},
+	"settings_button_saveChanges": {
+		"message": "Өзгерістерді сақтау"
+	},
+	"settings_message_clearCache_success": {
+		"message": "Кэш тазартылды"
+	},
+	"settings_message_common_invalidValueType": {
+		"message": "Қате мән"
+	},
+	"settings_message_importConfig_invalidFile": {
+		"message": "Импорттағы файл өңделмейді"
+	},
+	"settings_message_importConfig_success": {
+		"message": "Импорт аяқталды"
+	},
+	"settings_message_resetConfig_confirm": {
+		"message": "Параметрлерді қалпына келтіргіңіз келе ме?"
+	},
+	"settings_message_resetConfig_success": {
+		"message": "Баптаулар қалпына келтірілді"
+	},
+	"settings_message_saveChanges_success": {
+		"message": "Өзгерістер сақталды"
+	},
+	"settings_option_cache": {
+		"message": "Кэш"
+	},
+	"settings_option_cache_clear": {
+		"message": "Кэшті тазалау"
+	},
+	"settings_option_cache_clear_desc": {
+		"message": "Аудармадағы қателер немесе құпияларды өшіру қажет болса, кэшті тазалаңыз"
+	},
+	"settings_option_cache_enable": {
+		"message": "Кэшті қосу"
+	},
+	"settings_option_cache_enable_desc": {
+		"message": "Кэш қосылғанда, бір рет аударылған аудармалар интернет болмаса да дереу қолжетімді болады"
+	},
+	"settings_option_cache_ignoreCase": {
+		"message": "Тәртіпке сезімсіз"
+	},
+	"settings_option_cache_ignoreCase_desc": {
+		"message": "Қосылғанда, кэштен алынған аудармалар дәл келмейтін сәйкестіктермен қолданылады, бұл аударма қателеріне әкелуі мүмкін"
+	},
+	"settings_option_commonSettings": {
+		"message": "Жалпы баптаулар"
+	},
+	"settings_option_customTranslatorModule": {
+		"message": "Таңдамалы аудармашылар"
+	},
+	"settings_option_customTranslatorModule_desc": {
+		"message": "Сіздің сүйікті аударма қызметтеріңізге арналған таңдамалы аудармашыларды қоса аласыз. Толығырақ оқып, модульдерді <slot id=docs>таңдамалы аудармашылар құжаттамасынан</slot> табыңыз."
+	},
+	"settings_option_customTranslatorModule_manageButton": {
+		"message": "Аудармашыларды басқару"
+	},
+	"settings_option_history_enable": {
+		"message": "Тарихты қосу"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "Қосылғанда кез келген аударма история бетінде жазылады"
+	},
+	"settings_option_mainPreferences": {
+		"message": "Негізгі баптаулар"
+	},
+	"settings_option_pageTranslation": {
+		"message": "Бет аудармасы"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent": {
+		"message": "Тілді мазмұн бойынша анықтау"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent_desc": {
+		"message": "Беттің тілін анықтау үшін веб-беттегі мәтінді талдау. Оған өшірулі болса, бет метадеректерінде көрсетілген тіл қолданылады"
+	},
+	"settings_option_pageTranslation_enableContextMenu": {
+		"message": "Контекстік мәзір түймешігін қосу"
+	},
+	"settings_option_pageTranslation_enableContextMenu_desc": {
+		"message": "Бетті аударуды қосу немесе өшіру үшін контекстік мәзірге түйме қосу"
+	},
+	"settings_option_pageTranslation_excludeSelectors": {
+		"message": "Аудармадан өткізбеу керек селекторлар"
+	},
+	"settings_option_pageTranslation_excludeSelectors_desc": {
+		"message": "Аударылмайтын CSS селекторларының тізімі. Әрбір селектор жаңа жолда болады. Егер бір элемент осы селекторлардың қайсысына сәйкес келсе, ол және оның атрибуттары мен ішкі элементтері аударылмайды."
+	},
+	"settings_option_pageTranslation_lazyTranslate": {
+		"message": "Тек көрінетін элементтерді аудару"
+	},
+	"settings_option_pageTranslation_lazyTranslate_desc": {
+		"message": "Бұл опция қосылған кезде тек көрінетін элементтер аударылады. Бұл желі трафигін үнемдеуге пайдалы болуы мүмкін"
+	},
+	"settings_option_pageTranslation_originalTextPopup": {
+		"message": "Түпнұсқа мәтіннің терезесін қосу"
+	},
+	"settings_option_pageTranslation_originalTextPopup_desc": {
+		"message": "Аударылған мәтіннің үстінде тінтуірді ұстап тұру арқылы түпнұсқа мәтіннің терезесін көрсету"
+	},
+	"settings_option_pageTranslation_toggleTranslationHotkey": {
+		"message": "Қысқа түймелер"
+	},
+	"settings_option_pageTranslation_toggleTranslationHotkey_desc": {
+		"message": "Бетті аударуды қосу/өшіруге арналған ыстық пернелер\nПернелерді қалпына келтіру үшін ESC түймесін басыңыз"
+	},
+	"settings_option_pageTranslation_translatableAttributes": {
+		"message": "Аударылатын атрибуттар."
+	},
+	"settings_option_pageTranslation_translatableAttributes_desc": {
+		"message": "Аударма үшін <slot id=htmlAttributes>HTML атрибуттарының</slot> аттарын енгізіңіз. Әр жолға бір атрибут"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters": {
+		"message": "Аударма статистикасын көрсету"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters_desc": {
+		"message": "Бет аударма статистикасын көрсету"
+	},
+	"settings_option_selectTranslation": {
+		"message": "Таңдалған мәтінді аудару"
+	},
+	"settings_option_selectTranslation_detectedLangFirst": {
+		"message": "Беттің тілі орнына таңдалған мәтіннің анықталған тілін артық көру"
+	},
+	"settings_option_selectTranslation_detectedLangFirst_desc": {
+		"message": "Қосылған кезде таңдалған мәтіннің анықталған тілі бет тілінен артықшылық алады"
+	},
+	"settings_option_selectTranslation_disableWhileTranslatePage": {
+		"message": "Бетті аудару кезінде өшіру"
+	},
+	"settings_option_selectTranslation_enable": {
+		"message": "Қосу"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton": {
+		"message": "Аудару батырмасына автоматты фокусты орнату"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
+		"message": "Аудару батырмасы пайда болған кезде оған назар аудару"
+	},
+	"settings_option_selectTranslation_header_languageChoice": {
+		"message": "Тіл параметрлері"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang": {
+		"message": "Аудармашы арқылы автоматты тіл анықтауды қосу"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
+		"message": "Тіл жергілікті түрде анықталмаса, аудармашы арқылы автоматты тіл анықтауды пайдалану"
+	},
+	"settings_option_selectTranslation_mode": {
+		"message": "Аударма ілгерілеткіші"
+	},
+	"settings_option_selectTranslation_mode_item_contextMenu": {
+		"message": "Контекстік мәзір түймесі"
+	},
+	"settings_option_selectTranslation_mode_item_popupButton": {
+		"message": "Пайда болатын терезе түймесі"
+	},
+	"settings_option_selectTranslation_mode_item_quickTranslate": {
+		"message": "Мәтінді таңдау арқылы жедел аударма"
+	},
+	"settings_option_selectTranslation_modifiers": {
+		"message": "Модификаторлар"
+	},
+	"settings_option_selectTranslation_modifiers_desc": {
+		"message": "Аударма көрсетілуі үшін клавиатурада басылуы тиіс пернелерді таңдаңыз"
+	},
+	"settings_option_selectTranslation_modifiers_key_alt": {
+		"message": "alt"
+	},
+	"settings_option_selectTranslation_modifiers_key_ctrl": {
+		"message": "ctrl"
+	},
+	"settings_option_selectTranslation_modifiers_key_meta": {
+		"message": "meta"
+	},
+	"settings_option_selectTranslation_modifiers_key_shift": {
+		"message": "shift"
+	},
+	"settings_option_selectTranslation_rememberDirection": {
+		"message": "Ең соңында таңдалған мәтін тілін есте сақтау"
+	},
+	"settings_option_selectTranslation_showOnceForSelection": {
+		"message": "Әр таңдалған мәтінге аудару батырмасын бір рет көрсету"
+	},
+	"settings_option_selectTranslation_showOnceForSelection_desc": {
+		"message": "Батырма әр мәтін таңдалған сайын бір реттен ғана көрсетіледі. Егер оны қайта көрсету қажет болса, мәтінді қайтадан таңдаңыз"
+	},
+	"settings_option_selectTranslation_showOriginalText": {
+		"message": "Түпнұсқа мәтінді көрсету"
+	},
+	"settings_option_selectTranslation_showOriginalText_desc": {
+		"message": "Аудармасы бар терезеге түпнұсқа мәтіннің блокын қосу"
+	},
+	"settings_option_selectTranslation_strictSelection": {
+		"message": "Қатаң таңдау"
+	},
+	"settings_option_selectTranslation_strictSelection_desc": {
+		"message": "Таңдалған мәтінді қамтитын блоктан тыс сол жақ тышқан батырмасы босатылғанда таңдауды ескермеу"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton": {
+		"message": "Түймені жасыруға кешіктіру"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton_desc": {
+		"message": "Түймені жасыруға курсор қонбаған жағдайда миллисекундпен кешіктіру. Курсор түймеге тұрған кезде таймер қайта басталады. Автоматты түрде жасыруды өшіру үшін мәнді 1-ден кіші етіп орнатыңыз"
+	},
+	"settings_option_selectTranslation_zIndex": {
+		"message": "z-индекс"
+	},
+	"settings_option_selectTranslation_zIndex_desc": {
+		"message": "Кейбір беттердегі элементтер аударылған мәтіні бар пайда болатын терезені жабатын болса, мәнді арттырыңыз"
+	},
+	"settings_option_textTranslator": {
+		"message": "Мәтінді аудару"
+	},
+	"settings_option_textTranslator_rememberText": {
+		"message": "Аударылған мәтінді есте сақтау"
+	},
+	"settings_option_textTranslator_rememberText_desc": {
+		"message": "Терезе қайта ашылғанда аударылған мәтінді есте сақтау"
+	},
+	"settings_option_textTranslator_spellCheck": {
+		"message": "Орфографияны тексеруді қосу"
+	},
+	"settings_option_textTranslator_suggestLanguage": {
+		"message": "Табылған мәтін тілін ұсыну"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways": {
+		"message": "Тілді әрқашан анықтап, ұсыну"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways_desc": {
+		"message": "Өшірулі болса, тіл ұсыныстары тек бастапқы тіл автоанықталған жағдайда ғана көрсетіледі"
+	},
+	"settings_option_translatePreferences": {
+		"message": "Аударма параметрлері"
+	},
+	"settings_option_translateScheduler": {
+		"message": "Аударма жоспарлаушысы"
+	},
+	"settings_option_translateScheduler_delay": {
+		"message": "Мәтін жинау кешіктірілуі"
+	},
+	"settings_option_translateScheduler_delay_desc": {
+		"message": "Аударма жоспарлаушысы аударма қызметтерінің API-не сұраныстар санын азайтады. Жоспарлаушы мүмкіндігінше көп мәтінді бір сұраныспен жіберуге тырысады. Жоспарлаушы аударма басталмас бұрын жаңа мәтіндерді жинау үшін миллисекундпен көрсетілген уақыт бойы күтеді."
+	},
+	"settings_option_translateScheduler_retryLimit": {
+		"message": "Аударманы қайталау әрекеттері"
+	},
+	"settings_option_translateScheduler_retryLimit_desc": {
+		"message": "Жоспарлаушы аударма қателері үшін мәтіндерді қайта аударуға тырысады. Бұл опция қайталау әрекеттерінің шегін белгілейді. Шексіз қайта әрекеттерге мүмкіндік беру үшін теріс санды орнатыңыз."
+	},
+	"settings_option_translatorModule": {
+		"message": "Аудармашы модулі"
+	},
+	"settings_option_translatorModule_desc": {
+		"message": "Аудармалардың сапасы және аудармалау үшін қолжетімді тілдер аудармашыға байланысты."
+	},
+	"settings_option_tts": {
+		"message": "Мәтінді дауыспен оқу (TTS)"
+	},
+	"settings_option_ttsCustomModules": {
+		"message": "Арнайы TTS"
+	},
+	"settings_option_ttsCustomModules_button": {
+		"message": "TTS модульдерін басқару"
+	},
+	"settings_option_ttsCustomModules_desc": {
+		"message": "Сіз өзіңізге ұнаған қызмет пен дауыстарды қолданатын TTS модульдерін қоса аласыз. Толығырақ ақпарат пен модульдерді арнайы TTS құжаттамасынан табыңыз."
+	},
+	"settings_option_ttsModule": {
+		"message": "TTS модулі"
+	},
+	"settings_option_ttsModule_desc": {
+		"message": "Мәтіндерді оқу модулі"
+	},
+	"settings_option_userLanguage": {
+		"message": "Сіздің тіліңіз"
+	},
+	"settings_option_userLanguage_desc": {
+		"message": "Мәтіндерді аудару үшін мақсатты тіл"
+	},
+	"settings_pageTitle": {
+		"message": "Параметрлер"
+	},
+	"settings_section_history": {
+		"message": "Тарих"
+	},
+	"settings_section_popup": {
+		"message": "Попап"
+	},
+	"textTranslator_suggestLanguage": {
+		"message": "Бұл тілдің түрі"
+	},
+	"textTranslator_translateInputPlaceholder": {
+		"message": "Мәтін енгізіңіз"
+	},
+	"textTranslator_translatePlaceholder": {
+		"message": "Аударылған мәтін"
+	},
+	"translatorsManagerWindow_add": {
+		"message": "Қосу"
+	},
+	"translatorsManagerWindow_close": {
+		"message": "Жабу"
+	},
+	"translatorsManagerWindow_emptyTranslatorsListText": {
+		"message": "Таңдамалы аудармашылар әлі қосылмаған"
+	},
+	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
+		"message": "Сіз аудармашы \"$translator_name$\" жоюға сенімдісіз бе?",
+		"placeholders": {
+			"translator_name": {
+				"content": "$1",
+				"example": "Google translator"
+			}
+		}
+	},
+	"translatorsManagerWindow_title": {
+		"message": "Таңдамалы аудармашылар"
+	},
+	"translatorsManagerWindow_translator_delete": {
+		"message": "Жою"
+	},
+	"translatorsManagerWindow_translator_edit": {
+		"message": "Өңдеу"
+	},
+	"ttsManagerWindow_add": {
+		"message": "Қосу"
+	},
+	"ttsManagerWindow_close": {
+		"message": "Жабу"
+	},
+	"ttsManagerWindow_emptyTranslatorsListText": {
+		"message": "TTS модульдері әлі қосылған жоқ"
+	},
+	"ttsManagerWindow_message_ttsRemoveConfirmation": {
+		"message": "«$tts_name$» TTS модулін өшіргіңіз келетініне сенімдісіз бе?",
+		"placeholders": {
+			"tts_name": {
+				"content": "$1",
+				"example": "Google TTS"
+			}
+		}
+	},
+	"ttsManagerWindow_title": {
+		"message": "Мәтінді дауысқа айналдыру модульдері"
+	},
+	"ttsManagerWindow_translator_delete": {
+		"message": "Жою"
+	},
+	"ttsManagerWindow_translator_edit": {
+		"message": "Өңдеу"
+	},
+	"validation_number": {
+		"message": "Параметр сан болуы керек"
+	},
+	"validation_numberBetweenRange": {
+		"message": "Параметр $1 мен $2 арасындағы сан болуы керек"
+	},
+	"validation_positiveNumber": {
+		"message": "Параметр оң сан болуы керек."
+	},
+	"langCode_aa": {
+		"message": "Афар тілі"
+	},
+	"langCode_ab": {
+		"message": "Абхаз тілі"
+	},
+	"langCode_ae": {
+		"message": "Ae"
+	},
+	"langCode_af": {
+		"message": "Африкаанс тілі"
+	},
+	"langCode_ak": {
+		"message": "Акан тілі"
+	},
+	"langCode_am": {
+		"message": "Амхар тілі"
+	},
+	"langCode_an": {
+		"message": "Арагон тілі"
+	},
+	"langCode_ar": {
+		"message": "Араб тілі"
+	},
+	"langCode_as": {
+		"message": "Ассам тілі"
+	},
+	"langCode_av": {
+		"message": "Авар тілі"
+	},
+	"langCode_ay": {
+		"message": "Аймара тілі"
+	},
+	"langCode_az": {
+		"message": "Әзірбайжан тілі"
+	},
+	"langCode_ba": {
+		"message": "Башқұрт тілі"
+	},
+	"langCode_be": {
+		"message": "Беларусь тілі"
+	},
+	"langCode_bg": {
+		"message": "Болгар тілі"
+	},
+	"langCode_bh": {
+		"message": "Бходжпури тілі"
+	},
+	"langCode_bi": {
+		"message": "Бислама тілі"
+	},
+	"langCode_bm": {
+		"message": "Бамбара тілі"
+	},
+	"langCode_bn": {
+		"message": "Бенгал тілі"
+	},
+	"langCode_bo": {
+		"message": "Тибет тілі"
+	},
+	"langCode_br": {
+		"message": "Бретон тілі"
+	},
+	"langCode_bs": {
+		"message": "Босния тілі"
+	},
+	"langCode_ca": {
+		"message": "Каталан тілі"
+	},
+	"langCode_ce": {
+		"message": "Шешен тілі"
+	},
+	"langCode_ch": {
+		"message": "Чаморро тілі"
+	},
+	"langCode_co": {
+		"message": "Корсика тілі"
+	},
+	"langCode_cr": {
+		"message": "Cr"
+	},
+	"langCode_cs": {
+		"message": "Чех тілі"
+	},
+	"langCode_cu": {
+		"message": "Шіркеулік славян тілі"
+	},
+	"langCode_cv": {
+		"message": "Чуваш тілі"
+	},
+	"langCode_cy": {
+		"message": "Валлий тілі"
+	},
+	"langCode_da": {
+		"message": "Дат тілі"
+	},
+	"langCode_de": {
+		"message": "Неміс тілі"
+	},
+	"langCode_dv": {
+		"message": "Дивехи тілі"
+	},
+	"langCode_dz": {
+		"message": "Дзонг-кэ тілі"
+	},
+	"langCode_ee": {
+		"message": "Эве тілі"
+	},
+	"langCode_el": {
+		"message": "Грек тілі"
+	},
+	"langCode_en": {
+		"message": "Ағылшын тілі"
+	},
+	"langCode_eo": {
+		"message": "Эсперанто тілі"
+	},
+	"langCode_es": {
+		"message": "Испан тілі"
+	},
+	"langCode_et": {
+		"message": "Эстон тілі"
+	},
+	"langCode_eu": {
+		"message": "Баск тілі"
+	},
+	"langCode_fa": {
+		"message": "Парсы тілі"
+	},
+	"langCode_ff": {
+		"message": "Фула тілі"
+	},
+	"langCode_fi": {
+		"message": "Фин тілі"
+	},
+	"langCode_fj": {
+		"message": "Фиджи тілі"
+	},
+	"langCode_fo": {
+		"message": "Фарер тілі"
+	},
+	"langCode_fr": {
+		"message": "Француз тілі"
+	},
+	"langCode_fy": {
+		"message": "Батыс фриз тілі"
+	},
+	"langCode_ga": {
+		"message": "Ирланд тілі"
+	},
+	"langCode_gd": {
+		"message": "Шотландиялық гэль тілі"
+	},
+	"langCode_gl": {
+		"message": "Галисия тілі"
+	},
+	"langCode_gn": {
+		"message": "Гуарани тілі"
+	},
+	"langCode_gu": {
+		"message": "Гуджарати тілі"
+	},
+	"langCode_gv": {
+		"message": "Мэн тілі"
+	},
+	"langCode_ha": {
+		"message": "Хауса тілі"
+	},
+	"langCode_he": {
+		"message": "Иврит тілі"
+	},
+	"langCode_hi": {
+		"message": "Хинди тілі"
+	},
+	"langCode_ho": {
+		"message": "Ho"
+	},
+	"langCode_hr": {
+		"message": "Хорват тілі"
+	},
+	"langCode_ht": {
+		"message": "Гаити тілі"
+	},
+	"langCode_hu": {
+		"message": "Венгр тілі"
+	},
+	"langCode_hy": {
+		"message": "Армян тілі"
+	},
+	"langCode_hz": {
+		"message": "Гереро тілі"
+	},
+	"langCode_ia": {
+		"message": "Интерлингва тілі"
+	},
+	"langCode_id": {
+		"message": "Индонезия тілі"
+	},
+	"langCode_ie": {
+		"message": "Интерлингве тілі"
+	},
+	"langCode_ig": {
+		"message": "Игбо тілі"
+	},
+	"langCode_ii": {
+		"message": "Сычуан и тілі"
+	},
+	"langCode_ik": {
+		"message": "Ik"
+	},
+	"langCode_io": {
+		"message": "Идо тілі"
+	},
+	"langCode_is": {
+		"message": "Исланд тілі"
+	},
+	"langCode_it": {
+		"message": "Итальян тілі"
+	},
+	"langCode_iu": {
+		"message": "Инуктитут тілі"
+	},
+	"langCode_ja": {
+		"message": "Жапон тілі"
+	},
+	"langCode_jv": {
+		"message": "Ява тілі"
+	},
+	"langCode_ka": {
+		"message": "Грузин тілі"
+	},
+	"langCode_kg": {
+		"message": "Kg"
+	},
+	"langCode_ki": {
+		"message": "Кикуйю тілі"
+	},
+	"langCode_kj": {
+		"message": "Кваньяма тілі"
+	},
+	"langCode_kk": {
+		"message": "Қазақ тілі"
+	},
+	"langCode_kl": {
+		"message": "Калаалисут тілі"
+	},
+	"langCode_km": {
+		"message": "Кхмер тілі"
+	},
+	"langCode_kn": {
+		"message": "Каннада тілі"
+	},
+	"langCode_ko": {
+		"message": "Корей тілі"
+	},
+	"langCode_kr": {
+		"message": "Канури тілі"
+	},
+	"langCode_ks": {
+		"message": "Кашмир тілі"
+	},
+	"langCode_ku": {
+		"message": "Күрд тілі"
+	},
+	"langCode_kv": {
+		"message": "Коми тілі"
+	},
+	"langCode_kw": {
+		"message": "Корн тілі"
+	},
+	"langCode_ky": {
+		"message": "Қырғыз тілі"
+	},
+	"langCode_la": {
+		"message": "Латын тілі"
+	},
+	"langCode_lb": {
+		"message": "Люксембург тілі"
+	},
+	"langCode_lg": {
+		"message": "Ганда тілі"
+	},
+	"langCode_li": {
+		"message": "Лимбург тілі"
+	},
+	"langCode_ln": {
+		"message": "Лингала тілі"
+	},
+	"langCode_lo": {
+		"message": "Лаос тілі"
+	},
+	"langCode_lt": {
+		"message": "Литва тілі"
+	},
+	"langCode_lu": {
+		"message": "Луба-катанга тілі"
+	},
+	"langCode_lv": {
+		"message": "Латыш тілі"
+	},
+	"langCode_mg": {
+		"message": "Малагаси тілі"
+	},
+	"langCode_mh": {
+		"message": "Маршалл тілі"
+	},
+	"langCode_mi": {
+		"message": "Маори тілі"
+	},
+	"langCode_mk": {
+		"message": "Македон тілі"
+	},
+	"langCode_ml": {
+		"message": "Малаялам тілі"
+	},
+	"langCode_mn": {
+		"message": "Моңғол тілі"
+	},
+	"langCode_mr": {
+		"message": "Маратхи тілі"
+	},
+	"langCode_ms": {
+		"message": "Малай тілі"
+	},
+	"langCode_mt": {
+		"message": "Мальта тілі"
+	},
+	"langCode_my": {
+		"message": "Бирма тілі"
+	},
+	"langCode_na": {
+		"message": "Науру тілі"
+	},
+	"langCode_nb": {
+		"message": "Норвегиялық букмол тілі"
+	},
+	"langCode_nd": {
+		"message": "Солтүстік ндебеле тілі"
+	},
+	"langCode_ne": {
+		"message": "Непал тілі"
+	},
+	"langCode_ng": {
+		"message": "Ндонга тілі"
+	},
+	"langCode_nl": {
+		"message": "Нидерланд тілі"
+	},
+	"langCode_nn": {
+		"message": "Норвегиялық нюнорск тілі"
+	},
+	"langCode_no": {
+		"message": "Норвег тілі"
+	},
+	"langCode_nr": {
+		"message": "Оңтүстік ндебеле тілі"
+	},
+	"langCode_nv": {
+		"message": "Навахо тілі"
+	},
+	"langCode_ny": {
+		"message": "Ньянджа тілі"
+	},
+	"langCode_oc": {
+		"message": "Окситан тілі"
+	},
+	"langCode_oj": {
+		"message": "Oj"
+	},
+	"langCode_om": {
+		"message": "Оромо тілі"
+	},
+	"langCode_or": {
+		"message": "Ория тілі"
+	},
+	"langCode_os": {
+		"message": "Осетин тілі"
+	},
+	"langCode_pa": {
+		"message": "Пенджаб тілі"
+	},
+	"langCode_pi": {
+		"message": "Pi"
+	},
+	"langCode_pl": {
+		"message": "Поляк тілі"
+	},
+	"langCode_ps": {
+		"message": "Пушту тілі"
+	},
+	"langCode_pt": {
+		"message": "Португал тілі"
+	},
+	"langCode_qu": {
+		"message": "Кечуа тілі"
+	},
+	"langCode_rm": {
+		"message": "Романш тілі"
+	},
+	"langCode_rn": {
+		"message": "Рунди тілі"
+	},
+	"langCode_ro": {
+		"message": "Румын тілі"
+	},
+	"langCode_ru": {
+		"message": "Орыс тілі"
+	},
+	"langCode_rw": {
+		"message": "Киньяруанда тілі"
+	},
+	"langCode_sa": {
+		"message": "Санскрит тілі"
+	},
+	"langCode_sc": {
+		"message": "Сардин тілі"
+	},
+	"langCode_sd": {
+		"message": "Синдхи тілі"
+	},
+	"langCode_se": {
+		"message": "Солтүстік саам тілі"
+	},
+	"langCode_sg": {
+		"message": "Санго тілі"
+	},
+	"langCode_si": {
+		"message": "Сингал тілі"
+	},
+	"langCode_sk": {
+		"message": "Словак тілі"
+	},
+	"langCode_sl": {
+		"message": "Словен тілі"
+	},
+	"langCode_sm": {
+		"message": "Самоа тілі"
+	},
+	"langCode_sn": {
+		"message": "Шона тілі"
+	},
+	"langCode_so": {
+		"message": "Сомали тілі"
+	},
+	"langCode_sq": {
+		"message": "Албан тілі"
+	},
+	"langCode_sr": {
+		"message": "Серб тілі"
+	},
+	"langCode_ss": {
+		"message": "Свати тілі"
+	},
+	"langCode_st": {
+		"message": "Оңтүстік сото тілі"
+	},
+	"langCode_su": {
+		"message": "Сундан тілі"
+	},
+	"langCode_sv": {
+		"message": "Швед тілі"
+	},
+	"langCode_sw": {
+		"message": "Суахили тілі"
+	},
+	"langCode_ta": {
+		"message": "Тамил тілі"
+	},
+	"langCode_te": {
+		"message": "Телугу тілі"
+	},
+	"langCode_tg": {
+		"message": "Тәжік тілі"
+	},
+	"langCode_th": {
+		"message": "Тай тілі"
+	},
+	"langCode_ti": {
+		"message": "Тигринья тілі"
+	},
+	"langCode_tk": {
+		"message": "Түрікмен тілі"
+	},
+	"langCode_tl": {
+		"message": "Филиппин тілі"
+	},
+	"langCode_tn": {
+		"message": "Тсвана тілі"
+	},
+	"langCode_to": {
+		"message": "Тонган тілі"
+	},
+	"langCode_tr": {
+		"message": "Түрік тілі"
+	},
+	"langCode_ts": {
+		"message": "Тсонга тілі"
+	},
+	"langCode_tt": {
+		"message": "Татар тілі"
+	},
+	"langCode_tw": {
+		"message": "Акан тілі"
+	},
+	"langCode_ty": {
+		"message": "Таити тілі"
+	},
+	"langCode_ug": {
+		"message": "Ұйғыр тілі"
+	},
+	"langCode_uk": {
+		"message": "Украин тілі"
+	},
+	"langCode_ur": {
+		"message": "Урду тілі"
+	},
+	"langCode_uz": {
+		"message": "Өзбек тілі"
+	},
+	"langCode_ve": {
+		"message": "Венда тілі"
+	},
+	"langCode_vi": {
+		"message": "Вьетнам тілі"
+	},
+	"langCode_vo": {
+		"message": "Волапюк тілі"
+	},
+	"langCode_wa": {
+		"message": "Валлон тілі"
+	},
+	"langCode_wo": {
+		"message": "Волоф тілі"
+	},
+	"langCode_xh": {
+		"message": "Кхоса тілі"
+	},
+	"langCode_yi": {
+		"message": "Идиш тілі"
+	},
+	"langCode_yo": {
+		"message": "Йоруба тілі"
+	},
+	"langCode_za": {
+		"message": "Чжуан тілі"
+	},
+	"langCode_zh": {
+		"message": "Қытай тілі"
+	},
+	"langCode_zu": {
+		"message": "Зулу тілі"
+	}
+}

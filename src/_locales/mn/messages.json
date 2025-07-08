@@ -1,0 +1,1184 @@
+{
+	"common_action_addToDictionary": {
+		"message": "Орчуулгыг толь бичигт нэмэх"
+	},
+	"common_action_removeFromDictionary": {
+		"message": "Орчуулгыг толь бичгээс устгах"
+	},
+	"common_bgUnavailable": {
+		"message": "Арын фон скрипт ашиглах боломжгүй байна"
+	},
+	"common_cancel": {
+		"message": "Цуцлах"
+	},
+	"common_close": {
+		"message": "Хаах"
+	},
+	"common_copy": {
+		"message": "Хуулах"
+	},
+	"common_error": {
+		"message": "Алдаа"
+	},
+	"common_offlineTranslator": {
+		"message": "$1 - Интернетгүй орчуулагч"
+	},
+	"common_retry": {
+		"message": "Дахин оролдох"
+	},
+	"common_translate": {
+		"message": "Орчуулах"
+	},
+	"component_hotkey_placeholder": {
+		"message": "Шуурхай товч бичихийн тулд дарна уу"
+	},
+	"component_hotkey_recordPlaceholder": {
+		"message": "Товчны даралт"
+	},
+	"component_hotkey_resetButton": {
+		"message": "Дахин тохируулах"
+	},
+	"contextMenu_disablePageTranslation": {
+		"message": "Хуудасны орчуулгыг идэвхгүй болгох"
+	},
+	"contextMenu_translatePage": {
+		"message": "Хуудас орчуулах"
+	},
+	"contextMenu_translateSelectedText": {
+		"message": "Сонгосон текстийг орчуулах"
+	},
+	"dictionaryButton_add": {
+		"message": "Толь бичигт нэмэх"
+	},
+	"dictionaryButton_delete": {
+		"message": "Толь бичгээс устгах"
+	},
+	"dictionary_button_export": {
+		"message": "Экспортлох"
+	},
+	"dictionary_button_removeAll": {
+		"message": "Бүгдийг устгах"
+	},
+	"dictionary_deleteAll": {
+		"message": "Толь бичгээс бүх орчуулгыг устгах уу?"
+	},
+	"dictionary_deleteConfirmation": {
+		"message": "Энэ орчуулгыг устгах уу?"
+	},
+	"dictionary_description": {
+		"message": "Орчуулгадаа толь бичигт хадгалж, дараа нь олоорой"
+	},
+	"dictionary_emptyDictionary": {
+		"message": "Толь бичиг хоосон байна. Текст орчуулах үедээ бөглөж эхлээрэй"
+	},
+	"dictionary_filter_from": {
+		"message": "Хаанаас"
+	},
+	"dictionary_filter_to": {
+		"message": "Хаашаа"
+	},
+	"dictionary_message_deleteAll_success": {
+		"message": "Бүх орчуулгууд устгагдлаа"
+	},
+	"dictionary_notFoundEntries": {
+		"message": "Эдгээр шүүлтүүрт тохирох орчуулга олдсонгүй"
+	},
+	"dictionary_pageTitle": {
+		"message": "Толь бичиг"
+	},
+	"dictionary_resetFilters": {
+		"message": "шүүлтүүрийг дахин тохируулах"
+	},
+	"dictionary_searchPlaceholder": {
+		"message": "Текстаар хайх"
+	},
+	"editorWindow_close": {
+		"message": "Хаах"
+	},
+	"editorWindow_data_code": {
+		"message": "Код"
+	},
+	"editorWindow_data_translatorName": {
+		"message": "Орчуулагчийн нэр"
+	},
+	"editorWindow_message_invalidTranslatorName": {
+		"message": "Орчуулагчийн нэр дор хаяж нэг тэмдэгттэй байх ёстой"
+	},
+	"editorWindow_save": {
+		"message": "Хадгалах"
+	},
+	"ext_description": {
+		"message": "Хуудас ба текстийн орчуулга, толь бичиг, түүх, офлайн болон өөр өөр орчуулагчид"
+	},
+	"ext_name": {
+		"message": "Linguist - вэб хуудсын орчуулагч"
+	},
+	"history_control_selectEntry": {
+		"message": "Оруулахыг сонгох"
+	},
+	"history_controls_clearHistory": {
+		"message": "Түүхийг цэвэрлэх"
+	},
+	"history_controls_deleteSelected": {
+		"message": "Сонгосон зүйлсийг устгах"
+	},
+	"history_controls_selectAll": {
+		"message": "Бүх орчуулгыг сонгох"
+	},
+	"history_message_clearHistoryConfirmation": {
+		"message": "Түүхийг цэвэрлэхдээ итгэлтэй байна уу? Бүх бичлэгүүд устах болно"
+	},
+	"history_message_deleteEntryConfirmation": {
+		"message": "Энэ бичлэгийг устгахдаа итгэлтэй байна уу?"
+	},
+	"history_message_deleteSelectedEntriesConfirmation": {
+		"message": "Сонгогдсон бичлэгүүд ($1)-ийг устгахдаа итгэлтэй байна уу?"
+	},
+	"history_message_entriesNotFound": {
+		"message": "Шүүлтүүрт тохирох орчуулгууд олдсонгүй"
+	},
+	"history_message_noEntries": {
+		"message": "Түүх цэвэр байна"
+	},
+	"history_notification_disabled": {
+		"message": "Түүх бичлэгүй болсон тул шинэ бичлэгүүд гарч ирэхгүй. Та үүнийг <slot id=preferences>тохиргоо</slot>-нд өөрчилж болно"
+	},
+	"history_pageTitle": {
+		"message": "Түүх"
+	},
+	"history_searchPlaceholder": {
+		"message": "Текстээр хайх"
+	},
+	"inlineTranslator_showOriginalText": {
+		"message": "Анхны текстийг харуулах"
+	},
+	"lang_change": {
+		"message": "Хэл солих"
+	},
+	"lang_detect": {
+		"message": "Автомат илрүүлэх"
+	},
+	"lang_select": {
+		"message": "Хэл сонгох"
+	},
+	"lang_swap": {
+		"message": "Хэл солих"
+	},
+	"message_askResetConfig": {
+		"message": "Тохиргоог шинэчлэх үү?"
+	},
+	"message_cacheFlushed": {
+		"message": "Кэш цэвэрлэгдсэн"
+	},
+	"message_changesSaved": {
+		"message": "Өөрчлөлтүүд хадгалагдсан"
+	},
+	"message_error": {
+		"message": "Алдаа"
+	},
+	"message_errorOfTranslate": {
+		"message": "Орчуулгын алдаа"
+	},
+	"message_serviceRequiredKey": {
+		"message": "Үйлчилгээнд түлхүүр шаардлагатай"
+	},
+	"message_translateOfText": {
+		"message": "Орчуулсан"
+	},
+	"message_unknownError": {
+		"message": "Тодорхойгүй алдаа"
+	},
+	"pageTranslator_alwaysTranslateLang": {
+		"message": "Энэ хэлний орчуулгыг үргэлж хийх"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disable": {
+		"message": "Идэвхгүй болгох"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
+		"message": "Бүх сайтанд идэвхгүй болгох"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_enable": {
+		"message": "Идэвхжүүлэх"
+	},
+	"pageTranslator_commonPreferences_title": {
+		"message": "Энэхүү хэлний нийтлэг тохиргоо"
+	},
+	"pageTranslator_option_autoTranslate": {
+		"message": "Автомат орчуулга"
+	},
+	"pageTranslator_showOptions": {
+		"message": "Сонголтуудыг харуулах"
+	},
+	"pageTranslator_showOriginal": {
+		"message": "Анхны текстийг харуулах"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_always": {
+		"message": "Үргэлж орчуулах"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
+		"message": "Энэ хэлний хувьд үргэлж орчуулах"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_default": {
+		"message": "Энгийн дүрэм ашиглах"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
+		"message": "Энэ хэлний хувьд энгийн дүрэм ашиглах"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_never": {
+		"message": "Хэзээ ч орчуулахгүй"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
+		"message": "Энэ хэлний хувьд хэзээ ч орчуулахгүй"
+	},
+	"pageTranslator_sitePreferences_title": {
+		"message": "Тохиргоо"
+	},
+	"pageTranslator_translatePage": {
+		"message": "Хуудас орчуулах"
+	},
+	"pageTranslator_translationReport": {
+		"message": "Орчуулгын тайлан"
+	},
+	"pageTranslator_translationReport_queue": {
+		"message": "Босоо дараалал"
+	},
+	"pageTranslator_translationReport_reject": {
+		"message": "Алдаанууд"
+	},
+	"pageTranslator_translationReport_resolve": {
+		"message": "Орчуулсан"
+	},
+	"popup_tabIdNotFound": {
+		"message": "\"$1\" таб олдсонгүй"
+	},
+	"popup_tab_translatePage": {
+		"message": "Хуудасны орчуулга"
+	},
+	"popup_tab_translateText": {
+		"message": "Текстийн орчуулга"
+	},
+	"settings_button_cancel": {
+		"message": "Цуцлах"
+	},
+	"settings_button_export": {
+		"message": "Тохиргоог экспортлох"
+	},
+	"settings_button_import": {
+		"message": "Тохиргоог импортлох"
+	},
+	"settings_button_reset": {
+		"message": "Тохиргоог дахин тохируулах"
+	},
+	"settings_button_saveChanges": {
+		"message": "Хийсэн өөрчлөлтийг хадгалах"
+	},
+	"settings_message_clearCache_success": {
+		"message": "Кэш цэвэрлэгдлээ"
+	},
+	"settings_message_common_invalidValueType": {
+		"message": "Буруу утга"
+	},
+	"settings_message_importConfig_invalidFile": {
+		"message": "Импорт хийх файл боловсруулах боломжгүй"
+	},
+	"settings_message_importConfig_success": {
+		"message": "Импорт амжилттай боллоо"
+	},
+	"settings_message_resetConfig_confirm": {
+		"message": "Тохиргоог дахин тохируулах уу?"
+	},
+	"settings_message_resetConfig_success": {
+		"message": "Тохиргоог дахин тохирууллаа"
+	},
+	"settings_message_saveChanges_success": {
+		"message": "Өөрчлөлтүүд хадгалагдлаа"
+	},
+	"settings_option_cache": {
+		"message": "Кэш"
+	},
+	"settings_option_cache_clear": {
+		"message": "Кэш цэвэрлэх"
+	},
+	"settings_option_cache_clear_desc": {
+		"message": "Орчуулгын хадгалалтууд байвал эсвэл нууц мэдээллээ устгах шаардлагатай бол кэшийг цэвэрлэнэ үү"
+	},
+	"settings_option_cache_enable": {
+		"message": "Кэшийг идэвхжүүлэх"
+	},
+	"settings_option_cache_enable_desc": {
+		"message": "Кэш идэвхтэй үед нэг удаа орчуулагдсан орчуулгууд интернэтгүйгээр ч шууд ашиглах боломжтой болно"
+	},
+	"settings_option_cache_ignoreCase": {
+		"message": "Том жижиг үсгийг ялгахгүй"
+	},
+	"settings_option_cache_ignoreCase_desc": {
+		"message": "Идэвхтэй бол кэшээс орчуулга яг таарахгүйгээр ч ашиглагдаж болох бөгөөд энэ нь орчуулгын алдааг үүсгэж болзошгүй"
+	},
+	"settings_option_commonSettings": {
+		"message": "Ерөнхий тохиргоо"
+	},
+	"settings_option_customTranslatorModule": {
+		"message": "Гараар оруулсан орчуулагчид"
+	},
+	"settings_option_customTranslatorModule_desc": {
+		"message": "Та дуртай орчуулгын үйлчилгээнүүдэд зориулсан өөрийн орчуулагч модулийг нэмэх боломжтой. Илүү дэлгэрэнгүй уншиж, модулиудыг <slot id=docs>гараар оруулсан орчуулагчдын баримт бичгээс</slot> үзнэ үү."
+	},
+	"settings_option_customTranslatorModule_manageButton": {
+		"message": "Орчуулагчдыг удирдах"
+	},
+	"settings_option_history_enable": {
+		"message": "Түүхийг идэвхжүүлэх"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "Идэвхжүүлсэн үед аль ч орчуулга түүхийн хуудсанд хадгалагдана"
+	},
+	"settings_option_mainPreferences": {
+		"message": "Үндсэн тохиргоо"
+	},
+	"settings_option_pageTranslation": {
+		"message": "Хуудасны орчуулга"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent": {
+		"message": "Агуулгаар хэл тодорхойлох"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent_desc": {
+		"message": "Вэб хуудсан дахь текстийг шинжлэн хуудасны хэлний ойлголтыг тодорхойлно. Хэрэв идэвхгүй бол хуудасны метадата дахь тодорхойлсон хэлийг ашиглана."
+	},
+	"settings_option_pageTranslation_enableContextMenu": {
+		"message": "Контекст цэсний товчийг идэвхжүүлэх"
+	},
+	"settings_option_pageTranslation_enableContextMenu_desc": {
+		"message": "Хуудасны орчуулгыг солих товчийг контекст цэсэнд нэмнэ"
+	},
+	"settings_option_pageTranslation_excludeSelectors": {
+		"message": "Орчуулахгүй сонгогчид (selectors)"
+	},
+	"settings_option_pageTranslation_excludeSelectors_desc": {
+		"message": "Орчуулахгүй CSS сонгогчдын жагсаалт. Нэг сонгогчийг нэг мөрөнд бичнэ. Хэрэв элемент эдгээр сонгогчдын аль нэгтэй тааралдвал, тэр элемент, түүний шинж чанар болон доторх элементүүд нь орчуулагдахгүй."
+	},
+	"settings_option_pageTranslation_lazyTranslate": {
+		"message": "Зөвхөн харагдах элементийг орчуулах"
+	},
+	"settings_option_pageTranslation_lazyTranslate_desc": {
+		"message": "Энэ сонголт идэвхжсэн үед зөвхөн харагдах элементийг орчуулах бөгөөд энэ нь сүлжээний ачааллыг хэмнэхэд тустай байж болно"
+	},
+	"settings_option_pageTranslation_originalTextPopup": {
+		"message": "Эх бичгийн текстийг харуулах цонхыг идэвхжүүлэх"
+	},
+	"settings_option_pageTranslation_originalTextPopup_desc": {
+		"message": "Орчуулсан текст дээгүүр тэмдэглэгээ тавихад эх бичгийн текстийг харуулах цонхыг үзүүлэх"
+	},
+	"settings_option_pageTranslation_toggleTranslationHotkey": {
+		"message": "Халуун товчнууд"
+	},
+	"settings_option_pageTranslation_toggleTranslationHotkey_desc": {
+		"message": "Хуудасны орчуулгыг асаах/унтраах товчлолууд\nТовчлуурыг дахин тохируулахын тулд ESC товчийг дарна уу"
+	},
+	"settings_option_pageTranslation_translatableAttributes": {
+		"message": "Орчуулах боломжтой онцлогууд."
+	},
+	"settings_option_pageTranslation_translatableAttributes_desc": {
+		"message": "Орчуулахын тулд <slot id=htmlAttributes>HTML атрибутын</slot> нэрсийг оруулна уу. Нэг мөр бүрт нэг атрибут"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters": {
+		"message": "Орчуулгын статистикийг харуулах"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters_desc": {
+		"message": "Хуудасны орчуулгын статистикийг харуулах"
+	},
+	"settings_option_selectTranslation": {
+		"message": "Сонгосон текстийн орчуулга"
+	},
+	"settings_option_selectTranslation_detectedLangFirst": {
+		"message": "Хуудасны хэлний оронд илэрсэн хэлийг эрхэмлэх"
+	},
+	"settings_option_selectTranslation_detectedLangFirst_desc": {
+		"message": "Идэвхжүүлсэн тохиолдолд сонгосон текстийн илэрсэн хэл нь хуудасны хэлээс түрүүнд тавигдана"
+	},
+	"settings_option_selectTranslation_disableWhileTranslatePage": {
+		"message": "Хуудас орчуулах үед идэвхгүй болгох"
+	},
+	"settings_option_selectTranslation_enable": {
+		"message": "Идэвхжүүлэх"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton": {
+		"message": "Орчуулах товч дээр автоматаар төвлөрүүлэх"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
+		"message": "Орчуулах товч гарч ирэх үед түүнд төвлөрөх"
+	},
+	"settings_option_selectTranslation_header_languageChoice": {
+		"message": "Хэлний тохиргоо"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang": {
+		"message": "Орчуулагчийн автоматаар хэл илрүүлэхийг идэвхжүүлэх"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
+		"message": "Орон нутгаар хэл мэдэгдэх боломжгүй үед хөрвүүлэгчийн автоматаар хэл илрүүлэх функцыг ашиглах"
+	},
+	"settings_option_selectTranslation_mode": {
+		"message": "Хөрвүүлэлтийн эхлүүлэх арга"
+	},
+	"settings_option_selectTranslation_mode_item_contextMenu": {
+		"message": "Контекст цэсний товч"
+	},
+	"settings_option_selectTranslation_mode_item_popupButton": {
+		"message": "Толгой дээр гарч ирэх товч"
+	},
+	"settings_option_selectTranslation_mode_item_quickTranslate": {
+		"message": "Сонголтоор түргэн хөрвүүлэх"
+	},
+	"settings_option_selectTranslation_modifiers": {
+		"message": "Нэмэлт түлхүүрүүд"
+	},
+	"settings_option_selectTranslation_modifiers_desc": {
+		"message": "Орчуулгыг үзүүлэхийн тулд дарж байх ёстой товчлууруудыг сонгоно уу"
+	},
+	"settings_option_selectTranslation_modifiers_key_alt": {
+		"message": "alt"
+	},
+	"settings_option_selectTranslation_modifiers_key_ctrl": {
+		"message": "ctrl"
+	},
+	"settings_option_selectTranslation_modifiers_key_meta": {
+		"message": "meta"
+	},
+	"settings_option_selectTranslation_modifiers_key_shift": {
+		"message": "shift"
+	},
+	"settings_option_selectTranslation_rememberDirection": {
+		"message": "Хамгийн сүүлд сонгогдсон текстийн хэлний чиглэлийг хадгалах"
+	},
+	"settings_option_selectTranslation_showOnceForSelection": {
+		"message": "Текст сонгосон бүрд орчуулгын товчийг нэг удаа харуулах"
+	},
+	"settings_option_selectTranslation_showOnceForSelection_desc": {
+		"message": "Товчийг текст сонгосон бүрд зөвхөн нэг удаа харуулна. Дахин харуулах шаардлагатай бол текстээ дахин сонгоно уу."
+	},
+	"settings_option_selectTranslation_showOriginalText": {
+		"message": "Анхны текстийг харуулах"
+	},
+	"settings_option_selectTranslation_showOriginalText_desc": {
+		"message": "Орчуулгатай хамт гарчигт анхны текстийг нэмэх"
+	},
+	"settings_option_selectTranslation_strictSelection": {
+		"message": "Нарийн сонголт"
+	},
+	"settings_option_selectTranslation_strictSelection_desc": {
+		"message": "Сонгогдсон текст багтсан блокийн гадна баруун товчийг сулласны дараа сонголтыг үл тоомсорлоно."
+	},
+	"settings_option_selectTranslation_timeoutForHideButton": {
+		"message": "Товчлуурыг нуух хугацаа"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton_desc": {
+		"message": "Курсор товчлуур дээр тавигдаагүй үед товчлуурыг нуух хүртэлх хожимдол миллисекундээр. Курсор товчлуур дээр байвал хугацаа дахин тоологдоно. Автомат нуухыг идэвхгүй болгохын тулд утгыг 1-с бага байхаар тохируулна уу."
+	},
+	"settings_option_selectTranslation_zIndex": {
+		"message": "z-index"
+	},
+	"settings_option_selectTranslation_zIndex_desc": {
+		"message": "Хэрэв зарим хуудсын элементүүд орчуулагдсан текст бүхий түлхэх цонхтой давхцаж байвал утгыг нэмэгдүүлнэ үү."
+	},
+	"settings_option_textTranslator": {
+		"message": "Текст орчуулах"
+	},
+	"settings_option_textTranslator_rememberText": {
+		"message": "Орчуулсан текстыг хадгалах"
+	},
+	"settings_option_textTranslator_rememberText_desc": {
+		"message": "Цонх дахин нээгдэхэд орчуулсан текстийг санах"
+	},
+	"settings_option_textTranslator_spellCheck": {
+		"message": "Үгийн алдааг шалгахыг идэвхжүүлэх"
+	},
+	"settings_option_textTranslator_suggestLanguage": {
+		"message": "Олдсон текстийн хэлний санал болгох"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways": {
+		"message": "Хэлний илрүүлэлт ба санал болгосон байдал байнга идэвхтэй байх"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways_desc": {
+		"message": "Хэрэв идэвхгүй болгох юм бол хэлний санал зөвхөн эх хэл автоматаар илэрсэн үед гарна"
+	},
+	"settings_option_translatePreferences": {
+		"message": "Орчуулгын тохиргоо"
+	},
+	"settings_option_translateScheduler": {
+		"message": "Орчуулгын төлөвлөгч"
+	},
+	"settings_option_translateScheduler_delay": {
+		"message": "Текст цуглуулах хоцрогдол"
+	},
+	"settings_option_translateScheduler_delay_desc": {
+		"message": "Орчуулгын төлөвлөгч нь орчуулгын үйлчилгээний API руу илгээх хүсэлтийг бууруулдаг. Төлөвлөгч нь нэг хүсэлтэнд аль болох олон текст илгээхийн тулд текстүүдийг цуглуулахыг оролддог. Төлөвлөгч орчуулахыг эхлэхээс өмнө шинэ текстүүдийг цуглуулахын тулд миллисекундээр заасан хугацаагаар хүлээнэ."
+	},
+	"settings_option_translateScheduler_retryLimit": {
+		"message": "Орчуулга дахин оролдох хязгаар"
+	},
+	"settings_option_translateScheduler_retryLimit_desc": {
+		"message": "Төлөвлөгч нь орчуулгын алдаанаас үүдэлтэй текст орчуулах дахин оролдлого хийдэг. Энэ тохиргоо нь дахин оролдох оролдлогын хязгаарыг тогтоодог. Хязгаарыг хязгаарггүй болгохын тулд сөрөг тоо өгнө үү."
+	},
+	"settings_option_translatorModule": {
+		"message": "Орчуулагч модуль"
+	},
+	"settings_option_translatorModule_desc": {
+		"message": "Орчуулгын чанар болон орчуулгын боломжтой хэлүүд нь орчуулагч дээр үндэслэнэ."
+	},
+	"settings_option_tts": {
+		"message": "Текстээс дуугаралт руу (TTS)"
+	},
+	"settings_option_ttsCustomModules": {
+		"message": "Тусгай TTS"
+	},
+	"settings_option_ttsCustomModules_button": {
+		"message": "TTS модулиудыг удирдах"
+	},
+	"settings_option_ttsCustomModules_desc": {
+		"message": "Та дуртай үйлчилгээ болон дуу хоолойг ашигладаг TTS модулиудыг нэмж болно. Илүү дэлгэрэнгүйг тусгай TTS баримт бичгээс үзнэ үү."
+	},
+	"settings_option_ttsModule": {
+		"message": "TTS модуль"
+	},
+	"settings_option_ttsModule_desc": {
+		"message": "Текстыг дуугаар уншигч модуль"
+	},
+	"settings_option_userLanguage": {
+		"message": "Таны хэл"
+	},
+	"settings_option_userLanguage_desc": {
+		"message": "Текстыг орчуулах зорилтот хэл"
+	},
+	"settings_pageTitle": {
+		"message": "Тохиргоо"
+	},
+	"settings_section_history": {
+		"message": "Түүх"
+	},
+	"settings_section_popup": {
+		"message": "Гарч ирэх цонх"
+	},
+	"textTranslator_suggestLanguage": {
+		"message": "Тэр хэл нь бололтой"
+	},
+	"textTranslator_translateInputPlaceholder": {
+		"message": "Текст оруулах"
+	},
+	"textTranslator_translatePlaceholder": {
+		"message": "Орчуулсан текст"
+	},
+	"translatorsManagerWindow_add": {
+		"message": "Нэмэх"
+	},
+	"translatorsManagerWindow_close": {
+		"message": "Хаах"
+	},
+	"translatorsManagerWindow_emptyTranslatorsListText": {
+		"message": "Зохиомол орчуулагч нэмээгүй байна"
+	},
+	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
+		"message": "Та орчуулагч \"$translator_name$\"-г устгахдаа итгэлтэй байна уу?",
+		"placeholders": {
+			"translator_name": {
+				"content": "$1",
+				"example": "Google translator"
+			}
+		}
+	},
+	"translatorsManagerWindow_title": {
+		"message": "Захиалгат орчуулгууд"
+	},
+	"translatorsManagerWindow_translator_delete": {
+		"message": "Устгах"
+	},
+	"translatorsManagerWindow_translator_edit": {
+		"message": "Засах"
+	},
+	"ttsManagerWindow_add": {
+		"message": "Нэмэх"
+	},
+	"ttsManagerWindow_close": {
+		"message": "Хаах"
+	},
+	"ttsManagerWindow_emptyTranslatorsListText": {
+		"message": "TTS модулиуд одоогоор нэмэгдээгүй байна"
+	},
+	"ttsManagerWindow_message_ttsRemoveConfirmation": {
+		"message": "“$tts_name$” TTS-ийг устгахдаа итгэлтэй байна уу?",
+		"placeholders": {
+			"tts_name": {
+				"content": "$1",
+				"example": "Google TTS"
+			}
+		}
+	},
+	"ttsManagerWindow_title": {
+		"message": "Текстээс дуугарах модулиуд"
+	},
+	"ttsManagerWindow_translator_delete": {
+		"message": "Устгах"
+	},
+	"ttsManagerWindow_translator_edit": {
+		"message": "Засах"
+	},
+	"validation_number": {
+		"message": "Параметр тоо байх ёстой"
+	},
+	"validation_numberBetweenRange": {
+		"message": "Параметр нь $1 ба $2 хоорондох тоо байх ёстой"
+	},
+	"validation_positiveNumber": {
+		"message": "Параметр нь эерэг тоо байх ёстой."
+	},
+	"langCode_aa": {
+		"message": "Афар"
+	},
+	"langCode_ab": {
+		"message": "Абхаз"
+	},
+	"langCode_ae": {
+		"message": "Ae"
+	},
+	"langCode_af": {
+		"message": "Африкаанс"
+	},
+	"langCode_ak": {
+		"message": "Акан"
+	},
+	"langCode_am": {
+		"message": "Амхар"
+	},
+	"langCode_an": {
+		"message": "Арагон"
+	},
+	"langCode_ar": {
+		"message": "Араб"
+	},
+	"langCode_as": {
+		"message": "Ассам"
+	},
+	"langCode_av": {
+		"message": "Авар"
+	},
+	"langCode_ay": {
+		"message": "Аймара"
+	},
+	"langCode_az": {
+		"message": "Азербайжан"
+	},
+	"langCode_ba": {
+		"message": "Башкир"
+	},
+	"langCode_be": {
+		"message": "Беларусь"
+	},
+	"langCode_bg": {
+		"message": "Болгар"
+	},
+	"langCode_bh": {
+		"message": "Божпури"
+	},
+	"langCode_bi": {
+		"message": "Бислам"
+	},
+	"langCode_bm": {
+		"message": "Бамбара"
+	},
+	"langCode_bn": {
+		"message": "Бенгал"
+	},
+	"langCode_bo": {
+		"message": "Төвд"
+	},
+	"langCode_br": {
+		"message": "Бретон"
+	},
+	"langCode_bs": {
+		"message": "Босни"
+	},
+	"langCode_ca": {
+		"message": "Каталан"
+	},
+	"langCode_ce": {
+		"message": "Чечень"
+	},
+	"langCode_ch": {
+		"message": "Чаморро"
+	},
+	"langCode_co": {
+		"message": "Корсик"
+	},
+	"langCode_cr": {
+		"message": "Cr"
+	},
+	"langCode_cs": {
+		"message": "Чех"
+	},
+	"langCode_cu": {
+		"message": "Сүмийн славян"
+	},
+	"langCode_cv": {
+		"message": "Чуваш"
+	},
+	"langCode_cy": {
+		"message": "Уэльс"
+	},
+	"langCode_da": {
+		"message": "Дани"
+	},
+	"langCode_de": {
+		"message": "Герман"
+	},
+	"langCode_dv": {
+		"message": "Дивехи"
+	},
+	"langCode_dz": {
+		"message": "Зонха"
+	},
+	"langCode_ee": {
+		"message": "Эвэ"
+	},
+	"langCode_el": {
+		"message": "Грек"
+	},
+	"langCode_en": {
+		"message": "Англи"
+	},
+	"langCode_eo": {
+		"message": "Эсперанто"
+	},
+	"langCode_es": {
+		"message": "Испани"
+	},
+	"langCode_et": {
+		"message": "Эстони"
+	},
+	"langCode_eu": {
+		"message": "Баск"
+	},
+	"langCode_fa": {
+		"message": "Перс"
+	},
+	"langCode_ff": {
+		"message": "Фула"
+	},
+	"langCode_fi": {
+		"message": "Фин"
+	},
+	"langCode_fj": {
+		"message": "Фижи"
+	},
+	"langCode_fo": {
+		"message": "Фарер"
+	},
+	"langCode_fr": {
+		"message": "Франц"
+	},
+	"langCode_fy": {
+		"message": "Баруун фриз"
+	},
+	"langCode_ga": {
+		"message": "Ирланд"
+	},
+	"langCode_gd": {
+		"message": "Шотландын гел"
+	},
+	"langCode_gl": {
+		"message": "Галего"
+	},
+	"langCode_gn": {
+		"message": "Гуарани"
+	},
+	"langCode_gu": {
+		"message": "Гужарати"
+	},
+	"langCode_gv": {
+		"message": "Манкс"
+	},
+	"langCode_ha": {
+		"message": "Хауса"
+	},
+	"langCode_he": {
+		"message": "Еврей"
+	},
+	"langCode_hi": {
+		"message": "Хинди"
+	},
+	"langCode_ho": {
+		"message": "Ho"
+	},
+	"langCode_hr": {
+		"message": "Хорват"
+	},
+	"langCode_ht": {
+		"message": "Гаитийн креол"
+	},
+	"langCode_hu": {
+		"message": "Мажар"
+	},
+	"langCode_hy": {
+		"message": "Армен"
+	},
+	"langCode_hz": {
+		"message": "Хереро"
+	},
+	"langCode_ia": {
+		"message": "Интерлингво"
+	},
+	"langCode_id": {
+		"message": "Индонези"
+	},
+	"langCode_ie": {
+		"message": "Нэгдмэл хэл"
+	},
+	"langCode_ig": {
+		"message": "Игбо"
+	},
+	"langCode_ii": {
+		"message": "Сычуань и"
+	},
+	"langCode_ik": {
+		"message": "Ik"
+	},
+	"langCode_io": {
+		"message": "Идо"
+	},
+	"langCode_is": {
+		"message": "Исланд"
+	},
+	"langCode_it": {
+		"message": "Итали"
+	},
+	"langCode_iu": {
+		"message": "Инуктитут"
+	},
+	"langCode_ja": {
+		"message": "Япон"
+	},
+	"langCode_jv": {
+		"message": "Ява"
+	},
+	"langCode_ka": {
+		"message": "Гүрж"
+	},
+	"langCode_kg": {
+		"message": "Kg"
+	},
+	"langCode_ki": {
+		"message": "Кикуюү"
+	},
+	"langCode_kj": {
+		"message": "Куаньяма"
+	},
+	"langCode_kk": {
+		"message": "Казах"
+	},
+	"langCode_kl": {
+		"message": "Калалисут"
+	},
+	"langCode_km": {
+		"message": "Кхмер"
+	},
+	"langCode_kn": {
+		"message": "Каннада"
+	},
+	"langCode_ko": {
+		"message": "Солонгос"
+	},
+	"langCode_kr": {
+		"message": "Канури"
+	},
+	"langCode_ks": {
+		"message": "Кашмир"
+	},
+	"langCode_ku": {
+		"message": "Курд"
+	},
+	"langCode_kv": {
+		"message": "Коми"
+	},
+	"langCode_kw": {
+		"message": "Корн"
+	},
+	"langCode_ky": {
+		"message": "Киргиз"
+	},
+	"langCode_la": {
+		"message": "Латин"
+	},
+	"langCode_lb": {
+		"message": "Люксембург"
+	},
+	"langCode_lg": {
+		"message": "Ганда"
+	},
+	"langCode_li": {
+		"message": "Лимбург"
+	},
+	"langCode_ln": {
+		"message": "Лингала"
+	},
+	"langCode_lo": {
+		"message": "Лаос"
+	},
+	"langCode_lt": {
+		"message": "Литва"
+	},
+	"langCode_lu": {
+		"message": "Луба-катанга"
+	},
+	"langCode_lv": {
+		"message": "Латви"
+	},
+	"langCode_mg": {
+		"message": "Малагаси"
+	},
+	"langCode_mh": {
+		"message": "Маршалл"
+	},
+	"langCode_mi": {
+		"message": "Маори"
+	},
+	"langCode_mk": {
+		"message": "Македон"
+	},
+	"langCode_ml": {
+		"message": "Малаялам"
+	},
+	"langCode_mn": {
+		"message": "Монгол"
+	},
+	"langCode_mr": {
+		"message": "Марати"
+	},
+	"langCode_ms": {
+		"message": "Малай"
+	},
+	"langCode_mt": {
+		"message": "Малта"
+	},
+	"langCode_my": {
+		"message": "Бирм"
+	},
+	"langCode_na": {
+		"message": "Науру"
+	},
+	"langCode_nb": {
+		"message": "Норвегийн букмол"
+	},
+	"langCode_nd": {
+		"message": "Хойд ндебеле"
+	},
+	"langCode_ne": {
+		"message": "Балба"
+	},
+	"langCode_ng": {
+		"message": "Ндонга"
+	},
+	"langCode_nl": {
+		"message": "Нидерланд"
+	},
+	"langCode_nn": {
+		"message": "Норвегийн нинорск"
+	},
+	"langCode_no": {
+		"message": "Норвег"
+	},
+	"langCode_nr": {
+		"message": "Өмнөд ндебеле"
+	},
+	"langCode_nv": {
+		"message": "Навахо"
+	},
+	"langCode_ny": {
+		"message": "Нянжа"
+	},
+	"langCode_oc": {
+		"message": "Окситан"
+	},
+	"langCode_oj": {
+		"message": "Oj"
+	},
+	"langCode_om": {
+		"message": "Оромо"
+	},
+	"langCode_or": {
+		"message": "Ория"
+	},
+	"langCode_os": {
+		"message": "Оссетин"
+	},
+	"langCode_pa": {
+		"message": "Панжаби"
+	},
+	"langCode_pi": {
+		"message": "Pi"
+	},
+	"langCode_pl": {
+		"message": "Польш"
+	},
+	"langCode_ps": {
+		"message": "Пушту"
+	},
+	"langCode_pt": {
+		"message": "Португал"
+	},
+	"langCode_qu": {
+		"message": "Кечуа"
+	},
+	"langCode_rm": {
+		"message": "Романш"
+	},
+	"langCode_rn": {
+		"message": "Рунди"
+	},
+	"langCode_ro": {
+		"message": "Румын"
+	},
+	"langCode_ru": {
+		"message": "Орос"
+	},
+	"langCode_rw": {
+		"message": "Киньяруанда"
+	},
+	"langCode_sa": {
+		"message": "Санскрит"
+	},
+	"langCode_sc": {
+		"message": "Сардин"
+	},
+	"langCode_sd": {
+		"message": "Синдхи"
+	},
+	"langCode_se": {
+		"message": "Хойд сами"
+	},
+	"langCode_sg": {
+		"message": "Санго"
+	},
+	"langCode_si": {
+		"message": "Синхала"
+	},
+	"langCode_sk": {
+		"message": "Словак"
+	},
+	"langCode_sl": {
+		"message": "Словени"
+	},
+	"langCode_sm": {
+		"message": "Самоа"
+	},
+	"langCode_sn": {
+		"message": "Шона"
+	},
+	"langCode_so": {
+		"message": "Сомали"
+	},
+	"langCode_sq": {
+		"message": "Албани"
+	},
+	"langCode_sr": {
+		"message": "Серб"
+	},
+	"langCode_ss": {
+		"message": "Свати"
+	},
+	"langCode_st": {
+		"message": "Сесото"
+	},
+	"langCode_su": {
+		"message": "Сундан"
+	},
+	"langCode_sv": {
+		"message": "Швед"
+	},
+	"langCode_sw": {
+		"message": "Свахили"
+	},
+	"langCode_ta": {
+		"message": "Тамил"
+	},
+	"langCode_te": {
+		"message": "Тэлүгү"
+	},
+	"langCode_tg": {
+		"message": "Тажик"
+	},
+	"langCode_th": {
+		"message": "Тай"
+	},
+	"langCode_ti": {
+		"message": "Тигринья"
+	},
+	"langCode_tk": {
+		"message": "Туркмен"
+	},
+	"langCode_tl": {
+		"message": "Филипино"
+	},
+	"langCode_tn": {
+		"message": "Цвана"
+	},
+	"langCode_to": {
+		"message": "Тонга"
+	},
+	"langCode_tr": {
+		"message": "Турк"
+	},
+	"langCode_ts": {
+		"message": "Цонга"
+	},
+	"langCode_tt": {
+		"message": "Татар"
+	},
+	"langCode_tw": {
+		"message": "Акан"
+	},
+	"langCode_ty": {
+		"message": "Таити"
+	},
+	"langCode_ug": {
+		"message": "Уйгур"
+	},
+	"langCode_uk": {
+		"message": "Украин"
+	},
+	"langCode_ur": {
+		"message": "Урду"
+	},
+	"langCode_uz": {
+		"message": "Узбек"
+	},
+	"langCode_ve": {
+		"message": "Венда"
+	},
+	"langCode_vi": {
+		"message": "Вьетнам"
+	},
+	"langCode_vo": {
+		"message": "Волапюк"
+	},
+	"langCode_wa": {
+		"message": "Уоллун"
+	},
+	"langCode_wo": {
+		"message": "Волоф"
+	},
+	"langCode_xh": {
+		"message": "Хоса"
+	},
+	"langCode_yi": {
+		"message": "Иддиш"
+	},
+	"langCode_yo": {
+		"message": "Ёруба"
+	},
+	"langCode_za": {
+		"message": "Чжуанг"
+	},
+	"langCode_zh": {
+		"message": "Хятад"
+	},
+	"langCode_zu": {
+		"message": "Зулу"
+	}
+}

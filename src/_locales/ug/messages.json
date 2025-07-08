@@ -1,0 +1,1184 @@
+{
+	"common_action_addToDictionary": {
+		"message": "تەرجمىنى لۇغەتكە قوشۇش"
+	},
+	"common_action_removeFromDictionary": {
+		"message": "تەرجمىنى لۇغەتتىن چىقىرىش"
+	},
+	"common_bgUnavailable": {
+		"message": "ئارقا كۆرۈنۈش سۈرىتى ئىشلىتىلمەيدۇ"
+	},
+	"common_cancel": {
+		"message": "ئىزدەشنى توختىتىش"
+	},
+	"common_close": {
+		"message": "يېپىش"
+	},
+	"common_copy": {
+		"message": "كۆچۈرۈش"
+	},
+	"common_error": {
+		"message": "خاتا"
+	},
+	"common_offlineTranslator": {
+		"message": "$1 - تورسىز تەرجىمە قىلىش قورالى"
+	},
+	"common_retry": {
+		"message": "قايتا سىناش"
+	},
+	"common_translate": {
+		"message": "تەرجىمە قىلىش"
+	},
+	"component_hotkey_placeholder": {
+		"message": "قىسقا يول تەيغىسىنى خاتىرلەش ئۈچۈن چېكىڭ"
+	},
+	"component_hotkey_recordPlaceholder": {
+		"message": "تەيغىچە باسىڭ"
+	},
+	"component_hotkey_resetButton": {
+		"message": "قايتا سەپلىمەك"
+	},
+	"contextMenu_disablePageTranslation": {
+		"message": "بېەت تەرجىمە قىلىشنى چېكىتىپ قويۇش"
+	},
+	"contextMenu_translatePage": {
+		"message": "بېەتنى تەرجىمە قىلىش"
+	},
+	"contextMenu_translateSelectedText": {
+		"message": "تاللانغان تېكىستنى تەرجىمە قىلىش"
+	},
+	"dictionaryButton_add": {
+		"message": "سۆزلۈككە قوشۇش"
+	},
+	"dictionaryButton_delete": {
+		"message": "سۆزلۈكتىن ئۆچۈرۈش"
+	},
+	"dictionary_button_export": {
+		"message": "چىقىرىش"
+	},
+	"dictionary_button_removeAll": {
+		"message": "ھەممىسنى ئۆچۈرۈش"
+	},
+	"dictionary_deleteAll": {
+		"message": "سۆزلۈكتە بارلىق تەرجىمىلەرنى ئۆچۈرۈشنى چىن دىلىڭدىن خالايسىزمۇ؟"
+	},
+	"dictionary_deleteConfirmation": {
+		"message": "بۇ تەرجىمەنى ئۆچۈرۈشنى چىن دىلىڭدىن خالايسىزمۇ؟"
+	},
+	"dictionary_description": {
+		"message": "تەرجىمەلەرنى سۆزلۈктә ساقلاپ، كېيىن تاپالايسىز"
+	},
+	"dictionary_emptyDictionary": {
+		"message": "سۆزلۈك بوش. بەزى تېكستلارنى تەرجىمە قىلىپ، تولدۇرۇشنى باشلاڭ"
+	},
+	"dictionary_filter_from": {
+		"message": "دىن"
+	},
+	"dictionary_filter_to": {
+		"message": "گىچە"
+	},
+	"dictionary_message_deleteAll_success": {
+		"message": "بارلىق تەرجىمىلەر ئوچۇرۇلدى"
+	},
+	"dictionary_notFoundEntries": {
+		"message": "بۇ فلترگە ماس كەلگەن تەرجىمىلەر تېپىلمىدى"
+	},
+	"dictionary_pageTitle": {
+		"message": "لۇغەت"
+	},
+	"dictionary_resetFilters": {
+		"message": "فلترلارنى قايتا تەڭشەش"
+	},
+	"dictionary_searchPlaceholder": {
+		"message": "تېكىست بويىچە ئىزدەش"
+	},
+	"editorWindow_close": {
+		"message": "تاقاش"
+	},
+	"editorWindow_data_code": {
+		"message": "كود"
+	},
+	"editorWindow_data_translatorName": {
+		"message": "تەرجىمە قىلىشچىنىڭ ئىسمى"
+	},
+	"editorWindow_message_invalidTranslatorName": {
+		"message": "تەرجىمە قىلىشچىنىڭ ئىسمى ئەڭ ئاز بىر ھەرىپنى ئۆز ئىچىگە ئالشى كېرەك"
+	},
+	"editorWindow_save": {
+		"message": "ساقلاش"
+	},
+	"ext_description": {
+		"message": "بەتلەر ۋە تېكىستلار تەرجىمىسى، لۇغەت، تارىخ، تورسىز ھەمدە خاس تەرجىمەنلەر"
+	},
+	"ext_name": {
+		"message": "لېنګۋىست - تور بەتلىرىنى تەرجىمە قىلىش"
+	},
+	"history_control_selectEntry": {
+		"message": "كىرىشتۈكنى تاللاڭ"
+	},
+	"history_controls_clearHistory": {
+		"message": "تارىخنى تازىلاڭ"
+	},
+	"history_controls_deleteSelected": {
+		"message": "تاللانغانلارنى ئۆچۈرۈش"
+	},
+	"history_controls_selectAll": {
+		"message": "ھەممە تەرجىمىلەرنى تاللاڭ"
+	},
+	"history_message_clearHistoryConfirmation": {
+		"message": "تارىخنى تازىلاشقا ئىشىنىپ تۇرامسىز؟ بارلىق كىرىشلەر ئۆچۈرۈلىدۇ"
+	},
+	"history_message_deleteEntryConfirmation": {
+		"message": "بۇ كىرىشنى ئۆچۈرۈش توغرىسىدا ئىشىنىپ تۇرامسىز؟"
+	},
+	"history_message_deleteSelectedEntriesConfirmation": {
+		"message": "تاللانغان كىرىشلەرنى ($1) ئۆچۈرۈشنى خالايسىزمۇ؟"
+	},
+	"history_message_entriesNotFound": {
+		"message": "سىفارتاچقا ماس كېلىدىغان تەرجىمىلەر تېپىلمىدى"
+	},
+	"history_message_noEntries": {
+		"message": "تارىخ تازى"
+	},
+	"history_notification_disabled": {
+		"message": "تارىخ خاتىرىلەش ئاقىلانمىغان، يېڭى كىرىشلەر كۆرۈلمەيدۇ. بۇنى <slot id=preferences>تەڭشەكلەردە</slot> ئۆزگەرتەلەيسىز"
+	},
+	"history_pageTitle": {
+		"message": "تارىخ"
+	},
+	"history_searchPlaceholder": {
+		"message": "ئېزىق بويىچە ئىزدەش"
+	},
+	"inlineTranslator_showOriginalText": {
+		"message": "ئەسلى تېكىستنى كۆرۈش"
+	},
+	"lang_change": {
+		"message": "تىلنى ئۆزگەرتۈش"
+	},
+	"lang_detect": {
+		"message": "ئاپتوماتىك بايقاش"
+	},
+	"lang_select": {
+		"message": "تىل تاللاش"
+	},
+	"lang_swap": {
+		"message": "تىلغىلارنى ئالماشتۇرۇش"
+	},
+	"message_askResetConfig": {
+		"message": "تەڭشەكلىكەر قايتا بېكىتىلىسۇنمۇ؟"
+	},
+	"message_cacheFlushed": {
+		"message": "كەش تازىلاندى"
+	},
+	"message_changesSaved": {
+		"message": "ئۆزگەرتىشلەر ساقلانغان"
+	},
+	"message_error": {
+		"message": "خاتالىق"
+	},
+	"message_errorOfTranslate": {
+		"message": "تەرجىمە خاتالىقى"
+	},
+	"message_serviceRequiredKey": {
+		"message": "خىزمەت ئۈچۈن ئاچقۇچ كېرەك"
+	},
+	"message_translateOfText": {
+		"message": "تەرجىمە قىلىندى"
+	},
+	"message_unknownError": {
+		"message": "بىلمىگەن خاتالىق"
+	},
+	"pageTranslator_alwaysTranslateLang": {
+		"message": "ھەر داىم بۇ تىلنى تەرجىمە قىلىش"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disable": {
+		"message": "ئۆچۈرۈش"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
+		"message": "ھەممە تور بەت ئۈچۈن ئۆچۈرۈش"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_enable": {
+		"message": "ئۈنۈملۈك قىلىش"
+	},
+	"pageTranslator_commonPreferences_title": {
+		"message": "بۇ تىل ئۈچۈن ئومۇمىي تاللاشلار"
+	},
+	"pageTranslator_option_autoTranslate": {
+		"message": "ئاپتوماتىك تەرجىمە قىلىش"
+	},
+	"pageTranslator_showOptions": {
+		"message": "تاللاشلارنى كۆرسەت"
+	},
+	"pageTranslator_showOriginal": {
+		"message": "ئەسلىنى كۆرسەت"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_always": {
+		"message": "ھەر داىم تەرجىمە قىلىش"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
+		"message": "بۇ تىل ئۈچۈن ھەر دائىم تەرجىمە قىلىش"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_default": {
+		"message": "ئومۇمىي قائىدىلەرنى قوللىنىش"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
+		"message": "بۇ تىل ئۈچۈن ئومۇمىي قائىدىلەرنى قوللىنىش"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_never": {
+		"message": "تەرجىمە قىلمىسىن"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
+		"message": "بۇ تىل ئۈچۈن تەرجىمە قىلمىسىن"
+	},
+	"pageTranslator_sitePreferences_title": {
+		"message": "تاللاشلار"
+	},
+	"pageTranslator_translatePage": {
+		"message": "بەتنى تەرجىمە قىلىش"
+	},
+	"pageTranslator_translationReport": {
+		"message": "تەرجىمە دوكلاتى"
+	},
+	"pageTranslator_translationReport_queue": {
+		"message": "نەۋرى"
+	},
+	"pageTranslator_translationReport_reject": {
+		"message": "خاتالىقلار"
+	},
+	"pageTranslator_translationReport_resolve": {
+		"message": "تەرجىمە قىلىندى"
+	},
+	"popup_tabIdNotFound": {
+		"message": "\"$1\" ئورۇن تابلانمىدى"
+	},
+	"popup_tab_translatePage": {
+		"message": "بېكەت تەرجىمە قىلىش"
+	},
+	"popup_tab_translateText": {
+		"message": "تەرجىمە قىلىنغان تېكىست"
+	},
+	"settings_button_cancel": {
+		"message": "ئەنسىرەشنى توختىتىش"
+	},
+	"settings_button_export": {
+		"message": "تەڭشەك چىقىرىش"
+	},
+	"settings_button_import": {
+		"message": "تەڭشەك كىرتىش"
+	},
+	"settings_button_reset": {
+		"message": "تەڭشەك قايتا تەڭشەش"
+	},
+	"settings_button_saveChanges": {
+		"message": "ئۆزگەرتişләрни ساقلاش"
+	},
+	"settings_message_clearCache_success": {
+		"message": "كاشې تىزىمى تازىلاندى"
+	},
+	"settings_message_common_invalidValueType": {
+		"message": "ئەسلىگە ماس كەلمەيدىغان قىممەت"
+	},
+	"settings_message_importConfig_invalidFile": {
+		"message": "ائىمپورت قىلىش ئۈچۈن ھۆججەت مۇناسىۋەتسىز"
+	},
+	"settings_message_importConfig_success": {
+		"message": "ئىمپورت قىلىش تاماملاندى"
+	},
+	"settings_message_resetConfig_confirm": {
+		"message": "تەڭشەكلىرىنى قايتا ئەسلىگە كەلتۈرمەكچىمۇسىز؟"
+	},
+	"settings_message_resetConfig_success": {
+		"message": "تەڭشەلگەنلەر قايتا ئورنىتىلدى"
+	},
+	"settings_message_saveChanges_success": {
+		"message": "ئۆزگەرتىشلەر ساقلاندى"
+	},
+	"settings_option_cache": {
+		"message": "كاش"
+	},
+	"settings_option_cache_clear": {
+		"message": "كاشنى تازىلا"
+	},
+	"settings_option_cache_clear_desc": {
+		"message": "ئەگەر تەرجىمە خاتالىقلىرى بولسا ياكى مەخپىي ئۇچۇرلارنى ئۆچۈرۈش كېرەك بولسا كاشنى يوقاتىڭ"
+	},
+	"settings_option_cache_enable": {
+		"message": "كاشنى قوزغىتىش"
+	},
+	"settings_option_cache_enable_desc": {
+		"message": "كېش ئىقتىدارى ئىشلىتىلگەندە، بىر قېتىم تەرجىمە قىلىنغان ئايلارنى تورسىزمۇ دەرمەنلا قوللىنىشقا بولىدۇ"
+	},
+	"settings_option_cache_ignoreCase": {
+		"message": "ھەرپ چوڭ-كىچىكلىكىگە قارىمايدۇ"
+	},
+	"settings_option_cache_ignoreCase_desc": {
+		"message": "ئىقتىدار يولغا قويۇلغاندا، كېشتىن تەرجىمە قىلغاندا چۈشەندۈرۈش تەڭلىشىپ بولمىغان ھالەتتە ئىشلىتىلىشى مۇمكىن، بۇ تەرجىمىدە خاتالىقلارغا يول ئاچشى مۇمكىن"
+	},
+	"settings_option_commonSettings": {
+		"message": "ئومۇمىي تەڭشەش"
+	},
+	"settings_option_customTranslatorModule": {
+		"message": "مۇشتەرىي تەرجىمانلار"
+	},
+	"settings_option_customTranslatorModule_desc": {
+		"message": "سۆيۈملۈك تەرجىمانلىق مۇلازىمىتىڭىز ئۈچۈن مۇشتەرىي تەرجىمانلارنى قوشالايسىز. تەپسىلاتىنى ئوقۇپ، مۇشتەرىي تەرجىمانلار ھەققىدىكى <slot id=docs>ھۆججەتلەر</slot> دىن تابالايسىز."
+	},
+	"settings_option_customTranslatorModule_manageButton": {
+		"message": "تەرجىمەنلەرنى باشقۇرۇش"
+	},
+	"settings_option_history_enable": {
+		"message": "تارىخنى قوزغاتىش"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "قوزغىتىلغاندا، ھەر قايسى تەرجىمە تارىخ بەتتە خاتىرلىنىدۇ"
+	},
+	"settings_option_mainPreferences": {
+		"message": "ئاساسىي تۇغقانلار"
+	},
+	"settings_option_pageTranslation": {
+		"message": "بەت تەرجىمىسى"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent": {
+		"message": "تىلنى مەزمۇن ئارقىلىق بايقىش"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent_desc": {
+		"message": "تور بەتتىكى تېكىستنى تەhlىل قىلىپ، بەت تىلنى ھەل قىلىش. ئۈندىدارسىزلاشتىرىلغاندىمۇ بەتنىڭ مېتاداتادىكى بەلگىلەنگەن تىل ئىشلىتىلىدۇ"
+	},
+	"settings_option_pageTranslation_enableContextMenu": {
+		"message": "مەزمۇن مېنۇسى كۇنۇپكىسىنى ئوچۇرۇش"
+	},
+	"settings_option_pageTranslation_enableContextMenu_desc": {
+		"message": "بەت تەرجىمىسىنى ئوخشىمىغان مەزمۇن مېنۇسىغا قوشۇش كۇنۇپكىسى"
+	},
+	"settings_option_pageTranslation_excludeSelectors": {
+		"message": "تەرجىمىدىن چېكىنىدىغان تاللاشچىلار"
+	},
+	"settings_option_pageTranslation_excludeSelectors_desc": {
+		"message": "تەرجىمىگە كىرگۈزۈلمەيدىغان CSS تاللاشچىلار تىزىملىكى. ھەر قۇرغا بىر تاللاشچى. ئەگەر بىر ئەزا بۇ تاللاشچىلارنىڭ ھەر قانداق بولۇشىغا ئۇيغۇن كەلگەن بولسا، ئۇ، ئۇنىڭ ئالاھىدىلىكلىرى ۋە نىسپەتلىك تەركىبىي ئەزالىرى تەرجىمە قىلىنمايدۇ."
+	},
+	"settings_option_pageTranslation_lazyTranslate": {
+		"message": "پەقەت كۆرۈنۈپ تۇرغان ئەزالارنى تەرجىمە قىلىش"
+	},
+	"settings_option_pageTranslation_lazyTranslate_desc": {
+		"message": "بۇ تاللاش ئىچكىزىلغاندا، پەقەت كۆرۈنەلەيدىغان ئەزايلار تەرجىمە قىلىنىدۇ. بۇ تور ترافىكىنى تېجەش ئۈچۈن پايدىلىق بولىشى مۇمكىن"
+	},
+	"settings_option_pageTranslation_originalTextPopup": {
+		"message": "ئەسلى تېكىست بىلەن پاپئۇپ ئېچىشنى قوزغىتىش"
+	},
+	"settings_option_pageTranslation_originalTextPopup_desc": {
+		"message": "تەرجىمە قىلىنغان تېكىست ئۈستىگە چىشماقنى يېتىپ بارغاندا ئەسلى تېكىست بىلەن پاپئۇپ كۆرسىتىش"
+	},
+	"settings_option_pageTranslation_toggleTranslationHotkey": {
+		"message": "قىسقا يول كۇنۇپكىلىرى"
+	},
+	"settings_option_pageTranslation_toggleTranslationHotkey_desc": {
+		"message": "بەت تەرجىمە قىلىشنى ئارقىلىق كېسكىنلاشتۇرۇش كۇنۇپكىلىرى\nكۇنۇپكىلارنى قايتا تەڭشەش ئۈچۈن ESC نى بېسىڭ"
+	},
+	"settings_option_pageTranslation_translatableAttributes": {
+		"message": "تەرجىمە قىلىشقا بولىدىغان خاسلىقى."
+	},
+	"settings_option_pageTranslation_translatableAttributes_desc": {
+		"message": "تەرجىمە قىلىش ئۈچۈن <slot id=htmlAttributes>HTML ئالاھىدىلىك</slot> ناملىرىنى كىرگۈزۈڭ. ھەر قېتىم بىر ئالاھىدىلىك"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters": {
+		"message": "تەرجىمە ساناقلىرىنى كۆرسىتىش"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters_desc": {
+		"message": "بەت تەرجىمىسى ئۈچۈن سانلىق مەلۇماتلارنى كۆرۈش"
+	},
+	"settings_option_selectTranslation": {
+		"message": "تاللانغان تېكىستنىڭ تەرجىمىسى"
+	},
+	"settings_option_selectTranslation_detectedLangFirst": {
+		"message": "بېتىنۇڭ تىلدىن ئەمەس، تاللانغان تېكىستنىڭ بايقىلىغان تىلىغا ئەھمىيەت بېرىش"
+	},
+	"settings_option_selectTranslation_detectedLangFirst_desc": {
+		"message": "چىكلىلسەك، تاللانغان تېكىستتىكى بايقىلىغان تىل بېت تىلىدىن ئۈستۈن تۇتىلىدۇ"
+	},
+	"settings_option_selectTranslation_disableWhileTranslatePage": {
+		"message": "بەت تەرجىمە قىلىنىۋاتقاندا مەشغۇلاتتىن چىقىرىش"
+	},
+	"settings_option_selectTranslation_enable": {
+		"message": "يەككىلەش"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton": {
+		"message": "تەرجىمە كۇنۇپكىسىغا ئاپتوماتىك دىققەتنى قارىتىش"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
+		"message": "تەرجىمە كۇنۇپكىسى چىققاندا ئۇنىڭغا دىققەتنى قارىتىش"
+	},
+	"settings_option_selectTranslation_header_languageChoice": {
+		"message": "تىل تەڭشەشلىرى"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang": {
+		"message": "تەرجىمە قىلغۇچ ئارقىلىق ئاپتوماتىك تىلنى بايقاشنى يەككىلەش"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
+		"message": "تىلنى يەرلىك دەرسەم شەكىللەندۈرمەيدىغان حالەتلەردە ئاۋتوماتىك تىل ئېنىقلەشنى تەرجىمەن قوللىنسۇن"
+	},
+	"settings_option_selectTranslation_mode": {
+		"message": "تەرجىمە بۇيرۇقى"
+	},
+	"settings_option_selectTranslation_mode_item_contextMenu": {
+		"message": "كونتېكىست مېنۇسىدىكى كۇنۇپكا"
+	},
+	"settings_option_selectTranslation_mode_item_popupButton": {
+		"message": "كۆرۈنىدىغان كۇنۇپكا"
+	},
+	"settings_option_selectTranslation_mode_item_quickTranslate": {
+		"message": "تاللاش ئارقىلىق تېز تەرجىمە"
+	},
+	"settings_option_selectTranslation_modifiers": {
+		"message": "ئۆزگەرتكىچلەر"
+	},
+	"settings_option_selectTranslation_modifiers_desc": {
+		"message": "تەرجىمىنى كۆرسىتىش ئۈچۈن كۇنۇپكىلارنى تاللاڭ"
+	},
+	"settings_option_selectTranslation_modifiers_key_alt": {
+		"message": "alt"
+	},
+	"settings_option_selectTranslation_modifiers_key_ctrl": {
+		"message": "ctrl"
+	},
+	"settings_option_selectTranslation_modifiers_key_meta": {
+		"message": "meta"
+	},
+	"settings_option_selectTranslation_modifiers_key_shift": {
+		"message": "shift"
+	},
+	"settings_option_selectTranslation_rememberDirection": {
+		"message": "ئەڭ يېڭى تاللانغان تىلنى ساقلاڭ"
+	},
+	"settings_option_selectTranslation_showOnceForSelection": {
+		"message": "ھەر بىر تېكىست تاللىنىشى ئۈچۈن تەرجىمە كۇنۇپكىسىنى بىرلا قېتىم كۆرسىتىش"
+	},
+	"settings_option_selectTranslation_showOnceForSelection_desc": {
+		"message": "كۇنۇپكا ھەر بىر تېكىست تاللىنىشى ئۈچۈن پەقەت بىرلا قېتىم كۆرۈنىدۇ. قايتا كۆرسىتىشنى خالاساڭىز، تېكىستنى قايتا تاللاڭ"
+	},
+	"settings_option_selectTranslation_showOriginalText": {
+		"message": "ئەسلى تېكىستنى كۆرسىتىش"
+	},
+	"settings_option_selectTranslation_showOriginalText_desc": {
+		"message": "تەرجىمە بىلدۈرۈلگەن كىچىكچە ئېكرانغا ئەسلى تېكىست بلوكىنى قوشۇش"
+	},
+	"settings_option_selectTranslation_strictSelection": {
+		"message": "قىيىن تاللاش"
+	},
+	"settings_option_selectTranslation_strictSelection_desc": {
+		"message": "تاللانغان تېكىستنى ئۆز ئىچىگە ئالغان بلوكنىڭ چەتتىن ئوڭ تۆمۈر كۇنۇپكىسى قويۇلغاندا تاللاشنى نەزەرگە ئلمەش"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton": {
+		"message": "توختىتىش كۇنۇپكىسىنى يوشۇرۇش ۋاقتى"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton_desc": {
+		"message": "كۇرسور كۇنۇپكىنىڭ ئۈستىدە ئەمەس بولغاندا كۇنۇپكىنى يوشۇرۇشتىن بۇرۇنكى ۋاقىت (مىلىسىكۇندە). كۇرسور كۇنۇپكىغا كەلگەندە ۋاقىت چىقىرىش قايتا باشلىنىدۇ. ئاپتوماتىك يوشۇرۇشتاچقا توسۇش ئۈچۈن قىممەتنى 1 دىن تۆۋەن قىلىڭ"
+	},
+	"settings_option_selectTranslation_zIndex": {
+		"message": "z-ئىندىكس"
+	},
+	"settings_option_selectTranslation_zIndex_desc": {
+		"message": "بەزى بەتلەرگە يۈز بېرىدىغان ئېلېمېنتلار تەرجىمە قىلىنغان تېكىست بىلەن پاپئۈپنڭ ئۈستىگە چىققاندا قىممەتنى ئاشۇرۇڭ"
+	},
+	"settings_option_textTranslator": {
+		"message": "تېكىست تەرجىمىسى"
+	},
+	"settings_option_textTranslator_rememberText": {
+		"message": "تەرجىمە قىلىنغان تېكىستنى ساقلا"
+	},
+	"settings_option_textTranslator_rememberText_desc": {
+		"message": "تىزىملىك قايتا ئېچىلغاندا تەرجىمە قىلىنغان تېكىستنى ساقلاپ قويۇش"
+	},
+	"settings_option_textTranslator_spellCheck": {
+		"message": "ئىملا تەكشۈرۈشنى yoqutush"
+	},
+	"settings_option_textTranslator_suggestLanguage": {
+		"message": "بايقاشقان تېكىست تىلىنى تەۋسىيە قىلىش"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways": {
+		"message": "ھەر دائىم تىلنى بايقاش ۋە تەۋسىيە قىلىش"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways_desc": {
+		"message": "ئۆچۈرۈلگەن ھالەتتە، تىل تەۋسىيەلىرى پەقەت مەنبە تىلى ئاپتوماتىك بايقاشتا كۆرۈنىدۇ"
+	},
+	"settings_option_translatePreferences": {
+		"message": "تەرجىمە ئۇسۇللىرى"
+	},
+	"settings_option_translateScheduler": {
+		"message": "تەرجىمە جەدۋىلى"
+	},
+	"settings_option_translateScheduler_delay": {
+		"message": "ماقالىلار توپلىنىش كېچىكىشى"
+	},
+	"settings_option_translateScheduler_delay_desc": {
+		"message": "تەرجىمە جەدۋىلى تەرجىمە مۇلازىمەتلىرى API غا قىلىنغان تەلەپ سانىنى ئازايتىدۇ. جەدۋەل ھەر بىر تەلەپلەردە ئىمكانىي ئازراق ئەمەلدىن چىقىرىش ئۈچۈن كۆپلىگەن ماقالىلارنى توپلاشقا تىرىشىدۇ. جەدۋەل يېڭى ماقالىلارنى توپلاش ئۈچۈن بەلگىلەنگەن مىليسېكۇنتتا ۋاقىت ساقلايدۇ، ئاندىن تەرجىمانلاشقا باشلايدۇ"
+	},
+	"settings_option_translateScheduler_retryLimit": {
+		"message": "تەرجىمەنى قايتا سىناش چەكلىمىسى"
+	},
+	"settings_option_translateScheduler_retryLimit_desc": {
+		"message": "جەدۋەل تەرجىمانلاش خاتالىقلىرى ئۈچۈن تەرجىمانلاش ھەرەكەتلىرىنى قايتا سىنايدۇ. بۇ تاللاش قايتا سىناش چەكلىمىسىنى بەلگىلەيدۇ. چەكسىز قايتا سىناشقا رۇخسەت بېرىش ئۈچۈن مەنفى نومۇرنى قويۇڭ"
+	},
+	"settings_option_translatorModule": {
+		"message": "تەرجىمان مودۇلى"
+	},
+	"settings_option_translatorModule_desc": {
+		"message": "تەرجىمە سۈپىتى ۋە تەرجىمە قىلىشقا بولىدىغان تىللار تەرجىمە قىلغۇچىغا باغلىق."
+	},
+	"settings_option_tts": {
+		"message": "تېكىستتىن ئاۋازغا ئۆتۈش (TTS)"
+	},
+	"settings_option_ttsCustomModules": {
+		"message": "مۇشتەرەك TTS"
+	},
+	"settings_option_ttsCustomModules_button": {
+		"message": "TTS مودۇللىرىنى باشقۇرۇش"
+	},
+	"settings_option_ttsCustomModules_desc": {
+		"message": "ياخشى كۆرگەن مۇلازىمېتىڭىز ۋە ئاۋازلىرىڭىزنى ئىشلىتىدىغان TTS مودۇللىرىنى قوشالايسىز. قوشۇمچە ئۇچۇر ۋە مودۇللارنى مۇشتەرەك TTS ھۆججەتلىكىدە تاپالايسىز."
+	},
+	"settings_option_ttsModule": {
+		"message": "TTS مودۇلى"
+	},
+	"settings_option_ttsModule_desc": {
+		"message": "مەتىننى سۆزلەيدىغان مۇدۇل"
+	},
+	"settings_option_userLanguage": {
+		"message": "سىزنىڭ تىلىڭىز"
+	},
+	"settings_option_userLanguage_desc": {
+		"message": "مەتىنلەرنى تەرجىمە قىلىش نىشان تىلى"
+	},
+	"settings_pageTitle": {
+		"message": "تەڭشەكلەر"
+	},
+	"settings_section_history": {
+		"message": "تارىخچە"
+	},
+	"settings_section_popup": {
+		"message": "پاپئوپ"
+	},
+	"textTranslator_suggestLanguage": {
+		"message": "تېخىمۇ مۇمكىن بۇ تىل"
+	},
+	"textTranslator_translateInputPlaceholder": {
+		"message": "مەتن كىرگۈزۈڭ"
+	},
+	"textTranslator_translatePlaceholder": {
+		"message": "تەرجىمە قىلىنغان مەتن"
+	},
+	"translatorsManagerWindow_add": {
+		"message": "قوشۇش"
+	},
+	"translatorsManagerWindow_close": {
+		"message": "تاقاش"
+	},
+	"translatorsManagerWindow_emptyTranslatorsListText": {
+		"message": "ئىختىساسىي تەرجىمە قىلغۇچىلار ھېلى قوشۇلماپتۇ"
+	},
+	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
+		"message": "\"$translator_name$\" تەرجىمەچىنى چىقىرىۋېتىشقا ئەمگەكمۇسىز؟",
+		"placeholders": {
+			"translator_name": {
+				"content": "$1",
+				"example": "Google translator"
+			}
+		}
+	},
+	"translatorsManagerWindow_title": {
+		"message": "ئالاھىدە تەرجىمەچىلەر"
+	},
+	"translatorsManagerWindow_translator_delete": {
+		"message": "ئۆچۈرۈش"
+	},
+	"translatorsManagerWindow_translator_edit": {
+		"message": "تەھرىرلەش"
+	},
+	"ttsManagerWindow_add": {
+		"message": "قوشۇش"
+	},
+	"ttsManagerWindow_close": {
+		"message": "تاقاش"
+	},
+	"ttsManagerWindow_emptyTranslatorsListText": {
+		"message": "TTS مودۇللىرى ھەلىچە قوشۇلغان يوق"
+	},
+	"ttsManagerWindow_message_ttsRemoveConfirmation": {
+		"message": "«$tts_name$» TTS نى ئۆچۈرۈشكە ئەمەتسىزمۇ؟",
+		"placeholders": {
+			"tts_name": {
+				"content": "$1",
+				"example": "Google TTS"
+			}
+		}
+	},
+	"ttsManagerWindow_title": {
+		"message": "تىكستتىن سۆزگە مودۇللار"
+	},
+	"ttsManagerWindow_translator_delete": {
+		"message": "ئۆچۈرۈش"
+	},
+	"ttsManagerWindow_translator_edit": {
+		"message": "تەھرىرلەش"
+	},
+	"validation_number": {
+		"message": "پەرامېتىر نومۇر بولۇشى كېرەك"
+	},
+	"validation_numberBetweenRange": {
+		"message": "پارامېتىر $1 بىلەن $2 ئارىسىدا بولغان سان بولۇشى كېرەك"
+	},
+	"validation_positiveNumber": {
+		"message": "پارامېتىر مۇسبەت سان بولۇشى كېرەك."
+	},
+	"langCode_aa": {
+		"message": "ئافارچە"
+	},
+	"langCode_ab": {
+		"message": "ئابخازچە"
+	},
+	"langCode_ae": {
+		"message": "ئاۋېستاچە"
+	},
+	"langCode_af": {
+		"message": "ئافرىكانچە"
+	},
+	"langCode_ak": {
+		"message": "ئاكانچە"
+	},
+	"langCode_am": {
+		"message": "ئامھارچە"
+	},
+	"langCode_an": {
+		"message": "ئاراگونچە"
+	},
+	"langCode_ar": {
+		"message": "ئەرەبچە"
+	},
+	"langCode_as": {
+		"message": "ئاسامچە"
+	},
+	"langCode_av": {
+		"message": "ئاۋارچە"
+	},
+	"langCode_ay": {
+		"message": "ئايماراچە"
+	},
+	"langCode_az": {
+		"message": "ئەزەربەيجانچە"
+	},
+	"langCode_ba": {
+		"message": "باشقىرتچە"
+	},
+	"langCode_be": {
+		"message": "بېلارۇسچە"
+	},
+	"langCode_bg": {
+		"message": "بۇلغارچە"
+	},
+	"langCode_bh": {
+		"message": "بوجپۇرىچە"
+	},
+	"langCode_bi": {
+		"message": "بىسلاماچە"
+	},
+	"langCode_bm": {
+		"message": "بامباراچە"
+	},
+	"langCode_bn": {
+		"message": "بېنگالچە"
+	},
+	"langCode_bo": {
+		"message": "تىبەتچە"
+	},
+	"langCode_br": {
+		"message": "بىرېتونچە"
+	},
+	"langCode_bs": {
+		"message": "بوسىنچە"
+	},
+	"langCode_ca": {
+		"message": "كاتالانچە"
+	},
+	"langCode_ce": {
+		"message": "چېچىنچە"
+	},
+	"langCode_ch": {
+		"message": "چامورروچە"
+	},
+	"langCode_co": {
+		"message": "كورسۇچە"
+	},
+	"langCode_cr": {
+		"message": "كرىچە"
+	},
+	"langCode_cs": {
+		"message": "چېخچە"
+	},
+	"langCode_cu": {
+		"message": "قەدىمكى سلاۋيانچە"
+	},
+	"langCode_cv": {
+		"message": "چۇۋاشچە"
+	},
+	"langCode_cy": {
+		"message": "ۋېلشچە"
+	},
+	"langCode_da": {
+		"message": "دانىشچە"
+	},
+	"langCode_de": {
+		"message": "گېرمانچە"
+	},
+	"langCode_dv": {
+		"message": "دىۋېخچە"
+	},
+	"langCode_dz": {
+		"message": "زوڭخاچە"
+	},
+	"langCode_ee": {
+		"message": "ئېۋېچە"
+	},
+	"langCode_el": {
+		"message": "گىرېكچە"
+	},
+	"langCode_en": {
+		"message": "ئىنگلىزچە"
+	},
+	"langCode_eo": {
+		"message": "ئېسپرانتوچە"
+	},
+	"langCode_es": {
+		"message": "ئىسپانچە"
+	},
+	"langCode_et": {
+		"message": "ئېستونچە"
+	},
+	"langCode_eu": {
+		"message": "باسكىچە"
+	},
+	"langCode_fa": {
+		"message": "پارسچە"
+	},
+	"langCode_ff": {
+		"message": "فۇلاھچە"
+	},
+	"langCode_fi": {
+		"message": "فىنچە"
+	},
+	"langCode_fj": {
+		"message": "فىجىچە"
+	},
+	"langCode_fo": {
+		"message": "فائېروچە"
+	},
+	"langCode_fr": {
+		"message": "فىرانسۇزچە"
+	},
+	"langCode_fy": {
+		"message": "غەربىي فىرسچە"
+	},
+	"langCode_ga": {
+		"message": "ئىرېلاندچە"
+	},
+	"langCode_gd": {
+		"message": "شوتلاندىيە گايلچىسى"
+	},
+	"langCode_gl": {
+		"message": "گالىچە"
+	},
+	"langCode_gn": {
+		"message": "گۇئارانىچە"
+	},
+	"langCode_gu": {
+		"message": "گۇجاراتچە"
+	},
+	"langCode_gv": {
+		"message": "مانچە"
+	},
+	"langCode_ha": {
+		"message": "خائۇساچە"
+	},
+	"langCode_he": {
+		"message": "ئىبرانىيچە"
+	},
+	"langCode_hi": {
+		"message": "ھىندىچە"
+	},
+	"langCode_ho": {
+		"message": "ھىرى موتۇچە"
+	},
+	"langCode_hr": {
+		"message": "كىرودىچە"
+	},
+	"langCode_ht": {
+		"message": "ھايتىچە"
+	},
+	"langCode_hu": {
+		"message": "ۋېنگىرچە"
+	},
+	"langCode_hy": {
+		"message": "ئەرمېنچە"
+	},
+	"langCode_hz": {
+		"message": "خېرېروچە"
+	},
+	"langCode_ia": {
+		"message": "ئارىلىق تىل"
+	},
+	"langCode_id": {
+		"message": "ھىندونېزچە"
+	},
+	"langCode_ie": {
+		"message": "ئىنتىرلىڭچە"
+	},
+	"langCode_ig": {
+		"message": "ئىگبوچە"
+	},
+	"langCode_ii": {
+		"message": "يىچە (سىچۈەن)"
+	},
+	"langCode_ik": {
+		"message": "ئىنۇپىكچە"
+	},
+	"langCode_io": {
+		"message": "ئىدوچە"
+	},
+	"langCode_is": {
+		"message": "ئىسلاندچە"
+	},
+	"langCode_it": {
+		"message": "ئىتالىيانچە"
+	},
+	"langCode_iu": {
+		"message": "ئىنۇكتىتۇتچە"
+	},
+	"langCode_ja": {
+		"message": "ياپونچە"
+	},
+	"langCode_jv": {
+		"message": "ياۋاچە"
+	},
+	"langCode_ka": {
+		"message": "گىرۇزچە"
+	},
+	"langCode_kg": {
+		"message": "كونگوچە"
+	},
+	"langCode_ki": {
+		"message": "كىكۇيۇچە"
+	},
+	"langCode_kj": {
+		"message": "كىۋانياماچە"
+	},
+	"langCode_kk": {
+		"message": "قازاقچە"
+	},
+	"langCode_kl": {
+		"message": "گىرېنلاندچە"
+	},
+	"langCode_km": {
+		"message": "كىمېرچە"
+	},
+	"langCode_kn": {
+		"message": "كانناداچە"
+	},
+	"langCode_ko": {
+		"message": "كورېيەچە"
+	},
+	"langCode_kr": {
+		"message": "كانۇرچە"
+	},
+	"langCode_ks": {
+		"message": "كەشمىرچە"
+	},
+	"langCode_ku": {
+		"message": "كۇردچە"
+	},
+	"langCode_kv": {
+		"message": "كومىچە"
+	},
+	"langCode_kw": {
+		"message": "كورنىشچە"
+	},
+	"langCode_ky": {
+		"message": "قىرغىزچە"
+	},
+	"langCode_la": {
+		"message": "لاتىنچە"
+	},
+	"langCode_lb": {
+		"message": "لىيۇكسېمبۇرگچە"
+	},
+	"langCode_lg": {
+		"message": "گانداچە"
+	},
+	"langCode_li": {
+		"message": "لىمبۇرگچە"
+	},
+	"langCode_ln": {
+		"message": "لىنگالاچە"
+	},
+	"langCode_lo": {
+		"message": "لائوسچە"
+	},
+	"langCode_lt": {
+		"message": "لىتۋانىچە"
+	},
+	"langCode_lu": {
+		"message": "لۇبا-كاتانگاچە"
+	},
+	"langCode_lv": {
+		"message": "لاتچە"
+	},
+	"langCode_mg": {
+		"message": "مالاگاسچە"
+	},
+	"langCode_mh": {
+		"message": "مارشالچە"
+	},
+	"langCode_mi": {
+		"message": "ماۋرىچە"
+	},
+	"langCode_mk": {
+		"message": "ماكېدونچە"
+	},
+	"langCode_ml": {
+		"message": "مالايالامچە"
+	},
+	"langCode_mn": {
+		"message": "موڭغۇلچە"
+	},
+	"langCode_mr": {
+		"message": "ماراتىچە"
+	},
+	"langCode_ms": {
+		"message": "مالايچە"
+	},
+	"langCode_mt": {
+		"message": "مالتاچە"
+	},
+	"langCode_my": {
+		"message": "بىرماچە"
+	},
+	"langCode_na": {
+		"message": "ناۋرۇچە"
+	},
+	"langCode_nb": {
+		"message": "نورۋىگىيە بوكمالچە"
+	},
+	"langCode_nd": {
+		"message": "شىمالى ندەبەلەچە"
+	},
+	"langCode_ne": {
+		"message": "نېپالچە"
+	},
+	"langCode_ng": {
+		"message": "ندونگاچە"
+	},
+	"langCode_nl": {
+		"message": "گوللاندچە"
+	},
+	"langCode_nn": {
+		"message": "يېڭى نورۋېگچە"
+	},
+	"langCode_no": {
+		"message": "نورۋېگچە"
+	},
+	"langCode_nr": {
+		"message": "جەنۇبى ندەبەلەچە"
+	},
+	"langCode_nv": {
+		"message": "ناۋاخوچە"
+	},
+	"langCode_ny": {
+		"message": "نىيانجاچە"
+	},
+	"langCode_oc": {
+		"message": "ئوكسىتچە"
+	},
+	"langCode_oj": {
+		"message": "ئوجىبۋاچە"
+	},
+	"langCode_om": {
+		"message": "ئوروموچە"
+	},
+	"langCode_or": {
+		"message": "ئودىياچە"
+	},
+	"langCode_os": {
+		"message": "ئوسسېتچەچە"
+	},
+	"langCode_pa": {
+		"message": "پەنجابچە"
+	},
+	"langCode_pi": {
+		"message": "پالىچە"
+	},
+	"langCode_pl": {
+		"message": "پولەكچە"
+	},
+	"langCode_ps": {
+		"message": "پۇشتۇچە"
+	},
+	"langCode_pt": {
+		"message": "پورتۇگالچە"
+	},
+	"langCode_qu": {
+		"message": "كېچىۋاچە"
+	},
+	"langCode_rm": {
+		"message": "رومانسچە"
+	},
+	"langCode_rn": {
+		"message": "رۇندىچە"
+	},
+	"langCode_ro": {
+		"message": "رومىنچە"
+	},
+	"langCode_ru": {
+		"message": "رۇسچە"
+	},
+	"langCode_rw": {
+		"message": "كېنىيەرىۋانداچە"
+	},
+	"langCode_sa": {
+		"message": "سانسكرىتچە"
+	},
+	"langCode_sc": {
+		"message": "ساردىنىيەچە"
+	},
+	"langCode_sd": {
+		"message": "سىندىچە"
+	},
+	"langCode_se": {
+		"message": "شىمالىي سامىچە"
+	},
+	"langCode_sg": {
+		"message": "سانگوچە"
+	},
+	"langCode_si": {
+		"message": "سىنگالچە"
+	},
+	"langCode_sk": {
+		"message": "سىلوۋاكچە"
+	},
+	"langCode_sl": {
+		"message": "سىلوۋېنچە"
+	},
+	"langCode_sm": {
+		"message": "ساموئاچە"
+	},
+	"langCode_sn": {
+		"message": "شوناچە"
+	},
+	"langCode_so": {
+		"message": "سومالىچە"
+	},
+	"langCode_sq": {
+		"message": "ئالبانچە"
+	},
+	"langCode_sr": {
+		"message": "سېربچە"
+	},
+	"langCode_ss": {
+		"message": "سىۋاتىچە"
+	},
+	"langCode_st": {
+		"message": "سوتوچە"
+	},
+	"langCode_su": {
+		"message": "سۇنداچە"
+	},
+	"langCode_sv": {
+		"message": "شىۋېدچە"
+	},
+	"langCode_sw": {
+		"message": "سىۋاھىلچە"
+	},
+	"langCode_ta": {
+		"message": "تامىلچە"
+	},
+	"langCode_te": {
+		"message": "تېلۇگۇچە"
+	},
+	"langCode_tg": {
+		"message": "تاجىكچە"
+	},
+	"langCode_th": {
+		"message": "تايلاندچە"
+	},
+	"langCode_ti": {
+		"message": "تىگرىنياچە"
+	},
+	"langCode_tk": {
+		"message": "تۈركمەنچە"
+	},
+	"langCode_tl": {
+		"message": "فىلىپپىنچە"
+	},
+	"langCode_tn": {
+		"message": "سىۋاناچە"
+	},
+	"langCode_to": {
+		"message": "تونگانچە"
+	},
+	"langCode_tr": {
+		"message": "تۈركچە"
+	},
+	"langCode_ts": {
+		"message": "سونگاچە"
+	},
+	"langCode_tt": {
+		"message": "تاتارچە"
+	},
+	"langCode_tw": {
+		"message": "ئاكانچە"
+	},
+	"langCode_ty": {
+		"message": "تاختىچە"
+	},
+	"langCode_ug": {
+		"message": "ئۇيغۇرچە"
+	},
+	"langCode_uk": {
+		"message": "ئۇكرائىنچە"
+	},
+	"langCode_ur": {
+		"message": "ئوردۇچە"
+	},
+	"langCode_uz": {
+		"message": "ئۆزبېكچە"
+	},
+	"langCode_ve": {
+		"message": "ۋېنداچە"
+	},
+	"langCode_vi": {
+		"message": "ۋىيېتنامچە"
+	},
+	"langCode_vo": {
+		"message": "ۋولاپۇكچە"
+	},
+	"langCode_wa": {
+		"message": "ۋاللۇنچە"
+	},
+	"langCode_wo": {
+		"message": "ۋولوفچە"
+	},
+	"langCode_xh": {
+		"message": "خوساچە"
+	},
+	"langCode_yi": {
+		"message": "يىددىشچە"
+	},
+	"langCode_yo": {
+		"message": "يورۇباچە"
+	},
+	"langCode_za": {
+		"message": "جۇاڭچە"
+	},
+	"langCode_zh": {
+		"message": "خەنزۇچە"
+	},
+	"langCode_zu": {
+		"message": "زۇلۇچە"
+	}
+}

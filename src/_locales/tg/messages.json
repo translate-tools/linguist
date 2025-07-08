@@ -1,0 +1,1184 @@
+{
+	"common_action_addToDictionary": {
+		"message": "Илова кардани тарҷума ба луғат"
+	},
+	"common_action_removeFromDictionary": {
+		"message": "Хориҷ кардани тарҷума аз луғат"
+	},
+	"common_bgUnavailable": {
+		"message": "Скрипти пасзамина дастнорас аст"
+	},
+	"common_cancel": {
+		"message": "Бекор кардан"
+	},
+	"common_close": {
+		"message": "Пӯшидан"
+	},
+	"common_copy": {
+		"message": "Нусхабардорӣ"
+	},
+	"common_error": {
+		"message": "Хато"
+	},
+	"common_offlineTranslator": {
+		"message": "$1 - Баргардонандаи офлайн"
+	},
+	"common_retry": {
+		"message": "Боз санҷидан"
+	},
+	"common_translate": {
+		"message": "Тарҷума кардан"
+	},
+	"component_hotkey_placeholder": {
+		"message": "Барои сабт кардани тугмаҳои миёнарав зер кунед"
+	},
+	"component_hotkey_recordPlaceholder": {
+		"message": "Тугмаҳоро пахш кунед"
+	},
+	"component_hotkey_resetButton": {
+		"message": "Барқарор кардан"
+	},
+	"contextMenu_disablePageTranslation": {
+		"message": "Тарҷумаи саҳифаро хомӯш кунед"
+	},
+	"contextMenu_translatePage": {
+		"message": "Саҳифаро тарҷума кунед"
+	},
+	"contextMenu_translateSelectedText": {
+		"message": "Матни интихобшударо тарҷума кунед"
+	},
+	"dictionaryButton_add": {
+		"message": "Ба луғат илова кунед"
+	},
+	"dictionaryButton_delete": {
+		"message": "Аз луғат тоза кунед"
+	},
+	"dictionary_button_export": {
+		"message": "Экспорт"
+	},
+	"dictionary_button_removeAll": {
+		"message": "Ҳамаро нест кунед"
+	},
+	"dictionary_deleteAll": {
+		"message": "Оё шумо мутмаин ҳастед, ки мехоҳед ҲАМАи тарҷумаҳоро дар луғат нест кунед?"
+	},
+	"dictionary_deleteConfirmation": {
+		"message": "Оё шумо мутмаин ҳастед, ки мехоҳед ин тарҷумаҳоро нест кунед?"
+	},
+	"dictionary_description": {
+		"message": "Тарҷумаҳои худро дар луғат нигоҳ доред, то баъдтар онҳоро пайдо кунед"
+	},
+	"dictionary_emptyDictionary": {
+		"message": "Луғат холӣ аст. Вақти тарҷума кардани матнҳо, онро пур кунед"
+	},
+	"dictionary_filter_from": {
+		"message": "Аз"
+	},
+	"dictionary_filter_to": {
+		"message": "То"
+	},
+	"dictionary_message_deleteAll_success": {
+		"message": "Ҳамаи тарҷумаҳо ҳазф шуданд"
+	},
+	"dictionary_notFoundEntries": {
+		"message": "Тарҷумаҳо бо ин филтрҳо ёфт нашуданд"
+	},
+	"dictionary_pageTitle": {
+		"message": "Луғат"
+	},
+	"dictionary_resetFilters": {
+		"message": "тафсилотро барқарор кунед"
+	},
+	"dictionary_searchPlaceholder": {
+		"message": "Ҷустуҷӯ бо матн"
+	},
+	"editorWindow_close": {
+		"message": "Пӯшидан"
+	},
+	"editorWindow_data_code": {
+		"message": "Рамз"
+	},
+	"editorWindow_data_translatorName": {
+		"message": "Номи тарҷумон"
+	},
+	"editorWindow_message_invalidTranslatorName": {
+		"message": "Номи тарҷумон бояд ҳадди ақал як аломат дошта бошад"
+	},
+	"editorWindow_save": {
+		"message": "Нигоҳдорӣ"
+	},
+	"ext_description": {
+		"message": "Тарҷумаи саҳифаҳо ва матнҳо, луғат, таърих, тарҷумонҳои офлайн ва фармоишӣ"
+	},
+	"ext_name": {
+		"message": "Лингвист - тарҷумони саҳифаҳои веб"
+	},
+	"history_control_selectEntry": {
+		"message": "Интихоби воридот"
+	},
+	"history_controls_clearHistory": {
+		"message": "Тоза кардани таърих"
+	},
+	"history_controls_deleteSelected": {
+		"message": "Ҳазфи интихобшуда"
+	},
+	"history_controls_selectAll": {
+		"message": "Интихоби ҳамагуна тарҷумаҳо"
+	},
+	"history_message_clearHistoryConfirmation": {
+		"message": "Шумо итминон доред, ки таърихро тоза кунед? Ҳамаи сабтҳо ҳазф хоҳанд шуд"
+	},
+	"history_message_deleteEntryConfirmation": {
+		"message": "Шумо итминон доред, ки ин сабтро ҳазф кунед?"
+	},
+	"history_message_deleteSelectedEntriesConfirmation": {
+		"message": "Шумо итминон доред, ки сабтҳои интихобшударо ($1) ҳазф кунед?"
+	},
+	"history_message_entriesNotFound": {
+		"message": "Тарҷумаҳое, ки бо филтр мувофиқат кунанд, ёфт нашуданд"
+	},
+	"history_message_noEntries": {
+		"message": "Таърих тоза аст"
+	},
+	"history_notification_disabled": {
+		"message": "Реҷаи сабти таърих хомӯш аст, бинобар ин сабтҳои нав намоиш дода намешаванд. Шумо метавонед ин қарорро дар <slot id=preferences>танзимот</slot> тағйир диҳед"
+	},
+	"history_pageTitle": {
+		"message": "Таърих"
+	},
+	"history_searchPlaceholder": {
+		"message": "Ҷустуҷӯ бо матн"
+	},
+	"inlineTranslator_showOriginalText": {
+		"message": "Нишон додани матни аслӣ"
+	},
+	"lang_change": {
+		"message": "Таъйини забон"
+	},
+	"lang_detect": {
+		"message": "Шинохти худкор"
+	},
+	"lang_select": {
+		"message": "Интихоби забон"
+	},
+	"lang_swap": {
+		"message": "Иваз кардани забонҳо"
+	},
+	"message_askResetConfig": {
+		"message": "Оё хоҳед танзимотро барқарор кунед?"
+	},
+	"message_cacheFlushed": {
+		"message": "Кеш тоза карда шуд"
+	},
+	"message_changesSaved": {
+		"message": "Таъғирот сабт шуданд"
+	},
+	"message_error": {
+		"message": "Хато"
+	},
+	"message_errorOfTranslate": {
+		"message": "Хатои тарҷума"
+	},
+	"message_serviceRequiredKey": {
+		"message": "Хизмат калидро талаб мекунад"
+	},
+	"message_translateOfText": {
+		"message": "Тарҷума шуд"
+	},
+	"message_unknownError": {
+		"message": "Хатои номаълуми"
+	},
+	"pageTranslator_alwaysTranslateLang": {
+		"message": "Ҳамеша ин забонро тарҷума кунед"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disable": {
+		"message": "Хомӯш кардан"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
+		"message": "Барои ҳамаи сайтҳо хомӯш кунед"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_enable": {
+		"message": "Фаъолсозӣ"
+	},
+	"pageTranslator_commonPreferences_title": {
+		"message": "Танзимоти умумӣ барои ин забон"
+	},
+	"pageTranslator_option_autoTranslate": {
+		"message": "Тарҷумаи худкор"
+	},
+	"pageTranslator_showOptions": {
+		"message": "Намоиши имконот"
+	},
+	"pageTranslator_showOriginal": {
+		"message": "Намоиши аслӣ"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_always": {
+		"message": "Ҳамеша тарҷума кунед"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
+		"message": "Ҳамеша барои ин забон тарҷума кунед"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_default": {
+		"message": "Истифодаи қоидаҳои умумӣ"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
+		"message": "Истифодаи қоидаҳои умумӣ барои ин забон"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_never": {
+		"message": "Ҳеҷ гоҳ тарҷума накунед"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
+		"message": "Ҳеҷ гоҳ барои ин забон тарҷума накунед"
+	},
+	"pageTranslator_sitePreferences_title": {
+		"message": "Танзимоти афзалиятҳо барои"
+	},
+	"pageTranslator_translatePage": {
+		"message": "Тарҷумаи саҳифа"
+	},
+	"pageTranslator_translationReport": {
+		"message": "Ҳисоботи тарҷума"
+	},
+	"pageTranslator_translationReport_queue": {
+		"message": "Навбат"
+	},
+	"pageTranslator_translationReport_reject": {
+		"message": "Хатоҳо"
+	},
+	"pageTranslator_translationReport_resolve": {
+		"message": "Тарҷумашуда"
+	},
+	"popup_tabIdNotFound": {
+		"message": "Варақча \"$1\" ёфт нашуд"
+	},
+	"popup_tab_translatePage": {
+		"message": "Тарҷумаи саҳифа"
+	},
+	"popup_tab_translateText": {
+		"message": "Тарҷумаи матн"
+	},
+	"settings_button_cancel": {
+		"message": "Бекор кардан"
+	},
+	"settings_button_export": {
+		"message": "Содироти конфиг"
+	},
+	"settings_button_import": {
+		"message": "Ворид кардани конфиг"
+	},
+	"settings_button_reset": {
+		"message": "Барқарор кардани конфиг"
+	},
+	"settings_button_saveChanges": {
+		"message": "Тағиротро захира кунед"
+	},
+	"settings_message_clearCache_success": {
+		"message": "Кэш тоза карда шуд"
+	},
+	"settings_message_common_invalidValueType": {
+		"message": "Арзиши нодуруст"
+	},
+	"settings_message_importConfig_invalidFile": {
+		"message": "Файл барои ворид кардан қобили қабул нест"
+	},
+	"settings_message_importConfig_success": {
+		"message": "Ворид кардан анҷом ёфт"
+	},
+	"settings_message_resetConfig_confirm": {
+		"message": "Шумо мехоҳед танзимотро барқарор кунед?"
+	},
+	"settings_message_resetConfig_success": {
+		"message": "Танзимотҳо барқарор карда шуданд"
+	},
+	"settings_message_saveChanges_success": {
+		"message": "Тағйиротҳо захира шуданд"
+	},
+	"settings_option_cache": {
+		"message": "Кэш"
+	},
+	"settings_option_cache_clear": {
+		"message": "Тоза кардани кэш"
+	},
+	"settings_option_cache_clear_desc": {
+		"message": "Кэшро тоза кунед агар ба шумо чунин аномалияҳо дар тарҷума ё ниёз ба нест кардани маълумоти махфӣ лозим бошад"
+	},
+	"settings_option_cache_enable": {
+		"message": "Фаъол кардани кэш"
+	},
+	"settings_option_cache_enable_desc": {
+		"message": "Вақте ки кэш фаъол карда мешавад, тарҷумаҳое, ки як бор тарҷума шудаанд, ҳатто бидуни интернет фавран дастрас хоҳанд буд"
+	},
+	"settings_option_cache_ignoreCase": {
+		"message": "Бе назардошти ҳолати ҳарфҳо"
+	},
+	"settings_option_cache_ignoreCase_desc": {
+		"message": "Вақте ки фаъол карда мешавад, тарҷумаҳо аз кэш бо мувофиқатҳои нодурусти дақиқ истифода мешаванд, ки метавонад боиси хатогиҳои тарҷума гардад"
+	},
+	"settings_option_commonSettings": {
+		"message": "Танзимоти умумӣ"
+	},
+	"settings_option_customTranslatorModule": {
+		"message": "Тарҷумонҳои фармоишӣ"
+	},
+	"settings_option_customTranslatorModule_desc": {
+		"message": "Шумо метавонед барои хидматҳои тарҷумаи дӯстдоштаатон тарҷумонҳои фармоишӣ илова кунед. Бештар хонед ва модулҳоро дар <slot id=docs>ҳуҷҷатҳои тарҷумонҳои фармоишӣ</slot> ёбед."
+	},
+	"settings_option_customTranslatorModule_manageButton": {
+		"message": "Идоракунии тарҷумонҳо"
+	},
+	"settings_option_history_enable": {
+		"message": "Фаъолсозии таърих"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "Вақте фаъол бошад, ҳар гуна тарҷума дар саҳифаи таърих сабт мешавад"
+	},
+	"settings_option_mainPreferences": {
+		"message": "Танзимоти асосӣ"
+	},
+	"settings_option_pageTranslation": {
+		"message": "Тарҷумаи саҳифа"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent": {
+		"message": "Забонро бо мундариҷа муайян кунед"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent_desc": {
+		"message": "Матни сафҳаи вебро таҳлил кунед, то забони сафҳаро муайян намоед. Вақте ғайрифаъол бошад, забоне, ки дар метамаълумоти сафҳа пешниҳод шудааст, истифода мешавад"
+	},
+	"settings_option_pageTranslation_enableContextMenu": {
+		"message": "Дугмаи менюи контекстиро фаъол созед"
+	},
+	"settings_option_pageTranslation_enableContextMenu_desc": {
+		"message": "Дугмаро ба менюи контекстӣ илова кунед, то тарҷумаи сафҳаро фаъол ё ғайрифаъол созед"
+	},
+	"settings_option_pageTranslation_excludeSelectors": {
+		"message": "Селекторҳое, ки бояд тарҷума нашаванд"
+	},
+	"settings_option_pageTranslation_excludeSelectors_desc": {
+		"message": "Феҳристи селекторҳои CSS, ки тарҷума намешаванд. Як селектор дар як сатр. Агар ягон унсур бо ягон селектор мувофиқ бошад, он унсур ва хусусиятҳои он ва унсурҳои дохили он тарҷума карда намешаванд."
+	},
+	"settings_option_pageTranslation_lazyTranslate": {
+		"message": "Танҳо унсурҳои намоишдодашударо тарҷума кунед"
+	},
+	"settings_option_pageTranslation_lazyTranslate_desc": {
+		"message": "Вақте ки ин имконот фаъол карда мешавад, танҳо унсурҳои намоён тарҷума мешаванд. Ин метавонад барои сарфа кардани трафики шабакавӣ муфид бошад"
+	},
+	"settings_option_pageTranslation_originalTextPopup": {
+		"message": "Фаъол кардани равзанаи маъхаз бо матни аслӣ"
+	},
+	"settings_option_pageTranslation_originalTextPopup_desc": {
+		"message": "Намоиши равзанаи маъхаз бо матни аслӣ ҳангоми гузоштани муш ба болои матни тарҷумашуда"
+	},
+	"settings_option_pageTranslation_toggleTranslationHotkey": {
+		"message": "Тугмаҳои миёнбар"
+	},
+	"settings_option_pageTranslation_toggleTranslationHotkey_desc": {
+		"message": "Миёнабарҳоро барои фаъол ё хомӯш кардани тарҷумаи саҳифа истифода баред\nБарои барқарор кардани тугмаҳо ESC-ро зер кунед"
+	},
+	"settings_option_pageTranslation_translatableAttributes": {
+		"message": "Вазифаҳое, ки метавонанд тарҷума шаванд."
+	},
+	"settings_option_pageTranslation_translatableAttributes_desc": {
+		"message": "Номҳои <slot id=htmlAttributes>атрибутҳои HTML</slot>-ро барои тарҷума ворид кунед. Як атрибут дар ҳар қатор"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters": {
+		"message": "Нишон додани статистикаи тарҷума"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters_desc": {
+		"message": "Намоиши омори тарҷумаи саҳифа"
+	},
+	"settings_option_selectTranslation": {
+		"message": "Тарҷумаи матни интихобшуда"
+	},
+	"settings_option_selectTranslation_detectedLangFirst": {
+		"message": "Аввал афзалият додан ба забони муайяншудаи матн нисбат ба забони саҳифа"
+	},
+	"settings_option_selectTranslation_detectedLangFirst_desc": {
+		"message": "Вақте фаъол бошад, забони муайяншудаи матни интихобшуда бар забони саҳифа афзалият дорад"
+	},
+	"settings_option_selectTranslation_disableWhileTranslatePage": {
+		"message": "Ҳангоми тарҷумаи саҳифа ғайрифаъол созед"
+	},
+	"settings_option_selectTranslation_enable": {
+		"message": "Фаъол созед"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton": {
+		"message": "Автоматӣ ба тугмаи тарҷума тамаркуз кунед"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
+		"message": "Вақте ки тугмаи тарҷума пайдо мешавад, ба он диққат диҳед"
+	},
+	"settings_option_selectTranslation_header_languageChoice": {
+		"message": "Танзимоти забон"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang": {
+		"message": "Ҳассоси автоматии забон аз ҷониби тарҷумон фаъол карда шавад"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
+		"message": "Ҳангоми номуайян будани забон дар маҳаллӣ, аз муайянкунии автоматии забон тавассути тарҷумон истифода баред"
+	},
+	"settings_option_selectTranslation_mode": {
+		"message": "Оғози тарҷума"
+	},
+	"settings_option_selectTranslation_mode_item_contextMenu": {
+		"message": "Тугмаи менюи контекст"
+	},
+	"settings_option_selectTranslation_mode_item_popupButton": {
+		"message": "Тугмаи поп-ап"
+	},
+	"settings_option_selectTranslation_mode_item_quickTranslate": {
+		"message": "Тарҷумаи зуд бо интихоби матн"
+	},
+	"settings_option_selectTranslation_modifiers": {
+		"message": "Муҳаррикҳо"
+	},
+	"settings_option_selectTranslation_modifiers_desc": {
+		"message": "Калидҳое, ки бояд дар клавиатура фишурда шаванд, то тарҷума намоиш дода шавад, интихоб кунед"
+	},
+	"settings_option_selectTranslation_modifiers_key_alt": {
+		"message": "alt"
+	},
+	"settings_option_selectTranslation_modifiers_key_ctrl": {
+		"message": "ctrl"
+	},
+	"settings_option_selectTranslation_modifiers_key_meta": {
+		"message": "meta"
+	},
+	"settings_option_selectTranslation_modifiers_key_shift": {
+		"message": "shift"
+	},
+	"settings_option_selectTranslation_rememberDirection": {
+		"message": "Забони матни охирин интихобшударо ба ёд нигоҳ доред"
+	},
+	"settings_option_selectTranslation_showOnceForSelection": {
+		"message": "Нугари тугмаи тарҷума танҳо як маротиба барои ҳар интихоби матн нишон дода шавад"
+	},
+	"settings_option_selectTranslation_showOnceForSelection_desc": {
+		"message": "Тугма танҳо як маротиба барои ҳар интихоби матн нишон дода мешавад. Агар лозим бошад, онро дубора нишон додан, матнро дубора интихоб кунед"
+	},
+	"settings_option_selectTranslation_showOriginalText": {
+		"message": "Намоиши матни аслӣ"
+	},
+	"settings_option_selectTranslation_showOriginalText_desc": {
+		"message": "Илова кардани блок бо матни аслӣ ба тирезаи поп-ап бо тарҷума"
+	},
+	"settings_option_selectTranslation_strictSelection": {
+		"message": "Интихоби қатъӣ"
+	},
+	"settings_option_selectTranslation_strictSelection_desc": {
+		"message": "Агар тугмаи чапи муш дар берун аз блоке, ки матни интихобшударо дорост, озод шавад, интихоб ба назар гирифта намешавад"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton": {
+		"message": "Таъхир барои пинҳон кардани тугма"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton_desc": {
+		"message": "Таъхир бо миллисекундҳо пеш аз пинҳон кардани тугма, вақте ки курсор болои он намеистад. Баста шудани курсор ба болои тугма вақти тафтишро барқарор мекунад. Барои ғайрифаъол кардани пинҳон шудани автоматӣ, арзишро камтар аз 1 гузоред"
+	},
+	"settings_option_selectTranslation_zIndex": {
+		"message": "z-index"
+	},
+	"settings_option_selectTranslation_zIndex_desc": {
+		"message": "Агар баъзе унсурҳо дар баъзе саҳифаҳо болои равзанаи мучоддаашуда бо матни тарҷумашуда пӯшида шаванд, арзишро зиёд намоед"
+	},
+	"settings_option_textTranslator": {
+		"message": "Тарҷумаи матн"
+	},
+	"settings_option_textTranslator_rememberText": {
+		"message": "Тарҷумаи матнро дар ёд доштан"
+	},
+	"settings_option_textTranslator_rememberText_desc": {
+		"message": "Матни тарҷумашударо барои бозкушои оянда ба ёд гиред"
+	},
+	"settings_option_textTranslator_spellCheck": {
+		"message": "Фаъолсозии тафтишоти имло"
+	},
+	"settings_option_textTranslator_suggestLanguage": {
+		"message": "Таъйини забони матни ошкоршуда"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways": {
+		"message": "Ҳамеша забонро муайян ва пешниҳод кунед"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways_desc": {
+		"message": "Вақте, ки хомӯш аст, пешниҳодҳои забон танҳо ҳангоми муайян кардани худкори забон пайдо мешаванд"
+	},
+	"settings_option_translatePreferences": {
+		"message": "Танзимоти тарҷума"
+	},
+	"settings_option_translateScheduler": {
+		"message": "Нақшаи тарҷума"
+	},
+	"settings_option_translateScheduler_delay": {
+		"message": "Таъхири ҷамъоварии матн"
+	},
+	"settings_option_translateScheduler_delay_desc": {
+		"message": "Нақшаи тарҷума шумораи дархостҳо барои хидматрасониҳои API-и тарҷума кам мекунад. Нақша кӯшиш мекунад матнҳоро ҷамъ кунад, то якчанд матнро дар як дархост фиристад. Нақша барои ҷамъоварии матнҳои нав муддати муқарраршудаи миллисекундро интизор мешавад, пас тарҷума оғоз меёбад."
+	},
+	"settings_option_translateScheduler_retryLimit": {
+		"message": "Тоқи бори дубора кӯшиши тарҷума"
+	},
+	"settings_option_translateScheduler_retryLimit_desc": {
+		"message": "Нақша барои хатогиҳои тарҷума кӯшиш мекунад матнҳоро дубора тарҷума кунад. Ин танзим маҳдудият барои кӯшишҳои дубора таъин мекунад. Рақами манфӣ гузоред барои иҷозати кӯшишҳои бепоён."
+	},
+	"settings_option_translatorModule": {
+		"message": "Модули тарҷумон"
+	},
+	"settings_option_translatorModule_desc": {
+		"message": "Сифати тарҷумаҳо ва забонҳои дастрас барои тарҷума аз тарҷумон вобаста аст."
+	},
+	"settings_option_tts": {
+		"message": "Матн ба сухан (ТТС)"
+	},
+	"settings_option_ttsCustomModules": {
+		"message": "ТТС фармоишӣ"
+	},
+	"settings_option_ttsCustomModules_button": {
+		"message": "Идоракунии модулҳои ТТС"
+	},
+	"settings_option_ttsCustomModules_desc": {
+		"message": "Шумо метавонед модулҳои ТТС-ро илова кунед, ки хидмати дӯстдоштаи шумо ва овозҳоро истифода мебаранд. Барои маълумоти бештар ва ёфтани модулҳо ба ҳуҷҷатҳои ТТС фармоишӣ муроҷиат кунед."
+	},
+	"settings_option_ttsModule": {
+		"message": "Модули ТТС"
+	},
+	"settings_option_ttsModule_desc": {
+		"message": "Модула барои хондани матнҳо"
+	},
+	"settings_option_userLanguage": {
+		"message": "Забони шумо"
+	},
+	"settings_option_userLanguage_desc": {
+		"message": "Забони мақсад барои тарҷумаи матнҳо"
+	},
+	"settings_pageTitle": {
+		"message": "Танзимот"
+	},
+	"settings_section_history": {
+		"message": "Таърих"
+	},
+	"settings_section_popup": {
+		"message": "Панели ошкор"
+	},
+	"textTranslator_suggestLanguage": {
+		"message": "Мутаассфона, чунин менамояд, ки забон аст"
+	},
+	"textTranslator_translateInputPlaceholder": {
+		"message": "Матни воридшуда"
+	},
+	"textTranslator_translatePlaceholder": {
+		"message": "Матрияи тарҷумашуда"
+	},
+	"translatorsManagerWindow_add": {
+		"message": "Илова кардан"
+	},
+	"translatorsManagerWindow_close": {
+		"message": "Пӯшидан"
+	},
+	"translatorsManagerWindow_emptyTranslatorsListText": {
+		"message": "Тарҷумонҳои фармоишӣ ҳанӯз илова нашудаанд"
+	},
+	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
+		"message": "Оё шумо дар шубҳаед, ки мехоҳед тарҷумон \"$translator_name$\"-ро ҳазф кунед?",
+		"placeholders": {
+			"translator_name": {
+				"content": "$1",
+				"example": "Google translator"
+			}
+		}
+	},
+	"translatorsManagerWindow_title": {
+		"message": "Тарҷумонҳои фармоишӣ"
+	},
+	"translatorsManagerWindow_translator_delete": {
+		"message": "Ҳазф кардан"
+	},
+	"translatorsManagerWindow_translator_edit": {
+		"message": "Таҳрир кардан"
+	},
+	"ttsManagerWindow_add": {
+		"message": "Илова кардан"
+	},
+	"ttsManagerWindow_close": {
+		"message": "Пӯшидан"
+	},
+	"ttsManagerWindow_emptyTranslatorsListText": {
+		"message": "Модулҳои TTS ҳоло илова нашудаанд"
+	},
+	"ttsManagerWindow_message_ttsRemoveConfirmation": {
+		"message": "Оё шумо дар бораи хориҷ кардани TTS \"$tts_name$\" боварӣ доред?",
+		"placeholders": {
+			"tts_name": {
+				"content": "$1",
+				"example": "Google TTS"
+			}
+		}
+	},
+	"ttsManagerWindow_title": {
+		"message": "Модулҳои матн ба сухан"
+	},
+	"ttsManagerWindow_translator_delete": {
+		"message": "Ҳазф"
+	},
+	"ttsManagerWindow_translator_edit": {
+		"message": "Вироиш"
+	},
+	"validation_number": {
+		"message": "Параметр бояд рақам бошад"
+	},
+	"validation_numberBetweenRange": {
+		"message": "Параметр бояд рақаме бошад, ки байни $1 ва $2 қарор дорад"
+	},
+	"validation_positiveNumber": {
+		"message": "Параметр бояд рақами мусбат бошад."
+	},
+	"langCode_aa": {
+		"message": "Aa"
+	},
+	"langCode_ab": {
+		"message": "Ab"
+	},
+	"langCode_ae": {
+		"message": "Ae"
+	},
+	"langCode_af": {
+		"message": "Африкаанс"
+	},
+	"langCode_ak": {
+		"message": "Ak"
+	},
+	"langCode_am": {
+		"message": "Амҳарӣ"
+	},
+	"langCode_an": {
+		"message": "An"
+	},
+	"langCode_ar": {
+		"message": "Арабӣ"
+	},
+	"langCode_as": {
+		"message": "Ассомӣ"
+	},
+	"langCode_av": {
+		"message": "Av"
+	},
+	"langCode_ay": {
+		"message": "Ay"
+	},
+	"langCode_az": {
+		"message": "Озарбойҷонӣ"
+	},
+	"langCode_ba": {
+		"message": "Бошқирдӣ"
+	},
+	"langCode_be": {
+		"message": "Белорусӣ"
+	},
+	"langCode_bg": {
+		"message": "Булғорӣ"
+	},
+	"langCode_bh": {
+		"message": "Bho"
+	},
+	"langCode_bi": {
+		"message": "Bi"
+	},
+	"langCode_bm": {
+		"message": "Bm"
+	},
+	"langCode_bn": {
+		"message": "Бинғолӣ"
+	},
+	"langCode_bo": {
+		"message": "Тибетӣ"
+	},
+	"langCode_br": {
+		"message": "Бретонӣ"
+	},
+	"langCode_bs": {
+		"message": "Босниягӣ"
+	},
+	"langCode_ca": {
+		"message": "Каталонӣ"
+	},
+	"langCode_ce": {
+		"message": "Ce"
+	},
+	"langCode_ch": {
+		"message": "Ch"
+	},
+	"langCode_co": {
+		"message": "Корсиканӣ"
+	},
+	"langCode_cr": {
+		"message": "Cr"
+	},
+	"langCode_cs": {
+		"message": "Чехӣ"
+	},
+	"langCode_cu": {
+		"message": "Cu"
+	},
+	"langCode_cv": {
+		"message": "Cv"
+	},
+	"langCode_cy": {
+		"message": "Валлӣ"
+	},
+	"langCode_da": {
+		"message": "Даниягӣ"
+	},
+	"langCode_de": {
+		"message": "Немисӣ"
+	},
+	"langCode_dv": {
+		"message": "Дивеҳӣ"
+	},
+	"langCode_dz": {
+		"message": "Дзонгха"
+	},
+	"langCode_ee": {
+		"message": "Ee"
+	},
+	"langCode_el": {
+		"message": "Юнонӣ"
+	},
+	"langCode_en": {
+		"message": "Англисӣ"
+	},
+	"langCode_eo": {
+		"message": "Эсперанто"
+	},
+	"langCode_es": {
+		"message": "Испанӣ"
+	},
+	"langCode_et": {
+		"message": "Эстонӣ"
+	},
+	"langCode_eu": {
+		"message": "Баскӣ"
+	},
+	"langCode_fa": {
+		"message": "Форсӣ"
+	},
+	"langCode_ff": {
+		"message": "Фулаҳ"
+	},
+	"langCode_fi": {
+		"message": "Финӣ"
+	},
+	"langCode_fj": {
+		"message": "Fj"
+	},
+	"langCode_fo": {
+		"message": "Фарерӣ"
+	},
+	"langCode_fr": {
+		"message": "Франсузӣ"
+	},
+	"langCode_fy": {
+		"message": "Фризии ғарбӣ"
+	},
+	"langCode_ga": {
+		"message": "Ирландӣ"
+	},
+	"langCode_gd": {
+		"message": "Шотландии гэлӣ"
+	},
+	"langCode_gl": {
+		"message": "Галисиягӣ"
+	},
+	"langCode_gn": {
+		"message": "Гуаранӣ"
+	},
+	"langCode_gu": {
+		"message": "Гуҷаротӣ"
+	},
+	"langCode_gv": {
+		"message": "Gv"
+	},
+	"langCode_ha": {
+		"message": "Ҳауса"
+	},
+	"langCode_he": {
+		"message": "Ибронӣ"
+	},
+	"langCode_hi": {
+		"message": "Ҳиндӣ"
+	},
+	"langCode_ho": {
+		"message": "Ho"
+	},
+	"langCode_hr": {
+		"message": "Хорватӣ"
+	},
+	"langCode_ht": {
+		"message": "Гаитии креолӣ"
+	},
+	"langCode_hu": {
+		"message": "Маҷорӣ"
+	},
+	"langCode_hy": {
+		"message": "Арманӣ"
+	},
+	"langCode_hz": {
+		"message": "Ҳереро"
+	},
+	"langCode_ia": {
+		"message": "Ia"
+	},
+	"langCode_id": {
+		"message": "Индонезӣ"
+	},
+	"langCode_ie": {
+		"message": "Ie"
+	},
+	"langCode_ig": {
+		"message": "Игбо"
+	},
+	"langCode_ii": {
+		"message": "Ii"
+	},
+	"langCode_ik": {
+		"message": "Ik"
+	},
+	"langCode_io": {
+		"message": "Io"
+	},
+	"langCode_is": {
+		"message": "Исландӣ"
+	},
+	"langCode_it": {
+		"message": "Италиявӣ"
+	},
+	"langCode_iu": {
+		"message": "Инуктитутӣ"
+	},
+	"langCode_ja": {
+		"message": "Японӣ"
+	},
+	"langCode_jv": {
+		"message": "Jv"
+	},
+	"langCode_ka": {
+		"message": "Гурҷӣ"
+	},
+	"langCode_kg": {
+		"message": "Kg"
+	},
+	"langCode_ki": {
+		"message": "Ki"
+	},
+	"langCode_kj": {
+		"message": "Kj"
+	},
+	"langCode_kk": {
+		"message": "Қазоқӣ"
+	},
+	"langCode_kl": {
+		"message": "Kl"
+	},
+	"langCode_km": {
+		"message": "Кхмерӣ"
+	},
+	"langCode_kn": {
+		"message": "Каннада"
+	},
+	"langCode_ko": {
+		"message": "Кореягӣ"
+	},
+	"langCode_kr": {
+		"message": "Канурӣ"
+	},
+	"langCode_ks": {
+		"message": "Кашмирӣ"
+	},
+	"langCode_ku": {
+		"message": "Курдӣ"
+	},
+	"langCode_kv": {
+		"message": "Kv"
+	},
+	"langCode_kw": {
+		"message": "Kw"
+	},
+	"langCode_ky": {
+		"message": "Қирғизӣ"
+	},
+	"langCode_la": {
+		"message": "Лотинӣ"
+	},
+	"langCode_lb": {
+		"message": "Люксембургӣ"
+	},
+	"langCode_lg": {
+		"message": "Lg"
+	},
+	"langCode_li": {
+		"message": "Li"
+	},
+	"langCode_ln": {
+		"message": "Ln"
+	},
+	"langCode_lo": {
+		"message": "Лаосӣ"
+	},
+	"langCode_lt": {
+		"message": "Литвонӣ"
+	},
+	"langCode_lu": {
+		"message": "Lu"
+	},
+	"langCode_lv": {
+		"message": "Латишӣ"
+	},
+	"langCode_mg": {
+		"message": "Малагасӣ"
+	},
+	"langCode_mh": {
+		"message": "Mh"
+	},
+	"langCode_mi": {
+		"message": "Маорӣ"
+	},
+	"langCode_mk": {
+		"message": "Мақдунӣ"
+	},
+	"langCode_ml": {
+		"message": "Малаяламӣ"
+	},
+	"langCode_mn": {
+		"message": "Муғулӣ"
+	},
+	"langCode_mr": {
+		"message": "Маратҳӣ"
+	},
+	"langCode_ms": {
+		"message": "Малайӣ"
+	},
+	"langCode_mt": {
+		"message": "Малтӣ"
+	},
+	"langCode_my": {
+		"message": "Бирманӣ"
+	},
+	"langCode_na": {
+		"message": "Na"
+	},
+	"langCode_nb": {
+		"message": "Nb"
+	},
+	"langCode_nd": {
+		"message": "Nd"
+	},
+	"langCode_ne": {
+		"message": "Непалӣ"
+	},
+	"langCode_ng": {
+		"message": "Ng"
+	},
+	"langCode_nl": {
+		"message": "Голландӣ"
+	},
+	"langCode_nn": {
+		"message": "Nn"
+	},
+	"langCode_no": {
+		"message": "Норвегӣ"
+	},
+	"langCode_nr": {
+		"message": "Nr"
+	},
+	"langCode_nv": {
+		"message": "Nv"
+	},
+	"langCode_ny": {
+		"message": "Нянҷа"
+	},
+	"langCode_oc": {
+		"message": "Окситанӣ"
+	},
+	"langCode_oj": {
+		"message": "Oj"
+	},
+	"langCode_om": {
+		"message": "Оромо"
+	},
+	"langCode_or": {
+		"message": "Одия"
+	},
+	"langCode_os": {
+		"message": "Os"
+	},
+	"langCode_pa": {
+		"message": "Панҷобӣ"
+	},
+	"langCode_pi": {
+		"message": "Pi"
+	},
+	"langCode_pl": {
+		"message": "Лаҳистонӣ"
+	},
+	"langCode_ps": {
+		"message": "Пушту"
+	},
+	"langCode_pt": {
+		"message": "Португалӣ"
+	},
+	"langCode_qu": {
+		"message": "Кечуа"
+	},
+	"langCode_rm": {
+		"message": "Ретороманӣ"
+	},
+	"langCode_rn": {
+		"message": "Rn"
+	},
+	"langCode_ro": {
+		"message": "Руминӣ"
+	},
+	"langCode_ru": {
+		"message": "Русӣ"
+	},
+	"langCode_rw": {
+		"message": "Киняруанда"
+	},
+	"langCode_sa": {
+		"message": "Санскрит"
+	},
+	"langCode_sc": {
+		"message": "Sc"
+	},
+	"langCode_sd": {
+		"message": "Синдӣ"
+	},
+	"langCode_se": {
+		"message": "Самии шимолӣ"
+	},
+	"langCode_sg": {
+		"message": "Sg"
+	},
+	"langCode_si": {
+		"message": "Сингалӣ"
+	},
+	"langCode_sk": {
+		"message": "Словакӣ"
+	},
+	"langCode_sl": {
+		"message": "Словенӣ"
+	},
+	"langCode_sm": {
+		"message": "Sm"
+	},
+	"langCode_sn": {
+		"message": "Sn"
+	},
+	"langCode_so": {
+		"message": "Сомалӣ"
+	},
+	"langCode_sq": {
+		"message": "Албанӣ"
+	},
+	"langCode_sr": {
+		"message": "Сербӣ"
+	},
+	"langCode_ss": {
+		"message": "Ss"
+	},
+	"langCode_st": {
+		"message": "St"
+	},
+	"langCode_su": {
+		"message": "Su"
+	},
+	"langCode_sv": {
+		"message": "Шведӣ"
+	},
+	"langCode_sw": {
+		"message": "Sw"
+	},
+	"langCode_ta": {
+		"message": "Тамилӣ"
+	},
+	"langCode_te": {
+		"message": "Телугу"
+	},
+	"langCode_tg": {
+		"message": "Тоҷикӣ"
+	},
+	"langCode_th": {
+		"message": "Тайӣ"
+	},
+	"langCode_ti": {
+		"message": "Тигриня"
+	},
+	"langCode_tk": {
+		"message": "Туркманӣ"
+	},
+	"langCode_tl": {
+		"message": "Филиппинӣ"
+	},
+	"langCode_tn": {
+		"message": "Tn"
+	},
+	"langCode_to": {
+		"message": "Тонганӣ"
+	},
+	"langCode_tr": {
+		"message": "Туркӣ"
+	},
+	"langCode_ts": {
+		"message": "Ts"
+	},
+	"langCode_tt": {
+		"message": "Тоторӣ"
+	},
+	"langCode_tw": {
+		"message": "Ak"
+	},
+	"langCode_ty": {
+		"message": "Ty"
+	},
+	"langCode_ug": {
+		"message": "Ӯйғурӣ"
+	},
+	"langCode_uk": {
+		"message": "Украинӣ"
+	},
+	"langCode_ur": {
+		"message": "Урду"
+	},
+	"langCode_uz": {
+		"message": "Ӯзбекӣ"
+	},
+	"langCode_ve": {
+		"message": "Венда"
+	},
+	"langCode_vi": {
+		"message": "Ветнамӣ"
+	},
+	"langCode_vo": {
+		"message": "Vo"
+	},
+	"langCode_wa": {
+		"message": "Wa"
+	},
+	"langCode_wo": {
+		"message": "Волоф"
+	},
+	"langCode_xh": {
+		"message": "Xh"
+	},
+	"langCode_yi": {
+		"message": "Идиш"
+	},
+	"langCode_yo": {
+		"message": "Йоруба"
+	},
+	"langCode_za": {
+		"message": "Za"
+	},
+	"langCode_zh": {
+		"message": "Хитоӣ"
+	},
+	"langCode_zu": {
+		"message": "Zu"
+	}
+}
