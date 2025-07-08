@@ -8,7 +8,7 @@ import { LLMJsonProcessor } from '../../LLMJsonProcessor';
 import { LLMJsonTranslator } from '../../LLMJsonTranslator';
 import { LocalesManager } from '../../LocalesManager';
 import { getFileVersion } from '../../utils/git';
-import { orderKeysInLocalizationObject } from '../../utils/localeObject';
+import { postprocessLocale } from '../../utils/localeObject';
 import { getJsonTranslationPrompt } from '../../utils/prompts';
 
 import { mkdir, readFile, writeFile } from 'fs/promises';
@@ -140,12 +140,21 @@ command
 					language: targetLanguage,
 					content: localeObject,
 				},
+				skip(context) {
+					if (context.path[0].startsWith('langCode_')) return true;
+
+					return false;
+				},
 			});
 
 			await mkdir(path.dirname(targetLanguageFilename), { recursive: true });
 			await writeFile(
 				targetLanguageFilename,
-				JSON.stringify(orderKeysInLocalizationObject(syncedLocale), null, '\t'),
+				JSON.stringify(
+					postprocessLocale(syncedLocale, targetLanguage),
+					null,
+					'\t',
+				),
 			);
 		}
 	});
