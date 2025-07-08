@@ -6,7 +6,7 @@
 		"message": "Odstrániť preklad zo slovníka"
 	},
 	"common_bgUnavailable": {
-		"message": "Skript na pozadí nie je k dispozícii"
+		"message": "Pozadie skriptu nie je dostupné"
 	},
 	"common_cancel": {
 		"message": "Zrušiť"
@@ -21,16 +21,16 @@
 		"message": "Chyba"
 	},
 	"common_offlineTranslator": {
-		"message": "$1 - Offline prekladateľ"
+		"message": "$1 - Offline prekladač"
 	},
 	"common_retry": {
-		"message": "Skúsiť znova"
+		"message": "Opakovať"
 	},
 	"common_translate": {
 		"message": "Preložiť"
 	},
 	"component_hotkey_placeholder": {
-		"message": "Kliknite pre zaznamenanie klávesových skratiek"
+		"message": "Kliknite pre zaznamenanie skratky"
 	},
 	"component_hotkey_recordPlaceholder": {
 		"message": "Stlačte klávesy"
@@ -39,7 +39,7 @@
 		"message": "Obnoviť"
 	},
 	"contextMenu_disablePageTranslation": {
-		"message": "Vypnúť preklad stránky"
+		"message": "Zakázať preklad stránky"
 	},
 	"contextMenu_translatePage": {
 		"message": "Preložiť stránku"
@@ -60,37 +60,37 @@
 		"message": "Odstrániť všetko"
 	},
 	"dictionary_deleteAll": {
-		"message": "Ste si istí, že chcete vymazať VŠETKY preklady v slovníku?"
+		"message": "Ste si istý, že chcete odstrániť VŠETKY preklady v slovníku?"
 	},
 	"dictionary_deleteConfirmation": {
-		"message": "Ste si istí, že chcete vymazať tento preklad?"
+		"message": "Ste si istý, že chcete odstrániť tento preklad?"
 	},
 	"dictionary_description": {
-		"message": "Ukladajte svoje preklady do slovníka a neskôr ich ľahko vyhľadajte"
+		"message": "Ukladajte svoje preklady do slovníka, aby ste ich mohli neskôr nájsť"
 	},
 	"dictionary_emptyDictionary": {
-		"message": "Slovník je prázdny. Začnite ho napĺňať tým, že budete prekladať texty"
+		"message": "Slovník je prázdny. Začnite ho plniť prekladaním nejakého textu"
 	},
 	"dictionary_filter_from": {
-		"message": "Z jazyka"
+		"message": "Z"
 	},
 	"dictionary_filter_to": {
-		"message": "Do"
+		"message": "Na"
 	},
 	"dictionary_message_deleteAll_success": {
 		"message": "Všetky preklady boli odstránené"
 	},
 	"dictionary_notFoundEntries": {
-		"message": "Preklady zodpovedajúce týmto filtrom neboli nájdené"
+		"message": "Nenašli sa žiadne preklady zodpovedajúce týmto filtrom"
 	},
 	"dictionary_pageTitle": {
 		"message": "Slovník"
 	},
 	"dictionary_resetFilters": {
-		"message": "vynulovať filtre"
+		"message": "obnoviť filtre"
 	},
 	"dictionary_searchPlaceholder": {
-		"message": "Vyhľadávať podľa textu"
+		"message": "Vyhľadávanie podľa textu"
 	},
 	"editorWindow_close": {
 		"message": "Zavrieť"
@@ -98,23 +98,23 @@
 	"editorWindow_data_code": {
 		"message": "Kód"
 	},
-	"editorWindow_data_name": {
-		"message": "Názov"
+	"editorWindow_data_translatorName": {
+		"message": "Meno prekladateľa"
 	},
-	"editorWindow_message_invalidName": {
-		"message": "Názov musí obsahovať aspoň jeden symbol"
+	"editorWindow_message_invalidTranslatorName": {
+		"message": "Meno prekladateľa musí obsahovať aspoň jeden znak"
 	},
 	"editorWindow_save": {
 		"message": "Uložiť"
 	},
 	"ext_description": {
-		"message": "Preklad stránok a textov, slovník, história, offline a vlastné prekladatele"
+		"message": "Preklad stránok a textov, slovník, história, offline a vlastné prekladače"
 	},
 	"ext_name": {
-		"message": "Lingvista - prekladač webových stránok"
+		"message": "Linguist - prekladač webových stránok"
 	},
 	"history_control_selectEntry": {
-		"message": "Vybrať položku"
+		"message": "Vybrať záznam"
 	},
 	"history_controls_clearHistory": {
 		"message": "Vymazať históriu"
@@ -126,22 +126,22 @@
 		"message": "Vybrať všetky preklady"
 	},
 	"history_message_clearHistoryConfirmation": {
-		"message": "Ste si istí, že chcete vymazať históriu? Všetky záznamy budú odstránené."
+		"message": "Naozaj chcete vymazať históriu? Všetky záznamy budú odstránené"
 	},
 	"history_message_deleteEntryConfirmation": {
-		"message": "Ste si istí, že chcete zmazať tento záznam?"
+		"message": "Naozaj chcete vymazať tento záznam?"
 	},
 	"history_message_deleteSelectedEntriesConfirmation": {
-		"message": "Ste si istí, že chcete vymazať vybrané položky ($1)?"
-	},
-	"history_message_emptyEntries": {
-		"message": "História vyčistená"
+		"message": "Naozaj chcete vymazať vybrané záznamy ($1)?"
 	},
 	"history_message_entriesNotFound": {
-		"message": "Neboli nájdené žiadne preklady, ktoré by spĺňali filter"
+		"message": "Nenašli sa žiadne preklady zodpovedajúce filtru"
+	},
+	"history_message_noEntries": {
+		"message": "História je prázdna"
 	},
 	"history_notification_disabled": {
-		"message": "Zaznamenávanie histórie je vypnuté, takže sa nové položky nezobrazia. Môžete to zmeniť v <slot id=preferences>nastaveniach</slot>"
+		"message": "Záznam histórie je vypnutý, nové záznamy sa teda nezobrazia. Toto môžete zmeniť v <slot id=preferences>nastaveniach</slot>"
 	},
 	"history_pageTitle": {
 		"message": "História"
@@ -156,19 +156,19 @@
 		"message": "Zmeniť jazyk"
 	},
 	"lang_detect": {
-		"message": "Automatické zistenie"
+		"message": "Automaticky rozpoznať"
 	},
 	"lang_select": {
-		"message": "Vyberte jazyk"
+		"message": "Vybrať jazyk"
 	},
 	"lang_swap": {
-		"message": "Prehodiť jazyky"
+		"message": "Vymeniť jazyky"
 	},
 	"message_askResetConfig": {
-		"message": "Chcete obnoviť nastavenia?"
+		"message": "Obnoviť nastavenia?"
 	},
 	"message_cacheFlushed": {
-		"message": "Cache je vyčistená"
+		"message": "Vyrovnávacia pamäť bola vyčistená"
 	},
 	"message_changesSaved": {
 		"message": "Zmeny uložené"
@@ -201,7 +201,7 @@
 		"message": "Povoliť"
 	},
 	"pageTranslator_commonPreferences_title": {
-		"message": "Spoločné predvoľby pre tento jazyk"
+		"message": "Základné nastavenia pre tento jazyk"
 	},
 	"pageTranslator_option_autoTranslate": {
 		"message": "Automatický preklad"
@@ -213,16 +213,16 @@
 		"message": "Zobraziť originál"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_always": {
-		"message": "Vždy preložiť"
+		"message": "Vždy prekladať"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
-		"message": "Vždy preložiť pre túto jazykovú verziu"
+		"message": "Vždy prekladať pre tento jazyk"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_default": {
 		"message": "Použiť bežné pravidlá"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
-		"message": "Použiť bežné pravidlá pre túto jazykovú verziu"
+		"message": "Použiť bežné pravidlá pre tento jazyk"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_never": {
 		"message": "Nikdy neprekladať"
@@ -231,16 +231,16 @@
 		"message": "Nikdy neprekladať pre tento jazyk"
 	},
 	"pageTranslator_sitePreferences_title": {
-		"message": "Vlastnosti pre"
+		"message": "Preferencie pre"
 	},
 	"pageTranslator_translatePage": {
 		"message": "Preložiť stránku"
 	},
 	"pageTranslator_translationReport": {
-		"message": "Hlásenie o preklade"
+		"message": "Správa o preklade"
 	},
 	"pageTranslator_translationReport_queue": {
-		"message": "Rada"
+		"message": "Čakajúce"
 	},
 	"pageTranslator_translationReport_reject": {
 		"message": "Chyby"
@@ -261,25 +261,25 @@
 		"message": "Zrušiť"
 	},
 	"settings_button_export": {
-		"message": "Exportovať konfiguráciu"
+		"message": "Exportovať nastavenia"
 	},
 	"settings_button_import": {
-		"message": "Importovať konfiguráciu"
+		"message": "Importovať nastavenia"
 	},
 	"settings_button_reset": {
-		"message": "Obnoviť konfiguráciu"
+		"message": "Obnoviť nastavenia"
 	},
 	"settings_button_saveChanges": {
 		"message": "Uložiť zmeny"
 	},
 	"settings_message_clearCache_success": {
-		"message": "Cache je vyčistená"
+		"message": "Vyrovnávacia pamäť vyprázdnená"
 	},
 	"settings_message_common_invalidValueType": {
 		"message": "Neplatná hodnota"
 	},
 	"settings_message_importConfig_invalidFile": {
-		"message": "Súbor pre import nie je možné spracovať"
+		"message": "Súbor na import sa nedá spracovať"
 	},
 	"settings_message_importConfig_success": {
 		"message": "Import dokončený"
@@ -288,67 +288,49 @@
 		"message": "Chcete obnoviť nastavenia?"
 	},
 	"settings_message_resetConfig_success": {
-		"message": "Nastavenia resetované"
+		"message": "Nastavenia obnovené"
 	},
 	"settings_message_saveChanges_success": {
 		"message": "Zmeny uložené"
 	},
-	"settings_option_appIcon": {
-		"message": "Ikona rozšírenia"
-	},
-	"settings_option_appIcon_desc": {
-		"message": "Ak je vybraná dynamická ikona, farby sa prispôsobia téme prehliadača"
-	},
-	"settings_option_appIcon_item_auto": {
-		"message": "Dynamická"
-	},
-	"settings_option_appIcon_item_color": {
-		"message": "Farba"
-	},
-	"settings_option_appIcon_item_dark": {
-		"message": "Tmavé"
-	},
-	"settings_option_appIcon_item_light": {
-		"message": "Svetlé"
-	},
 	"settings_option_cache": {
-		"message": "Cache"
+		"message": "Vyrovnávacia pamäť"
 	},
 	"settings_option_cache_clear": {
-		"message": "Vyčistiť cache"
+		"message": "Vyprázdniť vyrovnávaciu pamäť"
 	},
 	"settings_option_cache_clear_desc": {
-		"message": "Odstráňte vyrovnávaciu pamäť, ak máte prekladateľské artefakty alebo musíte odstrániť tajomstvá"
+		"message": "Odstrániť vyrovnávaciu pamäť, ak máte problémy s prekladom alebo potrebujete odstrániť tajné údaje"
 	},
 	"settings_option_cache_enable": {
 		"message": "Povoliť vyrovnávaciu pamäť"
 	},
 	"settings_option_cache_enable_desc": {
-		"message": "Keď je vyrovnávacia pamäť povolená, preklady, ktoré boli raz preložené, budú k dispozícii okamžite aj bez internetu"
+		"message": "Keď je vyrovnávacia pamäť povolená, preklady, ktoré už boli raz preložené, budú dostupné okamžite, aj bez internetového pripojenia"
 	},
 	"settings_option_cache_ignoreCase": {
-		"message": "Bez ohľadu na veľkosť písmen"
+		"message": "Ignorovať veľkosť písmen"
 	},
 	"settings_option_cache_ignoreCase_desc": {
-		"message": "Ak je táto možnosť zapnutá, preklady z cache sa použijú aj s ne-exaktnými zhodami, čo môže spôsobiť prekladateľské artefakty"
+		"message": "Ak je toto povolené, budú sa používať preklady z vyrovnávacej pamäti aj pre čiastočné zhody, čo môže spôsobiť prekladové chyby"
 	},
 	"settings_option_commonSettings": {
-		"message": "Spoločné nastavenia"
+		"message": "Všeobecné nastavenia"
 	},
 	"settings_option_customTranslatorModule": {
-		"message": "Vlastné prekladače"
+		"message": "Vlastní prekladatelia"
 	},
 	"settings_option_customTranslatorModule_desc": {
-		"message": "Môžete pridať vlastné prekladače pre vaše obľúbené prekladové služby. Viac informácií a moduly nájdete v dokumentácii k <slot id=docs> vlastným prekladačom </slot>."
+		"message": "Môžete pridať vlastných prekladateľov pre vaše obľúbené prekladové služby. Viac informácií a moduly nájdete v <slot id=docs>dokumentácii vlastných prekladateľov</slot>"
 	},
 	"settings_option_customTranslatorModule_manageButton": {
-		"message": "Spravovať prekladače"
+		"message": "Spravovať prekladateľov"
 	},
 	"settings_option_history_enable": {
 		"message": "Povoliť históriu"
 	},
 	"settings_option_history_enable_desc": {
-		"message": "Po povolení bude každý preklad zaznamenaný na stránke histórie"
+		"message": "Po zapnutí sa každý preklad uloží na stránku histórie"
 	},
 	"settings_option_mainPreferences": {
 		"message": "Hlavné nastavenia"
@@ -357,46 +339,46 @@
 		"message": "Preklad stránky"
 	},
 	"settings_option_pageTranslation_detectLanguageByContent": {
-		"message": "Zistiť jazyk podľa obsahu"
+		"message": "Detegovať jazyk podľa obsahu"
 	},
 	"settings_option_pageTranslation_detectLanguageByContent_desc": {
-		"message": "Analyzovať text na webovej stránke pre zistenie jazyka stránky. Ak je zakázané, použije sa jazyk uvedený v metadate stránky"
+		"message": "Analyzujte text na webovej stránke pre detekciu jazyka stránky. Po vypnutí sa použije jazyk uvedený v metadátach stránky"
 	},
 	"settings_option_pageTranslation_enableContextMenu": {
 		"message": "Povoliť tlačidlo kontextového menu"
 	},
 	"settings_option_pageTranslation_enableContextMenu_desc": {
-		"message": "Pridať tlačidlo na prepínanie prekladu stránky do kontextového menu"
+		"message": "Pridať tlačidlo na prepínanie prekladu stránky v kontextovom menu"
 	},
 	"settings_option_pageTranslation_excludeSelectors": {
 		"message": "Selektory, ktoré sa nebudú prekladať"
 	},
 	"settings_option_pageTranslation_excludeSelectors_desc": {
-		"message": "Zoznam CSS selektorov, ktoré sa nebudú prekladať. Jeden selektor na riadok. Ak prvok zodpovedá niektorému z týchto selektorov, nebudú preložené ani on, ani jeho atribúty a vnorené prvky."
+		"message": "Zoznam CSS selektorov, ktoré sa nebudú prekladať. Jeden selektor na riadok. Ak element zodpovedá niektorému z týchto selektorov, nebude sa prekladať ani on, jeho atribúty ani vnorené prvky"
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
 		"message": "Prekladať iba viditeľné prvky"
 	},
 	"settings_option_pageTranslation_lazyTranslate_desc": {
-		"message": "Ak je táto voľba povolená, budú prekladané iba viditeľné prvky. To môže byť užitočné na úsporu sieťovej prevádzky."
+		"message": "Keď je táto možnosť povolená, budú preložené iba viditeľné prvky. Táto možnosť šetrí sieťový prenos a limity používaných prekladateľských služieb"
 	},
 	"settings_option_pageTranslation_originalTextPopup": {
 		"message": "Povoliť vyskakovacie okno s pôvodným textom"
 	},
 	"settings_option_pageTranslation_originalTextPopup_desc": {
-		"message": "Zobraziť vyskakovacie okno s originálnym textom pri podržaní myšou nad preloženým textom"
+		"message": "Zobraziť vyskakovacie okno s pôvodným textom pri prejdení myšou nad preloženými textovými blokmi"
 	},
 	"settings_option_pageTranslation_toggleTranslationHotkey": {
 		"message": "Klávesové skratky"
 	},
 	"settings_option_pageTranslation_toggleTranslationHotkey_desc": {
-		"message": "Skratky na prepínanie prekladu stránky\nStlačte ESC pre reset kláves"
+		"message": "Skratky pre zapnutie alebo vypnutie prekladu stránky\nStlačte ESC pre resetovanie klávesových skratiek"
 	},
 	"settings_option_pageTranslation_translatableAttributes": {
-		"message": "Prekladateľné atribúty."
+		"message": "Prekladateľné atribúty"
 	},
 	"settings_option_pageTranslation_translatableAttributes_desc": {
-		"message": "Zadajte názvy <slot id = htmlAttributes>HTML atribútov</slot> pre preklad. Jeden atribút na riadok"
+		"message": "Zadajte názvy <slot id=htmlAttributes>HTML atribútov</slot> na preklad, jeden atribút na riadok"
 	},
 	"settings_option_popupTab_pageTranslator_showCounters": {
 		"message": "Zobraziť štatistiky prekladu"
@@ -405,34 +387,34 @@
 		"message": "Zobraziť štatistiky prekladu stránky"
 	},
 	"settings_option_selectTranslation": {
-		"message": "Preklad vybraného textu"
+		"message": "Preklad vybratého textu"
 	},
 	"settings_option_selectTranslation_detectedLangFirst": {
-		"message": "Uprednostniť zistený jazyk textu pred jazykom stránky"
+		"message": "Uprednostniť rozpoznaný jazyk textu pred jazykom stránky"
 	},
 	"settings_option_selectTranslation_detectedLangFirst_desc": {
-		"message": "Ak je povolené, zistený jazyk vybraného textu bude uprednostnený pred jazykom stránky"
+		"message": "Ak je aktivované, bude uprednostnený rozpoznaný jazyk vybraného textu pred jazykom stránky"
 	},
 	"settings_option_selectTranslation_disableWhileTranslatePage": {
-		"message": "Vypnúť počas prekladania stránky"
+		"message": "Zakázať počas prekladu stránky"
 	},
 	"settings_option_selectTranslation_enable": {
 		"message": "Povoliť"
 	},
 	"settings_option_selectTranslation_focusOnTranslateButton": {
-		"message": "Automatické zameranie na tlačidlo prekladu"
+		"message": "Automaticky zaostriť na tlačidlo prekladu"
 	},
 	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
-		"message": "Zamerať sa na tlačidlo prekladu, keď sa objaví"
+		"message": "Zaostriť na tlačidlo prekladu, keď sa zobrazí"
 	},
 	"settings_option_selectTranslation_header_languageChoice": {
 		"message": "Nastavenia jazyka"
 	},
 	"settings_option_selectTranslation_isUseAutoForDetectLang": {
-		"message": "Povoliť automatické rozpoznávanie jazyka prekladačom"
+		"message": "Povoliť automatické rozpoznávanie jazyka prekladateľom"
 	},
 	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
-		"message": "Použiť automatické rozpoznávanie jazyka prekladačom v prípade, že sa jazyk nedokáže rozpoznať lokálne"
+		"message": "Použiť automatické rozpoznávanie jazyka prekladateľom, keď sa jazyk nedá lokalne rozpoznať"
 	},
 	"settings_option_selectTranslation_mode": {
 		"message": "Spúšťač prekladu"
@@ -441,16 +423,16 @@
 		"message": "Tlačidlo kontextového menu"
 	},
 	"settings_option_selectTranslation_mode_item_popupButton": {
-		"message": "Tlačidlo vyskakovacieho okna"
+		"message": "Vyskakovacie tlačidlo"
 	},
 	"settings_option_selectTranslation_mode_item_quickTranslate": {
-		"message": "Rýchle prekladanie výberom"
+		"message": "Rýchly preklad výberom"
 	},
 	"settings_option_selectTranslation_modifiers": {
 		"message": "Modifikátory"
 	},
 	"settings_option_selectTranslation_modifiers_desc": {
-		"message": "Vyberte klávesy, ktoré je potrebné stlačiť na klávesnici, aby sa zobrazil preklad"
+		"message": "Vyberte klávesy, ktoré musia byť stlačené na klávesnici na zobrazenie prekladu"
 	},
 	"settings_option_selectTranslation_modifiers_key_alt": {
 		"message": "alt"
@@ -465,106 +447,106 @@
 		"message": "shift"
 	},
 	"settings_option_selectTranslation_rememberDirection": {
-		"message": "Zapamätať si najnovšie zvolený jazyk pre text"
+		"message": "Zapamätať si naposledy vybraný jazyk textu"
 	},
 	"settings_option_selectTranslation_showOnceForSelection": {
-		"message": "Zobraziť tlačidlo prekladu len raz pre každý výber textu"
+		"message": "Zobraziť tlačidlo preklad iba raz pre každý výber textu"
 	},
 	"settings_option_selectTranslation_showOnceForSelection_desc": {
-		"message": "Tlačidlo sa bude zobrazovať len raz pre každý výber textu. Ak ho chcete zobraziť znova, musíte text zvoliť znova."
+		"message": "Tlačidlo sa zobrazí iba raz pre každý výber textu. Ak ho chcete zobraziť znova, vyberte text opäť"
 	},
 	"settings_option_selectTranslation_showOriginalText": {
 		"message": "Zobraziť pôvodný text"
 	},
 	"settings_option_selectTranslation_showOriginalText_desc": {
-		"message": "Pridať blok s pôvodným textom do vyskakovacieho okna s prekladom"
+		"message": "Pridať blok s pôvodným textom do prekladového vyskakovacieho okna"
 	},
 	"settings_option_selectTranslation_strictSelection": {
-		"message": "Prísne výber"
+		"message": "Prísny výber"
 	},
 	"settings_option_selectTranslation_strictSelection_desc": {
-		"message": "Ignorovať výber, ak sa ľavé tlačidlo myši uvoľní mimo bloku, ktorý obsahuje vybraný text"
+		"message": "Ignorovať výber, ak sa ľavé tlačidlo myši uvoľní mimo bloku obsahujúceho vybraný text"
 	},
 	"settings_option_selectTranslation_timeoutForHideButton": {
-		"message": "Oneskorenie skrytia tlačidla"
+		"message": "Oneskorenie pred skrytím tlačidla"
 	},
 	"settings_option_selectTranslation_timeoutForHideButton_desc": {
-		"message": "Oneskorenie v milisekundách pred skrytím tlačidla, keď kurzor nie je nad ním. Pohyb kurzora na tlačidle zresetuje časovač. Ak chcete zakázať automatické skrytie, nastavte hodnotu nižšiu ako 1."
+		"message": "Oneskorenie v milisekundách pred skrytím tlačidla, keď sa nad ním nepohybuje kurzor. Pohyb kurzora nad tlačidlom resetuje časovač. Pre vypnutie automatického skrývania nastavte hodnotu pod 1"
 	},
 	"settings_option_selectTranslation_zIndex": {
 		"message": "z-index"
 	},
 	"settings_option_selectTranslation_zIndex_desc": {
-		"message": "Zväčšite hodnotu, ak sa na niektorých stránkach prekrývajú prvky s vyskakovacím oknom s preloženým textom."
+		"message": "Zvýšte túto hodnotu, ak na niektorých stránkach prvky prekryjú vyskakovacie okno s preloženým textom"
 	},
 	"settings_option_textTranslator": {
 		"message": "Preklad textu"
 	},
 	"settings_option_textTranslator_rememberText": {
-		"message": "Zapamätať si preložený text"
+		"message": "Pamätať si preložený text"
 	},
 	"settings_option_textTranslator_rememberText_desc": {
-		"message": "Zapamätať preložený text pre ďalšie otvorenie okna"
+		"message": "Pamätať si preložený text pri opätovnom otvorení okna"
 	},
 	"settings_option_textTranslator_spellCheck": {
 		"message": "Povoliť kontrolu pravopisu"
 	},
 	"settings_option_textTranslator_suggestLanguage": {
-		"message": "Navrhnúť zistený jazyk textu"
+		"message": "Navrhnúť detekovaný jazyk textu"
 	},
 	"settings_option_textTranslator_suggestLanguageAlways": {
-		"message": "Vždy zistiť a navrhnúť jazyk"
+		"message": "Vždy zisťovať a navrhovať jazyk"
 	},
 	"settings_option_textTranslator_suggestLanguageAlways_desc": {
-		"message": "Ak je vypnuté, návrhy jazyka sa zobrazia len vtedy, ak je zdrojový jazyk automaticky zistený."
+		"message": "Keď je vypnuté, návrhy jazyka sa zobrazia iba pri automatickom zistení zdrojového jazyka"
 	},
 	"settings_option_translatePreferences": {
-		"message": "Prekladové preferencie"
+		"message": "Nastavenia prekladu"
 	},
 	"settings_option_translateScheduler": {
 		"message": "Plánovač prekladu"
 	},
 	"settings_option_translateScheduler_delay": {
-		"message": "Oneskorenie zhromažďovania textu"
+		"message": "Odmietanie hromadenia textu"
 	},
 	"settings_option_translateScheduler_delay_desc": {
-		"message": "Plánovač prekladu znižuje počet požiadaviek na API pre služby prekladu. Plánovač sa snaží nazbierať čo najviac textov, ktoré odosle na jednu požiadavku. Plánovač bude čakať určitý čas v milisekundách na zhromaždenie nových textov pred začatím prekladu."
+		"message": "Plánovač prekladu znižuje počet požiadaviek na API prekladateľskej služby. Snaží sa zhromaždiť čo najviac textov na odoslanie v jednej požiadavke. Plánovač počká určený čas v milisekundách, aby zhromaždil nové texty pred začatím prekladu"
 	},
 	"settings_option_translateScheduler_retryLimit": {
-		"message": "Počet pokusov o preklad"
+		"message": "Počet opakovaných pokusov o preklad"
 	},
 	"settings_option_translateScheduler_retryLimit_desc": {
-		"message": "Plánovač bude opakovať preklad textov z dôvodu chýb pri preklade. Táto voľba nastavuje limit pre pokusy o opakovanie. Nastavte záporné číslo, aby ste umožnili neobmedzené opakovania"
+		"message": "Plánovač sa pokúsi znovu preložiť texty v prípade chyby prekladu. Táto možnosť nastavuje limit pre opakované pokusy. Nastavte záporné číslo pre neobmedzené opakovanie"
 	},
 	"settings_option_translatorModule": {
-		"message": "Modul prekladača"
+		"message": "Prekladateľský modul"
 	},
 	"settings_option_translatorModule_desc": {
-		"message": "Kvalita prekladov a dostupné jazyky pre preklad závisia od prekladača."
+		"message": "Kvalita prekladov a dostupné jazyky závisia od prekladateľa"
 	},
 	"settings_option_tts": {
 		"message": "Text na reč (TTS)"
 	},
 	"settings_option_ttsCustomModules": {
-		"message": "Prispôsobené TTS"
+		"message": "Vlastné TTS"
 	},
 	"settings_option_ttsCustomModules_button": {
-		"message": "Spravovať moduly TTS"
+		"message": "Spravovať TTS moduly"
 	},
 	"settings_option_ttsCustomModules_desc": {
-		"message": "Môžete pridať moduly TTS, ktoré používajú vašu obľúbenú službu a jazyky. Prečítajte si viac a nájdite moduly v dokumentácii pre vlastné TTS."
+		"message": "Môžete pridať TTS moduly, ktoré používajú vaše obľúbené služby a hlasy. Viac informácií a moduly nájdete v dokumentácii k vlastnému TTS"
 	},
 	"settings_option_ttsModule": {
-		"message": "Modul TTS"
+		"message": "TTS modul"
 	},
 	"settings_option_ttsModule_desc": {
-		"message": "Modul na prehováranie textov"
+		"message": "Modul na čítanie textu"
 	},
 	"settings_option_userLanguage": {
 		"message": "Váš jazyk"
 	},
 	"settings_option_userLanguage_desc": {
-		"message": "Cieľový jazyk pre preklad textov"
+		"message": "Cieľový jazyk pre preklad textu"
 	},
 	"settings_pageTitle": {
 		"message": "Nastavenia"
@@ -576,10 +558,10 @@
 		"message": "Vyskakovacie okno"
 	},
 	"textTranslator_suggestLanguage": {
-		"message": "Zdá sa, že tento jazyk je"
+		"message": "Zdá sa, že jazyk je"
 	},
 	"textTranslator_translateInputPlaceholder": {
-		"message": "Vstupný text"
+		"message": "Zadajte text"
 	},
 	"textTranslator_translatePlaceholder": {
 		"message": "Preložený text"
@@ -591,19 +573,19 @@
 		"message": "Zavrieť"
 	},
 	"translatorsManagerWindow_emptyTranslatorsListText": {
-		"message": "Vlastné prekladače ešte neboli pridané"
+		"message": "Ešte neboli pridaní žiadni vlastní prekladatelia"
 	},
 	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
-		"message": "Ste si istý, že chcete odstrániť prekladač \"$translator_name$\"?",
+		"message": "Naozaj chcete odstrániť prekladateľa \"$translator_name$\"?",
 		"placeholders": {
 			"translator_name": {
 				"content": "$1",
-				"example": "Google prekladač"
+				"example": "Google translator"
 			}
 		}
 	},
 	"translatorsManagerWindow_title": {
-		"message": "Vlastné prekladače"
+		"message": "Vlastní prekladatelia"
 	},
 	"translatorsManagerWindow_translator_delete": {
 		"message": "Odstrániť"
@@ -615,13 +597,13 @@
 		"message": "Pridať"
 	},
 	"ttsManagerWindow_close": {
-		"message": "Zatvoriť"
+		"message": "Zavrieť"
 	},
 	"ttsManagerWindow_emptyTranslatorsListText": {
-		"message": "Moduly TTS ešte neboli pridané"
+		"message": "Ešte neboli pridané žiadne TTS moduly"
 	},
 	"ttsManagerWindow_message_ttsRemoveConfirmation": {
-		"message": "Naozaj chcete odstrániť TTS \"$tts_name$\"?",
+		"message": "Naozaj chcete odstrániť TTS modul \"$tts_name$\"?",
 		"placeholders": {
 			"tts_name": {
 				"content": "$1",
@@ -630,22 +612,22 @@
 		}
 	},
 	"ttsManagerWindow_title": {
-		"message": "Text na rečové moduly"
+		"message": "Moduly pre prevod textu na reč"
 	},
 	"ttsManagerWindow_translator_delete": {
-		"message": "Odstrániť"
+		"message": "Vymazať"
 	},
 	"ttsManagerWindow_translator_edit": {
 		"message": "Upraviť"
 	},
 	"validation_number": {
-		"message": "Parameter musí byť číslo."
+		"message": "Parameter musí byť číslo"
 	},
 	"validation_numberBetweenRange": {
-		"message": "Parameter musí byť číslo medzi $1 a $2."
+		"message": "Parameter musí byť číslo medzi $1 a $2"
 	},
 	"validation_positiveNumber": {
-		"message": "Parameter musí byť kladné číslo."
+		"message": "Parameter musí byť kladné číslo"
 	},
 	"langCode_aa": {
 		"message": "Afarčina"

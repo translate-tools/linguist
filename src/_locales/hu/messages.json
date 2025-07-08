@@ -6,7 +6,7 @@
 		"message": "Fordítás eltávolítása a szótárból"
 	},
 	"common_bgUnavailable": {
-		"message": "A háttérprogram nem elérhető"
+		"message": "Háttérszolgáltatás nem elérhető"
 	},
 	"common_cancel": {
 		"message": "Mégse"
@@ -24,16 +24,16 @@
 		"message": "$1 - Offline fordító"
 	},
 	"common_retry": {
-		"message": "Újra"
+		"message": "Újrapróbálkozás"
 	},
 	"common_translate": {
 		"message": "Fordítás"
 	},
 	"component_hotkey_placeholder": {
-		"message": "Kattintson a billentyűkombináció rögzítéséhez"
+		"message": "Kattintson a gyorsbillentyű rögzítéséhez"
 	},
 	"component_hotkey_recordPlaceholder": {
-		"message": "Nyomja meg a billentyűket"
+		"message": "Nyomjon meg billentyűket"
 	},
 	"component_hotkey_resetButton": {
 		"message": "Visszaállítás"
@@ -51,37 +51,37 @@
 		"message": "Hozzáadás a szótárhoz"
 	},
 	"dictionaryButton_delete": {
-		"message": "Törlés a szótárból"
+		"message": "Eltávolítás a szótárból"
 	},
 	"dictionary_button_export": {
 		"message": "Exportálás"
 	},
 	"dictionary_button_removeAll": {
-		"message": "Minden eltávolítása"
+		"message": "Összes eltávolítása"
 	},
 	"dictionary_deleteAll": {
-		"message": "Biztos benne, hogy törölni szeretné az összes fordítást a szótárból?"
+		"message": "Biztos, hogy törölni szeretné az ÖSSZES fordítást a szótárból?"
 	},
 	"dictionary_deleteConfirmation": {
-		"message": "Biztos benne, hogy törölni szeretné ezt a fordítást?"
+		"message": "Biztos, hogy törölni szeretné ezt a fordítást?"
 	},
 	"dictionary_description": {
-		"message": "Tartsa meg fordításait a szótárban, hogy később könnyebben megtalálja őket"
+		"message": "Mentse el a fordításait a szótárba, hogy később könnyen megtalálja őket"
 	},
 	"dictionary_emptyDictionary": {
-		"message": "A szótár üres. Kezdje el feltölteni, amikor fordít egy szöveget"
+		"message": "A szótár üres. Kezdje el feltölteni néhány fordítással"
 	},
 	"dictionary_filter_from": {
-		"message": "Miből"
+		"message": "Innen"
 	},
 	"dictionary_filter_to": {
-		"message": "Mire"
+		"message": "Ide"
 	},
 	"dictionary_message_deleteAll_success": {
-		"message": "Az összes fordítás eltávolításra került"
+		"message": "Minden fordítás törölve lett"
 	},
 	"dictionary_notFoundEntries": {
-		"message": "Ezen szűrőknek megfelelő fordítások nem találhatók"
+		"message": "Nem találhatóak ilyen szűrőfeltételeknek megfelelő fordítások"
 	},
 	"dictionary_pageTitle": {
 		"message": "Szótár"
@@ -90,7 +90,7 @@
 		"message": "szűrők visszaállítása"
 	},
 	"dictionary_searchPlaceholder": {
-		"message": "Szöveg szerinti keresés"
+		"message": "Keresés szöveg alapján"
 	},
 	"editorWindow_close": {
 		"message": "Bezárás"
@@ -98,71 +98,71 @@
 	"editorWindow_data_code": {
 		"message": "Kód"
 	},
-	"editorWindow_data_name": {
-		"message": "Név"
+	"editorWindow_data_translatorName": {
+		"message": "Fordító neve"
 	},
-	"editorWindow_message_invalidName": {
-		"message": "A név legalább egy szimbólumot tartalmaznia kell"
+	"editorWindow_message_invalidTranslatorName": {
+		"message": "A fordító nevének legalább egy karaktert kell tartalmaznia"
 	},
 	"editorWindow_save": {
 		"message": "Mentés"
 	},
 	"ext_description": {
-		"message": "Oldalak és szövegek fordítása, szótár, előzmények, offline és testreszabott fordítók"
+		"message": "Oldalak és szövegek fordítása, szótár, előzmények, offline és egyedi fordítók"
 	},
 	"ext_name": {
-		"message": "Fordító - weboldalak fordítója"
+		"message": "Linguist - weboldal fordító"
 	},
 	"history_control_selectEntry": {
-		"message": "Elem kiválasztása"
+		"message": "Bejegyzés kiválasztása"
 	},
 	"history_controls_clearHistory": {
 		"message": "Előzmények törlése"
 	},
 	"history_controls_deleteSelected": {
-		"message": "Kijelölt elemek törlése"
+		"message": "Kijelöltek törlése"
 	},
 	"history_controls_selectAll": {
-		"message": "Minden fordítás kijelölése"
+		"message": "Az összes fordítás kiválasztása"
 	},
 	"history_message_clearHistoryConfirmation": {
-		"message": "Biztosan törli a teljes előzményeket? Az összes bejegyzés törlődni fog."
+		"message": "Biztosan törölni szeretné a történetet? Minden bejegyzés törlésre kerül"
 	},
 	"history_message_deleteEntryConfirmation": {
-		"message": "Biztosan törli ezt az elemet?"
+		"message": "Biztosan törölni szeretné ezt a bejegyzést?"
 	},
 	"history_message_deleteSelectedEntriesConfirmation": {
-		"message": "Biztosan törli a kijelölt elemeket ($1)?"
-	},
-	"history_message_emptyEntries": {
-		"message": "Az előzmények törölve"
+		"message": "Biztosan törölni szeretné a kiválasztott bejegyzéseket ($1)?"
 	},
 	"history_message_entriesNotFound": {
-		"message": "Nem található fordítás a szűrésnek megfelelően"
+		"message": "Nem találhatók a szűrőnek megfelelő fordítások"
+	},
+	"history_message_noEntries": {
+		"message": "A történelem üres"
 	},
 	"history_notification_disabled": {
-		"message": "A történet rögzítése ki van kapcsolva, így az új bejegyzések nem jelennek meg. Ezt megváltoztathatod a <slot id=preferences>beállításokban</slot>"
+		"message": "A történet rögzítése le van tiltva, így az új bejegyzések nem fognak megjelenni. Ezt a <slot id=preferences>beállításokban</slot> módosíthatja"
 	},
 	"history_pageTitle": {
-		"message": "Előzmények"
+		"message": "Történelem"
 	},
 	"history_searchPlaceholder": {
-		"message": "Szöveg szerinti keresés"
+		"message": "Keresés szöveg alapján"
 	},
 	"inlineTranslator_showOriginalText": {
 		"message": "Eredeti szöveg megjelenítése"
 	},
 	"lang_change": {
-		"message": "Nyelv változtatása"
+		"message": "Nyelv módosítása"
 	},
 	"lang_detect": {
-		"message": "Automatikus észlelés"
+		"message": "Automatikus felismerés"
 	},
 	"lang_select": {
 		"message": "Nyelv kiválasztása"
 	},
 	"lang_swap": {
-		"message": "Nyelvek cseréje"
+		"message": "Nyelvek felcserélése"
 	},
 	"message_askResetConfig": {
 		"message": "Beállítások visszaállítása?"
@@ -171,7 +171,7 @@
 		"message": "A gyorsítótár törölve lett"
 	},
 	"message_changesSaved": {
-		"message": "Változások mentve"
+		"message": "Módosítások mentve"
 	},
 	"message_error": {
 		"message": "Hiba"
@@ -180,7 +180,7 @@
 		"message": "Fordítási hiba"
 	},
 	"message_serviceRequiredKey": {
-		"message": "A szolgáltatás kulcsot igényel"
+		"message": "A szolgáltatáshoz kulcs szükséges"
 	},
 	"message_translateOfText": {
 		"message": "Lefordítva"
@@ -189,13 +189,13 @@
 		"message": "Ismeretlen hiba"
 	},
 	"pageTranslator_alwaysTranslateLang": {
-		"message": "Mindenkor fordítsa le ezt a nyelvet"
+		"message": "Mindig fordítsa le ezt a nyelvet"
 	},
 	"pageTranslator_commonPreferences_autoTranslate_disable": {
 		"message": "Letiltás"
 	},
 	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
-		"message": "Letiltás az összes weboldalon"
+		"message": "Letiltás minden webhelyre"
 	},
 	"pageTranslator_commonPreferences_autoTranslate_enable": {
 		"message": "Engedélyezés"
@@ -207,28 +207,28 @@
 		"message": "Automatikus fordítás"
 	},
 	"pageTranslator_showOptions": {
-		"message": "Beállítások megjelenítése"
+		"message": "Opciók megjelenítése"
 	},
 	"pageTranslator_showOriginal": {
 		"message": "Eredeti megjelenítése"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_always": {
-		"message": "Mindig fordítson"
+		"message": "Mindig fordítsa le"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
-		"message": "Mindig fordítsa le erre a nyelvre"
+		"message": "Mindig fordítsa le ezen a nyelven"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_default": {
-		"message": "Általános szabályok használata"
+		"message": "Általános szabályok alkalmazása"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
-		"message": "Általános szabályok használata erre a nyelvre"
+		"message": "Általános szabályok alkalmazása ezen a nyelven"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_never": {
-		"message": "Soha ne fordítson"
+		"message": "Sose fordítsa le"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
-		"message": "Soha ne fordítsa le erre a nyelvre"
+		"message": "Sose fordítsa le ezen a nyelven"
 	},
 	"pageTranslator_sitePreferences_title": {
 		"message": "Beállítások"
@@ -240,7 +240,7 @@
 		"message": "Fordítási jelentés"
 	},
 	"pageTranslator_translationReport_queue": {
-		"message": "Várakozó"
+		"message": "Sor"
 	},
 	"pageTranslator_translationReport_reject": {
 		"message": "Hibák"
@@ -249,13 +249,13 @@
 		"message": "Lefordítva"
 	},
 	"popup_tabIdNotFound": {
-		"message": "A(z) \"$1\" fül nem található"
+		"message": "A „$1” fül nem található"
 	},
 	"popup_tab_translatePage": {
-		"message": "Oldal lefordítása"
+		"message": "Oldal fordítása"
 	},
 	"popup_tab_translateText": {
-		"message": "Szöveg lefordítása"
+		"message": "Szöveg fordítása"
 	},
 	"settings_button_cancel": {
 		"message": "Mégse"
@@ -270,46 +270,28 @@
 		"message": "Konfiguráció visszaállítása"
 	},
 	"settings_button_saveChanges": {
-		"message": "Változások mentése"
+		"message": "Változtatások mentése"
 	},
 	"settings_message_clearCache_success": {
-		"message": "A gyorsítótár törölve."
+		"message": "Gyorsítótár törölve"
 	},
 	"settings_message_common_invalidValueType": {
-		"message": "Érvénytelen érték."
+		"message": "Érvénytelen érték"
 	},
 	"settings_message_importConfig_invalidFile": {
-		"message": "A fájlt nem lehet importálni."
+		"message": "Az importálandó fájl nem feldolgozható"
 	},
 	"settings_message_importConfig_success": {
-		"message": "Az importálás kész."
+		"message": "Importálás befejezve"
 	},
 	"settings_message_resetConfig_confirm": {
-		"message": "Biztosan vissza akarod állítani a beállításokat?"
+		"message": "Biztosan visszaállítja a beállításokat?"
 	},
 	"settings_message_resetConfig_success": {
-		"message": "A beállítások visszaállítva."
+		"message": "Beállítások visszaállítva"
 	},
 	"settings_message_saveChanges_success": {
-		"message": "Módosítások mentve."
-	},
-	"settings_option_appIcon": {
-		"message": "Bővítmény ikon"
-	},
-	"settings_option_appIcon_desc": {
-		"message": "Ha a dinamikus ikont választja, a színek a böngésző téma szerint lesznek adaptálva."
-	},
-	"settings_option_appIcon_item_auto": {
-		"message": "Dinamikus"
-	},
-	"settings_option_appIcon_item_color": {
-		"message": "Szín"
-	},
-	"settings_option_appIcon_item_dark": {
-		"message": "Sötét"
-	},
-	"settings_option_appIcon_item_light": {
-		"message": "Világos"
+		"message": "Változtatások elmentve"
 	},
 	"settings_option_cache": {
 		"message": "Gyorsítótár"
@@ -318,124 +300,124 @@
 		"message": "Gyorsítótár törlése"
 	},
 	"settings_option_cache_clear_desc": {
-		"message": "A gyorsítótár eltávolítása, ha fordítási artefaktusok vannak, vagy titkokat kell eltávolítani."
+		"message": "Távolítsa el a gyorsítótárat, ha fordítási hibák jelentkeznek vagy titkos adatokat kell eltávolítani"
 	},
 	"settings_option_cache_enable": {
 		"message": "Gyorsítótár engedélyezése"
 	},
 	"settings_option_cache_enable_desc": {
-		"message": "Amikor a gyorsítótár engedélyezve van, a már egyszer lefordított szövegek azonnal elérhetővé válnak, még internetkapcsolat nélkül is."
+		"message": "Gyorsítótár engedélyezése esetén az egyszer már lefordított szövegek az internetkapcsolat hiányában is azonnal elérhetők"
 	},
 	"settings_option_cache_ignoreCase": {
-		"message": "Nem tesz különbséget a kis- és nagybetűk között"
+		"message": "Nagybetű-kisbetű érzéketlen"
 	},
 	"settings_option_cache_ignoreCase_desc": {
-		"message": "Ha engedélyezve van, akkor a gyorsítótárból származó fordításokat nem pontos egyezésekkel használjuk, ami fordítási artefaktusokhoz vezethet."
+		"message": "Ha engedélyezett, a gyorsítótárból származó fordítások pontos egyezés nélkül is használhatók, ami fordítási hibákhoz vezethet"
 	},
 	"settings_option_commonSettings": {
 		"message": "Általános beállítások"
 	},
 	"settings_option_customTranslatorModule": {
-		"message": "Egyéni fordítók"
+		"message": "Egyedi fordítók"
 	},
 	"settings_option_customTranslatorModule_desc": {
-		"message": "Hozzáadhat egyéni fordítókat kedvenc fordítási szolgáltatásaihoz. Olvassa el a <slot id=docs>egyéni fordítók dokumentációját</slot>, és keressen modulokat."
+		"message": "Hozzáadhat egyedi fordítókat kedvenc fordítási szolgáltatásaihoz. További információ és modulok a <slot id=docs>egyedi fordítók dokumentációjában</slot>"
 	},
 	"settings_option_customTranslatorModule_manageButton": {
 		"message": "Fordítók kezelése"
 	},
 	"settings_option_history_enable": {
-		"message": "Történet engedélyezése"
+		"message": "Előzmények engedélyezése"
 	},
 	"settings_option_history_enable_desc": {
-		"message": "Bekapcsoláskor bármely fordítás rögzítve lesz a történet oldalán"
+		"message": "Ha engedélyezve van, minden fordítás rögzítésre kerül egy előzmények oldalon"
 	},
 	"settings_option_mainPreferences": {
-		"message": "Főbeállítások"
+		"message": "Fő beállítások"
 	},
 	"settings_option_pageTranslation": {
 		"message": "Oldal fordítása"
 	},
 	"settings_option_pageTranslation_detectLanguageByContent": {
-		"message": "Nyelv automatikus felismerése"
+		"message": "Nyelv felismerése a tartalom alapján"
 	},
 	"settings_option_pageTranslation_detectLanguageByContent_desc": {
-		"message": "Elemzi a weboldalon található szöveget, hogy azonosítsa az oldal nyelvét. Ha letiltva van, akkor az oldal metaadatainak nyelve lesz használva."
+		"message": "A weboldal szövegének elemzése a nyelv megállapításához. Ha ki van kapcsolva, az oldal metaadataiban megadott nyelv lesz használva"
 	},
 	"settings_option_pageTranslation_enableContextMenu": {
-		"message": "A kontextusmenü gomb engedélyezése"
+		"message": "Kontextus menü gomb engedélyezése"
 	},
 	"settings_option_pageTranslation_enableContextMenu_desc": {
-		"message": "Gomb hozzáadása a lap fordításának kapcsolásához egy kontextusmenüben."
+		"message": "Gomb hozzáadása az oldal fordításának ki- és bekapcsolásához a kontextus menüben"
 	},
 	"settings_option_pageTranslation_excludeSelectors": {
 		"message": "Fordítást kihagyó szelektorok"
 	},
 	"settings_option_pageTranslation_excludeSelectors_desc": {
-		"message": "CSS szelektorok listája, amelyeket nem fordítunk le. Egy szelektor soronként. Ha egy elem megfelel bármely szelektornak, az elem, annak attribútumai és beágyazott elemei sem lesznek lefordítva."
+		"message": "CSS szelektorok listája, amelyeket nem fordítunk le. Egy szelektor soronként. Ha egy elem bármelyik szelektorral egyezik, maga az elem, annak attribútumai és beágyazott elemei sem lesznek fordítva"
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
 		"message": "Csak a látható elemek fordítása"
 	},
 	"settings_option_pageTranslation_lazyTranslate_desc": {
-		"message": "Ha engedélyezve van ez az opció, csak a látható elemek lesznek lefordítva. Ez hasznos lehet a hálózati forgalom megtakarításához."
+		"message": "Ha ez az opció be van kapcsolva, csak a látható elemek lesznek lefordítva. Ez az opció megtakarítja a hálózati forgalmat és korlátozza a használt fordítási szolgáltatások igénybevételét."
 	},
 	"settings_option_pageTranslation_originalTextPopup": {
-		"message": "Felugró ablak engedélyezése az eredeti szöveggel"
+		"message": "Eredeti szöveg megjelenítése felugró ablakban"
 	},
 	"settings_option_pageTranslation_originalTextPopup_desc": {
-		"message": "Az eredeti szöveget felugró ablakként jeleníti meg, ha a fordított szövegen az egérrel állunk"
+		"message": "Mutasson felugró ablakot az eredeti szöveggel, amikor az egérrel a lefordított szövegtömbök fölé húzzuk"
 	},
 	"settings_option_pageTranslation_toggleTranslationHotkey": {
 		"message": "Gyorsbillentyűk"
 	},
 	"settings_option_pageTranslation_toggleTranslationHotkey_desc": {
-		"message": "Parancsikont nyomva oldal fordítása ki/be kapcsolása\nNyomja meg az ESC billentyűt a gombok alapértelmezett beállításainak visszaállításához"
+		"message": "Gyorsbillentyűk az oldal fordításának ki- és bekapcsolásához\nNyomja meg az ESC-et a billentyűk alaphelyzetbe állításához"
 	},
 	"settings_option_pageTranslation_translatableAttributes": {
-		"message": "Fordítható attribútumok."
+		"message": "Fordítható attribútumok"
 	},
 	"settings_option_pageTranslation_translatableAttributes_desc": {
-		"message": "<slot id = htmlAttributes>HTML-attribútum</slot> nevek megadása fordításhoz. Egy attribútum soronként."
+		"message": "Adja meg az <slot id=htmlAttributes>HTML attribútum</slot> neveket fordításra, egy attribútumot soronként"
 	},
 	"settings_option_popupTab_pageTranslator_showCounters": {
-		"message": "Statisztikák megjelenítése a fordításokhoz"
+		"message": "Fordítási statisztikák megjelenítése"
 	},
 	"settings_option_popupTab_pageTranslator_showCounters_desc": {
-		"message": "Oldalak fordításának statisztikáinak megjelenítése"
+		"message": "Oldal fordítási statisztikák megjelenítése"
 	},
 	"settings_option_selectTranslation": {
 		"message": "Kijelölt szöveg fordítása"
 	},
 	"settings_option_selectTranslation_detectedLangFirst": {
-		"message": "Azonosított nyelv használata a kijelölt szövegnél az oldal nyelve helyett"
+		"message": "A felismert nyelv előnyben részesítése az oldal nyelvével szemben"
 	},
 	"settings_option_selectTranslation_detectedLangFirst_desc": {
-		"message": "Ha engedélyezett, akkor azonosított nyelvet fogja preferálni a kijelölt szövegnél az oldal nyelve helyett"
+		"message": "Engedélyezve a kijelölt szöveg felismert nyelve előnyben részesül az oldal nyelvével szemben"
 	},
 	"settings_option_selectTranslation_disableWhileTranslatePage": {
-		"message": "Letiltás az oldalak fordítása közben"
+		"message": "Tiltsa le az oldal fordítása közben"
 	},
 	"settings_option_selectTranslation_enable": {
 		"message": "Engedélyezés"
 	},
 	"settings_option_selectTranslation_focusOnTranslateButton": {
-		"message": "Automatikus fókusz az fordítás gombra"
+		"message": "Automatikus fókusz a fordítás gombra"
 	},
 	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
-		"message": "Fókuszáljon a fordítás gombra, amikor megjelenik"
+		"message": "Fókuszálás a fordítás gombra, amikor az megjelenik"
 	},
 	"settings_option_selectTranslation_header_languageChoice": {
 		"message": "Nyelvi beállítások"
 	},
 	"settings_option_selectTranslation_isUseAutoForDetectLang": {
-		"message": "Automatikus nyelvfelismerés engedélyezése a fordítónál"
+		"message": "Automatikus nyelvfelismerés engedélyezése a fordító által"
 	},
 	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
-		"message": "Az automatikus nyelvfelismerés használata a fordítónál, amikor a nyelvet helyileg nem lehet észlelni"
+		"message": "Automatikus nyelvfelismerés használata, amikor a nyelv helyileg nem ismerhető fel"
 	},
 	"settings_option_selectTranslation_mode": {
-		"message": "Fordítás indító"
+		"message": "Fordítás indítása"
 	},
 	"settings_option_selectTranslation_mode_item_contextMenu": {
 		"message": "Kontextus menü gomb"
@@ -447,16 +429,16 @@
 		"message": "Gyors fordítás kijelöléssel"
 	},
 	"settings_option_selectTranslation_modifiers": {
-		"message": "Módosítók"
+		"message": "Módosító billentyűk"
 	},
 	"settings_option_selectTranslation_modifiers_desc": {
-		"message": "Válassza ki a billentyűket, amelyeket meg kell nyomni a billentyűzeten a fordítás megjelenítéséhez"
+		"message": "Válassza ki azokat a billentyűket, amelyeket lenyomva kell tartani a fordítás megjelenítéséhez"
 	},
 	"settings_option_selectTranslation_modifiers_key_alt": {
-		"message": "Alt"
+		"message": "alt"
 	},
 	"settings_option_selectTranslation_modifiers_key_ctrl": {
-		"message": "Ctrl"
+		"message": "ctrl"
 	},
 	"settings_option_selectTranslation_modifiers_key_meta": {
 		"message": "meta"
@@ -465,121 +447,121 @@
 		"message": "shift"
 	},
 	"settings_option_selectTranslation_rememberDirection": {
-		"message": "Az utolsó kiválasztott szöveg nyelve legyen emlékezve"
+		"message": "Emlékezzen a legutóbb kiválasztott nyelvre a szöveg esetén"
 	},
 	"settings_option_selectTranslation_showOnceForSelection": {
-		"message": "A fordítás gombot csak egyszer mutasd meg minden kijelölt szövegre vonatkozóan"
+		"message": "A fordítás gomb egyszeri megjelenítése minden kiválasztott szöveghez"
 	},
 	"settings_option_selectTranslation_showOnceForSelection_desc": {
-		"message": "A gombot csak egyszer mutatjuk meg minden kijelölt szövegre vonatkozóan. Ha újra meg szeretnék mutatni, jelölje ki újra a szöveget."
+		"message": "A gomb csak egyszer jelenik meg minden szövegkiválasztásnál. Újra megjelenítéshez jelölje ki újra a szöveget."
 	},
 	"settings_option_selectTranslation_showOriginalText": {
-		"message": "Mutassa az eredeti szöveget is"
+		"message": "Eredeti szöveg megjelenítése"
 	},
 	"settings_option_selectTranslation_showOriginalText_desc": {
-		"message": "Adjon hozzá egy blokkot az eredeti szöveggel a fordítás felugró ablakához"
+		"message": "Eredeti szövegrész hozzáadása a fordítási felugró ablakhoz"
 	},
 	"settings_option_selectTranslation_strictSelection": {
 		"message": "Szigorú kijelölés"
 	},
 	"settings_option_selectTranslation_strictSelection_desc": {
-		"message": "Figyelmen kívül hagyja a kiválasztást, ha a bal egérgombot azon kívül engedik fel, hogy a kijelölt szöveget tartalmazó blokkban van"
+		"message": "A kijelölés figyelmen kívül hagyása, ha az egér bal gombját a kijelölt szöveget tartalmazó blokk kívül engedik el"
 	},
 	"settings_option_selectTranslation_timeoutForHideButton": {
-		"message": "Késleltetés a gomb elrejtéséhez"
+		"message": "Késleltetés a gomb elrejtése előtt"
 	},
 	"settings_option_selectTranslation_timeoutForHideButton_desc": {
-		"message": "Késleltetés milliszekundumban a gomb elrejtése előtt, amikor az egér nem áll rajta. Az egérrel való rámutatás visszaállítja az időzítőt. Az automatikus elrejtés letiltásához állítsa az értéket 1-nél kisebbre"
+		"message": "Késleltetés ezredmásodpercben a gomb elrejtése előtt, ha az egérkurzor nem lebeg a gomb felett. Az egérkurzor a gomb fölött történő mozgatása visszaállítja az időzítőt. Az automatikus elrejtés letiltásához állítsa az értéket 1 alá."
 	},
 	"settings_option_selectTranslation_zIndex": {
 		"message": "z-index"
 	},
 	"settings_option_selectTranslation_zIndex_desc": {
-		"message": "Növelje az értéket, ha egyes elemek néhány oldalon átfedik a lefordított szöveget tartalmazó felugró ablakot"
+		"message": "Növelje ezt az értéket, ha egyes oldalelemek elfedik a fordítást megjelenítő felugró ablakot"
 	},
 	"settings_option_textTranslator": {
-		"message": "Szöveg fordítása"
+		"message": "Szövegfordítás"
 	},
 	"settings_option_textTranslator_rememberText": {
-		"message": "Emlékezzen a lefordított szövegre"
+		"message": "Fordított szöveg megjegyzése"
 	},
 	"settings_option_textTranslator_rememberText_desc": {
-		"message": "Emlékezze meg a lefordított szöveget a következő alkalommal, amikor az ablakot megnyitja"
+		"message": "A fordított szöveg megjegyzése a következő ablakmegnyitásig"
 	},
 	"settings_option_textTranslator_spellCheck": {
 		"message": "Helyesírás-ellenőrzés engedélyezése"
 	},
 	"settings_option_textTranslator_suggestLanguage": {
-		"message": "Javasolja a megállapított szöveg nyelvét"
+		"message": "Felismert szöveg nyelvének javaslata"
 	},
 	"settings_option_textTranslator_suggestLanguageAlways": {
 		"message": "Mindig észlelje és javasolja a nyelvet"
 	},
 	"settings_option_textTranslator_suggestLanguageAlways_desc": {
-		"message": "Ha letiltva van, akkor a nyelvjavaslatok csak akkor jelennek meg, ha az forrásnyelv automatikusan felismerésre kerül"
+		"message": "Ha ki van kapcsolva, a nyelvjavaslatok csak automatikus forrásnyelv-észlelés esetén jelennek meg"
 	},
 	"settings_option_translatePreferences": {
-		"message": "Fordítási előnyök"
+		"message": "Fordítási beállítások"
 	},
 	"settings_option_translateScheduler": {
 		"message": "Fordítási ütemező"
 	},
 	"settings_option_translateScheduler_delay": {
-		"message": "Szöveg gyűjtési késleltetés"
+		"message": "Szövegfelhalmozási késleltetés"
 	},
 	"settings_option_translateScheduler_delay_desc": {
-		"message": "A fordítási ütemező csökkenti a fordítási szolgáltatás API-jának kéréseinek számát. Az ütemező igyekszik összegyűjteni a szövegeket, hogy egyetlen kérésben lehetőleg minél több szöveget küldjön el. Az ütemező megvárja a megadott időt milliszekundumokban, hogy új szövegeket gyűjtsön be, mielőtt elkezdené a fordítást."
+		"message": "A fordítási ütemező csökkenti a fordítási szolgáltatás API-jához intézett kérések számát. Megpróbál minél több szöveget összegyűjteni, hogy egyetlen kérésként küldje el őket. Az ütemező a megadott időt ezredmásodpercben várakozik, hogy új szövegeket gyűjtsön a fordítás megkezdése előtt."
 	},
 	"settings_option_translateScheduler_retryLimit": {
-		"message": "Fordítási újrapróbálkozások"
+		"message": "Fordítási ismétlések száma"
 	},
 	"settings_option_translateScheduler_retryLimit_desc": {
-		"message": "Az ütemező újra fogja próbálni a fordítást a fordítási hibák miatt. Ezzel az opcióval korlátozható az újrapróbálkozások száma. Állítsa be a negatív számot, ha korlátlan újrapróbálkozás engedélyezett."
+		"message": "Az ütemező megpróbálja újra lefordítani a szövegeket, ha fordítási hibák lépnek fel. Ez a beállítás korlátozza az ismétlések számát. Negatív érték megadása esetén korlátlan ismétlések engedélyezettek."
 	},
 	"settings_option_translatorModule": {
 		"message": "Fordító modul"
 	},
 	"settings_option_translatorModule_desc": {
-		"message": "A fordítások minősége és a rendelkezésre álló fordítási nyelvek a fordítótól függnek."
+		"message": "A fordítások minősége és az elérhető nyelvek a fordítótól függenek."
 	},
 	"settings_option_tts": {
-		"message": "Szöveg hangra (TTS)"
+		"message": "Szövegfelolvasás (TTS)"
 	},
 	"settings_option_ttsCustomModules": {
-		"message": "Egyedi TTS"
+		"message": "Egyéni TTS"
 	},
 	"settings_option_ttsCustomModules_button": {
-		"message": "Kezelje a TTS modulokat"
+		"message": "TTS modulok kezelése"
 	},
 	"settings_option_ttsCustomModules_desc": {
-		"message": "Hozzáadhat TTS modulokat, amelyek kedvenc szolgáltatásait és hangjait használják. Olvassa el többet és találjon modulokat a testreszabott TTS dokumentációban."
+		"message": "Hozzáadhat olyan TTS modulokat, amelyek a kedvenc szolgáltatásait és hangjait használják. További információkért és modulokért olvassa el az egyéni TTS dokumentációt."
 	},
 	"settings_option_ttsModule": {
 		"message": "TTS modul"
 	},
 	"settings_option_ttsModule_desc": {
-		"message": "Modul a szövegek beszédre alakításához"
+		"message": "Modul a szöveg felolvasásához"
 	},
 	"settings_option_userLanguage": {
 		"message": "Az Ön nyelve"
 	},
 	"settings_option_userLanguage_desc": {
-		"message": "Cél nyelv a szövegek fordításához"
+		"message": "Cél nyelv a szöveg fordításához"
 	},
 	"settings_pageTitle": {
 		"message": "Beállítások"
 	},
 	"settings_section_history": {
-		"message": "Történet"
+		"message": "Előzmények"
 	},
 	"settings_section_popup": {
 		"message": "Felugró ablak"
 	},
 	"textTranslator_suggestLanguage": {
-		"message": "Úgy tűnik, hogy az adott nyelv"
+		"message": "Úgy tűnik, hogy a nyelv"
 	},
 	"textTranslator_translateInputPlaceholder": {
-		"message": "Bemeneti szöveg"
+		"message": "Szöveg bevitele"
 	},
 	"textTranslator_translatePlaceholder": {
 		"message": "Lefordított szöveg"
@@ -591,19 +573,19 @@
 		"message": "Bezárás"
 	},
 	"translatorsManagerWindow_emptyTranslatorsListText": {
-		"message": "Egyéni fordítók még nincsenek hozzáadva"
+		"message": "Még nem lett egyedi fordító hozzáadva"
 	},
 	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
-		"message": "Biztosan eltávolítani a(z) \"$translator_name$\" fordítót?",
+		"message": "Biztosan el akarja távolítani a \"$translator_name$\" fordítót?",
 		"placeholders": {
 			"translator_name": {
 				"content": "$1",
-				"example": "Google fordító"
+				"example": "Google translator"
 			}
 		}
 	},
 	"translatorsManagerWindow_title": {
-		"message": "Egyéni fordítók"
+		"message": "Egyedi fordítók"
 	},
 	"translatorsManagerWindow_translator_delete": {
 		"message": "Törlés"
@@ -618,10 +600,10 @@
 		"message": "Bezárás"
 	},
 	"ttsManagerWindow_emptyTranslatorsListText": {
-		"message": "A TTS modulok még nincsenek hozzáadva"
+		"message": "Még nem lett TTS modul hozzáadva"
 	},
 	"ttsManagerWindow_message_ttsRemoveConfirmation": {
-		"message": "Biztosan eltávolítja a(z) \"$tts_name$\" TTS-t?",
+		"message": "Biztosan el akarja távolítani a \"$tts_name$\" TTS modult?",
 		"placeholders": {
 			"tts_name": {
 				"content": "$1",
@@ -630,7 +612,7 @@
 		}
 	},
 	"ttsManagerWindow_title": {
-		"message": "Szöveg hangra konvertáló modulok"
+		"message": "Beszéd szöveggé modulok"
 	},
 	"ttsManagerWindow_translator_delete": {
 		"message": "Törlés"
@@ -639,13 +621,13 @@
 		"message": "Szerkesztés"
 	},
 	"validation_number": {
-		"message": "A paraméter egy szám kell legyen"
+		"message": "A paraméternek számnak kell lennie"
 	},
 	"validation_numberBetweenRange": {
 		"message": "A paraméternek $1 és $2 közötti számnak kell lennie"
 	},
 	"validation_positiveNumber": {
-		"message": "A paraméternek pozitív számnak kell lennie."
+		"message": "A paraméternek pozitív számnak kell lennie"
 	},
 	"langCode_aa": {
 		"message": "Afar"

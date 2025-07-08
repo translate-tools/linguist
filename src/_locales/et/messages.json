@@ -1,12 +1,12 @@
 {
 	"common_action_addToDictionary": {
-		"message": "Lisa tõlge sõnastikku"
+		"message": "Lisa tõlge sõnaraamatusse"
 	},
 	"common_action_removeFromDictionary": {
-		"message": "Eemalda tõlge sõnastikust"
+		"message": "Eemalda tõlge sõnaraamatust"
 	},
 	"common_bgUnavailable": {
-		"message": "Taustaskript pole saadaval"
+		"message": "Taustskript ei ole saadaval"
 	},
 	"common_cancel": {
 		"message": "Tühista"
@@ -21,7 +21,7 @@
 		"message": "Viga"
 	},
 	"common_offlineTranslator": {
-		"message": "$1 - Veebiväline tõlkija"
+		"message": "$1 - Võrguühenduseta tõlk"
 	},
 	"common_retry": {
 		"message": "Proovi uuesti"
@@ -30,7 +30,7 @@
 		"message": "Tõlgi"
 	},
 	"component_hotkey_placeholder": {
-		"message": "Klõpsake otseteede salvestamiseks"
+		"message": "Klõpsake otsetee salvestamiseks"
 	},
 	"component_hotkey_recordPlaceholder": {
 		"message": "Vajutage klahve"
@@ -39,7 +39,7 @@
 		"message": "Lähtesta"
 	},
 	"contextMenu_disablePageTranslation": {
-		"message": "Keela lehe tõlkimine"
+		"message": "Keela lehe tõlge"
 	},
 	"contextMenu_translatePage": {
 		"message": "Tõlgi leht"
@@ -51,7 +51,7 @@
 		"message": "Lisa sõnastikku"
 	},
 	"dictionaryButton_delete": {
-		"message": "Eemalda sõnastikust"
+		"message": "Kustuta sõnastikust"
 	},
 	"dictionary_button_export": {
 		"message": "Ekspordi"
@@ -60,16 +60,16 @@
 		"message": "Eemalda kõik"
 	},
 	"dictionary_deleteAll": {
-		"message": "Kas olete kindel, et soovite kustutada kõik sõnastiku tõlked?"
+		"message": "Kas olete kindel, et soovite KÕIK sõnastiku tõlked kustutada?"
 	},
 	"dictionary_deleteConfirmation": {
 		"message": "Kas olete kindel, et soovite selle tõlke kustutada?"
 	},
 	"dictionary_description": {
-		"message": "Hoidke oma tõlked sõnastikus, et neid hiljem leida."
+		"message": "Hoidke oma tõlked sõnastikus, et neid hiljem leida"
 	},
 	"dictionary_emptyDictionary": {
-		"message": "Sõnastik on tühi. Alustage teksti tõlkimist ja täitke see."
+		"message": "Sõnastik on tühi. Alustage selle täitmist mõne teksti tõlkimisega"
 	},
 	"dictionary_filter_from": {
 		"message": "Alates"
@@ -78,16 +78,16 @@
 		"message": "Kuni"
 	},
 	"dictionary_message_deleteAll_success": {
-		"message": "Kõik tõlked on eemaldatud"
+		"message": "Kõik tõlked eemaldati"
 	},
 	"dictionary_notFoundEntries": {
-		"message": "Filtreid vastavaid tõlkeid ei leitud"
+		"message": "Ühtegi tõlget nende filtritega ei leitud"
 	},
 	"dictionary_pageTitle": {
 		"message": "Sõnastik"
 	},
 	"dictionary_resetFilters": {
-		"message": "Lähtesta filtrid"
+		"message": "filtrite lähtestamine"
 	},
 	"dictionary_searchPlaceholder": {
 		"message": "Otsi teksti järgi"
@@ -98,26 +98,26 @@
 	"editorWindow_data_code": {
 		"message": "Kood"
 	},
-	"editorWindow_data_name": {
-		"message": "Nimi"
+	"editorWindow_data_translatorName": {
+		"message": "Tõlgi nimi"
 	},
-	"editorWindow_message_invalidName": {
-		"message": "Nimi peab sisaldama vähemalt ühte sümbolit"
+	"editorWindow_message_invalidTranslatorName": {
+		"message": "Tõlgi nime peab sisaldama vähemalt üks täht"
 	},
 	"editorWindow_save": {
 		"message": "Salvesta"
 	},
 	"ext_description": {
-		"message": "Lehekülgede ja tekstide tõlkimine, sõnaraamat, ajalugu, võrguühenduseta ja isikupärastatud tõlkijad"
+		"message": "Lehekülgede ja teksti tõlge, sõnastik, ajalugu, võrguühenduseta ja kohandatud tõlkijad"
 	},
 	"ext_name": {
-		"message": "Lingvist - veebilehtede tõlkija"
+		"message": "Linguist - veebilehtede tõlkija"
 	},
 	"history_control_selectEntry": {
 		"message": "Vali kirje"
 	},
 	"history_controls_clearHistory": {
-		"message": "Kustuta ajalugu"
+		"message": "Tühjenda ajalugu"
 	},
 	"history_controls_deleteSelected": {
 		"message": "Kustuta valitud"
@@ -126,22 +126,22 @@
 		"message": "Vali kõik tõlked"
 	},
 	"history_message_clearHistoryConfirmation": {
-		"message": "Oled kindel, et soovid ajaloo kustutada? Kõik sissekanded eemaldatakse"
+		"message": "Kas olete kindel, et soovite ajaloo tühjendada? Kõik kirjed kustutatakse"
 	},
 	"history_message_deleteEntryConfirmation": {
-		"message": "Oled kindel, et soovid selle kirje kustutada?"
+		"message": "Kas olete kindel, et soovite selle kirje kustutada?"
 	},
 	"history_message_deleteSelectedEntriesConfirmation": {
-		"message": "Olete kindel, et soovite kustutada valitud sissekanded ($1)?"
-	},
-	"history_message_emptyEntries": {
-		"message": "Ajalugu kustutatud"
+		"message": "Kas olete kindel, et soovite kustutada valitud kirjed ($1)?"
 	},
 	"history_message_entriesNotFound": {
-		"message": "Tõlkeid ei leitud vastavalt filtrile"
+		"message": "Leidmata ühtegi tõlget vastavalt filtrile"
+	},
+	"history_message_noEntries": {
+		"message": "Ajalugu on tühi"
 	},
 	"history_notification_disabled": {
-		"message": "Ajaloo salvestamine on keelatud, seega uusi kirjeid ei ilmu. Võid seda muuta <slot id=preferences>seadetes</slot>"
+		"message": "Ajaloo salvestamine on keelatud, seega uued kirjed ei ilmu. Seda saate muuta <slot id=preferences>eelistustes</slot>"
 	},
 	"history_pageTitle": {
 		"message": "Ajalugu"
@@ -150,28 +150,28 @@
 		"message": "Otsi teksti järgi"
 	},
 	"inlineTranslator_showOriginalText": {
-		"message": "Näita algteksti"
+		"message": "Näita originaalteksti"
 	},
 	"lang_change": {
 		"message": "Vaheta keelt"
 	},
 	"lang_detect": {
-		"message": "Tuvasta automaatselt"
+		"message": "Automaatne tuvastamine"
 	},
 	"lang_select": {
 		"message": "Vali keel"
 	},
 	"lang_swap": {
-		"message": "Vaheta keeli"
+		"message": "Vaheta keeled"
 	},
 	"message_askResetConfig": {
-		"message": "Kas soovid lähtestada seadeid?"
+		"message": "Lähtesta seaded?"
 	},
 	"message_cacheFlushed": {
-		"message": "Puhver on tühjendatud"
+		"message": "Vahemälu on tühjendatud"
 	},
 	"message_changesSaved": {
-		"message": "Muudatused on salvestatud"
+		"message": "Muudatused salvestatud"
 	},
 	"message_error": {
 		"message": "Viga"
@@ -180,7 +180,7 @@
 		"message": "Tõlke viga"
 	},
 	"message_serviceRequiredKey": {
-		"message": "Teenus nõuab võtit"
+		"message": "Teenusel on vaja võtit"
 	},
 	"message_translateOfText": {
 		"message": "Tõlgitud"
@@ -189,40 +189,40 @@
 		"message": "Tundmatu viga"
 	},
 	"pageTranslator_alwaysTranslateLang": {
-		"message": "Tõlgi alati seda keelt"
+		"message": "Alati tõlgi seda keelt"
 	},
 	"pageTranslator_commonPreferences_autoTranslate_disable": {
 		"message": "Keela"
 	},
 	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
-		"message": "Keela kõigil saitidel"
+		"message": "Keela kõigile saitidele"
 	},
 	"pageTranslator_commonPreferences_autoTranslate_enable": {
 		"message": "Luba"
 	},
 	"pageTranslator_commonPreferences_title": {
-		"message": "Ühised eelistused selle keele jaoks"
+		"message": "Selle keele üldised eelistused"
 	},
 	"pageTranslator_option_autoTranslate": {
 		"message": "Automaatne tõlge"
 	},
 	"pageTranslator_showOptions": {
-		"message": "Kuva valikud"
+		"message": "Näita valikuid"
 	},
 	"pageTranslator_showOriginal": {
-		"message": "Kuva algtekst"
+		"message": "Näita originaali"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_always": {
-		"message": "Tõlgi alati"
+		"message": "Lõpuks tõlgi"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
-		"message": "Tõlgi alati selle keele jaoks"
+		"message": "Alati tõlgi selle keele jaoks"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_default": {
-		"message": "Kasuta üldreegleid"
+		"message": "Kasuta üldisi reegleid"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
-		"message": "Kasuta üldreegleid selle keele jaoks"
+		"message": "Kasuta selle keele üldisi reegleid"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_never": {
 		"message": "Ära kunagi tõlgi"
@@ -231,13 +231,13 @@
 		"message": "Ära kunagi tõlgi selle keele jaoks"
 	},
 	"pageTranslator_sitePreferences_title": {
-		"message": "Eelistused"
+		"message": "Eelistused keeltele"
 	},
 	"pageTranslator_translatePage": {
 		"message": "Tõlgi leht"
 	},
 	"pageTranslator_translationReport": {
-		"message": "Tõlkimisaruande"
+		"message": "Tõlkeraport"
 	},
 	"pageTranslator_translationReport_queue": {
 		"message": "Järjekord"
@@ -249,7 +249,7 @@
 		"message": "Tõlgitud"
 	},
 	"popup_tabIdNotFound": {
-		"message": "Vahelehte \"$1\" ei leitud"
+		"message": "Sakk \"$1\" ei leitud"
 	},
 	"popup_tab_translatePage": {
 		"message": "Lehe tõlge"
@@ -273,43 +273,25 @@
 		"message": "Salvesta muudatused"
 	},
 	"settings_message_clearCache_success": {
-		"message": "Vahemälu on tühjendatud"
+		"message": "Vahemälu tühjendatud"
 	},
 	"settings_message_common_invalidValueType": {
 		"message": "Vigane väärtus"
 	},
 	"settings_message_importConfig_invalidFile": {
-		"message": "Faili importimine pole võimalik"
+		"message": "Impordifaili ei saa töödelda"
 	},
 	"settings_message_importConfig_success": {
-		"message": "Importimine on tehtud"
+		"message": "Importimine lõpetatud"
 	},
 	"settings_message_resetConfig_confirm": {
-		"message": "Kas soovid seadeid lähtestada?"
+		"message": "Kas soovite seaded lähtestada?"
 	},
 	"settings_message_resetConfig_success": {
-		"message": "Seaded on lähtestatud"
+		"message": "Seaded lähtestatud"
 	},
 	"settings_message_saveChanges_success": {
-		"message": "Muudatused on salvestatud"
-	},
-	"settings_option_appIcon": {
-		"message": "Laienduse ikoon"
-	},
-	"settings_option_appIcon_desc": {
-		"message": "Dünaamilise ikooni valimisel kohanduvad värvid brauseri teemaga"
-	},
-	"settings_option_appIcon_item_auto": {
-		"message": "Dünaamiline"
-	},
-	"settings_option_appIcon_item_color": {
-		"message": "Värv"
-	},
-	"settings_option_appIcon_item_dark": {
-		"message": "Tume"
-	},
-	"settings_option_appIcon_item_light": {
-		"message": "Hele"
+		"message": "Muudatused salvestatud"
 	},
 	"settings_option_cache": {
 		"message": "Vahemälu"
@@ -318,28 +300,28 @@
 		"message": "Tühjenda vahemälu"
 	},
 	"settings_option_cache_clear_desc": {
-		"message": "Eemaldage vahemälu, kui teil on tõlkeartefakte või peate saladusi eemaldama"
+		"message": "Eemalda vahemälu, kui sul esineb tõlkevigu või vajad saladuste eemaldamist"
 	},
 	"settings_option_cache_enable": {
 		"message": "Luba vahemälu"
 	},
 	"settings_option_cache_enable_desc": {
-		"message": "Kui vahemälu on lubatud, saab tõlkeid, mis on korra tõlgitud, kasutada kohe, isegi ilma internetiühenduseta"
+		"message": "Kui vahemälu on lubatud, on kord tõlgitud tekstid kohe saadaval, isegi ilma internetiühenduseta"
 	},
 	"settings_option_cache_ignoreCase": {
-		"message": "Tähestiku suurust mittetunnustav"
+		"message": "Tähtsüsteemist sõltumatu"
 	},
 	"settings_option_cache_ignoreCase_desc": {
-		"message": "Kui see on lubatud, kasutatakse vahemälus olevaid tõlkeid täpsete vastete puudumisel, mis võib põhjustada tõlkeartefakte"
+		"message": "Kui lubatud, kasutatakse vahemälust tõlkeid ka mittetäpsete vaste puhul, mis võib põhjustada tõlkeartefakte"
 	},
 	"settings_option_commonSettings": {
-		"message": "Üldised sätted"
+		"message": "Üldseaded"
 	},
 	"settings_option_customTranslatorModule": {
-		"message": "Kohandatud tõlkijad"
+		"message": "Kohandatud tõlked"
 	},
 	"settings_option_customTranslatorModule_desc": {
-		"message": "Saate lisada oma lemmiktõlkesüsteemide jaoks kohandatud tõlkijaid. Lugege lähemalt ja leidke moodulid <slot id=docs>kohandatud tõlkijate dokumentatsioonist</slot>."
+		"message": "Saate lisada kohandatud tõlketeenuste mooduleid. Loe lisaks ja leia mooduleid <slot id=docs>kohandatud tõlketeenuste dokumentatsioonis</slot>"
 	},
 	"settings_option_customTranslatorModule_manageButton": {
 		"message": "Halda tõlkijaid"
@@ -348,94 +330,94 @@
 		"message": "Luba ajalugu"
 	},
 	"settings_option_history_enable_desc": {
-		"message": "Kui lubatud, salvestatakse iga tõlge ajaloo lehele"
+		"message": "Kui see on lubatud, salvestatakse iga tõlge ajaloolehele"
 	},
 	"settings_option_mainPreferences": {
-		"message": "Põhisätted"
+		"message": "Peamised seaded"
 	},
 	"settings_option_pageTranslation": {
 		"message": "Lehe tõlge"
 	},
 	"settings_option_pageTranslation_detectLanguageByContent": {
-		"message": "Keele tuvastamine sisu järgi"
+		"message": "Tuvasta keel sisu põhjal"
 	},
 	"settings_option_pageTranslation_detectLanguageByContent_desc": {
-		"message": "Analüüsige teksti veebilehel, et tuvastada lehe keel. Kui see on keelatud, kasutatakse lehe metadatast saadud keelt"
+		"message": "Analüüsi veebilehe tekst, et tuvastada lehe keel. Kui see on välja lülitatud, kasutatakse lehe metaandmetes määratud keelt"
 	},
 	"settings_option_pageTranslation_enableContextMenu": {
 		"message": "Luba kontekstimenüü nupp"
 	},
 	"settings_option_pageTranslation_enableContextMenu_desc": {
-		"message": "Lisage nupp lehe tõlkimise sisse- ja väljalülitamiseks kontekstimenüüsse"
+		"message": "Lisa nupp lehe tõlke sisse- ja väljalülitamiseks kontekstimenüüsse"
 	},
 	"settings_option_pageTranslation_excludeSelectors": {
-		"message": "Selektorid, mida tõlkimisest välja jätta"
+		"message": "Valijad, mida tõlkimisel vahele jätta"
 	},
 	"settings_option_pageTranslation_excludeSelectors_desc": {
-		"message": "CSS-selektorite nimekiri, mida ei tõlgita. Iga selektor eraldi real. Kui mõni element vastab mõnele neist selektoritest, ei tõlgita seda elementi, selle atribuute ega selle sees olevaid alamelemente."
+		"message": "CSS-valijate nimekiri, mida ei tõlgita. Üks valija reale. Kui mõni element vastab mõnele neist valijatest, seda elementi, tema atribuute ja alamüksusi ei tõlgita"
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
-		"message": "Tõlgi ainult nähtavad elemendid"
+		"message": "Tõlgi ainult nähtavaid elemente"
 	},
 	"settings_option_pageTranslation_lazyTranslate_desc": {
-		"message": "Kui see valik on lubatud, tõlgitakse ainult nähtavaid elemente. See võib olla kasulik võrguliikluse säästmiseks."
+		"message": "Kui see valik on lubatud, tõlgitakse ainult nähtavad elemendid. See valik säästab võrguühendust ja piirab kasutatavate tõlketeenuste koormust"
 	},
 	"settings_option_pageTranslation_originalTextPopup": {
-		"message": "Luba hüpikaken algtekstiga"
+		"message": "Luba algteksti hüpikaken"
 	},
 	"settings_option_pageTranslation_originalTextPopup_desc": {
-		"message": "Kuvage hüpikaken algtekstiga, hoides hiirt tõlgitud teksti kohal"
+		"message": "Kuva algteksti hüpikaken, kui hiirekursor viiakse tõlgitud tekstiblokkide kohale"
 	},
 	"settings_option_pageTranslation_toggleTranslationHotkey": {
 		"message": "Kiirklahvid"
 	},
 	"settings_option_pageTranslation_toggleTranslationHotkey_desc": {
-		"message": "Genereerige kiirklahvid lehe tõlkimiseks.\nVajutage ESC klahvi, et nullida klahvid."
+		"message": "Klahvivajutused lehe tõlke sisse- ja väljalülitamiseks\nVajutage ESC, et lähtestada klahvid"
 	},
 	"settings_option_pageTranslation_translatableAttributes": {
-		"message": "Tõlgitavad atribuudid."
+		"message": "Tõlgitavad atribuudid"
 	},
 	"settings_option_pageTranslation_translatableAttributes_desc": {
-		"message": "Sisestage <slot id=htmlAttributes>HTML atribuutide</slot> nimed tõlkimiseks. Üks atribuut rea kohta."
+		"message": "Sisestage tõlkimiseks <slot id=htmlAttributes>HTML atribuutide</slot> nimed, üks atribuut rea kohta"
 	},
 	"settings_option_popupTab_pageTranslator_showCounters": {
-		"message": "Näita tõlke statistikat"
+		"message": "Kuva tõlke statistika"
 	},
 	"settings_option_popupTab_pageTranslator_showCounters_desc": {
-		"message": "Kuva lehe tõlke statistikat"
+		"message": "Näita lehe tõlke statistikat"
 	},
 	"settings_option_selectTranslation": {
 		"message": "Valitud teksti tõlge"
 	},
 	"settings_option_selectTranslation_detectedLangFirst": {
-		"message": "Eelista valitud teksti tuvastatud keelt lehekülje keele asemel"
+		"message": "Eelista tuvastatud teksti keelt lehe keelele"
 	},
 	"settings_option_selectTranslation_detectedLangFirst_desc": {
-		"message": "Kui see on lubatud, eelistatakse valitud teksti tuvastatud keelt lehekülje keelele."
+		"message": "Kui lubatud, eelistatakse valitud teksti tuvastatud keelt lehe keelele"
 	},
 	"settings_option_selectTranslation_disableWhileTranslatePage": {
-		"message": "Keela lehekülje tõlkimine valitud teksti tõlkimise ajal"
+		"message": "Keela lehe tõlkimise ajal"
 	},
 	"settings_option_selectTranslation_enable": {
 		"message": "Luba"
 	},
 	"settings_option_selectTranslation_focusOnTranslateButton": {
-		"message": "Automaatne fookus tõlke nupule"
+		"message": "Automaatne fookus tõlkimise nupule"
 	},
 	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
-		"message": "Keskendu tõlkimisnupule, kui see ilmub"
+		"message": "Seadista fookus tõlkimise nupule, kui see ilmub"
 	},
 	"settings_option_selectTranslation_header_languageChoice": {
-		"message": "Keelte seaded"
+		"message": "Keele seaded"
 	},
 	"settings_option_selectTranslation_isUseAutoForDetectLang": {
-		"message": "Luba tõlkijal keele automaatne tuvastamine"
+		"message": "Luba automaatne keele tuvastamine tõlkija poolt"
 	},
 	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
-		"message": "Kasuta tõlkija automaatset keele tuvastamist, kui keelt ei saa kohapeal tuvastada"
+		"message": "Kasuta tõlkija automaatset keele tuvastamist, kui keelt ei suudeta lokaalselt kindlaks teha"
 	},
 	"settings_option_selectTranslation_mode": {
-		"message": "Tõlke käivitaja"
+		"message": "Tõlkimise käivitaja"
 	},
 	"settings_option_selectTranslation_mode_item_contextMenu": {
 		"message": "Kontekstimenüü nupp"
@@ -444,13 +426,13 @@
 		"message": "Hüpiknupp"
 	},
 	"settings_option_selectTranslation_mode_item_quickTranslate": {
-		"message": "Kiire tõlge valikuga"
+		"message": "Kiire tõlge valiku järgi"
 	},
 	"settings_option_selectTranslation_modifiers": {
-		"message": "Modifikaatorid"
+		"message": "Muudatusklahvid"
 	},
 	"settings_option_selectTranslation_modifiers_desc": {
-		"message": "Valige klahvid, mida tuleb klaviatuuril vajutada, et tõlget näidata"
+		"message": "Valige klahvid, mida tuleb hoidma, et näidata tõlget"
 	},
 	"settings_option_selectTranslation_modifiers_key_alt": {
 		"message": "alt"
@@ -465,85 +447,85 @@
 		"message": "shift"
 	},
 	"settings_option_selectTranslation_rememberDirection": {
-		"message": "Mäleta teksti keele valikut"
+		"message": "Mäleta viimati valitud teksti keel"
 	},
 	"settings_option_selectTranslation_showOnceForSelection": {
-		"message": "Näita tõlkimisnuppu ainult üks kord tekstituvastuse kohta"
+		"message": "Näita tõlkenuppu iga tekstivaliku kohta ainult üks kord"
 	},
 	"settings_option_selectTranslation_showOnceForSelection_desc": {
-		"message": "Nupp ilmub ainult üks kord iga tekstituvastuse jaoks. Kui soovite seda uuesti näha, valige tekst uuesti"
+		"message": "Nupp kuvatakse iga tekstivaliku puhul ainult kord. Selle uuesti kuvamiseks vali tekst uuesti"
 	},
 	"settings_option_selectTranslation_showOriginalText": {
 		"message": "Näita algset teksti"
 	},
 	"settings_option_selectTranslation_showOriginalText_desc": {
-		"message": "Lisage tõlkeaknasse plokk koos originaaltekstiga"
+		"message": "Lisa tõlke hüpikaknale plokk originaaltekstiga"
 	},
 	"settings_option_selectTranslation_strictSelection": {
 		"message": "Range valik"
 	},
 	"settings_option_selectTranslation_strictSelection_desc": {
-		"message": "Eirake valikut, kui vasak hiireklahv vabastatakse väljaspool blokki, mis sisaldab valitud teksti"
+		"message": "Jäta valik arvestamata, kui vasak hiireklõps vabastatakse väljaspool valitud teksti sisaldavat plokki"
 	},
 	"settings_option_selectTranslation_timeoutForHideButton": {
-		"message": "Viivitus nupu peitmiseks"
+		"message": "Nupu peitmise viivitus"
 	},
 	"settings_option_selectTranslation_timeoutForHideButton_desc": {
-		"message": "Viivitus millisekundites enne nupu peitmist, kui kursor pole nupu juures. Kursori liigutamine nupu kohal nullib taimeri. Automaatse peitmise keelamiseks seadke väärtus alla 1"
+		"message": "Viivitus millisekundites enne nupu peitmist, kui kursor ei ole nupu kohal. Kursori viibimine nupu kohal lähtestab taimeri. Automaatse peitmise keelamiseks määra väärtus alla 1"
 	},
 	"settings_option_selectTranslation_zIndex": {
-		"message": "z-index"
+		"message": "z-indeks"
 	},
 	"settings_option_selectTranslation_zIndex_desc": {
-		"message": "Suurendage väärtust, kui mõned elemendid mõnel leheküljel kattuvad tõlgitud tekstiga hüpikaknas"
+		"message": "Suurenda seda väärtust, kui mõnede lehtede elemendid kattuvad tõlgitud teksti hüpikaknaga"
 	},
 	"settings_option_textTranslator": {
-		"message": "Teksti tõlkija"
+		"message": "Teksti tõlge"
 	},
 	"settings_option_textTranslator_rememberText": {
 		"message": "Jäta meelde tõlgitud tekst"
 	},
 	"settings_option_textTranslator_rememberText_desc": {
-		"message": "Jäta meelde tõlgitud tekst järgmise korra jaoks, kui aken avatakse"
+		"message": "Jäta tõlgitud tekst meelde järgmisel akna avamisel"
 	},
 	"settings_option_textTranslator_spellCheck": {
 		"message": "Luba õigekirjakontroll"
 	},
 	"settings_option_textTranslator_suggestLanguage": {
-		"message": "Paku tuvastatud tekstikeelest lähtuvalt tõlkekeeli"
+		"message": "Soovita tuvastatud teksti keelt"
 	},
 	"settings_option_textTranslator_suggestLanguageAlways": {
-		"message": "Alati tuvastage ja soovitage keelt"
+		"message": "Tuvasta ja soovita alati keel"
 	},
 	"settings_option_textTranslator_suggestLanguageAlways_desc": {
-		"message": "Kui see on keelatud, ilmuvad keelesoovitused ainult siis, kui allikakeel tuvastatakse automaatselt"
+		"message": "Keeltesoovitused kuvatakse vaid siis, kui allikakeel on automaatselt tuvastatud, kui see on välja lülitatud"
 	},
 	"settings_option_translatePreferences": {
-		"message": "Tõlke-eelistused"
+		"message": "Tõlke eelistused"
 	},
 	"settings_option_translateScheduler": {
-		"message": "Tõlkekava"
+		"message": "Tõlke ajastaja"
 	},
 	"settings_option_translateScheduler_delay": {
 		"message": "Teksti kogumise viivitus"
 	},
 	"settings_option_translateScheduler_delay_desc": {
-		"message": "Tõlkekava vähendab päringute arvu tõlkeseadmetele API-le. Kava üritab tekste koguda, et saata võimalikult palju tekste ühe päringuga. Kava ootab uute tekstide kogumiseks määratud aja millisekundites enne tõlkimise alustamist."
+		"message": "Tõlkekavaleja vähendab tõlketeenuse API päringute arvu. See püüab koguda võimalikult palju tekste, et saata need ühes päringus. Kavandaja ootab enne tõlkimise alustamist määratud ajani millisekundites, et koguda uusi tekste"
 	},
 	"settings_option_translateScheduler_retryLimit": {
-		"message": "Tõlkekatse kordused"
+		"message": "Tõlkimise taasteksete arv"
 	},
 	"settings_option_translateScheduler_retryLimit_desc": {
-		"message": "Kava proovib tekstide tõlkimisel esinevaid vigu uuesti tõlkida. See valik seab limiidi katse kordustele. Piiranguteta katsete lubamiseks seadistage negatiivne number."
+		"message": "Kavandaja proovib tõlkimist uuesti, kui esineb tõlkevigu. See valik seab taasteksete piiri. Pange negatiivne arv, et lubada piiramatu arv taastekseid"
 	},
 	"settings_option_translatorModule": {
-		"message": "Tõlkemoodul"
+		"message": "Tõlkimismoodul"
 	},
 	"settings_option_translatorModule_desc": {
-		"message": "Tõlgete kvaliteet ja saadaolevad keeled sõltuvad tõlkijast."
+		"message": "Tõlgete kvaliteet ja saadaval keel sõltuvad kasutatavast tõlkest"
 	},
 	"settings_option_tts": {
-		"message": "Tekst-kõne (TTS)"
+		"message": "Tekst kõneks (TTS)"
 	},
 	"settings_option_ttsCustomModules": {
 		"message": "Kohandatud TTS"
@@ -552,19 +534,19 @@
 		"message": "Halda TTS mooduleid"
 	},
 	"settings_option_ttsCustomModules_desc": {
-		"message": "Saate lisada TTS mooduleid, mis kasutavad teie lemmikteenust ja hääli. Lugege lisateavet ja leidke mooduleid kohandatud TTS-i dokumentatsioonist."
+		"message": "Saate lisada TTS mooduleid, mis kasutavad teie eelistatud teenuseid ja hääli. Lisateabe ja moodulite leidmiseks vaadake kohandatud TTS dokumentatsiooni"
 	},
 	"settings_option_ttsModule": {
-		"message": "TTS-moodul"
+		"message": "TTS moodul"
 	},
 	"settings_option_ttsModule_desc": {
-		"message": "Moodul tekstide hääldamiseks"
+		"message": "Moodul teksti rääkimiseks"
 	},
 	"settings_option_userLanguage": {
 		"message": "Teie keel"
 	},
 	"settings_option_userLanguage_desc": {
-		"message": "Sihtkeel tekstide tõlkimiseks"
+		"message": "Sihtkeel teksti tõlkimiseks"
 	},
 	"settings_pageTitle": {
 		"message": "Seaded"
@@ -579,7 +561,7 @@
 		"message": "Tundub, et see keel on"
 	},
 	"textTranslator_translateInputPlaceholder": {
-		"message": "Sisestage tekst"
+		"message": "Sisesta tekst"
 	},
 	"textTranslator_translatePlaceholder": {
 		"message": "Tõlgitud tekst"
@@ -594,11 +576,11 @@
 		"message": "Kohandatud tõlkijaid pole veel lisatud"
 	},
 	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
-		"message": "Olete kindel, et soovite tõlkija \"$translator_name$\" eemaldada?",
+		"message": "Kas olete kindel, et soovite eemaldada tõlkija \"$translator_name$\"?",
 		"placeholders": {
 			"translator_name": {
 				"content": "$1",
-				"example": "Google Translator"
+				"example": "Google translator"
 			}
 		}
 	},
@@ -618,10 +600,10 @@
 		"message": "Sulge"
 	},
 	"ttsManagerWindow_emptyTranslatorsListText": {
-		"message": "Teksti-kõne mooduleid pole veel lisatud"
+		"message": "TTS mooduleid pole veel lisatud"
 	},
 	"ttsManagerWindow_message_ttsRemoveConfirmation": {
-		"message": "Olete kindel, et soovite eemaldada TTS-i \"$tts_name$\"?",
+		"message": "Kas olete kindel, et soovite eemaldada TTS mooduli \"$tts_name$\"?",
 		"placeholders": {
 			"tts_name": {
 				"content": "$1",
@@ -642,10 +624,10 @@
 		"message": "Parameeter peab olema number"
 	},
 	"validation_numberBetweenRange": {
-		"message": "Parameeter peab olema numbri vahemikus $1 ja $2"
+		"message": "Parameeter peab olema number vahemikus $1 kuni $2"
 	},
 	"validation_positiveNumber": {
-		"message": "Parameeter peab olema positiivne number."
+		"message": "Parameeter peab olema positiivne number"
 	},
 	"langCode_aa": {
 		"message": "Afari"

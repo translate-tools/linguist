@@ -1,12 +1,12 @@
 {
 	"common_action_addToDictionary": {
-		"message": "Idagdag ang pagsasalin sa diksiyonaryo"
+		"message": "Idagdag ang pagsasalin sa diksyunaryo"
 	},
 	"common_action_removeFromDictionary": {
-		"message": "Alisin ang pagsasalin mula sa diksiyonaryo"
+		"message": "Alisin ang pagsasalin mula sa diksyunaryo"
 	},
 	"common_bgUnavailable": {
-		"message": "Ang background script ay hindi magagamit"
+		"message": "Hindi magagamit ang background script"
 	},
 	"common_cancel": {
 		"message": "Kanselahin"
@@ -21,67 +21,67 @@
 		"message": "Error"
 	},
 	"common_offlineTranslator": {
-		"message": "$1 - Offline na tagasalin"
+		"message": "$1 - Tagasalin na walang koneksyon"
 	},
 	"common_retry": {
-		"message": "Ulitin"
+		"message": "Subukang muli"
 	},
 	"common_translate": {
 		"message": "Isalin"
 	},
 	"component_hotkey_placeholder": {
-		"message": "I-click para i-record ang mga hotkeys"
+		"message": "I-click upang i-record ang shortcut"
 	},
 	"component_hotkey_recordPlaceholder": {
-		"message": "Pindutin ang mga keys"
+		"message": "Pindutin ang mga key"
 	},
 	"component_hotkey_resetButton": {
 		"message": "I-reset"
 	},
 	"contextMenu_disablePageTranslation": {
-		"message": "Huwag mag-translate ng pahina"
+		"message": "Huwag paganahin ang pagsasalin ng pahina"
 	},
 	"contextMenu_translatePage": {
-		"message": "I-translate ang pahina"
+		"message": "Isalin ang pahina"
 	},
 	"contextMenu_translateSelectedText": {
-		"message": "I-translate ang piniling teksto"
+		"message": "Isalin ang napiling teksto"
 	},
 	"dictionaryButton_add": {
-		"message": "Idagdag sa diksiyunaryo"
+		"message": "Idagdag sa diksyunaryo"
 	},
 	"dictionaryButton_delete": {
-		"message": "Tanggalin mula sa diksiyunaryo"
+		"message": "Tanggalin mula sa diksyunaryo"
 	},
 	"dictionary_button_export": {
 		"message": "I-export"
 	},
 	"dictionary_button_removeAll": {
-		"message": "Alisin lahat"
+		"message": "Tanggalin lahat"
 	},
 	"dictionary_deleteAll": {
-		"message": "Sigurado ka bang gusto mong burahin ang LAHAT ng mga pagsasalin sa diksyunaryo?"
+		"message": "Sigurado ka bang nais mong tanggalin ang LAHAT ng mga pagsasalin sa diksyunaryo?"
 	},
 	"dictionary_deleteConfirmation": {
-		"message": "Sigurado ka bang gusto mong burahin ang pagsasaling ito?"
+		"message": "Sigurado ka bang nais mong tanggalin ang pagsasaling ito?"
 	},
 	"dictionary_description": {
-		"message": "I-save ang iyong mga pagsasalin sa diksyunaryo upang mahanap ito mamaya"
+		"message": "Itago ang iyong mga pagsasalin sa diksyunaryo upang madaling mahanap ito sa hinaharap"
 	},
 	"dictionary_emptyDictionary": {
-		"message": "Ang diksyunaryo ay walang laman. Simulan ang pagpuno nito habang nagtutumbas ng teksto"
+		"message": "Walang laman ang diksyunaryo. Magsimulang punan ito sa pamamagitan ng pagsasalin ng ilang teksto"
 	},
 	"dictionary_filter_from": {
-		"message": "Mula"
+		"message": "Mula sa"
 	},
 	"dictionary_filter_to": {
-		"message": "Hanggang"
+		"message": "Sa"
 	},
 	"dictionary_message_deleteAll_success": {
-		"message": "Lahat ng mga pagsasalin ay tinanggal"
+		"message": "Naitanggal ang lahat ng mga pagsasalin"
 	},
 	"dictionary_notFoundEntries": {
-		"message": "Wala pang mga pagsasaling tumutugma sa mga filter na ito"
+		"message": "Walang mga pagsasaling tumutugma sa mga filter na ito"
 	},
 	"dictionary_pageTitle": {
 		"message": "Diksyunaryo"
@@ -90,7 +90,7 @@
 		"message": "i-reset ang mga filter"
 	},
 	"dictionary_searchPlaceholder": {
-		"message": "Maghanap gamit ang teksto"
+		"message": "Maghanap ayon sa teksto"
 	},
 	"editorWindow_close": {
 		"message": "Isara"
@@ -98,89 +98,89 @@
 	"editorWindow_data_code": {
 		"message": "Kodigo"
 	},
-	"editorWindow_data_name": {
-		"message": "Pangalan"
+	"editorWindow_data_translatorName": {
+		"message": "Pangalan ng tagasalin"
 	},
-	"editorWindow_message_invalidName": {
-		"message": "Ang pangalan ay dapat naglalaman ng hindi bababa sa isang simbolo"
+	"editorWindow_message_invalidTranslatorName": {
+		"message": "Ang pangalan ng tagasalin ay dapat maglaman ng hindi bababa sa isang karakter"
 	},
 	"editorWindow_save": {
 		"message": "I-save"
 	},
 	"ext_description": {
-		"message": "Pagsasalin ng mga pahina at teksto, diksiyonaryo, kasaysayan, offline at mga pasadyang tagasalin"
+		"message": "Pagsasalin ng mga pahina at teksto, diksyunaryo, kasaysayan, offline at sariling tagasalin"
 	},
 	"ext_name": {
-		"message": "Tagasalin ng mga pahina sa web - Linguist"
+		"message": "Linguist - tagasalin ng mga web page"
 	},
 	"history_control_selectEntry": {
-		"message": "Pumili ng entry"
+		"message": "Piliin ang entry"
 	},
 	"history_controls_clearHistory": {
-		"message": "Burahin ang kasaysayan"
+		"message": "I-clear ang kasaysayan"
 	},
 	"history_controls_deleteSelected": {
-		"message": "Burahin ang napiling mga item"
+		"message": "Tanggalin ang napili"
 	},
 	"history_controls_selectAll": {
-		"message": "Pumili ng lahat ng mga pagsasalin"
+		"message": "Piliin lahat ng salin"
 	},
 	"history_message_clearHistoryConfirmation": {
-		"message": "Sigurado ka bang gusto mong burahin ang kasaysayan? Lahat ng mga entry ay mawawala"
+		"message": "Sigurado ka bang gusto mong linisin ang kasaysayan? Lahat ng tala ay matatanggal"
 	},
 	"history_message_deleteEntryConfirmation": {
-		"message": "Sigurado ka bang gusto mong burahin ang entry na ito?"
+		"message": "Sigurado ka bang gusto mong tanggalin ang tala na ito?"
 	},
 	"history_message_deleteSelectedEntriesConfirmation": {
-		"message": "Sigurado ka bang gusto mong burahin ang mga napiling entries ($1)?"
-	},
-	"history_message_emptyEntries": {
-		"message": "Kasaysayan ay malinis na"
+		"message": "Sigurado ka bang gusto mong tanggalin ang mga napiling tala ($1)?"
 	},
 	"history_message_entriesNotFound": {
-		"message": "Walang mga pagsasalin na nakita na nagbibigay-pugay sa filter"
+		"message": "Walang salin na natagpuang tumutugma sa filter"
+	},
+	"history_message_noEntries": {
+		"message": "Malinis ang kasaysayan"
 	},
 	"history_notification_disabled": {
-		"message": "Naka-disable ang pagtatala ng kasaysayan, kaya hindi lalabas ang mga bagong entry. Maaari mo itong baguhin sa <slot id=preferences>mga kagustuhan</slot>"
+		"message": "Hindi naka-enable ang pagtatala ng kasaysayan, kaya ang mga bagong tala ay hindi lalabas. Maaari mo itong baguhin sa <slot id=preferences>mga kagustuhan</slot>"
 	},
 	"history_pageTitle": {
 		"message": "Kasaysayan"
 	},
 	"history_searchPlaceholder": {
-		"message": "Maghanap gamit ang teksto"
+		"message": "Maghanap ayon sa teksto"
 	},
 	"inlineTranslator_showOriginalText": {
 		"message": "Ipakita ang orihinal na teksto"
 	},
 	"lang_change": {
-		"message": "Baguhin ang Wika"
+		"message": "Palitan ang wika"
 	},
 	"lang_detect": {
-		"message": "Auto detect"
+		"message": "Awtomatikong tuklasin"
 	},
 	"lang_select": {
-		"message": "Pumili ng Wika"
+		"message": "Pumili ng wika"
 	},
 	"lang_swap": {
-		"message": "Palitan ang Mga Wika"
+		"message": "Ipagpalit ang mga wika"
 	},
 	"message_askResetConfig": {
 		"message": "I-reset ang mga setting?"
 	},
 	"message_cacheFlushed": {
-		"message": "Ang cache ay nalilinis"
+		"message": "Nabura ang cache"
 	},
 	"message_changesSaved": {
-		"message": "Mga Pagbabago ay na-save"
+		"message": "Naitala ang mga pagbabago"
 	},
 	"message_error": {
 		"message": "Error"
 	},
 	"message_errorOfTranslate": {
-		"message": "Error sa Pag-translate"
+		"message": "Error sa pagsasalin"
 	},
 	"message_serviceRequiredKey": {
-		"message": "Kailangan ng key ang serbisyo"
+		"message": "Kinakailangan ng serbisyo ng isang susi"
 	},
 	"message_translateOfText": {
 		"message": "Isinalin"
@@ -189,22 +189,22 @@
 		"message": "Hindi kilalang error"
 	},
 	"pageTranslator_alwaysTranslateLang": {
-		"message": "Palaging isalin ang wika na ito"
+		"message": "Palaging isalin ang wikang ito"
 	},
 	"pageTranslator_commonPreferences_autoTranslate_disable": {
 		"message": "Huwag paganahin"
 	},
 	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
-		"message": "Huwag paganahin para sa lahat ng mga site"
+		"message": "Huwag paganahin para sa lahat ng site"
 	},
 	"pageTranslator_commonPreferences_autoTranslate_enable": {
 		"message": "Paganahin"
 	},
 	"pageTranslator_commonPreferences_title": {
-		"message": "Karaniwang mga nais ng wika na ito"
+		"message": "Karaniwang mga kagustuhan para sa wikang ito"
 	},
 	"pageTranslator_option_autoTranslate": {
-		"message": "Awtomatikong isalin"
+		"message": "Awtomatikong pagsasalin"
 	},
 	"pageTranslator_showOptions": {
 		"message": "Ipakita ang mga opsyon"
@@ -213,25 +213,25 @@
 		"message": "Ipakita ang orihinal"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_always": {
-		"message": "Laging isalin"
+		"message": "Palaging isalin"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
-		"message": "Laging isalin para sa wika na ito"
+		"message": "Palaging isalin para sa wikang ito"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_default": {
-		"message": "Gamitin ang karaniwang patakaran"
+		"message": "Gamitin ang karaniwang mga patakaran"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
-		"message": "Gamitin ang karaniwang patakaran para sa wika na ito"
+		"message": "Gamitin ang karaniwang mga patakaran para sa wikang ito"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_never": {
-		"message": "Huwag kailanman isalin"
+		"message": "Huwag isalin kailanman"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
-		"message": "Huwag kailanman isalin para sa wika na ito"
+		"message": "Huwag isalin kailanman para sa wikang ito"
 	},
 	"pageTranslator_sitePreferences_title": {
-		"message": "Mga nais ng"
+		"message": "Mga kagustuhan para sa"
 	},
 	"pageTranslator_translatePage": {
 		"message": "Isalin ang pahina"
@@ -240,31 +240,31 @@
 		"message": "Ulat sa pagsasalin"
 	},
 	"pageTranslator_translationReport_queue": {
-		"message": "Linya"
+		"message": "Naka-queue"
 	},
 	"pageTranslator_translationReport_reject": {
 		"message": "Mga Error"
 	},
 	"pageTranslator_translationReport_resolve": {
-		"message": "Naitranslate na"
+		"message": "Isinalin"
 	},
 	"popup_tabIdNotFound": {
-		"message": "Ang Tab \"$1\" ay hindi natagpuan"
+		"message": "Hindi makita ang tab na \"$1\""
 	},
 	"popup_tab_translatePage": {
-		"message": "Pagsasalin ng Pahina"
+		"message": "Pagsasalin ng pahina"
 	},
 	"popup_tab_translateText": {
-		"message": "Pagsasalin ng Teksto"
+		"message": "Pagsasalin ng teksto"
 	},
 	"settings_button_cancel": {
-		"message": " kanselahin"
+		"message": "Kanselahin"
 	},
 	"settings_button_export": {
 		"message": "I-export ang config"
 	},
 	"settings_button_import": {
-		"message": "Mag-angkat ng config"
+		"message": "I-import ang config"
 	},
 	"settings_button_reset": {
 		"message": "I-reset ang config"
@@ -273,43 +273,25 @@
 		"message": "I-save ang mga pagbabago"
 	},
 	"settings_message_clearCache_success": {
-		"message": "Ang cache ay nagreset"
+		"message": "Nalinis ang cache"
 	},
 	"settings_message_common_invalidValueType": {
-		"message": "Hindi wastong uri ng halaga"
+		"message": "Hindi wastong halaga"
 	},
 	"settings_message_importConfig_invalidFile": {
-		"message": "Hindi ma-handle ang file para sa pag-import"
+		"message": "Hindi maproseso ang file para sa pag-import"
 	},
 	"settings_message_importConfig_success": {
-		"message": "Nakaimport na"
+		"message": "Kumpleto na ang pag-import"
 	},
 	"settings_message_resetConfig_confirm": {
-		"message": "Gusto mo bang i-reset ang mga setting?"
+		"message": "Nais mo bang i-reset ang mga setting?"
 	},
 	"settings_message_resetConfig_success": {
-		"message": "Mga setting ay nireset"
+		"message": "Na-reset ang mga setting"
 	},
 	"settings_message_saveChanges_success": {
-		"message": "Mga pagbabago ay na-save"
-	},
-	"settings_option_appIcon": {
-		"message": "Icon ng Extension"
-	},
-	"settings_option_appIcon_desc": {
-		"message": "Kapag ang dynamic icon ay pinili, ang kulay ay mag-a-adapt sa tema ng browser."
-	},
-	"settings_option_appIcon_item_auto": {
-		"message": "Dynamic"
-	},
-	"settings_option_appIcon_item_color": {
-		"message": "Kulay"
-	},
-	"settings_option_appIcon_item_dark": {
-		"message": "Madilim"
-	},
-	"settings_option_appIcon_item_light": {
-		"message": "Maliwanag"
+		"message": "Naisalba ang mga pagbabago"
 	},
 	"settings_option_cache": {
 		"message": "Cache"
@@ -318,130 +300,130 @@
 		"message": "Linisin ang cache"
 	},
 	"settings_option_cache_clear_desc": {
-		"message": "Tanggalin ang cache kung mayroong mga pangungusap na hindi naaangkop sa pagsasalin o kailangan alisin ang mga lihim"
+		"message": "Alisin ang cache kung mayroon kang mga artifact ng pagsasalin o kailangang alisin ang mga sikreto"
 	},
 	"settings_option_cache_enable": {
 		"message": "Paganahin ang cache"
 	},
 	"settings_option_cache_enable_desc": {
-		"message": "Kapag pinaganahan ang cache, magiging agad na magagamit ang mga pagsasalin na naisalin na dati, kahit walang internet"
+		"message": "Kapag pinagana ang cache, ang mga pagsasaling naisalin na minsan ay agad na magagamit, kahit walang koneksyon sa internet"
 	},
 	"settings_option_cache_ignoreCase": {
-		"message": "Hindi sensitibo sa titik"
+		"message": "Hindi sensitibo sa malaking/maliit na titik"
 	},
 	"settings_option_cache_ignoreCase_desc": {
-		"message": "Kapag pinaganahan, ang mga pagsasalin mula sa cache ay gagamitin sa mga hindi eksaktong katugmang salita, na maaaring magdulot ng mga hindi tumpak na pagsasalin"
+		"message": "Kapag pinagana, gagamitin ang mga pagsasalin mula sa cache para sa mga hindi eksaktong tugma, na maaaring magdulot ng mga artifact sa pagsasalin"
 	},
 	"settings_option_commonSettings": {
-		"message": "Mga karaniwang setting"
+		"message": "Pangkaraniwang mga setting"
 	},
 	"settings_option_customTranslatorModule": {
-		"message": "Mga custom na tagasalin"
+		"message": "Mga pasadyang tagasalin"
 	},
 	"settings_option_customTranslatorModule_desc": {
-		"message": "Maaari kang magdagdag ng custom na mga tagasalin para sa iyong paboritong serbisyong pagpapakabanal. Magbasa pa at hanapin ang mga modulong ito sa <slot id=docs> dokumentasyon sa custom na mga tagasalin </slot>."
+		"message": "Maaari kang magdagdag ng mga pasadyang tagasalin para sa iyong mga paboritong serbisyo ng pagsasalin. Basahin pa at hanapin ang mga module sa <slot id=docs>dokumento ng mga pasadyang tagasalin</slot>"
 	},
 	"settings_option_customTranslatorModule_manageButton": {
 		"message": "Pamahalaan ang mga tagasalin"
 	},
 	"settings_option_history_enable": {
-		"message": "I-enable ang kasaysayan"
+		"message": "Paganahin ang kasaysayan"
 	},
 	"settings_option_history_enable_desc": {
-		"message": "Kapag naka-enable, anumang pagsasalin ay itatala sa isang pahina ng kasaysayan"
+		"message": "Kapag pinagana, bawat pagsasalin ay irerehistro sa isang pahina ng kasaysayan"
 	},
 	"settings_option_mainPreferences": {
-		"message": "Mga pangunahing setting"
+		"message": "Pangunahing mga setting"
 	},
 	"settings_option_pageTranslation": {
 		"message": "Pagsasalin ng pahina"
 	},
 	"settings_option_pageTranslation_detectLanguageByContent": {
-		"message": "Alamin ang wika sa pamamagitan ng nilalaman"
+		"message": "Tuklasin ang wika batay sa nilalaman"
 	},
 	"settings_option_pageTranslation_detectLanguageByContent_desc": {
-		"message": "Pag-aralan ang teksto sa web page upang alamin ang wika ng page. Kapag hindi pinagana, gagamitin ang wika na nasa metadata ng page."
+		"message": "Suriin ang teksto sa web page upang matukoy ang wika ng pahina. Kapag hindi pinagana, gagamitin ang wikang ibinigay sa metadata ng pahina"
 	},
 	"settings_option_pageTranslation_enableContextMenu": {
-		"message": "Paganahin ang button ng context menu"
+		"message": "Paganahin ang pindutan ng context menu"
 	},
 	"settings_option_pageTranslation_enableContextMenu_desc": {
-		"message": "Idagdag ang button upang paganahin ang pagsasalin ng pahina sa isang context menu"
+		"message": "Magdagdag ng pindutan upang i-toggle ang pagsasalin ng pahina sa context menu"
 	},
 	"settings_option_pageTranslation_excludeSelectors": {
 		"message": "Mga selector na hindi isasalin"
 	},
 	"settings_option_pageTranslation_excludeSelectors_desc": {
-		"message": "Listahan ng mga CSS selector na hindi isasalin. Isang selector kada linya. Kapag tumugma ang isang elemento sa alinman sa mga selector na ito, hindi isasalin ang elemento, mga katangian nito, at mga nakapaloob na elemento."
+		"message": "Listahan ng mga CSS selector na hindi isasalin. Isang selector bawat linya. Kung ang isang elemento ay tumutugma sa alinman sa mga selector na ito, hindi ito at ang mga katangian at nilalaman na nakapaloob dito ay isasalin"
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
 		"message": "Isalin lamang ang mga nakikitang elemento"
 	},
 	"settings_option_pageTranslation_lazyTranslate_desc": {
-		"message": "Kapag pinagana ang opsiyong ito, isasalin lamang ang mga nakikita. Maaaring magamit ito upang makatipid ng network traffic."
+		"message": "Kapag pinagana ang opsyong ito, tanging mga nakikitang elemento lamang ang isasalin. Nakakatipid ito sa trapiko ng network at limitasyon ng mga ginagamit na serbisyo sa pagsasalin"
 	},
 	"settings_option_pageTranslation_originalTextPopup": {
-		"message": "Paganahin ang popup na may orihinal na teksto"
+		"message": "I-enable ang popup na may orihinal na teksto"
 	},
 	"settings_option_pageTranslation_originalTextPopup_desc": {
-		"message": "Ipakita ang isang popup na nagtatampok ng orihinal na teksto kapag hinawakan ang mouse sa isinaling teksto."
+		"message": "Ipakita ang isang popup na may orihinal na teksto kapag inilapit ang mouse sa mga bloke ng isinaling teksto"
 	},
 	"settings_option_pageTranslation_toggleTranslationHotkey": {
-		"message": "Mga hotkey"
+		"message": "Mga Hotkey"
 	},
 	"settings_option_pageTranslation_toggleTranslationHotkey_desc": {
-		"message": "Mga shortcut para sa pagpapalit ng pagsasalin ng pahina\nPindutin ang ESC upang i-reset ang mga key"
+		"message": "Mga shortcut upang i-toggle ang pagsasalin ng pahina\nPindutin ang ESC upang i-reset ang mga key"
 	},
 	"settings_option_pageTranslation_translatableAttributes": {
-		"message": "Mga maaring isalin na attribute."
+		"message": "Mga attribute na maisasalin"
 	},
 	"settings_option_pageTranslation_translatableAttributes_desc": {
-		"message": "Ipasok ang mga pangalan ng <slot id=htmlAttributes>HTML attribute</slot> para sa pagsasalin. Isa lamang na attribute bawat linya."
+		"message": "Ipasok ang mga pangalan ng <slot id=htmlAttributes>HTML attribute</slot> na isasalin, isang attribute kada linya"
 	},
 	"settings_option_popupTab_pageTranslator_showCounters": {
-		"message": "Ipakita ang mga estadistika ng pagsasalin"
+		"message": "Ipakita ang istatistika ng pagsasalin"
 	},
 	"settings_option_popupTab_pageTranslator_showCounters_desc": {
-		"message": "Magpakita ng mga estadistika para sa pagsasalin ng pahina"
+		"message": "Ipakita ang istatistika para sa pagsasalin ng pahina"
 	},
 	"settings_option_selectTranslation": {
-		"message": "Pagsasalin ng napiling teksto"
+		"message": "Pagsasalin ng piniling teksto"
 	},
 	"settings_option_selectTranslation_detectedLangFirst": {
-		"message": "Gustuhin ang nadiskubreng wika ng teksto kaysa sa wika ng pahina"
+		"message": "Unahin ang natukoy na wika ng teksto kaysa sa wika ng pahina"
 	},
 	"settings_option_selectTranslation_detectedLangFirst_desc": {
-		"message": "Kapag pinagana, ang nadiskubreng wika ng napiling teksto ay pipiliin sa halip ng wika ng pahina"
+		"message": "Kapag naka-enable, uunahin ang natukoy na wika ng napiling teksto kaysa sa wika ng pahina"
 	},
 	"settings_option_selectTranslation_disableWhileTranslatePage": {
-		"message": "I-disable habang nagtutuloy-tuloy ang pagsasalin ng pahina"
+		"message": "I-disable habang isinasalin ang pahina"
 	},
 	"settings_option_selectTranslation_enable": {
 		"message": "Paganahin"
 	},
 	"settings_option_selectTranslation_focusOnTranslateButton": {
-		"message": "Auto-focus sa pindutan ng pagsasalin"
+		"message": "Awtomatikong ituon ang pansin sa pindutan ng pagsasalin"
 	},
 	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
-		"message": "Nakatuon sa pindutan ng pagsasalin kapag lumitaw"
+		"message": "Ituon ang pansin sa pindutan ng pagsasalin kapag ito ay lumitaw"
 	},
 	"settings_option_selectTranslation_header_languageChoice": {
 		"message": "Mga setting ng wika"
 	},
 	"settings_option_selectTranslation_isUseAutoForDetectLang": {
-		"message": "Paganahin ang awtomatikong pagtukoy ng wika ng tagasalin"
+		"message": "Paganahin ang awtomatikong pagtuklas ng wika ng tagasalin"
 	},
 	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
-		"message": "Gamitin ang awtomatikong pagtukoy ng wika ng tagasalin kung hindi ito maaaring agad tukuyin sa lokasyon"
+		"message": "Gamitin ang awtomatikong pagtuklas ng wika ng tagasalin kapag hindi matukoy nang lokal ang wika"
 	},
 	"settings_option_selectTranslation_mode": {
-		"message": "Tagapag-trigger ng pagsasalin"
+		"message": "Pampasigla ng pagsasalin"
 	},
 	"settings_option_selectTranslation_mode_item_contextMenu": {
-		"message": "Button sa konteksto ng menu"
+		"message": "Button ng kontekstwal na menu"
 	},
 	"settings_option_selectTranslation_mode_item_popupButton": {
-		"message": "Popup button"
+		"message": "Button ng popup"
 	},
 	"settings_option_selectTranslation_mode_item_quickTranslate": {
 		"message": "Mabilis na pagsasalin sa pamamagitan ng pagpili"
@@ -450,7 +432,7 @@
 		"message": "Mga modifier"
 	},
 	"settings_option_selectTranslation_modifiers_desc": {
-		"message": "Pumili ng mga susi na dapat pindutin sa keyboard upang ipakita ang pagsasalin"
+		"message": "Piliin ang mga key na kailangang pindutin sa keyboard upang ipakita ang pagsasalin"
 	},
 	"settings_option_selectTranslation_modifiers_key_alt": {
 		"message": "alt"
@@ -465,85 +447,85 @@
 		"message": "shift"
 	},
 	"settings_option_selectTranslation_rememberDirection": {
-		"message": "Tandaan ang pinakarecenteng napiling wika ng teksto"
+		"message": "Tandaan ang pinakahuling napiling wika ng teksto"
 	},
 	"settings_option_selectTranslation_showOnceForSelection": {
-		"message": "Ipakita ang button ng pagsasalin sa bawat pagpili ng teksto"
+		"message": "Ipakita ang button ng pagsasalin isang beses para sa bawat pagpili ng teksto"
 	},
 	"settings_option_selectTranslation_showOnceForSelection_desc": {
-		"message": "Ang button ay magpapakita lamang sa bawat pagpili ng teksto. Kung kailangan mong ipakita ito ulit, piliin muli ang teksto"
+		"message": "Magpapakita ang button ng isang beses lamang para sa bawat pagpili ng teksto. Upang ipakita ito muli, piliin muli ang teksto"
 	},
 	"settings_option_selectTranslation_showOriginalText": {
 		"message": "Ipakita ang orihinal na teksto"
 	},
 	"settings_option_selectTranslation_showOriginalText_desc": {
-		"message": "Magdagdag ng block na naglalaman ng orihinal na teksto sa popup ng pagsasalin"
+		"message": "Magdagdag ng bloke na may orihinal na teksto sa popup ng pagsasalin"
 	},
 	"settings_option_selectTranslation_strictSelection": {
 		"message": "Mahigpit na pagpili"
 	},
 	"settings_option_selectTranslation_strictSelection_desc": {
-		"message": "Balewalain ang pagpili kung lalabas ng block na naglalaman ng piniling teksto ang pag-release ng kaliwang button ng mouse."
+		"message": "Huwag pansinin ang pagpili kung ang kaliwang pindutan ng mouse ay pakawalan sa labas ng bloke na naglalaman ng napiling teksto"
 	},
 	"settings_option_selectTranslation_timeoutForHideButton": {
-		"message": "Pag-antala sa pagtatago ng button"
+		"message": "Pagkaantala bago itago ang button"
 	},
 	"settings_option_selectTranslation_timeoutForHideButton_desc": {
-		"message": "Delay sa mga millisecond bago itago ang button kapag hindi nakadagan sa cursor. Ang pagdadagan ng cursor sa isang button ay magrereset ng timer. Upang hindi mag-auto-hide, mag-set ng value na lower than 1"
+		"message": "Pagkaantala sa millisecond bago itago ang button kapag ang cursor ay hindi nakahover. Ang pag-hover sa button ay nag-reset ng timer. Upang huwag payagan ang awtomatikong pagtatago, itakda ang halaga na mas mababa sa 1"
 	},
 	"settings_option_selectTranslation_zIndex": {
 		"message": "z-index"
 	},
 	"settings_option_selectTranslation_zIndex_desc": {
-		"message": "Taasan ang value kung may mga elemento sa ilang pahina na nag-o-overlap sa popup na may naisalin na teksto"
+		"message": "Palakihin ang halagang ito kung ang mga elemento sa ilang pahina ay natatakpan ang popup na may salin na teksto"
 	},
 	"settings_option_textTranslator": {
-		"message": "Pagsasalin ng Teksto"
+		"message": "Pagsasalin ng teksto"
 	},
 	"settings_option_textTranslator_rememberText": {
-		"message": "Tandaan ang naisalin na teksto"
+		"message": "Tandaan ang isinalin na teksto"
 	},
 	"settings_option_textTranslator_rememberText_desc": {
-		"message": "Tandaan ang naisalin na teksto para sa susunod na pagbubukas ng window"
+		"message": "Tandaan ang isinalin na teksto sa susunod na pagbubukas ng window"
 	},
 	"settings_option_textTranslator_spellCheck": {
-		"message": "Paganahin ang Spell check"
+		"message": "Paganahin ang pagsuri ng baybay"
 	},
 	"settings_option_textTranslator_suggestLanguage": {
-		"message": "Mag-suggest ng natukoy na wika ng teksto"
+		"message": "Iminungkahing lengguwaheng natukoy"
 	},
 	"settings_option_textTranslator_suggestLanguageAlways": {
-		"message": "Palaging tukuyin at magrekomenda ng wika"
+		"message": "Laging tukuyin at imungkahi ang lengguwahe"
 	},
 	"settings_option_textTranslator_suggestLanguageAlways_desc": {
-		"message": "Kapag hindi pinagana, ang mga rekomendasyon sa wika ay magpapakita lamang kapag nagawa nang auto detection ang wika ng pinagmulan"
+		"message": "Kapag hindi pinagana, ang mga mungkahing lengguwahe ay lilitaw lamang kapag ang pinagmumulan ng lengguwahe ay awtomatikong natukoy"
 	},
 	"settings_option_translatePreferences": {
 		"message": "Mga kagustuhan sa pagsasalin"
 	},
 	"settings_option_translateScheduler": {
-		"message": "Tagapag-ayos ng pagsasalin"
+		"message": "Tagaplano ng pagsasalin"
 	},
 	"settings_option_translateScheduler_delay": {
-		"message": "Pagkaantala ng pag-accumulate ng teksto"
+		"message": "Antala sa pag-ipon ng teksto"
 	},
 	"settings_option_translateScheduler_delay_desc": {
-		"message": "Ang translation scheduler ay nagbabawas ng bilang ng mga kahilingan sa API ng mga serbisyo sa pagsasalin. Sinisikap ng scheduler na magtipon ng mga teksto upang ipadala bilang maraming teksto hanggang sa maabot ang isa lamang na kahilingan. Maghihintay ang scheduler para sa nakatakdang panahon sa milliseconds upang magtipon ng mga bagong teksto bago simulan ang pagsasalin."
+		"message": "Pinapababa ng tagapag-iskedyul ng pagsasalin ang bilang ng mga kahilingan sa translation service API. Sinisikap nitong pagtipunin ang maraming teksto hangga't maaari upang maipadala sa isang kahilingang solong. Maghihintay ang tagapag-iskedyul ng tinakdang oras sa millisecond upang makalikom ng mga bagong teksto bago simulan ang pagsasalin"
 	},
 	"settings_option_translateScheduler_retryLimit": {
 		"message": "Mga pagtatangka sa muling pagsasalin"
 	},
 	"settings_option_translateScheduler_retryLimit_desc": {
-		"message": "Uulitin ng scheduler ang pagsasalin ng mga teksto para sa mga error sa pagsasalin. Naglalagay ng limitasyon sa mga pagtatangka ng pag-uulit ang opsyon na ito. Maglagay ng negatibong numero upang payagan ang walang hanggang mga pagtatangka ng pag-uulit."
+		"message": "Muling susubukan ng tagapag-iskedyul ang pagsasalin ng mga teksto kapag may mga pagkakamali sa pagsasalin. Itinakda ng opsyong ito ang limitasyon para sa mga pagtatangka sa muling pagsasalin. Maglagay ng negatibong numero para payagan ang walang hanggang pag-uulit"
 	},
 	"settings_option_translatorModule": {
-		"message": "Module ng tagasalin"
+		"message": "Module ng Tagasalin"
 	},
 	"settings_option_translatorModule_desc": {
-		"message": "Depende sa tagasalin ang kalidad ng mga pagsasalin at ang mga magagamit na wika para sa pagsasalin."
+		"message": "Ang kalidad ng mga pagsasalin at ang mga available na wika ay nakadepende sa tagasalin"
 	},
 	"settings_option_tts": {
-		"message": "Teksto patungo sa tunog (TTS)"
+		"message": "Teksto sa Pananalita (TTS)"
 	},
 	"settings_option_ttsCustomModules": {
 		"message": "Pasadyang TTS"
@@ -552,19 +534,19 @@
 		"message": "Pamahalaan ang mga module ng TTS"
 	},
 	"settings_option_ttsCustomModules_desc": {
-		"message": "Maaari kang magdagdag ng mga module ng TTS na gumagamit ng iyong paboritong serbisyo at boses. Basahin pa at hanapin ang mga module sa dokumentasyon ng pasadyang TTS."
+		"message": "Maaari kang magdagdag ng mga module ng TTS na gumagamit ng iyong paboritong mga serbisyo at boses. Basahin pa at hanapin ang mga module sa dokumentasyon ng pasadyang TTS"
 	},
 	"settings_option_ttsModule": {
 		"message": "Module ng TTS"
 	},
 	"settings_option_ttsModule_desc": {
-		"message": "Module upang magbigkas ng teksto"
+		"message": "Module para magsalita ng teksto"
 	},
 	"settings_option_userLanguage": {
 		"message": "Iyong wika"
 	},
 	"settings_option_userLanguage_desc": {
-		"message": "Target na wika para isalin ang mga teksto"
+		"message": "Wika na target para sa pagsasalin ng teksto"
 	},
 	"settings_pageTitle": {
 		"message": "Mga Setting"
@@ -576,13 +558,13 @@
 		"message": "Popup"
 	},
 	"textTranslator_suggestLanguage": {
-		"message": "Mukhang iyon ay wika ng"
+		"message": "Mukhang ang wika ay"
 	},
 	"textTranslator_translateInputPlaceholder": {
-		"message": "Tekstong input"
+		"message": "Ilagay ang teksto"
 	},
 	"textTranslator_translatePlaceholder": {
-		"message": "Naisalin na tekst"
+		"message": "Isinalin na teksto"
 	},
 	"translatorsManagerWindow_add": {
 		"message": "Magdagdag"
@@ -591,19 +573,19 @@
 		"message": "Isara"
 	},
 	"translatorsManagerWindow_emptyTranslatorsListText": {
-		"message": "Walang idinagdag pa na mga pasadyang tagasalin"
+		"message": "Walang naidagdag na pasadyang tagasalin"
 	},
 	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
-		"message": "Sigurado ka ba sa pagtanggal ng tagasalin na \"$translator_name$\"?",
+		"message": "Sigurado ka bang nais mong alisin ang tagasalin na \"$translator_name$\"?",
 		"placeholders": {
 			"translator_name": {
 				"content": "$1",
-				"example": "Google tagasalin"
+				"example": "Google translator"
 			}
 		}
 	},
 	"translatorsManagerWindow_title": {
-		"message": "Mga Pasadyang Tagasalin"
+		"message": "Pasadyang mga tagasalin"
 	},
 	"translatorsManagerWindow_translator_delete": {
 		"message": "Tanggalin"
@@ -612,16 +594,16 @@
 		"message": "I-edit"
 	},
 	"ttsManagerWindow_add": {
-		"message": "Magdagdag"
+		"message": "Idagdag"
 	},
 	"ttsManagerWindow_close": {
 		"message": "Isara"
 	},
 	"ttsManagerWindow_emptyTranslatorsListText": {
-		"message": "Ang mga module ng TTS ay hindi pa idinagdag"
+		"message": "Walang naidagdag na mga TTS module"
 	},
 	"ttsManagerWindow_message_ttsRemoveConfirmation": {
-		"message": "Sigurado ka bang tatanggalin ang TTS na \"$tts_name$\"?",
+		"message": "Sigurado ka bang nais mong alisin ang TTS module na \"$tts_name$\"?",
 		"placeholders": {
 			"tts_name": {
 				"content": "$1",
@@ -630,7 +612,7 @@
 		}
 	},
 	"ttsManagerWindow_title": {
-		"message": "Mga module ng teksto patungong salita"
+		"message": "Mga module ng teksto sa pagsasalita"
 	},
 	"ttsManagerWindow_translator_delete": {
 		"message": "Tanggalin"
@@ -639,13 +621,13 @@
 		"message": "I-edit"
 	},
 	"validation_number": {
-		"message": "Ang parametre ay dapat na numero"
+		"message": "Ang parameter ay dapat isang numero"
 	},
 	"validation_numberBetweenRange": {
-		"message": "Ang parameter ay dapat na numero sa pagitan ng $1 at $2"
+		"message": "Ang parameter ay dapat isang numero sa pagitan ng $1 at $2"
 	},
 	"validation_positiveNumber": {
-		"message": "Ang parameter ay dapat na positibong numero."
+		"message": "Ang parameter ay dapat isang positibong numero"
 	},
 	"langCode_aa": {
 		"message": "Afar"
@@ -792,7 +774,7 @@
 		"message": "French"
 	},
 	"langCode_fy": {
-		"message": "Kanlurang Frisian"
+		"message": "Western Frisian"
 	},
 	"langCode_ga": {
 		"message": "Irish"
@@ -1191,7 +1173,7 @@
 		"message": "Yoruba"
 	},
 	"langCode_za": {
-		"message": "Za"
+		"message": "Zhuang"
 	},
 	"langCode_zh": {
 		"message": "Chinese"

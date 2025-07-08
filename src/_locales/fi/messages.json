@@ -6,7 +6,7 @@
 		"message": "Poista käännös sanakirjasta"
 	},
 	"common_bgUnavailable": {
-		"message": "Taustaohjelma ei ole käytettävissä"
+		"message": "Taustasovellus ei ole käytettävissä"
 	},
 	"common_cancel": {
 		"message": "Peruuta"
@@ -30,13 +30,13 @@
 		"message": "Käännä"
 	},
 	"component_hotkey_placeholder": {
-		"message": "Napsauta tallentaaksesi pikanäppäimet"
+		"message": "Napsauta tallentaaksesi pikanäppäimen"
 	},
 	"component_hotkey_recordPlaceholder": {
 		"message": "Paina näppäimiä"
 	},
 	"component_hotkey_resetButton": {
-		"message": "Nollaa"
+		"message": "Palauta"
 	},
 	"contextMenu_disablePageTranslation": {
 		"message": "Poista sivun käännös käytöstä"
@@ -60,28 +60,28 @@
 		"message": "Poista kaikki"
 	},
 	"dictionary_deleteAll": {
-		"message": "Oletko varma, että haluat poistaa kaikki sanakirjan käännökset?"
+		"message": "Haluatko varmasti poistaa KAIKKI käännökset sanakirjasta?"
 	},
 	"dictionary_deleteConfirmation": {
-		"message": "Oletko varma, että haluat poistaa tämän käännöksen?"
+		"message": "Haluatko varmasti poistaa tämän käännöksen?"
 	},
 	"dictionary_description": {
-		"message": "Säilytä käännökset sanakirjassa löytääksesi ne myöhemmin"
+		"message": "Pidä käännöksesi sanakirjassa, jotta löydät ne myöhemmin"
 	},
 	"dictionary_emptyDictionary": {
-		"message": "Sanakirja on tyhjä. Aloita täyttäminen kääntämällä jotain tekstiä"
+		"message": "Sanakirja on tyhjä. Aloita täyttämällä sitä kääntämällä tekstiä"
 	},
 	"dictionary_filter_from": {
-		"message": "Mistä"
+		"message": "Alkuperäinen"
 	},
 	"dictionary_filter_to": {
-		"message": "Mihin"
+		"message": "Kohde"
 	},
 	"dictionary_message_deleteAll_success": {
 		"message": "Kaikki käännökset poistettiin"
 	},
 	"dictionary_notFoundEntries": {
-		"message": "Suodattimia vastaavia käännöksiä ei löytynyt"
+		"message": "Suodattimien mukaisia käännöksiä ei löytynyt"
 	},
 	"dictionary_pageTitle": {
 		"message": "Sanakirja"
@@ -90,7 +90,7 @@
 		"message": "nollaa suodattimet"
 	},
 	"dictionary_searchPlaceholder": {
-		"message": "Etsi tekstin perusteella"
+		"message": "Hae tekstillä"
 	},
 	"editorWindow_close": {
 		"message": "Sulje"
@@ -98,20 +98,20 @@
 	"editorWindow_data_code": {
 		"message": "Koodi"
 	},
-	"editorWindow_data_name": {
-		"message": "Nimi"
+	"editorWindow_data_translatorName": {
+		"message": "Kääntäjän nimi"
 	},
-	"editorWindow_message_invalidName": {
-		"message": "Nimessä on oltava vähintään yksi symboli"
+	"editorWindow_message_invalidTranslatorName": {
+		"message": "Kääntäjän nimen on sisällettävä vähintään yksi merkki"
 	},
 	"editorWindow_save": {
 		"message": "Tallenna"
 	},
 	"ext_description": {
-		"message": "Sivujen ja tekstien käännös, sanakirja, historia, offline- ja mukautetut kääntäjät"
+		"message": "Sivut ja tekstin käännös, sanakirja, historia, offline- ja mukautetut kääntäjät"
 	},
 	"ext_name": {
-		"message": "Kielitieteilijä - verkkosivujen kääntäjä"
+		"message": "Linguist - verkkosivujen kääntäjä"
 	},
 	"history_control_selectEntry": {
 		"message": "Valitse merkintä"
@@ -134,29 +134,29 @@
 	"history_message_deleteSelectedEntriesConfirmation": {
 		"message": "Haluatko varmasti poistaa valitut merkinnät ($1)?"
 	},
-	"history_message_emptyEntries": {
-		"message": "Historia on tyhjennetty"
-	},
 	"history_message_entriesNotFound": {
-		"message": "Ei löytynyt hakuehtoja vastaavia käännöksiä"
+		"message": "Suodatinta vastaavia käännöksiä ei löytynyt"
+	},
+	"history_message_noEntries": {
+		"message": "Historia on tyhjä"
 	},
 	"history_notification_disabled": {
-		"message": "Historiatallennus on poissa käytöstä, joten uudet merkinnät eivät näy. Voit muuttaa tämän asetuksista <slot id=preferences>asetukset</slot>"
+		"message": "Historian tallennus on poistettu käytöstä, joten uudet merkinnät eivät näy. Voit muuttaa tätä asetuksissa <slot id=preferences>asetukset</slot>"
 	},
 	"history_pageTitle": {
 		"message": "Historia"
 	},
 	"history_searchPlaceholder": {
-		"message": "Hae tekstillä"
+		"message": "Haku tekstillä"
 	},
 	"inlineTranslator_showOriginalText": {
 		"message": "Näytä alkuperäinen teksti"
 	},
 	"lang_change": {
-		"message": "Vaihda kieltä"
+		"message": "Vaihda kieli"
 	},
 	"lang_detect": {
-		"message": "Tunnista automaattisesti"
+		"message": "Automaattinen tunnistus"
 	},
 	"lang_select": {
 		"message": "Valitse kieli"
@@ -165,7 +165,7 @@
 		"message": "Vaihda kielet"
 	},
 	"message_askResetConfig": {
-		"message": "Palautetaanko asetukset?"
+		"message": "Nollataanko asetukset?"
 	},
 	"message_cacheFlushed": {
 		"message": "Välimuisti on tyhjennetty"
@@ -189,13 +189,13 @@
 		"message": "Tuntematon virhe"
 	},
 	"pageTranslator_alwaysTranslateLang": {
-		"message": "Käännä aina tämä kieli"
+		"message": "Käännä tämä kieli aina"
 	},
 	"pageTranslator_commonPreferences_autoTranslate_disable": {
 		"message": "Poista käytöstä"
 	},
 	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
-		"message": "Poista kaikilta sivuilta"
+		"message": "Poista käytöstä kaikilla sivustoilla"
 	},
 	"pageTranslator_commonPreferences_autoTranslate_enable": {
 		"message": "Ota käyttöön"
@@ -207,16 +207,16 @@
 		"message": "Automaattinen käännös"
 	},
 	"pageTranslator_showOptions": {
-		"message": "Näytä vaihtoehdot"
+		"message": "Näytä asetukset"
 	},
 	"pageTranslator_showOriginal": {
 		"message": "Näytä alkuperäinen"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_always": {
-		"message": "Aina käännä"
+		"message": "Käännä aina"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
-		"message": "Aina käännä tälle kielelle"
+		"message": "Käännä aina tälle kielelle"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_default": {
 		"message": "Käytä yleisiä sääntöjä"
@@ -231,7 +231,7 @@
 		"message": "Älä koskaan käännä tälle kielelle"
 	},
 	"pageTranslator_sitePreferences_title": {
-		"message": "Asetukset"
+		"message": "Asetukset kohteelle"
 	},
 	"pageTranslator_translatePage": {
 		"message": "Käännä sivu"
@@ -252,10 +252,10 @@
 		"message": "Välilehteä \"$1\" ei löydy"
 	},
 	"popup_tab_translatePage": {
-		"message": "Sivun kääntäminen"
+		"message": "Sivun käännös"
 	},
 	"popup_tab_translateText": {
-		"message": "Tekstin kääntäminen"
+		"message": "Tekstin käännös"
 	},
 	"settings_button_cancel": {
 		"message": "Peruuta"
@@ -273,43 +273,25 @@
 		"message": "Tallenna muutokset"
 	},
 	"settings_message_clearCache_success": {
-		"message": "Välimuisti on tyhjennetty"
+		"message": "Välimuisti tyhjennetty"
 	},
 	"settings_message_common_invalidValueType": {
 		"message": "Virheellinen arvo"
 	},
 	"settings_message_importConfig_invalidFile": {
-		"message": "Tiedostoa ei voi käsitellä tuonnin yhteydessä"
+		"message": "Tuontitiedostoa ei voida käsitellä"
 	},
 	"settings_message_importConfig_success": {
-		"message": "Tuonti tehty"
+		"message": "Tuonti valmis"
 	},
 	"settings_message_resetConfig_confirm": {
-		"message": "Haluatko palauttaa asetukset?"
+		"message": "Haluatko palauttaa asetukset oletusasetuksiin?"
 	},
 	"settings_message_resetConfig_success": {
 		"message": "Asetukset palautettu"
 	},
 	"settings_message_saveChanges_success": {
 		"message": "Muutokset tallennettu"
-	},
-	"settings_option_appIcon": {
-		"message": "Laajennuksen kuvake"
-	},
-	"settings_option_appIcon_desc": {
-		"message": "Kun valitaan dynaaminen kuvake, värit mukautetaan selaimen teemaan"
-	},
-	"settings_option_appIcon_item_auto": {
-		"message": "Dynaaminen"
-	},
-	"settings_option_appIcon_item_color": {
-		"message": "Väri"
-	},
-	"settings_option_appIcon_item_dark": {
-		"message": "Tumma"
-	},
-	"settings_option_appIcon_item_light": {
-		"message": "Vaalea"
 	},
 	"settings_option_cache": {
 		"message": "Välimuisti"
@@ -318,19 +300,19 @@
 		"message": "Tyhjennä välimuisti"
 	},
 	"settings_option_cache_clear_desc": {
-		"message": "Poista välimuisti, jos sinulla on käännösartefakteja tai tarvitset poistaa salaisuuksia"
+		"message": "Poista välimuisti, jos sinulla on käännösjäännöksiä tai tarvitset salaisuuksien poistamista"
 	},
 	"settings_option_cache_enable": {
 		"message": "Ota välimuisti käyttöön"
 	},
 	"settings_option_cache_enable_desc": {
-		"message": "Kun välimuisti on käytössä, kerran käännettyjä käännöksiä voi käyttää välittömästi ilman internetyhteyttä"
+		"message": "Kun välimuisti on käytössä, kertaalleen käännetyt tekstit ovat välittömästi saatavilla, myös ilman internetyhteyttä"
 	},
 	"settings_option_cache_ignoreCase": {
-		"message": "Kirjainkoolla ei ole merkitystä"
+		"message": "Eriä kirjainkoon mukaan"
 	},
 	"settings_option_cache_ignoreCase_desc": {
-		"message": "Kun tämä on otettu käyttöön, välimuistista haetaan käännöksiä myös ei-täsmällisillä vastineilla, mikä voi aiheuttaa käännösartefakteja"
+		"message": "Kun tämä on käytössä, välimuistista käytetään myös epätäsmällisiä hakutuloksia, mikä saattaa aiheuttaa käännösvirheitä"
 	},
 	"settings_option_commonSettings": {
 		"message": "Yleiset asetukset"
@@ -339,16 +321,16 @@
 		"message": "Mukautetut kääntäjät"
 	},
 	"settings_option_customTranslatorModule_desc": {
-		"message": "Voit lisätä mukautettuja kääntäjiä suosikkikäännöspalveluihisi. Lue lisää ja löydä moduulit <slot id=docs>mukautettujen kääntäjien dokumentaatiosta</slot>."
+		"message": "Voit lisätä mukautettuja kääntäjiä suosikkikäännöspalveluillesi. Lue lisää ja löydä moduulit <slot id=docs>mukautettujen kääntäjien dokumentaatiosta</slot>"
 	},
 	"settings_option_customTranslatorModule_manageButton": {
-		"message": "Hallinnoi kääntäjiä"
+		"message": "Hallitse kääntäjiä"
 	},
 	"settings_option_history_enable": {
 		"message": "Ota historia käyttöön"
 	},
 	"settings_option_history_enable_desc": {
-		"message": "Kun tämä on käytössä, kaikki käännökset tallennetaan historia-sivulle"
+		"message": "Kun otetaan käyttöön, jokainen käännös tallennetaan historian sivulle"
 	},
 	"settings_option_mainPreferences": {
 		"message": "Pääasetukset"
@@ -360,82 +342,82 @@
 		"message": "Tunnista kieli sisällön perusteella"
 	},
 	"settings_option_pageTranslation_detectLanguageByContent_desc": {
-		"message": "Analysoi verkkosivun teksti tunnistaaksesi sivun kielen. Kun tämä on poissa päältä, käytetään sivun metadatasta löytyvää kieltä."
+		"message": "Analysoi verkkosivun teksti tunnistaakseen sivun kielen. Kun pois käytöstä, käytetään sivun metatiedoissa määriteltyä kieltä"
 	},
 	"settings_option_pageTranslation_enableContextMenu": {
-		"message": "Ota kontekstivalikon painike käyttöön"
+		"message": "Ota käyttöön pikavalikon painike"
 	},
 	"settings_option_pageTranslation_enableContextMenu_desc": {
-		"message": "Lisää painike käännöksen käynnistämiseksi sivun kontekstivalikkoon"
+		"message": "Lisää painike, jolla sivun kääntäminen voidaan kytkeä päälle tai pois pikavalikossa"
 	},
 	"settings_option_pageTranslation_excludeSelectors": {
 		"message": "Valitsimet, joita ei käännetä"
 	},
 	"settings_option_pageTranslation_excludeSelectors_desc": {
-		"message": "Lista CSS-valitsimista, joita ei käännetä. Yksi valitsin per rivi. Jos elementti vastaa mitä tahansa näistä valitsimista, sitä sekä sen attribuutteja ja sisäkkäisiä elementtejä ei käännetä."
+		"message": "Luettelo CSS-valitsimista, joita ei käännetä. Yksi valitsin per rivi. Jos elementti vastaa jotakin näistä valitsimista, sitä sekä sen attribuutteja ja sisäkkäisiä elementtejä ei käännetä"
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
 		"message": "Käännä vain näkyvät elementit"
 	},
 	"settings_option_pageTranslation_lazyTranslate_desc": {
-		"message": "Tämän vaihtoehdon ollessa käytössä, vain näkyvät elementit käännetään. Tämä voi olla hyödyllistä säästääkseen verkkoliikennettä"
+		"message": "Kun tämä asetus on käytössä, käännetään vain näkyvät elementit. Tämä asetus säästää verkkoliikennettä ja rajoittaa käytettyjen käännöspalvelujen määrää"
 	},
 	"settings_option_pageTranslation_originalTextPopup": {
-		"message": "Ota käyttöön alkuperäisteksti-ikkuna"
+		"message": "Ota käyttöön ponnahdusikkuna alkuperäisellä tekstillä"
 	},
 	"settings_option_pageTranslation_originalTextPopup_desc": {
-		"message": "Näyttää alkuperäistekstin ikkunassa, kun hiiri on käännety tekstin päällä."
+		"message": "Näytä ponnahdusikkuna alkuperäisellä tekstillä, kun hiiri siirretään käännettyjen tekstilohkojen päälle"
 	},
 	"settings_option_pageTranslation_toggleTranslationHotkey": {
 		"message": "Pikanäppäimet"
 	},
 	"settings_option_pageTranslation_toggleTranslationHotkey_desc": {
-		"message": "Pikanäppäimet sivunkäännöksen kytkeämiseen\nPaina ESC-näppäintä palauttaaksesi näppäimet"
+		"message": "Pikanäppäimet sivun käännöksen kytkemiseen\nPaina ESC-näppäintä nollataksesi näppäimet"
 	},
 	"settings_option_pageTranslation_translatableAttributes": {
-		"message": "Käännettävät attribuutit."
+		"message": "Käännettävät attribuutit"
 	},
 	"settings_option_pageTranslation_translatableAttributes_desc": {
-		"message": "Syötä <slot id=htmlAttributes>HTML-attribuutin</slot> nimet kääntämistä varten. Yksi ominaisuus riviä kohden."
+		"message": "Syötä <slot id=htmlAttributes>HTML-attribuutin</slot> nimet käännettäviksi, yksi attribuutti per rivi"
 	},
 	"settings_option_popupTab_pageTranslator_showCounters": {
-		"message": "Näytä käännöksen tilastotiedot"
+		"message": "Näytä käännösten tilastot"
 	},
 	"settings_option_popupTab_pageTranslator_showCounters_desc": {
-		"message": "Näytä tilastot sivunkäännökselle"
+		"message": "Näytä sivun käännösten tilastot"
 	},
 	"settings_option_selectTranslation": {
 		"message": "Valitun tekstin käännös"
 	},
 	"settings_option_selectTranslation_detectedLangFirst": {
-		"message": "Suosi valitun tekstin havaittua kieltä sivun kielen sijaan"
+		"message": "Anna etusija valitun tekstin havaittuun kieleen sivun kielen sijaan"
 	},
 	"settings_option_selectTranslation_detectedLangFirst_desc": {
-		"message": "Kun tämä on käytössä, valitun tekstin havaittua kieltä suositaan sivun kielen sijaan."
+		"message": "Kun tämä on käytössä, valitun tekstin havaittu kieli asetetaan etusijalle sivun kielen sijaan"
 	},
 	"settings_option_selectTranslation_disableWhileTranslatePage": {
-		"message": "Poista käytöstä sivun kääntämisen aikana"
+		"message": "Poista käytöstä sivua käännettäessä"
 	},
 	"settings_option_selectTranslation_enable": {
 		"message": "Ota käyttöön"
 	},
 	"settings_option_selectTranslation_focusOnTranslateButton": {
-		"message": "Automaattinen fokusointi käännöspainikkeeseen"
+		"message": "Automaattinen kohdistus käännöspainikkeeseen"
 	},
 	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
-		"message": "Kohdista käännöspainikkeeseen, kun se ilmestyy"
+		"message": "Kohdistus käännöspainikkeeseen, kun se ilmestyy"
 	},
 	"settings_option_selectTranslation_header_languageChoice": {
 		"message": "Kieliasetukset"
 	},
 	"settings_option_selectTranslation_isUseAutoForDetectLang": {
-		"message": "Ota käyttöön kääntäjän automaattinen kielen tunnistus"
+		"message": "Ota käyttöön kielen automaattinen tunnistus kääntäjän toimesta"
 	},
 	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
-		"message": "Käytä kääntäjän automaattista kielen tunnistusta, kun kieltä ei voida tunnistaa paikallisesti."
+		"message": "Käytä kääntäjän automaattista kielen tunnistusta, kun kieli ei tunnistu paikallisesti"
 	},
 	"settings_option_selectTranslation_mode": {
-		"message": "Käännöslaukaisin"
+		"message": "Käännöksen käynnistys"
 	},
 	"settings_option_selectTranslation_mode_item_contextMenu": {
 		"message": "Kontekstivalikon painike"
@@ -444,13 +426,13 @@
 		"message": "Ponnahdusikkunan painike"
 	},
 	"settings_option_selectTranslation_mode_item_quickTranslate": {
-		"message": "Nopea käännös valinnalla"
+		"message": "Nopea käännös valitsemalla"
 	},
 	"settings_option_selectTranslation_modifiers": {
-		"message": "Muokkaajat"
+		"message": "Muokkaimet"
 	},
 	"settings_option_selectTranslation_modifiers_desc": {
-		"message": "Valitse näppäimet, jotka on painettava näppäimistöllä, jotta käännös näytetään."
+		"message": "Valitse näppäimet, jotka on pidettävä painettuna käännöksen näyttämiseksi"
 	},
 	"settings_option_selectTranslation_modifiers_key_alt": {
 		"message": "alt"
@@ -465,37 +447,37 @@
 		"message": "shift"
 	},
 	"settings_option_selectTranslation_rememberDirection": {
-		"message": "Muista viimeisin valittu tekstin kieli."
+		"message": "Muista viimeksi valitun tekstin kieli"
 	},
 	"settings_option_selectTranslation_showOnceForSelection": {
-		"message": "Näytä käännöspainike vain kerran jokaiselle tekstin valinnalle."
+		"message": "Näytä käännöspainike kerran valintaa kohden"
 	},
 	"settings_option_selectTranslation_showOnceForSelection_desc": {
-		"message": "Painike näkyy vain kerran jokaiselle tekstin valinnalle. Jos haluat näyttää sen uudelleen, valitse teksti uudelleen."
+		"message": "Painike näytetään vain kerran kutakin tekstivalintaa kohden. Näyttääksesi sen uudelleen, valitse teksti uudelleen"
 	},
 	"settings_option_selectTranslation_showOriginalText": {
-		"message": "Näytä alkuperäinen teksti."
+		"message": "Näytä alkuperäinen teksti"
 	},
 	"settings_option_selectTranslation_showOriginalText_desc": {
-		"message": "Lisää lohko alkuperäisellä tekstillä popup-ikkunaan käännöksen kanssa."
+		"message": "Lisää käännöspopupiin lohko alkuperäisellä tekstillä"
 	},
 	"settings_option_selectTranslation_strictSelection": {
-		"message": "Tarkka valinta."
+		"message": "Tarkka valinta"
 	},
 	"settings_option_selectTranslation_strictSelection_desc": {
-		"message": "Ohita valinta, jos vasen hiiren painike vapautetaan tekstiä sisältävän lohkon ulkopuolella"
+		"message": "Ohita valinta, jos vasen hiiripainike vapautetaan valitun tekstin sisältävän lohkon ulkopuolella"
 	},
 	"settings_option_selectTranslation_timeoutForHideButton": {
-		"message": "Viive piilottaaksesi nappi"
+		"message": "Viive ennen painikkeen piilottamista"
 	},
 	"settings_option_selectTranslation_timeoutForHideButton_desc": {
-		"message": "Viive millisekunteina ennen kuin nappi piilotetaan, kun kursori ei ole päällä. Nappiin kohdistuva kursorin liike nollaa ajastimen. Automaattisen piilotuksen poistamiseksi aseta arvo pienemmäksi kuin 1"
+		"message": "Viive millisekunteina ennen painikkeen piilottamista, kun kursori ei ole sen päällä. Painikkeen päällä oleminen nollaa ajastimen. Automaattisen piilottamisen poistamiseksi käytä arvoa alle 1"
 	},
 	"settings_option_selectTranslation_zIndex": {
 		"message": "z-indeksi"
 	},
 	"settings_option_selectTranslation_zIndex_desc": {
-		"message": "Kasvata arvoa, jos joillakin sivuilla olevat elementit peittävät käännetyn tekstin popup-ikkunan"
+		"message": "Nosta tätä arvoa, jos joidenkin sivujen elementit peittävät käännetyn tekstin popupin"
 	},
 	"settings_option_textTranslator": {
 		"message": "Tekstin kääntäminen"
@@ -504,19 +486,19 @@
 		"message": "Muista käännetty teksti"
 	},
 	"settings_option_textTranslator_rememberText_desc": {
-		"message": "Muista käännetty teksti seuraavaa kertaa varten, kun ikkuna avataan"
+		"message": "Muista käännetty teksti seuraavaa ikkunan avaamista varten"
 	},
 	"settings_option_textTranslator_spellCheck": {
-		"message": "Ota käyttöön oikoluku"
+		"message": "Ota oikeinkirjoituksen tarkistus käyttöön"
 	},
 	"settings_option_textTranslator_suggestLanguage": {
-		"message": "Ehdota havaittua tekstin kieltä"
+		"message": "Ehdota tunnistettua tekstin kieltä"
 	},
 	"settings_option_textTranslator_suggestLanguageAlways": {
-		"message": "Havaitse aina ja ehdota kieltä"
+		"message": "Tunnista ja ehdota kieli aina"
 	},
 	"settings_option_textTranslator_suggestLanguageAlways_desc": {
-		"message": "Kun poistettu käytöstä, kielen ehdotukset näkyvät vain, kun lähdekieli havaitaan automaattisesti"
+		"message": "Kun poissa käytöstä, kieliehdotukset näkyvät vain, kun lähdekieli tunnistetaan automaattisesti"
 	},
 	"settings_option_translatePreferences": {
 		"message": "Käännösasetukset"
@@ -528,31 +510,31 @@
 		"message": "Tekstin kertymisen viive"
 	},
 	"settings_option_translateScheduler_delay_desc": {
-		"message": "Käännösaikataulu vähentää käännöspalvelun API-pyyntöjen määrää. Aikataulu yrittää kerätä tekstejä lähettää niin monta tekstiä yhdellä pyynnöllä kuin mahdollista. Aikataulu odottaa määritetyn ajan millisekunteina uusien tekstien keräämiseksi ennen kääntämisen aloittamista."
+		"message": "Käännösaikataulutin vähentää pyyntöjen määrää käännöspalvelun API:in. Se pyrkii kokoamaan mahdollisimman monta tekstiä yhteen pyyntöön. Aikataulutin odottaa määritetyn ajan millisekunteina kerätäkseen uusia tekstejä ennen käännöksen aloittamista"
 	},
 	"settings_option_translateScheduler_retryLimit": {
-		"message": "Käännösyritettyjen yritysten määrä"
+		"message": "Käännöksen uudelleenyritysten määrä"
 	},
 	"settings_option_translateScheduler_retryLimit_desc": {
-		"message": "Aikataulu yrittää uudelleen kääntää tekstit käännösvirheiden vuoksi. Tämä asetus asettaa rajoituksen uudelleenyrityksille. Aseta negatiivinen numero sallimaan rajattomat uudelleenyritykset."
+		"message": "Aikataulutin yrittää uudelleen kääntää tekstejä virhetilanteissa. Tämä asetus määrittää uudelleenyritysten enimmäismäärän. Aseta negatiivinen luku salliaksesi rajattomat uudelleenyritykset"
 	},
 	"settings_option_translatorModule": {
 		"message": "Kääntäjämoduuli"
 	},
 	"settings_option_translatorModule_desc": {
-		"message": "Käännösten laatu ja käytettävissä olevat kielet riippuvat käyttämästäsi kääntäjästä."
+		"message": "Käännösten laatu ja saatavilla olevat kielet riippuvat kääntäjästä"
 	},
 	"settings_option_tts": {
-		"message": "Tekstin puheeksi muuttaminen (TTS)"
+		"message": "Teksti puheeksi (TTS)"
 	},
 	"settings_option_ttsCustomModules": {
-		"message": "Mukautetut TTS-moduulit"
+		"message": "Mukautettu TTS"
 	},
 	"settings_option_ttsCustomModules_button": {
 		"message": "Hallitse TTS-moduuleja"
 	},
 	"settings_option_ttsCustomModules_desc": {
-		"message": "Voit lisätä TTS-moduuleja, jotka käyttävät suosikki palveluasi ja ääniä. Lue lisää ja löydä moduuleja mukautetun TTS-dokumentaation avulla."
+		"message": "Voit lisätä TTS-moduuleja, jotka käyttävät suosikkipalvelujasi ja -ääniäsi. Lue lisää ja löydä moduulit mukautetun TTS:n dokumentaatiosta"
 	},
 	"settings_option_ttsModule": {
 		"message": "TTS-moduuli"
@@ -561,10 +543,10 @@
 		"message": "Moduuli tekstin puhumiseen"
 	},
 	"settings_option_userLanguage": {
-		"message": "Kieli"
+		"message": "Kielesi"
 	},
 	"settings_option_userLanguage_desc": {
-		"message": "Kohdekieli tekstien kääntämiseen"
+		"message": "Kohdekieli tekstin kääntämiseen"
 	},
 	"settings_pageTitle": {
 		"message": "Asetukset"
@@ -573,10 +555,10 @@
 		"message": "Historia"
 	},
 	"settings_section_popup": {
-		"message": "Popup"
+		"message": "Ponnahdusikkuna"
 	},
 	"textTranslator_suggestLanguage": {
-		"message": "Näyttäisi siltä, että kieli on"
+		"message": "Vaikuttaa siltä, että kieli on"
 	},
 	"textTranslator_translateInputPlaceholder": {
 		"message": "Syötä teksti"
@@ -598,7 +580,7 @@
 		"placeholders": {
 			"translator_name": {
 				"content": "$1",
-				"example": "Google-kääntäjä"
+				"example": "Google translator"
 			}
 		}
 	},
@@ -618,10 +600,10 @@
 		"message": "Sulje"
 	},
 	"ttsManagerWindow_emptyTranslatorsListText": {
-		"message": "TTS-moduuleita ei ole vielä lisätty"
+		"message": "TTS-moduuleja ei ole vielä lisätty"
 	},
 	"ttsManagerWindow_message_ttsRemoveConfirmation": {
-		"message": "Haluatko varmasti poistaa TTS:n \"$tts_name$\"?",
+		"message": "Haluatko varmasti poistaa TTS-moduulin \"$tts_name$\"?",
 		"placeholders": {
 			"tts_name": {
 				"content": "$1",
@@ -630,7 +612,7 @@
 		}
 	},
 	"ttsManagerWindow_title": {
-		"message": "Tekstin puheeksi muuntamisen moduulit"
+		"message": "Teksti puheeksi -moduulit"
 	},
 	"ttsManagerWindow_translator_delete": {
 		"message": "Poista"
@@ -642,10 +624,10 @@
 		"message": "Parametrin on oltava numero"
 	},
 	"validation_numberBetweenRange": {
-		"message": "Parametrin on oltava luku välillä $1 ja $2"
+		"message": "Parametrin on oltava numero välillä $1 ja $2"
 	},
 	"validation_positiveNumber": {
-		"message": "Parametrin on oltava positiivinen luku."
+		"message": "Parametrin on oltava positiivinen numero"
 	},
 	"langCode_aa": {
 		"message": "Afar"

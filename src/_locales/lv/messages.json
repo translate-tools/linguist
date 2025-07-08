@@ -21,7 +21,7 @@
 		"message": "Kļūda"
 	},
 	"common_offlineTranslator": {
-		"message": "$1 - Bezsaistes tulks"
+		"message": "$1 - Bezsaistes tulkotājs"
 	},
 	"common_retry": {
 		"message": "Mēģināt vēlreiz"
@@ -30,46 +30,46 @@
 		"message": "Tulkot"
 	},
 	"component_hotkey_placeholder": {
-		"message": "Noklikšķiniet, lai ierakstītu karstās taustiņu kombinācijas"
+		"message": "Noklikšķiniet, lai ierakstītu īsinājumtaustiņu"
 	},
 	"component_hotkey_recordPlaceholder": {
-		"message": "Spiediet taustiņus"
+		"message": "Nospiediet taustiņus"
 	},
 	"component_hotkey_resetButton": {
 		"message": "Atiestatīt"
 	},
 	"contextMenu_disablePageTranslation": {
-		"message": "Atspējot lapas tulkošanu"
+		"message": "Izslēgt lapas tulkošanu"
 	},
 	"contextMenu_translatePage": {
 		"message": "Tulkot lapu"
 	},
 	"contextMenu_translateSelectedText": {
-		"message": "Tulkot izvēlēto tekstu"
+		"message": "Tulkot atlasīto tekstu"
 	},
 	"dictionaryButton_add": {
 		"message": "Pievienot vārdnīcai"
 	},
 	"dictionaryButton_delete": {
-		"message": "Izdzēst no vārdnīcas"
+		"message": "Dzēst no vārdnīcas"
 	},
 	"dictionary_button_export": {
 		"message": "Eksportēt"
 	},
 	"dictionary_button_removeAll": {
-		"message": "Noņemt visus"
+		"message": "Noņemt visu"
 	},
 	"dictionary_deleteAll": {
-		"message": "Vai tiešām vēlaties dzēst VISAS tulkojumu vārdnīcā?"
+		"message": "Vai tiešām vēlaties dzēst VISAS tulkojumus vārdnīcā?"
 	},
 	"dictionary_deleteConfirmation": {
-		"message": "Vai esat pārliecināts par šī tulkojuma dzēšanu?"
+		"message": "Vai tiešām vēlaties dzēst šo tulkojumu?"
 	},
 	"dictionary_description": {
-		"message": "Saglabājiet savus tulkojumus vārdnīcā, lai tos vēlāk atrastu"
+		"message": "Saglabājiet savus tulkojumus vārdnīcā, lai tos vēlāk vieglāk atrastu"
 	},
 	"dictionary_emptyDictionary": {
-		"message": "Vārdnīca ir tukša. Sāciet to aizpildīt, tulkojot tekstu"
+		"message": "Vārdnīca ir tukša. Sāciet to aizpildīt, tulkojot kādu tekstu"
 	},
 	"dictionary_filter_from": {
 		"message": "No"
@@ -78,10 +78,10 @@
 		"message": "Uz"
 	},
 	"dictionary_message_deleteAll_success": {
-		"message": "Visas tulkojumi tika noņemti"
+		"message": "Visi tulkojumi tika izdzēsti"
 	},
 	"dictionary_notFoundEntries": {
-		"message": "Tulkojumi, kas atbilst šiem filtriem, netika atrasti"
+		"message": "Tulkotājprogrammām atbilstoši rezultāti netika atrasti"
 	},
 	"dictionary_pageTitle": {
 		"message": "Vārdnīca"
@@ -98,35 +98,35 @@
 	"editorWindow_data_code": {
 		"message": "Kods"
 	},
-	"editorWindow_data_name": {
-		"message": "Nosaukums"
+	"editorWindow_data_translatorName": {
+		"message": "Tulkošanas nosaukums"
 	},
-	"editorWindow_message_invalidName": {
-		"message": "Nosaukumam jāsatur vismaz viens simbols"
+	"editorWindow_message_invalidTranslatorName": {
+		"message": "Tulkošanas nosaukumam jābūt vismaz ar vienu simbolu"
 	},
 	"editorWindow_save": {
 		"message": "Saglabāt"
 	},
 	"ext_description": {
-		"message": "Lapas un tekstu tulkošana, vārdnīca, vēsture, bezsaistes un pielāgoti tulki"
+		"message": "Lappušu un teksta tulkošana, vārdnīca, vēsture, bezsaistes un pielāgoti tulkotāji"
 	},
 	"ext_name": {
-		"message": "Linguist - tīmekļa lapu tulks"
+		"message": "Linguist - tīmekļa lapu tulkotājs"
 	},
 	"history_control_selectEntry": {
-		"message": "Izvēlieties ierakstu"
+		"message": "Izvēlēties ierakstu"
 	},
 	"history_controls_clearHistory": {
 		"message": "Notīrīt vēsturi"
 	},
 	"history_controls_deleteSelected": {
-		"message": "Izdzēst atlasīto"
+		"message": "Dzēst atlasīto"
 	},
 	"history_controls_selectAll": {
-		"message": "Atlasīt visu tulkojumu"
+		"message": "Atlasīt visas tulkojumus"
 	},
 	"history_message_clearHistoryConfirmation": {
-		"message": "Vai tiešām vēlaties notīrīt vēsturi? Visi ieraksti tiks dzēsti."
+		"message": "Vai tiešām vēlaties notīrīt vēsturi? Visi ieraksti tiks dzēsti"
 	},
 	"history_message_deleteEntryConfirmation": {
 		"message": "Vai tiešām vēlaties dzēst šo ierakstu?"
@@ -134,14 +134,14 @@
 	"history_message_deleteSelectedEntriesConfirmation": {
 		"message": "Vai tiešām vēlaties dzēst atlasītos ierakstus ($1)?"
 	},
-	"history_message_emptyEntries": {
-		"message": "Vēsture ir tīra"
-	},
 	"history_message_entriesNotFound": {
-		"message": "Netika atrasti tulkojumi, kas atbilst filtram"
+		"message": "Atbilstoši filtram nav atrasti tulkojumi"
+	},
+	"history_message_noEntries": {
+		"message": "Vēsture ir tukša"
 	},
 	"history_notification_disabled": {
-		"message": "Vēstures ierakstīšana ir atspējota, tāpēc jauni ieraksti neparādīsies. To var mainīt <slot id=preferences>iestatījumos</slot>"
+		"message": "Vēstures ierakstīšana ir atspējota, tāpēc jauni ieraksti netiks parādīti. To var mainīt <slot id=preferences>iestatījumos</slot>"
 	},
 	"history_pageTitle": {
 		"message": "Vēsture"
@@ -156,22 +156,22 @@
 		"message": "Mainīt valodu"
 	},
 	"lang_detect": {
-		"message": "Automātiska valodas noteikšana"
+		"message": "Automātiska noteikšana"
 	},
 	"lang_select": {
-		"message": "Izvēlieties valodu"
+		"message": "Izvēlēties valodu"
 	},
 	"lang_swap": {
-		"message": "Apmainīt valodas vietām"
+		"message": "Apmainīt valodas"
 	},
 	"message_askResetConfig": {
 		"message": "Atiestatīt iestatījumus?"
 	},
 	"message_cacheFlushed": {
-		"message": "Kešatmiņa ir notīrīta"
+		"message": "Kešatmiņa ir iztukšota"
 	},
 	"message_changesSaved": {
-		"message": "Izmaiņas ir saglabātas"
+		"message": "Izmaiņas saglabātas"
 	},
 	"message_error": {
 		"message": "Kļūda"
@@ -180,7 +180,7 @@
 		"message": "Tulkošanas kļūda"
 	},
 	"message_serviceRequiredKey": {
-		"message": "Servisam nepieciešama atslēga"
+		"message": "Pakalpojumam nepieciešama atslēga"
 	},
 	"message_translateOfText": {
 		"message": "Tulkots"
@@ -189,22 +189,22 @@
 		"message": "Nezināma kļūda"
 	},
 	"pageTranslator_alwaysTranslateLang": {
-		"message": "Vienmēr tulkojiet šo valodu"
+		"message": "Vienmēr tulkot šo valodu"
 	},
 	"pageTranslator_commonPreferences_autoTranslate_disable": {
 		"message": "Atspējot"
 	},
 	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
-		"message": "Atspējot visiem saitēm"
+		"message": "Atspējot visām vietnēm"
 	},
 	"pageTranslator_commonPreferences_autoTranslate_enable": {
-		"message": "Iespējot"
+		"message": "Ieslēgt"
 	},
 	"pageTranslator_commonPreferences_title": {
-		"message": "Vispārīgie iestatījumi šim valodai"
+		"message": "Vispārējās preferences šai valodai"
 	},
 	"pageTranslator_option_autoTranslate": {
-		"message": "Automātiski tulkošana"
+		"message": "Automātiska tulkošana"
 	},
 	"pageTranslator_showOptions": {
 		"message": "Rādīt opcijas"
@@ -213,16 +213,16 @@
 		"message": "Rādīt oriģinālu"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_always": {
-		"message": "Vienmēr tulkot"
+		"message": "Vēlreiz tulkot"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
-		"message": "Vienmēr tulkot šajā valodā"
+		"message": "Vienmēr tulkot šai valodai"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_default": {
-		"message": "Izmantot kopējos noteikumus"
+		"message": "Izmantot vispārējās noteikumus"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
-		"message": "Izmantot kopējos noteikumus šajā valodā"
+		"message": "Izmantot vispārējās noteikumus šai valodai"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_never": {
 		"message": "Nekad netulkot"
@@ -237,7 +237,7 @@
 		"message": "Tulkot lapu"
 	},
 	"pageTranslator_translationReport": {
-		"message": "Tulkojuma pārskats"
+		"message": "Tulkojuma ziņojums"
 	},
 	"pageTranslator_translationReport_queue": {
 		"message": "Rinda"
@@ -249,40 +249,40 @@
 		"message": "Tulkots"
 	},
 	"popup_tabIdNotFound": {
-		"message": "Lapu \"$1\" nav atrasta"
+		"message": "Cilne \"$1\" nav atrasta"
 	},
 	"popup_tab_translatePage": {
-		"message": "Lapas tulkošana"
+		"message": "Lapas tulkojums"
 	},
 	"popup_tab_translateText": {
-		"message": "Teksta tulkošana"
+		"message": "Teksta tulkojums"
 	},
 	"settings_button_cancel": {
 		"message": "Atcelt"
 	},
 	"settings_button_export": {
-		"message": "Eksportēt konfigurāciju"
+		"message": "Eksportēt iestatījumus"
 	},
 	"settings_button_import": {
-		"message": "Importēt konfigurāciju"
+		"message": "Importēt iestatījumus"
 	},
 	"settings_button_reset": {
-		"message": "Atiestatīt konfigurāciju"
+		"message": "Atjaunot iestatījumus"
 	},
 	"settings_button_saveChanges": {
 		"message": "Saglabāt izmaiņas"
 	},
 	"settings_message_clearCache_success": {
-		"message": "Kešatmiņa ir notīrīta"
+		"message": "Kešatmiņa notīrīta"
 	},
 	"settings_message_common_invalidValueType": {
 		"message": "Nederīga vērtība"
 	},
 	"settings_message_importConfig_invalidFile": {
-		"message": "Nevar apstrādāt importējamo failu"
+		"message": "Importējamais fails nav apstrādājams"
 	},
 	"settings_message_importConfig_success": {
-		"message": "Importēšana pabeigta"
+		"message": "Imports pabeigts"
 	},
 	"settings_message_resetConfig_confirm": {
 		"message": "Vai vēlaties atiestatīt iestatījumus?"
@@ -292,24 +292,6 @@
 	},
 	"settings_message_saveChanges_success": {
 		"message": "Izmaiņas saglabātas"
-	},
-	"settings_option_appIcon": {
-		"message": "Paplašinājuma ikona"
-	},
-	"settings_option_appIcon_desc": {
-		"message": "Kad tiek izvēlēta dinamiskā ikona, krāsas tiks pielāgotas pārlūka tēmai"
-	},
-	"settings_option_appIcon_item_auto": {
-		"message": "Dinamisks"
-	},
-	"settings_option_appIcon_item_color": {
-		"message": "Krāsa"
-	},
-	"settings_option_appIcon_item_dark": {
-		"message": "Tumšs"
-	},
-	"settings_option_appIcon_item_light": {
-		"message": "Gaišs"
 	},
 	"settings_option_cache": {
 		"message": "Kešatmiņa"
@@ -321,34 +303,34 @@
 		"message": "Noņemt kešatmiņu, ja ir tulkojuma artefakti vai nepieciešams noņemt noslēpumus"
 	},
 	"settings_option_cache_enable": {
-		"message": "Iespējot kešatmiņu"
+		"message": "Ieslēgt kešatmiņu"
 	},
 	"settings_option_cache_enable_desc": {
-		"message": "Kad kešatmiņa ir iespējota, tulkojumi, kas ir tulkoti vienreiz, būs pieejami nekavējoties, pat bez interneta."
+		"message": "Kad kešatmiņa ir ieslēgta, jau tulkotie tulkojumi būs tūlītēji pieejami, pat bez interneta savienojuma"
 	},
 	"settings_option_cache_ignoreCase": {
-		"message": "Reģistru neskatoties"
+		"message": "Nejūtīgs pret lielajiem/mazajiem burtiem"
 	},
 	"settings_option_cache_ignoreCase_desc": {
-		"message": "Ja ir aktivizēts, tulkojumi no kešatmiņas tiks izmantoti ar nesakritības gadījumiem, kas var izraisīt tulkojuma artefaktus."
+		"message": "Ieslēdzot šo, tiks izmantoti kešatmiņā esošie tulkojumi arī daļēji atbilstošiem tekstiem, kas var radīt tulkojuma artefaktus"
 	},
 	"settings_option_commonSettings": {
-		"message": "Kopējas iestatījumi"
+		"message": "Kopējie iestatījumi"
 	},
 	"settings_option_customTranslatorModule": {
-		"message": "Pielāgoti tulkošanas moduļi"
+		"message": "Pielāgoti tulkotāji"
 	},
 	"settings_option_customTranslatorModule_desc": {
-		"message": "Jūs varat pievienot pielāgotus tulkošanas moduļus savām iecienītākajām tulkošanas pakalpojumu platformām. Lasiet vairāk un atrodiet moduļus <slot id=docs>pielāgotie tulkošanas moduļi dokumentācijā</slot>."
+		"message": "Jūs varat pievienot pielāgotus tulkotājus saviem iemīļotajiem tulkošanas pakalpojumiem. Lasiet vairāk un atrodiet moduļus <slot id=docs>pielāgoto tulkotāju dokumentācijā</slot>"
 	},
 	"settings_option_customTranslatorModule_manageButton": {
-		"message": "Pārvaldīt tulks"
+		"message": "Pārvaldīt tulkotājus"
 	},
 	"settings_option_history_enable": {
-		"message": "Iespējot vēsturi"
+		"message": "Ieslēgt vēsturi"
 	},
 	"settings_option_history_enable_desc": {
-		"message": "Kad ieslēgts, jebkura tulkošana tiks ierakstīta vēstures lapā"
+		"message": "Ieslēdzot, katra tulkošana tiks ierakstīta vēstures lapā"
 	},
 	"settings_option_mainPreferences": {
 		"message": "Galvenie iestatījumi"
@@ -357,94 +339,94 @@
 		"message": "Lapas tulkošana"
 	},
 	"settings_option_pageTranslation_detectLanguageByContent": {
-		"message": "Noteikt valodu, pamatojoties uz saturu"
+		"message": "Noteikt valodu pēc satura"
 	},
 	"settings_option_pageTranslation_detectLanguageByContent_desc": {
-		"message": "Analizējiet tekstu tīmekļa lapā, lai noteiktu tā valodu. Ja atspējots, izmantos lapas metadatos norādīto valodu."
+		"message": "Analizēt tīmekļa lapas tekstu, lai noteiktu lapas valodu. Izslēdzot, tiks izmantota valoda, kas norādīta lapas metadatos"
 	},
 	"settings_option_pageTranslation_enableContextMenu": {
-		"message": "Iespējot konteksta izvēlnes pogu"
+		"message": "Ieslēgt konteksta izvēlnes pogu"
 	},
 	"settings_option_pageTranslation_enableContextMenu_desc": {
-		"message": "Pievienojiet pogu, lai iespējotu lapas tulkošanu konteksta izvēlnē."
+		"message": "Pievienot pogu, lai pārslēgtu lapas tulkošanu konteksta izvēlnē"
 	},
 	"settings_option_pageTranslation_excludeSelectors": {
-		"message": "Atlasītāji, kurus izlaist tulkošanā"
+		"message": "Selektori, kuri netiks tulkoti"
 	},
 	"settings_option_pageTranslation_excludeSelectors_desc": {
-		"message": "CSS atlasītāju saraksts, kurus netiks tulkots. Katrs atlasītājs jaunā rindā. Ja elements atbilst kādam no šiem atlasītājiem, tas, tā atribūti un iekšējie elementi netiks tulkoti."
+		"message": "CSS selektoru saraksts, kuri netiks tulkoti. Katrs selektors jaunā rindā. Ja elements atbilst kādam no šiem selektoriem, tas, tā atribūti un iekšējie elementi netiks tulkoti"
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
-		"message": "Tulkot tikai redzamās daļas"
+		"message": "Tulko tikai redzamos elementus"
 	},
 	"settings_option_pageTranslation_lazyTranslate_desc": {
-		"message": "Kad šī opcija ir ieslēgta, tikai redzamie elementi tiks tulko ti. Tas var būt noderīgi, lai ietaupītu tīkla satiksmi."
+		"message": "Kad šī opcija ir iespējota, tiks tulkoti tikai redzamie elementi. Šī opcija taupa tīkla datplūsmu un ierobežo izmantoto tulkošanas pakalpojumu pieprasījumus"
 	},
 	"settings_option_pageTranslation_originalTextPopup": {
 		"message": "Iespējot uznirstošo logu ar oriģinālo tekstu"
 	},
 	"settings_option_pageTranslation_originalTextPopup_desc": {
-		"message": "Rādīt uznirstošo tekstu ar oriģinālo tekstu, virzot peles kursoru uz tulkojumu"
+		"message": "Rādīt uznirstošo logu ar oriģinālo tekstu, novietojot peles kursoru virs tulkotajiem teksta blokiem"
 	},
 	"settings_option_pageTranslation_toggleTranslationHotkey": {
 		"message": "Karstie taustiņi"
 	},
 	"settings_option_pageTranslation_toggleTranslationHotkey_desc": {
-		"message": "Saīsnes, lai pārslēgtu lapas tulkojumu\nNospiediet ESC, lai atiestatītu taustiņus"
+		"message": "Īsinājumtaustiņi lapas tulkojuma pārslēgšanai\nNospiediet ESC, lai atiestatītu taustiņus"
 	},
 	"settings_option_pageTranslation_translatableAttributes": {
-		"message": "Tulkojamie atribūti"
+		"message": "Tulkotie atribūti"
 	},
 	"settings_option_pageTranslation_translatableAttributes_desc": {
-		"message": "Ievadiet <slot id=htmlAttributes>HTML atribūtu</slot> nosaukumus tulkošanai. Katrs atribūts jaunā rindā."
+		"message": "Ievadiet tulkojamos <slot id=htmlAttributes>HTML atribūtu</slot> nosaukumus, pa vienam atribūtam katrā rindā"
 	},
 	"settings_option_popupTab_pageTranslator_showCounters": {
-		"message": "Rādīt tulkošanas statistiku"
+		"message": "Rādīt tulkojuma statistiku"
 	},
 	"settings_option_popupTab_pageTranslator_showCounters_desc": {
-		"message": "Parādīt statistiku lapas tulkošanai"
+		"message": "Parādīt lapas tulkojuma statistiku"
 	},
 	"settings_option_selectTranslation": {
-		"message": "Izvēlētā teksta tulkošana"
+		"message": "Atlasītā teksta tulkojums"
 	},
 	"settings_option_selectTranslation_detectedLangFirst": {
-		"message": "Dot priekšroku izvēlētā teksta atpazītajai valodai, nevis lapas valodai"
+		"message": "Dodiet priekšroku atpazītajai teksta valodai pār lapas valodu"
 	},
 	"settings_option_selectTranslation_detectedLangFirst_desc": {
-		"message": "Ja iespējots, tiek izmantota izvēlētā teksta atpazītā valoda, nevis lapas valoda"
+		"message": "Iespējojot šo, izvēlētā teksta atpazītā valoda tiks izvēlēta pār lapas valodu"
 	},
 	"settings_option_selectTranslation_disableWhileTranslatePage": {
-		"message": "Atspējot, kamēr tulkos lapu"
+		"message": "Atspējot lapas tulkošanas laikā"
 	},
 	"settings_option_selectTranslation_enable": {
-		"message": "Iespējot"
+		"message": "Ieslēgt"
 	},
 	"settings_option_selectTranslation_focusOnTranslateButton": {
-		"message": "Automātiski fokusēties uz tulkošanas pogu"
+		"message": "Automātiska fokusēšanās uz tulkošanas pogu"
 	},
 	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
-		"message": "Fokusēties uz tulkošanas pogu, kad tas parādās"
+		"message": "Pievērst uzmanību tulkošanas pogai, kad tā parādās"
 	},
 	"settings_option_selectTranslation_header_languageChoice": {
 		"message": "Valodas iestatījumi"
 	},
 	"settings_option_selectTranslation_isUseAutoForDetectLang": {
-		"message": "Iespējot automātisko valodas noteikšanu tulkojamā teksta gadījumā"
+		"message": "Ieslēgt automātisko valodas atpazīšanu tulkotājam"
 	},
 	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
-		"message": "Izmantot automātisko valodas noteikšanu tulks gadījumos, kad vietne nevar atpazīt valodu"
+		"message": "Izmantot tulkotāja automātisko valodas atpazīšanu, ja valodu nav iespējams noteikt lokāli"
 	},
 	"settings_option_selectTranslation_mode": {
 		"message": "Tulkošanas aktivizēšana"
 	},
 	"settings_option_selectTranslation_mode_item_contextMenu": {
-		"message": "Konteksta izvēlnes poga"
+		"message": "Kontekstuālā izvēlne"
 	},
 	"settings_option_selectTranslation_mode_item_popupButton": {
-		"message": "Uznirstošās pogas teksts"
+		"message": "Uznirstošā poga"
 	},
 	"settings_option_selectTranslation_mode_item_quickTranslate": {
-		"message": "Ātrā tulkotāja izvēle"
+		"message": "Ātra tulkošana, atlasot tekstu"
 	},
 	"settings_option_selectTranslation_modifiers": {
 		"message": "Modifikatori"
@@ -465,58 +447,58 @@
 		"message": "shift"
 	},
 	"settings_option_selectTranslation_rememberDirection": {
-		"message": "Atcerēties pēdējo teksta valodu"
+		"message": "Atcerēties nesen izvēlēto teksta valodu"
 	},
 	"settings_option_selectTranslation_showOnceForSelection": {
-		"message": "Rādīt tulkošanas pogu tikai vienu reizi katram teksta izvēlē"
+		"message": "Rādīt tulkošanas pogu tikai vienreiz katram teksta atlasei"
 	},
 	"settings_option_selectTranslation_showOnceForSelection_desc": {
-		"message": "Poga parādīsies tikai vienu reizi katram teksta izvēlē. Ja vēlaties to parādīt vēlreiz, atkārtoti atlasiet tekstu"
+		"message": "Poga tiks parādīta tikai vienreiz katram teksta atlasījumam. Lai to parādītu vēlreiz, atlasiet tekstu no jauna"
 	},
 	"settings_option_selectTranslation_showOriginalText": {
 		"message": "Rādīt oriģinālo tekstu"
 	},
 	"settings_option_selectTranslation_showOriginalText_desc": {
-		"message": "Pievienot bloku ar oriģinālo tekstu izvēlnes laukumam ar tulkojumu"
+		"message": "Pievienot bloku ar oriģinālo tekstu tulkojuma uznirstošajā logā"
 	},
 	"settings_option_selectTranslation_strictSelection": {
-		"message": "Stingra atlase"
+		"message": "Nepieciešama precīza atlase"
 	},
 	"settings_option_selectTranslation_strictSelection_desc": {
-		"message": "Ignorēt atlasi, ja kreisais peles klikšķis tiek atlaists ārpus bloka, kas satur atlasīto tekstu"
+		"message": "Ignorēt atlasi, ja kreisās peles pogas atbrīvošana notiek ārpus bloka, kurā ir atlasītais teksts"
 	},
 	"settings_option_selectTranslation_timeoutForHideButton": {
-		"message": "Aizkavēšanās, lai paslēptu pogu"
+		"message": "Aizkave pirms pogas paslēpšanas"
 	},
 	"settings_option_selectTranslation_timeoutForHideButton_desc": {
-		"message": "Aizkavēšanās milisekundēs, pirms pogu paslēpj, ja kursoru neuztur virs tām. Uz pogas virsū novietotais kursors atiestatīs taimeri. Lai atspējotu automātisko paslēpšanu, iestatiet vērtību mazāku par 1"
+		"message": "Aizkave milisekundēs pirms pogas paslēpšanas, ja peles kursoru nepārvieto virs tās. Peles kursora novietošana virs pogas atiestata taimeri. Lai atslēgtu automātisko paslēpšanu, iestatiet vērtību mazāku par 1"
 	},
 	"settings_option_selectTranslation_zIndex": {
 		"message": "z-indekss"
 	},
 	"settings_option_selectTranslation_zIndex_desc": {
-		"message": "Palieliniet vērtību, ja daži elementi uz dažādām lapām pārklājas ar iztulkojuma teksta uznirstošo logu"
+		"message": "Palieliniet šo vērtību, ja dažās lapās elementi pārklāj tulkotā teksta uznirstošo logu"
 	},
 	"settings_option_textTranslator": {
 		"message": "Teksta tulkošana"
 	},
 	"settings_option_textTranslator_rememberText": {
-		"message": "Atcerēties tulkojumu"
+		"message": "Atcerēties tulkoto tekstu"
 	},
 	"settings_option_textTranslator_rememberText_desc": {
-		"message": "Atcerēties tulkoto tekstu nākamajai reizei, kad tiek atvērts logs"
+		"message": "Atcerēties tulkoto tekstu nākamajā loga atvēršanas reizē"
 	},
 	"settings_option_textTranslator_spellCheck": {
-		"message": "Iespējot pareizrakstības pārbaudi"
+		"message": "Ieslēgt pareizrakstības pārbaudi"
 	},
 	"settings_option_textTranslator_suggestLanguage": {
-		"message": "Ieteikt konstatēto teksta valodu"
+		"message": "Ieteikt noteikto teksta valodu"
 	},
 	"settings_option_textTranslator_suggestLanguageAlways": {
-		"message": "Vienmēr konstatēt un ieteikt valodu"
+		"message": "Vienmēr noteikt un ieteikt valodu"
 	},
 	"settings_option_textTranslator_suggestLanguageAlways_desc": {
-		"message": "Kad izslēgts, valodas ieteikumi parādīsies tikai tad, ja avota valoda ir automātiski noteikta"
+		"message": "Izslēdzot, valodas ieteikumi parādīsies tikai tad, ja avota valoda tiks automātiski noteikta"
 	},
 	"settings_option_translatePreferences": {
 		"message": "Tulkošanas preferences"
@@ -525,25 +507,25 @@
 		"message": "Tulkošanas plānotājs"
 	},
 	"settings_option_translateScheduler_delay": {
-		"message": "Teksta uzkrāšanas aizture"
+		"message": "Teksta uzkrāšanās aizture"
 	},
 	"settings_option_translateScheduler_delay_desc": {
-		"message": "Tulkošanas plānotājs samazina pieprasījumu skaitu pie tulkošanas pakalpojumu API. Plānotājs cenšas apkopot tekstus, lai nosūtītu pēc iespējas vairāk tekstu vienā pieprasījumā. Plānotājs gaida norādīto laiku milisekundēs, lai apkopotu jaunus tekstus, pirms sāk tulkošanu."
+		"message": "Tulkšanas plānotājs samazina pieprasījumu skaitu tulkošanas pakalpojuma API. Tas cenšas apkopot pēc iespējas vairāk tekstu vienā pieprasījumā. Plānotājs gaidīs norādīto laiku milisekundēs, lai savāktu jaunus tekstus pirms tulkošanas uzsākšanas."
 	},
 	"settings_option_translateScheduler_retryLimit": {
-		"message": "Mēģinājumu atkārtoti tulkošana"
+		"message": "Tulkot mēģinājumu skaits"
 	},
 	"settings_option_translateScheduler_retryLimit_desc": {
-		"message": "Plānotājs mēģinās atkārtoti tulkot tekstus, ja radušās kļūdas tulkojumā. Šī iespēja iestata limitu atkārtotajiem mēģinājumiem. Ievadiet negatīvu skaitli, lai ļautu neierobežotai skaitam mēģinājumu."
+		"message": "Plānotājs atkārtoti mēģinās tulkot tekstus, ja radīsies tulkošanas kļūdas. Šī opcija nosaka atkārtoto mēģinājumu ierobežojumu. Iestatiet negatīvu skaitli, lai atļautu neierobežotus mēģinājumus."
 	},
 	"settings_option_translatorModule": {
 		"message": "Tulkotāja modulis"
 	},
 	"settings_option_translatorModule_desc": {
-		"message": "Tulkojumu kvalitāte un pieejamie tulkojuma valodas ir atkarīgas no tulkotāja."
+		"message": "Tulkojumu kvalitāte un pieejamās valodas ir atkarīgas no tulkotāja."
 	},
 	"settings_option_tts": {
-		"message": "Teksta balss (TTS)"
+		"message": "Teksta runa (TTS)"
 	},
 	"settings_option_ttsCustomModules": {
 		"message": "Pielāgota TTS"
@@ -552,19 +534,19 @@
 		"message": "Pārvaldīt TTS moduļus"
 	},
 	"settings_option_ttsCustomModules_desc": {
-		"message": "Jūs varat pievienot TTS moduļus, kas izmanto jūsu izvēlēto servisu un balss. Lasiet vairāk un atrodiet moduļus pielāgoto TTS dokumentācijā."
+		"message": "Jūs varat pievienot TTS moduļus, kas izmanto jūsu iecienītākos pakalpojumus un balsis. Lasiet vairāk un atrodiet moduļus pielāgotās TTS dokumentācijā."
 	},
 	"settings_option_ttsModule": {
 		"message": "TTS modulis"
 	},
 	"settings_option_ttsModule_desc": {
-		"message": "Modulis, lai runātu tekstus"
+		"message": "Modulis teksta nolasīšanai"
 	},
 	"settings_option_userLanguage": {
 		"message": "Jūsu valoda"
 	},
 	"settings_option_userLanguage_desc": {
-		"message": "Mērķa valoda tekstu tulkošanai"
+		"message": "Mērķvaloda teksta tulkošanai"
 	},
 	"settings_pageTitle": {
 		"message": "Iestatījumi"
@@ -573,16 +555,16 @@
 		"message": "Vēsture"
 	},
 	"settings_section_popup": {
-		"message": "Uznirstošais logs"
+		"message": "Uzvedne"
 	},
 	"textTranslator_suggestLanguage": {
-		"message": "Izskatās, ka tā valoda ir"
+		"message": "Izskatās, ka valoda ir"
 	},
 	"textTranslator_translateInputPlaceholder": {
-		"message": "Ievades teksts"
+		"message": "Ievadiet tekstu"
 	},
 	"textTranslator_translatePlaceholder": {
-		"message": "Tulkots teksts"
+		"message": "Tulkojumā teksts"
 	},
 	"translatorsManagerWindow_add": {
 		"message": "Pievienot"
@@ -591,19 +573,19 @@
 		"message": "Aizvērt"
 	},
 	"translatorsManagerWindow_emptyTranslatorsListText": {
-		"message": "Pielāgotie tulki vēl nav pievienoti"
+		"message": "Pielāgoti tulkotāji vēl nav pievienoti"
 	},
 	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
-		"message": "Vai tiešām vēlaties noņemt tulkojumu programmu \"$translator_name$\"?",
+		"message": "Vai tiešām vēlaties noņemt tulkotāju \"$translator_name$\"?",
 		"placeholders": {
 			"translator_name": {
 				"content": "$1",
-				"example": "Google tulks"
+				"example": "Google translator"
 			}
 		}
 	},
 	"translatorsManagerWindow_title": {
-		"message": "Pielāgotie tulkotāji"
+		"message": "Pielāgoti tulkotāji"
 	},
 	"translatorsManagerWindow_translator_delete": {
 		"message": "Dzēst"
@@ -621,7 +603,7 @@
 		"message": "TTS moduļi vēl nav pievienoti"
 	},
 	"ttsManagerWindow_message_ttsRemoveConfirmation": {
-		"message": "Vai tiešām vēlaties noņemt TTS moduli “$tts_name$”?",
+		"message": "Vai tiešām vēlaties noņemt TTS moduli \"$tts_name$\"?",
 		"placeholders": {
 			"tts_name": {
 				"content": "$1",
@@ -630,7 +612,7 @@
 		}
 	},
 	"ttsManagerWindow_title": {
-		"message": "Teksta uz runas moduļi"
+		"message": "Teksta runas moduļi"
 	},
 	"ttsManagerWindow_translator_delete": {
 		"message": "Dzēst"
@@ -642,10 +624,10 @@
 		"message": "Parametram jābūt skaitlim"
 	},
 	"validation_numberBetweenRange": {
-		"message": "Parametram jābūt skaitlim starp $1 un $2"
+		"message": "Parametram jābūt skaitlim no $1 līdz $2"
 	},
 	"validation_positiveNumber": {
-		"message": "Parametram jābūt pozitīvam skaitlim."
+		"message": "Parametram jābūt pozitīvam skaitlim"
 	},
 	"langCode_aa": {
 		"message": "Afāru"

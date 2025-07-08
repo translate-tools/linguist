@@ -3,10 +3,10 @@
 		"message": "Додати переклад до словника"
 	},
 	"common_action_removeFromDictionary": {
-		"message": "Вилучити переклад зі словника"
+		"message": "Видалити переклад зі словника"
 	},
 	"common_bgUnavailable": {
-		"message": "Сценарій фону недоступний"
+		"message": "Фоновий скрипт недоступний"
 	},
 	"common_cancel": {
 		"message": "Скасувати"
@@ -21,16 +21,16 @@
 		"message": "Помилка"
 	},
 	"common_offlineTranslator": {
-		"message": "$1 - Офлайн-перекладач"
+		"message": "$1 - Офлайн перекладач"
 	},
 	"common_retry": {
-		"message": "Спробувати ще раз"
+		"message": "Повторити"
 	},
 	"common_translate": {
 		"message": "Перекласти"
 	},
 	"component_hotkey_placeholder": {
-		"message": "Клікніть, щоб записати гарячі клавіші"
+		"message": "Натисніть, щоб записати скорочення"
 	},
 	"component_hotkey_recordPlaceholder": {
 		"message": "Натисніть клавіші"
@@ -45,7 +45,7 @@
 		"message": "Перекласти сторінку"
 	},
 	"contextMenu_translateSelectedText": {
-		"message": "Перекласти обраний текст"
+		"message": "Перекласти вибраний текст"
 	},
 	"dictionaryButton_add": {
 		"message": "Додати до словника"
@@ -57,25 +57,25 @@
 		"message": "Експортувати"
 	},
 	"dictionary_button_removeAll": {
-		"message": "Видалити всі"
+		"message": "Видалити все"
 	},
 	"dictionary_deleteAll": {
-		"message": "Ви впевнені, що хочете видалити ВСІ переклади зі словника?"
+		"message": "Ви впевнені, що хочете видалити ВЕСІ переклади зі словника?"
 	},
 	"dictionary_deleteConfirmation": {
 		"message": "Ви впевнені, що хочете видалити цей переклад?"
 	},
 	"dictionary_description": {
-		"message": "Збережіть свої переклади в словнику, щоб знайти їх пізніше"
+		"message": "Зберігайте свої переклади у словнику, щоб знайти їх пізніше"
 	},
 	"dictionary_emptyDictionary": {
-		"message": "Словник порожній. Почніть заповнювати його, перекладаючи якийсь текст"
+		"message": "Словник порожній. Почніть заповнювати його, перекладаючи текст"
 	},
 	"dictionary_filter_from": {
 		"message": "З"
 	},
 	"dictionary_filter_to": {
-		"message": "До"
+		"message": "У"
 	},
 	"dictionary_message_deleteAll_success": {
 		"message": "Всі переклади були видалені"
@@ -98,20 +98,20 @@
 	"editorWindow_data_code": {
 		"message": "Код"
 	},
-	"editorWindow_data_name": {
-		"message": "Назва"
+	"editorWindow_data_translatorName": {
+		"message": "Ім'я перекладача"
 	},
-	"editorWindow_message_invalidName": {
-		"message": "Назва повинна містити щонайменше один символ"
+	"editorWindow_message_invalidTranslatorName": {
+		"message": "Ім'я перекладача повинно містити щонайменше один символ"
 	},
 	"editorWindow_save": {
 		"message": "Зберегти"
 	},
 	"ext_description": {
-		"message": "Переклад сторінок та текстів, словник, історія, автономні та користувацькі перекладачі"
+		"message": "Переклад сторінок та текстів, словник, історія, офлайн та користувацькі перекладачі"
 	},
 	"ext_name": {
-		"message": "Лінгвіст - перекладач веб-сторінок"
+		"message": "Linguist - перекладач веб-сторінок"
 	},
 	"history_control_selectEntry": {
 		"message": "Вибрати запис"
@@ -134,14 +134,14 @@
 	"history_message_deleteSelectedEntriesConfirmation": {
 		"message": "Ви впевнені, що хочете видалити вибрані записи ($1)?"
 	},
-	"history_message_emptyEntries": {
-		"message": "Історія очищена"
-	},
 	"history_message_entriesNotFound": {
-		"message": "Перекладів, що задовольняють фільтр, не знайдено"
+		"message": "Переклади, що відповідають фільтру, не знайдені"
+	},
+	"history_message_noEntries": {
+		"message": "Історія порожня"
 	},
 	"history_notification_disabled": {
-		"message": "Запис історії вимкнено, тому нові записи не зʼявлятимуться. Ви можете змінити це в <slot id=preferences>налаштуваннях</slot>"
+		"message": "Запис історії вимкнено, тому нові записи не з’являтимуться. Ви можете змінити це в <slot id=preferences>налаштуваннях</slot>"
 	},
 	"history_pageTitle": {
 		"message": "Історія"
@@ -150,19 +150,19 @@
 		"message": "Пошук за текстом"
 	},
 	"inlineTranslator_showOriginalText": {
-		"message": "Показати початковий текст"
+		"message": "Показати оригінальний текст"
 	},
 	"lang_change": {
 		"message": "Змінити мову"
 	},
 	"lang_detect": {
-		"message": "Автоматичне визначення"
+		"message": "Автовизначення"
 	},
 	"lang_select": {
 		"message": "Вибрати мову"
 	},
 	"lang_swap": {
-		"message": "Перемістити мови"
+		"message": "Поміняти мови"
 	},
 	"message_askResetConfig": {
 		"message": "Скинути налаштування?"
@@ -171,7 +171,7 @@
 		"message": "Кеш очищено"
 	},
 	"message_changesSaved": {
-		"message": "Зміни збережені"
+		"message": "Зміни збережено"
 	},
 	"message_error": {
 		"message": "Помилка"
@@ -189,13 +189,13 @@
 		"message": "Невідома помилка"
 	},
 	"pageTranslator_alwaysTranslateLang": {
-		"message": "Завжди перекладайте цю мову"
+		"message": "Завжди перекладати цю мову"
 	},
 	"pageTranslator_commonPreferences_autoTranslate_disable": {
 		"message": "Вимкнути"
 	},
 	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
-		"message": "Вимкнути для всіх сайтів"
+		"message": "Вимкнути на всіх сайтах"
 	},
 	"pageTranslator_commonPreferences_autoTranslate_enable": {
 		"message": "Увімкнути"
@@ -207,7 +207,7 @@
 		"message": "Автоматичний переклад"
 	},
 	"pageTranslator_showOptions": {
-		"message": "Показати параметри"
+		"message": "Показати опції"
 	},
 	"pageTranslator_showOriginal": {
 		"message": "Показати оригінал"
@@ -219,10 +219,10 @@
 		"message": "Завжди перекладати для цієї мови"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_default": {
-		"message": "Використовувати загальні правила"
+		"message": "Використовувати стандартні правила"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
-		"message": "Використовувати загальні правила для цієї мови"
+		"message": "Використовувати стандартні правила для цієї мови"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_never": {
 		"message": "Ніколи не перекладати"
@@ -249,7 +249,7 @@
 		"message": "Перекладено"
 	},
 	"popup_tabIdNotFound": {
-		"message": "Вкладка \"$1\" не знайдена"
+		"message": "Вкладку \"$1\" не знайдено"
 	},
 	"popup_tab_translatePage": {
 		"message": "Переклад сторінки"
@@ -261,10 +261,10 @@
 		"message": "Скасувати"
 	},
 	"settings_button_export": {
-		"message": "Експортувати конфігурацію"
+		"message": "Експорт конфігурації"
 	},
 	"settings_button_import": {
-		"message": "Імпортувати конфігурацію"
+		"message": "Імпорт конфігурації"
 	},
 	"settings_button_reset": {
 		"message": "Скинути конфігурацію"
@@ -293,24 +293,6 @@
 	"settings_message_saveChanges_success": {
 		"message": "Зміни збережено"
 	},
-	"settings_option_appIcon": {
-		"message": "Іконка розширення"
-	},
-	"settings_option_appIcon_desc": {
-		"message": "При виборі динамічної іконки кольори будуть адаптовані до теми браузера"
-	},
-	"settings_option_appIcon_item_auto": {
-		"message": "Динамічна"
-	},
-	"settings_option_appIcon_item_color": {
-		"message": "Колір"
-	},
-	"settings_option_appIcon_item_dark": {
-		"message": "Темний"
-	},
-	"settings_option_appIcon_item_light": {
-		"message": "Світлий"
-	},
 	"settings_option_cache": {
 		"message": "Кеш"
 	},
@@ -324,13 +306,13 @@
 		"message": "Увімкнути кеш"
 	},
 	"settings_option_cache_enable_desc": {
-		"message": "Якщо кеш увімкнено, переклади, що були перекладені один раз, будуть доступні негайно, навіть без інтернету"
+		"message": "Коли кеш увімкнено, переклади, які були виконані раніше, будуть доступні одразу, навіть без підключення до Інтернету"
 	},
 	"settings_option_cache_ignoreCase": {
-		"message": "Ігнорувати регістр"
+		"message": "Реєстр не враховується"
 	},
 	"settings_option_cache_ignoreCase_desc": {
-		"message": "Коли включено, переклади з кешу будуть використовуватися з ненадійними відповідностями, що може спричинити артефакти перекладу"
+		"message": "Якщо увімкнено, для нечітких збігів будуть використовуватися переклади з кешу, що може спричинити артефакти перекладу"
 	},
 	"settings_option_commonSettings": {
 		"message": "Загальні налаштування"
@@ -339,7 +321,7 @@
 		"message": "Користувацькі перекладачі"
 	},
 	"settings_option_customTranslatorModule_desc": {
-		"message": "Ви можете додати користувацькі перекладачі для своїх улюблених сервісів перекладу. Дізнайтеся більше та знайдіть модулі в <slot id=docs>документації для користувацьких перекладачів</slot>."
+		"message": "Ви можете додати користувацькі перекладачі для улюблених сервісів перекладу. Детальніше та модулі шукайте у <slot id=docs>документації користувацьких перекладачів</slot>"
 	},
 	"settings_option_customTranslatorModule_manageButton": {
 		"message": "Керувати перекладачами"
@@ -348,7 +330,7 @@
 		"message": "Увімкнути історію"
 	},
 	"settings_option_history_enable_desc": {
-		"message": "При увімкненні будь-який переклад буде збережено на сторінку історії"
+		"message": "Якщо увімкнено, кожен переклад буде збережено на сторінці історії"
 	},
 	"settings_option_mainPreferences": {
 		"message": "Основні налаштування"
@@ -357,82 +339,82 @@
 		"message": "Переклад сторінки"
 	},
 	"settings_option_pageTranslation_detectLanguageByContent": {
-		"message": "Виявлення мови за контентом"
+		"message": "Визначення мови за вмістом"
 	},
 	"settings_option_pageTranslation_detectLanguageByContent_desc": {
-		"message": "Аналізувати текст на веб-сторінці для визначення мови сторінки. При вимкненні буде використовуватися мова, що надається в метаданих сторінки."
+		"message": "Аналізувати текст на веб-сторінці для визначення мови сторінки. Якщо вимкнено, буде використана мова, зазначена у метаданих сторінки"
 	},
 	"settings_option_pageTranslation_enableContextMenu": {
 		"message": "Увімкнути кнопку контекстного меню"
 	},
 	"settings_option_pageTranslation_enableContextMenu_desc": {
-		"message": "Додайте кнопку для перемикання перекладу сторінки до контекстного меню"
+		"message": "Додати кнопку для перемикання перекладу сторінки в контекстному меню"
 	},
 	"settings_option_pageTranslation_excludeSelectors": {
-		"message": "Селектори, які потрібно пропустити при перекладі"
+		"message": "Селектори, які пропускаються при перекладі"
 	},
 	"settings_option_pageTranslation_excludeSelectors_desc": {
-		"message": "Список CSS-селекторів, які не будуть перекладені. По одному селектору на рядок. Якщо елемент відповідає будь-якому з цих селекторів, він, його атрибути та вкладені елементи не будуть перекладені."
+		"message": "Список CSS-селекторів, які не будуть перекладені. Один селектор на рядок. Якщо елемент відповідає будь-якому з цих селекторів, він разом зі своїми атрибутами та вкладеними елементами не перекладатиметься"
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
-		"message": "Перекладати тільки видимі елементи"
+		"message": "Перекладати лише видимі елементи"
 	},
 	"settings_option_pageTranslation_lazyTranslate_desc": {
-		"message": "Якщо ця опція увімкнена, перекладатимуться тільки видимі елементи. Це може бути корисно для збереження мережевого трафіку"
+		"message": "Коли ця опція увімкнена, перекладатимуться лише видимі елементи. Ця опція економить трафік та обмежує використання сервісів перекладу"
 	},
 	"settings_option_pageTranslation_originalTextPopup": {
 		"message": "Увімкнути спливаюче вікно з оригінальним текстом"
 	},
 	"settings_option_pageTranslation_originalTextPopup_desc": {
-		"message": "Показує спливаюче вікно з оригінальним текстом, наведіть курсор миші на перекладений текст"
+		"message": "Показувати спливаюче вікно з оригінальним текстом при наведенні курсору на перекладені блоки тексту"
 	},
 	"settings_option_pageTranslation_toggleTranslationHotkey": {
-		"message": "Гарячі клавіши"
+		"message": "Гарячі клавіші"
 	},
 	"settings_option_pageTranslation_toggleTranslationHotkey_desc": {
-		"message": "Скорочення для перемикання перекладу сторінки. Натисніть ESC для скидання клавіш"
+		"message": "Швидкі клавіші для ввімкнення/вимкнення перекладу сторінки\nНатисніть ESC, щоб скинути клавіші"
 	},
 	"settings_option_pageTranslation_translatableAttributes": {
-		"message": "Перекладувані атрибути."
+		"message": "Атрибути для перекладу"
 	},
 	"settings_option_pageTranslation_translatableAttributes_desc": {
-		"message": "Введіть імена <slot id=htmlAttributes>HTML-атрибутів</slot>, які потрібно перекласти. Один атрибут на рядок"
+		"message": "Введіть назви <slot id=htmlAttributes>HTML-атрибутів</slot> для перекладу, по одному атрибуту в рядку"
 	},
 	"settings_option_popupTab_pageTranslator_showCounters": {
 		"message": "Показувати статистику перекладу"
 	},
 	"settings_option_popupTab_pageTranslator_showCounters_desc": {
-		"message": "Відображення статистики перекладу сторінки"
+		"message": "Відображати статистику перекладу сторінки"
 	},
 	"settings_option_selectTranslation": {
-		"message": "Переклад виділеного тексту"
+		"message": "Переклад вибраного тексту"
 	},
 	"settings_option_selectTranslation_detectedLangFirst": {
-		"message": "Переважати виявлену мову тексту над мовою сторінки"
+		"message": "Віддавати перевагу визначеній мові тексту над мовою сторінки"
 	},
 	"settings_option_selectTranslation_detectedLangFirst_desc": {
-		"message": "Якщо увімкнено, виявлена мова виділеного тексту буде переважати над мовою сторінки"
+		"message": "Якщо увімкнено, буде віддаватися перевага визначеній мові виділеного тексту над мовою сторінки"
 	},
 	"settings_option_selectTranslation_disableWhileTranslatePage": {
-		"message": "Вимкнути під час перекладання сторінки"
+		"message": "Вимкнути під час перекладу сторінки"
 	},
 	"settings_option_selectTranslation_enable": {
 		"message": "Увімкнути"
 	},
 	"settings_option_selectTranslation_focusOnTranslateButton": {
-		"message": "Автоматично фокусуватись на кнопці перекладу"
+		"message": "Автоматично фокусуватися на кнопці перекладу"
 	},
 	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
-		"message": "Фокусуватись на кнопці перекладу, коли вона з'являється"
+		"message": "Фокусуватися на кнопці перекладу, коли вона з’являється"
 	},
 	"settings_option_selectTranslation_header_languageChoice": {
 		"message": "Налаштування мови"
 	},
 	"settings_option_selectTranslation_isUseAutoForDetectLang": {
-		"message": "Увімкнути автоматичне виявлення мови перекладачем"
+		"message": "Увімкнути автоматичне визначення мови перекладачем"
 	},
 	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
-		"message": "Використовуйте автоматичне виявлення мови перекладачем, коли мову не можна визначити локально"
+		"message": "Використовувати автоматичне визначення мови перекладачем, якщо мову не вдається визначити локально"
 	},
 	"settings_option_selectTranslation_mode": {
 		"message": "Тригер перекладу"
@@ -444,13 +426,13 @@
 		"message": "Кнопка спливаючого вікна"
 	},
 	"settings_option_selectTranslation_mode_item_quickTranslate": {
-		"message": "Швидкий переклад за виділенням"
+		"message": "Швидкий переклад за вибором"
 	},
 	"settings_option_selectTranslation_modifiers": {
 		"message": "Модифікатори"
 	},
 	"settings_option_selectTranslation_modifiers_desc": {
-		"message": "Виберіть клавіші, які потрібно натиснути на клавіатурі для відображення перекладу"
+		"message": "Виберіть клавіші, які потрібно натискати на клавіатурі для показу перекладу"
 	},
 	"settings_option_selectTranslation_modifiers_key_alt": {
 		"message": "alt"
@@ -459,64 +441,64 @@
 		"message": "ctrl"
 	},
 	"settings_option_selectTranslation_modifiers_key_meta": {
-		"message": "мета"
+		"message": "meta"
 	},
 	"settings_option_selectTranslation_modifiers_key_shift": {
-		"message": "шифт"
+		"message": "shift"
 	},
 	"settings_option_selectTranslation_rememberDirection": {
-		"message": "Запам'ятовувати останній вибраний мовний напрямок тексту"
+		"message": "Запам’ятовувати останню обрану мову тексту"
 	},
 	"settings_option_selectTranslation_showOnceForSelection": {
-		"message": "Показувати кнопку перекладу тільки один раз для кожного вибраного тексту"
+		"message": "Показувати кнопку перекладу лише один раз для кожного виділення тексту"
 	},
 	"settings_option_selectTranslation_showOnceForSelection_desc": {
-		"message": "Кнопка буде показана лише один раз для кожного вибраного тексту. Якщо потрібно відобразити її знову, повторно виділіть текст"
+		"message": "Кнопка відображатиметься лише один раз для кожного виділення тексту. Щоб показати знову, виділіть текст повторно"
 	},
 	"settings_option_selectTranslation_showOriginalText": {
 		"message": "Показати оригінальний текст"
 	},
 	"settings_option_selectTranslation_showOriginalText_desc": {
-		"message": "Додати блок з оригінальним текстом до спливаючого вікна з перекладом"
+		"message": "Додати блок із оригінальним текстом у спливаючому вікні перекладу"
 	},
 	"settings_option_selectTranslation_strictSelection": {
-		"message": "Строгий вибір"
+		"message": "Строге виділення"
 	},
 	"settings_option_selectTranslation_strictSelection_desc": {
-		"message": "Ігнорувати виділення, якщо ліва кнопка миші відпущена поза блоком, що містить виділений текст"
+		"message": "Ігнорувати виділення, якщо ліва кнопка миші відпущена поза блоком із виділеним текстом"
 	},
 	"settings_option_selectTranslation_timeoutForHideButton": {
-		"message": "Затримка для приховування кнопки"
+		"message": "Затримка перед приховуванням кнопки"
 	},
 	"settings_option_selectTranslation_timeoutForHideButton_desc": {
-		"message": "Затримка в мілісекундах перед прихованням кнопки, коли курсор не наведено. Наведення курсора на кнопку скине таймер. Щоб вимкнути автоматичне приховування, встановіть значення менше 1"
+		"message": "Затримка в мілісекундах перед приховуванням кнопки, коли курсор не знаходиться над нею. Наведення курсора на кнопку скидає таймер. Щоб вимкнути автоприховування, встановіть значення менше за 1"
 	},
 	"settings_option_selectTranslation_zIndex": {
 		"message": "z-index"
 	},
 	"settings_option_selectTranslation_zIndex_desc": {
-		"message": "Збільште значення, якщо деякі елементи на деяких сторінках перекривають спливаюче вікно з перекладеним текстом"
+		"message": "Збільшіть це значення, якщо елементи на деяких сторінках перекривають спливаюче вікно з перекладеним текстом"
 	},
 	"settings_option_textTranslator": {
 		"message": "Переклад тексту"
 	},
 	"settings_option_textTranslator_rememberText": {
-		"message": "Запам'ятовувати перекладений текст"
+		"message": "Запам’ятовувати перекладений текст"
 	},
 	"settings_option_textTranslator_rememberText_desc": {
-		"message": "Запам'ятовувати перекладений текст для наступного відкриття вікна"
+		"message": "Запам’ятовувати перекладений текст для наступного відкриття вікна"
 	},
 	"settings_option_textTranslator_spellCheck": {
 		"message": "Увімкнути перевірку правопису"
 	},
 	"settings_option_textTranslator_suggestLanguage": {
-		"message": "Пропонувати виявлену мову тексту"
+		"message": "Пропонувати визначену мову тексту"
 	},
 	"settings_option_textTranslator_suggestLanguageAlways": {
-		"message": "Завжди виявляти та пропонувати мову"
+		"message": "Завжди визначати та пропонувати мову"
 	},
 	"settings_option_textTranslator_suggestLanguageAlways_desc": {
-		"message": "Якщо вимкнено, пропозиції мови з'являться тільки тоді, коли мова джерела буде визначена автоматично"
+		"message": "Якщо вимкнено, пропозиції мови з’являтимуться лише при автоматичному виявленні мови джерела"
 	},
 	"settings_option_translatePreferences": {
 		"message": "Налаштування перекладу"
@@ -528,43 +510,43 @@
 		"message": "Затримка накопичення тексту"
 	},
 	"settings_option_translateScheduler_delay_desc": {
-		"message": "Планувальник перекладу зменшує кількість запитів до API перекладу. Планувальник намагається накопичувати тексти, щоб відправити якомога більше текстів за один запит. Планувальник буде чекати зазначений час у мілісекундах для збору нових текстів перед початком перекладу."
+		"message": "Планувальник перекладів зменшує кількість запитів до API сервісу перекладу. Він намагається накопичити якомога більше текстів для надсилання в одному запиті. Планувальник чекатиме вказаний час у мілісекундах, щоб зібрати нові тексти перед початком перекладу"
 	},
 	"settings_option_translateScheduler_retryLimit": {
-		"message": "Спроби повторного перекладу"
+		"message": "Кількість спроб повторного перекладу"
 	},
 	"settings_option_translateScheduler_retryLimit_desc": {
-		"message": "Планувальник буде повторювати переклад текстів для помилок перекладу. Ця опція встановлює обмеження на спроби повторної спроби. Встановіть від'ємне число, щоб дозволити необмежені повтори"
+		"message": "Планувальник повторюватиме спроби перекладу текстів у разі помилок. Цей параметр встановлює ліміт спроб. Встановіть від’ємне число, щоб дозволити необмежену кількість повторів"
 	},
 	"settings_option_translatorModule": {
 		"message": "Модуль перекладача"
 	},
 	"settings_option_translatorModule_desc": {
-		"message": "Якість перекладів та доступні мови для перекладу залежать від перекладача."
+		"message": "Якість перекладів і доступні мови залежать від перекладача"
 	},
 	"settings_option_tts": {
-		"message": "Текст в мовлення (TTS)"
+		"message": "Текст у мовлення (TTS)"
 	},
 	"settings_option_ttsCustomModules": {
-		"message": "Спеціальне TTS"
+		"message": "Користувацький TTS"
 	},
 	"settings_option_ttsCustomModules_button": {
-		"message": "Керування модулями TTS"
+		"message": "Керувати модулями TTS"
 	},
 	"settings_option_ttsCustomModules_desc": {
-		"message": "Ви можете додавати модулі TTS, які використовують ваші улюблені сервіси та голоси. Дізнайтеся більше та знайдіть модулі в документації з користувацьких TTS."
+		"message": "Ви можете додати модулі TTS, які використовують ваші улюблені сервіси й голоси. Детальніше та модулі шукайте в документації з користувацького TTS"
 	},
 	"settings_option_ttsModule": {
 		"message": "Модуль TTS"
 	},
 	"settings_option_ttsModule_desc": {
-		"message": "Модуль для проговорення текстів"
+		"message": "Модуль для озвучення тексту"
 	},
 	"settings_option_userLanguage": {
 		"message": "Ваша мова"
 	},
 	"settings_option_userLanguage_desc": {
-		"message": "Мова перекладу текстів"
+		"message": "Цільова мова для перекладу тексту"
 	},
 	"settings_pageTitle": {
 		"message": "Налаштування"
@@ -576,7 +558,7 @@
 		"message": "Спливаюче вікно"
 	},
 	"textTranslator_suggestLanguage": {
-		"message": "Здається, що це мова"
+		"message": "Схоже, що мова"
 	},
 	"textTranslator_translateInputPlaceholder": {
 		"message": "Введіть текст"
@@ -591,10 +573,10 @@
 		"message": "Закрити"
 	},
 	"translatorsManagerWindow_emptyTranslatorsListText": {
-		"message": "Користувацькі перекладачі ще не додані"
+		"message": "Поки що не додано жодного власного перекладача"
 	},
 	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
-		"message": "Ви впевнені, що хочете видалити перекладач \"$translator_name$\"?",
+		"message": "Ви впевнені, що хочете видалити перекладача \"$translator_name$\"?",
 		"placeholders": {
 			"translator_name": {
 				"content": "$1",
@@ -603,7 +585,7 @@
 		}
 	},
 	"translatorsManagerWindow_title": {
-		"message": "Користувацькі перекладачі"
+		"message": "Власні перекладачі"
 	},
 	"translatorsManagerWindow_translator_delete": {
 		"message": "Видалити"
@@ -618,10 +600,10 @@
 		"message": "Закрити"
 	},
 	"ttsManagerWindow_emptyTranslatorsListText": {
-		"message": "Модулі TTS ще не додані"
+		"message": "Поки що не додано жодного модуля TTS"
 	},
 	"ttsManagerWindow_message_ttsRemoveConfirmation": {
-		"message": "Ви впевнені, що хочете видалити TTS \"$tts_name$\"?",
+		"message": "Ви впевнені, що хочете видалити модуль TTS \"$tts_name$\"?",
 		"placeholders": {
 			"tts_name": {
 				"content": "$1",
@@ -630,7 +612,7 @@
 		}
 	},
 	"ttsManagerWindow_title": {
-		"message": "Модулі тексту в мовлення"
+		"message": "Модулі перетворення тексту в мову"
 	},
 	"ttsManagerWindow_translator_delete": {
 		"message": "Видалити"
@@ -642,10 +624,10 @@
 		"message": "Параметр повинен бути числом"
 	},
 	"validation_numberBetweenRange": {
-		"message": "Параметр повинен бути числом між $1 та $2"
+		"message": "Параметр повинен бути числом від $1 до $2"
 	},
 	"validation_positiveNumber": {
-		"message": "Параметр повинен бути додатнім числом."
+		"message": "Параметр повинен бути додатним числом"
 	},
 	"langCode_aa": {
 		"message": "Афарська"

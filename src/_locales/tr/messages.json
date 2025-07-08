@@ -3,7 +3,7 @@
 		"message": "Sözlüğe çeviri ekle"
 	},
 	"common_action_removeFromDictionary": {
-		"message": "Sözlükten çeviriyi kaldır"
+		"message": "Sözlükten çeviri kaldır"
 	},
 	"common_bgUnavailable": {
 		"message": "Arka plan betiği kullanılamıyor"
@@ -30,7 +30,7 @@
 		"message": "Çevir"
 	},
 	"component_hotkey_placeholder": {
-		"message": "Kısayolları kaydetmek için tıklayın"
+		"message": "Kısayol kaydetmek için tıklayın"
 	},
 	"component_hotkey_recordPlaceholder": {
 		"message": "Tuşlara basın"
@@ -48,10 +48,10 @@
 		"message": "Seçili metni çevir"
 	},
 	"dictionaryButton_add": {
-		"message": "Sözlüğe ekle"
+		"message": "Sözcüklüğe ekle"
 	},
 	"dictionaryButton_delete": {
-		"message": "Sözlükten sil"
+		"message": "Sözcüklükten sil"
 	},
 	"dictionary_button_export": {
 		"message": "Dışa aktar"
@@ -60,7 +60,7 @@
 		"message": "Tümünü kaldır"
 	},
 	"dictionary_deleteAll": {
-		"message": "Tüm çevirileri sözlükten silmek istediğinizden emin misiniz?"
+		"message": "Sözlükteki TÜM çevirileri silmek istediğinizden emin misiniz?"
 	},
 	"dictionary_deleteConfirmation": {
 		"message": "Bu çeviriyi silmek istediğinizden emin misiniz?"
@@ -69,7 +69,7 @@
 		"message": "Çevirilerinizi sözlükte tutun ve daha sonra bulun"
 	},
 	"dictionary_emptyDictionary": {
-		"message": "Sözlük boş. Bir metin çevirirken doldurmaya başlayın"
+		"message": "Sözlük boş. Çeviri yaparak doldurmaya başlayın"
 	},
 	"dictionary_filter_from": {
 		"message": "Kaynak"
@@ -78,10 +78,10 @@
 		"message": "Hedef"
 	},
 	"dictionary_message_deleteAll_success": {
-		"message": "Tüm çeviriler silindi"
+		"message": "Tüm çeviriler kaldırıldı"
 	},
 	"dictionary_notFoundEntries": {
-		"message": "Bu filtrelerle eşleşen çeviri bulunamadı"
+		"message": "Bu filtrelere uygun çeviri bulunamadı"
 	},
 	"dictionary_pageTitle": {
 		"message": "Sözlük"
@@ -90,7 +90,7 @@
 		"message": "filtreleri sıfırla"
 	},
 	"dictionary_searchPlaceholder": {
-		"message": "Metin ile arayın"
+		"message": "Metne göre ara"
 	},
 	"editorWindow_close": {
 		"message": "Kapat"
@@ -98,50 +98,50 @@
 	"editorWindow_data_code": {
 		"message": "Kod"
 	},
-	"editorWindow_data_name": {
-		"message": "İsim"
+	"editorWindow_data_translatorName": {
+		"message": "Çevirmen adı"
 	},
-	"editorWindow_message_invalidName": {
-		"message": "İsim en az bir sembol içermelidir"
+	"editorWindow_message_invalidTranslatorName": {
+		"message": "Çevirmen adı en az bir karakter içermelidir"
 	},
 	"editorWindow_save": {
 		"message": "Kaydet"
 	},
 	"ext_description": {
-		"message": "Sayfalar ve metinleri çevirme, sözlük, geçmiş, çevirmenlerde çevrimdışı ve özel çevirmenler"
+		"message": "Sayfalar ve metin çevirisi, sözlük, geçmiş, çevrimdışı ve özel çevirmenler"
 	},
 	"ext_name": {
-		"message": "Linguist - web sayfaları çevirmeni"
+		"message": "Linguist - web sayfası çevirmeni"
 	},
 	"history_control_selectEntry": {
-		"message": "Giriş seçin"
+		"message": "Girişi seç"
 	},
 	"history_controls_clearHistory": {
 		"message": "Geçmişi temizle"
 	},
 	"history_controls_deleteSelected": {
-		"message": "Seçilenleri Sil"
+		"message": "Seçilenleri sil"
 	},
 	"history_controls_selectAll": {
-		"message": "Tüm Çevirileri Seç"
+		"message": "Tüm çevirileri seç"
 	},
 	"history_message_clearHistoryConfirmation": {
-		"message": "Geçmişi temizlemek istediğinize emin misiniz? Tüm girdiler silinecektir"
+		"message": "Geçmişi temizlemek istediğinizden emin misiniz? Tüm kayıtlar silinecektir"
 	},
 	"history_message_deleteEntryConfirmation": {
-		"message": "Bu girdiyi silmek istediğinize emin misiniz?"
+		"message": "Bu kaydı silmek istediğinizden emin misiniz?"
 	},
 	"history_message_deleteSelectedEntriesConfirmation": {
-		"message": "Seçili girdileri ($1) silmek istediğinize emin misiniz?"
-	},
-	"history_message_emptyEntries": {
-		"message": "Geçmiş temizlendi"
+		"message": "Seçilen kayıtları ($1) silmek istediğinizden emin misiniz?"
 	},
 	"history_message_entriesNotFound": {
-		"message": "Filtreyi karşılayan çeviri bulunamadı"
+		"message": "Filtreye uyan çeviri bulunamadı"
+	},
+	"history_message_noEntries": {
+		"message": "Geçmiş temiz"
 	},
 	"history_notification_disabled": {
-		"message": "Geçmiş kaydı devre dışı bırakıldı, bu yüzden yeni girdiler görünmeyecek. Bunu <slot id=preferences>ayarlar</slot> bölümünden değiştirebilirsiniz"
+		"message": "Geçmiş kaydı devre dışı, yeni kayıtlar görünmeyecek. Bunu <slot id=preferences>ayarlar</slot> bölümünden değiştirebilirsiniz"
 	},
 	"history_pageTitle": {
 		"message": "Geçmiş"
@@ -153,19 +153,19 @@
 		"message": "Orijinal metni göster"
 	},
 	"lang_change": {
-		"message": "Dil Değiştir"
+		"message": "Dili değiştir"
 	},
 	"lang_detect": {
-		"message": "Otomatik Algıla"
+		"message": "Otomatik algıla"
 	},
 	"lang_select": {
-		"message": "Dil Seç"
+		"message": "Dil seç"
 	},
 	"lang_swap": {
-		"message": "Dilleri Değiştir"
+		"message": "Dilleri değiştir"
 	},
 	"message_askResetConfig": {
-		"message": "Ayarları Sıfırlamak İstiyor musunuz?"
+		"message": "Ayarlar sıfırlansın mı?"
 	},
 	"message_cacheFlushed": {
 		"message": "Önbellek temizlendi"
@@ -180,7 +180,7 @@
 		"message": "Çeviri hatası"
 	},
 	"message_serviceRequiredKey": {
-		"message": "Hizmet anahtarı gerekiyor"
+		"message": "Hizmet bir anahtar gerektirir"
 	},
 	"message_translateOfText": {
 		"message": "Çevrildi"
@@ -195,13 +195,13 @@
 		"message": "Devre dışı bırak"
 	},
 	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
-		"message": "Tüm siteler için devre dışı bırak"
+		"message": "Tüm sitelerde devre dışı bırak"
 	},
 	"pageTranslator_commonPreferences_autoTranslate_enable": {
 		"message": "Etkinleştir"
 	},
 	"pageTranslator_commonPreferences_title": {
-		"message": "Bu dil için ortak tercihler"
+		"message": "Bu dil için genel tercihler"
 	},
 	"pageTranslator_option_autoTranslate": {
 		"message": "Otomatik çeviri"
@@ -210,7 +210,7 @@
 		"message": "Seçenekleri göster"
 	},
 	"pageTranslator_showOriginal": {
-		"message": "Orijinali göster"
+		"message": "Orijinalini göster"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_always": {
 		"message": "Her zaman çevir"
@@ -225,13 +225,13 @@
 		"message": "Bu dil için ortak kuralları kullan"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_never": {
-		"message": "Asla çevirme"
+		"message": "Hiçbir zaman çevirme"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
-		"message": "Bu dil için asla çevirme"
+		"message": "Bu dil için hiçbir zaman çevirme"
 	},
 	"pageTranslator_sitePreferences_title": {
-		"message": "İçin tercihler"
+		"message": "Tercihler"
 	},
 	"pageTranslator_translatePage": {
 		"message": "Sayfayı çevir"
@@ -240,7 +240,7 @@
 		"message": "Çeviri raporu"
 	},
 	"pageTranslator_translationReport_queue": {
-		"message": "Sıra"
+		"message": "Kuyruk"
 	},
 	"pageTranslator_translationReport_reject": {
 		"message": "Hatalar"
@@ -261,16 +261,16 @@
 		"message": "İptal"
 	},
 	"settings_button_export": {
-		"message": "Yapılandırmayı Dışa Aktar"
+		"message": "Yapılandırmayı dışa aktar"
 	},
 	"settings_button_import": {
-		"message": "Yapılandırmayı İçe Aktar"
+		"message": "Yapılandırmayı içe aktar"
 	},
 	"settings_button_reset": {
-		"message": "Yapılandırmayı Sıfırla"
+		"message": "Yapılandırmayı sıfırla"
 	},
 	"settings_button_saveChanges": {
-		"message": "Değişiklikleri Kaydet"
+		"message": "Değişiklikleri kaydet"
 	},
 	"settings_message_clearCache_success": {
 		"message": "Önbellek temizlendi"
@@ -279,10 +279,10 @@
 		"message": "Geçersiz değer"
 	},
 	"settings_message_importConfig_invalidFile": {
-		"message": "İçe aktarma dosyası işlenemiyor"
+		"message": "İçe aktarma için dosya işlenemiyor"
 	},
 	"settings_message_importConfig_success": {
-		"message": "İçe aktarma işlemi tamamlandı"
+		"message": "İçe aktarma tamamlandı"
 	},
 	"settings_message_resetConfig_confirm": {
 		"message": "Ayarları sıfırlamak istiyor musunuz?"
@@ -293,44 +293,26 @@
 	"settings_message_saveChanges_success": {
 		"message": "Değişiklikler kaydedildi"
 	},
-	"settings_option_appIcon": {
-		"message": "Uzantı simgesi"
-	},
-	"settings_option_appIcon_desc": {
-		"message": "Dinamik simge seçildiğinde, renkler tarayıcı temasına uyacak şekilde ayarlanır"
-	},
-	"settings_option_appIcon_item_auto": {
-		"message": "Dinamik"
-	},
-	"settings_option_appIcon_item_color": {
-		"message": "Renk"
-	},
-	"settings_option_appIcon_item_dark": {
-		"message": "Koyu"
-	},
-	"settings_option_appIcon_item_light": {
-		"message": "Açık"
-	},
 	"settings_option_cache": {
 		"message": "Önbellek"
 	},
 	"settings_option_cache_clear": {
-		"message": "Önbelleği Temizle"
+		"message": "Önbelleği temizle"
 	},
 	"settings_option_cache_clear_desc": {
-		"message": "Çeviri kalıntılarına sahipseniz veya şifreleri kaldırmak isterseniz önbelleği temizleyin"
+		"message": "Çeviri hataları varsa veya gizli bilgileri kaldırmanız gerekiyorsa önbelleği temizleyin"
 	},
 	"settings_option_cache_enable": {
 		"message": "Önbelleği etkinleştir"
 	},
 	"settings_option_cache_enable_desc": {
-		"message": "Önbellek etkinleştirildiğinde, bir kez çevrilen çeviriler internet olmadan hemen kullanılabilir hale gelir"
+		"message": "Önbellek etkinleştirildiğinde, bir kez çevrilen çeviriler internet bağlantısı olmadan bile hemen kullanılabilir"
 	},
 	"settings_option_cache_ignoreCase": {
-		"message": "Büyük/küçük harf duyarsızlığı"
+		"message": "Büyük/küçük harf duyarsız"
 	},
 	"settings_option_cache_ignoreCase_desc": {
-		"message": "Etkinleştirildiğinde, önbellekten çeviriler kesin olmayan eşleşmelerle kullanılır ve bu çeviri kalıntılarına neden olabilir"
+		"message": "Etkinleştirildiğinde, tam eşleşmeyenler için önbellekten çeviriler kullanılır, bu çeviri hatalarına neden olabilir"
 	},
 	"settings_option_commonSettings": {
 		"message": "Ortak ayarlar"
@@ -339,7 +321,7 @@
 		"message": "Özel çevirmenler"
 	},
 	"settings_option_customTranslatorModule_desc": {
-		"message": "Favori çeviri hizmetleriniz için özel çevirmenler ekleyebilirsiniz. Daha fazla bilgi için <slot id=docs>özel çevirmenler belgelerine</slot> bakın."
+		"message": "Favori çeviri servisleriniz için özel çevirmenler ekleyebilirsiniz. Daha fazla bilgi ve modüller için <slot id=docs>özel çevirmenler dokümantasyonuna</slot> bakın"
 	},
 	"settings_option_customTranslatorModule_manageButton": {
 		"message": "Çevirmenleri yönet"
@@ -348,7 +330,7 @@
 		"message": "Geçmişi etkinleştir"
 	},
 	"settings_option_history_enable_desc": {
-		"message": "Etkinleştirildiğinde, yapılan tüm çeviriler geçmiş sayfasına kaydedilir"
+		"message": "Etkinleştirildiğinde, her çeviri geçmiş sayfasına kaydedilecektir"
 	},
 	"settings_option_mainPreferences": {
 		"message": "Ana ayarlar"
@@ -357,46 +339,46 @@
 		"message": "Sayfa çevirisi"
 	},
 	"settings_option_pageTranslation_detectLanguageByContent": {
-		"message": "İçerikle dil tespiti yap"
+		"message": "Dili içerikten algıla"
 	},
 	"settings_option_pageTranslation_detectLanguageByContent_desc": {
-		"message": "Sayfa dili tespiti için web sayfasındaki metni analiz edin. Devre dışı bırakıldığında, sayfa meta verilerinde sağlanan bir dili kullanır."
+		"message": "Sayfa dilini algılamak için web sayfasındaki metni analiz eder. Devre dışı bırakıldığında, sayfa meta verilerinde verilen dil kullanılır"
 	},
 	"settings_option_pageTranslation_enableContextMenu": {
-		"message": "İçerik menüsü düğmesini etkinleştir"
+		"message": "Bağlam menüsü düğmesini etkinleştir"
 	},
 	"settings_option_pageTranslation_enableContextMenu_desc": {
-		"message": "Sayfa çevirisini açıp kapamak için bir içerik menüsüne düğme ekleyin."
+		"message": "Bağlam menüsüne sayfa çevirisini açıp kapatmak için bir düğme ekler"
 	},
 	"settings_option_pageTranslation_excludeSelectors": {
-		"message": "Çeviri hariç tutulacak seçiciler"
+		"message": "Çeviriden hariç tutulacak seçiciler"
 	},
 	"settings_option_pageTranslation_excludeSelectors_desc": {
-		"message": "Çevrilmeyecek CSS seçicilerinin listesi. Her satıra bir seçici. Bir öğe bu seçicilerden herhangi biriyle eşleşiyorsa, kendisi, öznitelikleri ve içindeki öğeler çevrilmeyecektir."
+		"message": "Çevrilmeyecek CSS seçicilerinin listesi. Her satırda bir seçici. Bir öğe bu seçicilerden herhangi biriyle eşleşirse, kendisi, özellikleri ve iç içe öğeleri çevrilmez"
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
-		"message": "Yalnızca görünür öğeleri çevir"
+		"message": "Sadece görünür öğeleri çevir"
 	},
 	"settings_option_pageTranslation_lazyTranslate_desc": {
-		"message": "Bu seçenek etkinleştirildiğinde, yalnızca görünür öğeler çevrilecektir. Bu, ağ trafiğini kaydetmek için faydalı olabilir"
+		"message": "Bu seçenek etkinleştirildiğinde, yalnızca görünür öğeler çevrilir. Bu seçenek ağ trafiğini ve kullanılan çeviri servislerinin sınırlarını korur"
 	},
 	"settings_option_pageTranslation_originalTextPopup": {
-		"message": "Orijinal metinle açılır pencereyi etkinleştir"
+		"message": "Orijinal metin açılır penceresini etkinleştir"
 	},
 	"settings_option_pageTranslation_originalTextPopup_desc": {
-		"message": "Çevrilmiş metnin üzerine fareyi getirerek, orijinal metni gösteren bir açılır pencere göster"
+		"message": "Çevrilmiş metin bloklarının üzerine fareyle gelindiğinde orijinal metni içeren açılır pencereyi göster"
 	},
 	"settings_option_pageTranslation_toggleTranslationHotkey": {
-		"message": "Kısayol Tuşları"
+		"message": "Kısayol tuşları"
 	},
 	"settings_option_pageTranslation_toggleTranslationHotkey_desc": {
-		"message": "Sayfa çevirisini açıp kapatmak için kısayol tuşları\nTuşları sıfırlamak için ESC tuşuna basın"
+		"message": "Sayfa çevirisini açıp kapatmak için kısayollar\nTușlara sıfırlamak için ESC tuşuna basın"
 	},
 	"settings_option_pageTranslation_translatableAttributes": {
-		"message": "Çevrilebilir öznitelikler."
+		"message": "Çevrilebilir öznitelikler"
 	},
 	"settings_option_pageTranslation_translatableAttributes_desc": {
-		"message": "Çeviri için <slot id=htmlAttributes>HTML öznitelikleri</slot> adlarını girin. Her satıra bir öznitelik"
+		"message": "Çevrilecek <slot id=htmlAttributes>HTML öznitellik</slot> isimlerini girin, her satıra bir öznitelik"
 	},
 	"settings_option_popupTab_pageTranslator_showCounters": {
 		"message": "Çeviri istatistiklerini göster"
@@ -405,43 +387,43 @@
 		"message": "Sayfa çevirisi için istatistikleri göster"
 	},
 	"settings_option_selectTranslation": {
-		"message": "Seçili metin çevirisi"
+		"message": "Seçilen metni çevir"
 	},
 	"settings_option_selectTranslation_detectedLangFirst": {
-		"message": "Sayfa dilinin yerine metnin tespit edilen dilini tercih et"
+		"message": "Metnin algılanan dilini sayfa diline tercih et"
 	},
 	"settings_option_selectTranslation_detectedLangFirst_desc": {
-		"message": "Etkinleştirildiğinde, seçili metnin tespit edilen dili, sayfa dilinden öncelikli olarak tercih edilecektir"
+		"message": "Etkinleştirildiğinde, seçilen metnin algılanan dili sayfa diline tercih edilir"
 	},
 	"settings_option_selectTranslation_disableWhileTranslatePage": {
-		"message": "Sayfayı çevirirken devre dışı bırakın"
+		"message": "Sayfayı çevirirken devre dışı bırak"
 	},
 	"settings_option_selectTranslation_enable": {
 		"message": "Etkinleştir"
 	},
 	"settings_option_selectTranslation_focusOnTranslateButton": {
-		"message": "Otomatik olarak çeviri düğmesine odaklan"
+		"message": "Çeviri düğmesine otomatik odaklan"
 	},
 	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
-		"message": "Göründüğünde çeviri düğmesine odaklanın"
+		"message": "Çeviri düğmesi göründüğünde odaklan"
 	},
 	"settings_option_selectTranslation_header_languageChoice": {
 		"message": "Dil ayarları"
 	},
 	"settings_option_selectTranslation_isUseAutoForDetectLang": {
-		"message": "Çevirmen tarafından otomatik dil algılama özelliğini etkinleştirin"
+		"message": "Çevirmen tarafından otomatik dil algılamayı etkinleştir"
 	},
 	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
-		"message": "Yerel olarak dil tespit edilemediğinde, çevirmen tarafından otomatik dil algılama özelliğini kullanın"
+		"message": "Dil yerel olarak algılanamadığında, çevirmen tarafından otomatik dil algılamayı kullan"
 	},
 	"settings_option_selectTranslation_mode": {
-		"message": "Çeviri tetikleyici"
+		"message": "Çeviri tetikleyicisi"
 	},
 	"settings_option_selectTranslation_mode_item_contextMenu": {
 		"message": "Bağlam menüsü düğmesi"
 	},
 	"settings_option_selectTranslation_mode_item_popupButton": {
-		"message": "Açılır düğme"
+		"message": "Açılır pencere düğmesi"
 	},
 	"settings_option_selectTranslation_mode_item_quickTranslate": {
 		"message": "Seçimle hızlı çeviri"
@@ -450,7 +432,7 @@
 		"message": "Değiştiriciler"
 	},
 	"settings_option_selectTranslation_modifiers_desc": {
-		"message": "Çevirinin görüntülenmesi için klavyede basılması gereken tuşları seçin"
+		"message": "Çeviriyi göstermek için klavyede basılması gereken tuşları seçin"
 	},
 	"settings_option_selectTranslation_modifiers_key_alt": {
 		"message": "alt"
@@ -465,46 +447,46 @@
 		"message": "shift"
 	},
 	"settings_option_selectTranslation_rememberDirection": {
-		"message": "Metnin en son seçilen dilini hatırla"
+		"message": "En son seçilen metin dilini hatırla"
 	},
 	"settings_option_selectTranslation_showOnceForSelection": {
-		"message": "Her metin seçimi için çeviri butonunu yalnızca bir kez göster"
+		"message": "Her metin seçimi için çeviri düğmesini bir kez göster"
 	},
 	"settings_option_selectTranslation_showOnceForSelection_desc": {
-		"message": "Buton her metin seçimi için yalnızca bir kez gösterilecektir. Tekrar gösterilmesi gerekiyorsa, metni yeniden seçin"
+		"message": "Düğme, her metin seçimi için yalnızca bir kez gösterilir. Tekrar göstermek için metni tekrar seçin"
 	},
 	"settings_option_selectTranslation_showOriginalText": {
 		"message": "Orijinal metni göster"
 	},
 	"settings_option_selectTranslation_showOriginalText_desc": {
-		"message": "Çeviri için açılır pencereye orijinal metni de ekleyin"
+		"message": "Çeviri açılır penceresine orijinal metin bloğu ekle"
 	},
 	"settings_option_selectTranslation_strictSelection": {
-		"message": "Sıkı seçim"
+		"message": "Katı seçim"
 	},
 	"settings_option_selectTranslation_strictSelection_desc": {
-		"message": "Seçilen metin içeren bloğun dışında sol fare düğmesi bırakılırsa seçimi yok sayın"
+		"message": "Seçilen metni içeren bloğun dışında sol fare düğmesi bırakılırsa seçimi yok say"
 	},
 	"settings_option_selectTranslation_timeoutForHideButton": {
 		"message": "Düğmeyi gizleme gecikmesi"
 	},
 	"settings_option_selectTranslation_timeoutForHideButton_desc": {
-		"message": "Fare imleci üzerinde gezinilmediğinde düğmenin gizlenmesi için milisaniye cinsinden gecikme. Düğmeye fare imleciyle gelinmesi süresince süre sıfırlanır. Otomatik gizlemeyi devre dışı bırakmak için değeri 1'den daha düşük ayarlayın."
+		"message": "İmleç üzerine gelmediğinde düğmenin gizlenmesinden önceki gecikme (milisaniye). Düğmenin üzerine gelmek zamanlayıcıyı sıfırlar. Otomatik gizlemeyi devre dışı bırakmak için değeri 1’den küçük ayarlayın"
 	},
 	"settings_option_selectTranslation_zIndex": {
-		"message": "z-index"
+		"message": "z-indeksi"
 	},
 	"settings_option_selectTranslation_zIndex_desc": {
-		"message": "Bazı sayfalarda bazı öğelerin çevrilmiş metin içeren açılır pencereyi örtmesi durumunda değeri artırın."
+		"message": "Bazı sayfalarda elemanlar çeviri metni açılır penceresinin üstünü örtüyorsa bu değeri artırın"
 	},
 	"settings_option_textTranslator": {
 		"message": "Metin çevirisi"
 	},
 	"settings_option_textTranslator_rememberText": {
-		"message": "Çevrilmiş metni hatırla"
+		"message": "Çevrilen metni hatırla"
 	},
 	"settings_option_textTranslator_rememberText_desc": {
-		"message": "Çevrilen metni bir sonraki pencere açıldığında hatırla"
+		"message": "Pencere bir sonraki açıldığında çevrilen metni hatırla"
 	},
 	"settings_option_textTranslator_spellCheck": {
 		"message": "Yazım denetimini etkinleştir"
@@ -513,10 +495,10 @@
 		"message": "Algılanan metin dilini öner"
 	},
 	"settings_option_textTranslator_suggestLanguageAlways": {
-		"message": "Dilini her zaman algıla ve öner"
+		"message": "Dili her zaman tespit et ve öner"
 	},
 	"settings_option_textTranslator_suggestLanguageAlways_desc": {
-		"message": "Devre dışı bırakıldığında, dil önerileri sadece kaynak dil otomatik olarak algılandığında görüntülenecektir"
+		"message": "Devre dışı bırakıldığında, dil önerileri yalnızca kaynak dil otomatik algılandığında gösterilir"
 	},
 	"settings_option_translatePreferences": {
 		"message": "Çeviri tercihleri"
@@ -525,25 +507,25 @@
 		"message": "Çeviri zamanlayıcısı"
 	},
 	"settings_option_translateScheduler_delay": {
-		"message": "Metin biriktirme gecikmesi"
+		"message": "Metin birikim gecikmesi"
 	},
 	"settings_option_translateScheduler_delay_desc": {
-		"message": "Çeviri zamanlayıcısı, çeviri hizmetleri API'sına yönelik talep sayısını azaltır. Zamanlayıcı, mümkün olan en fazla metni tek bir istekte göndermek için metin biriktirmeye çalışır. Zamanlayıcı, yeni metinleri toplamaya başlamadan önce belirtilen süre boyunca milisaniye cinsinden bekleyecektir."
+		"message": "Çeviri zamanlayıcısı, çeviri hizmeti API'sine yapılan istek sayısını azaltır. Mümkün olduğunca çok metni tek bir istekte göndermek için biriktirmeye çalışır. Zamanlayıcı, çeviri işlemine başlamadan önce belirtilen milisaniye süresi kadar yeni metinleri toplamak için bekler."
 	},
 	"settings_option_translateScheduler_retryLimit": {
 		"message": "Çeviri yeniden deneme sayısı"
 	},
 	"settings_option_translateScheduler_retryLimit_desc": {
-		"message": "Çeviri programı, çeviri hataları için metinleri yeniden çevirmeyi deneyecektir. Bu seçenek yeniden deneme girişimleri için bir sınır belirler. Sınırsız denemelere izin vermek için negatif bir sayı ayarlayın."
+		"message": "Zamanlayıcı, çeviri hataları oluştuğunda metinleri yeniden çevirmeye çalışır. Bu seçenek yeniden deneme girişimleri için bir sınır belirler. Sınırsız deneme için negatif bir sayı girin."
 	},
 	"settings_option_translatorModule": {
 		"message": "Çeviri modülü"
 	},
 	"settings_option_translatorModule_desc": {
-		"message": "Çevirilerin kalitesi ve çevrilebilen diller, çevirmene bağlıdır."
+		"message": "Çeviri kalitesi ve kullanılabilir diller çevirmene bağlıdır."
 	},
 	"settings_option_tts": {
-		"message": "Metin okuma (TTS)"
+		"message": "Metin Seslendirme (TTS)"
 	},
 	"settings_option_ttsCustomModules": {
 		"message": "Özel TTS"
@@ -552,19 +534,19 @@
 		"message": "TTS modüllerini yönet"
 	},
 	"settings_option_ttsCustomModules_desc": {
-		"message": "Favori servislerinizi ve sesleri kullanan TTS modülleri ekleyebilirsiniz. Özel TTS belgelerinde daha fazla bilgi edinin ve modülleri bulun."
+		"message": "Favori hizmetlerinizi ve seslerinizi kullanan TTS modülleri ekleyebilirsiniz. Daha fazla bilgi ve modül bulmak için özel TTS dokümantasyonuna bakın."
 	},
 	"settings_option_ttsModule": {
 		"message": "TTS modülü"
 	},
 	"settings_option_ttsModule_desc": {
-		"message": "Metinleri okumak için modül"
+		"message": "Metni okumak için modül"
 	},
 	"settings_option_userLanguage": {
-		"message": "Sizin diliniz"
+		"message": "Diliniz"
 	},
 	"settings_option_userLanguage_desc": {
-		"message": "Metinleri çevirmek için hedef dil"
+		"message": "Metin çevirisi için hedef dil"
 	},
 	"settings_pageTitle": {
 		"message": "Ayarlar"
@@ -573,13 +555,13 @@
 		"message": "Geçmiş"
 	},
 	"settings_section_popup": {
-		"message": "Açılır pencere"
+		"message": "Açılır Pencere"
 	},
 	"textTranslator_suggestLanguage": {
-		"message": "Bu dil gibi görünüyor"
+		"message": "Dil şu gibi görünüyor"
 	},
 	"textTranslator_translateInputPlaceholder": {
-		"message": "Giriş metni"
+		"message": "Metin giriniz"
 	},
 	"textTranslator_translatePlaceholder": {
 		"message": "Çevrilmiş metin"
@@ -591,19 +573,19 @@
 		"message": "Kapat"
 	},
 	"translatorsManagerWindow_emptyTranslatorsListText": {
-		"message": "Özel çevirmenler henüz eklenmedi"
+		"message": "Henüz özel çevirmen eklenmedi"
 	},
 	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
 		"message": "\"$translator_name$\" çevirmenini kaldırmak istediğinizden emin misiniz?",
 		"placeholders": {
 			"translator_name": {
 				"content": "$1",
-				"example": "Google çevirmen"
+				"example": "Google translator"
 			}
 		}
 	},
 	"translatorsManagerWindow_title": {
-		"message": "Özel Çevirmenler"
+		"message": "Özel çevirmenler"
 	},
 	"translatorsManagerWindow_translator_delete": {
 		"message": "Sil"
@@ -618,10 +600,10 @@
 		"message": "Kapat"
 	},
 	"ttsManagerWindow_emptyTranslatorsListText": {
-		"message": "TTS modülleri henüz eklenmedi"
+		"message": "Henüz TTS modülü eklenmedi"
 	},
 	"ttsManagerWindow_message_ttsRemoveConfirmation": {
-		"message": "\"$tts_name$\" TTS'yi kaldırmak istediğinizden emin misiniz?",
+		"message": "\"$tts_name$\" TTS modülünü kaldırmak istediğinizden emin misiniz?",
 		"placeholders": {
 			"tts_name": {
 				"content": "$1",
@@ -630,7 +612,7 @@
 		}
 	},
 	"ttsManagerWindow_title": {
-		"message": "Metin okuma modülleri"
+		"message": "Metinden sese modülleri"
 	},
 	"ttsManagerWindow_translator_delete": {
 		"message": "Sil"
@@ -639,13 +621,13 @@
 		"message": "Düzenle"
 	},
 	"validation_number": {
-		"message": "Parametre bir sayı olmalı"
+		"message": "Parametre sayı olmalıdır"
 	},
 	"validation_numberBetweenRange": {
-		"message": "Parametre $1 ile $2 arasında bir sayı olmalı"
+		"message": "Parametre $1 ile $2 arasında bir sayı olmalıdır"
 	},
 	"validation_positiveNumber": {
-		"message": "Parametre pozitif bir sayı olmalıdır."
+		"message": "Parametre pozitif bir sayı olmalıdır"
 	},
 	"langCode_aa": {
 		"message": "Afar"

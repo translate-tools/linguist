@@ -6,7 +6,7 @@
 		"message": "إزالة الترجمة من القاموس"
 	},
 	"common_bgUnavailable": {
-		"message": "لا يتوفر سيناريو الخلفية"
+		"message": "نص الخلفية غير متوفر"
 	},
 	"common_cancel": {
 		"message": "إلغاء"
@@ -21,7 +21,7 @@
 		"message": "خطأ"
 	},
 	"common_offlineTranslator": {
-		"message": "$1 - مترجم دون اتصال"
+		"message": "$1 - مترجم غير متصل بالإنترنت"
 	},
 	"common_retry": {
 		"message": "إعادة المحاولة"
@@ -30,13 +30,13 @@
 		"message": "ترجمة"
 	},
 	"component_hotkey_placeholder": {
-		"message": "انقر لتسجيل مفاتيح الاختصار"
+		"message": "انقر لتسجيل الاختصار"
 	},
 	"component_hotkey_recordPlaceholder": {
-		"message": "اضغط على المفاتيح"
+		"message": "اضغط المفاتيح"
 	},
 	"component_hotkey_resetButton": {
-		"message": "إعادة تعيين"
+		"message": "إعادة ضبط"
 	},
 	"contextMenu_disablePageTranslation": {
 		"message": "تعطيل ترجمة الصفحة"
@@ -48,7 +48,7 @@
 		"message": "ترجمة النص المحدد"
 	},
 	"dictionaryButton_add": {
-		"message": "أضف إلى القاموس"
+		"message": "إضافة إلى القاموس"
 	},
 	"dictionaryButton_delete": {
 		"message": "حذف من القاموس"
@@ -60,16 +60,16 @@
 		"message": "إزالة الكل"
 	},
 	"dictionary_deleteAll": {
-		"message": "هل أنت متأكد من حذف جميع الترجمات في القاموس؟"
+		"message": "هل أنت متأكد أنك تريد حذف جميع الترجمات في القاموس؟"
 	},
 	"dictionary_deleteConfirmation": {
-		"message": "هل أنت متأكد من حذف هذه الترجمة؟"
+		"message": "هل أنت متأكد أنك تريد حذف هذه الترجمة؟"
 	},
 	"dictionary_description": {
 		"message": "احتفظ بترجماتك في القاموس للعثور عليها لاحقًا"
 	},
 	"dictionary_emptyDictionary": {
-		"message": "القاموس فارغ. ابدأ في ملء القاموس أثناء ترجمة بعض النصوص"
+		"message": "القاموس فارغ. ابدأ بملئه بترجمة بعض النصوص"
 	},
 	"dictionary_filter_from": {
 		"message": "من"
@@ -81,7 +81,7 @@
 		"message": "تمت إزالة جميع الترجمات"
 	},
 	"dictionary_notFoundEntries": {
-		"message": "لم يتم العثور على ترجمات تطابق هذه الفلاتر"
+		"message": "لم يتم العثور على ترجمات مطابقة لهذه الفلاتر"
 	},
 	"dictionary_pageTitle": {
 		"message": "القاموس"
@@ -90,34 +90,34 @@
 		"message": "إعادة تعيين الفلاتر"
 	},
 	"dictionary_searchPlaceholder": {
-		"message": "البحث عن طريق النص"
+		"message": "ابحث بالنص"
 	},
 	"editorWindow_close": {
 		"message": "إغلاق"
 	},
 	"editorWindow_data_code": {
-		"message": "الرمز"
+		"message": "كود"
 	},
-	"editorWindow_data_name": {
-		"message": "الاسم"
+	"editorWindow_data_translatorName": {
+		"message": "اسم المترجم"
 	},
-	"editorWindow_message_invalidName": {
-		"message": "يجب أن يحتوي الاسم على رمز واحد على الأقل"
+	"editorWindow_message_invalidTranslatorName": {
+		"message": "يجب أن يحتوي اسم المترجم على حرف واحد على الأقل"
 	},
 	"editorWindow_save": {
 		"message": "حفظ"
 	},
 	"ext_description": {
-		"message": "ترجمة الصفحات والنصوص، القاموس، التاريخ، المترجمون دون اتصال والمخصصون"
+		"message": "ترجمة الصفحات والنصوص، القاموس، السجل، الترجمة بدون إنترنت والمترجمون المخصصون"
 	},
 	"ext_name": {
-		"message": "مترجم - ترجمة صفحات الويب"
+		"message": "المترجم اللغوي - مترجم صفحات الويب"
 	},
 	"history_control_selectEntry": {
-		"message": "اختر إدخالًا"
+		"message": "اختر الإدخال"
 	},
 	"history_controls_clearHistory": {
-		"message": "مسح التاريخ"
+		"message": "مسح السجل"
 	},
 	"history_controls_deleteSelected": {
 		"message": "حذف المحدد"
@@ -126,7 +126,7 @@
 		"message": "تحديد كل الترجمات"
 	},
 	"history_message_clearHistoryConfirmation": {
-		"message": "هل أنت متأكد من حذف السجل؟ سيتم حذف جميع الإدخالات"
+		"message": "هل أنت متأكد من مسح السجل؟ سيتم إزالة كل الإدخالات"
 	},
 	"history_message_deleteEntryConfirmation": {
 		"message": "هل أنت متأكد من حذف هذا الإدخال؟"
@@ -134,14 +134,14 @@
 	"history_message_deleteSelectedEntriesConfirmation": {
 		"message": "هل أنت متأكد من حذف الإدخالات المحددة ($1)؟"
 	},
-	"history_message_emptyEntries": {
-		"message": "تم مسح السجل"
-	},
 	"history_message_entriesNotFound": {
-		"message": "لم يتم العثور على ترجمات تستوفي الشرط المحدد"
+		"message": "لم يتم العثور على ترجمات تطابق المرشح"
+	},
+	"history_message_noEntries": {
+		"message": "السجل فارغ"
 	},
 	"history_notification_disabled": {
-		"message": "تسجيل السجل معطل، لذا لن تظهر الإدخالات الجديدة. يمكنك تغييره في <slot id=preferences>التفضيلات</slot>"
+		"message": "تسجيل السجل معطل، لذلك لن تظهر الإدخالات الجديدة. يمكنك تعديل ذلك في <slot id=preferences>الإعدادات</slot>"
 	},
 	"history_pageTitle": {
 		"message": "السجل"
@@ -150,7 +150,7 @@
 		"message": "البحث بالنص"
 	},
 	"inlineTranslator_showOriginalText": {
-		"message": "إظهار النص الأصلي"
+		"message": "عرض النص الأصلي"
 	},
 	"lang_change": {
 		"message": "تغيير اللغة"
@@ -165,10 +165,10 @@
 		"message": "تبديل اللغات"
 	},
 	"message_askResetConfig": {
-		"message": "إعادة تعيين الإعدادات؟"
+		"message": "هل تريد إعادة تعيين الإعدادات؟"
 	},
 	"message_cacheFlushed": {
-		"message": "تم مسح الذاكرة المؤقتة"
+		"message": "تم مسح ذاكرة التخزين المؤقت"
 	},
 	"message_changesSaved": {
 		"message": "تم حفظ التغييرات"
@@ -177,19 +177,19 @@
 		"message": "خطأ"
 	},
 	"message_errorOfTranslate": {
-		"message": "خطأ في الترجمة"
+		"message": "حدث خطأ في الترجمة"
 	},
 	"message_serviceRequiredKey": {
-		"message": "يتطلب الخدمة مفتاح"
+		"message": "الخدمة تتطلب مفتاحًا"
 	},
 	"message_translateOfText": {
-		"message": "تم الترجمة"
+		"message": "تمت الترجمة"
 	},
 	"message_unknownError": {
 		"message": "خطأ غير معروف"
 	},
 	"pageTranslator_alwaysTranslateLang": {
-		"message": "ترجم هذه اللغة دائمًا"
+		"message": "ترجمة هذه اللغة دائمًا"
 	},
 	"pageTranslator_commonPreferences_autoTranslate_disable": {
 		"message": "تعطيل"
@@ -201,55 +201,55 @@
 		"message": "تمكين"
 	},
 	"pageTranslator_commonPreferences_title": {
-		"message": "تفضيلات شائعة لهذه اللغة"
+		"message": "التفضيلات العامة لهذه اللغة"
 	},
 	"pageTranslator_option_autoTranslate": {
 		"message": "الترجمة التلقائية"
 	},
 	"pageTranslator_showOptions": {
-		"message": "إظهار الخيارات"
+		"message": "عرض الخيارات"
 	},
 	"pageTranslator_showOriginal": {
-		"message": "عرض الأصلي"
+		"message": "عرض الأصل"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_always": {
-		"message": "ترجم دائمًا"
+		"message": "الترجمة دائماً"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
-		"message": "ترجم دائمًا لهذه اللغة"
+		"message": "الترجمة دائماً لهذه اللغة"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_default": {
-		"message": "استخدم القواعد الشائعة"
+		"message": "استخدام القواعد العامة"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
-		"message": "استخدم القواعد الشائعة لهذه اللغة"
+		"message": "استخدام القواعد العامة لهذه اللغة"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_never": {
-		"message": "لا تترجم"
+		"message": "عدم الترجمة أبداً"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
-		"message": "لا تترجم لهذه اللغة"
+		"message": "عدم الترجمة أبداً لهذه اللغة"
 	},
 	"pageTranslator_sitePreferences_title": {
-		"message": "تفضيلات"
+		"message": "تفضيلات لـ"
 	},
 	"pageTranslator_translatePage": {
-		"message": "ترجم الصفحة"
+		"message": "ترجمة الصفحة"
 	},
 	"pageTranslator_translationReport": {
 		"message": "تقرير الترجمة"
 	},
 	"pageTranslator_translationReport_queue": {
-		"message": "قائمة الانتظار"
+		"message": "الطابور"
 	},
 	"pageTranslator_translationReport_reject": {
-		"message": "أخطاء"
+		"message": "الأخطاء"
 	},
 	"pageTranslator_translationReport_resolve": {
-		"message": "تم ترجمتها"
+		"message": "مترجم"
 	},
 	"popup_tabIdNotFound": {
-		"message": "العلامة التبويب \"$1\" غير موجودة"
+		"message": "تبويب \"$1\" غير موجود"
 	},
 	"popup_tab_translatePage": {
 		"message": "ترجمة الصفحة"
@@ -261,94 +261,76 @@
 		"message": "إلغاء"
 	},
 	"settings_button_export": {
-		"message": "تصدير التكوين"
+		"message": "تصدير الإعدادات"
 	},
 	"settings_button_import": {
-		"message": "استيراد التكوين"
+		"message": "استيراد الإعدادات"
 	},
 	"settings_button_reset": {
-		"message": "إعادة تعيين التكوين"
+		"message": "إعادة ضبط الإعدادات"
 	},
 	"settings_button_saveChanges": {
 		"message": "حفظ التغييرات"
 	},
 	"settings_message_clearCache_success": {
-		"message": "تم مسح الذاكرة المؤقتة"
+		"message": "تم مسح ذاكرة التخزين المؤقت"
 	},
 	"settings_message_common_invalidValueType": {
 		"message": "قيمة غير صالحة"
 	},
 	"settings_message_importConfig_invalidFile": {
-		"message": "لا يمكن التعامل مع ملف الاستيراد"
+		"message": "لا يمكن معالجة الملف للاستيراد"
 	},
 	"settings_message_importConfig_success": {
-		"message": "تم الاستيراد بنجاح"
+		"message": "اكتمل الاستيراد"
 	},
 	"settings_message_resetConfig_confirm": {
 		"message": "هل تريد إعادة تعيين الإعدادات؟"
 	},
 	"settings_message_resetConfig_success": {
-		"message": "تم إعادة تعيين الإعدادات"
+		"message": "تمت إعادة تعيين الإعدادات"
 	},
 	"settings_message_saveChanges_success": {
 		"message": "تم حفظ التغييرات"
 	},
-	"settings_option_appIcon": {
-		"message": "أيقونة الامتداد"
-	},
-	"settings_option_appIcon_desc": {
-		"message": "عند اختيار الأيقونة الديناميكية، سيتم تكييف الألوان مع نسق المتصفح"
-	},
-	"settings_option_appIcon_item_auto": {
-		"message": "ديناميكي"
-	},
-	"settings_option_appIcon_item_color": {
-		"message": "اللون"
-	},
-	"settings_option_appIcon_item_dark": {
-		"message": "داكن"
-	},
-	"settings_option_appIcon_item_light": {
-		"message": "فاتح"
-	},
 	"settings_option_cache": {
-		"message": "التخزين المؤقت (Cache)"
+		"message": "ذاكرة التخزين المؤقت"
 	},
 	"settings_option_cache_clear": {
-		"message": "مسح التخزين المؤقت (Clear cache)"
+		"message": "مسح ذاكرة التخزين المؤقت"
 	},
 	"settings_option_cache_clear_desc": {
-		"message": "إزالة التخزين المؤقت إذا كان هناك أخطاء في الترجمة أو إذا كنت بحاجة لإزالة البيانات السرية"
+		"message": "قم بإزالة الذاكرة المؤقتة إذا واجهت أخطاء في الترجمة أو كنت بحاجة لإزالة المعلومات السرية"
 	},
 	"settings_option_cache_enable": {
-		"message": "تمكين التخزين المؤقت (Enable cache)"
+		"message": "تفعيل الذاكرة المؤقتة"
 	},
 	"settings_option_cache_enable_desc": {
-		"message": "عند تمكين التخزين المؤقت، ستصبح الترجمات التي تم ترجمتها مرة واحدة متاحة على الفور حتى بدون اتصال بالإنترنت"
+		"message": "عند تفعيل الذاكرة المؤقتة، ستكون الترجمات التي تم ترجمتها مسبقًا متاحة فورًا حتى بدون اتصال بالإنترنت"
 	},
 	"settings_option_cache_ignoreCase": {
-		"message": "غير حساس لحالة الأحرف (Case insensitive)"
+		"message": "غير حساس لحالة الحروف"
 	},
 	"settings_option_cache_ignoreCase_desc": {
-		"message": "عند التمكين، سيتم استخدام الترجمات من التخزين المؤقت مع الحالات التي لا تتطابق فيها الترجمة بشكل دقيق، مما قد يؤدي إلى وجود أخطاء في الترجمة"
+		"message": "عند التفعيل، سيتم استخدام الترجمات من الذاكرة المؤقتة للمطابقات غير الدقيقة، مما قد يسبب أخطاء في الترجمة"
 	},
 	"settings_option_commonSettings": {
-		"message": "إعدادات عامة"
+		"message": "الإعدادات العامة"
 	},
 	"settings_option_customTranslatorModule": {
 		"message": "المترجمون المخصصون"
 	},
 	"settings_option_customTranslatorModule_desc": {
-		"message": "يمكنك إضافة مترجمين مخصصين لخدمات الترجمة المفضلة لديك. اقرأ المزيد وابحث عن الوحدات في <slot id=docs>وثائق المترجمين المخصصين</slot>."
+		"message": "يمكنك إضافة مترجمين مخصصين لخدمات الترجمة المفضلة لديك. اقرأ المزيد واعثر على الوحدات في <slot id=docs>توثيق المترجمين المخصصين</slot>"
 	},
 	"settings_option_customTranslatorModule_manageButton": {
 		"message": "إدارة المترجمين"
 	},
 	"settings_option_history_enable": {
-		"message": "تمكين السجل"
+		"message": "تفعيل السجل"
 	},
 	"settings_option_history_enable_desc": {
-		"message": "عند التمكين، سيتم تسجيل أي ترجمة إلى صفحة السجل"
+		"message": "عند التفعيل، سيتم تسجيل كل ترجمة في صفحة التاريخ"
 	},
 	"settings_option_mainPreferences": {
 		"message": "الإعدادات الرئيسية"
@@ -357,67 +339,67 @@
 		"message": "ترجمة الصفحة"
 	},
 	"settings_option_pageTranslation_detectLanguageByContent": {
-		"message": "الكشف عن اللغة حسب المحتوى"
+		"message": "اكتشاف اللغة من المحتوى"
 	},
 	"settings_option_pageTranslation_detectLanguageByContent_desc": {
-		"message": "تحليل النص على صفحة الويب للكشف عن لغة الصفحة. عند التعطيل، سيتم استخدام اللغة الموجودة في بيانات تعريف الصفحة."
+		"message": "تحليل النص في صفحة الويب لاكتشاف لغة الصفحة. عند الإيقاف، ستُستخدم اللغة المحددة في بيانات الصفحة الوصفية"
 	},
 	"settings_option_pageTranslation_enableContextMenu": {
 		"message": "تمكين زر قائمة السياق"
 	},
 	"settings_option_pageTranslation_enableContextMenu_desc": {
-		"message": "إضافة زر لتحويل الصفحة إلى قائمة السياق"
+		"message": "إضافة زر لتبديل ترجمة الصفحة في قائمة السياق"
 	},
 	"settings_option_pageTranslation_excludeSelectors": {
-		"message": "المحددات التي يجب تخطي ترجمتها"
+		"message": "المحددات لتجاهل الترجمة"
 	},
 	"settings_option_pageTranslation_excludeSelectors_desc": {
-		"message": "قائمة محددات CSS التي لن تُترجم. محدد واحد لكل سطر. إذا تطابق عنصر مع أي من هذه المحددات، فلن يتم ترجمة العنصر وسماته والعناصر المُتعلقة به."
+		"message": "قائمة بمحددات CSS التي لن تُترجم. محدد واحد في كل سطر. إذا تطابق عنصر مع أي من هذه المحددات، فلن تُترجم هو وسماته والعناصر المتضمنة فيه"
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
-		"message": "ترجم فقط العناصر المرئية"
+		"message": "ترجمة العناصر الظاهرة فقط"
 	},
 	"settings_option_pageTranslation_lazyTranslate_desc": {
-		"message": "عند تفعيل هذا الخيار، سيتم ترجمة العناصر المرئية فقط. قد يكون هذا مفيدًا لتوفير حركة المرور عبر الشبكة"
+		"message": "عند تفعيل هذا الخيار، سيتم ترجمة العناصر الظاهرة فقط. هذا الخيار يوفر حركة الشبكة ويحد من استخدام خدمات الترجمة."
 	},
 	"settings_option_pageTranslation_originalTextPopup": {
-		"message": "تمكين البوب ​​آب بالنص الأصلي"
+		"message": "تفعيل النافذة المنبثقة للنص الأصلي"
 	},
 	"settings_option_pageTranslation_originalTextPopup_desc": {
-		"message": "إظهار بوب ​​آب بالنص الأصلي عند تحويم الماوس فوق النص المترجم"
+		"message": "عرض نافذة منبثقة تحتوي على النص الأصلي عند تحريك الفأرة فوق كتل النص المترجم."
 	},
 	"settings_option_pageTranslation_toggleTranslationHotkey": {
-		"message": "اختصارات لوحة المفاتيح"
+		"message": "مفاتيح الاختصار"
 	},
 	"settings_option_pageTranslation_toggleTranslationHotkey_desc": {
-		"message": "اختصارات لتبديل ترجمة الصفحة\nاضغط على ESC لإعادة المفاتيح"
+		"message": "اختصارات لتبديل ترجمة الصفحة\nاضغط ESC لإعادة تعيين المفاتيح"
 	},
 	"settings_option_pageTranslation_translatableAttributes": {
-		"message": "السمات المترجمة."
+		"message": "السمات القابلة للترجمة"
 	},
 	"settings_option_pageTranslation_translatableAttributes_desc": {
-		"message": "أدخل أسماء <slot id=htmlAttributes>سمات HTML</slot> للترجمة. سمة واحدة في كل سطر"
+		"message": "أدخل أسماء <slot id=htmlAttributes>سمات HTML</slot> للترجمة، سمة واحدة في كل سطر"
 	},
 	"settings_option_popupTab_pageTranslator_showCounters": {
-		"message": "عرض إحصاءات الترجمة"
+		"message": "عرض إحصائيات الترجمة"
 	},
 	"settings_option_popupTab_pageTranslator_showCounters_desc": {
-		"message": "عرض الإحصاءات لترجمة الصفحة"
+		"message": "عرض الإحصائيات الخاصة بترجمة الصفحة"
 	},
 	"settings_option_selectTranslation": {
 		"message": "ترجمة النص المحدد"
 	},
 	"settings_option_selectTranslation_detectedLangFirst": {
-		"message": "الأولوية للغة النص المكتشف بدلاً من لغة الصفحة"
+		"message": "تفضيل لغة النص المكتشفة على لغة الصفحة"
 	},
 	"settings_option_selectTranslation_detectedLangFirst_desc": {
-		"message": "عند التمكين، سيتم إعطاء الأولوية للغة النص المحدد على لغة الصفحة"
+		"message": "عند التفعيل، سيتم تفضيل لغة النص المحدد المكتشفة على لغة الصفحة"
 	},
 	"settings_option_selectTranslation_disableWhileTranslatePage": {
-		"message": "تعطيل ترجمة النص المحدد أثناء ترجمة الصفحة"
+		"message": "تعطيل أثناء ترجمة الصفحة"
 	},
 	"settings_option_selectTranslation_enable": {
-		"message": "تمكين"
+		"message": "تفعيل"
 	},
 	"settings_option_selectTranslation_focusOnTranslateButton": {
 		"message": "التركيز التلقائي على زر الترجمة"
@@ -429,28 +411,28 @@
 		"message": "إعدادات اللغة"
 	},
 	"settings_option_selectTranslation_isUseAutoForDetectLang": {
-		"message": "تمكين الكشف التلقائي عن اللغة بواسطة المترجم"
+		"message": "تمكين الكشف التلقائي للغة بواسطة المترجم"
 	},
 	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
-		"message": "استخدم الكشف التلقائي عن اللغة بواسطة المترجم عندما لا يمكن الكشف عن اللغة محليًا"
+		"message": "استخدام الكشف التلقائي للغة بواسطة المترجم عندما لا يمكن الكشف عن اللغة محليًا"
 	},
 	"settings_option_selectTranslation_mode": {
-		"message": "زر المترجم"
+		"message": "محفز الترجمة"
 	},
 	"settings_option_selectTranslation_mode_item_contextMenu": {
 		"message": "زر قائمة السياق"
 	},
 	"settings_option_selectTranslation_mode_item_popupButton": {
-		"message": "زر البوب ​​آب"
+		"message": "زر منبثق"
 	},
 	"settings_option_selectTranslation_mode_item_quickTranslate": {
-		"message": "الترجمة السريعة عن طريق التحديد"
+		"message": "ترجمة سريعة عن طريق التحديد"
 	},
 	"settings_option_selectTranslation_modifiers": {
-		"message": "التعديلات"
+		"message": "مفاتيح التعديل"
 	},
 	"settings_option_selectTranslation_modifiers_desc": {
-		"message": "حدد المفاتيح التي يجب الضغط عليها على لوحة المفاتيح لعرض الترجمة"
+		"message": "اختر المفاتيح التي يجب الضغط عليها على لوحة المفاتيح لعرض الترجمة"
 	},
 	"settings_option_selectTranslation_modifiers_key_alt": {
 		"message": "alt"
@@ -459,43 +441,43 @@
 		"message": "ctrl"
 	},
 	"settings_option_selectTranslation_modifiers_key_meta": {
-		"message": "التعريفات الرئيسية"
+		"message": "meta"
 	},
 	"settings_option_selectTranslation_modifiers_key_shift": {
-		"message": "التحول"
+		"message": "shift"
 	},
 	"settings_option_selectTranslation_rememberDirection": {
-		"message": "تذكر أخر اتجاه للغة المحددة في النص"
+		"message": "تذكر لغة النص التي تم اختيارها مؤخراً"
 	},
 	"settings_option_selectTranslation_showOnceForSelection": {
-		"message": "إظهار زر الترجمة مرة واحدة لكل تحديد للنص"
+		"message": "عرض زر الترجمة مرة واحدة لكل تحديد نص"
 	},
 	"settings_option_selectTranslation_showOnceForSelection_desc": {
-		"message": "سيتم عرض الزر مرة واحدة فقط لكل تحديد نص. إذا كنت بحاجة لإظهاره مرة أخرى ، يرجى إعادة تحديد النص"
+		"message": "سيظهر الزر مرة واحدة فقط لكل تحديد نص. لإظهاره مرة أخرى، أعد تحديد النص"
 	},
 	"settings_option_selectTranslation_showOriginalText": {
 		"message": "عرض النص الأصلي"
 	},
 	"settings_option_selectTranslation_showOriginalText_desc": {
-		"message": "إضافة كتلة من النص الأصلي إلى النافذة المنبثقة مع الترجمة"
+		"message": "إضافة قسم يحتوي على النص الأصلي في نافذة الترجمة المنبثقة"
 	},
 	"settings_option_selectTranslation_strictSelection": {
-		"message": "تحديد دقيق"
+		"message": "تحديد صارم"
 	},
 	"settings_option_selectTranslation_strictSelection_desc": {
-		"message": "تجاهل التحديد إذا تم الافراج عن زر الماوس الأيسر خارج البلوك الذي يحتوي على النص المحدد"
+		"message": "تجاهل التحديد إذا تم تحرير زر الماوس الأيسر خارج القسم الذي يحتوي النص المحدد"
 	},
 	"settings_option_selectTranslation_timeoutForHideButton": {
-		"message": "تأخير لإخفاء الزر"
+		"message": "التأخير قبل إخفاء الزر"
 	},
 	"settings_option_selectTranslation_timeoutForHideButton_desc": {
-		"message": "تأخير بالمللي ثانية قبل إخفاء الزر عندما لا يتم تحويل المؤشر عليه. سيؤدي تحويل المؤشر على الزر إلى إعادة تعيين المؤقت. لتعطيل الإخفاء التلقائي ، اجعل القيمة أقل من 1"
+		"message": "التأخير بالميلي ثانية قبل إخفاء الزر عندما لا يكون المؤشر فوقه. تمرير المؤشر فوق الزر يعيد ضبط المؤقت. لتعطيل الإخفاء التلقائي، اضبط القيمة على أقل من 1"
 	},
 	"settings_option_selectTranslation_zIndex": {
-		"message": "z-index"
+		"message": "مؤشر الطبقة (z-index)"
 	},
 	"settings_option_selectTranslation_zIndex_desc": {
-		"message": "زيادة القيمة إذا كانت بعض العناصر على بعض الصفحات تتداخل مع النافذة المنبثقة للنص المترجم"
+		"message": "زد هذه القيمة إذا كانت العناصر في بعض الصفحات تتداخل مع نافذة الترجمة المنبثقة"
 	},
 	"settings_option_textTranslator": {
 		"message": "ترجمة النص"
@@ -504,82 +486,82 @@
 		"message": "تذكر النص المترجم"
 	},
 	"settings_option_textTranslator_rememberText_desc": {
-		"message": "تذكر النص المترجم للمرة القادمة التي يتم فيها فتح النافذة"
+		"message": "تذكر النص المترجم للمرة القادمة عند فتح النافذة"
 	},
 	"settings_option_textTranslator_spellCheck": {
 		"message": "تمكين التدقيق الإملائي"
 	},
 	"settings_option_textTranslator_suggestLanguage": {
-		"message": "اقترح لغة النص المكتشفة"
+		"message": "اقتراح لغة النص المكتشف"
 	},
 	"settings_option_textTranslator_suggestLanguageAlways": {
-		"message": "الكشف وتوصية اللغة دائمًا"
+		"message": "كشف واقتراح اللغة دائمًا"
 	},
 	"settings_option_textTranslator_suggestLanguageAlways_desc": {
-		"message": "عند تعطيله، ستظهر اقتراحات اللغة فقط عند كشف اللغة المصدر تلقائيًا"
+		"message": "عند التعطيل، تظهر اقتراحات اللغة فقط عندما يتم اكتشاف اللغة المصدر تلقائيًا"
 	},
 	"settings_option_translatePreferences": {
 		"message": "تفضيلات الترجمة"
 	},
 	"settings_option_translateScheduler": {
-		"message": "جدولة الترجمة"
+		"message": "مجدول الترجمة"
 	},
 	"settings_option_translateScheduler_delay": {
-		"message": "تأخير تراكم النصوص"
+		"message": "تأخير تراكم النص"
 	},
 	"settings_option_translateScheduler_delay_desc": {
-		"message": "يقلل جدول الترجمة من عدد الطلبات إلى خدمات API الترجمة. يحاول جدول الترجمة تراكم النصوص لإرسال أكبر عدد ممكن من النصوص في طلب واحد. سينتظر جدول الترجمة لفترة محددة بالمللي ثانية لجمع نصوص جديدة قبل بدء الترجمة."
+		"message": "يقوم مجدول الترجمة بتقليل عدد الطلبات إلى واجهة برمجة تطبيقات خدمة الترجمة. يحاول تجميع أكبر عدد ممكن من النصوص للإرسال في طلب واحد. سينتظر المجدول الوقت المحدد بالمللي ثانية لجمع نصوص جديدة قبل بدء الترجمة"
 	},
 	"settings_option_translateScheduler_retryLimit": {
 		"message": "محاولات إعادة الترجمة"
 	},
 	"settings_option_translateScheduler_retryLimit_desc": {
-		"message": "سيعيد جدول الترجمة محاولة ترجمة النصوص في حالة وجود أخطاء في الترجمة. تحدد هذه الخيارات الحد الأقصى لمحاولات إعادة الترجمة. تعيين رقم سلبي للسماح بعدد غير محدود من المحاولات."
+		"message": "سيحاول المجدول إعادة ترجمة النصوص عند حدوث أخطاء في الترجمة. يحدد هذا الخيار حدًا لعدد محاولات الإعادة. ضع رقمًا سالبًا للسماح بمحاولات غير محدودة"
 	},
 	"settings_option_translatorModule": {
-		"message": "وحدة الترجمة"
+		"message": "وحدة المترجم"
 	},
 	"settings_option_translatorModule_desc": {
-		"message": "جودة الترجمة واللغات المتاحة للترجمة تعتمد على المترجم."
+		"message": "تعتمد جودة الترجمات واللغات المتاحة على المترجم"
 	},
 	"settings_option_tts": {
-		"message": "النص إلى كلام (TTS)"
+		"message": "تحويل النص إلى كلام (TTS)"
 	},
 	"settings_option_ttsCustomModules": {
-		"message": "TTS مخصص"
+		"message": "تحويل نص إلى كلام مخصص"
 	},
 	"settings_option_ttsCustomModules_button": {
-		"message": "إدارة وحدات TTS المخصصة"
+		"message": "إدارة وحدات تحويل النص إلى كلام"
 	},
 	"settings_option_ttsCustomModules_desc": {
-		"message": "يمكنك إضافة وحدات TTS التي تستخدم خدمتك وأصواتك المفضلة. قراءة المزيد والعثور على الوحدات في وثائق TTS المخصصة."
+		"message": "يمكنك إضافة وحدات تحويل النص إلى كلام التي تستخدم خدمات وأصواتك المفضلة. اقرأ المزيد واعثر على الوحدات في دليل تحويل النص إلى كلام المخصص"
 	},
 	"settings_option_ttsModule": {
-		"message": "وحدة TTS"
+		"message": "وحدة تحويل النص إلى كلام"
 	},
 	"settings_option_ttsModule_desc": {
-		"message": "وحدة للتحدث بالنصوص"
+		"message": "وحدة لتحويل النص إلى كلام"
 	},
 	"settings_option_userLanguage": {
 		"message": "لغتك"
 	},
 	"settings_option_userLanguage_desc": {
-		"message": "اللغة المستهدفة لترجمة النصوص"
+		"message": "اللغة المستهدفة لترجمة النص"
 	},
 	"settings_pageTitle": {
 		"message": "الإعدادات"
 	},
 	"settings_section_history": {
-		"message": "السجل"
+		"message": "التاريخ"
 	},
 	"settings_section_popup": {
-		"message": "النافذة المنبثقة"
+		"message": "نافذة منبثقة"
 	},
 	"textTranslator_suggestLanguage": {
-		"message": "يبدو أن هذه اللغة هي"
+		"message": "يبدو أن اللغة هي"
 	},
 	"textTranslator_translateInputPlaceholder": {
-		"message": "نص الإدخال"
+		"message": "أدخل النص"
 	},
 	"textTranslator_translatePlaceholder": {
 		"message": "النص المترجم"
@@ -591,25 +573,25 @@
 		"message": "إغلاق"
 	},
 	"translatorsManagerWindow_emptyTranslatorsListText": {
-		"message": "لم يتم إضافة مترجمين مخصصين بعد"
+		"message": "لم تتم إضافة مترجمين مخصصين بعد"
 	},
 	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
-		"message": "هل أنت متأكد من حذف المترجم \"$translator_name$\"؟",
+		"message": "هل أنت متأكد من رغبتك في إزالة المترجم \"$translator_name$\"؟",
 		"placeholders": {
 			"translator_name": {
 				"content": "$1",
-				"example": "مترجم Google"
+				"example": "Google translator"
 			}
 		}
 	},
 	"translatorsManagerWindow_title": {
-		"message": "مترجمون مخصصون"
+		"message": "المترجمون المخصصون"
 	},
 	"translatorsManagerWindow_translator_delete": {
 		"message": "حذف"
 	},
 	"translatorsManagerWindow_translator_edit": {
-		"message": "تحرير"
+		"message": "تعديل"
 	},
 	"ttsManagerWindow_add": {
 		"message": "إضافة"
@@ -618,10 +600,10 @@
 		"message": "إغلاق"
 	},
 	"ttsManagerWindow_emptyTranslatorsListText": {
-		"message": "لم يتم إضافة وحدات TTS بعد"
+		"message": "لم تتم إضافة وحدات تحويل النص إلى كلام بعد"
 	},
 	"ttsManagerWindow_message_ttsRemoveConfirmation": {
-		"message": "هل أنت متأكد من رغبتك في إزالة TTS \"$tts_name$\"؟",
+		"message": "هل أنت متأكد من رغبتك في إزالة وحدة تحويل النص إلى كلام \"$tts_name$\"؟",
 		"placeholders": {
 			"tts_name": {
 				"content": "$1",
@@ -630,22 +612,22 @@
 		}
 	},
 	"ttsManagerWindow_title": {
-		"message": "وحدات التحويل النصي إلى كلام (TTS)"
+		"message": "وحدات تحويل النص إلى كلام"
 	},
 	"ttsManagerWindow_translator_delete": {
 		"message": "حذف"
 	},
 	"ttsManagerWindow_translator_edit": {
-		"message": "تحرير"
+		"message": "تعديل"
 	},
 	"validation_number": {
-		"message": "يجب أن يكون المعامل قيمة رقمية"
+		"message": "يجب أن تكون المعلمة رقمًا"
 	},
 	"validation_numberBetweenRange": {
-		"message": "يجب أن يكون المعامل قيمة رقمية بين $1 و $2"
+		"message": "يجب أن تكون المعلمة رقمًا بين $1 و $2"
 	},
 	"validation_positiveNumber": {
-		"message": "يجب أن يكون المعامل قيمة رقمية موجبة."
+		"message": "يجب أن تكون المعلمة رقمًا موجبًا"
 	},
 	"langCode_aa": {
 		"message": "الأفارية"
@@ -750,7 +732,7 @@
 		"message": "المالديفية"
 	},
 	"langCode_dz": {
-		"message": "الزونخاية"
+		"message": "دزونكا"
 	},
 	"langCode_ee": {
 		"message": "الإيوي"
@@ -885,7 +867,7 @@
 		"message": "الكيكيو"
 	},
 	"langCode_kj": {
-		"message": "الكيونياما"
+		"message": "كوانياما"
 	},
 	"langCode_kk": {
 		"message": "الكازاخستانية"
@@ -1041,7 +1023,7 @@
 		"message": "البرتغالية"
 	},
 	"langCode_qu": {
-		"message": "الكويتشوا"
+		"message": "كيشوا"
 	},
 	"langCode_rm": {
 		"message": "الرومانشية"

@@ -30,7 +30,7 @@
 		"message": "Перевести"
 	},
 	"component_hotkey_placeholder": {
-		"message": "Нажмите, чтобы записать горячие клавиши"
+		"message": "Нажмите, чтобы записать сочетание клавиш"
 	},
 	"component_hotkey_recordPlaceholder": {
 		"message": "Нажмите клавиши"
@@ -60,16 +60,16 @@
 		"message": "Очистить"
 	},
 	"dictionary_deleteAll": {
-		"message": "Вы уверены что хотите удалить ВСЕ переводы из словаря?"
+		"message": "Вы уверены, что хотите удалить ВСЕ переводы в словаре?"
 	},
 	"dictionary_deleteConfirmation": {
-		"message": "Вы уверены что хотите удалить этот перевод?"
+		"message": "Вы уверены, что хотите удалить этот перевод?"
 	},
 	"dictionary_description": {
 		"message": "Сохраняйте переводы в словаре, что бы найти их позже"
 	},
 	"dictionary_emptyDictionary": {
-		"message": "Словарь пуст. Начните сохранять тексты при переводе"
+		"message": "Словарь пуст. Начните заполнять его, переводя текст"
 	},
 	"dictionary_filter_from": {
 		"message": "Исходный язык"
@@ -81,7 +81,7 @@
 		"message": "Словарь успешно очищен"
 	},
 	"dictionary_notFoundEntries": {
-		"message": "Не найдены записи, соответствующие фильтрам"
+		"message": "Переводы, соответствующие этим фильтрам, не найдены"
 	},
 	"dictionary_pageTitle": {
 		"message": "Словарь"
@@ -98,17 +98,17 @@
 	"editorWindow_data_code": {
 		"message": "Код"
 	},
-	"editorWindow_data_name": {
-		"message": "Название"
+	"editorWindow_data_translatorName": {
+		"message": "Имя переводчика"
 	},
-	"editorWindow_message_invalidName": {
-		"message": "Название должно содержать как минимум 1 символ"
+	"editorWindow_message_invalidTranslatorName": {
+		"message": "Имя переводчика должно содержать хотя бы один символ"
 	},
 	"editorWindow_save": {
 		"message": "Сохранить"
 	},
 	"ext_description": {
-		"message": "Перевод страниц и текстов, словарь, история, автономные и настраиваемые переводчики"
+		"message": "Перевод страниц и текста, словарь, история, офлайн и пользовательские переводчики"
 	},
 	"ext_name": {
 		"message": "Linguist - переводчик веб-страниц"
@@ -126,19 +126,19 @@
 		"message": "Выбрать все переводы"
 	},
 	"history_message_clearHistoryConfirmation": {
-		"message": "Очистить историю? Все записи будут удалены"
+		"message": "Вы уверены, что хотите очистить историю? Все записи будут удалены"
 	},
 	"history_message_deleteEntryConfirmation": {
-		"message": "Удалить этот перевод?"
+		"message": "Вы уверены, что хотите удалить эту запись?"
 	},
 	"history_message_deleteSelectedEntriesConfirmation": {
-		"message": "Удалить выбранные записи ($1)?"
-	},
-	"history_message_emptyEntries": {
-		"message": "История пуста"
+		"message": "Вы уверены, что хотите удалить выбранные записи ($1)?"
 	},
 	"history_message_entriesNotFound": {
-		"message": "Не найдены переводы, соответствующие фильтрам"
+		"message": "Переводы, соответствующие фильтру, не найдены"
+	},
+	"history_message_noEntries": {
+		"message": "История пуста"
 	},
 	"history_notification_disabled": {
 		"message": "Запись истории отключена, поэтому новые записи не будут появляться. Вы можете изменить это в <slot id=preferences>настройках</slot>"
@@ -156,7 +156,7 @@
 		"message": "Сменить язык"
 	},
 	"lang_detect": {
-		"message": "Определить язык"
+		"message": "Автоопределение"
 	},
 	"lang_select": {
 		"message": "Выбрать язык"
@@ -168,7 +168,7 @@
 		"message": "Сбросить настройки?"
 	},
 	"message_cacheFlushed": {
-		"message": "Кеш очищен"
+		"message": "Кеш был очищен"
 	},
 	"message_changesSaved": {
 		"message": "Изменения сохранены"
@@ -293,24 +293,6 @@
 	"settings_message_saveChanges_success": {
 		"message": "Изменения сохранены"
 	},
-	"settings_option_appIcon": {
-		"message": "Иконка расширения"
-	},
-	"settings_option_appIcon_desc": {
-		"message": "При установке динамической иконки, цвет будет подстраиваться под тему браузера"
-	},
-	"settings_option_appIcon_item_auto": {
-		"message": "Динамический выбор"
-	},
-	"settings_option_appIcon_item_color": {
-		"message": "Цветная"
-	},
-	"settings_option_appIcon_item_dark": {
-		"message": "Темная"
-	},
-	"settings_option_appIcon_item_light": {
-		"message": "Светлая"
-	},
 	"settings_option_cache": {
 		"message": "Кеш"
 	},
@@ -324,13 +306,13 @@
 		"message": "Использовать кеш"
 	},
 	"settings_option_cache_enable_desc": {
-		"message": "При использовании кеша, переводы сохраняются в локальное хранилище и в будущем аналогичные запросы будут переведены мгновенно.\n\nМожно, например, перевести страницу и переключаться между переводом и оригинальной версией, при отсутствии интернета"
+		"message": "При включенном кэше переводы, сделанные ранее, будут доступны сразу, даже без подключения к интернету"
 	},
 	"settings_option_cache_ignoreCase": {
 		"message": "Чувствительность к регистру"
 	},
 	"settings_option_cache_ignoreCase_desc": {
-		"message": "При отключенной опции, большее количество текста будет браться из кеша, но это может вызвать артефакты в переводе"
+		"message": "При включении из кэша будут использоваться переводы для несовпадающих точных вариантов, что может вызвать артефакты перевода"
 	},
 	"settings_option_commonSettings": {
 		"message": "Общие настройки"
@@ -339,7 +321,7 @@
 		"message": "Пользовательские модули перевода"
 	},
 	"settings_option_customTranslatorModule_desc": {
-		"message": "Вы можете добавить собственные переводчики, использующие ваши любимые сервисы перевода"
+		"message": "Вы можете добавить собственные переводчики для ваших любимых сервисов перевода. Подробнее и модули доступны в <slot id=docs>документации по пользовательским переводчикам</slot>"
 	},
 	"settings_option_customTranslatorModule_manageButton": {
 		"message": "Управление переводчиками"
@@ -348,7 +330,7 @@
 		"message": "Включить историю"
 	},
 	"settings_option_history_enable_desc": {
-		"message": "При включении любые переводы будут сохраняться на странице истории"
+		"message": "При включении все переводы будут сохраняться на странице истории"
 	},
 	"settings_option_mainPreferences": {
 		"message": "Основные настройки"
@@ -360,31 +342,31 @@
 		"message": "Определять язык страницы по содержимому тексту"
 	},
 	"settings_option_pageTranslation_detectLanguageByContent_desc": {
-		"message": "Пытаться определить язык страницы по содержимому тексту в первую очередь. По умолчанию, язык определяется по мета информации предоставленной страницей"
+		"message": "Анализировать текст на веб-странице для определения языка страницы. Если отключено, будет использоваться язык, указанный в метаданных страницы"
 	},
 	"settings_option_pageTranslation_enableContextMenu": {
 		"message": "Включить кнопку в контекстном меню"
 	},
 	"settings_option_pageTranslation_enableContextMenu_desc": {
-		"message": "Добавить кнопку для переключения перевода страницы в контекстное меню"
+		"message": "Добавить кнопку для включения и отключения перевода страницы в контекстном меню"
 	},
 	"settings_option_pageTranslation_excludeSelectors": {
 		"message": "Селекторы для исключения из перевода"
 	},
 	"settings_option_pageTranslation_excludeSelectors_desc": {
-		"message": "Список CSS-селекторов, которые не будут переводиться. Один селектор на строку. Если элемент соответствует любому из этих селекторов, он, его атрибуты и вложенные элементы не будут переведены."
+		"message": "Список CSS-селекторов, которые не будут переведены. Один селектор на строку. Если элемент соответствует любому из этих селекторов, он вместе с его атрибутами и вложенными элементами не будет переведен"
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
 		"message": "Переводить только видимую часть текста"
 	},
 	"settings_option_pageTranslation_lazyTranslate_desc": {
-		"message": "При отключении, страницы переводятся полностью сразу. Эта настройка может значительно экономить на трафик"
+		"message": "При включении этой опции будут переведены только видимые элементы. Это экономит сетевой трафик и ограничивает использование переводческих сервисов"
 	},
 	"settings_option_pageTranslation_originalTextPopup": {
 		"message": "Показывать оригинальный текст при наведении"
 	},
 	"settings_option_pageTranslation_originalTextPopup_desc": {
-		"message": "Показать всплывающее окно с исходным текстом при наведении мыши на переведенный текст"
+		"message": "Показывать всплывающее окно с оригинальным текстом при наведении мыши на блоки с переведенным текстом"
 	},
 	"settings_option_pageTranslation_toggleTranslationHotkey": {
 		"message": "Горячие клавиши"
@@ -393,10 +375,10 @@
 		"message": "Сочетания клавиш для переключения перевода страницы\nНажмите ESC для сброса клавиш"
 	},
 	"settings_option_pageTranslation_translatableAttributes": {
-		"message": "Список аттрибутов для перевода"
+		"message": "Атрибуты, подлежащие переводу"
 	},
 	"settings_option_pageTranslation_translatableAttributes_desc": {
-		"message": "Переводятся только аттрибуты из списка. Указывайте каждый аттрибут с новой строки"
+		"message": "Введите <slot id=htmlAttributes>имена HTML-атрибутов</slot> для перевода, по одному атрибуту на строку"
 	},
 	"settings_option_popupTab_pageTranslator_showCounters": {
 		"message": "Показывать статистику перевода"
@@ -408,7 +390,7 @@
 		"message": "Перевод при выделении"
 	},
 	"settings_option_selectTranslation_detectedLangFirst": {
-		"message": "Предпочитать определённый язык текста, языку страницы"
+		"message": "Отдавать предпочтение обнаруженному языку текста вместо языка страницы"
 	},
 	"settings_option_selectTranslation_detectedLangFirst_desc": {
 		"message": "При включении, модуль будет пытаться определить язык выделенного текста, иначе при переводе будет предложен язык страницы"
@@ -465,37 +447,37 @@
 		"message": "shift"
 	},
 	"settings_option_selectTranslation_rememberDirection": {
-		"message": "Запоминать последнее направление перевода"
+		"message": "Запоминать последний выбранный язык текста"
 	},
 	"settings_option_selectTranslation_showOnceForSelection": {
 		"message": "Показывать кнопку один раз для каждого выделения текста"
 	},
 	"settings_option_selectTranslation_showOnceForSelection_desc": {
-		"message": "Кнопка будет показываться только один раз после каждого выделения. Если нужно показать кнопку ещё раз, выделите текст снова"
+		"message": "Кнопка отображается только один раз для каждого выделенного текста. Чтобы показать её снова, выделите текст заново"
 	},
 	"settings_option_selectTranslation_showOriginalText": {
 		"message": "Показывать блок с оригинальным текстом"
 	},
 	"settings_option_selectTranslation_showOriginalText_desc": {
-		"message": "Добавить блок с исходным текстом во всплывающее окно с переводом"
+		"message": "Добавить блок с оригинальным текстом в всплывающее окно перевода"
 	},
 	"settings_option_selectTranslation_strictSelection": {
 		"message": "Строгое выделение"
 	},
 	"settings_option_selectTranslation_strictSelection_desc": {
-		"message": "Игнорировать выделение, при отпускании мыши за пределами блока содержащего текст"
+		"message": "Игнорировать выделение, если левая кнопка мыши отпущена за пределами блока, содержащего выбранный текст"
 	},
 	"settings_option_selectTranslation_timeoutForHideButton": {
-		"message": "Задержка автоматического скрытия кнопки перевода"
+		"message": "Задержка перед скрытием кнопки"
 	},
 	"settings_option_selectTranslation_timeoutForHideButton_desc": {
-		"message": "Время в мс, по истечении которого кнопка перевода будет скрыта после выделения текста.\nНаведение курсора на кнопку сбрасывает таймер.\n\nДля отключения автоматического скрытия, установите значение меньше еденицы"
+		"message": "Задержка в миллисекундах перед скрытием кнопки, когда курсор не наведен. Наведение на кнопку сбрасывает таймер. Чтобы отключить автоскрытие, установите значение меньше 1"
 	},
 	"settings_option_selectTranslation_zIndex": {
 		"message": "z-index"
 	},
 	"settings_option_selectTranslation_zIndex_desc": {
-		"message": "Если блок перевода перекрывается другими элементами, увеличьте это значение"
+		"message": "Увеличьте это значение, если элементы на некоторых страницах перекрывают всплывающее окно с переводом текста"
 	},
 	"settings_option_textTranslator": {
 		"message": "Перевод текста"
@@ -516,7 +498,7 @@
 		"message": "Определять и предлагать язык всегда"
 	},
 	"settings_option_textTranslator_suggestLanguageAlways_desc": {
-		"message": "В выключенном состоянии язык будет определяться только при не установленном языке текста"
+		"message": "При отключении предложения языка будут появляться только при автоматическом определении исходного языка"
 	},
 	"settings_option_translatePreferences": {
 		"message": "Настройки перевода"
@@ -528,22 +510,22 @@
 		"message": "Задержка для накопления текста (в мс)"
 	},
 	"settings_option_translateScheduler_delay_desc": {
-		"message": "Планировщик перевода старается уменьшить количество запросов к сервисам перевода и для этого накапливает тексты в блоки, что бы отправить на перевод несколько текстов одним запросом.\n\nПосле добавления текста в блок, планировщик ожидает некоторое время и если по истечении указанного времени новых текстов не добавляется, он отправляет блок на перевод"
+		"message": "Планировщик перевода снижает количество запросов к API сервиса перевода. Он пытается накопить как можно больше текстов для отправки в одном запросе. Планировщик будет ждать указанное время в миллисекундах для сбора новых текстов перед началом перевода"
 	},
 	"settings_option_translateScheduler_retryLimit": {
 		"message": "Количество повторных попыток перевода"
 	},
 	"settings_option_translateScheduler_retryLimit_desc": {
-		"message": "При неудачной попытке перевода, будут предприняты повторные попытки, не превышающие установленный лимит.\nДля снятия ограничения, установите отрицательное значение"
+		"message": "Планировщик будет повторять попытки перевода текстов при возникновении ошибок перевода. Этот параметр задаёт лимит попыток повторения. Установите отрицательное число для неограниченных повторов"
 	},
 	"settings_option_translatorModule": {
 		"message": "Модуль перевода"
 	},
 	"settings_option_translatorModule_desc": {
-		"message": "От выбранного модуля зависит скорость и качество переводов, а также доступные направления перевода.\n\nЕсли модуль работает некорректно, смените его"
+		"message": "Качество переводов и доступные языки зависят от выбранного переводчика"
 	},
 	"settings_option_tts": {
-		"message": "Озвучивание текста (TTS)"
+		"message": "Текст в речь (TTS)"
 	},
 	"settings_option_ttsCustomModules": {
 		"message": "Модули озвучивания текста"
@@ -552,19 +534,19 @@
 		"message": "Управление TTS модулями"
 	},
 	"settings_option_ttsCustomModules_desc": {
-		"message": "Вы можете добавить модули TTS, которые используют ваши любимые сервисы и голоса. Узнайте больше и ищите модули в документации по настройке TTS"
+		"message": "Вы можете добавить модули TTS, использующие ваши любимые сервисы и голоса. Подробнее и доступные модули смотрите в документации по пользовательским TTS"
 	},
 	"settings_option_ttsModule": {
 		"message": "TTS модуль"
 	},
 	"settings_option_ttsModule_desc": {
-		"message": "Модуль для озвучивания текстов"
+		"message": "Модуль для озвучивания текста"
 	},
 	"settings_option_userLanguage": {
 		"message": "Ваш язык"
 	},
 	"settings_option_userLanguage_desc": {
-		"message": "На этот язык будут переводиться тексты по умолчанию\n\nЯзык интерфейса зависит от языка браузера, возможно в будущем его можно будет установить в настройках расширения"
+		"message": "Целевой язык для перевода текста"
 	},
 	"settings_pageTitle": {
 		"message": "Настройки"
@@ -591,10 +573,10 @@
 		"message": "Закрыть"
 	},
 	"translatorsManagerWindow_emptyTranslatorsListText": {
-		"message": "Список пуст. Самое время добавить новый переводчик"
+		"message": "Пользовательские переводчики еще не добавлены"
 	},
 	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
-		"message": "Вы действительно хотите удалить переводчик \"$translator_name$\"?",
+		"message": "Вы уверены, что хотите удалить переводчика \"$translator_name$\"?",
 		"placeholders": {
 			"translator_name": {
 				"content": "$1",
@@ -618,10 +600,10 @@
 		"message": "Закрыть"
 	},
 	"ttsManagerWindow_emptyTranslatorsListText": {
-		"message": "Пользовательские модули TTS еще не добавлены"
+		"message": "Модули TTS еще не добавлены"
 	},
 	"ttsManagerWindow_message_ttsRemoveConfirmation": {
-		"message": "Удалить модуль озвучивания текста \"$tts_name$\"?",
+		"message": "Вы уверены, что хотите удалить модуль TTS \"$tts_name$\"?",
 		"placeholders": {
 			"tts_name": {
 				"content": "$1",

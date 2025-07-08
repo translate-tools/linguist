@@ -30,7 +30,7 @@
 		"message": "Traducir"
 	},
 	"component_hotkey_placeholder": {
-		"message": "Haga clic para grabar atajos de teclado"
+		"message": "Haga clic para grabar el atajo"
 	},
 	"component_hotkey_recordPlaceholder": {
 		"message": "Presione las teclas"
@@ -66,16 +66,16 @@
 		"message": "¿Está seguro de que desea eliminar esta traducción?"
 	},
 	"dictionary_description": {
-		"message": "Mantenga sus traducciones en el diccionario para encontrarlas más tarde"
+		"message": "Guarde sus traducciones en el diccionario para encontrarlas más tarde"
 	},
 	"dictionary_emptyDictionary": {
-		"message": "El diccionario está vacío. Comience a llenarlo mientras traduce algún texto."
+		"message": "El diccionario está vacío. Comience a llenarlo traduciendo algún texto"
 	},
 	"dictionary_filter_from": {
-		"message": "Desde"
+		"message": "De"
 	},
 	"dictionary_filter_to": {
-		"message": "Hasta"
+		"message": "A"
 	},
 	"dictionary_message_deleteAll_success": {
 		"message": "Todas las traducciones fueron eliminadas"
@@ -98,20 +98,20 @@
 	"editorWindow_data_code": {
 		"message": "Código"
 	},
-	"editorWindow_data_name": {
-		"message": "Nombre"
+	"editorWindow_data_translatorName": {
+		"message": "Nombre del traductor"
 	},
-	"editorWindow_message_invalidName": {
-		"message": "El nombre debe contener al menos un símbolo"
+	"editorWindow_message_invalidTranslatorName": {
+		"message": "El nombre del traductor debe contener al menos un carácter"
 	},
 	"editorWindow_save": {
 		"message": "Guardar"
 	},
 	"ext_description": {
-		"message": "Traducción de páginas y textos, diccionario, historial, traductores offline y personalizados"
+		"message": "Traducción de páginas y texto, diccionario, historial, traductores offline y personalizados"
 	},
 	"ext_name": {
-		"message": "Linguist - traductor de páginas web"
+		"message": "Lingüista - traductor de páginas web"
 	},
 	"history_control_selectEntry": {
 		"message": "Seleccionar entrada"
@@ -134,14 +134,14 @@
 	"history_message_deleteSelectedEntriesConfirmation": {
 		"message": "¿Está seguro de que desea eliminar las entradas seleccionadas ($1)?"
 	},
-	"history_message_emptyEntries": {
-		"message": "Historial vacío"
-	},
 	"history_message_entriesNotFound": {
-		"message": "No se encontraron traducciones que satisfagan el filtro"
+		"message": "No se encontraron traducciones que coincidan con el filtro"
+	},
+	"history_message_noEntries": {
+		"message": "El historial está vacío"
 	},
 	"history_notification_disabled": {
-		"message": "La grabación del historial está desactivada, por lo que no aparecerán nuevas entradas. Puedes cambiarlo en <slot id=preferences>preferencias</slot>"
+		"message": "La grabación del historial está desactivada, por lo que no aparecerán nuevas entradas. Puede cambiar esto en las <slot id=preferences>preferencias</slot>"
 	},
 	"history_pageTitle": {
 		"message": "Historial"
@@ -156,7 +156,7 @@
 		"message": "Cambiar idioma"
 	},
 	"lang_detect": {
-		"message": "Detectar automáticamente"
+		"message": "Detección automática"
 	},
 	"lang_select": {
 		"message": "Seleccionar idioma"
@@ -165,10 +165,10 @@
 		"message": "Intercambiar idiomas"
 	},
 	"message_askResetConfig": {
-		"message": "¿Restablecer la configuración?"
+		"message": "¿Restablecer configuración?"
 	},
 	"message_cacheFlushed": {
-		"message": "La caché se ha vaciado"
+		"message": "La caché ha sido limpiada"
 	},
 	"message_changesSaved": {
 		"message": "Cambios guardados"
@@ -189,7 +189,7 @@
 		"message": "Error desconocido"
 	},
 	"pageTranslator_alwaysTranslateLang": {
-		"message": "Siempre traducir este idioma"
+		"message": "Traducir siempre este idioma"
 	},
 	"pageTranslator_commonPreferences_autoTranslate_disable": {
 		"message": "Desactivar"
@@ -204,7 +204,7 @@
 		"message": "Preferencias comunes para este idioma"
 	},
 	"pageTranslator_option_autoTranslate": {
-		"message": "Auto traducir"
+		"message": "Traducción automática"
 	},
 	"pageTranslator_showOptions": {
 		"message": "Mostrar opciones"
@@ -213,10 +213,10 @@
 		"message": "Mostrar original"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_always": {
-		"message": "Siempre traducir"
+		"message": "Traducir siempre"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
-		"message": "Siempre traducir para este idioma"
+		"message": "Traducir siempre para este idioma"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_default": {
 		"message": "Usar reglas comunes"
@@ -249,7 +249,7 @@
 		"message": "Traducido"
 	},
 	"popup_tabIdNotFound": {
-		"message": "La pestaña \"$1\" no se encuentra"
+		"message": "Pestaña \"$1\" no encontrada"
 	},
 	"popup_tab_translatePage": {
 		"message": "Traducción de página"
@@ -273,16 +273,16 @@
 		"message": "Guardar cambios"
 	},
 	"settings_message_clearCache_success": {
-		"message": "La caché se ha borrado"
+		"message": "Caché limpiada"
 	},
 	"settings_message_common_invalidValueType": {
-		"message": "Valor no válido"
+		"message": "Valor inválido"
 	},
 	"settings_message_importConfig_invalidFile": {
-		"message": "No se puede manejar el archivo de importación"
+		"message": "No se puede procesar el archivo para importar"
 	},
 	"settings_message_importConfig_success": {
-		"message": "Importación realizada"
+		"message": "Importación completada"
 	},
 	"settings_message_resetConfig_confirm": {
 		"message": "¿Desea restablecer la configuración?"
@@ -293,44 +293,26 @@
 	"settings_message_saveChanges_success": {
 		"message": "Cambios guardados"
 	},
-	"settings_option_appIcon": {
-		"message": "Icono de extensión"
-	},
-	"settings_option_appIcon_desc": {
-		"message": "Cuando se selecciona el icono dinámico, los colores se adaptarán al tema del navegador."
-	},
-	"settings_option_appIcon_item_auto": {
-		"message": "Dinámico"
-	},
-	"settings_option_appIcon_item_color": {
-		"message": "Color"
-	},
-	"settings_option_appIcon_item_dark": {
-		"message": "Oscuro"
-	},
-	"settings_option_appIcon_item_light": {
-		"message": "Claro"
-	},
 	"settings_option_cache": {
-		"message": "Cache"
+		"message": "Caché"
 	},
 	"settings_option_cache_clear": {
-		"message": "Borrar caché"
+		"message": "Limpiar caché"
 	},
 	"settings_option_cache_clear_desc": {
-		"message": "Eliminar la caché si tiene archivos de traducción incorrectos o necesita eliminar secretos"
+		"message": "Eliminar caché si tiene artefactos de traducción o necesita eliminar secretos"
 	},
 	"settings_option_cache_enable": {
 		"message": "Habilitar caché"
 	},
 	"settings_option_cache_enable_desc": {
-		"message": "Cuando se habilita la caché, las traducciones que se han traducido una vez estarán disponibles de inmediato, incluso sin internet"
+		"message": "Cuando la caché está habilitada, las traducciones que se hayan realizado una vez estarán disponibles inmediatamente, incluso sin conexión a internet"
 	},
 	"settings_option_cache_ignoreCase": {
-		"message": "Mayúsculas y minúsculas"
+		"message": "Sin distinción de mayúsculas"
 	},
 	"settings_option_cache_ignoreCase_desc": {
-		"message": "Cuando está habilitado, las traducciones de la caché se utilizarán con coincidencias no exactas, lo que puede causar artefactos de traducción"
+		"message": "Cuando está activado, se usarán traducciones en caché para coincidencias no exactas, lo que puede causar artefactos de traducción"
 	},
 	"settings_option_commonSettings": {
 		"message": "Configuraciones comunes"
@@ -339,79 +321,79 @@
 		"message": "Traductores personalizados"
 	},
 	"settings_option_customTranslatorModule_desc": {
-		"message": "Puede añadir traductores personalizados para sus servicios de traducción favoritos. Obtenga más información y encuentre módulos en la <slot id=docs>documentación de traductores personalizados</slot>."
+		"message": "Puede agregar traductores personalizados para sus servicios de traducción favoritos. Lea más y encuentre módulos en la <slot id=docs>documentación de traductores personalizados</slot>"
 	},
 	"settings_option_customTranslatorModule_manageButton": {
-		"message": "Administrar traductores"
+		"message": "Gestionar traductores"
 	},
 	"settings_option_history_enable": {
-		"message": "Activar historial"
+		"message": "Habilitar historial"
 	},
 	"settings_option_history_enable_desc": {
-		"message": "Cuando está activado, cualquier traducción se registrará en una página de historial"
+		"message": "Cuando está activado, cada traducción se registrará en una página de historial"
 	},
 	"settings_option_mainPreferences": {
-		"message": "Configuraciones principales"
+		"message": "Configuración principal"
 	},
 	"settings_option_pageTranslation": {
 		"message": "Traducción de página"
 	},
 	"settings_option_pageTranslation_detectLanguageByContent": {
-		"message": "Detectar idioma según el contenido"
+		"message": "Detectar idioma por contenido"
 	},
 	"settings_option_pageTranslation_detectLanguageByContent_desc": {
-		"message": "Analice el texto en la página web para detectar el idioma de la página. Cuando esté desactivado, se utilizará un idioma proporcionado en los metadatos de la página."
+		"message": "Analizar el texto en la página web para detectar el idioma de la página. Cuando está desactivado, se utilizará el idioma proporcionado en los metadatos de la página"
 	},
 	"settings_option_pageTranslation_enableContextMenu": {
-		"message": "Activar botón del menú contextual"
+		"message": "Habilitar botón en el menú contextual"
 	},
 	"settings_option_pageTranslation_enableContextMenu_desc": {
-		"message": "Agregar botón para alternar la traducción de la página en un menú contextual"
+		"message": "Agregar un botón para activar o desactivar la traducción de la página en el menú contextual"
 	},
 	"settings_option_pageTranslation_excludeSelectors": {
 		"message": "Selectores para omitir la traducción"
 	},
 	"settings_option_pageTranslation_excludeSelectors_desc": {
-		"message": "Lista de selectores CSS que no serán traducidos. Un selector por línea. Si un elemento coincide con alguno de estos selectores, tanto él como sus atributos y elementos anidados no serán traducidos."
+		"message": "Lista de selectores CSS que no serán traducidos. Un selector por línea. Si un elemento coincide con alguno de estos selectores, este, sus atributos y elementos anidados no serán traducidos"
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
-		"message": "Traducir solo elementos visibles"
+		"message": "Traducir solo los elementos visibles"
 	},
 	"settings_option_pageTranslation_lazyTranslate_desc": {
-		"message": "Cuando esta opción está habilitada, solo se traducirán los elementos visibles. Esto puede ser útil para ahorrar tráfico de red"
+		"message": "Cuando esta opción está activada, solo se traducirán los elementos visibles. Esta opción ahorra tráfico de red y limita el uso de los servicios de traducción utilizados"
 	},
 	"settings_option_pageTranslation_originalTextPopup": {
-		"message": "Habilitar ventana emergente con texto original"
+		"message": "Activar ventana emergente con el texto original"
 	},
 	"settings_option_pageTranslation_originalTextPopup_desc": {
-		"message": "Mostrar una ventana emergente con el texto original al pasar el mouse sobre el texto traducido"
+		"message": "Mostrar una ventana emergente con el texto original al pasar el ratón sobre los bloques de texto traducidos"
 	},
 	"settings_option_pageTranslation_toggleTranslationHotkey": {
-		"message": "Atajos de teclado"
+		"message": "Teclas rápidas"
 	},
 	"settings_option_pageTranslation_toggleTranslationHotkey_desc": {
-		"message": "Atajos para activar/desactivar la traducción de la página\nPresione ESC para reiniciar las teclas"
+		"message": "Atajos para activar o desactivar la traducción de página\nPresione ESC para restablecer las teclas"
 	},
 	"settings_option_pageTranslation_translatableAttributes": {
-		"message": "Atributos traducibles."
+		"message": "Atributos traducibles"
 	},
 	"settings_option_pageTranslation_translatableAttributes_desc": {
-		"message": "Ingrese nombres de <slot id=htmlAttributes>atributos HTML</slot> para la traducción. Un atributo por línea"
+		"message": "Ingrese los nombres de los <slot id=htmlAttributes>atributos HTML</slot> para traducir, un atributo por línea"
 	},
 	"settings_option_popupTab_pageTranslator_showCounters": {
 		"message": "Mostrar estadísticas de traducción"
 	},
 	"settings_option_popupTab_pageTranslator_showCounters_desc": {
-		"message": "Mostrar estadísticas de traducción de página"
+		"message": "Mostrar estadísticas de la traducción de la página"
 	},
 	"settings_option_selectTranslation": {
-		"message": "Traducción de texto seleccionado"
+		"message": "Traducción del texto seleccionado"
 	},
 	"settings_option_selectTranslation_detectedLangFirst": {
-		"message": "Preferir el idioma detectado del texto en lugar del idioma de la página"
+		"message": "Preferir el idioma detectado del texto sobre el idioma de la página"
 	},
 	"settings_option_selectTranslation_detectedLangFirst_desc": {
-		"message": "Cuando está habilitado, se prefiere el idioma detectado del texto seleccionado sobre el idioma de la página"
+		"message": "Cuando esté habilitado, se preferirá el idioma detectado del texto seleccionado sobre el idioma de la página"
 	},
 	"settings_option_selectTranslation_disableWhileTranslatePage": {
 		"message": "Desactivar mientras se traduce la página"
@@ -420,19 +402,19 @@
 		"message": "Habilitar"
 	},
 	"settings_option_selectTranslation_focusOnTranslateButton": {
-		"message": "Enfoque automático en el botón de traducción"
+		"message": "Enfocar automáticamente el botón de traducción"
 	},
 	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
-		"message": "Enfocarse en el botón de traducción cuando aparezca"
+		"message": "Enfocar el botón de traducción cuando aparezca"
 	},
 	"settings_option_selectTranslation_header_languageChoice": {
 		"message": "Configuración de idioma"
 	},
 	"settings_option_selectTranslation_isUseAutoForDetectLang": {
-		"message": "Habilitar la detección automática de idioma por el traductor"
+		"message": "Habilitar detección automática de idioma por el traductor"
 	},
 	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
-		"message": "Utilice la detección automática de idioma por el traductor cuando no se pueda detectar el idioma localmente"
+		"message": "Usar detección automática de idioma por el traductor cuando el idioma no pueda detectarse localmente"
 	},
 	"settings_option_selectTranslation_mode": {
 		"message": "Disparador de traducción"
@@ -465,37 +447,37 @@
 		"message": "shift"
 	},
 	"settings_option_selectTranslation_rememberDirection": {
-		"message": "Recordar el idioma más reciente seleccionado del texto"
+		"message": "Recordar el idioma más recientemente seleccionado del texto"
 	},
 	"settings_option_selectTranslation_showOnceForSelection": {
-		"message": "Mostrar el botón de traducción solo una vez por cada selección de texto"
+		"message": "Mostrar el botón de traducción una vez por cada selección de texto"
 	},
 	"settings_option_selectTranslation_showOnceForSelection_desc": {
-		"message": "El botón aparecerá solo una vez para cada selección de texto. Si necesita volver a mostrarlo, vuelva a seleccionar el texto"
+		"message": "El botón se mostrará solo una vez por cada selección de texto. Para mostrarlo de nuevo, vuelva a seleccionar el texto"
 	},
 	"settings_option_selectTranslation_showOriginalText": {
 		"message": "Mostrar texto original"
 	},
 	"settings_option_selectTranslation_showOriginalText_desc": {
-		"message": "Agregar un bloque con el texto original a una ventana emergente con la traducción"
+		"message": "Agregar un bloque con el texto original en la ventana emergente de traducción"
 	},
 	"settings_option_selectTranslation_strictSelection": {
 		"message": "Selección estricta"
 	},
 	"settings_option_selectTranslation_strictSelection_desc": {
-		"message": "Ignorar la selección si se suelta el botón izquierdo del ratón fuera de un bloque que contenga texto seleccionado"
+		"message": "Ignorar la selección si el botón izquierdo del ratón se suelta fuera del bloque que contiene el texto seleccionado"
 	},
 	"settings_option_selectTranslation_timeoutForHideButton": {
-		"message": "Retraso para ocultar el botón"
+		"message": "Retraso antes de ocultar el botón"
 	},
 	"settings_option_selectTranslation_timeoutForHideButton_desc": {
-		"message": "Retardo en milisegundos antes de ocultar el botón cuando el cursor no está sobre él. Pasar el cursor sobre el botón reiniciará el temporizador. Para desactivar la ocultación automática, establezca un valor menor que 1."
+		"message": "Retraso en milisegundos antes de ocultar el botón cuando el cursor no está sobre él. Mantener el cursor sobre el botón reinicia el temporizador. Para desactivar el ocultamiento automático, establezca un valor menor que 1"
 	},
 	"settings_option_selectTranslation_zIndex": {
 		"message": "z-index"
 	},
 	"settings_option_selectTranslation_zIndex_desc": {
-		"message": "Aumente el valor si algunos elementos en algunas páginas se superponen a una ventana emergente con texto traducido."
+		"message": "Aumente este valor si elementos en algunas páginas se superponen a la ventana emergente con el texto traducido"
 	},
 	"settings_option_textTranslator": {
 		"message": "Traducción de texto"
@@ -504,19 +486,19 @@
 		"message": "Recordar texto traducido"
 	},
 	"settings_option_textTranslator_rememberText_desc": {
-		"message": "Recuerda el texto traducido para la próxima vez que se abra la ventana."
+		"message": "Recordar el texto traducido para la próxima vez que se abra la ventana"
 	},
 	"settings_option_textTranslator_spellCheck": {
-		"message": "Activar corrección ortográfica"
+		"message": "Habilitar corrector ortográfico"
 	},
 	"settings_option_textTranslator_suggestLanguage": {
-		"message": "Sugerir idioma detectado del texto"
+		"message": "Sugerir idioma del texto detectado"
 	},
 	"settings_option_textTranslator_suggestLanguageAlways": {
-		"message": "Siempre detectar y sugerir el idioma"
+		"message": "Detectar y sugerir idioma siempre"
 	},
 	"settings_option_textTranslator_suggestLanguageAlways_desc": {
-		"message": "Cuando está desactivado, las sugerencias de idioma solo aparecerán cuando se detecte automáticamente el idioma de origen"
+		"message": "Cuando está deshabilitado, las sugerencias de idioma aparecerán solo cuando el idioma origen se detecte automáticamente"
 	},
 	"settings_option_translatePreferences": {
 		"message": "Preferencias de traducción"
@@ -525,22 +507,22 @@
 		"message": "Programador de traducción"
 	},
 	"settings_option_translateScheduler_delay": {
-		"message": "Retraso de acumulación de texto"
+		"message": "Retraso en la acumulación de texto"
 	},
 	"settings_option_translateScheduler_delay_desc": {
-		"message": "El programador de traducción disminuye el número de solicitudes a la API de servicios de traducción. El programador trata de acumular textos para enviar tantos textos como sea posible por una solicitud. El programador esperará el tiempo especificado en milisegundos para recoger nuevos textos antes de comenzar a traducir"
+		"message": "El programador de traducción reduce la cantidad de solicitudes al servicio de traducción. Trata de acumular la mayor cantidad posible de textos para enviarlos en una sola solicitud. El programador esperará el tiempo especificado en milisegundos para reunir nuevos textos antes de iniciar la traducción"
 	},
 	"settings_option_translateScheduler_retryLimit": {
 		"message": "Intentos de reintento de traducción"
 	},
 	"settings_option_translateScheduler_retryLimit_desc": {
-		"message": "El planificador volverá a intentar la traducción de textos en caso de errores. Esta opción establece un límite para los intentos de reintentar. Establezca un número negativo para permitir intentos ilimitados."
+		"message": "El programador reintentará traducir los textos cuando ocurran errores de traducción. Esta opción establece un límite para los intentos de reintento. Establezca un número negativo para permitir reintentos ilimitados"
 	},
 	"settings_option_translatorModule": {
-		"message": "Módulo de traductor"
+		"message": "Módulo traductor"
 	},
 	"settings_option_translatorModule_desc": {
-		"message": "La calidad de las traducciones y los idiomas disponibles para la traducción dependen del traductor."
+		"message": "La calidad de las traducciones y los idiomas disponibles dependen del traductor"
 	},
 	"settings_option_tts": {
 		"message": "Texto a voz (TTS)"
@@ -549,37 +531,37 @@
 		"message": "TTS personalizado"
 	},
 	"settings_option_ttsCustomModules_button": {
-		"message": "Administrar módulos de TTS"
+		"message": "Gestionar módulos TTS"
 	},
 	"settings_option_ttsCustomModules_desc": {
-		"message": "Puede agregar módulos de TTS que utilicen su servicio y voces favoritas. Lea más y encuentre módulos en la documentación personalizada de TTS."
+		"message": "Puede añadir módulos TTS que usen sus servicios y voces favoritos. Lea más y encuentre módulos en la documentación de TTS personalizado"
 	},
 	"settings_option_ttsModule": {
 		"message": "Módulo TTS"
 	},
 	"settings_option_ttsModule_desc": {
-		"message": "Módulo para hablar textos"
+		"message": "Módulo para hablar texto"
 	},
 	"settings_option_userLanguage": {
 		"message": "Tu idioma"
 	},
 	"settings_option_userLanguage_desc": {
-		"message": "Idioma objetivo para traducir textos"
+		"message": "Idioma objetivo para la traducción de texto"
 	},
 	"settings_pageTitle": {
-		"message": "Ajustes"
+		"message": "Configuración"
 	},
 	"settings_section_history": {
 		"message": "Historial"
 	},
 	"settings_section_popup": {
-		"message": "Popup"
+		"message": "Ventana emergente"
 	},
 	"textTranslator_suggestLanguage": {
-		"message": "Parece que ese idioma es"
+		"message": "Parece que el idioma es"
 	},
 	"textTranslator_translateInputPlaceholder": {
-		"message": "Texto de entrada"
+		"message": "Introducir texto"
 	},
 	"textTranslator_translatePlaceholder": {
 		"message": "Texto traducido"
@@ -591,14 +573,14 @@
 		"message": "Cerrar"
 	},
 	"translatorsManagerWindow_emptyTranslatorsListText": {
-		"message": "No se han agregado traductores personalizados aún"
+		"message": "Aún no se han agregado traductores personalizados"
 	},
 	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
 		"message": "¿Está seguro de que desea eliminar el traductor \"$translator_name$\"?",
 		"placeholders": {
 			"translator_name": {
 				"content": "$1",
-				"example": "Traductor de Google"
+				"example": "Google translator"
 			}
 		}
 	},
@@ -618,10 +600,10 @@
 		"message": "Cerrar"
 	},
 	"ttsManagerWindow_emptyTranslatorsListText": {
-		"message": "Los módulos de TTS aún no se han agregado"
+		"message": "Aún no se han agregado módulos TTS"
 	},
 	"ttsManagerWindow_message_ttsRemoveConfirmation": {
-		"message": "¿Está seguro de que desea eliminar el TTS \"$tts_name$\"?",
+		"message": "¿Está seguro de que desea eliminar el módulo TTS \"$tts_name$\"?",
 		"placeholders": {
 			"tts_name": {
 				"content": "$1",
@@ -645,7 +627,7 @@
 		"message": "El parámetro debe ser un número entre $1 y $2"
 	},
 	"validation_positiveNumber": {
-		"message": "El parámetro debe ser un número positivo."
+		"message": "El parámetro debe ser un número positivo"
 	},
 	"langCode_aa": {
 		"message": "Afar"

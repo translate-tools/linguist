@@ -1,12 +1,12 @@
 {
 	"common_action_addToDictionary": {
-		"message": "เพิ่มคำแปลในพจนานุกรม"
+		"message": "เพิ่มคำแปลลงในพจนานุกรม"
 	},
 	"common_action_removeFromDictionary": {
 		"message": "ลบคำแปลออกจากพจนานุกรม"
 	},
 	"common_bgUnavailable": {
-		"message": "ไม่สามารถใช้งานสคริปต์พื้นหลังได้"
+		"message": "สคริปต์เบื้องหลังไม่สามารถใช้งานได้"
 	},
 	"common_cancel": {
 		"message": "ยกเลิก"
@@ -21,7 +21,7 @@
 		"message": "ข้อผิดพลาด"
 	},
 	"common_offlineTranslator": {
-		"message": "$1 - แปลออฟไลน์"
+		"message": "$1 - นักแปลออฟไลน์"
 	},
 	"common_retry": {
 		"message": "ลองใหม่"
@@ -30,16 +30,16 @@
 		"message": "แปล"
 	},
 	"component_hotkey_placeholder": {
-		"message": "คลิกเพื่อบันทึกการกดปุ่มลัด"
+		"message": "คลิกเพื่อบันทึกทางลัด"
 	},
 	"component_hotkey_recordPlaceholder": {
-		"message": "กดปุ่ม"
+		"message": "กดแป้นพิมพ์"
 	},
 	"component_hotkey_resetButton": {
 		"message": "รีเซ็ต"
 	},
 	"contextMenu_disablePageTranslation": {
-		"message": "ปิดการแปลหน้าเว็บ"
+		"message": "ปิดการแปลหน้าหน้าเว็บ"
 	},
 	"contextMenu_translatePage": {
 		"message": "แปลหน้าเว็บ"
@@ -51,7 +51,7 @@
 		"message": "เพิ่มในพจนานุกรม"
 	},
 	"dictionaryButton_delete": {
-		"message": "ลบออกจากพจนานุกรม"
+		"message": "ลบจากพจนานุกรม"
 	},
 	"dictionary_button_export": {
 		"message": "ส่งออก"
@@ -66,10 +66,10 @@
 		"message": "คุณแน่ใจหรือไม่ว่าต้องการลบการแปลนี้?"
 	},
 	"dictionary_description": {
-		"message": "เก็บการแปลของคุณในพจนานุกรมเพื่อค้นหาและใช้งานได้ในภายหลัง"
+		"message": "เก็บการแปลของคุณไว้ในพจนานุกรมเพื่อค้นหาในภายหลัง"
 	},
 	"dictionary_emptyDictionary": {
-		"message": "พจนานุกรมว่างเปล่า โปรดเริ่มเพิ่มข้อมูลโดยการแปลข้อความบางส่วน"
+		"message": "พจนานุกรมว่างเปล่า เริ่มเติมโดยการแปลข้อความบางส่วน"
 	},
 	"dictionary_filter_from": {
 		"message": "จาก"
@@ -78,10 +78,10 @@
 		"message": "ถึง"
 	},
 	"dictionary_message_deleteAll_success": {
-		"message": "ลบคำแปลทั้งหมดแล้ว"
+		"message": "ลบการแปลทั้งหมดเรียบร้อยแล้ว"
 	},
 	"dictionary_notFoundEntries": {
-		"message": "ไม่พบการแปลที่ตรงกับตัวกรองที่กำหนด"
+		"message": "ไม่พบการแปลที่ตรงกับตัวกรองนี้"
 	},
 	"dictionary_pageTitle": {
 		"message": "พจนานุกรม"
@@ -90,7 +90,7 @@
 		"message": "รีเซ็ตตัวกรอง"
 	},
 	"dictionary_searchPlaceholder": {
-		"message": "ค้นหาโดยข้อความ"
+		"message": "ค้นหาด้วยข้อความ"
 	},
 	"editorWindow_close": {
 		"message": "ปิด"
@@ -98,65 +98,65 @@
 	"editorWindow_data_code": {
 		"message": "รหัส"
 	},
-	"editorWindow_data_name": {
-		"message": "ชื่อ"
+	"editorWindow_data_translatorName": {
+		"message": "ชื่อผู้แปล"
 	},
-	"editorWindow_message_invalidName": {
-		"message": "ชื่อต้องมีอักขระอย่างน้อยหนึ่งตัว"
+	"editorWindow_message_invalidTranslatorName": {
+		"message": "ชื่อผู้แปลต้องมีอย่างน้อยหนึ่งตัวอักษร"
 	},
 	"editorWindow_save": {
 		"message": "บันทึก"
 	},
 	"ext_description": {
-		"message": "การแปลหน้าเว็บและข้อความ เช่น พจนานุกรม ประวัติ แปลออฟไลน์และแปลที่กำหนดเอง"
+		"message": "แปลหน้าเว็บและข้อความ พจนานุกรม ประวัติแบบออฟไลน์ และตัวแปลแบบกำหนดเอง"
 	},
 	"ext_name": {
-		"message": "Linguist - แปลหน้าเว็บ"
+		"message": "ลิงกวิสต์ – โปรแกรมแปลหน้าเว็บ"
 	},
 	"history_control_selectEntry": {
 		"message": "เลือกรายการ"
 	},
 	"history_controls_clearHistory": {
-		"message": "ล้างประวัติการใช้งาน"
+		"message": "ล้างประวัติ"
 	},
 	"history_controls_deleteSelected": {
 		"message": "ลบที่เลือก"
 	},
 	"history_controls_selectAll": {
-		"message": "เลือกทั้งหมด"
+		"message": "เลือกการแปลทั้งหมด"
 	},
 	"history_message_clearHistoryConfirmation": {
-		"message": "คุณแน่ใจหรือไม่ว่าต้องการล้างประวัติการแปล? รายการทั้งหมดจะถูกลบออก"
+		"message": "คุณแน่ใจหรือว่าต้องการล้างประวัติ? รายการทั้งหมดจะถูกลบ"
 	},
 	"history_message_deleteEntryConfirmation": {
-		"message": "คุณแน่ใจหรือไม่ว่าต้องการลบรายการนี้?"
+		"message": "คุณแน่ใจหรือว่าต้องการลบรายการนี้?"
 	},
 	"history_message_deleteSelectedEntriesConfirmation": {
-		"message": "คุณแน่ใจหรือไม่ว่าต้องการลบรายการที่เลือก ($1)?"
-	},
-	"history_message_emptyEntries": {
-		"message": "ประวัติศาสตร์ถูกลบ"
+		"message": "คุณแน่ใจหรือว่าต้องการลบรายการที่เลือกจำนวน ($1) รายการ?"
 	},
 	"history_message_entriesNotFound": {
 		"message": "ไม่พบการแปลที่ตรงกับตัวกรอง"
 	},
+	"history_message_noEntries": {
+		"message": "ประวัติถูกล้างแล้ว"
+	},
 	"history_notification_disabled": {
-		"message": "การบันทึกประวัติถูกปิดใช้งาน ดังนั้นรายการใหม่จะไม่แสดง คุณสามารถเปลี่ยนได้ใน <slot id=preferences>การตั้งค่า</slot>"
+		"message": "การบันทึกประวัติถูกปิดใช้งาน รายการใหม่จะไม่ปรากฏ คุณสามารถเปลี่ยนแปลงได้ใน <slot id=preferences>การตั้งค่า</slot>"
 	},
 	"history_pageTitle": {
-		"message": "ประวัติศาสตร์"
+		"message": "ประวัติ"
 	},
 	"history_searchPlaceholder": {
-		"message": "ค้นหาโดยข้อความ"
+		"message": "ค้นหาตามข้อความ"
 	},
 	"inlineTranslator_showOriginalText": {
-		"message": "แสดงข้อความเดิม"
+		"message": "แสดงข้อความต้นฉบับ"
 	},
 	"lang_change": {
 		"message": "เปลี่ยนภาษา"
 	},
 	"lang_detect": {
-		"message": "ตรวจหาภาษาอัตโนมัติ"
+		"message": "ตรวจจับอัตโนมัติ"
 	},
 	"lang_select": {
 		"message": "เลือกภาษา"
@@ -165,28 +165,28 @@
 		"message": "สลับภาษา"
 	},
 	"message_askResetConfig": {
-		"message": "ตั้งค่าใหม่?"
+		"message": "รีเซ็ตการตั้งค่าหรือไม่?"
 	},
 	"message_cacheFlushed": {
-		"message": "แคชถูกล้าง"
+		"message": "แคชถูกล้างแล้ว"
 	},
 	"message_changesSaved": {
-		"message": "บันทึกการเปลี่ยนแปลงแล้ว"
+		"message": "บันทึกการเปลี่ยนแปลงเรียบร้อยแล้ว"
 	},
 	"message_error": {
-		"message": "ข้อผิดพลาด"
+		"message": "เกิดข้อผิดพลาด"
 	},
 	"message_errorOfTranslate": {
-		"message": "ข้อผิดพลาดในการแปล"
+		"message": "เกิดข้อผิดพลาดในการแปล"
 	},
 	"message_serviceRequiredKey": {
 		"message": "บริการต้องการคีย์"
 	},
 	"message_translateOfText": {
-		"message": "แปลเป็นภาษา"
+		"message": "แปลแล้ว"
 	},
 	"message_unknownError": {
-		"message": "ข้อผิดพลาดที่ไม่รู้จัก"
+		"message": "ข้อผิดพลาดที่ไม่ทราบสาเหตุ"
 	},
 	"pageTranslator_alwaysTranslateLang": {
 		"message": "แปลภาษานี้เสมอ"
@@ -201,7 +201,7 @@
 		"message": "เปิดใช้งาน"
 	},
 	"pageTranslator_commonPreferences_title": {
-		"message": "การตั้งค่าทั่วไปสำหรับภาษานี้"
+		"message": "ค่ากำหนดทั่วไปสำหรับภาษานี้"
 	},
 	"pageTranslator_option_autoTranslate": {
 		"message": "แปลอัตโนมัติ"
@@ -225,13 +225,13 @@
 		"message": "ใช้กฎทั่วไปสำหรับภาษานี้"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_never": {
-		"message": "ไม่ต้องแปล"
+		"message": "ไม่แปลเลย"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
-		"message": "ไม่ต้องแปลสำหรับภาษานี้"
+		"message": "ไม่แปลสำหรับภาษานี้"
 	},
 	"pageTranslator_sitePreferences_title": {
-		"message": "การกำหนดค่าสำหรับ"
+		"message": "การตั้งค่าสำหรับ"
 	},
 	"pageTranslator_translatePage": {
 		"message": "แปลหน้า"
@@ -246,13 +246,13 @@
 		"message": "ข้อผิดพลาด"
 	},
 	"pageTranslator_translationReport_resolve": {
-		"message": "แปลเสร็จสิ้น"
+		"message": "แปลแล้ว"
 	},
 	"popup_tabIdNotFound": {
 		"message": "ไม่พบแท็บ \"$1\""
 	},
 	"popup_tab_translatePage": {
-		"message": "การแปลหน้าเว็บ"
+		"message": "การแปลหน้า"
 	},
 	"popup_tab_translateText": {
 		"message": "การแปลข้อความ"
@@ -273,43 +273,25 @@
 		"message": "บันทึกการเปลี่ยนแปลง"
 	},
 	"settings_message_clearCache_success": {
-		"message": "ล้างแคชสำเร็จ"
+		"message": "ล้างแคชเรียบร้อยแล้ว"
 	},
 	"settings_message_common_invalidValueType": {
-		"message": "ค่าไม่ถูกต้อง"
+		"message": "ค่าที่ไม่ถูกต้อง"
 	},
 	"settings_message_importConfig_invalidFile": {
-		"message": "ไม่สามารถจัดการไฟล์ที่นำเข้าได้"
+		"message": "ไม่สามารถประมวลผลไฟล์นำเข้าได้"
 	},
 	"settings_message_importConfig_success": {
-		"message": "นำเข้าเสร็จสิ้น"
+		"message": "นำเข้าสำเร็จ"
 	},
 	"settings_message_resetConfig_confirm": {
 		"message": "คุณต้องการรีเซ็ตการตั้งค่าหรือไม่?"
 	},
 	"settings_message_resetConfig_success": {
-		"message": "การตั้งค่ารีเซ็ต"
+		"message": "รีเซ็ตการตั้งค่าแล้ว"
 	},
 	"settings_message_saveChanges_success": {
-		"message": "บันทึกการเปลี่ยนแปลง"
-	},
-	"settings_option_appIcon": {
-		"message": "ไอคอนส่วนขยาย"
-	},
-	"settings_option_appIcon_desc": {
-		"message": "เมื่อเลือกไอคอนแบบไดนามิก สีจะถูกปรับให้เข้ากับธีมของเบราว์เซอร์"
-	},
-	"settings_option_appIcon_item_auto": {
-		"message": "ไดนามิก"
-	},
-	"settings_option_appIcon_item_color": {
-		"message": "สี"
-	},
-	"settings_option_appIcon_item_dark": {
-		"message": "มืด"
-	},
-	"settings_option_appIcon_item_light": {
-		"message": "สว่าง"
+		"message": "บันทึกการเปลี่ยนแปลงแล้ว"
 	},
 	"settings_option_cache": {
 		"message": "แคช"
@@ -318,103 +300,103 @@
 		"message": "ล้างแคช"
 	},
 	"settings_option_cache_clear_desc": {
-		"message": "ลบแคชหากมีอาการผิดพลาดในการแปลหรือต้องการลบความลับ"
+		"message": "ลบแคชหากคุณพบข้อผิดพลาดในการแปลหรือจำเป็นต้องลบข้อมูลลับ"
 	},
 	"settings_option_cache_enable": {
 		"message": "เปิดใช้งานแคช"
 	},
 	"settings_option_cache_enable_desc": {
-		"message": "เมื่อเปิดใช้งานแคช การแปลที่ถูกแปลครั้งแรกจะสามารถใช้ได้ทันทีโดยไม่ต้องเชื่อมต่ออินเทอร์เน็ต"
+		"message": "เมื่อเปิดใช้งานแคช การแปลที่เคยแปลแล้วจะพร้อมใช้งานทันที แม้ไม่มีการเชื่อมต่ออินเทอร์เน็ต"
 	},
 	"settings_option_cache_ignoreCase": {
-		"message": "ไม่สนใจตัวพิมพ์"
+		"message": "ไม่สนใจตัวพิมพ์ใหญ่/เล็ก"
 	},
 	"settings_option_cache_ignoreCase_desc": {
-		"message": "เมื่อเปิดใช้งาน การแปลจากแคชจะถูกใช้งานกับการตรงตาม ที่ไม่ตรงกันอย่างแน่นอนซึ่งอาจทำให้เกิดอาการผิดพลาดในการแปล"
+		"message": "เมื่อเปิดใช้งาน การแปลจากแคชจะถูกใช้สำหรับข้อความที่ไม่ตรงกันอย่างแม่นยำ ซึ่งอาจทำให้เกิดข้อผิดพลาดในการแปลได้"
 	},
 	"settings_option_commonSettings": {
 		"message": "การตั้งค่าทั่วไป"
 	},
 	"settings_option_customTranslatorModule": {
-		"message": "ผู้แปลที่กำหนดเอง"
+		"message": "นักแปลที่กำหนดเอง"
 	},
 	"settings_option_customTranslatorModule_desc": {
-		"message": "คุณสามารถเพิ่มผู้แปลที่กำหนดเองสำหรับบริการแปลที่คุณชื่นชอบได้ เพิ่มเติมและค้นหาโมดูลใน <slot id=docs>เอกสารผู้แปลที่กำหนดเอง</slot> "
+		"message": "คุณสามารถเพิ่มนักแปลที่กำหนดเองสำหรับบริการแปลที่คุณชื่นชอบ อ่านเพิ่มเติมและค้นหาโมดูลได้ใน <slot id=docs>เอกสารนักแปลที่กำหนดเอง</slot>"
 	},
 	"settings_option_customTranslatorModule_manageButton": {
-		"message": "จัดการผู้แปล"
+		"message": "จัดการนักแปล"
 	},
 	"settings_option_history_enable": {
 		"message": "เปิดใช้งานประวัติ"
 	},
 	"settings_option_history_enable_desc": {
-		"message": "เมื่อเปิดใช้งาน การแปลทั้งหมดจะถูกบันทึกในหน้าประวัติ"
+		"message": "เมื่อเปิดใช้งาน การแปลทุกครั้งจะถูกบันทึกไว้ในหน้าประวัติ"
 	},
 	"settings_option_mainPreferences": {
 		"message": "การตั้งค่าหลัก"
 	},
 	"settings_option_pageTranslation": {
-		"message": "การแปลหน้า"
+		"message": "การแปลหน้าเว็บ"
 	},
 	"settings_option_pageTranslation_detectLanguageByContent": {
-		"message": "ตรวจหาภาษาจากเนื้อหา"
+		"message": "ตรวจจับภาษาจากเนื้อหา"
 	},
 	"settings_option_pageTranslation_detectLanguageByContent_desc": {
-		"message": "วิเคราะห์ข้อความบนหน้าเว็บเพื่อตรวจหาภาษาของหน้าเว็บ ถ้าปิดใช้งานจะใช้ภาษาที่ระบุไว้ในข้อมูลเมตาของหน้าเว็บ"
+		"message": "วิเคราะห์ข้อความบนหน้าเว็บเพื่อตรวจจับภาษาของหน้า เมื่อปิดใช้งาน จะใช้ภาษาที่ระบุในข้อมูลเมตาของหน้า"
 	},
 	"settings_option_pageTranslation_enableContextMenu": {
-		"message": "เปิดใช้งานปุ่มเมนู"
+		"message": "เปิดใช้งานปุ่มเมนูบริบท"
 	},
 	"settings_option_pageTranslation_enableContextMenu_desc": {
-		"message": "เพิ่มปุ่มเพื่อเปิดหรือปิดการแปลหน้าเว็บในเมนู"
+		"message": "เพิ่มปุ่มสำหรับสลับการแปลหน้าในเมนูบริบท"
 	},
 	"settings_option_pageTranslation_excludeSelectors": {
-		"message": "ตัวเลือกที่ไม่ต้องแปล"
+		"message": "ตัวเลือกที่ไม่ต้องการให้แปล"
 	},
 	"settings_option_pageTranslation_excludeSelectors_desc": {
-		"message": "รายการของตัวเลือก CSS ที่จะไม่ถูกแปล หนึ่งตัวเลือกต่อบรรทัด หากองค์ประกอบใดตรงกับตัวเลือกเหล่านี้ องค์ประกอบนั้น รวมถึงคุณสมบัติและองค์ประกอบที่ซ้อนอยู่จะไม่ถูกแปล"
+		"message": "รายการตัวเลือก CSS ที่จะไม่ถูกแปล ตัวเลือกละบรรทัด หากองค์ประกอบใดตรงกับตัวเลือกเหล่านี้ องค์ประกอบนั้น รวมถึงแอตทริบิวต์และองค์ประกอบย่อยจะไม่ถูกแปล"
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
-		"message": "แปลเฉพาะองค์ประกอบที่มองเห็นได้เท่านั้น"
+		"message": "แปลเฉพาะองค์ประกอบที่มองเห็น"
 	},
 	"settings_option_pageTranslation_lazyTranslate_desc": {
-		"message": "เมื่อเปิดใช้งานตัวเลือกนี้ เฉพาะองค์ประกอบที่มองเห็นได้เท่านั้นที่จะถูกแปลงความหมาย สามารถช่วยประหยัดการเข้าถึงเครือข่ายได้"
+		"message": "เมื่อเปิดใช้งานตัวเลือกนี้ จะมีการแปลเฉพาะองค์ประกอบที่มองเห็นเท่านั้น ตัวเลือกนี้ช่วยประหยัดปริมาณข้อมูลเครือข่ายและจำกัดการใช้บริการแปลภาษา"
 	},
 	"settings_option_pageTranslation_originalTextPopup": {
-		"message": "เปิดใช้ popup แสดงข้อความต้นฉบับ"
+		"message": "เปิดใช้งานป๊อปอัปแสดงข้อความต้นฉบับ"
 	},
 	"settings_option_pageTranslation_originalTextPopup_desc": {
-		"message": "แสดงหน้าต่างป๊อปอัพที่มีข้อความต้นฉบับโดยเลื่อนเมาส์ไปที่ข้อความแปล"
+		"message": "แสดงป๊อปอัปข้อความต้นฉบับเมื่อเลื่อนเมาส์ไปบนบล็อกข้อความที่แปลแล้ว"
 	},
 	"settings_option_pageTranslation_toggleTranslationHotkey": {
-		"message": "แฮ็ตคีย์"
+		"message": "ปุ่มลัด"
 	},
 	"settings_option_pageTranslation_toggleTranslationHotkey_desc": {
-		"message": "ทำการใช้งานแฮตคีย์เพื่อเปิดหรือปิดการแปลหน้าเว็บ\nกด ESC เพื่อรีเซ็ตคีย์"
+		"message": "ทางลัดสำหรับสลับการแปลหน้า\nกด ESC เพื่อรีเซ็ตปุ่มลัด"
 	},
 	"settings_option_pageTranslation_translatableAttributes": {
-		"message": "แอตทริบิวต์ที่สามารถแปลได้"
+		"message": "แอตทริบิวต์ที่แปลได้"
 	},
 	"settings_option_pageTranslation_translatableAttributes_desc": {
-		"message": "กรอกชื่อ <slot id=htmlAttributes>แอตทริบิวต์ HTML</slot> เพื่อทำการแปล หนึ่งแอตทริบิวต์ต่อบรรทัด"
+		"message": "กรอกชื่อ<slot id=htmlAttributes>แอตทริบิวต์ HTML</slot>ที่ต้องการแปล โดยแอตทริบิวต์ละบรรทัด"
 	},
 	"settings_option_popupTab_pageTranslator_showCounters": {
 		"message": "แสดงสถิติการแปล"
 	},
 	"settings_option_popupTab_pageTranslator_showCounters_desc": {
-		"message": "แสดงสถิติการแปลของหน้าเว็บไซต์"
+		"message": "แสดงสถิติสำหรับการแปลหน้า"
 	},
 	"settings_option_selectTranslation": {
 		"message": "แปลข้อความที่เลือก"
 	},
 	"settings_option_selectTranslation_detectedLangFirst": {
-		"message": "ใช้ภาษาที่ตรวจพบจากข้อความที่เลือก แทนภาษาของหน้าเว็บ"
+		"message": "ให้ความสำคัญกับภาษาที่ตรวจพบจากข้อความมากกว่าภาษาของหน้า"
 	},
 	"settings_option_selectTranslation_detectedLangFirst_desc": {
-		"message": "เมื่อเปิดใช้งาน จะใช้ภาษาที่ตรวจพบจากข้อความที่เลือกแทนภาษาของหน้าเว็บ"
+		"message": "เมื่อเปิดใช้งาน ระบบจะให้ความสำคัญกับภาษาที่ตรวจพบจากข้อความที่เลือกมากกว่าภาษาของหน้าเว็บ"
 	},
 	"settings_option_selectTranslation_disableWhileTranslatePage": {
-		"message": "ปิดใช้งานขณะแปลหน้าเว็บ"
+		"message": "ปิดใช้งานขณะกำลังแปลหน้าเว็บ"
 	},
 	"settings_option_selectTranslation_enable": {
 		"message": "เปิดใช้งาน"
@@ -429,28 +411,28 @@
 		"message": "การตั้งค่าภาษา"
 	},
 	"settings_option_selectTranslation_isUseAutoForDetectLang": {
-		"message": "เปิดใช้ตรวจสอบภาษาโดยอัตโนมัติโดยตัวแปล"
+		"message": "เปิดใช้งานการตรวจจับภาษาด้วยระบบอัตโนมัติของเครื่องมือแปล"
 	},
 	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
-		"message": "ใช้การตรวจสอบภาษาโดยอัตโนมัติโดยตัวแปลเมื่อไม่สามารถตรวจหาภาษาได้ท้องถิ่น"
+		"message": "ใช้การตรวจจับภาษาด้วยระบบอัตโนมัติของเครื่องมือแปลเมื่อไม่สามารถตรวจสอบภาษาได้ในเครื่อง"
 	},
 	"settings_option_selectTranslation_mode": {
-		"message": "การกระตุ้นการแปล"
+		"message": "ตัวกระตุ้นการแปล"
 	},
 	"settings_option_selectTranslation_mode_item_contextMenu": {
-		"message": "ปุ่มเมนูคอนเท็กซ์"
+		"message": "ปุ่มเมนูบริบท"
 	},
 	"settings_option_selectTranslation_mode_item_popupButton": {
 		"message": "ปุ่มป็อปอัพ"
 	},
 	"settings_option_selectTranslation_mode_item_quickTranslate": {
-		"message": "การแปลง่ายๆโดยการเลือก"
+		"message": "แปลอย่างรวดเร็วโดยการเลือก"
 	},
 	"settings_option_selectTranslation_modifiers": {
-		"message": "ตัวดัดแปลง"
+		"message": "ปุ่มตัวปรับ"
 	},
 	"settings_option_selectTranslation_modifiers_desc": {
-		"message": "เลือกปุ่มที่ต้องกดบนแป้นพิมพ์เพื่อแสดงการแปล"
+		"message": "เลือกปุ่มที่ต้องกดบนแป้นพิมพ์เพื่อแสดงคำแปล"
 	},
 	"settings_option_selectTranslation_modifiers_key_alt": {
 		"message": "alt"
@@ -465,106 +447,106 @@
 		"message": "shift"
 	},
 	"settings_option_selectTranslation_rememberDirection": {
-		"message": "จำค่าภาษาล่าสุดที่เลือกในข้อความ"
+		"message": "จดจำภาษาที่เลือกล่าสุดของข้อความ"
 	},
 	"settings_option_selectTranslation_showOnceForSelection": {
-		"message": "แสดงปุ่มแปลภาษาเพียงครั้งเดียวต่อการเลือกข้อความ"
+		"message": "แสดงปุ่มแปลเพียงครั้งเดียวสำหรับแต่ละการเลือกข้อความ"
 	},
 	"settings_option_selectTranslation_showOnceForSelection_desc": {
-		"message": "ปุ่มจะแสดงเพียงครั้งเดียวต่อการเลือกข้อความ หากต้องการแสดงอีกครั้งให้เลือกข้อความใหม่"
+		"message": "ปุ่มจะแสดงเพียงครั้งเดียวสำหรับแต่ละการเลือกข้อความ หากต้องการแสดงอีกครั้ง ให้เลือกข้อความใหม่"
 	},
 	"settings_option_selectTranslation_showOriginalText": {
-		"message": "แสดงข้อความเดิม"
+		"message": "แสดงข้อความต้นฉบับ"
 	},
 	"settings_option_selectTranslation_showOriginalText_desc": {
-		"message": "เพิ่มบล็อกที่มีข้อความเดิมในหน้าต่างป๊อปอัพที่แปล"
+		"message": "เพิ่มบล็อกที่มีข้อความต้นฉบับในป๊อปอัปการแปล"
 	},
 	"settings_option_selectTranslation_strictSelection": {
-		"message": "การเลือกที่เข้มงวด"
+		"message": "การเลือกอย่างเข้มงวด"
 	},
 	"settings_option_selectTranslation_strictSelection_desc": {
-		"message": "ไม่สนใจการเลือกหากปล่อยปุ่มเมาส์ซ้ายออกนอกบล็อกที่มีข้อความที่เลือก"
+		"message": "ไม่สนใจการเลือกหากปล่อยปุ่มเมาส์ซ้ายนอกบล็อกที่มีข้อความที่เลือก"
 	},
 	"settings_option_selectTranslation_timeoutForHideButton": {
-		"message": "การล่าช้าในการซ่อนปุ่ม"
+		"message": "หน่วงเวลาก่อนซ่อนปุ่ม"
 	},
 	"settings_option_selectTranslation_timeoutForHideButton_desc": {
-		"message": "ค่าเวลารอก่อนซ่อนปุ่มเมื่อไม่มีเคอร์เซอร์ชี้ไปที่ปุ่ม หากมีการชี้เคอร์เซอร์ที่ปุ่มจะเริ่มนับเวลาใหม่ หากต้องการปิดฟังก์ชันการซ่อนโดยอัตโนมัติ ให้ตั้งค่าเป็นตัวเลขน้อยกว่า 1"
+		"message": "หน่วงเวลาเป็นมิลลิวินาทีก่อนซ่อนปุ่มเมื่อเคอร์เซอร์ไม่ได้อยู่เหนือปุ่ม การวางเมาส์เหนือปุ่มจะรีเซ็ตตัวจับเวลา หากต้องการปิดการซ่อนอัตโนมัติให้ตั้งค่าน้อยกว่า 1"
 	},
 	"settings_option_selectTranslation_zIndex": {
 		"message": "z-index"
 	},
 	"settings_option_selectTranslation_zIndex_desc": {
-		"message": "เพิ่มค่าได้หากมีองค์ประกอบบางอย่างบนหน้าต่าง ๆ ที่มีการแสดงผลแบบพ็อพอัพซ้อนทับกับข้อความแปล"
+		"message": "เพิ่มค่านี้หากองค์ประกอบในบางหน้าเรียงซ้อนทับป๊อปอัปข้อความแปล"
 	},
 	"settings_option_textTranslator": {
 		"message": "การแปลข้อความ"
 	},
 	"settings_option_textTranslator_rememberText": {
-		"message": "จำข้อความที่ถูกแปล"
+		"message": "จดจำข้อความที่แปลแล้ว"
 	},
 	"settings_option_textTranslator_rememberText_desc": {
-		"message": "จำข้อความแปลไว้สำหรับเปิดหน้าต่างครั้งต่อไป"
+		"message": "จดจำข้อความที่แปลไว้สำหรับครั้งต่อไปที่เปิดหน้าต่าง"
 	},
 	"settings_option_textTranslator_spellCheck": {
-		"message": "เปิดใช้งานตรวจสอบการสะกดคำ"
+		"message": "เปิดใช้งานการตรวจสอบการสะกดคำ"
 	},
 	"settings_option_textTranslator_suggestLanguage": {
-		"message": "แนะนำภาษาของข้อความที่ตรวจพบ"
+		"message": "แนะนำภาษาข้อความที่ตรวจพบ"
 	},
 	"settings_option_textTranslator_suggestLanguageAlways": {
-		"message": "ตรวจหาภาษาและแนะนำตลอดเวลา"
+		"message": "ตรวจจับและแนะนำภาษาตลอดเวลา"
 	},
 	"settings_option_textTranslator_suggestLanguageAlways_desc": {
-		"message": "เมื่อปิดการใช้งาน การแนะนำภาษาจะปรากฏเฉพาะเมื่อตรวจพบภาษาแบบอัตโนมัติของข้อความต้นฉบับ"
+		"message": "เมื่อปิดใช้งาน การแนะนำภาษาจะแสดงเฉพาะเมื่อแหล่งที่มาของภาษาถูกตรวจจับโดยอัตโนมัติ"
 	},
 	"settings_option_translatePreferences": {
-		"message": "การตั้งค่าการแปลภาษา"
+		"message": "การตั้งค่าการแปล"
 	},
 	"settings_option_translateScheduler": {
-		"message": "ตัวกำหนดเวลาการแปลภาษา"
+		"message": "ตัวจัดการเวลาแปล"
 	},
 	"settings_option_translateScheduler_delay": {
-		"message": "การล่าช้าการสะสมข้อความ"
+		"message": "เวลาหน่วงการสะสมข้อความ"
 	},
 	"settings_option_translateScheduler_delay_desc": {
-		"message": "ตัวกำหนดเวลาการแปลลดจำนวนคำร้องขอไปยัง API บริการแปลภาษา ตัวกำหนดเวลาพยายามสะสมข้อความเพื่อส่งข้อความหลายๆข้อความในคำร้องขอเดียว ตัวกำหนดเวลาจะรอเวลาที่ระบุไว้ในหน่วยมิลลิวินาทีเพื่อรวบรวมข้อความใหม่ก่อนเริ่มแปล"
+		"message": "ตัวจัดกำหนดเวลาการแปลช่วยลดจำนวนคำขอไปยัง API บริการแปล โดยจะพยายามรวบรวมข้อความให้มากที่สุดเพื่อส่งในการคำขอเดียว ตัวจัดกำหนดเวลาจะรอเวลาที่กำหนดเป็นมิลลิวินาทีเพื่อรวบรวมข้อความใหม่ก่อนเริ่มการแปล"
 	},
 	"settings_option_translateScheduler_retryLimit": {
-		"message": "จำกัดความพยายามในการแปลภาษาซ้ำ"
+		"message": "จำนวนครั้งการลองแปลซ้ำ"
 	},
 	"settings_option_translateScheduler_retryLimit_desc": {
-		"message": "ตัวเลือกนี้จะช่วยให้โปรแกรมลองแปลข้อความที่ผิดพลาดแล้วลองแปลอีกครั้ง ตั้งค่าเลขลบเพื่ออนุญาตให้ลองแปลได้ไม่จำกัดจำนวนครั้ง"
+		"message": "ตัวจัดกำหนดเวลาจะลองแปลซ้ำเมื่อเกิดข้อผิดพลาดในการแปล ตัวเลือกนี้ตั้งขีดจำกัดสำหรับจำนวนครั้งการลองซ้ำ ตั้งค่าตัวเลขลบเพื่ออนุญาตให้ลองซ้ำได้ไม่จำกัด"
 	},
 	"settings_option_translatorModule": {
-		"message": "โมดูลการแปล"
+		"message": "โมดูลแปลภาษา"
 	},
 	"settings_option_translatorModule_desc": {
-		"message": "คุณภาพของการแปลและภาษาที่สามารถแปลได้ขึ้นอยู่กับโมดูลการแปล"
+		"message": "คุณภาพของการแปลและภาษาที่รองรับขึ้นอยู่กับโมดูลแปลภาษา"
 	},
 	"settings_option_tts": {
 		"message": "ข้อความเป็นเสียง (TTS)"
 	},
 	"settings_option_ttsCustomModules": {
-		"message": "TTS ที่กำหนดเอง"
+		"message": "TTS แบบกำหนดเอง"
 	},
 	"settings_option_ttsCustomModules_button": {
 		"message": "จัดการโมดูล TTS"
 	},
 	"settings_option_ttsCustomModules_desc": {
-		"message": "คุณสามารถเพิ่มโมดูล TTS ที่ใช้บริการและเสียงที่คุณชื่นชอบได้ เรียนรู้เพิ่มเติมและค้นหาโมดูลในเอกสาร TTS ที่กำหนดเอง"
+		"message": "คุณสามารถเพิ่มโมดูล TTS ที่ใช้บริการและเสียงที่คุณชื่นชอบ อ่านเพิ่มเติมและค้นหาโมดูลได้ในเอกสารประกอบ TTS แบบกำหนดเอง"
 	},
 	"settings_option_ttsModule": {
 		"message": "โมดูล TTS"
 	},
 	"settings_option_ttsModule_desc": {
-		"message": "โมดูลที่ใช้สำหรับพูดข้อความ"
+		"message": "โมดูลสำหรับอ่านข้อความ"
 	},
 	"settings_option_userLanguage": {
 		"message": "ภาษาของคุณ"
 	},
 	"settings_option_userLanguage_desc": {
-		"message": "ภาษาเป้าหมายสำหรับการแปลข้อความ"
+		"message": "ภาษาปลายทางสำหรับการแปลข้อความ"
 	},
 	"settings_pageTitle": {
 		"message": "การตั้งค่า"
@@ -579,10 +561,10 @@
 		"message": "ดูเหมือนว่าภาษานั้นคือ"
 	},
 	"textTranslator_translateInputPlaceholder": {
-		"message": "ข้อความที่ต้องการแปล"
+		"message": "ป้อนข้อความ"
 	},
 	"textTranslator_translatePlaceholder": {
-		"message": "ข้อความที่แปล"
+		"message": "ข้อความที่แปลแล้ว"
 	},
 	"translatorsManagerWindow_add": {
 		"message": "เพิ่ม"
@@ -591,10 +573,10 @@
 		"message": "ปิด"
 	},
 	"translatorsManagerWindow_emptyTranslatorsListText": {
-		"message": "ยังไม่ได้เพิ่มตัวแปลภาษากำหนดเอง"
+		"message": "ยังไม่มีการเพิ่มนักแปลที่กำหนดเอง"
 	},
 	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
-		"message": "คุณแน่ใจหรือไม่ว่าต้องการลบตัวแปล \"$translator_name$\" ?",
+		"message": "คุณแน่ใจหรือไม่ว่าต้องการลบนักแปล \"$translator_name$\"?",
 		"placeholders": {
 			"translator_name": {
 				"content": "$1",
@@ -603,7 +585,7 @@
 		}
 	},
 	"translatorsManagerWindow_title": {
-		"message": "แปลภาษาที่กำหนดเอง"
+		"message": "นักแปลที่กำหนดเอง"
 	},
 	"translatorsManagerWindow_translator_delete": {
 		"message": "ลบ"
@@ -618,10 +600,10 @@
 		"message": "ปิด"
 	},
 	"ttsManagerWindow_emptyTranslatorsListText": {
-		"message": "ยังไม่มีการเพิ่มโมดูล TTS"
+		"message": "ยังไม่มีโมดูล TTS ถูกเพิ่ม"
 	},
 	"ttsManagerWindow_message_ttsRemoveConfirmation": {
-		"message": "คุณแน่ใจหรือไม่ว่าต้องการลบ TTS \"$tts_name$\"?",
+		"message": "คุณแน่ใจหรือไม่ว่าต้องการลบโมดูล TTS \"$tts_name$\"?",
 		"placeholders": {
 			"tts_name": {
 				"content": "$1",
@@ -630,7 +612,7 @@
 		}
 	},
 	"ttsManagerWindow_title": {
-		"message": "โมดูลข้อความเป็นเสียง (Text to speech)"
+		"message": "โมดูลข้อความเป็นเสียง"
 	},
 	"ttsManagerWindow_translator_delete": {
 		"message": "ลบ"
@@ -639,13 +621,13 @@
 		"message": "แก้ไข"
 	},
 	"validation_number": {
-		"message": "พารามิเตอร์ต้องเป็นตัวเลข"
+		"message": "ค่าพารามิเตอร์ต้องเป็นตัวเลข"
 	},
 	"validation_numberBetweenRange": {
-		"message": "พารามิเตอร์ต้องเป็นตัวเลขระหว่าง $1 และ $2"
+		"message": "ค่าพารามิเตอร์ต้องเป็นตัวเลขระหว่าง $1 ถึง $2"
 	},
 	"validation_positiveNumber": {
-		"message": "พารามิเตอร์ต้องเป็นจำนวนเต็มบวก"
+		"message": "ค่าพารามิเตอร์ต้องเป็นตัวเลขบวก"
 	},
 	"langCode_aa": {
 		"message": "อะฟาร์"

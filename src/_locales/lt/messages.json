@@ -6,7 +6,7 @@
 		"message": "Pašalinti vertimą iš žodyno"
 	},
 	"common_bgUnavailable": {
-		"message": "Fono skriptas nepasiekiamas"
+		"message": "Fono scenarijus nepasiekiamas"
 	},
 	"common_cancel": {
 		"message": "Atšaukti"
@@ -21,34 +21,34 @@
 		"message": "Klaida"
 	},
 	"common_offlineTranslator": {
-		"message": "$1 - Neprisijungęs vertėjas"
+		"message": "$1 - neprisijungęs vertėjas"
 	},
 	"common_retry": {
-		"message": "Bandyti dar kartą"
+		"message": "Bandykite dar kartą"
 	},
 	"common_translate": {
 		"message": "Versti"
 	},
 	"component_hotkey_placeholder": {
-		"message": "Paspauskite, kad įrašytumėte karščiausias klavišų derinius"
+		"message": "Spustelėkite, kad užfiksuotumėte spartųjį klavišą"
 	},
 	"component_hotkey_recordPlaceholder": {
 		"message": "Paspauskite klavišus"
 	},
 	"component_hotkey_resetButton": {
-		"message": "Iš naujo nustatyti"
+		"message": "Atstatyti"
 	},
 	"contextMenu_disablePageTranslation": {
 		"message": "Išjungti puslapio vertimą"
 	},
 	"contextMenu_translatePage": {
-		"message": "Versti puslapį"
+		"message": "Išversti puslapį"
 	},
 	"contextMenu_translateSelectedText": {
-		"message": "Išversti pasirinktą tekstą"
+		"message": "Išversti pažymėtą tekstą"
 	},
 	"dictionaryButton_add": {
-		"message": "Pridėti į žodyną"
+		"message": "Pridėti prie žodyno"
 	},
 	"dictionaryButton_delete": {
 		"message": "Ištrinti iš žodyno"
@@ -60,19 +60,19 @@
 		"message": "Pašalinti viską"
 	},
 	"dictionary_deleteAll": {
-		"message": "Ar tikrai norite ištrinti VISUS žodynų vertimus?"
+		"message": "Ar tikrai norite ištrinti VISAS žodyno vertimus?"
 	},
 	"dictionary_deleteConfirmation": {
 		"message": "Ar tikrai norite ištrinti šį vertimą?"
 	},
 	"dictionary_description": {
-		"message": "Išsaugokite savo vertimus žodyne, kad vėliau juos surastumėte"
+		"message": "Išsaugokite savo vertimus žodyne, kad galėtumėte juos rasti vėliau"
 	},
 	"dictionary_emptyDictionary": {
-		"message": "Žodynas yra tuščias. Pradėkite jį užpildydami vertimais."
+		"message": "Žodynas tuščias. Pradėkite jį pildyti išversdami tekstą"
 	},
 	"dictionary_filter_from": {
-		"message": "Nuo"
+		"message": "Iš"
 	},
 	"dictionary_filter_to": {
 		"message": "Į"
@@ -81,49 +81,49 @@
 		"message": "Visi vertimai buvo pašalinti"
 	},
 	"dictionary_notFoundEntries": {
-		"message": "Vertimų, atitinkančių šiuos filtrus, nerasta"
+		"message": "Nepavyko rasti vertimų pagal šiuos filtrus"
 	},
 	"dictionary_pageTitle": {
 		"message": "Žodynas"
 	},
 	"dictionary_resetFilters": {
-		"message": "nustatyti filtrus iš naujo"
+		"message": "atstatyti filtrus"
 	},
 	"dictionary_searchPlaceholder": {
 		"message": "Ieškoti pagal tekstą"
 	},
 	"editorWindow_close": {
-		"message": "Uždaryti"
+		"message": "Užverti"
 	},
 	"editorWindow_data_code": {
 		"message": "Kodas"
 	},
-	"editorWindow_data_name": {
-		"message": "Pavadinimas"
+	"editorWindow_data_translatorName": {
+		"message": "Vertėjo vardas"
 	},
-	"editorWindow_message_invalidName": {
-		"message": "Pavadinime turi būti bent vienas simbolis"
+	"editorWindow_message_invalidTranslatorName": {
+		"message": "Vertėjo vardas turi turėti bent vieną simbolį"
 	},
 	"editorWindow_save": {
 		"message": "Išsaugoti"
 	},
 	"ext_description": {
-		"message": "Puslapių ir tekstų vertimas, žodynas, istorija, neprisijungęs režimas ir pasirinktiniai vertėjai"
+		"message": "Puslapių ir teksto vertimas, žodynas, istorija, veikia neprisijungus ir su pasirinktiniais vertėjais"
 	},
 	"ext_name": {
-		"message": "Lingvistas - internetinių puslapių vertėjas"
+		"message": "Linguist - internetinių puslapių vertėjas"
 	},
 	"history_control_selectEntry": {
-		"message": "Pasirinkite įrašą"
+		"message": "Pasirinkti įrašą"
 	},
 	"history_controls_clearHistory": {
-		"message": "Valyti istoriją"
+		"message": "Išvalyti istoriją"
 	},
 	"history_controls_deleteSelected": {
 		"message": "Ištrinti pasirinktus"
 	},
 	"history_controls_selectAll": {
-		"message": "Pasirinkti visus vertimus"
+		"message": "Pažymėti visas vertimus"
 	},
 	"history_message_clearHistoryConfirmation": {
 		"message": "Ar tikrai norite išvalyti istoriją? Visi įrašai bus pašalinti"
@@ -134,11 +134,11 @@
 	"history_message_deleteSelectedEntriesConfirmation": {
 		"message": "Ar tikrai norite ištrinti pasirinktus įrašus ($1)?"
 	},
-	"history_message_emptyEntries": {
-		"message": "Istorija išvalyta"
-	},
 	"history_message_entriesNotFound": {
-		"message": "Nerasta jokių vertimų, atitinkančių filtrą"
+		"message": "Nepavyko rasti vertimų pagal filtrą"
+	},
+	"history_message_noEntries": {
+		"message": "Istorija tuščia"
 	},
 	"history_notification_disabled": {
 		"message": "Istorijos įrašymas išjungtas, todėl nauji įrašai nebus rodomi. Tai galite pakeisti <slot id=preferences>nuostatose</slot>"
@@ -147,16 +147,16 @@
 		"message": "Istorija"
 	},
 	"history_searchPlaceholder": {
-		"message": "Paieška pagal tekstą"
+		"message": "Ieškoti pagal tekstą"
 	},
 	"inlineTranslator_showOriginalText": {
-		"message": "Rodyti pradinį tekstą"
+		"message": "Rodyti originalų tekstą"
 	},
 	"lang_change": {
-		"message": "Pakeisti kalbą"
+		"message": "Keisti kalbą"
 	},
 	"lang_detect": {
-		"message": "Automatiškai aptikti"
+		"message": "Automatinis aptikimas"
 	},
 	"lang_select": {
 		"message": "Pasirinkti kalbą"
@@ -165,10 +165,10 @@
 		"message": "Apkeisti kalbas"
 	},
 	"message_askResetConfig": {
-		"message": "Grąžinti nustatymus į pradines vertes?"
+		"message": "Atstatyti nustatymus?"
 	},
 	"message_cacheFlushed": {
-		"message": "Atminties talpykla yra išvalyta"
+		"message": "Talpykla išvalyta"
 	},
 	"message_changesSaved": {
 		"message": "Pakeitimai išsaugoti"
@@ -195,16 +195,16 @@
 		"message": "Išjungti"
 	},
 	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
-		"message": "Išjungti visiems svetainėms"
+		"message": "Išjungti visose svetainėse"
 	},
 	"pageTranslator_commonPreferences_autoTranslate_enable": {
-		"message": "Įgalinti"
+		"message": "Įjungti"
 	},
 	"pageTranslator_commonPreferences_title": {
-		"message": "Bendrosios nuostatos šiai kalbai"
+		"message": "Bendrieji šios kalbos nustatymai"
 	},
 	"pageTranslator_option_autoTranslate": {
-		"message": "Automatiškai verti"
+		"message": "Automatinis vertimas"
 	},
 	"pageTranslator_showOptions": {
 		"message": "Rodyti parinktis"
@@ -216,22 +216,22 @@
 		"message": "Visada versti"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
-		"message": "Visada versti šia kalba"
+		"message": "Visada versti šiai kalbai"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_default": {
-		"message": "Naudoti bendras taisykles"
+		"message": "Naudoti bendrąsias taisykles"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
-		"message": "Naudoti bendras taisykles šiai kalbai"
+		"message": "Naudoti bendrąsias taisykles šiai kalbai"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_never": {
-		"message": "Nieko niekada neverti"
+		"message": "Niekada neversti"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
-		"message": "Niekada nereikia versti šia kalba"
+		"message": "Niekada neversti šiai kalbai"
 	},
 	"pageTranslator_sitePreferences_title": {
-		"message": "Nuostatos skirtos"
+		"message": "Nustatymai skirtas"
 	},
 	"pageTranslator_translatePage": {
 		"message": "Versti puslapį"
@@ -249,7 +249,7 @@
 		"message": "Išversta"
 	},
 	"popup_tabIdNotFound": {
-		"message": "Puslapis \"$1\" nerastas"
+		"message": "Skirtukas \"$1\" nerastas"
 	},
 	"popup_tab_translatePage": {
 		"message": "Puslapio vertimas"
@@ -261,31 +261,31 @@
 		"message": "Atšaukti"
 	},
 	"settings_button_export": {
-		"message": "Eksportuoti konfigūraciją"
+		"message": "Eksportuoti nustatymus"
 	},
 	"settings_button_import": {
-		"message": "Importuoti konfigūraciją"
+		"message": "Importuoti nustatymus"
 	},
 	"settings_button_reset": {
-		"message": "Iš naujo nustatyti konfigūraciją"
+		"message": "Atstatyti nustatymus"
 	},
 	"settings_button_saveChanges": {
-		"message": "Įrašyti pakeitimus"
+		"message": "Išsaugoti pakeitimus"
 	},
 	"settings_message_clearCache_success": {
-		"message": "Vyrojyklė išvalyta"
+		"message": "Talpykla išvalyta"
 	},
 	"settings_message_common_invalidValueType": {
-		"message": "Netinkamas reikšmės tipas"
+		"message": "Neteisinga reikšmė"
 	},
 	"settings_message_importConfig_invalidFile": {
-		"message": "Failas importavimui negali būti apdorotas"
+		"message": "Importui skirtas failas negali būti apdorotas"
 	},
 	"settings_message_importConfig_success": {
-		"message": "Importuota"
+		"message": "Importavimas baigtas"
 	},
 	"settings_message_resetConfig_confirm": {
-		"message": "Ar norite atstatyti nustatymus?"
+		"message": "Ar norite nustatyti nustatymus iš naujo?"
 	},
 	"settings_message_resetConfig_success": {
 		"message": "Nustatymai atstatyti"
@@ -293,110 +293,92 @@
 	"settings_message_saveChanges_success": {
 		"message": "Pakeitimai išsaugoti"
 	},
-	"settings_option_appIcon": {
-		"message": "Plėtinio piktograma"
-	},
-	"settings_option_appIcon_desc": {
-		"message": "Pasirinkus dinaminę piktogramą, spalvos bus pritaikytos naršyklės temai"
-	},
-	"settings_option_appIcon_item_auto": {
-		"message": "Dinaminis"
-	},
-	"settings_option_appIcon_item_color": {
-		"message": "Spalva"
-	},
-	"settings_option_appIcon_item_dark": {
-		"message": "Tamsus"
-	},
-	"settings_option_appIcon_item_light": {
-		"message": "Šviesus"
-	},
 	"settings_option_cache": {
-		"message": "Podėlis"
+		"message": "Talpykla"
 	},
 	"settings_option_cache_clear": {
-		"message": "Išvalyti podėlį"
+		"message": "Išvalyti talpyklą"
 	},
 	"settings_option_cache_clear_desc": {
-		"message": "Pašalinti talpyklą, jei turite vertimo artefaktų arba reikia pašalinti paslaptis"
+		"message": "Išvalykite talpyklą, jei turite vertimo klaidų arba reikia pašalinti slaptus duomenis"
 	},
 	"settings_option_cache_enable": {
 		"message": "Įjungti talpyklą"
 	},
 	"settings_option_cache_enable_desc": {
-		"message": "Kai talpykla įjungta, vertimai, kurie buvo išversti bent kartą, bus prieinami nedelsiant, net ir be interneto"
+		"message": "Kai talpykla įjungta, kartą išversti tekstai bus prieinami iš karto, net ir be interneto ryšio"
 	},
 	"settings_option_cache_ignoreCase": {
-		"message": "Neatsižvelgti į didžiąsias ir mažąsias raides"
+		"message": "Neskaityti didžiųjų ir mažųjų raidžių"
 	},
 	"settings_option_cache_ignoreCase_desc": {
-		"message": "Kai ši funkcija įjungta, vertimai iš talpyklos bus naudojami nesutampantys tiksliai, galimi vertimo artefaktai"
+		"message": "Įjungus, bus naudojami vertimai iš talpyklos net neatitikus tikslios raidžių formos, dėl ko gali atsirasti vertimo klaidų"
 	},
 	"settings_option_commonSettings": {
-		"message": "Bendrosios nuostatos"
+		"message": "Bendri nustatymai"
 	},
 	"settings_option_customTranslatorModule": {
-		"message": "Individualūs vertėjai"
+		"message": "Pasirinktiniai vertėjai"
 	},
 	"settings_option_customTranslatorModule_desc": {
-		"message": "Galite pridėti individualius vertėjus savo mėgstamiausiems vertimo paslaugoms. Sužinokite daugiau ir raskite modulius <slot id=docs>individualių vertėjų dokumentacijoje</slot>."
+		"message": "Galite pridėti pasirinktinius vertėjus savo mėgstamoms vertimo paslaugoms. Daugiau skaitykite ir raskite modulius <slot id=docs>pasirinktinių vertėjų dokumentacijoje</slot>"
 	},
 	"settings_option_customTranslatorModule_manageButton": {
-		"message": "Tvarkyti vertėjus"
+		"message": "Valdyti vertėjus"
 	},
 	"settings_option_history_enable": {
 		"message": "Įjungti istoriją"
 	},
 	"settings_option_history_enable_desc": {
-		"message": "Įjungus bet kuris vertimas bus įrašytas į istorijos puslapį"
+		"message": "Įjungus, kiekvienas vertimas bus įrašytas į istorijos puslapį"
 	},
 	"settings_option_mainPreferences": {
-		"message": "Pagrindinės nuostatos"
+		"message": "Pagrindiniai nustatymai"
 	},
 	"settings_option_pageTranslation": {
 		"message": "Puslapio vertimas"
 	},
 	"settings_option_pageTranslation_detectLanguageByContent": {
-		"message": "Aptikti kalbą pagal turinį"
+		"message": "Nustatyti kalbą pagal turinį"
 	},
 	"settings_option_pageTranslation_detectLanguageByContent_desc": {
-		"message": "Analizuoti teksto svetainę, kad būtų galima nustatyti puslapio kalbą. Kai išjungta, naudos kalbą, pateiktą svetainės metaduomenyse."
+		"message": "Analizuokite interneto puslapio tekstą, kad nustatytumėte puslapio kalbą. Išjungus bus naudojama puslapio metaduomenyse nurodyta kalba"
 	},
 	"settings_option_pageTranslation_enableContextMenu": {
-		"message": "Įgalinti kontekstinio meniu mygtuką"
+		"message": "Įjungti kontekstinio meniu mygtuką"
 	},
 	"settings_option_pageTranslation_enableContextMenu_desc": {
-		"message": "Įtraukti mygtuką, skirtą įjungti puslapio vertimą kontekstiniam meniu."
+		"message": "Pridėti mygtuką puslapio vertimo įjungimui/išjungimui kontekstiniame meniu"
 	},
 	"settings_option_pageTranslation_excludeSelectors": {
-		"message": "Selektoriai, kurių nebūtina versti"
+		"message": "Selektoriai, kurių vertimas bus praleistas"
 	},
 	"settings_option_pageTranslation_excludeSelectors_desc": {
-		"message": "CSS selektorių sąrašas, kurių vertimas nebus vykdomas. Vienas selektorius per eilutę. Jeigu elementas atitinka bet kurį iš šių selektorių, jis kartu su atributais ir vidiniais elementais nebus verčiamas."
+		"message": "CSS selektorių sąrašas, kurie nebus verčiami. Vienas selektorius per eilutę. Jei elementas atitiks bet kurį iš šių selektorių, jis, jo atributai ir vidiniai elementai nebus verčiami"
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
-		"message": "Verti tik matomus elementus"
+		"message": "Versti tik matomus elementus"
 	},
 	"settings_option_pageTranslation_lazyTranslate_desc": {
-		"message": "Jei ši parinktis įjungta, bus vertimi tik matomi elementai. Tai gali būti naudinga, norint sutaupyti tinklo srautą"
+		"message": "Kai ši parinktis įjungta, bus verčiami tik matomi elementai. Ši parinktis taupo tinklo srautą ir riboja naudojamų vertimo paslaugų kiekį."
 	},
 	"settings_option_pageTranslation_originalTextPopup": {
-		"message": "Leisti iškylančiąją laukelio su pradiniu tekstu"
+		"message": "Įjungti iškylantį langą su originaliu tekstu"
 	},
 	"settings_option_pageTranslation_originalTextPopup_desc": {
-		"message": "Rodyti iškylančią žymeklį su originaliu tekstu užvedus pelę ant išversto teksto"
+		"message": "Rodyti iškylantį langą su originaliu tekstu užvedus pelės žymeklį ant išverstų teksto blokų"
 	},
 	"settings_option_pageTranslation_toggleTranslationHotkey": {
-		"message": "Karštinės klavišai"
+		"message": "Karštieji klavišai"
 	},
 	"settings_option_pageTranslation_toggleTranslationHotkey_desc": {
-		"message": "Trumpiniai, skirti perjungti puslapio vertimą\nSpustelėkite ESC, kad nustatytumėte klavišus"
+		"message": "Sutrumpinimai, skirtie puslapio vertimo perjungimui\nPaspauskite ESC, kad išvalytumėte klavišus"
 	},
 	"settings_option_pageTranslation_translatableAttributes": {
-		"message": "Vertimiems atributams."
+		"message": "Verti atributai"
 	},
 	"settings_option_pageTranslation_translatableAttributes_desc": {
-		"message": "Įveskite <slot id=htmlAttributes>HTML atributo</slot> pavadinimus vertimui. Vienas atributas per eilutę"
+		"message": "Įveskite <slot id=htmlAttributes>HTML atributų</slot> pavadinimus, kuriuos norite versti, po vieną atributą kiekvienoje eilutėje"
 	},
 	"settings_option_popupTab_pageTranslator_showCounters": {
 		"message": "Rodyti vertimo statistiką"
@@ -405,52 +387,52 @@
 		"message": "Rodyti puslapio vertimo statistiką"
 	},
 	"settings_option_selectTranslation": {
-		"message": "Pasirinkto teksto vertimas"
+		"message": "Pažymėto teksto vertimas"
 	},
 	"settings_option_selectTranslation_detectedLangFirst": {
-		"message": "Pirmiausia naudoti aptiktą teksto kalbą, o ne puslapio kalbą"
+		"message": "Teikti pirmenybę aptiktai teksto kalbai prieš puslapio kalbą"
 	},
 	"settings_option_selectTranslation_detectedLangFirst_desc": {
-		"message": "Kai įjungta, tekstui nustatytos kalbos bus pirmenybė teikiama prieš puslapio kalbą"
+		"message": "Įjungus, aptikta pasirinkto teksto kalba bus teikiama pirmenybė prieš puslapio kalbą"
 	},
 	"settings_option_selectTranslation_disableWhileTranslatePage": {
-		"message": "Išjungti, vertinant puslapį"
+		"message": "Išjungti vertimą puslapio vertimo metu"
 	},
 	"settings_option_selectTranslation_enable": {
-		"message": "Aktyvuoti"
+		"message": "Įjungti"
 	},
 	"settings_option_selectTranslation_focusOnTranslateButton": {
-		"message": "Automatinis fokusavimas ant vertimo mygtuko"
+		"message": "Automatiškai fokusuoti vertimo mygtuką"
 	},
 	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
-		"message": "Susikaupti ant vertimo mygtuko, kai jis pasirodo"
+		"message": "Fokusuoti vertimo mygtuką, kai jis pasirodo"
 	},
 	"settings_option_selectTranslation_header_languageChoice": {
 		"message": "Kalbos nustatymai"
 	},
 	"settings_option_selectTranslation_isUseAutoForDetectLang": {
-		"message": "Įjungti automatinį vertėjo kalbos aptikimą"
+		"message": "Įjungti automatinį kalbos aptikimą vertėju"
 	},
 	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
-		"message": "Naudoti automatinį vertėjo kalbos aptikimą, kai vietinių kalbos negali būti nustatyta"
+		"message": "Naudoti automatinį kalbos aptikimą vertėjo, kai kalba negali būti aptikta lokaliai"
 	},
 	"settings_option_selectTranslation_mode": {
-		"message": "Vertimo aktyvavimo būdas"
+		"message": "Vertimo aktyvavimas"
 	},
 	"settings_option_selectTranslation_mode_item_contextMenu": {
 		"message": "Kontekstinio meniu mygtukas"
 	},
 	"settings_option_selectTranslation_mode_item_popupButton": {
-		"message": "Iškylančio mygtuko mygtukas"
+		"message": "Iškylantis mygtukas"
 	},
 	"settings_option_selectTranslation_mode_item_quickTranslate": {
-		"message": "Greitas vertimas pasirinkimu"
+		"message": "Greitas vertimas pažymint"
 	},
 	"settings_option_selectTranslation_modifiers": {
 		"message": "Modifikatoriai"
 	},
 	"settings_option_selectTranslation_modifiers_desc": {
-		"message": "Pasirinkite klavišus, kurie turi būti paspausti ant klaviatūros, kad parodytumėte vertimą"
+		"message": "Pasirinkite klavišus, kuriuos reikia paspausti klaviatūroje, kad būtų parodytas vertimas"
 	},
 	"settings_option_selectTranslation_modifiers_key_alt": {
 		"message": "alt"
@@ -465,49 +447,49 @@
 		"message": "shift"
 	},
 	"settings_option_selectTranslation_rememberDirection": {
-		"message": "Atsiminti neseniai pasirinktą teksto kalbą"
+		"message": "Prisaugoti neseniai pasirinktą teksto kalbą"
 	},
 	"settings_option_selectTranslation_showOnceForSelection": {
-		"message": "Rodyti vertimo mygtuką vieną kartą kiekvienam teksto pasirinkimui"
+		"message": "Rodyti vertimo mygtuką tik vieną kartą kiekvienam teksto pasirinkimui"
 	},
 	"settings_option_selectTranslation_showOnceForSelection_desc": {
-		"message": "Mygtukas rodomas tik vieną kartą kiekvienam teksto pasirinkimui. Jei norite jį vėl pamatyti, reikia iš naujo pasirinkti tekstą"
+		"message": "Mygtukas bus rodomas tik vieną kartą kiekvienam teksto pasirinkimui. Norint jį parodyti dar kartą, pasirinkite tekstą iš naujo"
 	},
 	"settings_option_selectTranslation_showOriginalText": {
-		"message": "Rodyti pradinį tekstą"
+		"message": "Rodyti originalų tekstą"
 	},
 	"settings_option_selectTranslation_showOriginalText_desc": {
-		"message": "Pridėti bloką su pirminiu tekstu į iššokantį vertimo langą"
+		"message": "Pridėti bloką su originaliu tekstu vertimo iššokančiame lange"
 	},
 	"settings_option_selectTranslation_strictSelection": {
-		"message": "Griežta atranka"
+		"message": "Tikslus pasirinkimas"
 	},
 	"settings_option_selectTranslation_strictSelection_desc": {
-		"message": "Ignoruoti atranką, jei kairysis pelės klavišas paleidžiamas už bloko ribų, kuriame yra pasirinktas tekstas"
+		"message": "Ignoruoti pasirinkimą, jei kairysis pelės mygtukas atleistas už bloko, kuriame yra pasirinktas tekstas, ribų"
 	},
 	"settings_option_selectTranslation_timeoutForHideButton": {
-		"message": "Uždelsti mygtuko paslėpimo laiką"
+		"message": "Uždelsimas prieš paslepiant mygtuką"
 	},
 	"settings_option_selectTranslation_timeoutForHideButton_desc": {
-		"message": "Delspinigiai milisekundėmis prieš paslėpdami mygtuką, kai žymeklis nėra virš jų. Žymeklio viršuje esantis mygtukas resetuos laikmatiklį. Norint išjungti automatinio paslėpimo funkciją, reikia nustatyti reikšmę mažesnę nei 1"
+		"message": "Uždelsimas milisekundėmis prieš paslepiant mygtuką, kai pelės žymeklis nėra ant jo. Uždėjus pelės žymeklį ant mygtuko, laikmatis atstatomas. Norint išjungti automatinį slėpimą, nustatykite reikšmę mažesnę nei 1"
 	},
 	"settings_option_selectTranslation_zIndex": {
 		"message": "z-indeksas"
 	},
 	"settings_option_selectTranslation_zIndex_desc": {
-		"message": "Padidinkite šią reikšmę, jei kai kurie elementai keletame puslapyje uždengia iššokantį vertimo teksto langą"
+		"message": "Padidinkite šią reikšmę, jei elementai kai kuriose puslapio vietose uždengia vertimo iššokantį langą"
 	},
 	"settings_option_textTranslator": {
 		"message": "Teksto vertimas"
 	},
 	"settings_option_textTranslator_rememberText": {
-		"message": "Prisiminti verstinį tekstą"
+		"message": "Įsiminti išverstą tekstą"
 	},
 	"settings_option_textTranslator_rememberText_desc": {
-		"message": "Prisiminti išverstą tekstą, kadangi langas bus atvertas kitą kartą"
+		"message": "Įsiminti išverstą tekstą kitą kartą atidarius langą"
 	},
 	"settings_option_textTranslator_spellCheck": {
-		"message": "Įjungti rašybos patikrą"
+		"message": "Įjungti rašybos tikrinimą"
 	},
 	"settings_option_textTranslator_suggestLanguage": {
 		"message": "Siūlyti aptiktą teksto kalbą"
@@ -516,55 +498,55 @@
 		"message": "Visada aptikti ir siūlyti kalbą"
 	},
 	"settings_option_textTranslator_suggestLanguageAlways_desc": {
-		"message": "Kai išjungta, kalbos pasiūlymai pasirodys tik tada, kai šaltinio kalba bus automatiškai nustatyta"
+		"message": "Išjungus kalbų pasiūlymai bus rodomi tik kai kalba nustatoma automatiškai"
 	},
 	"settings_option_translatePreferences": {
-		"message": "Vertimo nuostatos"
+		"message": "Vertimo nustatymai"
 	},
 	"settings_option_translateScheduler": {
-		"message": "Vertimo tvarkaraštis"
+		"message": "Vertimo planavimas"
 	},
 	"settings_option_translateScheduler_delay": {
-		"message": "Teksto kaupimo delsa"
+		"message": "Teksto kaupimo uždelsimas"
 	},
 	"settings_option_translateScheduler_delay_desc": {
-		"message": "Vertimo tvarkyklė mažina užklausų skaičių prie vertimo paslaugų API. Tvarkyklė stengiasi kaupia teksto žinutes ir siųsti kuo daugiau teksto per vieną užklausą. Tvarkyklė laukia nurodyto laiko milisekundėmis, kad surinktų naujus tekstus prieš pradedant vertimus."
+		"message": "Vertimo planuotojas sumažina užklausų vertimo paslaugos API skaičių. Jis stengiasi surinkti kuo daugiau tekstų vienai užklausai išsiųsti. Planuotojas lauks nurodyto laiko milisekundėmis, kad surinktų naujus tekstus prieš pradedant vertimą"
 	},
 	"settings_option_translateScheduler_retryLimit": {
-		"message": "Vertimo bandymų limitas"
+		"message": "Vertimo pakartojimų skaičius"
 	},
 	"settings_option_translateScheduler_retryLimit_desc": {
-		"message": "Tvarkyklė bandys išversti tekstus dar kartą, jei atsiras vertimų klaidų. Ši parinktis nustato ribą bandymams. Norėdami leisti neribotą bandymų skaičių, nustatykite neigiamą skaičių."
+		"message": "Planuotojas bandys pakartotinai versti tekstus, jei įvyks vertimo klaidos. Ši parinktis nustato pakartojimų limitą. Nustatykite neigiamą skaičių, kad leistumėte neribotą pakartojimų skaičių"
 	},
 	"settings_option_translatorModule": {
 		"message": "Vertimo modulis"
 	},
 	"settings_option_translatorModule_desc": {
-		"message": "Vertimo kokybė ir galimi kalbos variantai priklauso nuo vertėjo."
+		"message": "Vertimų kokybė ir galimos kalbos priklauso nuo vertėjo"
 	},
 	"settings_option_tts": {
-		"message": "Teksto į garsą (TTS)"
+		"message": "Tekstas į balsą (TTS)"
 	},
 	"settings_option_ttsCustomModules": {
-		"message": "Individualizuotas TTS"
+		"message": "Pasirinktinis TTS"
 	},
 	"settings_option_ttsCustomModules_button": {
-		"message": "Tvarkyti TTS modulius"
+		"message": "Valdyti TTS modulius"
 	},
 	"settings_option_ttsCustomModules_desc": {
-		"message": "Galite pridėti TTS modulius, naudojančius jūsų mėgstamą paslaugą ir balsus. Daugiau informacijos ir modulių rasite adaptuotame TTS dokumente."
+		"message": "Galite pridėti TTS modulius, kurie naudoja jūsų mėgstamas paslaugas ir balsus. Daugiau informacijos ir modulių rasite pasirinktinių TTS dokumentacijoje"
 	},
 	"settings_option_ttsModule": {
 		"message": "TTS modulis"
 	},
 	"settings_option_ttsModule_desc": {
-		"message": "Modulis, skirtas kalbėti tekstus"
+		"message": "Modulis tekstui perskaityti"
 	},
 	"settings_option_userLanguage": {
 		"message": "Jūsų kalba"
 	},
 	"settings_option_userLanguage_desc": {
-		"message": "Tiksli kalba, į kurią vertimi tekstai"
+		"message": "Tikslinė kalba tekstų vertimui"
 	},
 	"settings_pageTitle": {
 		"message": "Nustatymai"
@@ -573,10 +555,10 @@
 		"message": "Istorija"
 	},
 	"settings_section_popup": {
-		"message": "Iššokantis langas"
+		"message": "Iškylantis langas"
 	},
 	"textTranslator_suggestLanguage": {
-		"message": "Atrodo, kad tai kalba yra"
+		"message": "Panašu, kad ši kalba yra"
 	},
 	"textTranslator_translateInputPlaceholder": {
 		"message": "Įveskite tekstą"
@@ -591,7 +573,7 @@
 		"message": "Uždaryti"
 	},
 	"translatorsManagerWindow_emptyTranslatorsListText": {
-		"message": "Pasirinktinių vertėjų dar nėra pridėta"
+		"message": "Jokių naudotojų vertėjų dar nebuvo pridėta"
 	},
 	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
 		"message": "Ar tikrai norite pašalinti vertėją „$translator_name$“?",
@@ -603,7 +585,7 @@
 		}
 	},
 	"translatorsManagerWindow_title": {
-		"message": "Individualizuoti vertėjai"
+		"message": "Naudotojų vertėjai"
 	},
 	"translatorsManagerWindow_translator_delete": {
 		"message": "Ištrinti"
@@ -618,10 +600,10 @@
 		"message": "Uždaryti"
 	},
 	"ttsManagerWindow_emptyTranslatorsListText": {
-		"message": "Dar nėra pridėta jokių TTS modulių"
+		"message": "Jokių TTS modulių dar nebuvo pridėta"
 	},
 	"ttsManagerWindow_message_ttsRemoveConfirmation": {
-		"message": "Ar tikrai norite pašalinti TTS \"$tts_name$\"?",
+		"message": "Ar tikrai norite pašalinti TTS modulį „$tts_name$“?",
 		"placeholders": {
 			"tts_name": {
 				"content": "$1",
@@ -630,7 +612,7 @@
 		}
 	},
 	"ttsManagerWindow_title": {
-		"message": "Teksto į garsą moduliai"
+		"message": "Teksto į garso modulius"
 	},
 	"ttsManagerWindow_translator_delete": {
 		"message": "Ištrinti"
@@ -645,7 +627,7 @@
 		"message": "Parametras turi būti skaičius nuo $1 iki $2"
 	},
 	"validation_positiveNumber": {
-		"message": "Parametras turi būti teigiamas skaičius."
+		"message": "Parametras turi būti teigiamas skaičius"
 	},
 	"langCode_aa": {
 		"message": "Afarų"

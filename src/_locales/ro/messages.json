@@ -1,21 +1,21 @@
 {
 	"common_action_addToDictionary": {
-		"message": "Adăugați traducerea în dicționar"
+		"message": "Adaugă traducerea în dicționar"
 	},
 	"common_action_removeFromDictionary": {
-		"message": "Eliminați traducerea din dicționar"
+		"message": "Elimină traducerea din dicționar"
 	},
 	"common_bgUnavailable": {
 		"message": "Scriptul de fundal nu este disponibil"
 	},
 	"common_cancel": {
-		"message": "Anulați"
+		"message": "Anulează"
 	},
 	"common_close": {
-		"message": "Închideți"
+		"message": "Închide"
 	},
 	"common_copy": {
-		"message": "Copiază"
+		"message": "Copiere"
 	},
 	"common_error": {
 		"message": "Eroare"
@@ -30,19 +30,19 @@
 		"message": "Tradu"
 	},
 	"component_hotkey_placeholder": {
-		"message": "Apăsați pentru a înregistra combinația de taste"
+		"message": "Faceți clic pentru a înregistra scurtătura"
 	},
 	"component_hotkey_recordPlaceholder": {
 		"message": "Apăsați tastele"
 	},
 	"component_hotkey_resetButton": {
-		"message": "Resetare"
+		"message": "Resetează"
 	},
 	"contextMenu_disablePageTranslation": {
-		"message": "Dezactivați traducerea paginii"
+		"message": "Dezactivează traducerea paginii"
 	},
 	"contextMenu_translatePage": {
-		"message": "Traduceți pagina"
+		"message": "Tradu pagina"
 	},
 	"contextMenu_translateSelectedText": {
 		"message": "Tradu textul selectat"
@@ -57,16 +57,16 @@
 		"message": "Exportă"
 	},
 	"dictionary_button_removeAll": {
-		"message": "Șterge tot"
+		"message": "Elimină tot"
 	},
 	"dictionary_deleteAll": {
-		"message": "Sunteți sigur că doriți să ștergeți TOATE traducerile din dicționar?"
+		"message": "Sigur doriți să ștergeți TOATE traducerile din dicționar?"
 	},
 	"dictionary_deleteConfirmation": {
-		"message": "Sunteți sigur că doriți să ștergeți această traducere?"
+		"message": "Sigur doriți să ștergeți această traducere?"
 	},
 	"dictionary_description": {
-		"message": "Păstrați-vă traducerile în dicționar pentru a le găsi mai târziu"
+		"message": "Păstrați traducerile în dicționar pentru a le găsi mai târziu"
 	},
 	"dictionary_emptyDictionary": {
 		"message": "Dicționarul este gol. Începeți să-l completați traducând un text"
@@ -78,10 +78,10 @@
 		"message": "Către"
 	},
 	"dictionary_message_deleteAll_success": {
-		"message": "Toate traducerile au fost eliminate"
+		"message": "Toate traducerile au fost șterse"
 	},
 	"dictionary_notFoundEntries": {
-		"message": "Traducerile care se potrivesc cu aceste filtre nu au fost găsite"
+		"message": "Nu s-au găsit traduceri care să corespundă acestor filtre"
 	},
 	"dictionary_pageTitle": {
 		"message": "Dicționar"
@@ -98,20 +98,20 @@
 	"editorWindow_data_code": {
 		"message": "Cod"
 	},
-	"editorWindow_data_name": {
-		"message": "Nume"
+	"editorWindow_data_translatorName": {
+		"message": "Numele traducătorului"
 	},
-	"editorWindow_message_invalidName": {
-		"message": "Numele trebuie să conțină cel puțin un simbol"
+	"editorWindow_message_invalidTranslatorName": {
+		"message": "Numele traducătorului trebuie să conțină cel puțin un caracter"
 	},
 	"editorWindow_save": {
 		"message": "Salvează"
 	},
 	"ext_description": {
-		"message": "Traducere pagini și texte, dicționar, istoric, traducători offline și personalizați"
+		"message": "Traducerea paginilor și a textelor, dicționar, istoric, traducători offline și personalizați"
 	},
 	"ext_name": {
-		"message": "Lingvist - traducător de pagini web"
+		"message": "Linguist - translator pagini web"
 	},
 	"history_control_selectEntry": {
 		"message": "Selectează intrarea"
@@ -120,58 +120,58 @@
 		"message": "Șterge istoricul"
 	},
 	"history_controls_deleteSelected": {
-		"message": "Ștergeți selecția"
+		"message": "Șterge selectate"
 	},
 	"history_controls_selectAll": {
-		"message": "Selectați toate traducerile"
+		"message": "Selectează toate traducerile"
 	},
 	"history_message_clearHistoryConfirmation": {
-		"message": "Sigur doriți să ștergeți istoricul? Toate intrările vor fi eliminate"
+		"message": "Sunteți sigur că doriți să ștergeți istoricul? Toate înregistrările vor fi eliminate"
 	},
 	"history_message_deleteEntryConfirmation": {
-		"message": "Sigur doriți să ștergeți această intrare?"
+		"message": "Sunteți sigur că doriți să ștergeți această înregistrare?"
 	},
 	"history_message_deleteSelectedEntriesConfirmation": {
-		"message": "Sigur doriți să ștergeți intrările selectate ($1)?"
-	},
-	"history_message_emptyEntries": {
-		"message": "Istoricul este gol"
+		"message": "Sunteți sigur că doriți să ștergeți înregistrările selectate ($1)?"
 	},
 	"history_message_entriesNotFound": {
-		"message": "Nu s-au găsit traduceri care să satisfacă filtrul"
+		"message": "Nu au fost găsite traduceri care să corespundă filtrului"
+	},
+	"history_message_noEntries": {
+		"message": "Istoricul este gol"
 	},
 	"history_notification_disabled": {
-		"message": "Înregistrarea istoricului este dezactivată, prin urmare noile intrări nu vor apărea. Puteți schimba acest lucru în <slot id=preferences>preferințe</slot>"
+		"message": "Înregistrarea istorică este dezactivată, astfel încât noile înregistrări nu vor apărea. Puteți schimba acest lucru în <slot id=preferences>preferințe</slot>"
 	},
 	"history_pageTitle": {
 		"message": "Istoric"
 	},
 	"history_searchPlaceholder": {
-		"message": "Căutare după text"
+		"message": "Caută după text"
 	},
 	"inlineTranslator_showOriginalText": {
 		"message": "Afișează textul original"
 	},
 	"lang_change": {
-		"message": "Schimbare limbă"
+		"message": "Schimbă limba"
 	},
 	"lang_detect": {
 		"message": "Detectare automată"
 	},
 	"lang_select": {
-		"message": "Selectare limbă"
+		"message": "Selectează limba"
 	},
 	"lang_swap": {
-		"message": "Schimb de limbi"
+		"message": "Inversează limbile"
 	},
 	"message_askResetConfig": {
-		"message": "Resetați setările?"
+		"message": "Resetare setări?"
 	},
 	"message_cacheFlushed": {
-		"message": "Cache-ul este curățat"
+		"message": "Cache-ul a fost golit"
 	},
 	"message_changesSaved": {
-		"message": "Schimbările au fost salvate"
+		"message": "Modificările au fost salvate"
 	},
 	"message_error": {
 		"message": "Eroare"
@@ -189,16 +189,16 @@
 		"message": "Eroare necunoscută"
 	},
 	"pageTranslator_alwaysTranslateLang": {
-		"message": "Tradu mereu această limbă"
+		"message": "Traducere automată pentru această limbă"
 	},
 	"pageTranslator_commonPreferences_autoTranslate_disable": {
-		"message": "Dezactivat"
+		"message": "Dezactivează"
 	},
 	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
 		"message": "Dezactivează pentru toate site-urile"
 	},
 	"pageTranslator_commonPreferences_autoTranslate_enable": {
-		"message": "Activare"
+		"message": "Activează"
 	},
 	"pageTranslator_commonPreferences_title": {
 		"message": "Preferințe comune pentru această limbă"
@@ -207,28 +207,28 @@
 		"message": "Traducere automată"
 	},
 	"pageTranslator_showOptions": {
-		"message": "Afișare opțiuni"
+		"message": "Afișează opțiunile"
 	},
 	"pageTranslator_showOriginal": {
-		"message": "Afișare originală"
+		"message": "Arată originalul"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_always": {
-		"message": "Tradu mereu"
+		"message": "Tradu întotdeauna"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
-		"message": "Tradu mereu pentru această limbă"
+		"message": "Tradu întotdeauna pentru această limbă"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_default": {
-		"message": "Folosește regulile comune"
+		"message": "Folosește regulile generale"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
-		"message": "Folosește regulile comune pentru această limbă"
+		"message": "Folosește regulile generale pentru această limbă"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_never": {
 		"message": "Nu traduce niciodată"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
-		"message": "Niciodată nu traduceți pentru această limbă"
+		"message": "Nu traduce niciodată pentru această limbă"
 	},
 	"pageTranslator_sitePreferences_title": {
 		"message": "Preferințe pentru"
@@ -240,7 +240,7 @@
 		"message": "Raport de traducere"
 	},
 	"pageTranslator_translationReport_queue": {
-		"message": "Coadă"
+		"message": "Coada"
 	},
 	"pageTranslator_translationReport_reject": {
 		"message": "Erori"
@@ -258,31 +258,31 @@
 		"message": "Traducerea textului"
 	},
 	"settings_button_cancel": {
-		"message": "Anulare"
+		"message": "Anulează"
 	},
 	"settings_button_export": {
-		"message": "Exportă configurația"
+		"message": "Exportă configurarea"
 	},
 	"settings_button_import": {
-		"message": "Importă configurația"
+		"message": "Importă configurarea"
 	},
 	"settings_button_reset": {
-		"message": "Resetare configurație"
+		"message": "Resetează configurarea"
 	},
 	"settings_button_saveChanges": {
 		"message": "Salvează modificările"
 	},
 	"settings_message_clearCache_success": {
-		"message": "Cache-ul este golit"
+		"message": "Memoria cache a fost ștearsă"
 	},
 	"settings_message_common_invalidValueType": {
 		"message": "Valoare invalidă"
 	},
 	"settings_message_importConfig_invalidFile": {
-		"message": "Fișierul pentru import nu poate fi manipulat"
+		"message": "Fișierul pentru import nu poate fi procesat"
 	},
 	"settings_message_importConfig_success": {
-		"message": "Importul s-a efectuat cu succes"
+		"message": "Importul a fost finalizat"
 	},
 	"settings_message_resetConfig_confirm": {
 		"message": "Doriți să resetați setările?"
@@ -293,44 +293,26 @@
 	"settings_message_saveChanges_success": {
 		"message": "Modificările au fost salvate"
 	},
-	"settings_option_appIcon": {
-		"message": "Pictograma extensiei"
-	},
-	"settings_option_appIcon_desc": {
-		"message": "Când este selectată pictograma dinamică, culorile se vor adapta temei browser-ului"
-	},
-	"settings_option_appIcon_item_auto": {
-		"message": "Dinamic"
-	},
-	"settings_option_appIcon_item_color": {
-		"message": "Culoare"
-	},
-	"settings_option_appIcon_item_dark": {
-		"message": "Întunecat"
-	},
-	"settings_option_appIcon_item_light": {
-		"message": "Luminat"
-	},
 	"settings_option_cache": {
-		"message": "Cache"
+		"message": "Memorie cache"
 	},
 	"settings_option_cache_clear": {
-		"message": "Ștergeți cache-ul"
+		"message": "Șterge memoria cache"
 	},
 	"settings_option_cache_clear_desc": {
-		"message": "Eliminați cache-ul dacă aveți artefacte de traducere sau trebuie să eliminați secretele"
+		"message": "Eliminați memoria cache dacă aveți artefacte de traducere sau trebuie să eliminați secretele"
 	},
 	"settings_option_cache_enable": {
-		"message": "Activați cache-ul"
+		"message": "Activează memoria cache"
 	},
 	"settings_option_cache_enable_desc": {
-		"message": "Când este activat cache-ul, traducerile care au fost traduse odată vor fi disponibile imediat, chiar și fără internet"
+		"message": "Când memoria cache este activată, traducerile realizate anterior vor fi disponibile imediat, chiar și fără conexiune la internet"
 	},
 	"settings_option_cache_ignoreCase": {
-		"message": "Fără sensibilitate la majuscule/minuscule"
+		"message": "Nesensibil la majuscule/minuscule"
 	},
 	"settings_option_cache_ignoreCase_desc": {
-		"message": "Când este activată această opțiune, traducerile din cache vor fi utilizate pentru corespondențe neexacte, ceea ce poate duce la artefacte de traducere"
+		"message": "Când este activat, traducerile din memoria cache vor fi folosite și pentru potriviri aproximative, ceea ce poate cauza artefacte de traducere"
 	},
 	"settings_option_commonSettings": {
 		"message": "Setări comune"
@@ -339,16 +321,16 @@
 		"message": "Traducători personalizați"
 	},
 	"settings_option_customTranslatorModule_desc": {
-		"message": "Puteți adăuga traducători personalizați pentru serviciile dvs. favorite de traducere. Citiți mai mult și găsiți module în <slot id = docs> documentația traducătorilor personalizați </slot>."
+		"message": "Puteți adăuga traducători personalizați pentru serviciile de traducere preferate. Citiți mai mult și găsiți module în <slot id=docs>documentația traducătorilor personalizați</slot>"
 	},
 	"settings_option_customTranslatorModule_manageButton": {
-		"message": "Gestionați traducătorii"
+		"message": "Gestionează traducătorii"
 	},
 	"settings_option_history_enable": {
 		"message": "Activează istoricul"
 	},
 	"settings_option_history_enable_desc": {
-		"message": "Când este activat, orice traducere va fi înregistrată într-o pagină cu istoric"
+		"message": "Când este activat, fiecare traducere va fi înregistrată pe o pagină de istoric"
 	},
 	"settings_option_mainPreferences": {
 		"message": "Setări principale"
@@ -357,46 +339,46 @@
 		"message": "Traducerea paginii"
 	},
 	"settings_option_pageTranslation_detectLanguageByContent": {
-		"message": "Detectați limba prin conținut"
+		"message": "Detectează limba după conținut"
 	},
 	"settings_option_pageTranslation_detectLanguageByContent_desc": {
-		"message": "Analizați textul de pe pagina web pentru a detecta limba paginii. Când este dezactivat, se va folosi o limbă furnizată în metadatele paginii."
+		"message": "Analizează textul de pe pagina web pentru a detecta limba paginii. Când este dezactivat, se va folosi limba specificată în metadata paginii"
 	},
 	"settings_option_pageTranslation_enableContextMenu": {
-		"message": "Activați butonul meniului contextual"
+		"message": "Activează butonul din meniul contextual"
 	},
 	"settings_option_pageTranslation_enableContextMenu_desc": {
-		"message": "Adăugați un buton pentru a activa și dezactiva traducerea paginii în meniul contextual"
+		"message": "Adaugă un buton pentru activarea/dezactivarea traducerii paginii din meniul contextual"
 	},
 	"settings_option_pageTranslation_excludeSelectors": {
-		"message": "Selectori de evitat la traducere"
+		"message": "Selectori care vor fi omişi la traducere"
 	},
 	"settings_option_pageTranslation_excludeSelectors_desc": {
-		"message": "Lista de selectori CSS care nu vor fi traduse. Un selector pe linie. Dacă un element corespunde oricărui selector din această listă, acesta, atributele și elementele sale imbricate nu vor fi traduse."
+		"message": "Lista selectoarelor CSS care nu vor fi traduse. Un selector pe linie. Dacă un element corespunde oricărui selector, acesta, atributele sale și elementele imbricate nu vor fi traduse"
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
-		"message": "Tradu doar elementele vizibile"
+		"message": "Translatează doar elementele vizibile"
 	},
 	"settings_option_pageTranslation_lazyTranslate_desc": {
-		"message": "Când această opțiune este activată, se vor traduce numai elementele vizibile. Aceasta poate fi utilă pentru a economisi traficul de rețea."
+		"message": "Când această opțiune este activată, vor fi traduse doar elementele vizibile. Această opțiune economisește trafic de rețea și limitele serviciilor de traducere utilizate."
 	},
 	"settings_option_pageTranslation_originalTextPopup": {
-		"message": "Activați pop-up-ul cu textul original"
+		"message": "Activează fereastra pop-up cu textul original"
 	},
 	"settings_option_pageTranslation_originalTextPopup_desc": {
-		"message": "Afișați o fereastră pop-up cu textul original prin plasarea cursorului deasupra textului tradus"
+		"message": "Afișează o fereastră pop-up cu textul original când cursorul mouse-ului este deasupra blocurilor de text tradus."
 	},
 	"settings_option_pageTranslation_toggleTranslationHotkey": {
-		"message": "Scurtături tastatură"
+		"message": "Taste rapide"
 	},
 	"settings_option_pageTranslation_toggleTranslationHotkey_desc": {
-		"message": "Scurtături pentru a comuta traducerea paginii\nApăsați ESC pentru resetare"
+		"message": "Comenzi rapide pentru a comuta traducerea paginii\nApasă ESC pentru a reseta tastele"
 	},
 	"settings_option_pageTranslation_translatableAttributes": {
-		"message": "Atribute traductibile."
+		"message": "Atribute traducibile"
 	},
 	"settings_option_pageTranslation_translatableAttributes_desc": {
-		"message": "Introduceți numele atributelor <slot id=htmlAttributes>HTML</slot> pentru traducere. Un atribut pe linie"
+		"message": "Introduceți numele <slot id=htmlAttributes>atributelor HTML</slot> de tradus, câte un atribut pe linie"
 	},
 	"settings_option_popupTab_pageTranslator_showCounters": {
 		"message": "Afișează statistici de traducere"
@@ -408,31 +390,31 @@
 		"message": "Traducerea textului selectat"
 	},
 	"settings_option_selectTranslation_detectedLangFirst": {
-		"message": "Preferă limba detectată pentru text în locul limbii paginii"
+		"message": "Preferă limba detectată a textului în locul limbii paginii"
 	},
 	"settings_option_selectTranslation_detectedLangFirst_desc": {
-		"message": "Când este activată, limba detectată pentru textul selectat va fi preferată în fața limbii paginii"
+		"message": "Când este activat, limba detectată a textului selectat va fi preferată în locul limbii paginii"
 	},
 	"settings_option_selectTranslation_disableWhileTranslatePage": {
-		"message": "Dezactivați în timpul traducerii paginii"
+		"message": "Dezactivează în timpul traducerii paginii"
 	},
 	"settings_option_selectTranslation_enable": {
-		"message": "Activare"
+		"message": "Activează"
 	},
 	"settings_option_selectTranslation_focusOnTranslateButton": {
-		"message": "Auto-focalizare pe butonul de traducere"
+		"message": "Concentrează automat pe butonul de traducere"
 	},
 	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
-		"message": "Focalizare pe butonul de traducere atunci când acesta apare"
+		"message": "Concentrează-te pe butonul de traducere când acesta apare"
 	},
 	"settings_option_selectTranslation_header_languageChoice": {
-		"message": "Setări limbă"
+		"message": "Setări de limbă"
 	},
 	"settings_option_selectTranslation_isUseAutoForDetectLang": {
-		"message": "Activați detectarea automată a limbii de către traducător"
+		"message": "Activează detectarea automată a limbii de către traducător"
 	},
 	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
-		"message": "Utilizați detectarea automată a limbii de către traducător atunci când limba nu poate fi detectată local"
+		"message": "Folosește detectarea automată a limbii de către traducător atunci când limba nu poate fi detectată local"
 	},
 	"settings_option_selectTranslation_mode": {
 		"message": "Declanșator de traducere"
@@ -465,106 +447,106 @@
 		"message": "shift"
 	},
 	"settings_option_selectTranslation_rememberDirection": {
-		"message": "Ține minte ultima limbă selectată pentru text"
+		"message": "Rețineți cea mai recent selectată limbă a textului"
 	},
 	"settings_option_selectTranslation_showOnceForSelection": {
 		"message": "Afișează butonul de traducere o singură dată pentru fiecare selecție de text"
 	},
 	"settings_option_selectTranslation_showOnceForSelection_desc": {
-		"message": "Butonul se va afișa doar o singură dată pentru fiecare selecție de text. Dacă doriți să-l afișați din nou, selectați textul din nou"
+		"message": "Butonul va apărea o singură dată pentru fiecare selecție de text. Pentru a-l afișa din nou, selectați textul din nou"
 	},
 	"settings_option_selectTranslation_showOriginalText": {
 		"message": "Afișează textul original"
 	},
 	"settings_option_selectTranslation_showOriginalText_desc": {
-		"message": "Adaugă un bloc cu textul original într-un popup cu traducerea"
+		"message": "Adaugă un bloc cu textul original în popup-ul de traducere"
 	},
 	"settings_option_selectTranslation_strictSelection": {
 		"message": "Selecție strictă"
 	},
 	"settings_option_selectTranslation_strictSelection_desc": {
-		"message": "Ignoră selecția dacă butonul din stânga al mouse-ului este eliberat în afara unui bloc care conține textul selectat"
+		"message": "Ignoră selecția dacă butonul stâng al mouse-ului este eliberat în afara blocului care conține textul selectat"
 	},
 	"settings_option_selectTranslation_timeoutForHideButton": {
-		"message": "Întârziere pentru ascunderea butonului"
+		"message": "Întârziere înainte de ascunderea butonului"
 	},
 	"settings_option_selectTranslation_timeoutForHideButton_desc": {
-		"message": "Întârziere în milisecunde înainte de ascunderea butonului când cursorul nu este deasupra lui. Atunci când cursorul se află pe buton, temporizatorul se resetează. Pentru a dezactiva ascunderea automată, setați valoarea mai mică decât 1"
+		"message": "Întârziere în milisecunde înainte de ascunderea butonului când cursorul nu este pe el. Mișcarea cursorului peste buton resetează temporizatorul. Pentru a dezactiva ascunderea automată, setați valoarea mai mică de 1"
 	},
 	"settings_option_selectTranslation_zIndex": {
 		"message": "z-index"
 	},
 	"settings_option_selectTranslation_zIndex_desc": {
-		"message": "Creșteți valoarea dacă unele elemente de pe anumite pagini se suprapun cu o fereastră pop-up cu textul tradus"
+		"message": "Măriți această valoare dacă elementele din unele pagini se suprapun peste fereastra popup cu textul tradus"
 	},
 	"settings_option_textTranslator": {
-		"message": "Traducere de text"
+		"message": "Traducerea textului"
 	},
 	"settings_option_textTranslator_rememberText": {
-		"message": "Țineți minte textul tradus"
+		"message": "Reține textul tradus"
 	},
 	"settings_option_textTranslator_rememberText_desc": {
-		"message": "Țineți minte textul tradus pentru data viitoare când fereastra este deschisă"
+		"message": "Reține textul tradus pentru data următoare când se deschide fereastra"
 	},
 	"settings_option_textTranslator_spellCheck": {
-		"message": "Activați corectarea ortografică"
+		"message": "Activează verificarea ortografică"
 	},
 	"settings_option_textTranslator_suggestLanguage": {
-		"message": "Sugerați limba detectată a textului"
+		"message": "Sugerează limba textului detectat"
 	},
 	"settings_option_textTranslator_suggestLanguageAlways": {
-		"message": "Detectați întotdeauna și sugerați limba"
+		"message": "Detectează și sugerează limba întotdeauna"
 	},
 	"settings_option_textTranslator_suggestLanguageAlways_desc": {
-		"message": "Când opțiunea este dezactivată, sugestiile de limbă vor apărea doar atunci când limba sursă este detectată automat"
+		"message": "Când este dezactivat, sugestiile de limbă vor apărea doar când limba sursă este detectată automat"
 	},
 	"settings_option_translatePreferences": {
 		"message": "Preferințe de traducere"
 	},
 	"settings_option_translateScheduler": {
-		"message": "Programator de traducere"
+		"message": "Planificator de traducere"
 	},
 	"settings_option_translateScheduler_delay": {
 		"message": "Întârziere acumulare text"
 	},
 	"settings_option_translateScheduler_delay_desc": {
-		"message": "Programul de traducere reduce numărul de solicitări la API-ul serviciilor de traducere. Programul încearcă să acumuleze texte pentru a trimite cât mai multe texte posibile într-o singură solicitare. Programul va aștepta timpul specificat în milisecunde pentru a colecta noi texte înainte de a începe să traducă."
+		"message": "Programatorul de traduceri reduce numărul de cereri către API-ul serviciului de traduceri. Încearcă să acumuleze cât mai multe texte pentru a le trimite într-o singură cerere. Programatorul va aștepta timpul specificat în milisecunde pentru a aduna texte noi înainte de a începe traducerea"
 	},
 	"settings_option_translateScheduler_retryLimit": {
-		"message": "Încercări de reîncercare a traducerii"
+		"message": "Număr de încercări de retraducere"
 	},
 	"settings_option_translateScheduler_retryLimit_desc": {
-		"message": "Planificatorul va reîncerca traducerea textelor pentru erorile de traducere. Această opțiune stabilește un număr maxim de încercări. Stabiliți un număr negativ pentru a permite reîncercări nelimitate"
+		"message": "Programatorul va încerca să retraducă textele în cazul apariției unor erori de traducere. Această opțiune setează o limită pentru încercările de retraducere. Introduceți o valoare negativă pentru a permite încercări nelimitate"
 	},
 	"settings_option_translatorModule": {
-		"message": "Modul traducere"
+		"message": "Modul de traducere"
 	},
 	"settings_option_translatorModule_desc": {
-		"message": "Calitatea traducerilor și limbile disponibile pentru traducere depind de translator."
+		"message": "Calitatea traducerilor și limbile disponibile depind de traducător"
 	},
 	"settings_option_tts": {
-		"message": "Convertire text în vorbire (TTS)"
+		"message": "Text în vorbire (TTS)"
 	},
 	"settings_option_ttsCustomModules": {
-		"message": "Personalizare TTS"
+		"message": "TTS personalizat"
 	},
 	"settings_option_ttsCustomModules_button": {
-		"message": "Gestionați modulele TTS personalizate"
+		"message": "Gestionați modulele TTS"
 	},
 	"settings_option_ttsCustomModules_desc": {
-		"message": "Puteți adăuga module TTS care utilizează serviciul și vocile dvs. preferate. Citiți mai multe și găsiți module în documentația TTS personalizată."
+		"message": "Puteți adăuga module TTS care folosesc serviciile și vocile preferate. Citiți mai multe și găsiți module în documentația pentru TTS personalizat"
 	},
 	"settings_option_ttsModule": {
 		"message": "Modul TTS"
 	},
 	"settings_option_ttsModule_desc": {
-		"message": "Modul pentru a reda textele cu voce"
+		"message": "Modul pentru redarea textului"
 	},
 	"settings_option_userLanguage": {
-		"message": "Limba ta"
+		"message": "Limba dvs."
 	},
 	"settings_option_userLanguage_desc": {
-		"message": "Limba țintă pentru traducerea textelor"
+		"message": "Limba țintă pentru traducerea textului"
 	},
 	"settings_pageTitle": {
 		"message": "Setări"
@@ -573,13 +555,13 @@
 		"message": "Istoric"
 	},
 	"settings_section_popup": {
-		"message": "Popup"
+		"message": "Fereastră pop-up"
 	},
 	"textTranslator_suggestLanguage": {
-		"message": "Se pare că această limbă este"
+		"message": "Se pare că limba este"
 	},
 	"textTranslator_translateInputPlaceholder": {
-		"message": "Introduceți textul de tradus"
+		"message": "Introduceți textul"
 	},
 	"textTranslator_translatePlaceholder": {
 		"message": "Text tradus"
@@ -591,10 +573,10 @@
 		"message": "Închide"
 	},
 	"translatorsManagerWindow_emptyTranslatorsListText": {
-		"message": "Traducătorii personalizați nu au fost adăugați încă"
+		"message": "Nu a fost adăugat încă niciun traducător personalizat"
 	},
 	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
-		"message": "Ești sigur că dorești să elimini traducătorul \"$translator_name$\"?",
+		"message": "Sigur doriți să eliminați traducătorul „$translator_name$”?",
 		"placeholders": {
 			"translator_name": {
 				"content": "$1",
@@ -609,7 +591,7 @@
 		"message": "Șterge"
 	},
 	"translatorsManagerWindow_translator_edit": {
-		"message": "Editează"
+		"message": "Modifică"
 	},
 	"ttsManagerWindow_add": {
 		"message": "Adaugă"
@@ -618,10 +600,10 @@
 		"message": "Închide"
 	},
 	"ttsManagerWindow_emptyTranslatorsListText": {
-		"message": "Modulele TTS nu au fost adăugate încă"
+		"message": "Nu a fost adăugat încă niciun modul TTS"
 	},
 	"ttsManagerWindow_message_ttsRemoveConfirmation": {
-		"message": "Ești sigur că vrei să elimini TTS-ul \"$tts_name$\"?",
+		"message": "Sigur doriți să eliminați modulul TTS „$tts_name$”?",
 		"placeholders": {
 			"tts_name": {
 				"content": "$1",
@@ -630,7 +612,7 @@
 		}
 	},
 	"ttsManagerWindow_title": {
-		"message": "Module de text în vorbire"
+		"message": "Module text în vorbire"
 	},
 	"ttsManagerWindow_translator_delete": {
 		"message": "Șterge"
@@ -645,7 +627,7 @@
 		"message": "Parametrul trebuie să fie un număr între $1 și $2"
 	},
 	"validation_positiveNumber": {
-		"message": "Parametrul trebuie să fie un număr pozitiv."
+		"message": "Parametrul trebuie să fie un număr pozitiv"
 	},
 	"langCode_aa": {
 		"message": "Afar"

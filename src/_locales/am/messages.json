@@ -1,12 +1,12 @@
 {
 	"common_action_addToDictionary": {
-		"message": "ትርጉም ወደ መዝሙር መጨመር"
+		"message": "መተርጎም ወደ መዝገበ ቃላት ያክሉ"
 	},
 	"common_action_removeFromDictionary": {
-		"message": "ትርጉም ወደ መዝሙር ማውጫ አውጥቶው"
+		"message": "መተርጎም ከመዝገበ ቃላት ያስወግዱ"
 	},
 	"common_bgUnavailable": {
-		"message": "የዳሰሳ ስህተት አይገኝም"
+		"message": "የጀብዱ ስክሪፕት አልተገኘም"
 	},
 	"common_cancel": {
 		"message": "ተወው"
@@ -15,133 +15,133 @@
 		"message": "ዝጋ"
 	},
 	"common_copy": {
-		"message": "ኮፕይ"
+		"message": "ቅዳ"
 	},
 	"common_error": {
 		"message": "ስህተት"
 	},
 	"common_offlineTranslator": {
-		"message": "$1 - የማስተላለፉ ቻርተር ጥቂት ይደረጋል"
+		"message": "$1 - ኦፍላይን ተርጓሚ"
 	},
 	"common_retry": {
-		"message": "ድጋሚ አስተዋጽኦ"
+		"message": "እንደገና ሞክር"
 	},
 	"common_translate": {
-		"message": "ትርጉም"
+		"message": "ተርጉም"
 	},
 	"component_hotkey_placeholder": {
-		"message": "ሁሉንም የማይጠቀሙ ሂደቶችን ማጥፋት ይችላሉ"
+		"message": "እንደገና አፅድቅ ለመመዝገብ ጠቅ ያድርጉ"
 	},
 	"component_hotkey_recordPlaceholder": {
-		"message": "ሂደቶችን ጠቀማቸው"
+		"message": "ቁልፎችን ጫን"
 	},
 	"component_hotkey_resetButton": {
-		"message": "ነጥለው ይክፈሉ"
+		"message": "እንደገና ለመለወጥ"
 	},
 	"contextMenu_disablePageTranslation": {
-		"message": "የገለልተኛ ዕይታ ተዋግቶ ይጠቀሙ"
+		"message": "የገፅ ትርጉም አሰናዳ"
 	},
 	"contextMenu_translatePage": {
-		"message": "የገለልተኛ ዕይታ ትርጉም ይችላሉ"
+		"message": "ገፁን ተርጉም"
 	},
 	"contextMenu_translateSelectedText": {
-		"message": "የተሰራው ጽሑፍን በቀላሉ ትርጉም"
+		"message": "የተመረጠውን ጽሑፍ ተርጉም"
 	},
 	"dictionaryButton_add": {
-		"message": "ማስቀመጥ"
+		"message": "ወደ መዝገበ-ቃላት ጨምር"
 	},
 	"dictionaryButton_delete": {
-		"message": "ከመደበቅ ያስወግዱ"
+		"message": "ከመዝገበ-ቃላት ሰርዝ"
 	},
 	"dictionary_button_export": {
-		"message": "ላኩ"
+		"message": "ላክ"
 	},
 	"dictionary_button_removeAll": {
-		"message": "ሁሉንም ከመደበቅ ያስወግዱ"
+		"message": "ሁሉንም አስወግድ"
 	},
 	"dictionary_deleteAll": {
-		"message": "የመታወቂያ መግባቢያዎን በመሞከር እንዳይገኝም ነው። እርግጠኛ ነዎት?"
+		"message": "የትርጉሞቹን ሁሉ በመከልከል እርግጠኛ ነህ?"
 	},
 	"dictionary_deleteConfirmation": {
-		"message": "የእርስዎ ስምዎን ይጠብቁ ዘንድ እርግጠኛ ነዎት?"
+		"message": "ይህን ትርጉም መሰረዝ እርግጠኛ ነህ?"
 	},
 	"dictionary_description": {
-		"message": "የትርጉም ቋንቋዎን በመነጠቅ የትርጉም መደብደብን ለመድረስ ይጠቀሙ"
+		"message": "ትርጉሞችህን በመዝገበ ቃላት አስቀምጥ በዚህ ቅድሚያ ለማግኘት"
 	},
 	"dictionary_emptyDictionary": {
-		"message": "የሚታወቅ መታወቂያ የለም። በተጨማሪ ጽሑፍ ተጠቅመው ማታ መጀመሪያ ያስጨንቁ"
+		"message": "መዝገበ ቃላት ባዶ ነው። በትርጉም ከተለወጠ ጽሑፍ መሙላትን ጀምር"
 	},
 	"dictionary_filter_from": {
 		"message": "ከ"
 	},
 	"dictionary_filter_to": {
-		"message": "To"
+		"message": "ወደ"
 	},
 	"dictionary_message_deleteAll_success": {
-		"message": "All translations were removed"
+		"message": "ሁሉም ትርጉሞች ተሰርዟል"
 	},
 	"dictionary_notFoundEntries": {
-		"message": "Translations matching these filters not found"
+		"message": "እነዚህን ተገላጋሊ በመሰረት ትርጉሞች አልተሰጡም"
 	},
 	"dictionary_pageTitle": {
-		"message": "Dictionary"
+		"message": "መዝገበ ቃላት"
 	},
 	"dictionary_resetFilters": {
-		"message": "reset filters"
+		"message": "ነጻ ገለጻዎች"
 	},
 	"dictionary_searchPlaceholder": {
-		"message": "በጽሁፎ መፍለግ ይፈልጋሉ"
+		"message": "በጽሁፍ ፈልግ"
 	},
 	"editorWindow_close": {
-		"message": "ዝጋ"
+		"message": "መዝጊያ"
 	},
 	"editorWindow_data_code": {
-		"message": "ኮድ"
+		"message": "ማስታወቂያ"
 	},
-	"editorWindow_data_name": {
-		"message": "ስም"
+	"editorWindow_data_translatorName": {
+		"message": "ተርጓሚ ስም"
 	},
-	"editorWindow_message_invalidName": {
-		"message": "ስም ከአምስት ምልክቶች በታች አያስፈልጉም"
+	"editorWindow_message_invalidTranslatorName": {
+		"message": "የተርጓሚው ስም ቢያንስ አንድ ቁምፊ መኖሩ አለበት"
 	},
 	"editorWindow_save": {
 		"message": "አስቀምጥ"
 	},
 	"ext_description": {
-		"message": "ገለባዎችንና ጽሑፎችን ትርጉም, መዝገበ ቃላት, ታሪክ, የዛሬው እና የግራ-ሙሉ ተረት ትርጉም ያሉ ተረቶች"
+		"message": "ገፆችና ጽሁፍ ትርጉም, መዝገብ, ታሪክ, ከመስመር ውጭ እና ብዙ ትርጉሞች ተጠቃሚዎች"
 	},
 	"ext_name": {
-		"message": "ልንግስቲኛ - የድረ-ገጽ ተጠቃሚ"
+		"message": "ሊንጉዊስት - የድህረገፅ ተተርጎሚ"
 	},
 	"history_control_selectEntry": {
-		"message": "መለየት ይምረጡ"
+		"message": "ቅጽ ይምረጡ"
 	},
 	"history_controls_clearHistory": {
-		"message": "ታይቷ እንዳይቀር ከሚለው ስርዎ ታይቷን አጥፋ"
+		"message": "ታሪኩን አጽዳ"
 	},
 	"history_controls_deleteSelected": {
-		"message": "ተመርጧል አስተያየቶችን"
+		"message": "የተመረጡትን ይሰርዙ"
 	},
 	"history_controls_selectAll": {
-		"message": "ሁሉንም ተመርጧ"
+		"message": "ሁሉንም ትርጉሞች ይምረጡ"
 	},
 	"history_message_clearHistoryConfirmation": {
-		"message": "እርግጠኛውን ከሆነ? ሁሉንም ቀጥታ ቦታዎች ያስወጡት ይፈልጋሉ?"
+		"message": "ታሪኩን ለማጽዳት ደረሰኝ? ሁሉም መዝገቦች ይሰረዙ"
 	},
 	"history_message_deleteEntryConfirmation": {
-		"message": "በዚህ ቦታ ያሉትን መጫን እርግጠኛ ነዎት?"
+		"message": "ይህን መዝገብ ለማጥፋት ደረሰኝ?"
 	},
 	"history_message_deleteSelectedEntriesConfirmation": {
-		"message": "አስተያየቶች ($1) የተመረጡትን ቦታዎችን እርግጠኛ ነዎት?"
-	},
-	"history_message_emptyEntries": {
-		"message": "ታሪክ አግኝቶታል"
+		"message": "የተመረጡትን መዝገቦች ($1) ለማጥፋት ደረሰኝ?"
 	},
 	"history_message_entriesNotFound": {
-		"message": "ትርጉም መጠቀሚያ የለውም"
+		"message": "ከማጣሪያው ጋር የሚዛመዱ ትርጉሞች አልገኙም"
+	},
+	"history_message_noEntries": {
+		"message": "ታሪኩ ተጠርጓል"
 	},
 	"history_notification_disabled": {
-		"message": "የታሪክ መቅዳት ተከልክሏል፣ ስለዚህ አዲስ መዝገቦች አይታዩም። በ<slot id=preferences>ቅድመ ተወዳዳሪዎች</slot> ውስጥ ማሻሻል ይችላሉ።"
+		"message": "የታሪክ መዝግብ ተከልክሏል፣ እንግዲህ አዲስ መዝገቦች አያሳዩም። ይህን በ<slot id=preferences>ቅንብሮች</slot> መቀየር ይችላሉ"
 	},
 	"history_pageTitle": {
 		"message": "ታሪክ"
@@ -150,421 +150,403 @@
 		"message": "በጽሑፍ ይፈልጉ"
 	},
 	"inlineTranslator_showOriginalText": {
-		"message": "የመጀመሪያ ጽሑፍ አሳይ"
+		"message": "የመለኪያ ጽሑፍ አሳይ"
 	},
 	"lang_change": {
 		"message": "ቋንቋ ቀይር"
 	},
 	"lang_detect": {
-		"message": "መልስ አያይዘው"
+		"message": "ራስ-ማረጋገጫ"
 	},
 	"lang_select": {
-		"message": "ቋንቋ ማረጋገጫ"
+		"message": "ቋንቋ ይምረጡ"
 	},
 	"lang_swap": {
-		"message": "ቋንቋዎች ቀይር"
+		"message": "ቋንቋዎችን ለውጥ"
 	},
 	"message_askResetConfig": {
-		"message": "የተጠየቁ ቅንብሮችን ነፃ ድላለሁ?"
+		"message": "አቀማመጦችን መዳገት ይፈልጋሉ?"
 	},
 	"message_cacheFlushed": {
-		"message": "ካርቺ የተዘጋጀ ነው"
+		"message": "ጭነት ተከልክሏል"
 	},
 	"message_changesSaved": {
-		"message": "ለማድረግ ተሳክቷል"
+		"message": "ለውጦች ተቀምጠዋል"
 	},
 	"message_error": {
 		"message": "ስህተት"
 	},
 	"message_errorOfTranslate": {
-		"message": "ትርጉም ስህተት"
+		"message": "የትርጉም ስህተት"
 	},
 	"message_serviceRequiredKey": {
-		"message": "አገልግሎት ከፍተኛ ቁልፍ ይላኩ"
+		"message": "አገልግሎት መነሻ ቁልፍ ይፈልጋል"
 	},
 	"message_translateOfText": {
-		"message": "ተቀብል"
+		"message": "ተተርጎሟል"
 	},
 	"message_unknownError": {
-		"message": "ያልተመረጡ ስህተት"
+		"message": "ያልታወቀ ስህተት"
 	},
 	"pageTranslator_alwaysTranslateLang": {
-		"message": "ይሁን መተርጎሚያ ይተርጉ ይሆናል"
+		"message": "ይህን ቋንቋ ሁልጊዜ ተርጉም"
 	},
 	"pageTranslator_commonPreferences_autoTranslate_disable": {
-		"message": "እንዳይሰራ ይችላል"
+		"message": "አቋርጥ"
 	},
 	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
-		"message": "ሁሉንም ግን ይሰራ"
+		"message": "ለሁሉም ጣቢያዎች አቋርጥ"
 	},
 	"pageTranslator_commonPreferences_autoTranslate_enable": {
-		"message": "እንዲሁም ተጠቃሚ ተከታታይ ማድረግ"
+		"message": "አስችል"
 	},
 	"pageTranslator_commonPreferences_title": {
-		"message": "የይለፍ ቋንቋ አጠቃላይ መረጃዎች"
+		"message": "ለዚህ ቋንቋ የተለመዱ አማራጮች"
 	},
 	"pageTranslator_option_autoTranslate": {
-		"message": "እንዲሁም ተጠቃሚ ተከታታይ"
+		"message": "ራስ-ሰር ትርጉም"
 	},
 	"pageTranslator_showOptions": {
-		"message": "አማራጮች አሳይ"
+		"message": "አማራጮችን ያሳዩ"
 	},
 	"pageTranslator_showOriginal": {
-		"message": "የቅርብ ነገር አሳይ"
+		"message": "እድሳትን አሳይ"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_always": {
-		"message": "ይተርጎሚያ ይሁን መተርጎሚያ ይሰዳል"
+		"message": "ሁልጊዜ ተተርጎም"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
-		"message": "ይተርጎሚያ ይሁን ይሰሙን ለዚህ ቋንቋ"
+		"message": "ለዚህ ቋንቋ ሁልጊዜ ተተርጎም"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_default": {
-		"message": "የአጠቃላይ ምናሌ ይጠቀማል"
+		"message": "ተለመዱ ደንቦችን ተጠቀም"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
-		"message": "የአጠቃላይ ምናሌ ይጠቀማል ለዚህ ቋንቋ"
+		"message": "ለዚህ ቋንቋ ተለመዱ ደንቦችን ተጠቀም"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_never": {
-		"message": "አይተርጎም"
+		"message": "አትተርጎም"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
-		"message": "ይህ ቋንቋ ለመተርጎም አይፈልግም"
+		"message": "ለዚህ ቋንቋ አትተርጎም"
 	},
 	"pageTranslator_sitePreferences_title": {
-		"message": "መረጃዎች"
+		"message": "የተመረጡ አማራጮች ለ"
 	},
 	"pageTranslator_translatePage": {
-		"message": "ገፅታችንን በጣም ተቀብለን"
+		"message": "ገጹን ተርጉም"
 	},
 	"pageTranslator_translationReport": {
-		"message": "ትርጉም ማስታወቂያ"
+		"message": "የትርጉም ሪፖርት"
 	},
 	"pageTranslator_translationReport_queue": {
-		"message": "በሙሉ ውስጥ"
+		"message": "ተሰርዟል"
 	},
 	"pageTranslator_translationReport_reject": {
-		"message": "ስህተት"
+		"message": "ስህተቶች"
 	},
 	"pageTranslator_translationReport_resolve": {
-		"message": "ተጠቃሚ ነው"
+		"message": "ተተርጎሟል"
 	},
 	"popup_tabIdNotFound": {
-		"message": "ትእዛዝ \"$1\" አልተገኘም"
+		"message": "ትምህርቱ \"$1\" አልተገኘም"
 	},
 	"popup_tab_translatePage": {
-		"message": "ገፅ ትርጉም"
+		"message": "የገፅ ትርጉም"
 	},
 	"popup_tab_translateText": {
-		"message": "ጽሑፍ ትርጉም"
+		"message": "የጽሑፍ ትርጉም"
 	},
 	"settings_button_cancel": {
-		"message": "ይቅር"
+		"message": "ሰርዝ"
 	},
 	"settings_button_export": {
-		"message": "የተሳካ መረጃ አስተካክል"
+		"message": "ማቅረብ ቅንብር"
 	},
 	"settings_button_import": {
-		"message": "የተሳካ መረጃ አስገባ"
+		"message": "እንቅስቃሴ ቅንብር"
 	},
 	"settings_button_reset": {
-		"message": "መቀየሪያ አድስ"
+		"message": "ማስጀመር ቅንብር"
 	},
 	"settings_button_saveChanges": {
-		"message": "ሁሉንም ማስተካከል"
+		"message": "ለውጦችን ያስቀምጡ"
 	},
 	"settings_message_clearCache_success": {
-		"message": "ተጠቃሚ የካርቦት መረጃ ተወፋዮች ተሰርዟል"
+		"message": "ካሽ ተንቀሳቀሰ"
 	},
 	"settings_message_common_invalidValueType": {
-		"message": "የማጥፋት ዘዴ የተሳሳተ አይነት ነው"
+		"message": "የተሳሳተ እሴት"
 	},
 	"settings_message_importConfig_invalidFile": {
-		"message": "የአስተካክል ልዩ ፋይል መተግበሪያ ለመሆን አልተቻለም"
+		"message": "ለመስመር ያልተስማማ ፋይል"
 	},
 	"settings_message_importConfig_success": {
-		"message": "አስተካክሎ ተሳክቷል"
+		"message": "እንቅስቃሴ ተጠናቀቀ"
 	},
 	"settings_message_resetConfig_confirm": {
-		"message": "ይፈልጋሉ ይደግመሙ?"
+		"message": "ቅንብሮቹን መመለስ ይፈልጋሉ?"
 	},
 	"settings_message_resetConfig_success": {
-		"message": "ተሳክቷል የተሻሻለ እቃዎች"
+		"message": "ቅንብሮቹ ተመልሰዋል"
 	},
 	"settings_message_saveChanges_success": {
-		"message": "ማስቀመጫዎች ተወስዷል"
-	},
-	"settings_option_appIcon": {
-		"message": "በተለያዩ ቁርጥ አካባቢ"
-	},
-	"settings_option_appIcon_desc": {
-		"message": "በየትኛውም ቦታ መመርመር ተቋማት ከብሪታኒ ያሉትን በቀላሉ ለማድረግ ይህን ስንት አካባቢ ምረጥ"
-	},
-	"settings_option_appIcon_item_auto": {
-		"message": "ከባህር የተነበበ"
-	},
-	"settings_option_appIcon_item_color": {
-		"message": "ቀለም"
-	},
-	"settings_option_appIcon_item_dark": {
-		"message": "ጥቅም"
-	},
-	"settings_option_appIcon_item_light": {
-		"message": "ብርሃን"
+		"message": "ለውጦች ተቀምጠዋል"
 	},
 	"settings_option_cache": {
-		"message": "ካርቦ (Cache)"
+		"message": "ካሽ"
 	},
 	"settings_option_cache_clear": {
-		"message": "ማስተዳደር አጥፋ"
+		"message": "ካሽን አጽዳ"
 	},
 	"settings_option_cache_clear_desc": {
-		"message": "እዚህ ከተመለከተ ቻናል, እርስዎ ለውጦች ሲል የተዘጋጀ የትርጉም ስርዝ ለመወጣት ወይም የምርጫ ሳልሆነ ያልሆኑ ወሰኖችን በመስራት ያስቀምጥ"
+		"message": "ትርጉሞች የተሰሩበት የተለያዩ አይነቶች ከሆኑ ወይም ሚስጥሮችን ለማስወገድ ካሽ አጥፋ"
 	},
 	"settings_option_cache_enable": {
-		"message": "ካርቦ አስቀምጥ"
+		"message": "ካሽ አግባብ አድርግ"
 	},
 	"settings_option_cache_enable_desc": {
-		"message": "ካርቦ በርቷል የተሳነውን ትርጉም በመስራት ማስተዳደር ይቻላል ። በዚህ ቦታ ከተሳነው ትርጉም ሳታገኘው የሚታወቀው ስርዝ ያለው የተግባር ጥሪ በዚሁ ቦታ ይታያል"
+		"message": "ሲነቀሳ፣ ከአንድ ጊዜ በፊት ተተርጎሙ የነበሩ ትርጉሞች ከኢንተርኔት አገናኝ ባለመኖሩም በፍጥነት ይገኛሉ"
 	},
 	"settings_option_cache_ignoreCase": {
-		"message": "ማስቀመጥ ያልተገኘ"
+		"message": "ከፊያ ትክክለኛ አይደለም"
 	},
 	"settings_option_cache_ignoreCase_desc": {
-		"message": "ከታወቀ በኋላ, ከካርቦ የተመለከተ ትርጉም ወደ አንድ የተሳነው ተመራቂ ብቻ በመገናኛ ጊዜ ይጠቀሙ። ይህ በባህላዊ ተግባር ምሳሌ የለዎትም"
+		"message": "ሲነቀሳ፣ ከካሽ የተገኙ ትርጉሞች ለትክክለኛ አይደለም ማስማማት ይጠቀማሉ፣ ይህም የትርጉም ስህተቶችን ሊከትል ይችላል"
 	},
 	"settings_option_commonSettings": {
 		"message": "አጠቃላይ ቅንብሮች"
 	},
 	"settings_option_customTranslatorModule": {
-		"message": "የተሳካ ተርጓሚዎች"
+		"message": "በተለየ መልኩ የተሰሩ ተተርጓሚዎች"
 	},
 	"settings_option_customTranslatorModule_desc": {
-		"message": "የእርስዎ የተሳካ ተርጓሚዎችን ለመጨረስ ከ<slot id=docs>የተሳካ ተርጓሚ ኢንዱስትሪ</slot> አመልክቶ ይጫኑ።"
+		"message": "ለእንደ ምርጥ ትርጉም አገልግሎቶች ልዩ ተተርጓሚዎችን መጨመር ትችላለህ። ተጨማሪ መረጃ እና ሞጁሎችን በ<slot id=docs>በተለየ መልኩ የተሰሩ ተተርጓሚዎች ሰነድ</slot> ውስጥ ያገኙ"
 	},
 	"settings_option_customTranslatorModule_manageButton": {
-		"message": "ተርጓሚውን አስተዳደር"
+		"message": "ተተርጓሚዎችን አስተዳደር"
 	},
 	"settings_option_history_enable": {
-		"message": "ታሪኩን ከፍ አድርግ"
+		"message": "ታሪክ አግባብ አድርግ"
 	},
 	"settings_option_history_enable_desc": {
-		"message": "ሲከፈት፣ ማንኛውም ትርጉም ወደ ታሪክ ገጽ ይመዝገባል"
+		"message": "በማብራሪያ ላይ ሁሉንም ትርጉሞች ወደ ታሪክ ገፅ ይመዝግባሉ"
 	},
 	"settings_option_mainPreferences": {
-		"message": "ዋስትና ቅንብሮች"
+		"message": "ዋና ቅንብሮች"
 	},
 	"settings_option_pageTranslation": {
-		"message": "ገጽ ትርጓሜ"
+		"message": "የገፅ ትርጉም"
 	},
 	"settings_option_pageTranslation_detectLanguageByContent": {
-		"message": "በይዘን ስጥራዊ ቋንቋ መለየት"
+		"message": "ቋንቋን በይዘት ይገነዘብ"
 	},
 	"settings_option_pageTranslation_detectLanguageByContent_desc": {
-		"message": "የድረ-ገጽ ጽሑፍን ማሳያ ለመለየት ይፈልጋሉ። በከፍተኛ ይዘት የገጽ መታወቂያ ያግኙ።"
+		"message": "ቋንቋን ለማወቅ በድሕረ ገፅ ላይ ያለውን ጽሑፍ ይተካል። ከተጠቁሙ በስተቀር በገፅ ሜታዳታ ውስጥ የተሰጠው ቋንቋ ይጠቀማል"
 	},
 	"settings_option_pageTranslation_enableContextMenu": {
-		"message": "ከመረጡ ቅርብ መንገድ ጋር አድርገናል"
+		"message": "የእተንክል ምናሌ አባል አንድ ይፍቀዱ"
 	},
 	"settings_option_pageTranslation_enableContextMenu_desc": {
-		"message": "ማስተካከል ጠቋሚውን በድርጅቱ ላይ መቀየሪያ ተከላ ያክላል"
+		"message": "በእተንክል ምናሌ ውስጥ የገፅ ትርጉም ለመቀየር አዝራር ይጨምሩ"
 	},
 	"settings_option_pageTranslation_excludeSelectors": {
-		"message": "መርጫዎች ለትርጉም መውጣት እንዳይፈልጉ"
+		"message": "ለትርጉም ማስተከል የሚከለክሉ ምርጫዎች"
 	},
 	"settings_option_pageTranslation_excludeSelectors_desc": {
-		"message": "የ CSS መርጫዎች ዝርዝር እነዚህ አይተርጉሙም። አንድ መርጫ በመስመር ላይ። አንዳንድ አካል ከእነዚህ መርጫዎች ከተመሳሰለ እና እንዲሁም ባለባቸው አባላት እና ከታግሞ ያሉ አካላት አይተርጉሙም።"
+		"message": "የማይተርጉሙ የCSS ምርጫዎች ዝርዝር። ከዚህ ምርጫ አንዱ ላይ አንድ ሐረግ። እንዲሁም የሚያስመጣው እቃ፣ ባህሪያትና የተያያዙ እቃዎች አይተርጉሙም"
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
-		"message": "በሚታየው አማራጭ ተርጉም ይገባል"
+		"message": "ታይቷቸውን ንዑስ ንዑስ እቃዎችን ብቻ ይተርጉሙ"
 	},
 	"settings_option_pageTranslation_lazyTranslate_desc": {
-		"message": "ከሚታየው አማራጭ ተርጉም የተደረገ አማራጮች በመሆን ይተርጉማል። ይህ መረጃ ከተገባው ነጥብ ተገባው።"
+		"message": "ይህ አማራጭ ከተከፈተ በኋላ ብቻ ታዩ እቃዎች ይተርጉማሉ። ይህ አማራጭ የኔትወርክ ትራፊክንና የተጠቀሙ የትርጉም አገልግሎቶች ገደቦችን ይቆጣጠራል።"
 	},
 	"settings_option_pageTranslation_originalTextPopup": {
-		"message": "የነባሪ ፍለጋ ያንብቡ"
+		"message": "ከመተርጎም በፊት የቀድሞውን ጽሑፍ ፖፕአፕ አንድስ"
 	},
 	"settings_option_pageTranslation_originalTextPopup_desc": {
-		"message": "በመሣሪያዎ የተሰማሩ የነባሪ ፍለጋዎች በማንበብ ያሳውቁ"
+		"message": "በተርጉሙት ጽሑፍ ክፍሎች ላይ ሲሽንቀት በአማካሪ የቀድሞውን ጽሑፍ ፖፕአፕ አሳይ።"
 	},
 	"settings_option_pageTranslation_toggleTranslationHotkey": {
-		"message": "ሆቴል ቁልፍ"
+		"message": "ፍጥነት ቁልፎች"
 	},
 	"settings_option_pageTranslation_toggleTranslationHotkey_desc": {
-		"message": "የገፅ ትርጉም ማንቀሳቀስ አነስተኛ ቁልፍ\nእስካሁን ESC ቁልፍዎን እንደገና ይሰርዝ"
+		"message": "የገፅ ትርጉም ለመቀየር አጭር አሰራሮች\nየቁልፍ ዳካማ ለማስመለስ ESC ይጫኑ"
 	},
 	"settings_option_pageTranslation_translatableAttributes": {
-		"message": "ትርጉሞች የተመለከተ ባህሪዎች."
+		"message": "ሊተርጉሙ የሚችሉ ባህሪያት"
 	},
 	"settings_option_pageTranslation_translatableAttributes_desc": {
-		"message": "<slot id=htmlAttributes>HTML attribute</slot> ስምዎን ለትርጉማችን ያስገቡ። አንድ ባህል በመጠቀማቸው ይተርጉ"
+		"message": "ትርጉም ለማድረግ <slot id=htmlAttributes>የHTML ባህሪያት</slot> ስሞችን አንድ ባህሪ በአንድ መስመር ያስገቡ"
 	},
 	"settings_option_popupTab_pageTranslator_showCounters": {
-		"message": "ትርጉም ሪፖርተር የሚያሳይ"
+		"message": "የትርጉም ስሌት አሳይ"
 	},
 	"settings_option_popupTab_pageTranslator_showCounters_desc": {
-		"message": "የገለጹ መተግበሪያዎችን አያድርጉም"
+		"message": "ለገፅ ትርጉም ስሌቶችን አሳይ"
 	},
 	"settings_option_selectTranslation": {
-		"message": "የተመረጡ ጽሑፍ ትርጉም"
+		"message": "የተመረጠ ጽሑፍ ትርጉም"
 	},
 	"settings_option_selectTranslation_detectedLangFirst": {
-		"message": "ቃላት የተሰራ ቋንቋ ብቻ ያስፈልጋል ከገላጭ ቋንቋ ጋር"
+		"message": "ጽሑፉ የተገኘው ቋንቋ ከገፅ ቋንቋ ይሻላል"
 	},
 	"settings_option_selectTranslation_detectedLangFirst_desc": {
-		"message": "ከኢንግሊዘኛ እና ከትርጉሜ ቋንቋ ጋር ነባሪ ቋንቋዎችን የሚያሳይ ጥቅል ይሰጣል"
+		"message": "በተነቀሰ ጊዜ የተመረጠው ጽሑፍ ቋንቋ ከገፅ ቋንቋ ይቀይራል"
 	},
 	"settings_option_selectTranslation_disableWhileTranslatePage": {
-		"message": "ገላጭ ትርጉም ስላደረጉ አድርግ"
+		"message": "በገፅ መተርጎም ጊዜ ዝጋ"
 	},
 	"settings_option_selectTranslation_enable": {
-		"message": "አትክልት"
+		"message": "አርቀ"
 	},
 	"settings_option_selectTranslation_focusOnTranslateButton": {
-		"message": "ከትርጉሜ በፊት የተመለከተ በመስመር አትቀምስ"
+		"message": "በትርጉም አዝራር ላይ ራስ-ሰር አድርግ"
 	},
 	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
-		"message": "ጥሩ ትርጉም አውቶት የሚገባውን አዝራሮች ይዘት እየተመለከቱ ይጠቀሙ"
+		"message": "ትርጉም አዝራር ሲታይ ትኩረት ስጥ"
 	},
 	"settings_option_selectTranslation_header_languageChoice": {
-		"message": "ቋንቋ ቅንጅቶች"
+		"message": "የቋንቋ ማስተካከያ"
 	},
 	"settings_option_selectTranslation_isUseAutoForDetectLang": {
-		"message": "ትርጉም የተጠቀሰው ቋንቋ ከተማዎች ለመሰረታዊ ቀንብር እየተገባ"
+		"message": "በተርጓሚው ቋንቋ ማስለቀቂያ ማሽከርከር አርቀ"
 	},
 	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
-		"message": "የትርጉም ቋንቋ ማረጋገጫ በመተግበሪያ ከተማዎች በሚያስፈልጋቸው የትርጉም ቋንቋ በማግኘት እየተገባ"
+		"message": "ቋንቋውን በአካባቢ ማስለቀቂያ ማይቻል ጊዜ በተርጓሚው ቋንቋ ማሽከርከር ተጠቀም"
 	},
 	"settings_option_selectTranslation_mode": {
-		"message": "ትርጉም አግባቢ"
+		"message": "የትርጉም አሰሳ"
 	},
 	"settings_option_selectTranslation_mode_item_contextMenu": {
-		"message": "የብርሀን ማናቸውንም ጥቅስ ያስተካክሉ አግባቢ መሆኑን መስራት እየተቻለ"
+		"message": "የእቃ ማውጫ ምርጫ ቁልፍ"
 	},
 	"settings_option_selectTranslation_mode_item_popupButton": {
-		"message": "የብርሀን ማናቸውንም አዝራር ቦታ እንዲሁም ብንይን ማሳያ መሆኑን መስራት እየተቻለ"
+		"message": "ፖፕ አንደኛ ቁልፍ"
 	},
 	"settings_option_selectTranslation_mode_item_quickTranslate": {
-		"message": "በቀላሉ በማብራሪዎ ውስጥ ትርጉም ለማድረስ የብርሀን ማናቸውንም ቀንብር መሆኑን መስራት እየተቻለ"
+		"message": "በምርጫ ፈጣን ትርጉም"
 	},
 	"settings_option_selectTranslation_modifiers": {
-		"message": "አማራጮች"
+		"message": "አሰሳዎች"
 	},
 	"settings_option_selectTranslation_modifiers_desc": {
-		"message": "የትርጉም ቀንብሮች ለመሰረታዊ ቀንብር ሳይንሳዊ መሆኑን መስራት እየተቻለ"
+		"message": "ትርጉም ለማሳየት በቁልፍ ሰንሰለት ሊጫኑ የሚገቡትን ቁልፎች ይምረጡ"
 	},
 	"settings_option_selectTranslation_modifiers_key_alt": {
 		"message": "alt"
 	},
 	"settings_option_selectTranslation_modifiers_key_ctrl": {
-		"message": "ቆርጥሪው"
+		"message": "ctrl"
 	},
 	"settings_option_selectTranslation_modifiers_key_meta": {
-		"message": "መታ"
+		"message": "meta"
 	},
 	"settings_option_selectTranslation_modifiers_key_shift": {
-		"message": "ሽፍንጭ"
+		"message": "shift"
 	},
 	"settings_option_selectTranslation_rememberDirection": {
-		"message": "የመጨመሩ ትርጉም ቋንቋ ማስተላለፍ"
+		"message": "በቅርቡ የተመረጠውን የጽሑፍ ቋንቋ ይዝግጁ"
 	},
 	"settings_option_selectTranslation_showOnceForSelection": {
-		"message": "ለህል ቁልፍ ያስተላለፉ በስተቀር አይሰራም"
+		"message": "ለእያንዳንዱ ጽሑፍ ምርጫ አንድ ጊዜ የትርጉም አዝራር አሳይ"
 	},
 	"settings_option_selectTranslation_showOnceForSelection_desc": {
-		"message": "አዝራሮቹ የሚቀርቡበት ህልፍ ቁልፍ ወይም ቅኝት አንድ እየሰራ ነው ወይም እያለ በመጀመሪያ አዘራሮቹ ስለሚጠቁ ነው"
+		"message": "አዝራሩ ለእያንዳንዱ ጽሑፍ ምርጫ አንድ ጊዜ ብቻ ይታያል። እንደገና ለማሳየት ጽሑፉን ዳግም ይምረጡ"
 	},
 	"settings_option_selectTranslation_showOriginalText": {
-		"message": "የመጀመሪያ ጽሑፍ አሳይ"
+		"message": "የመጀመሪያውን ጽሑፍ አሳይ"
 	},
 	"settings_option_selectTranslation_showOriginalText_desc": {
-		"message": "ለተሳካ ቀላልና በጥቅም የመጀመሪያ ጽሑፍ አሳይ"
+		"message": "በትርጉም ፖፕአፕ ውስጥ ከኦሪጅናል ጽሑፍ ጋር አንድ ክፍል ያክሉ"
 	},
 	"settings_option_selectTranslation_strictSelection": {
-		"message": "ትክክለኛ ምርጫ"
+		"message": "በጥንቃቄ ምርጫ"
 	},
 	"settings_option_selectTranslation_strictSelection_desc": {
-		"message": "የተሳሳተ ክፍል ጠቋሚ ጥቅል: ከታች ያለው የተመረተባት ጽሑፍ አልተከፈለም ሲሆን ይቅርብ"
+		"message": "ስለተመረጠው ጽሑፍ ያለውን ብሎክ ውስጥ በግራ የእጅ አዝራር ካወጣ ምርጫን አትለክት"
 	},
 	"settings_option_selectTranslation_timeoutForHideButton": {
-		"message": "ተጨማሪ ለማዋል የመጣው ግምገማ"
+		"message": "አዝራሩን ለማሰዋለቅ የቆይታ ጊዜ"
 	},
 	"settings_option_selectTranslation_timeoutForHideButton_desc": {
-		"message": "በሰንደቅዓት ያልተጠቀሰ ቦታ የሚያስተላልፉ ስራዎች ስርዝ ታይምን በመስተካከል ምንም ማድረግ አይችልም። በእርስዎ አካባቢ በመሃከል ምንም ማድረግ አይችልም።"
+		"message": "ሲሰበሰብ አዝራሩን በማሰዋለቅ በፊት ያለው በሚሴኮንድ ውስጥ የሚያሳይ ጊዜ። በአዝራሩ ላይ ስትነሳ ጊዜ ማሰዋለቅ ቀጥሏል። ራስ-ሰብስለት ለማጥፋት እሴቱን ከ 1 በታች ቀይር"
 	},
 	"settings_option_selectTranslation_zIndex": {
-		"message": "z-መስመር"
+		"message": "z-መለኪያ"
 	},
 	"settings_option_selectTranslation_zIndex_desc": {
-		"message": "በሚቆጠሩበት ክፍልዎ ላይ የሚያተርፉ ስራዎችን የተሻለ ትርጉም ማውጫ ከማባላት የያዘ እስከመቼም አይገለጽም።"
+		"message": "በአንዳንድ ገጾች ያሉ ንብረቶች ከትርጉም ተጠቃሚ ፖፕአፕ ላይ ከሚያሰባስቡ ከሆነ ይህን እሴት ከፍ አድርግ"
 	},
 	"settings_option_textTranslator": {
-		"message": "የጽሁፍ ትርጉም"
+		"message": "ጽሁፍ ትርጉም"
 	},
 	"settings_option_textTranslator_rememberText": {
-		"message": "የተሻለ ትርጉም ለመስጠት"
+		"message": "ተተርጉሙ ጽሁፍ ያስታውሱ"
 	},
 	"settings_option_textTranslator_rememberText_desc": {
-		"message": "የተሻለ ትርጉም በመጀመሪያ ያስገቡ"
+		"message": "በመተግበሪያው ማንኛውም ጊዜ ከክፈቱ በኋላ ተተርጉሙ ጽሁፍ ያስታውሱ"
 	},
 	"settings_option_textTranslator_spellCheck": {
-		"message": "የምልክት ማድረግ አድርግ"
+		"message": "ስም ማረጋገጫ ይክናወን"
 	},
 	"settings_option_textTranslator_suggestLanguage": {
-		"message": "የተጠቃሚ የቋንቋ ትርጉም ግንኙነት ይደርስ"
+		"message": "የተገኘውን የጽሁፍ ቋንቋ አሳስባለሁ"
 	},
 	"settings_option_textTranslator_suggestLanguageAlways": {
-		"message": "በጥያቄ ቋንቋ ተከታይ እና ተዛራት እንዲያግዝዘው"
+		"message": "ሁልጊዜ ቋንቋ አስማትና አሳስባለሁ"
 	},
 	"settings_option_textTranslator_suggestLanguageAlways_desc": {
-		"message": "ከማያ ማያስገባት ቋንቋ አይቀርም በሁሉም ምረቃዎች ጥያቄ ተዛራት እንዲተከታይ መሰረት ይችላሉ"
+		"message": "ቢያስቈጥር ቋንቋ አማራጮች እንደ አስተዋይ ቋንቋ ብቻ ይታያሉ"
 	},
 	"settings_option_translatePreferences": {
-		"message": "የትርጉም መረጃዎች መሰብሰብ"
+		"message": "የትርጉም ቅድመ አማራጮች"
 	},
 	"settings_option_translateScheduler": {
-		"message": "የትርጉም ዘዴ መስመር"
+		"message": "የትርጉም መከታተያ"
 	},
 	"settings_option_translateScheduler_delay": {
-		"message": "የጽሁፍ አስተማማኝ ደብቅ ጊዜ"
+		"message": "የጽሁፍ ማከማቻ እረፍት"
 	},
 	"settings_option_translateScheduler_delay_desc": {
-		"message": "የትርጉም ዘዴ በሚገባበት ጊዜ API የትርጉም አስተማማኝ ደብቅን ለመከፋፈል መስመሩ ተጠቀሙ። የትርጉም ዘዴ የጽሁፉን ጥቅም እንዲሁም ከምሳ ጊዜ በላይ ያሉ ጽሁፍን ይላኩ"
+		"message": "የትርጉም መከታተያው ከትርጉም አገልግሎት API የሚጠየቀውን ብዛት ያነሳል። በአንድ ጥያቄ ላይ እስከ ተቻለ ድረስ ጽሑፎችን ለመላክ ይሞክራል። መከታተያው ከተገለጸው ሳንድ ነባን የተጠናቀቀ ጊዜ በሚሴኮንድ ያስቆያል እና አዲስ ጽሑፎችን ለመሰብሰብ ከዚያ በኋላ ትርጉም ይጀምራል።"
 	},
 	"settings_option_translateScheduler_retryLimit": {
-		"message": "የትርጉም ዘዴ የድጋሚ ቁጥር"
+		"message": "የትርጉም እንደገና ሞክር ሙከራዎች"
 	},
 	"settings_option_translateScheduler_retryLimit_desc": {
-		"message": "የትርጉም ዘዴ የድጋሚ መጠቀሚያዎችን በመተግበሪያ ላይ የሚያስፈልጉ የድጋሚ ቁጥሮችን ለመከፋፈል መስመሩ ተጠቀሙ። የሚታወቅ ጥቅም የለም"
+		"message": "መከታተያው ትርጉም ስህተቶች ሲከሰቱ ጽሑፎችን እንደገና ለማስተላለፍ ይሞክራል። ይህ አማራጭ ለድጋሜ ሙከራዎች አጠናቀር ይሰጣል። ያላገደ ቁጥር ለማስተናገድ ሲያስፈልግ አሉታዊ ቁጥር ያስቀምጡ።"
 	},
 	"settings_option_translatorModule": {
-		"message": "የትርጉም ሞጁል"
+		"message": "የትርጉም አገልግሎት ሞጁል"
 	},
 	"settings_option_translatorModule_desc": {
-		"message": "ከታማሚዎች ጋር የተሳካ ትርጓሜ እና የትርጓሜ ቋንቋዎች በመጠቀም የሚታወቀው ሁኔታ ይጠቀሙ."
+		"message": "የትርጉም ጥራት እና የሚገኙት ቋንቋዎች በትርጉም አገልግሎት ይፈሰሳሉ።"
 	},
 	"settings_option_tts": {
-		"message": "የጽሑፍ ድርጅቶች (TTS)"
+		"message": "ከጽሑፍ ወደ ድምፅ (TTS)"
 	},
 	"settings_option_ttsCustomModules": {
-		"message": "የብሶቻቸው የTTS"
+		"message": "ብልጥ የተሰራ TTS"
 	},
 	"settings_option_ttsCustomModules_button": {
-		"message": "እቅድ ያስፈልጉ TTS ሞጁሎች"
+		"message": "የTTS ሞጁል አስተዳደር"
 	},
 	"settings_option_ttsCustomModules_desc": {
-		"message": "ከዚያም በኋላቸው፣ የዜና ድርጅቶችን በየደረጃዎችዎ በመጠቀም እንዲሁም ለየት ያሉ ሞጁሎችን ያክላሉ፤ በእርስዎ ትርጉም ከሆኑ ተጨማሪ የ TTS ሞጁሎች መረጃዎችን ተጨማሪ ማግኘት ይችላሉ።"
+		"message": "እርስዎ የሚወዱትን አገልግሎቶችና ድምፆች የሚጠቀሙበትን የTTS ሞጁል ማክሰኞ ይችላሉ። በብልጥ የተሰራ TTS ሰነዶች ውስጥ ተጨማሪ እና ሞጁሉን ፈልጋለሁ ያነቡ።"
 	},
 	"settings_option_ttsModule": {
-		"message": "TTS ሞጁል"
+		"message": "የTTS ሞጁል"
 	},
 	"settings_option_ttsModule_desc": {
-		"message": "የጽሑፍ ጽሁፎችን መናገል ያስፈልጋል"
+		"message": "ጽሑፍን ለመናገር ሞጁል"
 	},
 	"settings_option_userLanguage": {
-		"message": "የተጠቃሚዎች ቋንቋ"
+		"message": "የእርስዎ ቋንቋ"
 	},
 	"settings_option_userLanguage_desc": {
-		"message": "የጽሑፍ ይሁኑ ቋንቋ"
+		"message": "ለጽሑፍ ትርጉም የተመረጠ ቋንቋ"
 	},
 	"settings_pageTitle": {
 		"message": "ቅንብሮች"
@@ -573,28 +555,28 @@
 		"message": "ታሪክ"
 	},
 	"settings_section_popup": {
-		"message": "ፖፕን ሀቅ"
+		"message": "ፖፕአፕ"
 	},
 	"textTranslator_suggestLanguage": {
-		"message": "ይህ ቋንቋ ነው"
+		"message": "ይመስላል ያ ቋንቋ ነው"
 	},
 	"textTranslator_translateInputPlaceholder": {
-		"message": "የጽሑፍ ቅድመ ፍለጋ"
+		"message": "ጽሑፍ አስገባ"
 	},
 	"textTranslator_translatePlaceholder": {
-		"message": "ትርጉም ያስተካክል"
+		"message": "ተርጉሙ ጽሑፍ"
 	},
 	"translatorsManagerWindow_add": {
 		"message": "አክል"
 	},
 	"translatorsManagerWindow_close": {
-		"message": "ዝጋ"
+		"message": "አጥፋ"
 	},
 	"translatorsManagerWindow_emptyTranslatorsListText": {
-		"message": "የግል ተጠቃሚዎች መቀጣጥል ማድረግ አልቻለሁ"
+		"message": "እስካሁን ልዩ ተርጉሞች አልተጨምሩም"
 	},
 	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
-		"message": "\"$translator_name$\" ተጠቅመው እስካሁን እንዳሉ ማስወገድ እስክፈልጉ ይፈልጋሉ?",
+		"message": "ተርጉሙን \"$translator_name$\" መሰየም እርግጠኛ ነህ?",
 		"placeholders": {
 			"translator_name": {
 				"content": "$1",
@@ -603,25 +585,25 @@
 		}
 	},
 	"translatorsManagerWindow_title": {
-		"message": "የግል ተጠቃሚዎች"
+		"message": "ልዩ ተርጉሞች"
 	},
 	"translatorsManagerWindow_translator_delete": {
 		"message": "አጥፋ"
 	},
 	"translatorsManagerWindow_translator_edit": {
-		"message": "አርትዖት"
+		"message": "አርትዕ"
 	},
 	"ttsManagerWindow_add": {
 		"message": "አክል"
 	},
 	"ttsManagerWindow_close": {
-		"message": "ዝጋ"
+		"message": "አጥፋ"
 	},
 	"ttsManagerWindow_emptyTranslatorsListText": {
-		"message": "ብዙ ጥቅሞች በማስተማሩ በመጨመር አይደለም"
+		"message": "እስካሁን TTS ሞጁሎች አልተጨምሩም"
 	},
 	"ttsManagerWindow_message_ttsRemoveConfirmation": {
-		"message": "እርግጠኛ ነዎት \"$tts_name$\" TTS-ን ከሚያደርጉ እባክዎ እርግጠኛ ነው?",
+		"message": "TTS ሞጁሉ \"$tts_name$\" መሰየም እርግጠኛ ነህ?",
 		"placeholders": {
 			"tts_name": {
 				"content": "$1",
@@ -630,22 +612,22 @@
 		}
 	},
 	"ttsManagerWindow_title": {
-		"message": "የጽሑፍ ወይም የኢንተርኔት ቅርጸት መስመር"
+		"message": "የጽሑፍ ወደ ንግግር ሞጁሎች"
 	},
 	"ttsManagerWindow_translator_delete": {
 		"message": "አጥፋ"
 	},
 	"ttsManagerWindow_translator_edit": {
-		"message": "አስተካክል"
+		"message": "አርትዕ"
 	},
 	"validation_number": {
-		"message": "የምዝገባ አማራጭ ቁጥር ነው"
+		"message": "ፓራሜተሩ ቁጥር መሆን አለበት"
 	},
 	"validation_numberBetweenRange": {
-		"message": "የምዝገባ አማራጭ ቁጥር $1 እና $2 መቶች የተሻለ ነው"
+		"message": "ፓራሜተሩ በ$1 እና $2 መካከል ያለ ቁጥር መሆን አለበት"
 	},
 	"validation_positiveNumber": {
-		"message": "የምዝገባ አማራጭ ቁጥር የሚያከናውን ቁጥር ነው"
+		"message": "ፓራሜተሩ አዎንታዊ ቁጥር መሆን አለበት"
 	},
 	"langCode_aa": {
 		"message": "አፋርኛ"
@@ -672,7 +654,7 @@
 		"message": "ዓረብኛ"
 	},
 	"langCode_as": {
-		"message": "አሳሜዛዊ"
+		"message": "አሳሜዝ"
 	},
 	"langCode_av": {
 		"message": "አቫሪክ"
@@ -693,7 +675,7 @@
 		"message": "ቡልጋሪኛ"
 	},
 	"langCode_bh": {
-		"message": "ቦጁሪ"
+		"message": "ቦጅፑሪ"
 	},
 	"langCode_bi": {
 		"message": "ቢስላምኛ"
@@ -735,16 +717,16 @@
 		"message": "ቸርች ስላቪክ"
 	},
 	"langCode_cv": {
-		"message": "ቹቫሽ"
+		"message": "ቹቫሽኛ"
 	},
 	"langCode_cy": {
-		"message": "ወልሽ"
+		"message": "ዌልሽ"
 	},
 	"langCode_da": {
 		"message": "ዴኒሽ"
 	},
 	"langCode_de": {
-		"message": "ጀርመን"
+		"message": "ጀርመንኛ"
 	},
 	"langCode_dv": {
 		"message": "ዲቬሂ"
@@ -765,7 +747,7 @@
 		"message": "ኤስፐራንቶ"
 	},
 	"langCode_es": {
-		"message": "ስፓንሽኛ"
+		"message": "ስፓኒሽ"
 	},
 	"langCode_et": {
 		"message": "ኢስቶኒያንኛ"
@@ -777,10 +759,10 @@
 		"message": "ፐርሺያኛ"
 	},
 	"langCode_ff": {
-		"message": "ፉላህ"
+		"message": "ፉላኒኛ"
 	},
 	"langCode_fi": {
-		"message": "ፊኒሽ"
+		"message": "ፊንላንድኛ"
 	},
 	"langCode_fj": {
 		"message": "ፊጂኛ"
@@ -795,13 +777,13 @@
 		"message": "ምዕራባዊ ፍሪሲኛ"
 	},
 	"langCode_ga": {
-		"message": "አይሪሽ"
+		"message": "አየርላንድኛ"
 	},
 	"langCode_gd": {
-		"message": "የስኮቲሽ ጌልክኛ"
+		"message": "የስኮትላንድ ጌይሊክ"
 	},
 	"langCode_gl": {
-		"message": "ጋሊሺያ"
+		"message": "ጋሊሺያንኛ"
 	},
 	"langCode_gn": {
 		"message": "ጓራኒኛ"
@@ -810,16 +792,16 @@
 		"message": "ጉጃርቲኛ"
 	},
 	"langCode_gv": {
-		"message": "ማንክስኛ"
+		"message": "ማንክስ"
 	},
 	"langCode_ha": {
 		"message": "ሃውሳኛ"
 	},
 	"langCode_he": {
-		"message": "ዕብራይስጥ﻿"
+		"message": "ዕብራይስጥ"
 	},
 	"langCode_hi": {
-		"message": "ሒንዱኛ"
+		"message": "ሕንድኛ"
 	},
 	"langCode_ho": {
 		"message": "Ho"
@@ -828,13 +810,13 @@
 		"message": "ክሮሽያንኛ"
 	},
 	"langCode_ht": {
-		"message": "ሃይትኛ"
+		"message": "ሃይትኛ ክሮሌ"
 	},
 	"langCode_hu": {
 		"message": "ሀንጋሪኛ"
 	},
 	"langCode_hy": {
-		"message": "አርመናዊ"
+		"message": "አርሜንኛ"
 	},
 	"langCode_hz": {
 		"message": "ሄሬሮ"
@@ -843,7 +825,7 @@
 		"message": "ኢንቴርሊንጓ"
 	},
 	"langCode_id": {
-		"message": "ኢንዶኔዥኛ"
+		"message": "ኢንዶኔዥያኛ"
 	},
 	"langCode_ie": {
 		"message": "እንተርሊንግወ"
@@ -852,7 +834,7 @@
 		"message": "ኢግቦኛ"
 	},
 	"langCode_ii": {
-		"message": "ሲቹንዪኛ"
+		"message": "ሲቹዋን ዪ"
 	},
 	"langCode_ik": {
 		"message": "እኑፒያቅኛ"
@@ -873,10 +855,10 @@
 		"message": "ጃፓንኛ"
 	},
 	"langCode_jv": {
-		"message": "ጃቫንኛ"
+		"message": "ጃቫኛ"
 	},
 	"langCode_ka": {
-		"message": "ጆርጂያን"
+		"message": "ጆርጂያንኛ"
 	},
 	"langCode_kg": {
 		"message": "ኮንጎኛ"
@@ -885,19 +867,19 @@
 		"message": "ኪኩዩ"
 	},
 	"langCode_kj": {
-		"message": "ኩንያማ"
+		"message": "ኩዋንያማ"
 	},
 	"langCode_kk": {
 		"message": "ካዛክኛ"
 	},
 	"langCode_kl": {
-		"message": "ካላሊሱትኛ"
+		"message": "ካላሊሱት"
 	},
 	"langCode_km": {
-		"message": "ክህመርኛ"
+		"message": "ክመር"
 	},
 	"langCode_kn": {
-		"message": "ካናዳኛ"
+		"message": "ካናዳ"
 	},
 	"langCode_ko": {
 		"message": "ኮሪያኛ"
@@ -909,7 +891,7 @@
 		"message": "ካሽሚርኛ"
 	},
 	"langCode_ku": {
-		"message": "ኩርድሽኛ"
+		"message": "ኩርድሽ"
 	},
 	"langCode_kv": {
 		"message": "ኮሚ"
@@ -918,13 +900,13 @@
 		"message": "ኮርኒሽ"
 	},
 	"langCode_ky": {
-		"message": "ኪርጊዝኛ"
+		"message": "ክይርግይዝ"
 	},
 	"langCode_la": {
 		"message": "ላቲንኛ"
 	},
 	"langCode_lb": {
-		"message": "ሉክዘምበርኛ"
+		"message": "ሉክሰምበርግኛ"
 	},
 	"langCode_lg": {
 		"message": "ጋንዳኛ"
@@ -933,46 +915,46 @@
 		"message": "ሊምቡርጊሽ"
 	},
 	"langCode_ln": {
-		"message": "ሊንጋላኛ"
+		"message": "ሊንጋላ"
 	},
 	"langCode_lo": {
 		"message": "ላኦኛ"
 	},
 	"langCode_lt": {
-		"message": "ሉቴንያንኛ"
+		"message": "ሊቱዌንያኛ"
 	},
 	"langCode_lu": {
-		"message": "ሉባ ካታንጋ"
+		"message": "ሉባ-ካታንጋ"
 	},
 	"langCode_lv": {
-		"message": "ላትቪያን"
+		"message": "ላትቪያኛ"
 	},
 	"langCode_mg": {
-		"message": "ማላጋስኛ"
+		"message": "ማላጋስይ"
 	},
 	"langCode_mh": {
-		"message": "ማርሻሌዝኛ"
+		"message": "ማርሻሊዝ"
 	},
 	"langCode_mi": {
-		"message": "ማኦሪኛ"
+		"message": "ማኦሪ"
 	},
 	"langCode_mk": {
-		"message": "ማሴዶንኛ"
+		"message": "ሜቄዶንኛ"
 	},
 	"langCode_ml": {
-		"message": "ማላያላምኛ"
+		"message": "ማላያላም"
 	},
 	"langCode_mn": {
 		"message": "ሞንጎሊያኛ"
 	},
 	"langCode_mr": {
-		"message": "ማራቲኛ"
+		"message": "ማራቲ"
 	},
 	"langCode_ms": {
-		"message": "ማላይኛ"
+		"message": "ማላይ"
 	},
 	"langCode_mt": {
-		"message": "ማልቲስኛ"
+		"message": "ማልቲዝኛ"
 	},
 	"langCode_my": {
 		"message": "ቡርማኛ"
@@ -999,7 +981,7 @@
 		"message": "የኖርዌይ ናይኖርስክ"
 	},
 	"langCode_no": {
-		"message": "ኖርዌጂያን"
+		"message": "ኖርዌይኛ"
 	},
 	"langCode_nr": {
 		"message": "ደቡብ ንደቤሌ"
@@ -1011,16 +993,16 @@
 		"message": "ንያንጃ"
 	},
 	"langCode_oc": {
-		"message": "ኦኪታንኛ"
+		"message": "ኦሲታን"
 	},
 	"langCode_oj": {
 		"message": "Oj"
 	},
 	"langCode_om": {
-		"message": "ኦሮሞኛ"
+		"message": "ኦሮሚኛ"
 	},
 	"langCode_or": {
-		"message": "ኦዲያኛ"
+		"message": "ኦዲያ"
 	},
 	"langCode_os": {
 		"message": "ኦሴቲክ"
@@ -1032,61 +1014,61 @@
 		"message": "Pi"
 	},
 	"langCode_pl": {
-		"message": "ፖሊሽኛ"
+		"message": "ፖሊሽ"
 	},
 	"langCode_ps": {
-		"message": "ፓሽቶኛ"
+		"message": "ፓሽቶ"
 	},
 	"langCode_pt": {
 		"message": "ፖርቹጋልኛ"
 	},
 	"langCode_qu": {
-		"message": "ኵቿኛ"
+		"message": "ኩዌቹዋ"
 	},
 	"langCode_rm": {
 		"message": "ሮማንሽ"
 	},
 	"langCode_rn": {
-		"message": "ሩንዲኛ"
+		"message": "ሩንዲ"
 	},
 	"langCode_ro": {
-		"message": "ሮማኒያን"
+		"message": "ሮማኒያኛ"
 	},
 	"langCode_ru": {
 		"message": "ራሽያኛ"
 	},
 	"langCode_rw": {
-		"message": "ኪንያርዋንድኛ"
+		"message": "ኪንያርዋንዳ"
 	},
 	"langCode_sa": {
-		"message": "ሳንስክሪትኛ"
+		"message": "ሳንስክሪት"
 	},
 	"langCode_sc": {
-		"message": "ሳርዲንያንኛ"
+		"message": "ሳርዲንያን"
 	},
 	"langCode_sd": {
-		"message": "ሲንድሂኛ"
+		"message": "ሲንዲ"
 	},
 	"langCode_se": {
 		"message": "ሰሜናዊ ሳሚ"
 	},
 	"langCode_sg": {
-		"message": "ሳንጎኛ"
+		"message": "ሳንጎ"
 	},
 	"langCode_si": {
-		"message": "ሲንሃልኛ"
+		"message": "ሲንሃላ"
 	},
 	"langCode_sk": {
 		"message": "ስሎቫክኛ"
 	},
 	"langCode_sl": {
-		"message": "ስሎቪኛ"
+		"message": "ስሎቬንኛ"
 	},
 	"langCode_sm": {
-		"message": "ሳሞአኛ"
+		"message": "ሳሞኣን"
 	},
 	"langCode_sn": {
-		"message": "ሾናኛ"
+		"message": "ሾና"
 	},
 	"langCode_so": {
 		"message": "ሱማልኛ"
@@ -1098,7 +1080,7 @@
 		"message": "ሰርብያኛ"
 	},
 	"langCode_ss": {
-		"message": "ስዋቲኛ"
+		"message": "ስዋቲ"
 	},
 	"langCode_st": {
 		"message": "ደቡባዊ ሶቶ"
@@ -1113,40 +1095,40 @@
 		"message": "ስዋሂሊኛ"
 	},
 	"langCode_ta": {
-		"message": "ታሚልኛ"
+		"message": "ታሚል"
 	},
 	"langCode_te": {
-		"message": "ተሉጉኛ"
+		"message": "ተሉጉ"
 	},
 	"langCode_tg": {
-		"message": "ታጂኪኛ"
+		"message": "ታጂክ"
 	},
 	"langCode_th": {
-		"message": "ታይኛ"
+		"message": "ታይ"
 	},
 	"langCode_ti": {
 		"message": "ትግርኛ"
 	},
 	"langCode_tk": {
-		"message": "ቱርክሜንኛ"
+		"message": "ቱርክሜን"
 	},
 	"langCode_tl": {
 		"message": "ፊሊፒንኛ"
 	},
 	"langCode_tn": {
-		"message": "ጽዋናዊኛ"
+		"message": "ጽዋና"
 	},
 	"langCode_to": {
-		"message": "ቶንጋኛ"
+		"message": "ቶንጋን"
 	},
 	"langCode_tr": {
 		"message": "ቱርክኛ"
 	},
 	"langCode_ts": {
-		"message": "ጾንጋኛ"
+		"message": "ጾንጋ"
 	},
 	"langCode_tt": {
-		"message": "ታታርኛ"
+		"message": "ታታር"
 	},
 	"langCode_tw": {
 		"message": "አካንኛ"
@@ -1155,7 +1137,7 @@
 		"message": "ታሂታንኛ"
 	},
 	"langCode_ug": {
-		"message": "ኡዊግሁርኛ"
+		"message": "ኡይግሁር"
 	},
 	"langCode_uk": {
 		"message": "ዩክሬንኛ"

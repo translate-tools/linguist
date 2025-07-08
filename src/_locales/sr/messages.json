@@ -21,22 +21,22 @@
 		"message": "Greška"
 	},
 	"common_offlineTranslator": {
-		"message": "$1 - Prevodilac bez internet konekcije"
+		"message": "$1 - Offline prevodilac"
 	},
 	"common_retry": {
-		"message": "Ponovo pokušaj"
+		"message": "Pokušaj ponovo"
 	},
 	"common_translate": {
 		"message": "Prevedi"
 	},
 	"component_hotkey_placeholder": {
-		"message": "Klikni da snimiš prečice"
+		"message": "Kliknite da snimite prečicu"
 	},
 	"component_hotkey_recordPlaceholder": {
-		"message": "Pritisni tipke"
+		"message": "Pritisnite tastere"
 	},
 	"component_hotkey_resetButton": {
-		"message": "Resetuj"
+		"message": "Poništi"
 	},
 	"contextMenu_disablePageTranslation": {
 		"message": "Onemogući prevod stranice"
@@ -45,7 +45,7 @@
 		"message": "Prevedi stranicu"
 	},
 	"contextMenu_translateSelectedText": {
-		"message": "Prevodi izabrani tekst"
+		"message": "Prevedi izabrani tekst"
 	},
 	"dictionaryButton_add": {
 		"message": "Dodaj u rečnik"
@@ -60,16 +60,16 @@
 		"message": "Ukloni sve"
 	},
 	"dictionary_deleteAll": {
-		"message": "Da li ste sigurni da želite da izbrišete sve prevode u rečniku?"
+		"message": "Da li ste sigurni da želite da obrišete SVE prevode u rečniku?"
 	},
 	"dictionary_deleteConfirmation": {
-		"message": "Da li ste sigurni da želite da izbrišete ovaj prevod?"
+		"message": "Da li ste sigurni da želite da obrišete ovaj prevod?"
 	},
 	"dictionary_description": {
-		"message": "Čuvajte vaše prevode u rečniku kako biste ih kasnije pronašli"
+		"message": "Sačuvajte svoje prevode u rečniku da biste ih kasnije lakše pronašli"
 	},
 	"dictionary_emptyDictionary": {
-		"message": "Rečnik je prazan. Počnite da ga popunjavate prevodeći neki tekst."
+		"message": "Rečnik je prazan. Počnite da ga punite prevodeći neki tekst"
 	},
 	"dictionary_filter_from": {
 		"message": "Od"
@@ -78,19 +78,19 @@
 		"message": "Do"
 	},
 	"dictionary_message_deleteAll_success": {
-		"message": "Sve prevođenja su uklonjena"
+		"message": "Svi prevodi su uklonjeni"
 	},
 	"dictionary_notFoundEntries": {
-		"message": "Nije pronađeno nijedno prevođenje koje odgovara ovim filterima"
+		"message": "Nisu pronađeni prevodi koji odgovaraju ovim filtrima"
 	},
 	"dictionary_pageTitle": {
 		"message": "Rečnik"
 	},
 	"dictionary_resetFilters": {
-		"message": "poništi filtere"
+		"message": "resetuj filtere"
 	},
 	"dictionary_searchPlaceholder": {
-		"message": "Pretražite po tekstu"
+		"message": "Pretraži po tekstu"
 	},
 	"editorWindow_close": {
 		"message": "Zatvori"
@@ -98,56 +98,56 @@
 	"editorWindow_data_code": {
 		"message": "Kod"
 	},
-	"editorWindow_data_name": {
-		"message": "Naziv"
+	"editorWindow_data_translatorName": {
+		"message": "Ime prevodioca"
 	},
-	"editorWindow_message_invalidName": {
-		"message": "Naziv mora sadržati barem jedan simbol"
+	"editorWindow_message_invalidTranslatorName": {
+		"message": "Ime prevodioca mora sadržati najmanje jedan karakter"
 	},
 	"editorWindow_save": {
 		"message": "Sačuvaj"
 	},
 	"ext_description": {
-		"message": "Prevod stranica i tekstova, rečnik, istorija, prevodioci za offline korišćenje i prilagođeni prevodioci"
+		"message": "Prevod stranica i teksta, rečnik, istorija, offline i prilagođeni prevodioci"
 	},
 	"ext_name": {
-		"message": "Linguist - prevodilac veb stranica"
+		"message": "Linguist - prevodilac web stranica"
 	},
 	"history_control_selectEntry": {
-		"message": "Izaberite unos"
+		"message": "Izaberi stavku"
 	},
 	"history_controls_clearHistory": {
 		"message": "Obriši istoriju"
 	},
 	"history_controls_deleteSelected": {
-		"message": "Obriši odabrano"
+		"message": "Obriši izabrano"
 	},
 	"history_controls_selectAll": {
-		"message": "Odaberi sve prevode"
+		"message": "Izaberi sve prevode"
 	},
 	"history_message_clearHistoryConfirmation": {
 		"message": "Da li ste sigurni da želite da obrišete istoriju? Svi unosi će biti uklonjeni"
 	},
 	"history_message_deleteEntryConfirmation": {
-		"message": "Jeste li sigurni da želite da izbrišete ovaj unos?"
+		"message": "Da li ste sigurni da želite da obrišete ovaj unos?"
 	},
 	"history_message_deleteSelectedEntriesConfirmation": {
-		"message": "Da li ste sigurni da želite da izbrišete odabrane unose ($1)?"
-	},
-	"history_message_emptyEntries": {
-		"message": "Istorija očišćena"
+		"message": "Da li ste sigurni da želite da obrišete izabrane unose ($1)?"
 	},
 	"history_message_entriesNotFound": {
-		"message": "Nema pronađenih prevoda koji zadovoljavaju filter"
+		"message": "Nema pronađenih prevoda koji odgovaraju filteru"
+	},
+	"history_message_noEntries": {
+		"message": "Istorija je prazna"
 	},
 	"history_notification_disabled": {
-		"message": "Snimanje istorije je onemogućeno, pa novi unosi neće biti prikazani. Možete to promeniti u <slot id=preferences>podešavanjima</slot>"
+		"message": "Snimanje istorije je isključeno, tako da novi unosi neće biti prikazani. Ovo možete promeniti u <slot id=preferences>podešavanjima</slot>"
 	},
 	"history_pageTitle": {
 		"message": "Istorija"
 	},
 	"history_searchPlaceholder": {
-		"message": "Pretražite po tekstu"
+		"message": "Pretraži po tekstu"
 	},
 	"inlineTranslator_showOriginalText": {
 		"message": "Prikaži originalni tekst"
@@ -156,22 +156,22 @@
 		"message": "Promeni jezik"
 	},
 	"lang_detect": {
-		"message": "Automatsko prepoznavanje"
+		"message": "Automatsko otkrivanje"
 	},
 	"lang_select": {
-		"message": "Izaberi jezik"
+		"message": "Izaberite jezik"
 	},
 	"lang_swap": {
 		"message": "Zameni jezike"
 	},
 	"message_askResetConfig": {
-		"message": "Resetovati postavke?"
+		"message": "Da li želite da resetujete podešavanja?"
 	},
 	"message_cacheFlushed": {
 		"message": "Keš je očišćen"
 	},
 	"message_changesSaved": {
-		"message": "Promene su sačuvane"
+		"message": "Izmene sačuvane"
 	},
 	"message_error": {
 		"message": "Greška"
@@ -180,7 +180,7 @@
 		"message": "Greška pri prevodu"
 	},
 	"message_serviceRequiredKey": {
-		"message": "Servis zahteva ključ"
+		"message": "Usluga zahteva ključ"
 	},
 	"message_translateOfText": {
 		"message": "Prevedeno"
@@ -201,10 +201,10 @@
 		"message": "Omogući"
 	},
 	"pageTranslator_commonPreferences_title": {
-		"message": "Opšte postavke za ovaj jezik"
+		"message": "Opšte preferencije za ovaj jezik"
 	},
 	"pageTranslator_option_autoTranslate": {
-		"message": "Automatski prevodi"
+		"message": "Automatski prevod"
 	},
 	"pageTranslator_showOptions": {
 		"message": "Prikaži opcije"
@@ -219,10 +219,10 @@
 		"message": "Uvek prevodi za ovaj jezik"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_default": {
-		"message": "Koristi uobičajena pravila"
+		"message": "Koristi opšta pravila"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
-		"message": "Koristi uobičajena pravila za ovaj jezik"
+		"message": "Koristi opšta pravila za ovaj jezik"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_never": {
 		"message": "Nikada ne prevodi"
@@ -231,16 +231,16 @@
 		"message": "Nikada ne prevodi za ovaj jezik"
 	},
 	"pageTranslator_sitePreferences_title": {
-		"message": "Postavke za"
+		"message": "Podešavanja za"
 	},
 	"pageTranslator_translatePage": {
 		"message": "Prevedi stranicu"
 	},
 	"pageTranslator_translationReport": {
-		"message": "Izvještaj o prijevodu"
+		"message": "Izveštaj o prevodu"
 	},
 	"pageTranslator_translationReport_queue": {
-		"message": "Red čekanja"
+		"message": "Red"
 	},
 	"pageTranslator_translationReport_reject": {
 		"message": "Greške"
@@ -261,76 +261,58 @@
 		"message": "Otkaži"
 	},
 	"settings_button_export": {
-		"message": "Izvezi konfiguraciju"
+		"message": "Izvezi podešavanja"
 	},
 	"settings_button_import": {
-		"message": "Uvezi konfiguraciju"
+		"message": "Uvezi podešavanja"
 	},
 	"settings_button_reset": {
-		"message": "Resetuj konfiguraciju"
+		"message": "Vrati podešavanja na fabrička"
 	},
 	"settings_button_saveChanges": {
-		"message": "Sačuvaj izmjene"
+		"message": "Sačuvaj izmene"
 	},
 	"settings_message_clearCache_success": {
 		"message": "Keš je očišćen"
 	},
 	"settings_message_common_invalidValueType": {
-		"message": "Neispravna vrijednost"
+		"message": "Nevažeća vrednost"
 	},
 	"settings_message_importConfig_invalidFile": {
-		"message": "Datoteku za uvoz nije moguće obraditi"
+		"message": "Datoteka za uvoz ne može da se obradi"
 	},
 	"settings_message_importConfig_success": {
 		"message": "Uvoz završen"
 	},
 	"settings_message_resetConfig_confirm": {
-		"message": "Da li želite da resetujete postavke?"
+		"message": "Da li želite da resetujete podešavanja?"
 	},
 	"settings_message_resetConfig_success": {
-		"message": "Postavke su resetovane"
+		"message": "Podešavanja su resetovana"
 	},
 	"settings_message_saveChanges_success": {
-		"message": "Promene su sačuvane"
-	},
-	"settings_option_appIcon": {
-		"message": "Ikona proširenja"
-	},
-	"settings_option_appIcon_desc": {
-		"message": "Kada je dinamička ikona izabrana, boje će se prilagoditi temi pregledača."
-	},
-	"settings_option_appIcon_item_auto": {
-		"message": "Dinamička"
-	},
-	"settings_option_appIcon_item_color": {
-		"message": "Boja"
-	},
-	"settings_option_appIcon_item_dark": {
-		"message": "Tamno"
-	},
-	"settings_option_appIcon_item_light": {
-		"message": "Svijetlo"
+		"message": "Izmene su sačuvane"
 	},
 	"settings_option_cache": {
 		"message": "Keš"
 	},
 	"settings_option_cache_clear": {
-		"message": "Obriši keš"
+		"message": "Očisti keš"
 	},
 	"settings_option_cache_clear_desc": {
-		"message": "Uklonite keš ako imate artefakte prevoda ili trebate ukloniti tajne podatke"
+		"message": "Uklonite keš ako imate prevodilačke artefakte ili je potrebno ukloniti tajne podatke"
 	},
 	"settings_option_cache_enable": {
-		"message": "Omogućite keširanje"
+		"message": "Omogući keš"
 	},
 	"settings_option_cache_enable_desc": {
-		"message": "Kada je keširanje omogućeno, prevodi koji su već jednom prevedeni će biti dostupni odmah, čak i bez interneta"
+		"message": "Kada je keš omogućen, prevodi koji su jednom prevedeni biće odmah dostupni, čak i bez internet konekcije"
 	},
 	"settings_option_cache_ignoreCase": {
-		"message": "Bez razlike u veličini slova"
+		"message": "Bez obzira na veličinu slova"
 	},
 	"settings_option_cache_ignoreCase_desc": {
-		"message": "Kada je omogućeno, prevodi iz keša će se koristiti sa nesavršenim poklapanjem, što može dovesti do artefakata prevoda"
+		"message": "Kada je uključeno, za prevode iz keša koristiće se neprecizna poklapanja, što može prouzrokovati prevodilačke artefakte"
 	},
 	"settings_option_commonSettings": {
 		"message": "Opšta podešavanja"
@@ -339,7 +321,7 @@
 		"message": "Prilagođeni prevodioci"
 	},
 	"settings_option_customTranslatorModule_desc": {
-		"message": "Možete dodati prilagođene prevodioce za svoje omiljene prevodilačke usluge. Pročitajte više i pronađite module u <slot id=docs>dokumentaciji za prilagođene prevodioce</slot>."
+		"message": "Možete dodati prilagođene prevodioce za vaše omiljene prevodilačke usluge. Pročitajte više i pronađite module u <slot id=docs>dokumentaciji za prilagođene prevodioce</slot>"
 	},
 	"settings_option_customTranslatorModule_manageButton": {
 		"message": "Upravljanje prevodiocima"
@@ -348,109 +330,109 @@
 		"message": "Omogući istoriju"
 	},
 	"settings_option_history_enable_desc": {
-		"message": "Kada je omogućeno, svaki prevod biće sačuvan na stranici sa istorijom"
+		"message": "Kada je omogućeno, svaki prevod biće zabeležen na stranici istorije"
 	},
 	"settings_option_mainPreferences": {
-		"message": "Glavna podešavanja"
+		"message": "Glavne postavke"
 	},
 	"settings_option_pageTranslation": {
 		"message": "Prevod stranice"
 	},
 	"settings_option_pageTranslation_detectLanguageByContent": {
-		"message": "Detektuj jezik na osnovu sadržaja"
+		"message": "Otkrivanje jezika prema sadržaju"
 	},
 	"settings_option_pageTranslation_detectLanguageByContent_desc": {
-		"message": "Analiziraj tekst na web stranici kako bi se detektovao jezik stranice. Kada je isključeno, koristiće se jezik naveden u metapodacima stranice."
+		"message": "Analizirajte tekst na veb stranici da biste otkrili jezik stranice. Kada je onemogućeno, koristiće se jezik naveden u metapodacima stranice"
 	},
 	"settings_option_pageTranslation_enableContextMenu": {
 		"message": "Omogući dugme kontekstnog menija"
 	},
 	"settings_option_pageTranslation_enableContextMenu_desc": {
-		"message": "Dodaj dugme za prebacivanje prevoda stranice u kontekstni meni"
+		"message": "Dodajte dugme za uključivanje prevoda stranice u kontekstni meni"
 	},
 	"settings_option_pageTranslation_excludeSelectors": {
-		"message": "Selektori za izuzimanje iz prevoda"
+		"message": "Selektori koji se ne prevode"
 	},
 	"settings_option_pageTranslation_excludeSelectors_desc": {
-		"message": "Lista CSS selektora koji neće biti prevedeni. Jedan selektor po liniji. Ako element odgovara bilo kojem od ovih selektora, on, njegovi atributi i ugneždeni elementi neće biti prevedeni."
+		"message": "Lista CSS selektora koji neće biti prevedeni. Po jedan selektor u liniji. Ako element odgovara bilo kom od ovih selektora, on i njegovi atributi i ugnježdeni elementi neće biti prevedeni"
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
-		"message": "Prevedi samo vidljive elemente"
+		"message": "Prevodi samo vidljive elemente"
 	},
 	"settings_option_pageTranslation_lazyTranslate_desc": {
-		"message": "Kada je ova opcija omogućena, prevodiće se samo vidljivi elementi. To može biti korisno za uštedu mrežnog saobraćaja."
+		"message": "Kada je ova opcija omogućena, prevode se samo vidljivi elementi. Ova opcija štedi mrežni saobraćaj i ograničenja korišćenih prevodilačkih servisa"
 	},
 	"settings_option_pageTranslation_originalTextPopup": {
 		"message": "Omogući iskačući prozor sa originalnim tekstom"
 	},
 	"settings_option_pageTranslation_originalTextPopup_desc": {
-		"message": "Prikaži iskačući prozor sa originalnim tekstom kada pređete mišem preko prevedenog teksta"
+		"message": "Prikaži iskačući prozor sa originalnim tekstom kada se kursor miša postavi preko prevedenih blokova teksta"
 	},
 	"settings_option_pageTranslation_toggleTranslationHotkey": {
-		"message": "Prečice tastature"
+		"message": "Prečice"
 	},
 	"settings_option_pageTranslation_toggleTranslationHotkey_desc": {
-		"message": "Prečice tastature za uključivanje/isključivanje prevoda na stranici\nPritisnite ESC da biste resetovali prečice"
+		"message": "Prečice za uključivanje/isključivanje prevoda stranice\nPritisnite ESC za resetovanje tastera"
 	},
 	"settings_option_pageTranslation_translatableAttributes": {
-		"message": "Prevodivi atributi"
+		"message": "Atributi za prevod"
 	},
 	"settings_option_pageTranslation_translatableAttributes_desc": {
-		"message": "Unesite imena <slot id=htmlAttributes>HTML atributa</slot> za prevod. Jedan atribut po liniji"
+		"message": "Unesite nazive <slot id=htmlAttributes>HTML atributa</slot> koje treba prevesti, po jedan atribut u red"
 	},
 	"settings_option_popupTab_pageTranslator_showCounters": {
 		"message": "Prikaži statistiku prevoda"
 	},
 	"settings_option_popupTab_pageTranslator_showCounters_desc": {
-		"message": "Prikaži statistiku za prevođenje stranice"
+		"message": "Prikaži statistiku za prevod stranice"
 	},
 	"settings_option_selectTranslation": {
-		"message": "Prevod odabranih tekstova"
+		"message": "Prevod izabranog teksta"
 	},
 	"settings_option_selectTranslation_detectedLangFirst": {
-		"message": "Preferiraj otkriveni jezik teksta umesto jezika stranice"
+		"message": "Preferirajte otkriveni jezik teksta u odnosu na jezik stranice"
 	},
 	"settings_option_selectTranslation_detectedLangFirst_desc": {
-		"message": "Kada je omogućeno, otkriveni jezik odabranog teksta će se preferirati u odnosu na jezik stranice"
+		"message": "Kada je omogućeno, otkriveni jezik izabranog teksta ima prednost nad jezikom stranice"
 	},
 	"settings_option_selectTranslation_disableWhileTranslatePage": {
-		"message": "Onemogući tokom prevoda stranice"
+		"message": "Onemogući tokom prevođenja stranice"
 	},
 	"settings_option_selectTranslation_enable": {
 		"message": "Omogući"
 	},
 	"settings_option_selectTranslation_focusOnTranslateButton": {
-		"message": "Automatsko fokusiranje na dugme za prevod"
+		"message": "Automatski fokus na dugme za prevod"
 	},
 	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
-		"message": "Fokusirajte se na dugme za prevod kada se pojavi"
+		"message": "Postavi fokus na dugme za prevod kada se pojavi"
 	},
 	"settings_option_selectTranslation_header_languageChoice": {
-		"message": "Opcije jezika"
+		"message": "Podešavanja jezika"
 	},
 	"settings_option_selectTranslation_isUseAutoForDetectLang": {
-		"message": "Omogućite automatsko otkrivanje jezika od strane prevodioca"
+		"message": "Omogući automatsko otkrivanje jezika od strane prevodioca"
 	},
 	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
-		"message": "Koristite automatsko otkrivanje jezika od strane prevodioca kada se jezik ne može otkriti lokalno"
+		"message": "Koristi automatsko otkrivanje jezika od strane prevodioca kada lokalno nije moguće odrediti jezik"
 	},
 	"settings_option_selectTranslation_mode": {
-		"message": "Okidač prevoda"
+		"message": "Okidač za prevođenje"
 	},
 	"settings_option_selectTranslation_mode_item_contextMenu": {
-		"message": "Dugme kontekstnog menija"
+		"message": "Dugme kontekstualnog menija"
 	},
 	"settings_option_selectTranslation_mode_item_popupButton": {
-		"message": "Dugme popup prozora"
+		"message": "Iskačuće dugme"
 	},
 	"settings_option_selectTranslation_mode_item_quickTranslate": {
-		"message": "Brzo prevođenje izborom"
+		"message": "Brzi prevod selekcijom"
 	},
 	"settings_option_selectTranslation_modifiers": {
 		"message": "Modifikatori"
 	},
 	"settings_option_selectTranslation_modifiers_desc": {
-		"message": "Odaberite tipke koje je potrebno pritisnuti na tipkovnici da biste prikazali prijevod"
+		"message": "Izaberite tastere koje treba pritisnuti na tastaturi da bi se prikazao prevod"
 	},
 	"settings_option_selectTranslation_modifiers_key_alt": {
 		"message": "alt"
@@ -465,37 +447,37 @@
 		"message": "shift"
 	},
 	"settings_option_selectTranslation_rememberDirection": {
-		"message": "Zapamti poslednje odabrani jezik teksta"
+		"message": "Zapamti poslednji izabrani jezik teksta"
 	},
 	"settings_option_selectTranslation_showOnceForSelection": {
-		"message": "Prikaži dugme za prevod samo jednom po svakom odabiru teksta"
+		"message": "Prikaži dugme za prevod samo jednom po izboru teksta"
 	},
 	"settings_option_selectTranslation_showOnceForSelection_desc": {
-		"message": "Dugme će se prikazati samo jednom po svakom odabiru teksta. Ako ga želite ponovo prikazati, ponovo izaberite tekst"
+		"message": "Dugme će se prikazati samo jednom za svaki izbor teksta. Da biste ga ponovo prikazali, ponovo izaberite tekst"
 	},
 	"settings_option_selectTranslation_showOriginalText": {
 		"message": "Prikaži originalni tekst"
 	},
 	"settings_option_selectTranslation_showOriginalText_desc": {
-		"message": "Dodaj blok sa originalnim tekstom u iskačući prozor sa prevodom"
+		"message": "Dodajte blok sa originalnim tekstom u iskačući prozor sa prevodom"
 	},
 	"settings_option_selectTranslation_strictSelection": {
-		"message": "Striktni izbor"
+		"message": " Strogi izbor"
 	},
 	"settings_option_selectTranslation_strictSelection_desc": {
-		"message": "Ignoriše izbor ako se levi taster miša otpusti van bloka koji sadrži izabrani tekst"
+		"message": "Ignoriši izbor ako se levi taster miša pusti izvan bloka koji sadrži izabrani tekst"
 	},
 	"settings_option_selectTranslation_timeoutForHideButton": {
-		"message": "Zakašnjenje za skrivanje dugmeta"
+		"message": "Kašnjenje pre skrivanja dugmeta"
 	},
 	"settings_option_selectTranslation_timeoutForHideButton_desc": {
-		"message": "Kašnjenje u milisekundama pre sakrivanja dugmeta kada kursor nije iznad njega. Kursor preko dugmeta će resetovati tajmer. Da biste onemogućili automatsko sakrivanje, postavite vrednost manju od 1."
+		"message": "Kašnjenje u milisekundama pre nego što se dugme sakrije kada kursor nije iznad njega. Prelazak kursora preko dugmeta resetuje tajmer. Da biste onemogućili automatsko skrivanje, postavite vrednost manje od 1"
 	},
 	"settings_option_selectTranslation_zIndex": {
-		"message": "z-indeks"
+		"message": "z-index"
 	},
 	"settings_option_selectTranslation_zIndex_desc": {
-		"message": "Povećajte vrednost ako se neki elementi na nekim stranicama preklapaju sa iskačućim prozorom prevedenog teksta"
+		"message": "Povećajte ovu vrednost ako elementi na nekim stranicama preklapaju iskačući prozor sa prevedenim tekstom"
 	},
 	"settings_option_textTranslator": {
 		"message": "Prevod teksta"
@@ -510,61 +492,61 @@
 		"message": "Omogući proveru pravopisa"
 	},
 	"settings_option_textTranslator_suggestLanguage": {
-		"message": "Predloži otkriveni jezik teksta"
+		"message": "Predloži otkriven jezik teksta"
 	},
 	"settings_option_textTranslator_suggestLanguageAlways": {
 		"message": "Uvek otkrij i predloži jezik"
 	},
 	"settings_option_textTranslator_suggestLanguageAlways_desc": {
-		"message": "Kada je onemogućeno, predlozi jezika će se pojaviti samo kada se izvor jezika automatski otkrije."
+		"message": "Kada je isključeno, predlozi jezika će se pojavljivati samo kada je izvorni jezik automatski otkriven"
 	},
 	"settings_option_translatePreferences": {
-		"message": "Prevodičke postavke"
+		"message": "Preferencije prevoda"
 	},
 	"settings_option_translateScheduler": {
-		"message": "Planer prevoda"
+		"message": "Raspored prevoda"
 	},
 	"settings_option_translateScheduler_delay": {
-		"message": "Kašnjenje u akumulaciji teksta"
+		"message": "Odgoda akumulacije teksta"
 	},
 	"settings_option_translateScheduler_delay_desc": {
-		"message": "Planer prevoda smanjuje broj zahteva ka API-ju za prevod. Planer pokušava da akumulira tekstove i pošalje što više tekstova u jednom zahtevu. Planer će sačekati određeno vreme u milisekundama da sakupi nove tekstove pre nego što počne prevoditi."
+		"message": "Raspoređivač prevoda smanjuje broj zahteva ka API-ju prevodilačke usluge. Pokušava da prikupi što više tekstova kako bi ih poslao u jednom zahtevu. Raspoređivač će čekati zadato vreme u milisekundama da sakupi nove tekstove pre nego što započne prevod."
 	},
 	"settings_option_translateScheduler_retryLimit": {
 		"message": "Pokušaji ponovnog prevoda"
 	},
 	"settings_option_translateScheduler_retryLimit_desc": {
-		"message": "Planer će pokušati da ponovo prevede tekstove zbog grešaka u prevodu. Ova opcija postavlja ograničenje za broj pokušaja. Postavite negativan broj da biste omogućili neograničene pokušaje."
+		"message": "Raspoređivač će pokušati ponovo da prevede tekstove kada dođe do grešaka u prevodu. Ova opcija postavlja ograničenje broja pokušaja. Postavite negativan broj za neograničene pokušaje."
 	},
 	"settings_option_translatorModule": {
-		"message": "Modul prevodioca"
+		"message": "Modul za prevođenje"
 	},
 	"settings_option_translatorModule_desc": {
-		"message": "Kvalitet prevoda i dostupni jezici za prevođenje zavise od prevodioca."
+		"message": "Kvalitet prevoda i dostupni jezici zavise od prevodilačkog modula."
 	},
 	"settings_option_tts": {
-		"message": "Tekst u govor (TTS)"
+		"message": "Pretvaranje teksta u govor (TTS)"
 	},
 	"settings_option_ttsCustomModules": {
 		"message": "Prilagođeni TTS"
 	},
 	"settings_option_ttsCustomModules_button": {
-		"message": "Upravljaj modulima TTS-a"
+		"message": "Upravljajte TTS modulima"
 	},
 	"settings_option_ttsCustomModules_desc": {
-		"message": "Možete dodati TTS module koji koriste vaš uslužni program i glasovi. Pročitajte više i pronađite module u prilagođenoj dokumentaciji za TTS."
+		"message": "Možete dodati TTS module koji koriste vaše omiljene usluge i glasove. Pročitajte više i pronađite module u dokumentaciji za prilagođeni TTS."
 	},
 	"settings_option_ttsModule": {
 		"message": "TTS modul"
 	},
 	"settings_option_ttsModule_desc": {
-		"message": "Modul za govor teksta"
+		"message": "Modul za čitanje teksta"
 	},
 	"settings_option_userLanguage": {
 		"message": "Vaš jezik"
 	},
 	"settings_option_userLanguage_desc": {
-		"message": "Ciljni jezik za prevod tekstova"
+		"message": "Ciljni jezik za prevod teksta"
 	},
 	"settings_pageTitle": {
 		"message": "Podešavanja"
@@ -573,7 +555,7 @@
 		"message": "Istorija"
 	},
 	"settings_section_popup": {
-		"message": "Iskačući prozor"
+		"message": "Iskočni prozor"
 	},
 	"textTranslator_suggestLanguage": {
 		"message": "Izgleda da je taj jezik"
@@ -591,14 +573,14 @@
 		"message": "Zatvori"
 	},
 	"translatorsManagerWindow_emptyTranslatorsListText": {
-		"message": "Prilagođeni prevodioci još nisu dodati"
+		"message": "Još uvek nisu dodati prilagođeni prevodioci"
 	},
 	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
-		"message": "Da li ste sigurni da želite da uklonite prevodilac \"$translator_name$\"?",
+		"message": "Da li ste sigurni da želite da uklonite prevodioca \"$translator_name$\"?",
 		"placeholders": {
 			"translator_name": {
 				"content": "$1",
-				"example": "Google prevodilac"
+				"example": "Google translator"
 			}
 		}
 	},
@@ -606,10 +588,10 @@
 		"message": "Prilagođeni prevodioci"
 	},
 	"translatorsManagerWindow_translator_delete": {
-		"message": "Izbriši"
+		"message": "Obriši"
 	},
 	"translatorsManagerWindow_translator_edit": {
-		"message": "Uredi"
+		"message": "Izmeni"
 	},
 	"ttsManagerWindow_add": {
 		"message": "Dodaj"
@@ -618,10 +600,10 @@
 		"message": "Zatvori"
 	},
 	"ttsManagerWindow_emptyTranslatorsListText": {
-		"message": "Još uvijek nije dodan nijedan TTS modul"
+		"message": "Još uvek nisu dodati TTS moduli"
 	},
 	"ttsManagerWindow_message_ttsRemoveConfirmation": {
-		"message": "Da li ste sigurni da želite ukloniti TTS \"$tts_name$\"?",
+		"message": "Da li ste sigurni da želite da uklonite TTS modul \"$tts_name$\"?",
 		"placeholders": {
 			"tts_name": {
 				"content": "$1",
@@ -630,10 +612,10 @@
 		}
 	},
 	"ttsManagerWindow_title": {
-		"message": "Moduli za tekst u govor"
+		"message": "Moduli za pretvaranje teksta u govor"
 	},
 	"ttsManagerWindow_translator_delete": {
-		"message": "Izbriši"
+		"message": "Obriši"
 	},
 	"ttsManagerWindow_translator_edit": {
 		"message": "Uredi"
@@ -645,7 +627,7 @@
 		"message": "Parametar mora biti broj između $1 i $2"
 	},
 	"validation_positiveNumber": {
-		"message": "Parametar mora biti pozitivan broj."
+		"message": "Parametar mora biti pozitivan broj"
 	},
 	"langCode_aa": {
 		"message": "Афарски"
@@ -1104,7 +1086,7 @@
 		"message": "Сесото"
 	},
 	"langCode_su": {
-		"message": "Сундански"
+		"message": "Сундски"
 	},
 	"langCode_sv": {
 		"message": "Шведски"

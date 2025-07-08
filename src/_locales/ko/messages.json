@@ -1,12 +1,12 @@
 {
 	"common_action_addToDictionary": {
-		"message": "사전에 번역 추가"
+		"message": "번역을 사전에 추가"
 	},
 	"common_action_removeFromDictionary": {
-		"message": "사전에서 번역 제거"
+		"message": "번역을 사전에서 제거"
 	},
 	"common_bgUnavailable": {
-		"message": "배경 스크립트를 사용할 수 없습니다."
+		"message": "백그라운드 스크립트를 사용할 수 없습니다"
 	},
 	"common_cancel": {
 		"message": "취소"
@@ -24,22 +24,22 @@
 		"message": "$1 - 오프라인 번역기"
 	},
 	"common_retry": {
-		"message": "재시도"
+		"message": "다시 시도"
 	},
 	"common_translate": {
 		"message": "번역"
 	},
 	"component_hotkey_placeholder": {
-		"message": "단축키 녹음을 위해 클릭하세요"
+		"message": "단축키 기록하려면 클릭하세요"
 	},
 	"component_hotkey_recordPlaceholder": {
-		"message": "키를 눌러주세요"
+		"message": "키를 누르세요"
 	},
 	"component_hotkey_resetButton": {
-		"message": "초기화"
+		"message": "재설정"
 	},
 	"contextMenu_disablePageTranslation": {
-		"message": "페이지 번역 비활성화"
+		"message": "페이지 번역 끄기"
 	},
 	"contextMenu_translatePage": {
 		"message": "페이지 번역"
@@ -57,37 +57,37 @@
 		"message": "내보내기"
 	},
 	"dictionary_button_removeAll": {
-		"message": "모두 삭제"
+		"message": "모두 제거"
 	},
 	"dictionary_deleteAll": {
-		"message": "사전에 있는 모든 번역을 삭제하시겠습니까?"
+		"message": "사전의 모든 번역을 삭제하시겠습니까?"
 	},
 	"dictionary_deleteConfirmation": {
-		"message": "이번 번역을 삭제하시겠습니까?"
+		"message": "이 번역을 삭제하시겠습니까?"
 	},
 	"dictionary_description": {
-		"message": "나중에 찾아보기 위해 사전에 번역을 보관합니다"
+		"message": "나중에 찾기 위해 번역을 사전에 보관하세요"
 	},
 	"dictionary_emptyDictionary": {
-		"message": "사전이 비어 있습니다. 텍스트를 번역하면 채워나갈 수 있습니다"
+		"message": "사전이 비어 있습니다. 텍스트를 번역하여 채우기 시작하세요"
 	},
 	"dictionary_filter_from": {
-		"message": "원어"
+		"message": "원본"
 	},
 	"dictionary_filter_to": {
-		"message": "번역어"
+		"message": "대상"
 	},
 	"dictionary_message_deleteAll_success": {
 		"message": "모든 번역이 삭제되었습니다"
 	},
 	"dictionary_notFoundEntries": {
-		"message": "해당 필터와 일치하는 번역을 찾을 수 없습니다"
+		"message": "이 필터에 맞는 번역을 찾을 수 없습니다"
 	},
 	"dictionary_pageTitle": {
 		"message": "사전"
 	},
 	"dictionary_resetFilters": {
-		"message": "필터 초기화"
+		"message": "필터 재설정"
 	},
 	"dictionary_searchPlaceholder": {
 		"message": "텍스트로 검색"
@@ -98,20 +98,20 @@
 	"editorWindow_data_code": {
 		"message": "코드"
 	},
-	"editorWindow_data_name": {
-		"message": "이름"
+	"editorWindow_data_translatorName": {
+		"message": "번역가 이름"
 	},
-	"editorWindow_message_invalidName": {
-		"message": "이름은 적어도 하나의 기호를 포함해야합니다."
+	"editorWindow_message_invalidTranslatorName": {
+		"message": "번역가 이름은 최소 한 글자를 포함해야 합니다"
 	},
 	"editorWindow_save": {
 		"message": "저장"
 	},
 	"ext_description": {
-		"message": "페이지 및 텍스트 번역, 사전, 기록, 오프라인 및 사용자 정의 번역기"
+		"message": "페이지 및 텍스트 번역, 사전, 기록, 오프라인 및 맞춤 번역기"
 	},
 	"ext_name": {
-		"message": "번역사 - 웹 페이지 번역기"
+		"message": "링귀스트 - 웹 페이지 번역기"
 	},
 	"history_control_selectEntry": {
 		"message": "항목 선택"
@@ -126,22 +126,22 @@
 		"message": "모든 번역 선택"
 	},
 	"history_message_clearHistoryConfirmation": {
-		"message": "기록을 지우시겠습니까? 모든 항목이 삭제됩니다"
+		"message": "기록을 삭제하시겠습니까? 모든 항목이 제거됩니다"
 	},
 	"history_message_deleteEntryConfirmation": {
 		"message": "이 항목을 삭제하시겠습니까?"
 	},
 	"history_message_deleteSelectedEntriesConfirmation": {
-		"message": "선택한 항목($1)을 삭제하시겠습니까?"
-	},
-	"history_message_emptyEntries": {
-		"message": "기록이 지워졌습니다"
+		"message": "선택한 항목 ($1)을 삭제하시겠습니까?"
 	},
 	"history_message_entriesNotFound": {
-		"message": "필터 조건에 맞는 번역 없음"
+		"message": "필터에 맞는 번역을 찾을 수 없습니다"
+	},
+	"history_message_noEntries": {
+		"message": "기록이 없습니다"
 	},
 	"history_notification_disabled": {
-		"message": "기록 저장이 비활성화되어 새 항목이 표시되지 않습니다. <slot id=preferences>환경설정</slot>에서 변경할 수 있습니다."
+		"message": "기록 저장이 비활성화되어 새 항목이 표시되지 않습니다. <slot id=preferences>환경 설정</slot>에서 변경할 수 있습니다"
 	},
 	"history_pageTitle": {
 		"message": "기록"
@@ -162,16 +162,16 @@
 		"message": "언어 선택"
 	},
 	"lang_swap": {
-		"message": "언어 바꾸기"
+		"message": "언어 교체"
 	},
 	"message_askResetConfig": {
 		"message": "설정을 재설정하시겠습니까?"
 	},
 	"message_cacheFlushed": {
-		"message": "캐시가 지워졌습니다"
+		"message": "캐시가 삭제되었습니다"
 	},
 	"message_changesSaved": {
-		"message": "변경 사항이 저장되었습니다"
+		"message": "변경사항이 저장되었습니다"
 	},
 	"message_error": {
 		"message": "오류"
@@ -180,37 +180,37 @@
 		"message": "번역 오류"
 	},
 	"message_serviceRequiredKey": {
-		"message": "서비스는 키가 필요합니다"
+		"message": "서비스에 키가 필요합니다"
 	},
 	"message_translateOfText": {
-		"message": "번역"
+		"message": "번역됨"
 	},
 	"message_unknownError": {
 		"message": "알 수 없는 오류"
 	},
 	"pageTranslator_alwaysTranslateLang": {
-		"message": "언어 항상 번역"
+		"message": "이 언어를 항상 번역하기"
 	},
 	"pageTranslator_commonPreferences_autoTranslate_disable": {
-		"message": "비활성화"
+		"message": "사용 안 함"
 	},
 	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
-		"message": "모든 사이트에서 비활성화"
+		"message": "모든 사이트에서 사용 안 함"
 	},
 	"pageTranslator_commonPreferences_autoTranslate_enable": {
-		"message": "활성화"
+		"message": "사용"
 	},
 	"pageTranslator_commonPreferences_title": {
-		"message": "이 언어의 공통 환경 설정"
+		"message": "이 언어에 대한 일반 설정"
 	},
 	"pageTranslator_option_autoTranslate": {
 		"message": "자동 번역"
 	},
 	"pageTranslator_showOptions": {
-		"message": "옵션 표시"
+		"message": "옵션 보기"
 	},
 	"pageTranslator_showOriginal": {
-		"message": "원본 표시"
+		"message": "원본 보기"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_always": {
 		"message": "항상 번역"
@@ -219,10 +219,10 @@
 		"message": "이 언어에 대해 항상 번역"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_default": {
-		"message": "공통 규칙 사용"
+		"message": "일반 규칙 사용"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
-		"message": "이 언어에 대해 공통 규칙 사용"
+		"message": "이 언어에 대해 일반 규칙 사용"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_never": {
 		"message": "번역하지 않음"
@@ -246,10 +246,10 @@
 		"message": "오류"
 	},
 	"pageTranslator_translationReport_resolve": {
-		"message": "번역 완료"
+		"message": "번역됨"
 	},
 	"popup_tabIdNotFound": {
-		"message": "\"$1\" 탭을 찾을 수 없습니다."
+		"message": "탭 \"$1\"을(를) 찾을 수 없습니다"
 	},
 	"popup_tab_translatePage": {
 		"message": "페이지 번역"
@@ -273,7 +273,7 @@
 		"message": "변경 사항 저장"
 	},
 	"settings_message_clearCache_success": {
-		"message": "캐시가 지워졌습니다"
+		"message": "캐시가 삭제되었습니다"
 	},
 	"settings_message_common_invalidValueType": {
 		"message": "잘못된 값입니다"
@@ -285,70 +285,52 @@
 		"message": "가져오기가 완료되었습니다"
 	},
 	"settings_message_resetConfig_confirm": {
-		"message": "설정을 초기화 하시겠습니까?"
+		"message": "설정을 초기화하시겠습니까?"
 	},
 	"settings_message_resetConfig_success": {
 		"message": "설정이 초기화되었습니다"
 	},
 	"settings_message_saveChanges_success": {
-		"message": "변경 내용이 저장되었습니다"
-	},
-	"settings_option_appIcon": {
-		"message": "확장 프로그램 아이콘"
-	},
-	"settings_option_appIcon_desc": {
-		"message": "동적 아이콘이 선택되면 색상이 브라우저 테마에 맞게 조정됩니다"
-	},
-	"settings_option_appIcon_item_auto": {
-		"message": "동적"
-	},
-	"settings_option_appIcon_item_color": {
-		"message": "색상"
-	},
-	"settings_option_appIcon_item_dark": {
-		"message": "다크"
-	},
-	"settings_option_appIcon_item_light": {
-		"message": "라이트"
+		"message": "변경 사항이 저장되었습니다"
 	},
 	"settings_option_cache": {
 		"message": "캐시"
 	},
 	"settings_option_cache_clear": {
-		"message": "캐시 지우기"
+		"message": "캐시 삭제"
 	},
 	"settings_option_cache_clear_desc": {
-		"message": "번역 오류가 있는 경우 또는 비밀번호를 제거해야하는 경우 캐시를 제거합니다."
+		"message": "번역 오류가 있거나 비밀 정보를 제거해야 할 경우 캐시를 삭제합니다"
 	},
 	"settings_option_cache_enable": {
-		"message": "캐시 활성화"
+		"message": "캐시 사용"
 	},
 	"settings_option_cache_enable_desc": {
-		"message": "캐시가 활성화되면 한 번 번역된 번역은 인터넷이없어도 즉시 사용할 수 있습니다."
+		"message": "캐시가 활성화되면 인터넷 연결 없이도 한 번 번역된 내용이 즉시 제공됩니다"
 	},
 	"settings_option_cache_ignoreCase": {
-		"message": "대소문자 무시"
+		"message": "대소문자 구분 안 함"
 	},
 	"settings_option_cache_ignoreCase_desc": {
-		"message": "활성화 된 경우 캐시에서의 번역은 정확하지 않은 일치로 사용됩니다. 이는 번역 오류를 초래할 수 있습니다."
+		"message": "활성화 시, 완전 일치하지 않아도 캐시된 번역을 사용하므로 번역 오류가 발생할 수 있습니다"
 	},
 	"settings_option_commonSettings": {
 		"message": "공통 설정"
 	},
 	"settings_option_customTranslatorModule": {
-		"message": "사용자 지정 번역기"
+		"message": "맞춤 번역기"
 	},
 	"settings_option_customTranslatorModule_desc": {
-		"message": "<slot id=docs>사용자 지정 번역기 문서</slot>에서 자세한 내용과 모듈을 찾아보세요."
+		"message": "선호하는 번역 서비스를 위해 맞춤 번역기를 추가할 수 있습니다. 자세한 내용과 모듈은 <slot id=docs>맞춤 번역기 문서</slot>를 참조하세요"
 	},
 	"settings_option_customTranslatorModule_manageButton": {
 		"message": "번역기 관리"
 	},
 	"settings_option_history_enable": {
-		"message": "기록 활성화"
+		"message": "기록 사용"
 	},
 	"settings_option_history_enable_desc": {
-		"message": "활성화 시 모든 번역 내용이 기록 페이지에 저장됩니다."
+		"message": "활성화하면 모든 번역이 기록 페이지에 저장됩니다"
 	},
 	"settings_option_mainPreferences": {
 		"message": "주요 설정"
@@ -360,79 +342,79 @@
 		"message": "내용으로 언어 감지"
 	},
 	"settings_option_pageTranslation_detectLanguageByContent_desc": {
-		"message": "웹 페이지의 텍스트를 분석하여 페이지 언어를 감지합니다. 비활성화되면 페이지 메타데이터에 제공된 언어를 사용합니다."
+		"message": "웹페이지의 텍스트를 분석하여 페이지 언어를 감지합니다. 비활성화 시, 페이지 메타데이터에 제공된 언어가 사용됩니다"
 	},
 	"settings_option_pageTranslation_enableContextMenu": {
 		"message": "컨텍스트 메뉴 버튼 활성화"
 	},
 	"settings_option_pageTranslation_enableContextMenu_desc": {
-		"message": "컨텍스트 메뉴에 페이지 번역을 전환하는 버튼 추가하기"
+		"message": "컨텍스트 메뉴에 페이지 번역 토글 버튼을 추가합니다"
 	},
 	"settings_option_pageTranslation_excludeSelectors": {
-		"message": "번역을 제외할 셀렉터"
+		"message": "번역 제외 선택자"
 	},
 	"settings_option_pageTranslation_excludeSelectors_desc": {
-		"message": "번역하지 않을 CSS 셀렉터 목록입니다. 한 줄에 하나씩 입력하세요. 요소가 이 셀렉터 중 하나와 일치하면 해당 요소와 속성 및 하위 요소들은 번역되지 않습니다."
+		"message": "번역하지 않을 CSS 선택자 목록입니다. 한 줄에 하나씩 입력하세요. 해당 선택자와 일치하는 요소 및 속성, 하위 요소는 번역되지 않습니다"
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
 		"message": "보이는 요소만 번역"
 	},
 	"settings_option_pageTranslation_lazyTranslate_desc": {
-		"message": "이 옵션을 활성화하면 보이는 요소만 번역됩니다. 네트워크 트래픽을 절약하는 데 유용할 수 있습니다."
+		"message": "이 옵션이 활성화되면 보이는 요소만 번역됩니다. 이 옵션은 네트워크 트래픽과 번역 서비스 사용 한도를 절약합니다"
 	},
 	"settings_option_pageTranslation_originalTextPopup": {
-		"message": "원본 텍스트 팝업 사용"
+		"message": "원본 텍스트 팝업 활성화"
 	},
 	"settings_option_pageTranslation_originalTextPopup_desc": {
-		"message": "번역된 텍스트 위로 마우스를 가져가면 원본 텍스트가 포함된 팝업이 표시됩니다."
+		"message": "번역된 텍스트 블록 위에 마우스를 올리면 원본 텍스트 팝업을 표시합니다"
 	},
 	"settings_option_pageTranslation_toggleTranslationHotkey": {
 		"message": "단축키"
 	},
 	"settings_option_pageTranslation_toggleTranslationHotkey_desc": {
-		"message": "페이지 번역을 전환하는 바로 가기키\nESC 키를 눌러 키를 재설정합니다."
+		"message": "페이지 번역 토글 단축키\nESC 키를 눌러 키 설정을 초기화합니다"
 	},
 	"settings_option_pageTranslation_translatableAttributes": {
-		"message": "번역 가능한 속성입니다."
+		"message": "번역 가능한 속성"
 	},
 	"settings_option_pageTranslation_translatableAttributes_desc": {
-		"message": "<slot id = htmlAttributes>HTML 속성</slot> 이름을 입력하여 번역합니다. 한 줄에 하나의 속성 입력"
+		"message": "번역할 <slot id=htmlAttributes>HTML 속성</slot> 이름을 한 줄에 하나씩 입력하세요"
 	},
 	"settings_option_popupTab_pageTranslator_showCounters": {
-		"message": "번역 통계 보기"
+		"message": "번역 통계 표시"
 	},
 	"settings_option_popupTab_pageTranslator_showCounters_desc": {
-		"message": "페이지 번역을 위한 통계 표시"
+		"message": "페이지 번역 통계를 표시합니다"
 	},
 	"settings_option_selectTranslation": {
 		"message": "선택한 텍스트 번역"
 	},
 	"settings_option_selectTranslation_detectedLangFirst": {
-		"message": "텍스트의 감지된 언어를 페이지 언어 대신 우선 선택"
+		"message": "페이지 언어보다 감지된 텍스트 언어 우선 사용"
 	},
 	"settings_option_selectTranslation_detectedLangFirst_desc": {
-		"message": "활성화하면 선택한 텍스트의 감지된 언어가 페이지 언어보다 우선합니다."
+		"message": "활성화 시 선택한 텍스트의 감지된 언어를 페이지 언어보다 우선합니다"
 	},
 	"settings_option_selectTranslation_disableWhileTranslatePage": {
 		"message": "페이지 번역 중 비활성화"
 	},
 	"settings_option_selectTranslation_enable": {
-		"message": "활성화"
+		"message": "사용"
 	},
 	"settings_option_selectTranslation_focusOnTranslateButton": {
-		"message": "자동으로 번역 버튼에 초점 맞추기"
+		"message": "번역 버튼 자동 포커스"
 	},
 	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
-		"message": "번역 버튼이 나타날 때 번역 버튼에 초점을 맞춥니다."
+		"message": "번역 버튼이 나타날 때 자동으로 포커스를 맞춥니다"
 	},
 	"settings_option_selectTranslation_header_languageChoice": {
 		"message": "언어 설정"
 	},
 	"settings_option_selectTranslation_isUseAutoForDetectLang": {
-		"message": "번역기에서 자동 언어 감지 사용"
+		"message": "번역기 자동 언어 감지 사용"
 	},
 	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
-		"message": "로컬에서 언어를 감지할 수 없을 때 번역기에서 자동 언어 감지를 사용하세요."
+		"message": "로컬에서 언어를 감지하지 못할 때 번역기의 자동 언어 감지를 사용합니다"
 	},
 	"settings_option_selectTranslation_mode": {
 		"message": "번역 트리거"
@@ -444,13 +426,13 @@
 		"message": "팝업 버튼"
 	},
 	"settings_option_selectTranslation_mode_item_quickTranslate": {
-		"message": "선택한 내용에 대한 빠른 번역"
+		"message": "선택으로 빠른 번역"
 	},
 	"settings_option_selectTranslation_modifiers": {
-		"message": "수식어"
+		"message": "수정 키"
 	},
 	"settings_option_selectTranslation_modifiers_desc": {
-		"message": "번역을 보여주기 위해 키보드에서 눌러야 할 키를 선택합니다."
+		"message": "번역을 표시하기 위해 키보드에서 눌러야 하는 키를 선택하세요"
 	},
 	"settings_option_selectTranslation_modifiers_key_alt": {
 		"message": "alt"
@@ -465,82 +447,82 @@
 		"message": "shift"
 	},
 	"settings_option_selectTranslation_rememberDirection": {
-		"message": "가장 최근 선택한 텍스트 언어를 기억합니다."
+		"message": "최근에 선택된 텍스트 언어를 기억합니다"
 	},
 	"settings_option_selectTranslation_showOnceForSelection": {
-		"message": "각 텍스트 선택에 대해 번역 버튼을 한 번씩만 표시"
+		"message": "텍스트 선택마다 번역 버튼을 한 번만 표시"
 	},
 	"settings_option_selectTranslation_showOnceForSelection_desc": {
-		"message": "버튼은 각 텍스트 선택에 대해 한 번만 표시됩니다. 다시 표시해야 하는 경우 텍스트를 다시 선택하십시오."
+		"message": "텍스트 선택마다 버튼이 한 번만 표시됩니다. 다시 표시하려면 텍스트를 다시 선택하세요"
 	},
 	"settings_option_selectTranslation_showOriginalText": {
-		"message": "원래 텍스트 보기"
+		"message": "원본 텍스트 표시"
 	},
 	"settings_option_selectTranslation_showOriginalText_desc": {
-		"message": "번역과 함께 원래 텍스트 블록을 팝업에 추가합니다."
+		"message": "번역 팝업에 원본 텍스트 블록을 추가합니다"
 	},
 	"settings_option_selectTranslation_strictSelection": {
 		"message": "엄격한 선택"
 	},
 	"settings_option_selectTranslation_strictSelection_desc": {
-		"message": "선택한 텍스트가 포함된 블록 외부에서 마우스 왼쪽 버튼을 놓으면 선택이 무시됩니다."
+		"message": "선택된 텍스트가 포함된 블록 밖에서 마우스 왼쪽 버튼을 놓으면 선택을 무시합니다"
 	},
 	"settings_option_selectTranslation_timeoutForHideButton": {
-		"message": "버튼 숨기기 지연 시간"
+		"message": "버튼 숨김 전 지연 시간"
 	},
 	"settings_option_selectTranslation_timeoutForHideButton_desc": {
-		"message": "커서가 호버되지 않은 경우 버튼을 숨기기 전에 지연 시간 (밀리초 단위). 버튼 위로 커서를 가져가면 타이머가 재설정됩니다. 자동 숨기기를 해제하려면 값이 1보다 낮게 설정하십시오."
+		"message": "커서가 버튼 위에 있지 않을 때 버튼을 숨기기 전의 지연 시간(밀리초 단위). 버튼 위에 마우스를 올리면 타이머가 초기화됩니다. 자동 숨김을 비활성화하려면 값을 1 미만으로 설정하세요"
 	},
 	"settings_option_selectTranslation_zIndex": {
 		"message": "z-인덱스"
 	},
 	"settings_option_selectTranslation_zIndex_desc": {
-		"message": "번역된 텍스트 팝업이 일부 페이지의 일부 요소와 겹치는 경우 값을 증가시킵니다."
+		"message": "일부 페이지에서 요소가 번역된 텍스트 팝업을 가릴 경우 이 값을 높이세요"
 	},
 	"settings_option_textTranslator": {
 		"message": "텍스트 번역"
 	},
 	"settings_option_textTranslator_rememberText": {
-		"message": "번역된 텍스트 기억하기"
+		"message": "번역된 텍스트 저장"
 	},
 	"settings_option_textTranslator_rememberText_desc": {
-		"message": "다음 창을 열 때까지 번역된 텍스트를 기억합니다."
+		"message": "창이 다시 열릴 때 번역된 텍스트를 기억합니다"
 	},
 	"settings_option_textTranslator_spellCheck": {
-		"message": "맞춤법 검사 사용"
+		"message": "맞춤법 검사 활성화"
 	},
 	"settings_option_textTranslator_suggestLanguage": {
 		"message": "감지된 텍스트 언어 제안"
 	},
 	"settings_option_textTranslator_suggestLanguageAlways": {
-		"message": "언어 감지 및 제안 항상 사용"
+		"message": "항상 언어 감지 및 제안"
 	},
 	"settings_option_textTranslator_suggestLanguageAlways_desc": {
-		"message": "비활성화되면 원본 언어가 자동 감지될 때만 언어 제안이 표시됩니다."
+		"message": "비활성화 시 원본 언어가 자동 감지될 때만 언어 제안이 표시됩니다"
 	},
 	"settings_option_translatePreferences": {
-		"message": "번역 기본 설정"
+		"message": "번역 환경 설정"
 	},
 	"settings_option_translateScheduler": {
-		"message": "번역 일정 관리"
+		"message": "번역 스케줄러"
 	},
 	"settings_option_translateScheduler_delay": {
-		"message": "텍스트 축적 지연 시간"
+		"message": "텍스트 누적 지연 시간"
 	},
 	"settings_option_translateScheduler_delay_desc": {
-		"message": "번역 일정 관리자는 번역 서비스 API로의 요청 수를 줄입니다. 일정 관리자는 가능한 한 많은 텍스트를 하나의 요청으로 보내기 위해 텍스트를 축적하려고합니다. 새 텍스트를 수집하기 전에 일정된 시간(밀리 초) 동안 대기 한 다음 번역을 시작합니다."
+		"message": "번역 스케줄러는 번역 서비스 API에 대한 요청 수를 줄입니다. 가능한 많은 텍스트를 한 번의 요청으로 보내기 위해 모으려고 시도합니다. 스케줄러는 번역을 시작하기 전에 지정된 시간(밀리초) 동안 새로운 텍스트를 수집하기 위해 대기합니다."
 	},
 	"settings_option_translateScheduler_retryLimit": {
 		"message": "번역 재시도 횟수"
 	},
 	"settings_option_translateScheduler_retryLimit_desc": {
-		"message": "번역 일정 관리자는 번역 오류를 위해 텍스트 번역을 다시 시도합니다. 이 옵션은 재시도 횟수에 대한 제한을 설정합니다. 무제한 재시도를 허용하려면 음수 값을 설정하십시오."
+		"message": "번역 오류가 발생할 경우 스케줄러가 텍스트 번역을 재시도합니다. 이 옵션은 재시도 횟수 제한을 설정합니다. 무제한 재시도를 허용하려면 음수를 설정하세요."
 	},
 	"settings_option_translatorModule": {
-		"message": "번역 모듈"
+		"message": "번역기 모듈"
 	},
 	"settings_option_translatorModule_desc": {
-		"message": "번역 품질과 번역 가능 언어는 번역기에 따라 다릅니다."
+		"message": "번역 품질과 사용 가능한 언어는 번역기에 따라 다릅니다."
 	},
 	"settings_option_tts": {
 		"message": "텍스트 음성 변환 (TTS)"
@@ -552,19 +534,19 @@
 		"message": "TTS 모듈 관리"
 	},
 	"settings_option_ttsCustomModules_desc": {
-		"message": "원하는 서비스와 음성을 사용하는 TTS 모듈을 추가할 수 있습니다. 사용자 정의 TTS 문서에서 자세히 알아보고 모듈을 찾으세요."
+		"message": "선호하는 서비스와 음성을 사용하는 TTS 모듈을 추가할 수 있습니다. 자세한 내용과 모듈은 사용자 정의 TTS 문서를 참조하세요."
 	},
 	"settings_option_ttsModule": {
 		"message": "TTS 모듈"
 	},
 	"settings_option_ttsModule_desc": {
-		"message": "텍스트를 발음하는 모듈"
+		"message": "텍스트를 음성으로 읽는 모듈"
 	},
 	"settings_option_userLanguage": {
 		"message": "사용자 언어"
 	},
 	"settings_option_userLanguage_desc": {
-		"message": "번역할 대상 언어"
+		"message": "텍스트 번역 대상 언어"
 	},
 	"settings_pageTitle": {
 		"message": "설정"
@@ -576,10 +558,10 @@
 		"message": "팝업"
 	},
 	"textTranslator_suggestLanguage": {
-		"message": "그 언어가 맞는 것 같습니다"
+		"message": "해당 언어는 다음과 같습니다"
 	},
 	"textTranslator_translateInputPlaceholder": {
-		"message": "입력 텍스트"
+		"message": "텍스트 입력"
 	},
 	"textTranslator_translatePlaceholder": {
 		"message": "번역된 텍스트"
@@ -591,19 +573,19 @@
 		"message": "닫기"
 	},
 	"translatorsManagerWindow_emptyTranslatorsListText": {
-		"message": "사용자 지정 번역기가 아직 추가되지 않았습니다."
+		"message": "추가된 맞춤 번역기가 없습니다"
 	},
 	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
-		"message": "\"$translator_name$\" 번역기를 제거하시겠습니까?",
+		"message": "번역기 \"$translator_name$\"를 삭제하시겠습니까?",
 		"placeholders": {
 			"translator_name": {
 				"content": "$1",
-				"example": "Google 번역기"
+				"example": "Google translator"
 			}
 		}
 	},
 	"translatorsManagerWindow_title": {
-		"message": "사용자 지정 번역기"
+		"message": "맞춤 번역기"
 	},
 	"translatorsManagerWindow_translator_delete": {
 		"message": "삭제"
@@ -618,10 +600,10 @@
 		"message": "닫기"
 	},
 	"ttsManagerWindow_emptyTranslatorsListText": {
-		"message": "TTS 모듈이 아직 추가되지 않았습니다."
+		"message": "추가된 TTS 모듈이 없습니다"
 	},
 	"ttsManagerWindow_message_ttsRemoveConfirmation": {
-		"message": "\"$tts_name$\" TTS를 삭제하시겠습니까?",
+		"message": "TTS 모듈 \"$tts_name$\"를 삭제하시겠습니까?",
 		"placeholders": {
 			"tts_name": {
 				"content": "$1",
@@ -639,13 +621,13 @@
 		"message": "편집"
 	},
 	"validation_number": {
-		"message": "매개변수는 숫자여야합니다."
+		"message": "매개변수는 숫자여야 합니다"
 	},
 	"validation_numberBetweenRange": {
-		"message": "매개변수는 $1과 $2 사이의 숫자 여야합니다."
+		"message": "매개변수는 $1과 $2 사이의 숫자여야 합니다"
 	},
 	"validation_positiveNumber": {
-		"message": "매개변수는 양수 여야합니다."
+		"message": "매개변수는 양수여야 합니다"
 	},
 	"langCode_aa": {
 		"message": "아파르어"
@@ -1140,7 +1122,7 @@
 		"message": "통가어"
 	},
 	"langCode_tr": {
-		"message": "터키어"
+		"message": "튀르키예어"
 	},
 	"langCode_ts": {
 		"message": "총가어"
