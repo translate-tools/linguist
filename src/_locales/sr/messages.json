@@ -140,6 +140,9 @@
 	"history_message_entriesNotFound": {
 		"message": "Nema pronađenih prevoda koji zadovoljavaju filter"
 	},
+	"history_notification_disabled": {
+		"message": "Snimanje istorije je onemogućeno, pa novi unosi neće biti prikazani. Možete to promeniti u <slot id=preferences>podešavanjima</slot>"
+	},
 	"history_pageTitle": {
 		"message": "Istorija"
 	},
@@ -341,6 +344,12 @@
 	"settings_option_customTranslatorModule_manageButton": {
 		"message": "Upravljanje prevodiocima"
 	},
+	"settings_option_history_enable": {
+		"message": "Omogući istoriju"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "Kada je omogućeno, svaki prevod biće sačuvan na stranici sa istorijom"
+	},
 	"settings_option_mainPreferences": {
 		"message": "Glavna podešavanja"
 	},
@@ -359,11 +368,11 @@
 	"settings_option_pageTranslation_enableContextMenu_desc": {
 		"message": "Dodaj dugme za prebacivanje prevoda stranice u kontekstni meni"
 	},
-	"settings_option_pageTranslation_ignoredTags": {
-		"message": "Ignorisani elementi"
+	"settings_option_pageTranslation_excludeSelectors": {
+		"message": "Selektori za izuzimanje iz prevoda"
 	},
-	"settings_option_pageTranslation_ignoredTags_desc": {
-		"message": "Unesite nazive <slot id=htmlElements> HTML elemenata </slot> koji se ne smeju prevoditi. Ugnježđeni elementi takođe neće biti prevedeni. Jedan element po liniji."
+	"settings_option_pageTranslation_excludeSelectors_desc": {
+		"message": "Lista CSS selektora koji neće biti prevedeni. Jedan selektor po liniji. Ako element odgovara bilo kojem od ovih selektora, on, njegovi atributi i ugneždeni elementi neće biti prevedeni."
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
 		"message": "Prevedi samo vidljive elemente"
@@ -559,6 +568,9 @@
 	},
 	"settings_pageTitle": {
 		"message": "Podešavanja"
+	},
+	"settings_section_history": {
+		"message": "Istorija"
 	},
 	"settings_section_popup": {
 		"message": "Iskačući prozor"

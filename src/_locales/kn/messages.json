@@ -140,6 +140,9 @@
 	"history_message_entriesNotFound": {
 		"message": "ಫಿಲ್ಟರ್ ಪೂರೈಕವನ್ನು ಸಂತೋಷವಾಗಿ ಪೂರ್ತಿಯಾಗಿಸಿದ ಪರಿವರ್ತನೆಗಳು ಸಿಗಲಿಲ್ಲ"
 	},
+	"history_notification_disabled": {
+		"message": "ಇತಿಹಾಸ ದಾಖಲಿಸುವಿಕೆ ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಲಾಗಿದೆ, ಆದ್ದರಿಂದ ಹೊಸ ದಾಖಲೆಗಳು ಕಾಣಿಸಲಿದ್ದು ಇಲ್ಲ. ನೀವು ಇದನ್ನು <slot id=preferences>ಆಯ್ಕೆಗಳು</slot> ನಲ್ಲಿ ಬದಲಾಯಿಸಬಹುದು"
+	},
 	"history_pageTitle": {
 		"message": "ಹಿಂದಿನ ಪರಿವರ್ತನೆಗಳು"
 	},
@@ -341,6 +344,12 @@
 	"settings_option_customTranslatorModule_manageButton": {
 		"message": "ಅನುವಾದಕರನ್ನು ನಿರ್ವಹಿಸಿ "
 	},
+	"settings_option_history_enable": {
+		"message": "ಇತಿಹಾಸವನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಿ"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "ಸಕ್ರಿಯಗೊಳಿಸಿದಾಗ, ಯಾವುದೇ ಅನುವಾದವು ಇತಿಹಾಸ ಪುಟಕ್ಕೆ ದಾಖಲಿಸಲಾಗುತ್ತದೆ"
+	},
 	"settings_option_mainPreferences": {
 		"message": "ಪ್ರಧಾನ ಸೆಟ್ಟಿಂಗ್ಗಳು"
 	},
@@ -359,11 +368,11 @@
 	"settings_option_pageTranslation_enableContextMenu_desc": {
 		"message": "ಪುಟ ಅನುವಾದವನ್ನು ಟಾಗಲ್ ಮೆನುಗೆ ಸೇರಿಸಲು ಬಟನ್ ಸೇರಿಸಿ"
 	},
-	"settings_option_pageTranslation_ignoredTags": {
-		"message": "ಉಲ್ಲೇಖಿಸಲಾಗದ ಅಂಶಗಳು"
+	"settings_option_pageTranslation_excludeSelectors": {
+		"message": "ಅನುವಾದ ತಪ್ಪಿಸಲು ಸೆಲೆಕ್ಟರ್ಸ್"
 	},
-	"settings_option_pageTranslation_ignoredTags_desc": {
-		"message": "ಭಾಷಾಂತರಣೆ ಆಗಕೂಡದ <slot id=htmlElements>HTML ಅಂಶ</slot> ಹೆಸರುಗಳನ್ನು ನಮೂದಿಸಿ. ಅಳತೆಗೆ ಬಾರದ ಅಂಶಗಳು ಭಾಷಾಂತರಣೆಯಾಗದು. ಒಂದು ಅಂಶ ಪ್ರತಿ ಸಾಲಕ್ಕೆ."
+	"settings_option_pageTranslation_excludeSelectors_desc": {
+		"message": "ಅನುವಾದ ಮಾಡದಿರುವ CSS ಸೆಲೆಕ್ಟರ್ಸ್ ಪಟ್ಟಿ. ಪ್ರತಿ ಸಾಲಿಗೆ ಒಂದು ಸೆಲೆಕ್ಟರ್. ಯಾವುದೇ ಒಂದು ಸೆಲೆಕ್ಟರ್‌ಗೆ ಅಲೈನ್ ಆಗಿದ್ದರೆ, ಆ ತತ್ವಾಂಶ ಮತ್ತು ಅದರ ಗುಣಲಕ್ಷಣಗಳು ಹಾಗೂ ಒಳಗಿನ ಅಂಶಗಳು ಅನುವಾದವಾಗುವುದಿಲ್ಲ."
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
 		"message": "ಕೇವಲ ಕಾಣೆಯಾದ ಅಂಶಗಳನ್ನು ಭಾಷಾಂತರಿಸಿ"
@@ -559,6 +568,9 @@
 	},
 	"settings_pageTitle": {
 		"message": "ಸೆಟ್ಟಿಂಗ್ಗಳು"
+	},
+	"settings_section_history": {
+		"message": "ಇತಿಹಾಸ"
 	},
 	"settings_section_popup": {
 		"message": "ಪಾಪ್‌ಅಪ್"

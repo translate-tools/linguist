@@ -140,6 +140,9 @@
 	"history_message_entriesNotFound": {
 		"message": "Не са намерени преводи, отговарящи на филтъра"
 	},
+	"history_notification_disabled": {
+		"message": "Записът на историята е изключен, така че нови записи няма да се появяват. Можете да го промените в <slot id=preferences>настройките</slot>"
+	},
 	"history_pageTitle": {
 		"message": "История"
 	},
@@ -341,6 +344,12 @@
 	"settings_option_customTranslatorModule_manageButton": {
 		"message": "Управление на преводачите"
 	},
+	"settings_option_history_enable": {
+		"message": "Активиране на историята"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "При активиране всяка превод ще се записва на страница с история"
+	},
 	"settings_option_mainPreferences": {
 		"message": "Основни настройки"
 	},
@@ -359,11 +368,11 @@
 	"settings_option_pageTranslation_enableContextMenu_desc": {
 		"message": "Добавете бутон за превключване на превода на страницата в контекстно меню"
 	},
-	"settings_option_pageTranslation_ignoredTags": {
-		"message": "Игнорирани елементи"
+	"settings_option_pageTranslation_excludeSelectors": {
+		"message": "Селектори за пропускане на превод"
 	},
-	"settings_option_pageTranslation_ignoredTags_desc": {
-		"message": "Въведете имена на <slot id=htmlElements>HTML елементи</slot>, които не трябва да се превеждат. Вложените елементи също няма да се превеждат. По един елемент на ред."
+	"settings_option_pageTranslation_excludeSelectors_desc": {
+		"message": "Списък с CSS селектори, които няма да бъдат превеждани. Един селектор на ред. Ако елемент съвпада с който и да е от тези селектори, той, неговите атрибути и вложени елементи няма да бъдат преведени."
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
 		"message": "Превеждайте само видимите елементи"
@@ -559,6 +568,9 @@
 	},
 	"settings_pageTitle": {
 		"message": "Настройки"
+	},
+	"settings_section_history": {
+		"message": "История"
 	},
 	"settings_section_popup": {
 		"message": "Изскачащ прозорец"

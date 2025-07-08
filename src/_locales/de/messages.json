@@ -140,6 +140,9 @@
 	"history_message_entriesNotFound": {
 		"message": "Es wurden keine Übersetzungen gefunden, die dem Filter entsprechen"
 	},
+	"history_notification_disabled": {
+		"message": "Die Verlaufserfassung ist deaktiviert, daher werden keine neuen Einträge angezeigt. Sie können dies in den <slot id=preferences>Einstellungen</slot> ändern"
+	},
 	"history_pageTitle": {
 		"message": "Verlauf"
 	},
@@ -341,6 +344,12 @@
 	"settings_option_customTranslatorModule_manageButton": {
 		"message": "Übersetzer verwalten"
 	},
+	"settings_option_history_enable": {
+		"message": "Verlauf aktivieren"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "Wenn aktiviert, wird jede Übersetzung auf einer Verlaufseite gespeichert"
+	},
 	"settings_option_mainPreferences": {
 		"message": "Haupteinstellungen"
 	},
@@ -359,11 +368,11 @@
 	"settings_option_pageTranslation_enableContextMenu_desc": {
 		"message": "Schaltfläche zum Umschalten der Seitenübersetzung zum Kontextmenü hinzufügen"
 	},
-	"settings_option_pageTranslation_ignoredTags": {
-		"message": "Ignorierte Elemente"
+	"settings_option_pageTranslation_excludeSelectors": {
+		"message": "Selektoren für die Übersetzung ausschließen"
 	},
-	"settings_option_pageTranslation_ignoredTags_desc": {
-		"message": "Geben Sie <slot id=htmlElements>HTML-Element</slot>-Namen ein, die nicht übersetzt werden dürfen. Verschachtelte Elemente werden auch nicht übersetzt. Ein Element pro Zeile."
+	"settings_option_pageTranslation_excludeSelectors_desc": {
+		"message": "Liste der CSS-Selektoren, die nicht übersetzt werden. Ein Selektor pro Zeile. Wenn ein Element einem dieser Selektoren entspricht, werden es sowie seine Attribute und verschachtelten Elemente nicht übersetzt."
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
 		"message": "Nur sichtbare Elemente übersetzen"
@@ -559,6 +568,9 @@
 	},
 	"settings_pageTitle": {
 		"message": "Einstellungen"
+	},
+	"settings_section_history": {
+		"message": "Verlauf"
 	},
 	"settings_section_popup": {
 		"message": "Popup"

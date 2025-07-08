@@ -140,6 +140,9 @@
 	"history_message_entriesNotFound": {
 		"message": "لم يتم العثور على ترجمات تستوفي الشرط المحدد"
 	},
+	"history_notification_disabled": {
+		"message": "تسجيل السجل معطل، لذا لن تظهر الإدخالات الجديدة. يمكنك تغييره في <slot id=preferences>التفضيلات</slot>"
+	},
 	"history_pageTitle": {
 		"message": "السجل"
 	},
@@ -341,6 +344,12 @@
 	"settings_option_customTranslatorModule_manageButton": {
 		"message": "إدارة المترجمين"
 	},
+	"settings_option_history_enable": {
+		"message": "تمكين السجل"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "عند التمكين، سيتم تسجيل أي ترجمة إلى صفحة السجل"
+	},
 	"settings_option_mainPreferences": {
 		"message": "الإعدادات الرئيسية"
 	},
@@ -359,11 +368,11 @@
 	"settings_option_pageTranslation_enableContextMenu_desc": {
 		"message": "إضافة زر لتحويل الصفحة إلى قائمة السياق"
 	},
-	"settings_option_pageTranslation_ignoredTags": {
-		"message": "العناصر المتجاهلة"
+	"settings_option_pageTranslation_excludeSelectors": {
+		"message": "المحددات التي يجب تخطي ترجمتها"
 	},
-	"settings_option_pageTranslation_ignoredTags_desc": {
-		"message": "أدخل أسماء <slot id=htmlElements>عناصر HTML</slot> التي يجب ألا يتم ترجمتها. لن يتم ترجمة العناصر المتداخلة أيضًا. عنصر واحد في كل سطر."
+	"settings_option_pageTranslation_excludeSelectors_desc": {
+		"message": "قائمة محددات CSS التي لن تُترجم. محدد واحد لكل سطر. إذا تطابق عنصر مع أي من هذه المحددات، فلن يتم ترجمة العنصر وسماته والعناصر المُتعلقة به."
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
 		"message": "ترجم فقط العناصر المرئية"
@@ -559,6 +568,9 @@
 	},
 	"settings_pageTitle": {
 		"message": "الإعدادات"
+	},
+	"settings_section_history": {
+		"message": "السجل"
 	},
 	"settings_section_popup": {
 		"message": "النافذة المنبثقة"

@@ -140,6 +140,9 @@
 	"history_message_entriesNotFound": {
 		"message": "ไม่พบการแปลที่ตรงกับตัวกรอง"
 	},
+	"history_notification_disabled": {
+		"message": "การบันทึกประวัติถูกปิดใช้งาน ดังนั้นรายการใหม่จะไม่แสดง คุณสามารถเปลี่ยนได้ใน <slot id=preferences>การตั้งค่า</slot>"
+	},
 	"history_pageTitle": {
 		"message": "ประวัติศาสตร์"
 	},
@@ -341,6 +344,12 @@
 	"settings_option_customTranslatorModule_manageButton": {
 		"message": "จัดการผู้แปล"
 	},
+	"settings_option_history_enable": {
+		"message": "เปิดใช้งานประวัติ"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "เมื่อเปิดใช้งาน การแปลทั้งหมดจะถูกบันทึกในหน้าประวัติ"
+	},
 	"settings_option_mainPreferences": {
 		"message": "การตั้งค่าหลัก"
 	},
@@ -359,11 +368,11 @@
 	"settings_option_pageTranslation_enableContextMenu_desc": {
 		"message": "เพิ่มปุ่มเพื่อเปิดหรือปิดการแปลหน้าเว็บในเมนู"
 	},
-	"settings_option_pageTranslation_ignoredTags": {
-		"message": "ฟิลด์ที่ถูกละเว้น"
+	"settings_option_pageTranslation_excludeSelectors": {
+		"message": "ตัวเลือกที่ไม่ต้องแปล"
 	},
-	"settings_option_pageTranslation_ignoredTags_desc": {
-		"message": "ป้อนชื่อ <slot id=htmlElements>องค์ประกอบ HTML</slot> ที่ต้องไม่แปลงความหมาย องค์ประกอบที่ซ้อนกันจะไม่ถูกแปลงความหมายด้วย เพียงหนึ่งองค์ประกอบต่อหนึ่งบรรทัด"
+	"settings_option_pageTranslation_excludeSelectors_desc": {
+		"message": "รายการของตัวเลือก CSS ที่จะไม่ถูกแปล หนึ่งตัวเลือกต่อบรรทัด หากองค์ประกอบใดตรงกับตัวเลือกเหล่านี้ องค์ประกอบนั้น รวมถึงคุณสมบัติและองค์ประกอบที่ซ้อนอยู่จะไม่ถูกแปล"
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
 		"message": "แปลเฉพาะองค์ประกอบที่มองเห็นได้เท่านั้น"
@@ -559,6 +568,9 @@
 	},
 	"settings_pageTitle": {
 		"message": "การตั้งค่า"
+	},
+	"settings_section_history": {
+		"message": "ประวัติ"
 	},
 	"settings_section_popup": {
 		"message": "ป๊อปอัพ"

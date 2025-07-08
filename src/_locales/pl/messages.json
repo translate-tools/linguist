@@ -140,6 +140,9 @@
 	"history_message_entriesNotFound": {
 		"message": "Nie znaleziono tłumaczeń spełniających kryteria filtrowania"
 	},
+	"history_notification_disabled": {
+		"message": "Nagrywanie historii jest wyłączone, więc nowe wpisy nie będą się pojawiać. Możesz to zmienić w <slot id=preferences>ustawieniach</slot>"
+	},
 	"history_pageTitle": {
 		"message": "Historia"
 	},
@@ -341,6 +344,12 @@
 	"settings_option_customTranslatorModule_manageButton": {
 		"message": "Zarządzaj tłumaczami"
 	},
+	"settings_option_history_enable": {
+		"message": "Włącz historię"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "Po włączeniu każde tłumaczenie będzie zapisywane na stronie historii"
+	},
 	"settings_option_mainPreferences": {
 		"message": "Główne ustawienia"
 	},
@@ -359,11 +368,11 @@
 	"settings_option_pageTranslation_enableContextMenu_desc": {
 		"message": "Dodaj przycisk do przełączania tłumaczenia strony w menu kontekstowym"
 	},
-	"settings_option_pageTranslation_ignoredTags": {
-		"message": "Ignorowane elementy"
+	"settings_option_pageTranslation_excludeSelectors": {
+		"message": "Selektory do pominięcia w tłumaczeniu"
 	},
-	"settings_option_pageTranslation_ignoredTags_desc": {
-		"message": "Wprowadź nazwy elementów <slot id=htmlElements>HTML</slot>, które nie powinny być tłumaczone. Zagnieżdżone elementy również nie będą tłumaczone. Jeden element na wiersz."
+	"settings_option_pageTranslation_excludeSelectors_desc": {
+		"message": "Lista selektorów CSS, które nie będą tłumaczone. Jeden selektor na linię. Jeśli element pasuje do któregokolwiek z tych selektorów, on oraz jego atrybuty i zagnieżdżone elementy nie będą tłumaczone."
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
 		"message": "Tłumacz tylko widoczne elementy"
@@ -559,6 +568,9 @@
 	},
 	"settings_pageTitle": {
 		"message": "Ustawienia"
+	},
+	"settings_section_history": {
+		"message": "Historia"
 	},
 	"settings_section_popup": {
 		"message": "Wyskakujące okienko"

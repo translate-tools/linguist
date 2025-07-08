@@ -140,6 +140,9 @@
 	"history_message_entriesNotFound": {
 		"message": "Nu s-au găsit traduceri care să satisfacă filtrul"
 	},
+	"history_notification_disabled": {
+		"message": "Înregistrarea istoricului este dezactivată, prin urmare noile intrări nu vor apărea. Puteți schimba acest lucru în <slot id=preferences>preferințe</slot>"
+	},
 	"history_pageTitle": {
 		"message": "Istoric"
 	},
@@ -341,6 +344,12 @@
 	"settings_option_customTranslatorModule_manageButton": {
 		"message": "Gestionați traducătorii"
 	},
+	"settings_option_history_enable": {
+		"message": "Activează istoricul"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "Când este activat, orice traducere va fi înregistrată într-o pagină cu istoric"
+	},
 	"settings_option_mainPreferences": {
 		"message": "Setări principale"
 	},
@@ -359,11 +368,11 @@
 	"settings_option_pageTranslation_enableContextMenu_desc": {
 		"message": "Adăugați un buton pentru a activa și dezactiva traducerea paginii în meniul contextual"
 	},
-	"settings_option_pageTranslation_ignoredTags": {
-		"message": "Elemente ignorate"
+	"settings_option_pageTranslation_excludeSelectors": {
+		"message": "Selectori de evitat la traducere"
 	},
-	"settings_option_pageTranslation_ignoredTags_desc": {
-		"message": "Introduceți numele elementelor <slot id=htmlElements>HTML</slot> care nu trebuie traduse. Elementele înglobate nu vor fi traduse. Un element per linie."
+	"settings_option_pageTranslation_excludeSelectors_desc": {
+		"message": "Lista de selectori CSS care nu vor fi traduse. Un selector pe linie. Dacă un element corespunde oricărui selector din această listă, acesta, atributele și elementele sale imbricate nu vor fi traduse."
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
 		"message": "Tradu doar elementele vizibile"
@@ -559,6 +568,9 @@
 	},
 	"settings_pageTitle": {
 		"message": "Setări"
+	},
+	"settings_section_history": {
+		"message": "Istoric"
 	},
 	"settings_section_popup": {
 		"message": "Popup"

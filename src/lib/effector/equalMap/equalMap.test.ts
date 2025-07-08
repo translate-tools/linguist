@@ -21,7 +21,7 @@ test('mapped store do not updates for data that equal current state', () => {
 
 	const $subStore = equalMap($store1, ({ foo, bar }) => ({ foo, bar }));
 
-	const watcher = jest.fn();
+	const watcher = vi.fn();
 
 	$subStore.watch(watcher);
 	expect(watcher).toBeCalledTimes(1);

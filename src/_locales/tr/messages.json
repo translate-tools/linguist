@@ -140,6 +140,9 @@
 	"history_message_entriesNotFound": {
 		"message": "Filtreyi karşılayan çeviri bulunamadı"
 	},
+	"history_notification_disabled": {
+		"message": "Geçmiş kaydı devre dışı bırakıldı, bu yüzden yeni girdiler görünmeyecek. Bunu <slot id=preferences>ayarlar</slot> bölümünden değiştirebilirsiniz"
+	},
 	"history_pageTitle": {
 		"message": "Geçmiş"
 	},
@@ -341,6 +344,12 @@
 	"settings_option_customTranslatorModule_manageButton": {
 		"message": "Çevirmenleri yönet"
 	},
+	"settings_option_history_enable": {
+		"message": "Geçmişi etkinleştir"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "Etkinleştirildiğinde, yapılan tüm çeviriler geçmiş sayfasına kaydedilir"
+	},
 	"settings_option_mainPreferences": {
 		"message": "Ana ayarlar"
 	},
@@ -359,11 +368,11 @@
 	"settings_option_pageTranslation_enableContextMenu_desc": {
 		"message": "Sayfa çevirisini açıp kapamak için bir içerik menüsüne düğme ekleyin."
 	},
-	"settings_option_pageTranslation_ignoredTags": {
-		"message": "Yoksayılan öğeler"
+	"settings_option_pageTranslation_excludeSelectors": {
+		"message": "Çeviri hariç tutulacak seçiciler"
 	},
-	"settings_option_pageTranslation_ignoredTags_desc": {
-		"message": "Çevrilmemesi gereken <slot id=htmlElements>HTML elementi</slot> adlarını girin. İç içe geçmiş öğeler de çevrilmeyecektir. Satır başına bir öğe."
+	"settings_option_pageTranslation_excludeSelectors_desc": {
+		"message": "Çevrilmeyecek CSS seçicilerinin listesi. Her satıra bir seçici. Bir öğe bu seçicilerden herhangi biriyle eşleşiyorsa, kendisi, öznitelikleri ve içindeki öğeler çevrilmeyecektir."
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
 		"message": "Yalnızca görünür öğeleri çevir"
@@ -559,6 +568,9 @@
 	},
 	"settings_pageTitle": {
 		"message": "Ayarlar"
+	},
+	"settings_section_history": {
+		"message": "Geçmiş"
 	},
 	"settings_section_popup": {
 		"message": "Açılır pencere"

@@ -140,6 +140,9 @@
 	"history_message_entriesNotFound": {
 		"message": "Nessuna traduzione trovata che soddisfi il filtro"
 	},
+	"history_notification_disabled": {
+		"message": "La registrazione della cronologia è disabilitata, quindi non appariranno nuove voci. Puoi modificarlo nelle <slot id=preferences>preferenze</slot>"
+	},
 	"history_pageTitle": {
 		"message": "Cronologia"
 	},
@@ -341,6 +344,12 @@
 	"settings_option_customTranslatorModule_manageButton": {
 		"message": "Gestisci traduttori"
 	},
+	"settings_option_history_enable": {
+		"message": "Abilita cronologia"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "Quando abilitato, ogni traduzione verrà salvata in una pagina della cronologia"
+	},
 	"settings_option_mainPreferences": {
 		"message": "Impostazioni principali"
 	},
@@ -359,11 +368,11 @@
 	"settings_option_pageTranslation_enableContextMenu_desc": {
 		"message": "Aggiungi pulsante per attivare la traduzione della pagina in un menu contestuale"
 	},
-	"settings_option_pageTranslation_ignoredTags": {
-		"message": "Elementi ignorati"
+	"settings_option_pageTranslation_excludeSelectors": {
+		"message": "Selettori da escludere dalla traduzione"
 	},
-	"settings_option_pageTranslation_ignoredTags_desc": {
-		"message": "Inserisci i nomi degli elementi HTML <slot id=htmlElements>HTML</slot> che non devono essere tradotti. Gli elementi nidificati non saranno tradotti. Un elemento per linea."
+	"settings_option_pageTranslation_excludeSelectors_desc": {
+		"message": "Elenco di selettori CSS che non saranno tradotti. Un selettore per riga. Se un elemento corrisponde a uno di questi selettori, esso, i suoi attributi e gli elementi annidati non saranno tradotti."
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
 		"message": "Traduci solo gli elementi visibili"
@@ -559,6 +568,9 @@
 	},
 	"settings_pageTitle": {
 		"message": "Impostazioni"
+	},
+	"settings_section_history": {
+		"message": "Cronologia"
 	},
 	"settings_section_popup": {
 		"message": "Popup"

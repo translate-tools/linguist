@@ -140,6 +140,9 @@
 	"history_message_entriesNotFound": {
 		"message": "ትርጉም መጠቀሚያ የለውም"
 	},
+	"history_notification_disabled": {
+		"message": "የታሪክ መቅዳት ተከልክሏል፣ ስለዚህ አዲስ መዝገቦች አይታዩም። በ<slot id=preferences>ቅድመ ተወዳዳሪዎች</slot> ውስጥ ማሻሻል ይችላሉ።"
+	},
 	"history_pageTitle": {
 		"message": "ታሪክ"
 	},
@@ -341,6 +344,12 @@
 	"settings_option_customTranslatorModule_manageButton": {
 		"message": "ተርጓሚውን አስተዳደር"
 	},
+	"settings_option_history_enable": {
+		"message": "ታሪኩን ከፍ አድርግ"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "ሲከፈት፣ ማንኛውም ትርጉም ወደ ታሪክ ገጽ ይመዝገባል"
+	},
 	"settings_option_mainPreferences": {
 		"message": "ዋስትና ቅንብሮች"
 	},
@@ -359,11 +368,11 @@
 	"settings_option_pageTranslation_enableContextMenu_desc": {
 		"message": "ማስተካከል ጠቋሚውን በድርጅቱ ላይ መቀየሪያ ተከላ ያክላል"
 	},
-	"settings_option_pageTranslation_ignoredTags": {
-		"message": "ተጨማሪ የማይረዳት ዓምድን"
+	"settings_option_pageTranslation_excludeSelectors": {
+		"message": "መርጫዎች ለትርጉም መውጣት እንዳይፈልጉ"
 	},
-	"settings_option_pageTranslation_ignoredTags_desc": {
-		"message": "ስልክ <slot id=htmlElements>HTML ዓምድ</slot> ስምዎች ያልረዳባቸውን ነጥብ ያስገቡ። የተመሳሳይ አማራጮች ከአሁን በኋላ አልተለየንም።"
+	"settings_option_pageTranslation_excludeSelectors_desc": {
+		"message": "የ CSS መርጫዎች ዝርዝር እነዚህ አይተርጉሙም። አንድ መርጫ በመስመር ላይ። አንዳንድ አካል ከእነዚህ መርጫዎች ከተመሳሰለ እና እንዲሁም ባለባቸው አባላት እና ከታግሞ ያሉ አካላት አይተርጉሙም።"
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
 		"message": "በሚታየው አማራጭ ተርጉም ይገባል"
@@ -559,6 +568,9 @@
 	},
 	"settings_pageTitle": {
 		"message": "ቅንብሮች"
+	},
+	"settings_section_history": {
+		"message": "ታሪክ"
 	},
 	"settings_section_popup": {
 		"message": "ፖፕን ሀቅ"

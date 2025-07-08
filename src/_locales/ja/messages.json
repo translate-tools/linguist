@@ -140,6 +140,9 @@
 	"history_message_entriesNotFound": {
 		"message": "フィルターに合致する翻訳が見つかりませんでした"
 	},
+	"history_notification_disabled": {
+		"message": "履歴記録が無効になっているため、新しい項目は表示されません。<slot id=preferences>設定</slot>で変更できます"
+	},
 	"history_pageTitle": {
 		"message": "履歴"
 	},
@@ -341,6 +344,12 @@
 	"settings_option_customTranslatorModule_manageButton": {
 		"message": "翻訳を管理する"
 	},
+	"settings_option_history_enable": {
+		"message": "履歴を有効にする"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "有効にすると、翻訳はすべて履歴ページに記録されます"
+	},
 	"settings_option_mainPreferences": {
 		"message": "メイン設定"
 	},
@@ -359,11 +368,11 @@
 	"settings_option_pageTranslation_enableContextMenu_desc": {
 		"message": "コンテキストメニューにページ翻訳を切り替えるボタンを追加する"
 	},
-	"settings_option_pageTranslation_ignoredTags": {
-		"message": "無視される要素"
+	"settings_option_pageTranslation_excludeSelectors": {
+		"message": "翻訳をスキップするセレクター"
 	},
-	"settings_option_pageTranslation_ignoredTags_desc": {
-		"message": "<slot id=htmlElements>翻訳しない</slot>HTML要素の名前を入力してください。ネストされた要素も翻訳されません。一行につき1つの要素。"
+	"settings_option_pageTranslation_excludeSelectors_desc": {
+		"message": "翻訳しないCSSセレクターのリスト。セレクターは1行に1つずつ記入してください。要素がこれらのいずれかのセレクターに一致する場合、その要素および属性、ネストされた要素は翻訳されません。"
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
 		"message": "表示されている要素のみを翻訳する"
@@ -559,6 +568,9 @@
 	},
 	"settings_pageTitle": {
 		"message": "設定"
+	},
+	"settings_section_history": {
+		"message": "履歴"
 	},
 	"settings_section_popup": {
 		"message": "ポップアップ"

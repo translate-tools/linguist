@@ -140,6 +140,9 @@
 	"history_message_entriesNotFound": {
 		"message": "फ़िल्टर को पूरा करने वाली कोई अनुवाद नहीं मिला"
 	},
+	"history_notification_disabled": {
+		"message": "इतिहास रिकॉर्डिंग अक्षम है, इसलिए नए प्रविष्टियां दिखाई नहीं देंगी। आप इसे <slot id=preferences>पसंदों</slot> में बदल सकते हैं"
+	},
 	"history_pageTitle": {
 		"message": "इतिहास"
 	},
@@ -341,6 +344,12 @@
 	"settings_option_customTranslatorModule_manageButton": {
 		"message": "अनुवादक प्रबंधित करें"
 	},
+	"settings_option_history_enable": {
+		"message": "इतिहास सक्षम करें"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "सक्रिय होने पर, कोई भी अनुवाद इतिहास पृष्ठ पर रिकॉर्ड किया जाएगा"
+	},
 	"settings_option_mainPreferences": {
 		"message": "मुख्य सेटिंग्स"
 	},
@@ -359,11 +368,11 @@
 	"settings_option_pageTranslation_enableContextMenu_desc": {
 		"message": "संदर्भ मेनू में पृष्ठ अनुवाद को टॉगल करने के लिए एक बटन जोड़ें"
 	},
-	"settings_option_pageTranslation_ignoredTags": {
-		"message": "अनदेखा करने वाले तत्व"
+	"settings_option_pageTranslation_excludeSelectors": {
+		"message": "अनुवाद से छोड़ने के लिए चयनकर्ता"
 	},
-	"settings_option_pageTranslation_ignoredTags_desc": {
-		"message": "उन <slot id=htmlElements>HTML तत्व</slot> के नाम दर्ज करें जो अनुवाद नहीं होने चाहिए। सम्मिश्र तत्व भी अनुवाद नहीं होंगे। प्रति पंक्ति एक तत्व।"
+	"settings_option_pageTranslation_excludeSelectors_desc": {
+		"message": "CSS चयनकर्ताओं की सूची जिन्हें अनुवादित नहीं किया जाएगा। एक चयनकर्ता प्रति पंक्ति। यदि कोई तत्व इन चयनकर्ताओं में से किसी से मेल खाता है, तो उसे, उसके गुणों और अंतर्निहित तत्वों को अनुवादित नहीं किया जाएगा।"
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
 		"message": "केवल दृश्यमान तत्वों का अनुवाद करें"
@@ -559,6 +568,9 @@
 	},
 	"settings_pageTitle": {
 		"message": "सेटिंग्स"
+	},
+	"settings_section_history": {
+		"message": "इतिहास"
 	},
 	"settings_section_popup": {
 		"message": "पॉपअप"

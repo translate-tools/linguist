@@ -140,6 +140,9 @@
 	"history_message_entriesNotFound": {
 		"message": "هیچ ترجمه‌ای یافت نشد که با فیلتر مطابقت داشته باشد"
 	},
+	"history_notification_disabled": {
+		"message": "ضبط تاریخچه غیرفعال است، بنابراین ورودی‌های جدید ظاهر نخواهند شد. می‌توانید این تنظیم را در <slot id=preferences>تنظیمات</slot> تغییر دهید"
+	},
 	"history_pageTitle": {
 		"message": "تاریخچه"
 	},
@@ -341,6 +344,12 @@
 	"settings_option_customTranslatorModule_manageButton": {
 		"message": "مدیریت ترجمه‌کننده‌ها"
 	},
+	"settings_option_history_enable": {
+		"message": "فعال کردن تاریخچه"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "با فعال شدن، هر ترجمه در صفحه تاریخچه ثبت می‌شود"
+	},
 	"settings_option_mainPreferences": {
 		"message": "تنظیمات اصلی"
 	},
@@ -359,11 +368,11 @@
 	"settings_option_pageTranslation_enableContextMenu_desc": {
 		"message": "افزودن دکمه برای فعالسازی ترجمه صفحه در منوی context"
 	},
-	"settings_option_pageTranslation_ignoredTags": {
-		"message": "عناصر نادیده گرفته شده"
+	"settings_option_pageTranslation_excludeSelectors": {
+		"message": "انتخابگرهایی که باید از ترجمه صرف‌نظر شوند"
 	},
-	"settings_option_pageTranslation_ignoredTags_desc": {
-		"message": "نام <slot id=htmlElements>عناصر HTML</slot> را که نباید ترجمه شوند وارد کنید. عناصر تو در تو نیز ترجمه نخواهند شد. هر عنصر در یک خط."
+	"settings_option_pageTranslation_excludeSelectors_desc": {
+		"message": "فهرستی از انتخابگرهای CSS که ترجمه نخواهند شد. هر خط شامل یک انتخابگر است. اگر یک عنصر با هر یک از این انتخابگرها مطابقت داشته باشد، آن عنصر به همراه ویژگی‌ها و عناصر تو در تو ترجمه نخواهند شد."
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
 		"message": "ترجمه فقط عناصر قابل مشاهده"
@@ -559,6 +568,9 @@
 	},
 	"settings_pageTitle": {
 		"message": "تنظیمات"
+	},
+	"settings_section_history": {
+		"message": "تاریخچه"
 	},
 	"settings_section_popup": {
 		"message": "Popup"

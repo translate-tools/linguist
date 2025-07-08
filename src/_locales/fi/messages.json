@@ -140,6 +140,9 @@
 	"history_message_entriesNotFound": {
 		"message": "Ei löytynyt hakuehtoja vastaavia käännöksiä"
 	},
+	"history_notification_disabled": {
+		"message": "Historiatallennus on poissa käytöstä, joten uudet merkinnät eivät näy. Voit muuttaa tämän asetuksista <slot id=preferences>asetukset</slot>"
+	},
 	"history_pageTitle": {
 		"message": "Historia"
 	},
@@ -341,6 +344,12 @@
 	"settings_option_customTranslatorModule_manageButton": {
 		"message": "Hallinnoi kääntäjiä"
 	},
+	"settings_option_history_enable": {
+		"message": "Ota historia käyttöön"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "Kun tämä on käytössä, kaikki käännökset tallennetaan historia-sivulle"
+	},
 	"settings_option_mainPreferences": {
 		"message": "Pääasetukset"
 	},
@@ -359,11 +368,11 @@
 	"settings_option_pageTranslation_enableContextMenu_desc": {
 		"message": "Lisää painike käännöksen käynnistämiseksi sivun kontekstivalikkoon"
 	},
-	"settings_option_pageTranslation_ignoredTags": {
-		"message": "Ohitettavat elementit"
+	"settings_option_pageTranslation_excludeSelectors": {
+		"message": "Valitsimet, joita ei käännetä"
 	},
-	"settings_option_pageTranslation_ignoredTags_desc": {
-		"message": "Syötä <slot id=htmlElements>HTML-elementin</slot> nimet, joita ei saa kääntää. Suljetut elementit eivät myöskään käänny. Yksi elementti riviä kohti."
+	"settings_option_pageTranslation_excludeSelectors_desc": {
+		"message": "Lista CSS-valitsimista, joita ei käännetä. Yksi valitsin per rivi. Jos elementti vastaa mitä tahansa näistä valitsimista, sitä sekä sen attribuutteja ja sisäkkäisiä elementtejä ei käännetä."
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
 		"message": "Käännä vain näkyvät elementit"
@@ -559,6 +568,9 @@
 	},
 	"settings_pageTitle": {
 		"message": "Asetukset"
+	},
+	"settings_section_history": {
+		"message": "Historia"
 	},
 	"settings_section_popup": {
 		"message": "Popup"

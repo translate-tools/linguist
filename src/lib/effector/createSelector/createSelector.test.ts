@@ -35,7 +35,7 @@ describe('demonstrate reshape problems', () => {
 			},
 		});
 
-		const watcher = jest.fn();
+		const watcher = vi.fn();
 		$subStore.watch(watcher);
 
 		updated({ baz: { x: 42 } });
@@ -59,7 +59,7 @@ describe('demonstrate reshape problems', () => {
 			updateFilter: (update, state) => !isEqual(update, state),
 		});
 
-		const watcher = jest.fn();
+		const watcher = vi.fn();
 		$subStore.watch(watcher);
 
 		updated({ baz: { x: 42 } });

@@ -140,6 +140,9 @@
 	"history_message_entriesNotFound": {
 		"message": "Tõlkeid ei leitud vastavalt filtrile"
 	},
+	"history_notification_disabled": {
+		"message": "Ajaloo salvestamine on keelatud, seega uusi kirjeid ei ilmu. Võid seda muuta <slot id=preferences>seadetes</slot>"
+	},
 	"history_pageTitle": {
 		"message": "Ajalugu"
 	},
@@ -341,6 +344,12 @@
 	"settings_option_customTranslatorModule_manageButton": {
 		"message": "Halda tõlkijaid"
 	},
+	"settings_option_history_enable": {
+		"message": "Luba ajalugu"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "Kui lubatud, salvestatakse iga tõlge ajaloo lehele"
+	},
 	"settings_option_mainPreferences": {
 		"message": "Põhisätted"
 	},
@@ -359,11 +368,11 @@
 	"settings_option_pageTranslation_enableContextMenu_desc": {
 		"message": "Lisage nupp lehe tõlkimise sisse- ja väljalülitamiseks kontekstimenüüsse"
 	},
-	"settings_option_pageTranslation_ignoredTags": {
-		"message": "Ignoreeritud elemendid"
+	"settings_option_pageTranslation_excludeSelectors": {
+		"message": "Selektorid, mida tõlkimisest välja jätta"
 	},
-	"settings_option_pageTranslation_ignoredTags_desc": {
-		"message": "Sisestage <slot id=htmlElements>HTML element</slot> nimed, mida ei tohi tõlkida. Pesastatud elemendid ei ole samuti tõlgitud. Üks element rea kohta."
+	"settings_option_pageTranslation_excludeSelectors_desc": {
+		"message": "CSS-selektorite nimekiri, mida ei tõlgita. Iga selektor eraldi real. Kui mõni element vastab mõnele neist selektoritest, ei tõlgita seda elementi, selle atribuute ega selle sees olevaid alamelemente."
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
 		"message": "Tõlgi ainult nähtavad elemendid"
@@ -559,6 +568,9 @@
 	},
 	"settings_pageTitle": {
 		"message": "Seaded"
+	},
+	"settings_section_history": {
+		"message": "Ajalugu"
 	},
 	"settings_section_popup": {
 		"message": "Hüpikaken"

@@ -140,6 +140,9 @@
 	"history_message_entriesNotFound": {
 		"message": "Geen vertalingen gevonden die aan de filter voldoen"
 	},
+	"history_notification_disabled": {
+		"message": "Geschiedenisregistratie is uitgeschakeld, dus nieuwe items verschijnen niet. U kunt dit wijzigen in de <slot id=preferences>instellingen</slot>"
+	},
 	"history_pageTitle": {
 		"message": "Geschiedenis"
 	},
@@ -341,6 +344,12 @@
 	"settings_option_customTranslatorModule_manageButton": {
 		"message": "Vertalers beheren"
 	},
+	"settings_option_history_enable": {
+		"message": "Geschiedenis inschakelen"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "Wanneer ingeschakeld, wordt elke vertaling vastgelegd op een geschiedenispagina"
+	},
 	"settings_option_mainPreferences": {
 		"message": "Belangrijkste instellingen"
 	},
@@ -359,11 +368,11 @@
 	"settings_option_pageTranslation_enableContextMenu_desc": {
 		"message": "Voeg knop toe om paginavertaling aan een contextmenu toe te voegen"
 	},
-	"settings_option_pageTranslation_ignoredTags": {
-		"message": "Genegeerde elementen"
+	"settings_option_pageTranslation_excludeSelectors": {
+		"message": "Selectoren om vertaling over te slaan"
 	},
-	"settings_option_pageTranslation_ignoredTags_desc": {
-		"message": "Voer namen van <slot id=htmlElements>HTML-elementen</slot> in die niet vertaald moeten worden. Geneste elementen worden ook niet vertaald. Eén element per regel."
+	"settings_option_pageTranslation_excludeSelectors_desc": {
+		"message": "Lijst met CSS-selectoren die niet vertaald worden. Eén selector per regel. Als een element aan een van deze selectoren voldoet, worden het element, zijn attributen en geneste elementen niet vertaald."
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
 		"message": "Alleen zichtbare elementen vertalen"
@@ -559,6 +568,9 @@
 	},
 	"settings_pageTitle": {
 		"message": "Instellingen"
+	},
+	"settings_section_history": {
+		"message": "Geschiedenis"
 	},
 	"settings_section_popup": {
 		"message": "Pop-up"

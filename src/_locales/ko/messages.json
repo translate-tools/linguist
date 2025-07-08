@@ -140,6 +140,9 @@
 	"history_message_entriesNotFound": {
 		"message": "필터 조건에 맞는 번역 없음"
 	},
+	"history_notification_disabled": {
+		"message": "기록 저장이 비활성화되어 새 항목이 표시되지 않습니다. <slot id=preferences>환경설정</slot>에서 변경할 수 있습니다."
+	},
 	"history_pageTitle": {
 		"message": "기록"
 	},
@@ -341,6 +344,12 @@
 	"settings_option_customTranslatorModule_manageButton": {
 		"message": "번역기 관리"
 	},
+	"settings_option_history_enable": {
+		"message": "기록 활성화"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "활성화 시 모든 번역 내용이 기록 페이지에 저장됩니다."
+	},
 	"settings_option_mainPreferences": {
 		"message": "주요 설정"
 	},
@@ -359,11 +368,11 @@
 	"settings_option_pageTranslation_enableContextMenu_desc": {
 		"message": "컨텍스트 메뉴에 페이지 번역을 전환하는 버튼 추가하기"
 	},
-	"settings_option_pageTranslation_ignoredTags": {
-		"message": "무시할 요소"
+	"settings_option_pageTranslation_excludeSelectors": {
+		"message": "번역을 제외할 셀렉터"
 	},
-	"settings_option_pageTranslation_ignoredTags_desc": {
-		"message": "번역하지 말아야 하는 <slot id=htmlElements>HTML 요소</slot> 이름을 입력하십시오. 중첩된 요소도 번역되지 않습니다. 한 줄에 하나의 요소를 입력하십시오."
+	"settings_option_pageTranslation_excludeSelectors_desc": {
+		"message": "번역하지 않을 CSS 셀렉터 목록입니다. 한 줄에 하나씩 입력하세요. 요소가 이 셀렉터 중 하나와 일치하면 해당 요소와 속성 및 하위 요소들은 번역되지 않습니다."
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
 		"message": "보이는 요소만 번역"
@@ -559,6 +568,9 @@
 	},
 	"settings_pageTitle": {
 		"message": "설정"
+	},
+	"settings_section_history": {
+		"message": "기록"
 	},
 	"settings_section_popup": {
 		"message": "팝업"

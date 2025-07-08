@@ -140,6 +140,9 @@
 	"history_message_entriesNotFound": {
 		"message": "Hakuna tafsiri iliyopatikana inayokidhi kichujio"
 	},
+	"history_notification_disabled": {
+		"message": "Rekodi ya historia imezimwa, hivyo rekodi mpya hazitaonekana. Unaweza kubadilisha hili katika <slot id=preferences>mapendeleo</slot>"
+	},
 	"history_pageTitle": {
 		"message": "Historia"
 	},
@@ -341,6 +344,12 @@
 	"settings_option_customTranslatorModule_manageButton": {
 		"message": "Simamia Watafsiri"
 	},
+	"settings_option_history_enable": {
+		"message": "Washa historia"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "Unapowasha, tafsiri yoyote itahifadhiwa kwenye ukurasa wa historia"
+	},
 	"settings_option_mainPreferences": {
 		"message": "Mipangilio Mkuu"
 	},
@@ -359,11 +368,11 @@
 	"settings_option_pageTranslation_enableContextMenu_desc": {
 		"message": "Ongeza kitufe cha kuwasha au kuzima tafsiri ya ukurasa kwenye menyu ya muktadha"
 	},
-	"settings_option_pageTranslation_ignoredTags": {
-		"message": "Vipengele vilivyopuuzwa"
+	"settings_option_pageTranslation_excludeSelectors": {
+		"message": "Chaguo za kuepuka tafsiri"
 	},
-	"settings_option_pageTranslation_ignoredTags_desc": {
-		"message": "Ingiza majina ya <slot id=htmlElements>vipengele vya HTML</slot> ambavyo havisitahili kutafsiriwa. Vipengele vilivyofichwa ndivyo vivyo hivyo havitafsiriwi. Kipengele kimoja kila mstari."
+	"settings_option_pageTranslation_excludeSelectors_desc": {
+		"message": "Orodha ya vichague vya CSS ambavyo havitatafsirika. Chagua moja kwa kila mstari. Ikiwa kipengele kitalingana na yoyote ya vichague hivi, kipengele hicho na sifa zake pamoja na vipengele vilivyo ndani hayatatafsirika."
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
 		"message": "Tafsiri vipengele vinavyoonekana tu"
@@ -559,6 +568,9 @@
 	},
 	"settings_pageTitle": {
 		"message": "Mipangilio"
+	},
+	"settings_section_history": {
+		"message": "Historia"
 	},
 	"settings_section_popup": {
 		"message": "Kupambazuka"

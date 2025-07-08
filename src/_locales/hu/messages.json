@@ -140,6 +140,9 @@
 	"history_message_entriesNotFound": {
 		"message": "Nem található fordítás a szűrésnek megfelelően"
 	},
+	"history_notification_disabled": {
+		"message": "A történet rögzítése ki van kapcsolva, így az új bejegyzések nem jelennek meg. Ezt megváltoztathatod a <slot id=preferences>beállításokban</slot>"
+	},
 	"history_pageTitle": {
 		"message": "Előzmények"
 	},
@@ -341,6 +344,12 @@
 	"settings_option_customTranslatorModule_manageButton": {
 		"message": "Fordítók kezelése"
 	},
+	"settings_option_history_enable": {
+		"message": "Történet engedélyezése"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "Bekapcsoláskor bármely fordítás rögzítve lesz a történet oldalán"
+	},
 	"settings_option_mainPreferences": {
 		"message": "Főbeállítások"
 	},
@@ -359,11 +368,11 @@
 	"settings_option_pageTranslation_enableContextMenu_desc": {
 		"message": "Gomb hozzáadása a lap fordításának kapcsolásához egy kontextusmenüben."
 	},
-	"settings_option_pageTranslation_ignoredTags": {
-		"message": "Figyelmen kívül hagyott elemek"
+	"settings_option_pageTranslation_excludeSelectors": {
+		"message": "Fordítást kihagyó szelektorok"
 	},
-	"settings_option_pageTranslation_ignoredTags_desc": {
-		"message": "<slot id=htmlElements>HTML elem</slot> nevek megadása, melyeket nem szabad lefordítani. A beágyazott elemeket se fogjuk lefordítani. Egy elem soronként."
+	"settings_option_pageTranslation_excludeSelectors_desc": {
+		"message": "CSS szelektorok listája, amelyeket nem fordítunk le. Egy szelektor soronként. Ha egy elem megfelel bármely szelektornak, az elem, annak attribútumai és beágyazott elemei sem lesznek lefordítva."
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
 		"message": "Csak a látható elemek fordítása"
@@ -559,6 +568,9 @@
 	},
 	"settings_pageTitle": {
 		"message": "Beállítások"
+	},
+	"settings_section_history": {
+		"message": "Történet"
 	},
 	"settings_section_popup": {
 		"message": "Felugró ablak"

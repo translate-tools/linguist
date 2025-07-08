@@ -140,6 +140,9 @@
 	"history_message_entriesNotFound": {
 		"message": "No se encontraron traducciones que satisfagan el filtro"
 	},
+	"history_notification_disabled": {
+		"message": "La grabación del historial está desactivada, por lo que no aparecerán nuevas entradas. Puedes cambiarlo en <slot id=preferences>preferencias</slot>"
+	},
 	"history_pageTitle": {
 		"message": "Historial"
 	},
@@ -341,6 +344,12 @@
 	"settings_option_customTranslatorModule_manageButton": {
 		"message": "Administrar traductores"
 	},
+	"settings_option_history_enable": {
+		"message": "Activar historial"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "Cuando está activado, cualquier traducción se registrará en una página de historial"
+	},
 	"settings_option_mainPreferences": {
 		"message": "Configuraciones principales"
 	},
@@ -359,11 +368,11 @@
 	"settings_option_pageTranslation_enableContextMenu_desc": {
 		"message": "Agregar botón para alternar la traducción de la página en un menú contextual"
 	},
-	"settings_option_pageTranslation_ignoredTags": {
-		"message": "Elementos ignorados"
+	"settings_option_pageTranslation_excludeSelectors": {
+		"message": "Selectores para omitir la traducción"
 	},
-	"settings_option_pageTranslation_ignoredTags_desc": {
-		"message": "Ingrese los nombres de los elementos <slot id=htmlElements>HTML</slot> que no deben ser traducidos. Los elementos anidados tampoco se traducirán. Un elemento por línea."
+	"settings_option_pageTranslation_excludeSelectors_desc": {
+		"message": "Lista de selectores CSS que no serán traducidos. Un selector por línea. Si un elemento coincide con alguno de estos selectores, tanto él como sus atributos y elementos anidados no serán traducidos."
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
 		"message": "Traducir solo elementos visibles"
@@ -559,6 +568,9 @@
 	},
 	"settings_pageTitle": {
 		"message": "Ajustes"
+	},
+	"settings_section_history": {
+		"message": "Historial"
 	},
 	"settings_section_popup": {
 		"message": "Popup"

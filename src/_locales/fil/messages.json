@@ -140,6 +140,9 @@
 	"history_message_entriesNotFound": {
 		"message": "Walang mga pagsasalin na nakita na nagbibigay-pugay sa filter"
 	},
+	"history_notification_disabled": {
+		"message": "Naka-disable ang pagtatala ng kasaysayan, kaya hindi lalabas ang mga bagong entry. Maaari mo itong baguhin sa <slot id=preferences>mga kagustuhan</slot>"
+	},
 	"history_pageTitle": {
 		"message": "Kasaysayan"
 	},
@@ -341,6 +344,12 @@
 	"settings_option_customTranslatorModule_manageButton": {
 		"message": "Pamahalaan ang mga tagasalin"
 	},
+	"settings_option_history_enable": {
+		"message": "I-enable ang kasaysayan"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "Kapag naka-enable, anumang pagsasalin ay itatala sa isang pahina ng kasaysayan"
+	},
 	"settings_option_mainPreferences": {
 		"message": "Mga pangunahing setting"
 	},
@@ -359,11 +368,11 @@
 	"settings_option_pageTranslation_enableContextMenu_desc": {
 		"message": "Idagdag ang button upang paganahin ang pagsasalin ng pahina sa isang context menu"
 	},
-	"settings_option_pageTranslation_ignoredTags": {
-		"message": "Ignored na elemento"
+	"settings_option_pageTranslation_excludeSelectors": {
+		"message": "Mga selector na hindi isasalin"
 	},
-	"settings_option_pageTranslation_ignoredTags_desc": {
-		"message": "Ilagay ang mga pangalan ng <slot id=htmlElements>elemento ng HTML</slot> na hindi dapat isalin. Hindi rin isasalin ang mga nakalinya sa mga elemento. Isang elemento sa bawat linya."
+	"settings_option_pageTranslation_excludeSelectors_desc": {
+		"message": "Listahan ng mga CSS selector na hindi isasalin. Isang selector kada linya. Kapag tumugma ang isang elemento sa alinman sa mga selector na ito, hindi isasalin ang elemento, mga katangian nito, at mga nakapaloob na elemento."
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
 		"message": "Isalin lamang ang mga nakikitang elemento"
@@ -559,6 +568,9 @@
 	},
 	"settings_pageTitle": {
 		"message": "Mga Setting"
+	},
+	"settings_section_history": {
+		"message": "Kasaysayan"
 	},
 	"settings_section_popup": {
 		"message": "Popup"

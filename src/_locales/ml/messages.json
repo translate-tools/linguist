@@ -140,6 +140,9 @@
 	"history_message_entriesNotFound": {
 		"message": "ഫിൽറ്റർ പൂർത്തിയാക്കാൻ പോലെ ഒന്നും കണ്ടെത്തിയില്ലാത്ത വാക്കുകൾ"
 	},
+	"history_notification_disabled": {
+		"message": "ചരിത്രം பதிவு غیرപ്രവർത്തനമാണ്, അതിനാൽ പുതിയ എൻട്രികൾ കാണിക്കില്ല. നിങ്ങൾ ഇത് <slot id=preferences>അഭിരുചികൾ</slot> ൽ മാറ്റാം"
+	},
 	"history_pageTitle": {
 		"message": "ചരിത്രം"
 	},
@@ -341,6 +344,12 @@
 	"settings_option_customTranslatorModule_manageButton": {
 		"message": "ട്രാൻസ്‌ലേറ്ററുകൾ പരിചയപ്പെടുത്തുക"
 	},
+	"settings_option_history_enable": {
+		"message": "ചരിത്രം ആക്ടിവേറ്റ് ചെയ്യുക"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "ആക്റ്റിവേറ്റ് ചെയ്താൽ, ഏതൊരു വിവർത്തനവും ചരിത്രം പേജിൽ രെക്കോർഡ് ചെയ്യും"
+	},
 	"settings_option_mainPreferences": {
 		"message": "പ്രധാന ക്രമീകരണങ്ങൾ"
 	},
@@ -359,11 +368,11 @@
 	"settings_option_pageTranslation_enableContextMenu_desc": {
 		"message": "കണ്ടെത്തല്‍ മെനുവിനേയും പേജ് പരിഭാഷയേയും ടോഗിൾ ചെയ്യുന്ന ഒരു ബട്ടൺ ചേർക്കുക"
 	},
-	"settings_option_pageTranslation_ignoredTags": {
-		"message": "അറിയില്ലാത്ത ഘടകങ്ങൾ"
+	"settings_option_pageTranslation_excludeSelectors": {
+		"message": "പരിഭാഷ ഒഴിവാക്കാനുള്ള സെലക്ടറുകൾ"
 	},
-	"settings_option_pageTranslation_ignoredTags_desc": {
-		"message": "പരിഭാഷയാക്കരാനാവാത്ത HTML ഘടകങ്ങളിലേക്ക് <slot id=htmlElements>എൽമെന്റ്</slot> പേരുകൾ നൽകുക. ഏറ്റവും അടുത്ത ഘടകങ്ങളും പരിഭാഷയാക്കപ്പെടാതെ ഉണ്ടാകും. ഒരു ഘടകം ഓൺലൈൻ പെടുത്തുക."
+	"settings_option_pageTranslation_excludeSelectors_desc": {
+		"message": "പരിഭാഷ ചെയ്യപ്പെടുകാത്ത CSS സെലക്ടറുകളുടെ പട്ടിക. ഒറ്റ വരിയിൽ ഒരു സെലക്ടർ. ഏതെങ്കിലും സെലക്ടറുമായി പൊരുത്തം ചെയ്യുന്ന ഒരു ഘടകം, അതിന്റെ ഗുണങ്ങൾക്കും ഉള്ളിലെ ഘടകങ്ങൾക്കും പരിഭാഷിക്കപ്പെടുകയില്ല."
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
 		"message": "കാണായതിനു മാത്രം പരിഭാഷയാക്കുക"
@@ -559,6 +568,9 @@
 	},
 	"settings_pageTitle": {
 		"message": "ക്രമീകരണങ്ങള്‍"
+	},
+	"settings_section_history": {
+		"message": "ചരിത്രം"
 	},
 	"settings_section_popup": {
 		"message": "പോപ്പപ്"

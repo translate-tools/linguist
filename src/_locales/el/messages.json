@@ -140,6 +140,9 @@
 	"history_message_entriesNotFound": {
 		"message": "Δε βρέθηκαν μεταφράσεις που να ικανοποιούν το φίλτρο"
 	},
+	"history_notification_disabled": {
+		"message": "Η καταγραφή ιστορικού είναι απενεργοποιημένη, οπότε νέες εγγραφές δεν θα εμφανίζονται. Μπορείτε να το αλλάξετε στις <slot id=preferences>προτιμήσεις</slot>"
+	},
 	"history_pageTitle": {
 		"message": "Ιστορικό"
 	},
@@ -341,6 +344,12 @@
 	"settings_option_customTranslatorModule_manageButton": {
 		"message": "Διαχείριση μεταφραστών"
 	},
+	"settings_option_history_enable": {
+		"message": "Ενεργοποίηση ιστορικού"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "Όταν ενεργοποιείται, κάθε μετάφραση θα καταγράφεται σε μια σελίδα ιστορικού"
+	},
 	"settings_option_mainPreferences": {
 		"message": "Κύριες ρυθμίσεις"
 	},
@@ -359,11 +368,11 @@
 	"settings_option_pageTranslation_enableContextMenu_desc": {
 		"message": "Προσθήκη κουμπιού για να εναλλάξετε τη μετάφραση σελίδας σε ένα μενού περιβάλλοντος"
 	},
-	"settings_option_pageTranslation_ignoredTags": {
-		"message": "Αγνοούμενα στοιχεία"
+	"settings_option_pageTranslation_excludeSelectors": {
+		"message": "Επιλογείς που παραλείπονται από τη μετάφραση"
 	},
-	"settings_option_pageTranslation_ignoredTags_desc": {
-		"message": "Εισαγάγετε ονόματα <slot id=htmlElements>στοιχείων HTML</slot> που δεν πρέπει να μεταφραστούν. Τα εμφωλευμένα στοιχεία δεν θα μεταφραστούν επίσης. Ένα στοιχείο ανά γραμμή."
+	"settings_option_pageTranslation_excludeSelectors_desc": {
+		"message": "Λίστα CSS επιλογέων που δεν θα μεταφραστούν. Ένας επιλογέας ανά γραμμή. Εάν ένα στοιχείο ταιριάζει με κάποιον από αυτούς τους επιλογείς, αυτό και τα χαρακτηριστικά του καθώς και τα εμφωλευμένα στοιχεία δεν θα μεταφραστούν."
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
 		"message": "Μετάφραση μόνο ορατών στοιχείων"
@@ -559,6 +568,9 @@
 	},
 	"settings_pageTitle": {
 		"message": "Ρυθμίσεις"
+	},
+	"settings_section_history": {
+		"message": "Ιστορικό"
 	},
 	"settings_section_popup": {
 		"message": "Αναδυόμενο παράθυρο"

@@ -140,6 +140,9 @@
 	"history_message_entriesNotFound": {
 		"message": "Не найдены переводы, соответствующие фильтрам"
 	},
+	"history_notification_disabled": {
+		"message": "Запись истории отключена, поэтому новые записи не будут появляться. Вы можете изменить это в <slot id=preferences>настройках</slot>"
+	},
 	"history_pageTitle": {
 		"message": "История"
 	},
@@ -341,6 +344,12 @@
 	"settings_option_customTranslatorModule_manageButton": {
 		"message": "Управление переводчиками"
 	},
+	"settings_option_history_enable": {
+		"message": "Включить историю"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "При включении любые переводы будут сохраняться на странице истории"
+	},
 	"settings_option_mainPreferences": {
 		"message": "Основные настройки"
 	},
@@ -359,11 +368,11 @@
 	"settings_option_pageTranslation_enableContextMenu_desc": {
 		"message": "Добавить кнопку для переключения перевода страницы в контекстное меню"
 	},
-	"settings_option_pageTranslation_ignoredTags": {
-		"message": "Черный список тегов"
+	"settings_option_pageTranslation_excludeSelectors": {
+		"message": "Селекторы для исключения из перевода"
 	},
-	"settings_option_pageTranslation_ignoredTags_desc": {
-		"message": "Переводятся все теги, кроме указанных в списке"
+	"settings_option_pageTranslation_excludeSelectors_desc": {
+		"message": "Список CSS-селекторов, которые не будут переводиться. Один селектор на строку. Если элемент соответствует любому из этих селекторов, он, его атрибуты и вложенные элементы не будут переведены."
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
 		"message": "Переводить только видимую часть текста"
@@ -559,6 +568,9 @@
 	},
 	"settings_pageTitle": {
 		"message": "Настройки"
+	},
+	"settings_section_history": {
+		"message": "История"
 	},
 	"settings_section_popup": {
 		"message": "Всплывающее окно"

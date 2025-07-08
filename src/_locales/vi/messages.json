@@ -140,6 +140,9 @@
 	"history_message_entriesNotFound": {
 		"message": "Không tìm thấy bản dịch phù hợp với bộ lọc"
 	},
+	"history_notification_disabled": {
+		"message": "Ghi lại lịch sử đang bị tắt, vì vậy các mục mới sẽ không xuất hiện. Bạn có thể thay đổi trong <slot id=preferences>cài đặt</slot>"
+	},
 	"history_pageTitle": {
 		"message": "Lịch sử"
 	},
@@ -341,6 +344,12 @@
 	"settings_option_customTranslatorModule_manageButton": {
 		"message": "Quản lý trình dịch"
 	},
+	"settings_option_history_enable": {
+		"message": "Bật lịch sử"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "Khi bật, mọi bản dịch sẽ được ghi lại vào trang lịch sử"
+	},
 	"settings_option_mainPreferences": {
 		"message": "Thông số cơ bản"
 	},
@@ -359,11 +368,11 @@
 	"settings_option_pageTranslation_enableContextMenu_desc": {
 		"message": "Thêm nút để chuyển đổi dịch trang web thành menu ngữ cảnh"
 	},
-	"settings_option_pageTranslation_ignoredTags": {
-		"message": "Thẻ bị bỏ qua"
+	"settings_option_pageTranslation_excludeSelectors": {
+		"message": "Các bộ chọn để bỏ qua dịch"
 	},
-	"settings_option_pageTranslation_ignoredTags_desc": {
-		"message": "Tất cả các thẻ sẽ được dịch ngoại trừ những thẻ được chỉ định ở đây và thẻ con của chúng. Chỉ định từng tên trên một dòng mới"
+	"settings_option_pageTranslation_excludeSelectors_desc": {
+		"message": "Danh sách các bộ chọn CSS sẽ không được dịch. Mỗi dòng một bộ chọn. Nếu một phần tử khớp với bất kỳ bộ chọn nào trong số này, phần tử đó cùng các thuộc tính và phần tử lồng bên trong sẽ không được dịch."
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
 		"message": "Chỉ dịch các yếu tố hiển thị"
@@ -559,6 +568,9 @@
 	},
 	"settings_pageTitle": {
 		"message": "Cài đặt"
+	},
+	"settings_section_history": {
+		"message": "Lịch sử"
 	},
 	"settings_section_popup": {
 		"message": "Popup"

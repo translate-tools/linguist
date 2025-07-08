@@ -140,6 +140,9 @@
 	"history_message_entriesNotFound": {
 		"message": "לא נמצאו תרגומים שעונים על המסנן"
 	},
+	"history_notification_disabled": {
+		"message": "הקלטת ההיסטוריה כבויה, ולכן רשומות חדשות לא יופיעו. באפשרותך לשנות זאת ב<slot id=preferences>העדפות</slot>"
+	},
 	"history_pageTitle": {
 		"message": "היסטורייה"
 	},
@@ -341,6 +344,12 @@
 	"settings_option_customTranslatorModule_manageButton": {
 		"message": "ניהול מתרגמים"
 	},
+	"settings_option_history_enable": {
+		"message": "הפעל היסטוריה"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "כאשר מופעלת, כל תרגום יוקלט בעמוד ההיסטוריה"
+	},
 	"settings_option_mainPreferences": {
 		"message": "הגדרות ראשיות"
 	},
@@ -359,11 +368,11 @@
 	"settings_option_pageTranslation_enableContextMenu_desc": {
 		"message": "הוסף לחצן כדי להחליף את תרגום העמוד לתפריט הקשר"
 	},
-	"settings_option_pageTranslation_ignoredTags": {
-		"message": "רכיבים שהוגדרו לא לתרגם"
+	"settings_option_pageTranslation_excludeSelectors": {
+		"message": "סלקטורים שיש לדלג עליהם בתרגום"
 	},
-	"settings_option_pageTranslation_ignoredTags_desc": {
-		"message": "הזן את שמות הרכיבים <slot id=htmlElements>HTML</slot> שלא ישתנו בתרגום. רכיבים מקוננים לא יתווספו. רכיב אחד לכל שורה."
+	"settings_option_pageTranslation_excludeSelectors_desc": {
+		"message": "רשימת סלקטורים של CSS שלא יתורגמו. סלקטור אחד לכל שורה. אם אלמנט תואם לכל אחד מהסלקטורים הללו, הוא ותכונותיו והאלמנטים המוטמעים בו לא יתורגמו."
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
 		"message": "תרגם רק את הרכיבים המוצגים"
@@ -559,6 +568,9 @@
 	},
 	"settings_pageTitle": {
 		"message": "הגדרות"
+	},
+	"settings_section_history": {
+		"message": "היסטוריה"
 	},
 	"settings_section_popup": {
 		"message": "חלון קופץ"

@@ -5,6 +5,8 @@ import { createMigrationTask, Migration } from '../../lib/migrations/createMigra
 import { decodeStruct } from '../../lib/types';
 import { AppConfig } from '../../types/runtime';
 
+import noTranslateSelectors from './no-translate-selectors.txt';
+
 const migrations: Migration[] = [
 	{
 		version: 1,
@@ -156,6 +158,35 @@ const migrations: Migration[] = [
 			};
 
 			delete updatedConfig['appIcon'];
+
+			// Write data
+			await browser.storage.local.set({ [storageName]: updatedConfig });
+		},
+	},
+	{
+		version: 9,
+		async migrate() {
+			const storageName = 'appConfig';
+
+			let { [storageName]: actualData } = await browser.storage.local.get(
+				storageName,
+			);
+			if (typeof actualData !== 'object') {
+				actualData = {};
+			}
+
+			// Delete deprecated option
+			const pageTranslatorConfig = actualData?.pageTranslator ?? {};
+			delete pageTranslatorConfig['ignoredTags'];
+
+			const updatedConfig = {
+				...actualData,
+				pageTranslator: {
+					...pageTranslatorConfig,
+					// Set new default
+					excludeSelectors: noTranslateSelectors.split('\n'),
+				},
+			};
 
 			// Write data
 			await browser.storage.local.set({ [storageName]: updatedConfig });

@@ -140,6 +140,9 @@
 	"history_message_entriesNotFound": {
 		"message": "Ni najdenih prevodov, ki bi zadostili filtru"
 	},
+	"history_notification_disabled": {
+		"message": "Zgodovina zapisov je onemogočena, zato se novi vnosi ne bodo prikazovali. To lahko spremenite v <slot id=preferences>nastavitvah</slot>"
+	},
 	"history_pageTitle": {
 		"message": "Zgodovina"
 	},
@@ -341,6 +344,12 @@
 	"settings_option_customTranslatorModule_manageButton": {
 		"message": "Upravljaj prevajalnike"
 	},
+	"settings_option_history_enable": {
+		"message": "Omogoči zgodovino"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "Ko je omogočeno, bo vsak prevod shranjen na strani z zgodovino"
+	},
 	"settings_option_mainPreferences": {
 		"message": "Glavne nastavitve"
 	},
@@ -359,11 +368,11 @@
 	"settings_option_pageTranslation_enableContextMenu_desc": {
 		"message": "Dodajte gumb za preklop prevajanja strani do kontekstnega menija."
 	},
-	"settings_option_pageTranslation_ignoredTags": {
-		"message": "Ignorirani elementi"
+	"settings_option_pageTranslation_excludeSelectors": {
+		"message": "Izbirniki za izključitev prevajanja"
 	},
-	"settings_option_pageTranslation_ignoredTags_desc": {
-		"message": "Vnesite imena <slot id=htmlElements>HTML elementov</slot>, ki se ne smejo prevajati. Vgrajeni elementi ne bodo prevedeni. En element na vrstico."
+	"settings_option_pageTranslation_excludeSelectors_desc": {
+		"message": "Seznam CSS izbirnikov, ki ne bodo prevedeni. En izbirnik na vrstico. Če element ustreza kateremukoli od teh izbirnikov, ne bodo prevedeni niti on, njegove lastnosti in gnezdeni elementi."
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
 		"message": "Prevajaj samo vidne elemente"
@@ -559,6 +568,9 @@
 	},
 	"settings_pageTitle": {
 		"message": "Nastavitve"
+	},
+	"settings_section_history": {
+		"message": "Zgodovina"
 	},
 	"settings_section_popup": {
 		"message": "Pojavno okno"
