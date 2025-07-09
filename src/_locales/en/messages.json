@@ -66,7 +66,7 @@
 		"message": "Are you sure you want to delete this translation?"
 	},
 	"dictionary_description": {
-		"message": "Save translations in the dictionary to find them quick later"
+		"message": "Save translations in the dictionary to find them quickly later"
 	},
 	"dictionary_emptyDictionary": {
 		"message": "Dictionary is empty, start filling it by translating some text"
@@ -185,11 +185,11 @@
 	"pageTranslator_option_autoTranslate": {
 		"message": "Auto-translate"
 	},
-	"pageTranslator_showTranslationPreferences": {
-		"message": "Translation preferences"
-	},
 	"pageTranslator_showOriginal": {
 		"message": "Show original"
+	},
+	"pageTranslator_showTranslationPreferences": {
+		"message": "Translation preferences"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_always": {
 		"message": "Always translate"
@@ -258,13 +258,13 @@
 		"message": "Invalid value"
 	},
 	"settings_message_importConfig_invalidFile": {
-		"message": "Provided config file is formed incorrect and cannot be processed"
+		"message": "The provided config file is incorrectly formatted and cannot be processed"
 	},
 	"settings_message_importConfig_success": {
 		"message": "Import complete"
 	},
 	"settings_message_resetConfig_confirm": {
-		"message": "Are you sure about reset the settings to default?"
+		"message": "Are you sure you want to reset the settings to default?"
 	},
 	"settings_message_resetConfig_success": {
 		"message": "Settings reset"
@@ -279,7 +279,7 @@
 		"message": "Clear cache"
 	},
 	"settings_option_cache_clear_desc": {
-		"message": "If you notice translation artifacts or accidentally translate private texts while cache is enabled, you can delete all data from the cache"
+		"message": "If you notice translation errors or accidentally translate private texts while the cache is enabled, you can delete all data from the cache"
 	},
 	"settings_option_cache_enable": {
 		"message": "Enable cache"
@@ -312,7 +312,7 @@
 		"message": "When enabled, translations will be recorded and appear on the <slot id=historyPage>history page</slot>"
 	},
 	"settings_option_pageTranslation": {
-		"message": "Pages translation"
+		"message": "The full page translation"
 	},
 	"settings_option_pageTranslation_detectLanguageByContent": {
 		"message": "Detect language by content"
@@ -369,7 +369,7 @@
 		"message": "Detect text language"
 	},
 	"settings_option_selectTranslation_detectTextLanguage_desc": {
-		"message": "When enabled, selected text will be analyzed to detect the language for translation Otherwise, the page language will be used"
+		"message": "When enabled, selected text will be analyzed to detect the language for translation. Otherwise, the page language will be used"
 	},
 	"settings_option_selectTranslation_disableWhileTranslatePage": {
 		"message": "Disable while translating the page"
@@ -393,7 +393,7 @@
 		"message": "Allow the translation module to detect the text language"
 	},
 	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
-		"message": "When the text language cannot be detected locally and this option is enabled, the text will be translated with the language \"auto\" if supported\nWhen the option is disabled, another fallback method will be used to set source language of text"
+		"message": "When the text language cannot be detected locally and this option is enabled, the text will be translated with the language \"auto\" if supported\nWhen the option is disabled, another fallback method will be used to set the source language of the text"
 	},
 	"settings_option_selectTranslation_mode": {
 		"message": "Action on text selection"
@@ -450,7 +450,7 @@
 		"message": "Delay before hiding the popup button"
 	},
 	"settings_option_selectTranslation_timeoutForHideButton_desc": {
-		"message": "Delay in milliseconds before hiding the button when the cursor is not hovering over it. Hovering the button resets the timer. To disable auto-hide, set the value to less than 1"
+		"message": "Delay in milliseconds before hiding the button when the cursor is not hovering over it. Hovering over the button resets the timer. To disable auto-hide, set the value to less than 1"
 	},
 	"settings_option_selectTranslation_zIndex": {
 		"message": "z-index"
@@ -465,7 +465,7 @@
 		"message": "Remember translated text"
 	},
 	"settings_option_textTranslator_rememberText_desc": {
-		"message": "Remember translated text for next time the window opens"
+		"message": "Remember translated text for the next time the window opens"
 	},
 	"settings_option_textTranslator_spellCheck": {
 		"message": "Enable spell check"
@@ -519,7 +519,7 @@
 		"message": "Selected TTS module"
 	},
 	"settings_option_ttsModule_desc": {
-		"message": "Voice engine used for voicing text"
+		"message": "Voice engine used for voicing the text"
 	},
 	"settings_option_userLanguage": {
 		"message": "Your language"
@@ -597,7 +597,7 @@
 		}
 	},
 	"ttsManagerWindow_title": {
-		"message": "Text-to-speech modules"
+		"message": "Text-to-Speech modules"
 	},
 	"ttsManagerWindow_translator_delete": {
 		"message": "Delete"
