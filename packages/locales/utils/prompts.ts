@@ -32,6 +32,8 @@ export const getJsonTranslationPrompt = (json: string, from: string, to: string)
 
 	Never change text intention. For example, if text is formulated as an question, you must never remove question mark.
 
+	Never translate any terminology.
+
 	# The context
 
 	You must consider next project description as context when you work on localization:

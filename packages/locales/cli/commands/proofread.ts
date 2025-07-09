@@ -123,6 +123,9 @@ command
 					In case a message have no problems, you must leave it as is.
 	
 					Be careful when creating an JSON object; it must be syntactically correct and do not change quotation marks.
+
+					Never change texts if it not necessary. Preserve original text always when it is possible.
+					This is critical error if you will change text that is fine and not require any changes.
 	
 					# The context
 
