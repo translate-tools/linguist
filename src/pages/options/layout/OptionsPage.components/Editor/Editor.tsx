@@ -66,7 +66,7 @@ export const Editor: FC<EditorProps> = ({
 
 	const onSavePress = useImmutableCallback(() => {
 		if (name.trim().length < 1) {
-			setLocalError(getMessage('editorWindow_message_invalidTranslatorName'));
+			setLocalError(getMessage('editorWindow_message_invalidTitle'));
 			return;
 		}
 
@@ -100,7 +100,7 @@ export const Editor: FC<EditorProps> = ({
 					<Textinput
 						value={name}
 						onInputText={setName}
-						placeholder={getMessage('editorWindow_data_translatorName')}
+						placeholder={getMessage('editorWindow_data_title')}
 					/>
 				</div>
 
