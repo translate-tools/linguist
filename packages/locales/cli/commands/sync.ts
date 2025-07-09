@@ -91,12 +91,12 @@ command
 						},
 						{
 							model: process.env.OPENAI_MODEL ?? 'openai/gpt-4.1-mini',
-							temperature: 1,
+							temperature: 0,
 						},
 					),
 					{
 						concurrency: 10,
-						termsLimit: 10,
+						termsLimit: 15,
 						chunkParsingRetriesLimit: options.forceUpdate ? 20 : 8,
 						backpressureTimeout: {
 							base: 100,

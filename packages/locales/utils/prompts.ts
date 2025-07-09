@@ -53,6 +53,9 @@ export const getJsonTranslationPrompt = (json: string, from: string, to: string)
 
 	Be careful when creating an JSON object; it must be syntactically correct and do not change quotation marks.
 
+	Make sure every translated message sounds natively in ${targetLang} language.
+	Make sure twice, that every translated message sounds natively in ${targetLang} language.
+
 	# Your task
 
 	Here is the JSON to translate:
