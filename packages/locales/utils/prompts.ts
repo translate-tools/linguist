@@ -32,6 +32,15 @@ export const getJsonTranslationPrompt = (json: string, from: string, to: string)
 
 	Never change text intention. For example, if text is formulated as an question, you must never remove question mark.
 
+	# The context
+
+	You must consider next project description as context when you work on localization:
+
+	> Linguist is a browser extension for translate web pages. It is a full-featured translation solution.
+	> With Linguist user may run full page translation, translate any custom text, translate selected text.
+	> Linguist supports a custom translators, so user can add its own implementation of translator module.
+	> Linguist is a privacy focused, includes embedded modules for offline translation in user device (locally).
+
 	# Translation recommendations
 
 	You may rephrase texts to make it look native for target language, but you must keep the common sense of every "message" according to its context of use.
