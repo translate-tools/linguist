@@ -115,6 +115,10 @@ command
 					You should fix any grammar issues and typos.
 
 					You must never add any dots at end of sentences, because you don't know how it will be used and you will break some use cases.
+
+					You must never change slogans and marketing descriptions for a products.
+
+					Never change text intention. For example, if text is formulated as an question, you must never remove question mark.
 	
 					In case a message have no problems, you must leave it as is.
 	

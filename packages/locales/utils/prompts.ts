@@ -28,6 +28,10 @@ export const getJsonTranslationPrompt = (json: string, from: string, to: string)
 	
 	Never translate anything except "message" property, it's just a context to help you understand how this "message" will be used.
 
+	You must never change slogans and marketing descriptions for a products.
+
+	Never change text intention. For example, if text is formulated as an question, you must never remove question mark.
+
 	# Translation recommendations
 
 	You may rephrase texts to make it look native for target language, but you must keep the common sense of every "message" according to its context of use.
