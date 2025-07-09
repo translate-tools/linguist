@@ -186,7 +186,7 @@ export const PageTranslator: FC<PageTranslatorProps> = ({
 
 			{/* Options */}
 			<Spoiler
-				title={getMessage('pageTranslator_showOptions')}
+				title={getMessage('pageTranslator_showTranslationPreferences')}
 				open={isShowOptions}
 				onToggle={setIsShowOptions}
 			>

@@ -66,7 +66,7 @@
 		"message": "Are you sure you want to delete this translation?"
 	},
 	"dictionary_description": {
-		"message": "Keep your translations in the dictionary to find them later"
+		"message": "Save translations in the dictionary to find them quick later"
 	},
 	"dictionary_emptyDictionary": {
 		"message": "Dictionary is empty, start filling it by translating some text"
@@ -114,13 +114,13 @@
 		"message": "Linguist - web page translator"
 	},
 	"history_control_selectEntry": {
-		"message": "Select entry"
+		"message": "Select translation for bulk action"
 	},
 	"history_controls_clearHistory": {
 		"message": "Clear history"
 	},
 	"history_controls_deleteSelected": {
-		"message": "Delete selected"
+		"message": "Delete selected translations"
 	},
 	"history_controls_selectAll": {
 		"message": "Select all translations"
@@ -185,8 +185,8 @@
 	"pageTranslator_option_autoTranslate": {
 		"message": "Auto-translate"
 	},
-	"pageTranslator_showOptions": {
-		"message": "Show options"
+	"pageTranslator_showTranslationPreferences": {
+		"message": "Translation preferences"
 	},
 	"pageTranslator_showOriginal": {
 		"message": "Show original"
@@ -219,7 +219,7 @@
 		"message": "Translation report"
 	},
 	"pageTranslator_translationReport_queue": {
-		"message": "Queue"
+		"message": "Pending"
 	},
 	"pageTranslator_translationReport_reject": {
 		"message": "Errors"
@@ -258,13 +258,13 @@
 		"message": "Invalid value"
 	},
 	"settings_message_importConfig_invalidFile": {
-		"message": "Invalid config file, cannot be processed"
+		"message": "Provided config file is invalid and cannot be processed"
 	},
 	"settings_message_importConfig_success": {
 		"message": "Import complete"
 	},
 	"settings_message_resetConfig_confirm": {
-		"message": "Do you want to reset the settings?"
+		"message": "Are you sure about reset the settings to default?"
 	},
 	"settings_message_resetConfig_success": {
 		"message": "Settings reset"
@@ -309,10 +309,10 @@
 		"message": "Enable history"
 	},
 	"settings_option_history_enable_desc": {
-		"message": "When enabled, every translation will be recorded and appear on the <slot id=historyPage>history page</slot>"
+		"message": "When enabled, translations will be recorded and appear on the <slot id=historyPage>history page</slot>"
 	},
 	"settings_option_pageTranslation": {
-		"message": "Page translation"
+		"message": "Pages translation"
 	},
 	"settings_option_pageTranslation_detectLanguageByContent": {
 		"message": "Detect language by content"
@@ -492,13 +492,13 @@
 		"message": "The translation scheduler reduces the number of requests to the translation service API by accumulating as many texts as possible to send in a single request. The scheduler will wait for the specified time in milliseconds to gather new texts before starting translation"
 	},
 	"settings_option_translateScheduler_retryLimit": {
-		"message": "Translation retry attempts"
+		"message": "Limit for translation retry attempts"
 	},
 	"settings_option_translateScheduler_retryLimit_desc": {
 		"message": "The scheduler will retry translating texts when translation errors occur. This option sets a limit on retry attempts. Set a negative number to allow unlimited retries"
 	},
 	"settings_option_translatorModule": {
-		"message": "Translator module"
+		"message": "Translation module"
 	},
 	"settings_option_translatorModule_desc": {
 		"message": "The quality of translations and the available languages depend on the translator"
@@ -537,7 +537,7 @@
 		"message": "Popup"
 	},
 	"textTranslator_suggestLanguage": {
-		"message": "It looks like the language is <slot id=languageSuggest>$language_name$</slot>",
+		"message": "It seems the text language is <slot id=languageSuggest>$language_name$</slot>",
 		"placeholders": {
 			"language_name": {
 				"content": "$1",
@@ -549,16 +549,16 @@
 		"message": "Input text"
 	},
 	"textTranslator_translatePlaceholder": {
-		"message": "Translated text"
+		"message": "Translated text will be here"
 	},
 	"translatorsManagerWindow_add": {
-		"message": "Create custom translator"
+		"message": "Add translator"
 	},
 	"translatorsManagerWindow_close": {
 		"message": "Close"
 	},
 	"translatorsManagerWindow_emptyTranslatorsListText": {
-		"message": "No custom translators have been added yet"
+		"message": "No custom translation modules have been added yet"
 	},
 	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
 		"message": "Are you sure you want to remove the translator \"$translator_name$\"?",
@@ -570,7 +570,7 @@
 		}
 	},
 	"translatorsManagerWindow_title": {
-		"message": "Custom translators"
+		"message": "Custom translation modules"
 	},
 	"translatorsManagerWindow_translator_delete": {
 		"message": "Delete"
