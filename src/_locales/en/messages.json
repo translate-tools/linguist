@@ -258,7 +258,7 @@
 		"message": "Invalid value"
 	},
 	"settings_message_importConfig_invalidFile": {
-		"message": "Provided config file is invalid and cannot be processed"
+		"message": "Provided config file is formed incorrect and cannot be processed"
 	},
 	"settings_message_importConfig_success": {
 		"message": "Import complete"
@@ -300,7 +300,7 @@
 		"message": "Custom translators"
 	},
 	"settings_option_customTranslatorModule_desc": {
-		"message": "You can add custom translators for your favorite translation services. Learn more and find modules in the <slot id=docs>custom translators documentation</slot>"
+		"message": "You can add custom translators for your favorite translation services. Learn more in the <slot id=docs>custom translators documentation</slot>"
 	},
 	"settings_option_customTranslatorModule_manageButton": {
 		"message": "Manage translators"
@@ -390,10 +390,10 @@
 		"message": "Language settings"
 	},
 	"settings_option_selectTranslation_isUseAutoForDetectLang": {
-		"message": "Allow the translator module to detect the text language"
+		"message": "Allow the translation module to detect the text language"
 	},
 	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
-		"message": "When the text language cannot be detected locally and this option is enabled, the text will be translated with the language \"auto\" if supported\nWhen the option is disabled, another fallback method will be used"
+		"message": "When the text language cannot be detected locally and this option is enabled, the text will be translated with the language \"auto\" if supported\nWhen the option is disabled, another fallback method will be used to set source language of text"
 	},
 	"settings_option_selectTranslation_mode": {
 		"message": "Action on text selection"
@@ -441,10 +441,10 @@
 		"message": "Add a block with the original text to the translation popup"
 	},
 	"settings_option_selectTranslation_strictSelection": {
-		"message": "Strict selection"
+		"message": "Strict text selection mode"
 	},
 	"settings_option_selectTranslation_strictSelection_desc": {
-		"message": "Ignore the selection if the left mouse button is released outside the block containing the selected text"
+		"message": "Ignore text selection if the left mouse button is released outside the block containing the selected text"
 	},
 	"settings_option_selectTranslation_timeoutForHideButton": {
 		"message": "Delay before hiding the popup button"
@@ -465,7 +465,7 @@
 		"message": "Remember translated text"
 	},
 	"settings_option_textTranslator_rememberText_desc": {
-		"message": "Remember translated text the next time the window opens"
+		"message": "Remember translated text for next time the window opens"
 	},
 	"settings_option_textTranslator_spellCheck": {
 		"message": "Enable spell check"
@@ -501,10 +501,10 @@
 		"message": "Translation module"
 	},
 	"settings_option_translatorModule_desc": {
-		"message": "The quality of translations and the available languages depend on the translator"
+		"message": "The quality of translations and the available languages depend on the translation module"
 	},
 	"settings_option_tts": {
-		"message": "Text to Speech (TTS)"
+		"message": "Text to Speech conversion (TTS)"
 	},
 	"settings_option_ttsCustomModules": {
 		"message": "Custom speech synthesis modules"
@@ -519,13 +519,13 @@
 		"message": "Selected TTS module"
 	},
 	"settings_option_ttsModule_desc": {
-		"message": "Voice engine used for text-to-speech features"
+		"message": "Voice engine used for voicing text"
 	},
 	"settings_option_userLanguage": {
 		"message": "Your language"
 	},
 	"settings_option_userLanguage_desc": {
-		"message": "Target language for text translation"
+		"message": "The language that texts will be translated into"
 	},
 	"settings_pageTitle": {
 		"message": "Settings"
@@ -552,7 +552,7 @@
 		"message": "Translated text will be here"
 	},
 	"translatorsManagerWindow_add": {
-		"message": "Add translator"
+		"message": "Add translation module"
 	},
 	"translatorsManagerWindow_close": {
 		"message": "Close"
@@ -561,7 +561,7 @@
 		"message": "No custom translation modules have been added yet"
 	},
 	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
-		"message": "Are you sure you want to remove the translator \"$translator_name$\"?",
+		"message": "Are you sure you want to remove the \"$translator_name$\" translation module?",
 		"placeholders": {
 			"translator_name": {
 				"content": "$1",
@@ -606,13 +606,13 @@
 		"message": "Edit"
 	},
 	"validation_number": {
-		"message": "The parameter must be a number"
+		"message": "Value must be a number"
 	},
 	"validation_numberBetweenRange": {
-		"message": "The parameter must be a number between $1 and $2"
+		"message": "Value must be a number between $1 and $2"
 	},
 	"validation_positiveNumber": {
-		"message": "This parameter must be a positive number"
+		"message": "Value must be a positive number"
 	},
 	"langCode_aa": {
 		"message": "Afar"
