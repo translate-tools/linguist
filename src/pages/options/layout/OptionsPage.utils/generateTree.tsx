@@ -206,9 +206,15 @@ export const generateTree = ({
 					},
 				},
 				{
-					description: getMessage(
-						'settings_option_pageTranslation_detectLanguageByContent_desc',
-					),
+					description: getLocalizedNode({
+						messageName:
+							'settings_option_pageTranslation_detectLanguageByContent_desc',
+						slots: {
+							docs: buildLink(
+								'https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/lang',
+							),
+						},
+					}),
 					path: 'pageTranslator.detectLanguageByContent',
 					optionContent: {
 						type: 'Checkbox',
@@ -232,10 +238,10 @@ export const generateTree = ({
 				{
 					path: 'pageTranslator.toggleTranslationHotkey',
 					title: getMessage(
-						'settings_option_pageTranslation_toggleTranslationHotkey',
+						'settings_option_pageTranslation_shortcut_toggleTranslation',
 					),
 					description: getMessage(
-						'settings_option_pageTranslation_toggleTranslationHotkey_desc',
+						'settings_option_pageTranslation_shortcut_toggleTranslation_desc',
 					),
 					optionContent: {
 						type: 'Hotkey',
@@ -288,6 +294,9 @@ export const generateTree = ({
 			groupContent: [
 				{
 					path: 'selectTranslator.enabled',
+					description: getMessage(
+						'settings_option_selectTranslation_enable_desc',
+					),
 					optionContent: {
 						type: 'Checkbox',
 						text: getMessage('settings_option_selectTranslation_enable'),
@@ -399,14 +408,14 @@ export const generateTree = ({
 						},
 						{
 							description: getMessage(
-								'settings_option_selectTranslation_detectedLangFirst_desc',
+								'settings_option_selectTranslation_detectTextLanguage_desc',
 							),
 
 							path: 'selectTranslator.detectedLangFirst',
 							optionContent: {
 								type: 'Checkbox',
 								text: getMessage(
-									'settings_option_selectTranslation_detectedLangFirst',
+									'settings_option_selectTranslation_detectTextLanguage',
 								),
 							},
 						},
@@ -548,7 +557,12 @@ export const generateTree = ({
 			title: getMessage('settings_section_history'),
 			groupContent: [
 				{
-					description: getMessage('settings_option_history_enable_desc'),
+					description: getLocalizedNode({
+						messageName: 'settings_option_history_enable_desc',
+						slots: {
+							historyPage: buildLink(`/pages/history/history.html`),
+						},
+					}),
 					path: 'history.enabled',
 					optionContent: {
 						type: 'Checkbox',

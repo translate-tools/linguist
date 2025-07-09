@@ -1,4 +1,13 @@
-import React, { FC, Ref, useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import React, {
+	FC,
+	PropsWithChildren,
+	Ref,
+	useCallback,
+	useEffect,
+	useMemo,
+	useRef,
+	useState,
+} from 'react';
 import ReactDOM from 'react-dom';
 import { useDelayCallback } from 'react-elegant-ui/esm/hooks/useDelayCallback';
 import { useImmutableCallback } from 'react-elegant-ui/esm/hooks/useImmutableCallback';
@@ -12,7 +21,11 @@ import { Textarea } from '../../../../components/primitives/Textarea/Textarea.bu
 import { useIsFirstRenderRef } from '../../../../lib/hooks/useIsFirstRenderRef';
 import { useTTS } from '../../../../lib/hooks/useTTS';
 import { useTTSLanguages } from '../../../../lib/hooks/useTTSLanguages';
-import { getLanguageNameByCode, getMessage } from '../../../../lib/language';
+import {
+	getLanguageNameByCode,
+	getLocalizedNode,
+	getMessage,
+} from '../../../../lib/language';
 import { addTranslationHistoryEntry } from '../../../../requests/backend/history/addTranslationHistoryEntry';
 import { TRANSLATION_ORIGIN } from '../../../../requests/backend/history/constants';
 import { suggestLanguage } from '../../../../requests/backend/suggestLanguage';
@@ -145,6 +158,7 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 
 	const applySuggestedLanguage: React.MouseEventHandler = useCallback(
 		(evt) => {
+			console.log('CLICK');
 			evt.preventDefault();
 
 			if (languageSuggestion !== null) {
@@ -153,6 +167,21 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 			}
 		},
 		[languageSuggestion, setFrom],
+	);
+
+	const ApplySuggestComponent = useMemo(
+		() =>
+			({ children }: PropsWithChildren<{}>) => {
+				return (
+					<a
+						href="src/components/layouts/TextTranslator#"
+						onClick={applySuggestedLanguage}
+					>
+						{children}
+					</a>
+				);
+			},
+		[applySuggestedLanguage],
 	);
 
 	//
@@ -381,16 +410,14 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 						<div className={cnTextTranslator('LanguageSuggestion')}>
 							<Icon glyph="autoFix" scalable={false} size="s" />
 							<span>
-								{getMessage(
-									'textTranslator_suggestLanguage',
-								).toLowerCase()}
+								{getLocalizedNode({
+									messageName: 'textTranslator_suggestLanguage',
+									substitutions: [langSuggestion.toLowerCase()],
+									slots: {
+										languageSuggest: ApplySuggestComponent,
+									},
+								})}
 							</span>
-							<a
-								href="src/components/layouts/TextTranslator#"
-								onClick={applySuggestedLanguage}
-							>
-								{langSuggestion.toLowerCase()}
-							</a>
 						</div>
 					)}
 
