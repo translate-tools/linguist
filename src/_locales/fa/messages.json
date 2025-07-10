@@ -30,7 +30,7 @@
 		"message": "ترجمه"
 	},
 	"component_hotkey_placeholder": {
-		"message": "برای ضبط کلید میانبر کلیک کنید"
+		"message": "برای ضبط میانبر کلیک کنید"
 	},
 	"component_hotkey_recordPlaceholder": {
 		"message": "کلیدها را فشار دهید"
@@ -39,7 +39,7 @@
 		"message": "بازنشانی"
 	},
 	"contextMenu_disablePageTranslation": {
-		"message": "غیرفعال کردن ترجمه صفحه"
+		"message": "توقف ترجمه صفحه"
 	},
 	"contextMenu_translatePage": {
 		"message": "ترجمه صفحه"
@@ -48,46 +48,46 @@
 		"message": "ترجمه متن انتخاب شده"
 	},
 	"dictionaryButton_add": {
-		"message": "افزودن به دیکشنری"
+		"message": "افزودن به فرهنگ لغت"
 	},
 	"dictionaryButton_delete": {
-		"message": "حذف از دیکشنری"
+		"message": "حذف از فرهنگ لغت"
 	},
 	"dictionary_button_export": {
-		"message": "صادرات"
+		"message": "صادر کردن"
 	},
 	"dictionary_button_removeAll": {
 		"message": "حذف همه"
 	},
 	"dictionary_deleteAll": {
-		"message": "آیا مطمئن هستید که می‌خواهید تمام ترجمه‌ها را در فرهنگ لغت حذف کنید؟"
+		"message": "آیا مطمئن هستید که می‌خواهید همه ترجمه‌ها را از فرهنگ لغت حذف کنید؟"
 	},
 	"dictionary_deleteConfirmation": {
 		"message": "آیا مطمئن هستید که می‌خواهید این ترجمه را حذف کنید؟"
 	},
 	"dictionary_description": {
-		"message": "ترجمه‌های خود را در فرهنگ لغت نگه دارید تا بعداً بتوانید آن‌ها را پیدا کنید"
+		"message": "ترجمه‌ها را در فرهنگ لغت ذخیره کنید تا بعداً به سرعت آنها را پیدا کنید"
 	},
 	"dictionary_emptyDictionary": {
-		"message": "فرهنگ لغت خالی است. با ترجمه متنی، شروع به پر کردن آن کنید"
+		"message": "فرهنگ لغت خالی است، با ترجمه برخی متون شروع به پر کردن آن کنید"
 	},
 	"dictionary_filter_from": {
-		"message": "از"
+		"message": "زبان متن منبع"
 	},
 	"dictionary_filter_to": {
-		"message": "به"
+		"message": "زبان هدف"
 	},
 	"dictionary_message_deleteAll_success": {
-		"message": "تمام ترجمه‌ها حذف شدند"
+		"message": "همه ترجمه‌ها حذف شده‌اند"
 	},
 	"dictionary_notFoundEntries": {
-		"message": "ترجمه‌ای با این فیلترها یافت نشد"
+		"message": "هیچ ترجمه‌ای مطابق با این فیلترها یافت نشد"
 	},
 	"dictionary_pageTitle": {
 		"message": "فرهنگ لغت"
 	},
 	"dictionary_resetFilters": {
-		"message": "پاک‌کردن فیلترها"
+		"message": "بازنشانی فیلترها"
 	},
 	"dictionary_searchPlaceholder": {
 		"message": "جستجو بر اساس متن"
@@ -98,50 +98,51 @@
 	"editorWindow_data_code": {
 		"message": "کد"
 	},
-	"editorWindow_data_translatorName": {
-		"message": "نام مترجم"
+	"editorWindow_data_title": {
+		"message": "نام ماژول"
 	},
-	"editorWindow_message_invalidTranslatorName": {
-		"message": "نام مترجم باید حداقل یک کاراکتر داشته باشد"
+	"editorWindow_message_invalidTitle": {
+		"message": "نام ماژول باید حداقل یک کاراکتر داشته باشد"
 	},
 	"editorWindow_save": {
 		"message": "ذخیره"
 	},
 	"ext_description": {
-		"message": "ترجمه صفحات و متن، فرهنگ لغت، تاریخچه، آفلاین و مترجمان سفارشی"
+		"message": "ترجمه صفحات وب، ترجمه متن، دیکشنری، تاریخچه، مترجم‌های سفارشی، همه چیزهایی که برای شکستن موانع زبانی نیاز دارید"
 	},
 	"ext_name": {
 		"message": "Linguist - مترجم صفحات وب"
 	},
 	"history_control_selectEntry": {
-		"message": "انتخاب ورودی"
+		"message": "انتخاب ترجمه برای عملیات گروهی",
+		"description": "Description in finite form \"to pick\" with explaining what this checkbox will do"
 	},
 	"history_controls_clearHistory": {
 		"message": "پاک کردن تاریخچه"
 	},
 	"history_controls_deleteSelected": {
-		"message": "حذف موارد انتخاب شده"
+		"message": "حذف ترجمه‌های انتخاب شده"
 	},
 	"history_controls_selectAll": {
-		"message": "انتخاب تمامی ترجمه‌ها"
+		"message": "انتخاب همه ترجمه‌ها"
 	},
 	"history_message_clearHistoryConfirmation": {
-		"message": "آیا مطمئن هستید که می‌خواهید تاریخچه را پاک کنید؟ همه موارد حذف خواهند شد"
+		"message": "آیا مطمئن هستید که می‌خواهید تاریخچه را پاک کنید؟ تمام ورودی‌ها حذف خواهند شد"
 	},
 	"history_message_deleteEntryConfirmation": {
-		"message": "آیا مطمئن هستید که می‌خواهید این مورد را حذف کنید؟"
+		"message": "آیا مطمئن هستید که می‌خواهید این ورودی را حذف کنید؟"
 	},
 	"history_message_deleteSelectedEntriesConfirmation": {
-		"message": "آیا مطمئن هستید که می‌خواهید موارد انتخاب شده ($1) را حذف کنید؟"
+		"message": "آیا مطمئن هستید که می‌خواهید ورودی‌های انتخاب شده ($1) را حذف کنید؟"
 	},
 	"history_message_entriesNotFound": {
-		"message": "هیچ ترجمه‌ای با فیلتر انتخاب شده پیدا نشد"
+		"message": "هیچ ترجمه‌ای مطابق با فیلتر یافت نشد"
 	},
 	"history_message_noEntries": {
 		"message": "تاریخچه خالی است"
 	},
 	"history_notification_disabled": {
-		"message": "ثبت تاریخچه غیرفعال شده است، بنابراین موارد جدید نمایش داده نخواهند شد. می‌توانید این تنظیم را در <slot id=preferences>تنظیمات</slot> تغییر دهید"
+		"message": "ضبط تاریخچه غیرفعال است، بنابراین ورودی‌های جدید ظاهر نخواهند شد. می‌توانید این را در <slot id=preferences>تنظیمات</slot> تغییر دهید"
 	},
 	"history_pageTitle": {
 		"message": "تاریخچه"
@@ -156,34 +157,13 @@
 		"message": "تغییر زبان"
 	},
 	"lang_detect": {
-		"message": "شناسایی خودکار"
+		"message": "تشخیص خودکار"
 	},
 	"lang_select": {
 		"message": "انتخاب زبان"
 	},
 	"lang_swap": {
 		"message": "تبادل زبان‌ها"
-	},
-	"message_askResetConfig": {
-		"message": "تنظیمات را بازنشانی کنید؟"
-	},
-	"message_cacheFlushed": {
-		"message": "کش پاک‌سازی شد"
-	},
-	"message_changesSaved": {
-		"message": "تغییرات ذخیره شد"
-	},
-	"message_error": {
-		"message": "خطا"
-	},
-	"message_errorOfTranslate": {
-		"message": "خطا در ترجمه"
-	},
-	"message_serviceRequiredKey": {
-		"message": "این سرویس نیاز به کلید دارد"
-	},
-	"message_translateOfText": {
-		"message": "ترجمه شده"
 	},
 	"message_unknownError": {
 		"message": "خطای ناشناخته"
@@ -192,25 +172,25 @@
 		"message": "همیشه این زبان را ترجمه کن"
 	},
 	"pageTranslator_commonPreferences_autoTranslate_disable": {
-		"message": "غیرفعال کن"
+		"message": "غیرفعال کردن"
 	},
 	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
-		"message": "برای همه سایت‌ها غیرفعال کن"
+		"message": "غیرفعال کردن برای همه سایت‌ها"
 	},
 	"pageTranslator_commonPreferences_autoTranslate_enable": {
-		"message": "فعالسازی"
+		"message": "فعال کردن"
 	},
 	"pageTranslator_commonPreferences_title": {
-		"message": "تنظیمات رایج برای این زبان"
+		"message": "ترجیحات عمومی برای این زبان"
 	},
 	"pageTranslator_option_autoTranslate": {
 		"message": "ترجمه خودکار"
 	},
-	"pageTranslator_showOptions": {
-		"message": "نمایش گزینه‌ها"
-	},
 	"pageTranslator_showOriginal": {
-		"message": "نمایش متن اصلی"
+		"message": "نمایش نسخه اصلی"
+	},
+	"pageTranslator_showTranslationPreferences": {
+		"message": "ترجیحات ترجمه"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_always": {
 		"message": "همیشه ترجمه کن"
@@ -219,10 +199,10 @@
 		"message": "همیشه برای این زبان ترجمه کن"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_default": {
-		"message": "استفاده از قوانین رایج"
+		"message": "استفاده از قوانین عمومی"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
-		"message": "استفاده از قوانین رایج برای این زبان"
+		"message": "استفاده از قوانین عمومی برای این زبان"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_never": {
 		"message": "هرگز ترجمه نکن"
@@ -231,7 +211,7 @@
 		"message": "هرگز برای این زبان ترجمه نکن"
 	},
 	"pageTranslator_sitePreferences_title": {
-		"message": "تنظیمات برای"
+		"message": "ترجیحات برای"
 	},
 	"pageTranslator_translatePage": {
 		"message": "ترجمه صفحه"
@@ -240,7 +220,7 @@
 		"message": "گزارش ترجمه"
 	},
 	"pageTranslator_translationReport_queue": {
-		"message": "صف"
+		"message": "در انتظار"
 	},
 	"pageTranslator_translationReport_reject": {
 		"message": "خطاها"
@@ -249,7 +229,7 @@
 		"message": "ترجمه شده"
 	},
 	"popup_tabIdNotFound": {
-		"message": "تب \"$1\" پیدا نشد"
+		"message": "زبانه \"$1\" یافت نشد"
 	},
 	"popup_tab_translatePage": {
 		"message": "ترجمه صفحه"
@@ -261,7 +241,7 @@
 		"message": "لغو"
 	},
 	"settings_button_export": {
-		"message": "صدور تنظیمات"
+		"message": "خروجی گرفتن تنظیمات"
 	},
 	"settings_button_import": {
 		"message": "وارد کردن تنظیمات"
@@ -276,16 +256,16 @@
 		"message": "کش پاک شد"
 	},
 	"settings_message_common_invalidValueType": {
-		"message": "مقدار نامعتبر است"
+		"message": "مقدار نامعتبر"
 	},
 	"settings_message_importConfig_invalidFile": {
-		"message": "فایل وارد شده قابل پردازش نیست"
+		"message": "فایل تنظیمات ارائه شده نادرست یا خراب است و نمی‌توان آن را پردازش کرد"
 	},
 	"settings_message_importConfig_success": {
-		"message": "واردسازی انجام شد"
+		"message": "وارد کردن کامل شد"
 	},
 	"settings_message_resetConfig_confirm": {
-		"message": "آیا مایل به بازنشانی تنظیمات هستید؟"
+		"message": "تأیید برای بازنشانی تنظیمات به مقادیر پیش‌فرض"
 	},
 	"settings_message_resetConfig_success": {
 		"message": "تنظیمات بازنشانی شد"
@@ -300,184 +280,188 @@
 		"message": "پاک کردن کش"
 	},
 	"settings_option_cache_clear_desc": {
-		"message": "در صورت وجود مشکلات در ترجمه یا نیاز به حذف اطلاعات محرمانه، حافظه پنهان را پاک کنید"
+		"message": "اگر متوجه خطاهای ترجمه شدید یا به طور تصادفی متون خصوصی را در حالی که کش فعال است ترجمه کردید، می‌توانید تمام داده‌ها را از کش حذف کنید",
+		"description": "Explanation for user about cases when it's useful to clear cache"
 	},
 	"settings_option_cache_enable": {
-		"message": "فعال‌سازی حافظه پنهان"
+		"message": "فعال کردن کش"
 	},
 	"settings_option_cache_enable_desc": {
-		"message": "وقتی حافظه پنهان فعال باشد، ترجمه‌های انجام شده یک بار به‌صورت فوری در دسترس خواهند بود، حتی بدون اتصال به اینترنت"
+		"message": "وقتی کش فعال است، متونی که قبلاً ترجمه شده‌اند، بدون درخواست اضافی به سرویس ترجمه، فوراً ترجمه می‌شوند"
 	},
 	"settings_option_cache_ignoreCase": {
-		"message": "حساس به حروف نباشد"
+		"message": "استفاده از کش بدون حساسیت به حروف بزرگ و کوچک"
 	},
 	"settings_option_cache_ignoreCase_desc": {
-		"message": "در صورت فعال بودن، ترجمه‌های حافظه پنهان برای تطابق‌های غیر دقیق نیز استفاده می‌شوند که ممکن است منجر به خطاهای ترجمه شود"
+		"message": "وقتی فعال است، ترجمه‌های کش شده برای متون با حروف بزرگ و کوچک متفاوت استفاده می‌شود که ممکن است در برخی موارد باعث تحریف ترجمه شود"
 	},
 	"settings_option_commonSettings": {
 		"message": "تنظیمات عمومی"
 	},
 	"settings_option_customTranslatorModule": {
-		"message": "مترجمان سفارشی"
+		"message": "ماژول‌های ترجمه سفارشی",
+		"description": "An user defined code that implements a translation module"
 	},
 	"settings_option_customTranslatorModule_desc": {
-		"message": "شما می‌توانید مترجمان سفارشی برای سرویس‌های ترجمه مورد علاقه خود اضافه کنید. برای اطلاعات بیشتر و پیدا کردن ماژول‌ها به <slot id=docs>مستندات مترجمان سفارشی</slot> مراجعه کنید"
+		"message": "شما می‌توانید ماژول‌های ترجمه سفارشی که از خدمات ترجمه مورد علاقه شما استفاده می‌کنند را اضافه کنید. بیشتر در <slot id=docs>مستندات مترجمان سفارشی</slot> بیاموزید"
 	},
 	"settings_option_customTranslatorModule_manageButton": {
-		"message": "مدیریت مترجمان"
+		"message": "مدیریت مترجمان",
+		"description": "A button to show list of translation modules"
 	},
 	"settings_option_history_enable": {
 		"message": "فعال‌سازی تاریخچه"
 	},
 	"settings_option_history_enable_desc": {
-		"message": "هنگامی که فعال باشد، هر ترجمه در صفحه تاریخچه ثبت خواهد شد"
-	},
-	"settings_option_mainPreferences": {
-		"message": "تنظیمات اصلی"
+		"message": "هنگامی که فعال باشد، ترجمه‌ها ضبط شده و در <slot id=historyPage>صفحه تاریخچه</slot> ظاهر می‌شوند"
 	},
 	"settings_option_pageTranslation": {
-		"message": "ترجمه صفحه"
+		"message": "ترجمه کامل صفحه"
 	},
 	"settings_option_pageTranslation_detectLanguageByContent": {
 		"message": "تشخیص زبان بر اساس محتوا"
 	},
 	"settings_option_pageTranslation_detectLanguageByContent_desc": {
-		"message": "متن صفحه وب را برای تشخیص زبان صفحه تجزیه و تحلیل کنید. وقتی غیرفعال باشد، زبان ارائه شده در متادیتای صفحه استفاده می‌شود"
+		"message": "متن موجود در صفحه وب را برای تشخیص زبان آن تحلیل کنید. هنگامی که غیرفعال باشد، زبان مشخص شده در <slot id=docs>متادیتای صفحه</slot> استفاده خواهد شد"
 	},
 	"settings_option_pageTranslation_enableContextMenu": {
-		"message": "فعال‌سازی دکمه منوی راست‌کلیک"
+		"message": "فعال‌سازی دکمه منوی زمینه"
 	},
 	"settings_option_pageTranslation_enableContextMenu_desc": {
-		"message": "افزودن دکمه‌ای برای فعال یا غیرفعال کردن ترجمه صفحه در منوی راست‌کلیک"
+		"message": "افزودن دکمه‌ای برای تغییر ترجمه صفحه در منوی زمینه صفحه"
 	},
 	"settings_option_pageTranslation_excludeSelectors": {
-		"message": "گزینشگرهایی برای نادیده گرفتن ترجمه"
+		"message": "انتخابگرهایی که از ترجمه مستثنی می‌شوند"
 	},
 	"settings_option_pageTranslation_excludeSelectors_desc": {
-		"message": "فهرستی از گزینشگرهای CSS که ترجمه نخواهند شد. هر گزینشگر در یک خط. اگر عنصری با هر کدام از این گزینشگرها تطابق داشته باشد، خود آن به همراه ویژگی‌ها و عناصر تو در تو ترجمه نخواهند شد"
+		"message": "فهرستی از انتخابگرهای CSS برای عناصری که باید از ترجمه مستثنی شوند. هر انتخابگر در یک خط. اگر عنصری با هر یک از این انتخابگرها مطابقت داشته باشد، متن، ویژگی‌ها و عناصر تو در توی آن ترجمه نخواهند شد"
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
 		"message": "فقط عناصر قابل مشاهده را ترجمه کن"
 	},
 	"settings_option_pageTranslation_lazyTranslate_desc": {
-		"message": "زمانی که این گزینه فعال باشد، فقط عناصر قابل مشاهده ترجمه می‌شوند. این گزینه مصرف پهنای باند شبکه را کاهش داده و محدودیت‌های خدمات ترجمه را محدود می‌کند"
+		"message": "وقتی این گزینه فعال است، فقط عناصر قابل مشاهده ترجمه می‌شوند. این گزینه ترافیک شبکه را کاهش می‌دهد"
 	},
 	"settings_option_pageTranslation_originalTextPopup": {
-		"message": "فعال‌سازی پنجره پاپ‌آپ با متن اصلی"
+		"message": "فعال کردن پنجره پاپ‌آپ با متن اصلی"
 	},
 	"settings_option_pageTranslation_originalTextPopup_desc": {
-		"message": "نمایش پنجره پاپ‌آپ حاوی متن اصلی هنگام قرار دادن ماوس روی بلوک‌های متن ترجمه‌شده"
+		"message": "نمایش پنجره پاپ‌آپ با متن اصلی هنگام قرار گرفتن روی بلوک‌های متن ترجمه شده"
 	},
-	"settings_option_pageTranslation_toggleTranslationHotkey": {
-		"message": "کلیدهای میانبر"
+	"settings_option_pageTranslation_shortcut_toggleTranslation": {
+		"message": "میانبر"
 	},
-	"settings_option_pageTranslation_toggleTranslationHotkey_desc": {
-		"message": "میانبرها برای روشن و خاموش کردن ترجمه صفحه\nبرای بازنشانی کلیدها ESC را فشار دهید"
+	"settings_option_pageTranslation_shortcut_toggleTranslation_desc": {
+		"message": "میانبر برای تغییر ترجمه صفحه\nبرای بازنشانی کلیدها ESC را فشار دهید"
 	},
 	"settings_option_pageTranslation_translatableAttributes": {
 		"message": "ویژگی‌های قابل ترجمه"
 	},
 	"settings_option_pageTranslation_translatableAttributes_desc": {
-		"message": "نام‌های <slot id=htmlAttributes>ویژگی‌های HTML</slot> برای ترجمه را وارد کنید، هر خط یک ویژگی"
+		"message": "نام‌های <slot id=htmlAttributes>ویژگی HTML</slot> را برای ترجمه وارد کنید، هر ویژگی در یک خط\nفقط ویژگی‌های موجود در این فهرست ترجمه خواهند شد"
 	},
 	"settings_option_popupTab_pageTranslator_showCounters": {
-		"message": "نمایش آمار ترجمه"
+		"message": "نمایش پیشرفت ترجمه"
 	},
 	"settings_option_popupTab_pageTranslator_showCounters_desc": {
-		"message": "نمایش آمارهای مرتبط با ترجمه صفحه"
+		"message": "نمایش یک پانل با پیشرفت ترجمه صفحه در پنجره افزونه"
 	},
 	"settings_option_selectTranslation": {
-		"message": "ترجمه متن انتخاب‌شده"
+		"message": "ترجمه برای متن انتخاب شده"
 	},
-	"settings_option_selectTranslation_detectedLangFirst": {
-		"message": "ترجیح دادن زبان شناسایی شده متن نسبت به زبان صفحه"
+	"settings_option_selectTranslation_detectTextLanguage": {
+		"message": "تشخیص زبان متن"
 	},
-	"settings_option_selectTranslation_detectedLangFirst_desc": {
-		"message": "در صورت فعال بودن، زبان شناسایی شده متن انتخاب شده نسبت به زبان صفحه در اولویت خواهد بود"
+	"settings_option_selectTranslation_detectTextLanguage_desc": {
+		"message": "هنگامی که فعال است، متن انتخاب شده برای تشخیص زبان برای ترجمه تحلیل می‌شود. در غیر این صورت، زبان صفحه استفاده خواهد شد"
 	},
 	"settings_option_selectTranslation_disableWhileTranslatePage": {
-		"message": "غیرفعال کردن هنگام ترجمه صفحه"
+		"message": "غیرفعال کردن در حین ترجمه صفحه"
 	},
 	"settings_option_selectTranslation_enable": {
-		"message": "فعال‌سازی"
+		"message": "فعال کردن ترجمه متن انتخاب شده"
+	},
+	"settings_option_selectTranslation_enable_desc": {
+		"message": "هنگامی که این ویژگی فعال است، می‌توانید هر متنی را در صفحه انتخاب کرده و آن را در یک پنجره پاپ‌آپ ترجمه کنید"
 	},
 	"settings_option_selectTranslation_focusOnTranslateButton": {
-		"message": "تمرکز خودکار روی دکمه ترجمه"
+		"message": "تمرکز خودکار بر روی دکمه ترجمه"
 	},
 	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
-		"message": "هنگام ظاهر شدن دکمه ترجمه، تمرکز روی آن قرار می‌گیرد"
+		"message": "هنگامی که دکمه ترجمه در صفحه ظاهر می‌شود، به طور خودکار متمرکز خواهد شد"
 	},
 	"settings_option_selectTranslation_header_languageChoice": {
 		"message": "تنظیمات زبان"
 	},
 	"settings_option_selectTranslation_isUseAutoForDetectLang": {
-		"message": "فعال کردن تشخیص خودکار زبان توسط مترجم"
+		"message": "اجازه دهید ماژول ترجمه زبان متن را تشخیص دهد"
 	},
 	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
-		"message": "هنگامی که زبان به صورت محلی قابل تشخیص نیست، از تشخیص خودکار زبان توسط مترجم استفاده شود"
+		"message": "وقتی زبان متن به صورت محلی قابل تشخیص نیست و این گزینه فعال است، متن با زبان \"auto\" ترجمه می‌شود اگر پشتیبانی شود.\nوقتی گزینه غیرفعال است، روش جایگزین دیگری برای تعیین زبان منبع متن استفاده خواهد شد"
 	},
 	"settings_option_selectTranslation_mode": {
-		"message": "روشن شدن ترجمه"
+		"message": "عملکرد در انتخاب متن"
 	},
 	"settings_option_selectTranslation_mode_item_contextMenu": {
-		"message": "دکمه منوی متنی"
+		"message": "ترجمه متن از طریق منوی زمینه"
 	},
 	"settings_option_selectTranslation_mode_item_popupButton": {
-		"message": "دکمه پاپ‌آپ"
+		"message": "نمایش دکمه ترجمه"
 	},
 	"settings_option_selectTranslation_mode_item_quickTranslate": {
-		"message": "ترجمه سریع با انتخاب"
+		"message": "ترجمه فوری متن"
 	},
 	"settings_option_selectTranslation_modifiers": {
-		"message": "کلیدهای تغییر"
+		"message": "تغییر دهنده‌ها"
 	},
 	"settings_option_selectTranslation_modifiers_desc": {
-		"message": "کلیدهایی که باید روی صفحه‌کلید فشرده شوند تا ترجمه نمایش داده شود انتخاب کنید"
+		"message": "کلیدهایی را انتخاب کنید که باید روی صفحه کلید فشار داده شوند تا ترجمه نمایش داده شود"
 	},
 	"settings_option_selectTranslation_modifiers_key_alt": {
-		"message": "آلت"
+		"message": "alt"
 	},
 	"settings_option_selectTranslation_modifiers_key_ctrl": {
-		"message": "کنترل"
+		"message": "ctrl"
 	},
 	"settings_option_selectTranslation_modifiers_key_meta": {
-		"message": "متا"
+		"message": "meta"
 	},
 	"settings_option_selectTranslation_modifiers_key_shift": {
-		"message": "شیفت"
+		"message": "shift"
 	},
 	"settings_option_selectTranslation_rememberDirection": {
-		"message": "آخرین زبان انتخاب شده متن را به خاطر بسپار"
+		"message": "زبان متنی که اخیراً انتخاب شده را به خاطر بسپار"
 	},
 	"settings_option_selectTranslation_showOnceForSelection": {
-		"message": "نمایش دکمه ترجمه تنها یک‌بار برای هر انتخاب متن"
+		"message": "دکمه ترجمه را یک بار برای هر انتخاب متن نشان دهید"
 	},
 	"settings_option_selectTranslation_showOnceForSelection_desc": {
-		"message": "دکمه تنها یک‌بار برای هر انتخاب متن نمایش داده می‌شود. برای نمایش مجدد، متن را دوباره انتخاب کنید."
+		"message": "دکمه فقط یک بار برای هر انتخاب متن ظاهر می‌شود. برای نمایش مجدد، متن را دوباره انتخاب کنید"
 	},
 	"settings_option_selectTranslation_showOriginalText": {
 		"message": "نمایش متن اصلی"
 	},
 	"settings_option_selectTranslation_showOriginalText_desc": {
-		"message": "افزودن بخشی شامل متن اصلی به پنجره ترجمه"
+		"message": "یک بلوک با متن اصلی به پنجره ترجمه اضافه کنید"
 	},
 	"settings_option_selectTranslation_strictSelection": {
-		"message": "انتخاب دقیق"
+		"message": "حالت سختگیرانه انتخاب محدوده متن",
+		"description": "This option is about selecting text via mouse"
 	},
 	"settings_option_selectTranslation_strictSelection_desc": {
-		"message": "انتخاب را نادیده بگیرید اگر دکمه چپ ماوس بیرون از بلوکی که متن انتخاب‌شده در آن است رها شود"
+		"message": "انتخاب محدوده متن را نادیده بگیرید اگر دکمه چپ ماوس خارج از بلوک حاوی متن انتخاب شده رها شود"
 	},
 	"settings_option_selectTranslation_timeoutForHideButton": {
-		"message": "تاخیر قبل از مخفی شدن دکمه"
+		"message": "تاخیر قبل از پنهان کردن دکمه پنجره"
 	},
 	"settings_option_selectTranslation_timeoutForHideButton_desc": {
-		"message": "تاخیر به میلی‌ثانیه قبل از مخفی شدن دکمه زمانی که نشانگر ماوس روی آن نیست. قرار دادن نشانگر روی دکمه، تایمر را ریست می‌کند. برای غیرفعال کردن مخفی شدن خودکار، مقدار را کمتر از ۱ تنظیم کنید."
+		"message": "تأخیر به میلی‌ثانیه قبل از پنهان کردن دکمه زمانی که نشانگر روی آن نیست. قرار گرفتن نشانگر روی دکمه تایمر را بازنشانی می‌کند. برای غیرفعال کردن پنهان‌سازی خودکار، مقدار را کمتر از ۱ تنظیم کنید"
 	},
 	"settings_option_selectTranslation_zIndex": {
 		"message": "z-index"
 	},
 	"settings_option_selectTranslation_zIndex_desc": {
-		"message": "اگر عناصر صفحات روی پنجره ترجمه قرار می‌گیرند، مقدار این گزینه را افزایش دهید"
+		"message": "اگر عناصر در برخی صفحات با پنجره پاپ‌آپ متن ترجمه شده همپوشانی دارند، این مقدار را افزایش دهید"
 	},
 	"settings_option_textTranslator": {
 		"message": "ترجمه متن"
@@ -486,97 +470,104 @@
 		"message": "به خاطر سپردن متن ترجمه شده"
 	},
 	"settings_option_textTranslator_rememberText_desc": {
-		"message": "به خاطر سپردن متن ترجمه شده برای بار بعدی که پنجره باز می‌شود"
+		"message": "به خاطر سپردن متن ترجمه شده برای دفعه بعدی که پنجره باز می‌شود"
 	},
 	"settings_option_textTranslator_spellCheck": {
-		"message": "فعال‌سازی بررسی املایی"
+		"message": "فعال‌سازی بررسی املاء"
 	},
 	"settings_option_textTranslator_suggestLanguage": {
-		"message": "پیشنهاد زبان متن شناسایی شده"
+		"message": "نمایش زبان متن شناسایی شده"
 	},
 	"settings_option_textTranslator_suggestLanguageAlways": {
-		"message": "همیشه زبان را شناسایی و پیشنهاد بده"
+		"message": "همیشه شناسایی و پیشنهاد زبان"
 	},
 	"settings_option_textTranslator_suggestLanguageAlways_desc": {
-		"message": "وقتی غیرفعال باشد، پیشنهاد زبان فقط هنگام شناسایی خودکار زبان مبدأ نمایش داده می‌شود"
+		"message": "وقتی غیرفعال است، پیشنهادات زبان فقط در صورتی ظاهر می‌شوند که زبان منبع به \"auto\" تنظیم شده باشد"
 	},
 	"settings_option_translatePreferences": {
-		"message": "تنظیمات دلخواه ترجمه"
+		"message": "ترجیحات ترجمه"
 	},
 	"settings_option_translateScheduler": {
-		"message": "زمان‌بندی ترجمه"
+		"message": "برنامه‌ریز ترجمه"
 	},
 	"settings_option_translateScheduler_delay": {
-		"message": "تاخیر انباشته شدن متن"
+		"message": "تاخیر در انباشت متن"
 	},
 	"settings_option_translateScheduler_delay_desc": {
-		"message": "زمان‌بندی ترجمه، تعداد درخواست‌ها به API سرویس ترجمه را کاهش می‌دهد. این زمان‌بندی تلاش می‌کند تا بیشترین تعداد متن ممکن را برای ارسال در یک درخواست جمع‌آوری کند. این زمان‌بندی برای مدت زمان مشخص شده بر حسب میلی‌ثانیه صبر می‌کند تا متن‌های جدیدی جمع‌آوری شود قبل از اینکه ترجمه آغاز شود."
+		"message": "برنامه‌ریز ترجمه با انباشت هرچه بیشتر متون برای ارسال در یک درخواست، تعداد درخواست‌ها به API سرویس ترجمه را کاهش می‌دهد. برنامه‌ریز برای مدت زمان مشخص شده به میلی‌ثانیه منتظر می‌ماند تا متون بیشتری را قبل از شروع ترجمه جمع‌آوری کند"
 	},
 	"settings_option_translateScheduler_retryLimit": {
-		"message": "تعداد تلاش‌های مجدد ترجمه"
+		"message": "محدودیت برای تلاش‌های مجدد ترجمه"
 	},
 	"settings_option_translateScheduler_retryLimit_desc": {
-		"message": "زمان‌بندی در صورت بروز خطا در ترجمه، ترجمه را دوباره امتحان خواهد کرد. این گزینه محدودیتی برای تعداد تلاش‌های مجدد تعیین می‌کند. برای اجازه دادن به تلاش‌های نامحدود، عدد منفی تنظیم کنید."
+		"message": "برنامه‌ریز در صورت بروز خطاهای ترجمه، تلاش مجدد برای ترجمه متون را انجام می‌دهد. این گزینه محدودیتی برای تلاش‌های مجدد تعیین می‌کند. برای اجازه به تلاش‌های نامحدود، یک عدد منفی تنظیم کنید"
 	},
 	"settings_option_translatorModule": {
 		"message": "ماژول ترجمه"
 	},
 	"settings_option_translatorModule_desc": {
-		"message": "کیفیت ترجمه‌ها و زبان‌های در دسترس به ماژول ترجمه بستگی دارد."
+		"message": "کیفیت ترجمه‌ها و زبان‌های موجود به ماژول ترجمه بستگی دارد"
 	},
 	"settings_option_tts": {
 		"message": "تبدیل متن به گفتار (TTS)"
 	},
 	"settings_option_ttsCustomModules": {
-		"message": "ماژول‌های سفارشی TTS"
+		"message": "ماژول‌های سفارشی سنتز گفتار"
 	},
 	"settings_option_ttsCustomModules_button": {
-		"message": "مدیریت ماژول‌های TTS"
+		"message": "مدیریت ماژول‌های سنتز گفتار"
 	},
 	"settings_option_ttsCustomModules_desc": {
-		"message": "شما می‌توانید ماژول‌های TTS را که از خدمات و صداهای مورد علاقه‌تان استفاده می‌کنند اضافه کنید. برای اطلاعات بیشتر به <slot id=docs>مستندات ماژول‌های TTS سفارشی</slot> مراجعه کنید"
+		"message": "می‌توانید ماژول‌های سنتز گفتار را که از خدمات و موتورهای صوتی مورد علاقه‌تان استفاده می‌کنند، اضافه کنید. بیشتر بخوانید در <slot id=docs>مستندات TTS سفارشی</slot>"
 	},
 	"settings_option_ttsModule": {
-		"message": "ماژول TTS"
+		"message": "ماژول TTS انتخاب شده"
 	},
 	"settings_option_ttsModule_desc": {
-		"message": "ماژول برای خواندن متن"
+		"message": "موتور صوتی مورد استفاده برای صدای متن"
 	},
 	"settings_option_userLanguage": {
 		"message": "زبان شما"
 	},
 	"settings_option_userLanguage_desc": {
-		"message": "زبان مقصد برای ترجمه متن"
+		"message": "زبانی که متون به آن ترجمه خواهند شد"
 	},
 	"settings_pageTitle": {
 		"message": "تنظیمات"
 	},
 	"settings_section_history": {
-		"message": "سابقه"
+		"message": "تاریخچه"
 	},
 	"settings_section_popup": {
-		"message": "پنجره پاپ‌آپ"
+		"message": "پاپ‌آپ"
 	},
 	"textTranslator_suggestLanguage": {
-		"message": "به نظر می‌رسد زبان مورد نظر"
+		"message": "به نظر می‌رسد زبان متن <slot id=languageSuggest>$language_name$</slot> است",
+		"placeholders": {
+			"language_name": {
+				"content": "$1",
+				"example": "ژاپنی"
+			}
+		}
 	},
 	"textTranslator_translateInputPlaceholder": {
-		"message": "متن ورودی"
+		"message": "متن را برای ترجمه وارد کنید",
+		"description": "Request to user input some text for translation"
 	},
 	"textTranslator_translatePlaceholder": {
-		"message": "متن ترجمه شده"
+		"message": "متن ترجمه شده اینجا خواهد بود"
 	},
 	"translatorsManagerWindow_add": {
-		"message": "افزودن"
+		"message": "افزودن ماژول ترجمه"
 	},
 	"translatorsManagerWindow_close": {
 		"message": "بستن"
 	},
 	"translatorsManagerWindow_emptyTranslatorsListText": {
-		"message": "هیچ مترجم سفارشی اضافه نشده است"
+		"message": "هنوز هیچ ماژول ترجمه سفارشی اضافه نشده است"
 	},
 	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
-		"message": "آیا مطمئنید که می‌خواهید مترجم \"$translator_name$\" را حذف کنید؟",
+		"message": "آیا مطمئن هستید که می‌خواهید ماژول ترجمه \"$translator_name$\" را حذف کنید؟",
 		"placeholders": {
 			"translator_name": {
 				"content": "$1",
@@ -585,7 +576,7 @@
 		}
 	},
 	"translatorsManagerWindow_title": {
-		"message": "مترجم‌های سفارشی"
+		"message": "ماژول‌های ترجمه سفارشی"
 	},
 	"translatorsManagerWindow_translator_delete": {
 		"message": "حذف"
@@ -594,16 +585,16 @@
 		"message": "ویرایش"
 	},
 	"ttsManagerWindow_add": {
-		"message": "افزودن"
+		"message": "افزودن ماژول TTS"
 	},
 	"ttsManagerWindow_close": {
 		"message": "بستن"
 	},
 	"ttsManagerWindow_emptyTranslatorsListText": {
-		"message": "هیچ ماژول تبدیل متن به گفتار اضافه نشده است"
+		"message": "هنوز هیچ ماژول TTS اضافه نشده است"
 	},
 	"ttsManagerWindow_message_ttsRemoveConfirmation": {
-		"message": "آیا مطمئنید که می‌خواهید ماژول تبدیل متن به گفتار \"$tts_name$\" را حذف کنید؟",
+		"message": "آیا مطمئن هستید که می‌خواهید ماژول TTS \"$tts_name$\" را حذف کنید؟",
 		"placeholders": {
 			"tts_name": {
 				"content": "$1",
@@ -621,13 +612,13 @@
 		"message": "ویرایش"
 	},
 	"validation_number": {
-		"message": "پارامتر باید عدد باشد"
+		"message": "مقدار باید یک عدد باشد"
 	},
 	"validation_numberBetweenRange": {
-		"message": "پارامتر باید عددی بین $1 و $2 باشد"
+		"message": "مقدار باید عددی بین $1 و $2 باشد"
 	},
 	"validation_positiveNumber": {
-		"message": "پارامتر باید عددی مثبت باشد"
+		"message": "مقدار باید یک عدد مثبت باشد"
 	},
 	"langCode_aa": {
 		"message": "آفاری"

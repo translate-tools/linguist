@@ -3,10 +3,10 @@
 		"message": "Ongeza tafsiri kwenye kamusi"
 	},
 	"common_action_removeFromDictionary": {
-		"message": "Ondoa tafsiri kutoka kamusi"
+		"message": "Ondoa tafsiri kutoka kwenye kamusi"
 	},
 	"common_bgUnavailable": {
-		"message": "Skripti ya nyuma haipatikani"
+		"message": "Skripti ya mandharinyuma haipatikani"
 	},
 	"common_cancel": {
 		"message": "Ghairi"
@@ -21,7 +21,7 @@
 		"message": "Hitilafu"
 	},
 	"common_offlineTranslator": {
-		"message": "$1 - Mtafsiri wa bila mtandao"
+		"message": "$1 - Mkalimani wa nje ya mtandao"
 	},
 	"common_retry": {
 		"message": "Jaribu tena"
@@ -30,55 +30,55 @@
 		"message": "Tafsiri"
 	},
 	"component_hotkey_placeholder": {
-		"message": "Bonyeza kurekodi njia mfupi"
+		"message": "Bonyeza kurekodi njia ya mkato"
 	},
 	"component_hotkey_recordPlaceholder": {
-		"message": "Bonyeza vitufe"
+		"message": "Bonyeza funguo"
 	},
 	"component_hotkey_resetButton": {
 		"message": "Weka upya"
 	},
 	"contextMenu_disablePageTranslation": {
-		"message": "Zima tafsiri ya ukurasa"
+		"message": "Acha kutafsiri ukurasa"
 	},
 	"contextMenu_translatePage": {
 		"message": "Tafsiri ukurasa"
 	},
 	"contextMenu_translateSelectedText": {
-		"message": "Tafsiri maandishi yaliyoteuliwa"
+		"message": "Tafsiri maandishi yaliyochaguliwa"
 	},
 	"dictionaryButton_add": {
 		"message": "Ongeza kwenye kamusi"
 	},
 	"dictionaryButton_delete": {
-		"message": "Futa kutoka kamusi"
+		"message": "Futa kutoka kwenye kamusi"
 	},
 	"dictionary_button_export": {
-		"message": "Safirisha"
+		"message": "Hamisha"
 	},
 	"dictionary_button_removeAll": {
-		"message": "Ondoa yote"
+		"message": "Ondoa zote"
 	},
 	"dictionary_deleteAll": {
-		"message": "Una uhakika unataka kufuta TAFSIRI ZOTE katika kamusi?"
+		"message": "Una uhakika unataka kufuta tafsiri ZOTE kutoka kwenye kamusi?"
 	},
 	"dictionary_deleteConfirmation": {
 		"message": "Una uhakika unataka kufuta tafsiri hii?"
 	},
 	"dictionary_description": {
-		"message": "Hifadhi tafsiri zako katika kamusi ili kuzitafuta baadaye"
+		"message": "Hifadhi tafsiri kwenye kamusi ili kuzipata haraka baadaye"
 	},
 	"dictionary_emptyDictionary": {
-		"message": "Kamusi iko tupu. Anza kuijaza kwa kutafsiri baadhi ya maandishi"
+		"message": "Kamusi haina kitu, anza kuijaza kwa kutafsiri maandishi"
 	},
 	"dictionary_filter_from": {
-		"message": "Kutoka"
+		"message": "Lugha ya maandishi ya chanzo"
 	},
 	"dictionary_filter_to": {
-		"message": "Hadi"
+		"message": "Lugha lengwa"
 	},
 	"dictionary_message_deleteAll_success": {
-		"message": "Tafsiri zote zimetolewa"
+		"message": "Tafsiri zote zimeondolewa"
 	},
 	"dictionary_notFoundEntries": {
 		"message": "Hakuna tafsiri zinazolingana na vichujio hivi zilizopatikana"
@@ -87,7 +87,7 @@
 		"message": "Kamusi"
 	},
 	"dictionary_resetFilters": {
-		"message": "rejesha vichujio"
+		"message": "Weka upya vichujio"
 	},
 	"dictionary_searchPlaceholder": {
 		"message": "Tafuta kwa maandishi"
@@ -98,50 +98,51 @@
 	"editorWindow_data_code": {
 		"message": "Msimbo"
 	},
-	"editorWindow_data_translatorName": {
-		"message": "Jina la mtafsiri"
+	"editorWindow_data_title": {
+		"message": "Jina la moduli"
 	},
-	"editorWindow_message_invalidTranslatorName": {
-		"message": "Jina la mtafsiri lazima liwe na angalau herufi moja"
+	"editorWindow_message_invalidTitle": {
+		"message": "Jina la moduli lazima liwe na angalau herufi moja"
 	},
 	"editorWindow_save": {
 		"message": "Hifadhi"
 	},
 	"ext_description": {
-		"message": "Tafsiri za kurasa na maandishi, kamusi, historia, kazi bila mtandao na watafsiri wa kawaida"
+		"message": "Tafsiri ya ukurasa wa wavuti, tafsiri ya maandishi, kamusi, historia, watafsiri maalum, yote unayohitaji kuvunja vizuizi vya lugha"
 	},
 	"ext_name": {
-		"message": "Linguist - mtafsiri wa kurasa za wavuti"
+		"message": "Linguist - mtafsiri wa ukurasa wa wavuti"
 	},
 	"history_control_selectEntry": {
-		"message": "Chagua kipengee"
+		"message": "Chagua tafsiri kwa hatua ya pamoja",
+		"description": "Description in finite form \"to pick\" with explaining what this checkbox will do"
 	},
 	"history_controls_clearHistory": {
 		"message": "Futa historia"
 	},
 	"history_controls_deleteSelected": {
-		"message": "Futa zilizochaguliwa"
+		"message": "Futa tafsiri zilizochaguliwa"
 	},
 	"history_controls_selectAll": {
 		"message": "Chagua tafsiri zote"
 	},
 	"history_message_clearHistoryConfirmation": {
-		"message": "Una uhakika unataka kufuta historia? Kila kipengee kitaondolewa"
+		"message": "Una uhakika unataka kufuta historia? Kumbukumbu zote zitaondolewa"
 	},
 	"history_message_deleteEntryConfirmation": {
-		"message": "Una uhakika unataka kufuta kipengee hiki?"
+		"message": "Una uhakika unataka kufuta kumbukumbu hii?"
 	},
 	"history_message_deleteSelectedEntriesConfirmation": {
-		"message": "Una uhakika unataka kufuta vipengee vilivyochaguliwa ($1)?"
+		"message": "Una uhakika unataka kufuta kumbukumbu zilizochaguliwa ($1)?"
 	},
 	"history_message_entriesNotFound": {
-		"message": "Hakuna tafsiri iliyo patikana kwa kuchuja"
+		"message": "Hakuna tafsiri zilizopatikana zinazolingana na kichujio"
 	},
 	"history_message_noEntries": {
-		"message": "Historia ni safi"
+		"message": "Historia haina kumbukumbu"
 	},
 	"history_notification_disabled": {
-		"message": "Kurekodi historia kumeshizimwa, hivyo vipengee vipya haviwezi kuonekana. Unaweza kubadilisha hili katika <slot id=preferences>mapendeleo</slot>"
+		"message": "Kurekodi historia kumezimwa, kwa hivyo kumbukumbu mpya hazitaonekana. Unaweza kubadilisha hili katika <slot id=preferences>Mapendeleo</slot>"
 	},
 	"history_pageTitle": {
 		"message": "Historia"
@@ -150,13 +151,13 @@
 		"message": "Tafuta kwa maandishi"
 	},
 	"inlineTranslator_showOriginalText": {
-		"message": "Onyesha maandishi ya awali"
+		"message": "Onyesha maandishi asilia"
 	},
 	"lang_change": {
 		"message": "Badilisha lugha"
 	},
 	"lang_detect": {
-		"message": "Gundua kiotomatiki"
+		"message": "Tambua kiotomatiki"
 	},
 	"lang_select": {
 		"message": "Chagua lugha"
@@ -164,32 +165,11 @@
 	"lang_swap": {
 		"message": "Badilisha lugha"
 	},
-	"message_askResetConfig": {
-		"message": "Rejesha mipangilio?"
-	},
-	"message_cacheFlushed": {
-		"message": "Kache imefutwa"
-	},
-	"message_changesSaved": {
-		"message": "Mabadiliko yamehifadhiwa"
-	},
-	"message_error": {
-		"message": "Hitilafu"
-	},
-	"message_errorOfTranslate": {
-		"message": "Hitilafu ya tafsiri"
-	},
-	"message_serviceRequiredKey": {
-		"message": "Huduma inahitaji ufunguo"
-	},
-	"message_translateOfText": {
-		"message": "Imetafsiriwa"
-	},
 	"message_unknownError": {
 		"message": "Hitilafu isiyojulikana"
 	},
 	"pageTranslator_alwaysTranslateLang": {
-		"message": "Daima tafsiri lugha hii"
+		"message": "Tafsiri lugha hii kila wakati"
 	},
 	"pageTranslator_commonPreferences_autoTranslate_disable": {
 		"message": "Zima"
@@ -204,31 +184,31 @@
 		"message": "Mapendeleo ya kawaida kwa lugha hii"
 	},
 	"pageTranslator_option_autoTranslate": {
-		"message": "Tafsiri moja kwa moja"
-	},
-	"pageTranslator_showOptions": {
-		"message": "Onyesha chaguzi"
+		"message": "Tafsiri kiotomatiki"
 	},
 	"pageTranslator_showOriginal": {
 		"message": "Onyesha asili"
 	},
+	"pageTranslator_showTranslationPreferences": {
+		"message": "Mapendeleo ya tafsiri"
+	},
 	"pageTranslator_sitePreferences_autoTranslate_always": {
-		"message": "Tafsiri kila mara"
+		"message": "Tafsiri kila wakati"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
-		"message": "Tafsiri kila mara kwa lugha hii"
+		"message": "Tafsiri kila wakati kwa lugha hii"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_default": {
-		"message": "Tumia kanuni za kawaida"
+		"message": "Tumia sheria za kawaida"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
-		"message": "Tumia kanuni za kawaida kwa lugha hii"
+		"message": "Tumia sheria za kawaida kwa lugha hii"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_never": {
-		"message": "Usitafsiri kabisa"
+		"message": "Usitafsiri kamwe"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
-		"message": "Usitafsiri kabisa kwa lugha hii"
+		"message": "Usitafsiri kamwe kwa lugha hii"
 	},
 	"pageTranslator_sitePreferences_title": {
 		"message": "Mapendeleo kwa"
@@ -240,22 +220,22 @@
 		"message": "Ripoti ya tafsiri"
 	},
 	"pageTranslator_translationReport_queue": {
-		"message": "Orodha ya kusubiri"
+		"message": "Inasubiri"
 	},
 	"pageTranslator_translationReport_reject": {
 		"message": "Makosa"
 	},
 	"pageTranslator_translationReport_resolve": {
-		"message": "Imefasiriwa"
+		"message": "Imetafsiriwa"
 	},
 	"popup_tabIdNotFound": {
-		"message": "Kichupo \"$1\" hakikupatikana"
+		"message": "Kichupo \"$1\" hakijapatikana"
 	},
 	"popup_tab_translatePage": {
-		"message": "Tafsiri ya ukurasa"
+		"message": "Tafsiri ukurasa"
 	},
 	"popup_tab_translateText": {
-		"message": "Tafsiri ya maandishi"
+		"message": "Tafsiri maandishi"
 	},
 	"settings_button_cancel": {
 		"message": "Ghairi"
@@ -264,10 +244,10 @@
 		"message": "Hamisha usanidi"
 	},
 	"settings_button_import": {
-		"message": "Leta usanidi"
+		"message": "Ingiza usanidi"
 	},
 	"settings_button_reset": {
-		"message": "Rejesha usanidi"
+		"message": "Weka upya usanidi"
 	},
 	"settings_button_saveChanges": {
 		"message": "Hifadhi mabadiliko"
@@ -279,16 +259,16 @@
 		"message": "Thamani batili"
 	},
 	"settings_message_importConfig_invalidFile": {
-		"message": "Faili ya kuingiza haiwezi kushughulikiwa"
+		"message": "Faili ya usanidi iliyotolewa si sahihi au imeharibika, na haiwezi kushughulikiwa"
 	},
 	"settings_message_importConfig_success": {
 		"message": "Uingizaji umekamilika"
 	},
 	"settings_message_resetConfig_confirm": {
-		"message": "Je, unataka kurekebisha mipangilio?"
+		"message": "Thibitisha kuweka upya mipangilio kwa thamani za awali"
 	},
 	"settings_message_resetConfig_success": {
-		"message": "Mipangilio imerejeshwa"
+		"message": "Mipangilio imewekwa upya"
 	},
 	"settings_message_saveChanges_success": {
 		"message": "Mabadiliko yamehifadhiwa"
@@ -300,139 +280,142 @@
 		"message": "Futa kache"
 	},
 	"settings_option_cache_clear_desc": {
-		"message": "Ondoa hifadhi ya muda ikiwa una makosa ya tafsiri au unahitaji kuondoa siri"
+		"message": "Ikiwa unakumbana na makosa ya tafsiri au kutafsiri maandishi ya kibinafsi kwa bahati mbaya wakati kache imewezeshwa, unaweza kufuta data zote kutoka kwenye kache",
+		"description": "Explanation for user about cases when it's useful to clear cache"
 	},
 	"settings_option_cache_enable": {
-		"message": "Washa hifadhi ya muda"
+		"message": "Wezesha kache"
 	},
 	"settings_option_cache_enable_desc": {
-		"message": "Wakati hifadhi ya muda inapo washwa, tafsiri ambazo tayari zimetafsiriwa zitapatikana mara moja, hata bila muunganisho wa intaneti"
+		"message": "Wakati kache imewezeshwa, maandishi ambayo yametafsiriwa hapo awali yatatafsiriwa mara moja bila maombi ya ziada kwa huduma ya tafsiri"
 	},
 	"settings_option_cache_ignoreCase": {
-		"message": "Isizingatie herufi kubwa na ndogo"
+		"message": "Tumia kache isiyo na hisia za herufi kubwa na ndogo"
 	},
 	"settings_option_cache_ignoreCase_desc": {
-		"message": "Ikiwashwa, tafsiri kutoka hifadhi ya muda zitatumika kwa mechi zisizo kamili, ambazo zinaweza kusababisha makosa ya tafsiri"
+		"message": "Wakati imewezeshwa, tafsiri zilizohifadhiwa zitatumika kwa maandishi yenye herufi kubwa na ndogo tofauti, ambayo inaweza kusababisha upotoshaji wa tafsiri katika hali fulani"
 	},
 	"settings_option_commonSettings": {
 		"message": "Mipangilio ya kawaida"
 	},
 	"settings_option_customTranslatorModule": {
-		"message": "Watafsiri maalum"
+		"message": "Moduli za tafsiri maalum",
+		"description": "An user defined code that implements a translation module"
 	},
 	"settings_option_customTranslatorModule_desc": {
-		"message": "Unaweza kuongeza watafsiri maalum kwa huduma zako za tafsiri unazozipenda. Soma zaidi na upate moduli katika <slot id=docs>nyaraka za watafsiri maalum</slot>"
+		"message": "Unaweza kuongeza moduli za tafsiri maalum zinazotumia huduma zako za tafsiri unazopenda. Jifunze zaidi katika <slot id=docs>hati za watafsiri maalum</slot>"
 	},
 	"settings_option_customTranslatorModule_manageButton": {
-		"message": "Simamia watafsiri"
+		"message": "Kusimamia watafsiri",
+		"description": "A button to show list of translation modules"
 	},
 	"settings_option_history_enable": {
-		"message": "Washa historia"
+		"message": "Wezesha historia"
 	},
 	"settings_option_history_enable_desc": {
-		"message": "Wakati umewezeshwa, tafsiri zote zitaandikwa kwenye ukurasa wa historia"
-	},
-	"settings_option_mainPreferences": {
-		"message": "Mipangilio kuu"
+		"message": "Wakati imewezeshwa, tafsiri zitarekodiwa na kuonekana kwenye <slot id=historyPage>ukurasa wa historia</slot>"
 	},
 	"settings_option_pageTranslation": {
-		"message": "Tafsiri ya ukurasa"
+		"message": "Tafsiri ya ukurasa mzima"
 	},
 	"settings_option_pageTranslation_detectLanguageByContent": {
-		"message": "Gundua lugha kwa maudhui"
+		"message": "Tambua lugha kwa maudhui"
 	},
 	"settings_option_pageTranslation_detectLanguageByContent_desc": {
-		"message": "Chambua maandishi kwenye ukurasa wa wavuti kugundua lugha ya ukurasa. Ikiwa haijawezeshwa, lugha iliyotolewa kwenye metadata ya ukurasa itatumika"
+		"message": "Chambua maandishi kwenye ukurasa wa wavuti ili kutambua lugha yake. Wakati imezimwa, lugha iliyotajwa katika <slot id=docs>metadata ya ukurasa</slot> itatumika"
 	},
 	"settings_option_pageTranslation_enableContextMenu": {
 		"message": "Wezesha kitufe cha menyu ya muktadha"
 	},
 	"settings_option_pageTranslation_enableContextMenu_desc": {
-		"message": "Ongeza kitufe cha kubadilisha tafsiri ya ukurasa kwenye menyu ya muktadha"
+		"message": "Ongeza kitufe cha kubadili tafsiri ya ukurasa katika menyu ya muktadha wa ukurasa"
 	},
 	"settings_option_pageTranslation_excludeSelectors": {
-		"message": "Waachaje wa kuchagua kutoruhusu tafsiri"
+		"message": "Vichagua vya kuondoa kwenye tafsiri"
 	},
 	"settings_option_pageTranslation_excludeSelectors_desc": {
-		"message": "Orodha ya waachaje wa CSS ambao hautatafsiriwa. Mchagua mmoja kwa mstari. Ikiwa kipengele kitafanana na mchagua yeyote kati ya hawa, yeye na sifa zake pamoja na vipengele vilivyo ndani haitatafsiriwa"
+		"message": "Orodha ya vichagua vya CSS kwa vipengele vya kuondolewa kwenye tafsiri. Kichagua kimoja kwa kila mstari. Ikiwa kipengele kinapatana na mojawapo ya vichagua hivi, maandishi yake, sifa, na vipengele vilivyopachikwa havitatafsiriwa"
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
 		"message": "Tafsiri vipengele vinavyoonekana tu"
 	},
 	"settings_option_pageTranslation_lazyTranslate_desc": {
-		"message": "Wakati chaguo hili linawashwa, vipengele vinavyoonekana pekee ndio vitatafsiriwa. Chaguo hili linahifadhi trafiki ya mtandao na mipaka ya huduma za utafsiri zinazotumika"
+		"message": "Wakati chaguo hili limewezeshwa, vipengele vinavyoonekana tu ndivyo vitakavyotafsiriwa. Chaguo hili hupunguza trafiki ya mtandao"
 	},
 	"settings_option_pageTranslation_originalTextPopup": {
-		"message": "Washa dirisha la maandishi ya asili"
+		"message": "Wezesha dirisha ibukizi na maandishi asilia"
 	},
 	"settings_option_pageTranslation_originalTextPopup_desc": {
-		"message": "Onyesha dirisha dogo lenye maandishi ya asili kwa kuweka panya juu ya sehemu zilizotafsiriwa"
+		"message": "Onyesha dirisha ibukizi na maandishi asilia wakati wa kuelea juu ya vitalu vya maandishi vilivyotafsiriwa"
 	},
-	"settings_option_pageTranslation_toggleTranslationHotkey": {
-		"message": "Vifungo vya haraka"
+	"settings_option_pageTranslation_shortcut_toggleTranslation": {
+		"message": "Njia ya mkato"
 	},
-	"settings_option_pageTranslation_toggleTranslationHotkey_desc": {
-		"message": "Njia za mkato za kubadili utafsiri wa ukurasa\nBonyeza ESC kuanzisha upya vifungo"
+	"settings_option_pageTranslation_shortcut_toggleTranslation_desc": {
+		"message": "Njia ya mkato ya kubadili tafsiri ya ukurasa\nBonyeza ESC ili kuweka upya funguo"
 	},
 	"settings_option_pageTranslation_translatableAttributes": {
-		"message": "Sifa za kutafsiri"
+		"message": "Sifa zinazoweza kutafsiriwa"
 	},
 	"settings_option_pageTranslation_translatableAttributes_desc": {
-		"message": "Weka majina ya <slot id=htmlAttributes>sifa za HTML</slot> kutafsiriwa, sifa moja kwa mstari"
+		"message": "Ingiza majina ya <slot id=htmlAttributes>sifa za HTML</slot> za kutafsiri, sifa moja kwa kila mstari\nNi sifa tu katika orodha hii zitakazotafsiriwa"
 	},
 	"settings_option_popupTab_pageTranslator_showCounters": {
-		"message": "Onyesha takwimu za utafsiri"
+		"message": "Onyesha maendeleo ya tafsiri"
 	},
 	"settings_option_popupTab_pageTranslator_showCounters_desc": {
-		"message": "Onyesha takwimu za utafsiri wa ukurasa"
+		"message": "Onyesha paneli na maendeleo ya tafsiri ya ukurasa kwenye kidirisha cha upanuzi"
 	},
 	"settings_option_selectTranslation": {
-		"message": "Utafsiri wa maandishi yaliyochaguliwa"
+		"message": "Tafsiri kwa maandishi yaliyochaguliwa"
 	},
-	"settings_option_selectTranslation_detectedLangFirst": {
-		"message": "Pendelea lugha iliyoonekana ya maandishi kuliko lugha ya ukurasa"
+	"settings_option_selectTranslation_detectTextLanguage": {
+		"message": "Tambua lugha ya maandishi"
 	},
-	"settings_option_selectTranslation_detectedLangFirst_desc": {
-		"message": "Ikiwa imewezeshwa, lugha iliyoonekana ya maandishi yaliyoteuliwa itapendelea kuliko lugha ya ukurasa"
+	"settings_option_selectTranslation_detectTextLanguage_desc": {
+		"message": "Ikiwa imewezeshwa, maandishi yaliyochaguliwa yatachambuliwa ili kutambua lugha kwa tafsiri. Vinginevyo, lugha ya ukurasa itatumika"
 	},
 	"settings_option_selectTranslation_disableWhileTranslatePage": {
 		"message": "Zima wakati wa kutafsiri ukurasa"
 	},
 	"settings_option_selectTranslation_enable": {
-		"message": "Wezesha"
+		"message": "Wezesha tafsiri ya maandishi yaliyochaguliwa"
+	},
+	"settings_option_selectTranslation_enable_desc": {
+		"message": "Wakati kipengele hiki kimewezeshwa, unaweza kuchagua maandishi yoyote kwenye ukurasa na kuyatafsiri kwenye kidirisha"
 	},
 	"settings_option_selectTranslation_focusOnTranslateButton": {
-		"message": "Weka kipaumbele kwa kitufe cha kutafsiri moja kwa moja"
+		"message": "Lenga kiotomatiki kwenye kitufe cha tafsiri"
 	},
 	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
-		"message": "Weka kipaumbele kwa kitufe cha kutafsiri kinapoonekana"
+		"message": "Wakati kitufe cha tafsiri kinapoonekana kwenye ukurasa, kitazingatiwa kiotomatiki"
 	},
 	"settings_option_selectTranslation_header_languageChoice": {
 		"message": "Mipangilio ya lugha"
 	},
 	"settings_option_selectTranslation_isUseAutoForDetectLang": {
-		"message": "Wezesha utambuzi wa lugha moja kwa moja na mtafsiri"
+		"message": "Ruhusu moduli ya tafsiri kutambua lugha ya maandishi"
 	},
 	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
-		"message": "Tumia utambuzi wa lugha moja kwa moja na mtafsiri wakati lugha haijagunduliwa kwa ndani"
+		"message": "Wakati lugha ya maandishi haiwezi kutambuliwa kwa ndani na chaguo hili limewezeshwa, maandishi yatatafsiriwa kwa lugha \"auto\" ikiwa inasaidiwa.\nWakati chaguo limezimwa, njia nyingine ya kurudi nyuma itatumika kuweka lugha ya chanzo ya maandishi"
 	},
 	"settings_option_selectTranslation_mode": {
-		"message": "Kichocheo cha tafsiri"
+		"message": "Kitendo kwenye uteuzi wa maandishi"
 	},
 	"settings_option_selectTranslation_mode_item_contextMenu": {
-		"message": "Kitufe cha menyu ya muktadha"
+		"message": "Tafsiri maandishi kupitia menyu ya muktadha"
 	},
 	"settings_option_selectTranslation_mode_item_popupButton": {
-		"message": "Kitufe cha pop-up"
+		"message": "Onyesha kitufe cha tafsiri"
 	},
 	"settings_option_selectTranslation_mode_item_quickTranslate": {
-		"message": "Tafsiri ya haraka kwa kuchagua"
+		"message": "Tafsiri maandishi mara moja"
 	},
 	"settings_option_selectTranslation_modifiers": {
-		"message": "Viashiria"
+		"message": "Vibadilishi"
 	},
 	"settings_option_selectTranslation_modifiers_desc": {
-		"message": "Chagua funguo zinazopaswa kubonyezwa kwenye kibodi kuonyesha tafsiri"
+		"message": "Chagua funguo ambazo lazima zibofye kwenye kibodi ili kuonyesha tafsiri"
 	},
 	"settings_option_selectTranslation_modifiers_key_alt": {
 		"message": "alt"
@@ -447,106 +430,107 @@
 		"message": "shift"
 	},
 	"settings_option_selectTranslation_rememberDirection": {
-		"message": "Kumbuka lugha iliyochaguliwa ya karibuni ya maandishi"
+		"message": "Kumbuka lugha ya maandishi iliyochaguliwa hivi karibuni"
 	},
 	"settings_option_selectTranslation_showOnceForSelection": {
 		"message": "Onyesha kitufe cha tafsiri mara moja kwa kila uteuzi wa maandishi"
 	},
 	"settings_option_selectTranslation_showOnceForSelection_desc": {
-		"message": "Kitufe kitaonyeshwa mara moja tu kwa kila uteuzi wa maandishi. Ili kuonesha tena, chagua tena maandishi"
+		"message": "Kitufe kitaonekana mara moja tu kwa kila uteuzi wa maandishi Ili kuonyesha tena, chagua maandishi tena"
 	},
 	"settings_option_selectTranslation_showOriginalText": {
-		"message": "Onyesha maandishi asili"
+		"message": "Onyesha maandishi asilia"
 	},
 	"settings_option_selectTranslation_showOriginalText_desc": {
-		"message": "Ongeza kizuizi chenye maandishi asili kwenye dirisha la kuchukua tafsiri"
+		"message": "Ongeza kizuizi na maandishi asilia kwenye kidirisha cha tafsiri"
 	},
 	"settings_option_selectTranslation_strictSelection": {
-		"message": "Uteuzi mkali"
+		"message": "Hali kali ya uteuzi wa maandishi",
+		"description": "Chaguo hili ni kuhusu kuchagua maandishi kupitia panya"
 	},
 	"settings_option_selectTranslation_strictSelection_desc": {
-		"message": "Puuzilia mbali uteuzi ikiwa kitufe cha kusogeza cha kushoto cha kipanya kimetolewa nje ya kizuizi chenye maandishi yaliyoteuliwa"
+		"message": "Puuza uteuzi wa maandishi ikiwa kitufe cha kushoto cha panya kimeachiliwa nje ya kizuizi kinachoshikilia maandishi yaliyochaguliwa"
 	},
 	"settings_option_selectTranslation_timeoutForHideButton": {
-		"message": "Chelewesha kabla ya kuficha kitufe"
+		"message": "Kuchelewa kabla ya kuficha kitufe cha kidirisha"
 	},
 	"settings_option_selectTranslation_timeoutForHideButton_desc": {
-		"message": "Chelewa kwa millisekunde kabla ya kuficha kitufe wakati mshale hauko juu ya kitufe. Kuwekwa juu ya kitufe kunarekebisha muda. Ili kuzima kufichwa kiotomatiki, weka thamani chini ya 1"
+		"message": "Kuchelewesha kwa milisekunde kabla ya kuficha kitufe wakati kipanya hakipo juu yake. Kuwa juu ya kitufe kunaanzisha upya kipima muda. Ili kuzima kuficha kiotomatiki, weka thamani chini ya 1"
 	},
 	"settings_option_selectTranslation_zIndex": {
 		"message": "z-index"
 	},
 	"settings_option_selectTranslation_zIndex_desc": {
-		"message": "Ongeza thamani hii ikiwa vipengele kwenye baadhi ya kurasa vinafunikana na dirisha lenye maandishi yaliyotafsiriwa"
+		"message": "Ongeza thamani hii ikiwa vipengele kwenye baadhi ya kurasa vinazidi popup yenye maandishi yaliyotafsiriwa"
 	},
 	"settings_option_textTranslator": {
 		"message": "Tafsiri ya maandishi"
 	},
 	"settings_option_textTranslator_rememberText": {
-		"message": "Kumbuka maandishi yaliyotafsiriwa"
+		"message": "Kukumbuka maandishi yaliyotafsiriwa"
 	},
 	"settings_option_textTranslator_rememberText_desc": {
-		"message": "Kumbuka maandishi yaliyotafsiriwa wakati dirisha linateuliwa tena"
+		"message": "Kukumbuka maandishi yaliyotafsiriwa kwa mara nyingine dirisha linapofunguliwa"
 	},
 	"settings_option_textTranslator_spellCheck": {
-		"message": "Washa ukaguzi wa tahajia"
+		"message": "Wezesha ukaguzi wa tahajia"
 	},
 	"settings_option_textTranslator_suggestLanguage": {
-		"message": "Pendekeza lugha iliyogunduliwa ya maandishi"
+		"message": "Kuonyesha lugha ya maandishi iliyogunduliwa"
 	},
 	"settings_option_textTranslator_suggestLanguageAlways": {
-		"message": "Daima gundua na pendekeza lugha"
+		"message": "Kila wakati gundua na pendekeza lugha"
 	},
 	"settings_option_textTranslator_suggestLanguageAlways_desc": {
-		"message": "Ikiwashwa kuzimwa, mapendekezo ya lugha yataonekana tu wakati lugha ya chanzo inatambuliwa kiotomatiki"
+		"message": "Ikizimwa, mapendekezo ya lugha yanaonekana tu ikiwa lugha ya chanzo imewekwa kuwa \"auto\""
 	},
 	"settings_option_translatePreferences": {
 		"message": "Mapendeleo ya tafsiri"
 	},
 	"settings_option_translateScheduler": {
-		"message": "Ratibu wa tafsiri"
+		"message": "Ratiba ya tafsiri"
 	},
 	"settings_option_translateScheduler_delay": {
-		"message": "Muda wa kuchelewa kukusanya maandishi"
+		"message": "Kuchelewesha mkusanyiko wa maandishi"
 	},
 	"settings_option_translateScheduler_delay_desc": {
-		"message": "Ratiba ya tafsiri inapunguza idadi ya maombi kwa API ya huduma ya tafsiri. Inajaribu kukusanya maandishi mengi iwezekanavyo kwa ajili ya kutumwa kwenye ombi moja. Ratiba itasubiri muda uliotajwa kwa millisekunde kukusanya maandishi mapya kabla ya kuanza tafsiri"
+		"message": "Ratiba ya tafsiri inapunguza idadi ya maombi kwa API ya huduma ya tafsiri kwa kukusanya maandishi mengi iwezekanavyo kutuma katika ombi moja. Ratiba itasubiri muda uliowekwa kwa milisekunde kukusanya maandishi zaidi kabla ya kuanza tafsiri"
 	},
 	"settings_option_translateScheduler_retryLimit": {
-		"message": "Juhudi za kujaribu tena tafsiri"
+		"message": "Kikomo cha majaribio ya kurudia tafsiri"
 	},
 	"settings_option_translateScheduler_retryLimit_desc": {
-		"message": "Ratiba itajaribu tena kutafsiri maandishi wakati hitilafu za tafsiri zikatokea. Chaguo hili linaweka kikomo cha idadi ya majaribio ya kurudia. Weka nambari hasi kuruhusu majaribio yasiyo na kikomo"
+		"message": "Ratiba itajaribu tena kutafsiri maandishi wakati makosa ya tafsiri yanapotokea. Chaguo hili linaweka kikomo cha majaribio ya kurudia. Weka nambari hasi kuruhusu majaribio yasiyo na kikomo"
 	},
 	"settings_option_translatorModule": {
-		"message": "Moduli ya mtafsiri"
+		"message": "Moduli ya tafsiri"
 	},
 	"settings_option_translatorModule_desc": {
-		"message": "Ubora wa tafsiri na lugha zinazopatikana hutegemea mtafsiri"
+		"message": "Ubora wa tafsiri na lugha zinazopatikana zinategemea moduli ya tafsiri"
 	},
 	"settings_option_tts": {
-		"message": "Nakala ya Sauti kwa Maandishi (TTS)"
+		"message": "Ubadilishaji wa Maandishi kuwa Sauti (TTS)"
 	},
 	"settings_option_ttsCustomModules": {
-		"message": "TTS Maalum"
+		"message": "Moduli maalum za usanisi wa sauti"
 	},
 	"settings_option_ttsCustomModules_button": {
-		"message": "Dhibiti moduli za TTS"
+		"message": "Kusimamia moduli za usanisi wa sauti"
 	},
 	"settings_option_ttsCustomModules_desc": {
-		"message": "Unaweza kuongeza moduli za TTS zinazotumia huduma na sauti unazopenda. Soma zaidi katika <slot id=docs>nyaraka za TTS za kawaida</slot>"
+		"message": "Unaweza kuongeza moduli za usanisi wa sauti zinazotumia huduma na injini za sauti unazopenda. Soma zaidi katika <slot id=docs>nyaraka za TTS maalum</slot>"
 	},
 	"settings_option_ttsModule": {
-		"message": "Moduli ya TTS"
+		"message": "Moduli ya TTS iliyochaguliwa"
 	},
 	"settings_option_ttsModule_desc": {
-		"message": "Moduli ya kuzungumza maandishi"
+		"message": "Injini ya sauti inayotumika kwa kusikika kwa maandishi"
 	},
 	"settings_option_userLanguage": {
 		"message": "Lugha yako"
 	},
 	"settings_option_userLanguage_desc": {
-		"message": "Lugha lengwa kwa tafsiri ya maandishi"
+		"message": "Lugha ambayo maandishi yatatafsiriwa"
 	},
 	"settings_pageTitle": {
 		"message": "Mipangilio"
@@ -555,28 +539,35 @@
 		"message": "Historia"
 	},
 	"settings_section_popup": {
-		"message": "Dirisha la maelezo"
+		"message": "Popup"
 	},
 	"textTranslator_suggestLanguage": {
-		"message": "Inaonekana lugha hiyo ni"
+		"message": "Inaonekana lugha ya maandishi ni <slot id=languageSuggest>$language_name$</slot>",
+		"placeholders": {
+			"language_name": {
+				"content": "$1",
+				"example": "Japanese"
+			}
+		}
 	},
 	"textTranslator_translateInputPlaceholder": {
-		"message": "Weka maandishi"
+		"message": "Ingiza maandishi kwa tafsiri",
+		"description": "Request to user input some text for translation"
 	},
 	"textTranslator_translatePlaceholder": {
-		"message": "Maandishi yaliyo tafsiriwa"
+		"message": "Maandishi yaliyotafsiriwa yatakuwa hapa"
 	},
 	"translatorsManagerWindow_add": {
-		"message": "Ongeza"
+		"message": "Ongeza moduli ya tafsiri"
 	},
 	"translatorsManagerWindow_close": {
 		"message": "Funga"
 	},
 	"translatorsManagerWindow_emptyTranslatorsListText": {
-		"message": "Hakuna wakalimani maalum waliowekwa bado"
+		"message": "Hakuna moduli za tafsiri za kawaida zilizoongezwa bado"
 	},
 	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
-		"message": "Una uhakika unataka kuondoa mkalimani \"$translator_name$\"?",
+		"message": "Je, una uhakika unataka kuondoa moduli ya tafsiri \"$translator_name$\"?",
 		"placeholders": {
 			"translator_name": {
 				"content": "$1",
@@ -585,7 +576,7 @@
 		}
 	},
 	"translatorsManagerWindow_title": {
-		"message": "Wakalimani maalum"
+		"message": "Moduli za tafsiri za kawaida"
 	},
 	"translatorsManagerWindow_translator_delete": {
 		"message": "Futa"
@@ -594,7 +585,7 @@
 		"message": "Hariri"
 	},
 	"ttsManagerWindow_add": {
-		"message": "Ongeza"
+		"message": "Ongeza moduli ya TTS"
 	},
 	"ttsManagerWindow_close": {
 		"message": "Funga"
@@ -603,7 +594,7 @@
 		"message": "Hakuna moduli za TTS zilizoongezwa bado"
 	},
 	"ttsManagerWindow_message_ttsRemoveConfirmation": {
-		"message": "Una uhakika unataka kuondoa moduli ya TTS \"$tts_name$\"?",
+		"message": "Je, una uhakika unataka kuondoa moduli ya TTS \"$tts_name$\"?",
 		"placeholders": {
 			"tts_name": {
 				"content": "$1",
@@ -612,7 +603,7 @@
 		}
 	},
 	"ttsManagerWindow_title": {
-		"message": "Moduli za maandishi kwa sauti"
+		"message": "Moduli za Maandishi-kwa-Sauti"
 	},
 	"ttsManagerWindow_translator_delete": {
 		"message": "Futa"
@@ -621,13 +612,13 @@
 		"message": "Hariri"
 	},
 	"validation_number": {
-		"message": "Kigezo lazima kiwe nambari"
+		"message": "Thamani lazima iwe nambari"
 	},
 	"validation_numberBetweenRange": {
-		"message": "Kigezo lazima kiwe nambari kati ya $1 na $2"
+		"message": "Thamani lazima iwe nambari kati ya $1 na $2"
 	},
 	"validation_positiveNumber": {
-		"message": "Kigezo lazima kiwe nambari chanya"
+		"message": "Thamani lazima iwe nambari chanya"
 	},
 	"langCode_aa": {
 		"message": "Kiafar"

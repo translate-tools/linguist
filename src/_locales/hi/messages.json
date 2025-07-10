@@ -6,7 +6,7 @@
 		"message": "अनुवाद को शब्दकोश से हटाएं"
 	},
 	"common_bgUnavailable": {
-		"message": "पृष्ठभूमि स्क्रिप्ट अनुपलब्ध है"
+		"message": "पृष्ठभूमि स्क्रिप्ट उपलब्ध नहीं है"
 	},
 	"common_cancel": {
 		"message": "रद्द करें"
@@ -33,13 +33,13 @@
 		"message": "शॉर्टकट रिकॉर्ड करने के लिए क्लिक करें"
 	},
 	"component_hotkey_recordPlaceholder": {
-		"message": "कुंजी दबाएँ"
+		"message": "कुंजियाँ दबाएँ"
 	},
 	"component_hotkey_resetButton": {
-		"message": "रीसेट करें"
+		"message": "रीसेट"
 	},
 	"contextMenu_disablePageTranslation": {
-		"message": "पृष्ठ अनुवाद अक्षम करें"
+		"message": "पृष्ठ अनुवाद बंद करें"
 	},
 	"contextMenu_translatePage": {
 		"message": "पृष्ठ का अनुवाद करें"
@@ -48,49 +48,49 @@
 		"message": "चयनित पाठ का अनुवाद करें"
 	},
 	"dictionaryButton_add": {
-		"message": "शब्दकोष में जोड़ें"
+		"message": "शब्दकोश में जोड़ें"
 	},
 	"dictionaryButton_delete": {
-		"message": "शब्दकोष से हटाएं"
+		"message": "शब्दकोश से हटाएँ"
 	},
 	"dictionary_button_export": {
 		"message": "निर्यात करें"
 	},
 	"dictionary_button_removeAll": {
-		"message": "सभी हटाएं"
+		"message": "सभी हटाएँ"
 	},
 	"dictionary_deleteAll": {
-		"message": "क्या आप वाकई शब्दकोश में सभी अनुवाद हटाना चाहते हैं?"
+		"message": "क्या आप वाकई शब्दकोश से सभी अनुवाद हटाना चाहते हैं?"
 	},
 	"dictionary_deleteConfirmation": {
 		"message": "क्या आप वाकई इस अनुवाद को हटाना चाहते हैं?"
 	},
 	"dictionary_description": {
-		"message": "अपने अनुवादों को शब्दकोश में रखें ताकि बाद में उन्हें खोज सकें"
+		"message": "अनुवादों को शब्दकोश में सहेजें ताकि उन्हें बाद में जल्दी से ढूंढ सकें"
 	},
 	"dictionary_emptyDictionary": {
-		"message": "शब्दकोश खाली है। कुछ टेक्स्ट का अनुवाद करके इसे भरना शुरू करें"
+		"message": "शब्दकोश खाली है, कुछ पाठ का अनुवाद करके इसे भरना शुरू करें"
 	},
 	"dictionary_filter_from": {
-		"message": "से"
+		"message": "स्रोत पाठ भाषा"
 	},
 	"dictionary_filter_to": {
-		"message": "को"
+		"message": "लक्ष्य भाषा"
 	},
 	"dictionary_message_deleteAll_success": {
-		"message": "सभी अनुवाद हटा दिए गए"
+		"message": "सभी अनुवाद हटा दिए गए हैं"
 	},
 	"dictionary_notFoundEntries": {
-		"message": "इन फ़िल्टर्स से मेल खाने वाले कोई अनुवाद नहीं मिले"
+		"message": "इन फ़िल्टरों से मेल खाते हुए कोई अनुवाद नहीं मिला"
 	},
 	"dictionary_pageTitle": {
 		"message": "शब्दकोश"
 	},
 	"dictionary_resetFilters": {
-		"message": "फ़िल्टर्स रीसेट करें"
+		"message": "फ़िल्टर रीसेट करें"
 	},
 	"dictionary_searchPlaceholder": {
-		"message": "टेक्स्ट द्वारा खोजें"
+		"message": "पाठ द्वारा खोजें"
 	},
 	"editorWindow_close": {
 		"message": "बंद करें"
@@ -98,98 +98,78 @@
 	"editorWindow_data_code": {
 		"message": "कोड"
 	},
-	"editorWindow_data_translatorName": {
-		"message": "अनुवादक का नाम"
+	"editorWindow_data_title": {
+		"message": "मॉड्यूल नाम"
 	},
-	"editorWindow_message_invalidTranslatorName": {
-		"message": "अनुवादक के नाम में कम से कम एक अक्षर होना आवश्यक है"
+	"editorWindow_message_invalidTitle": {
+		"message": "मॉड्यूल नाम में कम से कम एक अक्षर होना चाहिए"
 	},
 	"editorWindow_save": {
 		"message": "सहेजें"
 	},
 	"ext_description": {
-		"message": "पृष्ठ और टेक्स्ट अनुवाद, शब्दकोश, इतिहास, ऑफलाइन और कस्टम अनुवादक"
+		"message": "वेब पेज अनुवाद, पाठ अनुवाद, शब्दकोश, इतिहास, कस्टम अनुवादक, भाषा बाधाओं को तोड़ने के लिए आपको जो कुछ भी चाहिए"
 	},
 	"ext_name": {
-		"message": "लिंग्विस्ट - वेब पृष्ठ अनुवादक"
+		"message": "Linguist - वेब पेज अनुवादक"
 	},
 	"history_control_selectEntry": {
-		"message": "प्रविष्टि चुनें"
+		"message": "थोक क्रिया के लिए अनुवाद चुनें",
+		"description": "Description in finite form \"to pick\" with explaining what this checkbox will do"
 	},
 	"history_controls_clearHistory": {
 		"message": "इतिहास साफ़ करें"
 	},
 	"history_controls_deleteSelected": {
-		"message": "चयनित हटाएं"
+		"message": "चयनित अनुवाद हटाएं"
 	},
 	"history_controls_selectAll": {
 		"message": "सभी अनुवाद चुनें"
 	},
 	"history_message_clearHistoryConfirmation": {
-		"message": "क्या आप वाकई इतिहास साफ करना चाहते हैं? सभी प्रविष्टियाँ हटा दी जाएंगी"
+		"message": "क्या आप वाकई इतिहास साफ़ करना चाहते हैं? सभी प्रविष्टियाँ हटा दी जाएंगी"
 	},
 	"history_message_deleteEntryConfirmation": {
 		"message": "क्या आप वाकई इस प्रविष्टि को हटाना चाहते हैं?"
 	},
 	"history_message_deleteSelectedEntriesConfirmation": {
-		"message": "क्या आप निश्चित हैं कि आप चयनित प्रविष्टियाँ ($1) हटाना चाहते हैं?"
+		"message": "क्या आप वाकई चयनित प्रविष्टियों ($1) को हटाना चाहते हैं?"
 	},
 	"history_message_entriesNotFound": {
-		"message": "फ़िल्टर से मेल खाने वाले कोई अनुवाद नहीं मिले"
+		"message": "फ़िल्टर से मेल खाते हुए कोई अनुवाद नहीं मिला"
 	},
 	"history_message_noEntries": {
-		"message": "इतिहास साफ़ है"
+		"message": "इतिहास खाली है"
 	},
 	"history_notification_disabled": {
-		"message": "इतिहास रिकॉर्डिंग अक्षम है, इसलिए नई प्रविष्टियाँ दिखाई नहीं देंगी। आप इसे <slot id=preferences>प्राथमिकताओं</slot> में बदल सकते हैं"
+		"message": "इतिहास रिकॉर्डिंग अक्षम है, इसलिए नई प्रविष्टियाँ दिखाई नहीं देंगी। आप इसे <slot id=preferences>प्राथमिकताएँ</slot> में बदल सकते हैं"
 	},
 	"history_pageTitle": {
 		"message": "इतिहास"
 	},
 	"history_searchPlaceholder": {
-		"message": "पाठ के अनुसार खोजें"
+		"message": "पाठ द्वारा खोजें"
 	},
 	"inlineTranslator_showOriginalText": {
-		"message": "मूल पाठ दिखाएँ"
+		"message": "मूल पाठ दिखाएं"
 	},
 	"lang_change": {
 		"message": "भाषा बदलें"
 	},
 	"lang_detect": {
-		"message": "स्वतः पहचानें"
+		"message": "स्वतः पहचान"
 	},
 	"lang_select": {
 		"message": "भाषा चुनें"
 	},
 	"lang_swap": {
-		"message": "भाषाएँ स्वैप करें"
-	},
-	"message_askResetConfig": {
-		"message": "सेटिंग्स रीसेट करें?"
-	},
-	"message_cacheFlushed": {
-		"message": "कैश साफ़ कर दिया गया है"
-	},
-	"message_changesSaved": {
-		"message": "परिवर्तनों को सहेजा गया"
-	},
-	"message_error": {
-		"message": "त्रुटि"
-	},
-	"message_errorOfTranslate": {
-		"message": "अनुवाद त्रुटि"
-	},
-	"message_serviceRequiredKey": {
-		"message": "सेवा के लिए एक कुंजी आवश्यक है"
-	},
-	"message_translateOfText": {
-		"message": "अनुवादित"
+		"message": "भाषाएँ बदलें"
 	},
 	"message_unknownError": {
 		"message": "अज्ञात त्रुटि"
 	},
 	"pageTranslator_alwaysTranslateLang": {
-		"message": "इस भाषा का हमेशा अनुवाद करें"
+		"message": "हमेशा इस भाषा का अनुवाद करें"
 	},
 	"pageTranslator_commonPreferences_autoTranslate_disable": {
 		"message": "अक्षम करें"
@@ -201,16 +181,16 @@
 		"message": "सक्षम करें"
 	},
 	"pageTranslator_commonPreferences_title": {
-		"message": "इस भाषा के लिए सामान्य प्राथमिकताएं"
+		"message": "इस भाषा के लिए सामान्य प्राथमिकताएँ"
 	},
 	"pageTranslator_option_autoTranslate": {
-		"message": "स्वचालित अनुवाद"
-	},
-	"pageTranslator_showOptions": {
-		"message": "विकल्प दिखाएं"
+		"message": "स्वतः अनुवाद"
 	},
 	"pageTranslator_showOriginal": {
-		"message": "मूल दिखाएं"
+		"message": "मूल दिखाएँ"
+	},
+	"pageTranslator_showTranslationPreferences": {
+		"message": "अनुवाद प्राथमिकताएँ"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_always": {
 		"message": "हमेशा अनुवाद करें"
@@ -231,16 +211,16 @@
 		"message": "इस भाषा के लिए कभी अनुवाद न करें"
 	},
 	"pageTranslator_sitePreferences_title": {
-		"message": "के लिए वरीयताएं"
+		"message": "के लिए प्राथमिकताएँ"
 	},
 	"pageTranslator_translatePage": {
-		"message": "पृष्ठ अनुवादित करें"
+		"message": "पृष्ठ का अनुवाद करें"
 	},
 	"pageTranslator_translationReport": {
 		"message": "अनुवाद रिपोर्ट"
 	},
 	"pageTranslator_translationReport_queue": {
-		"message": "कतार"
+		"message": "लंबित"
 	},
 	"pageTranslator_translationReport_reject": {
 		"message": "त्रुटियाँ"
@@ -261,16 +241,16 @@
 		"message": "रद्द करें"
 	},
 	"settings_button_export": {
-		"message": "कॉन्फ़िग एक्सपोर्ट करें"
+		"message": "कॉन्फ़िग निर्यात करें"
 	},
 	"settings_button_import": {
-		"message": "कॉन्फ़िग इंपोर्ट करें"
+		"message": "कॉन्फ़िग आयात करें"
 	},
 	"settings_button_reset": {
 		"message": "कॉन्फ़िग रीसेट करें"
 	},
 	"settings_button_saveChanges": {
-		"message": "परिवर्तन सहेजें"
+		"message": "परिवर्तनों को सहेजें"
 	},
 	"settings_message_clearCache_success": {
 		"message": "कैश साफ़ किया गया"
@@ -279,16 +259,16 @@
 		"message": "अमान्य मान"
 	},
 	"settings_message_importConfig_invalidFile": {
-		"message": "आयात के लिए फ़ाइल संसाधित नहीं की जा सकती"
+		"message": "प्रदान की गई कॉन्फ़िग फ़ाइल गलत या क्षतिग्रस्त है, और इसे संसाधित नहीं किया जा सकता"
 	},
 	"settings_message_importConfig_success": {
-		"message": "आयात पूरा हुआ"
+		"message": "आयात पूर्ण"
 	},
 	"settings_message_resetConfig_confirm": {
-		"message": "क्या आप सेटिंग्स रीसेट करना चाहते हैं?"
+		"message": "सेटिंग्स को डिफ़ॉल्ट मानों पर रीसेट करने की पुष्टि करें"
 	},
 	"settings_message_resetConfig_success": {
-		"message": "सेटिंग्स रीसेट कर दी गईं"
+		"message": "सेटिंग्स रीसेट की गई"
 	},
 	"settings_message_saveChanges_success": {
 		"message": "परिवर्तन सहेजे गए"
@@ -300,253 +280,257 @@
 		"message": "कैश साफ़ करें"
 	},
 	"settings_option_cache_clear_desc": {
-		"message": "अगर आपके पास अनुवाद में त्रुटियाँ हैं या रहस्य हटाने की आवश्यकता है तो कैश हटाएँ"
+		"message": "यदि आप अनुवाद त्रुटियों को देखते हैं या गलती से निजी पाठों का अनुवाद करते हैं जबकि कैश सक्षम है, तो आप कैश से सभी डेटा हटा सकते हैं",
+		"description": "Explanation for user about cases when it's useful to clear cache"
 	},
 	"settings_option_cache_enable": {
 		"message": "कैश सक्षम करें"
 	},
 	"settings_option_cache_enable_desc": {
-		"message": "जब कैश सक्षम होता है, तो एक बार अनुवादित अनुवाद तुरंत उपलब्ध होंगे, भले ही इंटरनेट कनेक्शन न हो"
+		"message": "जब कैश सक्षम होता है, तो पहले अनुवादित पाठ बिना अतिरिक्त अनुरोधों के तुरंत अनुवादित हो जाएंगे"
 	},
 	"settings_option_cache_ignoreCase": {
-		"message": "केस-असंसitive"
+		"message": "केस-इनसेंसिटिव कैश का उपयोग करें"
 	},
 	"settings_option_cache_ignoreCase_desc": {
-		"message": "सक्रिय होने पर, कैश से अनुवाद असटीक मिलान के लिए उपयोग किए जाएंगे, जिससे अनुवाद में त्रुटियाँ हो सकती हैं"
+		"message": "जब सक्षम होता है, तो कैश किए गए अनुवाद विभिन्न मामलों के लिए उपयोग किए जाएंगे, जो कुछ स्थितियों में अनुवाद विकृतियों का कारण बन सकते हैं"
 	},
 	"settings_option_commonSettings": {
 		"message": "सामान्य सेटिंग्स"
 	},
 	"settings_option_customTranslatorModule": {
-		"message": "कस्टम ट्रांसलेटर"
+		"message": "कस्टम अनुवाद मॉड्यूल",
+		"description": "An user defined code that implements a translation module"
 	},
 	"settings_option_customTranslatorModule_desc": {
-		"message": "आप अपनी पसंदीदा अनुवाद सेवाओं के लिए कस्टम ट्रांसलेटर जोड़ सकते हैं। <slot id=docs>कस्टम ट्रांसलेटर दस्तावेज़</slot> में अधिक पढ़ें और मॉड्यूल खोजें"
+		"message": "आप अपने पसंदीदा अनुवाद सेवाओं का उपयोग करने वाले कस्टम अनुवाद मॉड्यूल जोड़ सकते हैं। <slot id=docs>कस्टम अनुवादक दस्तावेज़</slot> में और जानें"
 	},
 	"settings_option_customTranslatorModule_manageButton": {
-		"message": "ट्रांसलेटर प्रबंधित करें"
+		"message": "अनुवादकों का प्रबंधन",
+		"description": "अनुवाद मॉड्यूल की सूची दिखाने के लिए एक बटन"
 	},
 	"settings_option_history_enable": {
 		"message": "इतिहास सक्षम करें"
 	},
 	"settings_option_history_enable_desc": {
-		"message": "इसे सक्षम करने पर, हर अनुवाद का इतिहास पृष्ठ पर रिकॉर्ड किया जाएगा"
-	},
-	"settings_option_mainPreferences": {
-		"message": "मुख्य सेटिंग्स"
+		"message": "जब सक्षम किया जाता है, तो अनुवाद रिकॉर्ड किए जाएंगे और <slot id=historyPage>इतिहास पृष्ठ</slot> पर दिखाई देंगे"
 	},
 	"settings_option_pageTranslation": {
-		"message": "पृष्ठ अनुवाद"
+		"message": "पूर्ण पृष्ठ अनुवाद"
 	},
 	"settings_option_pageTranslation_detectLanguageByContent": {
-		"message": "सामग्री द्वारा भाषा पहचानें"
+		"message": "सामग्री द्वारा भाषा का पता लगाएं"
 	},
 	"settings_option_pageTranslation_detectLanguageByContent_desc": {
-		"message": "पृष्ठ की भाषा का पता लगाने के लिए वेब पेज पर पाठ का विश्लेषण करें। जब अक्षम हो, तो पृष्ठ मेटाडेटा में दी गई भाषा का उपयोग किया जाएगा"
+		"message": "उसकी भाषा का पता लगाने के लिए वेब पृष्ठ पर पाठ का विश्लेषण करें। जब अक्षम किया जाता है, तो <slot id=docs>पृष्ठ मेटाडेटा</slot> में निर्दिष्ट भाषा का उपयोग किया जाएगा"
 	},
 	"settings_option_pageTranslation_enableContextMenu": {
 		"message": "संदर्भ मेनू बटन सक्षम करें"
 	},
 	"settings_option_pageTranslation_enableContextMenu_desc": {
-		"message": "संदर्भ मेनू में पृष्ठ अनुवाद टॉगल करने के लिए एक बटन जोड़ें"
+		"message": "पृष्ठ संदर्भ मेनू में पृष्ठ अनुवाद को टॉगल करने के लिए एक बटन जोड़ें"
 	},
 	"settings_option_pageTranslation_excludeSelectors": {
-		"message": "अनुवाद से बाहर करने वाले सेलेक्टर्स"
+		"message": "अनुवाद से बाहर करने के लिए चयनकर्ता"
 	},
 	"settings_option_pageTranslation_excludeSelectors_desc": {
-		"message": "CSS सेलेक्टर्स की सूची जो अनूदित नहीं होंगे। एक सेलेक्टर प्रति पंक्ति। यदि कोई तत्व इन सेलेक्टर्स में से किसी से मेल खाता है, तो वह तत्व, उसके गुण और अंतर्निहित तत्व अनूदित नहीं होंगे"
+		"message": "अनुवाद से बाहर रखने के लिए तत्वों के लिए CSS चयनकर्ताओं की सूची। प्रत्येक पंक्ति में एक चयनकर्ता। यदि कोई तत्व इन चयनकर्ताओं में से किसी से मेल खाता है, तो उसका पाठ, गुण, और नेस्टेड तत्व अनुवादित नहीं होंगे"
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
-		"message": "केवल दिखाई देने वाले तत्वों का अनुवाद करें"
+		"message": "केवल दृश्य तत्वों का अनुवाद करें"
 	},
 	"settings_option_pageTranslation_lazyTranslate_desc": {
-		"message": "जब यह विकल्प सक्षम होता है, तो केवल दिखाई देने वाले तत्वों का अनुवाद किया जाएगा। यह विकल्प नेटवर्क ट्रैफ़िक और उपयोग की जाने वाली अनुवाद सेवाओं की सीमाओं को बचाता है"
+		"message": "जब यह विकल्प सक्षम होता है, तो केवल दृश्य तत्वों का अनुवाद किया जाएगा। यह विकल्प नेटवर्क ट्रैफ़िक को कम करता है"
 	},
 	"settings_option_pageTranslation_originalTextPopup": {
 		"message": "मूल पाठ के साथ पॉपअप सक्षम करें"
 	},
 	"settings_option_pageTranslation_originalTextPopup_desc": {
-		"message": "अनुवादित पाठ ब्लॉकों पर माउस होवर करने पर मूल पाठ के साथ एक पॉपअप दिखाएं"
+		"message": "अनुवादित पाठ ब्लॉकों पर होवर करने पर मूल पाठ के साथ एक पॉपअप दिखाएं"
 	},
-	"settings_option_pageTranslation_toggleTranslationHotkey": {
-		"message": "हॉटकीज़"
+	"settings_option_pageTranslation_shortcut_toggleTranslation": {
+		"message": "शॉर्टकट"
 	},
-	"settings_option_pageTranslation_toggleTranslationHotkey_desc": {
-		"message": "पृष्ठ अनुवाद को टॉगल करने के लिए शॉर्टकट\nकीज़ रीसेट करने के लिए ESC दबाएँ"
+	"settings_option_pageTranslation_shortcut_toggleTranslation_desc": {
+		"message": "पृष्ठ अनुवाद को टॉगल करने के लिए शॉर्टकट\nकुंजियों को रीसेट करने के लिए ESC दबाएं"
 	},
 	"settings_option_pageTranslation_translatableAttributes": {
 		"message": "अनुवाद योग्य गुण"
 	},
 	"settings_option_pageTranslation_translatableAttributes_desc": {
-		"message": "<slot id=htmlAttributes>HTML गुण</slot> नाम दर्ज करें जिन्हें अनुवादित किया जाना है, प्रति पंक्ति एक गुण"
+		"message": "<slot id=htmlAttributes>HTML गुण</slot> नाम दर्ज करें जिन्हें अनुवाद करना है, प्रत्येक पंक्ति में एक गुण\nकेवल इस सूची में गुणों का अनुवाद किया जाएगा"
 	},
 	"settings_option_popupTab_pageTranslator_showCounters": {
-		"message": "अनुवाद सांख्यिकी दिखाएँ"
+		"message": "अनुवाद प्रगति दिखाएं"
 	},
 	"settings_option_popupTab_pageTranslator_showCounters_desc": {
-		"message": "पृष्ठ अनुवाद के लिए सांख्यिकी दिखाएँ"
+		"message": "एक्सटेंशन पॉपअप में पृष्ठ अनुवाद प्रगति के साथ एक पैनल दिखाएं"
 	},
 	"settings_option_selectTranslation": {
-		"message": "चयनित पाठ का अनुवाद"
+		"message": "चयनित पाठ के लिए अनुवाद"
 	},
-	"settings_option_selectTranslation_detectedLangFirst": {
-		"message": "पृष्ठ भाषा की तुलना में टेक्स्ट की पहचानी गई भाषा को प्राथमिकता दें"
+	"settings_option_selectTranslation_detectTextLanguage": {
+		"message": "पाठ भाषा का पता लगाएं"
 	},
-	"settings_option_selectTranslation_detectedLangFirst_desc": {
-		"message": "सक्रिय होने पर, चयनित टेक्स्ट की पहचानी गई भाषा को पृष्ठ भाषा पर प्राथमिकता दी जाएगी"
+	"settings_option_selectTranslation_detectTextLanguage_desc": {
+		"message": "जब सक्षम हो, चयनित पाठ का विश्लेषण करके अनुवाद के लिए भाषा का पता लगाया जाएगा। अन्यथा, पृष्ठ भाषा का उपयोग किया जाएगा"
 	},
 	"settings_option_selectTranslation_disableWhileTranslatePage": {
 		"message": "पृष्ठ का अनुवाद करते समय अक्षम करें"
 	},
 	"settings_option_selectTranslation_enable": {
-		"message": "सक्रिय करें"
+		"message": "चयनित पाठ अनुवाद सक्षम करें"
+	},
+	"settings_option_selectTranslation_enable_desc": {
+		"message": "जब यह सुविधा सक्षम हो, तो आप पृष्ठ पर किसी भी पाठ का चयन कर सकते हैं और इसे पॉपअप में अनुवाद कर सकते हैं"
 	},
 	"settings_option_selectTranslation_focusOnTranslateButton": {
-		"message": "अनुवाद बटन पर स्वचालित फोकस"
+		"message": "अनुवाद बटन पर स्वतः-फोकस"
 	},
 	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
-		"message": "जब अनुवाद बटन दिखाई दे तो उस पर फोकस करें"
+		"message": "जब पृष्ठ पर अनुवाद बटन दिखाई देता है, तो यह स्वचालित रूप से फोकस हो जाएगा"
 	},
 	"settings_option_selectTranslation_header_languageChoice": {
 		"message": "भाषा सेटिंग्स"
 	},
 	"settings_option_selectTranslation_isUseAutoForDetectLang": {
-		"message": "अनुवादक द्वारा स्वचालित भाषा पहचान सक्षम करें"
+		"message": "अनुवाद मॉड्यूल को पाठ की भाषा का पता लगाने की अनुमति दें"
 	},
 	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
-		"message": "जब स्थानीय रूप से भाषा पहचानी न जा सके तो अनुवादक द्वारा स्वचालित भाषा पहचान का उपयोग करें"
+		"message": "जब पाठ की भाषा को स्थानीय रूप से नहीं पहचाना जा सकता है और यह विकल्प सक्षम है, तो पाठ को \"ऑटो\" भाषा के साथ अनुवादित किया जाएगा यदि समर्थित है।\nजब विकल्प अक्षम है, तो पाठ की स्रोत भाषा सेट करने के लिए एक अन्य फॉलबैक विधि का उपयोग किया जाएगा"
 	},
 	"settings_option_selectTranslation_mode": {
-		"message": "अनुवाद सक्रियण"
+		"message": "पाठ चयन पर क्रिया"
 	},
 	"settings_option_selectTranslation_mode_item_contextMenu": {
-		"message": "संदर्भ मेनू बटन"
+		"message": "संदर्भ मेनू के माध्यम से पाठ का अनुवाद करें"
 	},
 	"settings_option_selectTranslation_mode_item_popupButton": {
-		"message": "पॉपअप बटन"
+		"message": "अनुवाद बटन दिखाएं"
 	},
 	"settings_option_selectTranslation_mode_item_quickTranslate": {
-		"message": "चयन द्वारा त्वरित अनुवाद"
+		"message": "पाठ का तुरंत अनुवाद करें"
 	},
 	"settings_option_selectTranslation_modifiers": {
 		"message": "संशोधक"
 	},
 	"settings_option_selectTranslation_modifiers_desc": {
-		"message": "अनुवाद दिखाने के लिए कीबोर्ड पर दबाए जाने वाले कुंजी चुनें"
+		"message": "उन कुंजियों का चयन करें जिन्हें अनुवाद प्रदर्शित करने के लिए कीबोर्ड पर दबाया जाना चाहिए"
 	},
 	"settings_option_selectTranslation_modifiers_key_alt": {
-		"message": "Alt"
+		"message": "alt"
 	},
 	"settings_option_selectTranslation_modifiers_key_ctrl": {
-		"message": "Ctrl"
+		"message": "ctrl"
 	},
 	"settings_option_selectTranslation_modifiers_key_meta": {
-		"message": "Meta"
+		"message": "meta"
 	},
 	"settings_option_selectTranslation_modifiers_key_shift": {
-		"message": "Shift"
+		"message": "shift"
 	},
 	"settings_option_selectTranslation_rememberDirection": {
-		"message": "सबसे हाल ही में चयनित भाषा को याद रखें"
+		"message": "हाल ही में चयनित पाठ भाषा को याद रखें"
 	},
 	"settings_option_selectTranslation_showOnceForSelection": {
-		"message": "प्रत्येक पाठ चयन के लिए एक बार अनुवाद बटन दिखाएं"
+		"message": "प्रत्येक पाठ चयन के लिए अनुवाद बटन एक बार दिखाएं"
 	},
 	"settings_option_selectTranslation_showOnceForSelection_desc": {
-		"message": "प्रत्येक पाठ चयन के लिए बटन केवल एक बार दिखेगा। इसे फिर से दिखाने के लिए, पाठ को पुनः चुनें।"
+		"message": "बटन प्रत्येक पाठ चयन के लिए केवल एक बार दिखाई देगा। इसे फिर से दिखाने के लिए, पाठ को पुनः चुनें"
 	},
 	"settings_option_selectTranslation_showOriginalText": {
 		"message": "मूल पाठ दिखाएं"
 	},
 	"settings_option_selectTranslation_showOriginalText_desc": {
-		"message": "अनुवाद पॉपअप में मूल पाठ का एक खंड जोड़ें"
+		"message": "अनुवाद पॉपअप में मूल पाठ के साथ एक ब्लॉक जोड़ें"
 	},
 	"settings_option_selectTranslation_strictSelection": {
-		"message": "कठोर चयन"
+		"message": "पाठ चयन के लिए सख्त मोड",
+		"description": "यह विकल्प माउस के माध्यम से पाठ चयन के बारे में है"
 	},
 	"settings_option_selectTranslation_strictSelection_desc": {
-		"message": "अगर माउस बटन चयनित पाठ वाले ब्लॉक के बाहर छोड़ दिया गया तो चयन को नजरअंदाज करें"
+		"message": "यदि चयनित पाठ को शामिल करने वाले ब्लॉक के बाहर बायां माउस बटन छोड़ा जाता है तो पाठ चयन को अनदेखा करें"
 	},
 	"settings_option_selectTranslation_timeoutForHideButton": {
-		"message": "बटन छुपाने से पहले विलंब"
+		"message": "पॉपअप बटन छिपाने से पहले विलंब"
 	},
 	"settings_option_selectTranslation_timeoutForHideButton_desc": {
-		"message": "मिलीसेकंड में विलंब जब कर्सर होवर नहीं कर रहा हो तब बटन छुपाने से पहले। बटन पर होवर करने से टाइमर रीसेट होता है। स्वचालित छुपाने को अक्षम करने के लिए, मान 1 से कम सेट करें।"
+		"message": "कर्सर बटन पर नहीं होने पर बटन को छिपाने से पहले मिलीसेकंड में देरी। बटन पर होवर करने से टाइमर रीसेट हो जाता है। ऑटो-हाइड को अक्षम करने के लिए, मान को 1 से कम सेट करें"
 	},
 	"settings_option_selectTranslation_zIndex": {
-		"message": "z-इंडेक्स"
+		"message": "z-index"
 	},
 	"settings_option_selectTranslation_zIndex_desc": {
-		"message": "यदि कुछ पृष्ठों पर तत्व अनुवादित पाठ वाले पॉपअप को ओवरलैप करते हैं तो इस मान को बढ़ाएं।"
+		"message": "यदि कुछ पृष्ठों पर तत्व अनुवादित पाठ के साथ पॉपअप को ओवरलैप करते हैं तो इस मान को बढ़ाएं"
 	},
 	"settings_option_textTranslator": {
 		"message": "पाठ अनुवाद"
 	},
 	"settings_option_textTranslator_rememberText": {
-		"message": "अनुवादित पाठ याद रखें"
+		"message": "अनुवादित पाठ को याद रखना"
 	},
 	"settings_option_textTranslator_rememberText_desc": {
-		"message": "अगली बार विंडो खुलने पर अनुवादित पाठ याद रखें"
+		"message": "अगली बार जब विंडो खुलती है तो अनुवादित पाठ को याद रखना"
 	},
 	"settings_option_textTranslator_spellCheck": {
-		"message": "स्पेल चेक सक्षम करें"
+		"message": "वर्तनी जांच सक्षम करें"
 	},
 	"settings_option_textTranslator_suggestLanguage": {
-		"message": "पहचानी गई भाषा सुझाएं"
+		"message": "पता की गई पाठ भाषा दिखाना"
 	},
 	"settings_option_textTranslator_suggestLanguageAlways": {
-		"message": "हमेशा भाषा पहचानें और सुझाव दें"
+		"message": "हमेशा भाषा का पता लगाएं और सुझाव दें"
 	},
 	"settings_option_textTranslator_suggestLanguageAlways_desc": {
-		"message": "अक्षम होने पर, भाषा सुझाव केवल तब दिखाई देंगे जब स्रोत भाषा स्वचालित रूप से पहचानी जाए"
+		"message": "जब अक्षम हो, तो भाषा सुझाव केवल तभी दिखाई देते हैं जब स्रोत भाषा \"ऑटो\" पर सेट हो"
 	},
 	"settings_option_translatePreferences": {
 		"message": "अनुवाद प्राथमिकताएँ"
 	},
 	"settings_option_translateScheduler": {
-		"message": "अनुवाद कार्यक्रम"
+		"message": "अनुवाद अनुसूचक"
 	},
 	"settings_option_translateScheduler_delay": {
-		"message": "पाठ संचयन विलंब"
+		"message": "पाठ संचय विलंब"
 	},
 	"settings_option_translateScheduler_delay_desc": {
-		"message": "अनुवाद शेड्यूलर अनुवाद सेवा APIへの अनुरोधों की संख्या को कम करता है। यह जितनी अधिक संभव हो उतनी पाठों को एक ही अनुरोध में भेजने के लिए इकट्ठा करने का प्रयास करता है। शेड्यूलर अनुवाद शुरू करने से पहले निर्दिष्ट मिलीसेकंड समय के लिए नए पाठों को इकट्ठा करने के लिए इंतजार करेगा।"
+		"message": "अनुवाद अनुसूचक एकल अनुरोध में भेजने के लिए जितना संभव हो सके उतने पाठों को संचित करके अनुवाद सेवा API के अनुरोधों की संख्या को कम करता है। अनुवाद शुरू करने से पहले अधिक पाठों को एकत्र करने के लिए अनुसूचक निर्दिष्ट समय (मिलीसेकंड में) तक प्रतीक्षा करेगा"
 	},
 	"settings_option_translateScheduler_retryLimit": {
-		"message": "अनुवाद पुनः प्रयास की सीमाएँ"
+		"message": "अनुवाद पुनः प्रयास की सीमा"
 	},
 	"settings_option_translateScheduler_retryLimit_desc": {
-		"message": "जब अनुवाद में त्रुटियां हों तो शेड्यूलर पुनः अनुवाद करने का प्रयास करेगा। यह विकल्प पुनः प्रयासों की सीमा निर्धारित करता है। अनंत पुनः प्रयास की अनुमति देने के लिए नकारात्मक संख्या सेट करें।"
+		"message": "जब अनुवाद त्रुटियाँ होती हैं, तो अनुसूचक पाठों का पुनः अनुवाद करने का प्रयास करेगा। यह विकल्प पुनः प्रयासों की सीमा निर्धारित करता है। असीमित पुनः प्रयासों की अनुमति देने के लिए नकारात्मक संख्या सेट करें"
 	},
 	"settings_option_translatorModule": {
-		"message": "अनुवादक मॉड्यूल"
+		"message": "अनुवाद मॉड्यूल"
 	},
 	"settings_option_translatorModule_desc": {
-		"message": "अनुवाद की गुणवत्ता और उपलब्ध भाषाएं अनुवादक पर निर्भर करती हैं।"
+		"message": "अनुवादों की गुणवत्ता और उपलब्ध भाषाएँ अनुवाद मॉड्यूल पर निर्भर करती हैं"
 	},
 	"settings_option_tts": {
-		"message": "टेक्स्ट से स्पीच (TTS)"
+		"message": "पाठ से वाक् रूपांतरण (TTS)"
 	},
 	"settings_option_ttsCustomModules": {
-		"message": "कस्टम TTS"
+		"message": "कस्टम वाक् संश्लेषण मॉड्यूल"
 	},
 	"settings_option_ttsCustomModules_button": {
-		"message": "TTS मॉड्यूल प्रबंधित करें"
+		"message": "वाक् संश्लेषण मॉड्यूल प्रबंधित करना"
 	},
 	"settings_option_ttsCustomModules_desc": {
-		"message": "आप अपने पसंदीदा सेवाओं और आवाजों का उपयोग करने वाले टीटीएस मॉड्यूल जोड़ सकते हैं। <slot id=docs>कस्टम टीटीएस के लिए दस्तावेज़</slot> में अधिक पढ़ें"
+		"message": "आप अपने पसंदीदा सेवाओं और वॉइस इंजन का उपयोग करने वाले वाक् संश्लेषण मॉड्यूल जोड़ सकते हैं। अधिक जानकारी के लिए <slot id=docs>कस्टम TTS दस्तावेज़</slot> पढ़ें"
 	},
 	"settings_option_ttsModule": {
-		"message": "TTS मॉड्यूल"
+		"message": "चयनित TTS मॉड्यूल"
 	},
 	"settings_option_ttsModule_desc": {
-		"message": "टेक्स्ट बोलने के लिए मॉड्यूल"
+		"message": "पाठ को आवाज देने के लिए उपयोग किया जाने वाला वॉइस इंजन"
 	},
 	"settings_option_userLanguage": {
 		"message": "आपकी भाषा"
 	},
 	"settings_option_userLanguage_desc": {
-		"message": "टेक्स्ट अनुवाद के लिए लक्ष्य भाषा"
+		"message": "वह भाषा जिसमें पाठ का अनुवाद किया जाएगा"
 	},
 	"settings_pageTitle": {
 		"message": "सेटिंग्स"
@@ -558,25 +542,32 @@
 		"message": "पॉपअप"
 	},
 	"textTranslator_suggestLanguage": {
-		"message": "ऐसा लगता है कि भाषा है"
+		"message": "ऐसा लगता है कि पाठ की भाषा <slot id=languageSuggest>$language_name$</slot> है",
+		"placeholders": {
+			"language_name": {
+				"content": "$1",
+				"example": "Japanese"
+			}
+		}
 	},
 	"textTranslator_translateInputPlaceholder": {
-		"message": "टेक्स्ट इनपुट करें"
+		"message": "अनुवाद के लिए पाठ दर्ज करें",
+		"description": "Request to user input some text for translation"
 	},
 	"textTranslator_translatePlaceholder": {
-		"message": "अनुवादित टेक्स्ट"
+		"message": "अनुवादित पाठ यहाँ होगा"
 	},
 	"translatorsManagerWindow_add": {
-		"message": "जोड़ें"
+		"message": "अनुवाद मॉड्यूल जोड़ें"
 	},
 	"translatorsManagerWindow_close": {
 		"message": "बंद करें"
 	},
 	"translatorsManagerWindow_emptyTranslatorsListText": {
-		"message": "कोई कस्टम ट्रांसलेटर अभी तक जोड़ा नहीं गया है"
+		"message": "कोई कस्टम अनुवाद मॉड्यूल अभी तक नहीं जोड़ा गया है"
 	},
 	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
-		"message": "क्या आप वाकई ट्रांसलेटर \"$translator_name$\" को हटाना चाहते हैं?",
+		"message": "क्या आप वाकई \"$translator_name$\" अनुवाद मॉड्यूल को हटाना चाहते हैं?",
 		"placeholders": {
 			"translator_name": {
 				"content": "$1",
@@ -585,22 +576,22 @@
 		}
 	},
 	"translatorsManagerWindow_title": {
-		"message": "कस्टम ट्रांसलेटर"
+		"message": "कस्टम अनुवाद मॉड्यूल"
 	},
 	"translatorsManagerWindow_translator_delete": {
-		"message": "हटाएँ"
+		"message": "हटाएं"
 	},
 	"translatorsManagerWindow_translator_edit": {
 		"message": "संपादित करें"
 	},
 	"ttsManagerWindow_add": {
-		"message": "जोड़ें"
+		"message": "टीटीएस मॉड्यूल जोड़ें"
 	},
 	"ttsManagerWindow_close": {
 		"message": "बंद करें"
 	},
 	"ttsManagerWindow_emptyTranslatorsListText": {
-		"message": "कोई TTS मॉड्यूल अभी तक जोड़ा नहीं गया है"
+		"message": "कोई TTS मॉड्यूल अभी तक नहीं जोड़ा गया है"
 	},
 	"ttsManagerWindow_message_ttsRemoveConfirmation": {
 		"message": "क्या आप वाकई TTS मॉड्यूल \"$tts_name$\" को हटाना चाहते हैं?",
@@ -612,7 +603,7 @@
 		}
 	},
 	"ttsManagerWindow_title": {
-		"message": "टेक्स्ट से स्पीच मॉड्यूल"
+		"message": "टेक्स्ट-टू-स्पीच मॉड्यूल"
 	},
 	"ttsManagerWindow_translator_delete": {
 		"message": "हटाएं"
@@ -621,13 +612,13 @@
 		"message": "संपादित करें"
 	},
 	"validation_number": {
-		"message": "पैरामीटर संख्या होनी चाहिए"
+		"message": "मान एक संख्या होनी चाहिए"
 	},
 	"validation_numberBetweenRange": {
-		"message": "पैरामीटर $1 और $2 के बीच की संख्या होनी चाहिए"
+		"message": "मान $1 और $2 के बीच की संख्या होनी चाहिए"
 	},
 	"validation_positiveNumber": {
-		"message": "पैरामीटर सकारात्मक संख्या होनी चाहिए"
+		"message": "मान एक सकारात्मक संख्या होनी चाहिए"
 	},
 	"langCode_aa": {
 		"message": "अफ़ार"

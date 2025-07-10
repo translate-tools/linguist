@@ -6,10 +6,10 @@
 		"message": "Αφαίρεση μετάφρασης από το λεξικό"
 	},
 	"common_bgUnavailable": {
-		"message": "Το υπόβαθρο εκτέλεσης είναι μη διαθέσιμο"
+		"message": "Το σενάριο παρασκηνίου δεν είναι διαθέσιμο"
 	},
 	"common_cancel": {
-		"message": "Άκυρο"
+		"message": "Ακύρωση"
 	},
 	"common_close": {
 		"message": "Κλείσιμο"
@@ -30,7 +30,7 @@
 		"message": "Μετάφραση"
 	},
 	"component_hotkey_placeholder": {
-		"message": "Κάντε κλικ για καταγραφή συντόμευσης"
+		"message": "Κάντε κλικ για να καταγράψετε μια συντόμευση"
 	},
 	"component_hotkey_recordPlaceholder": {
 		"message": "Πατήστε πλήκτρα"
@@ -39,7 +39,7 @@
 		"message": "Επαναφορά"
 	},
 	"contextMenu_disablePageTranslation": {
-		"message": "Απενεργοποίηση μετάφρασης σελίδας"
+		"message": "Διακοπή μετάφρασης σελίδας"
 	},
 	"contextMenu_translatePage": {
 		"message": "Μετάφραση σελίδας"
@@ -60,25 +60,25 @@
 		"message": "Αφαίρεση όλων"
 	},
 	"dictionary_deleteAll": {
-		"message": "Είστε βέβαιοι ότι θέλετε να διαγράψετε ΟΛΕΣ τις μεταφράσεις στο λεξικό;"
+		"message": "Είστε βέβαιοι ότι θέλετε να διαγράψετε ΟΛΕΣ τις μεταφράσεις από το λεξικό;"
 	},
 	"dictionary_deleteConfirmation": {
 		"message": "Είστε βέβαιοι ότι θέλετε να διαγράψετε αυτή τη μετάφραση;"
 	},
 	"dictionary_description": {
-		"message": "Κρατήστε τις μεταφράσεις σας στο λεξικό για να τις βρείτε αργότερα"
+		"message": "Αποθηκεύστε μεταφράσεις στο λεξικό για να τις βρείτε γρήγορα αργότερα"
 	},
 	"dictionary_emptyDictionary": {
-		"message": "Το λεξικό είναι κενό. Ξεκινήστε να το γεμίζετε μεταφράζοντας κάποιο κείμενο"
+		"message": "Το λεξικό είναι άδειο, ξεκινήστε να το γεμίζετε μεταφράζοντας κάποιο κείμενο"
 	},
 	"dictionary_filter_from": {
-		"message": "Από"
+		"message": "Γλώσσα πηγής κειμένου"
 	},
 	"dictionary_filter_to": {
-		"message": "Προς"
+		"message": "Γλώσσα στόχος"
 	},
 	"dictionary_message_deleteAll_success": {
-		"message": "Όλες οι μεταφράσεις αφαιρέθηκαν"
+		"message": "Όλες οι μεταφράσεις έχουν αφαιρεθεί"
 	},
 	"dictionary_notFoundEntries": {
 		"message": "Δεν βρέθηκαν μεταφράσεις που να ταιριάζουν με αυτά τα φίλτρα"
@@ -87,7 +87,7 @@
 		"message": "Λεξικό"
 	},
 	"dictionary_resetFilters": {
-		"message": "επαναφορά φίλτρων"
+		"message": "Επαναφορά φίλτρων"
 	},
 	"dictionary_searchPlaceholder": {
 		"message": "Αναζήτηση με κείμενο"
@@ -96,31 +96,32 @@
 		"message": "Κλείσιμο"
 	},
 	"editorWindow_data_code": {
-		"message": "Κωδικός"
+		"message": "Κώδικας"
 	},
-	"editorWindow_data_translatorName": {
-		"message": "Όνομα μεταφραστή"
+	"editorWindow_data_title": {
+		"message": "Όνομα μονάδας"
 	},
-	"editorWindow_message_invalidTranslatorName": {
-		"message": "Το όνομα του μεταφραστή πρέπει να περιέχει τουλάχιστον ένα χαρακτήρα"
+	"editorWindow_message_invalidTitle": {
+		"message": "Το όνομα της μονάδας πρέπει να έχει τουλάχιστον έναν χαρακτήρα"
 	},
 	"editorWindow_save": {
 		"message": "Αποθήκευση"
 	},
 	"ext_description": {
-		"message": "Μετάφραση σελίδων και κειμένου, λεξικό, ιστορικό, εκτός σύνδεσης και προσαρμοσμένοι μεταφραστές"
+		"message": "Μετάφραση ιστοσελίδων, μετάφραση κειμένου, λεξικό, ιστορικό, προσαρμοσμένοι μεταφραστές, όλα όσα χρειάζεστε για να ξεπεράσετε τα γλωσσικά εμπόδια"
 	},
 	"ext_name": {
 		"message": "Linguist - μεταφραστής ιστοσελίδων"
 	},
 	"history_control_selectEntry": {
-		"message": "Επιλέξτε εγγραφή"
+		"message": "Επιλογή μετάφρασης για μαζική ενέργεια",
+		"description": "Description in finite form \"to pick\" with explaining what this checkbox will do"
 	},
 	"history_controls_clearHistory": {
 		"message": "Εκκαθάριση ιστορικού"
 	},
 	"history_controls_deleteSelected": {
-		"message": "Διαγραφή επιλεγμένων"
+		"message": "Διαγραφή επιλεγμένων μεταφράσεων"
 	},
 	"history_controls_selectAll": {
 		"message": "Επιλογή όλων των μεταφράσεων"
@@ -138,10 +139,10 @@
 		"message": "Δεν βρέθηκαν μεταφράσεις που να ταιριάζουν με το φίλτρο"
 	},
 	"history_message_noEntries": {
-		"message": "Το ιστορικό είναι καθαρό"
+		"message": "Το ιστορικό είναι κενό"
 	},
 	"history_notification_disabled": {
-		"message": "Η καταγραφή ιστορικού είναι απενεργοποιημένη, επομένως νέες καταχωρήσεις δεν θα εμφανίζονται. Μπορείτε να το αλλάξετε στις <slot id=preferences>προτιμήσεις</slot>"
+		"message": "Η καταγραφή ιστορικού είναι απενεργοποιημένη, επομένως δεν θα εμφανιστούν νέες καταχωρήσεις. Μπορείτε να το αλλάξετε στις <slot id=preferences>Προτιμήσεις</slot>"
 	},
 	"history_pageTitle": {
 		"message": "Ιστορικό"
@@ -164,38 +165,17 @@
 	"lang_swap": {
 		"message": "Αντιστροφή γλωσσών"
 	},
-	"message_askResetConfig": {
-		"message": "Επαναφορά ρυθμίσεων;"
-	},
-	"message_cacheFlushed": {
-		"message": "Η προσωρινή μνήμη εκκαθαρίστηκε"
-	},
-	"message_changesSaved": {
-		"message": "Οι αλλαγές αποθηκεύτηκαν"
-	},
-	"message_error": {
-		"message": "Σφάλμα"
-	},
-	"message_errorOfTranslate": {
-		"message": "Σφάλμα μετάφρασης"
-	},
-	"message_serviceRequiredKey": {
-		"message": "Η υπηρεσία απαιτεί κλειδί"
-	},
-	"message_translateOfText": {
-		"message": "Μεταφρασμένο"
-	},
 	"message_unknownError": {
 		"message": "Άγνωστο σφάλμα"
 	},
 	"pageTranslator_alwaysTranslateLang": {
-		"message": "Μετάφραση πάντα αυτής της γλώσσας"
+		"message": "Πάντα μετάφραση αυτής της γλώσσας"
 	},
 	"pageTranslator_commonPreferences_autoTranslate_disable": {
 		"message": "Απενεργοποίηση"
 	},
 	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
-		"message": "Απενεργοποίηση για όλες τις ιστοσελίδες"
+		"message": "Απενεργοποίηση για όλους τους ιστότοπους"
 	},
 	"pageTranslator_commonPreferences_autoTranslate_enable": {
 		"message": "Ενεργοποίηση"
@@ -206,29 +186,29 @@
 	"pageTranslator_option_autoTranslate": {
 		"message": "Αυτόματη μετάφραση"
 	},
-	"pageTranslator_showOptions": {
-		"message": "Εμφάνιση επιλογών"
-	},
 	"pageTranslator_showOriginal": {
-		"message": "Εμφάνιση πρωτότυπου"
+		"message": "Εμφάνιση πρωτοτύπου"
+	},
+	"pageTranslator_showTranslationPreferences": {
+		"message": "Προτιμήσεις μετάφρασης"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_always": {
-		"message": "Μετάφραση πάντα"
+		"message": "Πάντα μετάφραση"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
-		"message": "Μετάφραση πάντα για αυτήν τη γλώσσα"
+		"message": "Πάντα μετάφραση για αυτή τη γλώσσα"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_default": {
 		"message": "Χρήση κοινών κανόνων"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
-		"message": "Χρήση κοινών κανόνων για αυτήν τη γλώσσα"
+		"message": "Χρήση κοινών κανόνων για αυτή τη γλώσσα"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_never": {
 		"message": "Ποτέ μετάφραση"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
-		"message": "Ποτέ μετάφραση για αυτήν τη γλώσσα"
+		"message": "Ποτέ μετάφραση για αυτή τη γλώσσα"
 	},
 	"pageTranslator_sitePreferences_title": {
 		"message": "Προτιμήσεις για"
@@ -240,13 +220,13 @@
 		"message": "Αναφορά μετάφρασης"
 	},
 	"pageTranslator_translationReport_queue": {
-		"message": "Ουρά"
+		"message": "Σε εκκρεμότητα"
 	},
 	"pageTranslator_translationReport_reject": {
 		"message": "Σφάλματα"
 	},
 	"pageTranslator_translationReport_resolve": {
-		"message": "Μεταφρασμένα"
+		"message": "Μεταφρασμένο"
 	},
 	"popup_tabIdNotFound": {
 		"message": "Η καρτέλα \"$1\" δεν βρέθηκε"
@@ -273,19 +253,19 @@
 		"message": "Αποθήκευση αλλαγών"
 	},
 	"settings_message_clearCache_success": {
-		"message": "Η προσωρινή μνήμη διαγράφηκε"
+		"message": "Η κρυφή μνήμη εκκαθαρίστηκε"
 	},
 	"settings_message_common_invalidValueType": {
 		"message": "Μη έγκυρη τιμή"
 	},
 	"settings_message_importConfig_invalidFile": {
-		"message": "Το αρχείο εισαγωγής δεν μπορεί να επεξεργαστεί"
+		"message": "Το παρεχόμενο αρχείο ρυθμίσεων είναι εσφαλμένο ή κατεστραμμένο και δεν μπορεί να επεξεργαστεί"
 	},
 	"settings_message_importConfig_success": {
 		"message": "Η εισαγωγή ολοκληρώθηκε"
 	},
 	"settings_message_resetConfig_confirm": {
-		"message": "Θέλετε να επαναφέρετε τις ρυθμίσεις;"
+		"message": "Επιβεβαιώστε την επαναφορά των ρυθμίσεων στις προεπιλεγμένες τιμές"
 	},
 	"settings_message_resetConfig_success": {
 		"message": "Οι ρυθμίσεις επαναφέρθηκαν"
@@ -294,139 +274,142 @@
 		"message": "Οι αλλαγές αποθηκεύτηκαν"
 	},
 	"settings_option_cache": {
-		"message": "Προσωρινή μνήμη"
+		"message": "Cache"
 	},
 	"settings_option_cache_clear": {
-		"message": "Καθαρισμός προσωρινής μνήμης"
+		"message": "Εκκαθάριση cache"
 	},
 	"settings_option_cache_clear_desc": {
-		"message": "Αφαιρέστε την προσωρινή μνήμη αν έχετε προβλήματα μετάφρασης ή χρειάζεται να αφαιρέσετε μυστικά"
+		"message": "Εάν παρατηρήσετε σφάλματα μετάφρασης ή μεταφράσετε κατά λάθος ιδιωτικά κείμενα ενώ η cache είναι ενεργοποιημένη, μπορείτε να διαγράψετε όλα τα δεδομένα από την cache",
+		"description": "Explanation for user about cases when it's useful to clear cache"
 	},
 	"settings_option_cache_enable": {
-		"message": "Ενεργοποίηση προσωρινής μνήμης"
+		"message": "Ενεργοποίηση cache"
 	},
 	"settings_option_cache_enable_desc": {
-		"message": "Όταν η προσωρινή μνήμη είναι ενεργοποιημένη, οι μεταφράσεις που έχουν γίνει μία φορά θα είναι διαθέσιμες άμεσα, ακόμα και χωρίς σύνδεση στο διαδίκτυο"
+		"message": "Όταν η cache είναι ενεργοποιημένη, τα κείμενα που έχουν μεταφραστεί προηγουμένως θα μεταφράζονται άμεσα χωρίς επιπλέον αιτήματα στην υπηρεσία μετάφρασης"
 	},
 	"settings_option_cache_ignoreCase": {
-		"message": "Αγνόηση πεζών-κεφαλαίων"
+		"message": "Χρήση cache χωρίς διάκριση πεζών-κεφαλαίων"
 	},
 	"settings_option_cache_ignoreCase_desc": {
-		"message": "Όταν είναι ενεργοποιημένο, οι μεταφράσεις από την προσωρινή μνήμη θα χρησιμοποιούνται για μη ακριβείς αντιστοιχίσεις, κάτι που μπορεί να προκαλέσει σφάλματα μετάφρασης"
+		"message": "Όταν είναι ενεργοποιημένο, οι αποθηκευμένες μεταφράσεις θα χρησιμοποιούνται για κείμενα με διαφορετικές περιπτώσεις, κάτι που μπορεί να προκαλέσει παραμορφώσεις στη μετάφραση σε ορισμένες καταστάσεις"
 	},
 	"settings_option_commonSettings": {
-		"message": "Γενικές ρυθμίσεις"
+		"message": "Κοινές ρυθμίσεις"
 	},
 	"settings_option_customTranslatorModule": {
-		"message": "Προσαρμοσμένοι μεταφραστές"
+		"message": "Προσαρμοσμένες μονάδες μετάφρασης",
+		"description": "An user defined code that implements a translation module"
 	},
 	"settings_option_customTranslatorModule_desc": {
-		"message": "Μπορείτε να προσθέσετε προσαρμοσμένους μεταφραστές για τις αγαπημένες σας υπηρεσίες μετάφρασης. Διαβάστε περισσότερα και βρείτε μονάδες στο <slot id=docs>τεκμηρίωση προσαρμοσμένων μεταφραστών</slot>"
+		"message": "Μπορείτε να προσθέσετε προσαρμοσμένα μεταφραστικά modules που χρησιμοποιούν τις αγαπημένες σας υπηρεσίες μετάφρασης. Μάθετε περισσότερα στην <slot id=docs>τεκμηρίωση προσαρμοσμένων μεταφραστών</slot>"
 	},
 	"settings_option_customTranslatorModule_manageButton": {
-		"message": "Διαχείριση μεταφραστών"
+		"message": "Διαχείριση μεταφραστών",
+		"description": "A button to show list of translation modules"
 	},
 	"settings_option_history_enable": {
 		"message": "Ενεργοποίηση ιστορικού"
 	},
 	"settings_option_history_enable_desc": {
-		"message": "Όταν είναι ενεργοποιημένο, κάθε μετάφραση θα καταγράφεται σε μια σελίδα ιστορικού"
-	},
-	"settings_option_mainPreferences": {
-		"message": "Κύριες ρυθμίσεις"
+		"message": "Όταν είναι ενεργοποιημένο, οι μεταφράσεις θα καταγράφονται και θα εμφανίζονται στη <slot id=historyPage>σελίδα ιστορικού</slot>"
 	},
 	"settings_option_pageTranslation": {
-		"message": "Μετάφραση σελίδας"
+		"message": "Η πλήρης μετάφραση σελίδας"
 	},
 	"settings_option_pageTranslation_detectLanguageByContent": {
 		"message": "Ανίχνευση γλώσσας από το περιεχόμενο"
 	},
 	"settings_option_pageTranslation_detectLanguageByContent_desc": {
-		"message": "Ανάλυση κειμένου στη σελίδα για την ανίχνευση της γλώσσας της σελίδας. Όταν είναι απενεργοποιημένο, θα χρησιμοποιείται η γλώσσα που ορίζεται στα μεταδεδομένα της σελίδας"
+		"message": "Ανάλυση του κειμένου στη σελίδα για ανίχνευση της γλώσσας του. Όταν είναι απενεργοποιημένο, θα χρησιμοποιηθεί η γλώσσα που καθορίζεται στα <slot id=docs>μεταδεδομένα της σελίδας</slot>"
 	},
 	"settings_option_pageTranslation_enableContextMenu": {
-		"message": "Ενεργοποίηση κουμπιού στο μενού περιβάλλοντος"
+		"message": "Ενεργοποίηση κουμπιού μενού περιβάλλοντος"
 	},
 	"settings_option_pageTranslation_enableContextMenu_desc": {
-		"message": "Προσθήκη κουμπιού για εναλλαγή της μετάφρασης της σελίδας στο μενού περιβάλλοντος"
+		"message": "Προσθήκη κουμπιού για εναλλαγή μετάφρασης σελίδας στο μενού περιβάλλοντος της σελίδας"
 	},
 	"settings_option_pageTranslation_excludeSelectors": {
-		"message": "Επιλογείς που παραλείπονται από τη μετάφραση"
+		"message": "Επιλογείς για εξαίρεση από τη μετάφραση"
 	},
 	"settings_option_pageTranslation_excludeSelectors_desc": {
-		"message": "Λίστα με επιλογείς CSS που δεν θα μεταφραστούν. Ένας επιλογέας ανά γραμμή. Εάν ένα στοιχείο ταιριάζει με οποιονδήποτε από αυτούς τους επιλογείς, αυτό, τα χαρακτηριστικά του και τα εσωτερικά του στοιχεία δεν θα μεταφραστούν"
+		"message": "Λίστα επιλεγμένων CSS για στοιχεία που θα εξαιρεθούν από τη μετάφραση. Ένας επιλεγμένος ανά γραμμή. Αν ένα στοιχείο ταιριάζει με οποιονδήποτε από αυτούς τους επιλεγμένους, το κείμενο, τα χαρακτηριστικά και τα ενσωματωμένα στοιχεία του δεν θα μεταφραστούν"
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
-		"message": "Μετάφραση μόνο των ορατών στοιχείων"
+		"message": "Μετάφραση μόνο ορατών στοιχείων"
 	},
 	"settings_option_pageTranslation_lazyTranslate_desc": {
-		"message": "Όταν αυτή η επιλογή είναι ενεργοποιημένη, θα μεταφράζονται μόνο τα ορατά στοιχεία. Αυτή η επιλογή εξοικονομεί δεδομένα δικτύου και περιορίζει τη χρήση των υπηρεσιών μετάφρασης"
+		"message": "Όταν αυτή η επιλογή είναι ενεργοποιημένη, μόνο τα ορατά στοιχεία θα μεταφραστούν. Αυτή η επιλογή μειώνει την κίνηση στο δίκτυο"
 	},
 	"settings_option_pageTranslation_originalTextPopup": {
-		"message": "Ενεργοποίηση αναδυόμενου με το πρωτότυπο κείμενο"
+		"message": "Ενεργοποίηση αναδυόμενου με το αρχικό κείμενο"
 	},
 	"settings_option_pageTranslation_originalTextPopup_desc": {
-		"message": "Εμφάνιση αναδυόμενου παραθύρου με το πρωτότυπο κείμενο όταν ο δείκτης του ποντικιού περνάει πάνω από τα μεταφρασμένα μπλοκ κειμένου"
+		"message": "Εμφάνιση αναδυόμενου με το αρχικό κείμενο όταν τοποθετείτε το δείκτη πάνω από μεταφρασμένα μπλοκ κειμένου"
 	},
-	"settings_option_pageTranslation_toggleTranslationHotkey": {
-		"message": "Πλήκτρα συντόμευσης"
+	"settings_option_pageTranslation_shortcut_toggleTranslation": {
+		"message": "Συντόμευση"
 	},
-	"settings_option_pageTranslation_toggleTranslationHotkey_desc": {
-		"message": "Συντομεύσεις για εναλλαγή της μετάφρασης σελίδας\nΠατήστε ESC για επαναφορά πλήκτρων"
+	"settings_option_pageTranslation_shortcut_toggleTranslation_desc": {
+		"message": "Συντόμευση για εναλλαγή μετάφρασης σελίδας\nΠατήστε ESC για επαναφορά πλήκτρων"
 	},
 	"settings_option_pageTranslation_translatableAttributes": {
 		"message": "Μεταφράσιμα χαρακτηριστικά"
 	},
 	"settings_option_pageTranslation_translatableAttributes_desc": {
-		"message": "Εισάγετε τα ονόματα <slot id=htmlAttributes>χαρακτηριστικών HTML</slot> προς μετάφραση, ένα χαρακτηριστικό ανά γραμμή"
+		"message": "Εισάγετε ονόματα <slot id=htmlAttributes>HTML χαρακτηριστικών</slot> για μετάφραση, ένα χαρακτηριστικό ανά γραμμή\nΜόνο τα χαρακτηριστικά σε αυτή τη λίστα θα μεταφραστούν"
 	},
 	"settings_option_popupTab_pageTranslator_showCounters": {
-		"message": "Εμφάνιση στατιστικών μετάφρασης"
+		"message": "Εμφάνιση προόδου μετάφρασης"
 	},
 	"settings_option_popupTab_pageTranslator_showCounters_desc": {
-		"message": "Εμφάνιση στατιστικών για τη μετάφραση σελίδας"
+		"message": "Εμφάνιση πίνακα με την πρόοδο της μετάφρασης σελίδας στο αναδυόμενο παράθυρο της επέκτασης"
 	},
 	"settings_option_selectTranslation": {
-		"message": "Μετάφραση επιλεγμένου κειμένου"
+		"message": "Μετάφραση για επιλεγμένο κείμενο"
 	},
-	"settings_option_selectTranslation_detectedLangFirst": {
-		"message": "Προτιμήστε τη γλώσσα που ανιχνεύτηκε από το κείμενο αντί για τη γλώσσα της σελίδας"
+	"settings_option_selectTranslation_detectTextLanguage": {
+		"message": "Ανίχνευση γλώσσας κειμένου"
 	},
-	"settings_option_selectTranslation_detectedLangFirst_desc": {
-		"message": "Όταν είναι ενεργοποιημένο, η ανιχνευμένη γλώσσα του επιλεγμένου κειμένου θα προτιμάται έναντι της γλώσσας της σελίδας"
+	"settings_option_selectTranslation_detectTextLanguage_desc": {
+		"message": "Όταν είναι ενεργοποιημένο, το επιλεγμένο κείμενο θα αναλυθεί για να ανιχνευθεί η γλώσσα για μετάφραση. Διαφορετικά, θα χρησιμοποιηθεί η γλώσσα της σελίδας"
 	},
 	"settings_option_selectTranslation_disableWhileTranslatePage": {
 		"message": "Απενεργοποίηση κατά τη μετάφραση της σελίδας"
 	},
 	"settings_option_selectTranslation_enable": {
-		"message": "Ενεργοποίηση"
+		"message": "Ενεργοποίηση μετάφρασης επιλεγμένου κειμένου"
+	},
+	"settings_option_selectTranslation_enable_desc": {
+		"message": "Όταν αυτή η λειτουργία είναι ενεργοποιημένη, μπορείτε να επιλέξετε οποιοδήποτε κείμενο στη σελίδα και να το μεταφράσετε σε ένα αναδυόμενο παράθυρο"
 	},
 	"settings_option_selectTranslation_focusOnTranslateButton": {
 		"message": "Αυτόματη εστίαση στο κουμπί μετάφρασης"
 	},
 	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
-		"message": "Εστίαση στο κουμπί μετάφρασης όταν εμφανίζεται"
+		"message": "Όταν το κουμπί μετάφρασης εμφανίζεται στη σελίδα, θα εστιάζεται αυτόματα"
 	},
 	"settings_option_selectTranslation_header_languageChoice": {
 		"message": "Ρυθμίσεις γλώσσας"
 	},
 	"settings_option_selectTranslation_isUseAutoForDetectLang": {
-		"message": "Ενεργοποίηση αυτόματης ανίχνευσης γλώσσας από τον μεταφραστή"
+		"message": "Επιτρέψτε στη μονάδα μετάφρασης να ανιχνεύσει τη γλώσσα του κειμένου"
 	},
 	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
-		"message": "Χρησιμοποιήστε την αυτόματη ανίχνευση γλώσσας από τον μεταφραστή όταν η γλώσσα δεν μπορεί να ανιχνευτεί τοπικά"
+		"message": "Όταν η γλώσσα του κειμένου δεν μπορεί να ανιχνευθεί τοπικά και αυτή η επιλογή είναι ενεργοποιημένη, το κείμενο θα μεταφραστεί με τη γλώσσα \"auto\" αν υποστηρίζεται.\nΌταν η επιλογή είναι απενεργοποιημένη, θα χρησιμοποιηθεί άλλη μέθοδος για να οριστεί η γλώσσα προέλευσης του κειμένου"
 	},
 	"settings_option_selectTranslation_mode": {
-		"message": "Ενεργοποίηση μετάφρασης"
+		"message": "Ενέργεια κατά την επιλογή κειμένου"
 	},
 	"settings_option_selectTranslation_mode_item_contextMenu": {
-		"message": "Κουμπί μενού περιβάλλοντος"
+		"message": "Μετάφραση κειμένου μέσω του μενού περιβάλλοντος"
 	},
 	"settings_option_selectTranslation_mode_item_popupButton": {
-		"message": "Αναδυόμενο κουμπί"
+		"message": "Εμφάνιση κουμπιού μετάφρασης"
 	},
 	"settings_option_selectTranslation_mode_item_quickTranslate": {
-		"message": "Γρήγορη μετάφραση με επιλογή"
+		"message": "Άμεση μετάφραση κειμένου"
 	},
 	"settings_option_selectTranslation_modifiers": {
 		"message": "Τροποποιητές"
@@ -447,13 +430,13 @@
 		"message": "shift"
 	},
 	"settings_option_selectTranslation_rememberDirection": {
-		"message": "Αποθήκευση της πιο πρόσφατα επιλεγμένης γλώσσας κειμένου"
+		"message": "Να θυμάσαι τη γλώσσα του πιο πρόσφατα επιλεγμένου κειμένου"
 	},
 	"settings_option_selectTranslation_showOnceForSelection": {
-		"message": "Εμφάνιση κουμπιού μετάφρασης μία φορά για κάθε επιλογή κειμένου"
+		"message": "Εμφάνιση του κουμπιού μετάφρασης μία φορά ανά επιλογή κειμένου"
 	},
 	"settings_option_selectTranslation_showOnceForSelection_desc": {
-		"message": "Το κουμπί θα εμφανίζεται μόνο μία φορά για κάθε επιλογή κειμένου. Για να εμφανιστεί ξανά, επιλέξτε το κείμενο εκ νέου"
+		"message": "Το κουμπί θα εμφανιστεί μόνο μία φορά για κάθε επιλογή κειμένου. Για να το εμφανίσετε ξανά, επιλέξτε ξανά το κείμενο"
 	},
 	"settings_option_selectTranslation_showOriginalText": {
 		"message": "Εμφάνιση αρχικού κειμένου"
@@ -462,43 +445,44 @@
 		"message": "Προσθήκη μπλοκ με το αρχικό κείμενο στο αναδυόμενο παράθυρο μετάφρασης"
 	},
 	"settings_option_selectTranslation_strictSelection": {
-		"message": "Αυστηρή επιλογή"
+		"message": "Αυστηρή λειτουργία επιλογής εύρους κειμένου",
+		"description": "This option is about selecting text via mouse"
 	},
 	"settings_option_selectTranslation_strictSelection_desc": {
-		"message": "Αγνόηση της επιλογής αν το αριστερό κουμπί του ποντικιού αφεθεί έξω από το μπλοκ που περιέχει το επιλεγμένο κείμενο"
+		"message": "Αγνόηση επιλογής εύρους κειμένου αν το αριστερό κουμπί του ποντικιού απελευθερωθεί εκτός του μπλοκ που περιέχει το επιλεγμένο κείμενο"
 	},
 	"settings_option_selectTranslation_timeoutForHideButton": {
-		"message": "Καθυστέρηση πριν την απόκρυψη του κουμπιού"
+		"message": "Καθυστέρηση πριν την απόκρυψη του κουμπιού αναδυόμενου παραθύρου"
 	},
 	"settings_option_selectTranslation_timeoutForHideButton_desc": {
-		"message": "Καθυστέρηση σε χιλιοστά του δευτερολέπτου πριν την απόκρυψη του κουμπιού όταν ο δείκτης δεν βρίσκεται πάνω του. Αν ο δείκτης βρεθεί πάνω στο κουμπί, ο χρονοδιακόπτης επανεκκινείται. Για απενεργοποίηση αυτόματης απόκρυψης, ορίστε τιμή μικρότερη του 1"
+		"message": "Καθυστέρηση σε χιλιοστά του δευτερολέπτου πριν την απόκρυψη του κουμπιού όταν ο κέρσορας δεν αιωρείται πάνω του. Η αιώρηση πάνω στο κουμπί επαναφέρει το χρονόμετρο. Για να απενεργοποιήσετε την αυτόματη απόκρυψη, ορίστε την τιμή σε λιγότερο από 1"
 	},
 	"settings_option_selectTranslation_zIndex": {
 		"message": "z-index"
 	},
 	"settings_option_selectTranslation_zIndex_desc": {
-		"message": "Αυξήστε αυτή την τιμή αν στοιχεία σε κάποιες σελίδες επικαλύπτουν το αναδυόμενο με το μεταφρασμένο κείμενο"
+		"message": "Αυξήστε αυτήν την τιμή εάν στοιχεία σε ορισμένες σελίδες επικαλύπτουν το αναδυόμενο παράθυρο με το μεταφρασμένο κείμενο"
 	},
 	"settings_option_textTranslator": {
 		"message": "Μετάφραση κειμένου"
 	},
 	"settings_option_textTranslator_rememberText": {
-		"message": "Αποθήκευση μεταφρασμένου κειμένου"
+		"message": "Απομνημόνευση μεταφρασμένου κειμένου"
 	},
 	"settings_option_textTranslator_rememberText_desc": {
-		"message": "Αποθήκευση του μεταφρασμένου κειμένου για την επόμενη φορά που ανοίγει το παράθυρο"
+		"message": "Απομνημόνευση μεταφρασμένου κειμένου για την επόμενη φορά που ανοίγει το παράθυρο"
 	},
 	"settings_option_textTranslator_spellCheck": {
 		"message": "Ενεργοποίηση ορθογραφικού ελέγχου"
 	},
 	"settings_option_textTranslator_suggestLanguage": {
-		"message": "Πρόταση ανιχνευμένης γλώσσας κειμένου"
+		"message": "Εμφάνιση ανιχνευμένης γλώσσας κειμένου"
 	},
 	"settings_option_textTranslator_suggestLanguageAlways": {
-		"message": "Πάντα εντοπίζετε και προτείνετε τη γλώσσα"
+		"message": "Πάντα ανίχνευση και πρόταση γλώσσας"
 	},
 	"settings_option_textTranslator_suggestLanguageAlways_desc": {
-		"message": "Όταν είναι απενεργοποιημένο, οι προτάσεις γλώσσας εμφανίζονται μόνο όταν η γλώσσα προέλευσης ανιχνεύεται αυτόματα"
+		"message": "Όταν είναι απενεργοποιημένο, οι προτάσεις γλώσσας εμφανίζονται μόνο εάν η γλώσσα προέλευσης έχει οριστεί σε \"αυτόματο\""
 	},
 	"settings_option_translatePreferences": {
 		"message": "Προτιμήσεις μετάφρασης"
@@ -510,43 +494,43 @@
 		"message": "Καθυστέρηση συσσώρευσης κειμένου"
 	},
 	"settings_option_translateScheduler_delay_desc": {
-		"message": "Ο μηχανισμός προγραμματισμού μετάφρασης μειώνει τον αριθμό των αιτημάτων προς το API της υπηρεσίας μετάφρασης. Προσπαθεί να συγκεντρώσει όσο το δυνατόν περισσότερα κείμενα για να αποσταλούν με ένα αίτημα. Ο προγραμματιστής θα περιμένει τον καθορισμένο χρόνο σε χιλιοστά του δευτερολέπτου για να συγκεντρώσει νέα κείμενα πριν ξεκινήσει τη μετάφραση"
+		"message": "Ο προγραμματιστής μετάφρασης μειώνει τον αριθμό των αιτημάτων προς το API της υπηρεσίας μετάφρασης συσσωρεύοντας όσο το δυνατόν περισσότερα κείμενα για αποστολή σε ένα μόνο αίτημα. Ο προγραμματιστής θα περιμένει για τον καθορισμένο χρόνο σε χιλιοστά του δευτερολέπτου για να συγκεντρώσει περισσότερα κείμενα πριν ξεκινήσει τη μετάφραση"
 	},
 	"settings_option_translateScheduler_retryLimit": {
-		"message": "Προσπάθειες επανάληψης μετάφρασης"
+		"message": "Όριο για προσπάθειες επανάληψης μετάφρασης"
 	},
 	"settings_option_translateScheduler_retryLimit_desc": {
-		"message": "Ο προγραμματιστής θα προσπαθήσει ξανά να μεταφράσει τα κείμενα όταν παρουσιαστούν σφάλματα μετάφρασης. Αυτή η επιλογή ορίζει το όριο των προσπαθειών επανάληψης. Ορισμός αρνητικού αριθμού επιτρέπει απεριόριστες επαναλήψεις"
+		"message": "Ο προγραμματιστής θα προσπαθήσει ξανά να μεταφράσει κείμενα όταν προκύψουν σφάλματα μετάφρασης. Αυτή η επιλογή ορίζει ένα όριο στις προσπάθειες επανάληψης. Ορίστε έναν αρνητικό αριθμό για να επιτρέψετε απεριόριστες επαναλήψεις"
 	},
 	"settings_option_translatorModule": {
 		"message": "Μονάδα μετάφρασης"
 	},
 	"settings_option_translatorModule_desc": {
-		"message": "Η ποιότητα των μεταφράσεων και οι διαθέσιμες γλώσσες εξαρτώνται από τον μεταφραστή"
+		"message": "Η ποιότητα των μεταφράσεων και οι διαθέσιμες γλώσσες εξαρτώνται από τη μονάδα μετάφρασης"
 	},
 	"settings_option_tts": {
-		"message": "Κείμενο σε Ομιλία (TTS)"
+		"message": "Μετατροπή κειμένου σε ομιλία (TTS)"
 	},
 	"settings_option_ttsCustomModules": {
-		"message": "Προσαρμοσμένο TTS"
+		"message": "Προσαρμοσμένες μονάδες σύνθεσης ομιλίας"
 	},
 	"settings_option_ttsCustomModules_button": {
-		"message": "Διαχείριση μονάδων TTS"
+		"message": "Διαχείριση μονάδων σύνθεσης ομιλίας"
 	},
 	"settings_option_ttsCustomModules_desc": {
-		"message": "Μπορείτε να προσθέσετε μονάδες TTS που χρησιμοποιούν τις αγαπημένες σας υπηρεσίες και φωνές. Διαβάστε περισσότερα στην <slot id=docs>τεκμηρίωση για προσαρμοσμένα TTS</slot>"
+		"message": "Μπορείτε να προσθέσετε μονάδες σύνθεσης ομιλίας που χρησιμοποιούν τις αγαπημένες σας υπηρεσίες και μηχανές φωνής. Διαβάστε περισσότερα στην <slot id=docs>τεκμηρίωση προσαρμοσμένου TTS</slot>"
 	},
 	"settings_option_ttsModule": {
-		"message": "Μονάδα TTS"
+		"message": "Επιλεγμένη μονάδα TTS"
 	},
 	"settings_option_ttsModule_desc": {
-		"message": "Μονάδα αναπαραγωγής κειμένου"
+		"message": "Μηχανή φωνής που χρησιμοποιείται για την εκφώνηση του κειμένου"
 	},
 	"settings_option_userLanguage": {
 		"message": "Η γλώσσα σας"
 	},
 	"settings_option_userLanguage_desc": {
-		"message": "Γλώσσα προορισμού για τη μετάφραση κειμένου"
+		"message": "Η γλώσσα στην οποία θα μεταφραστούν τα κείμενα"
 	},
 	"settings_pageTitle": {
 		"message": "Ρυθμίσεις"
@@ -555,28 +539,35 @@
 		"message": "Ιστορικό"
 	},
 	"settings_section_popup": {
-		"message": "Αναδυόμενο παράθυρο"
+		"message": "Αναδυόμενο"
 	},
 	"textTranslator_suggestLanguage": {
-		"message": "Φαίνεται ότι η γλώσσα είναι"
+		"message": "Φαίνεται ότι η γλώσσα του κειμένου είναι <slot id=languageSuggest>$language_name$</slot>",
+		"placeholders": {
+			"language_name": {
+				"content": "$1",
+				"example": "Ιαπωνικά"
+			}
+		}
 	},
 	"textTranslator_translateInputPlaceholder": {
-		"message": "Εισαγωγή κειμένου"
+		"message": "Εισαγωγή κειμένου για μετάφραση",
+		"description": "Request to user input some text for translation"
 	},
 	"textTranslator_translatePlaceholder": {
-		"message": "Μεταφρασμένο κείμενο"
+		"message": "Το μεταφρασμένο κείμενο θα εμφανιστεί εδώ"
 	},
 	"translatorsManagerWindow_add": {
-		"message": "Προσθήκη"
+		"message": "Προσθήκη μονάδας μετάφρασης"
 	},
 	"translatorsManagerWindow_close": {
 		"message": "Κλείσιμο"
 	},
 	"translatorsManagerWindow_emptyTranslatorsListText": {
-		"message": "Δεν έχουν προστεθεί ακόμη προσαρμοσμένοι μεταφραστές"
+		"message": "Δεν έχουν προστεθεί ακόμη προσαρμοσμένες μονάδες μετάφρασης"
 	},
 	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
-		"message": "Είστε βέβαιοι ότι θέλετε να αφαιρέσετε τον μεταφραστή \"$translator_name$\";",
+		"message": "Είστε βέβαιοι ότι θέλετε να αφαιρέσετε τη μονάδα μετάφρασης \"$translator_name$\";",
 		"placeholders": {
 			"translator_name": {
 				"content": "$1",
@@ -585,7 +576,7 @@
 		}
 	},
 	"translatorsManagerWindow_title": {
-		"message": "Προσαρμοσμένοι μεταφραστές"
+		"message": "Προσαρμοσμένες μονάδες μετάφρασης"
 	},
 	"translatorsManagerWindow_translator_delete": {
 		"message": "Διαγραφή"
@@ -594,7 +585,7 @@
 		"message": "Επεξεργασία"
 	},
 	"ttsManagerWindow_add": {
-		"message": "Προσθήκη"
+		"message": "Προσθήκη μονάδας TTS"
 	},
 	"ttsManagerWindow_close": {
 		"message": "Κλείσιμο"
@@ -612,7 +603,7 @@
 		}
 	},
 	"ttsManagerWindow_title": {
-		"message": "Μονάδες κειμένου σε ομιλία"
+		"message": "Μονάδες Μετατροπής Κειμένου σε Ομιλία"
 	},
 	"ttsManagerWindow_translator_delete": {
 		"message": "Διαγραφή"
@@ -621,13 +612,13 @@
 		"message": "Επεξεργασία"
 	},
 	"validation_number": {
-		"message": "Η παράμετρος πρέπει να είναι αριθμός"
+		"message": "Η τιμή πρέπει να είναι αριθμός"
 	},
 	"validation_numberBetweenRange": {
-		"message": "Η παράμετρος πρέπει να είναι αριθμός μεταξύ $1 και $2"
+		"message": "Η τιμή πρέπει να είναι αριθμός μεταξύ $1 και $2"
 	},
 	"validation_positiveNumber": {
-		"message": "Η παράμετρος πρέπει να είναι θετικός αριθμός"
+		"message": "Η τιμή πρέπει να είναι θετικός αριθμός"
 	},
 	"langCode_aa": {
 		"message": "Αφάρ"

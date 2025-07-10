@@ -1,9 +1,9 @@
 {
 	"common_action_addToDictionary": {
-		"message": "અનુવાદ શાબ্দકોશમાં ઉમેરો"
+		"message": "અનુવાદને શબ્દકોશમાં ઉમેરો"
 	},
 	"common_action_removeFromDictionary": {
-		"message": "અનુવાદ શાબ్దકોશમાંથી કાઢી નાખો"
+		"message": "અનુવાદને શબ્દકોશમાંથી દૂર કરો"
 	},
 	"common_bgUnavailable": {
 		"message": "પૃષ્ઠભૂમિ સ્ક્રિપ્ટ ઉપલબ્ધ નથી"
@@ -15,10 +15,10 @@
 		"message": "બંધ કરો"
 	},
 	"common_copy": {
-		"message": "નકલો કરો"
+		"message": "કૉપિ કરો"
 	},
 	"common_error": {
-		"message": "ત્રুটি"
+		"message": "ભૂલ"
 	},
 	"common_offlineTranslator": {
 		"message": "$1 - ઑફલાઇન અનુવાદક"
@@ -30,7 +30,7 @@
 		"message": "અનુવાદ કરો"
 	},
 	"component_hotkey_placeholder": {
-		"message": "શૉર્ટકટ રેકોર્ડ કરવા માટે ક્લિક કરો"
+		"message": "શોર્ટકટ રેકોર્ડ કરવા માટે ક્લિક કરો"
 	},
 	"component_hotkey_recordPlaceholder": {
 		"message": "કી દબાવો"
@@ -39,13 +39,13 @@
 		"message": "રીસેટ"
 	},
 	"contextMenu_disablePageTranslation": {
-		"message": "પૃષ્ઠ અનુવાદ અક્ષમ કરો"
+		"message": "પૃષ્ઠ અનુવાદ બંધ કરો"
 	},
 	"contextMenu_translatePage": {
-		"message": "પૃષ્ઠ અનુવાદીત કરો"
+		"message": "પૃષ્ઠ અનુવાદ કરો"
 	},
 	"contextMenu_translateSelectedText": {
-		"message": "ચયનિત ટેક્સ્ટ અનુવાદ કરો"
+		"message": "પસંદ કરેલ લખાણ અનુવાદ કરો"
 	},
 	"dictionaryButton_add": {
 		"message": "શબ્દકોશમાં ઉમેરો"
@@ -57,40 +57,40 @@
 		"message": "નિકાસ કરો"
 	},
 	"dictionary_button_removeAll": {
-		"message": "સભું કાઢી નાખો"
+		"message": "બધું દૂર કરો"
 	},
 	"dictionary_deleteAll": {
-		"message": "શું તમે નિશ્ચિત છો કે તમે অভিধાનમાં બધી અનુવાદો કાઢી નાખવા માંગો છો?"
+		"message": "શું તમે ખરેખર ડિક્શનરીમાંથી બધી જ અનુવાદો કાઢી નાખવા માંગો છો?"
 	},
 	"dictionary_deleteConfirmation": {
-		"message": "શું તમે નિશ્ચિત છો કે તમે આ અનુવાદ કાઢી નાખવા માંગો છો?"
+		"message": "શું તમે ખરેખર આ અનુવાદ કાઢી નાખવા માંગો છો?"
 	},
 	"dictionary_description": {
-		"message": "તમારા અનુવાદોને অভিধાનમાં જાળવો જેથી તેઓને પછી શોધી શકો"
+		"message": "અનુવાદોને ડિક્શનરીમાં સાચવો જેથી તમે તેમને પછીથી ઝડપથી શોધી શકો"
 	},
 	"dictionary_emptyDictionary": {
-		"message": "અભિધાન ખાલી છે. કેટલાક ટેક્સ્ટનું અનુવાદ કરીને ભરો શરૂઆત કરો"
+		"message": "ડિક્શનરી ખાલી છે, કેટલાક ટેક્સ્ટનો અનુવાદ કરીને તેને ભરવાનું શરૂ કરો"
 	},
 	"dictionary_filter_from": {
-		"message": "થી"
+		"message": "મૂળ ટેક્સ્ટ ભાષા"
 	},
 	"dictionary_filter_to": {
-		"message": "ત્યારે"
+		"message": "લક્ષ્ય ભાષા"
 	},
 	"dictionary_message_deleteAll_success": {
-		"message": "બધી અનુવાદો હટાવવામાં આવી"
+		"message": "બધા અનુવાદો દૂર કરવામાં આવ્યા છે"
 	},
 	"dictionary_notFoundEntries": {
-		"message": "આ ફિલ્ટર્સ સાથે મેળ ખાતા કોઈ અનુવાદ મળ્યાં નહીં"
+		"message": "આ ફિલ્ટર્સ સાથે મેળ ખાતા કોઈ અનુવાદો મળ્યા નથી"
 	},
 	"dictionary_pageTitle": {
-		"message": "અભિધાન"
+		"message": "ડિક્શનરી"
 	},
 	"dictionary_resetFilters": {
-		"message": "ફિલ્ટર્સ ફરીથી સેટ કરો"
+		"message": "ફિલ્ટર્સ રીસેટ કરો"
 	},
 	"dictionary_searchPlaceholder": {
-		"message": "લખાણ દ્વારા શોધો"
+		"message": "ટેક્સ્ટ દ્વારા શોધો"
 	},
 	"editorWindow_close": {
 		"message": "બંધ કરો"
@@ -98,35 +98,36 @@
 	"editorWindow_data_code": {
 		"message": "કોડ"
 	},
-	"editorWindow_data_translatorName": {
-		"message": "અનુવાદકનું નામ"
+	"editorWindow_data_title": {
+		"message": "મોડ્યુલ નામ"
 	},
-	"editorWindow_message_invalidTranslatorName": {
-		"message": "अनુવાદકનું નામ ઓછામાં ઓછો એક અક્ષર હોવું જોઈએ"
+	"editorWindow_message_invalidTitle": {
+		"message": "મોડ્યુલ નામમાં ઓછામાં ઓછો એક અક્ષર હોવો જોઈએ"
 	},
 	"editorWindow_save": {
-		"message": "સંગ્રહ કરો"
+		"message": "સાચવો"
 	},
 	"ext_description": {
-		"message": "પૃષ્ઠો અને લખાણનો અનુવાદ, શબ્દકોશ, ઇતિહાસ, ઑફલાઈન અને કસ્ટમ અનુવાદકો"
+		"message": "વેબ પેજ અનુવાદ, ટેક્સ્ટ અનુવાદ, શબ્દકોશ, ઇતિહાસ, કસ્ટમ અનુવાદકો, ભાષા અવરોધોને તોડવા માટે તમારે જે કંઈપણ જોઈએ છે"
 	},
 	"ext_name": {
-		"message": "લિંગ્વિસ્ટ - વેબ પૃષ્ઠો અનુવાદક"
+		"message": "Linguist - વેબ પેજ અનુવાદક"
 	},
 	"history_control_selectEntry": {
-		"message": "એન્ટ્રી પસંદ કરો"
+		"message": "બલ્ક ક્રિયા માટે અનુવાદ પસંદ કરો",
+		"description": "Description in finite form \"to pick\" with explaining what this checkbox will do"
 	},
 	"history_controls_clearHistory": {
 		"message": "ઇતિહાસ સાફ કરો"
 	},
 	"history_controls_deleteSelected": {
-		"message": "પસંદ કરેલા કાઢી નાખો"
+		"message": "પસંદ કરેલ અનુવાદો કાઢી નાખો"
 	},
 	"history_controls_selectAll": {
-		"message": "બધી ભાષાંતરો પસંદ કરો"
+		"message": "બધા અનુવાદો પસંદ કરો"
 	},
 	"history_message_clearHistoryConfirmation": {
-		"message": "શું તમે ખરેખર ઇતિહાસ સાફ કરવા ઇચ્છો છો? બધા એન્ટ્રીઓ દૂર થશે"
+		"message": "શું તમે ખરેખર ઇતિહાસ સાફ કરવા માંગો છો? બધી એન્ટ્રીઓ દૂર કરવામાં આવશે"
 	},
 	"history_message_deleteEntryConfirmation": {
 		"message": "શું તમે ખરેખર આ એન્ટ્રી કાઢી નાખવા માંગો છો?"
@@ -135,13 +136,13 @@
 		"message": "શું તમે ખરેખર પસંદ કરેલી એન્ટ્રીઓ ($1) કાઢી નાખવા માંગો છો?"
 	},
 	"history_message_entriesNotFound": {
-		"message": "ફિલ્ટર સાથે મેળ ખાતા ભાષાંતરો મળ્યા નથી"
+		"message": "ફિલ્ટર સાથે મેળ ખાતા કોઈ અનુવાદો મળ્યા નથી"
 	},
 	"history_message_noEntries": {
-		"message": "ઇતિહાસ સાફ છે"
+		"message": "ઇતિહાસ ખાલી છે"
 	},
 	"history_notification_disabled": {
-		"message": "ઇતિહાસ રેકોર્ડિંગ નિષ્ક્રિય છે, તેથી નવી એન્ટ્રીઓ દેખાશે નહીં. તમે આને <slot id=preferences>પ્રીફરન્સમાં</slot> બદલાવી શકો છો"
+		"message": "ઇતિહાસ રેકોર્ડિંગ અક્ષમ છે, તેથી નવી એન્ટ્રીઓ દેખાશે નહીં. તમે આને <slot id=preferences>પસંદગીઓ</slot> માં બદલી શકો છો"
 	},
 	"history_pageTitle": {
 		"message": "ઇતિહાસ"
@@ -153,64 +154,43 @@
 		"message": "મૂળ લખાણ બતાવો"
 	},
 	"lang_change": {
-		"message": "ભાષા બદલાવો"
+		"message": "ભાષા બદલો"
 	},
 	"lang_detect": {
-		"message": "આપમેળે શોધો"
+		"message": "સ્વયં-હદય"
 	},
 	"lang_select": {
 		"message": "ભાષા પસંદ કરો"
 	},
 	"lang_swap": {
-		"message": "ભાષાઓનું સ્થાન બદલો"
-	},
-	"message_askResetConfig": {
-		"message": "સેટિંગ્સ ફરીથી લોડ કરવી છે?"
-	},
-	"message_cacheFlushed": {
-		"message": "કેશ સાફ કરી દેવામાં આવ્યો છે"
-	},
-	"message_changesSaved": {
-		"message": "બદલાવ સાચવાયા"
-	},
-	"message_error": {
-		"message": "ભૂલ"
-	},
-	"message_errorOfTranslate": {
-		"message": "અનુવાદમાં ભૂલ"
-	},
-	"message_serviceRequiredKey": {
-		"message": "સેવા માટે કી જરૂરી છે"
-	},
-	"message_translateOfText": {
-		"message": "અનુવાદિત"
+		"message": "ભાષાઓ બદલો"
 	},
 	"message_unknownError": {
 		"message": "અજ્ઞાત ભૂલ"
 	},
 	"pageTranslator_alwaysTranslateLang": {
-		"message": "આ ભાષાનું હંમેશા અનુવાદ કરો"
+		"message": "હંમેશા આ ભાષાનું અનુવાદ કરો"
 	},
 	"pageTranslator_commonPreferences_autoTranslate_disable": {
-		"message": "આપવો બંધ કરો"
+		"message": "અક્ષમ કરો"
 	},
 	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
-		"message": "બધા સાઇટ્સ માટે બંધ કરો"
+		"message": "બધા સાઇટ્સ માટે અક્ષમ કરો"
 	},
 	"pageTranslator_commonPreferences_autoTranslate_enable": {
-		"message": "સક્રિય કરો"
+		"message": "સક્ષમ કરો"
 	},
 	"pageTranslator_commonPreferences_title": {
 		"message": "આ ભાષા માટે સામાન્ય પસંદગીઓ"
 	},
 	"pageTranslator_option_autoTranslate": {
-		"message": "સ્વયં અનુરુપ અનુવાદ"
-	},
-	"pageTranslator_showOptions": {
-		"message": "વિકલ્પ બતાવો"
+		"message": "સ્વચાલિત અનુવાદ"
 	},
 	"pageTranslator_showOriginal": {
-		"message": "મૂળ દર્શાવો"
+		"message": "મૂળ બતાવો"
+	},
+	"pageTranslator_showTranslationPreferences": {
+		"message": "અનુવાદ પસંદગીઓ"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_always": {
 		"message": "હંમેશા અનુવાદ કરો"
@@ -219,10 +199,10 @@
 		"message": "આ ભાષા માટે હંમેશા અનુવાદ કરો"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_default": {
-		"message": "સાંઘાન્ય નિયમો ઉપયોગ કરો"
+		"message": "સામાન્ય નિયમોનો ઉપયોગ કરો"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
-		"message": "આ ભાષા માટે સાંઘાન્ય નિયમો ઉપયોગ કરો"
+		"message": "આ ભાષા માટે સામાન્ય નિયમોનો ઉપયોગ કરો"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_never": {
 		"message": "ક્યારેય અનુવાદ ન કરો"
@@ -231,19 +211,19 @@
 		"message": "આ ભાષા માટે ક્યારેય અનુવાદ ન કરો"
 	},
 	"pageTranslator_sitePreferences_title": {
-		"message": "પસંદગીઓ માટે"
+		"message": "માટે પસંદગીઓ"
 	},
 	"pageTranslator_translatePage": {
-		"message": "પાનું અનુવાદ કરો"
+		"message": "પૃષ્ઠ અનુવાદ"
 	},
 	"pageTranslator_translationReport": {
-		"message": "અનુવાદ રિપોર્ટ"
+		"message": "અનુવાદ અહેવાલ"
 	},
 	"pageTranslator_translationReport_queue": {
-		"message": "પંક્તિ"
+		"message": "બાકી"
 	},
 	"pageTranslator_translationReport_reject": {
-		"message": "ત્રુટિઓ"
+		"message": "ભૂલો"
 	},
 	"pageTranslator_translationReport_resolve": {
 		"message": "અનુવાદિત"
@@ -261,37 +241,37 @@
 		"message": "રદ કરો"
 	},
 	"settings_button_export": {
-		"message": "સેટિંગ્સ નિકાસ કરો"
+		"message": "કોન્ફિગ નિકાસ કરો"
 	},
 	"settings_button_import": {
-		"message": "સેટિંગ્સ આયાત કરો"
+		"message": "કોન્ફિગ આયાત કરો"
 	},
 	"settings_button_reset": {
-		"message": "સેટિંગ્સ રીસેટ કરો"
+		"message": "કોન્ફિગ રીસેટ કરો"
 	},
 	"settings_button_saveChanges": {
-		"message": "બદલાવો સાચવો"
+		"message": "ફેરફારો સાચવો"
 	},
 	"settings_message_clearCache_success": {
-		"message": "કેશ સાફ કરી દેવામાં આવ્યો"
+		"message": "કેશ સાફ કરી"
 	},
 	"settings_message_common_invalidValueType": {
 		"message": "અમાન્ય મૂલ્ય"
 	},
 	"settings_message_importConfig_invalidFile": {
-		"message": "આયાત માટે ફાઇલને પ્રક્રિયા કરી શકાઈ ગઈ નથી"
+		"message": "પ્રદાન કરેલ કોન્ફિગ ફાઇલ ખોટી છે અથવા ખરાબ છે, અને પ્રક્રિયા કરી શકાતી નથી"
 	},
 	"settings_message_importConfig_success": {
-		"message": "આયાત પુર્ણ થયું"
+		"message": "આયાત પૂર્ણ"
 	},
 	"settings_message_resetConfig_confirm": {
-		"message": "શું તમે સેટિંગ્સ રીસેટ કરવી ઈચ્છો છો?"
+		"message": "સેટિંગ્સને મૂળ મૂલ્યો પર રીસેટ કરવા માટે પુષ્ટિ કરો"
 	},
 	"settings_message_resetConfig_success": {
-		"message": "સેટિંગ્સ રીસેટ થઇ ગયા"
+		"message": "સેટિંગ્સ રીસેટ"
 	},
 	"settings_message_saveChanges_success": {
-		"message": "બદલાવો સાચવાયા"
+		"message": "ફેરફારો સાચવ્યા"
 	},
 	"settings_option_cache": {
 		"message": "કેશ"
@@ -300,253 +280,257 @@
 		"message": "કેશ સાફ કરો"
 	},
 	"settings_option_cache_clear_desc": {
-		"message": "તમારા પાસે અનુવાદના અવશેષો હોય અથવા ગુપ્ત માહિતી કાઢવી હોય તો કેશ દૂર કરો"
+		"message": "જો તમે અનુવાદની ભૂલો જોતા હો અથવા કેશ સક્રિય હોય ત્યારે ખોટી રીતે ખાનગી લખાણોનું અનુવાદ કરો, તો તમે કેશમાંથી તમામ ડેટા કાઢી શકો છો",
+		"description": "Explanation for user about cases when it's useful to clear cache"
 	},
 	"settings_option_cache_enable": {
-		"message": "કેશ સક્ષમ કરો"
+		"message": "કેશ સક્રિય કરો"
 	},
 	"settings_option_cache_enable_desc": {
-		"message": "જ્યારે કેશ સક્રિય હોય ત્યારે એકવાર અનુવાદ થયેલા અનુવાદ તાત્કાલિક ઉપલબ્ધ રહેશે, ઇન્ટરનેટ કનેક્શન વગર પણ"
+		"message": "જ્યારે કેશ સક્રિય હોય, ત્યારે અગાઉ અનુવાદ કરેલા લખાણો તરત જ અનુવાદિત થશે, અનુવાદ સેવા માટે વધારાના વિનંતીઓ વિના"
 	},
 	"settings_option_cache_ignoreCase": {
-		"message": "કેસ સંવેદનશીલ નથી"
+		"message": "કેસ-અસંવેદનશીલ કેશનો ઉપયોગ કરો"
 	},
 	"settings_option_cache_ignoreCase_desc": {
-		"message": "જ્યારે સક્રિય હોય ત્યારે કેશમાંથી અનુવાદ નખરા વિના પણ ઉપયોગ થશે, જેના કરણે અનુવાદમાં કેટલીક ભૂલો થઈ શકે છે"
+		"message": "જ્યારે સક્રિય હોય, ત્યારે કેશ કરેલા અનુવાદો વિવિધ કેસવાળા લખાણો માટે ઉપયોગમાં લેવામાં આવશે, જે ચોક્કસ પરિસ્થિતિઓમાં અનુવાદ વિકારણોનું કારણ બની શકે છે"
 	},
 	"settings_option_commonSettings": {
 		"message": "સામાન્ય સેટિંગ્સ"
 	},
 	"settings_option_customTranslatorModule": {
-		"message": "કસ્ટમ અનુવાદક"
+		"message": "કસ્ટમ અનુવાદ મોડ્યુલો",
+		"description": "An user defined code that implements a translation module"
 	},
 	"settings_option_customTranslatorModule_desc": {
-		"message": "તમારા મનપસંદ અનુવાદ સેવાઓ માટે તમે કસ્ટમ અનુવાદક ઉમેરવા શકો છો. વધુ વાંચો અને <slot id=docs>કસ્ટમ અનુવાદક દસ્તાવેજમાં</slot> મોડ્યુલ શોધો"
+		"message": "તમે તમારા મનપસંદ અનુવાદ સેવાઓનો ઉપયોગ કરતા કસ્ટમ અનુવાદ મોડ્યુલો ઉમેરી શકો છો. <slot id=docs>કસ્ટમ અનુવાદકો દસ્તાવેજીકરણ</slot> માં વધુ જાણો"
 	},
 	"settings_option_customTranslatorModule_manageButton": {
-		"message": "અનુવાદકોનું સંચાલન કરો"
+		"message": "અનુવાદકોનું સંચાલન",
+		"description": "અનુવાદ મોડ્યુલોની યાદી બતાવવા માટેનું બટન"
 	},
 	"settings_option_history_enable": {
 		"message": "ઇતિહાસ સક્ષમ કરો"
 	},
 	"settings_option_history_enable_desc": {
-		"message": "જ્યારે સક્રિય કરવામાં આવે ત્યારે દરેક અનુવાદને ઇતિહાસ પૃષ્ઠે રેકોર્ડ કરવામાં આવશે"
-	},
-	"settings_option_mainPreferences": {
-		"message": "મુખ્ય સુવિધાઓ"
+		"message": "જ્યારે સક્ષમ હોય, ત્યારે અનુવાદો રેકોર્ડ કરવામાં આવશે અને <slot id=historyPage>ઇતિહાસ પૃષ્ઠ</slot> પર દેખાશે"
 	},
 	"settings_option_pageTranslation": {
-		"message": "પૃષ્ઠ અનુવાદ"
+		"message": "સંપૂર્ણ પૃષ્ઠ અનુવાદ"
 	},
 	"settings_option_pageTranslation_detectLanguageByContent": {
-		"message": "વસ્તુદ્વારા ભાષા ઓળખો"
+		"message": "સામગ્રી દ્વારા ભાષા શોધો"
 	},
 	"settings_option_pageTranslation_detectLanguageByContent_desc": {
-		"message": "પૃષ્ઠની ભાષા શોધવા માટે વેબ પૃષ્ઠ પર લખાણનું વિશ્લેષણ કરો. બંધ કર્યા બાદ પૃષ્ઠ મેટાડેટામાં આપવામાં આવેલી ભાષા ઉપયોગમાં લેવાશે"
+		"message": "તેની ભાષા શોધવા માટે વેબ પૃષ્ઠ上的 લખાણનું વિશ્લેષણ કરો. જ્યારે નિષ્ક્રિય હોય, ત્યારે <slot id=docs>પૃષ્ઠ મેટાડેટા</slot> માં નિર્દિષ્ટ ભાષાનો ઉપયોગ કરવામાં આવશે"
 	},
 	"settings_option_pageTranslation_enableContextMenu": {
-		"message": "સંદર્ભ મેનુ બટન સક્રિય કરો"
+		"message": "સંદર્ભ મેનુ બટન સક્ષમ કરો"
 	},
 	"settings_option_pageTranslation_enableContextMenu_desc": {
-		"message": "સંદર્ભ મેનુમાં પૃષ્ઠ અનુવાદ ટોસ્ટOGGLE કરવા માટે બટન ઉમેરો"
+		"message": "પૃષ્ઠ સંદર્ભ મેનુમાં પૃષ્ઠ અનુવાદ ટૉગલ કરવા માટે બટન ઉમેરો"
 	},
 	"settings_option_pageTranslation_excludeSelectors": {
-		"message": "ઓછું અનુવાદ કરવાના પસંદગીઓ"
+		"message": "અનુવાદમાંથી બહાર રાખવા માટેના પસંદકર્તાઓ"
 	},
 	"settings_option_pageTranslation_excludeSelectors_desc": {
-		"message": "આ CSS પસંદગીઓની સૂચિ જે અનુવાદ નહીં કરવામાં આવે. દરેક પંક્તિમાં એક પસંદગી. જો કોઈ તત્વ આ પસંદગીઓમાં કોઈને મેચ કરે, તો તેનો અને તેના ગુણધર્મો અને વંશજ તત્વો અનુવાદ નહીં કરવામાં આવે"
+		"message": "અનુવાદમાંથી બહાર રાખવાના તત્વો માટેના CSS સિલેક્ટર્સની યાદી. દરેક લાઇન પર એક સિલેક્ટર. જો કોઈ તત્વ આ સિલેક્ટર્સમાંથી કોઈને મેળવે છે, તો તેનો ટેક્સ્ટ, ગુણધર્મો અને નેસ્ટેડ તત્વો અનુવાદિત નહીં થાય"
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
-		"message": "કેવળ દેખાતા તત્વોનું અનુવાદ કરો"
+		"message": "માત્ર દેખાતા તત્વોને અનુવાદિત કરો"
 	},
 	"settings_option_pageTranslation_lazyTranslate_desc": {
-		"message": "જ્યારે આ વિકલ્પ સક્રિય હોય છે, ત્યારે માત્ર દૃશ્યમાન તત્વોનું અનુવાદ કરવામાં આવે છે. આ વિકલ્પ નેટવર્ક ટ્રાફિક અને ઉપયોગમાં આવતા અનુવાદ સેવાઓની મર્યાદાઓ બચાવે છે"
+		"message": "જ્યારે આ વિકલ્પ સક્રિય હોય છે, ત્યારે માત્ર દેખાતા તત્વોને અનુવાદિત કરવામાં આવશે. આ વિકલ્પ નેટવર્ક ટ્રાફિક ઘટાડે છે"
 	},
 	"settings_option_pageTranslation_originalTextPopup": {
-		"message": "મૂળ લખાણ સાથે પોસ્ટપ અપ સક્ષમ કરો"
+		"message": "મૂળ ટેક્સ્ટ સાથે પોપઅપ સક્રિય કરો"
 	},
 	"settings_option_pageTranslation_originalTextPopup_desc": {
-		"message": "અનુવાદિત લખાણ બ્લોક પર માઉસ હવર કરતાં મૂળ લખાણ સાથે પોસ્ટપ અપ બતાવો"
+		"message": "અનુવાદિત ટેક્સ્ટ બ્લોક્સ પર હૉવર કરતી વખતે મૂળ ટેક્સ્ટ સાથે પોપઅપ બતાવો"
 	},
-	"settings_option_pageTranslation_toggleTranslationHotkey": {
-		"message": "હોટકી"
+	"settings_option_pageTranslation_shortcut_toggleTranslation": {
+		"message": "શૉર્ટકટ"
 	},
-	"settings_option_pageTranslation_toggleTranslationHotkey_desc": {
-		"message": "પાના અનુવાદ માટે શોર્ટકટ્સ\nકીઓ રીસેટ કરવા ESC દબાવો"
+	"settings_option_pageTranslation_shortcut_toggleTranslation_desc": {
+		"message": "પેજ અનુવાદ ટૉગલ કરવા માટે શૉર્ટકટ\nકીઝ રીસેટ કરવા માટે ESC દબાવો"
 	},
 	"settings_option_pageTranslation_translatableAttributes": {
-		"message": "અનુવાદનીય ગુણધર્મો"
+		"message": "અનુવાદિત ગુણધર્મો"
 	},
 	"settings_option_pageTranslation_translatableAttributes_desc": {
-		"message": "અનુવાદ કરવા માટે <slot id=htmlAttributes>HTML ગુણધર્મ</slot> ના નામ લખો, હरेक લાઇનમાં એક ગુણધર્મ"
+		"message": "<slot id=htmlAttributes>HTML ગુણધર્મ</slot> નામો દાખલ કરો, એક ગુણધર્મ પ્રતિ લાઇન\nમાત્ર આ યાદીમાંના ગુણધર્મો અનુવાદિત થશે"
 	},
 	"settings_option_popupTab_pageTranslator_showCounters": {
-		"message": "અનુવાદ આંકડાકીય માહિતી બતાવો"
+		"message": "અનુવાદ પ્રગતિ બતાવો"
 	},
 	"settings_option_popupTab_pageTranslator_showCounters_desc": {
-		"message": "પાનું અનુવાદ માટે આંકડાકીય માહિતી દર્શાવો"
+		"message": "એક્સ્ટેન્શન પોપઅપમાં પેજ અનુવાદ પ્રગતિ સાથે પેનલ બતાવો"
 	},
 	"settings_option_selectTranslation": {
-		"message": "પસંદ કરેલ લખાણનો અનુવાદ"
+		"message": "પસંદ કરેલ લખાણ માટે અનુવાદ"
 	},
-	"settings_option_selectTranslation_detectedLangFirst": {
-		"message": "પાનું ભાષા કરતા ટેક્સ્ટની ઓળખાયેલી ભાષાને પ્રાધાન્ય આપો"
+	"settings_option_selectTranslation_detectTextLanguage": {
+		"message": "લખાણની ભાષા શોધો"
 	},
-	"settings_option_selectTranslation_detectedLangFirst_desc": {
-		"message": "જ્યારે સક્રિય હોય, ત્યારે પસંદ કરાયેલ ટેક્સ્ટની ઓળખાયેલી ભાષા પાનું ભાષા કરતા વધુ પ્રાધાન્ય આપવામાં આવશે"
+	"settings_option_selectTranslation_detectTextLanguage_desc": {
+		"message": "જ્યારે સક્ષમ હોય, ત્યારે પસંદ કરેલ લખાણનું વિશ્લેષણ કરીને અનુવાદ માટે ભાષા શોધવામાં આવશે. અન્યથા, પેજની ભાષાનો ઉપયોગ કરવામાં આવશે"
 	},
 	"settings_option_selectTranslation_disableWhileTranslatePage": {
-		"message": "પાનું અનુવાદ કરતી વખતે અવરોધિત કરો"
+		"message": "પેજ અનુવાદ કરતી વખતે નિષ્ક્રિય કરો"
 	},
 	"settings_option_selectTranslation_enable": {
-		"message": "સક્રિય કરો"
+		"message": "પસંદ કરેલ લખાણ અનુવાદ સક્ષમ કરો"
+	},
+	"settings_option_selectTranslation_enable_desc": {
+		"message": "જ્યારે આ સુવિધા સક્ષમ હોય, ત્યારે તમે પેજ પર કોઈપણ લખાણ પસંદ કરી શકો છો અને તેને પોપઅપમાં અનુવાદિત કરી શકો છો"
 	},
 	"settings_option_selectTranslation_focusOnTranslateButton": {
-		"message": "અનુવાદ બટન પર આપોઆપ ધ્યાન કેન્દ્રિત કરો"
+		"message": "અનુવાદ બટન પર આપમેળે ફોકસ કરો"
 	},
 	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
-		"message": "જ્યારે અનુવાદ બટન દેખાય ત્યારે તેમાં ધ્યાન કેન્દ્રિત કરો"
+		"message": "જ્યારે પેજ પર અનુવાદ બટન દેખાય છે, ત્યારે તે આપમેળે ફોકસ કરવામાં આવશે"
 	},
 	"settings_option_selectTranslation_header_languageChoice": {
 		"message": "ભાષા સેટિંગ્સ"
 	},
 	"settings_option_selectTranslation_isUseAutoForDetectLang": {
-		"message": "ભાષા માન્ય કરવા માટે અનુવાદક દ્વારા આપોઆપ શોધ સક્રિય કરો"
+		"message": "અનુવાદ મોડ્યુલને ટેક્સ્ટ ભાષા શોધવા માટે મંજૂરી આપો"
 	},
 	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
-		"message": "જ્યારે સ્થાનિક રીતે ભાષા ઓળખી ન શકાય ત્યારે અનુવાદક દ્વારા આપોઆપ ભાષા શોધનો ઉપયોગ કરો"
+		"message": "જ્યારે ટેક્સ્ટ ભાષા સ્થાનિક સ્તરે શોધી શકાતી નથી અને આ વિકલ્પ સક્રિય છે, ત્યારે ટેક્સ્ટને ભાષા \"auto\" સાથે અનુવાદિત કરવામાં આવશે જો સમર્થિત હોય.\nજ્યારે વિકલ્પ નિષ્ક્રિય છે, ત્યારે ટેક્સ્ટની સ્ત્રોત ભાષા સેટ કરવા માટે બીજો ફોલબેક પદ્ધતિનો ઉપયોગ કરવામાં આવશે"
 	},
 	"settings_option_selectTranslation_mode": {
-		"message": "અનુવાદ પ્રક્રિયા ટ્રિગર"
+		"message": "ટેક્સ્ટ પસંદગી પર ક્રિયા"
 	},
 	"settings_option_selectTranslation_mode_item_contextMenu": {
-		"message": "સંદર્ભ મેનુ બટન"
+		"message": "સંદર્ભ મેનુ દ્વારા ટેક્સ્ટ અનુવાદિત કરો"
 	},
 	"settings_option_selectTranslation_mode_item_popupButton": {
-		"message": "પોપઅપ બટન"
+		"message": "અનુવાદ બટન બતાવો"
 	},
 	"settings_option_selectTranslation_mode_item_quickTranslate": {
-		"message": "પસંદગી દ્વારા ઝડપી અનુવાદ"
+		"message": "ટેક્સ્ટ તરત જ અનુવાદિત કરો"
 	},
 	"settings_option_selectTranslation_modifiers": {
 		"message": "મોડિફાયર્સ"
 	},
 	"settings_option_selectTranslation_modifiers_desc": {
-		"message": "અનુવાદ બતાવવા માટે કીબોર્ડ પર દબાવવામાં આવતી કીઝ પસંદ કરો"
+		"message": "અનુવાદ દર્શાવવા માટે કીબોર્ડ પર દબાવવાની કીઓ પસંદ કરો"
 	},
 	"settings_option_selectTranslation_modifiers_key_alt": {
-		"message": "અલ્ટ"
+		"message": "alt"
 	},
 	"settings_option_selectTranslation_modifiers_key_ctrl": {
-		"message": "કન્ટ્રોલ"
+		"message": "ctrl"
 	},
 	"settings_option_selectTranslation_modifiers_key_meta": {
-		"message": "મેટા"
+		"message": "meta"
 	},
 	"settings_option_selectTranslation_modifiers_key_shift": {
-		"message": "શિફ્ટ"
+		"message": "shift"
 	},
 	"settings_option_selectTranslation_rememberDirection": {
-		"message": "ટેક્સ્ટના સૌથી તાજા પસંદ કરેલા ભાષા યાદ રાખવું"
+		"message": "તાજેતરમાં પસંદ કરેલી ભાષા યાદ રાખો"
 	},
 	"settings_option_selectTranslation_showOnceForSelection": {
-		"message": "દરેક ટેક્સ્ટ પસંદગીને માટે એક વાર અનુવાદ બટન બતાવો"
+		"message": "ટેક્સ્ટ પસંદગી માટે એકવાર અનુવાદ બટન બતાવો"
 	},
 	"settings_option_selectTranslation_showOnceForSelection_desc": {
-		"message": "દરેક ટેક્સ્ટ પસંદગીને માટે બટન માત્ર એક વખત જ બતાવવામાં આવશે. ફરી બતાવવા માટે, ટેક્સ્ટને ફરીથી પસંદ કરો"
+		"message": "બટન દરેક ટેક્સ્ટ પસંદગી માટે ફક્ત એકવાર દેખાશે. તેને ફરીથી બતાવવા માટે, ટેક્સ્ટને ફરીથી પસંદ કરો"
 	},
 	"settings_option_selectTranslation_showOriginalText": {
 		"message": "મૂળ ટેક્સ્ટ બતાવો"
 	},
 	"settings_option_selectTranslation_showOriginalText_desc": {
-		"message": "અનુવાદ પોપઅપમાં મૂળ ટેક્સ્ટ સાથે બ્લોક ઉમેરો"
+		"message": "અનુવાદ પોપઅપમાં મૂળ ટેક્સ્ટ સાથેનો બ્લોક ઉમેરો"
 	},
 	"settings_option_selectTranslation_strictSelection": {
-		"message": "સખત પસંદગી"
+		"message": "ટેક્સ્ટ સ્પાન પસંદગીનો કડક મોડ",
+		"description": "આ વિકલ્પ માઉસ દ્વારા ટેક્સ્ટ પસંદ કરવા વિશે છે"
 	},
 	"settings_option_selectTranslation_strictSelection_desc": {
-		"message": "પસંદ કરેલ ટેક્સ્ટ ધરાવતા બ્લોકની બહાર માઉસ બટન છોડવામાં આવે તો પસંદગી અવગણો"
+		"message": "પસંદ કરેલ ટેક્સ્ટ ધરાવતા બ્લોકની બહાર ડાબું માઉસ બટન છોડવામાં આવે તો ટેક્સ્ટ સ્પાન પસંદગી અવગણો"
 	},
 	"settings_option_selectTranslation_timeoutForHideButton": {
-		"message": "બટન છુપાવવાની મેરવાત પહેલા વિરામ"
+		"message": "પોપઅપ બટન છુપાવવા માટે વિલંબ"
 	},
 	"settings_option_selectTranslation_timeoutForHideButton_desc": {
-		"message": "કર્સર ન હHover કરતી વખતે બટન છુપાવવા માટેનું મિલીસેકંડમાં વિરામ. બટન પર હHover કરવાથી ટાઈમર ફરી શરૂ થાય છે. આપોઆપ છુપાવવા નિવારવા માટે, મૂલ્ય 1 કરતા ઓછું મૂકો"
+		"message": "કર્સર બટન પર હોવર ન કરતું હોય ત્યારે બટન છુપાવવા માટે મિલિસેકન્ડમાં વિલંબ. બટન પર હોવર કરવાથી ટાઈમર રીસેટ થાય છે. ઓટો-હાઈડ નિષ્ક્રિય કરવા માટે, મૂલ્ય 1 કરતા ઓછું સેટ કરો"
 	},
 	"settings_option_selectTranslation_zIndex": {
 		"message": "z-ઇન્ડેક્સ"
 	},
 	"settings_option_selectTranslation_zIndex_desc": {
-		"message": "જો કેટલાક પાના પર તત્વો અનુવાદિત ટેક્સ્ટવાળા પોપઅપની ઉપર overlap થાય તો આ માન વધારવો"
+		"message": "જો કેટલીક પેજ પરના તત્વો અનુવાદિત ટેક્સ્ટ સાથે પોપઅપને ઓવરલેપ કરે છે તો આ મૂલ્ય વધારવું"
 	},
 	"settings_option_textTranslator": {
 		"message": "ટેક્સ્ટ અનુવાદ"
 	},
 	"settings_option_textTranslator_rememberText": {
-		"message": "અનુવાદિત ટેક્સ્ટ યાદ રાખો"
+		"message": "અનુવાદિત ટેક્સ્ટ યાદ રાખવું"
 	},
 	"settings_option_textTranslator_rememberText_desc": {
-		"message": "વિન્ડો ફરી ખૂલતી વખતે અનુવાદિત ટેક્સ્ટ યાદ રાખો"
+		"message": "વિન્ડો ખૂલે ત્યારે અનુવાદિત ટેક્સ્ટ યાદ રાખવું"
 	},
 	"settings_option_textTranslator_spellCheck": {
-		"message": "સ્પેલ ચેક સક્રિય કરો"
+		"message": "સ્પેલ ચેક સક્ષમ કરો"
 	},
 	"settings_option_textTranslator_suggestLanguage": {
-		"message": "પહોચાનેલી ટેક્સ્ટ ભાષા સૂચવાવો"
+		"message": "શોધાયેલ ટેક્સ્ટ ભાષા બતાવવી"
 	},
 	"settings_option_textTranslator_suggestLanguageAlways": {
 		"message": "હંમેશા ભાષા શોધો અને સૂચવો"
 	},
 	"settings_option_textTranslator_suggestLanguageAlways_desc": {
-		"message": "બંદ હોવા પર, ભાષા સૂચનો માત્ર ત્યારે દેખાશે જ્યારે સ્ત્રોત ભાષા આપમેળે ઓળખાય"
+		"message": "જ્યારે નિષ્ક્રિય હોય, ભાષા સૂચનો ફક્ત ત્યારે જ દેખાય છે જ્યારે સ્ત્રોત ભાષા \"auto\" પર સેટ હોય"
 	},
 	"settings_option_translatePreferences": {
 		"message": "અનુવાદ પસંદગીઓ"
 	},
 	"settings_option_translateScheduler": {
-		"message": "અનુવાદ શેડ્યુલર"
+		"message": "અનુવાદ શેડ્યૂલર"
 	},
 	"settings_option_translateScheduler_delay": {
-		"message": "ટેક્સ્ટ સંગ્રહ વિલંબ"
+		"message": "ટેક્સ્ટ એકઠા કરવાની વિલંબ"
 	},
 	"settings_option_translateScheduler_delay_desc": {
-		"message": "અનુવાદ શિડ્યૂલર અનુવાદ સેવા API માટે વિનંતીઓની સંખ્યાને ઘટાડી દે છે. તે શક્ય તેટલા ટેક્સ્ટને એકસાથે મોકલવાના પ્રયત્નમાં રહે છે. શિડ્યૂલર નિર્ધારિત મિલિસેકંડ સમય માટે નવો ટેક્સ્ટ એકત્રિત કરવા માટે રાહ જોઈને અનુવાદ શરૂ કરશે."
+		"message": "અનુવાદ શેડ્યૂલર એક જ વિનંતીમાં મોકલવા માટે શક્ય તેટલા ટેક્સ્ટ એકઠા કરીને અનુવાદ સેવા API માટેની વિનંતીઓની સંખ્યા ઘટાડે છે. અનુવાદ શરૂ કરતા પહેલા વધુ ટેક્સ્ટ એકઠા કરવા માટે શેડ્યૂલર નિર્ધારિત સમય (મિલિસેકન્ડમાં) માટે રાહ જોશે"
 	},
 	"settings_option_translateScheduler_retryLimit": {
-		"message": "અનુવાદ ફરી પ્રયાસોની સંખ્યા"
+		"message": "અનુવાદ ફરી પ્રયાસોની મર્યાદા"
 	},
 	"settings_option_translateScheduler_retryLimit_desc": {
-		"message": "શિડ્યૂલર અનુવાદમાં ત્રુટિ થાય ત્યારે ટેક્સ્ટનું ફરીથી અનુવાદ કરવાની કોશિશ કરશે. આ વિકલ્પ ફરી પ્રયાસોની મર્યાદા নির্ধારિત કરે છે. અનનિyamિત ફરી પ્રયાસો માટે નકારાત્મક સંખ્યા સેટ કરો."
+		"message": "જ્યારે અનુવાદમાં ભૂલો થાય છે ત્યારે શેડ્યૂલર ટેક્સ્ટનું અનુવાદ ફરી પ્રયાસ કરશે. આ વિકલ્પ ફરી પ્રયાસોની મર્યાદા નક્કી કરે છે. અનંત ફરી પ્રયાસોની મંજૂરી આપવા માટે નકારાત્મક સંખ્યા સેટ કરો"
 	},
 	"settings_option_translatorModule": {
-		"message": "અનુવાદક મોડ્યુલ"
+		"message": "અનુવાદ મોડ્યુલ"
 	},
 	"settings_option_translatorModule_desc": {
-		"message": "અનુવાદની ગુણવત્તા અને ઉપલબ્ધ ભાષાઓ અનુવાદક પર આધારિત છે."
+		"message": "અનુવાદની ગુણવત્તા અને ઉપલબ્ધ ભાષાઓ અનુવાદ મોડ્યુલ પર આધાર રાખે છે"
 	},
 	"settings_option_tts": {
-		"message": "ટેક્સ્ટ ટુ સ્પીચ (TTS)"
+		"message": "ટેક્સ્ટ ટુ સ્પીચ રૂપાંતર (TTS)"
 	},
 	"settings_option_ttsCustomModules": {
-		"message": "કસ્ટમ TTS"
+		"message": "કસ્ટમ ભાષણ સંશ્લેષણ મોડ્યુલ્સ"
 	},
 	"settings_option_ttsCustomModules_button": {
-		"message": "TTS મોડ્યુલ મેનેજ કરો"
+		"message": "વાણી સંશ્લેષણ મોડ્યુલોનું સંચાલન"
 	},
 	"settings_option_ttsCustomModules_desc": {
-		"message": "તમે તમારા પ્રિય સેવાઓ અને અવાજોનો ઉપયોગ કરતી TTS મોડ્યૂલો ઉમેરવા શકો છો. વધુ વાંચવા માટે <slot id=docs>કસ્ટમ TTS માટે દસ્તાવેજીકરણ</slot> જોવા કરો"
+		"message": "તમે તમારા મનપસંદ સેવાઓ અને વાણી એન્જિનોનો ઉપયોગ કરતા વાણી સંશ્લેષણ મોડ્યુલો ઉમેરી શકો છો. વધુ વાંચો <slot id=docs>કસ્ટમ TTS દસ્તાવેજીકરણ</slot> માં"
 	},
 	"settings_option_ttsModule": {
-		"message": "TTS મોડ્યુલ"
+		"message": "પસંદ કરેલ TTS મોડ્યુલ"
 	},
 	"settings_option_ttsModule_desc": {
-		"message": "ટેક્સ્ટ બોલવા માટે મોડ્યુલ"
+		"message": "વાણી એન્જિન જે ટેક્સ્ટને અવાજ આપવા માટે વપરાય છે"
 	},
 	"settings_option_userLanguage": {
 		"message": "તમારી ભાષા"
 	},
 	"settings_option_userLanguage_desc": {
-		"message": "ટેક્સ્ટ અનુવાદ માટે લક્ષ્ય ભાષા"
+		"message": "ભાષા જેમાં ટેક્સ્ટનો અનુવાદ કરવામાં આવશે"
 	},
 	"settings_pageTitle": {
 		"message": "સેટિંગ્સ"
@@ -558,25 +542,32 @@
 		"message": "પોપઅપ"
 	},
 	"textTranslator_suggestLanguage": {
-		"message": "આ ભાષા લાગી રહી છે"
+		"message": "લાગે છે કે ટેક્સ્ટની ભાષા <slot id=languageSuggest>$language_name$</slot> છે",
+		"placeholders": {
+			"language_name": {
+				"content": "$1",
+				"example": "Japanese"
+			}
+		}
 	},
 	"textTranslator_translateInputPlaceholder": {
-		"message": "ટેક્સ્ટ દાખલ કરો"
+		"message": "અનુવાદ માટે ટેક્સ્ટ દાખલ કરો",
+		"description": "Request to user input some text for translation"
 	},
 	"textTranslator_translatePlaceholder": {
-		"message": "અનુવાદિત ટેક્સ્ટ"
+		"message": "અનુવાદિત ટેક્સ્ટ અહીં હશે"
 	},
 	"translatorsManagerWindow_add": {
-		"message": "માત્ર કરો"
+		"message": "અનુવાદ મોડ્યુલ ઉમેરો"
 	},
 	"translatorsManagerWindow_close": {
 		"message": "બંધ કરો"
 	},
 	"translatorsManagerWindow_emptyTranslatorsListText": {
-		"message": "કોઈ કસ્ટમ અનુવાદકો હજુ ઉમેરવામાં આવ્યા નથી"
+		"message": "હજી સુધી કોઈ કસ્ટમ અનુવાદ મોડ્યુલ ઉમેરવામાં આવ્યા નથી"
 	},
 	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
-		"message": "શું તમે ખાતરી કરો છો કે તમે અનુવાદક \"$translator_name$\"ને હટાવવું માંગો છો?",
+		"message": "શું તમે ખરેખર \"$translator_name$\" અનુવાદ મોડ્યુલ દૂર કરવા માંગો છો?",
 		"placeholders": {
 			"translator_name": {
 				"content": "$1",
@@ -585,25 +576,25 @@
 		}
 	},
 	"translatorsManagerWindow_title": {
-		"message": "કસ્ટમ અનુવાદકો"
+		"message": "કસ્ટમ અનુવાદ મોડ્યુલ"
 	},
 	"translatorsManagerWindow_translator_delete": {
-		"message": "હટાવો"
+		"message": "દૂર કરો"
 	},
 	"translatorsManagerWindow_translator_edit": {
-		"message": "સંપાદન કરો"
+		"message": "સંપાદિત કરો"
 	},
 	"ttsManagerWindow_add": {
-		"message": "ઉમેરો"
+		"message": "TTS મોડ્યુલ ઉમેરો"
 	},
 	"ttsManagerWindow_close": {
 		"message": "બંધ કરો"
 	},
 	"ttsManagerWindow_emptyTranslatorsListText": {
-		"message": "કોઈ TTS મોડ્યુલ્સ હજુ ઉમેરવામાં આવ્યા નથી"
+		"message": "હજી સુધી કોઈ TTS મોડ્યુલ્સ ઉમેરવામાં આવ્યા નથી"
 	},
 	"ttsManagerWindow_message_ttsRemoveConfirmation": {
-		"message": "શું તમે ખાતરી કરો છો કે તમે TTS મોડ્યુલ \"$tts_name$\"ને હટાવવું માંગો છો?",
+		"message": "શું તમે ખરેખર TTS મોડ્યુલ \"$tts_name$\" દૂર કરવા માંગો છો?",
 		"placeholders": {
 			"tts_name": {
 				"content": "$1",
@@ -612,22 +603,22 @@
 		}
 	},
 	"ttsManagerWindow_title": {
-		"message": "ટેક્સ્ટ ટુ સ્પીચ મોડ્યુલ્સ"
+		"message": "ટેક્સ્ટ-ટુ-સ્પીચ મોડ્યુલ્સ"
 	},
 	"ttsManagerWindow_translator_delete": {
-		"message": "હટાવો"
+		"message": "કાઢી નાખો"
 	},
 	"ttsManagerWindow_translator_edit": {
 		"message": "સંપાદિત કરો"
 	},
 	"validation_number": {
-		"message": "પેરામીટર સંખ્યા હોવી આવશ્યક છે"
+		"message": "મૂલ્ય સંખ્યા હોવું જોઈએ"
 	},
 	"validation_numberBetweenRange": {
-		"message": "પેરામીટર $1 અને $2 ની વચ્ચેની સંખ્યા હોવી જોઈએ"
+		"message": "મૂલ્ય $1 અને $2 વચ્ચેની સંખ્યા હોવી જોઈએ"
 	},
 	"validation_positiveNumber": {
-		"message": "પેરામીટર ધનાત્મક સંખ્યા હોવી જોઈએ"
+		"message": "મૂલ્ય સકારાત્મક સંખ્યા હોવું જોઈએ"
 	},
 	"langCode_aa": {
 		"message": "અફાર"

@@ -1,9 +1,9 @@
 {
 	"common_action_addToDictionary": {
-		"message": "Сөздүктө котормону кошуу"
+		"message": "Сөздүккө которууну кошуу"
 	},
 	"common_action_removeFromDictionary": {
-		"message": "Сөздүктөн котормону алып салуу"
+		"message": "Сөздүктөн которууну алып салуу"
 	},
 	"common_bgUnavailable": {
 		"message": "Фондук скрипт жеткиликсиз"
@@ -18,10 +18,10 @@
 		"message": "Көчүрүү"
 	},
 	"common_error": {
-		"message": "Каталык"
+		"message": "Ката"
 	},
 	"common_offlineTranslator": {
-		"message": "$1 - Оффлайн котормочу"
+		"message": "$1 - Офлайн котормочу"
 	},
 	"common_retry": {
 		"message": "Кайра аракет кылуу"
@@ -30,19 +30,19 @@
 		"message": "Которуу"
 	},
 	"component_hotkey_placeholder": {
-		"message": "Жылуу баскычтарды жаздыруу үчүн чыкылдатыңыз"
+		"message": "Кыскартууну жаздыруу үчүн басыңыз"
 	},
 	"component_hotkey_recordPlaceholder": {
 		"message": "Баскычтарды басыңыз"
 	},
 	"component_hotkey_resetButton": {
-		"message": "Баштапкы абалга келтирүү"
+		"message": "Кайра орнотуу"
 	},
 	"contextMenu_disablePageTranslation": {
-		"message": "Баракты которууну өчүрүү"
+		"message": "Баракчаны которууну токтотуу"
 	},
 	"contextMenu_translatePage": {
-		"message": "Баракты которуу"
+		"message": "Баракчаны которуу"
 	},
 	"contextMenu_translateSelectedText": {
 		"message": "Тандалган текстти которуу"
@@ -57,37 +57,37 @@
 		"message": "Экспорттоо"
 	},
 	"dictionary_button_removeAll": {
-		"message": "Баарын жок кылуу"
+		"message": "Баарын өчүрүү"
 	},
 	"dictionary_deleteAll": {
-		"message": "Сөздүктөгү БААРДЫК котормолорду өчүрүп жиберүү жөнүндө ишеничтүү белеңиз?"
+		"message": "Сиз чындап эле сөздүктөн БАРДЫК котормолорду өчүргүңүз келеби?"
 	},
 	"dictionary_deleteConfirmation": {
-		"message": "Бул котормону өчүрүп жиберүүгө ишенесизби?"
+		"message": "Сиз чындап эле бул котормону өчүргүңүз келеби?"
 	},
 	"dictionary_description": {
-		"message": "Котормолоруңузду сөздүктө сактап, кийин кайра табыңыз"
+		"message": "Кийинчерээк тез табуу үчүн котормолорду сөздүккө сактаңыз"
 	},
 	"dictionary_emptyDictionary": {
-		"message": "Сөздүк бош. Кээ бир тексттерди которуп жатканда толтурууну баштаңыз"
+		"message": "Сөздүк бош, аны текстти которуу менен толтурууну баштаңыз"
 	},
 	"dictionary_filter_from": {
-		"message": "Кайсыдан"
+		"message": "Булак текстинин тили"
 	},
 	"dictionary_filter_to": {
-		"message": "Кайсыга"
+		"message": "Максаттуу тил"
 	},
 	"dictionary_message_deleteAll_success": {
-		"message": "Бардык котормолор алынган"
+		"message": "Бардык котормолор өчүрүлдү"
 	},
 	"dictionary_notFoundEntries": {
-		"message": "Бул фильтрлерге туура келген котормолор табылган жок"
+		"message": "Бул чыпкаларга дал келген котормолор табылган жок"
 	},
 	"dictionary_pageTitle": {
 		"message": "Сөздүк"
 	},
 	"dictionary_resetFilters": {
-		"message": "фильтрлерди баштапкы абалга келтирүү"
+		"message": "Чыпкаларды баштапкы абалга келтирүү"
 	},
 	"dictionary_searchPlaceholder": {
 		"message": "Текст боюнча издөө"
@@ -98,98 +98,78 @@
 	"editorWindow_data_code": {
 		"message": "Код"
 	},
-	"editorWindow_data_translatorName": {
-		"message": "Котормочунун аты"
+	"editorWindow_data_title": {
+		"message": "Модулдун аты"
 	},
-	"editorWindow_message_invalidTranslatorName": {
-		"message": "Котормочунун аты кеминде бир белгиден турушу керек"
+	"editorWindow_message_invalidTitle": {
+		"message": "Модулдун аты жок дегенде бир символ болушу керек"
 	},
 	"editorWindow_save": {
 		"message": "Сактоо"
 	},
 	"ext_description": {
-		"message": "Барактарды жана тексттерди которуу, сөздүк, тарых, офлайн жана ылайыкташтырылган котормочулар"
+		"message": "Веб-баракчаларды которуу, текст которуу, сөздүк, тарых, өзгөчө котормочулар, тил тоскоолдуктарын жоюу үчүн керектүү нерселердин баары"
 	},
 	"ext_name": {
-		"message": "Linguist - веб-барактарды которуучу"
+		"message": "Linguist - веб-баракча которгуч"
 	},
 	"history_control_selectEntry": {
-		"message": "Кирүүнү тандаңыз"
+		"message": "Көптөгөн аракеттер үчүн которууну тандоо",
+		"description": "Description in finite form \"to pick\" with explaining what this checkbox will do"
 	},
 	"history_controls_clearHistory": {
 		"message": "Тарыхты тазалоо"
 	},
 	"history_controls_deleteSelected": {
-		"message": "Тандалганын өчүрүү"
+		"message": "Тандалган котормолорду өчүрүү"
 	},
 	"history_controls_selectAll": {
-		"message": "Бардык котормолорду танда"
+		"message": "Бардык котормолорду тандоо"
 	},
 	"history_message_clearHistoryConfirmation": {
-		"message": "Тарыхты тазалайм деп ойлонуп жатасызбы? Бардык жазуулар өчүрүлөт"
+		"message": "Тарыхты тазалоону каалайсызбы? Бардык жазуулар өчүрүлөт"
 	},
 	"history_message_deleteEntryConfirmation": {
-		"message": "Бул жазууну өчүрүүгө ишенесизби?"
+		"message": "Бул жазууну өчүрүүнү каалайсызбы?"
 	},
 	"history_message_deleteSelectedEntriesConfirmation": {
-		"message": "Тандалган жазууларды ($1) өчүрүүгө ишенесизби?"
+		"message": "Тандалган жазууларды ($1) өчүрүүнү каалайсызбы?"
 	},
 	"history_message_entriesNotFound": {
-		"message": "Фильтрге туура келген котормолор табылган жок"
+		"message": "Фильтрге дал келген котормолор табылган жок"
 	},
 	"history_message_noEntries": {
-		"message": "Тарых тазаланган"
+		"message": "Тарых бош"
 	},
 	"history_notification_disabled": {
-		"message": "Тарыхты жазуу өчүрүлгөн, ошондуктан жаңы жазуулар көрүнбөйт. Сиз булду <slot id=preferences>жөндөөлөрдөн</slot> өзгөртө аласыз"
+		"message": "Тарых жазуу өчүрүлгөн, ошондуктан жаңы жазуулар пайда болбойт. Муну <slot id=preferences>Тандоолор</slot> бөлүмүндө өзгөртө аласыз"
 	},
 	"history_pageTitle": {
 		"message": "Тарых"
 	},
 	"history_searchPlaceholder": {
-		"message": "Мәтин боюнча издөө"
+		"message": "Текст боюнча издөө"
 	},
 	"inlineTranslator_showOriginalText": {
-		"message": "Баштапкы текстти көрсөтүү"
+		"message": "Түпнуска текстти көрсөтүү"
 	},
 	"lang_change": {
-		"message": "Тилди алмаштыруу"
+		"message": "Тилди өзгөртүү"
 	},
 	"lang_detect": {
-		"message": "Автоматтык аныктоо"
+		"message": "Авто-аныктоо"
 	},
 	"lang_select": {
-		"message": "Тилди тандаңыз"
+		"message": "Тилди тандоо"
 	},
 	"lang_swap": {
-		"message": "Тилди алмаштыруу"
-	},
-	"message_askResetConfig": {
-		"message": "Параметрлерди кайра орнотуу?"
-	},
-	"message_cacheFlushed": {
-		"message": "Кэш тазаланды"
-	},
-	"message_changesSaved": {
-		"message": "Өзгөртүүлөр сакталды"
-	},
-	"message_error": {
-		"message": "Ката"
-	},
-	"message_errorOfTranslate": {
-		"message": "Тил которууда ката кетти"
-	},
-	"message_serviceRequiredKey": {
-		"message": "Кызмат ачкычты талап кылат"
-	},
-	"message_translateOfText": {
-		"message": "Котормо жасалды"
+		"message": "Тилдерди алмаштыруу"
 	},
 	"message_unknownError": {
 		"message": "Белгисиз ката"
 	},
 	"pageTranslator_alwaysTranslateLang": {
-		"message": "Бул тилиди дайыма которуу"
+		"message": "Бул тилди ар дайым которуу"
 	},
 	"pageTranslator_commonPreferences_autoTranslate_disable": {
 		"message": "Өчүрүү"
@@ -201,58 +181,58 @@
 		"message": "Иштетүү"
 	},
 	"pageTranslator_commonPreferences_title": {
-		"message": "Бул тил үчүн жалпы артыкчылыктар"
+		"message": "Бул тил үчүн жалпы жөндөөлөр"
 	},
 	"pageTranslator_option_autoTranslate": {
-		"message": "Автоматтык которуу"
-	},
-	"pageTranslator_showOptions": {
-		"message": "Параметрлерди көрсөтүү"
+		"message": "Авто которуу"
 	},
 	"pageTranslator_showOriginal": {
-		"message": "Баштапкысын көрсөтүү"
+		"message": "Түп нускасын көрсөтүү"
+	},
+	"pageTranslator_showTranslationPreferences": {
+		"message": "Котормо жөндөөлөрү"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_always": {
 		"message": "Ар дайым которуу"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
-		"message": "Бул тил үчүн дайыма которуу"
+		"message": "Бул тил үчүн ар дайым которуу"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_default": {
-		"message": "Жалпыланган эрежелерди колдонуу"
+		"message": "Жалпы эрежелерди колдонуу"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
-		"message": "Бул тил үчүн жалпыланган эрежелерди колдонуу"
+		"message": "Бул тил үчүн жалпы эрежелерди колдонуу"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_never": {
-		"message": "Көчүрбө"
+		"message": "Эч качан которбоо"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
 		"message": "Бул тил үчүн эч качан которбоо"
 	},
 	"pageTranslator_sitePreferences_title": {
-		"message": "Байкоо параметрлери"
+		"message": "Үчүн жөндөөлөр"
 	},
 	"pageTranslator_translatePage": {
-		"message": "Бетти которуу"
+		"message": "Баракчаны которуу"
 	},
 	"pageTranslator_translationReport": {
-		"message": "Котормо маалыматы"
+		"message": "Котормо отчету"
 	},
 	"pageTranslator_translationReport_queue": {
-		"message": "Кезек"
+		"message": "Күтүүдө"
 	},
 	"pageTranslator_translationReport_reject": {
 		"message": "Ката"
 	},
 	"pageTranslator_translationReport_resolve": {
-		"message": "Котормолор"
+		"message": "Которулган"
 	},
 	"popup_tabIdNotFound": {
-		"message": "\"$1\" вкладкасы табылган жок"
+		"message": "Таб \"$1\" табылган жок"
 	},
 	"popup_tab_translatePage": {
-		"message": "Бетти которуу"
+		"message": "Баракчаны которуу"
 	},
 	"popup_tab_translateText": {
 		"message": "Текстти которуу"
@@ -267,7 +247,7 @@
 		"message": "Конфигурацияны импорттоо"
 	},
 	"settings_button_reset": {
-		"message": "Конфигурацияны кайра орнотуу"
+		"message": "Конфигурацияны баштапкы абалга келтирүү"
 	},
 	"settings_button_saveChanges": {
 		"message": "Өзгөртүүлөрдү сактоо"
@@ -276,19 +256,19 @@
 		"message": "Кэш тазаланды"
 	},
 	"settings_message_common_invalidValueType": {
-		"message": "Жарамсыз маані"
+		"message": "Туура эмес маани"
 	},
 	"settings_message_importConfig_invalidFile": {
-		"message": "Импорттоо үчүн файл иштетилбейт"
+		"message": "Берилген конфигурация файлы туура эмес же бузулган жана иштетүүгө мүмкүн эмес"
 	},
 	"settings_message_importConfig_success": {
-		"message": "Импорттолду"
+		"message": "Импорттоо аяктады"
 	},
 	"settings_message_resetConfig_confirm": {
-		"message": "Түзөтмөлөрдү баштапкы абалга келтиргиңиз келеби?"
+		"message": "Орнотууларды баштапкы маанилерге келтирүүнү тастыктаңыз"
 	},
 	"settings_message_resetConfig_success": {
-		"message": "Параметрлер кайра орнотулду"
+		"message": "Орнотуулар баштапкы абалга келтирилди"
 	},
 	"settings_message_saveChanges_success": {
 		"message": "Өзгөртүүлөр сакталды"
@@ -300,139 +280,142 @@
 		"message": "Кэшти тазалоо"
 	},
 	"settings_option_cache_clear_desc": {
-		"message": "Эгерде котормодо көйгөйлөр пайда болсо же сыр сөздөрдү өчүрүү керек болсо, кэшти тазалаңыз"
+		"message": "Эгерде кэш иштетилгенде котормо каталары же жеке тексттерди кокустан которуп алсаңыз, кэштен бардык маалыматтарды өчүрсөңүз болот",
+		"description": "Кэшти тазалоо пайдалуу болгон учурлар жөнүндө колдонуучуга түшүндүрмө"
 	},
 	"settings_option_cache_enable": {
-		"message": "Кэшти күйгүзүү"
+		"message": "Кэшти иштетүү"
 	},
 	"settings_option_cache_enable_desc": {
-		"message": "Кэш иштетилгенде, бир жолу которулган котормолор интернет жокто да дароо жеткиликтүү болот"
+		"message": "Кэш иштетилгенде, мурда которулган тексттер кошумча суроо-талаптарсыз дароо которулат"
 	},
 	"settings_option_cache_ignoreCase": {
-		"message": "Үлпөткө сезгич эмес"
+		"message": "Кэштеги регистрге сезимтал эмес колдонуу"
 	},
 	"settings_option_cache_ignoreCase_desc": {
-		"message": "Иштетилгенде, так дал келбеген учурларда да кэштен котормолор колдонулат, бул котормодо катачылыктардын пайда болушуна себеп болушу мүмкүн"
+		"message": "Иштетилгенде, кэштеги котормолор ар кандай регистрдеги тексттер үчүн колдонулат, бул айрым учурларда котормо бурмалоолорун жаратышы мүмкүн"
 	},
 	"settings_option_commonSettings": {
 		"message": "Жалпы жөндөөлөр"
 	},
 	"settings_option_customTranslatorModule": {
-		"message": "Өзгөчө котормочу"
+		"message": "Ыңгайлаштырылган котормо модулдары",
+		"description": "Которуу модулун ишке ашырган колдонуучу аныктаган код"
 	},
 	"settings_option_customTranslatorModule_desc": {
-		"message": "Сүйүктүү котормо кызматтарыңыз үчүн өзгөчө котормочуларды кошо аласыз. Толугураак окуу жана модулдарды табуу үчүн <slot id=docs>өзгөчө котормочулардын документациясы</slot> караңыз."
+		"message": "Сиз өзүңүздүн сүйүктүү котормо кызматтарыңызды колдонгон ыңгайлаштырылган котормо модулдарын кошо аласыз. <slot id=docs>ыңгайлаштырылган котормочулар документтеринен</slot> көбүрөөк билиңиз"
 	},
 	"settings_option_customTranslatorModule_manageButton": {
-		"message": "Аудармачыларды башкаруу"
+		"message": "Котормочуларды башкаруу",
+		"description": "Котормо модулдарынын тизмесин көрсөтүүчү баскыч"
 	},
 	"settings_option_history_enable": {
 		"message": "Тарыхты иштетүү"
 	},
 	"settings_option_history_enable_desc": {
-		"message": "Иштетилгенде, ар бир котормо тарих барагына жазылат"
-	},
-	"settings_option_mainPreferences": {
-		"message": "Негизги орнотуулар"
+		"message": "Иштетилгенде, котормолор жазылып, <slot id=historyPage>тарых барагында</slot> пайда болот"
 	},
 	"settings_option_pageTranslation": {
-		"message": "Баракты которуу"
+		"message": "Толук баракчаны которуу"
 	},
 	"settings_option_pageTranslation_detectLanguageByContent": {
-		"message": "Тилди мазмуну боюнча аныктоо"
+		"message": "Мазмун боюнча тилди аныктоо"
 	},
 	"settings_option_pageTranslation_detectLanguageByContent_desc": {
-		"message": "Баракчадагы текстти анализдөө аркылуу баракча тилин аныктоо. Өчүрүлгөндө баракчанын метамәлүматында көрсөтүлгөн тил колдонулат"
+		"message": "Веб-баракчадагы текстти анализдеп, анын тилин аныктоо. Өчүрүлгөндө, <slot id=docs>баракчанын метамаалыматында</slot> көрсөтүлгөн тил колдонулат"
 	},
 	"settings_option_pageTranslation_enableContextMenu": {
-		"message": "Контексттик менюдагы баскычты иштетүү"
+		"message": "Контексттик меню баскычын иштетүү"
 	},
 	"settings_option_pageTranslation_enableContextMenu_desc": {
-		"message": "Баракча котормо үчүн контексттик менюга баскыч кошуу"
+		"message": "Баракчанын контексттик менюсунда баракчаны которууну алмаштыруу үчүн баскыч кошуу"
 	},
 	"settings_option_pageTranslation_excludeSelectors": {
-		"message": "Аударуудан өткөрүлбөшү керек болгон селекторлор"
+		"message": "Которуудан чыгаруу үчүн селекторлор"
 	},
 	"settings_option_pageTranslation_excludeSelectors_desc": {
-		"message": "Аударылбай турган CSS селекторлорунун тизмеси. Ар бир сапта бир селектор. Эгер элемент ошол селекторлордун бирине туура келсе, ал өзүнүн өзгөчөлүктөрү жана ичиндеги элементтери менен бирге аударылбайт."
+		"message": "Котормодон чыгарылуучу элементтер үчүн CSS селекторлорунун тизмеси. Ар бир сапка бир селектор. Эгер элемент бул селекторлордун кайсынысына болсо да дал келсе, анын тексти, атрибуттары жана ичине салынган элементтер которулбайт"
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
-		"message": "Тек гана көрүнүп турган элементтерди которуу"
+		"message": "Көрүнүп турган элементтерди гана которуу"
 	},
 	"settings_option_pageTranslation_lazyTranslate_desc": {
-		"message": "Бул опция күйгүзүлгөндө, гана көрүнүп турган элементтер которулат. Бул тармак трафигин үнөмдөө үчүн пайдалуу болушу мүмкүн"
+		"message": "Бул параметр иштетилгенде, көрүнүп турган элементтер гана которулат. Бул параметр тармак трафигин азайтат"
 	},
 	"settings_option_pageTranslation_originalTextPopup": {
-		"message": "Баштапкы текст менен күтөткүчтү күйгүзүү"
+		"message": "Баштапкы текст менен калкыма терезени иштетүү"
 	},
 	"settings_option_pageTranslation_originalTextPopup_desc": {
-		"message": "Котормолгон тексттин үстүнөн чычканды өткөргөндө баштапкы текст менен күтөткүчтү көрсөтүңүз"
+		"message": "Которулган текст блокторунун үстүнө чычканды алып барганда, баштапкы текст менен калкыма терезени көрсөтүү"
 	},
-	"settings_option_pageTranslation_toggleTranslationHotkey": {
-		"message": "Ыкчам баскычтар"
+	"settings_option_pageTranslation_shortcut_toggleTranslation": {
+		"message": "Кыскартуу"
 	},
-	"settings_option_pageTranslation_toggleTranslationHotkey_desc": {
-		"message": "Бетти которууну күйгүзүп өчүрүү үчүн ыкчам баскычтар\nЫкчам баскычтарды кайра коюу үчүн ESC басыңыз"
+	"settings_option_pageTranslation_shortcut_toggleTranslation_desc": {
+		"message": "Баракчаны которууну которуу үчүн кыскартуу\nТүймөлөрдү баштапкы абалга келтирүү үчүн ESC басыңыз"
 	},
 	"settings_option_pageTranslation_translatableAttributes": {
-		"message": "Котормого боло турган өзгөчөлүктөр."
+		"message": "Которулуучу атрибуттар"
 	},
 	"settings_option_pageTranslation_translatableAttributes_desc": {
-		"message": "Аударма үчүн <slot id=htmlAttributes>HTML атрибутунун</slot> аттарын киргизиңиз. Бир сапка бир атрибут"
+		"message": "Которуу үчүн <slot id=htmlAttributes>HTML атрибут</slot> аттарын киргизиңиз, ар бир сапка бир атрибут\nБул тизмедеги атрибуттар гана которулат"
 	},
 	"settings_option_popupTab_pageTranslator_showCounters": {
-		"message": "Аударма статистикасын көрсөтүү"
+		"message": "Котормо прогрессин көрсөтүү"
 	},
 	"settings_option_popupTab_pageTranslator_showCounters_desc": {
-		"message": "Баракчаны аударуунун статистикасын көрсөтүү"
+		"message": "Кеңейтменин калкыма терезесинде баракчаны которуу процесси менен панелди көрсөтүү"
 	},
 	"settings_option_selectTranslation": {
-		"message": "Тандалган тексттин аудармасы"
+		"message": "Тандалган текстти которуу"
 	},
-	"settings_option_selectTranslation_detectedLangFirst": {
-		"message": "Баракчанын тилинин ордуна аныкталган тилди артык көрүү"
+	"settings_option_selectTranslation_detectTextLanguage": {
+		"message": "Тексттин тилин аныктоо"
 	},
-	"settings_option_selectTranslation_detectedLangFirst_desc": {
-		"message": "Иштетилсе, тандалган тексттин аныкталган тили баракчанын тилинен артыкчылыкка ээ болот"
+	"settings_option_selectTranslation_detectTextLanguage_desc": {
+		"message": "Бул функция иштетилгенде, тандалган текст которуу үчүн тилди аныктоо максатында анализденет. Болбосо, баракчанын тили колдонулат"
 	},
 	"settings_option_selectTranslation_disableWhileTranslatePage": {
-		"message": "Баракты которуп жатканда өчүрүү"
+		"message": "Баракчаны которуп жатканда өчүрүү"
 	},
 	"settings_option_selectTranslation_enable": {
-		"message": "Ишиңизди күйгүзүү"
+		"message": "Тандалган текстти которууну иштетүү"
+	},
+	"settings_option_selectTranslation_enable_desc": {
+		"message": "Бул функция иштетилгенде, баракчадагы каалаган текстти тандап, аны калкыма терезеде которсоңуз болот"
 	},
 	"settings_option_selectTranslation_focusOnTranslateButton": {
-		"message": "Котормо баскычына автоматтык көңүл буруу"
+		"message": "Которуу баскычына автоматтык түрдө көңүл буруу"
 	},
 	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
-		"message": "Котормо баскычы пайда болгондо ага көңүл буруу"
+		"message": "Баракчада которуу баскычы пайда болгондо, ал автоматтык түрдө көңүл бурулат"
 	},
 	"settings_option_selectTranslation_header_languageChoice": {
-		"message": "Тил жөндөмдүүлүгү"
+		"message": "Тил жөндөөлөрү"
 	},
 	"settings_option_selectTranslation_isUseAutoForDetectLang": {
-		"message": "Котормочу тарабынан тилди автоматтык аныктоону күйгүзүү"
+		"message": "Тексттин тилин аныктоо үчүн котормо модулуна уруксат берүү"
 	},
 	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
-		"message": "Чөйрөдө тил аныкталбаса, которуучу тарабынан автоматтык тилди аныктоону колдонуу"
+		"message": "Тексттин тили жергиликтүү түрдө аныкталбаса жана бул параметр иштетилсе, текст \"авто\" тили менен которулат, эгерде колдоого алынган болсо.\nПараметр өчүрүлгөндө, тексттин баштапкы тилин орнотуу үчүн башка ыкма колдонулат"
 	},
 	"settings_option_selectTranslation_mode": {
-		"message": "Котормо ишке киргизүү"
+		"message": "Текст тандоодо аракет"
 	},
 	"settings_option_selectTranslation_mode_item_contextMenu": {
-		"message": "Контексттик меню баскычы"
+		"message": "Контексттик меню аркылуу текстти которуу"
 	},
 	"settings_option_selectTranslation_mode_item_popupButton": {
-		"message": "Попап баскычы"
+		"message": "Которуу баскычын көрсөтүү"
 	},
 	"settings_option_selectTranslation_mode_item_quickTranslate": {
-		"message": "Тандоонун тез котормосу"
+		"message": "Текстти дароо которуу"
 	},
 	"settings_option_selectTranslation_modifiers": {
 		"message": "Модификаторлор"
 	},
 	"settings_option_selectTranslation_modifiers_desc": {
-		"message": "Котормо көрсөтүү үчүн басылышы керек болгон клавиатурадагы баскычтарды тандаңыз"
+		"message": "Которууну көрсөтүү үчүн клавиатурада басылышы керек болгон баскычтарды тандаңыз"
 	},
 	"settings_option_selectTranslation_modifiers_key_alt": {
 		"message": "alt"
@@ -447,136 +430,144 @@
 		"message": "shift"
 	},
 	"settings_option_selectTranslation_rememberDirection": {
-		"message": "Акыркы тандалган тексттин тилдерин эскерип калуу"
+		"message": "Акыркы тандалган тексттин тилин эстеп калуу"
 	},
 	"settings_option_selectTranslation_showOnceForSelection": {
-		"message": "Ар бир текст тандоого бир гана жолу которуу баскычын көрсөтүү"
+		"message": "Ар бир текст тандоодо котормо баскычын бир жолу көрсөтүү"
 	},
 	"settings_option_selectTranslation_showOnceForSelection_desc": {
-		"message": "Баскыч ар бир текст тандоодо бир гана жолу көрсөтүлөт. Эгер кайра көрсөтүүнү кааласаңыз, текстти кайра тандаңыз"
+		"message": "Баскыч ар бир текст тандоодо бир гана жолу пайда болот. Аны кайра көрсөтүү үчүн текстти кайра тандаңыз"
 	},
 	"settings_option_selectTranslation_showOriginalText": {
-		"message": "Баштапкы текстти көрсөтүү"
+		"message": "Түпнуска текстти көрсөтүү"
 	},
 	"settings_option_selectTranslation_showOriginalText_desc": {
-		"message": "Которуу терезесине баштапкы тексттин блогуна кошуу"
+		"message": "Которуу терезесине түпнуска текст менен блок кошуу"
 	},
 	"settings_option_selectTranslation_strictSelection": {
-		"message": "Так тандоо"
+		"message": "Текст тандоонун катуу режими",
+		"description": "This option is about selecting text via mouse"
 	},
 	"settings_option_selectTranslation_strictSelection_desc": {
-		"message": "Тандалган текстти камтыган блоктон тышкары сол чычкан баскычы чыгарылса, тандоону көз жаздымда калтырууну белгилөө"
+		"message": "Тандалган текстти камтыган блоктун сыртында сол чычкан баскычы бошотулса, текст тандоону эске албоо"
 	},
 	"settings_option_selectTranslation_timeoutForHideButton": {
-		"message": "Токмоок баскычты жашыруу убактысы"
+		"message": "Калкыма баскычты жашыруу алдында кечигүү"
 	},
 	"settings_option_selectTranslation_timeoutForHideButton_desc": {
-		"message": "Курсор баскычтын үстүндө жок болгон учурда баскычты жашыруу үчүн кечигүү убактысы миллисекунд менен. Курсор баскычтын үстүндө болгондо убакыт кайра башталат. Авто жашырууну өчүрүү үчүн 1ден аз маанини коюңуз"
+		"message": "Көрсөтмө баскычын курсор анын үстүндө турбаган учурда жашыруу үчүн миллисекунддагы кечигүү. Баскычтын үстүндө курсорду кармоо таймерди кайра баштайт. Авто-жашырууну өчүрүү үчүн, маанини 1ден аз коюңуз"
 	},
 	"settings_option_selectTranslation_zIndex": {
 		"message": "z-index"
 	},
 	"settings_option_selectTranslation_zIndex_desc": {
-		"message": "Текст которулган терезени айрым баракчалардагы элементтер жабып коё турган болсо, маанини жогорулатуу"
+		"message": "Кээ бир баракчалардагы элементтер которулган текст менен калкыма терезени жаап калса, бул маанини көбөйтүңүз"
 	},
 	"settings_option_textTranslator": {
 		"message": "Текстти которуу"
 	},
 	"settings_option_textTranslator_rememberText": {
-		"message": "Котормолорду сактоо"
+		"message": "Которулган текстти эстеп калуу"
 	},
 	"settings_option_textTranslator_rememberText_desc": {
-		"message": "Терезе кайра ачылганда которулган текстти эскертип коюу"
+		"message": "Терезе кийинки жолу ачылганда которулган текстти эстеп калуу"
 	},
 	"settings_option_textTranslator_spellCheck": {
 		"message": "Орфографияны текшерүүнү иштетүү"
 	},
 	"settings_option_textTranslator_suggestLanguage": {
-		"message": "Табылган тексттин тилин сунуштоо"
+		"message": "Тексттин аныкталган тилин көрсөтүү"
 	},
 	"settings_option_textTranslator_suggestLanguageAlways": {
-		"message": "Ар дайым тилди табуу жана сунуштоо"
+		"message": "Ар дайым тилди аныктап, сунуштоо"
 	},
 	"settings_option_textTranslator_suggestLanguageAlways_desc": {
-		"message": "Өчүрүлгөндө, тил сунуштары тек гана авто аныкталган учурда көрсөтүлөт"
+		"message": "Өчүрүлгөндө, тил сунуштары булагы \"авто\" деп коюлганда гана пайда болот"
 	},
 	"settings_option_translatePreferences": {
-		"message": "Котормолор боюнча артыкчылыктар"
+		"message": "Котормо артыкчылыктары"
 	},
 	"settings_option_translateScheduler": {
-		"message": "Которуу пландоочу"
+		"message": "Котормо графиги"
 	},
 	"settings_option_translateScheduler_delay": {
-		"message": "Текстти топтоо кечигүү"
+		"message": "Текст топтоо кечигүүсү"
 	},
 	"settings_option_translateScheduler_delay_desc": {
-		"message": "Которуу пландоочу которуу кызматтарынын API'сына жасала турган сурамдардын санын азайтат. Пландоочу мүмкүн болушунча көп текстти бирге топтоого аракет кылат. Которууну баштоодон мурун жаңы тексттерди чогултуу үчүн белгиленген миллисекунд убакытка күтөт."
+		"message": "Котормо графиги бир өтүнүчтө мүмкүн болушунча көп тексттерди жөнөтүү үчүн топтоо аркылуу котормо кызматынын APIге болгон өтүнүчтөрдүн санын азайтат. График которууну баштоодон мурун көбүрөөк тексттерди чогултуу үчүн миллисекунддар менен көрсөтүлгөн убакытты күтөт"
 	},
 	"settings_option_translateScheduler_retryLimit": {
-		"message": "Которууну кайра аракеттенүү чеги"
+		"message": "Котормону кайра аракет кылуу чектөөсү"
 	},
 	"settings_option_translateScheduler_retryLimit_desc": {
-		"message": "Пландоочу которуу каталары үчүн тексттерди кайра которуп көрөт. Бул параметр кайра аракеттенүү чегин белгилейт. Чексиз аракеттерге уруксат берүү үчүн терс сан коюңуз."
+		"message": "Котормо каталары пайда болгондо график тексттерди кайра которууга аракет кылат. Бул параметр кайра аракет кылуу чектөөсүн белгилейт. Чексиз аракеттерге уруксат берүү үчүн терс санды коюңуз"
 	},
 	"settings_option_translatorModule": {
-		"message": "Которуу модулу"
+		"message": "Котормо модулу"
 	},
 	"settings_option_translatorModule_desc": {
-		"message": "Переводдордун сапаты жана жеткиликтүү тилдер котормочунун көз каранды."
+		"message": "Котормолордун сапаты жана жеткиликтүү тилдер котормо модулуна көз каранды"
 	},
 	"settings_option_tts": {
-		"message": "Текстти үн менен айтуу (TTS)"
+		"message": "Текстти үнгө айландыруу (TTS)"
 	},
 	"settings_option_ttsCustomModules": {
-		"message": "Ыңгайлаштырылган TTS"
+		"message": "Ыңгайлаштырылган үн синтез модулдары"
 	},
 	"settings_option_ttsCustomModules_button": {
-		"message": "TTS модулдарын башкаруу"
+		"message": "Сүйлөө синтез модулдарын башкаруу"
 	},
 	"settings_option_ttsCustomModules_desc": {
-		"message": "Сиз сүйүктүү кызматтарыңыз жана үндөрүңүз менен колдонулган TTS модулдарын кошо аласыз. Толугураак маалыматты <slot id=docs>түзөтүлгөн TTS үчүн документациядан</slot> окуңуз"
+		"message": "Сиз сүйүктүү кызматтарыңыз жана үн кыймылдаткычтарыңыз менен колдонулуучу сүйлөө синтез модулдарын кошо аласыз. <slot id=docs>кастомдук TTS документтерин</slot> окуңуз"
 	},
 	"settings_option_ttsModule": {
-		"message": "TTS модулу"
+		"message": "Тандалган TTS модулу"
 	},
 	"settings_option_ttsModule_desc": {
-		"message": "Тексттерди айтуучу модуль"
+		"message": "Текстти үн менен айтуу үчүн колдонулган үн кыймылдаткычы"
 	},
 	"settings_option_userLanguage": {
 		"message": "Сиздин тилиңиз"
 	},
 	"settings_option_userLanguage_desc": {
-		"message": "Тексттерди которуу үчүн максаттуу тил"
+		"message": "Тексттер которулчу тил"
 	},
 	"settings_pageTitle": {
-		"message": "Настройкалар"
+		"message": "Орнотуулар"
 	},
 	"settings_section_history": {
 		"message": "Тарых"
 	},
 	"settings_section_popup": {
-		"message": "Попап"
+		"message": "Чыгуу терезеси"
 	},
 	"textTranslator_suggestLanguage": {
-		"message": "Бул тил сыяктуу көрүнөт"
+		"message": "Тексттин тили <slot id=languageSuggest>$language_name$</slot> окшойт",
+		"placeholders": {
+			"language_name": {
+				"content": "$1",
+				"example": "Жапон тили"
+			}
+		}
 	},
 	"textTranslator_translateInputPlaceholder": {
-		"message": "Текст киргизүү"
+		"message": "Которуу үчүн текст киргизиңиз",
+		"description": "Которуу үчүн колдонуучудан текст киргизүүсүн сурануу"
 	},
 	"textTranslator_translatePlaceholder": {
-		"message": "Которулган текст"
+		"message": "Которулган текст бул жерде болот"
 	},
 	"translatorsManagerWindow_add": {
-		"message": "Кошуу"
+		"message": "Которуу модулун кошуу"
 	},
 	"translatorsManagerWindow_close": {
 		"message": "Жабуу"
 	},
 	"translatorsManagerWindow_emptyTranslatorsListText": {
-		"message": "Артыкчылыктуу котормочулардын тизмеси дагы кошулган жок"
+		"message": "Эч кандай колдонуучунун которуу модулдары кошулган жок"
 	},
 	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
-		"message": "«$translator_name$» котормомчуну жок кылууга ишенесизби?",
+		"message": "\"$translator_name$\" которуу модулун өчүрүүнү каалайсызбы?",
 		"placeholders": {
 			"translator_name": {
 				"content": "$1",
@@ -585,25 +576,25 @@
 		}
 	},
 	"translatorsManagerWindow_title": {
-		"message": "Ыңгайлаштырылган котормочулар"
+		"message": "Колдонуучунун которуу модулдары"
 	},
 	"translatorsManagerWindow_translator_delete": {
-		"message": "Жок кылуу"
+		"message": "Өчүрүү"
 	},
 	"translatorsManagerWindow_translator_edit": {
 		"message": "Түзөтүү"
 	},
 	"ttsManagerWindow_add": {
-		"message": "Кошуу"
+		"message": "TTS модулун кошуу"
 	},
 	"ttsManagerWindow_close": {
 		"message": "Жабуу"
 	},
 	"ttsManagerWindow_emptyTranslatorsListText": {
-		"message": "TTS модулдары азырынча кошулган жок"
+		"message": "TTS модулдары кошула элек"
 	},
 	"ttsManagerWindow_message_ttsRemoveConfirmation": {
-		"message": "TTS \"$tts_name$\" өчүрүлүшүнө ишенесизби?",
+		"message": "TTS модулун \"$tts_name$\" өчүрүүнү каалайсызбы?",
 		"placeholders": {
 			"tts_name": {
 				"content": "$1",
@@ -612,7 +603,7 @@
 		}
 	},
 	"ttsManagerWindow_title": {
-		"message": "Тексттен үн чыгаруу модулдары"
+		"message": "Текстти үнгө айландыруу модулдары"
 	},
 	"ttsManagerWindow_translator_delete": {
 		"message": "Өчүрүү"
@@ -621,13 +612,13 @@
 		"message": "Түзөтүү"
 	},
 	"validation_number": {
-		"message": "Параметр сан болушу керек"
+		"message": "Маани сан болушу керек"
 	},
 	"validation_numberBetweenRange": {
-		"message": "Параметр $1 менен $2 арасында болгон сан болушу керек"
+		"message": "Маани $1 жана $2 ортосундагы сан болушу керек"
 	},
 	"validation_positiveNumber": {
-		"message": "Параметр оң сандын болушу керек."
+		"message": "Маани оң сан болушу керек"
 	},
 	"langCode_aa": {
 		"message": "Афарча"

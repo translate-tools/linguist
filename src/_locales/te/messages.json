@@ -1,12 +1,12 @@
 {
 	"common_action_addToDictionary": {
-		"message": "అనువాదాన్ని నిఘంటువులో జోడించండి"
+		"message": "అనువాదాన్ని నిఘంటువులో చేర్చండి"
 	},
 	"common_action_removeFromDictionary": {
-		"message": "అనువాదాన్ని నిఘంటువులో నుండి తొలగించండి"
+		"message": "అనువాదాన్ని నిఘంటువులో నుండి తీసివేయండి"
 	},
 	"common_bgUnavailable": {
-		"message": "బ్యాక్‌గ్రౌండ్ స్క్రిప్ట్ అందుబాటులో లేదు"
+		"message": "నేపథ్య స్క్రిప్ట్ అందుబాటులో లేదు"
 	},
 	"common_cancel": {
 		"message": "రద్దు చేయండి"
@@ -15,10 +15,10 @@
 		"message": "మూసివేయండి"
 	},
 	"common_copy": {
-		"message": "నకలు చేసుకోండి"
+		"message": "కాపీ చేయండి"
 	},
 	"common_error": {
-		"message": "పొరపాటు"
+		"message": "లోపం"
 	},
 	"common_offlineTranslator": {
 		"message": "$1 - ఆఫ్‌లైన్ అనువాదకుడు"
@@ -27,70 +27,70 @@
 		"message": "మళ్లీ ప్రయత్నించండి"
 	},
 	"common_translate": {
-		"message": "అనువాదం చేయండి"
+		"message": "అనువదించండి"
 	},
 	"component_hotkey_placeholder": {
-		"message": "కీ షార్ట్‌కట్ రికార్డ్ చేయడానికి క్లిక్ చేయండి"
+		"message": "షార్ట్‌కట్ రికార్డ్ చేయడానికి క్లిక్ చేయండి"
 	},
 	"component_hotkey_recordPlaceholder": {
-		"message": "కీలు నొక్కండి"
+		"message": "కీలను నొక్కండి"
 	},
 	"component_hotkey_resetButton": {
 		"message": "రీసెట్ చేయండి"
 	},
 	"contextMenu_disablePageTranslation": {
-		"message": "పేజీ అనువాదాన్ని నిలిపివేయండి"
+		"message": "పేజీ అనువాదాన్ని ఆపండి"
 	},
 	"contextMenu_translatePage": {
 		"message": "పేజీని అనువదించండి"
 	},
 	"contextMenu_translateSelectedText": {
-		"message": "ఎంపిక చేసిన పాఠాన్ని అనువదించండి"
+		"message": "ఎంచుకున్న పాఠ్యాన్ని అనువదించండి"
 	},
 	"dictionaryButton_add": {
-		"message": "నిఘంటువులో చేరించండి"
+		"message": "నిఘంటువులో చేర్చండి"
 	},
 	"dictionaryButton_delete": {
-		"message": "నిఘంటు నుండి తొలగించండి"
+		"message": "నిఘంటువులో నుండి తొలగించండి"
 	},
 	"dictionary_button_export": {
-		"message": "ఎగుమతి"
+		"message": "ఎగుమతి చేయండి"
 	},
 	"dictionary_button_removeAll": {
 		"message": "అన్నింటినీ తొలగించండి"
 	},
 	"dictionary_deleteAll": {
-		"message": "డిక్షనరీలోని అన్ని అనువాదాలను మీరు నిజంగా తొలగించాలనుకుంటున్నారా?"
+		"message": "నిఘంటువులోని అన్ని అనువాదాలను తొలగించాలనుకుంటున్నారా?"
 	},
 	"dictionary_deleteConfirmation": {
-		"message": "ఈ అనువాదాన్ని మీరు నిజంగా తొలగించాలనుకుంటున్నారా?"
+		"message": "ఈ అనువాదాన్ని తొలగించాలనుకుంటున్నారా?"
 	},
 	"dictionary_description": {
-		"message": "మీ అనువాదాలను తర్వాత కనుగొనటానికి డిక్షనరీలో ఉంచండి"
+		"message": "తరువాత త్వరగా కనుగొనడానికి అనువాదాలను నిఘంటువులో సేవ్ చేయండి"
 	},
 	"dictionary_emptyDictionary": {
-		"message": "డిక్షనరీ ఖాళీగా ఉంది. కొన్ని వాక్యాలను అనువదించడం ప్రారంభించండి"
+		"message": "నిఘంటువు ఖాళీగా ఉంది, కొంత పాఠ్యాన్ని అనువదించడం ద్వారా దాన్ని నింపడం ప్రారంభించండి"
 	},
 	"dictionary_filter_from": {
-		"message": "నుండి"
+		"message": "మూల పాఠ్య భాష"
 	},
 	"dictionary_filter_to": {
-		"message": "కు"
+		"message": "లక్ష్య భాష"
 	},
 	"dictionary_message_deleteAll_success": {
 		"message": "అన్ని అనువాదాలు తొలగించబడ్డాయి"
 	},
 	"dictionary_notFoundEntries": {
-		"message": "ఈ ఫిల్టర్లకు సరిపోయే అనువాదాలు ఉన్నాయి"
+		"message": "ఈ వడపోతలకు సరిపోయే అనువాదాలు కనుగొనబడలేదు"
 	},
 	"dictionary_pageTitle": {
-		"message": "డిక్షనరీ"
+		"message": "నిఘంటువు"
 	},
 	"dictionary_resetFilters": {
-		"message": "ఫిల్టర్లు రీసెట్ చేయండి"
+		"message": "వడపోతలను రీసెట్ చేయండి"
 	},
 	"dictionary_searchPlaceholder": {
-		"message": "వ్యాఖ్య ద్వారా శోధించండి"
+		"message": "పాఠ్యంతో శోధించండి"
 	},
 	"editorWindow_close": {
 		"message": "మూసివేయి"
@@ -98,65 +98,66 @@
 	"editorWindow_data_code": {
 		"message": "కోడ్"
 	},
-	"editorWindow_data_translatorName": {
-		"message": "అనువాద‌కుడు పేరు"
+	"editorWindow_data_title": {
+		"message": "మాడ్యూల్ పేరు"
 	},
-	"editorWindow_message_invalidTranslatorName": {
-		"message": "అనువాద‌కుడు పేరు కనీసం ఒక అక్షరం ఉండాలి"
+	"editorWindow_message_invalidTitle": {
+		"message": "మాడ్యూల్ పేరులో కనీసం ఒక అక్షరం ఉండాలి"
 	},
 	"editorWindow_save": {
-		"message": "సేవ్ చేయి"
+		"message": "సేవ్"
 	},
 	"ext_description": {
-		"message": "పేజీలు మరియు పాఠ్య అనువాదం, నిఘంటువు, చరిత్ర, ఆఫ్‌లైన్ మరియు అనుకూల అనువాదకులు"
+		"message": "వెబ్ పేజీ అనువాదం, పాఠ్య అనువాదం, నిఘంటువు, చరిత్ర, కస్టమ్ అనువాదకులు, భాషా అవరోధాలను అధిగమించడానికి మీకు అవసరమైన అన్ని"
 	},
 	"ext_name": {
-		"message": "లింగ్విస్ట్ - వెబ్ పేజీలు అనువాదకుడు"
+		"message": "Linguist - వెబ్ పేజీ అనువాదకుడు"
 	},
 	"history_control_selectEntry": {
-		"message": "ఎంట్రీని ఎంచుకోండి"
+		"message": "బల్క్ చర్య కోసం అనువాదాన్ని ఎంచుకోండి",
+		"description": "Description in finite form \"to pick\" with explaining what this checkbox will do"
 	},
 	"history_controls_clearHistory": {
-		"message": "చరిత్రను క్లియర్ చేయి"
+		"message": "చరిత్రను క్లియర్ చేయండి"
 	},
 	"history_controls_deleteSelected": {
-		"message": "ఎంచుకున్న వాటిని తొలగించండి"
+		"message": "ఎంచుకున్న అనువాదాలను తొలగించండి"
 	},
 	"history_controls_selectAll": {
 		"message": "అన్ని అనువాదాలను ఎంచుకోండి"
 	},
 	"history_message_clearHistoryConfirmation": {
-		"message": "మీరు నిజంగా చరిత్రను శుభ్రం చేయాలనుకుంటున్నారా? అన్ని ఎంట్రీలు తొలగించబడతాయి"
+		"message": "మీరు నిజంగా చరిత్రను క్లియర్ చేయాలనుకుంటున్నారా? అన్ని ఎంట్రీలు తొలగించబడతాయి"
 	},
 	"history_message_deleteEntryConfirmation": {
-		"message": "మీరు ఈ ఎంట్రీని తొలగించాలనుకుంటున్నారా?"
+		"message": "మీరు నిజంగా ఈ ఎంట్రీని తొలగించాలనుకుంటున్నారా?"
 	},
 	"history_message_deleteSelectedEntriesConfirmation": {
-		"message": "మీరు ఎంచుకున్న ఎంట్రీలను ($1) తొలగించాలనుకుంటున్నారా?"
+		"message": "మీరు నిజంగా ఎంచుకున్న ఎంట్రీలను ($1) తొలగించాలనుకుంటున్నారా?"
 	},
 	"history_message_entriesNotFound": {
-		"message": "ఫిల్టర్‌కు సరిచూసిన అనువాదాలు లభించలేదు"
+		"message": "ఫిల్టర్‌కు సరిపోయే అనువాదాలు కనుగొనబడలేదు"
 	},
 	"history_message_noEntries": {
 		"message": "చరిత్ర ఖాళీగా ఉంది"
 	},
 	"history_notification_disabled": {
-		"message": "చరిత్ర రికార్డింగ్ అచేతనమైంది, కనుక కొత్త ఎంట్రీలు కనిపించవు. మీరు దీన్ని <slot id=preferences>అభిరుచులు</slot>లో మార్చవచ్చు"
+		"message": "చరిత్ర రికార్డింగ్ నిలిపివేయబడింది, కాబట్టి కొత్త ఎంట్రీలు కనిపించవు. మీరు దీన్ని <slot id=preferences>ప్రాధాన్యతలు</slot>లో మార్చవచ్చు"
 	},
 	"history_pageTitle": {
 		"message": "చరిత్ర"
 	},
 	"history_searchPlaceholder": {
-		"message": "పాఠ్యానుసారం శోధించండి"
+		"message": "పాఠ్యంతో శోధించండి"
 	},
 	"inlineTranslator_showOriginalText": {
-		"message": "మూల పాఠ్యం చూపించండి"
+		"message": "అసలు పాఠ్యాన్ని చూపించు"
 	},
 	"lang_change": {
-		"message": "భాష మార్చండి"
+		"message": "భాషను మార్చండి"
 	},
 	"lang_detect": {
-		"message": "ఆటో గుర్తింపు"
+		"message": "ఆటో-డిటెక్ట్"
 	},
 	"lang_select": {
 		"message": "భాషను ఎంచుకోండి"
@@ -164,92 +165,71 @@
 	"lang_swap": {
 		"message": "భాషలను మార్చండి"
 	},
-	"message_askResetConfig": {
-		"message": "సెట్టింగ్స్ని రీసెట్ చేయాలా?"
-	},
-	"message_cacheFlushed": {
-		"message": "క్యాషే క్లియర్ చేయబడింది"
-	},
-	"message_changesSaved": {
-		"message": "మార్పులు సేవ్ చేయబడ్డాయి"
-	},
-	"message_error": {
-		"message": "పొరపాటు"
-	},
-	"message_errorOfTranslate": {
-		"message": "అనువాదంలో లోపం"
-	},
-	"message_serviceRequiredKey": {
-		"message": "సేవకు కీ అవసరం"
-	},
-	"message_translateOfText": {
-		"message": "అనువదించబడింది"
-	},
 	"message_unknownError": {
-		"message": "అననుకూల లోపం"
+		"message": "తెలియని లోపం"
 	},
 	"pageTranslator_alwaysTranslateLang": {
 		"message": "ఈ భాషను ఎల్లప్పుడూ అనువదించండి"
 	},
 	"pageTranslator_commonPreferences_autoTranslate_disable": {
-		"message": "నిరోదించు"
+		"message": "నిలిపివేయి"
 	},
 	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
-		"message": "అన్ని సైట్లకు నిరోధించు"
+		"message": "అన్ని సైట్ల కోసం నిలిపివేయి"
 	},
 	"pageTranslator_commonPreferences_autoTranslate_enable": {
-		"message": "సక్రియం చేయి"
+		"message": "ప్రారంభించు"
 	},
 	"pageTranslator_commonPreferences_title": {
-		"message": "ఈ భాషకు సాధారణ ఎంపికలు"
+		"message": "ఈ భాష కోసం సాధారణ అభిరుచులు"
 	},
 	"pageTranslator_option_autoTranslate": {
 		"message": "ఆటో-అనువాదం"
 	},
-	"pageTranslator_showOptions": {
-		"message": "ఎంపికలను చూపించు"
-	},
 	"pageTranslator_showOriginal": {
-		"message": "మూలాన్ని చూపించండి"
+		"message": "అసలు చూపించు"
+	},
+	"pageTranslator_showTranslationPreferences": {
+		"message": "అనువాద అభిరుచులు"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_always": {
-		"message": "ఎప్పుడూ అనువదించండి"
+		"message": "ఎప్పుడూ అనువదించు"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
-		"message": "ఈ భాష కోసం ఎప్పుడూ అనువదించండి"
+		"message": "ఈ భాష కోసం ఎప్పుడూ అనువదించు"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_default": {
-		"message": "సాధారణ నియమాలను ఉపయోగించండి"
+		"message": "సాధారణ నియమాలు ఉపయోగించు"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
-		"message": "ఈ భాష కోసం సాధారణ నియమాలను ఉపయోగించండి"
+		"message": "ఈ భాష కోసం సాధారణ నియమాలు ఉపయోగించు"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_never": {
-		"message": "ఎప్పుడూ అనువదించకండి"
+		"message": "ఎప్పుడూ అనువదించవద్దు"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
-		"message": "ఈ భాష కోసం ఎప్పుడూ అనువదించకండి"
+		"message": "ఈ భాష కోసం ఎప్పుడూ అనువదించవద్దు"
 	},
 	"pageTranslator_sitePreferences_title": {
-		"message": "ఇష్టాపెట్టులు"
+		"message": "కోసం అభిరుచులు"
 	},
 	"pageTranslator_translatePage": {
-		"message": "పేజీని అనువదించండి"
+		"message": "పేజీని అనువదించు"
 	},
 	"pageTranslator_translationReport": {
 		"message": "అనువాద నివేదిక"
 	},
 	"pageTranslator_translationReport_queue": {
-		"message": "పోరుగు"
+		"message": "పెండింగ్"
 	},
 	"pageTranslator_translationReport_reject": {
-		"message": "పొరపాట్లు"
+		"message": "తప్పులు"
 	},
 	"pageTranslator_translationReport_resolve": {
-		"message": "భాషా మార్పిడి జరిగింది"
+		"message": "అనువదించబడింది"
 	},
 	"popup_tabIdNotFound": {
-		"message": "టాబ్ \"$1\" కనుగొనబడలేదు"
+		"message": "ట్యాబ్ \"$1\" కనుగొనబడలేదు"
 	},
 	"popup_tab_translatePage": {
 		"message": "పేజీ అనువాదం"
@@ -261,292 +241,296 @@
 		"message": "రద్దు చేయి"
 	},
 	"settings_button_export": {
-		"message": "కాన్ఫిగ్ ఎగుమతి చేయి"
+		"message": "కాన్ఫిగరేషన్ ఎగుమతి"
 	},
 	"settings_button_import": {
-		"message": "కాన్ఫిగ్ దిగుమతి చేయి"
+		"message": "కాన్ఫిగరేషన్ దిగుమతి"
 	},
 	"settings_button_reset": {
-		"message": "కాన్ఫిగ్ పునఃసెట్చేయి"
+		"message": "కాన్ఫిగరేషన్ రీసెట్"
 	},
 	"settings_button_saveChanges": {
-		"message": "మార్పులను సురక్షితం చేయండి"
+		"message": "మార్పులను సేవ్ చేయి"
 	},
 	"settings_message_clearCache_success": {
-		"message": "క్యాచ్ సాఫ్ అయింది"
+		"message": "క్యాష్ క్లియర్ చేయబడింది"
 	},
 	"settings_message_common_invalidValueType": {
 		"message": "చెల్లని విలువ"
 	},
 	"settings_message_importConfig_invalidFile": {
-		"message": "దీనిని దిగుమతి పొందడానికి ఫైల్‌ను ప్రాసెస్ చేయలేము"
+		"message": "ఇచ్చిన కాన్ఫిగరేషన్ ఫైల్ తప్పు లేదా చెడిపోయింది, మరియు ప్రాసెస్ చేయలేము"
 	},
 	"settings_message_importConfig_success": {
-		"message": "దిగుమతి ముగిసింది"
+		"message": "దిగుమతి పూర్తయింది"
 	},
 	"settings_message_resetConfig_confirm": {
-		"message": "మీరు సెట్ చేసిన ఎంపికలను రీసెట్ చేసుకోవాలనుకుంటున్నారా?"
+		"message": "అభిరుచులను డిఫాల్ట్ విలువలకు రీసెట్ చేయడానికి నిర్ధారించండి"
 	},
 	"settings_message_resetConfig_success": {
-		"message": "సెట్టింగ్లు రీసెట్ చేయబడ్డాయి"
+		"message": "అభిరుచులు రీసెట్ చేయబడ్డాయి"
 	},
 	"settings_message_saveChanges_success": {
-		"message": "మార్పులు సురక్షితం చేయబడ్డాయి"
+		"message": "మార్పులు సేవ్ చేయబడ్డాయి"
 	},
 	"settings_option_cache": {
-		"message": "క్యాచ్"
+		"message": "క్యాష్"
 	},
 	"settings_option_cache_clear": {
-		"message": "క్యాచ్ క్లియర్ చేయండి"
+		"message": "క్యాష్ క్లియర్ చేయండి"
 	},
 	"settings_option_cache_clear_desc": {
-		"message": "మీకు అనువాద లోపాలు ఉన్నట్లయితే లేదా సీక్రెట్స్ తొలగించాల్సిన అవసరం ఉన్నప్పుడు కాచే తొలగించండి"
+		"message": "మీరు అనువాద లోపాలను గమనించినప్పుడు లేదా క్యాష్ ప్రారంభించబడినప్పుడు ప్రైవేట్ పాఠ్యాలను అనువదించినప్పుడు, మీరు క్యాష్ నుండి అన్ని డేటాను తొలగించవచ్చు",
+		"description": "Explanation for user about cases when it's useful to clear cache"
 	},
 	"settings_option_cache_enable": {
-		"message": "కాచే సక్రియం చేయండి"
+		"message": "క్యాష్ ప్రారంభించండి"
 	},
 	"settings_option_cache_enable_desc": {
-		"message": "కాచే సక్రియమైనప్పుడు, ఒకసారి అనువదించిన అనువాదాలు తక్షణం అందుబాటులో ఉంటాయి, ఇంటర్నెట్ కనెక్షన్ లేకపోయినా కూడా"
+		"message": "క్యాష్ ప్రారంభించబడినప్పుడు, ముందుగా అనువదించిన పాఠ్యాలు అనువాద సేవకు అదనపు అభ్యర్థనలు లేకుండా వెంటనే అనువదించబడతాయి"
 	},
 	"settings_option_cache_ignoreCase": {
-		"message": "పలుకుబడి తేడాలపై حساسత లేదు"
+		"message": "కేస్-ఇన్‌సెన్సిటివ్ క్యాష్ ఉపయోగించండి"
 	},
 	"settings_option_cache_ignoreCase_desc": {
-		"message": "సక్రియం చేసినప్పుడు, ఖచ్చితమైన సారూప్యాలు కాని అనువాదాలకు కాచే నుండి అనువాదాలు ఉపయోగిస్తారు, ఇది అనువాద లోపాలకు దారితీస్తుంది"
+		"message": "ప్రారంభించబడినప్పుడు, క్యాష్ చేయబడిన అనువాదాలు వివిధ కేసులతో ఉన్న పాఠ్యాలకు ఉపయోగించబడతాయి, ఇది కొన్ని పరిస్థితుల్లో అనువాద వక్రీకరణలకు కారణం కావచ్చు"
 	},
 	"settings_option_commonSettings": {
-		"message": "సాధారణ సెట్టింగ్లు"
+		"message": "సాధారణ సెట్టింగ్‌లు"
 	},
 	"settings_option_customTranslatorModule": {
-		"message": "కస్టమ్ అనువాదకులు"
+		"message": "కస్టమ్ అనువాద మాడ్యూల్‌లు",
+		"description": "An user defined code that implements a translation module"
 	},
 	"settings_option_customTranslatorModule_desc": {
-		"message": "మీ ఇష్టమైన అనువాద సేవలకు మీరు కస్టమ్ అనువాదకులను జోడించవచ్చు. మరిన్ని చదవండి మరియు మాడ్యూల్స్‌ను <slot id=docs>కస్టమ్ అనువాదకుల డాక్యుమెంటేషన్</slot> లో కనుగొనండి"
+		"message": "మీకు ఇష్టమైన అనువాద సేవలను ఉపయోగించే కస్టమ్ అనువాద మాడ్యూల్‌లను మీరు జోడించవచ్చు. <slot id=docs>కస్టమ్ అనువాదకుల డాక్యుమెంటేషన్</slot>లో మరింత తెలుసుకోండి"
 	},
 	"settings_option_customTranslatorModule_manageButton": {
-		"message": "అనువాదకులను నిర్వహించండి"
+		"message": "అనువాదకులను నిర్వహించడం",
+		"description": "A button to show list of translation modules"
 	},
 	"settings_option_history_enable": {
-		"message": "చరిత్ర సక్రియం చేయండి"
+		"message": "చరిత్ర ప్రారంభించండి"
 	},
 	"settings_option_history_enable_desc": {
-		"message": "క్రియాశీలం చేస్తే, ప్రతి అనువాదం ఒక చరిత్ర పేజీలో రికార్డ్ అవుతుంది"
-	},
-	"settings_option_mainPreferences": {
-		"message": "ప్రధాన సెట్టింగులు"
+		"message": "ప్రారంభించబడినప్పుడు, అనువాదాలు రికార్డ్ చేయబడతాయి మరియు <slot id=historyPage>చరిత్ర పేజీ</slot>లో కనిపిస్తాయి"
 	},
 	"settings_option_pageTranslation": {
-		"message": "పేజీ అనువాదం"
+		"message": "పూర్తి పేజీ అనువాదం"
 	},
 	"settings_option_pageTranslation_detectLanguageByContent": {
 		"message": "కంటెంట్ ద్వారా భాషను గుర్తించండి"
 	},
 	"settings_option_pageTranslation_detectLanguageByContent_desc": {
-		"message": "పేజీ భాషను గుర్తించడానికి వెబ్ పున్యాక్షేపంలో ఉన్న వచనం విశ్లేషించండి. సహకారం లేకపోతే, పేజీ మెటాడేటాలో ఇచ్చిన భాషను ఉపయోగిస్తారు"
+		"message": "దాని భాషను గుర్తించడానికి వెబ్ పేజీపై పాఠ్యాన్ని విశ్లేషించండి. నిలిపివేయబడినప్పుడు, <slot id=docs>పేజీ మెటాడేటా</slot>లో పేర్కొన్న భాష ఉపయోగించబడుతుంది"
 	},
 	"settings_option_pageTranslation_enableContextMenu": {
-		"message": "సందర్భ మెనూ బటన్‌ను ప్రారంభించండి"
+		"message": "కాంటెక్స్ట్ మెనూ బటన్ ప్రారంభించండి"
 	},
 	"settings_option_pageTranslation_enableContextMenu_desc": {
-		"message": "సందర్భ మెనూలో పేజీ అనువాదాన్ని స్థిరపరచడానికి ఒక బటన్ జోడించండి"
+		"message": "పేజీ కాంటెక్స్ట్ మెనూలో పేజీ అనువాదాన్ని టోగుల్ చేయడానికి బటన్ జోడించండి"
 	},
 	"settings_option_pageTranslation_excludeSelectors": {
-		"message": "అనువాదం తప్పించుకోమని సెలెక్టర్లు"
+		"message": "అనువాదం నుండి మినహాయించడానికి సెలెక్టర్లు"
 	},
 	"settings_option_pageTranslation_excludeSelectors_desc": {
-		"message": "అనువదించబడని CSS సెలెక్టర్ల జాబితా. ఒక్కో సెలెక్టర్ ఒక్కో పంక్తిలో ఉండాలి. ఈ సెలెక్టర్లలో ఏదైతే సరే సరిపోయే మూలకం, దాని గుణళలతో పాటు అంతర్గత మూలకాలూ అనువదించబడవు"
+		"message": "అనువాదం నుండి మినహాయించాల్సిన అంశాల కోసం CSS సెలెక్టర్ల జాబితా. ప్రతి లైన్‌కు ఒక సెలెక్టర్. ఈ సెలెక్టర్లలో ఏదైనా సరిపోలితే, దాని పాఠ్యం, లక్షణాలు మరియు నెస్టెడ్ అంశాలు అనువదించబడవు"
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
-		"message": "కనిపించే మూలకాలకే అనువాదం చేయండి"
+		"message": "కనిపించే అంశాలను మాత్రమే అనువదించండి"
 	},
 	"settings_option_pageTranslation_lazyTranslate_desc": {
-		"message": "ఈ ఎంపిక చెలామణీ చేస్తే, కేవలం కనిపించే అంశాలనే అనువాదం చేయబడతాయి. ఈ ఎంపిక నెట్‌వర్క్ ట్రాఫిక్‌ను మరియు ఉపయోగించిన అనువాద సేవల పరిమితులను సంరక్షిస్తుంది"
+		"message": "ఈ ఎంపిక ప్రారంభించబడినప్పుడు, కనిపించే అంశాలు మాత్రమే అనువదించబడతాయి. ఈ ఎంపిక నెట్‌వర్క్ ట్రాఫిక్‌ను తగ్గిస్తుంది"
 	},
 	"settings_option_pageTranslation_originalTextPopup": {
-		"message": "మూల టెక్స్ట్‌తో పాప్-అప్ ను అనుమతించండి"
+		"message": "మూల పాఠ్యంతో పాప్‌అప్ ప్రారంభించండి"
 	},
 	"settings_option_pageTranslation_originalTextPopup_desc": {
-		"message": "అనువాదం చేసిన టెక్స్ట్ బ్లాక్‌లపై మౌస్ తొడిచినప్పుడు మూల టెక్స్ట్‌తో పాప్-అప్ చూపించండి"
+		"message": "అనువదించిన పాఠ్య బ్లాక్‌లపై హోవర్ చేసినప్పుడు మూల పాఠ్యంతో పాప్‌అప్‌ను చూపించండి"
 	},
-	"settings_option_pageTranslation_toggleTranslationHotkey": {
-		"message": "హాట్‌కీలు"
+	"settings_option_pageTranslation_shortcut_toggleTranslation": {
+		"message": "షార్ట్‌కట్"
 	},
-	"settings_option_pageTranslation_toggleTranslationHotkey_desc": {
-		"message": "పేజీ అనువాదాన్ని టోగుల్ చేసుకోవడానికి షార్ట్‌కట్స్\nకీలను రీసెట్ చేయడానికి ESC నొక్కండి"
+	"settings_option_pageTranslation_shortcut_toggleTranslation_desc": {
+		"message": "పేజీ అనువాదాన్ని టోగుల్ చేయడానికి షార్ట్‌కట్\nకీలను రీసెట్ చేయడానికి ESC నొక్కండి"
 	},
 	"settings_option_pageTranslation_translatableAttributes": {
-		"message": "అనువదించదగిన లక్షణాలు"
+		"message": "అనువదించగల లక్షణాలు"
 	},
 	"settings_option_pageTranslation_translatableAttributes_desc": {
-		"message": "అనువదించడానికి <slot id=htmlAttributes>HTML లక్షణ</slot> పేర్లను నమోదు చేయండి, ఒక్కో లక్షణాన్ని ఒక్కో వరుసలో"
+		"message": "అనువదించడానికి <slot id=htmlAttributes>HTML లక్షణం</slot> పేర్లను నమోదు చేయండి, ప్రతి లైన్‌కు ఒక లక్షణం\nఈ జాబితాలో ఉన్న లక్షణాలు మాత్రమే అనువదించబడతాయి"
 	},
 	"settings_option_popupTab_pageTranslator_showCounters": {
-		"message": "అనువాద గణాంకాలు చూపించండి"
+		"message": "అనువాద పురోగతిని చూపించండి"
 	},
 	"settings_option_popupTab_pageTranslator_showCounters_desc": {
-		"message": "పేజీ అనువాద గణాంకాలను ప్రదర్శించండి"
+		"message": "విస్తరణ పాప్‌అప్‌లో పేజీ అనువాద పురోగతితో ప్యానెల్‌ను చూపించు"
 	},
 	"settings_option_selectTranslation": {
-		"message": "ఎంచుకున్న టెక్స్ట్ అనువాదం"
+		"message": "ఎంచుకున్న పాఠ్యానికి అనువాదం"
 	},
-	"settings_option_selectTranslation_detectedLangFirst": {
-		"message": "పేజీ భాష కంటే టెక్స్ట్ యొక్క కనుగొన్న భాషకు ప్రాధాన్యం ఇవ్వండి"
+	"settings_option_selectTranslation_detectTextLanguage": {
+		"message": "పాఠ్య భాషను గుర్తించు"
 	},
-	"settings_option_selectTranslation_detectedLangFirst_desc": {
-		"message": "చాలా ఆప్షన్ ఆన్ చేసినప్పుడు, ఎంపిక చేసిన టెక్స్ట్ యొక్క కనుగొన్న భాష పేజీ భాష కంటే ప్రాధాన్యం పొందుతుంది"
+	"settings_option_selectTranslation_detectTextLanguage_desc": {
+		"message": "ఈ ఎంపిక ప్రారంభించబడినప్పుడు, అనువాదం కోసం భాషను గుర్తించడానికి ఎంపిక చేసిన పాఠ్యాన్ని విశ్లేషిస్తారు. లేకపోతే, పేజీ భాష ఉపయోగించబడుతుంది"
 	},
 	"settings_option_selectTranslation_disableWhileTranslatePage": {
-		"message": "పేజీ అనువాద సమయంలో నిలిపివేయండి"
+		"message": "పేజీ అనువదిస్తున్నప్పుడు నిలిపివేయి"
 	},
 	"settings_option_selectTranslation_enable": {
-		"message": "సక్రియంచేయండి"
+		"message": "ఎంచుకున్న పాఠ్య అనువాదాన్ని ప్రారంభించు"
+	},
+	"settings_option_selectTranslation_enable_desc": {
+		"message": "ఈ ఫీచర్ ప్రారంభించబడినప్పుడు, మీరు పేజీలో ఏదైనా పాఠ్యాన్ని ఎంచుకుని పాప్‌అప్‌లో అనువదించవచ్చు"
 	},
 	"settings_option_selectTranslation_focusOnTranslateButton": {
-		"message": "అనువాద బటన్‌పై ఆటోపైలు పెట్టండి"
+		"message": "అనువాద బటన్‌పై ఆటో-ఫోకస్"
 	},
 	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
-		"message": "అనువాద బటన్ కనిపించినప్పుడు దానిపై ఫోకస్ పెట్టండి"
+		"message": "పేజీలో అనువాద బటన్ కనిపించినప్పుడు, అది ఆటోమేటిక్‌గా ఫోకస్ అవుతుంది"
 	},
 	"settings_option_selectTranslation_header_languageChoice": {
-		"message": "భాషా సెట్టింగ్స్"
+		"message": "భాషా అమరికలు"
 	},
 	"settings_option_selectTranslation_isUseAutoForDetectLang": {
-		"message": "అనువాదకులు స్వయంగా భాషను గుర్తించడం ఆన్ చేయండి"
+		"message": "పాఠ్య భాషను గుర్తించడానికి అనువాద మాడ్యూల్‌ను అనుమతించు"
 	},
 	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
-		"message": "స్థానికంగా భాషను గుర్తించటం వీలైనప్పుడు అనువాదకులు స్వయంగా భాష గుర్తింపు ఉపయోగించండి"
+		"message": "పాఠ్య భాషను స్థానికంగా గుర్తించలేకపోతే మరియు ఈ ఎంపిక ప్రారంభించబడితే, భాష \"ఆటో\" తో పాఠ్యం అనువదించబడుతుంది, ఇది మద్దతు ఇస్తే.\nఎంపిక నిలిపివేయబడితే, పాఠ్య మూల భాషను సెట్ చేయడానికి మరొక ఫాల్బ్యాక్ పద్ధతి ఉపయోగించబడుతుంది"
 	},
 	"settings_option_selectTranslation_mode": {
-		"message": "అనువాద ట్రిగ్గర్"
+		"message": "పాఠ్య ఎంపికపై చర్య"
 	},
 	"settings_option_selectTranslation_mode_item_contextMenu": {
-		"message": "కాంటెక్స్ట్ మెను బటన్"
+		"message": "కాంటెక్స్ట్ మెనూ ద్వారా పాఠ్యాన్ని అనువదించు"
 	},
 	"settings_option_selectTranslation_mode_item_popupButton": {
-		"message": "పాప్-అప్ బటన్"
+		"message": "అనువాద బటన్‌ను చూపించు"
 	},
 	"settings_option_selectTranslation_mode_item_quickTranslate": {
-		"message": "ఎంపిక ద్వారా త్వరిత అనువాదం"
+		"message": "పాఠ్యాన్ని తక్షణం అనువదించు"
 	},
 	"settings_option_selectTranslation_modifiers": {
-		"message": "మార్పులు"
+		"message": "మోడిఫైయర్లు"
 	},
 	"settings_option_selectTranslation_modifiers_desc": {
-		"message": "అనువాదం చూపించడానికి కీబోర్డ్‌లో ఆ ప్రెస్ చేయాల్సిన కీలు ఎంచుకోండి"
+		"message": "అనువాదాన్ని ప్రదర్శించడానికి కీబోర్డ్‌పై నొక్కాల్సిన కీలు ఎంచుకోండి"
 	},
 	"settings_option_selectTranslation_modifiers_key_alt": {
-		"message": "ఆల్ట్"
+		"message": "alt"
 	},
 	"settings_option_selectTranslation_modifiers_key_ctrl": {
-		"message": "కంట్రోల్"
+		"message": "ctrl"
 	},
 	"settings_option_selectTranslation_modifiers_key_meta": {
-		"message": "మేటా"
+		"message": "meta"
 	},
 	"settings_option_selectTranslation_modifiers_key_shift": {
-		"message": "షిఫ్ట్"
+		"message": "shift"
 	},
 	"settings_option_selectTranslation_rememberDirection": {
-		"message": "సর্বస‌మీపంగా ఎంచుకున్న భాషను గుర్తించండి"
+		"message": "ఇటీవల ఎంచుకున్న పాఠ్య భాషను గుర్తుంచుకోండి"
 	},
 	"settings_option_selectTranslation_showOnceForSelection": {
-		"message": "ప్రతి టెక్స్ట్ ఎంపిక కోసం ఒకసారి అనువాద బటన్ చూపించండి"
+		"message": "ప్రతి పాఠ్య ఎంపికకు ఒకసారి అనువాద బటన్‌ను చూపించు"
 	},
 	"settings_option_selectTranslation_showOnceForSelection_desc": {
-		"message": "ప్రతి టెక్స్ట్ ఎంపిక కోసం బటన్ ఒకసారి మాత్రమే కనిపిస్తుంది. మళ్లీ చూపించాలంటే, టెక్స్ట్‌ను తిరిగి ఎంచుకోండి"
+		"message": "ప్రతి పాఠ్య ఎంపికకు బటన్ కేవలం ఒకసారి మాత్రమే కనిపిస్తుంది. దానిని మళ్లీ చూపించడానికి, పాఠ్యాన్ని మళ్లీ ఎంచుకోండి"
 	},
 	"settings_option_selectTranslation_showOriginalText": {
-		"message": "మూల టెక్స్ట్ చూపించండి"
+		"message": "మూల పాఠ్యాన్ని చూపించు"
 	},
 	"settings_option_selectTranslation_showOriginalText_desc": {
-		"message": "అనువాద పాప్‌అప్‌లో మూల టెక్స్ట్‌తో కూడిన విభాగాన్ని జోడించండి"
+		"message": "అనువాద పాప్‌అప్‌లో మూల పాఠ్యంతో బ్లాక్‌ను జోడించండి"
 	},
 	"settings_option_selectTranslation_strictSelection": {
-		"message": "కఠిన ఎంపిక"
+		"message": "పాఠ్య విస్తరణ ఎంపిక యొక్క కఠినమైన మోడ్",
+		"description": "This option is about selecting text via mouse"
 	},
 	"settings_option_selectTranslation_strictSelection_desc": {
-		"message": "ఎంపిక చేసిన టెక్స్ట్ ఉన్న బ్లాక్ బాహ్యంగా ఎడమ మౌస్ బటన్ విడుదలయ్యితే, ఎంపికను గతించండి"
+		"message": "ఎంచుకున్న పాఠ్యాన్ని కలిగి ఉన్న బ్లాక్ వెలుపల ఎడమ మౌస్ బటన్ విడుదలైతే పాఠ్య విస్తరణ ఎంపికను నిర్లక్ష్యం చేయండి"
 	},
 	"settings_option_selectTranslation_timeoutForHideButton": {
-		"message": "బటన్ దాచే ముందు ఆలస్యం"
+		"message": "పాప్‌అప్ బటన్‌ను దాచడానికి ముందు ఆలస్యం"
 	},
 	"settings_option_selectTranslation_timeoutForHideButton_desc": {
-		"message": "కర్సర్ హోవర్ చేయకపోవడానికి బటన్ దాచే ముందు మిల్లిసెకండ్లలో ఆలస్యం. బటన్ మీద హోవర్ చేస్తే టైమర్ రీసెట్ అవుతుంది. ఆటో-హైడ్‌ను నిలిపివేయాలి అంటే, విలువ 1 కన్నా తక్కువగా సెట్ చేయండి"
+		"message": "కర్సర్ దానిపై ఉండకపోతే బటన్ దాచడానికి ముందు మిల్లీసెకన్లలో ఆలస్యం. బటన్‌పై హోవర్ చేయడం టైమర్‌ను రీసెట్ చేస్తుంది. ఆటో-హైడ్‌ను నిలిపివేయడానికి, విలువను 1 కంటే తక్కువగా సెట్ చేయండి"
 	},
 	"settings_option_selectTranslation_zIndex": {
-		"message": "z-ఇండెక్స్"
+		"message": "z-index"
 	},
 	"settings_option_selectTranslation_zIndex_desc": {
-		"message": "కొన్ని పేజీలలోని అంశాలు అనువాద పాప్‌అప్‌ను ముడుచితే ఈ విలువను పెంచండి"
+		"message": "కొన్ని పేజీలపై మూలకాలు అనువాదిత పాఠంతో పాప్‌అప్‌ను కప్పివేస్తే ఈ విలువను పెంచండి"
 	},
 	"settings_option_textTranslator": {
-		"message": "పాఠ్య అనువాదం"
+		"message": "పాఠ అనువాదం"
 	},
 	"settings_option_textTranslator_rememberText": {
-		"message": "అనువదించిన పాఠ్యాన్ని గుర్తుపెట్టుకోండి"
+		"message": "అనువాదిత పాఠాన్ని గుర్తుంచుకోవడం"
 	},
 	"settings_option_textTranslator_rememberText_desc": {
-		"message": "విండో మళ్లీ తెరవబడినప్పుడు అనువదించిన పాఠ్యాన్ని గుర్తుపెట్టుకోండి"
+		"message": "విండో మళ్లీ తెరిచినప్పుడు అనువాదిత పాఠాన్ని గుర్తుంచుకోవడం"
 	},
 	"settings_option_textTranslator_spellCheck": {
-		"message": "వర్ణవిన్యాస తనిఖీని ప్రారంభించండి"
+		"message": "అక్షరదోష నిర్ధారణను ప్రారంభించండి"
 	},
 	"settings_option_textTranslator_suggestLanguage": {
-		"message": "గుర్తించిన పాఠ్య భాషను సూచించండి"
+		"message": "గుర్తించిన పాఠ భాషను చూపించడం"
 	},
 	"settings_option_textTranslator_suggestLanguageAlways": {
-		"message": "ఎప్పుడూ భాషను గుర్తించి సూచించండి"
+		"message": "భాషను ఎల్లప్పుడూ గుర్తించి సూచించండి"
 	},
 	"settings_option_textTranslator_suggestLanguageAlways_desc": {
-		"message": "ఆపివేస్తే, భాష సూచనలు మూల భాష 'auto'గా గుర్తించినప్పుడు మాత్రమే కనిపిస్తాయి"
+		"message": "అచేతనం చేసినప్పుడు, మూల భాష \"ఆటో\"గా సెట్ చేయబడితే మాత్రమే భాష సూచనలు కనిపిస్తాయి"
 	},
 	"settings_option_translatePreferences": {
-		"message": "అనువాదాత్మక ప్రవృత్తులు"
+		"message": "అనువాద ప్రాధాన్యతలు"
 	},
 	"settings_option_translateScheduler": {
-		"message": "అనువాదం పథక కర్త"
+		"message": "అనువాద షెడ్యూలర్"
 	},
 	"settings_option_translateScheduler_delay": {
-		"message": "పాఠ్య సేకరణ ఆలస్సు"
+		"message": "పాఠం సేకరణ ఆలస్యం"
 	},
 	"settings_option_translateScheduler_delay_desc": {
-		"message": "అనువాద రిక్వెస్ట్‌ల సంఖ్యను తగ్గించేందుకు అనువాద షెడ్యూలర్ పని చేస్తుంది. ఒకే రిక్వెస్ట్‌లో ఎక్కువ ტექస్త్‌లు పంపేందుకు ఇది ప్రయత్నిస్తుంది. అనువాదం ప్రారంభించే ముందు కొత్త టెక్స్టులు సేకరించేందుకు షెడ్యూలర్ సూచించిన మిల్లీసెకన్ల సమయాన్ని వేచివుంటుంది."
+		"message": "అనువాద షెడ్యూలర్ అనువాద సేవ APIకి అభ్యర్థనల సంఖ్యను తగ్గించడానికి ఒకే అభ్యర్థనలో పంపడానికి వీలైనంత ఎక్కువ పాఠాలను సేకరిస్తుంది. అనువాదం ప్రారంభించడానికి ముందు మరిన్ని పాఠాలను సేకరించడానికి షెడ్యూలర్ పేర్కొన్న సమయాన్ని మిల్లీసెకన్లలో వేచి ఉంటుంది"
 	},
 	"settings_option_translateScheduler_retryLimit": {
-		"message": "అనువాద పునఃప్రయత్నాలు"
+		"message": "అనువాద పునఃప్రయత్నాల పరిమితి"
 	},
 	"settings_option_translateScheduler_retryLimit_desc": {
-		"message": "అనువాద లోపాలు వచ్చినప్పుడు షెడ్యూలర్ అనువాదాన్ని మళ్లీ ప్రయత్నిస్తుంది. ఈ ఎంపిక పునఃప్రయత్నాల పరిమితిని సెట్ చేస్తుంది. పరిమితి లేకుండా అవసరమైతే ప్రతీకూల సంఖ్యను సెట్ చేయండి."
+		"message": "అనువాద లోపాలు సంభవించినప్పుడు షెడ్యూలర్ పాఠాలను అనువదించడానికి మళ్లీ ప్రయత్నిస్తుంది. ఈ ఎంపిక పునఃప్రయత్నాల పరిమితిని సెట్ చేస్తుంది. పరిమిత లేని పునఃప్రయత్నాలను అనుమతించడానికి ప్రతికూల సంఖ్యను సెట్ చేయండి"
 	},
 	"settings_option_translatorModule": {
 		"message": "అనువాద మాడ్యూల్"
 	},
 	"settings_option_translatorModule_desc": {
-		"message": "అనువాద గుణాత్మకం మరియు లభ్యమయ్యే భాషలు అనువాదకంపైనే ఆధారపడి ఉంటాయి."
+		"message": "అనువాదాల నాణ్యత మరియు అందుబాటులో ఉన్న భాషలు అనువాద మాడ్యూల్‌పై ఆధారపడి ఉంటాయి"
 	},
 	"settings_option_tts": {
-		"message": "టెక్స్ట్ టు స్పీచ్ (TTS)"
+		"message": "పాఠం నుండి మాటలుగా మార్పు (TTS)"
 	},
 	"settings_option_ttsCustomModules": {
-		"message": "కస్టమ్ TTS"
+		"message": "అనుకూల మాటల సింథసిస్ మాడ్యూల్స్"
 	},
 	"settings_option_ttsCustomModules_button": {
-		"message": "TTS మాడ్యూల్స్ నిర్వహణ"
+		"message": "మాటల సింథసిస్ మాడ్యూల్స్‌ను నిర్వహించడం"
 	},
 	"settings_option_ttsCustomModules_desc": {
-		"message": "మీరు మీ ఇష్టమైన సేవలు మరియు స్వరాలను ఉపయోగించుకునే TTS మాడ్యూల్స్‌ను జోడించడానికి వీలుంది. కస్టమ్ TTS కు సంబంధించిన <slot id=docs>డాక్యుమెంటేషన్</slot>లో మరిన్ని వివరాలు చదవండి"
+		"message": "మీకు ఇష్టమైన సేవలు మరియు వాయిస్ ఇంజిన్లను ఉపయోగించే మాటల సింథసిస్ మాడ్యూల్స్‌ను మీరు జోడించవచ్చు. <slot id=docs>అనుకూల TTS డాక్యుమెంటేషన్</slot>లో మరింత చదవండి"
 	},
 	"settings_option_ttsModule": {
-		"message": "TTS మాడ్యూల్"
+		"message": "ఎంచుకున్న TTS మాడ్యూల్"
 	},
 	"settings_option_ttsModule_desc": {
-		"message": "పాఠ్యాన్ని మాట్లాడే మాడ్యూల్"
+		"message": "పాఠాన్ని వాయిస్ చేయడానికి ఉపయోగించే వాయిస్ ఇంజిన్"
 	},
 	"settings_option_userLanguage": {
 		"message": "మీ భాష"
 	},
 	"settings_option_userLanguage_desc": {
-		"message": "పాఠ్య అనువాదానికి లక్ష్య భాష"
+		"message": "పాఠాలు అనువదించబడే భాష"
 	},
 	"settings_pageTitle": {
 		"message": "సెట్టింగ్స్"
@@ -555,28 +539,35 @@
 		"message": "చరిత్ర"
 	},
 	"settings_section_popup": {
-		"message": "పాప్అప్"
+		"message": "పాప్‌అప్"
 	},
 	"textTranslator_suggestLanguage": {
-		"message": "ఆ భాష ఇలా ఉంది"
+		"message": "పాఠ భాష <slot id=languageSuggest>$language_name$</slot> అని అనిపిస్తోంది",
+		"placeholders": {
+			"language_name": {
+				"content": "$1",
+				"example": "Japanese"
+			}
+		}
 	},
 	"textTranslator_translateInputPlaceholder": {
-		"message": "పాఠ్యం నమోదు చేయండి"
+		"message": "అనువాదం కోసం పాఠ్యాన్ని నమోదు చేయండి",
+		"description": "Request to user input some text for translation"
 	},
 	"textTranslator_translatePlaceholder": {
-		"message": "అనువదించిన పాఠ్యం"
+		"message": "అనువాదిత పాఠ్యం ఇక్కడ ఉంటుంది"
 	},
 	"translatorsManagerWindow_add": {
-		"message": "చేరచేయి"
+		"message": "అనువాద మాడ్యూల్‌ను జోడించండి"
 	},
 	"translatorsManagerWindow_close": {
-		"message": "మూసివేయి"
+		"message": "మూసివేయండి"
 	},
 	"translatorsManagerWindow_emptyTranslatorsListText": {
-		"message": "ఇప్పటి వరకు ఎటువంటి కస్టమ్ అనువాదకులు చేరలేదు"
+		"message": "ఇప్పటివరకు ఎటువంటి కస్టమ్ అనువాద మాడ్యూల్‌లు జోడించబడలేదు"
 	},
 	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
-		"message": "మీరు ఖచ్చితంగా \"$translator_name$\" అనువాదకుని తొలగించాలనుకుంటున్నారా?",
+		"message": "\"$translator_name$\" అనువాద మాడ్యూల్‌ను తొలగించాలనుకుంటున్నారా?",
 		"placeholders": {
 			"translator_name": {
 				"content": "$1",
@@ -585,25 +576,25 @@
 		}
 	},
 	"translatorsManagerWindow_title": {
-		"message": "కస్టమ్ అనువాదకులు"
+		"message": "కస్టమ్ అనువాద మాడ్యూల్‌లు"
 	},
 	"translatorsManagerWindow_translator_delete": {
-		"message": "తొలగించు"
+		"message": "తొలగించండి"
 	},
 	"translatorsManagerWindow_translator_edit": {
-		"message": "సవరించు"
+		"message": "సవరించండి"
 	},
 	"ttsManagerWindow_add": {
-		"message": "చేర్చు"
+		"message": "TTS మాడ్యూల్‌ను జోడించండి"
 	},
 	"ttsManagerWindow_close": {
-		"message": "మూసివేయి"
+		"message": "మూసివేయండి"
 	},
 	"ttsManagerWindow_emptyTranslatorsListText": {
-		"message": "ఇప్పటి వరకు ఎటువంటి TTS మాడ్యూల్స్ చేరలేదు"
+		"message": "ఇప్పటివరకు ఎటువంటి TTS మాడ్యూల్‌లు జోడించబడలేదు"
 	},
 	"ttsManagerWindow_message_ttsRemoveConfirmation": {
-		"message": "మీరు ఖచ్చితంగా \"$tts_name$\" TTS మాడ్యూల్ తొలగించాలనుకుంటున్నారా?",
+		"message": "\"$tts_name$\" TTS మాడ్యూల్‌ను తొలగించాలనుకుంటున్నారా?",
 		"placeholders": {
 			"tts_name": {
 				"content": "$1",
@@ -612,22 +603,22 @@
 		}
 	},
 	"ttsManagerWindow_title": {
-		"message": "పాఠ్యాన్ని మాటగా మార్చే మాడ్యూల్స్"
+		"message": "టెక్స్ట్-టు-స్పీచ్ మాడ్యూల్‌లు"
 	},
 	"ttsManagerWindow_translator_delete": {
-		"message": "ఇతివృత్తం చేయండి"
+		"message": "తొలగించండి"
 	},
 	"ttsManagerWindow_translator_edit": {
-		"message": "సవరిం చడం"
+		"message": "సవరించండి"
 	},
 	"validation_number": {
-		"message": "పరామితి ఒక సంఖ్య కావాలి"
+		"message": "విలువ ఒక సంఖ్యగా ఉండాలి"
 	},
 	"validation_numberBetweenRange": {
-		"message": "పరామితి $1 మరియు $2 మధ్యలో ఒక సంఖ్య కావాలి"
+		"message": "విలువ $1 మరియు $2 మధ్య ఒక సంఖ్యగా ఉండాలి"
 	},
 	"validation_positiveNumber": {
-		"message": "పరామితి ఒక ధనాత్మక సంఖ్య కావాలి"
+		"message": "విలువ సానుకూల సంఖ్యగా ఉండాలి"
 	},
 	"langCode_aa": {
 		"message": "అఫార్"

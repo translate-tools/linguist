@@ -3,10 +3,10 @@
 		"message": "Тәрҗемәне сүзлеккә өстәү"
 	},
 	"common_action_removeFromDictionary": {
-		"message": "Тәрҗемәне сүзлектән чыгару"
+		"message": "Тәрҗемәне сүзлектән алу"
 	},
 	"common_bgUnavailable": {
-		"message": "Фон программасы эшләми"
+		"message": "Фон скрипты кулланылмый"
 	},
 	"common_cancel": {
 		"message": "Юкка чыгару"
@@ -30,16 +30,16 @@
 		"message": "Тәрҗемә итү"
 	},
 	"component_hotkey_placeholder": {
-		"message": "Кыска юлларны яздыру өчен басыгыз"
+		"message": "Кыска юлны язу өчен басыгыз"
 	},
 	"component_hotkey_recordPlaceholder": {
-		"message": "Төмән төймәләрне басыгыз"
+		"message": "Төймәләрне басыгыз"
 	},
 	"component_hotkey_resetButton": {
-		"message": "Башка торгызу"
+		"message": "Сброс"
 	},
 	"contextMenu_disablePageTranslation": {
-		"message": "Бит тәрҗемәсен сүндерү"
+		"message": "Бит тәрҗемәсен туктату"
 	},
 	"contextMenu_translatePage": {
 		"message": "Битне тәрҗемә итү"
@@ -60,34 +60,34 @@
 		"message": "Барысын да бетерү"
 	},
 	"dictionary_deleteAll": {
-		"message": "Сүзлектәге БАРлык тәрҗемәләрне бетерергә телисезме?"
+		"message": "Сез чыннан да сүзлектән БАРЛЫК тәрҗемәләрне бетерергә телисезме?"
 	},
 	"dictionary_deleteConfirmation": {
-		"message": "Әлеге тәрҗемәне бетерергә ышанасызмы?"
+		"message": "Сез чыннан да бу тәрҗемәне бетерергә телисезме?"
 	},
 	"dictionary_description": {
-		"message": "Тәрҗемәләрегезне сүзлектә саклагыз, аларны соңыннан табу өчен"
+		"message": "Тәрҗемәләрне сүзлектә саклагыз, аларны тиз табу өчен"
 	},
 	"dictionary_emptyDictionary": {
-		"message": "Сүзлек буш. Кайбер текст тәрҗемә иткәндә тутырырга башлагыз"
+		"message": "Сүзлек буш, аны текст тәрҗемә итеп тутырыгыз"
 	},
 	"dictionary_filter_from": {
-		"message": "Кемнән"
+		"message": "Чыганак текст теле"
 	},
 	"dictionary_filter_to": {
-		"message": "Кемгә"
+		"message": "Максат теле"
 	},
 	"dictionary_message_deleteAll_success": {
 		"message": "Барлык тәрҗемәләр бетерелде"
 	},
 	"dictionary_notFoundEntries": {
-		"message": "Бу сүзлек фильтрларына туры килгән тәрҗемәләр табылмады"
+		"message": "Бу фильтрларга туры килгән тәрҗемәләр табылмады"
 	},
 	"dictionary_pageTitle": {
 		"message": "Сүзлек"
 	},
 	"dictionary_resetFilters": {
-		"message": "фильтрларны яңадан куярга"
+		"message": "Фильтрларны сброслау"
 	},
 	"dictionary_searchPlaceholder": {
 		"message": "Текст буенча эзләү"
@@ -98,50 +98,51 @@
 	"editorWindow_data_code": {
 		"message": "Код"
 	},
-	"editorWindow_data_translatorName": {
-		"message": "Тәрҗемәче исеме"
+	"editorWindow_data_title": {
+		"message": "Модуль исеме"
 	},
-	"editorWindow_message_invalidTranslatorName": {
-		"message": "Тәрҗемәче исеме ким дигәндә бер символдан торырга тиеш"
+	"editorWindow_message_invalidTitle": {
+		"message": "Модуль исеме кимендә бер символ булырга тиеш"
 	},
 	"editorWindow_save": {
 		"message": "Саклау"
 	},
 	"ext_description": {
-		"message": "Битләр һәм текстлар тәрҗемәсе, сүзлек, тарих, офлайн һәм үзенчәлекле тәрҗемәчеләр"
+		"message": "Веб битләрне тәрҗемә итү, текст тәрҗемәсе, сүзлек, тарих, үзенчәлекле тәрҗемәчеләр, тел киртәләрен җимерү өчен кирәк булган бар нәрсә"
 	},
 	"ext_name": {
-		"message": "Лингвист - веб-битләр тәрҗемәчесе"
+		"message": "Linguist - веб бит тәрҗемәчесе"
 	},
 	"history_control_selectEntry": {
-		"message": "Язма сайлау"
+		"message": "Күпләп эш өчен тәрҗемәне сайлау",
+		"description": "Description in finite form \"to pick\" with explaining what this checkbox will do"
 	},
 	"history_controls_clearHistory": {
 		"message": "Тарихны чистарту"
 	},
 	"history_controls_deleteSelected": {
-		"message": "Сайланганнарны бетерү"
+		"message": "Сайланган тәрҗемәләрне бетерү"
 	},
 	"history_controls_selectAll": {
 		"message": "Барлык тәрҗемәләрне сайлау"
 	},
 	"history_message_clearHistoryConfirmation": {
-		"message": "Тарихны чистартырга ышанасызмы? Барлык язмалар да юкка чыгарылыр"
+		"message": "Тарихны чистартырга телисезме? Барлык язмалар бетереләчәк"
 	},
 	"history_message_deleteEntryConfirmation": {
-		"message": "Бу язманы бетерергә ышанасызмы?"
+		"message": "Бу язманы бетерергә телисезме?"
 	},
 	"history_message_deleteSelectedEntriesConfirmation": {
-		"message": "Сайланган язмаларны ($1) бетерергә ышанасызмы?"
+		"message": "Сайланган язмаларны ($1) бетерергә телисезме?"
 	},
 	"history_message_entriesNotFound": {
 		"message": "Фильтрга туры килгән тәрҗемәләр табылмады"
 	},
 	"history_message_noEntries": {
-		"message": "Тарих чиста"
+		"message": "Тарих буш"
 	},
 	"history_notification_disabled": {
-		"message": "Тарих яздыру сүндерелгән, шуңа күрә яңа язмалар чыкмаячак. Моныңны <slot id=preferences>көйләүләр</slot> бүлегендә үзгәртә аласыз"
+		"message": "Тарих яздыру сүндерелгән, шуңа күрә яңа язмалар күренмәячәк. Моның үзгәртүен <slot id=preferences>Өстенлекләр</slot> бүлегендә ясый аласыз"
 	},
 	"history_pageTitle": {
 		"message": "Тарих"
@@ -156,49 +157,28 @@
 		"message": "Телне үзгәртү"
 	},
 	"lang_detect": {
-		"message": "Авто ачыклау"
+		"message": "Автоматик ачыклау"
 	},
 	"lang_select": {
-		"message": "Тел сайлау"
+		"message": "Телне сайлау"
 	},
 	"lang_swap": {
-		"message": "Телләрне алмаштыру"
-	},
-	"message_askResetConfig": {
-		"message": "Көйләүләрне яңадан торгызырга?"
-	},
-	"message_cacheFlushed": {
-		"message": "Кэш чистартылды"
-	},
-	"message_changesSaved": {
-		"message": "Үзгәрешләр сакланды"
-	},
-	"message_error": {
-		"message": "Хата"
-	},
-	"message_errorOfTranslate": {
-		"message": "Тәрҗемә хатасы"
-	},
-	"message_serviceRequiredKey": {
-		"message": "Хезмәт ачкыч таләп итә"
-	},
-	"message_translateOfText": {
-		"message": "Тәрҗемә ителгән"
+		"message": "Телләрне алыштыру"
 	},
 	"message_unknownError": {
-		"message": "Билгесез хаталык"
+		"message": "Билгесез хата"
 	},
 	"pageTranslator_alwaysTranslateLang": {
-		"message": "Һәрвакыт бу телне тәрҗемә итү"
+		"message": "Бу телне һәрвакыт тәрҗемә итү"
 	},
 	"pageTranslator_commonPreferences_autoTranslate_disable": {
-		"message": "Үзгәртеп булмай"
+		"message": "Сүндерү"
 	},
 	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
-		"message": "Барлык сайтлар өчен дә сүндерү"
+		"message": "Барлык сайтлар өчен сүндерү"
 	},
 	"pageTranslator_commonPreferences_autoTranslate_enable": {
-		"message": "Үзгәртүне кушу"
+		"message": "Кушу"
 	},
 	"pageTranslator_commonPreferences_title": {
 		"message": "Бу тел өчен гомуми өстенлекләр"
@@ -206,11 +186,11 @@
 	"pageTranslator_option_autoTranslate": {
 		"message": "Автоматик тәрҗемә"
 	},
-	"pageTranslator_showOptions": {
-		"message": "Опционнарны күрсәтү"
-	},
 	"pageTranslator_showOriginal": {
-		"message": "Төп текстны күрсәтү"
+		"message": "Төп нөсхәне күрсәтү"
+	},
+	"pageTranslator_showTranslationPreferences": {
+		"message": "Тәрҗемә өстенлекләре"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_always": {
 		"message": "Һәрвакыт тәрҗемә итү"
@@ -219,10 +199,10 @@
 		"message": "Бу тел өчен һәрвакыт тәрҗемә итү"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_default": {
-		"message": "Гадәти кагыйдәләрне куллану"
+		"message": "Гомуми кагыйдәләрне куллану"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
-		"message": "Бу тел өчен гадәти кагыйдәләрне куллану"
+		"message": "Бу тел өчен гомуми кагыйдәләрне куллану"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_never": {
 		"message": "Беркайчан да тәрҗемә итмәү"
@@ -240,7 +220,7 @@
 		"message": "Тәрҗемә хисабы"
 	},
 	"pageTranslator_translationReport_queue": {
-		"message": "Көтү рәте"
+		"message": "Көтүдә"
 	},
 	"pageTranslator_translationReport_reject": {
 		"message": "Хаталар"
@@ -249,16 +229,16 @@
 		"message": "Тәрҗемә ителгән"
 	},
 	"popup_tabIdNotFound": {
-		"message": "\"$1\" бит тә табылмады"
+		"message": "Таб \"$1\" табылмады"
 	},
 	"popup_tab_translatePage": {
-		"message": "Бит тәрҗемәсе"
+		"message": "Битне тәрҗемә итү"
 	},
 	"popup_tab_translateText": {
-		"message": "Текст тәрҗемәсе"
+		"message": "Текстны тәрҗемә итү"
 	},
 	"settings_button_cancel": {
-		"message": "Кире кагу"
+		"message": "Юкка чыгару"
 	},
 	"settings_button_export": {
 		"message": "Конфигурацияне экспортлау"
@@ -267,7 +247,7 @@
 		"message": "Конфигурацияне импортлау"
 	},
 	"settings_button_reset": {
-		"message": "Конфигурацияне яңадан куярга"
+		"message": "Конфигурацияне яңадан көйләү"
 	},
 	"settings_button_saveChanges": {
 		"message": "Үзгәрешләрне саклау"
@@ -276,19 +256,19 @@
 		"message": "Кэш чистартылды"
 	},
 	"settings_message_common_invalidValueType": {
-		"message": "Кыйммәт дөрес түгел"
+		"message": "Яраксыз кыйммәт"
 	},
 	"settings_message_importConfig_invalidFile": {
-		"message": "Кертү өчен файл эшкәртелә алмый"
+		"message": "Бирелгән конфигурация файлы дөрес түгел яки бозылган, эшкәртеп булмый"
 	},
 	"settings_message_importConfig_success": {
-		"message": "Керткән эшләнде"
+		"message": "Импорт тәмам"
 	},
 	"settings_message_resetConfig_confirm": {
-		"message": "Билгеләмәләрне яңадан куярга телисезме?"
+		"message": "Көйләүләрне төп кыйммәтләргә яңадан көйләүне раслау"
 	},
 	"settings_message_resetConfig_success": {
-		"message": "Көйләүләр яңартылды"
+		"message": "Көйләүләр яңадан көйләнде"
 	},
 	"settings_message_saveChanges_success": {
 		"message": "Үзгәрешләр сакланды"
@@ -300,139 +280,142 @@
 		"message": "Кэшны чистарту"
 	},
 	"settings_option_cache_clear_desc": {
-		"message": "Әгәр тәрҗемәдә хаталар барлыкка килсә яки серләрне юк итәргә кирәк булса, кэшны бетерегез"
+		"message": "Әгәр дә сез тәрҗемә хаталарын күрәсез яки кэш эшләгәндә шәхси текстларны ялгыш тәрҗемә итәсез икән, кэштан барлык мәгълүматны бетерә аласыз",
+		"description": "Кэшны чистартуның файдалы булуы турында кулланучыга аңлатма"
 	},
 	"settings_option_cache_enable": {
-		"message": "Кэшны кушу"
+		"message": "Кэшны активлаштыру"
 	},
 	"settings_option_cache_enable_desc": {
-		"message": "Кеш активланган очракта, бер тапкыр тәрҗемә ителгән тәрҗемәләр интернетсыз да шунда ук кулланыла ала."
+		"message": "Кэш эшләгәндә, элек тәрҗемә ителгән текстлар өстәмә сорауларсыз шунда ук тәрҗемә ителәчәк"
 	},
 	"settings_option_cache_ignoreCase": {
-		"message": "Харефләрнең регистрын исәпкә алмау"
+		"message": "Регистрга сизгер булмаган кэш куллану"
 	},
 	"settings_option_cache_ignoreCase_desc": {
-		"message": "Активланган очракта, кештәге тәрҗемәләр төгәл туры килмәгән очракта да кулланылачак, бу тәрҗемә хаталарына китерергә мөмкин."
+		"message": "Әгәр активлаштырылган булса, кэшланган тәрҗемәләр төрле регистрлы текстлар өчен кулланылачак, бу кайбер очракларда тәрҗемә бозылуларына китерергә мөмкин"
 	},
 	"settings_option_commonSettings": {
 		"message": "Гомуми көйләүләр"
 	},
 	"settings_option_customTranslatorModule": {
-		"message": "Куллана торган тәрҗемәчеләр"
+		"message": "Кулланучы тәрҗемә модульләре",
+		"description": "Тәрҗемә модулен гамәлгә ашыручы кулланучы билгеләгән код"
 	},
 	"settings_option_customTranslatorModule_desc": {
-		"message": "Үзегезгә ошаган тәрҗемә хезмәтләре өчен махсус тәрҗемәчеләр өсти аласыз. Тулырак мәгълүматны һәм модульләрне <slot id=docs>махсус тәрҗемәчеләр документациясендә</slot> табыгыз."
+		"message": "Сез үзегезнең яраткан тәрҗемә хезмәтләрен кулланучы тәрҗемә модульләрен өсти аласыз. <slot id=docs>Кулланучы тәрҗемәчеләре документациясендә</slot> күбрәк белегез"
 	},
 	"settings_option_customTranslatorModule_manageButton": {
-		"message": "Тәрҗемәчеләрне идарә итү"
+		"message": "Тәрҗемәчеләрне идарә итү",
+		"description": "Тәрҗемә модульләре исемлеген күрсәтү өчен төймә"
 	},
 	"settings_option_history_enable": {
 		"message": "Тарихны активлаштыру"
 	},
 	"settings_option_history_enable_desc": {
-		"message": "Активлаштырганда, һәр тәрҗемә тарих битенә теркәләчәк"
-	},
-	"settings_option_mainPreferences": {
-		"message": "Төп көйләүләр"
+		"message": "Әгәр активлаштырылган булса, тәрҗемәләр язылып <slot id=historyPage>тарих битендә</slot> күрсәтеләчәк"
 	},
 	"settings_option_pageTranslation": {
-		"message": "Битне тәрҗемә итү"
+		"message": "Тулы битне тәрҗемә итү"
 	},
 	"settings_option_pageTranslation_detectLanguageByContent": {
 		"message": "Телне эчтәлек буенча ачыклау"
 	},
 	"settings_option_pageTranslation_detectLanguageByContent_desc": {
-		"message": "Бит телен ачыклау өчен веб-биттәге текстны анализлагыз. Әгәр сүндерелгән булса, битнең метадатасында күрсәтелгән тел кулланылачак"
+		"message": "Веб-биттәге текстны анализлап, аның телен ачыклау. Әгәр сүндерелгән булса, <slot id=docs>бит метадатасында</slot> күрсәтелгән тел кулланылачак"
 	},
 	"settings_option_pageTranslation_enableContextMenu": {
 		"message": "Контекст меню төймәсен активлаштыру"
 	},
 	"settings_option_pageTranslation_enableContextMenu_desc": {
-		"message": "Битне тәрҗемә итүне контекст менюга кертә торган төймә өстәү"
+		"message": "Бит контекст менюсында бит тәрҗемәсен үзгәртү өчен төймә өстәү"
 	},
 	"settings_option_pageTranslation_excludeSelectors": {
-		"message": "Тәрҗемә итмәү өчен сайлаучылар"
+		"message": "Тәрҗемәдән чыгарырга селекторлар"
 	},
 	"settings_option_pageTranslation_excludeSelectors_desc": {
-		"message": "Тәрҗемә ителмәячәк CSS сайлаучылары исемлеге. Һәр юлда бер сайлаучы. Әгәр элемент бу сайлаучыларның берсенә туры килсә, ул һәм аның атрибутлары һәм эчке элементлары тәрҗемә ителмәячәк."
+		"message": "Тәрҗемәдән чыгарырга элементлар өчен CSS селекторлар исемлеге. Бер юлга бер селектор. Әгәр элемент бу селекторларның берсенә туры килсә, аның тексты, атрибутлары һәм эчке элементлары тәрҗемә ителмәячәк"
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
-		"message": "Тик күренгән элементларны тәрҗемә итү"
+		"message": "Бары тик күренеп торган элементларны тәрҗемә итү"
 	},
 	"settings_option_pageTranslation_lazyTranslate_desc": {
-		"message": "Әлеге параметр эшләтеп җибәрелгәндә, бары тик күренгән элементлар гына тәрҗемә ителәчәк. Бу челтәр трафигын саклау өчен файдалы булырга мөмкин."
+		"message": "Бу опция активлаштырылган булса, бары тик күренеп торган элементлар гына тәрҗемә ителәчәк. Бу опция челтәр трафигын киметә"
 	},
 	"settings_option_pageTranslation_originalTextPopup": {
-		"message": "Төп текст белән күчмә тәрәзә мөмкинлеген кабул итү"
+		"message": "Оригинал текст белән калкып чыга торган тәрәзәне активлаштыру"
 	},
 	"settings_option_pageTranslation_originalTextPopup_desc": {
-		"message": "Тәрҗемә ителгән текст өстенә күрсәткечне куеп, төп текст белән күчмә тәрәзә күрсәтү"
+		"message": "Тәрҗемә ителгән текст блоклары өстендә курсорны йөрткәндә оригинал текст белән калкып чыга торган тәрәзәне күрсәтү"
 	},
-	"settings_option_pageTranslation_toggleTranslationHotkey": {
-		"message": "Кыска юл төймәләре"
+	"settings_option_pageTranslation_shortcut_toggleTranslation": {
+		"message": "Кыска юл"
 	},
-	"settings_option_pageTranslation_toggleTranslationHotkey_desc": {
-		"message": "Бит тәрҗемәсен кабызу яки сүндерү өчен кыска юллар\n ESC төймәсенә басып, төймәләрне яңадан билгеләгез"
+	"settings_option_pageTranslation_shortcut_toggleTranslation_desc": {
+		"message": "Бит тәрҗемәсен үзгәртү өчен кыска юл\nТөймәләрне яңадан көйләү өчен ESC басыгыз"
 	},
 	"settings_option_pageTranslation_translatableAttributes": {
-		"message": "Тәрҗемә ителергә мөмкин булган үзенчәлекләр."
+		"message": "Тәрҗемә ителә торган атрибутлар"
 	},
 	"settings_option_pageTranslation_translatableAttributes_desc": {
-		"message": "Тәрҗемә өчен <slot id=htmlAttributes>HTML атрибуты</slot> исемнәрен керегез. Бер атрибут бер юлда"
+		"message": "Тәрҗемә ителәсе <slot id=htmlAttributes>HTML атрибут</slot> исемнәрен кертергә, бер юлга бер атрибут\nБу исемлектәге атрибутлар гына тәрҗемә ителәчәк"
 	},
 	"settings_option_popupTab_pageTranslator_showCounters": {
-		"message": "Тәрҗемә статистикасын күрсәтү"
+		"message": "Тәрҗемә барышын күрсәтү"
 	},
 	"settings_option_popupTab_pageTranslator_showCounters_desc": {
-		"message": "Бит тәрҗемәсе өчен статистиканы күрсәтү"
+		"message": "Киңәйтү өстәмә тәрәзәсендә бит тәрҗемәсе барышын күрсәтү өчен панельне күрсәтү"
 	},
 	"settings_option_selectTranslation": {
-		"message": "Сайланган текстны тәрҗемә итү"
+		"message": "Сайланган текст өчен тәрҗемә"
 	},
-	"settings_option_selectTranslation_detectedLangFirst": {
-		"message": "Бит теле урынына текстның аңланган телен өстен күрү"
+	"settings_option_selectTranslation_detectTextLanguage": {
+		"message": "Текст телен ачыклау"
 	},
-	"settings_option_selectTranslation_detectedLangFirst_desc": {
-		"message": "Күчереп куелса, сайланган текстның аңланган теле бит теленә караганда өстен булачак"
+	"settings_option_selectTranslation_detectTextLanguage_desc": {
+		"message": "Бу функция актив булганда, сайланган текстның теле тәрҗемә өчен ачыкланачак. Башкача, бит теле кулланылачак"
 	},
 	"settings_option_selectTranslation_disableWhileTranslatePage": {
 		"message": "Битне тәрҗемә иткәндә сүндерү"
 	},
 	"settings_option_selectTranslation_enable": {
-		"message": "Кулланырга мөмкин итү"
+		"message": "Сайланган текст тәрҗемәсен активлаштыру"
+	},
+	"settings_option_selectTranslation_enable_desc": {
+		"message": "Бу функция актив булганда, сез биттә теләсә нинди текстны сайлап, аны өстәмә тәрәзәдә тәрҗемә итә аласыз"
 	},
 	"settings_option_selectTranslation_focusOnTranslateButton": {
 		"message": "Тәрҗемә төймәсенә автоматик игътибар"
 	},
 	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
-		"message": "Тәрҗемә төймәсе пәйда булганда аңа игътибарны юнәлтү"
+		"message": "Биттә тәрҗемә төймәсе күренгәндә, ул автоматик рәвештә игътибарга алыначак"
 	},
 	"settings_option_selectTranslation_header_languageChoice": {
 		"message": "Тел көйләүләре"
 	},
 	"settings_option_selectTranslation_isUseAutoForDetectLang": {
-		"message": "Тәрҗемәче тарафыннан автоматик телне ачыклауны активлаштыру"
+		"message": "Тәрҗемә модуленә текст телен ачыкларга рөхсәт итү"
 	},
 	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
-		"message": "Тел җирле рәвештә ачыкланмаганда тәрҗемәче тарафыннан автоматик тел ачыклауны куллану"
+		"message": "Текст телен локаль рәвештә ачыклап булмаганда һәм бу опция актив булганда, текст \"авто\" телендә тәрҗемә ителәчәк, әгәр ул ярдәм ителә. Опция сүндерелгәндә, текстның чыганак телен билгеләү өчен башка резерв ысул кулланылачак"
 	},
 	"settings_option_selectTranslation_mode": {
-		"message": "Тәрҗемә башлау"
+		"message": "Текст сайлау буенча гамәл"
 	},
 	"settings_option_selectTranslation_mode_item_contextMenu": {
-		"message": "Контекст меню төймәсе"
+		"message": "Контекст менюсы аша текстны тәрҗемә итү"
 	},
 	"settings_option_selectTranslation_mode_item_popupButton": {
-		"message": "Попап төймәсе"
+		"message": "Тәрҗемә төймәсен күрсәтү"
 	},
 	"settings_option_selectTranslation_mode_item_quickTranslate": {
-		"message": "Сайлауга тиз тәрҗемә"
+		"message": "Текстны шунда ук тәрҗемә итү"
 	},
 	"settings_option_selectTranslation_modifiers": {
 		"message": "Модификаторлар"
 	},
 	"settings_option_selectTranslation_modifiers_desc": {
-		"message": "Тәрҗемәне күрсәтү өчен клавиатурда басылырга тиешле төймәләрне сайлагыз"
+		"message": "Тәрҗемәне күрсәтү өчен клавиатурада басылырга тиешле төймәләрне сайлагыз"
 	},
 	"settings_option_selectTranslation_modifiers_key_alt": {
 		"message": "alt"
@@ -447,106 +430,107 @@
 		"message": "shift"
 	},
 	"settings_option_selectTranslation_rememberDirection": {
-		"message": "Текстның соңгы сайланган телен истә тоту"
+		"message": "Иң соңгы сайланган текст телен истә калдыру"
 	},
 	"settings_option_selectTranslation_showOnceForSelection": {
-		"message": "Текст сайлаган саен тәрҗемә төймәсен бер мәртәбә күрсәтү"
+		"message": "Текст сайлау өчен тәрҗемә төймәсен бер тапкыр күрсәтү"
 	},
 	"settings_option_selectTranslation_showOnceForSelection_desc": {
-		"message": "Төймә һәр текст сайлаган саен бер мәртәбә генә күрсәтеләчәк. Әгәр аны кабат күрсәтү кирәк булса, текстны яңадан сайлагыз"
+		"message": "Төймә һәр текст сайлау өчен бер тапкыр гына күренәчәк. Аны яңадан күрсәтү өчен, текстны яңадан сайлагыз"
 	},
 	"settings_option_selectTranslation_showOriginalText": {
-		"message": "Төп текстны күрсәтү"
+		"message": "Текстның оригиналын күрсәтү"
 	},
 	"settings_option_selectTranslation_showOriginalText_desc": {
-		"message": "Тәрҗемә белән popup-ка төп текст блогын өстәү"
+		"message": "Тәрҗемә өстәмә тәрәзәсенә оригинал текст белән блок өстәү"
 	},
 	"settings_option_selectTranslation_strictSelection": {
-		"message": "Катгый сайлау"
+		"message": "Текст сайлауның катгый режимы",
+		"description": "This option is about selecting text via mouse"
 	},
 	"settings_option_selectTranslation_strictSelection_desc": {
-		"message": "Сайланган текст булган блоктан тыш, сул чычкан төймәсен куйганда сайлауны игнорлау"
+		"message": "Сайланган текстны үз эченә алган блоктан тыш сул тычкан төймәсе җибәрелгән булса, текст сайлауны игътибарга алмау"
 	},
 	"settings_option_selectTranslation_timeoutForHideButton": {
-		"message": "Төшерү төймәсен тоткарлау вакыты"
+		"message": "Өстәмә тәрәзә төймәсен яшерү алдыннан тоткарлык"
 	},
 	"settings_option_selectTranslation_timeoutForHideButton_desc": {
-		"message": "Курсор төймә өстендә булмаганда төймә яшерелергә кадәрге тоткарлау вакытын миллисекундларда күрсәтә. Курсор төймә өстенә килгәндә вакыт санау яңадан башлана. Авто яшерүне сүндерү өчен, кыйммәтне 1-дән ким итеп куегыз."
+		"message": "Төймә өстендә курсор булмаганда, төймәне яшерү өчен миллисекундларда тоткарлык. Төймә өстендә курсор булганда таймер яңадан башлана. Авто-яшерүне сүндерү өчен, бәяне 1 дән кимрәк итеп куегыз"
 	},
 	"settings_option_selectTranslation_zIndex": {
 		"message": "z-index"
 	},
 	"settings_option_selectTranslation_zIndex_desc": {
-		"message": "Тәрҗемә булган текстлы өстәмә тәрәзә кайбер битләрдә башка элементлар астында калса, бу кыйммәтне арттырыгыз."
+		"message": "Кайбер битләрдә элементлар тәрҗемә ителгән текст белән калкып чыккан тәрәзәне капласа, бу бәяне арттырыгыз"
 	},
 	"settings_option_textTranslator": {
-		"message": "Текстны тәрҗемә итү"
+		"message": "Текст тәрҗемәсе"
 	},
 	"settings_option_textTranslator_rememberText": {
-		"message": "Тәрҗемә ителгән текстны истә тоту"
+		"message": "Тәрҗемә ителгән текстны истә калдыру"
 	},
 	"settings_option_textTranslator_rememberText_desc": {
-		"message": "Тәрҗемә ителгән текстны тәрәзә кабат ачылганда саклау"
+		"message": "Тәрәзә кабат ачылганда тәрҗемә ителгән текстны истә калдыру"
 	},
 	"settings_option_textTranslator_spellCheck": {
-		"message": "Язма хаталарын тикшерүне кушу"
+		"message": "Орфография тикшерүне активлаштыру"
 	},
 	"settings_option_textTranslator_suggestLanguage": {
-		"message": "Ачылган текст телен тәкъдим итү"
+		"message": "Ачыкланган текст телен күрсәтү"
 	},
 	"settings_option_textTranslator_suggestLanguageAlways": {
-		"message": "Телне һәрвакыт ачыклау һәм тәкъдим итү"
+		"message": "Һәрвакыт телне ачыклау һәм тәкъдим итү"
 	},
 	"settings_option_textTranslator_suggestLanguageAlways_desc": {
-		"message": "Сүндерелгән очракта тел тәкъдимнәре бары тик чыганак теле автоматик ачыкланганда гына күрсәтеләчәк"
+		"message": "Сүндерелгәндә, тел тәкъдимнәре бары тик чыганак теле \"авто\" итеп куелган булганда гына күренә"
 	},
 	"settings_option_translatePreferences": {
-		"message": "Тәрҗемә көйләүләре"
+		"message": "Тәрҗемә өстенлекләре"
 	},
 	"settings_option_translateScheduler": {
-		"message": "Тәрҗемә планлаштыручысы"
+		"message": "Тәрҗемә планировщигы"
 	},
 	"settings_option_translateScheduler_delay": {
-		"message": "Текст җыю көтүе"
+		"message": "Текст җыю тоткарлыгы"
 	},
 	"settings_option_translateScheduler_delay_desc": {
-		"message": "Тәрҗемә планлаштыручысы тәрҗемә хезмәтләренең API сораулары санын киметә. Планлаштыручы мөмкин кадәр күп текстны бер үк сорауда җибәрү өчен текстларны җыярга тырыша. Тәрҗемә башлар алдыннан, яңа текстлар җыелып бетсен өчен билгеләнгән миллисекундлар буенча көтәчәк."
+		"message": "Тәрҗемә планировщигы мөмкин кадәр күбрәк текстларны бер үк вакытта җибәрү өчен җыеп, тәрҗемә хезмәте API-га мөрәҗәгатьләр санын киметә. Планировщик тәрҗемә башланганчы күбрәк текстлар җыю өчен күрсәтелгән вакытны миллисекундларда көтәчәк"
 	},
 	"settings_option_translateScheduler_retryLimit": {
-		"message": "Тәрҗемәне яңадан сынау саны"
+		"message": "Тәрҗемә кабатлау омтылышлары чикләве"
 	},
 	"settings_option_translateScheduler_retryLimit_desc": {
-		"message": "Планлаштыручы тәрҗемә хаталары очрагында текстларны яңадан тәрҗемә итәргә тырышачак. Бу параметр яңадан сынау санын чикли. Чиксез яңадан сынаулар өчен тискәре сан куегыз."
+		"message": "Тәрҗемә хаталары булганда планировщик текстларны кабат тәрҗемә итәргә тырышачак. Бу опция кабатлау омтылышлары чикләвен куя. Чиксез кабатлауларга рөхсәт итү өчен тискәре сан куегыз"
 	},
 	"settings_option_translatorModule": {
-		"message": "Тәрҗемә модулe"
+		"message": "Тәрҗемә модуле"
 	},
 	"settings_option_translatorModule_desc": {
-		"message": "Тәрҗемәләрнең сыйфаты һәм тәрҗемә өчен кулланыла торган телләр тәрҗемәче программага бәйле."
+		"message": "Тәрҗемәләрнең сыйфаты һәм мөмкин булган телләр тәрҗемә модуленә бәйле"
 	},
 	"settings_option_tts": {
-		"message": "Текстны тавышка әверелдерү (TTS)"
+		"message": "Текстны тавышка әйләндерү (TTS)"
 	},
 	"settings_option_ttsCustomModules": {
-		"message": "Кустом TTS"
+		"message": "Кулланучы тавыш синтезы модульләре"
 	},
 	"settings_option_ttsCustomModules_button": {
-		"message": "TTS модульләрен идарә итү"
+		"message": "Тавыш синтезы модульләрен идарә итү"
 	},
 	"settings_option_ttsCustomModules_desc": {
-		"message": "Сез иң яраткан хезмәтләрегезне һәм тавышларыгызны кулланган ТТС модульләрен өсти аласыз. Тулырак мәгълүматны <slot id=docs>шәхси ТТС өчен документациядә</slot> укыгыз"
+		"message": "Сез үзегезнең яраткан хезмәтләрегез һәм тавыш двигательләрегезне кулланучы тавыш синтезы модульләрен өсти аласыз. <slot id=docs>кулланучы TTS документациясендә</slot> күбрәк укыгыз"
 	},
 	"settings_option_ttsModule": {
-		"message": "TTS модуле"
+		"message": "Сайланган TTS модуле"
 	},
 	"settings_option_ttsModule_desc": {
-		"message": "Текстларны уку модуле"
+		"message": "Текстны тавышландыру өчен кулланылган тавыш двигателе"
 	},
 	"settings_option_userLanguage": {
 		"message": "Сезнең тел"
 	},
 	"settings_option_userLanguage_desc": {
-		"message": "Текстларны тәрҗемә итү өчен максат теле"
+		"message": "Текстлар тәрҗемә ителәчәк тел"
 	},
 	"settings_pageTitle": {
 		"message": "Көйләүләр"
@@ -555,28 +539,35 @@
 		"message": "Тарих"
 	},
 	"settings_section_popup": {
-		"message": "Поп-ап"
+		"message": "Калкып чыккан тәрәзә"
 	},
 	"textTranslator_suggestLanguage": {
-		"message": "Күренешчә, бу тел"
+		"message": "Текстның теле <slot id=languageSuggest>$language_name$</slot> булырга охшаган",
+		"placeholders": {
+			"language_name": {
+				"content": "$1",
+				"example": "Японча"
+			}
+		}
 	},
 	"textTranslator_translateInputPlaceholder": {
-		"message": "Текстны кертергә"
+		"message": "Тәрҗемә өчен текст кертегез",
+		"description": "Request to user input some text for translation"
 	},
 	"textTranslator_translatePlaceholder": {
-		"message": "Тәрҗемә ителгән текст"
+		"message": "Тәрҗемә ителгән текст монда булачак"
 	},
 	"translatorsManagerWindow_add": {
-		"message": "Өстәргә"
+		"message": "Тәрҗемә модулен өстәү"
 	},
 	"translatorsManagerWindow_close": {
-		"message": "Ябарга"
+		"message": "Ябу"
 	},
 	"translatorsManagerWindow_emptyTranslatorsListText": {
-		"message": "Кулланма тәрҗемәчеләр әле өстәлмәгән"
+		"message": "Әлегә бернинди махсус тәрҗемә модуле өстәлмәгән"
 	},
 	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
-		"message": "\"$translator_name$\" тәрҗемәчене бетерергә җайлымы сезгә?",
+		"message": "\"$translator_name$\" тәрҗемә модулен чыннан да бетерергә телисезме?",
 		"placeholders": {
 			"translator_name": {
 				"content": "$1",
@@ -585,25 +576,25 @@
 		}
 	},
 	"translatorsManagerWindow_title": {
-		"message": "Үзгәртелгән тәрҗемәчеләр"
+		"message": "Махсус тәрҗемә модульләре"
 	},
 	"translatorsManagerWindow_translator_delete": {
-		"message": "Үткәрү"
+		"message": "Бетерү"
 	},
 	"translatorsManagerWindow_translator_edit": {
-		"message": "Үзгәртү"
+		"message": "Төзәтү"
 	},
 	"ttsManagerWindow_add": {
-		"message": "Өстәргә"
+		"message": "TTS модулен өстәү"
 	},
 	"ttsManagerWindow_close": {
 		"message": "Ябу"
 	},
 	"ttsManagerWindow_emptyTranslatorsListText": {
-		"message": "TTS модулләре әле өстәлмәгән"
+		"message": "Әлегә бернинди TTS модуле өстәлмәгән"
 	},
 	"ttsManagerWindow_message_ttsRemoveConfirmation": {
-		"message": "TTS \"$tts_name$\" ны бетерүегезгә ышанычлысызмы?",
+		"message": "Чыннан да \"$tts_name$\" TTS модулен бетерергә телисезме?",
 		"placeholders": {
 			"tts_name": {
 				"content": "$1",
@@ -612,22 +603,22 @@
 		}
 	},
 	"ttsManagerWindow_title": {
-		"message": "Текстны тавышка әверелдерү модульләре"
+		"message": "Текстны тавышка әйләндерү модульләре"
 	},
 	"ttsManagerWindow_translator_delete": {
 		"message": "Бетерү"
 	},
 	"ttsManagerWindow_translator_edit": {
-		"message": "Үзгәртергә"
+		"message": "Төзәтү"
 	},
 	"validation_number": {
-		"message": "Параметр сан булырга тиеш"
+		"message": "Мәгънә сан булырга тиеш"
 	},
 	"validation_numberBetweenRange": {
-		"message": "Параметр $1 белән $2 арасында сан булырга тиеш"
+		"message": "Мәгънә $1 һәм $2 арасында сан булырга тиеш"
 	},
 	"validation_positiveNumber": {
-		"message": "Параметр уңай сан булырга тиеш."
+		"message": "Мәгънә уңай сан булырга тиеш"
 	},
 	"langCode_aa": {
 		"message": "Aa"

@@ -1,12 +1,12 @@
 {
 	"common_action_addToDictionary": {
-		"message": "Lägg till översättning i ordlistan"
+		"message": "Lägg till översättning i ordboken"
 	},
 	"common_action_removeFromDictionary": {
-		"message": "Ta bort översättning från ordlistan"
+		"message": "Ta bort översättning från ordboken"
 	},
 	"common_bgUnavailable": {
-		"message": "Bakgrundsskriptet är otillgängligt"
+		"message": "Bakgrundsskript otillgängligt"
 	},
 	"common_cancel": {
 		"message": "Avbryt"
@@ -30,7 +30,7 @@
 		"message": "Översätt"
 	},
 	"component_hotkey_placeholder": {
-		"message": "Klicka för att spela in genväg"
+		"message": "Klicka för att spela in en genväg"
 	},
 	"component_hotkey_recordPlaceholder": {
 		"message": "Tryck på tangenter"
@@ -39,19 +39,19 @@
 		"message": "Återställ"
 	},
 	"contextMenu_disablePageTranslation": {
-		"message": "Inaktivera sidöversättning"
+		"message": "Stoppa sidöversättning"
 	},
 	"contextMenu_translatePage": {
-		"message": "Översätt sidan"
+		"message": "Översätt sida"
 	},
 	"contextMenu_translateSelectedText": {
 		"message": "Översätt markerad text"
 	},
 	"dictionaryButton_add": {
-		"message": "Lägg till i ordbok"
+		"message": "Lägg till i ordboken"
 	},
 	"dictionaryButton_delete": {
-		"message": "Ta bort från ordbok"
+		"message": "Ta bort från ordboken"
 	},
 	"dictionary_button_export": {
 		"message": "Exportera"
@@ -60,34 +60,34 @@
 		"message": "Ta bort alla"
 	},
 	"dictionary_deleteAll": {
-		"message": "Är du säker på att du vill radera ALLA översättningar i ordboken?"
+		"message": "Är du säker på att du vill ta bort ALLA översättningar från ordboken?"
 	},
 	"dictionary_deleteConfirmation": {
-		"message": "Är du säker på att du vill radera denna översättning?"
+		"message": "Är du säker på att du vill ta bort denna översättning?"
 	},
 	"dictionary_description": {
-		"message": "Spara dina översättningar i ordboken för att hitta dem senare"
+		"message": "Spara översättningar i ordboken för att snabbt hitta dem senare"
 	},
 	"dictionary_emptyDictionary": {
-		"message": "Ordboken är tom. Börja fylla den genom att översätta någon text"
+		"message": "Ordboken är tom, börja fylla den genom att översätta lite text"
 	},
 	"dictionary_filter_from": {
-		"message": "Från"
+		"message": "Källtextspråk"
 	},
 	"dictionary_filter_to": {
-		"message": "Till"
+		"message": "Målspråk"
 	},
 	"dictionary_message_deleteAll_success": {
 		"message": "Alla översättningar har tagits bort"
 	},
 	"dictionary_notFoundEntries": {
-		"message": "Inga översättningar matchar dessa filter"
+		"message": "Inga översättningar som matchar dessa filter hittades"
 	},
 	"dictionary_pageTitle": {
 		"message": "Ordbok"
 	},
 	"dictionary_resetFilters": {
-		"message": "rensa filter"
+		"message": "Återställ filter"
 	},
 	"dictionary_searchPlaceholder": {
 		"message": "Sök efter text"
@@ -98,50 +98,51 @@
 	"editorWindow_data_code": {
 		"message": "Kod"
 	},
-	"editorWindow_data_translatorName": {
-		"message": "Översättarens namn"
+	"editorWindow_data_title": {
+		"message": "Modulnamn"
 	},
-	"editorWindow_message_invalidTranslatorName": {
-		"message": "Översättarens namn måste innehålla minst ett tecken"
+	"editorWindow_message_invalidTitle": {
+		"message": "Modulnamn måste ha minst ett tecken"
 	},
 	"editorWindow_save": {
 		"message": "Spara"
 	},
 	"ext_description": {
-		"message": "Översättning av sidor och text, ordbok, historik, offline och anpassade översättare"
+		"message": "Webbsidöversättning, textöversättning, ordbok, historik, anpassade översättare, allt du behöver för att bryta språkbarriärer"
 	},
 	"ext_name": {
-		"message": "Linguist - översättare av webbsidor"
+		"message": "Linguist - webbsidöversättare"
 	},
 	"history_control_selectEntry": {
-		"message": "Välj post"
+		"message": "Välj översättning för massåtgärd",
+		"description": "Description in finite form \"to pick\" with explaining what this checkbox will do"
 	},
 	"history_controls_clearHistory": {
 		"message": "Rensa historik"
 	},
 	"history_controls_deleteSelected": {
-		"message": "Radera valda"
+		"message": "Ta bort valda översättningar"
 	},
 	"history_controls_selectAll": {
-		"message": "Markera alla översättningar"
+		"message": "Välj alla översättningar"
 	},
 	"history_message_clearHistoryConfirmation": {
 		"message": "Är du säker på att du vill rensa historiken? Alla poster kommer att tas bort"
 	},
 	"history_message_deleteEntryConfirmation": {
-		"message": "Är du säker på att du vill radera denna post?"
+		"message": "Är du säker på att du vill ta bort denna post?"
 	},
 	"history_message_deleteSelectedEntriesConfirmation": {
-		"message": "Är du säker på att du vill radera de valda posterna ($1)?"
+		"message": "Är du säker på att du vill ta bort de valda posterna ($1)?"
 	},
 	"history_message_entriesNotFound": {
-		"message": "Inga översättningar matchade filtret"
+		"message": "Inga översättningar hittades som matchar filtret"
 	},
 	"history_message_noEntries": {
 		"message": "Historiken är tom"
 	},
 	"history_notification_disabled": {
-		"message": "Historikregistrering är avstängd, så nya poster kommer inte att visas. Du kan ändra detta i <slot id=preferences>inställningar</slot>"
+		"message": "Historikregistrering är inaktiverad, så nya poster kommer inte att visas. Du kan ändra detta i <slot id=preferences>Inställningar</slot>"
 	},
 	"history_pageTitle": {
 		"message": "Historik"
@@ -156,34 +157,13 @@
 		"message": "Byt språk"
 	},
 	"lang_detect": {
-		"message": "Automatisk upptäckt"
+		"message": "Auto-detektera"
 	},
 	"lang_select": {
 		"message": "Välj språk"
 	},
 	"lang_swap": {
 		"message": "Byt språk"
-	},
-	"message_askResetConfig": {
-		"message": "Återställ inställningar?"
-	},
-	"message_cacheFlushed": {
-		"message": "Cachen har rensats"
-	},
-	"message_changesSaved": {
-		"message": "Ändringar sparade"
-	},
-	"message_error": {
-		"message": "Fel"
-	},
-	"message_errorOfTranslate": {
-		"message": "Översättningsfel"
-	},
-	"message_serviceRequiredKey": {
-		"message": "Tjänsten kräver en nyckel"
-	},
-	"message_translateOfText": {
-		"message": "Översatt"
 	},
 	"message_unknownError": {
 		"message": "Okänt fel"
@@ -206,41 +186,41 @@
 	"pageTranslator_option_autoTranslate": {
 		"message": "Automatisk översättning"
 	},
-	"pageTranslator_showOptions": {
-		"message": "Visa alternativ"
-	},
 	"pageTranslator_showOriginal": {
 		"message": "Visa original"
+	},
+	"pageTranslator_showTranslationPreferences": {
+		"message": "Översättningsinställningar"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_always": {
 		"message": "Översätt alltid"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
-		"message": "Översätt alltid för det här språket"
+		"message": "Översätt alltid för detta språk"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_default": {
 		"message": "Använd vanliga regler"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
-		"message": "Använd vanliga regler för det här språket"
+		"message": "Använd vanliga regler för detta språk"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_never": {
 		"message": "Översätt aldrig"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
-		"message": "Översätt aldrig för det här språket"
+		"message": "Översätt aldrig för detta språk"
 	},
 	"pageTranslator_sitePreferences_title": {
 		"message": "Inställningar för"
 	},
 	"pageTranslator_translatePage": {
-		"message": "Översätt sidan"
+		"message": "Översätt sida"
 	},
 	"pageTranslator_translationReport": {
 		"message": "Översättningsrapport"
 	},
 	"pageTranslator_translationReport_queue": {
-		"message": "Kö"
+		"message": "Väntande"
 	},
 	"pageTranslator_translationReport_reject": {
 		"message": "Fel"
@@ -252,7 +232,7 @@
 		"message": "Flik \"$1\" hittades inte"
 	},
 	"popup_tab_translatePage": {
-		"message": "Sidoöversättning"
+		"message": "Sidöversättning"
 	},
 	"popup_tab_translateText": {
 		"message": "Textöversättning"
@@ -279,16 +259,16 @@
 		"message": "Ogiltigt värde"
 	},
 	"settings_message_importConfig_invalidFile": {
-		"message": "Filen för import kan inte bearbetas"
+		"message": "Den angivna konfigurationsfilen är felaktig eller skadad och kan inte bearbetas"
 	},
 	"settings_message_importConfig_success": {
-		"message": "Import klar"
+		"message": "Importen slutförd"
 	},
 	"settings_message_resetConfig_confirm": {
-		"message": "Vill du återställa inställningarna?"
+		"message": "Bekräfta för att återställa inställningarna till standardvärden"
 	},
 	"settings_message_resetConfig_success": {
-		"message": "Inställningarna återställda"
+		"message": "Inställningar återställda"
 	},
 	"settings_message_saveChanges_success": {
 		"message": "Ändringar sparade"
@@ -300,139 +280,142 @@
 		"message": "Rensa cache"
 	},
 	"settings_option_cache_clear_desc": {
-		"message": "Ta bort cache om du har översättningsfel eller behöver ta bort hemligheter"
+		"message": "Om du märker översättningsfel eller av misstag översätter privata texter medan cachen är aktiverad, kan du radera all data från cachen",
+		"description": "Explanation for user about cases when it's useful to clear cache"
 	},
 	"settings_option_cache_enable": {
 		"message": "Aktivera cache"
 	},
 	"settings_option_cache_enable_desc": {
-		"message": "När cache är aktiverat blir översättningar som redan har översatts tillgängliga omedelbart, även utan internetanslutning"
+		"message": "När cachen är aktiverad kommer texter som har översatts tidigare att översättas omedelbart utan ytterligare förfrågningar till översättningstjänsten"
 	},
 	"settings_option_cache_ignoreCase": {
-		"message": "Skiftlägesokänslig"
+		"message": "Använd skiftlägesokänslig cache"
 	},
 	"settings_option_cache_ignoreCase_desc": {
-		"message": "När detta är aktiverat används översättningar från cache även för icke-exakta matchningar, vilket kan orsaka översättningsfel"
+		"message": "När aktiverad kommer cachelagrade översättningar att användas för texter med olika skiftlägen, vilket kan orsaka översättningsförvrängningar i vissa situationer"
 	},
 	"settings_option_commonSettings": {
 		"message": "Allmänna inställningar"
 	},
 	"settings_option_customTranslatorModule": {
-		"message": "Anpassade översättare"
+		"message": "Anpassade översättningsmoduler",
+		"description": "An user defined code that implements a translation module"
 	},
 	"settings_option_customTranslatorModule_desc": {
-		"message": "Du kan lägga till anpassade översättare för dina favoritöversättningstjänster. Läs mer och hitta moduler i <slot id=docs>dokumentationen för anpassade översättare</slot>"
+		"message": "Du kan lägga till anpassade översättningsmoduler som använder dina favoritöversättningstjänster. Läs mer i <slot id=docs>anpassade översättares dokumentation</slot>"
 	},
 	"settings_option_customTranslatorModule_manageButton": {
-		"message": "Hantera översättare"
+		"message": "Hantera översättare",
+		"description": "A button to show list of translation modules"
 	},
 	"settings_option_history_enable": {
 		"message": "Aktivera historik"
 	},
 	"settings_option_history_enable_desc": {
-		"message": "När aktiverad kommer varje översättning att sparas på en historiksida"
-	},
-	"settings_option_mainPreferences": {
-		"message": "Huvudinställningar"
+		"message": "När aktiverad kommer översättningar att registreras och visas på <slot id=historyPage>historiksidan</slot>"
 	},
 	"settings_option_pageTranslation": {
-		"message": "Sidöversättning"
+		"message": "Hela sidan översättning"
 	},
 	"settings_option_pageTranslation_detectLanguageByContent": {
-		"message": "Identifiera språk via innehåll"
+		"message": "Identifiera språk genom innehåll"
 	},
 	"settings_option_pageTranslation_detectLanguageByContent_desc": {
-		"message": "Analysera text på webbsidan för att identifiera sidans språk. När detta är avstängt används språket som anges i sidans metadata"
+		"message": "Analysera texten på webbsidan för att identifiera dess språk. När inaktiverad kommer språket som anges i <slot id=docs>sidemetadata</slot> att användas"
 	},
 	"settings_option_pageTranslation_enableContextMenu": {
-		"message": "Aktivera knapp i snabbmenyn"
+		"message": "Aktivera snabbmenyknapp"
 	},
 	"settings_option_pageTranslation_enableContextMenu_desc": {
-		"message": "Lägg till en knapp för att växla sidöversättning i snabbmenyn"
+		"message": "Lägg till en knapp för att växla sidöversättning i sidans snabbmeny"
 	},
 	"settings_option_pageTranslation_excludeSelectors": {
-		"message": "Väljare som ska undantas från översättning"
+		"message": "Väljare att utesluta från översättning"
 	},
 	"settings_option_pageTranslation_excludeSelectors_desc": {
-		"message": "Lista med CSS-väljare som inte kommer att översättas. En väljare per rad. Om ett element matchar någon av dessa väljare kommer det tillsammans med dess attribut och underliggande element inte att översättas"
+		"message": "Lista över CSS-väljare för element som ska uteslutas från översättning. En väljare per rad. Om ett element matchar någon av dessa väljare kommer dess text, attribut och inbäddade element inte att översättas"
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
 		"message": "Översätt endast synliga element"
 	},
 	"settings_option_pageTranslation_lazyTranslate_desc": {
-		"message": "När detta alternativ är aktiverat översätts endast synliga element. Detta alternativ sparar nätverkstrafik och begränsar användningen av översättningstjänster."
+		"message": "När detta alternativ är aktiverat kommer endast synliga element att översättas. Detta alternativ minskar nätverkstrafiken"
 	},
 	"settings_option_pageTranslation_originalTextPopup": {
-		"message": "Aktivera popup med originaltext"
+		"message": "Aktivera popup med originaltexten"
 	},
 	"settings_option_pageTranslation_originalTextPopup_desc": {
-		"message": "Visa en popup med originaltexten när musen förs över de översatta textblocken"
+		"message": "Visa en popup med originaltexten när du svävar över översatta textblock"
 	},
-	"settings_option_pageTranslation_toggleTranslationHotkey": {
-		"message": "Snabbtangenter"
+	"settings_option_pageTranslation_shortcut_toggleTranslation": {
+		"message": "Genväg"
 	},
-	"settings_option_pageTranslation_toggleTranslationHotkey_desc": {
-		"message": "Genvägar för att växla sidöversättning\nTryck på ESC för att återställa tangenter"
+	"settings_option_pageTranslation_shortcut_toggleTranslation_desc": {
+		"message": "Genväg för att växla sidöversättning\nTryck på ESC för att återställa tangenter"
 	},
 	"settings_option_pageTranslation_translatableAttributes": {
-		"message": "Översättningsbara attribut"
+		"message": "Översättbara attribut"
 	},
 	"settings_option_pageTranslation_translatableAttributes_desc": {
-		"message": "Ange <slot id=htmlAttributes>HTML-attribut</slot> namn att översätta, ett attribut per rad"
+		"message": "Ange <slot id=htmlAttributes>HTML-attribut</slot> namn att översätta, ett attribut per rad\nEndast attributen i denna lista kommer att översättas"
 	},
 	"settings_option_popupTab_pageTranslator_showCounters": {
-		"message": "Visa översättningsstatistik"
+		"message": "Visa översättningsframsteg"
 	},
 	"settings_option_popupTab_pageTranslator_showCounters_desc": {
-		"message": "Visa statistik för sidöversättning"
+		"message": "Visa en panel med sidöversättningsframsteg i tilläggspopupen"
 	},
 	"settings_option_selectTranslation": {
-		"message": "Översättning av markerad text"
+		"message": "Översättning för markerad text"
 	},
-	"settings_option_selectTranslation_detectedLangFirst": {
-		"message": "Föredra detekterat språk för texten framför sidans språk"
+	"settings_option_selectTranslation_detectTextLanguage": {
+		"message": "Identifiera textspråk"
 	},
-	"settings_option_selectTranslation_detectedLangFirst_desc": {
-		"message": "När aktiverat kommer detekterat språk för den markerade texten att föredras framför sidans språk"
+	"settings_option_selectTranslation_detectTextLanguage_desc": {
+		"message": "När aktiverad kommer markerad text att analyseras för att identifiera språket för översättning. Annars kommer sidans språk att användas"
 	},
 	"settings_option_selectTranslation_disableWhileTranslatePage": {
-		"message": "Inaktivera vid översättning av sidan"
+		"message": "Inaktivera medan sidan översätts"
 	},
 	"settings_option_selectTranslation_enable": {
-		"message": "Aktivera"
+		"message": "Aktivera översättning av markerad text"
+	},
+	"settings_option_selectTranslation_enable_desc": {
+		"message": "När denna funktion är aktiverad kan du markera vilken text som helst på sidan och översätta den i en popup"
 	},
 	"settings_option_selectTranslation_focusOnTranslateButton": {
-		"message": "Automatisk fokus på översättningsknappen"
+		"message": "Autofokusera på översättningsknappen"
 	},
 	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
-		"message": "Fokusera på översättningsknappen när den visas"
+		"message": "När översättningsknappen visas på sidan kommer den automatiskt att fokuseras"
 	},
 	"settings_option_selectTranslation_header_languageChoice": {
 		"message": "Språkinställningar"
 	},
 	"settings_option_selectTranslation_isUseAutoForDetectLang": {
-		"message": "Aktivera automatisk språkdetection av översättaren"
+		"message": "Tillåt översättningsmodulen att identifiera textspråket"
 	},
 	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
-		"message": "Använd automatisk språkdetection av översättaren när språket inte kan upptäckas lokalt"
+		"message": "När textspråket inte kan identifieras lokalt och detta alternativ är aktiverat, kommer texten att översättas med språket \"auto\" om det stöds.\nNär alternativet är inaktiverat kommer en annan reservmetod att användas för att ställa in textens källspråk"
 	},
 	"settings_option_selectTranslation_mode": {
-		"message": "Översättningsutlösare"
+		"message": "Åtgärd vid textmarkering"
 	},
 	"settings_option_selectTranslation_mode_item_contextMenu": {
-		"message": "Knap för snabbmeny"
+		"message": "Översätt text via snabbmeny"
 	},
 	"settings_option_selectTranslation_mode_item_popupButton": {
-		"message": "Popup-knapp"
+		"message": "Visa översättningsknapp"
 	},
 	"settings_option_selectTranslation_mode_item_quickTranslate": {
-		"message": "Snabböversättning vid markering"
+		"message": "Översätt text omedelbart"
 	},
 	"settings_option_selectTranslation_modifiers": {
 		"message": "Modifierare"
 	},
 	"settings_option_selectTranslation_modifiers_desc": {
-		"message": "Välj tangenter som måste hållas ned på tangentbordet för att visa översättningen"
+		"message": "Välj de tangenter som måste tryckas på tangentbordet för att visa översättningen"
 	},
 	"settings_option_selectTranslation_modifiers_key_alt": {
 		"message": "alt"
@@ -447,37 +430,38 @@
 		"message": "shift"
 	},
 	"settings_option_selectTranslation_rememberDirection": {
-		"message": "Kom ihåg det senast valda språkets riktning"
+		"message": "Kom ihåg det senast valda textspråket"
 	},
 	"settings_option_selectTranslation_showOnceForSelection": {
-		"message": "Visa översättningsknappen en gång för varje textmarkering"
+		"message": "Visa översättningsknappen en gång per textmarkering"
 	},
 	"settings_option_selectTranslation_showOnceForSelection_desc": {
-		"message": "Knappen visas endast en gång för varje textmarkering. För att visa den igen, markera texten på nytt"
+		"message": "Knappen kommer att visas endast en gång för varje textmarkering. För att visa den igen, markera texten på nytt"
 	},
 	"settings_option_selectTranslation_showOriginalText": {
 		"message": "Visa originaltext"
 	},
 	"settings_option_selectTranslation_showOriginalText_desc": {
-		"message": "Lägg till en ruta med originaltexten i översättningsfönstret"
+		"message": "Lägg till ett block med originaltexten i översättningspopupen"
 	},
 	"settings_option_selectTranslation_strictSelection": {
-		"message": "Strikt markering"
+		"message": "Strikt läge för textmarkering",
+		"description": "This option is about selecting text via mouse"
 	},
 	"settings_option_selectTranslation_strictSelection_desc": {
-		"message": "Ignorera markeringen om vänster musknapp släpps utanför blocket som innehåller den markerade texten"
+		"message": "Ignorera textmarkering om vänster musknapp släpps utanför blocket som innehåller den markerade texten"
 	},
 	"settings_option_selectTranslation_timeoutForHideButton": {
-		"message": "Fördröjning innan knappen döljs"
+		"message": "Fördröjning innan popupknappen döljs"
 	},
 	"settings_option_selectTranslation_timeoutForHideButton_desc": {
-		"message": "Fördröjning i millisekunder innan knappen döljs när markören inte svävar över den. Att föra markören över knappen återställer timern. För att inaktivera automatisk dölning, sätt värdet till mindre än 1"
+		"message": "Fördröjning i millisekunder innan knappen döljs när markören inte svävar över den. Att sväva över knappen återställer timern. För att inaktivera automatisk dölja, ställ in värdet till mindre än 1"
 	},
 	"settings_option_selectTranslation_zIndex": {
 		"message": "z-index"
 	},
 	"settings_option_selectTranslation_zIndex_desc": {
-		"message": "Öka detta värde om element på vissa sidor överlappar ett popup-fönster med översatt text"
+		"message": "Öka detta värde om element på vissa sidor överlappar popupen med översatt text"
 	},
 	"settings_option_textTranslator": {
 		"message": "Textöversättning"
@@ -486,19 +470,19 @@
 		"message": "Kom ihåg översatt text"
 	},
 	"settings_option_textTranslator_rememberText_desc": {
-		"message": "Kom ihåg översatt text nästa gång fönstret öppnas"
+		"message": "Kom ihåg översatt text till nästa gång fönstret öppnas"
 	},
 	"settings_option_textTranslator_spellCheck": {
 		"message": "Aktivera stavningskontroll"
 	},
 	"settings_option_textTranslator_suggestLanguage": {
-		"message": "Föreslå upptäckt textspråk"
+		"message": "Visa upptäckt textspråk"
 	},
 	"settings_option_textTranslator_suggestLanguageAlways": {
-		"message": "Alltid upptäcka och föreslå språk"
+		"message": "Upptäck och föreslå alltid språk"
 	},
 	"settings_option_textTranslator_suggestLanguageAlways_desc": {
-		"message": "När avaktiverat visas språköverlägg endast när källspråket auto-upptäcks"
+		"message": "När inaktiverad visas språksförslag endast om källspråket är inställt på \"auto\""
 	},
 	"settings_option_translatePreferences": {
 		"message": "Översättningsinställningar"
@@ -510,43 +494,43 @@
 		"message": "Fördröjning för textackumulering"
 	},
 	"settings_option_translateScheduler_delay_desc": {
-		"message": "Översättningsschemaläggaren minskar antalet förfrågningar till översättningstjänstens API. Den försöker samla så många texter som möjligt för att skicka i en enda begäran. Schemaläggaren väntar den angivna tiden i millisekunder för att samla nya texter innan översättningen påbörjas"
+		"message": "Översättningsschemaläggaren minskar antalet förfrågningar till översättningstjänstens API genom att ackumulera så många texter som möjligt för att skicka i en enda förfrågan. Schemaläggaren väntar den angivna tiden i millisekunder för att samla fler texter innan översättningen startar"
 	},
 	"settings_option_translateScheduler_retryLimit": {
-		"message": "Antal försök att översätta igen"
+		"message": "Gräns för översättningsförsök"
 	},
 	"settings_option_translateScheduler_retryLimit_desc": {
-		"message": "Schemaläggaren försöker översätta texterna igen när översättningsfel uppstår. Detta alternativ sätter en gräns för antal försök. Ange ett negativt tal för obegränsade försök"
+		"message": "Schemaläggaren kommer att försöka översätta texter igen när översättningsfel uppstår. Detta alternativ sätter en gräns för antalet försök. Ställ in ett negativt tal för att tillåta obegränsade försök"
 	},
 	"settings_option_translatorModule": {
 		"message": "Översättningsmodul"
 	},
 	"settings_option_translatorModule_desc": {
-		"message": "Översättningarnas kvalitet och tillgängliga språk beror på översättaren"
+		"message": "Kvaliteten på översättningar och de tillgängliga språken beror på översättningsmodulen"
 	},
 	"settings_option_tts": {
-		"message": "Tal-syntes (TTS)"
+		"message": "Text till tal-konvertering (TTS)"
 	},
 	"settings_option_ttsCustomModules": {
-		"message": "Anpassad TTS"
+		"message": "Anpassade talmoduler"
 	},
 	"settings_option_ttsCustomModules_button": {
-		"message": "Hantera TTS-moduler"
+		"message": "Hantera talmoduler"
 	},
 	"settings_option_ttsCustomModules_desc": {
-		"message": "Du kan lägga till TTS-moduler som använder dina favorittjänster och röster. Läs mer i <slot id=docs>dokumentationen för anpassad TTS</slot>"
+		"message": "Du kan lägga till talmoduler som använder dina favorittjänster och röstmotorer. Läs mer i <slot id=docs>anpassad TTS-dokumentation</slot>"
 	},
 	"settings_option_ttsModule": {
-		"message": "TTS-modul"
+		"message": "Vald TTS-modul"
 	},
 	"settings_option_ttsModule_desc": {
-		"message": "Modul för att tala text"
+		"message": "Röstmotor som används för att läsa upp texten"
 	},
 	"settings_option_userLanguage": {
 		"message": "Ditt språk"
 	},
 	"settings_option_userLanguage_desc": {
-		"message": "Målspråk för textöversättning"
+		"message": "Språket som texter kommer att översättas till"
 	},
 	"settings_pageTitle": {
 		"message": "Inställningar"
@@ -558,25 +542,32 @@
 		"message": "Popup"
 	},
 	"textTranslator_suggestLanguage": {
-		"message": "Det verkar som att språket är"
+		"message": "Det verkar som att textens språk är <slot id=languageSuggest>$language_name$</slot>",
+		"placeholders": {
+			"language_name": {
+				"content": "$1",
+				"example": "Japanese"
+			}
+		}
 	},
 	"textTranslator_translateInputPlaceholder": {
-		"message": "Ange text"
+		"message": "Ange text för översättning",
+		"description": "Request to user input some text for translation"
 	},
 	"textTranslator_translatePlaceholder": {
-		"message": "Översatt text"
+		"message": "Översatt text kommer att visas här"
 	},
 	"translatorsManagerWindow_add": {
-		"message": "Lägg till"
+		"message": "Lägg till översättningsmodul"
 	},
 	"translatorsManagerWindow_close": {
 		"message": "Stäng"
 	},
 	"translatorsManagerWindow_emptyTranslatorsListText": {
-		"message": "Inga egna översättare har lagts till ännu"
+		"message": "Inga anpassade översättningsmoduler har lagts till ännu"
 	},
 	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
-		"message": "Är du säker på att du vill ta bort översättaren \"$translator_name$\"?",
+		"message": "Är du säker på att du vill ta bort översättningsmodulen \"$translator_name$\"?",
 		"placeholders": {
 			"translator_name": {
 				"content": "$1",
@@ -585,7 +576,7 @@
 		}
 	},
 	"translatorsManagerWindow_title": {
-		"message": "Egna översättare"
+		"message": "Anpassade översättningsmoduler"
 	},
 	"translatorsManagerWindow_translator_delete": {
 		"message": "Ta bort"
@@ -594,7 +585,7 @@
 		"message": "Redigera"
 	},
 	"ttsManagerWindow_add": {
-		"message": "Lägg till"
+		"message": "Lägg till TTS-modul"
 	},
 	"ttsManagerWindow_close": {
 		"message": "Stäng"
@@ -612,7 +603,7 @@
 		}
 	},
 	"ttsManagerWindow_title": {
-		"message": "Tal-syntesmoduler"
+		"message": "Text-till-tal-moduler"
 	},
 	"ttsManagerWindow_translator_delete": {
 		"message": "Ta bort"
@@ -621,13 +612,13 @@
 		"message": "Redigera"
 	},
 	"validation_number": {
-		"message": "Parametern måste vara ett nummer"
+		"message": "Värdet måste vara ett nummer"
 	},
 	"validation_numberBetweenRange": {
-		"message": "Parametern måste vara ett nummer mellan $1 och $2"
+		"message": "Värdet måste vara ett nummer mellan $1 och $2"
 	},
 	"validation_positiveNumber": {
-		"message": "Parametern måste vara ett positivt nummer"
+		"message": "Värdet måste vara ett positivt nummer"
 	},
 	"langCode_aa": {
 		"message": "Afar"

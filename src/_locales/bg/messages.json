@@ -1,12 +1,12 @@
 {
 	"common_action_addToDictionary": {
-		"message": "Добави превода в речника"
+		"message": "Добавяне на превод в речника"
 	},
 	"common_action_removeFromDictionary": {
-		"message": "Премахни превода от речника"
+		"message": "Премахване на превод от речника"
 	},
 	"common_bgUnavailable": {
-		"message": "Сценарият на заден план е недостъпен"
+		"message": "Скриптът за фон не е наличен"
 	},
 	"common_cancel": {
 		"message": "Отказ"
@@ -30,7 +30,7 @@
 		"message": "Преведи"
 	},
 	"component_hotkey_placeholder": {
-		"message": "Кликнете, за да запишете клавишна комбинация"
+		"message": "Щракнете, за да запишете пряк път"
 	},
 	"component_hotkey_recordPlaceholder": {
 		"message": "Натиснете клавиши"
@@ -39,43 +39,43 @@
 		"message": "Нулиране"
 	},
 	"contextMenu_disablePageTranslation": {
-		"message": "Изключване на превод на страницата"
+		"message": "Спиране на превода на страницата"
 	},
 	"contextMenu_translatePage": {
-		"message": "Преведи страницата"
+		"message": "Превод на страницата"
 	},
 	"contextMenu_translateSelectedText": {
-		"message": "Преведи избрания текст"
+		"message": "Превод на избрания текст"
 	},
 	"dictionaryButton_add": {
-		"message": "Добави към речника"
+		"message": "Добавяне в речника"
 	},
 	"dictionaryButton_delete": {
-		"message": "Изтрий от речника"
+		"message": "Изтриване от речника"
 	},
 	"dictionary_button_export": {
 		"message": "Експорт"
 	},
 	"dictionary_button_removeAll": {
-		"message": "Премахни всички"
+		"message": "Премахване на всички"
 	},
 	"dictionary_deleteAll": {
-		"message": "Сигурни ли сте, че искате да изтриете ВСИЧКИ преводи в речника?"
+		"message": "Сигурни ли сте, че искате да изтриете ВСИЧКИ преводи от речника?"
 	},
 	"dictionary_deleteConfirmation": {
 		"message": "Сигурни ли сте, че искате да изтриете този превод?"
 	},
 	"dictionary_description": {
-		"message": "Запазвайте вашите преводи в речника, за да ги намерите по-късно"
+		"message": "Запазете преводите в речника, за да ги намерите бързо по-късно"
 	},
 	"dictionary_emptyDictionary": {
-		"message": "Речникът е празен. Започнете да го попълвате, като преведете някакъв текст"
+		"message": "Речникът е празен, започнете да го попълвате, като преведете някакъв текст"
 	},
 	"dictionary_filter_from": {
-		"message": "От"
+		"message": "Език на изходния текст"
 	},
 	"dictionary_filter_to": {
-		"message": "До"
+		"message": "Целеви език"
 	},
 	"dictionary_message_deleteAll_success": {
 		"message": "Всички преводи бяха премахнати"
@@ -87,7 +87,7 @@
 		"message": "Речник"
 	},
 	"dictionary_resetFilters": {
-		"message": "нулиране на филтрите"
+		"message": "Нулиране на филтрите"
 	},
 	"dictionary_searchPlaceholder": {
 		"message": "Търсене по текст"
@@ -98,32 +98,33 @@
 	"editorWindow_data_code": {
 		"message": "Код"
 	},
-	"editorWindow_data_translatorName": {
-		"message": "Име на преводача"
+	"editorWindow_data_title": {
+		"message": "Име на модула"
 	},
-	"editorWindow_message_invalidTranslatorName": {
-		"message": "Името на преводача трябва да съдържа поне един символ"
+	"editorWindow_message_invalidTitle": {
+		"message": "Името на модула трябва да съдържа поне един символ"
 	},
 	"editorWindow_save": {
 		"message": "Запази"
 	},
 	"ext_description": {
-		"message": "Превод на страници и текст, речник, история, офлайн и персонализирани преводачи"
+		"message": "Превод на уеб страници, превод на текст, речник, история, персонализирани преводачи, всичко необходимо за преодоляване на езиковите бариери"
 	},
 	"ext_name": {
 		"message": "Linguist - преводач на уеб страници"
 	},
 	"history_control_selectEntry": {
-		"message": "Избери запис"
+		"message": "Избор на превод за масово действие",
+		"description": "Description in finite form \"to pick\" with explaining what this checkbox will do"
 	},
 	"history_controls_clearHistory": {
-		"message": "Изчистване на историята"
+		"message": "Изчисти историята"
 	},
 	"history_controls_deleteSelected": {
-		"message": "Изтрий избраните"
+		"message": "Изтриване на избраните преводи"
 	},
 	"history_controls_selectAll": {
-		"message": "Избери всички преводи"
+		"message": "Избор на всички преводи"
 	},
 	"history_message_clearHistoryConfirmation": {
 		"message": "Сигурни ли сте, че искате да изчистите историята? Всички записи ще бъдат премахнати"
@@ -141,7 +142,7 @@
 		"message": "Историята е празна"
 	},
 	"history_notification_disabled": {
-		"message": "Записването на историята е деактивирано и новите записи няма да се появяват. Можете да промените това в <slot id=preferences>настройките</slot>"
+		"message": "Записването на история е деактивирано, така че нови записи няма да се появят. Можете да промените това в <slot id=preferences>Предпочитания</slot>"
 	},
 	"history_pageTitle": {
 		"message": "История"
@@ -150,7 +151,7 @@
 		"message": "Търсене по текст"
 	},
 	"inlineTranslator_showOriginalText": {
-		"message": "Покажи оригиналния текст"
+		"message": "Показване на оригиналния текст"
 	},
 	"lang_change": {
 		"message": "Смяна на езика"
@@ -162,28 +163,7 @@
 		"message": "Избор на език"
 	},
 	"lang_swap": {
-		"message": "Смяна на езиците"
-	},
-	"message_askResetConfig": {
-		"message": "Да се възстановят ли настройките?"
-	},
-	"message_cacheFlushed": {
-		"message": "Кешът е изчистен"
-	},
-	"message_changesSaved": {
-		"message": "Промените са запазени"
-	},
-	"message_error": {
-		"message": "Грешка"
-	},
-	"message_errorOfTranslate": {
-		"message": "Грешка при превода"
-	},
-	"message_serviceRequiredKey": {
-		"message": "За услугата е необходим ключ"
-	},
-	"message_translateOfText": {
-		"message": "Преведено"
+		"message": "Размяна на езици"
 	},
 	"message_unknownError": {
 		"message": "Неизвестна грешка"
@@ -192,13 +172,13 @@
 		"message": "Винаги превеждай този език"
 	},
 	"pageTranslator_commonPreferences_autoTranslate_disable": {
-		"message": "Изключи"
+		"message": "Деактивиране"
 	},
 	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
-		"message": "Изключи за всички сайтове"
+		"message": "Деактивиране за всички сайтове"
 	},
 	"pageTranslator_commonPreferences_autoTranslate_enable": {
-		"message": "Включи"
+		"message": "Активиране"
 	},
 	"pageTranslator_commonPreferences_title": {
 		"message": "Общи предпочитания за този език"
@@ -206,11 +186,11 @@
 	"pageTranslator_option_autoTranslate": {
 		"message": "Автоматичен превод"
 	},
-	"pageTranslator_showOptions": {
-		"message": "Покажи опции"
-	},
 	"pageTranslator_showOriginal": {
-		"message": "Покажи оригинала"
+		"message": "Показване на оригинала"
+	},
+	"pageTranslator_showTranslationPreferences": {
+		"message": "Предпочитания за превод"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_always": {
 		"message": "Винаги превеждай"
@@ -234,19 +214,19 @@
 		"message": "Предпочитания за"
 	},
 	"pageTranslator_translatePage": {
-		"message": "Преведи страницата"
+		"message": "Преведи страница"
 	},
 	"pageTranslator_translationReport": {
-		"message": "Доклад за превода"
+		"message": "Доклад за превод"
 	},
 	"pageTranslator_translationReport_queue": {
-		"message": "Опашка"
+		"message": "Изчакващи"
 	},
 	"pageTranslator_translationReport_reject": {
 		"message": "Грешки"
 	},
 	"pageTranslator_translationReport_resolve": {
-		"message": "Преведено"
+		"message": "Преведени"
 	},
 	"popup_tabIdNotFound": {
 		"message": "Раздел \"$1\" не е намерен"
@@ -267,10 +247,10 @@
 		"message": "Импортиране на конфигурация"
 	},
 	"settings_button_reset": {
-		"message": "Възстановяване на конфигурация"
+		"message": "Нулиране на конфигурация"
 	},
 	"settings_button_saveChanges": {
-		"message": "Запази промените"
+		"message": "Запазване на промените"
 	},
 	"settings_message_clearCache_success": {
 		"message": "Кешът е изчистен"
@@ -279,13 +259,13 @@
 		"message": "Невалидна стойност"
 	},
 	"settings_message_importConfig_invalidFile": {
-		"message": "Файлът за импортиране не може да бъде обработен"
+		"message": "Предоставеният конфигурационен файл е неправилен или повреден и не може да бъде обработен"
 	},
 	"settings_message_importConfig_success": {
 		"message": "Импортирането е завършено"
 	},
 	"settings_message_resetConfig_confirm": {
-		"message": "Искате ли да нулирате настройките?"
+		"message": "Потвърдете, за да нулирате настройките до стойностите по подразбиране"
 	},
 	"settings_message_resetConfig_success": {
 		"message": "Настройките са нулирани"
@@ -297,142 +277,145 @@
 		"message": "Кеш"
 	},
 	"settings_option_cache_clear": {
-		"message": "Изчисти кеша"
+		"message": "Изчистване на кеша"
 	},
 	"settings_option_cache_clear_desc": {
-		"message": "Изчистете кеша, ако имате артефакти от преводи или трябва да премахнете тайни данни"
+		"message": "Ако забележите грешки в превода или случайно преведете лични текстове, докато кешът е активиран, можете да изтриете всички данни от кеша",
+		"description": "Explanation for user about cases when it's useful to clear cache"
 	},
 	"settings_option_cache_enable": {
-		"message": "Активирай кеша"
+		"message": "Активиране на кеша"
 	},
 	"settings_option_cache_enable_desc": {
-		"message": "Когато кешът е активиран, вече преведените текстове ще са достъпни незабавно, дори без интернет връзка"
+		"message": "Когато кешът е активиран, текстовете, които са били преведени преди, ще бъдат преведени мигновено без допълнителни заявки към услугата за превод"
 	},
 	"settings_option_cache_ignoreCase": {
-		"message": "Без значение главни/малки букви"
+		"message": "Използване на кеш, нечувствителен към регистъра"
 	},
 	"settings_option_cache_ignoreCase_desc": {
-		"message": "При активиране, кешираните преводи ще се използват и за неexact съвпадения, което може да доведе до артефакти в превода"
+		"message": "Когато е активирано, кешираните преводи ще се използват за текстове с различни регистри, което може да причини изкривявания в превода в определени ситуации"
 	},
 	"settings_option_commonSettings": {
 		"message": "Общи настройки"
 	},
 	"settings_option_customTranslatorModule": {
-		"message": "Персонализирани преводачи"
+		"message": "Модули за персонализиран превод",
+		"description": "An user defined code that implements a translation module"
 	},
 	"settings_option_customTranslatorModule_desc": {
-		"message": "Можете да добавите персонализирани преводачи за любимите си преводачески услуги. Научете повече и намерете модули в <slot id=docs>документацията за персонализирани преводачи</slot>"
+		"message": "Можете да добавите персонализирани модули за превод, които използват вашите любими преводачески услуги. Научете повече в <slot id=docs>документацията за персонализирани преводачи</slot>"
 	},
 	"settings_option_customTranslatorModule_manageButton": {
-		"message": "Управление на преводачи"
+		"message": "Управление на преводачи",
+		"description": "A button to show list of translation modules"
 	},
 	"settings_option_history_enable": {
-		"message": "Активиране на история"
+		"message": "Активиране на историята"
 	},
 	"settings_option_history_enable_desc": {
-		"message": "Когато е включено, всяко превод ще бъде записан на страница с история"
-	},
-	"settings_option_mainPreferences": {
-		"message": "Основни настройки"
+		"message": "Когато е активирано, преводите ще бъдат записани и ще се появят на <slot id=historyPage>страницата с история</slot>"
 	},
 	"settings_option_pageTranslation": {
-		"message": "Превод на страница"
+		"message": "Пълен превод на страницата"
 	},
 	"settings_option_pageTranslation_detectLanguageByContent": {
-		"message": "Откриване на езика по съдържанието"
+		"message": "Откриване на езика по съдържание"
 	},
 	"settings_option_pageTranslation_detectLanguageByContent_desc": {
-		"message": "Анализирайте текста на уеб страницата, за да се определи езикът на страницата. Когато е изключено, се използва езикът, посочен в метаданните на страницата"
+		"message": "Анализирайте текста на уеб страницата, за да откриете езика му. Когато е деактивирано, ще се използва езикът, посочен в <slot id=docs>метаданните на страницата</slot>"
 	},
 	"settings_option_pageTranslation_enableContextMenu": {
-		"message": "Активиране на бутон в контекстното меню"
+		"message": "Активиране на бутона в контекстното меню"
 	},
 	"settings_option_pageTranslation_enableContextMenu_desc": {
-		"message": "Добавя бутон за включване и изключване на превода на страницата в контекстното меню"
+		"message": "Добавете бутон за превключване на превода на страницата в контекстното меню на страницата"
 	},
 	"settings_option_pageTranslation_excludeSelectors": {
-		"message": "Селектори, които да се пропускат при превод"
+		"message": "Селектори за изключване от превод"
 	},
 	"settings_option_pageTranslation_excludeSelectors_desc": {
-		"message": "Списък с CSS селектори, които няма да се превеждат. Един селектор на ред. Ако елемент съответства на някой от тези селектори, той и неговите атрибути и вложени елементи няма да бъдат преведени"
+		"message": "Списък с CSS селектори за елементи, които да бъдат изключени от превод. Един селектор на ред. Ако елемент съвпада с някой от тези селектори, неговият текст, атрибути и вложени елементи няма да бъдат преведени"
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
-		"message": "Превод само на видимите елементи"
+		"message": "Превеждай само видимите елементи"
 	},
 	"settings_option_pageTranslation_lazyTranslate_desc": {
-		"message": "Когато тази опция е активирана, ще се превеждат само видимите елементи. Тази опция спестява мрежов трафик и лимити на използваните преводачески услуги"
+		"message": "Когато тази опция е активирана, ще се превеждат само видимите елементи. Тази опция намалява мрежовия трафик"
 	},
 	"settings_option_pageTranslation_originalTextPopup": {
-		"message": "Активиране на изскачащ прозорец с оригиналния текст"
+		"message": "Активирай изскачащ прозорец с оригиналния текст"
 	},
 	"settings_option_pageTranslation_originalTextPopup_desc": {
-		"message": "Показване на изскачащ прозорец с оригиналния текст при преместване на мишката върху преведените текстови блокове"
+		"message": "Показвай изскачащ прозорец с оригиналния текст при задържане на курсора върху преведени текстови блокове"
 	},
-	"settings_option_pageTranslation_toggleTranslationHotkey": {
-		"message": "Клавишни комбинации"
+	"settings_option_pageTranslation_shortcut_toggleTranslation": {
+		"message": "Бърз клавиш"
 	},
-	"settings_option_pageTranslation_toggleTranslationHotkey_desc": {
-		"message": "Пряк път за включване и изключване на превода на страницата\nНатиснете ESC за нулиране на клавишите"
+	"settings_option_pageTranslation_shortcut_toggleTranslation_desc": {
+		"message": "Бърз клавиш за превключване на превода на страницата\nНатиснете ESC за нулиране на клавишите"
 	},
 	"settings_option_pageTranslation_translatableAttributes": {
-		"message": "Атрибути за превод"
+		"message": "Преводими атрибути"
 	},
 	"settings_option_pageTranslation_translatableAttributes_desc": {
-		"message": "Въведете имена на <slot id=htmlAttributes>HTML атрибути</slot> за превод, по един атрибут на ред"
+		"message": "Въведете <slot id=htmlAttributes>HTML атрибут</slot> имена за превод, по един атрибут на ред\nСамо атрибутите в този списък ще бъдат преведени"
 	},
 	"settings_option_popupTab_pageTranslator_showCounters": {
-		"message": "Показване на статистика за превода"
+		"message": "Показвай напредъка на превода"
 	},
 	"settings_option_popupTab_pageTranslator_showCounters_desc": {
-		"message": "Показване на статистика за превода на страницата"
+		"message": "Показване на панел с напредъка на превода на страницата в изскачащия прозорец на разширението"
 	},
 	"settings_option_selectTranslation": {
 		"message": "Превод на избран текст"
 	},
-	"settings_option_selectTranslation_detectedLangFirst": {
-		"message": "Предпочитайте открития език на текста пред езика на страницата"
+	"settings_option_selectTranslation_detectTextLanguage": {
+		"message": "Откриване на езика на текста"
 	},
-	"settings_option_selectTranslation_detectedLangFirst_desc": {
-		"message": "Когато е включено, откритият език на избрания текст ще се предпочита пред езика на страницата"
+	"settings_option_selectTranslation_detectTextLanguage_desc": {
+		"message": "Когато е активирано, избраният текст ще бъде анализиран за откриване на езика за превод. В противен случай ще се използва езикът на страницата"
 	},
 	"settings_option_selectTranslation_disableWhileTranslatePage": {
 		"message": "Деактивиране по време на превод на страницата"
 	},
 	"settings_option_selectTranslation_enable": {
-		"message": "Включване"
+		"message": "Активиране на превод на избран текст"
+	},
+	"settings_option_selectTranslation_enable_desc": {
+		"message": "Когато тази функция е активирана, можете да изберете всеки текст на страницата и да го преведете в изскачащ прозорец"
 	},
 	"settings_option_selectTranslation_focusOnTranslateButton": {
 		"message": "Автоматично фокусиране върху бутона за превод"
 	},
 	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
-		"message": "Фокусиране върху бутона за превод, когато се появи"
+		"message": "Когато бутонът за превод се появи на страницата, той автоматично ще бъде фокусиран"
 	},
 	"settings_option_selectTranslation_header_languageChoice": {
 		"message": "Настройки на езика"
 	},
 	"settings_option_selectTranslation_isUseAutoForDetectLang": {
-		"message": "Активирайте автоматичното разпознаване на езика от преводача"
+		"message": "Позволете на модула за превод да открие езика на текста"
 	},
 	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
-		"message": "Използвайте автоматично разпознаване на езика от преводача, когато езикът не може да бъде локално открит"
+		"message": "Когато езикът на текста не може да бъде открит локално и тази опция е активирана, текстът ще бъде преведен с език \"auto\", ако се поддържа.\nКогато опцията е деактивирана, ще се използва друг метод за задаване на изходния език на текста"
 	},
 	"settings_option_selectTranslation_mode": {
-		"message": "Тригер за превод"
+		"message": "Действие при избор на текст"
 	},
 	"settings_option_selectTranslation_mode_item_contextMenu": {
-		"message": "Бутона за контекстно меню"
+		"message": "Преведете текста чрез контекстното меню"
 	},
 	"settings_option_selectTranslation_mode_item_popupButton": {
-		"message": "Изскачащ бутон"
+		"message": "Показване на бутон за превод"
 	},
 	"settings_option_selectTranslation_mode_item_quickTranslate": {
-		"message": "Бърз превод чрез маркиране"
+		"message": "Преведете текста незабавно"
 	},
 	"settings_option_selectTranslation_modifiers": {
 		"message": "Модификатори"
 	},
 	"settings_option_selectTranslation_modifiers_desc": {
-		"message": "Изберете клавишите, които трябва да се натиснат на клавиатурата, за да се покаже преводът"
+		"message": "Изберете клавишите, които трябва да бъдат натиснати на клавиатурата, за да се покаже преводът"
 	},
 	"settings_option_selectTranslation_modifiers_key_alt": {
 		"message": "alt"
@@ -447,106 +430,107 @@
 		"message": "shift"
 	},
 	"settings_option_selectTranslation_rememberDirection": {
-		"message": "Запомня последно избрания език на текста"
+		"message": "Запомни най-скоро избрания език на текста"
 	},
 	"settings_option_selectTranslation_showOnceForSelection": {
-		"message": "Показване на бутон за превод само веднъж за всяко избиране на текст"
+		"message": "Показвай бутона за превод веднъж на избор на текст"
 	},
 	"settings_option_selectTranslation_showOnceForSelection_desc": {
-		"message": "Бутонът се показва само веднъж за всяко избиране на текст. За да го видите отново, изберете текста наново"
+		"message": "Бутонът ще се появи само веднъж за всеки избор на текст. За да го покажете отново, изберете текста отново"
 	},
 	"settings_option_selectTranslation_showOriginalText": {
-		"message": "Показване на оригиналния текст"
+		"message": "Показвай оригиналния текст"
 	},
 	"settings_option_selectTranslation_showOriginalText_desc": {
-		"message": "Добавяне на блок с оригиналния текст в изскачащия прозорец с превода"
+		"message": "Добавете блок с оригиналния текст в изскачащия прозорец за превод"
 	},
 	"settings_option_selectTranslation_strictSelection": {
-		"message": "Строго избиране"
+		"message": "Строг режим на избор на текстов обхват",
+		"description": "This option is about selecting text via mouse"
 	},
 	"settings_option_selectTranslation_strictSelection_desc": {
-		"message": "Игнориране на избора, ако левият бутон на мишката се освободи извън блока, съдържащ избрания текст"
+		"message": "Игнорирайте избора на текстов обхват, ако левият бутон на мишката е освободен извън блока, съдържащ избрания текст"
 	},
 	"settings_option_selectTranslation_timeoutForHideButton": {
-		"message": "Задържане преди скриване на бутона"
+		"message": "Забавяне преди скриване на бутона за изскачащ прозорец"
 	},
 	"settings_option_selectTranslation_timeoutForHideButton_desc": {
-		"message": "Закъснение в милисекунди преди скриване на бутона, когато курсорът не е върху него. Задържането върху бутона нулира таймера. За да деактивирате автоматичното скриване, задайте стойност по-малка от 1"
+		"message": "Забавяне в милисекунди преди скриване на бутона, когато курсорът не е над него. Задържането на курсора върху бутона нулира таймера. За да деактивирате автоматичното скриване, задайте стойност по-малка от 1"
 	},
 	"settings_option_selectTranslation_zIndex": {
 		"message": "z-index"
 	},
 	"settings_option_selectTranslation_zIndex_desc": {
-		"message": "Увеличете тази стойност, ако елементи на някои страници припокриват изскачащ прозорец с преведен текст"
+		"message": "Увеличете тази стойност, ако елементи на някои страници припокриват изскачащия прозорец с преведен текст"
 	},
 	"settings_option_textTranslator": {
 		"message": "Превод на текст"
 	},
 	"settings_option_textTranslator_rememberText": {
-		"message": "Запомни преведения текст"
+		"message": "Запомняне на преведения текст"
 	},
 	"settings_option_textTranslator_rememberText_desc": {
-		"message": "Запомня преведения текст за следващото отваряне на прозореца"
+		"message": "Запомняне на преведения текст за следващото отваряне на прозореца"
 	},
 	"settings_option_textTranslator_spellCheck": {
-		"message": "Активиране на проверка на правописа"
+		"message": "Включване на проверка на правописа"
 	},
 	"settings_option_textTranslator_suggestLanguage": {
-		"message": "Предлагай открития език на текста"
+		"message": "Показване на открития език на текста"
 	},
 	"settings_option_textTranslator_suggestLanguageAlways": {
-		"message": "Винаги откривай и предлагай езика"
+		"message": "Винаги откривай и предлагай език"
 	},
 	"settings_option_textTranslator_suggestLanguageAlways_desc": {
-		"message": "Когато е деактивирано, предложенията за език се появяват само когато източникът е автоматично открит"
+		"message": "Когато е деактивирано, предложенията за език се появяват само ако изходният език е зададен на \"автоматично\""
 	},
 	"settings_option_translatePreferences": {
 		"message": "Предпочитания за превод"
 	},
 	"settings_option_translateScheduler": {
-		"message": "Планиране на превода"
+		"message": "График за превод"
 	},
 	"settings_option_translateScheduler_delay": {
-		"message": "Задържане на текста преди превод"
+		"message": "Забавяне на натрупването на текст"
 	},
 	"settings_option_translateScheduler_delay_desc": {
-		"message": "Планиращият преводач намалява броя на заявките към API-то на услугата за превод. Той се опитва да събере колкото се може повече текстове, за да ги изпрати в една заявка. Планиращият ще изчака посоченото време в милисекунди, за да събере нови текстове преди да започне превода."
+		"message": "Графикът за превод намалява броя на заявките към API за превод, като натрупва възможно най-много текстове за изпращане в една заявка. Графикът ще изчака определеното време в милисекунди, за да събере повече текстове преди да започне превода"
 	},
 	"settings_option_translateScheduler_retryLimit": {
-		"message": "Опити за повторен превод"
+		"message": "Ограничение за опити за повторен превод"
 	},
 	"settings_option_translateScheduler_retryLimit_desc": {
-		"message": "Планиращият ще се опита отново да преведе текстове при възникване на грешки при превода. Тази опция задава максималния брой опити за повторен превод. Задайте отрицателно число за неограничени опити."
+		"message": "Графикът ще опита да преведе текстовете отново, когато възникнат грешки при превода. Тази опция задава ограничение на опитите за повторение. Задайте отрицателно число, за да позволите неограничени повторения"
 	},
 	"settings_option_translatorModule": {
 		"message": "Модул за превод"
 	},
 	"settings_option_translatorModule_desc": {
-		"message": "Качеството на преводите и наличните езици зависят от преводача."
+		"message": "Качеството на преводите и наличните езици зависят от модула за превод"
 	},
 	"settings_option_tts": {
-		"message": "Текст към говор (TTS)"
+		"message": "Конвертиране на текст в реч (TTS)"
 	},
 	"settings_option_ttsCustomModules": {
-		"message": "Персонализиран TTS"
+		"message": "Персонализирани модули за синтез на реч"
 	},
 	"settings_option_ttsCustomModules_button": {
-		"message": "Управление на TTS модулите"
+		"message": "Управление на модули за синтез на реч"
 	},
 	"settings_option_ttsCustomModules_desc": {
-		"message": "Можете да добавите TTS модули, които използват вашите любими услуги и гласове. Прочетете повече в <slot id=docs>документацията за персонализирани TTS</slot>"
+		"message": "Можете да добавите модули за синтез на реч, които използват вашите любими услуги и гласови двигатели. Прочетете повече в <slot id=docs>документацията за персонализирани TTS</slot>"
 	},
 	"settings_option_ttsModule": {
-		"message": "TTS модул"
+		"message": "Избран TTS модул"
 	},
 	"settings_option_ttsModule_desc": {
-		"message": "Модул за озвучаване на текст"
+		"message": "Гласов двигател, използван за озвучаване на текста"
 	},
 	"settings_option_userLanguage": {
 		"message": "Вашият език"
 	},
 	"settings_option_userLanguage_desc": {
-		"message": "Целеви език за превод на текст"
+		"message": "Езикът, на който ще бъдат преведени текстовете"
 	},
 	"settings_pageTitle": {
 		"message": "Настройки"
@@ -558,25 +542,32 @@
 		"message": "Изскачащ прозорец"
 	},
 	"textTranslator_suggestLanguage": {
-		"message": "Изглежда, че езикът е"
+		"message": "Изглежда, че езикът на текста е <slot id=languageSuggest>$language_name$</slot>",
+		"placeholders": {
+			"language_name": {
+				"content": "$1",
+				"example": "Japanese"
+			}
+		}
 	},
 	"textTranslator_translateInputPlaceholder": {
-		"message": "Въведете текст"
+		"message": "Въведете текст за превод",
+		"description": "Request to user input some text for translation"
 	},
 	"textTranslator_translatePlaceholder": {
-		"message": "Преведен текст"
+		"message": "Преведеният текст ще бъде тук"
 	},
 	"translatorsManagerWindow_add": {
-		"message": "Добави"
+		"message": "Добавяне на модул за превод"
 	},
 	"translatorsManagerWindow_close": {
 		"message": "Затвори"
 	},
 	"translatorsManagerWindow_emptyTranslatorsListText": {
-		"message": "Все още не са добавени потребителски преводачи"
+		"message": "Все още не са добавени персонализирани модули за превод"
 	},
 	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
-		"message": "Сигурни ли сте, че искате да премахнете преводача \"$translator_name$\"?",
+		"message": "Сигурни ли сте, че искате да премахнете модула за превод \"$translator_name$\"?",
 		"placeholders": {
 			"translator_name": {
 				"content": "$1",
@@ -585,7 +576,7 @@
 		}
 	},
 	"translatorsManagerWindow_title": {
-		"message": "Потребителски преводачи"
+		"message": "Персонализирани модули за превод"
 	},
 	"translatorsManagerWindow_translator_delete": {
 		"message": "Изтрий"
@@ -594,13 +585,13 @@
 		"message": "Редактирай"
 	},
 	"ttsManagerWindow_add": {
-		"message": "Добави"
+		"message": "Добавяне на TTS модул"
 	},
 	"ttsManagerWindow_close": {
 		"message": "Затвори"
 	},
 	"ttsManagerWindow_emptyTranslatorsListText": {
-		"message": "Все още не са добавени TTS модули"
+		"message": "Все още няма добавени TTS модули"
 	},
 	"ttsManagerWindow_message_ttsRemoveConfirmation": {
 		"message": "Сигурни ли сте, че искате да премахнете TTS модула \"$tts_name$\"?",
@@ -612,7 +603,7 @@
 		}
 	},
 	"ttsManagerWindow_title": {
-		"message": "Модули за текст към реч"
+		"message": "Модули за преобразуване на текст в реч"
 	},
 	"ttsManagerWindow_translator_delete": {
 		"message": "Изтрий"
@@ -621,13 +612,13 @@
 		"message": "Редактирай"
 	},
 	"validation_number": {
-		"message": "Параметърът трябва да бъде число"
+		"message": "Стойността трябва да бъде число"
 	},
 	"validation_numberBetweenRange": {
-		"message": "Параметърът трябва да бъде число между $1 и $2"
+		"message": "Стойността трябва да бъде число между $1 и $2"
 	},
 	"validation_positiveNumber": {
-		"message": "Параметърът трябва да бъде положително число"
+		"message": "Стойността трябва да бъде положително число"
 	},
 	"langCode_aa": {
 		"message": "Афарски"

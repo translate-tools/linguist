@@ -6,7 +6,7 @@
 		"message": "הסר תרגום מהמילון"
 	},
 	"common_bgUnavailable": {
-		"message": "סקריפט הרקע אינו זמין"
+		"message": "סקריפט רקע לא זמין"
 	},
 	"common_cancel": {
 		"message": "בטל"
@@ -30,22 +30,22 @@
 		"message": "תרגם"
 	},
 	"component_hotkey_placeholder": {
-		"message": "לחץ כדי להקליט קיצור מקשים"
+		"message": "לחץ כדי להקליט קיצור"
 	},
 	"component_hotkey_recordPlaceholder": {
-		"message": "הקש מקשים"
+		"message": "לחץ על מקשים"
 	},
 	"component_hotkey_resetButton": {
-		"message": "איפוס"
+		"message": "אפס"
 	},
 	"contextMenu_disablePageTranslation": {
-		"message": "בטל תרגום דף"
+		"message": "הפסק תרגום עמוד"
 	},
 	"contextMenu_translatePage": {
-		"message": "תרגם דף"
+		"message": "תרגם עמוד"
 	},
 	"contextMenu_translateSelectedText": {
-		"message": "תרגם את הטקסט שנבחר"
+		"message": "תרגם טקסט נבחר"
 	},
 	"dictionaryButton_add": {
 		"message": "הוסף למילון"
@@ -54,43 +54,43 @@
 		"message": "מחק מהמילון"
 	},
 	"dictionary_button_export": {
-		"message": "יצא"
+		"message": "ייצא"
 	},
 	"dictionary_button_removeAll": {
 		"message": "הסר הכל"
 	},
 	"dictionary_deleteAll": {
-		"message": "האם אתה בטוח שברצונך למחוק את כל התרגומים במילון?"
+		"message": "האם אתה בטוח שברצונך למחוק את כל התרגומים מהמילון?"
 	},
 	"dictionary_deleteConfirmation": {
-		"message": "האם אתה בטוח שברצונך למחוק תרגום זה?"
+		"message": "האם אתה בטוח שברצונך למחוק את התרגום הזה?"
 	},
 	"dictionary_description": {
-		"message": "שמור את התרגומים שלך במילון כדי למצוא אותם מאוחר יותר"
+		"message": "שמור תרגומים במילון כדי למצוא אותם במהירות מאוחר יותר"
 	},
 	"dictionary_emptyDictionary": {
-		"message": "המילון ריק. התחל למלא אותו על ידי תרגום טקסט כלשהו"
+		"message": "המילון ריק, התחל למלא אותו על ידי תרגום טקסט כלשהו"
 	},
 	"dictionary_filter_from": {
-		"message": "מ־"
+		"message": "שפת הטקסט המקורי"
 	},
 	"dictionary_filter_to": {
-		"message": "אל"
+		"message": "שפת היעד"
 	},
 	"dictionary_message_deleteAll_success": {
 		"message": "כל התרגומים הוסרו"
 	},
 	"dictionary_notFoundEntries": {
-		"message": "לא נמצאו תרגומים התואמים לסינונים אלה"
+		"message": "לא נמצאו תרגומים התואמים למסננים אלו"
 	},
 	"dictionary_pageTitle": {
 		"message": "מילון"
 	},
 	"dictionary_resetFilters": {
-		"message": "אפס סינונים"
+		"message": "אפס מסננים"
 	},
 	"dictionary_searchPlaceholder": {
-		"message": "חפש לפי טקסט"
+		"message": "חיפוש לפי טקסט"
 	},
 	"editorWindow_close": {
 		"message": "סגור"
@@ -98,56 +98,57 @@
 	"editorWindow_data_code": {
 		"message": "קוד"
 	},
-	"editorWindow_data_translatorName": {
-		"message": "שם המתורגמן"
+	"editorWindow_data_title": {
+		"message": "שם המודול"
 	},
-	"editorWindow_message_invalidTranslatorName": {
-		"message": "שם המתורגמן חייב להכיל לפחות תו אחד"
+	"editorWindow_message_invalidTitle": {
+		"message": "שם המודול חייב להכיל לפחות תו אחד"
 	},
 	"editorWindow_save": {
 		"message": "שמור"
 	},
 	"ext_description": {
-		"message": "תרגום דפי אינטרנט וטקסט, מילון, היסטוריה, תרגום במצב לא מקוון ותרגומים מותאמים אישית"
+		"message": "תרגום דפי אינטרנט, תרגום טקסט, מילון, היסטוריה, מתרגמים מותאמים אישית, כל מה שצריך כדי לשבור מחסומי שפה"
 	},
 	"ext_name": {
-		"message": "לינגוויסט - מתרגם דפי אינטרנט"
+		"message": "Linguist - מתרגם דפי אינטרנט"
 	},
 	"history_control_selectEntry": {
-		"message": "בחר רשומה"
+		"message": "לבחור תרגום לפעולה מרובה",
+		"description": "Description in finite form \"to pick\" with explaining what this checkbox will do"
 	},
 	"history_controls_clearHistory": {
 		"message": "נקה היסטוריה"
 	},
 	"history_controls_deleteSelected": {
-		"message": "מחק שנבחרו"
+		"message": "למחוק תרגומים נבחרים"
 	},
 	"history_controls_selectAll": {
-		"message": "בחר את כל התרגומים"
+		"message": "לבחור את כל התרגומים"
 	},
 	"history_message_clearHistoryConfirmation": {
 		"message": "האם אתה בטוח שברצונך לנקות את ההיסטוריה? כל הרשומות יוסרו"
 	},
 	"history_message_deleteEntryConfirmation": {
-		"message": "האם אתה בטוח שברצונך למחוק רשומה זו?"
+		"message": "האם אתה בטוח שברצונך למחוק את הרשומה הזו?"
 	},
 	"history_message_deleteSelectedEntriesConfirmation": {
-		"message": "האם אתה בטוח שברצונך למחוק את הרשומות שנבחרו ($1)?"
+		"message": "האם אתה בטוח שברצונך למחוק את הרשומות הנבחרות ($1)?"
 	},
 	"history_message_entriesNotFound": {
 		"message": "לא נמצאו תרגומים התואמים את המסנן"
 	},
 	"history_message_noEntries": {
-		"message": "ההיסטוריה נקייה"
+		"message": "ההיסטוריה ריקה"
 	},
 	"history_notification_disabled": {
-		"message": "הקלטת ההיסטוריה מושבתת, לכן רשומות חדשות לא יופיעו. ניתן לשנות זאת ב<slot id=preferences>העדפות</slot>"
+		"message": "הקלטת ההיסטוריה מושבתת, ולכן רשומות חדשות לא יופיעו. ניתן לשנות זאת ב-<slot id=preferences>העדפות</slot>"
 	},
 	"history_pageTitle": {
 		"message": "היסטוריה"
 	},
 	"history_searchPlaceholder": {
-		"message": "חפש לפי טקסט"
+		"message": "חיפוש לפי טקסט"
 	},
 	"inlineTranslator_showOriginalText": {
 		"message": "הצג טקסט מקורי"
@@ -164,83 +165,62 @@
 	"lang_swap": {
 		"message": "החלף שפות"
 	},
-	"message_askResetConfig": {
-		"message": "לאפס הגדרות?"
-	},
-	"message_cacheFlushed": {
-		"message": "המטמון נוקה"
-	},
-	"message_changesSaved": {
-		"message": "השינויים נשמרו"
-	},
-	"message_error": {
-		"message": "שגיאה"
-	},
-	"message_errorOfTranslate": {
-		"message": "שגיאת תרגום"
-	},
-	"message_serviceRequiredKey": {
-		"message": "השירות דורש מפתח"
-	},
-	"message_translateOfText": {
-		"message": "מתורגם"
-	},
 	"message_unknownError": {
 		"message": "שגיאה לא ידועה"
 	},
 	"pageTranslator_alwaysTranslateLang": {
-		"message": "לתרגם תמיד שפה זו"
+		"message": "תמיד לתרגם שפה זו"
 	},
 	"pageTranslator_commonPreferences_autoTranslate_disable": {
 		"message": "השבת"
 	},
 	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
-		"message": "השבת עבור כל האתרים"
+		"message": "השבת לכל האתרים"
 	},
 	"pageTranslator_commonPreferences_autoTranslate_enable": {
-		"message": "אפשר"
+		"message": "הפעל"
 	},
 	"pageTranslator_commonPreferences_title": {
-		"message": "העדפות כלליות עבור שפה זו"
+		"message": "העדפות כלליות לשפה זו"
 	},
 	"pageTranslator_option_autoTranslate": {
 		"message": "תרגום אוטומטי"
 	},
-	"pageTranslator_showOptions": {
-		"message": "הצג אפשרויות"
-	},
 	"pageTranslator_showOriginal": {
-		"message": "הצג מקורי"
+		"message": "הצג מקור"
+	},
+	"pageTranslator_showTranslationPreferences": {
+		"message": "העדפות תרגום"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_always": {
 		"message": "תמיד לתרגם"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
-		"message": "תמיד לתרגם עבור שפה זו"
+		"message": "תמיד לתרגם לשפה זו"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_default": {
 		"message": "השתמש בכללים כלליים"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
-		"message": "השתמש בכללים כלליים עבור שפה זו"
+		"message": "השתמש בכללים כלליים לשפה זו"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_never": {
 		"message": "לעולם לא לתרגם"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
-		"message": "לעולם לא לתרגם עבור שפה זו"
+		"message": "לעולם לא לתרגם לשפה זו"
 	},
 	"pageTranslator_sitePreferences_title": {
 		"message": "העדפות עבור"
 	},
 	"pageTranslator_translatePage": {
-		"message": "תרגם את הדף"
+		"message": "תרגם דף"
 	},
 	"pageTranslator_translationReport": {
 		"message": "דוח תרגום"
 	},
 	"pageTranslator_translationReport_queue": {
-		"message": "תור"
+		"message": "ממתין"
 	},
 	"pageTranslator_translationReport_reject": {
 		"message": "שגיאות"
@@ -249,7 +229,7 @@
 		"message": "מתורגם"
 	},
 	"popup_tabIdNotFound": {
-		"message": "הכרטיסייה \"$1\" לא נמצאה"
+		"message": "לשונית \"$1\" לא נמצאה"
 	},
 	"popup_tab_translatePage": {
 		"message": "תרגום דף"
@@ -258,181 +238,184 @@
 		"message": "תרגום טקסט"
 	},
 	"settings_button_cancel": {
-		"message": "בטל"
+		"message": "ביטול"
 	},
 	"settings_button_export": {
-		"message": "יצא הגדרות"
+		"message": "ייצוא תצורה"
 	},
 	"settings_button_import": {
-		"message": "ייבא הגדרות"
+		"message": "ייבוא תצורה"
 	},
 	"settings_button_reset": {
-		"message": "אפס הגדרות"
+		"message": "איפוס תצורה"
 	},
 	"settings_button_saveChanges": {
-		"message": "שמור שינויים"
+		"message": "שמירת שינויים"
 	},
 	"settings_message_clearCache_success": {
-		"message": "הזיכרון הנסתר נוקה"
+		"message": "מטמון נוקה"
 	},
 	"settings_message_common_invalidValueType": {
 		"message": "ערך לא חוקי"
 	},
 	"settings_message_importConfig_invalidFile": {
-		"message": "לא ניתן לעבד את הקובץ ליבוא"
+		"message": "קובץ התצורה שסופק אינו נכון או פגום, ולא ניתן לעבד אותו"
 	},
 	"settings_message_importConfig_success": {
-		"message": "הייבוא הושלם"
+		"message": "ייבוא הושלם"
 	},
 	"settings_message_resetConfig_confirm": {
-		"message": "האם ברצונך לאפס את ההגדרות?"
+		"message": "אשר לאיפוס ההגדרות לערכי ברירת מחדל"
 	},
 	"settings_message_resetConfig_success": {
-		"message": "ההגדרות אופסו"
+		"message": "הגדרות אופסו"
 	},
 	"settings_message_saveChanges_success": {
-		"message": "השינויים נשמרו"
+		"message": "שינויים נשמרו"
 	},
 	"settings_option_cache": {
-		"message": "זיכרון מטמון"
+		"message": "מטמון"
 	},
 	"settings_option_cache_clear": {
-		"message": "נקה את זיכרון המטמון"
+		"message": "נקה מטמון"
 	},
 	"settings_option_cache_clear_desc": {
-		"message": "הסר את המטמון אם יש לך ארטיפקטים של תרגום או אם יש צורך להסיר סודות"
+		"message": "אם אתה מבחין בשגיאות תרגום או מתרגם בטעות טקסטים פרטיים כאשר המטמון מופעל, תוכל למחוק את כל הנתונים מהמטמון",
+		"description": "Explanation for user about cases when it's useful to clear cache"
 	},
 	"settings_option_cache_enable": {
-		"message": "אפשר מטמון"
+		"message": "הפעל מטמון"
 	},
 	"settings_option_cache_enable_desc": {
-		"message": "כאשר המטמון מופעל, תרגומים שתורגמו פעם אחת יהיו זמינים מיד, גם ללא חיבור לאינטרנט"
+		"message": "כאשר המטמון מופעל, טקסטים שתורגמו בעבר יתורגמו מיידית ללא בקשות נוספות לשירות התרגום"
 	},
 	"settings_option_cache_ignoreCase": {
-		"message": "אי-רגישות לאותיות רישיות/קטנות"
+		"message": "השתמש במטמון ללא רגישות לאותיות"
 	},
 	"settings_option_cache_ignoreCase_desc": {
-		"message": "כאשר מופעל, תרגומים מהמטמון ישמשו גם להתאמות לא מדויקות, מה שעלול לגרום לארטיפקטים של תרגום"
+		"message": "כאשר מופעל, תרגומים במטמון ישמשו לטקסטים עם אותיות שונות, מה שעלול לגרום לעיוותי תרגום במצבים מסוימים"
 	},
 	"settings_option_commonSettings": {
 		"message": "הגדרות כלליות"
 	},
 	"settings_option_customTranslatorModule": {
-		"message": "מתרגמים מותאמים אישית"
+		"message": "מודולים מותאמים אישית לתרגום",
+		"description": "An user defined code that implements a translation module"
 	},
 	"settings_option_customTranslatorModule_desc": {
-		"message": "אתה יכול להוסיף מתרגמים מותאמים אישית לשירותי התרגום האהובים עליך. קרא עוד ומצא מודולים ב<slot id=docs>התיעוד של מתרגמים מותאמים אישית</slot>"
+		"message": "אתה יכול להוסיף מודולי תרגום מותאמים אישית שמשתמשים בשירותי התרגום המועדפים עליך. למד עוד ב<slot id=docs>תיעוד מתרגמים מותאמים אישית</slot>"
 	},
 	"settings_option_customTranslatorModule_manageButton": {
-		"message": "נהל מתרגמים"
+		"message": "ניהול מתרגמים",
+		"description": "A button to show list of translation modules"
 	},
 	"settings_option_history_enable": {
-		"message": "אפשר היסטוריה"
+		"message": "הפעל היסטוריה"
 	},
 	"settings_option_history_enable_desc": {
-		"message": "כאשר מופעל, כל תרגום יירשם לדף ההיסטוריה"
-	},
-	"settings_option_mainPreferences": {
-		"message": "הגדרות ראשיות"
+		"message": "כאשר מופעל, תרגומים יירשמו ויופיעו ב<slot id=historyPage>דף ההיסטוריה</slot>"
 	},
 	"settings_option_pageTranslation": {
-		"message": "תרגום דף"
+		"message": "תרגום עמוד מלא"
 	},
 	"settings_option_pageTranslation_detectLanguageByContent": {
 		"message": "זיהוי שפה לפי תוכן"
 	},
 	"settings_option_pageTranslation_detectLanguageByContent_desc": {
-		"message": "ניתוח הטקסט בדף האינטרנט לזיהוי שפת הדף. כאשר כבוי, תהיה השפה כפי שמצוינת במטא דאטה של הדף"
+		"message": "ניתוח הטקסט בעמוד האינטרנט כדי לזהות את שפתו. כאשר מושבת, תשתמש בשפה שצוינה ב<slot id=docs>מטא-דאטה של העמוד</slot>"
 	},
 	"settings_option_pageTranslation_enableContextMenu": {
-		"message": "הפעל כפתור תפריט ההקשר"
+		"message": "הפעל כפתור בתפריט ההקשר"
 	},
 	"settings_option_pageTranslation_enableContextMenu_desc": {
-		"message": "הוסף כפתור להפעלה וכיבוי של תרגום הדף בתפריט ההקשר"
+		"message": "הוסף כפתור להחלפת תרגום עמוד בתפריט ההקשר של העמוד"
 	},
 	"settings_option_pageTranslation_excludeSelectors": {
-		"message": "סלקטורים לשמטת תרגום"
+		"message": "בוחרים להחרגה מהתרגום"
 	},
 	"settings_option_pageTranslation_excludeSelectors_desc": {
-		"message": "רשימת סלקטורי CSS שלא יתורגמו. סלקטור אחד בכל שורה. אם אלמנט תואם לכל סלקטור ברשימה זו, הוא, התכונות שלו והאלמנטים הנסתרים בו לא יתורגמו"
+		"message": "רשימת בוררי CSS עבור אלמנטים שיש להחריג מהתרגום. בורר אחד בשורה. אם אלמנט תואם לאחד מהבוררים הללו, הטקסט שלו, התכונות והאלמנטים המקוננים לא יתורגמו"
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
-		"message": "תרגם רק אלמנטים גלויים"
+		"message": "לתרגם רק אלמנטים גלויים"
 	},
 	"settings_option_pageTranslation_lazyTranslate_desc": {
-		"message": "כאשר אפשרות זו מופעלת, ייתרגמו רק האלמנטים הגלויים. אפשרות זו חוסכת בתעבורת רשת ומגבילה שימוש בשירותי תרגום"
+		"message": "כאשר אפשרות זו מופעלת, רק אלמנטים גלויים יתורגמו. אפשרות זו מפחיתה את תעבורת הרשת"
 	},
 	"settings_option_pageTranslation_originalTextPopup": {
 		"message": "הפעל חלון קופץ עם הטקסט המקורי"
 	},
 	"settings_option_pageTranslation_originalTextPopup_desc": {
-		"message": "הצג חלון קופץ עם הטקסט המקורי כאשר מעבירים את העכבר מעל בלוקי הטקסט המתורגמים"
+		"message": "הצג חלון קופץ עם הטקסט המקורי כאשר מרחפים מעל בלוקי טקסט מתורגמים"
 	},
-	"settings_option_pageTranslation_toggleTranslationHotkey": {
-		"message": "קיצורי מקלדת"
+	"settings_option_pageTranslation_shortcut_toggleTranslation": {
+		"message": "קיצור דרך"
 	},
-	"settings_option_pageTranslation_toggleTranslationHotkey_desc": {
-		"message": "קיצורי דרך להחלפת תרגום הדף\nלחץ ESC לאיפוס המפתחות"
+	"settings_option_pageTranslation_shortcut_toggleTranslation_desc": {
+		"message": "קיצור דרך להחלפת תרגום דף\nלחץ ESC לאיפוס מקשים"
 	},
 	"settings_option_pageTranslation_translatableAttributes": {
-		"message": "תכונות הניתנות לתרגום"
+		"message": "תכונות ניתנות לתרגום"
 	},
 	"settings_option_pageTranslation_translatableAttributes_desc": {
-		"message": "הזן שמות <slot id=htmlAttributes>תכונות HTML</slot> לתרגום, תכונה אחת בכל שורה"
+		"message": "הזן שמות <slot id=htmlAttributes>תכונות HTML</slot> לתרגום, תכונה אחת בשורה\nרק התכונות ברשימה זו יתורגמו"
 	},
 	"settings_option_popupTab_pageTranslator_showCounters": {
-		"message": "הצגת סטטיסטיקות תרגום"
+		"message": "הצג התקדמות תרגום"
 	},
 	"settings_option_popupTab_pageTranslator_showCounters_desc": {
-		"message": "תצוגת סטטיסטיקות עבור תרגום הדף"
+		"message": "הצג לוח עם התקדמות תרגום הדף בחלון הקופץ של התוסף"
 	},
 	"settings_option_selectTranslation": {
-		"message": "תרגום הטקסט שנבחר"
+		"message": "תרגום לטקסט נבחר"
 	},
-	"settings_option_selectTranslation_detectedLangFirst": {
-		"message": "להעדיף את שפת הטקסט המתגלת על פני שפת הדף"
+	"settings_option_selectTranslation_detectTextLanguage": {
+		"message": "זיהוי שפת הטקסט"
 	},
-	"settings_option_selectTranslation_detectedLangFirst_desc": {
-		"message": "כאשר מופעל, תיעדף שפת הטקסט שנבחרה על פני שפת הדף"
+	"settings_option_selectTranslation_detectTextLanguage_desc": {
+		"message": "כאשר מופעל, הטקסט הנבחר ינותח כדי לזהות את השפה לתרגום. אחרת, תשתמש בשפת הדף"
 	},
 	"settings_option_selectTranslation_disableWhileTranslatePage": {
-		"message": "השבת במהלך תרגום הדף"
+		"message": "השבת בזמן תרגום הדף"
 	},
 	"settings_option_selectTranslation_enable": {
-		"message": "אפשר"
+		"message": "הפעל תרגום טקסט נבחר"
+	},
+	"settings_option_selectTranslation_enable_desc": {
+		"message": "כאשר תכונה זו מופעלת, תוכל לבחור כל טקסט בדף ולתרגם אותו בחלון קופץ"
 	},
 	"settings_option_selectTranslation_focusOnTranslateButton": {
-		"message": "מיקוד אוטומטי על כפתור התרגום"
+		"message": "מיקוד אוטומטי בכפתור התרגום"
 	},
 	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
-		"message": "התמקד בכפתור התרגום כאשר הוא מופיע"
+		"message": "כאשר כפתור התרגום מופיע בדף, הוא יתמקד אוטומטית"
 	},
 	"settings_option_selectTranslation_header_languageChoice": {
 		"message": "הגדרות שפה"
 	},
 	"settings_option_selectTranslation_isUseAutoForDetectLang": {
-		"message": "הפעל זיהוי שפה אוטומטי על ידי המתרגם"
+		"message": "לאפשר למודול התרגום לזהות את שפת הטקסט"
 	},
 	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
-		"message": "השתמש בזיהוי שפה אוטומטי על ידי המתרגם כאשר השפה אינה ניתנת לזיהוי באופן מקומי"
+		"message": "כאשר לא ניתן לזהות את שפת הטקסט באופן מקומי ואפשרות זו מופעלת, הטקסט יתורגם עם השפה \"אוטומטי\" אם נתמך.\nכאשר האפשרות מושבתת, תשתמש בשיטה חלופית אחרת כדי להגדיר את שפת המקור של הטקסט"
 	},
 	"settings_option_selectTranslation_mode": {
-		"message": "טריגר תרגום"
+		"message": "פעולה על בחירת טקסט"
 	},
 	"settings_option_selectTranslation_mode_item_contextMenu": {
-		"message": "כפתור תפריט הקשר"
+		"message": "תרגם טקסט דרך תפריט ההקשר"
 	},
 	"settings_option_selectTranslation_mode_item_popupButton": {
-		"message": "כפתור קופץ"
+		"message": "הצג כפתור תרגום"
 	},
 	"settings_option_selectTranslation_mode_item_quickTranslate": {
-		"message": "תרגום מהיר באמצעות בחירה"
+		"message": "תרגם טקסט מיידית"
 	},
 	"settings_option_selectTranslation_modifiers": {
-		"message": "מקשי שינוי"
+		"message": "שינוי"
 	},
 	"settings_option_selectTranslation_modifiers_desc": {
-		"message": "בחר את המקשים שצריך ללחוץ עליהם במקלדת כדי להציג את התרגום"
+		"message": "בחר את המקשים שיש ללחוץ עליהם במקלדת כדי להציג את התרגום"
 	},
 	"settings_option_selectTranslation_modifiers_key_alt": {
 		"message": "alt"
@@ -447,58 +430,59 @@
 		"message": "shift"
 	},
 	"settings_option_selectTranslation_rememberDirection": {
-		"message": "זכור את שפת הטקסט שנבחרה לאחרונה"
+		"message": "זכור את שפת הטקסט שנבחר לאחרונה"
 	},
 	"settings_option_selectTranslation_showOnceForSelection": {
 		"message": "הצג את כפתור התרגום פעם אחת לכל בחירת טקסט"
 	},
 	"settings_option_selectTranslation_showOnceForSelection_desc": {
-		"message": "הכפתור יוצג רק פעם אחת לכל בחירת טקסט. כדי להציגו שוב, בחר את הטקסט מחדש"
+		"message": "הכפתור יופיע רק פעם אחת לכל בחירת טקסט. כדי להציג אותו שוב, בחר את הטקסט מחדש"
 	},
 	"settings_option_selectTranslation_showOriginalText": {
-		"message": "הצג את הטקסט המקורי"
+		"message": "הצג טקסט מקורי"
 	},
 	"settings_option_selectTranslation_showOriginalText_desc": {
-		"message": "הוסף בלוק עם הטקסט המקורי לחלונית התרגום"
+		"message": "הוסף בלוק עם הטקסט המקורי לחלון התרגום"
 	},
 	"settings_option_selectTranslation_strictSelection": {
-		"message": "בחירה מדויקת"
+		"message": "מצב קפדני של בחירת טווח טקסט",
+		"description": "This option is about selecting text via mouse"
 	},
 	"settings_option_selectTranslation_strictSelection_desc": {
-		"message": "התעלם מהבחירה אם כפתור העכבר השמאלי שוחרר מחוץ לבלוק המכיל את הטקסט שנבחר"
+		"message": "התעלם מבחירת טווח טקסט אם לחצן העכבר השמאלי משוחרר מחוץ לבלוק המכיל את הטקסט שנבחר"
 	},
 	"settings_option_selectTranslation_timeoutForHideButton": {
-		"message": "השיהוי לפני הסתרת הכפתור"
+		"message": "השהיה לפני הסתרת כפתור החלון הקופץ"
 	},
 	"settings_option_selectTranslation_timeoutForHideButton_desc": {
-		"message": "השיהוי במילישניות לפני הסתרת הכפתור כשלא מצביעים עליו. הצבעה על הכפתור מאפס את הטיימר. כדי להשבית הסתרה אוטומטית, הגדר את הערך לפחות מ-1"
+		"message": "עיכוב במילישניות לפני הסתרת הכפתור כאשר הסמן לא מרחף מעליו. ריחוף מעל הכפתור מאפס את הטיימר. כדי לבטל הסתרה אוטומטית, הגדר את הערך לפחות מ-1"
 	},
 	"settings_option_selectTranslation_zIndex": {
 		"message": "z-index"
 	},
 	"settings_option_selectTranslation_zIndex_desc": {
-		"message": "הגבר ערך זה אם אלמנטים בדפים מסוימים חופפים לחלון הקופץ עם הטקסט המתורגם"
+		"message": "הגדל ערך זה אם אלמנטים בדפים מסוימים חופפים את החלון הקופץ עם הטקסט המתורגם"
 	},
 	"settings_option_textTranslator": {
 		"message": "תרגום טקסט"
 	},
 	"settings_option_textTranslator_rememberText": {
-		"message": "זכור את הטקסט המתורגם"
+		"message": "זכירת טקסט מתורגם"
 	},
 	"settings_option_textTranslator_rememberText_desc": {
-		"message": "זכור את הטקסט המתורגם לפעם הבאה שהחלון יפתח"
+		"message": "זכירת טקסט מתורגם לפעם הבאה שהחלון נפתח"
 	},
 	"settings_option_textTranslator_spellCheck": {
 		"message": "הפעל בדיקת איות"
 	},
 	"settings_option_textTranslator_suggestLanguage": {
-		"message": "הצע את שפת הטקסט שזוהתה"
+		"message": "הצגת שפת הטקסט שזוהתה"
 	},
 	"settings_option_textTranslator_suggestLanguageAlways": {
-		"message": "זיהוי והצעת שפה תמידית"
+		"message": "תמיד לזהות ולהציע שפה"
 	},
 	"settings_option_textTranslator_suggestLanguageAlways_desc": {
-		"message": "כאשר מבוטל, הצעות לשפה יופיעו רק כאשר השפה מקורית מזוהה אוטומטית"
+		"message": "כאשר מושבת, הצעות לשפה מופיעות רק אם שפת המקור מוגדרת ל\"אוטומטי\""
 	},
 	"settings_option_translatePreferences": {
 		"message": "העדפות תרגום"
@@ -507,46 +491,46 @@
 		"message": "מתזמן תרגום"
 	},
 	"settings_option_translateScheduler_delay": {
-		"message": "השהיית הצטברות טקסט"
+		"message": "עיכוב צבירת טקסט"
 	},
 	"settings_option_translateScheduler_delay_desc": {
-		"message": "מתזמן התרגום מפחית את מספר הבקשות ל-API של שירות התרגום. הוא מנסה לאסוף כמה שיותר טקסטים ולשלוח אותם בבקשה אחת. המתזמן ימתין למשך הזמן שנקבע במילישניות לאיסוף טקסטים חדשים לפני תחילת התרגום"
+		"message": "מתזמן התרגום מפחית את מספר הבקשות ל-API של שירות התרגום על ידי צבירת כמה שיותר טקסטים לשליחה בבקשה אחת. המתזמן ימתין לזמן שצוין במילישניות כדי לאסוף עוד טקסטים לפני תחילת התרגום"
 	},
 	"settings_option_translateScheduler_retryLimit": {
-		"message": "מספר ניסיונות התרגום החוזרים"
+		"message": "הגבלת ניסיונות תרגום חוזרים"
 	},
 	"settings_option_translateScheduler_retryLimit_desc": {
-		"message": "המתזמן ינסה לתרגם מחדש טקסטים כאשר מתרחשות שגיאות תרגום. אפשרות זו מגדירה מגבלה על מספר ניסיונות החזרה. הגדר מספר שלילי כדי לאפשר ניסיונות ללא הגבלה"
+		"message": "המתזמן ינסה לתרגם מחדש טקסטים כאשר מתרחשות שגיאות תרגום. אפשרות זו קובעת הגבלה על ניסיונות חוזרים. הגדר מספר שלילי כדי לאפשר ניסיונות בלתי מוגבלים"
 	},
 	"settings_option_translatorModule": {
-		"message": "מודול מתרגם"
+		"message": "מודול תרגום"
 	},
 	"settings_option_translatorModule_desc": {
-		"message": "איכות התרגומים והשפות הזמינות תלויות במתרגם"
+		"message": "איכות התרגומים והשפות הזמינות תלויות במודול התרגום"
 	},
 	"settings_option_tts": {
-		"message": "טקסט לדיבור (TTS)"
+		"message": "המרת טקסט לדיבור (TTS)"
 	},
 	"settings_option_ttsCustomModules": {
-		"message": "TTS מותאם אישית"
+		"message": "מודולים מותאמים אישית להמרת דיבור"
 	},
 	"settings_option_ttsCustomModules_button": {
-		"message": "ניהול מודולי TTS"
+		"message": "ניהול מודולי סינתזת דיבור"
 	},
 	"settings_option_ttsCustomModules_desc": {
-		"message": "אתה יכול להוסיף מודולים של המרת טקסט לדיבור המשתמשים בשירותים ובקולות המועדפים עליך. קרא עוד ב<slot id=docs>תיעוד עבור המרת טקסט לדיבור מותאמת אישית</slot>"
+		"message": "ניתן להוסיף מודולי סינתזת דיבור המשתמשים בשירותים ומנועי קול מועדפים. קרא עוד ב-<slot id=docs>תיעוד TTS מותאם אישית</slot>"
 	},
 	"settings_option_ttsModule": {
-		"message": "מודול TTS"
+		"message": "מודול TTS נבחר"
 	},
 	"settings_option_ttsModule_desc": {
-		"message": "מודול לדיבור טקסט"
+		"message": "מנוע קול המשמש להקראת הטקסט"
 	},
 	"settings_option_userLanguage": {
 		"message": "השפה שלך"
 	},
 	"settings_option_userLanguage_desc": {
-		"message": "שפת היעד לתרגום טקסט"
+		"message": "השפה שאליה יתורגמו הטקסטים"
 	},
 	"settings_pageTitle": {
 		"message": "הגדרות"
@@ -558,25 +542,32 @@
 		"message": "חלון קופץ"
 	},
 	"textTranslator_suggestLanguage": {
-		"message": "נראה שהשפה היא"
+		"message": "נראה כי שפת הטקסט היא <slot id=languageSuggest>$language_name$</slot>",
+		"placeholders": {
+			"language_name": {
+				"content": "$1",
+				"example": "Japanese"
+			}
+		}
 	},
 	"textTranslator_translateInputPlaceholder": {
-		"message": "הקלד טקסט"
+		"message": "הזן טקסט לתרגום",
+		"description": "Request to user input some text for translation"
 	},
 	"textTranslator_translatePlaceholder": {
-		"message": "טקסט מתורגם"
+		"message": "הטקסט המתורגם יופיע כאן"
 	},
 	"translatorsManagerWindow_add": {
-		"message": "הוסף"
+		"message": "הוסף מודול תרגום"
 	},
 	"translatorsManagerWindow_close": {
 		"message": "סגור"
 	},
 	"translatorsManagerWindow_emptyTranslatorsListText": {
-		"message": "עדיין לא נוספו מתרגמים מותאמים אישית"
+		"message": "לא נוספו מודולי תרגום מותאמים אישית"
 	},
 	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
-		"message": "האם אתה בטוח שברצונך להסיר את המתרגם \"$translator_name$\"?",
+		"message": "האם אתה בטוח שברצונך להסיר את מודול התרגום \"$translator_name$\"?",
 		"placeholders": {
 			"translator_name": {
 				"content": "$1",
@@ -585,7 +576,7 @@
 		}
 	},
 	"translatorsManagerWindow_title": {
-		"message": "מתרגמים מותאמים אישית"
+		"message": "מודולי תרגום מותאמים אישית"
 	},
 	"translatorsManagerWindow_translator_delete": {
 		"message": "מחק"
@@ -594,16 +585,16 @@
 		"message": "ערוך"
 	},
 	"ttsManagerWindow_add": {
-		"message": "הוסף"
+		"message": "הוסף מודול TTS"
 	},
 	"ttsManagerWindow_close": {
 		"message": "סגור"
 	},
 	"ttsManagerWindow_emptyTranslatorsListText": {
-		"message": "עדיין לא נוספו מודולי דיבור"
+		"message": "לא נוספו עדיין מודולי TTS"
 	},
 	"ttsManagerWindow_message_ttsRemoveConfirmation": {
-		"message": "האם אתה בטוח שברצונך להסיר את מודול הדיבור \"$tts_name$\"?",
+		"message": "האם אתה בטוח שברצונך להסיר את מודול ה-TTS \"$tts_name$\"?",
 		"placeholders": {
 			"tts_name": {
 				"content": "$1",
@@ -621,13 +612,13 @@
 		"message": "ערוך"
 	},
 	"validation_number": {
-		"message": "הפרמטר חייב להיות מספר"
+		"message": "הערך חייב להיות מספר"
 	},
 	"validation_numberBetweenRange": {
-		"message": "הפרמטר חייב להיות מספר בין $1 ל-$2"
+		"message": "הערך חייב להיות מספר בין $1 ל-$2"
 	},
 	"validation_positiveNumber": {
-		"message": "הפרמטר חייב להיות מספר חיובי"
+		"message": "הערך חייב להיות מספר חיובי"
 	},
 	"langCode_aa": {
 		"message": "אפארית"
