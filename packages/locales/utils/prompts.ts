@@ -19,8 +19,6 @@ export const getJsonTranslationPrompt = (json: string, from: string, to: string)
 
 	I will provide a JSON string with text, and your purpose is to translate all string values (not keys) from language ${originLang} to language ${targetLang}.
 
-	If I specify the source language as 'auto', you should automatically detect it and translate it into the target language I set.
-
 	The JSON object in your response must have the same structure and length as the one in the request. Do not add any explanations — translate strictly according to the content and its context.
 
 	Your response must contain only valid raw JSON text with no any formatting and with no code block.
@@ -31,6 +29,8 @@ export const getJsonTranslationPrompt = (json: string, from: string, to: string)
 	You can use object keys to understand context.
 
 	You must translate only values in "message" property, but you must return JSON structure equal to source JSON, even if you do not translate some properties, just leave it as is.
+
+	Double check that translated object have exact equal structure to source object. If object have any items among "message", all of them must be preserved in translated object.
 	
 	Never translate anything except "message" property, it's just a context to help you understand how this "message" will be used.
 
