@@ -1,5 +1,6 @@
 import isEqual from 'deep-equal';
 
+import { configureFakeLLMQuery, fakeTranslationPrompt } from './__tests__/llmFetcher';
 import { LLMFetcher } from './LLMFetcher';
 import { LLMJsonProcessor } from './LLMJsonProcessor';
 import { LLMJsonTranslator } from './LLMJsonTranslator';
@@ -7,16 +8,31 @@ import { LocalesManager } from './LocalesManager';
 
 const fetch = vi.fn();
 
+const translationPrompt = (json: string, from: string, to: string) =>
+	fakeTranslationPrompt(`translation request[${from}-${to}]` + json);
+
 beforeEach(() => {
 	vi.clearAllMocks();
 
 	fetch.mockRestore();
-	fetch.mockImplementation(async (request: string) => request);
+	fetch.mockImplementation(
+		configureFakeLLMQuery((json) => {
+			const match = json.match(/^(translation request\[(\w+)-(\w+)\])/);
+			return match
+				? json
+					.slice(match[0].length)
+					.replaceAll(
+						/:"(.+?)"/g,
+						`:"translated[${match[2]}-${match[3]}] $1"`,
+					)
+				: json;
+		}),
+	);
 });
 
 const translator = new LLMJsonTranslator(
 	new LLMJsonProcessor({
-		fetch,
+		query: fetch,
 		getLengthLimit() {
 			return 3000;
 		},
@@ -24,7 +40,9 @@ const translator = new LLMJsonTranslator(
 			return 0;
 		},
 	} satisfies LLMFetcher),
-	(json, from, to) => json.replaceAll(/:"(.+?)"/g, `:"translated[${from}-${to}] $1"`),
+	{
+		translate: translationPrompt,
+	},
 );
 
 const localesManager = new LocalesManager(translator);
@@ -232,27 +250,36 @@ describe('Skip nodes', () => {
 
 		expect(fetch.mock.calls).toStrictEqual([
 			[
-				JSON.stringify({
-					key2: {
-						message: 'translated[lang2-lang1] lang2 - value2',
+				[
+					{
+						role: 'user',
+						content: translationPrompt(
+							JSON.stringify({
+								key2: {
+									message: 'lang2 - value2',
+								},
+								key3: {
+									message: 'lang2 - value3',
+								},
+								nestedObject: {
+									bar: {
+										message: 'lang2 - text',
+										baz: {
+											message: 'lang2 - text',
+										},
+									},
+									partiallyTranslated: {
+										forTranslation: {
+											message: 'lang2 - text',
+										},
+									},
+								},
+							}),
+							'lang2',
+							'lang1',
+						),
 					},
-					key3: {
-						message: 'translated[lang2-lang1] lang2 - value3',
-					},
-					nestedObject: {
-						bar: {
-							message: 'translated[lang2-lang1] lang2 - text',
-							baz: {
-								message: 'translated[lang2-lang1] lang2 - text',
-							},
-						},
-						partiallyTranslated: {
-							forTranslation: {
-								message: 'translated[lang2-lang1] lang2 - text',
-							},
-						},
-					},
-				}),
+				],
 			],
 		]);
 	});
@@ -293,11 +320,26 @@ describe('Skip nodes', () => {
 
 		expect(fetch.mock.calls).toStrictEqual([
 			[
-				JSON.stringify({
-					key1: { message: 'translated[lang2-lang1] lang2 - value1' },
-					key2: { message: 'translated[lang2-lang1] lang2 - value2' },
-					key3: { message: 'translated[lang2-lang1] lang2 - value3' },
-				}),
+				[
+					{
+						role: 'user',
+						content: translationPrompt(
+							JSON.stringify({
+								key1: {
+									message: 'lang2 - value1',
+								},
+								key2: {
+									message: 'lang2 - value2',
+								},
+								key3: {
+									message: 'lang2 - value3',
+								},
+							}),
+							'lang2',
+							'lang1',
+						),
+					},
+				],
 			],
 		]);
 	});

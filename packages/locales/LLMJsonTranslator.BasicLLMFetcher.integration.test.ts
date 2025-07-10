@@ -38,13 +38,15 @@ test('Translation for a sample localization file', async () => {
 					dangerouslyAllowBrowser: true,
 				},
 				{
-					model: process.env.OPENAI_MODEL ?? 'openai/gpt-4.1-mini',
-					temperature: 1,
+					model: 'openai/gpt-4.1-mini',
+					temperature: 0,
 				},
 			),
 			{ concurrency: 10 },
 		),
-		getJsonTranslationPrompt,
+		{
+			translate: getJsonTranslationPrompt,
+		},
 	);
 
 	await expect(translator.translate(dataSample, 'en', 'ru')).resolves.toMatchSnapshot();
