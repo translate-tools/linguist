@@ -96,15 +96,37 @@ command
 					),
 					{
 						concurrency: 10,
-						termsLimit: 15,
-						chunkParsingRetriesLimit: options.forceUpdate ? 20 : 8,
+						termsLimit: 30,
+						chunkParsingRetriesLimit: options.forceUpdate ? 10 : 8,
 						backpressureTimeout: {
 							base: 100,
 							max: options.forceUpdate ? 3000 : 1000,
 						},
 					},
 				),
-				getJsonTranslationPrompt,
+				{
+					translate: getJsonTranslationPrompt,
+					fix({ missedPaths, addedPaths }) {
+						return [
+							{
+								role: 'user',
+								content:
+									[
+										'Incorrect!',
+										missedPaths &&
+											`You missed next paths in your result:\n${missedPaths.join(
+												'\n',
+											)}\n`,
+										addedPaths &&
+											`You added next paths that is not needed:\n${addedPaths.join(
+												'\n',
+											)}\n`,
+									].join('\n') +
+									'\n\nPlease fix this problems and return me correct JSON with no comments',
+							},
+						];
+					},
+				},
 			),
 		);
 
