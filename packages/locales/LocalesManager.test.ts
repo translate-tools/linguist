@@ -256,4 +256,49 @@ describe('Skip nodes', () => {
 			],
 		]);
 	});
+
+	test('Filter is skip nodes that is not present in target object', async () => {
+		await expect(
+			localesManager.sync({
+				target: {
+					language: 'lang1',
+					content: {},
+				},
+				source: {
+					language: 'lang2',
+					content: {
+						key1: { message: 'lang2 - value1' },
+						key2: { message: 'lang2 - value2' },
+						key3: { message: 'lang2 - value3' },
+						newValue: { message: 'lang2 - newValue' },
+						newValue2: { message: 'lang2 - newValue2' },
+						newValue3: { message: 'lang2 - newValue3' },
+					},
+					previous: {
+						key1: { message: 'lang2 - old value1' },
+						key2: { message: 'lang2 - old value2' },
+						key3: { message: 'lang2 - value3' },
+					},
+				},
+				skip(context) {
+					if (context.path[0].startsWith('new')) return true;
+					return false;
+				},
+			}),
+		).resolves.toStrictEqual({
+			key1: { message: 'translated[lang2-lang1] lang2 - value1' },
+			key2: { message: 'translated[lang2-lang1] lang2 - value2' },
+			key3: { message: 'translated[lang2-lang1] lang2 - value3' },
+		});
+
+		expect(fetch.mock.calls).toStrictEqual([
+			[
+				JSON.stringify({
+					key1: { message: 'translated[lang2-lang1] lang2 - value1' },
+					key2: { message: 'translated[lang2-lang1] lang2 - value2' },
+					key3: { message: 'translated[lang2-lang1] lang2 - value3' },
+				}),
+			],
+		]);
+	});
 });

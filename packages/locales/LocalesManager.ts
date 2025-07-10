@@ -59,6 +59,21 @@ export class LocalesManager {
 							path: path,
 						}),
 					)
+					.concat(
+						// Add superset paths
+						traverse(patch.superset)
+							.paths()
+							.slice(1)
+							.filter((path) =>
+								skip({
+									locale: structuredClone({
+										language: source.language,
+										content: patch.superset,
+									}),
+									path: path,
+								}),
+							),
+					)
 					.map(pathToString)
 				: [],
 		);
