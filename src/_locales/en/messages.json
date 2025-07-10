@@ -108,13 +108,14 @@
 		"message": "Save"
 	},
 	"ext_description": {
-		"message": "Web page translation, free text translation, dictionary, history, custom translators, all you need to break language barriers"
+		"message": "Web page translation, text translation, dictionary, history, custom translators, all you need to break language barriers"
 	},
 	"ext_name": {
 		"message": "Linguist - web page translator"
 	},
 	"history_control_selectEntry": {
-		"message": "Select translation for bulk action"
+		"message": "Pick translation for bulk action",
+		"description": "Description in finite form \"to pick\" with explaining what this checkbox will do"
 	},
 	"history_controls_clearHistory": {
 		"message": "Clear history"
@@ -258,13 +259,13 @@
 		"message": "Invalid value"
 	},
 	"settings_message_importConfig_invalidFile": {
-		"message": "The provided config file is incorrectly formatted and cannot be processed"
+		"message": "The provided config file is incorrect or corrupted, and cannot be processed"
 	},
 	"settings_message_importConfig_success": {
 		"message": "Import complete"
 	},
 	"settings_message_resetConfig_confirm": {
-		"message": "Are you sure you want to reset the settings to default?"
+		"message": "Confirm to reset the settings to default values"
 	},
 	"settings_message_resetConfig_success": {
 		"message": "Settings reset"
@@ -279,7 +280,8 @@
 		"message": "Clear cache"
 	},
 	"settings_option_cache_clear_desc": {
-		"message": "If you notice translation errors or accidentally translate private texts while the cache is enabled, you can delete all data from the cache"
+		"message": "If you notice translation errors or accidentally translate private texts while the cache is enabled, you can delete all data from the cache",
+		"description": "Explanation for user about cases when it's useful to clear cache"
 	},
 	"settings_option_cache_enable": {
 		"message": "Enable cache"
@@ -291,19 +293,21 @@
 		"message": "Use case-insensitive cache"
 	},
 	"settings_option_cache_ignoreCase_desc": {
-		"message": "When enabled, cached translations will be used for texts with different cases, which may cause translation artifacts in certain situations"
+		"message": "When enabled, cached translations will be used for texts with different cases, which may cause translation distortions in certain situations"
 	},
 	"settings_option_commonSettings": {
 		"message": "Common settings"
 	},
 	"settings_option_customTranslatorModule": {
-		"message": "Custom translators"
+		"message": "Custom translation modules",
+		"description": "An user defined code that implements a translation module"
 	},
 	"settings_option_customTranslatorModule_desc": {
-		"message": "You can add custom translators for your favorite translation services. Learn more in the <slot id=docs>custom translators documentation</slot>"
+		"message": "You can add custom translation modules that use your favorite translation services. Learn more in the <slot id=docs>custom translators documentation</slot>"
 	},
 	"settings_option_customTranslatorModule_manageButton": {
-		"message": "Manage translators"
+		"message": "Managing translators",
+		"description": "A button to show list of translation modules"
 	},
 	"settings_option_history_enable": {
 		"message": "Enable history"
@@ -330,7 +334,7 @@
 		"message": "Selectors to exclude from translation"
 	},
 	"settings_option_pageTranslation_excludeSelectors_desc": {
-		"message": "List of CSS selectors to be excluded from translation. One selector per line. If an element matches any of these selectors, its text, attributes, and nested elements will not be translated"
+		"message": "List of CSS selectors for elements to be excluded from translation. One selector per line. If an element matches any of these selectors, its text, attributes, and nested elements will not be translated"
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
 		"message": "Translate only visible elements"
@@ -441,10 +445,11 @@
 		"message": "Add a block with the original text to the translation popup"
 	},
 	"settings_option_selectTranslation_strictSelection": {
-		"message": "Strict text selection mode"
+		"message": "Strict mode of text span selection",
+		"description": "This option is about selecting text via mouse"
 	},
 	"settings_option_selectTranslation_strictSelection_desc": {
-		"message": "Ignore text selection if the left mouse button is released outside the block containing the selected text"
+		"message": "Ignore text span selection if the left mouse button is released outside the block containing the selected text"
 	},
 	"settings_option_selectTranslation_timeoutForHideButton": {
 		"message": "Delay before hiding the popup button"
@@ -462,16 +467,16 @@
 		"message": "Text translation"
 	},
 	"settings_option_textTranslator_rememberText": {
-		"message": "Remember translated text"
+		"message": "Remembering translated text"
 	},
 	"settings_option_textTranslator_rememberText_desc": {
-		"message": "Remember translated text for the next time the window opens"
+		"message": "Remembering translated text for the next time the window opens"
 	},
 	"settings_option_textTranslator_spellCheck": {
 		"message": "Enable spell check"
 	},
 	"settings_option_textTranslator_suggestLanguage": {
-		"message": "Show detected text language"
+		"message": "Showing detected text language"
 	},
 	"settings_option_textTranslator_suggestLanguageAlways": {
 		"message": "Always detect and suggest language"
@@ -489,7 +494,7 @@
 		"message": "Text accumulation delay"
 	},
 	"settings_option_translateScheduler_delay_desc": {
-		"message": "The translation scheduler reduces the number of requests to the translation service API by accumulating as many texts as possible to send in a single request. The scheduler will wait for the specified time in milliseconds to gather new texts before starting translation"
+		"message": "The translation scheduler reduces the number of requests to the translation service API by accumulating as many texts as possible to send in a single request. The scheduler will wait for the specified time in milliseconds to gather more texts before starting translation"
 	},
 	"settings_option_translateScheduler_retryLimit": {
 		"message": "Limit for translation retry attempts"
@@ -510,7 +515,7 @@
 		"message": "Custom speech synthesis modules"
 	},
 	"settings_option_ttsCustomModules_button": {
-		"message": "Manage speech synthesis modules"
+		"message": "Managing speech synthesis modules"
 	},
 	"settings_option_ttsCustomModules_desc": {
 		"message": "You can add speech synthesis modules that use your favorite services and voice engines. Read more in the <slot id=docs>custom TTS documentation</slot>"
@@ -546,7 +551,8 @@
 		}
 	},
 	"textTranslator_translateInputPlaceholder": {
-		"message": "Input text"
+		"message": "Input text for translation",
+		"description": "Request to user input some text for translation"
 	},
 	"textTranslator_translatePlaceholder": {
 		"message": "Translated text will be here"
