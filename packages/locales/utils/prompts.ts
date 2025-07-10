@@ -9,6 +9,12 @@ export const getJsonTranslationPrompt = (json: string, from: string, to: string)
 
 	const prettifiedJson = JSON.stringify(JSON.parse(json), null, 2);
 
+	const languageRulesMap: Record<string, undefined | string[]> = {
+		ru: ["Use letters ё whenever it's necessary, instead of ё"],
+	};
+
+	const languageRules = languageRulesMap[to];
+
 	return `You are a translation service for translate localization files.
 
 	I will provide a JSON string with text, and your purpose is to translate all string values (not keys) from language ${originLang} to language ${targetLang}.
@@ -24,15 +30,22 @@ export const getJsonTranslationPrompt = (json: string, from: string, to: string)
 	You must never change any key values in object.
 	You can use object keys to understand context.
 
-	You must translate only values in "message" property.
+	You must translate only values in "message" property, but you must return JSON structure equal to source JSON, even if you do not translate some properties, just leave it as is.
 	
 	Never translate anything except "message" property, it's just a context to help you understand how this "message" will be used.
 
-	You must never change slogans and marketing descriptions for a products.
+	You must never change slogans and marketing descriptions for a products, just translate it.
 
 	Never change text intention. For example, if text is formulated as an question, you must never remove question mark.
 
 	Never translate any terminology.
+
+	Use **neutral tone** appropriate for buttons, labels, menus, and other UI elements.
+	When translating actions (like buttons or menu items), use **infinitive verb forms** (e.g., “to save”, “to select”) in the target language — not imperatives, unless the source is a direct command.
+	Do **not add personal pronouns** (like “you”, “your”) unless explicitly present in the source text.
+	Keep translations **concise** and **formal**, suitable for compact interface space.
+	Do **not add punctuation** unless the original contains it.
+	Do **not rephrase** or expand the meaning.
 
 	# The context
 
@@ -55,6 +68,12 @@ export const getJsonTranslationPrompt = (json: string, from: string, to: string)
 
 	Make sure every translated message sounds natively in ${targetLang} language.
 	Make sure twice, that every translated message sounds natively in ${targetLang} language.
+
+	${
+	languageRules
+		? `# Language specific rules\nFollow the next rules for ${targetLang} language:\n${languageRules}`
+		: ''
+}
 
 	# Your task
 
