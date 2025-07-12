@@ -1,3 +1,5 @@
+import traverse, { Traverse, TraverseContext } from 'traverse';
+
 export type ValuesEqualityPredicate = (a: unknown, b: unknown) => boolean;
 
 export const sliceJsonString = (
@@ -129,4 +131,122 @@ export const getObjectPatch = (
 		subset,
 		superset,
 	};
+};
+
+export const getPathHash = (path: string[]) => path.join('.');
+
+export const getObjectPathsFromTraverse = (
+	traverseContext: Traverse<any>,
+	allPaths = false,
+) => {
+	const paths: string[] = [];
+	traverseContext.forEach(function() {
+		if (this.isRoot) return;
+
+		if (allPaths || this.isLeaf) {
+			paths.push(getPathHash(this.path));
+		}
+	});
+
+	return paths;
+};
+
+export const getObjectPaths = (object: Record<any, any>, allPaths = false) =>
+	getObjectPathsFromTraverse(traverse(object), allPaths);
+
+// TODO: simplify implementation
+/**
+ * Returns object that contains subset or superset of `source` derived of `target` object
+ *
+ * In case a mode is `intersection`, will be returned slice of `target` object with all values that match `source` object.
+ * In case a mode is `diff`, will be returned slice of `target` object with all values that not match `source` object.
+ *
+ * @param source Reference object
+ * @param target Object to compare structure and values with `source`
+ * @param mode 'diff' | 'intersection'
+ * @param isEqual Function that will be called for primitive values to check equality
+ * @returns
+ */
+export const getObjectsDiff = (
+	source: Record<any, any>,
+	target: Record<any, any>,
+	mode: 'diff' | 'intersection',
+	isEqual: ValuesEqualityPredicate = Object.is,
+) => {
+	const sourceWalker = traverse(source);
+	const targetWalker = traverse(target);
+
+	const intersection = targetWalker.map(function() {
+		if (this.isRoot) return;
+
+		// Remove whole subtrees that is not match the search mode
+		if (!sourceWalker.has(this.path)) {
+			this.block();
+			this.remove();
+
+			return;
+		}
+
+		const currentNode = this.node;
+		const targetNode = sourceWalker.get(this.path);
+
+		// Handle case if node types is not equal
+		if (getType(currentNode) !== getType(targetNode)) {
+			// Don't traverse nested nodes
+			this.block();
+			this.remove();
+
+			return;
+		}
+
+		// Continue traversing for objects
+		if (getType(currentNode) === 'object' || getType(currentNode) === 'array') return;
+
+		// Check primitive values equality with a predicate
+		if (!isEqual(currentNode, targetNode)) {
+			// Don't traverse nested nodes (just for safe, to ensure it will not continue)
+			this.block();
+			this.remove();
+
+			return;
+		}
+	});
+
+	if (mode === 'intersection') return intersection;
+
+	const intersectionWalker = traverse(intersection);
+	return targetWalker.map(function() {
+		if (this.isRoot || !this.isLeaf) return;
+
+		if (!intersectionWalker.has(this.path)) return;
+
+		this.remove();
+
+		// Remove parents
+		let context: TraverseContext | undefined = this;
+		while ((context = context.parent)) {
+			if (context.isRoot) break;
+
+			if (!intersectionWalker.has(context.path)) break;
+
+			let shouldRemoveParent = true;
+
+			// Check parent for nodes out of intersection
+			const objectKeys = context.keys ?? [];
+			if (objectKeys.length > 0) {
+				for (const key of objectKeys) {
+					if (!intersectionWalker.has([...context.path, key])) {
+						shouldRemoveParent = false;
+						break;
+					}
+				}
+			}
+
+			if (shouldRemoveParent) {
+				context.remove();
+			} else {
+				break;
+			}
+		}
+	});
 };

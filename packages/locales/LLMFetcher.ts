@@ -1,8 +1,13 @@
+export type MessageObject = {
+	role: 'system' | 'user' | 'assistant';
+	content: string;
+};
+
 export interface LLMFetcher {
 	/**
-	 * Method for request to AI model
+	 * Build completions with a model
 	 */
-	fetch(prompt: string): Promise<string>;
+	query(messages: MessageObject[]): Promise<MessageObject[]>;
 
 	/**
 	 * Max length of string for prompt

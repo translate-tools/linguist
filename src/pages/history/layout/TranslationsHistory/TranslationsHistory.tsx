@@ -244,7 +244,7 @@ export const TranslationsHistory: FC<TranslationsHistoryProps> = ({
 	if (translations.length === 0) {
 		const isEmptyFilters = search === '';
 		noEntriesMessage = isEmptyFilters
-			? getMessage('history_message_emptyEntries')
+			? getMessage('history_message_noEntries')
 			: getMessage('history_message_entriesNotFound');
 	}
 
