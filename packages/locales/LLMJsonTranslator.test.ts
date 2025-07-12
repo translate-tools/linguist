@@ -309,14 +309,7 @@ describe('Fetcher errors handling', () => {
 			[
 				{
 					addedPaths: ['irrelevantKey'],
-					missedPaths: [
-						'foo',
-						'bar',
-						'object',
-						'object.x',
-						'object.y',
-						'object.text',
-					],
+					missedPaths: ['foo', 'bar', 'object.x', 'object.y', 'object.text'],
 					context: {
 						from: 'en',
 						to: 'de',

@@ -113,15 +113,17 @@ command
 								content:
 									[
 										'Incorrect!',
-										missedPaths &&
+										missedPaths.length > 0 &&
 											`You missed next paths in your result:\n${missedPaths.join(
 												'\n',
 											)}\n`,
-										addedPaths &&
+										addedPaths.length > 0 &&
 											`You added next paths that is not needed:\n${addedPaths.join(
 												'\n',
 											)}\n`,
-									].join('\n') +
+									]
+										.filter(Boolean)
+										.join('\n') +
 									'\n\nPlease fix this problems and return me correct JSON with no comments',
 							},
 						];
