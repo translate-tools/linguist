@@ -28,7 +28,7 @@ test('intersection mode returns all nested nodes that does match', () => {
 	});
 });
 
-test.only('diff mode returns all nested nodes that does not match', () => {
+test('diff mode returns all nested nodes that does not match', () => {
 	expect(
 		getObjectsDiff(
 			{
