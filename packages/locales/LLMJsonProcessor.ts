@@ -5,8 +5,6 @@ import { sliceJsonString } from './utils/json';
 import { ObjectFilter, splitObjectByFilter } from './utils/splitObjectByFilter';
 import { waitTimeWithJitter } from './utils/time';
 
-export type ParsingErrorFixer = (response: string) => MessageObject[];
-
 export type ValidatorResult =
 	| {
 			isValid: true;
@@ -21,6 +19,19 @@ export type ObjectTransformingValidator = (
 	sourceObject: any,
 	processedObject: any,
 ) => ValidatorResult;
+
+export type ProcessingHooks = {
+	onParsingError?: (response: string) => MessageObject[];
+	onProcessed?: (info: { completed: number; total: number }) => void;
+	onError?: (info: { error: unknown; retry: number; id: number }) => void;
+};
+
+export type ProcessingOptions = ProcessingHooks & {
+	prompt: (json: string) => string;
+	filter?: ObjectFilter;
+	validate?: ObjectTransformingValidator;
+	validateSlice?: ObjectTransformingValidator;
+};
 
 /**
  * LLM processor for JSON objects that support object slicing
@@ -45,17 +56,13 @@ export class LLMJsonProcessor {
 		sourceObject: T,
 		{
 			prompt,
+			onProcessed,
 			onParsingError,
+			onError,
 			filter,
 			validate,
 			validateSlice,
-		}: {
-			prompt: (json: string) => string;
-			onParsingError?: ParsingErrorFixer;
-			filter?: ObjectFilter;
-			validate?: ObjectTransformingValidator;
-			validateSlice?: ObjectTransformingValidator;
-		},
+		}: ProcessingOptions,
 	) {
 		const filteredObject = filter
 			? splitObjectByFilter(sourceObject, filter)
@@ -70,6 +77,7 @@ export class LLMJsonProcessor {
 		const transformedSlices: [string, unknown][][] = Array(objectSlices.length);
 
 		let index = 0;
+		let completedCounter = 0;
 		const abort = new AbortController();
 		await Promise.all(
 			Array(this.config.concurrency ?? 3)
@@ -143,8 +151,23 @@ export class LLMJsonProcessor {
 
 								transformedSlices[currentIndex] =
 									Object.entries(transformedObject);
+
+								completedCounter++;
+
+								// Notify successful processing
+								if (onProcessed) {
+									onProcessed({
+										completed: completedCounter,
+										total: objectSlices.length,
+									});
+								}
 								break;
 							} catch (error) {
+								// Notify error
+								if (onError) {
+									onError({ error, retry, id: index });
+								}
+
 								if (
 									retry++ < (this.config.chunkParsingRetriesLimit ?? 5)
 								) {

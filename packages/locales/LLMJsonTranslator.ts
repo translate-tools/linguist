@@ -1,5 +1,5 @@
 import { MessageObject } from './LLMFetcher';
-import { LLMJsonProcessor, ParsingErrorFixer } from './LLMJsonProcessor';
+import { LLMJsonProcessor, ProcessingHooks, ValidatorResult } from './LLMJsonProcessor';
 import { getObjectPaths, getObjectsDiff } from './utils/json';
 
 export type TranslationContext = {
@@ -22,7 +22,7 @@ export const createValidator =
 		context: TranslationContext;
 		fix?: InvalidTranslationPromptFetcher;
 	}) =>
-		(source: Record<any, any>, transformed: Record<any, any>) => {
+		(source: Record<any, any>, transformed: Record<any, any>): ValidatorResult => {
 			const missedPaths = getObjectPaths(
 				getObjectsDiff(transformed, source, 'diff', Boolean),
 			);
@@ -48,16 +48,15 @@ export const createValidator =
 export class LLMJsonTranslator {
 	constructor(
 		private readonly jsonProcessor: LLMJsonProcessor,
-		private readonly prompts: {
+		private readonly options: {
 			translate: (json: string, from: string, to: string) => string;
 			fix?: InvalidTranslationPromptFetcher;
-			onParsingError?: ParsingErrorFixer;
-		},
+		} & ProcessingHooks,
 	) {}
 
 	public async translate<T extends {}>(sourceObject: T, from: string, to: string) {
 		const validator = createValidator({
-			fix: this.prompts.fix,
+			fix: this.options.fix,
 			context: {
 				json: structuredClone(sourceObject),
 				from,
@@ -66,8 +65,10 @@ export class LLMJsonTranslator {
 		});
 
 		return this.jsonProcessor.process(sourceObject, {
-			prompt: (json) => this.prompts.translate(json, from, to),
-			onParsingError: this.prompts.onParsingError,
+			prompt: (json) => this.options.translate(json, from, to),
+			onProcessed: this.options.onProcessed,
+			onParsingError: this.options.onParsingError,
+			onError: this.options.onError,
 			validate: validator,
 			validateSlice: validator,
 		});

@@ -106,6 +106,9 @@ command
 				),
 				{
 					translate: getJsonTranslationPrompt,
+					onProcessed(info) {
+						console.log(`Translated ${info.completed}/${info.total}`);
+					},
 					onParsingError(text) {
 						console.log('Invalid JSON', text);
 
