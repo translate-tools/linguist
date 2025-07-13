@@ -106,6 +106,17 @@ command
 				),
 				{
 					translate: getJsonTranslationPrompt,
+					onParsingError(text) {
+						console.log('Invalid JSON', text);
+
+						return [
+							{
+								role: 'user',
+								content:
+									'Your JSON is invalid. Fix it and send me back valid JSON',
+							},
+						];
+					},
 					fix({ missedPaths, addedPaths }) {
 						return [
 							{

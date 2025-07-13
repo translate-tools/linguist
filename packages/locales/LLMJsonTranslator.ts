@@ -1,5 +1,5 @@
 import { MessageObject } from './LLMFetcher';
-import { LLMJsonProcessor } from './LLMJsonProcessor';
+import { LLMJsonProcessor, ParsingErrorFixer } from './LLMJsonProcessor';
 import { getObjectPaths, getObjectsDiff } from './utils/json';
 
 export type TranslationContext = {
@@ -51,6 +51,7 @@ export class LLMJsonTranslator {
 		private readonly prompts: {
 			translate: (json: string, from: string, to: string) => string;
 			fix?: InvalidTranslationPromptFetcher;
+			onParsingError?: ParsingErrorFixer;
 		},
 	) {}
 
@@ -66,6 +67,7 @@ export class LLMJsonTranslator {
 
 		return this.jsonProcessor.process(sourceObject, {
 			prompt: (json) => this.prompts.translate(json, from, to),
+			onParsingError: this.prompts.onParsingError,
 			validate: validator,
 			validateSlice: validator,
 		});

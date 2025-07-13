@@ -5,6 +5,8 @@ import { sliceJsonString } from './utils/json';
 import { ObjectFilter, splitObjectByFilter } from './utils/splitObjectByFilter';
 import { waitTimeWithJitter } from './utils/time';
 
+export type ParsingErrorFixer = (response: string) => MessageObject[];
+
 export type ValidatorResult =
 	| {
 			isValid: true;
@@ -43,11 +45,13 @@ export class LLMJsonProcessor {
 		sourceObject: T,
 		{
 			prompt,
+			onParsingError,
 			filter,
 			validate,
 			validateSlice,
 		}: {
 			prompt: (json: string) => string;
+			onParsingError?: ParsingErrorFixer;
 			filter?: ObjectFilter;
 			validate?: ObjectTransformingValidator;
 			validateSlice?: ObjectTransformingValidator;
@@ -106,7 +110,16 @@ export class LLMJsonProcessor {
 									throw new TypeError('Empty message in response');
 
 								const sourceObject = JSON.parse(slice);
-								const transformedObject = JSON.parse(transformedSlice);
+								let transformedObject;
+								try {
+									transformedObject = JSON.parse(transformedSlice);
+								} catch (error) {
+									if (onParsingError) {
+										correctionMessages =
+											onParsingError(transformedSlice);
+									}
+									throw error;
+								}
 
 								// Validate slice
 								if (validateSlice) {
