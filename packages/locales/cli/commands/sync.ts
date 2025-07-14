@@ -189,21 +189,12 @@ command
 						language: targetLanguage,
 						content: localeObject,
 					},
-					skip(context) {
-						if (context.path[0].startsWith('langCode_')) return true;
-
-						return false;
-					},
 				});
 
 				await mkdir(path.dirname(targetLanguageFilename), { recursive: true });
 				await writeFile(
 					targetLanguageFilename,
-					JSON.stringify(
-						postprocessLocale(syncedLocale, targetLanguage),
-						null,
-						'\t',
-					),
+					JSON.stringify(postprocessLocale(syncedLocale), null, '\t'),
 				);
 			} catch (error) {
 				if (options.skipErrors) {
