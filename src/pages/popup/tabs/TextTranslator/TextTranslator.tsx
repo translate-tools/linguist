@@ -158,7 +158,6 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 
 	const applySuggestedLanguage: React.MouseEventHandler = useCallback(
 		(evt) => {
-			console.log('CLICK');
 			evt.preventDefault();
 
 			if (languageSuggestion !== null) {
