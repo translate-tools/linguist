@@ -15,23 +15,6 @@ export class BasicLLMFetcher implements LLMFetcher {
 		this.api = new OpenAI(params);
 	}
 
-	async fetch(prompt: string) {
-		const response = await this.api.chat.completions.create({
-			model: this.config.model,
-			temperature: this.config.temperature,
-			messages: [
-				...(this.config.systemPrompt ?? []),
-				{ role: 'user', content: prompt },
-			],
-		});
-
-		const { content } = response.choices[0].message;
-
-		if (!content) throw new Error('Invalid response');
-
-		return content;
-	}
-
 	async query(messages: MessageObject[]): Promise<MessageObject[]> {
 		const response = await this.api.chat.completions.create({
 			model: this.config.model,
@@ -51,7 +34,7 @@ export class BasicLLMFetcher implements LLMFetcher {
 	}
 
 	getLengthLimit() {
-		return 5000;
+		return 25000;
 	}
 
 	getRequestsTimeout() {
