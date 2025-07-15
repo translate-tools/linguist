@@ -1,12 +1,12 @@
 {
 	"common_action_addToDictionary": {
-		"message": "Afegir la traducció al diccionari"
+		"message": "Afegir traducció al diccionari"
 	},
 	"common_action_removeFromDictionary": {
-		"message": "Eliminar la traducció del diccionari"
+		"message": "Eliminar traducció del diccionari"
 	},
 	"common_bgUnavailable": {
-		"message": "El script del fons no està disponible"
+		"message": "Script de fons no disponible"
 	},
 	"common_cancel": {
 		"message": "Cancel·lar"
@@ -15,7 +15,7 @@
 		"message": "Tancar"
 	},
 	"common_copy": {
-		"message": "Còpia"
+		"message": "Copiar"
 	},
 	"common_error": {
 		"message": "Error"
@@ -24,109 +24,110 @@
 		"message": "$1 - Traductor fora de línia"
 	},
 	"common_retry": {
-		"message": "Tornar a intentar"
+		"message": "Reintentar"
 	},
 	"common_translate": {
 		"message": "Traduir"
 	},
 	"component_hotkey_placeholder": {
-		"message": "Fes clic per enregistrar les tecles de dreceres"
+		"message": "Fes clic per enregistrar una drecera"
 	},
 	"component_hotkey_recordPlaceholder": {
 		"message": "Prem les tecles"
 	},
 	"component_hotkey_resetButton": {
-		"message": "Restableix"
+		"message": "Restablir"
 	},
 	"contextMenu_disablePageTranslation": {
-		"message": "Desactiva la traducció de pàgines"
+		"message": "Atura la traducció de la pàgina"
 	},
 	"contextMenu_translatePage": {
-		"message": "Tradueix la pàgina"
+		"message": "Traduir pàgina"
 	},
 	"contextMenu_translateSelectedText": {
-		"message": "Tradueix el text seleccionat"
+		"message": "Traduir el text seleccionat"
 	},
 	"dictionaryButton_add": {
-		"message": "Afegir al diccionari"
+		"message": "Afegeix al diccionari"
 	},
 	"dictionaryButton_delete": {
-		"message": "Eliminar del diccionari"
+		"message": "Elimina del diccionari"
 	},
 	"dictionary_button_export": {
-		"message": "Exporta"
+		"message": "Exportar"
 	},
 	"dictionary_button_removeAll": {
 		"message": "Elimina-ho tot"
 	},
 	"dictionary_deleteAll": {
-		"message": "Esteu segur que voleu eliminar TOTES les traduccions del diccionari?"
+		"message": "Esteu segur que voleu suprimir TOTES les traduccions del diccionari?"
 	},
 	"dictionary_deleteConfirmation": {
-		"message": "Esteu segur que voleu eliminar aquesta traducció?"
+		"message": "Esteu segur que voleu suprimir aquesta traducció?"
 	},
 	"dictionary_description": {
-		"message": "Mantingueu les vostres traduccions al diccionari per trobar-les més tard."
+		"message": "Desa les traduccions al diccionari per trobar-les ràpidament més tard"
 	},
 	"dictionary_emptyDictionary": {
-		"message": "El diccionari està buit. Comenceu a omplir-lo mentre traduïu algun text."
+		"message": "El diccionari està buit, comenceu a omplir-lo traduint algun text"
 	},
 	"dictionary_filter_from": {
-		"message": "De"
+		"message": "Idioma del text d'origen"
 	},
 	"dictionary_filter_to": {
-		"message": "A"
+		"message": "Idioma de destinació"
 	},
 	"dictionary_message_deleteAll_success": {
-		"message": "Totes les traduccions han estat eliminades"
+		"message": "S'han eliminat totes les traduccions"
 	},
 	"dictionary_notFoundEntries": {
-		"message": "No s'han trobat traduccions que coincideixen amb aquests filtres"
+		"message": "No s'han trobat traduccions que coincideixin amb aquests filtres"
 	},
 	"dictionary_pageTitle": {
 		"message": "Diccionari"
 	},
 	"dictionary_resetFilters": {
-		"message": "restablir els filtres"
+		"message": "Restableix els filtres"
 	},
 	"dictionary_searchPlaceholder": {
 		"message": "Cerca per text"
 	},
 	"editorWindow_close": {
-		"message": "Tanca"
+		"message": "Tancar"
 	},
 	"editorWindow_data_code": {
 		"message": "Codi"
 	},
-	"editorWindow_data_name": {
-		"message": "Nom"
+	"editorWindow_data_title": {
+		"message": "Nom del mòdul"
 	},
-	"editorWindow_message_invalidName": {
-		"message": "El nom ha de contenir almenys un símbol"
+	"editorWindow_message_invalidTitle": {
+		"message": "El nom del mòdul ha de tenir almenys un caràcter"
 	},
 	"editorWindow_save": {
-		"message": "Desa"
+		"message": "Desar"
 	},
 	"ext_description": {
-		"message": "Traducció de pàgines i textos, diccionari, històric, traductors personalitzats i sense connexió"
+		"message": "Traducció de pàgines web, traducció de text, diccionari, historial, traductors personalitzats, tot el que necessites per trencar barreres lingüístiques"
 	},
 	"ext_name": {
 		"message": "Linguist - traductor de pàgines web"
 	},
 	"history_control_selectEntry": {
-		"message": "Selecciona entrada"
+		"message": "Seleccionar traducció per a acció massiva",
+		"description": "Description in finite form \"to pick\" with explaining what this checkbox will do"
 	},
 	"history_controls_clearHistory": {
-		"message": "Neteja l'historial"
+		"message": "Esborrar historial"
 	},
 	"history_controls_deleteSelected": {
-		"message": "Eliminar seleccionats"
+		"message": "Eliminar les traduccions seleccionades"
 	},
 	"history_controls_selectAll": {
 		"message": "Seleccionar totes les traduccions"
 	},
 	"history_message_clearHistoryConfirmation": {
-		"message": "Esteu segur que voleu netejar l'historial? Totes les entrades seran eliminades"
+		"message": "Esteu segur que voleu esborrar l'historial? Totes les entrades seran eliminades"
 	},
 	"history_message_deleteEntryConfirmation": {
 		"message": "Esteu segur que voleu eliminar aquesta entrada?"
@@ -134,14 +135,14 @@
 	"history_message_deleteSelectedEntriesConfirmation": {
 		"message": "Esteu segur que voleu eliminar les entrades seleccionades ($1)?"
 	},
-	"history_message_emptyEntries": {
-		"message": "Historial buit"
-	},
 	"history_message_entriesNotFound": {
-		"message": "No s'han trobat traduccions que satisfacin el filtre"
+		"message": "No s'han trobat traduccions que coincideixin amb el filtre"
+	},
+	"history_message_noEntries": {
+		"message": "L'historial està buit"
 	},
 	"history_notification_disabled": {
-		"message": "La gravació de l'historial està desactivada, així que no apareixeran entrades noves. Ho pots canviar a <slot id=preferences>preferències</slot>"
+		"message": "L'enregistrament de l'historial està desactivat, per tant, no apareixeran noves entrades. Podeu canviar això a <slot id=preferences>Preferències</slot>"
 	},
 	"history_pageTitle": {
 		"message": "Historial"
@@ -156,7 +157,7 @@
 		"message": "Canviar idioma"
 	},
 	"lang_detect": {
-		"message": "Detectar automàticament"
+		"message": "Detecció automàtica"
 	},
 	"lang_select": {
 		"message": "Seleccionar idioma"
@@ -164,83 +165,62 @@
 	"lang_swap": {
 		"message": "Intercanviar idiomes"
 	},
-	"message_askResetConfig": {
-		"message": "Voleu restablir la configuració?"
-	},
-	"message_cacheFlushed": {
-		"message": "La memòria caché s'ha netejat"
-	},
-	"message_changesSaved": {
-		"message": "Canvis desats"
-	},
-	"message_error": {
-		"message": "Error"
-	},
-	"message_errorOfTranslate": {
-		"message": "Error de traducció"
-	},
-	"message_serviceRequiredKey": {
-		"message": "El servei requereix una clau"
-	},
-	"message_translateOfText": {
-		"message": "Traduït"
-	},
 	"message_unknownError": {
 		"message": "Error desconegut"
 	},
 	"pageTranslator_alwaysTranslateLang": {
-		"message": "Sempre tradueix aquest idioma"
+		"message": "Traduir sempre aquest idioma"
 	},
 	"pageTranslator_commonPreferences_autoTranslate_disable": {
-		"message": "Desactiva"
+		"message": "Desactivar"
 	},
 	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
-		"message": "Desactiva per a tots els llocs web"
+		"message": "Desactivar per a tots els llocs"
 	},
 	"pageTranslator_commonPreferences_autoTranslate_enable": {
 		"message": "Activar"
 	},
 	"pageTranslator_commonPreferences_title": {
-		"message": "Preferències comunes per aquest idioma"
+		"message": "Preferències comunes per a aquest idioma"
 	},
 	"pageTranslator_option_autoTranslate": {
 		"message": "Traducció automàtica"
 	},
-	"pageTranslator_showOptions": {
-		"message": "Mostrar opcions"
-	},
 	"pageTranslator_showOriginal": {
 		"message": "Mostrar original"
 	},
+	"pageTranslator_showTranslationPreferences": {
+		"message": "Preferències de traducció"
+	},
 	"pageTranslator_sitePreferences_autoTranslate_always": {
-		"message": "Sempre traduir"
+		"message": "Traduir sempre"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
-		"message": "Sempre traduir per aquest idioma"
+		"message": "Traduir sempre per a aquest idioma"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_default": {
-		"message": "Utilitzar les regles comunes"
+		"message": "Utilitzar regles comunes"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
-		"message": "Utilitzar les regles comunes per aquest idioma"
+		"message": "Utilitzar regles comunes per a aquest idioma"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_never": {
-		"message": "Mai traduir"
+		"message": "No traduir mai"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
-		"message": "Mai traduir per a aquest idioma"
+		"message": "No traduir mai per a aquest idioma"
 	},
 	"pageTranslator_sitePreferences_title": {
 		"message": "Preferències per a"
 	},
 	"pageTranslator_translatePage": {
-		"message": "Tradueix la pàgina"
+		"message": "Traduir pàgina"
 	},
 	"pageTranslator_translationReport": {
 		"message": "Informe de traducció"
 	},
 	"pageTranslator_translationReport_queue": {
-		"message": "Cua"
+		"message": "Pendent"
 	},
 	"pageTranslator_translationReport_reject": {
 		"message": "Errors"
@@ -249,16 +229,16 @@
 		"message": "Traduït"
 	},
 	"popup_tabIdNotFound": {
-		"message": "La pestanya \"$1\" no s'ha trobat"
+		"message": "Pestanya \"$1\" no trobada"
 	},
 	"popup_tab_translatePage": {
-		"message": "Traducció de pàgines"
+		"message": "Traducció de pàgina"
 	},
 	"popup_tab_translateText": {
-		"message": "Traducció de textos"
+		"message": "Traducció de text"
 	},
 	"settings_button_cancel": {
-		"message": "Cancel"
+		"message": "Cancel·lar"
 	},
 	"settings_button_export": {
 		"message": "Exportar configuració"
@@ -267,25 +247,25 @@
 		"message": "Importar configuració"
 	},
 	"settings_button_reset": {
-		"message": "Reiniciar configuració"
+		"message": "Restablir configuració"
 	},
 	"settings_button_saveChanges": {
-		"message": "Guardar canvis"
+		"message": "Desar canvis"
 	},
 	"settings_message_clearCache_success": {
-		"message": "La memòria cau ha estat esborrada"
+		"message": "Caché esborrada"
 	},
 	"settings_message_common_invalidValueType": {
-		"message": "Valor no vàlid"
+		"message": "Valor invàlid"
 	},
 	"settings_message_importConfig_invalidFile": {
-		"message": "No es pot manipular el fitxer d'importació"
+		"message": "El fitxer de configuració proporcionat és incorrecte o està danyat, i no es pot processar"
 	},
 	"settings_message_importConfig_success": {
-		"message": "Importació finalitzada"
+		"message": "Importació completada"
 	},
 	"settings_message_resetConfig_confirm": {
-		"message": "Voleu restablir la configuració?"
+		"message": "Confirmeu per restablir la configuració als valors per defecte"
 	},
 	"settings_message_resetConfig_success": {
 		"message": "Configuració restablerta"
@@ -293,158 +273,143 @@
 	"settings_message_saveChanges_success": {
 		"message": "Canvis desats"
 	},
-	"settings_option_appIcon": {
-		"message": "Icona d'extensió"
-	},
-	"settings_option_appIcon_desc": {
-		"message": "Quan es selecciona l'icona dinàmica, els colors s'adaptaran al tema del navegador"
-	},
-	"settings_option_appIcon_item_auto": {
-		"message": "Dinàmic"
-	},
-	"settings_option_appIcon_item_color": {
-		"message": "Color"
-	},
-	"settings_option_appIcon_item_dark": {
-		"message": "Fosc"
-	},
-	"settings_option_appIcon_item_light": {
-		"message": "Clar"
-	},
 	"settings_option_cache": {
 		"message": "Memòria cau"
 	},
 	"settings_option_cache_clear": {
-		"message": "Netejar memòria cau"
+		"message": "Esborrar memòria cau"
 	},
 	"settings_option_cache_clear_desc": {
-		"message": "Elimina la memòria cau si hi ha artefactes de traducció o necessites eliminar secrets"
+		"message": "Si observeu errors de traducció o traduïu accidentalment textos privats mentre la memòria cau està activada, podeu eliminar totes les dades de la memòria cau",
+		"description": "Explanation for user about cases when it's useful to clear cache"
 	},
 	"settings_option_cache_enable": {
-		"message": "Habilita la memòria cau"
+		"message": "Activar memòria cau"
 	},
 	"settings_option_cache_enable_desc": {
-		"message": "Quan la memòria cau està habilitada, les traduccions que s'han traduït una vegada estaran disponibles immediatament, fins i tot sense connexió a internet."
+		"message": "Quan la memòria cau està activada, els textos que s'han traduït abans es traduiran instantàniament sense sol·licituds addicionals al servei de traducció"
 	},
 	"settings_option_cache_ignoreCase": {
-		"message": "No diferenciar majúscules de minúscules"
+		"message": "Utilitzar memòria cau sense distingir majúscules"
 	},
 	"settings_option_cache_ignoreCase_desc": {
-		"message": "Quan està habilitada, les traduccions de la memòria cau s'utilitzaran amb coincidències no exactes, la qual cosa pot provocar artefactes de traducció."
+		"message": "Quan està activat, les traduccions emmagatzemades a la memòria cau s'utilitzaran per a textos amb diferents majúscules, cosa que pot causar distorsions de traducció en determinades situacions"
 	},
 	"settings_option_commonSettings": {
-		"message": "Configuracions comunes"
+		"message": "Configuració comuna"
 	},
 	"settings_option_customTranslatorModule": {
-		"message": "Traductors personalitzats"
+		"message": "Mòduls de traducció personalitzats",
+		"description": "An user defined code that implements a translation module"
 	},
 	"settings_option_customTranslatorModule_desc": {
-		"message": "Podeu afegir traductors personalitzats per als vostres serveis de traducció preferits. Llegiu més i trobeu mòduls a la <slot id=docs>documentació de traductors personalitzats</slot>."
+		"message": "Podeu afegir mòduls de traducció personalitzats que utilitzin els vostres serveis de traducció preferits. Més informació a la <slot id=docs>documentació de traductors personalitzats</slot>"
 	},
 	"settings_option_customTranslatorModule_manageButton": {
-		"message": "Gestionar traductors"
+		"message": "Gestionar traductors",
+		"description": "A button to show list of translation modules"
 	},
 	"settings_option_history_enable": {
-		"message": "Activa l'historial"
+		"message": "Activar historial"
 	},
 	"settings_option_history_enable_desc": {
-		"message": "Quan està activat, qualsevol traducció quedarà registrada en una pàgina d'historial"
-	},
-	"settings_option_mainPreferences": {
-		"message": "Configuracions principals"
+		"message": "Quan estigui activat, les traduccions es registraran i apareixeran a la <slot id=historyPage>pàgina d'historial</slot>"
 	},
 	"settings_option_pageTranslation": {
-		"message": "Traducció de pàgina"
+		"message": "La traducció de pàgina completa"
 	},
 	"settings_option_pageTranslation_detectLanguageByContent": {
-		"message": "Detecta la llengua pel contingut"
+		"message": "Detectar idioma pel contingut"
 	},
 	"settings_option_pageTranslation_detectLanguageByContent_desc": {
-		"message": "Analitza el text de la pàgina web per detectar la llengua de la pàgina. Quan estigui desactivat, s'usarà una llengua proporcionada en les metadades de la pàgina"
+		"message": "Analitzar el text de la pàgina web per detectar el seu idioma. Quan estigui desactivat, s'utilitzarà l'idioma especificat a la <slot id=docs>metadades de la pàgina</slot>"
 	},
 	"settings_option_pageTranslation_enableContextMenu": {
-		"message": "Habilita el botó del menú contextual"
+		"message": "Activar botó del menú contextual"
 	},
 	"settings_option_pageTranslation_enableContextMenu_desc": {
-		"message": "Afegeix un botó per alternar la traducció de la pàgina a un menú contextual"
+		"message": "Afegir un botó per activar la traducció de pàgina al menú contextual de la pàgina"
 	},
 	"settings_option_pageTranslation_excludeSelectors": {
-		"message": "Selectors per saltar la traducció"
+		"message": "Selectors per excloure de la traducció"
 	},
 	"settings_option_pageTranslation_excludeSelectors_desc": {
-		"message": "Llista de selectors CSS que no es traduiran. Un selector per línia. Si un element coincideix amb algun d'aquests selectors, aquest element, els seus atributs i elements anidats no seran traduïts."
+		"message": "Llista de selectors CSS per a elements que s'han d'excloure de la traducció. Un selector per línia. Si un element coincideix amb algun d'aquests selectors, el seu text, atributs i elements niats no es traduiran"
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
-		"message": "Tradueix només els elements visibles"
+		"message": "Traduir només els elements visibles"
 	},
 	"settings_option_pageTranslation_lazyTranslate_desc": {
-		"message": "Quan aquesta opció està habilitada, només es tradueixen els elements visibles. Això pot ser útil per estalviar tràfic de xarxa"
+		"message": "Quan aquesta opció està activada, només es traduiran els elements visibles. Aquesta opció redueix el trànsit de xarxa"
 	},
 	"settings_option_pageTranslation_originalTextPopup": {
-		"message": "Habilita la finestra emergent amb el text original"
+		"message": "Activar la finestra emergent amb el text original"
 	},
 	"settings_option_pageTranslation_originalTextPopup_desc": {
-		"message": "Mostra una finestra emergent amb el text original en passar el ratolí sobre el text traduït"
+		"message": "Mostra una finestra emergent amb el text original quan es passa el cursor sobre blocs de text traduïts"
 	},
-	"settings_option_pageTranslation_toggleTranslationHotkey": {
-		"message": "Tecles de drecera"
+	"settings_option_pageTranslation_shortcut_toggleTranslation": {
+		"message": "Drecera"
 	},
-	"settings_option_pageTranslation_toggleTranslationHotkey_desc": {
-		"message": "Dreceres de teclat per activar/desactivar la traducció de la pàgina\nPrem ESC per restablir les tecles"
+	"settings_option_pageTranslation_shortcut_toggleTranslation_desc": {
+		"message": "Drecera per activar o desactivar la traducció de pàgines\nPrem ESC per restablir les tecles"
 	},
 	"settings_option_pageTranslation_translatableAttributes": {
-		"message": "Atributs traduíbles."
+		"message": "Atributs traduïbles"
 	},
 	"settings_option_pageTranslation_translatableAttributes_desc": {
-		"message": "Introduïu els noms dels atributs <slot id=htmlAttributes>HTML</slot> per a la traducció. Un atribut per línia"
+		"message": "Introdueix els noms dels <slot id=htmlAttributes>atributs HTML</slot> per traduir, un atribut per línia\nNomés es traduiran els atributs d'aquesta llista"
 	},
 	"settings_option_popupTab_pageTranslator_showCounters": {
-		"message": "Mostra estadístiques de traducció"
+		"message": "Mostrar el progrés de la traducció"
 	},
 	"settings_option_popupTab_pageTranslator_showCounters_desc": {
-		"message": "Mostra les estadístiques per a la traducció de pàgines"
+		"message": "Mostra un panell amb el progrés de la traducció de la pàgina al menú emergent de l'extensió"
 	},
 	"settings_option_selectTranslation": {
-		"message": "Traducció de text seleccionat"
+		"message": "Traducció per al text seleccionat"
 	},
-	"settings_option_selectTranslation_detectedLangFirst": {
-		"message": "Prefereix l'idioma detectat del text en lloc de l'idioma de la pàgina"
+	"settings_option_selectTranslation_detectTextLanguage": {
+		"message": "Detectar l'idioma del text"
 	},
-	"settings_option_selectTranslation_detectedLangFirst_desc": {
-		"message": "Quan estigui habilitat, s'utilitzarà l'idioma detectat del text seleccionat abans que l'idioma de la pàgina"
+	"settings_option_selectTranslation_detectTextLanguage_desc": {
+		"message": "Quan està activat, el text seleccionat s'analitzarà per detectar l'idioma per a la traducció. En cas contrari, s'utilitzarà l'idioma de la pàgina"
 	},
 	"settings_option_selectTranslation_disableWhileTranslatePage": {
-		"message": "Desactiva mentre es tradueix la pàgina"
+		"message": "Desactivar mentre es tradueix la pàgina"
 	},
 	"settings_option_selectTranslation_enable": {
-		"message": "Activa"
+		"message": "Activar la traducció de text seleccionat"
+	},
+	"settings_option_selectTranslation_enable_desc": {
+		"message": "Quan aquesta funció està activada, podeu seleccionar qualsevol text de la pàgina i traduir-lo en un menú emergent"
 	},
 	"settings_option_selectTranslation_focusOnTranslateButton": {
-		"message": "Autoenfocament al botó de traducció"
+		"message": "Autoenfocar al botó de traducció"
 	},
 	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
-		"message": "Enfoca al botó de traducció quan apareixi"
+		"message": "Quan el botó de traducció aparegui a la pàgina, s'enfocarà automàticament"
 	},
 	"settings_option_selectTranslation_header_languageChoice": {
 		"message": "Configuració d'idioma"
 	},
 	"settings_option_selectTranslation_isUseAutoForDetectLang": {
-		"message": "Habilita la detecció automàtica de llengua pel traductor"
+		"message": "Permet al mòdul de traducció detectar l'idioma del text"
 	},
 	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
-		"message": "Utilitza la detecció automàtica de llengua pel traductor quan la llengua no es pot detectar localment"
+		"message": "Quan l'idioma del text no es pot detectar localment i aquesta opció està activada, el text es traduirà amb l'idioma \"auto\" si és compatible.\nQuan l'opció està desactivada, s'utilitzarà un altre mètode alternatiu per establir l'idioma d'origen del text"
 	},
 	"settings_option_selectTranslation_mode": {
-		"message": "Activador de traducció"
+		"message": "Acció en seleccionar text"
 	},
 	"settings_option_selectTranslation_mode_item_contextMenu": {
-		"message": "Botó del menú contextual"
+		"message": "Traduir text mitjançant el menú contextual"
 	},
 	"settings_option_selectTranslation_mode_item_popupButton": {
-		"message": "Botó emergent"
+		"message": "Mostrar botó de traducció"
 	},
 	"settings_option_selectTranslation_mode_item_quickTranslate": {
-		"message": "Traducció ràpida per selecció"
+		"message": "Traduir text instantàniament"
 	},
 	"settings_option_selectTranslation_modifiers": {
 		"message": "Modificadors"
@@ -462,109 +427,110 @@
 		"message": "meta"
 	},
 	"settings_option_selectTranslation_modifiers_key_shift": {
-		"message": "majús"
+		"message": "majúscules"
 	},
 	"settings_option_selectTranslation_rememberDirection": {
-		"message": "Recorda l'idioma més recent seleccionat per al text"
+		"message": "Recorda l'idioma del text seleccionat més recentment"
 	},
 	"settings_option_selectTranslation_showOnceForSelection": {
-		"message": "Mostra el botó de traducció només una vegada per cada selecció de text"
+		"message": "Mostra el botó de traducció una vegada per selecció de text"
 	},
 	"settings_option_selectTranslation_showOnceForSelection_desc": {
-		"message": "El botó només es mostrarà una vegada per cada selecció de text. Si necessites tornar-lo a mostrar, selecciona'n de nou el text"
+		"message": "El botó apareixerà només una vegada per cada selecció de text. Per mostrar-lo de nou, torneu a seleccionar el text"
 	},
 	"settings_option_selectTranslation_showOriginalText": {
 		"message": "Mostra el text original"
 	},
 	"settings_option_selectTranslation_showOriginalText_desc": {
-		"message": "Afegiu un bloc amb el text original a una finestra emergent amb la traducció"
+		"message": "Afegeix un bloc amb el text original al popup de traducció"
 	},
 	"settings_option_selectTranslation_strictSelection": {
-		"message": "Selecció estricta"
+		"message": "Mode estricte de selecció de text",
+		"description": "This option is about selecting text via mouse"
 	},
 	"settings_option_selectTranslation_strictSelection_desc": {
-		"message": "Ignora la selecció si es prem el botó esquerre del ratolí fora d'un bloc que contingui el text seleccionat"
+		"message": "Ignora la selecció de text si el botó esquerre del ratolí es deixa anar fora del bloc que conté el text seleccionat"
 	},
 	"settings_option_selectTranslation_timeoutForHideButton": {
-		"message": "Retard per amagar el botó"
+		"message": "Retard abans d'amagar el botó emergent"
 	},
 	"settings_option_selectTranslation_timeoutForHideButton_desc": {
-		"message": "Retard en mil·lisegons abans d'amagar el botó quan el cursor no hi està situat. El cursor sobre un botó restablirà el temporitzador. Per desactivar l'amagat automàtic, estableixi el valor per sota de 1"
+		"message": "Retard en mil·lisegons abans d'amagar el botó quan el cursor no hi està sobre. Passar el cursor sobre el botó restableix el temporitzador. Per desactivar l'amagat automàtic, estableix el valor a menys de 1"
 	},
 	"settings_option_selectTranslation_zIndex": {
 		"message": "z-index"
 	},
 	"settings_option_selectTranslation_zIndex_desc": {
-		"message": "Augmenti el valor si alguns elements en algunes pàgines solapen una finestra emergent amb text traduït"
+		"message": "Augmenta aquest valor si els elements d'algunes pàgines se superposen al popup amb el text traduït"
 	},
 	"settings_option_textTranslator": {
 		"message": "Traducció de text"
 	},
 	"settings_option_textTranslator_rememberText": {
-		"message": "Recorda el text traduït"
+		"message": "Recordar el text traduït"
 	},
 	"settings_option_textTranslator_rememberText_desc": {
-		"message": "Recorda el text traduït per la propera vegada que s'obri la finestra"
+		"message": "Recordar el text traduït per a la propera vegada que s'obri la finestra"
 	},
 	"settings_option_textTranslator_spellCheck": {
-		"message": "Habilita la correcció ortogràfica"
+		"message": "Activar la correcció ortogràfica"
 	},
 	"settings_option_textTranslator_suggestLanguage": {
-		"message": "Suggerir idioma detectat del text"
+		"message": "Mostrar l'idioma del text detectat"
 	},
 	"settings_option_textTranslator_suggestLanguageAlways": {
-		"message": "Detectar i suggerir l'idioma sempre"
+		"message": "Detectar i suggerir sempre l'idioma"
 	},
 	"settings_option_textTranslator_suggestLanguageAlways_desc": {
-		"message": "Quan estigui desactivat, les suggerències d'idioma només apareixeran quan s'hagi detectat automàticament l'idioma de origen"
+		"message": "Quan està desactivat, les suggerències d'idioma apareixen només si l'idioma d'origen està configurat a \"auto\""
 	},
 	"settings_option_translatePreferences": {
 		"message": "Preferències de traducció"
 	},
 	"settings_option_translateScheduler": {
-		"message": "Programador de traducció"
+		"message": "Planificador de traducció"
 	},
 	"settings_option_translateScheduler_delay": {
 		"message": "Retard d'acumulació de text"
 	},
 	"settings_option_translateScheduler_delay_desc": {
-		"message": "El programador de traducció disminueix el nombre de sol·licituds a l'API de serveis de traducció. El programador intenta acumular textos per enviar tants textos com sigui possible per una sol·licitud. El programador esperarà el temps especificat en mil·lisegons per recopilar nous textos abans de començar a traduir"
+		"message": "El planificador de traducció redueix el nombre de sol·licituds a l'API del servei de traducció acumulant tants textos com sigui possible per enviar en una sola sol·licitud. El planificador esperarà el temps especificat en mil·lisegons per reunir més textos abans de començar la traducció"
 	},
 	"settings_option_translateScheduler_retryLimit": {
-		"message": "Intents de reintent de traducció"
+		"message": "Límit per als intents de reintentar la traducció"
 	},
 	"settings_option_translateScheduler_retryLimit_desc": {
-		"message": "L'agendador intentarà tornar a traduir textos en cas d'errors de traducció. Aquesta opció estableix un límit per als intents de reintent. Estableixi un número negatiu per permetre intents il·limitats."
+		"message": "El planificador tornarà a intentar traduir els textos quan es produeixin errors de traducció. Aquesta opció estableix un límit en els intents de reintentar. Establiu un nombre negatiu per permetre intents il·limitats"
 	},
 	"settings_option_translatorModule": {
-		"message": "Mòdul Traductor"
+		"message": "Mòdul de traducció"
 	},
 	"settings_option_translatorModule_desc": {
-		"message": "La qualitat de les traduccions i els idiomes disponibles depenen del traductor."
+		"message": "La qualitat de les traduccions i els idiomes disponibles depenen del mòdul de traducció"
 	},
 	"settings_option_tts": {
-		"message": "Text a veu (TTS)"
+		"message": "Conversió de text a veu (TTS)"
 	},
 	"settings_option_ttsCustomModules": {
-		"message": "TTS personalitzat"
+		"message": "Mòduls personalitzats de síntesi de veu"
 	},
 	"settings_option_ttsCustomModules_button": {
-		"message": "Gestionar mòduls TTS personalitzats"
+		"message": "Gestió de mòduls de síntesi de veu"
 	},
 	"settings_option_ttsCustomModules_desc": {
-		"message": "Podeu afegir mòduls TTS que utilitzin el vostre servei i les veus preferides. Llegiu més informació i trobeu mòduls a la documentació personalitzada de TTS."
+		"message": "Podeu afegir mòduls de síntesi de veu que utilitzin els vostres serveis i motors de veu preferits. Llegiu més a la <slot id=docs>documentació personalitzada de TTS</slot>"
 	},
 	"settings_option_ttsModule": {
-		"message": "Mòdul TTS"
+		"message": "Mòdul TTS seleccionat"
 	},
 	"settings_option_ttsModule_desc": {
-		"message": "Mòdul per llegir textos"
+		"message": "Motor de veu utilitzat per a la locució del text"
 	},
 	"settings_option_userLanguage": {
-		"message": "La teva llengua"
+		"message": "La vostra llengua"
 	},
 	"settings_option_userLanguage_desc": {
-		"message": "Llengua objectiu per traduir texts"
+		"message": "La llengua a la qual es traduiran els textos"
 	},
 	"settings_pageTitle": {
 		"message": "Configuració"
@@ -576,34 +542,41 @@
 		"message": "Finestra emergent"
 	},
 	"textTranslator_suggestLanguage": {
-		"message": "Sembla que aquesta llengua és"
+		"message": "Sembla que la llengua del text és <slot id=languageSuggest>$language_name$</slot>",
+		"placeholders": {
+			"language_name": {
+				"content": "$1",
+				"example": "Japanese"
+			}
+		}
 	},
 	"textTranslator_translateInputPlaceholder": {
-		"message": "Text d'entrada"
+		"message": "Introdueix text per a traduir",
+		"description": "Request to user input some text for translation"
 	},
 	"textTranslator_translatePlaceholder": {
-		"message": "Text traduït"
+		"message": "El text traduït apareixerà aquí"
 	},
 	"translatorsManagerWindow_add": {
-		"message": "Afegir"
+		"message": "Afegir mòdul de traducció"
 	},
 	"translatorsManagerWindow_close": {
 		"message": "Tancar"
 	},
 	"translatorsManagerWindow_emptyTranslatorsListText": {
-		"message": "Encara no s'han afegit traductors personalitzats"
+		"message": "Encara no s'han afegit mòduls de traducció personalitzats"
 	},
 	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
-		"message": "Esteu segur que voleu suprimir el traductor \"$translator_name$\"?",
+		"message": "Estàs segur que vols eliminar el mòdul de traducció \"$translator_name$\"?",
 		"placeholders": {
 			"translator_name": {
 				"content": "$1",
-				"example": "Traductor de Google"
+				"example": "Google translator"
 			}
 		}
 	},
 	"translatorsManagerWindow_title": {
-		"message": "Traductors personalitzats"
+		"message": "Mòduls de traducció personalitzats"
 	},
 	"translatorsManagerWindow_translator_delete": {
 		"message": "Eliminar"
@@ -612,16 +585,16 @@
 		"message": "Editar"
 	},
 	"ttsManagerWindow_add": {
-		"message": "Afegir"
+		"message": "Afegir mòdul TTS"
 	},
 	"ttsManagerWindow_close": {
 		"message": "Tancar"
 	},
 	"ttsManagerWindow_emptyTranslatorsListText": {
-		"message": "Els mòduls TTS encara no s'han afegit"
+		"message": "Encara no s'han afegit mòduls TTS"
 	},
 	"ttsManagerWindow_message_ttsRemoveConfirmation": {
-		"message": "Esteu segur que voleu eliminar TTS\"$tts_name$\"?",
+		"message": "Estàs segur que vols eliminar el mòdul TTS \"$tts_name$\"?",
 		"placeholders": {
 			"tts_name": {
 				"content": "$1",
@@ -630,7 +603,7 @@
 		}
 	},
 	"ttsManagerWindow_title": {
-		"message": "Mòduls de text a veu"
+		"message": "Mòduls de Text a Veu"
 	},
 	"ttsManagerWindow_translator_delete": {
 		"message": "Eliminar"
@@ -639,564 +612,12 @@
 		"message": "Editar"
 	},
 	"validation_number": {
-		"message": "El paràmetre ha de ser un número"
+		"message": "El valor ha de ser un número"
 	},
 	"validation_numberBetweenRange": {
-		"message": "El paràmetre ha de ser un número entre $1 i $2"
+		"message": "El valor ha de ser un número entre $1 i $2"
 	},
 	"validation_positiveNumber": {
-		"message": "El paràmetre ha de ser un número positiu."
-	},
-	"langCode_aa": {
-		"message": "Àfar"
-	},
-	"langCode_ab": {
-		"message": "Abkhaz"
-	},
-	"langCode_ae": {
-		"message": "Avèstic"
-	},
-	"langCode_af": {
-		"message": "Afrikaans"
-	},
-	"langCode_ak": {
-		"message": "Àkan"
-	},
-	"langCode_am": {
-		"message": "Amhàric"
-	},
-	"langCode_an": {
-		"message": "Aragonès"
-	},
-	"langCode_ar": {
-		"message": "Àrab"
-	},
-	"langCode_as": {
-		"message": "Assamès"
-	},
-	"langCode_av": {
-		"message": "Àvar"
-	},
-	"langCode_ay": {
-		"message": "Aimara"
-	},
-	"langCode_az": {
-		"message": "Azerbaidjanès"
-	},
-	"langCode_ba": {
-		"message": "Baixkir"
-	},
-	"langCode_be": {
-		"message": "Belarús"
-	},
-	"langCode_bg": {
-		"message": "Búlgar"
-	},
-	"langCode_bh": {
-		"message": "Bhojpuri"
-	},
-	"langCode_bi": {
-		"message": "Bislama"
-	},
-	"langCode_bm": {
-		"message": "Bambara"
-	},
-	"langCode_bn": {
-		"message": "Bengalí"
-	},
-	"langCode_bo": {
-		"message": "Tibetà"
-	},
-	"langCode_br": {
-		"message": "Bretó"
-	},
-	"langCode_bs": {
-		"message": "Bosnià"
-	},
-	"langCode_ca": {
-		"message": "Català"
-	},
-	"langCode_ce": {
-		"message": "Txetxè"
-	},
-	"langCode_ch": {
-		"message": "Chamorro"
-	},
-	"langCode_co": {
-		"message": "Cors"
-	},
-	"langCode_cr": {
-		"message": "Cree"
-	},
-	"langCode_cs": {
-		"message": "Txec"
-	},
-	"langCode_cu": {
-		"message": "Eslau eclesiàstic"
-	},
-	"langCode_cv": {
-		"message": "Txuvaix"
-	},
-	"langCode_cy": {
-		"message": "Gal·lès"
-	},
-	"langCode_da": {
-		"message": "Danès"
-	},
-	"langCode_de": {
-		"message": "Alemany"
-	},
-	"langCode_dv": {
-		"message": "Divehi"
-	},
-	"langCode_dz": {
-		"message": "Dzongka"
-	},
-	"langCode_ee": {
-		"message": "Ewe"
-	},
-	"langCode_el": {
-		"message": "Grec"
-	},
-	"langCode_en": {
-		"message": "Anglès"
-	},
-	"langCode_eo": {
-		"message": "Esperanto"
-	},
-	"langCode_es": {
-		"message": "Espanyol"
-	},
-	"langCode_et": {
-		"message": "Estonià"
-	},
-	"langCode_eu": {
-		"message": "Basc"
-	},
-	"langCode_fa": {
-		"message": "Persa"
-	},
-	"langCode_ff": {
-		"message": "Ful"
-	},
-	"langCode_fi": {
-		"message": "Finès"
-	},
-	"langCode_fj": {
-		"message": "Fijià"
-	},
-	"langCode_fo": {
-		"message": "Feroès"
-	},
-	"langCode_fr": {
-		"message": "Francès"
-	},
-	"langCode_fy": {
-		"message": "Frisó occidental"
-	},
-	"langCode_ga": {
-		"message": "Irlandès"
-	},
-	"langCode_gd": {
-		"message": "Gaèlic escocès"
-	},
-	"langCode_gl": {
-		"message": "Gallec"
-	},
-	"langCode_gn": {
-		"message": "Guaraní"
-	},
-	"langCode_gu": {
-		"message": "Gujarati"
-	},
-	"langCode_gv": {
-		"message": "Manx"
-	},
-	"langCode_ha": {
-		"message": "Haussa"
-	},
-	"langCode_he": {
-		"message": "Hebreu"
-	},
-	"langCode_hi": {
-		"message": "Hindi"
-	},
-	"langCode_ho": {
-		"message": "Hiri motu"
-	},
-	"langCode_hr": {
-		"message": "Croat"
-	},
-	"langCode_ht": {
-		"message": "Crioll d’Haití"
-	},
-	"langCode_hu": {
-		"message": "Hongarès"
-	},
-	"langCode_hy": {
-		"message": "Armeni"
-	},
-	"langCode_hz": {
-		"message": "Herero"
-	},
-	"langCode_ia": {
-		"message": "Interlingua"
-	},
-	"langCode_id": {
-		"message": "Indonesi"
-	},
-	"langCode_ie": {
-		"message": "Interlingue"
-	},
-	"langCode_ig": {
-		"message": "Igbo"
-	},
-	"langCode_ii": {
-		"message": "Yi sichuan"
-	},
-	"langCode_ik": {
-		"message": "Inupiak"
-	},
-	"langCode_io": {
-		"message": "Ido"
-	},
-	"langCode_is": {
-		"message": "Islandès"
-	},
-	"langCode_it": {
-		"message": "Italià"
-	},
-	"langCode_iu": {
-		"message": "Inuktitut"
-	},
-	"langCode_ja": {
-		"message": "Japonès"
-	},
-	"langCode_jv": {
-		"message": "Javanès"
-	},
-	"langCode_ka": {
-		"message": "Georgià"
-	},
-	"langCode_kg": {
-		"message": "Kongo"
-	},
-	"langCode_ki": {
-		"message": "Kikuiu"
-	},
-	"langCode_kj": {
-		"message": "Kuanyama"
-	},
-	"langCode_kk": {
-		"message": "Kazakh"
-	},
-	"langCode_kl": {
-		"message": "Groenlandès"
-	},
-	"langCode_km": {
-		"message": "Khmer"
-	},
-	"langCode_kn": {
-		"message": "Kannada"
-	},
-	"langCode_ko": {
-		"message": "Coreà"
-	},
-	"langCode_kr": {
-		"message": "Kanuri"
-	},
-	"langCode_ks": {
-		"message": "Caixmiri"
-	},
-	"langCode_ku": {
-		"message": "Kurd"
-	},
-	"langCode_kv": {
-		"message": "Komi"
-	},
-	"langCode_kw": {
-		"message": "Còrnic"
-	},
-	"langCode_ky": {
-		"message": "Kirguís"
-	},
-	"langCode_la": {
-		"message": "Llatí"
-	},
-	"langCode_lb": {
-		"message": "Luxemburguès"
-	},
-	"langCode_lg": {
-		"message": "Ganda"
-	},
-	"langCode_li": {
-		"message": "Limburguès"
-	},
-	"langCode_ln": {
-		"message": "Lingala"
-	},
-	"langCode_lo": {
-		"message": "Laosià"
-	},
-	"langCode_lt": {
-		"message": "Lituà"
-	},
-	"langCode_lu": {
-		"message": "Luba katanga"
-	},
-	"langCode_lv": {
-		"message": "Letó"
-	},
-	"langCode_mg": {
-		"message": "Malgaix"
-	},
-	"langCode_mh": {
-		"message": "Marshallès"
-	},
-	"langCode_mi": {
-		"message": "Maori"
-	},
-	"langCode_mk": {
-		"message": "Macedoni"
-	},
-	"langCode_ml": {
-		"message": "Malaiàlam"
-	},
-	"langCode_mn": {
-		"message": "Mongol"
-	},
-	"langCode_mr": {
-		"message": "Marathi"
-	},
-	"langCode_ms": {
-		"message": "Malai"
-	},
-	"langCode_mt": {
-		"message": "Maltès"
-	},
-	"langCode_my": {
-		"message": "Birmà"
-	},
-	"langCode_na": {
-		"message": "Nauruà"
-	},
-	"langCode_nb": {
-		"message": "Noruec bokmål"
-	},
-	"langCode_nd": {
-		"message": "Ndebele septentrional"
-	},
-	"langCode_ne": {
-		"message": "Nepalès"
-	},
-	"langCode_ng": {
-		"message": "Ndonga"
-	},
-	"langCode_nl": {
-		"message": "Neerlandès"
-	},
-	"langCode_nn": {
-		"message": "Noruec nynorsk"
-	},
-	"langCode_no": {
-		"message": "Noruec"
-	},
-	"langCode_nr": {
-		"message": "Ndebele meridional"
-	},
-	"langCode_nv": {
-		"message": "Navaho"
-	},
-	"langCode_ny": {
-		"message": "Nyanja"
-	},
-	"langCode_oc": {
-		"message": "Occità"
-	},
-	"langCode_oj": {
-		"message": "Ojibwa"
-	},
-	"langCode_om": {
-		"message": "Oromo"
-	},
-	"langCode_or": {
-		"message": "Oriya"
-	},
-	"langCode_os": {
-		"message": "Osseta"
-	},
-	"langCode_pa": {
-		"message": "Panjabi"
-	},
-	"langCode_pi": {
-		"message": "Pali"
-	},
-	"langCode_pl": {
-		"message": "Polonès"
-	},
-	"langCode_ps": {
-		"message": "Paixtu"
-	},
-	"langCode_pt": {
-		"message": "Portuguès"
-	},
-	"langCode_qu": {
-		"message": "Quítxua"
-	},
-	"langCode_rm": {
-		"message": "Retoromànic"
-	},
-	"langCode_rn": {
-		"message": "Rundi"
-	},
-	"langCode_ro": {
-		"message": "Romanès"
-	},
-	"langCode_ru": {
-		"message": "Rus"
-	},
-	"langCode_rw": {
-		"message": "Ruandès"
-	},
-	"langCode_sa": {
-		"message": "Sànscrit"
-	},
-	"langCode_sc": {
-		"message": "Sard"
-	},
-	"langCode_sd": {
-		"message": "Sindi"
-	},
-	"langCode_se": {
-		"message": "Sami septentrional"
-	},
-	"langCode_sg": {
-		"message": "Sango"
-	},
-	"langCode_si": {
-		"message": "Singalès"
-	},
-	"langCode_sk": {
-		"message": "Eslovac"
-	},
-	"langCode_sl": {
-		"message": "Eslovè"
-	},
-	"langCode_sm": {
-		"message": "Samoà"
-	},
-	"langCode_sn": {
-		"message": "Shona"
-	},
-	"langCode_so": {
-		"message": "Somali"
-	},
-	"langCode_sq": {
-		"message": "Albanès"
-	},
-	"langCode_sr": {
-		"message": "Serbi"
-	},
-	"langCode_ss": {
-		"message": "Swazi"
-	},
-	"langCode_st": {
-		"message": "Sotho meridional"
-	},
-	"langCode_su": {
-		"message": "Sondanès"
-	},
-	"langCode_sv": {
-		"message": "Suec"
-	},
-	"langCode_sw": {
-		"message": "Suahili"
-	},
-	"langCode_ta": {
-		"message": "Tàmil"
-	},
-	"langCode_te": {
-		"message": "Telugu"
-	},
-	"langCode_tg": {
-		"message": "Tadjik"
-	},
-	"langCode_th": {
-		"message": "Tai"
-	},
-	"langCode_ti": {
-		"message": "Tigrinya"
-	},
-	"langCode_tk": {
-		"message": "Turcman"
-	},
-	"langCode_tl": {
-		"message": "Filipí"
-	},
-	"langCode_tn": {
-		"message": "Setswana"
-	},
-	"langCode_to": {
-		"message": "Tongalès"
-	},
-	"langCode_tr": {
-		"message": "Turc"
-	},
-	"langCode_ts": {
-		"message": "Tsonga"
-	},
-	"langCode_tt": {
-		"message": "Tàtar"
-	},
-	"langCode_tw": {
-		"message": "Àkan"
-	},
-	"langCode_ty": {
-		"message": "Tahitià"
-	},
-	"langCode_ug": {
-		"message": "Uigur"
-	},
-	"langCode_uk": {
-		"message": "Ucraïnès"
-	},
-	"langCode_ur": {
-		"message": "Urdú"
-	},
-	"langCode_uz": {
-		"message": "Uzbek"
-	},
-	"langCode_ve": {
-		"message": "Venda"
-	},
-	"langCode_vi": {
-		"message": "Vietnamita"
-	},
-	"langCode_vo": {
-		"message": "Volapük"
-	},
-	"langCode_wa": {
-		"message": "Való"
-	},
-	"langCode_wo": {
-		"message": "Wòlof"
-	},
-	"langCode_xh": {
-		"message": "Xosa"
-	},
-	"langCode_yi": {
-		"message": "Ídix"
-	},
-	"langCode_yo": {
-		"message": "Ioruba"
-	},
-	"langCode_za": {
-		"message": "Zhuang"
-	},
-	"langCode_zh": {
-		"message": "Xinès"
-	},
-	"langCode_zu": {
-		"message": "Zulu"
+		"message": "El valor ha de ser un número positiu"
 	}
 }

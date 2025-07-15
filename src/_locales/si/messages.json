@@ -1,0 +1,623 @@
+{
+	"common_action_addToDictionary": {
+		"message": "පරිවර්තනය ශබ්දකෝෂයට එක් කරන්න"
+	},
+	"common_action_removeFromDictionary": {
+		"message": "පරිවර්තනය ශබ්දකෝෂයෙන් ඉවත් කරන්න"
+	},
+	"common_bgUnavailable": {
+		"message": "පසුබිම් ස්ක්‍රිප්ට් ලබා ගත නොහැක"
+	},
+	"common_cancel": {
+		"message": "අවලංගු කරන්න"
+	},
+	"common_close": {
+		"message": "වසන්න"
+	},
+	"common_copy": {
+		"message": "පිටපත් කරන්න"
+	},
+	"common_error": {
+		"message": "දෝෂය"
+	},
+	"common_offlineTranslator": {
+		"message": "$1 - අන්තර්ජාලය නොමැති පරිවර්තකය"
+	},
+	"common_retry": {
+		"message": "නැවත උත්සාහ කරන්න"
+	},
+	"common_translate": {
+		"message": "පරිවර්තනය කරන්න"
+	},
+	"component_hotkey_placeholder": {
+		"message": "කෙටි මාර්ගයක් සටහන් කිරීමට ක්ලික් කරන්න"
+	},
+	"component_hotkey_recordPlaceholder": {
+		"message": "යතුරු ඔබන්න"
+	},
+	"component_hotkey_resetButton": {
+		"message": "නැවත සකසන්න"
+	},
+	"contextMenu_disablePageTranslation": {
+		"message": "පිටු පරිවර්තනය නවත්වන්න"
+	},
+	"contextMenu_translatePage": {
+		"message": "පිටුව පරිවර්තනය කරන්න"
+	},
+	"contextMenu_translateSelectedText": {
+		"message": "තෝරාගත් පෙළ පරිවර්තනය කරන්න"
+	},
+	"dictionaryButton_add": {
+		"message": "ශබ්දකෝෂයට එක් කරන්න"
+	},
+	"dictionaryButton_delete": {
+		"message": "ශබ්දකෝෂයෙන් මකන්න"
+	},
+	"dictionary_button_export": {
+		"message": "අපනයනය කරන්න"
+	},
+	"dictionary_button_removeAll": {
+		"message": "සියල්ල ඉවත් කරන්න"
+	},
+	"dictionary_deleteAll": {
+		"message": "ඔබට සියලුම පරිවර්තන ශබ්දකෝෂයෙන් මැකීමට අවශ්‍ය බව විශ්වාසද?"
+	},
+	"dictionary_deleteConfirmation": {
+		"message": "ඔබට මෙම පරිවර්තනය මැකීමට අවශ්‍ය බව විශ්වාසද?"
+	},
+	"dictionary_description": {
+		"message": "පරිවර්තන ශබ්දකෝෂයේ සුරකින්න, පසුව ඉක්මනින් සොයා ගැනීමට"
+	},
+	"dictionary_emptyDictionary": {
+		"message": "ශබ්දකෝෂය හිස්ව ඇත, පෙළක් පරිවර්තනය කිරීමෙන් එය පුරවන්න"
+	},
+	"dictionary_filter_from": {
+		"message": "මූලාශ්‍ර පෙළ භාෂාව"
+	},
+	"dictionary_filter_to": {
+		"message": "ඉලක්ක භාෂාව"
+	},
+	"dictionary_message_deleteAll_success": {
+		"message": "සියලුම පරිවර්තන ඉවත් කර ඇත"
+	},
+	"dictionary_notFoundEntries": {
+		"message": "මෙම පෙරහන් වලට ගැලපෙන පරිවර්තන හමු නොවීය"
+	},
+	"dictionary_pageTitle": {
+		"message": "ශබ්දකෝෂය"
+	},
+	"dictionary_resetFilters": {
+		"message": "පෙරහන් නැවත සකසන්න"
+	},
+	"dictionary_searchPlaceholder": {
+		"message": "පෙළ අනුව සොයන්න"
+	},
+	"editorWindow_close": {
+		"message": "වසන්න"
+	},
+	"editorWindow_data_code": {
+		"message": "කේතය"
+	},
+	"editorWindow_data_title": {
+		"message": "මොඩියුලයේ නම"
+	},
+	"editorWindow_message_invalidTitle": {
+		"message": "මොඩියුලයේ නම අක්ෂරයක් හෝ වැඩි විය යුතුය"
+	},
+	"editorWindow_save": {
+		"message": "සුරකින්න"
+	},
+	"ext_description": {
+		"message": "වෙබ් පිටු පරිවර්තනය, පෙළ පරිවර්තනය, ශබ්දකෝෂය, ඉතිහාසය, අභිරුචි පරිවර්තක, භාෂා බාධක බිඳ දැමීමට ඔබට අවශ්‍ය සියල්ල"
+	},
+	"ext_name": {
+		"message": "Linguist - වෙබ් පිටු පරිවර්තකය"
+	},
+	"history_control_selectEntry": {
+		"message": "තොග ක්‍රියාව සඳහා පරිවර්තනය තෝරන්න",
+		"description": "Description in finite form \"to pick\" with explaining what this checkbox will do"
+	},
+	"history_controls_clearHistory": {
+		"message": "ඉතිහාසය මකන්න"
+	},
+	"history_controls_deleteSelected": {
+		"message": "තෝරාගත් පරිවර්තන මකන්න"
+	},
+	"history_controls_selectAll": {
+		"message": "සියලුම පරිවර්තන තෝරන්න"
+	},
+	"history_message_clearHistoryConfirmation": {
+		"message": "ඔබට විශ්වාසද ඔබට ඉතිහාසය මැකීමට අවශ්‍යද? සියලුම ඇතුළත් කිරීම් ඉවත් කෙරේ"
+	},
+	"history_message_deleteEntryConfirmation": {
+		"message": "ඔබට විශ්වාසද ඔබට මෙම ඇතුළත් කිරීම මැකීමට අවශ්‍යද?"
+	},
+	"history_message_deleteSelectedEntriesConfirmation": {
+		"message": "ඔබට විශ්වාසද ඔබට තෝරාගත් ඇතුළත් කිරීම් ($1) මැකීමට අවශ්‍යද?"
+	},
+	"history_message_entriesNotFound": {
+		"message": "පෙරහන්ට ගැලපෙන පරිවර්තන හමු නොවීය"
+	},
+	"history_message_noEntries": {
+		"message": "ඉතිහාසය හිස්ය"
+	},
+	"history_notification_disabled": {
+		"message": "ඉතිහාස සටහන් කිරීම අක්‍රීය කර ඇත, එබැවින් නව ඇතුළත් කිරීම් පෙනී නොසිටිය හැක. ඔබට <slot id=preferences>අභිරුචි</slot> හිදී මෙය වෙනස් කළ හැක"
+	},
+	"history_pageTitle": {
+		"message": "ඉතිහාසය"
+	},
+	"history_searchPlaceholder": {
+		"message": "පෙළ අනුව සොයන්න"
+	},
+	"inlineTranslator_showOriginalText": {
+		"message": "මුල් පෙළ පෙන්වන්න"
+	},
+	"lang_change": {
+		"message": "භාෂාව වෙනස් කරන්න"
+	},
+	"lang_detect": {
+		"message": "ස්වයංක්‍රීයව හඳුනාගන්න"
+	},
+	"lang_select": {
+		"message": "භාෂාව තෝරන්න"
+	},
+	"lang_swap": {
+		"message": "භාෂා හුවමාරු කරන්න"
+	},
+	"message_unknownError": {
+		"message": "නොදන්නා දෝෂයකි"
+	},
+	"pageTranslator_alwaysTranslateLang": {
+		"message": "මෙම භාෂාව සෑම විටම පරිවර්තනය කරන්න"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disable": {
+		"message": "අක්‍රීය කරන්න"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
+		"message": "සියලුම අඩවි සඳහා අක්‍රීය කරන්න"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_enable": {
+		"message": "සක්‍රීය කරන්න"
+	},
+	"pageTranslator_commonPreferences_title": {
+		"message": "මෙම භාෂාව සඳහා පොදු කැමැත්තන්"
+	},
+	"pageTranslator_option_autoTranslate": {
+		"message": "ස්වයංක්‍රීය පරිවර්තනය"
+	},
+	"pageTranslator_showOriginal": {
+		"message": "මුල් පිටපත පෙන්වන්න"
+	},
+	"pageTranslator_showTranslationPreferences": {
+		"message": "පරිවර්තන කැමැත්තන්"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_always": {
+		"message": "සෑම විටම පරිවර්තනය කරන්න"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
+		"message": "මෙම භාෂාව සඳහා සෑම විටම පරිවර්තනය කරන්න"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_default": {
+		"message": "පොදු නීති භාවිතා කරන්න"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
+		"message": "මෙම භාෂාව සඳහා පොදු නීති භාවිතා කරන්න"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_never": {
+		"message": "කවදාවත් පරිවර්තනය නොකරන්න"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
+		"message": "මෙම භාෂාව සඳහා කවදාවත් පරිවර්තනය නොකරන්න"
+	},
+	"pageTranslator_sitePreferences_title": {
+		"message": "සඳහා කැමැත්තන්"
+	},
+	"pageTranslator_translatePage": {
+		"message": "පිටුව පරිවර්තනය කරන්න"
+	},
+	"pageTranslator_translationReport": {
+		"message": "පරිවර්තන වාර්තාව"
+	},
+	"pageTranslator_translationReport_queue": {
+		"message": "බැඳී ඇත"
+	},
+	"pageTranslator_translationReport_reject": {
+		"message": "දෝෂ"
+	},
+	"pageTranslator_translationReport_resolve": {
+		"message": "පරිවර්තනය කර ඇත"
+	},
+	"popup_tabIdNotFound": {
+		"message": "ටැබ් \"$1\" සොයාගත නොහැක"
+	},
+	"popup_tab_translatePage": {
+		"message": "පිටු පරිවර්තනය"
+	},
+	"popup_tab_translateText": {
+		"message": "පෙළ පරිවර්තනය"
+	},
+	"settings_button_cancel": {
+		"message": "අවලංගු කරන්න"
+	},
+	"settings_button_export": {
+		"message": "විනියෝග වින්‍යාසය"
+	},
+	"settings_button_import": {
+		"message": "ආයාත වින්‍යාසය"
+	},
+	"settings_button_reset": {
+		"message": "වින්‍යාසය යළි පිහිටුවන්න"
+	},
+	"settings_button_saveChanges": {
+		"message": "වෙනස්කම් සුරකින්න"
+	},
+	"settings_message_clearCache_success": {
+		"message": "කැෂේ හිස් කරන ලදී"
+	},
+	"settings_message_common_invalidValueType": {
+		"message": "අවලංගු අගය"
+	},
+	"settings_message_importConfig_invalidFile": {
+		"message": "සපයන ලද වින්‍යාස ගොනුව වැරදි හෝ විකෘති වී ඇති අතර, සැකසිය නොහැක"
+	},
+	"settings_message_importConfig_success": {
+		"message": "ආයාත කිරීම සම්පූර්ණයි"
+	},
+	"settings_message_resetConfig_confirm": {
+		"message": "සැකසුම් පෙරනිමි අගයන්ට යළි පිහිටුවීමට තහවුරු කරන්න"
+	},
+	"settings_message_resetConfig_success": {
+		"message": "සැකසුම් යළි පිහිටුවන ලදී"
+	},
+	"settings_message_saveChanges_success": {
+		"message": "වෙනස්කම් සුරකින ලදී"
+	},
+	"settings_option_cache": {
+		"message": "කැෂ්"
+	},
+	"settings_option_cache_clear": {
+		"message": "කැෂ් හිස් කරන්න"
+	},
+	"settings_option_cache_clear_desc": {
+		"message": "ඔබට කැෂ් සක්‍රීය කර ඇති විට පරිවර්තන දෝෂ හෝ අකමැතිව පෞද්ගලික පෙළ පරිවර්තනය කළහොත්, කැෂ් එකෙන් සියලුම දත්ත මකා දැමිය හැක",
+		"description": "Explanation for user about cases when it's useful to clear cache"
+	},
+	"settings_option_cache_enable": {
+		"message": "කැෂ් සක්‍රීය කරන්න"
+	},
+	"settings_option_cache_enable_desc": {
+		"message": "කැෂ් සක්‍රීය කර ඇති විට, පෙර පරිවර්තනය කළ පෙළවල් අමතර ඉල්ලීම් නැතිව මොහොතකින් පරිවර්තනය වේ"
+	},
+	"settings_option_cache_ignoreCase": {
+		"message": "අකුරු විශාලත්වය නොසලකා හරින කැෂ් භාවිතා කරන්න"
+	},
+	"settings_option_cache_ignoreCase_desc": {
+		"message": "සක්‍රීය කළ විට, විවිධ අකුරු විශාලත්වයන් සහිත පෙළ සඳහා කැෂ් කළ පරිවර්තන භාවිතා කරනු ඇත, එය විශේෂිත තත්ත්වයන්හි පරිවර්තන විකෘති විය හැක"
+	},
+	"settings_option_commonSettings": {
+		"message": "පොදු සැකසුම්"
+	},
+	"settings_option_customTranslatorModule": {
+		"message": "අභිරුචි පරිවර්තන මොඩියුල",
+		"description": "An user defined code that implements a translation module"
+	},
+	"settings_option_customTranslatorModule_desc": {
+		"message": "ඔබේ ප්‍රියතම පරිවර්තන සේවාවන් භාවිතා කරන අභිරුචි පරිවර්තන මොඩියුල එකතු කළ හැක. <slot id=docs>අභිරුචි පරිවර්තක ලේඛනය</slot> තුළ වැඩිදුර ඉගෙන ගන්න"
+	},
+	"settings_option_customTranslatorModule_manageButton": {
+		"message": "පරිවර්තක කළමනාකරණය",
+		"description": "A button to show list of translation modules"
+	},
+	"settings_option_history_enable": {
+		"message": "ඉතිහාසය සක්‍රීය කරන්න"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "සක්‍රීය කළ විට, පරිවර්තන සටහන් වී <slot id=historyPage>ඉතිහාස පිටුව</slot> මත පෙනේ"
+	},
+	"settings_option_pageTranslation": {
+		"message": "සම්පූර්ණ පිටු පරිවර්තනය"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent": {
+		"message": "අන්තර්ගතය අනුව භාෂාව හඳුනා ගන්න"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent_desc": {
+		"message": "එහි භාෂාව හඳුනා ගැනීමට වෙබ් පිටුවේ පෙළ විශ්ලේෂණය කරන්න. අක්‍රීය කළ විට, <slot id=docs>පිටු මීටා දත්ත</slot> තුළ සඳහන් භාෂාව භාවිතා කරනු ඇත"
+	},
+	"settings_option_pageTranslation_enableContextMenu": {
+		"message": "සන්දර්භ මෙනු බොත්තම සක්‍රීය කරන්න"
+	},
+	"settings_option_pageTranslation_enableContextMenu_desc": {
+		"message": "පිටු සන්දර්භ මෙනුවේ පිටු පරිවර්තනය මාරු කිරීමට බොත්තමක් එකතු කරන්න"
+	},
+	"settings_option_pageTranslation_excludeSelectors": {
+		"message": "පරිවර්තනයෙන් බැහැර කිරීමට තේරීම්"
+	},
+	"settings_option_pageTranslation_excludeSelectors_desc": {
+		"message": "පරිවර්තනයෙන් බැහැර කිරීමට අංග සඳහා CSS තේරීම් ලැයිස්තුව. එක් පේළියකට එක් තේරීමක්. මෙම තේරීම් කිසිවක් සමඟ ගැලපෙන අංගයක් නම්, එහි පෙළ, ගුණාංග සහ නැඟෙන අංග පරිවර්තනය නොකෙරේ"
+	},
+	"settings_option_pageTranslation_lazyTranslate": {
+		"message": "පෙනෙන අංග පමණක් පරිවර්තනය කරන්න"
+	},
+	"settings_option_pageTranslation_lazyTranslate_desc": {
+		"message": "මෙම විකල්පය සක්‍රීය කළ විට, පෙනෙන අංග පමණක් පරිවර්තනය වේ. මෙම විකල්පය ජාලය මාරු කිරීම අඩු කරයි"
+	},
+	"settings_option_pageTranslation_originalTextPopup": {
+		"message": "මුල් පෙළ සමඟ පෝප්අප් සක්‍රීය කරන්න"
+	},
+	"settings_option_pageTranslation_originalTextPopup_desc": {
+		"message": "පරිවර්තිත පෙළ කොටස් මත හෝවර් කිරීමේදී මුල් පෙළ සමඟ පෝප්අප් එකක් පෙන්වන්න"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation": {
+		"message": "කෙටි මාර්ගය"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation_desc": {
+		"message": "පිටු පරිවර්තනය මාරු කිරීමට කෙටි මාර්ගය\nයතුරු නැවත සකසන්න ESC ඔබන්න"
+	},
+	"settings_option_pageTranslation_translatableAttributes": {
+		"message": "පරිවර්තනය කළ හැකි ගුණාංග"
+	},
+	"settings_option_pageTranslation_translatableAttributes_desc": {
+		"message": "පරිවර්තනය කිරීමට <slot id=htmlAttributes>HTML ගුණාංග</slot> නම් ඇතුළත් කරන්න, එක් පේළියකට එක් ගුණාංගයක්\nමෙම ලැයිස්තුවේ ගුණාංග පමණක් පරිවර්තනය වේ"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters": {
+		"message": "පරිවර්තන ප්‍රගතිය පෙන්වන්න"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters_desc": {
+		"message": "විස්තාරණ පෝප්අප් එකේ පිටු පරිවර්තන ප්‍රගතිය සමඟ පැනලයක් පෙන්වන්න"
+	},
+	"settings_option_selectTranslation": {
+		"message": "තෝරාගත් පෙළ සඳහා පරිවර්තනය"
+	},
+	"settings_option_selectTranslation_detectTextLanguage": {
+		"message": "පෙළ භාෂාව හඳුනාගන්න"
+	},
+	"settings_option_selectTranslation_detectTextLanguage_desc": {
+		"message": "සක්‍රීය කළ විට, තෝරාගත් පෙළ පරිවර්තනය සඳහා භාෂාව හඳුනා ගැනීමට විශ්ලේෂණය කරනු ඇත. නැතහොත්, පිටු භාෂාව භාවිතා කරනු ඇත"
+	},
+	"settings_option_selectTranslation_disableWhileTranslatePage": {
+		"message": "පිටුව පරිවර්තනය කරන විට අක්‍රීය කරන්න"
+	},
+	"settings_option_selectTranslation_enable": {
+		"message": "තෝරාගත් පෙළ පරිවර්තනය සක්‍රීය කරන්න"
+	},
+	"settings_option_selectTranslation_enable_desc": {
+		"message": "මෙම විශේෂාංගය සක්‍රීය කළ විට, ඔබට පිටුවේ ඕනෑම පෙළක් තෝරාගෙන පෝප්අප් එකක පරිවර්තනය කළ හැක"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton": {
+		"message": "පරිවර්තන බොත්තම මත ස්වයංක්‍රීය අවධානය"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
+		"message": "පරිවර්තන බොත්තම පිටුවේ පෙනෙන විට, එය ස්වයංක්‍රීයව අවධානය යොමු කරනු ඇත"
+	},
+	"settings_option_selectTranslation_header_languageChoice": {
+		"message": "භාෂා සැකසුම්"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang": {
+		"message": "පෙළ භාෂාව හඳුනා ගැනීමට පරිවර්තන මොඩියුලය සක්‍රීය කරන්න"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
+		"message": "පෙළ භාෂාව ස්ථානීයව හඳුනාගත නොහැකි විට සහ මෙම විකල්පය සක්‍රීය කර ඇති විට, \"auto\" භාෂාව සමඟ පෙළ පරිවර්තනය කෙරේ. විකල්පය අක්‍රීය කර ඇති විට, පෙළේ මූලාශ්‍ර භාෂාව සකසීමට වෙනත් පිටුපස ක්‍රමයක් භාවිතා කරනු ඇත"
+	},
+	"settings_option_selectTranslation_mode": {
+		"message": "පෙළ තේරීමේ ක්‍රියාව"
+	},
+	"settings_option_selectTranslation_mode_item_contextMenu": {
+		"message": "සන්දර්භ මෙනුව හරහා පෙළ පරිවර්තනය කරන්න"
+	},
+	"settings_option_selectTranslation_mode_item_popupButton": {
+		"message": "පරිවර්තන බොත්තම පෙන්වන්න"
+	},
+	"settings_option_selectTranslation_mode_item_quickTranslate": {
+		"message": "පෙළ ක්ෂණිකව පරිවර්තනය කරන්න"
+	},
+	"settings_option_selectTranslation_modifiers": {
+		"message": "සංශෝධක"
+	},
+	"settings_option_selectTranslation_modifiers_desc": {
+		"message": "පරිවර්තනය පෙන්වීමට යතුරුපුවරුවේ ඔබන්නා යුතු යතුරු තෝරන්න"
+	},
+	"settings_option_selectTranslation_modifiers_key_alt": {
+		"message": "alt"
+	},
+	"settings_option_selectTranslation_modifiers_key_ctrl": {
+		"message": "ctrl"
+	},
+	"settings_option_selectTranslation_modifiers_key_meta": {
+		"message": "meta"
+	},
+	"settings_option_selectTranslation_modifiers_key_shift": {
+		"message": "shift"
+	},
+	"settings_option_selectTranslation_rememberDirection": {
+		"message": "මෑතකදී තෝරාගත් පෙළ භාෂාව මතක තබා ගන්න"
+	},
+	"settings_option_selectTranslation_showOnceForSelection": {
+		"message": "පෙළ තේරීමකට වරක් පරිවර්තන බොත්තම පෙන්වන්න"
+	},
+	"settings_option_selectTranslation_showOnceForSelection_desc": {
+		"message": "බොත්තම එක් එක් පෙළ තේරීම සඳහා වරක් පමණක් පෙනේ. එය නැවත පෙන්වීමට, පෙළ නැවත තෝරන්න"
+	},
+	"settings_option_selectTranslation_showOriginalText": {
+		"message": "මුල් පෙළ පෙන්වන්න"
+	},
+	"settings_option_selectTranslation_showOriginalText_desc": {
+		"message": "පරිවර්තන පෝප්අප් එකට මුල් පෙළ සමඟ බ්ලොක් එකක් එක් කරන්න"
+	},
+	"settings_option_selectTranslation_strictSelection": {
+		"message": "පෙළ පරාස තේරීමේ දැඩි ප්‍රකාරය",
+		"description": "This option is about selecting text via mouse"
+	},
+	"settings_option_selectTranslation_strictSelection_desc": {
+		"message": "තෝරාගත් පෙළ අඩංගු බ්ලොක් එකෙන් පිටත වම් මවුස් බොත්තම නිදහස් කළහොත් පෙළ පරාස තේරීම නොසලකා හරින්න"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton": {
+		"message": "පෝප්අප් බොත්තම සඟවා ඇති පෙර විලාම්බය"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton_desc": {
+		"message": "කර්සර්ය එය මත නොමැති විට බොත්තම සඟවීමට පෙර මිලි තත්පර වල ප්‍රමාදය. බොත්තම මත කර්සර්ය තබා ගැනීම ටයිමරය නැවත සකසයි. ස්වයංක්‍රීය සඟවීම අක්‍රීය කිරීමට, අගය 1 ට අඩු ලෙස සකසන්න"
+	},
+	"settings_option_selectTranslation_zIndex": {
+		"message": "z-index"
+	},
+	"settings_option_selectTranslation_zIndex_desc": {
+		"message": "සමහර පිටු මත මූලික අංග පරිවර්තිත පෙළ සමඟ පෙනෙන පෙනුම ආවරණය කරන්නේ නම්, මෙම අගය වැඩි කරන්න"
+	},
+	"settings_option_textTranslator": {
+		"message": "පෙළ පරිවර්තනය"
+	},
+	"settings_option_textTranslator_rememberText": {
+		"message": "පරිවර්තිත පෙළ මතක තබා ගැනීම"
+	},
+	"settings_option_textTranslator_rememberText_desc": {
+		"message": "කවුළුව නැවත විවෘත වන විට පරිවර්තිත පෙළ මතක තබා ගැනීම"
+	},
+	"settings_option_textTranslator_spellCheck": {
+		"message": "අක්ෂර වින්‍යාස පරීක්ෂාව සක්‍රීය කරන්න"
+	},
+	"settings_option_textTranslator_suggestLanguage": {
+		"message": "හඳුනාගත් පෙළ භාෂාව පෙන්වීම"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways": {
+		"message": "සෑම විටම භාෂාව හඳුනාගෙන යෝජනා කරන්න"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways_desc": {
+		"message": "අක්‍රීය කළ විට, මූලාශ්‍ර භාෂාව \"ස්වයංක්‍රීය\" ලෙස සකසා ඇති විට පමණක් භාෂා යෝජනා පෙනේ"
+	},
+	"settings_option_translatePreferences": {
+		"message": "පරිවර්තන අභිමතයන්"
+	},
+	"settings_option_translateScheduler": {
+		"message": "පරිවර්තන කාලසටහන"
+	},
+	"settings_option_translateScheduler_delay": {
+		"message": "පෙළ එකතු කිරීමේ ප්‍රමාදය"
+	},
+	"settings_option_translateScheduler_delay_desc": {
+		"message": "පරිවර්තන කාලසටහන, එක් ඉල්ලීමකින් යැවීමට හැකි තරම් පෙළ එකතු කිරීමෙන් පරිවර්තන සේවා API වෙත ඉල්ලීම් සංඛ්‍යාව අඩු කරයි. පරිවර්තනය ආරම්භ කිරීමට පෙර වැඩි පෙළ එකතු කිරීමට කාලසටහන සඳහන් කළ මිලි තත්පර කාලය බලා සිටී"
+	},
+	"settings_option_translateScheduler_retryLimit": {
+		"message": "පරිවර්තන නැවත උත්සාහ කිරීම් සීමාව"
+	},
+	"settings_option_translateScheduler_retryLimit_desc": {
+		"message": "පරිවර්තන දෝෂ සිදුවන විට කාලසටහන පෙළ පරිවර්තනය නැවත උත්සාහ කරයි. නැවත උත්සාහ කිරීම් සීමාව මෙම විකල්පය සකසයි. සීමාවක් නොමැතිව නැවත උත්සාහ කිරීමට ඍජු සංඛ්‍යා අගයක් සකසන්න"
+	},
+	"settings_option_translatorModule": {
+		"message": "පරිවර්තන මොඩියුලය"
+	},
+	"settings_option_translatorModule_desc": {
+		"message": "පරිවර්තන ගුණාත්මකභාවය සහ ලබා ගත හැකි භාෂා පරිවර්තන මොඩියුලය මත රඳා පවතී"
+	},
+	"settings_option_tts": {
+		"message": "පෙළ හඬ පරිවර්තනය (TTS)"
+	},
+	"settings_option_ttsCustomModules": {
+		"message": "අභිරුචි හඬ සංස්කරණ මොඩියුල"
+	},
+	"settings_option_ttsCustomModules_button": {
+		"message": "හඬ සංස්කරණ මොඩියුල කළමනාකරණය"
+	},
+	"settings_option_ttsCustomModules_desc": {
+		"message": "ඔබේ ප්‍රියතම සේවා සහ හඬ එන්ජින් භාවිතා කරන හඬ සංස්කරණ මොඩියුල එකතු කළ හැක. <slot id=docs>අභිරුචි TTS ලේඛනය</slot> තුළ වැඩි විස්තර කියවන්න"
+	},
+	"settings_option_ttsModule": {
+		"message": "තෝරාගත් TTS මොඩියුලය"
+	},
+	"settings_option_ttsModule_desc": {
+		"message": "පෙළ හඬ කිරීම සඳහා භාවිතා කරන හඬ එන්ජිම"
+	},
+	"settings_option_userLanguage": {
+		"message": "ඔබේ භාෂාව"
+	},
+	"settings_option_userLanguage_desc": {
+		"message": "පෙළ පරිවර්තනය වන භාෂාව"
+	},
+	"settings_pageTitle": {
+		"message": "සැකසුම්"
+	},
+	"settings_section_history": {
+		"message": "ඉතිහාසය"
+	},
+	"settings_section_popup": {
+		"message": "පොප්අප්"
+	},
+	"textTranslator_suggestLanguage": {
+		"message": "පෙළ භාෂාව <slot id=languageSuggest>$language_name$</slot> වැනි පෙනේ",
+		"placeholders": {
+			"language_name": {
+				"content": "$1",
+				"example": "Japanese"
+			}
+		}
+	},
+	"textTranslator_translateInputPlaceholder": {
+		"message": "පරිවර්තනය සඳහා පාඨය ඇතුළත් කරන්න",
+		"description": "පරිවර්තනය සඳහා පරිශීලකයාට පාඨයක් ඇතුළත් කරන ලෙස ඉල්ලීම"
+	},
+	"textTranslator_translatePlaceholder": {
+		"message": "පරිවර්තිත පාඨය මෙහි පෙනේ"
+	},
+	"translatorsManagerWindow_add": {
+		"message": "පරිවර්තන මොඩියුලය එක් කරන්න"
+	},
+	"translatorsManagerWindow_close": {
+		"message": "වසන්න"
+	},
+	"translatorsManagerWindow_emptyTranslatorsListText": {
+		"message": "අභිරුචි පරිවර්තන මොඩියුල එකතු කර නොමැත"
+	},
+	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
+		"message": "\"$translator_name$\" පරිවර්තන මොඩියුලය ඉවත් කිරීමට ඔබට විශ්වාසද?",
+		"placeholders": {
+			"translator_name": {
+				"content": "$1",
+				"example": "Google translator"
+			}
+		}
+	},
+	"translatorsManagerWindow_title": {
+		"message": "අභිරුචි පරිවර්තන මොඩියුල"
+	},
+	"translatorsManagerWindow_translator_delete": {
+		"message": "මකන්න"
+	},
+	"translatorsManagerWindow_translator_edit": {
+		"message": "සංස්කරණය කරන්න"
+	},
+	"ttsManagerWindow_add": {
+		"message": "TTS මොඩියුලය එක් කරන්න"
+	},
+	"ttsManagerWindow_close": {
+		"message": "වසන්න"
+	},
+	"ttsManagerWindow_emptyTranslatorsListText": {
+		"message": "TTS මොඩියුල එකතු කර නොමැත"
+	},
+	"ttsManagerWindow_message_ttsRemoveConfirmation": {
+		"message": "\"$tts_name$\" TTS මොඩියුලය ඉවත් කිරීමට ඔබට විශ්වාසද?",
+		"placeholders": {
+			"tts_name": {
+				"content": "$1",
+				"example": "Google TTS"
+			}
+		}
+	},
+	"ttsManagerWindow_title": {
+		"message": "පාඨ-කථන මොඩියුල"
+	},
+	"ttsManagerWindow_translator_delete": {
+		"message": "මකන්න"
+	},
+	"ttsManagerWindow_translator_edit": {
+		"message": "සංස්කරණය කරන්න"
+	},
+	"validation_number": {
+		"message": "අගය සංඛ්‍යාතයක් විය යුතුය"
+	},
+	"validation_numberBetweenRange": {
+		"message": "අගය $1 සහ $2 අතර සංඛ්‍යාතයක් විය යුතුය"
+	},
+	"validation_positiveNumber": {
+		"message": "අගය ධන සංඛ්‍යාතයක් විය යුතුය"
+	}
+}

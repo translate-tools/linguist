@@ -1,0 +1,623 @@
+{
+	"common_action_addToDictionary": {
+		"message": "Ɓeydu jungo e ɗum to ɗaɓɓitorde"
+	},
+	"common_action_removeFromDictionary": {
+		"message": "Nana jungo e ɗum to ɗaɓɓitorde"
+	},
+	"common_bgUnavailable": {
+		"message": "Script e leydi waawataa"
+	},
+	"common_cancel": {
+		"message": "Fokkit"
+	},
+	"common_close": {
+		"message": "Uddu"
+	},
+	"common_copy": {
+		"message": "Natto"
+	},
+	"common_error": {
+		"message": "Juumre"
+	},
+	"common_offlineTranslator": {
+		"message": "$1 - Jungo e leydi"
+	},
+	"common_retry": {
+		"message": "Jokkit"
+	},
+	"common_translate": {
+		"message": "Jungo"
+	},
+	"component_hotkey_placeholder": {
+		"message": "Nawndu to ɗaɓɓitorde"
+	},
+	"component_hotkey_recordPlaceholder": {
+		"message": "Nawndu konngol"
+	},
+	"component_hotkey_resetButton": {
+		"message": "Fokkit"
+	},
+	"contextMenu_disablePageTranslation": {
+		"message": "Daggit jungo e leydi"
+	},
+	"contextMenu_translatePage": {
+		"message": "Jungo leydi"
+	},
+	"contextMenu_translateSelectedText": {
+		"message": "Jungo text e ɗaɓɓitorde"
+	},
+	"dictionaryButton_add": {
+		"message": "Ɓeydu to ɗaɓɓitorde"
+	},
+	"dictionaryButton_delete": {
+		"message": "Nana to ɗaɓɓitorde"
+	},
+	"dictionary_button_export": {
+		"message": "Nana"
+	},
+	"dictionary_button_removeAll": {
+		"message": "Nana fota"
+	},
+	"dictionary_deleteAll": {
+		"message": "Aɗa yenanaa aɗa waawi nana fota jungo e ɗaɓɓitorde?"
+	},
+	"dictionary_deleteConfirmation": {
+		"message": "Aɗa yenanaa aɗa waawi nana jungo e ɗum?"
+	},
+	"dictionary_description": {
+		"message": "Danndu jungo e ɗaɓɓitorde to waɗde ɗum njilli"
+	},
+	"dictionary_emptyDictionary": {
+		"message": "Ɗaɓɓitorde waawataa, fuɗɗit ɗum e jungo text"
+	},
+	"dictionary_filter_from": {
+		"message": "Ɗemngal e jungo"
+	},
+	"dictionary_filter_to": {
+		"message": "Ɗemngal e ɗaɓɓitorde"
+	},
+	"dictionary_message_deleteAll_success": {
+		"message": "Jungo fota ɗaɓɓitorde nanaama"
+	},
+	"dictionary_notFoundEntries": {
+		"message": "Jungo e ɗaɓɓitorde njillataa e waɗde"
+	},
+	"dictionary_pageTitle": {
+		"message": "Ɗaɓɓitorde"
+	},
+	"dictionary_resetFilters": {
+		"message": "Fokkit waɗde"
+	},
+	"dictionary_searchPlaceholder": {
+		"message": "Nanaadee e binndol"
+	},
+	"editorWindow_close": {
+		"message": "Uddu"
+	},
+	"editorWindow_data_code": {
+		"message": "Code"
+	},
+	"editorWindow_data_title": {
+		"message": "Innde module"
+	},
+	"editorWindow_message_invalidTitle": {
+		"message": "Innde module maa jogi ko feereede e nder ngoo"
+	},
+	"editorWindow_save": {
+		"message": "Danndu"
+	},
+	"ext_description": {
+		"message": "Nanaadee e binndol, nanaadee e binndol, diina, histori, diinaaji moƴƴi, ko ɗum woni maa waɗi ko ɓe"
+	},
+	"ext_name": {
+		"message": "Linguist - nanaadee e binndol"
+	},
+	"history_control_selectEntry": {
+		"message": "Nanaadee e binndol e ɗam",
+		"description": "Description in finite form \"to pick\" with explaining what this checkbox will do"
+	},
+	"history_controls_clearHistory": {
+		"message": "Naatu histori"
+	},
+	"history_controls_deleteSelected": {
+		"message": "Momtu diinaaji moƴƴi"
+	},
+	"history_controls_selectAll": {
+		"message": "Nanaadee e binndol fow"
+	},
+	"history_message_clearHistoryConfirmation": {
+		"message": "Aɗa sure aɗa yiɗi naatude histori? Diinaaji fow maa momtude"
+	},
+	"history_message_deleteEntryConfirmation": {
+		"message": "Aɗa sure aɗa yiɗi momtude ngoo?"
+	},
+	"history_message_deleteSelectedEntriesConfirmation": {
+		"message": "Aɗa sure aɗa yiɗi momtude diinaaji moƴƴi ($1)?"
+	},
+	"history_message_entriesNotFound": {
+		"message": "Diinaaji moƴƴi njogi e filter"
+	},
+	"history_message_noEntries": {
+		"message": "Histori njogi"
+	},
+	"history_notification_disabled": {
+		"message": "Naatude histori njogi, ko ɗum woni maa waɗi ko ɓe. Aɗa waawi waylude ngoo e <slot id=preferences>Preferences</slot>"
+	},
+	"history_pageTitle": {
+		"message": "Histori"
+	},
+	"history_searchPlaceholder": {
+		"message": "Nanaadee e binndol"
+	},
+	"inlineTranslator_showOriginalText": {
+		"message": "Hollu binndol jooni"
+	},
+	"lang_change": {
+		"message": "Waylu ɗemngal"
+	},
+	"lang_detect": {
+		"message": "Nanaadee e binndol"
+	},
+	"lang_select": {
+		"message": "Nanaadee e binndol"
+	},
+	"lang_swap": {
+		"message": "Waylu ɗemngal"
+	},
+	"message_unknownError": {
+		"message": "Juumre njogi"
+	},
+	"pageTranslator_alwaysTranslateLang": {
+		"message": "Nanaadee e binndol ɗemngal"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disable": {
+		"message": "Naatu"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
+		"message": "Naatu e binndol fow"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_enable": {
+		"message": "Waylu"
+	},
+	"pageTranslator_commonPreferences_title": {
+		"message": "Cuɓɓo ɗe nder ɗemngal ngol"
+	},
+	"pageTranslator_option_autoTranslate": {
+		"message": "Jokkitirgol mum"
+	},
+	"pageTranslator_showOriginal": {
+		"message": "Hollu asli"
+	},
+	"pageTranslator_showTranslationPreferences": {
+		"message": "Cuɓɓe jokkitirgol"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_always": {
+		"message": "Jokkitirgol sahlaa"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
+		"message": "Jokkitirgol sahlaa nder ɗemngal ngol"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_default": {
+		"message": "Naatnu cuɓɓe cuɓɓo"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
+		"message": "Naatnu cuɓɓe cuɓɓo nder ɗemngal ngol"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_never": {
+		"message": "Hoto jokkitirgol"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
+		"message": "Hoto jokkitirgol nder ɗemngal ngol"
+	},
+	"pageTranslator_sitePreferences_title": {
+		"message": "Cuɓɓe ɗe"
+	},
+	"pageTranslator_translatePage": {
+		"message": "Jokkitir ngal"
+	},
+	"pageTranslator_translationReport": {
+		"message": "Jaŋngol jokkitirgol"
+	},
+	"pageTranslator_translationReport_queue": {
+		"message": "Nana"
+	},
+	"pageTranslator_translationReport_reject": {
+		"message": "Kokki"
+	},
+	"pageTranslator_translationReport_resolve": {
+		"message": "Jokkitirgol"
+	},
+	"popup_tabIdNotFound": {
+		"message": "Tab \"$1\" hoto njiyta"
+	},
+	"popup_tab_translatePage": {
+		"message": "Jokkitirgol ngal"
+	},
+	"popup_tab_translateText": {
+		"message": "Jokkitirgol ɗemngal"
+	},
+	"settings_button_cancel": {
+		"message": "Fokkit"
+	},
+	"settings_button_export": {
+		"message": "Naatnu config"
+	},
+	"settings_button_import": {
+		"message": "Jokkit config"
+	},
+	"settings_button_reset": {
+		"message": "Fokkit config"
+	},
+	"settings_button_saveChanges": {
+		"message": "Danndu waylu"
+	},
+	"settings_message_clearCache_success": {
+		"message": "Cache njiyta"
+	},
+	"settings_message_common_invalidValueType": {
+		"message": "Kiɗɗo hoto njiyta"
+	},
+	"settings_message_importConfig_invalidFile": {
+		"message": "Fiilde config njiyta hoto njiyta walla njiyta, hoto njiyta"
+	},
+	"settings_message_importConfig_success": {
+		"message": "Jokkit njiyta"
+	},
+	"settings_message_resetConfig_confirm": {
+		"message": "Danndu fokkit cuɓɓe ɗe cuɓɓo"
+	},
+	"settings_message_resetConfig_success": {
+		"message": "Cuɓɓe njiyta"
+	},
+	"settings_message_saveChanges_success": {
+		"message": "Ndaɗo ɗaɓɓitan"
+	},
+	"settings_option_cache": {
+		"message": "Cache"
+	},
+	"settings_option_cache_clear": {
+		"message": "Noddii cache"
+	},
+	"settings_option_cache_clear_desc": {
+		"message": "So tawii a foti waɗi leeral e nder jaɓɓorgo walla a jaɓɓi ɗeere leeral e nder cache, a foti noddi ɗum fow e nder cache",
+		"description": "Explanation for user about cases when it's useful to clear cache"
+	},
+	"settings_option_cache_enable": {
+		"message": "Huutora cache"
+	},
+	"settings_option_cache_enable_desc": {
+		"message": "When the cache is enabled, texts that have been translated before will be translated instantly without additional requests to the translation service"
+	},
+	"settings_option_cache_ignoreCase": {
+		"message": "Use case-insensitive cache"
+	},
+	"settings_option_cache_ignoreCase_desc": {
+		"message": "When enabled, cached translations will be used for texts with different cases, which may cause translation distortions in certain situations"
+	},
+	"settings_option_commonSettings": {
+		"message": "Common settings"
+	},
+	"settings_option_customTranslatorModule": {
+		"message": "Custom translation modules",
+		"description": "An user defined code that implements a translation module"
+	},
+	"settings_option_customTranslatorModule_desc": {
+		"message": "You can add custom translation modules that use your favorite translation services. Learn more in the <slot id=docs>custom translators documentation</slot>"
+	},
+	"settings_option_customTranslatorModule_manageButton": {
+		"message": "Managing translators",
+		"description": "A button to show list of translation modules"
+	},
+	"settings_option_history_enable": {
+		"message": "Enable history"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "When enabled, translations will be recorded and appear on the <slot id=historyPage>history page</slot>"
+	},
+	"settings_option_pageTranslation": {
+		"message": "The full page translation"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent": {
+		"message": "Detect language by content"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent_desc": {
+		"message": "Analyze the text on the web page to detect its language. When disabled, the language specified in the <slot id=docs>page metadata</slot> will be used"
+	},
+	"settings_option_pageTranslation_enableContextMenu": {
+		"message": "Enable context menu button"
+	},
+	"settings_option_pageTranslation_enableContextMenu_desc": {
+		"message": "Add a button to toggle page translation in the page context menu"
+	},
+	"settings_option_pageTranslation_excludeSelectors": {
+		"message": "Selectors to exclude from translation"
+	},
+	"settings_option_pageTranslation_excludeSelectors_desc": {
+		"message": "List of CSS selectors for elements to be excluded from translation. One selector per line. If an element matches any of these selectors, its text, attributes, and nested elements will not be translated"
+	},
+	"settings_option_pageTranslation_lazyTranslate": {
+		"message": "Translate only visible elements"
+	},
+	"settings_option_pageTranslation_lazyTranslate_desc": {
+		"message": "When this option is enabled, only visible elements will be translated. This option reduces network traffic"
+	},
+	"settings_option_pageTranslation_originalTextPopup": {
+		"message": "Enable popup with the original text"
+	},
+	"settings_option_pageTranslation_originalTextPopup_desc": {
+		"message": "Show a popup with the original text when hovering over translated text blocks"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation": {
+		"message": "Shortcut"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation_desc": {
+		"message": "Shortcut to toggle page translation\nPress ESC to reset keys"
+	},
+	"settings_option_pageTranslation_translatableAttributes": {
+		"message": "Translatable attributes"
+	},
+	"settings_option_pageTranslation_translatableAttributes_desc": {
+		"message": "Enter <slot id=htmlAttributes>HTML attribute</slot> names to translate, one attribute per line\nOnly the attributes in this list will be translated"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters": {
+		"message": "Show translation progress"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters_desc": {
+		"message": "Hollu kaɓirgol e nder popup ngol e nder extension ngol"
+	},
+	"settings_option_selectTranslation": {
+		"message": "Naatgol e nder text ngol ɗiɗol"
+	},
+	"settings_option_selectTranslation_detectTextLanguage": {
+		"message": "Naatgol ɗum e nder ɗum"
+	},
+	"settings_option_selectTranslation_detectTextLanguage_desc": {
+		"message": "So tawii ɗum ena ɗaɓɓit, text ngol ɗiɗol maa naatgol ɗum e nder ɗum. So tawii ɗum ena ɗaɓɓit, ɗum maa naatgol ɗum e nder ɗum"
+	},
+	"settings_option_selectTranslation_disableWhileTranslatePage": {
+		"message": "Naatgol ɗum e nder ɗum"
+	},
+	"settings_option_selectTranslation_enable": {
+		"message": "Naatgol e nder text ngol ɗiɗol"
+	},
+	"settings_option_selectTranslation_enable_desc": {
+		"message": "So tawii ɗum ena ɗaɓɓit, aɗa waawaa naatgol e nder text ngol ɗiɗol e nder popup ngol"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton": {
+		"message": "Naatgol e nder button ngol"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
+		"message": "So tawii button ngol ena ɗaɓɓit e nder ɗum, ɗum maa naatgol ɗum e nder ɗum"
+	},
+	"settings_option_selectTranslation_header_languageChoice": {
+		"message": "Naatgol e nder ɗum"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang": {
+		"message": "Naatgol e nder ɗum"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
+		"message": "So tawii ɗum ena ɗaɓɓit e nder ɗum, ɗum maa naatgol ɗum e nder ɗum \"auto\" so tawii ɗum ena ɗaɓɓit.\nSo tawii ɗum ena ɗaɓɓit, ɗum maa naatgol ɗum e nder ɗum"
+	},
+	"settings_option_selectTranslation_mode": {
+		"message": "Naatgol e nder ɗum"
+	},
+	"settings_option_selectTranslation_mode_item_contextMenu": {
+		"message": "Naatgol e nder ɗum"
+	},
+	"settings_option_selectTranslation_mode_item_popupButton": {
+		"message": "Naatgol e nder ɗum"
+	},
+	"settings_option_selectTranslation_mode_item_quickTranslate": {
+		"message": "Naatgol e nder ɗum"
+	},
+	"settings_option_selectTranslation_modifiers": {
+		"message": "Naatgol e nder ɗum"
+	},
+	"settings_option_selectTranslation_modifiers_desc": {
+		"message": "Naatgol e nder ɗum"
+	},
+	"settings_option_selectTranslation_modifiers_key_alt": {
+		"message": "alt"
+	},
+	"settings_option_selectTranslation_modifiers_key_ctrl": {
+		"message": "ctrl"
+	},
+	"settings_option_selectTranslation_modifiers_key_meta": {
+		"message": "meta"
+	},
+	"settings_option_selectTranslation_modifiers_key_shift": {
+		"message": "shift"
+	},
+	"settings_option_selectTranslation_rememberDirection": {
+		"message": "Naatgol e nder ɗum"
+	},
+	"settings_option_selectTranslation_showOnceForSelection": {
+		"message": "Naatgol e nder ɗum"
+	},
+	"settings_option_selectTranslation_showOnceForSelection_desc": {
+		"message": "Naatgol e nder ɗum"
+	},
+	"settings_option_selectTranslation_showOriginalText": {
+		"message": "Naatgol e nder ɗum"
+	},
+	"settings_option_selectTranslation_showOriginalText_desc": {
+		"message": "Naatgol e nder ɗum"
+	},
+	"settings_option_selectTranslation_strictSelection": {
+		"message": "Naatgol e nder ɗum",
+		"description": "This option is about selecting text via mouse"
+	},
+	"settings_option_selectTranslation_strictSelection_desc": {
+		"message": "Naatgol e nder ɗum"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton": {
+		"message": "Naatgol e nder ɗum"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton_desc": {
+		"message": "Wakkati ɗiɗi e milliseconds kala ko button ɗiɗi waɗi ko ɓuri, so tawii cursor ɗiɗi waɗi ko ɓuri. So tawii cursor ɗiɗi waɗi ko ɓuri button ɗiɗi, timer ɗiɗi waɗi ko ɓuri. So tawii aɗa yiɗi ko ɓuri auto-hide, settii value ɗiɗi ko ɓuri 1"
+	},
+	"settings_option_selectTranslation_zIndex": {
+		"message": "z-index"
+	},
+	"settings_option_selectTranslation_zIndex_desc": {
+		"message": "Ɓeydui value ɗiɗi so tawii elements ɗiɗi e ɓuri pages ɗiɗi waɗi ko ɓuri popup ɗiɗi e text ɗiɗi waɗi ko ɓuri"
+	},
+	"settings_option_textTranslator": {
+		"message": "Tarjumaade text"
+	},
+	"settings_option_textTranslator_rememberText": {
+		"message": "Nana faamii text ɗiɗi waɗi ko ɓuri"
+	},
+	"settings_option_textTranslator_rememberText_desc": {
+		"message": "Nana faamii text ɗiɗi waɗi ko ɓuri so tawii window ɗiɗi waɗi ko ɓuri"
+	},
+	"settings_option_textTranslator_spellCheck": {
+		"message": "Nana ɗaɓɓitii spell check"
+	},
+	"settings_option_textTranslator_suggestLanguage": {
+		"message": "Nana holli ɗiɗi e text ɗiɗi waɗi ko ɓuri"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways": {
+		"message": "Nana ɗaɓɓitii e holli ɗiɗi e kala"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways_desc": {
+		"message": "So tawii ɗiɗi waɗi ko ɓuri, holli ɗiɗi waɗi ko ɓuri so tawii source ɗiɗi waɗi ko ɓuri \"auto\""
+	},
+	"settings_option_translatePreferences": {
+		"message": "Preferences ɗiɗi waɗi ko ɓuri"
+	},
+	"settings_option_translateScheduler": {
+		"message": "Scheduler ɗiɗi waɗi ko ɓuri"
+	},
+	"settings_option_translateScheduler_delay": {
+		"message": "Wakkati ɗiɗi waɗi ko ɓuri"
+	},
+	"settings_option_translateScheduler_delay_desc": {
+		"message": "Scheduler ɗiɗi waɗi ko ɓuri waɗi ko ɓuri requests ɗiɗi waɗi ko ɓuri service API ɗiɗi waɗi ko ɓuri e waɗi ko ɓuri texts ɗiɗi waɗi ko ɓuri e waɗi ko ɓuri request ɗiɗi waɗi ko ɓuri. Scheduler ɗiɗi waɗi ko ɓuri waɗi ko ɓuri wakkati ɗiɗi waɗi ko ɓuri e milliseconds ɗiɗi waɗi ko ɓuri waɗi ko ɓuri texts ɗiɗi waɗi ko ɓuri waɗi ko ɓuri"
+	},
+	"settings_option_translateScheduler_retryLimit": {
+		"message": "Limit ɗiɗi waɗi ko ɓuri retry ɗiɗi waɗi ko ɓuri"
+	},
+	"settings_option_translateScheduler_retryLimit_desc": {
+		"message": "Scheduler ɗiɗi waɗi ko ɓuri waɗi ko ɓuri texts ɗiɗi waɗi ko ɓuri so tawii errors ɗiɗi waɗi ko ɓuri. Option ɗiɗi waɗi ko ɓuri waɗi ko ɓuri limit ɗiɗi waɗi ko ɓuri retry ɗiɗi waɗi ko ɓuri. Settii number ɗiɗi waɗi ko ɓuri so tawii aɗa yiɗi ko ɓuri unlimited retries"
+	},
+	"settings_option_translatorModule": {
+		"message": "Module ɗiɗi waɗi ko ɓuri"
+	},
+	"settings_option_translatorModule_desc": {
+		"message": "Quality ɗiɗi waɗi ko ɓuri e languages ɗiɗi waɗi ko ɓuri waɗi ko ɓuri module ɗiɗi waɗi ko ɓuri"
+	},
+	"settings_option_tts": {
+		"message": "Text to Speech conversion (TTS)"
+	},
+	"settings_option_ttsCustomModules": {
+		"message": "Modules ɗiɗi waɗi ko ɓuri"
+	},
+	"settings_option_ttsCustomModules_button": {
+		"message": "Nana ɗaɓɓitii modules ɗiɗi waɗi ko ɓuri"
+	},
+	"settings_option_ttsCustomModules_desc": {
+		"message": "Aɗa waɗi ko ɓuri modules ɗiɗi waɗi ko ɓuri waɗi ko ɓuri services ɗiɗi waɗi ko ɓuri e engines ɗiɗi waɗi ko ɓuri. Nana waɗi ko ɓuri e <slot id=docs>custom TTS documentation</slot>"
+	},
+	"settings_option_ttsModule": {
+		"message": "Module ɗiɗi waɗi ko ɓuri"
+	},
+	"settings_option_ttsModule_desc": {
+		"message": "Engine ɗiɗi waɗi ko ɓuri waɗi ko ɓuri text ɗiɗi waɗi ko ɓuri"
+	},
+	"settings_option_userLanguage": {
+		"message": "Language ɗiɗi waɗi ko ɓuri"
+	},
+	"settings_option_userLanguage_desc": {
+		"message": "Language ɗiɗi waɗi ko ɓuri waɗi ko ɓuri texts ɗiɗi waɗi ko ɓuri"
+	},
+	"settings_pageTitle": {
+		"message": "Settings"
+	},
+	"settings_section_history": {
+		"message": "History"
+	},
+	"settings_section_popup": {
+		"message": "Popup"
+	},
+	"textTranslator_suggestLanguage": {
+		"message": "Nana waɗi ko ɓuri ɗiɗi e text ɗiɗi waɗi ko ɓuri <slot id=languageSuggest>$language_name$</slot>",
+		"placeholders": {
+			"language_name": {
+				"content": "$1",
+				"example": "Japanese"
+			}
+		}
+	},
+	"textTranslator_translateInputPlaceholder": {
+		"message": "Jokku text ngoo ngoo woni ko nder",
+		"description": "Request to user input some text for translation"
+	},
+	"textTranslator_translatePlaceholder": {
+		"message": "Text ngoo ngoo woni ko nder"
+	},
+	"translatorsManagerWindow_add": {
+		"message": "Jokku module ngoo ngoo woni ko nder"
+	},
+	"translatorsManagerWindow_close": {
+		"message": "Uddu"
+	},
+	"translatorsManagerWindow_emptyTranslatorsListText": {
+		"message": "Module ngoo ngoo woni ko nder ngoo ngoo ngoni yettude"
+	},
+	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
+		"message": "Aɗa sure aɗa yiɗi a waɗi module ngoo ngoo woni ko nder \"$translator_name$\"?",
+		"placeholders": {
+			"translator_name": {
+				"content": "$1",
+				"example": "Google translator"
+			}
+		}
+	},
+	"translatorsManagerWindow_title": {
+		"message": "Module ngoo ngoo woni ko nder ngoo ngoo ngoni"
+	},
+	"translatorsManagerWindow_translator_delete": {
+		"message": "Momtu"
+	},
+	"translatorsManagerWindow_translator_edit": {
+		"message": "Taƴto"
+	},
+	"ttsManagerWindow_add": {
+		"message": "Jokku module TTS"
+	},
+	"ttsManagerWindow_close": {
+		"message": "Uddu"
+	},
+	"ttsManagerWindow_emptyTranslatorsListText": {
+		"message": "Module TTS ngoo ngoo ngoni yettude"
+	},
+	"ttsManagerWindow_message_ttsRemoveConfirmation": {
+		"message": "Aɗa sure aɗa yiɗi a waɗi module TTS \"$tts_name$\"?",
+		"placeholders": {
+			"tts_name": {
+				"content": "$1",
+				"example": "Google TTS"
+			}
+		}
+	},
+	"ttsManagerWindow_title": {
+		"message": "Module Text-to-Speech"
+	},
+	"ttsManagerWindow_translator_delete": {
+		"message": "Momtu"
+	},
+	"ttsManagerWindow_translator_edit": {
+		"message": "Taƴto"
+	},
+	"validation_number": {
+		"message": "Ndeerɗe ngoo ngoo ngoni ko nder"
+	},
+	"validation_numberBetweenRange": {
+		"message": "Ndeerɗe ngoo ngoo ngoni ko nder $1 e $2"
+	},
+	"validation_positiveNumber": {
+		"message": "Ndeerɗe ngoo ngoo ngoni ko nder ngoo ngoni"
+	}
+}

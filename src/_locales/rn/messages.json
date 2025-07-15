@@ -1,0 +1,623 @@
+{
+	"common_action_addToDictionary": {
+		"message": "Guteza ishusho mu gisomwa"
+	},
+	"common_action_removeFromDictionary": {
+		"message": "Kura ishusho mu gisomwa"
+	},
+	"common_bgUnavailable": {
+		"message": "Ishusho y'inyuma ntiboneka"
+	},
+	"common_cancel": {
+		"message": "Guhagarika"
+	},
+	"common_close": {
+		"message": "Gufunga"
+	},
+	"common_copy": {
+		"message": "Gukoporora"
+	},
+	"common_error": {
+		"message": "Ikosa"
+	},
+	"common_offlineTranslator": {
+		"message": "$1 - Umusiguzi atari kuri internet"
+	},
+	"common_retry": {
+		"message": "Gusubira kugerageza"
+	},
+	"common_translate": {
+		"message": "Guhindura"
+	},
+	"component_hotkey_placeholder": {
+		"message": "Kanda kugira ngo wandike umufupisho"
+	},
+	"component_hotkey_recordPlaceholder": {
+		"message": "Kanda imfunguruzo"
+	},
+	"component_hotkey_resetButton": {
+		"message": "Gusubira gutangura"
+	},
+	"contextMenu_disablePageTranslation": {
+		"message": "Hagarika guhindura urupapuro"
+	},
+	"contextMenu_translatePage": {
+		"message": "Hindura urupapuro"
+	},
+	"contextMenu_translateSelectedText": {
+		"message": "Hindura inyandiko yatowe"
+	},
+	"dictionaryButton_add": {
+		"message": "Guteza mu gisomwa"
+	},
+	"dictionaryButton_delete": {
+		"message": "Gukura mu gisomwa"
+	},
+	"dictionary_button_export": {
+		"message": "Kohereza hanze"
+	},
+	"dictionary_button_removeAll": {
+		"message": "Kura vyose"
+	},
+	"dictionary_deleteAll": {
+		"message": "Urashaka vy'ukuri gukura vyose mu gisomwa?"
+	},
+	"dictionary_deleteConfirmation": {
+		"message": "Urashaka vy'ukuri gukura iyi shusho?"
+	},
+	"dictionary_description": {
+		"message": "Bika amashusho mu gisomwa kugira ngo uyasange vuba"
+	},
+	"dictionary_emptyDictionary": {
+		"message": "Igisomwa kirahera, tangura kugihindura uduhimba"
+	},
+	"dictionary_filter_from": {
+		"message": "Ururimi rw'inyandiko y'inkomoko"
+	},
+	"dictionary_filter_to": {
+		"message": "Ururimi rw'iherezo"
+	},
+	"dictionary_message_deleteAll_success": {
+		"message": "Amashusho yose yakuwemo"
+	},
+	"dictionary_notFoundEntries": {
+		"message": "Nta mashusho aboneka akwiranye n'ayo masano"
+	},
+	"dictionary_pageTitle": {
+		"message": "Igisomwa"
+	},
+	"dictionary_resetFilters": {
+		"message": "Gusubira gutangura amasano"
+	},
+	"dictionary_searchPlaceholder": {
+		"message": "Rondera ijambo"
+	},
+	"editorWindow_close": {
+		"message": "Gufunga"
+	},
+	"editorWindow_data_code": {
+		"message": "Ikirangamuntu"
+	},
+	"editorWindow_data_title": {
+		"message": "Izina rya module"
+	},
+	"editorWindow_message_invalidTitle": {
+		"message": "Izina rya module rigomba kugira inyuguti imwe nibura"
+	},
+	"editorWindow_save": {
+		"message": "Gukiza"
+	},
+	"ext_description": {
+		"message": "Guhindura urupapuro rw'urubuga, guhindura inyandiko, insiguro, amateka, abahinduzi b'inyandiko bwite, vyose ukeneye kugira ngo usambure inzitizi z'ururimi"
+	},
+	"ext_name": {
+		"message": "Linguist - umuhinduzi w'urupapuro rw'urubuga"
+	},
+	"history_control_selectEntry": {
+		"message": "Guhitamwo guhindura ku gikorwa rusangi",
+		"description": "Description in finite form \"to pick\" with explaining what this checkbox will do"
+	},
+	"history_controls_clearHistory": {
+		"message": "Gusiba amateka"
+	},
+	"history_controls_deleteSelected": {
+		"message": "Gusiba ivyahinduwe vyatoranijwe"
+	},
+	"history_controls_selectAll": {
+		"message": "Guhitamwo vyose vyahinduwe"
+	},
+	"history_message_clearHistoryConfirmation": {
+		"message": "Urashaka vy'ukuri gusiba amateka? Ivyose bizokurwaho"
+	},
+	"history_message_deleteEntryConfirmation": {
+		"message": "Urashaka vy'ukuri gusiba iki kintu?"
+	},
+	"history_message_deleteSelectedEntriesConfirmation": {
+		"message": "Urashaka vy'ukuri gusiba ivyo wahisemwo ($1)?"
+	},
+	"history_message_entriesNotFound": {
+		"message": "Nta vyahinduwe vyabonetse bihuye n'ifiltri"
+	},
+	"history_message_noEntries": {
+		"message": "Amateka arakimaze"
+	},
+	"history_notification_disabled": {
+		"message": "Gufata amateka birahagaritswe, bityo ivishasha ntibizoboneka. Urashobora guhindura ibi muri <slot id=preferences>Preferences</slot>"
+	},
+	"history_pageTitle": {
+		"message": "Amateka"
+	},
+	"history_searchPlaceholder": {
+		"message": "Rondera ijambo"
+	},
+	"inlineTranslator_showOriginalText": {
+		"message": "Kwerekana inyandiko y'umwimerere"
+	},
+	"lang_change": {
+		"message": "Guhindura ururimi"
+	},
+	"lang_detect": {
+		"message": "Kwimenya"
+	},
+	"lang_select": {
+		"message": "Guhitamwo ururimi"
+	},
+	"lang_swap": {
+		"message": "Guhinduranya indimi"
+	},
+	"message_unknownError": {
+		"message": "Ikosa ritazwi"
+	},
+	"pageTranslator_alwaysTranslateLang": {
+		"message": "Buraheza guhindura uru rurimi"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disable": {
+		"message": "Guhagarika"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
+		"message": "Guhagarika ku mbuga zose"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_enable": {
+		"message": "Gushiraho"
+	},
+	"pageTranslator_commonPreferences_title": {
+		"message": "Ivyipfuzo rusangi kuri uru rurimi"
+	},
+	"pageTranslator_option_autoTranslate": {
+		"message": "Guhindura vyikora"
+	},
+	"pageTranslator_showOriginal": {
+		"message": "Kwerekana ivya mbere"
+	},
+	"pageTranslator_showTranslationPreferences": {
+		"message": "Ivyipfuzo vyo guhindura"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_always": {
+		"message": "Bihindure igihe cose"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
+		"message": "Bihindure igihe cose kuri uru rurimi"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_default": {
+		"message": "Koresha amategeko rusangi"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
+		"message": "Koresha amategeko rusangi kuri uru rurimi"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_never": {
+		"message": "Ntibihindure na rimwe"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
+		"message": "Ntibihindure na rimwe kuri uru rurimi"
+	},
+	"pageTranslator_sitePreferences_title": {
+		"message": "Ivyipfuzo vya"
+	},
+	"pageTranslator_translatePage": {
+		"message": "Guhindura urupapuro"
+	},
+	"pageTranslator_translationReport": {
+		"message": "Raporo y'ihindura"
+	},
+	"pageTranslator_translationReport_queue": {
+		"message": "Birindiriye"
+	},
+	"pageTranslator_translationReport_reject": {
+		"message": "Ibibazo"
+	},
+	"pageTranslator_translationReport_resolve": {
+		"message": "Vyahinduwe"
+	},
+	"popup_tabIdNotFound": {
+		"message": "Ikibanza \"$1\" nticabonetse"
+	},
+	"popup_tab_translatePage": {
+		"message": "Guhindura urupapuro"
+	},
+	"popup_tab_translateText": {
+		"message": "Guhindura inyandiko"
+	},
+	"settings_button_cancel": {
+		"message": "Guhagarika"
+	},
+	"settings_button_export": {
+		"message": "Kohereza ivyashizweho"
+	},
+	"settings_button_import": {
+		"message": "Kwinjiza ivyashizweho"
+	},
+	"settings_button_reset": {
+		"message": "Gusubira ku vyashizweho"
+	},
+	"settings_button_saveChanges": {
+		"message": "Gukiza ivyo wahinduye"
+	},
+	"settings_message_clearCache_success": {
+		"message": "Ububiko bwarasivye"
+	},
+	"settings_message_common_invalidValueType": {
+		"message": "Agaciro katari ko"
+	},
+	"settings_message_importConfig_invalidFile": {
+		"message": "Ifayile y'ivyashizweho yatanzwe siyo canke yarasambutse, ntishobora gutunganywa"
+	},
+	"settings_message_importConfig_success": {
+		"message": "Kwinjiza birarangiye"
+	},
+	"settings_message_resetConfig_confirm": {
+		"message": "Emeza gusubira ku vyashizweho bisanzwe"
+	},
+	"settings_message_resetConfig_success": {
+		"message": "Ivyashizweho vyarasubiwemwo"
+	},
+	"settings_message_saveChanges_success": {
+		"message": "Ibihinduka vyararinze"
+	},
+	"settings_option_cache": {
+		"message": "Cache"
+	},
+	"settings_option_cache_clear": {
+		"message": "Guhanagura cache"
+	},
+	"settings_option_cache_clear_desc": {
+		"message": "Nimba ubona amakosa mu guhindura canke wahindura ibihishijwe igihe cache ikora, urashobora gusiba amakuru yose muri cache",
+		"description": "Explanation for user about cases when it's useful to clear cache"
+	},
+	"settings_option_cache_enable": {
+		"message": "Gushiraho cache"
+	},
+	"settings_option_cache_enable_desc": {
+		"message": "Igihe cache ikora, ivyahinduwe imbere bizohindurwa ako kanya ata gusaba ubundi busabe ku gisata co guhindura"
+	},
+	"settings_option_cache_ignoreCase": {
+		"message": "Koresha cache idashira akamaro ku nyuguti"
+	},
+	"settings_option_cache_ignoreCase_desc": {
+		"message": "Igihe ikora, ivyahinduwe muri cache bizokoreshwa ku nyandiko zifise inyuguti zitandukanye, bishobora gutera amakosa mu guhindura mu bihe bimwe"
+	},
+	"settings_option_commonSettings": {
+		"message": "Ivyerekeye vyose"
+	},
+	"settings_option_customTranslatorModule": {
+		"message": "Ibikoresho vyihariye vyo guhindura",
+		"description": "An user defined code that implements a translation module"
+	},
+	"settings_option_customTranslatorModule_desc": {
+		"message": "Urashobora kongerako ibikoresho vyihariye vyo guhindura bikoresha ibisata ukunda. Menya vyinshi muri <slot id=docs>inyandiko zerekeye abahindura vyihariye</slot>"
+	},
+	"settings_option_customTranslatorModule_manageButton": {
+		"message": "Gucunga abahindura",
+		"description": "A button to show list of translation modules"
+	},
+	"settings_option_history_enable": {
+		"message": "Gushiraho kahise"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "Igihe ikora, ivyahinduwe bizokwandikwa kandi bigaragarire ku <slot id=historyPage>urupapuro rw'akahise</slot>"
+	},
+	"settings_option_pageTranslation": {
+		"message": "Guhindura urupapuro rwose"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent": {
+		"message": "Kumenya ururimi hakurikijwe ibirimwo"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent_desc": {
+		"message": "Gusuzuma inyandiko iri ku rupapuro rwa web kugira umenye ururimi rwayo. Igihe itakoze, ururimi rwashizwe mu <slot id=docs>page metadata</slot> ruzokoreshwa"
+	},
+	"settings_option_pageTranslation_enableContextMenu": {
+		"message": "Gushiraho buto mu menyu y'ibikorerwa"
+	},
+	"settings_option_pageTranslation_enableContextMenu_desc": {
+		"message": "Kongerako buto yo guhindura urupapuro mu menyu y'ibikorerwa ku rupapuro"
+	},
+	"settings_option_pageTranslation_excludeSelectors": {
+		"message": "Abatoranya b'ukudakoresha mu guhindura"
+	},
+	"settings_option_pageTranslation_excludeSelectors_desc": {
+		"message": "Urutonde rw'abatoranya ba CSS ku bintu bitazokorerwa guhindura. Umutoranya umwe ku murongo. Nimba ikintu cose gihuye n'umwe muri aba batoranya, inyandiko yaco, ivyaco, n'ibintu vyaco vy'imbere ntibizohindurwa"
+	},
+	"settings_option_pageTranslation_lazyTranslate": {
+		"message": "Hindura ibigaragara gusa"
+	},
+	"settings_option_pageTranslation_lazyTranslate_desc": {
+		"message": "Igihe iyi nzira ikora, ibigaragara gusa ni vyo bizohindurwa. Iyi nzira igabanya uruja n'uruza rw'ubutumwa"
+	},
+	"settings_option_pageTranslation_originalTextPopup": {
+		"message": "Gushiraho popup ifise inyandiko y'umwimerere"
+	},
+	"settings_option_pageTranslation_originalTextPopup_desc": {
+		"message": "Kwerekana popup ifise inyandiko y'umwimerere igihe uhagaze hejuru y'ibice vyahinduwe"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation": {
+		"message": "Inzira ngufi"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation_desc": {
+		"message": "Inzira ngufi yo guhindura urupapuro\nKanda ESC kugira usubize imfunguruzo"
+	},
+	"settings_option_pageTranslation_translatableAttributes": {
+		"message": "Ibintu bishobora guhindurwa"
+	},
+	"settings_option_pageTranslation_translatableAttributes_desc": {
+		"message": "Injiza amazina y'ibintu vya <slot id=htmlAttributes>HTML</slot> kugira bihindurwe, ikintu kimwe ku murongo\nIbintu biri muri uru rutonde gusa ni vyo bizohindurwa"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters": {
+		"message": "Kwerekana intambwe yo guhindura"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters_desc": {
+		"message": "Kwerekana igipande kirimwo uko guhindura urupapuro bigenda mu gice ca extension"
+	},
+	"settings_option_selectTranslation": {
+		"message": "Guhindura inyandiko yatowe"
+	},
+	"settings_option_selectTranslation_detectTextLanguage": {
+		"message": "Gutororokanya ururimi rw'inyandiko"
+	},
+	"settings_option_selectTranslation_detectTextLanguage_desc": {
+		"message": "Iyo vyakoreshejwe, inyandiko yatowe izosuzumwa kugira ngo hamenyekane ururimi rwo guhindura. Bitagenze gutyo, ururimi rw'urupapuro ni rwo ruzokwisungwa"
+	},
+	"settings_option_selectTranslation_disableWhileTranslatePage": {
+		"message": "Guhagarika mugihe urupapuro ruriko rurahindurwa"
+	},
+	"settings_option_selectTranslation_enable": {
+		"message": "Gushira mu ngiro guhindura inyandiko yatowe"
+	},
+	"settings_option_selectTranslation_enable_desc": {
+		"message": "Iyo iyi nyabune iriko, urashobora gutora inyandiko iyo ari yo yose ku rupapuro ukayihindura mu gice ca popup"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton": {
+		"message": "Kwibanda ku gikorwa co guhindura"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
+		"message": "Iyo igikorwa co guhindura kigaragara ku rupapuro, kizoca ciyibandako"
+	},
+	"settings_option_selectTranslation_header_languageChoice": {
+		"message": "Ivyerekeye ururimi"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang": {
+		"message": "Kwemerera igikoresho co guhindura gutororokanya ururimi rw'inyandiko"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
+		"message": "Iyo ururimi rw'inyandiko rutashoboye gutororokanywa ku buryo bw'aho hantu kandi iyi nyabune iriko, inyandiko izohindurwa n'ururimi \"auto\" niyo ishimikiwe.\nIyo iyi nyabune itakoze, ubundi buryo buzokwisungwa kugira ngo hashirwe ururimi rw'inyandiko"
+	},
+	"settings_option_selectTranslation_mode": {
+		"message": "Igikorwa ku gutora inyandiko"
+	},
+	"settings_option_selectTranslation_mode_item_contextMenu": {
+		"message": "Guhindura inyandiko biciye mu gice c'ibikorerwa"
+	},
+	"settings_option_selectTranslation_mode_item_popupButton": {
+		"message": "Kwerekana igikorwa co guhindura"
+	},
+	"settings_option_selectTranslation_mode_item_quickTranslate": {
+		"message": "Guhindura inyandiko ako kanya"
+	},
+	"settings_option_selectTranslation_modifiers": {
+		"message": "Ibihindura"
+	},
+	"settings_option_selectTranslation_modifiers_desc": {
+		"message": "Tora imfunguruzo zigomba gukorwako ku kibaho kugira ngo hamenyekane guhindura"
+	},
+	"settings_option_selectTranslation_modifiers_key_alt": {
+		"message": "alt"
+	},
+	"settings_option_selectTranslation_modifiers_key_ctrl": {
+		"message": "ctrl"
+	},
+	"settings_option_selectTranslation_modifiers_key_meta": {
+		"message": "meta"
+	},
+	"settings_option_selectTranslation_modifiers_key_shift": {
+		"message": "shift"
+	},
+	"settings_option_selectTranslation_rememberDirection": {
+		"message": "Kwibuka ururimi rw'inyandiko yatowe vuba"
+	},
+	"settings_option_selectTranslation_showOnceForSelection": {
+		"message": "Kwerekana igikorwa co guhindura rimwe ku gutora inyandiko"
+	},
+	"settings_option_selectTranslation_showOnceForSelection_desc": {
+		"message": "Igikorwa kizokwerekana rimwe gusa ku gutora inyandiko kugira ngo kigaruke, tora inyandiko ukundi"
+	},
+	"settings_option_selectTranslation_showOriginalText": {
+		"message": "Kwerekana inyandiko y'umwimerere"
+	},
+	"settings_option_selectTranslation_showOriginalText_desc": {
+		"message": "Shirako igice kirimwo inyandiko y'umwimerere mu gice ca popup"
+	},
+	"settings_option_selectTranslation_strictSelection": {
+		"message": "Uburyo bukomeye bwo gutora igice c'inyandiko",
+		"description": "This option is about selecting text via mouse"
+	},
+	"settings_option_selectTranslation_strictSelection_desc": {
+		"message": "Kwirengagiza gutora igice c'inyandiko iyo imfunguruzo y'ibubamfu y'imbeba irekuriwe hanze y'igice kirimwo inyandiko yatowe"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton": {
+		"message": "Gusiba imbere yo guhisha igikorwa ca popup"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton_desc": {
+		"message": "Gusiba mu milisekunde imbere y'uko buto ihishwe igihe umusumari utari hejuru yayo. Guhagarara hejuru y'ubuto bisubiza isaha. Kugira ngo uhagarike guhisha, shira agaciro kari munsi ya 1"
+	},
+	"settings_option_selectTranslation_zIndex": {
+		"message": "z-index"
+	},
+	"settings_option_selectTranslation_zIndex_desc": {
+		"message": "Shira agaciro kanini kuri iyi ndangagaciro niba ibice ku mapaji amwe amwe bisumba agasanduku k'ubutumwa bwarimwo"
+	},
+	"settings_option_textTranslator": {
+		"message": "Ihindura ry'inyandiko"
+	},
+	"settings_option_textTranslator_rememberText": {
+		"message": "Kwibuka inyandiko yahinduwe"
+	},
+	"settings_option_textTranslator_rememberText_desc": {
+		"message": "Kwibuka inyandiko yahinduwe igihe idirishya rifunguwe"
+	},
+	"settings_option_textTranslator_spellCheck": {
+		"message": "Gushira mu bikorwa kugenzura inyandiko"
+	},
+	"settings_option_textTranslator_suggestLanguage": {
+		"message": "Kwerekana ururimi rw'inyandiko rwabonetse"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways": {
+		"message": "Guhora ubona no gusaba ururimi"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways_desc": {
+		"message": "Iyo bidashizwe mu bikorwa, ivyifuzo vy'ururimi biza gusa igihe ururimi rw'inkomoko rushizwe kuri \"auto\""
+	},
+	"settings_option_translatePreferences": {
+		"message": "Ivyipfuzo vy'ihindura"
+	},
+	"settings_option_translateScheduler": {
+		"message": "Igenamigambi ry'ihindura"
+	},
+	"settings_option_translateScheduler_delay": {
+		"message": "Gusiba kw'inyandiko"
+	},
+	"settings_option_translateScheduler_delay_desc": {
+		"message": "Igenamigambi ry'ihindura rigabanya umubare w'amasaba ku API y'ihindura ry'inyandiko mu gukoranya inyandiko nyinshi uko bishoboka kugira ngo zoherezwe mu gusaba kumwe. Igenamigambi rizorindira igihe cashizwe mu milisekunde kugira ngo rikoranye inyandiko nyinshi imbere y'uko ritangura ihindura"
+	},
+	"settings_option_translateScheduler_retryLimit": {
+		"message": "Umupaka w'ukugerageza gusubira mu gusaba ihindura"
+	},
+	"settings_option_translateScheduler_retryLimit_desc": {
+		"message": "Igenamigambi rizosubira mu gusaba ihindura ry'inyandiko igihe amakosa y'ihindura abaye. Iyi nzira ishiraho umupaka ku kugerageza gusubira mu gusaba. Shira igitigiri kibi kugira ngo wemerere gusubira mu gusaba bidafise umupaka"
+	},
+	"settings_option_translatorModule": {
+		"message": "Ihimbaza ry'ihindura"
+	},
+	"settings_option_translatorModule_desc": {
+		"message": "Ubwiza bw'ihindura n'indimi ziboneka biterwa n'ihimbaza ry'ihindura"
+	},
+	"settings_option_tts": {
+		"message": "Guhindura inyandiko mu majwi (TTS)"
+	},
+	"settings_option_ttsCustomModules": {
+		"message": "Ihimbaza ry'ijwi ryihariye"
+	},
+	"settings_option_ttsCustomModules_button": {
+		"message": "Gucunga ihimbaza ry'ijwi"
+	},
+	"settings_option_ttsCustomModules_desc": {
+		"message": "Urashobora gushiraho ihimbaza ry'ijwi rikoresha serivisi n'ijwi ukunda. Soma vyinshi mu <slot id=docs>inyandiko y'ijwi ryihariye</slot>"
+	},
+	"settings_option_ttsModule": {
+		"message": "Ihimbaza ry'ijwi ryatoranijwe"
+	},
+	"settings_option_ttsModule_desc": {
+		"message": "Imashini y'ijwi ikoreshwa mu kuvuga inyandiko"
+	},
+	"settings_option_userLanguage": {
+		"message": "Ururimi rwawe"
+	},
+	"settings_option_userLanguage_desc": {
+		"message": "Ururimi inyandiko zizohindurwamwo"
+	},
+	"settings_pageTitle": {
+		"message": "Igenamigambi"
+	},
+	"settings_section_history": {
+		"message": "Amateka"
+	},
+	"settings_section_popup": {
+		"message": "Agasanduku k'ubutumwa"
+	},
+	"textTranslator_suggestLanguage": {
+		"message": "Bisa n'uko ururimi rw'inyandiko ari <slot id=languageSuggest>$language_name$</slot>",
+		"placeholders": {
+			"language_name": {
+				"content": "$1",
+				"example": "Japanese"
+			}
+		}
+	},
+	"textTranslator_translateInputPlaceholder": {
+		"message": "Injiza inyandiko yo guhindura",
+		"description": "Request to user input some text for translation"
+	},
+	"textTranslator_translatePlaceholder": {
+		"message": "Inyandiko yahinduwe izoba hano"
+	},
+	"translatorsManagerWindow_add": {
+		"message": "Ongerako igikoresho co guhindura"
+	},
+	"translatorsManagerWindow_close": {
+		"message": "Gufunga"
+	},
+	"translatorsManagerWindow_emptyTranslatorsListText": {
+		"message": "Nta bikoresho vyihariye vyo guhindura vyarashizweho"
+	},
+	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
+		"message": "Urashaka vy'ukuri gukuraho igikoresho co guhindura \"$translator_name$\"?",
+		"placeholders": {
+			"translator_name": {
+				"content": "$1",
+				"example": "Google translator"
+			}
+		}
+	},
+	"translatorsManagerWindow_title": {
+		"message": "Ibikoresho vyihariye vyo guhindura"
+	},
+	"translatorsManagerWindow_translator_delete": {
+		"message": "Gusiba"
+	},
+	"translatorsManagerWindow_translator_edit": {
+		"message": "Guhindura"
+	},
+	"ttsManagerWindow_add": {
+		"message": "Ongerako igikoresho ca TTS"
+	},
+	"ttsManagerWindow_close": {
+		"message": "Gufunga"
+	},
+	"ttsManagerWindow_emptyTranslatorsListText": {
+		"message": "Nta bikoresho vya TTS vyarashizweho"
+	},
+	"ttsManagerWindow_message_ttsRemoveConfirmation": {
+		"message": "Urashaka vy'ukuri gukuraho igikoresho ca TTS \"$tts_name$\"?",
+		"placeholders": {
+			"tts_name": {
+				"content": "$1",
+				"example": "Google TTS"
+			}
+		}
+	},
+	"ttsManagerWindow_title": {
+		"message": "Ibikoresho vya Text-to-Speech"
+	},
+	"ttsManagerWindow_translator_delete": {
+		"message": "Gusiba"
+	},
+	"ttsManagerWindow_translator_edit": {
+		"message": "Guhindura"
+	},
+	"validation_number": {
+		"message": "Agaciro kabe igitigiri"
+	},
+	"validation_numberBetweenRange": {
+		"message": "Agaciro kabe igitigiri kiri hagati ya $1 na $2"
+	},
+	"validation_positiveNumber": {
+		"message": "Agaciro kabe igitigiri ciza"
+	}
+}

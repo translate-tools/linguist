@@ -1,0 +1,623 @@
+{
+	"common_action_addToDictionary": {
+		"message": "Kenya phetolelo bukeng"
+	},
+	"common_action_removeFromDictionary": {
+		"message": "Tlosa phetolelo bukeng"
+	},
+	"common_bgUnavailable": {
+		"message": "Skripte sa morao ha se fumanehe"
+	},
+	"common_cancel": {
+		"message": "Hlakola"
+	},
+	"common_close": {
+		"message": "Koala"
+	},
+	"common_copy": {
+		"message": "Kopitsa"
+	},
+	"common_error": {
+		"message": "Phoso"
+	},
+	"common_offlineTranslator": {
+		"message": "$1 - Phetolelo e sa hokahanngoa"
+	},
+	"common_retry": {
+		"message": "Leka hape"
+	},
+	"common_translate": {
+		"message": "Fetolela"
+	},
+	"component_hotkey_placeholder": {
+		"message": "Tobetsa ho rekota tsela e khuts'oane"
+	},
+	"component_hotkey_recordPlaceholder": {
+		"message": "Tobetsa linotlolo"
+	},
+	"component_hotkey_resetButton": {
+		"message": "Khutlisetsa"
+	},
+	"contextMenu_disablePageTranslation": {
+		"message": "Emisa phetolelo ea leqephe"
+	},
+	"contextMenu_translatePage": {
+		"message": "Fetolela leqephe"
+	},
+	"contextMenu_translateSelectedText": {
+		"message": "Fetolela sengoloa se khethiloeng"
+	},
+	"dictionaryButton_add": {
+		"message": "Kenya bukeng"
+	},
+	"dictionaryButton_delete": {
+		"message": "Tlosa bukeng"
+	},
+	"dictionary_button_export": {
+		"message": "Romela kantle"
+	},
+	"dictionary_button_removeAll": {
+		"message": "Tlosa tsohle"
+	},
+	"dictionary_deleteAll": {
+		"message": "Na u tiile hore u batla ho tlosa LIPHETOLELO TSOHLE bukeng?"
+	},
+	"dictionary_deleteConfirmation": {
+		"message": "Na u tiile hore u batla ho tlosa phetolelo ee?"
+	},
+	"dictionary_description": {
+		"message": "Boloka liphetolelo bukeng ho li fumana kapele hamorao"
+	},
+	"dictionary_emptyDictionary": {
+		"message": "Buka e se na letho, qala ho e tlatsa ka ho fetolela sengoloa"
+	},
+	"dictionary_filter_from": {
+		"message": "Puo ea sengoloa sa mohloli"
+	},
+	"dictionary_filter_to": {
+		"message": "Puo e eang"
+	},
+	"dictionary_message_deleteAll_success": {
+		"message": "Liphetolelo tsohle li tlositsoe"
+	},
+	"dictionary_notFoundEntries": {
+		"message": "Ha ho liphetolelo tse lumellanang le li-filters tsena tse fumanoeng"
+	},
+	"dictionary_pageTitle": {
+		"message": "Buka"
+	},
+	"dictionary_resetFilters": {
+		"message": "Khutlisetsa li-filters"
+	},
+	"dictionary_searchPlaceholder": {
+		"message": "Batla ka mongolo"
+	},
+	"editorWindow_close": {
+		"message": "Koala"
+	},
+	"editorWindow_data_code": {
+		"message": "Khoutu"
+	},
+	"editorWindow_data_title": {
+		"message": "Lebitso la module"
+	},
+	"editorWindow_message_invalidTitle": {
+		"message": "Lebitso la module le tlameha ho ba le bonyane letshwao le le leng"
+	},
+	"editorWindow_save": {
+		"message": "Boloka"
+	},
+	"ext_description": {
+		"message": "Phetolelo ea maqephe a webo, phetolelo ea mongolo, bukantswe, nalane, bafetoleli ba tloaelo, tsohle tseo u li hlokang ho tlola meeli ea puo"
+	},
+	"ext_name": {
+		"message": "Linguist - mofetoleli oa maqephe a webo"
+	},
+	"history_control_selectEntry": {
+		"message": "Khetha phetolelo bakeng sa ketso e ngata",
+		"description": "Description in finite form \"to pick\" with explaining what this checkbox will do"
+	},
+	"history_controls_clearHistory": {
+		"message": "Hlakola nalane"
+	},
+	"history_controls_deleteSelected": {
+		"message": "Hlakola liphetolelo tse khethiloeng"
+	},
+	"history_controls_selectAll": {
+		"message": "Khetha liphetolelo tsohle"
+	},
+	"history_message_clearHistoryConfirmation": {
+		"message": "Na u na le bonnete ba hore u batla ho hlakola nalane? Lintlha tsohle li tla tlosoa"
+	},
+	"history_message_deleteEntryConfirmation": {
+		"message": "Na u na le bonnete ba hore u batla ho hlakola ntho ee?"
+	},
+	"history_message_deleteSelectedEntriesConfirmation": {
+		"message": "Na u na le bonnete ba hore u batla ho hlakola lintlha tse khethiloeng ($1)?"
+	},
+	"history_message_entriesNotFound": {
+		"message": "Ha ho liphetolelo tse fumanoeng tse lumellanang le sefe"
+	},
+	"history_message_noEntries": {
+		"message": "Nalane e se na letho"
+	},
+	"history_notification_disabled": {
+		"message": "Ho rekota nalane ho thibetsoe, kahoo lintlha tse ncha li ke ke tsa hlaha. U ka fetola sena ho <slot id=preferences>Litlhophiso</slot>"
+	},
+	"history_pageTitle": {
+		"message": "Nalane"
+	},
+	"history_searchPlaceholder": {
+		"message": "Batla ka mongolo"
+	},
+	"inlineTranslator_showOriginalText": {
+		"message": "Bontša mongolo oa mantlha"
+	},
+	"lang_change": {
+		"message": "Fetola puo"
+	},
+	"lang_detect": {
+		"message": "Ithute ka bo eona"
+	},
+	"lang_select": {
+		"message": "Khetha puo"
+	},
+	"lang_swap": {
+		"message": "Fetola lipuo"
+	},
+	"message_unknownError": {
+		"message": "Phoso e sa tsejoeng"
+	},
+	"pageTranslator_alwaysTranslateLang": {
+		"message": "Fetolela puo ena kamehla"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disable": {
+		"message": "Tima"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
+		"message": "Tima bakeng sa libaka tsohle"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_enable": {
+		"message": "Bulela"
+	},
+	"pageTranslator_commonPreferences_title": {
+		"message": "Litlhophiso tse tloaelehileng bakeng sa puo ena"
+	},
+	"pageTranslator_option_autoTranslate": {
+		"message": "Fetolela ka boiketsetso"
+	},
+	"pageTranslator_showOriginal": {
+		"message": "Bontša ea mantlha"
+	},
+	"pageTranslator_showTranslationPreferences": {
+		"message": "Litlhophiso tsa phetolelo"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_always": {
+		"message": "Fetolela kamehla"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
+		"message": "Fetolela kamehla bakeng sa puo ena"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_default": {
+		"message": "Sebelisa melao e tloaelehileng"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
+		"message": "Sebelisa melao e tloaelehileng bakeng sa puo ena"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_never": {
+		"message": "Se ke oa fetolela"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
+		"message": "Se ke oa fetolela bakeng sa puo ena"
+	},
+	"pageTranslator_sitePreferences_title": {
+		"message": "Litlhophiso bakeng sa"
+	},
+	"pageTranslator_translatePage": {
+		"message": "Fetolela leqephe"
+	},
+	"pageTranslator_translationReport": {
+		"message": "Tlaleho ea phetolelo"
+	},
+	"pageTranslator_translationReport_queue": {
+		"message": "E emetse"
+	},
+	"pageTranslator_translationReport_reject": {
+		"message": "Liphoso"
+	},
+	"pageTranslator_translationReport_resolve": {
+		"message": "E fetotsoe"
+	},
+	"popup_tabIdNotFound": {
+		"message": "Tabo \"$1\" ha e fumanehe"
+	},
+	"popup_tab_translatePage": {
+		"message": "Phetolelo ea leqephe"
+	},
+	"popup_tab_translateText": {
+		"message": "Phetolelo ea mongolo"
+	},
+	"settings_button_cancel": {
+		"message": "Hlakola"
+	},
+	"settings_button_export": {
+		"message": "Romela config"
+	},
+	"settings_button_import": {
+		"message": "Kenya config"
+	},
+	"settings_button_reset": {
+		"message": "Khutlisetsa config"
+	},
+	"settings_button_saveChanges": {
+		"message": "Boloka liphetoho"
+	},
+	"settings_message_clearCache_success": {
+		"message": "Cache e hlakotsoe"
+	},
+	"settings_message_common_invalidValueType": {
+		"message": "Boleng bo sa nepahalang"
+	},
+	"settings_message_importConfig_invalidFile": {
+		"message": "Faele ea config e fanoeng ha e nepahe kapa e senyehile, 'me e ke ke ea sebetsoa"
+	},
+	"settings_message_importConfig_success": {
+		"message": "Ho kenya ho felile"
+	},
+	"settings_message_resetConfig_confirm": {
+		"message": "Netefatsa ho khutlisetsa litlhophiso ho litekanyetso tsa kamehla"
+	},
+	"settings_message_resetConfig_success": {
+		"message": "Litlhophiso li khutlisitsoe"
+	},
+	"settings_message_saveChanges_success": {
+		"message": "Liphetoho li bolokiloe"
+	},
+	"settings_option_cache": {
+		"message": "Cache"
+	},
+	"settings_option_cache_clear": {
+		"message": "Hlakola cache"
+	},
+	"settings_option_cache_clear_desc": {
+		"message": "Haeba u hlokomela liphoso tsa phetolelo kapa ka phoso u fetolela lingoloa tsa lekunutu ha cache e buletsoe, u ka hlakola data eohle ho tsoa ho cache",
+		"description": "Explanation for user about cases when it's useful to clear cache"
+	},
+	"settings_option_cache_enable": {
+		"message": "Bulela cache"
+	},
+	"settings_option_cache_enable_desc": {
+		"message": "Ha cache e buletsoe, lingoloa tse kileng tsa fetoleloa pele li tla fetoleloa hang-hang ntle le likopo tse ling ho tšebeletso ea phetolelo"
+	},
+	"settings_option_cache_ignoreCase": {
+		"message": "Sebelisa cache e sa tsotelleng litlhaku tse kholo le tse nyane"
+	},
+	"settings_option_cache_ignoreCase_desc": {
+		"message": "Ha e buletsoe, liphetolelo tse bolokiloeng li tla sebelisoa bakeng sa lingoloa tse nang le litlhaku tse fapaneng, tse ka bakang ho sotha phetolelo maemong a itseng"
+	},
+	"settings_option_commonSettings": {
+		"message": "Litlhophiso tse tloaelehileng"
+	},
+	"settings_option_customTranslatorModule": {
+		"message": "Lisebelisoa tsa phetolelo tse ikhethileng",
+		"description": "An user defined code that implements a translation module"
+	},
+	"settings_option_customTranslatorModule_desc": {
+		"message": "U ka eketsa lisebelisoa tsa phetolelo tse ikhethileng tse sebelisang lits'ebeletso tsa hau tsa phetolelo tseo u li ratang. Ithute haholoanyane ho <slot id=docs>litokomane tsa bafetoleli ba ikhethileng</slot>"
+	},
+	"settings_option_customTranslatorModule_manageButton": {
+		"message": "Ho laola bafetoleli",
+		"description": "A button to show list of translation modules"
+	},
+	"settings_option_history_enable": {
+		"message": "Bulela nalane"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "Ha e buletsoe, liphetolelo li tla ngolisoa 'me li hlahe leqepheng la <slot id=historyPage>nalane</slot>"
+	},
+	"settings_option_pageTranslation": {
+		"message": "Phetolelo ea leqephe lohle"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent": {
+		"message": "Fumana puo ka litaba"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent_desc": {
+		"message": "Hlahloba sengoloa leqepheng la webo ho fumana puo ea sona. Ha e koetsoe, puo e boletsoeng ho <slot id=docs>metadata ea leqephe</slot> e tla sebelisoa"
+	},
+	"settings_option_pageTranslation_enableContextMenu": {
+		"message": "Bulela konopo ea lenane la maemo"
+	},
+	"settings_option_pageTranslation_enableContextMenu_desc": {
+		"message": "Eketsa konopo ea ho fetolela leqephe lenaneng la maemo a leqephe"
+	},
+	"settings_option_pageTranslation_excludeSelectors": {
+		"message": "Lisebelisoa tse lokelang ho qheleloa ka thoko ho phetolelo"
+	},
+	"settings_option_pageTranslation_excludeSelectors_desc": {
+		"message": "Lenane la li-CSS selectors bakeng sa likarolo tse lokelang ho qheleloa ka thoko ho phetolelo. Selector e le 'ngoe ka mola. Ha karolo e tsamaellana le e 'ngoe ea li-selectors tsena, sengoloa sa eona, litšobotsi, le likarolo tse kenelletseng li ke ke tsa fetoleloa"
+	},
+	"settings_option_pageTranslation_lazyTranslate": {
+		"message": "Fetolela likarolo tse bonahalang feela"
+	},
+	"settings_option_pageTranslation_lazyTranslate_desc": {
+		"message": "Ha khetho ena e buletsoe, ke likarolo tse bonahalang feela tse tla fetoleloa. Khetho ena e fokotsa sephethephethe sa marang-rang"
+	},
+	"settings_option_pageTranslation_originalTextPopup": {
+		"message": "Bulela popup ka sengoloa sa mantlha"
+	},
+	"settings_option_pageTranslation_originalTextPopup_desc": {
+		"message": "Bontša popup ka sengoloa sa mantlha ha u ntse u tsamaea holim'a likarolo tsa sengoloa tse fetotsoeng"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation": {
+		"message": "Khutšoanyane"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation_desc": {
+		"message": "Khutšoanyane ea ho fetola phetolelo ea leqephe\nTobetsa ESC ho seta likonopo"
+	},
+	"settings_option_pageTranslation_translatableAttributes": {
+		"message": "Litšobotsi tse ka fetoleloang"
+	},
+	"settings_option_pageTranslation_translatableAttributes_desc": {
+		"message": "Kenya mabitso a <slot id=htmlAttributes>litšobotsi tsa HTML</slot> tse lokelang ho fetoleloa, tšobotsi e le 'ngoe ka mola\nKe litšobotsi tse lenaneng lena feela tse tla fetoleloa"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters": {
+		"message": "Bontša tsoelo-pele ea phetolelo"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters_desc": {
+		"message": "Bontša phanele ka tsoelo-pele ea phetolelo ea leqephe ka popo ea katoloso"
+	},
+	"settings_option_selectTranslation": {
+		"message": "Phetolelo bakeng sa sengoloa se khethiloeng"
+	},
+	"settings_option_selectTranslation_detectTextLanguage": {
+		"message": "Fumana puo ea sengoloa"
+	},
+	"settings_option_selectTranslation_detectTextLanguage_desc": {
+		"message": "Ha e buletsoe, sengoloa se khethiloeng se tla hlahlojoa ho fumana puo bakeng sa phetolelo. Ho seng joalo, puo ea leqephe e tla sebelisoa"
+	},
+	"settings_option_selectTranslation_disableWhileTranslatePage": {
+		"message": "Tima ha u ntse u fetolela leqephe"
+	},
+	"settings_option_selectTranslation_enable": {
+		"message": "Bulela phetolelo ea sengoloa se khethiloeng"
+	},
+	"settings_option_selectTranslation_enable_desc": {
+		"message": "Ha tšobotsi ena e buletsoe, u ka khetha sengoloa leha e le sefe leqepheng 'me ua se fetolela ka popo"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton": {
+		"message": "Tsepamisa maikutlo ka bohona konopong ea phetolelo"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
+		"message": "Ha konopo ea phetolelo e hlaha leqepheng, e tla tsepamisoa ka bohona"
+	},
+	"settings_option_selectTranslation_header_languageChoice": {
+		"message": "Litlhophiso tsa puo"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang": {
+		"message": "Lumella module ea phetolelo ho fumana puo ea sengoloa"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
+		"message": "Ha puo ea sengoloa e sa khone ho fumanoa sebakeng sa heno 'me khetho ena e buletsoe, sengoloa se tla fetoleloa ka puo \"auto\" haeba e tšehetsoa.\nHa khetho e koetsoe, mokhoa o mong o tla sebelisoa ho beha puo ea mohloli ea sengoloa"
+	},
+	"settings_option_selectTranslation_mode": {
+		"message": "Ketso ka khetho ea sengoloa"
+	},
+	"settings_option_selectTranslation_mode_item_contextMenu": {
+		"message": "Fetolela sengoloa ka menu ea maemo"
+	},
+	"settings_option_selectTranslation_mode_item_popupButton": {
+		"message": "Bontša konopo ea phetolelo"
+	},
+	"settings_option_selectTranslation_mode_item_quickTranslate": {
+		"message": "Fetolela sengoloa hang-hang"
+	},
+	"settings_option_selectTranslation_modifiers": {
+		"message": "Lisebelisoa"
+	},
+	"settings_option_selectTranslation_modifiers_desc": {
+		"message": "Khetha linotlolo tse lokelang ho hatelloa ka keyboard ho bontša phetolelo"
+	},
+	"settings_option_selectTranslation_modifiers_key_alt": {
+		"message": "alt"
+	},
+	"settings_option_selectTranslation_modifiers_key_ctrl": {
+		"message": "ctrl"
+	},
+	"settings_option_selectTranslation_modifiers_key_meta": {
+		"message": "meta"
+	},
+	"settings_option_selectTranslation_modifiers_key_shift": {
+		"message": "shift"
+	},
+	"settings_option_selectTranslation_rememberDirection": {
+		"message": "Hopola puo ea sengoloa e khethiloeng haufinyane"
+	},
+	"settings_option_selectTranslation_showOnceForSelection": {
+		"message": "Bontša konopo ea phetolelo hang feela ka khetho ea sengoloa"
+	},
+	"settings_option_selectTranslation_showOnceForSelection_desc": {
+		"message": "Konopo e tla hlaha hang feela bakeng sa khetho e 'ngoe le e 'ngoe ea sengoloa Ho e bontša hape, khetha sengoloa hape"
+	},
+	"settings_option_selectTranslation_showOriginalText": {
+		"message": "Bontša sengoloa sa mantlha"
+	},
+	"settings_option_selectTranslation_showOriginalText_desc": {
+		"message": "Kenya block ka sengoloa sa mantlha ka popo ea phetolelo"
+	},
+	"settings_option_selectTranslation_strictSelection": {
+		"message": "Mokhoa o thata oa khetho ea span ea sengoloa",
+		"description": "This option is about selecting text via mouse"
+	},
+	"settings_option_selectTranslation_strictSelection_desc": {
+		"message": "Hlokomoloha khetho ea span ea sengoloa haeba konopo e ka letsohong le letšehali ea toeba e lokolloa ka ntle ho block e nang le sengoloa se khethiloeng"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton": {
+		"message": "Ho lieha pele ho pata konopo ea popo"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton_desc": {
+		"message": "Ho lieha ka metsotsoana pele o pata konopo ha sekhahla se sa e phahamise. Ho phahama holim'a konopo ho khutlisa nako. Ho tima ho ipata ka boiketsetso, beha boleng bo ka tlase ho 1"
+	},
+	"settings_option_selectTranslation_zIndex": {
+		"message": "z-index"
+	},
+	"settings_option_selectTranslation_zIndex_desc": {
+		"message": "Eketsa boleng bona haeba likarolo tse ling maqepheng a mang li koahela popo e nang le mongolo o fetoletsoeng"
+	},
+	"settings_option_textTranslator": {
+		"message": "Phetolelo ea mongolo"
+	},
+	"settings_option_textTranslator_rememberText": {
+		"message": "Ho hopola mongolo o fetoletsoeng"
+	},
+	"settings_option_textTranslator_rememberText_desc": {
+		"message": "Ho hopola mongolo o fetoletsoeng bakeng sa nako e tlang ha fensetere e buloa"
+	},
+	"settings_option_textTranslator_spellCheck": {
+		"message": "Bulela tlhahlobo ea mopeleto"
+	},
+	"settings_option_textTranslator_suggestLanguage": {
+		"message": "Ho bontša puo e fumanoeng ea mongolo"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways": {
+		"message": "Kamehla fumana le ho fana ka maikutlo a puo"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways_desc": {
+		"message": "Ha e tima, litlhahiso tsa puo li hlaha feela haeba puo ea mohloli e behiloe ho \"auto\""
+	},
+	"settings_option_translatePreferences": {
+		"message": "Litakatso tsa phetolelo"
+	},
+	"settings_option_translateScheduler": {
+		"message": "Mokhoa oa ho hlophisa phetolelo"
+	},
+	"settings_option_translateScheduler_delay": {
+		"message": "Ho lieha ha pokello ea mongolo"
+	},
+	"settings_option_translateScheduler_delay_desc": {
+		"message": "Mokhoa oa ho hlophisa phetolelo o fokotsa palo ea likopo ho API ea tšebeletso ea phetolelo ka ho bokella lingoloa tse ngata kamoo ho ka khonehang ho li romela ka kopo e le 'ngoe. Mokhoa o tla ema nako e boletsoeng ka metsotsoana ho bokella lingoloa tse ling pele o qala phetolelo"
+	},
+	"settings_option_translateScheduler_retryLimit": {
+		"message": "Moeli oa liteko tsa ho pheta phetolelo"
+	},
+	"settings_option_translateScheduler_retryLimit_desc": {
+		"message": "Mokhoa o tla leka hape ho fetolela lingoloa ha liphoso tsa phetolelo li etsahala. Khetho ena e beha moeli oa liteko tsa ho pheta. Beha palo e mpe ho lumella liteko tse sa lekanyetsoang"
+	},
+	"settings_option_translatorModule": {
+		"message": "Mokhoa oa phetolelo"
+	},
+	"settings_option_translatorModule_desc": {
+		"message": "Boleng ba liphetolelo le lipuo tse fumanehang li itšetlehile ka mokhoa oa phetolelo"
+	},
+	"settings_option_tts": {
+		"message": "Phetoho ea Mongolo ho Puo (TTS)"
+	},
+	"settings_option_ttsCustomModules": {
+		"message": "Likarolo tse ikhethileng tsa ho bopa puo"
+	},
+	"settings_option_ttsCustomModules_button": {
+		"message": "Ho laola likarolo tsa ho bopa puo"
+	},
+	"settings_option_ttsCustomModules_desc": {
+		"message": "U ka eketsa likarolo tsa ho bopa puo tse sebelisang lits'ebeletso le lienjine tsa lentsoe tseo u li ratang. Bala haholoanyane ho <slot id=docs>litokomane tse ikhethileng tsa TTS</slot>"
+	},
+	"settings_option_ttsModule": {
+		"message": "Mokhoa o khethiloeng oa TTS"
+	},
+	"settings_option_ttsModule_desc": {
+		"message": "Enjine ea lentsoe e sebelisetsoang ho bua mongolo"
+	},
+	"settings_option_userLanguage": {
+		"message": "Puo ea hau"
+	},
+	"settings_option_userLanguage_desc": {
+		"message": "Puo eo lingoloa li tla fetoleloa ho eona"
+	},
+	"settings_pageTitle": {
+		"message": "Litlhophiso"
+	},
+	"settings_section_history": {
+		"message": "Nalane"
+	},
+	"settings_section_popup": {
+		"message": "Popup"
+	},
+	"textTranslator_suggestLanguage": {
+		"message": "Ho bonahala puo ea mongolo ke <slot id=languageSuggest>$language_name$</slot>",
+		"placeholders": {
+			"language_name": {
+				"content": "$1",
+				"example": "Japanese"
+			}
+		}
+	},
+	"textTranslator_translateInputPlaceholder": {
+		"message": "Kenya mongolo bakeng sa phetolelo",
+		"description": "Request to user input some text for translation"
+	},
+	"textTranslator_translatePlaceholder": {
+		"message": "Mongolo o fetotsoeng o tla ba mona"
+	},
+	"translatorsManagerWindow_add": {
+		"message": "Kenya module ea phetolelo"
+	},
+	"translatorsManagerWindow_close": {
+		"message": "Koala"
+	},
+	"translatorsManagerWindow_emptyTranslatorsListText": {
+		"message": "Ha ho na li-module tsa phetolelo tse ikhethileng tse kentsoeng hajoale"
+	},
+	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
+		"message": "Na u netefatsa hore u batla ho tlosa module ea phetolelo \"$translator_name$\"?",
+		"placeholders": {
+			"translator_name": {
+				"content": "$1",
+				"example": "Google translator"
+			}
+		}
+	},
+	"translatorsManagerWindow_title": {
+		"message": "Li-module tsa phetolelo tse ikhethileng"
+	},
+	"translatorsManagerWindow_translator_delete": {
+		"message": "Hlakola"
+	},
+	"translatorsManagerWindow_translator_edit": {
+		"message": "Fetola"
+	},
+	"ttsManagerWindow_add": {
+		"message": "Kenya module ea TTS"
+	},
+	"ttsManagerWindow_close": {
+		"message": "Koala"
+	},
+	"ttsManagerWindow_emptyTranslatorsListText": {
+		"message": "Ha ho na li-module tsa TTS tse kentsoeng hajoale"
+	},
+	"ttsManagerWindow_message_ttsRemoveConfirmation": {
+		"message": "Na u netefatsa hore u batla ho tlosa module ea TTS \"$tts_name$\"?",
+		"placeholders": {
+			"tts_name": {
+				"content": "$1",
+				"example": "Google TTS"
+			}
+		}
+	},
+	"ttsManagerWindow_title": {
+		"message": "Li-module tsa Text-to-Speech"
+	},
+	"ttsManagerWindow_translator_delete": {
+		"message": "Hlakola"
+	},
+	"ttsManagerWindow_translator_edit": {
+		"message": "Fetola"
+	},
+	"validation_number": {
+		"message": "Boleng bo tlameha ho ba palo"
+	},
+	"validation_numberBetweenRange": {
+		"message": "Boleng bo tlameha ho ba palo pakeng tsa $1 le $2"
+	},
+	"validation_positiveNumber": {
+		"message": "Boleng bo tlameha ho ba palo e ntle"
+	}
+}

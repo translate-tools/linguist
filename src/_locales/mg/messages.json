@@ -1,0 +1,623 @@
+{
+	"common_action_addToDictionary": {
+		"message": "Ampio ny fandikan-teny ao amin'ny rakibolana"
+	},
+	"common_action_removeFromDictionary": {
+		"message": "Esory ny fandikan-teny ao amin'ny rakibolana"
+	},
+	"common_bgUnavailable": {
+		"message": "Tsy misy ny script ao ambadika"
+	},
+	"common_cancel": {
+		"message": "Foano"
+	},
+	"common_close": {
+		"message": "Akato"
+	},
+	"common_copy": {
+		"message": "Adikao"
+	},
+	"common_error": {
+		"message": "Hadisoana"
+	},
+	"common_offlineTranslator": {
+		"message": "$1 - Mpandika teny an-tserasera"
+	},
+	"common_retry": {
+		"message": "Avereno"
+	},
+	"common_translate": {
+		"message": "Adikao"
+	},
+	"component_hotkey_placeholder": {
+		"message": "Tsindrio raha hanoratra fohy"
+	},
+	"component_hotkey_recordPlaceholder": {
+		"message": "Tsindrio ny lakile"
+	},
+	"component_hotkey_resetButton": {
+		"message": "Avereno"
+	},
+	"contextMenu_disablePageTranslation": {
+		"message": "Atsaharo ny fandikan-teny pejy"
+	},
+	"contextMenu_translatePage": {
+		"message": "Adikao ny pejy"
+	},
+	"contextMenu_translateSelectedText": {
+		"message": "Adikao ny lahatsoratra voafantina"
+	},
+	"dictionaryButton_add": {
+		"message": "Ampio ao amin'ny rakibolana"
+	},
+	"dictionaryButton_delete": {
+		"message": "Esory ao amin'ny rakibolana"
+	},
+	"dictionary_button_export": {
+		"message": "Aondrana"
+	},
+	"dictionary_button_removeAll": {
+		"message": "Esory daholo"
+	},
+	"dictionary_deleteAll": {
+		"message": "Azonao antoka ve fa te-hamafa ny fandikan-teny REHETRA ao amin'ny rakibolana ianao?"
+	},
+	"dictionary_deleteConfirmation": {
+		"message": "Azonao antoka ve fa te-hamafa ity fandikan-teny ity ianao?"
+	},
+	"dictionary_description": {
+		"message": "Tehirizo ao amin'ny rakibolana ny fandikan-teny mba hahitana azy ireo haingana any aoriana"
+	},
+	"dictionary_emptyDictionary": {
+		"message": "Foana ny rakibolana, atombohy ny famenoana azy amin'ny fandikana lahatsoratra sasany"
+	},
+	"dictionary_filter_from": {
+		"message": "Fiteny loharano"
+	},
+	"dictionary_filter_to": {
+		"message": "Fiteny kendrena"
+	},
+	"dictionary_message_deleteAll_success": {
+		"message": "Voafafa avokoa ny fandikan-teny rehetra"
+	},
+	"dictionary_notFoundEntries": {
+		"message": "Tsy misy fandikan-teny mifanaraka amin'ireo sivana ireo hita"
+	},
+	"dictionary_pageTitle": {
+		"message": "Rakibolana"
+	},
+	"dictionary_resetFilters": {
+		"message": "Avereno ny sivana"
+	},
+	"dictionary_searchPlaceholder": {
+		"message": "Karohy amin'ny alalan'ny lahatsoratra"
+	},
+	"editorWindow_close": {
+		"message": "Akato"
+	},
+	"editorWindow_data_code": {
+		"message": "Kaody"
+	},
+	"editorWindow_data_title": {
+		"message": "Anaran'ny module"
+	},
+	"editorWindow_message_invalidTitle": {
+		"message": "Ny anaran'ny module dia tsy maintsy manana tarehintsoratra iray farafahakeliny"
+	},
+	"editorWindow_save": {
+		"message": "Tehirizo"
+	},
+	"ext_description": {
+		"message": "Fandikan-teny pejy web, fandikan-teny lahatsoratra, rakibolana, tantara, mpandika manokana, izay rehetra ilainao hanapaka ny sakana amin'ny fiteny"
+	},
+	"ext_name": {
+		"message": "Linguist - mpandika pejy web"
+	},
+	"history_control_selectEntry": {
+		"message": "Misafidiana fandikan-teny ho an'ny hetsika betsaka",
+		"description": "Description in finite form \"to pick\" with explaining what this checkbox will do"
+	},
+	"history_controls_clearHistory": {
+		"message": "Fafao ny tantara"
+	},
+	"history_controls_deleteSelected": {
+		"message": "Fafao ny fandikan-teny voafantina"
+	},
+	"history_controls_selectAll": {
+		"message": "Safidio ny fandikan-teny rehetra"
+	},
+	"history_message_clearHistoryConfirmation": {
+		"message": "Azonao antoka ve fa te-hamafa ny tantara ianao? Ho voafafa avokoa ny fidirana rehetra"
+	},
+	"history_message_deleteEntryConfirmation": {
+		"message": "Azonao antoka ve fa te-hamafa ity fidirana ity ianao?"
+	},
+	"history_message_deleteSelectedEntriesConfirmation": {
+		"message": "Azonao antoka ve fa te-hamafa ny fidirana voafantina ($1) ianao?"
+	},
+	"history_message_entriesNotFound": {
+		"message": "Tsy misy fandikan-teny hita mifanaraka amin'ny sivana"
+	},
+	"history_message_noEntries": {
+		"message": "Tsy misy tantara"
+	},
+	"history_notification_disabled": {
+		"message": "Tsy mandeha ny firaketana tantara, ka tsy hiseho ny fidirana vaovao. Azonao ovaina izany ao amin'ny <slot id=preferences>Preferences</slot>"
+	},
+	"history_pageTitle": {
+		"message": "Tantara"
+	},
+	"history_searchPlaceholder": {
+		"message": "Karohy amin'ny alalan'ny lahatsoratra"
+	},
+	"inlineTranslator_showOriginalText": {
+		"message": "Asehoy ny lahatsoratra tany am-boalohany"
+	},
+	"lang_change": {
+		"message": "Ovay ny fiteny"
+	},
+	"lang_detect": {
+		"message": "Famaritana ho azy"
+	},
+	"lang_select": {
+		"message": "Safidio ny fiteny"
+	},
+	"lang_swap": {
+		"message": "Ovay ny fiteny"
+	},
+	"message_unknownError": {
+		"message": "Hadisoana tsy fantatra"
+	},
+	"pageTranslator_alwaysTranslateLang": {
+		"message": "Adikao foana ity fiteny ity"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disable": {
+		"message": "Atsaharo"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
+		"message": "Atsaharo ho an'ny tranokala rehetra"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_enable": {
+		"message": "Alefaso"
+	},
+	"pageTranslator_commonPreferences_title": {
+		"message": "Safidy mahazatra ho an'ity fiteny ity"
+	},
+	"pageTranslator_option_autoTranslate": {
+		"message": "Adika ho azy"
+	},
+	"pageTranslator_showOriginal": {
+		"message": "Asehoy ny tena izy"
+	},
+	"pageTranslator_showTranslationPreferences": {
+		"message": "Safidy fandikan-teny"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_always": {
+		"message": "Adika foana"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
+		"message": "Adika foana ho an'ity fiteny ity"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_default": {
+		"message": "Ampiasao ny fitsipika mahazatra"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
+		"message": "Ampiasao ny fitsipika mahazatra ho an'ity fiteny ity"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_never": {
+		"message": "Tsy adika mihitsy"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
+		"message": "Tsy adika mihitsy ho an'ity fiteny ity"
+	},
+	"pageTranslator_sitePreferences_title": {
+		"message": "Safidy ho an'ny"
+	},
+	"pageTranslator_translatePage": {
+		"message": "Adika pejy"
+	},
+	"pageTranslator_translationReport": {
+		"message": "Tatitra fandikan-teny"
+	},
+	"pageTranslator_translationReport_queue": {
+		"message": "Miandry"
+	},
+	"pageTranslator_translationReport_reject": {
+		"message": "Fahadisoana"
+	},
+	"pageTranslator_translationReport_resolve": {
+		"message": "Voadika"
+	},
+	"popup_tabIdNotFound": {
+		"message": "Tabilao \"$1\" tsy hita"
+	},
+	"popup_tab_translatePage": {
+		"message": "Fandikan-teny pejy"
+	},
+	"popup_tab_translateText": {
+		"message": "Fandikan-teny lahatsoratra"
+	},
+	"settings_button_cancel": {
+		"message": "Foano"
+	},
+	"settings_button_export": {
+		"message": "Aondrana ny fikirakirana"
+	},
+	"settings_button_import": {
+		"message": "Ampidiro ny fikirakirana"
+	},
+	"settings_button_reset": {
+		"message": "Avereno ny fikirakirana"
+	},
+	"settings_button_saveChanges": {
+		"message": "Tehirizo ny fanovana"
+	},
+	"settings_message_clearCache_success": {
+		"message": "Voafafa ny cache"
+	},
+	"settings_message_common_invalidValueType": {
+		"message": "Sandan'ny tsy mety"
+	},
+	"settings_message_importConfig_invalidFile": {
+		"message": "Tsy mety na simba ny rakitra fikirakirana nomena, ary tsy azo atao"
+	},
+	"settings_message_importConfig_success": {
+		"message": "Vita ny fampidirana"
+	},
+	"settings_message_resetConfig_confirm": {
+		"message": "Manamarina ny famerenana ny fikirakirana amin'ny sanda voalohany"
+	},
+	"settings_message_resetConfig_success": {
+		"message": "Voaverina ny fikirakirana"
+	},
+	"settings_message_saveChanges_success": {
+		"message": "Voatahiry ny fanovana"
+	},
+	"settings_option_cache": {
+		"message": "Cache"
+	},
+	"settings_option_cache_clear": {
+		"message": "Fafao ny cache"
+	},
+	"settings_option_cache_clear_desc": {
+		"message": "Raha mahatsikaritra hadisoana amin'ny fandikan-teny ianao na sendra nandika teny manokana raha mbola mandeha ny cache, dia azonao atao ny mamafa ny angona rehetra ao amin'ny cache",
+		"description": "Explanation for user about cases when it's useful to clear cache"
+	},
+	"settings_option_cache_enable": {
+		"message": "Alefaso ny cache"
+	},
+	"settings_option_cache_enable_desc": {
+		"message": "Rehefa alefa ny cache, ny lahatsoratra efa nadika taloha dia hadika avy hatrany tsy misy fangatahana fanampiny amin'ny serivisy fandikan-teny"
+	},
+	"settings_option_cache_ignoreCase": {
+		"message": "Ampiasao ny cache tsy miankina amin'ny litera"
+	},
+	"settings_option_cache_ignoreCase_desc": {
+		"message": "Rehefa alefa, ny fandikan-teny voatahiry dia hampiasaina amin'ny lahatsoratra misy litera samihafa, izay mety hiteraka fahadisoana amin'ny fandikan-teny amin'ny toe-javatra sasany"
+	},
+	"settings_option_commonSettings": {
+		"message": "Fikirana iombonana"
+	},
+	"settings_option_customTranslatorModule": {
+		"message": "Module fandikan-teny manokana",
+		"description": "An user defined code that implements a translation module"
+	},
+	"settings_option_customTranslatorModule_desc": {
+		"message": "Afaka manampy module fandikan-teny manokana ianao izay mampiasa ny serivisy fandikan-teny tianao indrindra. Mianara bebe kokoa ao amin'ny <slot id=docs>antontan-taratasy momba ny mpandika manokana</slot>"
+	},
+	"settings_option_customTranslatorModule_manageButton": {
+		"message": "Fitantanana mpandika",
+		"description": "A button to show list of translation modules"
+	},
+	"settings_option_history_enable": {
+		"message": "Alefaso ny tantara"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "Rehefa alefa, ny fandikan-teny dia ho voarakitra ary hiseho ao amin'ny <slot id=historyPage>pejy tantara</slot>"
+	},
+	"settings_option_pageTranslation": {
+		"message": "Fandikan-teny pejy feno"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent": {
+		"message": "Fantaro ny fiteny amin'ny votoaty"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent_desc": {
+		"message": "Diniho ny lahatsoratra ao amin'ny pejy web mba hamantarana ny fiteniny. Rehefa tsy alefa, ny fiteny voafaritra ao amin'ny <slot id=docs>metadata pejy</slot> no hampiasaina"
+	},
+	"settings_option_pageTranslation_enableContextMenu": {
+		"message": "Alefaso ny bokotra ao amin'ny menio context"
+	},
+	"settings_option_pageTranslation_enableContextMenu_desc": {
+		"message": "Ampio bokotra hanovana ny fandikan-teny pejy ao amin'ny menio context pejy"
+	},
+	"settings_option_pageTranslation_excludeSelectors": {
+		"message": "Selectors tsy ho adika"
+	},
+	"settings_option_pageTranslation_excludeSelectors_desc": {
+		"message": "Lisitry ny selectors CSS ho an'ny singa tsy ho adika. Selector iray isaky ny tsipika. Raha misy singa mifanaraka amin'ireto selectors ireto, ny lahatsorany, ny toetrany, ary ny singa ao anatiny dia tsy ho adika"
+	},
+	"settings_option_pageTranslation_lazyTranslate": {
+		"message": "Adikao ny singa hita maso ihany"
+	},
+	"settings_option_pageTranslation_lazyTranslate_desc": {
+		"message": "Rehefa alefa ity safidy ity, ny singa hita maso ihany no hadika. Ity safidy ity dia mampihena ny fifamoivoizana amin'ny tambajotra"
+	},
+	"settings_option_pageTranslation_originalTextPopup": {
+		"message": "Alefaso ny popup misy ny lahatsoratra tany am-boalohany"
+	},
+	"settings_option_pageTranslation_originalTextPopup_desc": {
+		"message": "Asehoy ny popup misy ny lahatsoratra tany am-boalohany rehefa manindry ny lahatsoratra efa nadika"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation": {
+		"message": "Lalana fohy"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation_desc": {
+		"message": "Lalana fohy hanovana ny fandikan-teny pejy\nTsindrio ESC hanesorana ny fanalahidy"
+	},
+	"settings_option_pageTranslation_translatableAttributes": {
+		"message": "Toetra azo adika"
+	},
+	"settings_option_pageTranslation_translatableAttributes_desc": {
+		"message": "Ampidiro ny anaran'ny <slot id=htmlAttributes>toetra HTML</slot> ho adika, toetra iray isaky ny tsipika\nNy toetra ao amin'ity lisitra ity ihany no ho adika"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters": {
+		"message": "Asehoy ny fandrosoan'ny fandikan-teny"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters_desc": {
+		"message": "Asehoy ny tontonana misy ny fandrosoan'ny fandikan-teny amin'ny pejy ao amin'ny popup-n'ny fanitarana"
+	},
+	"settings_option_selectTranslation": {
+		"message": "Fandikan-teny ho an'ny lahatsoratra voafantina"
+	},
+	"settings_option_selectTranslation_detectTextLanguage": {
+		"message": "Fantaro ny fitenin'ny lahatsoratra"
+	},
+	"settings_option_selectTranslation_detectTextLanguage_desc": {
+		"message": "Rehefa alefa, dia hohadihadiana ny lahatsoratra voafantina mba hamantarana ny fiteny ho an'ny fandikan-teny. Raha tsy izany, ny fitenin'ny pejy no hampiasaina"
+	},
+	"settings_option_selectTranslation_disableWhileTranslatePage": {
+		"message": "Atsaharo mandritra ny fandikan-teny ny pejy"
+	},
+	"settings_option_selectTranslation_enable": {
+		"message": "Alefaso ny fandikan-teny amin'ny lahatsoratra voafantina"
+	},
+	"settings_option_selectTranslation_enable_desc": {
+		"message": "Rehefa alefa ity endri-javatra ity, dia azonao atao ny mifidy lahatsoratra rehetra ao amin'ny pejy ary mandika azy ao amin'ny popup"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton": {
+		"message": "Mifantoha ho azy amin'ny bokotra fandikan-teny"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
+		"message": "Rehefa miseho eo amin'ny pejy ny bokotra fandikan-teny, dia ho voafantina ho azy izany"
+	},
+	"settings_option_selectTranslation_header_languageChoice": {
+		"message": "Fikirakirana fiteny"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang": {
+		"message": "Avelao ny module fandikan-teny hamantatra ny fitenin'ny lahatsoratra"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
+		"message": "Rehefa tsy azo fantarina eo an-toerana ny fitenin'ny lahatsoratra ary alefa ity safidy ity, dia hadika amin'ny fiteny \"auto\" ny lahatsoratra raha tohanana.\nRehefa tsy alefa ny safidy, dia fomba hafa no hampiasaina hametrahana ny fitenin'ny loharano amin'ny lahatsoratra"
+	},
+	"settings_option_selectTranslation_mode": {
+		"message": "Hetsika amin'ny fisafidianana lahatsoratra"
+	},
+	"settings_option_selectTranslation_mode_item_contextMenu": {
+		"message": "Dikao ny lahatsoratra amin'ny alalan'ny menio context"
+	},
+	"settings_option_selectTranslation_mode_item_popupButton": {
+		"message": "Asehoy ny bokotra fandikan-teny"
+	},
+	"settings_option_selectTranslation_mode_item_quickTranslate": {
+		"message": "Dikao avy hatrany ny lahatsoratra"
+	},
+	"settings_option_selectTranslation_modifiers": {
+		"message": "Fanovana"
+	},
+	"settings_option_selectTranslation_modifiers_desc": {
+		"message": "Safidio ny lakile izay tsy maintsy tsindriana amin'ny klavier mba hisehoan'ny fandikan-teny"
+	},
+	"settings_option_selectTranslation_modifiers_key_alt": {
+		"message": "alt"
+	},
+	"settings_option_selectTranslation_modifiers_key_ctrl": {
+		"message": "ctrl"
+	},
+	"settings_option_selectTranslation_modifiers_key_meta": {
+		"message": "meta"
+	},
+	"settings_option_selectTranslation_modifiers_key_shift": {
+		"message": "shift"
+	},
+	"settings_option_selectTranslation_rememberDirection": {
+		"message": "Tadidio ny fiteny farany voafantina"
+	},
+	"settings_option_selectTranslation_showOnceForSelection": {
+		"message": "Asehoy indray mandeha ny bokotra fandikan-teny isaky ny fisafidianana lahatsoratra"
+	},
+	"settings_option_selectTranslation_showOnceForSelection_desc": {
+		"message": "Hiseho indray mandeha ihany ny bokotra isaky ny fisafidianana lahatsoratra. Mba hisehoana azy indray, safidio indray ny lahatsoratra"
+	},
+	"settings_option_selectTranslation_showOriginalText": {
+		"message": "Asehoy ny lahatsoratra tany am-boalohany"
+	},
+	"settings_option_selectTranslation_showOriginalText_desc": {
+		"message": "Ampio tontonana misy ny lahatsoratra tany am-boalohany ao amin'ny popup fandikan-teny"
+	},
+	"settings_option_selectTranslation_strictSelection": {
+		"message": "Fomba henjana amin'ny fisafidianana elanelan'ny lahatsoratra",
+		"description": "Ity safidy ity dia momba ny fisafidianana lahatsoratra amin'ny alalan'ny totozy"
+	},
+	"settings_option_selectTranslation_strictSelection_desc": {
+		"message": "Aza jerena ny fisafidianana elanelan'ny lahatsoratra raha mivoaka ivelan'ny tontonana misy ny lahatsoratra voafantina ny bokotra havia amin'ny totozy"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton": {
+		"message": "Fahatarana alohan'ny hanafenana ny bokotra popup"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton_desc": {
+		"message": "Fahatarana amin'ny milisegondra alohan'ny hanafenana ny bokotra rehefa tsy eo amboniny ny kursor. Ny fipetrahana eo ambonin'ny bokotra dia mamerina ny famantaranandro. Raha te-hanafoana ny fanjavonana mandeha ho azy, apetraho ho latsaky ny 1 ny sanda"
+	},
+	"settings_option_selectTranslation_zIndex": {
+		"message": "z-index"
+	},
+	"settings_option_selectTranslation_zIndex_desc": {
+		"message": "Ampitomboy ity sanda ity raha toa ka misy singa amin'ny pejy sasany manarona ny popup misy ny lahatsoratra nadika"
+	},
+	"settings_option_textTranslator": {
+		"message": "Fandikan-teny lahatsoratra"
+	},
+	"settings_option_textTranslator_rememberText": {
+		"message": "Mahatsiaro ny lahatsoratra nadika"
+	},
+	"settings_option_textTranslator_rememberText_desc": {
+		"message": "Mahatsiaro ny lahatsoratra nadika ho an'ny manaraka rehefa misokatra ny varavarankely"
+	},
+	"settings_option_textTranslator_spellCheck": {
+		"message": "Alefaso ny fanamarinana tsipelina"
+	},
+	"settings_option_textTranslator_suggestLanguage": {
+		"message": "Mampiseho ny fiteny hita"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways": {
+		"message": "Hita sy atolotra foana ny fiteny"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways_desc": {
+		"message": "Rehefa tsy alefa, miseho ihany ny tolo-kevitra momba ny fiteny raha toa ka apetraka ho \"auto\" ny fiteny loharano"
+	},
+	"settings_option_translatePreferences": {
+		"message": "Safidy fandikan-teny"
+	},
+	"settings_option_translateScheduler": {
+		"message": "Fandaharam-potoana fandikan-teny"
+	},
+	"settings_option_translateScheduler_delay": {
+		"message": "Fahatarana fanangonana lahatsoratra"
+	},
+	"settings_option_translateScheduler_delay_desc": {
+		"message": "Ny fandaharam-potoana fandikan-teny dia mampihena ny isan'ny fangatahana amin'ny API fanompoana fandikan-teny amin'ny fanangonana lahatsoratra betsaka araka izay azo atao mba halefa amin'ny fangatahana tokana. Miandry ny fotoana voatondro amin'ny milisegondra ny fandaharam-potoana mba hanangonana lahatsoratra bebe kokoa alohan'ny hanombohana ny fandikan-teny"
+	},
+	"settings_option_translateScheduler_retryLimit": {
+		"message": "Fetra ho an'ny fiezahana indray ny fandikan-teny"
+	},
+	"settings_option_translateScheduler_retryLimit_desc": {
+		"message": "Hiezaka indray ny fandaharam-potoana fandikan-teny rehefa misy hadisoana fandikan-teny. Ity safidy ity dia mametra ny isan'ny fiezahana indray. Apetraho ho isa ratsy raha te-hanome fiezahana tsy voafetra"
+	},
+	"settings_option_translatorModule": {
+		"message": "Module fandikan-teny"
+	},
+	"settings_option_translatorModule_desc": {
+		"message": "Ny kalitaon'ny fandikan-teny sy ny fiteny misy dia miankina amin'ny module fandikan-teny"
+	},
+	"settings_option_tts": {
+		"message": "Fiovam-peo ho lahatsoratra (TTS)"
+	},
+	"settings_option_ttsCustomModules": {
+		"message": "Module fanamboarana feo manokana"
+	},
+	"settings_option_ttsCustomModules_button": {
+		"message": "Fitantanana ny module fanamboarana feo"
+	},
+	"settings_option_ttsCustomModules_desc": {
+		"message": "Afaka manampy module fanamboarana feo ianao izay mampiasa ny serivisy sy motera feo tianao indrindra. Vakio bebe kokoa ao amin'ny <slot id=docs>antontan-taratasy TTS manokana</slot>"
+	},
+	"settings_option_ttsModule": {
+		"message": "Module TTS voafantina"
+	},
+	"settings_option_ttsModule_desc": {
+		"message": "Motera feo ampiasaina amin'ny famoahana ny lahatsoratra"
+	},
+	"settings_option_userLanguage": {
+		"message": "Ny fiteninao"
+	},
+	"settings_option_userLanguage_desc": {
+		"message": "Ny fiteny izay hadika ny lahatsoratra"
+	},
+	"settings_pageTitle": {
+		"message": "Fikirana"
+	},
+	"settings_section_history": {
+		"message": "Tantara"
+	},
+	"settings_section_popup": {
+		"message": "Popup"
+	},
+	"textTranslator_suggestLanguage": {
+		"message": "Toa ny fitenin'ny lahatsoratra dia <slot id=languageSuggest>$language_name$</slot>",
+		"placeholders": {
+			"language_name": {
+				"content": "$1",
+				"example": "Japanese"
+			}
+		}
+	},
+	"textTranslator_translateInputPlaceholder": {
+		"message": "Ampidiro ny lahatsoratra ho adika",
+		"description": "Request to user input some text for translation"
+	},
+	"textTranslator_translatePlaceholder": {
+		"message": "Eto no hiseho ny lahatsoratra voadika"
+	},
+	"translatorsManagerWindow_add": {
+		"message": "Ampio ny maodely fandikan-teny"
+	},
+	"translatorsManagerWindow_close": {
+		"message": "Akato"
+	},
+	"translatorsManagerWindow_emptyTranslatorsListText": {
+		"message": "Tsy mbola nisy maodely fandikan-teny manokana nampiana"
+	},
+	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
+		"message": "Azonao antoka ve fa te-hanala ny maodely fandikan-teny \"$translator_name$\" ianao?",
+		"placeholders": {
+			"translator_name": {
+				"content": "$1",
+				"example": "Google translator"
+			}
+		}
+	},
+	"translatorsManagerWindow_title": {
+		"message": "Maodely fandikan-teny manokana"
+	},
+	"translatorsManagerWindow_translator_delete": {
+		"message": "Fafao"
+	},
+	"translatorsManagerWindow_translator_edit": {
+		"message": "Hanova"
+	},
+	"ttsManagerWindow_add": {
+		"message": "Ampio ny maodely TTS"
+	},
+	"ttsManagerWindow_close": {
+		"message": "Akato"
+	},
+	"ttsManagerWindow_emptyTranslatorsListText": {
+		"message": "Tsy mbola nisy maodely TTS nampiana"
+	},
+	"ttsManagerWindow_message_ttsRemoveConfirmation": {
+		"message": "Azonao antoka ve fa te-hanala ny maodely TTS \"$tts_name$\" ianao?",
+		"placeholders": {
+			"tts_name": {
+				"content": "$1",
+				"example": "Google TTS"
+			}
+		}
+	},
+	"ttsManagerWindow_title": {
+		"message": "Maodely Text-to-Speech"
+	},
+	"ttsManagerWindow_translator_delete": {
+		"message": "Fafao"
+	},
+	"ttsManagerWindow_translator_edit": {
+		"message": "Hanova"
+	},
+	"validation_number": {
+		"message": "Tokony ho isa ny sanda"
+	},
+	"validation_numberBetweenRange": {
+		"message": "Tokony ho isa eo anelanelan'ny $1 sy $2 ny sanda"
+	},
+	"validation_positiveNumber": {
+		"message": "Tokony ho isa tsara ny sanda"
+	}
+}

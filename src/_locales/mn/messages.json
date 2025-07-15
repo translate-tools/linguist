@@ -1,0 +1,623 @@
+{
+	"common_action_addToDictionary": {
+		"message": "Орчуулгыг толь бичигт нэмэх"
+	},
+	"common_action_removeFromDictionary": {
+		"message": "Орчуулгыг толь бичгээс хасах"
+	},
+	"common_bgUnavailable": {
+		"message": "Арын скрипт боломжгүй байна"
+	},
+	"common_cancel": {
+		"message": "Цуцлах"
+	},
+	"common_close": {
+		"message": "Хаах"
+	},
+	"common_copy": {
+		"message": "Хуулах"
+	},
+	"common_error": {
+		"message": "Алдаа"
+	},
+	"common_offlineTranslator": {
+		"message": "$1 - Офлайн орчуулагч"
+	},
+	"common_retry": {
+		"message": "Дахин оролдох"
+	},
+	"common_translate": {
+		"message": "Орчуулах"
+	},
+	"component_hotkey_placeholder": {
+		"message": "Товчлол бичихийн тулд дарна уу"
+	},
+	"component_hotkey_recordPlaceholder": {
+		"message": "Товчлууруудыг дарна уу"
+	},
+	"component_hotkey_resetButton": {
+		"message": "Дахин тохируулах"
+	},
+	"contextMenu_disablePageTranslation": {
+		"message": "Хуудасны орчуулгыг зогсоох"
+	},
+	"contextMenu_translatePage": {
+		"message": "Хуудас орчуулах"
+	},
+	"contextMenu_translateSelectedText": {
+		"message": "Сонгосон текстийг орчуулах"
+	},
+	"dictionaryButton_add": {
+		"message": "Толь бичигт нэмэх"
+	},
+	"dictionaryButton_delete": {
+		"message": "Толь бичгээс устгах"
+	},
+	"dictionary_button_export": {
+		"message": "Экспортлох"
+	},
+	"dictionary_button_removeAll": {
+		"message": "Бүгдийг устгах"
+	},
+	"dictionary_deleteAll": {
+		"message": "Толь бичгээс БҮХ орчуулгыг устгахдаа итгэлтэй байна уу?"
+	},
+	"dictionary_deleteConfirmation": {
+		"message": "Энэ орчуулгыг устгахдаа итгэлтэй байна уу?"
+	},
+	"dictionary_description": {
+		"message": "Орчуулгуудыг толь бичигт хадгалж, дараа нь хурдан олох"
+	},
+	"dictionary_emptyDictionary": {
+		"message": "Толь бичиг хоосон байна, зарим текстийг орчуулж эхлээрэй"
+	},
+	"dictionary_filter_from": {
+		"message": "Эх текстийн хэл"
+	},
+	"dictionary_filter_to": {
+		"message": "Зорилтот хэл"
+	},
+	"dictionary_message_deleteAll_success": {
+		"message": "Бүх орчуулгууд устгагдсан"
+	},
+	"dictionary_notFoundEntries": {
+		"message": "Эдгээр шүүлтүүрт тохирох орчуулга олдсонгүй"
+	},
+	"dictionary_pageTitle": {
+		"message": "Толь бичиг"
+	},
+	"dictionary_resetFilters": {
+		"message": "Шүүлтүүрийг дахин тохируулах"
+	},
+	"dictionary_searchPlaceholder": {
+		"message": "Текстээр хайх"
+	},
+	"editorWindow_close": {
+		"message": "Хаах"
+	},
+	"editorWindow_data_code": {
+		"message": "Код"
+	},
+	"editorWindow_data_title": {
+		"message": "Модулийн нэр"
+	},
+	"editorWindow_message_invalidTitle": {
+		"message": "Модулийн нэр дор хаяж нэг тэмдэгттэй байх ёстой"
+	},
+	"editorWindow_save": {
+		"message": "Хадгалах"
+	},
+	"ext_description": {
+		"message": "Вэб хуудас орчуулах, текст орчуулах, толь бичиг, түүх, өөрчлөн тохируулсан орчуулагчид, хэлний саадыг давахад хэрэгтэй бүх зүйл"
+	},
+	"ext_name": {
+		"message": "Linguist - вэб хуудас орчуулагч"
+	},
+	"history_control_selectEntry": {
+		"message": "Бөөн үйлдэлд орчуулга сонгох",
+		"description": "Description in finite form \"to pick\" with explaining what this checkbox will do"
+	},
+	"history_controls_clearHistory": {
+		"message": "Түүхийг цэвэрлэх"
+	},
+	"history_controls_deleteSelected": {
+		"message": "Сонгосон орчуулгуудыг устгах"
+	},
+	"history_controls_selectAll": {
+		"message": "Бүх орчуулгыг сонгох"
+	},
+	"history_message_clearHistoryConfirmation": {
+		"message": "Түүхийг цэвэрлэхдээ итгэлтэй байна уу? Бүх бичлэгүүд устгагдана"
+	},
+	"history_message_deleteEntryConfirmation": {
+		"message": "Энэ бичлэгийг устгахдаа итгэлтэй байна уу?"
+	},
+	"history_message_deleteSelectedEntriesConfirmation": {
+		"message": "Сонгосон бичлэгүүдийг устгахдаа итгэлтэй байна уу? ($1)"
+	},
+	"history_message_entriesNotFound": {
+		"message": "Шүүлтүүрт тохирох орчуулга олдсонгүй"
+	},
+	"history_message_noEntries": {
+		"message": "Түүх хоосон байна"
+	},
+	"history_notification_disabled": {
+		"message": "Түүх бичихийг идэвхгүй болгосон тул шинэ бичлэгүүд харагдахгүй. Үүнийг <slot id=preferences>Тохиргоо</slot> хэсгээс өөрчилж болно"
+	},
+	"history_pageTitle": {
+		"message": "Түүх"
+	},
+	"history_searchPlaceholder": {
+		"message": "Текстээр хайх"
+	},
+	"inlineTranslator_showOriginalText": {
+		"message": "Эх текстийг харуулах"
+	},
+	"lang_change": {
+		"message": "Хэл солих"
+	},
+	"lang_detect": {
+		"message": "Автоматаар илрүүлэх"
+	},
+	"lang_select": {
+		"message": "Хэл сонгох"
+	},
+	"lang_swap": {
+		"message": "Хэлүүдийг солих"
+	},
+	"message_unknownError": {
+		"message": "Тодорхойгүй алдаа"
+	},
+	"pageTranslator_alwaysTranslateLang": {
+		"message": "Энэ хэлийг үргэлж орчуулах"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disable": {
+		"message": "Идэвхгүй болгох"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
+		"message": "Бүх сайтуудад идэвхгүй болгох"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_enable": {
+		"message": "Идэвхжүүлэх"
+	},
+	"pageTranslator_commonPreferences_title": {
+		"message": "Энэ хэлний нийтлэг тохиргоо"
+	},
+	"pageTranslator_option_autoTranslate": {
+		"message": "Автоматаар орчуулах"
+	},
+	"pageTranslator_showOriginal": {
+		"message": "Эх хувилбарыг харуулах"
+	},
+	"pageTranslator_showTranslationPreferences": {
+		"message": "Орчуулгын тохиргоо"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_always": {
+		"message": "Үргэлж орчуулах"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
+		"message": "Энэ хэлийг үргэлж орчуулах"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_default": {
+		"message": "Нийтлэг дүрмийг ашиглах"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
+		"message": "Энэ хэлний нийтлэг дүрмийг ашиглах"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_never": {
+		"message": "Хэзээ ч орчуулахгүй"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
+		"message": "Энэ хэлийг хэзээ ч орчуулахгүй"
+	},
+	"pageTranslator_sitePreferences_title": {
+		"message": "Тохиргоо"
+	},
+	"pageTranslator_translatePage": {
+		"message": "Хуудас орчуулах"
+	},
+	"pageTranslator_translationReport": {
+		"message": "Орчуулгын тайлан"
+	},
+	"pageTranslator_translationReport_queue": {
+		"message": "Хүлээгдэж буй"
+	},
+	"pageTranslator_translationReport_reject": {
+		"message": "Алдаа"
+	},
+	"pageTranslator_translationReport_resolve": {
+		"message": "Орчуулагдсан"
+	},
+	"popup_tabIdNotFound": {
+		"message": "Таб \"$1\" олдсонгүй"
+	},
+	"popup_tab_translatePage": {
+		"message": "Хуудасны орчуулга"
+	},
+	"popup_tab_translateText": {
+		"message": "Текстийн орчуулга"
+	},
+	"settings_button_cancel": {
+		"message": "Цуцлах"
+	},
+	"settings_button_export": {
+		"message": "Тохиргоог экспортлох"
+	},
+	"settings_button_import": {
+		"message": "Тохиргоог импортлох"
+	},
+	"settings_button_reset": {
+		"message": "Тохиргоог дахин тохируулах"
+	},
+	"settings_button_saveChanges": {
+		"message": "Өөрчлөлтийг хадгалах"
+	},
+	"settings_message_clearCache_success": {
+		"message": "Кэш цэвэрлэгдсэн"
+	},
+	"settings_message_common_invalidValueType": {
+		"message": "Буруу утга"
+	},
+	"settings_message_importConfig_invalidFile": {
+		"message": "Өгөгдсөн тохиргооны файл буруу эсвэл гэмтсэн тул боловсруулж чадахгүй"
+	},
+	"settings_message_importConfig_success": {
+		"message": "Импорт дууссан"
+	},
+	"settings_message_resetConfig_confirm": {
+		"message": "Тохиргоог анхны утгад нь дахин тохируулахыг баталгаажуулна уу"
+	},
+	"settings_message_resetConfig_success": {
+		"message": "Тохиргоо дахин тохируулагдсан"
+	},
+	"settings_message_saveChanges_success": {
+		"message": "Өөрчлөлтүүд хадгалагдлаа"
+	},
+	"settings_option_cache": {
+		"message": "Кэш"
+	},
+	"settings_option_cache_clear": {
+		"message": "Кэшийг цэвэрлэх"
+	},
+	"settings_option_cache_clear_desc": {
+		"message": "Хэрэв та орчуулгын алдаа гарсан эсвэл хувийн текстүүдийг санамсаргүйгээр орчуулсан бол кэшийг идэвхжүүлсэн үед бүх өгөгдлийг кэшээс устгаж болно",
+		"description": "Кэшийг цэвэрлэх нь ашигтай байдаг тохиолдлуудын талаар хэрэглэгчдэд тайлбар"
+	},
+	"settings_option_cache_enable": {
+		"message": "Кэшийг идэвхжүүлэх"
+	},
+	"settings_option_cache_enable_desc": {
+		"message": "Кэшийг идэвхжүүлсэн үед өмнө нь орчуулагдсан текстүүд нэмэлт хүсэлтгүйгээр шууд орчуулагдана"
+	},
+	"settings_option_cache_ignoreCase": {
+		"message": "Том жижиг үсгийн ялгаагүй кэш ашиглах"
+	},
+	"settings_option_cache_ignoreCase_desc": {
+		"message": "Идэвхжүүлсэн үед, кэшлэгдсэн орчуулгууд өөр өөр том жижиг үсгийн хувилбаруудад ашиглагдах бөгөөд энэ нь тодорхой нөхцөлд орчуулгын гажуудал үүсгэж болзошгүй"
+	},
+	"settings_option_commonSettings": {
+		"message": "Ерөнхий тохиргоо"
+	},
+	"settings_option_customTranslatorModule": {
+		"message": "Захиалгат орчуулгын модулиуд",
+		"description": "Орчуулгын модуль хэрэгжүүлдэг хэрэглэгчийн тодорхойлсон код"
+	},
+	"settings_option_customTranslatorModule_desc": {
+		"message": "Өөрийн дуртай орчуулгын үйлчилгээг ашиглах захиалгат орчуулгын модулиудыг нэмэх боломжтой. <slot id=docs>захиалгат орчуулагчдын баримт бичиг</slot>-ээс дэлгэрэнгүйг үзнэ үү"
+	},
+	"settings_option_customTranslatorModule_manageButton": {
+		"message": "Орчуулагчдыг удирдах",
+		"description": "Орчуулгын модулиудын жагсаалтыг харуулах товч"
+	},
+	"settings_option_history_enable": {
+		"message": "Түүхийг идэвхжүүлэх"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "Идэвхжүүлсэн үед орчуулгууд бүртгэгдэж, <slot id=historyPage>түүхийн хуудас</slot>-д харагдана"
+	},
+	"settings_option_pageTranslation": {
+		"message": "Бүтэн хуудасны орчуулга"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent": {
+		"message": "Агуулгаар нь хэл илрүүлэх"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent_desc": {
+		"message": "Вэб хуудасны текстийг шинжилж, хэл илрүүлэх. Идэвхгүй бол <slot id=docs>хуудасны мета өгөгдөл</slot>-д заасан хэл ашиглагдана"
+	},
+	"settings_option_pageTranslation_enableContextMenu": {
+		"message": "Контекст цэсний товчийг идэвхжүүлэх"
+	},
+	"settings_option_pageTranslation_enableContextMenu_desc": {
+		"message": "Хуудасны контекст цэсэнд хуудасны орчуулгыг солих товч нэмэх"
+	},
+	"settings_option_pageTranslation_excludeSelectors": {
+		"message": "Орчуулгаас хасах сонгогчид"
+	},
+	"settings_option_pageTranslation_excludeSelectors_desc": {
+		"message": "Орчуулгаас хасах элементүүдийн CSS сонгогчдын жагсаалт. Нэг мөрөнд нэг сонгогч. Хэрэв элемент эдгээр сонгогчдын аль нэгэнд тохирч байвал түүний текст, атрибутууд болон үүрэн элементүүд орчуулагдахгүй"
+	},
+	"settings_option_pageTranslation_lazyTranslate": {
+		"message": "Зөвхөн харагдах элементүүдийг орчуулах"
+	},
+	"settings_option_pageTranslation_lazyTranslate_desc": {
+		"message": "Энэ сонголтыг идэвхжүүлсэн үед зөвхөн харагдах элементүүд орчуулагдана. Энэ сонголт сүлжээний урсгалыг бууруулна"
+	},
+	"settings_option_pageTranslation_originalTextPopup": {
+		"message": "Эх тексттэй попапыг идэвхжүүлэх"
+	},
+	"settings_option_pageTranslation_originalTextPopup_desc": {
+		"message": "Орчуулагдсан текстийн блокууд дээр хулганаар хөвөх үед эх тексттэй попапыг харуулах"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation": {
+		"message": "Товчлол"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation_desc": {
+		"message": "Хуудасны орчуулгыг солих товчлол\nТовчлууруудыг дахин тохируулахын тулд ESC дарна уу"
+	},
+	"settings_option_pageTranslation_translatableAttributes": {
+		"message": "Орчуулагдах атрибутууд"
+	},
+	"settings_option_pageTranslation_translatableAttributes_desc": {
+		"message": "Орчуулах <slot id=htmlAttributes>HTML атрибут</slot> нэрсийг оруулна уу, нэг мөрөнд нэг атрибут\nЭнэ жагсаалтад байгаа атрибутууд л орчуулагдана"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters": {
+		"message": "Орчуулгын явцыг харуулах"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters_desc": {
+		"message": "Өргөтгөлийн цонхонд хуудасны орчуулгын явцыг харуулах самбар харуулах"
+	},
+	"settings_option_selectTranslation": {
+		"message": "Сонгосон текстийн орчуулга"
+	},
+	"settings_option_selectTranslation_detectTextLanguage": {
+		"message": "Текстийн хэлийг илрүүлэх"
+	},
+	"settings_option_selectTranslation_detectTextLanguage_desc": {
+		"message": "Идэвхжүүлсэн үед сонгосон текстийг орчуулах хэл илрүүлэхийн тулд шинжилнэ. Үгүй бол хуудасны хэл ашиглагдана"
+	},
+	"settings_option_selectTranslation_disableWhileTranslatePage": {
+		"message": "Хуудас орчуулах үед идэвхгүй болгох"
+	},
+	"settings_option_selectTranslation_enable": {
+		"message": "Сонгосон текстийн орчуулгыг идэвхжүүлэх"
+	},
+	"settings_option_selectTranslation_enable_desc": {
+		"message": "Энэ боломжийг идэвхжүүлсэн үед та хуудсан дээрх ямар ч текстийг сонгож, цонхонд орчуулах боломжтой"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton": {
+		"message": "Орчуулгын товч дээр автоматаар төвлөрөх"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
+		"message": "Хуудас дээр орчуулгын товч гарч ирэх үед автоматаар төвлөрнө"
+	},
+	"settings_option_selectTranslation_header_languageChoice": {
+		"message": "Хэлний тохиргоо"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang": {
+		"message": "Орчуулгын модулийг текстийн хэлийг илрүүлэхийг зөвшөөрөх"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
+		"message": "Текстийн хэлийг орон нутагт илрүүлж чадахгүй үед энэ сонголт идэвхжсэн бол \"auto\" хэлээр орчуулах болно. Сонголт идэвхгүй бол өөр нэг арга ашиглан текстийн эх хэлийг тохируулна"
+	},
+	"settings_option_selectTranslation_mode": {
+		"message": "Текст сонгох үед хийх үйлдэл"
+	},
+	"settings_option_selectTranslation_mode_item_contextMenu": {
+		"message": "Контекст цэсээр текст орчуулах"
+	},
+	"settings_option_selectTranslation_mode_item_popupButton": {
+		"message": "Орчуулгын товч харуулах"
+	},
+	"settings_option_selectTranslation_mode_item_quickTranslate": {
+		"message": "Текстийг шууд орчуулах"
+	},
+	"settings_option_selectTranslation_modifiers": {
+		"message": "Өөрчлөгчид"
+	},
+	"settings_option_selectTranslation_modifiers_desc": {
+		"message": "Орчуулгыг харуулахын тулд дарах ёстой товчлууруудыг сонгоно уу"
+	},
+	"settings_option_selectTranslation_modifiers_key_alt": {
+		"message": "alt"
+	},
+	"settings_option_selectTranslation_modifiers_key_ctrl": {
+		"message": "ctrl"
+	},
+	"settings_option_selectTranslation_modifiers_key_meta": {
+		"message": "meta"
+	},
+	"settings_option_selectTranslation_modifiers_key_shift": {
+		"message": "shift"
+	},
+	"settings_option_selectTranslation_rememberDirection": {
+		"message": "Хамгийн сүүлд сонгосон текстийн хэлийг санах"
+	},
+	"settings_option_selectTranslation_showOnceForSelection": {
+		"message": "Текст сонгох бүрт орчуулгын товчийг нэг удаа харуулах"
+	},
+	"settings_option_selectTranslation_showOnceForSelection_desc": {
+		"message": "Товч нь текст сонгох бүрт зөвхөн нэг удаа гарч ирнэ. Дахин харуулахын тулд текстийг дахин сонгоно уу"
+	},
+	"settings_option_selectTranslation_showOriginalText": {
+		"message": "Эх текстийг харуулах"
+	},
+	"settings_option_selectTranslation_showOriginalText_desc": {
+		"message": "Орчуулгын цонхонд эх текст бүхий блок нэмэх"
+	},
+	"settings_option_selectTranslation_strictSelection": {
+		"message": "Текст сонгох хатуу горим",
+		"description": "Энэ сонголт нь хулганаар текст сонгох тухай юм"
+	},
+	"settings_option_selectTranslation_strictSelection_desc": {
+		"message": "Сонгосон текст агуулсан блокийн гадна зүүн хулганы товчийг сулласан бол текст сонгохыг үл тоомсорлох"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton": {
+		"message": "Цонхны товчийг нуухын өмнөх хоцрогдол"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton_desc": {
+		"message": "Товчлуур дээр хулганаас гарсан үед товчлуурыг нуух хүртэлх миллисекундээр хэмжигдэх хоцрогдол. Товчлуур дээр хулганаас гарсан үед таймер дахин эхэлнэ. Автоматаар нуухыг идэвхгүй болгохын тулд утгыг 1-ээс бага байхаар тохируулна уу"
+	},
+	"settings_option_selectTranslation_zIndex": {
+		"message": "z-index"
+	},
+	"settings_option_selectTranslation_zIndex_desc": {
+		"message": "Зарим хуудсан дээрх элементүүд орчуулсан текст бүхий цонхыг давхарлах тохиолдолд энэ утгыг нэмэгдүүлнэ үү"
+	},
+	"settings_option_textTranslator": {
+		"message": "Текст орчуулга"
+	},
+	"settings_option_textTranslator_rememberText": {
+		"message": "Орчуулсан текстийг санах"
+	},
+	"settings_option_textTranslator_rememberText_desc": {
+		"message": "Цонх дахин нээгдэхэд орчуулсан текстийг санах"
+	},
+	"settings_option_textTranslator_spellCheck": {
+		"message": "Үг үсгийн алдаа шалгахыг идэвхжүүлэх"
+	},
+	"settings_option_textTranslator_suggestLanguage": {
+		"message": "Илэрсэн текстийн хэлийг харуулах"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways": {
+		"message": "Хэлийг үргэлж илрүүлж санал болгох"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways_desc": {
+		"message": "Идэвхгүй бол эх хэл \"авто\" гэж тохируулагдсан үед л хэлний санал гарч ирнэ"
+	},
+	"settings_option_translatePreferences": {
+		"message": "Орчуулгын тохиргоо"
+	},
+	"settings_option_translateScheduler": {
+		"message": "Орчуулгын хуваарь"
+	},
+	"settings_option_translateScheduler_delay": {
+		"message": "Текст хуримтлуулах хоцрогдол"
+	},
+	"settings_option_translateScheduler_delay_desc": {
+		"message": "Орчуулгын хуваарь нь орчуулгын үйлчилгээний API-д илгээх хүсэлтийн тоог багасгахын тулд аль болох олон текстийг нэг хүсэлтээр илгээхээр хуримтлуулдаг. Орчуулга эхлэхээс өмнө илүү олон текст цуглуулахын тулд миллисекундээр заасан хугацааг хүлээнэ"
+	},
+	"settings_option_translateScheduler_retryLimit": {
+		"message": "Орчуулгыг дахин оролдох хязгаар"
+	},
+	"settings_option_translateScheduler_retryLimit_desc": {
+		"message": "Орчуулгын алдаа гарсан үед хуваарь нь текстийг дахин орчуулахыг оролдоно. Энэ сонголт нь дахин оролдох оролдлогын хязгаарыг тогтооно. Хязгааргүй дахин оролдохыг зөвшөөрөхийн тулд сөрөг тоо тохируулна уу"
+	},
+	"settings_option_translatorModule": {
+		"message": "Орчуулгын модуль"
+	},
+	"settings_option_translatorModule_desc": {
+		"message": "Орчуулгын чанар болон боломжтой хэлнүүд нь орчуулгын модулиас хамаарна"
+	},
+	"settings_option_tts": {
+		"message": "Текстийг яриа болгон хувиргах (TTS)"
+	},
+	"settings_option_ttsCustomModules": {
+		"message": "Захиалгат ярианы синтезийн модулиуд"
+	},
+	"settings_option_ttsCustomModules_button": {
+		"message": "Ярианы синтезийн модулиудыг удирдах"
+	},
+	"settings_option_ttsCustomModules_desc": {
+		"message": "Таны дуртай үйлчилгээ болон дуу хоолойн хөдөлгүүрийг ашигладаг ярианы синтезийн модулиудыг нэмж болно. <slot id=docs>захиалгат TTS баримт бичиг</slot> дээрээс дэлгэрэнгүй уншина уу"
+	},
+	"settings_option_ttsModule": {
+		"message": "Сонгосон TTS модуль"
+	},
+	"settings_option_ttsModule_desc": {
+		"message": "Текстийг дуу хоолойгоор уншихад ашигладаг дуу хоолойн хөдөлгүүр"
+	},
+	"settings_option_userLanguage": {
+		"message": "Таны хэл"
+	},
+	"settings_option_userLanguage_desc": {
+		"message": "Текстийг орчуулах хэл"
+	},
+	"settings_pageTitle": {
+		"message": "Тохиргоо"
+	},
+	"settings_section_history": {
+		"message": "Түүх"
+	},
+	"settings_section_popup": {
+		"message": "Цонх"
+	},
+	"textTranslator_suggestLanguage": {
+		"message": "Текстийн хэл <slot id=languageSuggest>$language_name$</slot> байх магадлалтай",
+		"placeholders": {
+			"language_name": {
+				"content": "$1",
+				"example": "Япон"
+			}
+		}
+	},
+	"textTranslator_translateInputPlaceholder": {
+		"message": "Орчуулгын текст оруулна уу",
+		"description": "Орчуулга хийх текстийг хэрэглэгчээс оруулахыг хүсэх"
+	},
+	"textTranslator_translatePlaceholder": {
+		"message": "Орчуулагдсан текст энд гарна"
+	},
+	"translatorsManagerWindow_add": {
+		"message": "Орчуулгын модулийг нэмэх"
+	},
+	"translatorsManagerWindow_close": {
+		"message": "Хаах"
+	},
+	"translatorsManagerWindow_emptyTranslatorsListText": {
+		"message": "Хэрэглэгчийн орчуулгын модуль нэмэгдээгүй байна"
+	},
+	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
+		"message": "Та \"$translator_name$\" орчуулгын модулийг устгахдаа итгэлтэй байна уу?",
+		"placeholders": {
+			"translator_name": {
+				"content": "$1",
+				"example": "Google translator"
+			}
+		}
+	},
+	"translatorsManagerWindow_title": {
+		"message": "Хэрэглэгчийн орчуулгын модулиуд"
+	},
+	"translatorsManagerWindow_translator_delete": {
+		"message": "Устгах"
+	},
+	"translatorsManagerWindow_translator_edit": {
+		"message": "Засах"
+	},
+	"ttsManagerWindow_add": {
+		"message": "TTS модулийг нэмэх"
+	},
+	"ttsManagerWindow_close": {
+		"message": "Хаах"
+	},
+	"ttsManagerWindow_emptyTranslatorsListText": {
+		"message": "TTS модуль нэмэгдээгүй байна"
+	},
+	"ttsManagerWindow_message_ttsRemoveConfirmation": {
+		"message": "Та \"$tts_name$\" TTS модулийг устгахдаа итгэлтэй байна уу?",
+		"placeholders": {
+			"tts_name": {
+				"content": "$1",
+				"example": "Google TTS"
+			}
+		}
+	},
+	"ttsManagerWindow_title": {
+		"message": "Текстийг яриа болгон хувиргах модулиуд"
+	},
+	"ttsManagerWindow_translator_delete": {
+		"message": "Устгах"
+	},
+	"ttsManagerWindow_translator_edit": {
+		"message": "Засах"
+	},
+	"validation_number": {
+		"message": "Утга нь тоо байх ёстой"
+	},
+	"validation_numberBetweenRange": {
+		"message": "Утга нь $1 ба $2 хооронд тоо байх ёстой"
+	},
+	"validation_positiveNumber": {
+		"message": "Утга нь эерэг тоо байх ёстой"
+	}
+}

@@ -1,0 +1,623 @@
+{
+	"common_action_addToDictionary": {
+		"message": "Yongeza uguqulelo kwidikshinari"
+	},
+	"common_action_removeFromDictionary": {
+		"message": "Susa uguqulelo kwidikshinari"
+	},
+	"common_bgUnavailable": {
+		"message": "Iskripthi sangasemva asifumaneki"
+	},
+	"common_cancel": {
+		"message": "Rhoxisa"
+	},
+	"common_close": {
+		"message": "Vala"
+	},
+	"common_copy": {
+		"message": "Kopa"
+	},
+	"common_error": {
+		"message": "Impazamo"
+	},
+	"common_offlineTranslator": {
+		"message": "$1 - Umguquleli okwi-intanethi"
+	},
+	"common_retry": {
+		"message": "Phinda uzame"
+	},
+	"common_translate": {
+		"message": "Guqulela"
+	},
+	"component_hotkey_placeholder": {
+		"message": "Cofa ukuze ubhale isitshixo esifutshane"
+	},
+	"component_hotkey_recordPlaceholder": {
+		"message": "Cinezela izitshixo"
+	},
+	"component_hotkey_resetButton": {
+		"message": "Setha kwakhona"
+	},
+	"contextMenu_disablePageTranslation": {
+		"message": "Yeka ukuguqulela iphepha"
+	},
+	"contextMenu_translatePage": {
+		"message": "Guqulela iphepha"
+	},
+	"contextMenu_translateSelectedText": {
+		"message": "Guqulela umbhalo okhethiweyo"
+	},
+	"dictionaryButton_add": {
+		"message": "Yongeza kwidikshinari"
+	},
+	"dictionaryButton_delete": {
+		"message": "Cima kwidikshinari"
+	},
+	"dictionary_button_export": {
+		"message": "Thumela ngaphandle"
+	},
+	"dictionary_button_removeAll": {
+		"message": "Susa zonke"
+	},
+	"dictionary_deleteAll": {
+		"message": "Uqinisekile ukuba ufuna ukucima ZONKE iinguqulelo kwidikshinari?"
+	},
+	"dictionary_deleteConfirmation": {
+		"message": "Uqinisekile ukuba ufuna ukucima olu guqulelo?"
+	},
+	"dictionary_description": {
+		"message": "Gcina iinguqulelo kwidikshinari ukuze uzifumane ngokukhawuleza kamva"
+	},
+	"dictionary_emptyDictionary": {
+		"message": "Idikshinari ayinanto, qalisa ukuyizalisa ngokuguqulela umbhalo othile"
+	},
+	"dictionary_filter_from": {
+		"message": "Ulwimi lombhalo wokuqala"
+	},
+	"dictionary_filter_to": {
+		"message": "Ulwimi olujoliswe kulo"
+	},
+	"dictionary_message_deleteAll_success": {
+		"message": "Zonke iinguqulelo zisusiwe"
+	},
+	"dictionary_notFoundEntries": {
+		"message": "Akukho zinguqulelo ezifumanekayo ezihambelana nezi zihluzo"
+	},
+	"dictionary_pageTitle": {
+		"message": "Idikshinari"
+	},
+	"dictionary_resetFilters": {
+		"message": "Setha kwakhona izihluzo"
+	},
+	"dictionary_searchPlaceholder": {
+		"message": "Khangela ngombhalo"
+	},
+	"editorWindow_close": {
+		"message": "Vala"
+	},
+	"editorWindow_data_code": {
+		"message": "Ikhowudi"
+	},
+	"editorWindow_data_title": {
+		"message": "Igama leModyuli"
+	},
+	"editorWindow_message_invalidTitle": {
+		"message": "Igama leModyuli kufuneka libe nobuncinci uphawu olunye"
+	},
+	"editorWindow_save": {
+		"message": "Gcina"
+	},
+	"ext_description": {
+		"message": "Uguqulelo lwephepha lewebhu, uguqulelo lombhalo, isichazi-magama, imbali, abaguquleli abenziwe ngokwezifiso, konke okufunekayo ukoyisa imiqobo yolwimi"
+	},
+	"ext_name": {
+		"message": "Linguist - umguquleli wephepha lewebhu"
+	},
+	"history_control_selectEntry": {
+		"message": "Khetha uguqulelo lwesenzo esikhulu",
+		"description": "Description in finite form \"to pick\" with explaining what this checkbox will do"
+	},
+	"history_controls_clearHistory": {
+		"message": "Cima imbali"
+	},
+	"history_controls_deleteSelected": {
+		"message": "Cima uguqulelo olukhethiweyo"
+	},
+	"history_controls_selectAll": {
+		"message": "Khetha onke uguqulelo"
+	},
+	"history_message_clearHistoryConfirmation": {
+		"message": "Uqinisekile ukuba ufuna ukucima imbali? Zonke izinto ziya kususwa"
+	},
+	"history_message_deleteEntryConfirmation": {
+		"message": "Uqinisekile ukuba ufuna ukucima le nto?"
+	},
+	"history_message_deleteSelectedEntriesConfirmation": {
+		"message": "Uqinisekile ukuba ufuna ukucima izinto ezikhethiweyo ($1)?"
+	},
+	"history_message_entriesNotFound": {
+		"message": "Akukho ziguqulelo zifunyenweyo ezihambelana nesihluzi"
+	},
+	"history_message_noEntries": {
+		"message": "Imbali ayikho"
+	},
+	"history_notification_disabled": {
+		"message": "Ukurekhoda imbali kukhutshiwe, ngoko ke izinto ezintsha azizukubonakala. Ungatshintsha oku kwi <slot id=preferences>Izinto ezikhethwayo</slot>"
+	},
+	"history_pageTitle": {
+		"message": "Imbali"
+	},
+	"history_searchPlaceholder": {
+		"message": "Khangela ngombhalo"
+	},
+	"inlineTranslator_showOriginalText": {
+		"message": "Bonisa umbhalo wokuqala"
+	},
+	"lang_change": {
+		"message": "Tshintsha ulwimi"
+	},
+	"lang_detect": {
+		"message": "Zifumanise ngokuzenzekelayo"
+	},
+	"lang_select": {
+		"message": "Khetha ulwimi"
+	},
+	"lang_swap": {
+		"message": "Tshintshiselana iilwimi"
+	},
+	"message_unknownError": {
+		"message": "Impazamo engaziwayo"
+	},
+	"pageTranslator_alwaysTranslateLang": {
+		"message": "Soloko uguqulela olu lwimi"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disable": {
+		"message": "Khupha"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
+		"message": "Khupha kuzo zonke iisayithi"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_enable": {
+		"message": "Vula"
+	},
+	"pageTranslator_commonPreferences_title": {
+		"message": "Izinto ezikhethwayo eziqhelekileyo kolu lwimi"
+	},
+	"pageTranslator_option_autoTranslate": {
+		"message": "Guqulela ngokuzenzekelayo"
+	},
+	"pageTranslator_showOriginal": {
+		"message": "Bonisa eyantlandlolo"
+	},
+	"pageTranslator_showTranslationPreferences": {
+		"message": "Izinto ezikhethwayo zoguqulelo"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_always": {
+		"message": "Soloko uguqulela"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
+		"message": "Soloko uguqulela kolu lwimi"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_default": {
+		"message": "Sebenzisa imigaqo eqhelekileyo"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
+		"message": "Sebenzisa imigaqo eqhelekileyo kolu lwimi"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_never": {
+		"message": "Ungaze uguqulele"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
+		"message": "Ungaze uguqulele kolu lwimi"
+	},
+	"pageTranslator_sitePreferences_title": {
+		"message": "Izinto ezikhethwayo ze"
+	},
+	"pageTranslator_translatePage": {
+		"message": "Guqulela iphepha"
+	},
+	"pageTranslator_translationReport": {
+		"message": "Ingxelo yoguqulelo"
+	},
+	"pageTranslator_translationReport_queue": {
+		"message": "Kulindwe"
+	},
+	"pageTranslator_translationReport_reject": {
+		"message": "Iimpazamo"
+	},
+	"pageTranslator_translationReport_resolve": {
+		"message": "Kuguqulelwe"
+	},
+	"popup_tabIdNotFound": {
+		"message": "Ithebhu \"$1\" ayifumanekanga"
+	},
+	"popup_tab_translatePage": {
+		"message": "Uguqulelo lwephepha"
+	},
+	"popup_tab_translateText": {
+		"message": "Uguqulelo lombhalo"
+	},
+	"settings_button_cancel": {
+		"message": "Rhoxisa"
+	},
+	"settings_button_export": {
+		"message": "Thumela ngaphandle useto"
+	},
+	"settings_button_import": {
+		"message": "Ngenisa useto"
+	},
+	"settings_button_reset": {
+		"message": "Cwangcisa kwakhona useto"
+	},
+	"settings_button_saveChanges": {
+		"message": "Gcina utshintsho"
+	},
+	"settings_message_clearCache_success": {
+		"message": "Ikhache icinyiwe"
+	},
+	"settings_message_common_invalidValueType": {
+		"message": "Ixabiso alikho semthethweni"
+	},
+	"settings_message_importConfig_invalidFile": {
+		"message": "Ifayile yoseto enikiweyo ayilunganga okanye yonakele, ayinakwenziwa"
+	},
+	"settings_message_importConfig_success": {
+		"message": "Ukungenisa kugqityiwe"
+	},
+	"settings_message_resetConfig_confirm": {
+		"message": "Qinisekisa ukucwangcisa kwakhona useto kwiixabiso ezizenzekelayo"
+	},
+	"settings_message_resetConfig_success": {
+		"message": "Useto lucwangciswe kwakhona"
+	},
+	"settings_message_saveChanges_success": {
+		"message": "Iinguqu zigalelwe"
+	},
+	"settings_option_cache": {
+		"message": "Icache"
+	},
+	"settings_option_cache_clear": {
+		"message": "Cima icache"
+	},
+	"settings_option_cache_clear_desc": {
+		"message": "Ukuba uqaphela iimpazamo zotoliko okanye ngempazamo utolika imibhalo yabucala ngelixa icache ivuliwe, ungacima yonke idatha kwi-cache",
+		"description": "Explanation for user about cases when it's useful to clear cache"
+	},
+	"settings_option_cache_enable": {
+		"message": "Vula icache"
+	},
+	"settings_option_cache_enable_desc": {
+		"message": "Xa icache ivuliwe, imibhalo etolikiweyo ngaphambili iya kutolikwa kwangoko ngaphandle kwezicelo ezongezelelweyo kwinkonzo yotoliko"
+	},
+	"settings_option_cache_ignoreCase": {
+		"message": "Sebenzisa icache engahoyiyo iimeko"
+	},
+	"settings_option_cache_ignoreCase_desc": {
+		"message": "Xa ivuliwe, iinguqu ezigcinwe kwi-cache ziya kusetyenziswa kwimibhalo eneemeko ezahlukeneyo, nto leyo enokubangela ukuguqulwa okungachanekanga kwezinye iimeko"
+	},
+	"settings_option_commonSettings": {
+		"message": "Iisetingi eziqhelekileyo"
+	},
+	"settings_option_customTranslatorModule": {
+		"message": "Iimodyuli zotoliko ezilungiselelwe wena",
+		"description": "An user defined code that implements a translation module"
+	},
+	"settings_option_customTranslatorModule_desc": {
+		"message": "Ungongeza iimodyuli zotoliko ezilungiselelwe wena ezisebenzisa iinkonzo zakho ozithandayo zotoliko. Funda ngakumbi kwi-<slot id=docs>uxwebhu lweenguqu ezilungiselelwe wena</slot>"
+	},
+	"settings_option_customTranslatorModule_manageButton": {
+		"message": "Ukulawula abaguquleli",
+		"description": "A button to show list of translation modules"
+	},
+	"settings_option_history_enable": {
+		"message": "Vula imbali"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "Xa ivuliwe, iinguqu ziya kurekhodwa kwaye zibonakale kwi-<slot id=historyPage>iphepha lembali</slot>"
+	},
+	"settings_option_pageTranslation": {
+		"message": "Utoliko lwephepha elipheleleyo"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent": {
+		"message": "Fumanisa ulwimi ngombhalo"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent_desc": {
+		"message": "Hlola umbhalo kwiphepha lewebhu ukufumanisa ulwimi lwayo. Xa icinyiwe, ulwimi oluchaziweyo kwi-<slot id=docs>metadata yephepha</slot> luya kusetyenziswa"
+	},
+	"settings_option_pageTranslation_enableContextMenu": {
+		"message": "Vula iqhosha lemenyu yomxholo"
+	},
+	"settings_option_pageTranslation_enableContextMenu_desc": {
+		"message": "Yongeza iqhosha lokutshintsha utoliko lwephepha kwimenyu yomxholo wephepha"
+	},
+	"settings_option_pageTranslation_excludeSelectors": {
+		"message": "Abakhethiweyo abangafakwanga kutoliko"
+	},
+	"settings_option_pageTranslation_excludeSelectors_desc": {
+		"message": "Uluhlu lwabakhethiweyo be-CSS kwizinto ezingafakwanga kutoliko. Umkhethiweyo omnye kumgca ngamnye. Ukuba into ifana naluphi na kula makhethiweyo, umbhalo wayo, iimpawu, kunye nezinto ezifakwe ngaphakathi azizukuguqulwa"
+	},
+	"settings_option_pageTranslation_lazyTranslate": {
+		"message": "Tolika izinto ezibonakalayo kuphela"
+	},
+	"settings_option_pageTranslation_lazyTranslate_desc": {
+		"message": "Xa olu khetho luvuliwe, izinto ezibonakalayo kuphela eziza kutolikwa. Olu khetho lunciphisa umthwalo wenethiwekhi"
+	},
+	"settings_option_pageTranslation_originalTextPopup": {
+		"message": "Vula i-popup enombhalo wokuqala"
+	},
+	"settings_option_pageTranslation_originalTextPopup_desc": {
+		"message": "Bonisa i-popup enombhalo wokuqala xa ugxininisa kwiibhloko zombhalo eziguqulweyo"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation": {
+		"message": "Isinqamlezo"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation_desc": {
+		"message": "Isinqamlezo sokutshintsha utoliko lwephepha\nCinezela i-ESC ukuseta kwakhona izitshixo"
+	},
+	"settings_option_pageTranslation_translatableAttributes": {
+		"message": "Iimpawu eziguqulwayo"
+	},
+	"settings_option_pageTranslation_translatableAttributes_desc": {
+		"message": "Faka amagama e-<slot id=htmlAttributes>impawu ze-HTML</slot> ukuguqula, impawu enye kumgca ngamnye\nKuphela iimpawu ezikolu luhlu eziza kutolikwa"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters": {
+		"message": "Bonisa inkqubela phambili yotoliko"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters_desc": {
+		"message": "Bonisa ipaneli ngenkqubela phambili yokuguqulela iphepha kwi-popup yesandiso"
+	},
+	"settings_option_selectTranslation": {
+		"message": "Inguqulelo yombhalo okhethiweyo"
+	},
+	"settings_option_selectTranslation_detectTextLanguage": {
+		"message": "Fumanisa ulwimi lombhalo"
+	},
+	"settings_option_selectTranslation_detectTextLanguage_desc": {
+		"message": "Xa ivuliwe, umbhalo okhethiweyo uya kuhlalutywa ukufumanisa ulwimi lokuguqulela. Ngaphandle koko, ulwimi lwephepha luya kusetyenziswa"
+	},
+	"settings_option_selectTranslation_disableWhileTranslatePage": {
+		"message": "Khubaza ngelixa uguqulela iphepha"
+	},
+	"settings_option_selectTranslation_enable": {
+		"message": "Vula uguqulelo lombhalo okhethiweyo"
+	},
+	"settings_option_selectTranslation_enable_desc": {
+		"message": "Xa eli nqaku livuliwe, unokukhetha nawuphi na umbhalo kwiphepha kwaye uwuguqulele kwi-popup"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton": {
+		"message": "Gxila ngokuzenzekelayo kwiqhosha lokuguqulela"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
+		"message": "Xa iqhosha lokuguqulela livela kwiphepha, liya kugxilwa ngokuzenzekelayo"
+	},
+	"settings_option_selectTranslation_header_languageChoice": {
+		"message": "Useto lolwimi"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang": {
+		"message": "Vumela imodyuli yokuguqulela ifumanise ulwimi lombhalo"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
+		"message": "Xa ulwimi lombhalo lungafumaneki ngokwasemzimbeni kwaye olu khetho luvuliwe, umbhalo uya kuguqulelwa ngolwimi \"auto\" ukuba luxhaswa.\nXa olu khetho lukhutshiweyo, enye indlela yokubuyisela umva iya kusetyenziswa ukuseta ulwimi lomthombo wombhalo"
+	},
+	"settings_option_selectTranslation_mode": {
+		"message": "Isenzo sokukhetha umbhalo"
+	},
+	"settings_option_selectTranslation_mode_item_contextMenu": {
+		"message": "Guqulela umbhalo nge-menu yomxholo"
+	},
+	"settings_option_selectTranslation_mode_item_popupButton": {
+		"message": "Bonisa iqhosha lokuguqulela"
+	},
+	"settings_option_selectTranslation_mode_item_quickTranslate": {
+		"message": "Guqulela umbhalo ngokukhawuleza"
+	},
+	"settings_option_selectTranslation_modifiers": {
+		"message": "Izilungisi"
+	},
+	"settings_option_selectTranslation_modifiers_desc": {
+		"message": "Khetha izitshixo ekufuneka zicinezelwe kwikhibhodi ukubonisa uguqulelo"
+	},
+	"settings_option_selectTranslation_modifiers_key_alt": {
+		"message": "alt"
+	},
+	"settings_option_selectTranslation_modifiers_key_ctrl": {
+		"message": "ctrl"
+	},
+	"settings_option_selectTranslation_modifiers_key_meta": {
+		"message": "meta"
+	},
+	"settings_option_selectTranslation_modifiers_key_shift": {
+		"message": "shift"
+	},
+	"settings_option_selectTranslation_rememberDirection": {
+		"message": "Khumbula ulwimi lombhalo olusandula ukukhethwa"
+	},
+	"settings_option_selectTranslation_showOnceForSelection": {
+		"message": "Bonisa iqhosha lokuguqulela kube kanye ngokukhetha umbhalo"
+	},
+	"settings_option_selectTranslation_showOnceForSelection_desc": {
+		"message": "Iqhosha liya kuvela kube kanye kuphela ngokukhetha umbhalo Ngaphinda ukhethe umbhalo ukuze ulubonise kwakhona"
+	},
+	"settings_option_selectTranslation_showOriginalText": {
+		"message": "Bonisa umbhalo wokuqala"
+	},
+	"settings_option_selectTranslation_showOriginalText_desc": {
+		"message": "Yongeza ibhloko enombhalo wokuqala kwi-popup yokuguqulela"
+	},
+	"settings_option_selectTranslation_strictSelection": {
+		"message": "Imowudi engqongqo yokukhetha isithuba sombhalo",
+		"description": "This option is about selecting text via mouse"
+	},
+	"settings_option_selectTranslation_strictSelection_desc": {
+		"message": "Yihoye ukukhethwa kwesithuba sombhalo ukuba iqhosha lasekhohlo le mouse likhululwe ngaphandle kwebhloko equlethe umbhalo okhethiweyo"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton": {
+		"message": "Libazisa ngaphambi kokufihla iqhosha le-popup"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton_desc": {
+		"message": "Ukulibaziseka kumasekhondi ngaphambi kokufihla iqhosha xa umkhombandlela ungahambi phezu kwalo. Ukuhamba phezu kweqhosha kuphinda kusebenze isibali-xesha. Ukukhubaza ukufihla ngokuzenzekelayo, misa ixabiso libe ngaphantsi kwe-1"
+	},
+	"settings_option_selectTranslation_zIndex": {
+		"message": "z-index"
+	},
+	"settings_option_selectTranslation_zIndex_desc": {
+		"message": "Yandisa eli xabiso ukuba izinto kumaphepha athile zigquma i-popup enombhalo oguqulweyo"
+	},
+	"settings_option_textTranslator": {
+		"message": "Uguqulelo lombhalo"
+	},
+	"settings_option_textTranslator_rememberText": {
+		"message": "Ukukhumbula umbhalo oguqulweyo"
+	},
+	"settings_option_textTranslator_rememberText_desc": {
+		"message": "Ukukhumbula umbhalo oguqulweyo ngexesha elizayo xa ivula iwindi"
+	},
+	"settings_option_textTranslator_spellCheck": {
+		"message": "Vula ukujonga upelo"
+	},
+	"settings_option_textTranslator_suggestLanguage": {
+		"message": "Ukubonisa ulwimi lombhalo olufunyenweyo"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways": {
+		"message": "Soloko ufumanisa kwaye ucebise ulwimi"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways_desc": {
+		"message": "Xa ikhubazekile, iziphakamiso zolwimi ziya kuvela kuphela ukuba ulwimi lomthombo lusetiwe ku-\"auto\""
+	},
+	"settings_option_translatePreferences": {
+		"message": "Izinto ezikhethwayo zoguqulelo"
+	},
+	"settings_option_translateScheduler": {
+		"message": "Ishedyuli yoguqulelo"
+	},
+	"settings_option_translateScheduler_delay": {
+		"message": "Ukulibaziseka kokuqokelela umbhalo"
+	},
+	"settings_option_translateScheduler_delay_desc": {
+		"message": "Ishedyuli yoguqulelo inciphisa inani lezicelo kwi-API yenkonzo yoguqulelo ngokudibanisa imibhalo emininzi kangangoko kunokwenzeka ukuthumela ngesicelo esinye. Ishedyuli iya kulinda ixesha elichaziweyo kumasekhondi ukuqokelela imibhalo engakumbi ngaphambi kokuqala uguqulelo"
+	},
+	"settings_option_translateScheduler_retryLimit": {
+		"message": "Umda wezilingo zokuphinda uguqulelo"
+	},
+	"settings_option_translateScheduler_retryLimit_desc": {
+		"message": "Ishedyuli iya kuphinda izame ukuguqulela imibhalo xa iimpazamo zoguqulelo zenzeka. Olu khetho luseta umda wezilingo zokuphinda. Misa inani elingalunganga ukuvumela ukuphinda okungenamda"
+	},
+	"settings_option_translatorModule": {
+		"message": "Imodyuli yoguqulelo"
+	},
+	"settings_option_translatorModule_desc": {
+		"message": "Umgangatho woguqulelo kunye neelwimi ezifumanekayo zixhomekeke kwimodyuli yoguqulelo"
+	},
+	"settings_option_tts": {
+		"message": "Uguqulelo lombhalo ukuya kwintetho (TTS)"
+	},
+	"settings_option_ttsCustomModules": {
+		"message": "Iimodyuli zokwenziwa kwentetho ezilungiselelwe wena"
+	},
+	"settings_option_ttsCustomModules_button": {
+		"message": "Ukulawula iimodyuli zokwenziwa kwentetho"
+	},
+	"settings_option_ttsCustomModules_desc": {
+		"message": "Unokongeza iimodyuli zokwenziwa kwentetho ezisebenzisa iinkonzo ozithandayo kunye neenjini zezwi. Funda ngakumbi kwi-<slot id=docs>uxwebhu lwe-TTS olulungiselelwe wena</slot>"
+	},
+	"settings_option_ttsModule": {
+		"message": "Imodyuli ye-TTS ekhethiweyo"
+	},
+	"settings_option_ttsModule_desc": {
+		"message": "Injini yezwi esetyenziselwa ukuvakalisa umbhalo"
+	},
+	"settings_option_userLanguage": {
+		"message": "Ulwimi lwakho"
+	},
+	"settings_option_userLanguage_desc": {
+		"message": "Ulwimi apho imibhalo iya kuguqulelwa khona"
+	},
+	"settings_pageTitle": {
+		"message": "Iisetingi"
+	},
+	"settings_section_history": {
+		"message": "Imbali"
+	},
+	"settings_section_popup": {
+		"message": "I-Popup"
+	},
+	"textTranslator_suggestLanguage": {
+		"message": "Kubonakala ngathi ulwimi lombhalo ngu<slot id=languageSuggest>$language_name$</slot>",
+		"placeholders": {
+			"language_name": {
+				"content": "$1",
+				"example": "Japanese"
+			}
+		}
+	},
+	"textTranslator_translateInputPlaceholder": {
+		"message": "Faka umbhalo wokuguqulela",
+		"description": "Request to user input some text for translation"
+	},
+	"textTranslator_translatePlaceholder": {
+		"message": "Umbhalo oguqulelweyo uya kuba lapha"
+	},
+	"translatorsManagerWindow_add": {
+		"message": "Yongeza imodyuli yokuguqulela"
+	},
+	"translatorsManagerWindow_close": {
+		"message": "Vala"
+	},
+	"translatorsManagerWindow_emptyTranslatorsListText": {
+		"message": "Akukho midyuli yokuguqulela yesiko eyongeziweyo okwangoku"
+	},
+	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
+		"message": "Uqinisekile ukuba ufuna ukususa imodyuli yokuguqulela \"$translator_name$\"?",
+		"placeholders": {
+			"translator_name": {
+				"content": "$1",
+				"example": "Google translator"
+			}
+		}
+	},
+	"translatorsManagerWindow_title": {
+		"message": "Iimodyuli zokuguqulela zesiko"
+	},
+	"translatorsManagerWindow_translator_delete": {
+		"message": "Cima"
+	},
+	"translatorsManagerWindow_translator_edit": {
+		"message": "Hlela"
+	},
+	"ttsManagerWindow_add": {
+		"message": "Yongeza imodyuli ye-TTS"
+	},
+	"ttsManagerWindow_close": {
+		"message": "Vala"
+	},
+	"ttsManagerWindow_emptyTranslatorsListText": {
+		"message": "Akukho midyuli ye-TTS eyongeziweyo okwangoku"
+	},
+	"ttsManagerWindow_message_ttsRemoveConfirmation": {
+		"message": "Uqinisekile ukuba ufuna ukususa imodyuli ye-TTS \"$tts_name$\"?",
+		"placeholders": {
+			"tts_name": {
+				"content": "$1",
+				"example": "Google TTS"
+			}
+		}
+	},
+	"ttsManagerWindow_title": {
+		"message": "Iimodyuli ze-Text-to-Speech"
+	},
+	"ttsManagerWindow_translator_delete": {
+		"message": "Cima"
+	},
+	"ttsManagerWindow_translator_edit": {
+		"message": "Hlela"
+	},
+	"validation_number": {
+		"message": "Ixabiso kufuneka libe linani"
+	},
+	"validation_numberBetweenRange": {
+		"message": "Ixabiso kufuneka libe linani phakathi kwe-$1 ne-$2"
+	},
+	"validation_positiveNumber": {
+		"message": "Ixabiso kufuneka libe linani elihle"
+	}
+}

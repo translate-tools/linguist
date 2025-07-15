@@ -1,0 +1,623 @@
+{
+	"common_action_addToDictionary": {
+		"message": "ژباړه قاموس ته اضافه کړئ"
+	},
+	"common_action_removeFromDictionary": {
+		"message": "ژباړه له قاموس څخه لرې کړئ"
+	},
+	"common_bgUnavailable": {
+		"message": "شالید سکریپټ شتون نلري"
+	},
+	"common_cancel": {
+		"message": "لغوه کړئ"
+	},
+	"common_close": {
+		"message": "بند کړئ"
+	},
+	"common_copy": {
+		"message": "کاپي کړئ"
+	},
+	"common_error": {
+		"message": "تېروتنه"
+	},
+	"common_offlineTranslator": {
+		"message": "$1 - آفلاین ژباړن"
+	},
+	"common_retry": {
+		"message": "بیا هڅه وکړئ"
+	},
+	"common_translate": {
+		"message": "ژباړئ"
+	},
+	"component_hotkey_placeholder": {
+		"message": "شارټ کټ ثبتولو لپاره کلیک وکړئ"
+	},
+	"component_hotkey_recordPlaceholder": {
+		"message": "کلي ګانې فشار کړئ"
+	},
+	"component_hotkey_resetButton": {
+		"message": "بیا تنظیم کړئ"
+	},
+	"contextMenu_disablePageTranslation": {
+		"message": "د پاڼې ژباړه ودروئ"
+	},
+	"contextMenu_translatePage": {
+		"message": "پاڼه ژباړئ"
+	},
+	"contextMenu_translateSelectedText": {
+		"message": "ټاکل شوی متن ژباړئ"
+	},
+	"dictionaryButton_add": {
+		"message": "قاموس ته اضافه کړئ"
+	},
+	"dictionaryButton_delete": {
+		"message": "له قاموس څخه لرې کړئ"
+	},
+	"dictionary_button_export": {
+		"message": "صادر کړئ"
+	},
+	"dictionary_button_removeAll": {
+		"message": "ټول لرې کړئ"
+	},
+	"dictionary_deleteAll": {
+		"message": "ایا تاسو ډاډه یاست چې غواړئ ټول ژباړې له قاموس څخه حذف کړئ؟"
+	},
+	"dictionary_deleteConfirmation": {
+		"message": "ایا تاسو ډاډه یاست چې دا ژباړه حذف کړئ؟"
+	},
+	"dictionary_description": {
+		"message": "ژباړې په قاموس کې خوندي کړئ ترڅو وروسته یې ژر ومومئ"
+	},
+	"dictionary_emptyDictionary": {
+		"message": "قاموس خالي دی، د ځینې متن ژباړلو سره یې ډکول پیل کړئ"
+	},
+	"dictionary_filter_from": {
+		"message": "د سرچینې متن ژبه"
+	},
+	"dictionary_filter_to": {
+		"message": "هدف ژبه"
+	},
+	"dictionary_message_deleteAll_success": {
+		"message": "ټولې ژباړې لرې شوې"
+	},
+	"dictionary_notFoundEntries": {
+		"message": "هیڅ ژباړې چې د دې فلټرونو سره سمون ولري ونه موندل شوې"
+	},
+	"dictionary_pageTitle": {
+		"message": "قاموس"
+	},
+	"dictionary_resetFilters": {
+		"message": "فلټرونه بیا تنظیم کړئ"
+	},
+	"dictionary_searchPlaceholder": {
+		"message": "د متن له مخې لټون وکړئ"
+	},
+	"editorWindow_close": {
+		"message": "بندول"
+	},
+	"editorWindow_data_code": {
+		"message": "کوډ"
+	},
+	"editorWindow_data_title": {
+		"message": "د ماډل نوم"
+	},
+	"editorWindow_message_invalidTitle": {
+		"message": "د ماډل نوم باید لږ تر لږه یو حرف ولري"
+	},
+	"editorWindow_save": {
+		"message": "خوندي کول"
+	},
+	"ext_description": {
+		"message": "د ویب پاڼې ژباړه، د متن ژباړه، قاموس، تاریخچه، دودیز ژباړونکي، ټول هغه څه چې تاسو ته د ژبې خنډونه ماتوي"
+	},
+	"ext_name": {
+		"message": "Linguist - د ویب پاڼې ژباړونکی"
+	},
+	"history_control_selectEntry": {
+		"message": "د ډله ایز عمل لپاره ژباړه غوره کړئ",
+		"description": "Description in finite form \"to pick\" with explaining what this checkbox will do"
+	},
+	"history_controls_clearHistory": {
+		"message": "تاریخچه پاکول"
+	},
+	"history_controls_deleteSelected": {
+		"message": "غوره شوې ژباړې ړنګول"
+	},
+	"history_controls_selectAll": {
+		"message": "ټولې ژباړې غوره کړئ"
+	},
+	"history_message_clearHistoryConfirmation": {
+		"message": "آیا تاسو ډاډه یاست چې تاریخچه پاکول غواړئ؟ ټولې ننوتنې به لرې شي"
+	},
+	"history_message_deleteEntryConfirmation": {
+		"message": "آیا تاسو ډاډه یاست چې دا ننوتنه ړنګول غواړئ؟"
+	},
+	"history_message_deleteSelectedEntriesConfirmation": {
+		"message": "آیا تاسو ډاډه یاست چې غوره شوې ننوتنې ($1) ړنګول غواړئ؟"
+	},
+	"history_message_entriesNotFound": {
+		"message": "هیڅ ژباړې د فلټر سره سمون نه لري"
+	},
+	"history_message_noEntries": {
+		"message": "تاریخچه خالي ده"
+	},
+	"history_notification_disabled": {
+		"message": "د تاریخچه ثبتول غیر فعال دي، نو نوې ننوتنې به نه ښکاري. تاسو کولی شئ دا په <slot id=preferences>غوره توبونه</slot> کې بدل کړئ"
+	},
+	"history_pageTitle": {
+		"message": "تاریخچه"
+	},
+	"history_searchPlaceholder": {
+		"message": "د متن له مخې لټون وکړئ"
+	},
+	"inlineTranslator_showOriginalText": {
+		"message": "اصلي متن ښکاره کړئ"
+	},
+	"lang_change": {
+		"message": "ژبه بدلول"
+	},
+	"lang_detect": {
+		"message": "په اوتومات ډول پېژندل"
+	},
+	"lang_select": {
+		"message": "ژبه غوره کړئ"
+	},
+	"lang_swap": {
+		"message": "ژبې بدلول"
+	},
+	"message_unknownError": {
+		"message": "نامعلومه تېروتنه"
+	},
+	"pageTranslator_alwaysTranslateLang": {
+		"message": "تل دا ژبه وژباړئ"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disable": {
+		"message": "غیر فعالول"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
+		"message": "د ټولو سایټونو لپاره غیر فعالول"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_enable": {
+		"message": "فعالول"
+	},
+	"pageTranslator_commonPreferences_title": {
+		"message": "د دې ژبې لپاره عام غوره توبونه"
+	},
+	"pageTranslator_option_autoTranslate": {
+		"message": "خودکار ژباړه"
+	},
+	"pageTranslator_showOriginal": {
+		"message": "اصلي ښکاره کړئ"
+	},
+	"pageTranslator_showTranslationPreferences": {
+		"message": "د ژباړې غوره توبونه"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_always": {
+		"message": "تل ژباړه"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
+		"message": "د دې ژبې لپاره تل ژباړه"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_default": {
+		"message": "عام قواعد وکاروئ"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
+		"message": "د دې ژبې لپاره عام قواعد وکاروئ"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_never": {
+		"message": "هیڅکله ژباړه مه کوئ"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
+		"message": "د دې ژبې لپاره هیڅکله ژباړه مه کوئ"
+	},
+	"pageTranslator_sitePreferences_title": {
+		"message": "غوره توبونه د"
+	},
+	"pageTranslator_translatePage": {
+		"message": "پاڼه ژباړئ"
+	},
+	"pageTranslator_translationReport": {
+		"message": "د ژباړې راپور"
+	},
+	"pageTranslator_translationReport_queue": {
+		"message": "په تمه"
+	},
+	"pageTranslator_translationReport_reject": {
+		"message": "تېروتنې"
+	},
+	"pageTranslator_translationReport_resolve": {
+		"message": "ژباړل شوی"
+	},
+	"popup_tabIdNotFound": {
+		"message": "ټب \"$1\" ونه موندل شو"
+	},
+	"popup_tab_translatePage": {
+		"message": "د پاڼې ژباړه"
+	},
+	"popup_tab_translateText": {
+		"message": "د متن ژباړه"
+	},
+	"settings_button_cancel": {
+		"message": "لغوه کړئ"
+	},
+	"settings_button_export": {
+		"message": "تشکیلات صادر کړئ"
+	},
+	"settings_button_import": {
+		"message": "تشکیلات وارد کړئ"
+	},
+	"settings_button_reset": {
+		"message": "تشکیلات بیا تنظیم کړئ"
+	},
+	"settings_button_saveChanges": {
+		"message": "بدلونونه خوندي کړئ"
+	},
+	"settings_message_clearCache_success": {
+		"message": "کیش پاک شو"
+	},
+	"settings_message_common_invalidValueType": {
+		"message": "ناسم ارزښت"
+	},
+	"settings_message_importConfig_invalidFile": {
+		"message": "ورکړل شوی تشکیلات فایل ناسم یا خراب دی، او نشي پروسس کیدی"
+	},
+	"settings_message_importConfig_success": {
+		"message": "واردات بشپړ شول"
+	},
+	"settings_message_resetConfig_confirm": {
+		"message": "تصدیق کړئ چې تنظیمات د اصلي ارزښتونو ته بیا تنظیم کړئ"
+	},
+	"settings_message_resetConfig_success": {
+		"message": "تنظیمات بیا تنظیم شول"
+	},
+	"settings_message_saveChanges_success": {
+		"message": "بدلونونه خوندي شول"
+	},
+	"settings_option_cache": {
+		"message": "کاشه"
+	},
+	"settings_option_cache_clear": {
+		"message": "کاشه پاکول"
+	},
+	"settings_option_cache_clear_desc": {
+		"message": "که تاسو د ژباړې تېروتنې ګورئ یا په ناڅاپي ډول شخصي متنونه ژباړئ پداسې حال کې چې کاشه فعاله وي، تاسو کولی شئ ټول معلومات له کاشه څخه حذف کړئ",
+		"description": "Explanation for user about cases when it's useful to clear cache"
+	},
+	"settings_option_cache_enable": {
+		"message": "کاشه فعالول"
+	},
+	"settings_option_cache_enable_desc": {
+		"message": "کله چې کاشه فعاله وي، هغه متنونه چې مخکې ژباړل شوي وي به په فوري توګه ژباړل شي پرته له دې چې د ژباړې خدمت ته اضافي غوښتنې وشي"
+	},
+	"settings_option_cache_ignoreCase": {
+		"message": "د کاشه لپاره د حروفو حساسیت نه کارول"
+	},
+	"settings_option_cache_ignoreCase_desc": {
+		"message": "کله چې فعاله وي، د مختلفو حروفو سره د متنونو لپاره کاشه شوې ژباړې به وکارول شي، چې ممکن په ځینو حالاتو کې د ژباړې تحریفات رامنځته کړي"
+	},
+	"settings_option_commonSettings": {
+		"message": "عام تنظیمات"
+	},
+	"settings_option_customTranslatorModule": {
+		"message": "دودیز ژباړې ماډلونه",
+		"description": "An user defined code that implements a translation module"
+	},
+	"settings_option_customTranslatorModule_desc": {
+		"message": "تاسو کولی شئ دودیز ژباړې ماډلونه اضافه کړئ چې ستاسو د خوښې ژباړې خدمتونه کاروي. په <slot id=docs>دودیز ژباړونکي سندونه</slot> کې نور معلومات زده کړئ"
+	},
+	"settings_option_customTranslatorModule_manageButton": {
+		"message": "ژباړونکي اداره کول",
+		"description": "A button to show list of translation modules"
+	},
+	"settings_option_history_enable": {
+		"message": "تاریخ فعالول"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "کله چې فعاله وي، ژباړې به ثبت شي او په <slot id=historyPage>تاریخ پاڼه</slot> کې به ښکاره شي"
+	},
+	"settings_option_pageTranslation": {
+		"message": "د بشپړ پاڼې ژباړه"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent": {
+		"message": "د محتوا له مخې ژبه پېژندل"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent_desc": {
+		"message": "د ویب پاڼې متن تحلیل کړئ ترڅو د هغې ژبه وپېژني. کله چې غیر فعال وي، په <slot id=docs>پاڼې میټاډاټا</slot> کې مشخص شوې ژبه به وکارول شي"
+	},
+	"settings_option_pageTranslation_enableContextMenu": {
+		"message": "د کانټکسټ مینو تڼۍ فعالول"
+	},
+	"settings_option_pageTranslation_enableContextMenu_desc": {
+		"message": "په پاڼه کې د ژباړې د فعالولو لپاره په کانټکسټ مینو کې یوه تڼۍ اضافه کړئ"
+	},
+	"settings_option_pageTranslation_excludeSelectors": {
+		"message": "د ژباړې څخه د استثنا لپاره انتخابونکي"
+	},
+	"settings_option_pageTranslation_excludeSelectors_desc": {
+		"message": "د CSS انتخابونکو لیست د هغو عناصرو لپاره چې له ژباړې څخه مستثنی دي. په هره کرښه کې یو انتخابونکی. که یو عنصر د دې انتخابونکو سره سمون خوري، د هغې متن، ځانګړتیاوې، او نغښتي عناصر به ژباړل نشي"
+	},
+	"settings_option_pageTranslation_lazyTranslate": {
+		"message": "یوازې ښکاره عناصر ژباړل"
+	},
+	"settings_option_pageTranslation_lazyTranslate_desc": {
+		"message": "کله چې دا اختیار فعال وي، یوازې ښکاره عناصر به ژباړل شي. دا اختیار د شبکې ترافیک کموي"
+	},
+	"settings_option_pageTranslation_originalTextPopup": {
+		"message": "د اصلي متن سره پاپ اپ فعالول"
+	},
+	"settings_option_pageTranslation_originalTextPopup_desc": {
+		"message": "کله چې د ژباړل شوي متن بلاکونو باندې د ماوس حرکت وکړئ، د اصلي متن سره پاپ اپ ښکاره کړئ"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation": {
+		"message": "لنډلار"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation_desc": {
+		"message": "د پاڼې ژباړې د فعالولو لپاره لنډلار\nد کیليانو د بیا تنظیمولو لپاره ESC فشار ورکړئ"
+	},
+	"settings_option_pageTranslation_translatableAttributes": {
+		"message": "ژباړل کېدونکي ځانګړتیاوې"
+	},
+	"settings_option_pageTranslation_translatableAttributes_desc": {
+		"message": "د ژباړې لپاره د <slot id=htmlAttributes>HTML ځانګړتیا</slot> نومونه دننه کړئ، په هره کرښه کې یوه ځانګړتیا\nیوازې په دې لیست کې ځانګړتیاوې به ژباړل شي"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters": {
+		"message": "د ژباړې پرمختګ ښکاره کول"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters_desc": {
+		"message": "په توسیع پاپ اپ کې د پاڼې ژباړې پرمختګ سره یو پینل وښایئ"
+	},
+	"settings_option_selectTranslation": {
+		"message": "د ټاکل شوي متن لپاره ژباړه"
+	},
+	"settings_option_selectTranslation_detectTextLanguage": {
+		"message": "د متن ژبه معلومه کړئ"
+	},
+	"settings_option_selectTranslation_detectTextLanguage_desc": {
+		"message": "کله چې فعال وي، ټاکل شوی متن به د ژباړې لپاره د ژبې معلومولو لپاره تحلیل شي. که نه، د پاڼې ژبه به وکارول شي"
+	},
+	"settings_option_selectTranslation_disableWhileTranslatePage": {
+		"message": "د پاڼې ژباړې پر مهال غیر فعال کړئ"
+	},
+	"settings_option_selectTranslation_enable": {
+		"message": "د ټاکل شوي متن ژباړه فعال کړئ"
+	},
+	"settings_option_selectTranslation_enable_desc": {
+		"message": "کله چې دا ځانګړتیا فعاله وي، تاسو کولی شئ په پاڼه کې هر متن وټاکئ او په پاپ اپ کې یې وژباړئ"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton": {
+		"message": "په اتومات ډول د ژباړې تڼۍ باندې تمرکز وکړئ"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
+		"message": "کله چې د ژباړې تڼۍ په پاڼه کې څرګند شي، دا به په اتومات ډول تمرکز شي"
+	},
+	"settings_option_selectTranslation_header_languageChoice": {
+		"message": "د ژبې ترتیبات"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang": {
+		"message": "د ژباړې ماډل ته اجازه ورکړئ چې د متن ژبه معلومه کړي"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
+		"message": "کله چې د متن ژبه په محلي توګه معلومه نشي او دا اختیار فعال وي، متن به د \"auto\" ژبې سره وژباړل شي که ملاتړ کیږي.\nکله چې اختیار غیر فعال وي، بله بیک اپ طریقه به وکارول شي ترڅو د متن سرچینې ژبه وټاکل شي"
+	},
+	"settings_option_selectTranslation_mode": {
+		"message": "د متن ټاکنې پر مهال عمل"
+	},
+	"settings_option_selectTranslation_mode_item_contextMenu": {
+		"message": "د متن ژباړه د کانټیکسټ مینو له لارې"
+	},
+	"settings_option_selectTranslation_mode_item_popupButton": {
+		"message": "د ژباړې تڼۍ وښایئ"
+	},
+	"settings_option_selectTranslation_mode_item_quickTranslate": {
+		"message": "متن په چټکۍ سره وژباړئ"
+	},
+	"settings_option_selectTranslation_modifiers": {
+		"message": "تعدیل کوونکي"
+	},
+	"settings_option_selectTranslation_modifiers_desc": {
+		"message": "هغه کیلي وټاکئ چې باید په کیبورډ کې فشار شي ترڅو ژباړه وښودل شي"
+	},
+	"settings_option_selectTranslation_modifiers_key_alt": {
+		"message": "alt"
+	},
+	"settings_option_selectTranslation_modifiers_key_ctrl": {
+		"message": "ctrl"
+	},
+	"settings_option_selectTranslation_modifiers_key_meta": {
+		"message": "meta"
+	},
+	"settings_option_selectTranslation_modifiers_key_shift": {
+		"message": "shift"
+	},
+	"settings_option_selectTranslation_rememberDirection": {
+		"message": "د وروستي ټاکل شوي متن ژبه په یاد وساتئ"
+	},
+	"settings_option_selectTranslation_showOnceForSelection": {
+		"message": "د هر متن ټاکنې لپاره د ژباړې تڼۍ یو ځل وښایئ"
+	},
+	"settings_option_selectTranslation_showOnceForSelection_desc": {
+		"message": "تڼۍ به یوازې د هر متن ټاکنې لپاره یو ځل څرګنده شي. د دې بیا ښودلو لپاره، متن بیا وټاکئ"
+	},
+	"settings_option_selectTranslation_showOriginalText": {
+		"message": "اصلي متن وښایئ"
+	},
+	"settings_option_selectTranslation_showOriginalText_desc": {
+		"message": "په ژباړې پاپ اپ کې د اصلي متن سره یو بلاک اضافه کړئ"
+	},
+	"settings_option_selectTranslation_strictSelection": {
+		"message": "د متن ټاکنې لپاره سخت حالت",
+		"description": "دا اختیار د ماؤس له لارې د متن ټاکنې په اړه دی"
+	},
+	"settings_option_selectTranslation_strictSelection_desc": {
+		"message": "د متن ټاکنې بلاک څخه بهر د کیڼ ماؤس تڼۍ خوشې کولو په صورت کې د متن ټاکنه له پامه وغورځوئ"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton": {
+		"message": "د پاپ اپ تڼۍ پټولو مخکې ځنډ"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton_desc": {
+		"message": "د تڼۍ د پټولو څخه مخکې په میلی ثانیو کې ځنډ کله چې کرسر په هغې باندې نه وي. په تڼۍ باندې د کرسر راوړل ټایمر بیا تنظیموي. د اتوماتیک پټولو د غیر فعالولو لپاره، ارزښت له 1 څخه کم وټاکئ"
+	},
+	"settings_option_selectTranslation_zIndex": {
+		"message": "z-index"
+	},
+	"settings_option_selectTranslation_zIndex_desc": {
+		"message": "که په ځینو پاڼو کې عناصر د ژباړل شوي متن سره د پاپ اپ سره تیریږي، نو دا ارزښت زیات کړئ"
+	},
+	"settings_option_textTranslator": {
+		"message": "د متن ژباړه"
+	},
+	"settings_option_textTranslator_rememberText": {
+		"message": "ژباړل شوی متن یاد ساتل"
+	},
+	"settings_option_textTranslator_rememberText_desc": {
+		"message": "د بل ځل لپاره د کړکۍ د پرانیستلو لپاره ژباړل شوی متن یاد ساتل"
+	},
+	"settings_option_textTranslator_spellCheck": {
+		"message": "د املا چیک فعالول"
+	},
+	"settings_option_textTranslator_suggestLanguage": {
+		"message": "د کشف شوي متن ژبه ښودل"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways": {
+		"message": "تل ژبه کشف او وړاندیز کول"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways_desc": {
+		"message": "کله چې غیر فعال وي، د ژبې وړاندیزونه یوازې هغه وخت ښکاري کله چې د سرچینې ژبه \"اتوماتیک\" ته ټاکل شوې وي"
+	},
+	"settings_option_translatePreferences": {
+		"message": "د ژباړې غوره توبونه"
+	},
+	"settings_option_translateScheduler": {
+		"message": "د ژباړې مهال ویش"
+	},
+	"settings_option_translateScheduler_delay": {
+		"message": "د متن راټولولو ځنډ"
+	},
+	"settings_option_translateScheduler_delay_desc": {
+		"message": "د ژباړې مهال ویش د ژباړې خدمت API ته د غوښتنو شمیر کموي د دې لپاره چې په یوه غوښتنه کې د لیږلو لپاره څومره چې ممکنه وي متنونه راټول کړي. مهال ویش به د ټاکل شوي وخت لپاره په میلی ثانیو کې انتظار وکړي ترڅو د ژباړې پیل کولو څخه مخکې نور متنونه راټول کړي"
+	},
+	"settings_option_translateScheduler_retryLimit": {
+		"message": "د ژباړې د بیا هڅې هڅو حد"
+	},
+	"settings_option_translateScheduler_retryLimit_desc": {
+		"message": "مهال ویش به د ژباړې د تېروتنو په صورت کې د متنونو ژباړه بیا هڅه وکړي. دا اختیار د بیا هڅې هڅو باندې حد ټاکي. د غیر محدودو بیا هڅو لپاره منفي شمیره وټاکئ"
+	},
+	"settings_option_translatorModule": {
+		"message": "د ژباړې ماډل"
+	},
+	"settings_option_translatorModule_desc": {
+		"message": "د ژباړو کیفیت او موجودې ژبې د ژباړې ماډل پورې اړه لري"
+	},
+	"settings_option_tts": {
+		"message": "د متن څخه وینا ته بدلون (TTS)"
+	},
+	"settings_option_ttsCustomModules": {
+		"message": "د دودیز وینا ترکیب ماډلونه"
+	},
+	"settings_option_ttsCustomModules_button": {
+		"message": "د وینا ترکیب ماډلونو اداره کول"
+	},
+	"settings_option_ttsCustomModules_desc": {
+		"message": "تاسو کولی شئ د وینا ترکیب ماډلونه اضافه کړئ چې ستاسو د خوښې خدمتونه او د غږ انجنونه کاروي. په <slot id=docs>دودیز TTS سند</slot> کې نور ولولئ"
+	},
+	"settings_option_ttsModule": {
+		"message": "ټاکل شوی TTS ماډل"
+	},
+	"settings_option_ttsModule_desc": {
+		"message": "د متن د غږولو لپاره د غږ انجن کارول"
+	},
+	"settings_option_userLanguage": {
+		"message": "ستاسو ژبه"
+	},
+	"settings_option_userLanguage_desc": {
+		"message": "هغه ژبه چې متنونه به ورته ژباړل کیږي"
+	},
+	"settings_pageTitle": {
+		"message": "تنظیمات"
+	},
+	"settings_section_history": {
+		"message": "تاریخ"
+	},
+	"settings_section_popup": {
+		"message": "پاپ اپ"
+	},
+	"textTranslator_suggestLanguage": {
+		"message": "ښکاري چې د متن ژبه <slot id=languageSuggest>$language_name$</slot> ده",
+		"placeholders": {
+			"language_name": {
+				"content": "$1",
+				"example": "جاپاني"
+			}
+		}
+	},
+	"textTranslator_translateInputPlaceholder": {
+		"message": "د ژباړې لپاره متن دننه کړئ",
+		"description": "Request to user input some text for translation"
+	},
+	"textTranslator_translatePlaceholder": {
+		"message": "ژباړل شوی متن به دلته وي"
+	},
+	"translatorsManagerWindow_add": {
+		"message": "د ژباړې ماډل اضافه کړئ"
+	},
+	"translatorsManagerWindow_close": {
+		"message": "بندول"
+	},
+	"translatorsManagerWindow_emptyTranslatorsListText": {
+		"message": "تر اوسه کوم دودیز ژباړې ماډلونه نه دي اضافه شوي"
+	},
+	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
+		"message": "آیا تاسو ډاډه یاست چې د \"$translator_name$\" ژباړې ماډل لرې کول غواړئ؟",
+		"placeholders": {
+			"translator_name": {
+				"content": "$1",
+				"example": "Google translator"
+			}
+		}
+	},
+	"translatorsManagerWindow_title": {
+		"message": "دودیز ژباړې ماډلونه"
+	},
+	"translatorsManagerWindow_translator_delete": {
+		"message": "ړنګول"
+	},
+	"translatorsManagerWindow_translator_edit": {
+		"message": "سمول"
+	},
+	"ttsManagerWindow_add": {
+		"message": "د TTS ماډل اضافه کړئ"
+	},
+	"ttsManagerWindow_close": {
+		"message": "بندول"
+	},
+	"ttsManagerWindow_emptyTranslatorsListText": {
+		"message": "تر اوسه کوم TTS ماډلونه نه دي اضافه شوي"
+	},
+	"ttsManagerWindow_message_ttsRemoveConfirmation": {
+		"message": "آیا تاسو ډاډه یاست چې د \"$tts_name$\" TTS ماډل لرې کول غواړئ؟",
+		"placeholders": {
+			"tts_name": {
+				"content": "$1",
+				"example": "Google TTS"
+			}
+		}
+	},
+	"ttsManagerWindow_title": {
+		"message": "د متن څخه وینا ماډلونه"
+	},
+	"ttsManagerWindow_translator_delete": {
+		"message": "ړنګول"
+	},
+	"ttsManagerWindow_translator_edit": {
+		"message": "سمول"
+	},
+	"validation_number": {
+		"message": "ارزښت باید یو شمېر وي"
+	},
+	"validation_numberBetweenRange": {
+		"message": "ارزښت باید د $1 او $2 ترمنځ یو شمېر وي"
+	},
+	"validation_positiveNumber": {
+		"message": "ارزښت باید یو مثبت شمېر وي"
+	}
+}

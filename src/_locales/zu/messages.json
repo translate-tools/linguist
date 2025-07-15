@@ -1,0 +1,623 @@
+{
+	"common_action_addToDictionary": {
+		"message": "Engeza ukuhumusha kudikshini"
+	},
+	"common_action_removeFromDictionary": {
+		"message": "Susa ukuhumusha kudikshini"
+	},
+	"common_bgUnavailable": {
+		"message": "Iskripthi sangemuva asitholakali"
+	},
+	"common_cancel": {
+		"message": "Khansela"
+	},
+	"common_close": {
+		"message": "Vala"
+	},
+	"common_copy": {
+		"message": "Kopisha"
+	},
+	"common_error": {
+		"message": "Iphutha"
+	},
+	"common_offlineTranslator": {
+		"message": "$1 - Umhumushi ongaxhunyiwe ku-inthanethi"
+	},
+	"common_retry": {
+		"message": "Phinda uzame"
+	},
+	"common_translate": {
+		"message": "Humusha"
+	},
+	"component_hotkey_placeholder": {
+		"message": "Chofoza ukuze uqophe isinqamuleli"
+	},
+	"component_hotkey_recordPlaceholder": {
+		"message": "Cindezela okhiye"
+	},
+	"component_hotkey_resetButton": {
+		"message": "Setha kabusha"
+	},
+	"contextMenu_disablePageTranslation": {
+		"message": "Misa ukuhumusha kwekhasi"
+	},
+	"contextMenu_translatePage": {
+		"message": "Humusha ikhasi"
+	},
+	"contextMenu_translateSelectedText": {
+		"message": "Humusha umbhalo okhethiwe"
+	},
+	"dictionaryButton_add": {
+		"message": "Engeza kudikshini"
+	},
+	"dictionaryButton_delete": {
+		"message": "Susa kudikshini"
+	},
+	"dictionary_button_export": {
+		"message": "Thumela ngaphandle"
+	},
+	"dictionary_button_removeAll": {
+		"message": "Susa konke"
+	},
+	"dictionary_deleteAll": {
+		"message": "Uqinisekile ukuthi ufuna ukususa ZONKE izinguqulo kudikshini?"
+	},
+	"dictionary_deleteConfirmation": {
+		"message": "Uqinisekile ukuthi ufuna ukususa le nguqulo?"
+	},
+	"dictionary_description": {
+		"message": "Londoloza izinguqulo kudikshini ukuze uzithole ngokushesha kamuva"
+	},
+	"dictionary_emptyDictionary": {
+		"message": "Idikshini alinalutho, qala ukuligcwalisa ngokuhumusha umbhalo othile"
+	},
+	"dictionary_filter_from": {
+		"message": "Ulimi lombhalo wokuqala"
+	},
+	"dictionary_filter_to": {
+		"message": "Ulimi oluqondiwe"
+	},
+	"dictionary_message_deleteAll_success": {
+		"message": "Zonke izinguqulo zisusiwe"
+	},
+	"dictionary_notFoundEntries": {
+		"message": "Azikho izinguqulo ezihambisana nalezi zihluzo ezitholakele"
+	},
+	"dictionary_pageTitle": {
+		"message": "Idikshini"
+	},
+	"dictionary_resetFilters": {
+		"message": "Setha kabusha izihlungi"
+	},
+	"dictionary_searchPlaceholder": {
+		"message": "Sesha ngombhalo"
+	},
+	"editorWindow_close": {
+		"message": "Vala"
+	},
+	"editorWindow_data_code": {
+		"message": "Ikhodi"
+	},
+	"editorWindow_data_title": {
+		"message": "Igama lemoduli"
+	},
+	"editorWindow_message_invalidTitle": {
+		"message": "Igama lemoduli kumele libe nezinhlamvu okungenani eyodwa"
+	},
+	"editorWindow_save": {
+		"message": "Londoloza"
+	},
+	"ext_description": {
+		"message": "Ukuhumusha amakhasi ewebhu, ukuhumusha umbhalo, isichazamazwi, umlando, abahumushi abenziwe ngokwezifiso, konke okudingayo ukuze weqe izithiyo zolimi"
+	},
+	"ext_name": {
+		"message": "Linguist - umhumushi wekhasi lewebhu"
+	},
+	"history_control_selectEntry": {
+		"message": "Khetha ukuhumusha ukuze wenze isenzo esiningi",
+		"description": "Description in finite form \"to pick\" with explaining what this checkbox will do"
+	},
+	"history_controls_clearHistory": {
+		"message": "Sula umlando"
+	},
+	"history_controls_deleteSelected": {
+		"message": "Susa ukuhumusha okukhethiwe"
+	},
+	"history_controls_selectAll": {
+		"message": "Khetha konke ukuhumusha"
+	},
+	"history_message_clearHistoryConfirmation": {
+		"message": "Uqinisekile ukuthi ufuna ukusula umlando? Zonke izinto zizokhishwa"
+	},
+	"history_message_deleteEntryConfirmation": {
+		"message": "Uqinisekile ukuthi ufuna ukususa le nto?"
+	},
+	"history_message_deleteSelectedEntriesConfirmation": {
+		"message": "Uqinisekile ukuthi ufuna ukususa izinto ezikhethiwe ($1)?"
+	},
+	"history_message_entriesNotFound": {
+		"message": "Azikho izinguqulo ezitholakele ezihambisana nesihlungi"
+	},
+	"history_message_noEntries": {
+		"message": "Umlando awukho"
+	},
+	"history_notification_disabled": {
+		"message": "Ukurekhoda umlando kukhutshaziwe, ngakho izinto ezintsha ngeke zivele. Ungakushintsha lokhu ku-<slot id=preferences>Izintandokazi</slot>"
+	},
+	"history_pageTitle": {
+		"message": "Umlando"
+	},
+	"history_searchPlaceholder": {
+		"message": "Sesha ngombhalo"
+	},
+	"inlineTranslator_showOriginalText": {
+		"message": "Bonisa umbhalo wokuqala"
+	},
+	"lang_change": {
+		"message": "Shintsha ulimi"
+	},
+	"lang_detect": {
+		"message": "Thola ngokuzenzakalelayo"
+	},
+	"lang_select": {
+		"message": "Khetha ulimi"
+	},
+	"lang_swap": {
+		"message": "Shintshanisa izilimi"
+	},
+	"message_unknownError": {
+		"message": "Iphutha elingaziwa"
+	},
+	"pageTranslator_alwaysTranslateLang": {
+		"message": "Hlalani nihumusha leli limi"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disable": {
+		"message": "Khubaza"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
+		"message": "Khubaza kuzo zonke izindawo"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_enable": {
+		"message": "Nika amandla"
+	},
+	"pageTranslator_commonPreferences_title": {
+		"message": "Izintandokazi ezivamile zalolu limi"
+	},
+	"pageTranslator_option_autoTranslate": {
+		"message": "Ukuhumusha okuzenzakalelayo"
+	},
+	"pageTranslator_showOriginal": {
+		"message": "Bonisa okwangempela"
+	},
+	"pageTranslator_showTranslationPreferences": {
+		"message": "Izintandokazi zokuhumusha"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_always": {
+		"message": "Hlala uhunyushwa"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
+		"message": "Hlala uhunyushwa kulolu limi"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_default": {
+		"message": "Sebenzisa imithetho evamile"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
+		"message": "Sebenzisa imithetho evamile kulolu limi"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_never": {
+		"message": "Ungalokothi uhunyushe"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
+		"message": "Ungalokothi uhunyushe kulolu limi"
+	},
+	"pageTranslator_sitePreferences_title": {
+		"message": "Izintandokazi ze"
+	},
+	"pageTranslator_translatePage": {
+		"message": "Humusha ikhasi"
+	},
+	"pageTranslator_translationReport": {
+		"message": "Umbiko wokuhumusha"
+	},
+	"pageTranslator_translationReport_queue": {
+		"message": "Kulindile"
+	},
+	"pageTranslator_translationReport_reject": {
+		"message": "Amaphutha"
+	},
+	"pageTranslator_translationReport_resolve": {
+		"message": "Kuhunyushiwe"
+	},
+	"popup_tabIdNotFound": {
+		"message": "Ithebhu \"$1\" ayitholakalanga"
+	},
+	"popup_tab_translatePage": {
+		"message": "Ukuhumusha kwekhasi"
+	},
+	"popup_tab_translateText": {
+		"message": "Ukuhumusha umbhalo"
+	},
+	"settings_button_cancel": {
+		"message": "Khansela"
+	},
+	"settings_button_export": {
+		"message": "Thumela ukulungiselelwa"
+	},
+	"settings_button_import": {
+		"message": "Ngenisa ukulungiselelwa"
+	},
+	"settings_button_reset": {
+		"message": "Setha kabusha ukulungiselelwa"
+	},
+	"settings_button_saveChanges": {
+		"message": "Londoloza izinguquko"
+	},
+	"settings_message_clearCache_success": {
+		"message": "Ikhasi licishiwe"
+	},
+	"settings_message_common_invalidValueType": {
+		"message": "Inani elingavumelekile"
+	},
+	"settings_message_importConfig_invalidFile": {
+		"message": "Ifayela lokulungiselela elinikeziwe alilungile noma lonakele, futhi alikwazi ukucutshungulwa"
+	},
+	"settings_message_importConfig_success": {
+		"message": "Ukungenisa kuqediwe"
+	},
+	"settings_message_resetConfig_confirm": {
+		"message": "Qinisekisa ukusetha kabusha izilungiselelo kuzilinganiselo ezizenzakalelayo"
+	},
+	"settings_message_resetConfig_success": {
+		"message": "Izilungiselelo zisethwe kabusha"
+	},
+	"settings_message_saveChanges_success": {
+		"message": "Izinguquko zilondoloziwe"
+	},
+	"settings_option_cache": {
+		"message": "Ikhesh"
+	},
+	"settings_option_cache_clear": {
+		"message": "Sula ikhesh"
+	},
+	"settings_option_cache_clear_desc": {
+		"message": "Uma uqaphela amaphutha okuguqulela noma uguqulela ngengozi imibhalo yangasese ngenkathi ikhesh ivuliwe, ungakwazi ukususa yonke idatha ekhesheni",
+		"description": "Explanation for user about cases when it's useful to clear cache"
+	},
+	"settings_option_cache_enable": {
+		"message": "Vula ikhesh"
+	},
+	"settings_option_cache_enable_desc": {
+		"message": "Uma ikhesh ivuliwe, imibhalo eguqulelwe ngaphambili izoguqulelwa ngokushesha ngaphandle kwezicelo ezengeziwe kumsebenzi wokuguqulela"
+	},
+	"settings_option_cache_ignoreCase": {
+		"message": "Sebenzisa ikhesh elingabheki izinhlamvu ezinkulu nezincane"
+	},
+	"settings_option_cache_ignoreCase_desc": {
+		"message": "Uma kuvuliwe, ukuhunyushwa okusesikhathini kuzosebenza kwimibhalo enezinhlamvu ezinkulu nezincane ezihlukene, okungase kubangele ukuphazamiseka kokuhunyushwa kwezinye izimo"
+	},
+	"settings_option_commonSettings": {
+		"message": "Izilungiselelo ezivamile"
+	},
+	"settings_option_customTranslatorModule": {
+		"message": "Amamojula okuguqulela ngokwezifiso",
+		"description": "An user defined code that implements a translation module"
+	},
+	"settings_option_customTranslatorModule_desc": {
+		"message": "Ungangeza amamojula okuguqulela ngokwezifiso asebenzisa izinsizakalo zakho zokuguqulela ozithandayo. Funda kabanzi ku-<slot id=docs>imibhalo yabaguquleli ngokwezifiso</slot>"
+	},
+	"settings_option_customTranslatorModule_manageButton": {
+		"message": "Phatha abaguquleli",
+		"description": "A button to show list of translation modules"
+	},
+	"settings_option_history_enable": {
+		"message": "Vula umlando"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "Uma kuvuliwe, ukuhunyushwa kuzorekhodwa futhi kuvele ekhasini lomlando <slot id=historyPage>ikhasi lomlando</slot>"
+	},
+	"settings_option_pageTranslation": {
+		"message": "Ukuhunyushwa kwekhasi eliphelele"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent": {
+		"message": "Thola ulimi ngokuqukethwe"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent_desc": {
+		"message": "Hlaziya umbhalo ekhasini lewebhu ukuthola ulimi lwawo. Uma kungavuliwe, ulimi olucaciswe ku-<slot id=docs>metadata yekhasi</slot> luzosetshenziswa"
+	},
+	"settings_option_pageTranslation_enableContextMenu": {
+		"message": "Vula inkinobho yemenyu yokuqukethwe"
+	},
+	"settings_option_pageTranslation_enableContextMenu_desc": {
+		"message": "Engeza inkinobho yokushintsha ukuhunyushwa kwekhasi kumenyu yokuqukethwe yekhasi"
+	},
+	"settings_option_pageTranslation_excludeSelectors": {
+		"message": "Izikhethi ezizokhishwa ekuhunyushweni"
+	},
+	"settings_option_pageTranslation_excludeSelectors_desc": {
+		"message": "Uhlu lwezikhethi ze-CSS zezinto ezizokhishwa ekuhunyushweni. Isikhethi esisodwa kulayini ngamunye. Uma into ihambisana nanoma yisiphi salezi zikhethi, umbhalo wayo, izimfanelo, nezinto ezifakwe ngaphakathi ngeke zihunyushwe"
+	},
+	"settings_option_pageTranslation_lazyTranslate": {
+		"message": "Hunyushwa izinto ezibonakalayo kuphela"
+	},
+	"settings_option_pageTranslation_lazyTranslate_desc": {
+		"message": "Uma le nketho ivuliwe, izinto ezibonakalayo kuphela ezizohunyushwa. Le nketho inciphisa ithrafikhi yenethiwekhi"
+	},
+	"settings_option_pageTranslation_originalTextPopup": {
+		"message": "Vula i-popup enombhalo wokuqala"
+	},
+	"settings_option_pageTranslation_originalTextPopup_desc": {
+		"message": "Bonisa i-popup enombhalo wokuqala uma ugunda phezu kwezibhlokhi zombhalo ezihunyushiwe"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation": {
+		"message": "Isinqamuleli"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation_desc": {
+		"message": "Isinqamuleli sokushintsha ukuhunyushwa kwekhasi\nCindezela i-ESC ukusetha kabusha okhiye"
+	},
+	"settings_option_pageTranslation_translatableAttributes": {
+		"message": "Izimfanelo ezihunyushwayo"
+	},
+	"settings_option_pageTranslation_translatableAttributes_desc": {
+		"message": "Faka amagama ezimfanelo ze-<slot id=htmlAttributes>HTML</slot> ukuhunyushwa, isici esisodwa kulayini ngamunye\nIzimfanelo ezikuleli luhlu kuphela ezizohunyushwa"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters": {
+		"message": "Bonisa inqubekelaphambili yokuhunyushwa"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters_desc": {
+		"message": "Bonisa iphaneli ngenqubekela phambili yokuhumusha ikhasi ku-popup yesandiso"
+	},
+	"settings_option_selectTranslation": {
+		"message": "Ukuhumusha umbhalo okhethiwe"
+	},
+	"settings_option_selectTranslation_detectTextLanguage": {
+		"message": "Thola ulimi lombhalo"
+	},
+	"settings_option_selectTranslation_detectTextLanguage_desc": {
+		"message": "Uma kuvuliwe, umbhalo okhethiwe uzohlaziywa ukuthola ulimi lokuhumusha. Ngaphandle kwalokho, kuzosebenza ulimi lwekhasi"
+	},
+	"settings_option_selectTranslation_disableWhileTranslatePage": {
+		"message": "Khubaza ngenkathi uhunyushwa ikhasi"
+	},
+	"settings_option_selectTranslation_enable": {
+		"message": "Vula ukuhumusha kombhalo okhethiwe"
+	},
+	"settings_option_selectTranslation_enable_desc": {
+		"message": "Uma lesi sici sivuliwe, ungakhetha noma yimuphi umbhalo ekhasini bese uwuhumusha ku-popup"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton": {
+		"message": "Gxila ngokuzenzakalelayo kunkinobho yokuhumusha"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
+		"message": "Uma inkinobho yokuhumusha ivela ekhasini, izogxilwa ngokuzenzakalelayo"
+	},
+	"settings_option_selectTranslation_header_languageChoice": {
+		"message": "Izilungiselelo zolimi"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang": {
+		"message": "Vumela imodyuli yokuhumusha ukuthola ulimi lombhalo"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
+		"message": "Uma ulimi lombhalo lungatholakali endaweni futhi le nketho ivuliwe, umbhalo uzohunyushwa ngolimi \"auto\" uma lusekelwa.\nUma inketho ikhutshaziwe, enye indlela yokubuyisela emuva izosetshenziswa ukusetha ulimi lomthombo wombhalo"
+	},
+	"settings_option_selectTranslation_mode": {
+		"message": "Isenzo ekukhethweni kombhalo"
+	},
+	"settings_option_selectTranslation_mode_item_contextMenu": {
+		"message": "Humusha umbhalo nge-menu yokuqukethwe"
+	},
+	"settings_option_selectTranslation_mode_item_popupButton": {
+		"message": "Bonisa inkinobho yokuhumusha"
+	},
+	"settings_option_selectTranslation_mode_item_quickTranslate": {
+		"message": "Humusha umbhalo ngokushesha"
+	},
+	"settings_option_selectTranslation_modifiers": {
+		"message": "Izichasiselo"
+	},
+	"settings_option_selectTranslation_modifiers_desc": {
+		"message": "Khetha okhiye okufanele bacindezelwe kukhibhodi ukuze kuboniswe ukuhumusha"
+	},
+	"settings_option_selectTranslation_modifiers_key_alt": {
+		"message": "alt"
+	},
+	"settings_option_selectTranslation_modifiers_key_ctrl": {
+		"message": "ctrl"
+	},
+	"settings_option_selectTranslation_modifiers_key_meta": {
+		"message": "meta"
+	},
+	"settings_option_selectTranslation_modifiers_key_shift": {
+		"message": "shift"
+	},
+	"settings_option_selectTranslation_rememberDirection": {
+		"message": "Khumbula ulimi lombhalo olwakhethwe muva nje"
+	},
+	"settings_option_selectTranslation_showOnceForSelection": {
+		"message": "Bonisa inkinobho yokuhumusha kanye kuphela ekukhethweni kombhalo"
+	},
+	"settings_option_selectTranslation_showOnceForSelection_desc": {
+		"message": "Inkinobho izovela kanye kuphela ekukhethweni kombhalo ngakunye Ukuze uyibonise futhi, khetha kabusha umbhalo"
+	},
+	"settings_option_selectTranslation_showOriginalText": {
+		"message": "Bonisa umbhalo wokuqala"
+	},
+	"settings_option_selectTranslation_showOriginalText_desc": {
+		"message": "Engeza ibhulokhi enombhalo wokuqala ku-popup yokuhumusha"
+	},
+	"settings_option_selectTranslation_strictSelection": {
+		"message": "Imodi eqinile yokukhetha isiqeshana sombhalo",
+		"description": "This option is about selecting text via mouse"
+	},
+	"settings_option_selectTranslation_strictSelection_desc": {
+		"message": "Yeka ukukhetha isiqeshana sombhalo uma inkinobho yesokunxele yegundane ikhululwa ngaphandle kwebhulokhi equkethe umbhalo okhethiwe"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton": {
+		"message": "Libazisa ngaphambi kokufihla inkinobho ye-popup"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton_desc": {
+		"message": "Ukubambezeleka kumasekhondi ngaphambi kokufihla inkinobho uma isikhombisi singekho phezu kwayo. Ukubeka isikhombisi phezu kwenkinobho kubuyisela isikhathi. Ukuze ungasebenzisi ukufihla okuzenzakalelayo, setha inani libe ngaphansi kuka-1"
+	},
+	"settings_option_selectTranslation_zIndex": {
+		"message": "z-index"
+	},
+	"settings_option_selectTranslation_zIndex_desc": {
+		"message": "Khulisa leli nani uma izinto kwamanye amakhasi zigqagqana nephepha elinombhalo ohlosiwe"
+	},
+	"settings_option_textTranslator": {
+		"message": "Ukuhumusha umbhalo"
+	},
+	"settings_option_textTranslator_rememberText": {
+		"message": "Ukukhumbula umbhalo ohlosiwe"
+	},
+	"settings_option_textTranslator_rememberText_desc": {
+		"message": "Ukukhumbula umbhalo ohlosiwe ngesikhathi esizayo lapho iwindi livulwa"
+	},
+	"settings_option_textTranslator_spellCheck": {
+		"message": "Vumela ukuhlola ukupela"
+	},
+	"settings_option_textTranslator_suggestLanguage": {
+		"message": "Ukubonisa ulimi lombhalo olutholakele"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways": {
+		"message": "Hlola njalo futhi uphakamise ulimi"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways_desc": {
+		"message": "Uma kungasebenzi, iziphakamiso zolimi ziveza kuphela uma ulimi lomthombo lusethelwe ku-\"auto\""
+	},
+	"settings_option_translatePreferences": {
+		"message": "Izintandokazi zokuhumusha"
+	},
+	"settings_option_translateScheduler": {
+		"message": "Isheduli yokuhumusha"
+	},
+	"settings_option_translateScheduler_delay": {
+		"message": "Ukubambezeleka kokuhlanganiswa kombhalo"
+	},
+	"settings_option_translateScheduler_delay_desc": {
+		"message": "Isheduli yokuhumusha inciphisa inani lezicelo ku-API yesevisi yokuhumusha ngokuhlanganisa imibhalo eminingi ngangokunokwenzeka ukuze ithunyelwe ngesicelo esisodwa. Isheduli izolinda isikhathi esishiwo kumasekhondi ukuqoqa imibhalo eminingi ngaphambi kokuqala ukuhumusha"
+	},
+	"settings_option_translateScheduler_retryLimit": {
+		"message": "Umkhawulo wezama kabusha ukuhumusha"
+	},
+	"settings_option_translateScheduler_retryLimit_desc": {
+		"message": "Isheduli izozama kabusha ukuhumusha imibhalo uma kwenzeka amaphutha okuhumusha. Le nketho isetha umkhawulo wezama kabusha. Setha inombolo engalungile ukuvumela ukuzama kabusha okungenamkhawulo"
+	},
+	"settings_option_translatorModule": {
+		"message": "Imodyuli yokuhumusha"
+	},
+	"settings_option_translatorModule_desc": {
+		"message": "Ikhwalithi yokuhumusha nezilimi ezitholakalayo zincike kwimodyuli yokuhumusha"
+	},
+	"settings_option_tts": {
+		"message": "Ukuguqulwa kombhalo ube yizwi (TTS)"
+	},
+	"settings_option_ttsCustomModules": {
+		"message": "Izimodyuli zokwenziwa kwezwi ezizimele"
+	},
+	"settings_option_ttsCustomModules_button": {
+		"message": "Ukuphatha izimodyuli zokwenziwa kwezwi"
+	},
+	"settings_option_ttsCustomModules_desc": {
+		"message": "Ungangeza izimodyuli zokwenziwa kwezwi ezisebenzisa izinsizakalo ozithandayo nezinjini zezwi. Funda kabanzi ku-<slot id=docs>imibhalo ye-TTS eyenziwe ngokwezifiso</slot>"
+	},
+	"settings_option_ttsModule": {
+		"message": "Imodyuli ye-TTS ekhethiwe"
+	},
+	"settings_option_ttsModule_desc": {
+		"message": "Injini yezwi esetshenziselwa ukuveza umbhalo"
+	},
+	"settings_option_userLanguage": {
+		"message": "Ulimi lwakho"
+	},
+	"settings_option_userLanguage_desc": {
+		"message": "Ulimi imibhalo ezohunyushwa kulo"
+	},
+	"settings_pageTitle": {
+		"message": "Izilungiselelo"
+	},
+	"settings_section_history": {
+		"message": "Umlando"
+	},
+	"settings_section_popup": {
+		"message": "Iphopuphu"
+	},
+	"textTranslator_suggestLanguage": {
+		"message": "Kubukeka sengathi ulimi lombhalo ngu-<slot id=languageSuggest>$language_name$</slot>",
+		"placeholders": {
+			"language_name": {
+				"content": "$1",
+				"example": "Japanese"
+			}
+		}
+	},
+	"textTranslator_translateInputPlaceholder": {
+		"message": "Faka umbhalo wokuhumusha",
+		"description": "Request to user input some text for translation"
+	},
+	"textTranslator_translatePlaceholder": {
+		"message": "Umbhalo ohunyushiwe uzoba lapha"
+	},
+	"translatorsManagerWindow_add": {
+		"message": "Engeza imodyuli yokuhumusha"
+	},
+	"translatorsManagerWindow_close": {
+		"message": "Vala"
+	},
+	"translatorsManagerWindow_emptyTranslatorsListText": {
+		"message": "Azikho izimodyuli zokuhumusha ezenziwe ngokwezifiso ezingeziwe okwamanje"
+	},
+	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
+		"message": "Uqinisekile ukuthi ufuna ukususa imodyuli yokuhumusha \"$translator_name$\"?",
+		"placeholders": {
+			"translator_name": {
+				"content": "$1",
+				"example": "Google translator"
+			}
+		}
+	},
+	"translatorsManagerWindow_title": {
+		"message": "Izimodyuli zokuhumusha ezenziwe ngokwezifiso"
+	},
+	"translatorsManagerWindow_translator_delete": {
+		"message": "Susa"
+	},
+	"translatorsManagerWindow_translator_edit": {
+		"message": "Hlela"
+	},
+	"ttsManagerWindow_add": {
+		"message": "Engeza imodyuli ye-TTS"
+	},
+	"ttsManagerWindow_close": {
+		"message": "Vala"
+	},
+	"ttsManagerWindow_emptyTranslatorsListText": {
+		"message": "Azikho izimodyuli ze-TTS ezenziwe ngokwezifiso ezingeziwe okwamanje"
+	},
+	"ttsManagerWindow_message_ttsRemoveConfirmation": {
+		"message": "Uqinisekile ukuthi ufuna ukususa imodyuli ye-TTS \"$tts_name$\"?",
+		"placeholders": {
+			"tts_name": {
+				"content": "$1",
+				"example": "Google TTS"
+			}
+		}
+	},
+	"ttsManagerWindow_title": {
+		"message": "Izimodyuli ze-Text-to-Speech"
+	},
+	"ttsManagerWindow_translator_delete": {
+		"message": "Susa"
+	},
+	"ttsManagerWindow_translator_edit": {
+		"message": "Hlela"
+	},
+	"validation_number": {
+		"message": "Inani kumele libe yinombolo"
+	},
+	"validation_numberBetweenRange": {
+		"message": "Inani kumele libe yinombolo phakathi kuka-$1 no-$2"
+	},
+	"validation_positiveNumber": {
+		"message": "Inani kumele libe yinombolo engeyinhle"
+	}
+}

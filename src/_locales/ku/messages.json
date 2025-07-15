@@ -1,0 +1,623 @@
+{
+	"common_action_addToDictionary": {
+		"message": "زیادکردنی وەرگێڕین بۆ فەرهەنگ"
+	},
+	"common_action_removeFromDictionary": {
+		"message": "لابردنی وەرگێڕین لە فەرهەنگ"
+	},
+	"common_bgUnavailable": {
+		"message": "سکرێپتی پاشبنەما بەردەست نییە"
+	},
+	"common_cancel": {
+		"message": "هەڵوەشاندنەوە"
+	},
+	"common_close": {
+		"message": "داخستن"
+	},
+	"common_copy": {
+		"message": "کۆپی کردن"
+	},
+	"common_error": {
+		"message": "هەڵە"
+	},
+	"common_offlineTranslator": {
+		"message": "$1 - وەرگێڕی ئۆفلاین"
+	},
+	"common_retry": {
+		"message": "دووبارە هەوڵدان"
+	},
+	"common_translate": {
+		"message": "وەرگێڕین"
+	},
+	"component_hotkey_placeholder": {
+		"message": "کرتە بکە بۆ تۆمارکردنی کورتەڕێک"
+	},
+	"component_hotkey_recordPlaceholder": {
+		"message": "کلیلەکان بفشارە"
+	},
+	"component_hotkey_resetButton": {
+		"message": "دووبارە ڕێکخستن"
+	},
+	"contextMenu_disablePageTranslation": {
+		"message": "وەستاندنی وەرگێڕینی لاپەڕە"
+	},
+	"contextMenu_translatePage": {
+		"message": "وەرگێڕینی لاپەڕە"
+	},
+	"contextMenu_translateSelectedText": {
+		"message": "وەرگێڕینی دەقە هەڵبژێردراوەکان"
+	},
+	"dictionaryButton_add": {
+		"message": "زیادکردن بۆ فەرهەنگ"
+	},
+	"dictionaryButton_delete": {
+		"message": "لابردن لە فەرهەنگ"
+	},
+	"dictionary_button_export": {
+		"message": "هەناردن"
+	},
+	"dictionary_button_removeAll": {
+		"message": "سڕینەوەی هەموو"
+	},
+	"dictionary_deleteAll": {
+		"message": "دڵنیایت کە دەتەوێت هەموو وەرگێڕینەکان لە فەرهەنگ بسڕیتەوە؟"
+	},
+	"dictionary_deleteConfirmation": {
+		"message": "دڵنیایت کە دەتەوێت ئەم وەرگێڕینە بسڕیتەوە؟"
+	},
+	"dictionary_description": {
+		"message": "وەرگێڕینەکان لە فەرهەنگدا پاشەکەوت بکە بۆ دۆزینەوەی خێرا لە دواتر"
+	},
+	"dictionary_emptyDictionary": {
+		"message": "فەرهەنگ بەتاڵە، دەست پێبکە بە پڕکردنەوەی بە وەرگێڕینی هەندێک دەق"
+	},
+	"dictionary_filter_from": {
+		"message": "زمانی دەقی سەرچاوە"
+	},
+	"dictionary_filter_to": {
+		"message": "زمانی مەبەست"
+	},
+	"dictionary_message_deleteAll_success": {
+		"message": "هەموو وەرگێڕینەکان سڕاوەتەوە"
+	},
+	"dictionary_notFoundEntries": {
+		"message": "هیچ وەرگێڕینێک کە گونجاوی ئەم فلتەرە نییە"
+	},
+	"dictionary_pageTitle": {
+		"message": "فەرهەنگ"
+	},
+	"dictionary_resetFilters": {
+		"message": "دووبارە ڕێکخستنی فلتەرەکان"
+	},
+	"dictionary_searchPlaceholder": {
+		"message": "گەڕان بە تێکست"
+	},
+	"editorWindow_close": {
+		"message": "داخستن"
+	},
+	"editorWindow_data_code": {
+		"message": "کۆد"
+	},
+	"editorWindow_data_title": {
+		"message": "ناوی مۆدیوول"
+	},
+	"editorWindow_message_invalidTitle": {
+		"message": "ناوی مۆدیوول پێویستە بەلایەنی کەمەوە یەک پیت هەبێت"
+	},
+	"editorWindow_save": {
+		"message": "پاشەکەوتکردن"
+	},
+	"ext_description": {
+		"message": "وەرگێڕانی پەڕەی وێب، وەرگێڕانی تێکست، فەرهەنگ، مێژوو، وەرگێڕانی تایبەتی، هەموو شتێک کە پێویستە بۆ شکاندنی سنووردانی زمان"
+	},
+	"ext_name": {
+		"message": "Linguist - وەرگێڕانی پەڕەی وێب"
+	},
+	"history_control_selectEntry": {
+		"message": "هەڵبژاردنی وەرگێڕان بۆ کرداری گشتی",
+		"description": "Description in finite form \"to pick\" with explaining what this checkbox will do"
+	},
+	"history_controls_clearHistory": {
+		"message": "پاککردنەوەی مێژوو"
+	},
+	"history_controls_deleteSelected": {
+		"message": "سڕینەوەی وەرگێڕانی هەڵبژاردە"
+	},
+	"history_controls_selectAll": {
+		"message": "هەڵبژاردنی هەموو وەرگێڕانەکان"
+	},
+	"history_message_clearHistoryConfirmation": {
+		"message": "دڵنیایت لە پاککردنەوەی مێژوو؟ هەموو تۆمارەکان دەسڕدرێنەوە"
+	},
+	"history_message_deleteEntryConfirmation": {
+		"message": "دڵنیایت لە سڕینەوەی ئەم تۆمارە؟"
+	},
+	"history_message_deleteSelectedEntriesConfirmation": {
+		"message": "دڵنیایت لە سڕینەوەی تۆمارە هەڵبژاردەکان ($1)؟"
+	},
+	"history_message_entriesNotFound": {
+		"message": "هیچ وەرگێڕانێک نەدۆزرایەوە کە پەیوەندیدار بێت بە فلتەرەکە"
+	},
+	"history_message_noEntries": {
+		"message": "مێژوو بەتاڵە"
+	},
+	"history_notification_disabled": {
+		"message": "تۆمارکردنی مێژوو ناچالاک کراوە، بۆیە تۆمارە نوێکان نادیار دەبن. دەتوانیت ئەمە بگۆڕیت لە <slot id=preferences>Preferences</slot>"
+	},
+	"history_pageTitle": {
+		"message": "مێژوو"
+	},
+	"history_searchPlaceholder": {
+		"message": "گەڕان بە تێکست"
+	},
+	"inlineTranslator_showOriginalText": {
+		"message": "پیشاندانی دەقی سەرەکی"
+	},
+	"lang_change": {
+		"message": "گۆڕینی زمان"
+	},
+	"lang_detect": {
+		"message": "خۆکارانە دۆزینەوە"
+	},
+	"lang_select": {
+		"message": "هەڵبژاردنی زمان"
+	},
+	"lang_swap": {
+		"message": "گۆڕینی زمانەکان"
+	},
+	"message_unknownError": {
+		"message": "هەڵەی نەزانراو"
+	},
+	"pageTranslator_alwaysTranslateLang": {
+		"message": "هەموو کات وەرگێڕانی ئەم زمانە"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disable": {
+		"message": "ناچالاککردن"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
+		"message": "ناچالاککردن بۆ هەموو ماڵپەڕەکان"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_enable": {
+		"message": "چالاککردن"
+	},
+	"pageTranslator_commonPreferences_title": {
+		"message": "پەسەندەی گشتی بۆ ئەم زمانە"
+	},
+	"pageTranslator_option_autoTranslate": {
+		"message": "خۆکارانە وەرگێڕان"
+	},
+	"pageTranslator_showOriginal": {
+		"message": "نیشاندانی سەرەتا"
+	},
+	"pageTranslator_showTranslationPreferences": {
+		"message": "پەسەندەی وەرگێڕان"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_always": {
+		"message": "هەموو کات وەرگێڕە"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
+		"message": "هەموو کات وەرگێڕە بۆ ئەم زمانە"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_default": {
+		"message": "بەکارھێنانی یاساکانی گشتی"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
+		"message": "بەکارھێنانی یاساکانی گشتی بۆ ئەم زمانە"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_never": {
+		"message": "هەرگیز وەرگێڕان مەکە"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
+		"message": "هەرگیز وەرگێڕان مەکە بۆ ئەم زمانە"
+	},
+	"pageTranslator_sitePreferences_title": {
+		"message": "پەسەندەکان بۆ"
+	},
+	"pageTranslator_translatePage": {
+		"message": "وەرگێڕانی لاپەڕە"
+	},
+	"pageTranslator_translationReport": {
+		"message": "ڕاپۆرتی وەرگێڕان"
+	},
+	"pageTranslator_translationReport_queue": {
+		"message": "چاوەڕوانی"
+	},
+	"pageTranslator_translationReport_reject": {
+		"message": "هەڵەکان"
+	},
+	"pageTranslator_translationReport_resolve": {
+		"message": "وەرگێڕاوە"
+	},
+	"popup_tabIdNotFound": {
+		"message": "تاب \"$1\" نەدۆزرایەوە"
+	},
+	"popup_tab_translatePage": {
+		"message": "وەرگێڕانی لاپەڕە"
+	},
+	"popup_tab_translateText": {
+		"message": "وەرگێڕانی دەق"
+	},
+	"settings_button_cancel": {
+		"message": "هەڵوەشاندنەوە"
+	},
+	"settings_button_export": {
+		"message": "هەناردنی ڕێکخستنەکان"
+	},
+	"settings_button_import": {
+		"message": "هێنانەوەی ڕێکخستنەکان"
+	},
+	"settings_button_reset": {
+		"message": "ڕێکخستنەکان بگەڕێنەوە بۆ بنەڕەتی"
+	},
+	"settings_button_saveChanges": {
+		"message": "پاشەکەوتکردنی گۆڕانکارییەکان"
+	},
+	"settings_message_clearCache_success": {
+		"message": "کاش پاککرا"
+	},
+	"settings_message_common_invalidValueType": {
+		"message": "نرخی نادروست"
+	},
+	"settings_message_importConfig_invalidFile": {
+		"message": "پەڕگەی ڕێکخستنە پێشکەشکراو هەڵەیە یان تێکچووە، و ناتوانرێت پڕۆسە بکرێت"
+	},
+	"settings_message_importConfig_success": {
+		"message": "هێنانەوە تەواوبوو"
+	},
+	"settings_message_resetConfig_confirm": {
+		"message": "دڵنیابە بۆ گەڕاندنەوەی ڕێکخستنەکان بۆ نرخی بنەڕەتی"
+	},
+	"settings_message_resetConfig_success": {
+		"message": "ڕێکخستنەکان گەڕانەوە"
+	},
+	"settings_message_saveChanges_success": {
+		"message": "گۆڕانکارییەکان پاشەکەوت کران"
+	},
+	"settings_option_cache": {
+		"message": "کاش"
+	},
+	"settings_option_cache_clear": {
+		"message": "کاشی پاک بکە"
+	},
+	"settings_option_cache_clear_desc": {
+		"message": "ئەگەر هەڵەی وەرگێڕان دەتەوێت یان بەهەڵە دەقی تایبەتی وەرگێڕیتەوە کاتێک کاش چالاکە، دەتوانیت هەموو داتاکان لە کاش بسڕیتەوە",
+		"description": "Explanation for user about cases when it's useful to clear cache"
+	},
+	"settings_option_cache_enable": {
+		"message": "چالاککردنی کاش"
+	},
+	"settings_option_cache_enable_desc": {
+		"message": "کاتێک کاش چالاکە، دەقەکان کە پێشتر وەرگێڕانەوە بێ پێویستی بە داواکارییەکی زیادە بەرز دەکرێنەوە"
+	},
+	"settings_option_cache_ignoreCase": {
+		"message": "کاشی بەبێ پەیوەندیدانی پیتی گەورە و بچووک بەکاربە"
+	},
+	"settings_option_cache_ignoreCase_desc": {
+		"message": "کاتێک چالاکە، وەرگێڕانی کاشکراو بۆ دەقەکان بە پیتی جیاواز بەکار دەهێنرێت، کە لە هەندێک دۆخدا دەتوانێت هەڵەی وەرگێڕان دروست بکات"
+	},
+	"settings_option_commonSettings": {
+		"message": "ڕێکخستنە گشتییەکان"
+	},
+	"settings_option_customTranslatorModule": {
+		"message": "مۆدیولە تایبەتییەکانی وەرگێڕان",
+		"description": "An user defined code that implements a translation module"
+	},
+	"settings_option_customTranslatorModule_desc": {
+		"message": "دەتوانیت مۆدیولە تایبەتییەکانی وەرگێڕان زیاد بکەیت کە خزمەتگوزارییە وەرگێڕانی دڵخوازەکانت بەکار دەهێنن. زانیاری زیاتر لە <slot id=docs>بەڵگەنامەی وەرگێڕانی تایبەتی</slot>"
+	},
+	"settings_option_customTranslatorModule_manageButton": {
+		"message": "بەڕێوەبردنی وەرگێڕان",
+		"description": "A button to show list of translation modules"
+	},
+	"settings_option_history_enable": {
+		"message": "چالاککردنی مێژوو"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "کاتێک چالاکە، وەرگێڕانەکان تۆمار دەکرێن و لە <slot id=historyPage>لاپەڕەی مێژوو</slot> دەردەکەون"
+	},
+	"settings_option_pageTranslation": {
+		"message": "وەرگێڕانی پەڕەی تەواو"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent": {
+		"message": "زمان بە ناوەڕۆک بەرز بکە"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent_desc": {
+		"message": "دەقی لەسەر پەڕەی وێب بەرز بکە بۆ دیاریکردنی زمانەکە. کاتێک ناچالاکە، زمانە دیاریکراوە لە <slot id=docs>زانیاری پەڕە</slot> بەکار دەهێنرێت"
+	},
+	"settings_option_pageTranslation_enableContextMenu": {
+		"message": "چالاککردنی دوگمەی فهرستی ناوەڕاست"
+	},
+	"settings_option_pageTranslation_enableContextMenu_desc": {
+		"message": "دوگمەی زیاد بکە بۆ گۆڕینی وەرگێڕانی پەڕە لە فهرستی ناوەڕاستی پەڕە"
+	},
+	"settings_option_pageTranslation_excludeSelectors": {
+		"message": "هەڵبژاردنەکان بۆ لابردن لە وەرگێڕان"
+	},
+	"settings_option_pageTranslation_excludeSelectors_desc": {
+		"message": "لیستی هەڵبژاردنەکانی CSS بۆ ئەو بەرپرسەکان کە پێویستە لە وەرگێڕان لاببرێن. هەر هەڵبژاردنێک بۆ هەر هێڵێک. ئەگەر بەرپرسێک لە هەر یەک لەو هەڵبژاردنانە پەیوەندیدا، دەقی، تایبەتمەندیەکان، و بەرپرسە نێوەکیەکان وەرگێڕان نابی"
+	},
+	"settings_option_pageTranslation_lazyTranslate": {
+		"message": "تەنها بەرپرسە دیاریکراوەکان وەرگێڕە"
+	},
+	"settings_option_pageTranslation_lazyTranslate_desc": {
+		"message": "کاتێک ئەم هەڵبژاردنە چالاکە، تەنها بەرپرسە دیاریکراوەکان وەرگێڕان دەکرێن. ئەم هەڵبژاردنە هاتوچۆی تۆڕ کەم دەکات"
+	},
+	"settings_option_pageTranslation_originalTextPopup": {
+		"message": "چالاککردنی پەڕەیەکی پەیوەندیدار بە دەقی سەرەتا"
+	},
+	"settings_option_pageTranslation_originalTextPopup_desc": {
+		"message": "پەڕەیەکی پەیوەندیدار بە دەقی سەرەتا پیشان بدە کاتێک لەسەر وەرگێڕانی دەقەکان دەستپێدەکەیت"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation": {
+		"message": "کورتەیەک"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation_desc": {
+		"message": "کورتەیەک بۆ گۆڕینی وەرگێڕانی پەڕە\nفشار بدە ESC بۆ ڕێکخستنەوەی کلیلیەکان"
+	},
+	"settings_option_pageTranslation_translatableAttributes": {
+		"message": "تایبەتمەندیە وەرگێڕاوەکان"
+	},
+	"settings_option_pageTranslation_translatableAttributes_desc": {
+		"message": "ناوی تایبەتمەندیەکانی <slot id=htmlAttributes>HTML</slot> بنووسە بۆ وەرگێڕان، هەر تایبەتمەندیەک بۆ هەر هێڵێک\nتەنها تایبەتمەندیەکان لە ئەم لیستە وەرگێڕان دەکرێن"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters": {
+		"message": "پیشاندانی پێشکەوتنی وەرگێڕان"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters_desc": {
+		"message": "پەڕگەیەک نیشان بدە بە پێشکەوتنی وەرگێڕانی پەڕە لە پەیامەکانی زیادکردن"
+	},
+	"settings_option_selectTranslation": {
+		"message": "وەرگێڕانی بۆ دەقە دیاریکراوەکان"
+	},
+	"settings_option_selectTranslation_detectTextLanguage": {
+		"message": "زمانی دەقەکە دۆزینەوە"
+	},
+	"settings_option_selectTranslation_detectTextLanguage_desc": {
+		"message": "کاتێک چالاکە، دەقە دیاریکراوەکان پشکنین دەکرێن بۆ دۆزینەوەی زمانی وەرگێڕان. بەرەوپێش، زمانی پەڕە بەکاردەهێنرێت"
+	},
+	"settings_option_selectTranslation_disableWhileTranslatePage": {
+		"message": "ناچالاککردن کاتێک پەڕەکە وەرگێڕدرێت"
+	},
+	"settings_option_selectTranslation_enable": {
+		"message": "چالاککردنی وەرگێڕانی دەقە دیاریکراوەکان"
+	},
+	"settings_option_selectTranslation_enable_desc": {
+		"message": "کاتێک ئەم تایبەتمەندییە چالاکە، دەتوانیت هەر دەقێک لە پەڕەکە دیاری بکەیت و لە پەیامەکەدا وەرگێڕی بکەیت"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton": {
+		"message": "خۆکارانە سەرەوەی دوگمەی وەرگێڕان"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
+		"message": "کاتێک دوگمەی وەرگێڕان لە پەڕەکەدا دەربکەوێت، خۆکارانە سەرەوە دەبێت"
+	},
+	"settings_option_selectTranslation_header_languageChoice": {
+		"message": "ڕێکخستنەکانی زمان"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang": {
+		"message": "ڕێگەدان بە مۆدیولە وەرگێڕانەکان بۆ دۆزینەوەی زمانی دەقەکە"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
+		"message": "کاتێک زمانی دەقەکە ناتوانرێت لە ناوخۆ دۆزرابێت و ئەم هەڵبژاردنە چالاکە، دەقەکە بە زمانە \"خۆکار\" وەرگێڕدرێت ئەگەر پشتگیری کرا. کاتێک هەڵبژاردنەکە ناچالاکە، ڕێگایەکی تر بەکار دەهێنرێت بۆ دانانی زمانی سەرچاوەی دەقەکە"
+	},
+	"settings_option_selectTranslation_mode": {
+		"message": "کردار لەسەر دیاریکردنی دەق"
+	},
+	"settings_option_selectTranslation_mode_item_contextMenu": {
+		"message": "وەرگێڕانی دەق بە شێوەی فهرستی ناوەڕاست"
+	},
+	"settings_option_selectTranslation_mode_item_popupButton": {
+		"message": "دوگمەی وەرگێڕان نیشان بدە"
+	},
+	"settings_option_selectTranslation_mode_item_quickTranslate": {
+		"message": "وەرگێڕانی دەق بە خێرایی"
+	},
+	"settings_option_selectTranslation_modifiers": {
+		"message": "گۆڕانکارەکان"
+	},
+	"settings_option_selectTranslation_modifiers_desc": {
+		"message": "کلیلەکان دیاری بکە کە پێویستە لە سەر کیبۆردەکە فشاردەکرێن بۆ نیشاندانی وەرگێڕان"
+	},
+	"settings_option_selectTranslation_modifiers_key_alt": {
+		"message": "alt"
+	},
+	"settings_option_selectTranslation_modifiers_key_ctrl": {
+		"message": "ctrl"
+	},
+	"settings_option_selectTranslation_modifiers_key_meta": {
+		"message": "meta"
+	},
+	"settings_option_selectTranslation_modifiers_key_shift": {
+		"message": "shift"
+	},
+	"settings_option_selectTranslation_rememberDirection": {
+		"message": "بیرکردنەوەی زمانی دەقە دیاریکراوەکانی دوایین"
+	},
+	"settings_option_selectTranslation_showOnceForSelection": {
+		"message": "دوگمەی وەرگێڕان تەنها جارێک نیشان بدە بۆ هەر دیاریکردنی دەقێک"
+	},
+	"settings_option_selectTranslation_showOnceForSelection_desc": {
+		"message": "دوگمەکە تەنها جارێک بۆ هەر دیاریکردنی دەقێک دەربکەوێت بۆ نیشاندانی دووبارە، دەقەکە دووبارە دیاری بکە"
+	},
+	"settings_option_selectTranslation_showOriginalText": {
+		"message": "دەقە سەرەتا نیشان بدە"
+	},
+	"settings_option_selectTranslation_showOriginalText_desc": {
+		"message": "بەشێک زیاد بکە بە دەقە سەرەتا بۆ پەیامەکانی وەرگێڕان"
+	},
+	"settings_option_selectTranslation_strictSelection": {
+		"message": "شێوازی بەردەوامی دیاریکردنی دەق",
+		"description": "ئەم هەڵبژاردنە دەربارەی دیاریکردنی دەق بە شێوەی ماوسە"
+	},
+	"settings_option_selectTranslation_strictSelection_desc": {
+		"message": "دیاریکردنی دەقەکە پشتگوێ خستن ئەگەر دوگمەی چەپەی ماوسەکە لە دەرەوەی بەشەکە بەسەرچوو"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton": {
+		"message": "ماوەی پێش شاردنەوەی دوگمەی پەیامەکە"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton_desc": {
+		"message": "ماوەی کات بە میللی چرکە پێش شاردنەوەی دوگمەکە کاتێک کەرسەرە لەسەرەوە نییە. کەرسەرە لەسەر دوگمەکە بێت کاتژمێرەکە نوێ دەکاتەوە. بۆ ناچالاککردنی شاردنەوەی خۆکار، نرخی کەمتر لە ١ دانە"
+	},
+	"settings_option_selectTranslation_zIndex": {
+		"message": "z-index"
+	},
+	"settings_option_selectTranslation_zIndex_desc": {
+		"message": "ئەم نرخە زیاد بکە ئەگەر بەشەکان لە هەندێک لاپەڕە سەرپەڕەی پەیامی وەرگێڕاو بپۆشێنەوە"
+	},
+	"settings_option_textTranslator": {
+		"message": "وەرگێڕانی دەق"
+	},
+	"settings_option_textTranslator_rememberText": {
+		"message": "بیرکردنەوەی دەقی وەرگێڕاو"
+	},
+	"settings_option_textTranslator_rememberText_desc": {
+		"message": "بیرکردنەوەی دەقی وەرگێڕاو بۆ جارە داهاتوو کە پەنجەرەکە کرابێتەوە"
+	},
+	"settings_option_textTranslator_spellCheck": {
+		"message": "چالاککردنی پشکنینی ڕستە"
+	},
+	"settings_option_textTranslator_suggestLanguage": {
+		"message": "پیشاندانی زمانە دیاریکراوەکەی دەق"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways": {
+		"message": "هەموو کات زمان دیاری بکە و پێشنیار بکە"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways_desc": {
+		"message": "کاتێک ناچالاکە، پێشنیارەکانی زمان تەنها کاتێک دەردەکەون کە زمانە سەرچاوەکە دانراوە بۆ \"خۆکار\""
+	},
+	"settings_option_translatePreferences": {
+		"message": "پیشاندانی وەرگێڕان"
+	},
+	"settings_option_translateScheduler": {
+		"message": "ڕێکخستنی کاتی وەرگێڕان"
+	},
+	"settings_option_translateScheduler_delay": {
+		"message": "ماوەی کۆکردنەوەی دەق"
+	},
+	"settings_option_translateScheduler_delay_desc": {
+		"message": "ڕێکخستنی کاتی وەرگێڕان ژمارەی داواکاریەکان بۆ APIی خزمەتی وەرگێڕان کەم دەکات بە کۆکردنەوەی زۆرترین دەق بۆ ناردن لە داواکارییەکی تاک. ڕێکخستەری کات چاوەڕوان دەکات بۆ ماوەی دیاریکراو بە میللی چرکە بۆ کۆکردنەوەی دەقی زیاتر پێش دەستپێکردنی وەرگێڕان"
+	},
+	"settings_option_translateScheduler_retryLimit": {
+		"message": "سنووردانی هەوڵدانەوەی وەرگێڕان"
+	},
+	"settings_option_translateScheduler_retryLimit_desc": {
+		"message": "ڕێکخستەری کات هەوڵ دەداتەوە بۆ وەرگێڕانی دەقەکان کاتێک هەڵەکانی وەرگێڕان ڕوویدا. ئەم هەڵبژاردنە سنووردانی هەوڵدانەوەکان دانا. ژمارەی نیوەگرە دانە بۆ ڕێگەدان بە هەوڵدانەوەی بێ سنوور"
+	},
+	"settings_option_translatorModule": {
+		"message": "مۆدیولە وەرگێڕانەکان"
+	},
+	"settings_option_translatorModule_desc": {
+		"message": "کوالیتی وەرگێڕانەکان و زمانە دیاریکراوەکان پەیوەندیدارە بە مۆدیولە وەرگێڕانەکان"
+	},
+	"settings_option_tts": {
+		"message": "گۆڕینی دەق بۆ وتار (TTS)"
+	},
+	"settings_option_ttsCustomModules": {
+		"message": "مۆدیولە تایبەتیەکانی دروستکردنی وتار"
+	},
+	"settings_option_ttsCustomModules_button": {
+		"message": "بەڕێوەبردنی مۆدیولە تایبەتیەکانی دروستکردنی وتار"
+	},
+	"settings_option_ttsCustomModules_desc": {
+		"message": "دەتوانیت مۆدیولە تایبەتیەکانی دروستکردنی وتار زیاد بکەیت کە خزمەتی دڵخواز و ماتۆری دەنگی بەکاربەرن. زانیاری زیاتر بخوێنەوە لە <slot id=docs>بەڵگەنامەی تایبەتی TTS</slot>"
+	},
+	"settings_option_ttsModule": {
+		"message": "مۆدیولە دیاریکراوی TTS"
+	},
+	"settings_option_ttsModule_desc": {
+		"message": "ماتۆری دەنگی بەکاربردراو بۆ دەنگدانەوەی دەقەکە"
+	},
+	"settings_option_userLanguage": {
+		"message": "زمانی تۆ"
+	},
+	"settings_option_userLanguage_desc": {
+		"message": "زمانی کە دەقەکان بۆ وەرگێڕانەوە بۆ ئەوە دەکرێن"
+	},
+	"settings_pageTitle": {
+		"message": "ڕێکخستنەکان"
+	},
+	"settings_section_history": {
+		"message": "مێژوو"
+	},
+	"settings_section_popup": {
+		"message": "پەڕەی پەڕەیەکی بچووک"
+	},
+	"textTranslator_suggestLanguage": {
+		"message": "وەک خۆی دەردەبڕێت زمانەکەی دەقەکە <slot id=languageSuggest>$language_name$</slot>",
+		"placeholders": {
+			"language_name": {
+				"content": "$1",
+				"example": "Japanese"
+			}
+		}
+	},
+	"textTranslator_translateInputPlaceholder": {
+		"message": "Nivîsarê ji bo wergerê binivîse",
+		"description": "Request to user input some text for translation"
+	},
+	"textTranslator_translatePlaceholder": {
+		"message": "Nivîsarê wergerî li vir dê be"
+	},
+	"translatorsManagerWindow_add": {
+		"message": "Modula wergerê zêde bike"
+	},
+	"translatorsManagerWindow_close": {
+		"message": "Bigre"
+	},
+	"translatorsManagerWindow_emptyTranslatorsListText": {
+		"message": "Hîn modulan wergerê taybet nehatine zêdekirin"
+	},
+	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
+		"message": "Ma hûn guman dikin ku hûn dixwazin modula wergerê \"$translator_name$\" jê bibe?",
+		"placeholders": {
+			"translator_name": {
+				"content": "$1",
+				"example": "Google translator"
+			}
+		}
+	},
+	"translatorsManagerWindow_title": {
+		"message": "Modulan wergerê taybet"
+	},
+	"translatorsManagerWindow_translator_delete": {
+		"message": "Jê bibe"
+	},
+	"translatorsManagerWindow_translator_edit": {
+		"message": "Biguherîne"
+	},
+	"ttsManagerWindow_add": {
+		"message": "Modula TTS zêde bike"
+	},
+	"ttsManagerWindow_close": {
+		"message": "Bigre"
+	},
+	"ttsManagerWindow_emptyTranslatorsListText": {
+		"message": "Hîn modulan TTS nehatine zêdekirin"
+	},
+	"ttsManagerWindow_message_ttsRemoveConfirmation": {
+		"message": "Ma hûn guman dikin ku hûn dixwazin modula TTS \"$tts_name$\" jê bibe?",
+		"placeholders": {
+			"tts_name": {
+				"content": "$1",
+				"example": "Google TTS"
+			}
+		}
+	},
+	"ttsManagerWindow_title": {
+		"message": "Modulan Text-to-Speech"
+	},
+	"ttsManagerWindow_translator_delete": {
+		"message": "Jê bibe"
+	},
+	"ttsManagerWindow_translator_edit": {
+		"message": "Biguherîne"
+	},
+	"validation_number": {
+		"message": "Nirx divê hejmarek be"
+	},
+	"validation_numberBetweenRange": {
+		"message": "Nirx divê di navbera $1 û $2 de be"
+	},
+	"validation_positiveNumber": {
+		"message": "Nirx divê hejmarek pozîtîf be"
+	}
+}

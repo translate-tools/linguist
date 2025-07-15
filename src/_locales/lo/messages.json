@@ -1,0 +1,623 @@
+{
+	"common_action_addToDictionary": {
+		"message": "ເພີ່ມການແປລົງໃນພະຈົນລະນານຸກົມ"
+	},
+	"common_action_removeFromDictionary": {
+		"message": "ລຶບການແປອອກຈາກພະຈົນລະນານຸກົມ"
+	},
+	"common_bgUnavailable": {
+		"message": "ສະກຣິບພື້ນຫລັງບໍ່ພ້ອມໃຊ້"
+	},
+	"common_cancel": {
+		"message": "ຍົກເລີກ"
+	},
+	"common_close": {
+		"message": "ປິດ"
+	},
+	"common_copy": {
+		"message": "ຄັດລອກ"
+	},
+	"common_error": {
+		"message": "ຜິດພາດ"
+	},
+	"common_offlineTranslator": {
+		"message": "$1 - ຜູ້ແປອອບໄລນ"
+	},
+	"common_retry": {
+		"message": "ລອງໃໝ່"
+	},
+	"common_translate": {
+		"message": "ແປ"
+	},
+	"component_hotkey_placeholder": {
+		"message": "ຄລິກເພື່ອບັນທຶກທາງລັດ"
+	},
+	"component_hotkey_recordPlaceholder": {
+		"message": "ກົດປຸ່ມ"
+	},
+	"component_hotkey_resetButton": {
+		"message": "ຣີເຊັດ"
+	},
+	"contextMenu_disablePageTranslation": {
+		"message": "ຢຸດການແປໜ້າ"
+	},
+	"contextMenu_translatePage": {
+		"message": "ແປໜ້າ"
+	},
+	"contextMenu_translateSelectedText": {
+		"message": "ແປຂໍ້ຄວາມທີ່ເລືອກ"
+	},
+	"dictionaryButton_add": {
+		"message": "ເພີ່ມໃນພະຈົນລະນານຸກົມ"
+	},
+	"dictionaryButton_delete": {
+		"message": "ລຶບອອກຈາກພະຈົນລະນານຸກົມ"
+	},
+	"dictionary_button_export": {
+		"message": "ສົ່ງອອກ"
+	},
+	"dictionary_button_removeAll": {
+		"message": "ລຶບທັງໝົດ"
+	},
+	"dictionary_deleteAll": {
+		"message": "ທ່ານແນ່ໃຈບໍ່ທີ່ຈະລຶບການແປທັງໝົດອອກຈາກພະຈົນລະນານຸກົມ?"
+	},
+	"dictionary_deleteConfirmation": {
+		"message": "ທ່ານແນ່ໃຈບໍ່ທີ່ຈະລຶບການແປນີ້?"
+	},
+	"dictionary_description": {
+		"message": "ບັນທຶກການແປໃນພະຈົນລະນານຸກົມເພື່ອຄົ້ນຫາພວກມັນໄດ້ຢ່າງວ່ອງໄວຕໍ່ມາ"
+	},
+	"dictionary_emptyDictionary": {
+		"message": "ພະຈົນລະນານຸກົມວ່າງ, ເລີ່ມຕົ້ນຕື່ມມັນໂດຍການແປຂໍ້ຄວາມບາງສ່ວນ"
+	},
+	"dictionary_filter_from": {
+		"message": "ພາສາຂໍ້ຄວາມຕົ້ນສະບັບ"
+	},
+	"dictionary_filter_to": {
+		"message": "ພາສາປາຍທາງ"
+	},
+	"dictionary_message_deleteAll_success": {
+		"message": "ການແປທັງໝົດຖືກລຶບແລ້ວ"
+	},
+	"dictionary_notFoundEntries": {
+		"message": "ບໍ່ພົບການແປທີ່ກົງກັບຕົວກອງເຫຼົ່ານີ້"
+	},
+	"dictionary_pageTitle": {
+		"message": "ພະຈົນລະນານຸກົມ"
+	},
+	"dictionary_resetFilters": {
+		"message": "ຣີເຊັດຕົວກອງ"
+	},
+	"dictionary_searchPlaceholder": {
+		"message": "ຄົ້ນຫາດ້ວຍຂໍ້ຄວາມ"
+	},
+	"editorWindow_close": {
+		"message": "ປິດ"
+	},
+	"editorWindow_data_code": {
+		"message": "ລະຫັດ"
+	},
+	"editorWindow_data_title": {
+		"message": "ຊື່ໂມດູນ"
+	},
+	"editorWindow_message_invalidTitle": {
+		"message": "ຊື່ໂມດູນຕ້ອງມີຢ່າງນ້ອຍຫນຶ່ງຕົວອັກສອນ"
+	},
+	"editorWindow_save": {
+		"message": "ບັນທຶກ"
+	},
+	"ext_description": {
+		"message": "ການແປໜ້າເວັບ, ການແປຂໍ້ຄວາມ, ພາສາບັນດານິດ, ປະຫວັດສາດ, ຜູ້ແປສ່ວນຕົວ, ທຸກຢ່າງທີ່ທ່ານຕ້ອງການເພື່ອທຳລາຍຂອບເຂດພາສາ"
+	},
+	"ext_name": {
+		"message": "Linguist - ແປໜ້າເວັບ"
+	},
+	"history_control_selectEntry": {
+		"message": "ເລືອກການແປສຳລັບການດຳເນີນການຈຳນວນຫຼາຍ",
+		"description": "Description in finite form \"to pick\" with explaining what this checkbox will do"
+	},
+	"history_controls_clearHistory": {
+		"message": "ລຶບປະຫວັດ"
+	},
+	"history_controls_deleteSelected": {
+		"message": "ລຶບການແປທີ່ເລືອກ"
+	},
+	"history_controls_selectAll": {
+		"message": "ເລືອກການແປທັງໝົດ"
+	},
+	"history_message_clearHistoryConfirmation": {
+		"message": "ທ່ານແນ່ໃຈບໍ່ທີ່ຈະລຶບປະຫວັດ? ລາຍການທັງໝົດຈະຖືກລຶບ"
+	},
+	"history_message_deleteEntryConfirmation": {
+		"message": "ທ່ານແນ່ໃຈບໍ່ທີ່ຈະລຶບລາຍການນີ້?"
+	},
+	"history_message_deleteSelectedEntriesConfirmation": {
+		"message": "ທ່ານແນ່ໃຈບໍ່ທີ່ຈະລຶບລາຍການທີ່ເລືອກ ($1)?"
+	},
+	"history_message_entriesNotFound": {
+		"message": "ບໍ່ພົບການແປທີ່ກົງກັບການຄັດກອງ"
+	},
+	"history_message_noEntries": {
+		"message": "ປະຫວັດວ່າງເປົ່າ"
+	},
+	"history_notification_disabled": {
+		"message": "ການບັນທຶກປະຫວັດຖືກປິດ, ດັ່ງນັ້ນລາຍການໃໝ່ຈະບໍ່ປາກົດ. ທ່ານສາມາດປ່ຽນແປງນີ້ໃນ <slot id=preferences>ຄວາມຕັ້ງໃຈ</slot>"
+	},
+	"history_pageTitle": {
+		"message": "ປະຫວັດ"
+	},
+	"history_searchPlaceholder": {
+		"message": "ຄົ້ນຫາດ້ວຍຂໍ້ຄວາມ"
+	},
+	"inlineTranslator_showOriginalText": {
+		"message": "ສະແດງຂໍ້ຄວາມຕົ້ນສະບັບ"
+	},
+	"lang_change": {
+		"message": "ປ່ຽນພາສາ"
+	},
+	"lang_detect": {
+		"message": "ກວດຈັບອັດຕະໂນມັດ"
+	},
+	"lang_select": {
+		"message": "ເລືອກພາສາ"
+	},
+	"lang_swap": {
+		"message": "ສະຫຼັບພາສາ"
+	},
+	"message_unknownError": {
+		"message": "ຄວາມຜິດພາດທີ່ບໍ່ຮູ້ຈັກ"
+	},
+	"pageTranslator_alwaysTranslateLang": {
+		"message": "ແປພາສານີ້ສະເຫມີ"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disable": {
+		"message": "ປິດ"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
+		"message": "ປິດສຳລັບທຸກເວັບໄຊ"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_enable": {
+		"message": "ເປີດ"
+	},
+	"pageTranslator_commonPreferences_title": {
+		"message": "ຄວາມຕ້ອງການທົ່ວໄປສໍາລັບພາສານີ້"
+	},
+	"pageTranslator_option_autoTranslate": {
+		"message": "ແປອັດຕະໂນມັດ"
+	},
+	"pageTranslator_showOriginal": {
+		"message": "ສະແດງຕົ້ນສະບັບ"
+	},
+	"pageTranslator_showTranslationPreferences": {
+		"message": "ຄວາມຕ້ອງການແປ"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_always": {
+		"message": "ແປສະເຫມີ"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
+		"message": "ແປສະເຫມີສໍາລັບພາສານີ້"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_default": {
+		"message": "ໃຊ້ກົດທົ່ວໄປ"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
+		"message": "ໃຊ້ກົດທົ່ວໄປສໍາລັບພາສານີ້"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_never": {
+		"message": "ບໍ່ແປ"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
+		"message": "ບໍ່ແປສໍາລັບພາສານີ້"
+	},
+	"pageTranslator_sitePreferences_title": {
+		"message": "ຄວາມຕ້ອງການສໍາລັບ"
+	},
+	"pageTranslator_translatePage": {
+		"message": "ແປໜ້າ"
+	},
+	"pageTranslator_translationReport": {
+		"message": "ລາຍງານການແປ"
+	},
+	"pageTranslator_translationReport_queue": {
+		"message": "ລໍຖ້າ"
+	},
+	"pageTranslator_translationReport_reject": {
+		"message": "ຂໍ້ຜິດພາດ"
+	},
+	"pageTranslator_translationReport_resolve": {
+		"message": "ແປແລ້ວ"
+	},
+	"popup_tabIdNotFound": {
+		"message": "ບໍ່ພົບແຖບ \"$1\""
+	},
+	"popup_tab_translatePage": {
+		"message": "ການແປໜ້າ"
+	},
+	"popup_tab_translateText": {
+		"message": "ການແປຂໍ້ຄວາມ"
+	},
+	"settings_button_cancel": {
+		"message": "ຍົກເລີກ"
+	},
+	"settings_button_export": {
+		"message": "ສົ່ງອອກການຕັ້ງຄ່າ"
+	},
+	"settings_button_import": {
+		"message": "ນໍາເຂົ້າການຕັ້ງຄ່າ"
+	},
+	"settings_button_reset": {
+		"message": "ຣີເຊັດການຕັ້ງຄ່າ"
+	},
+	"settings_button_saveChanges": {
+		"message": "ບັນທຶກການປ່ຽນແປງ"
+	},
+	"settings_message_clearCache_success": {
+		"message": "ລ້າງແຄັດແລ້ວ"
+	},
+	"settings_message_common_invalidValueType": {
+		"message": "ຄ່າບໍ່ຖືກຕ້ອງ"
+	},
+	"settings_message_importConfig_invalidFile": {
+		"message": "ໄຟລ໌ການຕັ້ງຄ່າທີ່ໃຫ້ບໍ່ຖືກຕ້ອງ ຫຼື ເສຍຫາຍ, ບໍ່ສາມາດປະມວນຜົນໄດ້"
+	},
+	"settings_message_importConfig_success": {
+		"message": "ນໍາເຂົ້າສໍາເລັດ"
+	},
+	"settings_message_resetConfig_confirm": {
+		"message": "ຢືນຢັນການຣີເຊັດການຕັ້ງຄ່າເປັນຄ່າເລີ່ມຕົ້ນ"
+	},
+	"settings_message_resetConfig_success": {
+		"message": "ຣີເຊັດການຕັ້ງຄ່າແລ້ວ"
+	},
+	"settings_message_saveChanges_success": {
+		"message": "ການປ່ຽນແປງຖືກບັນທຶກ"
+	},
+	"settings_option_cache": {
+		"message": "ຄ່າຈຳ"
+	},
+	"settings_option_cache_clear": {
+		"message": "ລ້າງຄ່າຈຳ"
+	},
+	"settings_option_cache_clear_desc": {
+		"message": "ຖ້າທ່ານສັງເກດຄວາມຜິດພາດໃນການແປພາສາ ຫຼືແປຂໍ້ຄວາມສ່ວນຕົວຜິດພາດໃນຂະນະທີ່ຄ່າຈຳເປີດໃຊ້ງານ, ທ່ານສາມາດລຶບຂໍ້ມູນທັງໝົດຈາກຄ່າຈຳ",
+		"description": "Explanation for user about cases when it's useful to clear cache"
+	},
+	"settings_option_cache_enable": {
+		"message": "ເປີດໃຊ້ຄ່າຈຳ"
+	},
+	"settings_option_cache_enable_desc": {
+		"message": "ເມື່ອຄ່າຈຳເປີດໃຊ້ງານ, ຂໍ້ຄວາມທີ່ໄດ້ຖືກແປກ່ອນຫນ້ານີ້ຈະຖືກແປທັນທີໂດຍບໍ່ຕ້ອງຮ້ອງຂໍເພີ່ມເຕີມໄປຫາບໍລິການແປພາສາ"
+	},
+	"settings_option_cache_ignoreCase": {
+		"message": "ໃຊ້ຄ່າຈຳທີ່ບໍ່ຄຳນຶງເຖິງຂໍ້ຄວາມໃຫຍ່ນ້ອຍ"
+	},
+	"settings_option_cache_ignoreCase_desc": {
+		"message": "ເມື່ອເປີດໃຊ້ງານ, ການແປທີ່ຖືກຈຳຈະຖືກນຳໃຊ້ສຳລັບຂໍ້ຄວາມທີ່ມີຂໍ້ຄວາມໃຫຍ່ນ້ອຍທີ່ແຕກຕ່າງກັນ, ຊຶ່ງອາດຈະເຮັດໃຫ້ເກີດຄວາມບິດເບືອນໃນການແປໃນບາງສະຖານະການ"
+	},
+	"settings_option_commonSettings": {
+		"message": "ການຕັ້ງຄ່າທົ່ວໄປ"
+	},
+	"settings_option_customTranslatorModule": {
+		"message": "ໂມດູນແປພາສາທີ່ກຳນົດເອງ",
+		"description": "An user defined code that implements a translation module"
+	},
+	"settings_option_customTranslatorModule_desc": {
+		"message": "ທ່ານສາມາດເພີ່ມໂມດູນແປພາສາທີ່ກຳນົດເອງທີ່ໃຊ້ບໍລິການແປພາສາທີ່ທ່ານມັກ. ຮຽນຮູ້ເພີ່ມເຕີມໃນ <slot id=docs>ເອກະສານແປພາສາທີ່ກຳນົດເອງ</slot>"
+	},
+	"settings_option_customTranslatorModule_manageButton": {
+		"message": "ຈັດການຜູ້ແປ",
+		"description": "A button to show list of translation modules"
+	},
+	"settings_option_history_enable": {
+		"message": "ເປີດໃຊ້ປະຫວັດ"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "ເມື່ອເປີດໃຊ້ງານ, ການແປຈະຖືກບັນທຶກແລະປາກົດຢູ່ໃນ <slot id=historyPage>ໜ້າປະຫວັດ</slot>"
+	},
+	"settings_option_pageTranslation": {
+		"message": "ການແປພາສາໜ້າເຕັມ"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent": {
+		"message": "ກວດຈັບພາສາຈາກເນື້ອຫາ"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent_desc": {
+		"message": "ວິເຄາະຂໍ້ຄວາມໃນໜ້າເວັບເພື່ອກວດຈັບພາສາຂອງມັນ. ເມື່ອປິດໃຊ້ງານ, ພາສາທີ່ກຳນົດໃນ <slot id=docs>ເມຕາດາຕ້າຂອງໜ້າ</slot> ຈະຖືກນຳໃຊ້"
+	},
+	"settings_option_pageTranslation_enableContextMenu": {
+		"message": "ເປີດໃຊ້ປຸ່ມໃນເມນູບໍລິບົດ"
+	},
+	"settings_option_pageTranslation_enableContextMenu_desc": {
+		"message": "ເພີ່ມປຸ່ມເພື່ອສະຫຼັບການແປພາສາໜ້າໃນເມນູບໍລິບົດຂອງໜ້າ"
+	},
+	"settings_option_pageTranslation_excludeSelectors": {
+		"message": "ຕົວເລືອກທີ່ຈະຍົກເວັ້ນຈາກການແປ"
+	},
+	"settings_option_pageTranslation_excludeSelectors_desc": {
+		"message": "ລາຍຊື່ຂອງຕົວເລືອກ CSS ສຳລັບອົງປະກອບທີ່ຈະຍົກເວັ້ນຈາກການແປ. ຕົວເລືອກລະໜຶ່ງຕໍ່ແຖວ. ຖ້າອົງປະກອບກົງກັບຕົວເລືອກໃດໜຶ່ງໃນນີ້, ຂໍ້ຄວາມ, ຄຸນສົມບັດ, ແລະອົງປະກອບທີ່ຝັງຢູ່ຈະບໍ່ຖືກແປ"
+	},
+	"settings_option_pageTranslation_lazyTranslate": {
+		"message": "ແປພຽງອົງປະກອບທີ່ເຫັນໄດ້"
+	},
+	"settings_option_pageTranslation_lazyTranslate_desc": {
+		"message": "ເມື່ອເລືອກຕົວເລືອກນີ້, ຈະມີພຽງອົງປະກອບທີ່ເຫັນໄດ້ທີ່ຈະຖືກແປ. ຕົວເລືອກນີ້ຊ່ວຍຫຼຸດການໃຊ້ຈ່າຍເຄືອຂ່າຍ"
+	},
+	"settings_option_pageTranslation_originalTextPopup": {
+		"message": "ເປີດໃຊ້ປ່ອງປ໋ອບທີ່ມີຂໍ້ຄວາມຕົ້ນສະບັບ"
+	},
+	"settings_option_pageTranslation_originalTextPopup_desc": {
+		"message": "ສະແດງປ່ອງປ໋ອບທີ່ມີຂໍ້ຄວາມຕົ້ນສະບັບເມື່ອຊີ້ເຫນືອບລັອກຂໍ້ຄວາມທີ່ແປແລ້ວ"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation": {
+		"message": "ທາງລັດ"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation_desc": {
+		"message": "ທາງລັດເພື່ອສະຫຼັບການແປພາສາໜ້າ\nກົດ ESC ເພື່ອຣີເຊັດຄີ"
+	},
+	"settings_option_pageTranslation_translatableAttributes": {
+		"message": "ຄຸນສົມບັດທີ່ສາມາດແປໄດ້"
+	},
+	"settings_option_pageTranslation_translatableAttributes_desc": {
+		"message": "ປ້ອນຊື່ <slot id=htmlAttributes>ຄຸນສົມບັດ HTML</slot> ທີ່ຈະແປ, ຄຸນສົມບັດລະໜຶ່ງຕໍ່ແຖວ\nພຽງແຕ່ຄຸນສົມບັດໃນລາຍຊື່ນີ້ຈະຖືກແປ"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters": {
+		"message": "ສະແດງຄວາມຄືບໜ້າການແປ"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters_desc": {
+		"message": "ສະແດງແຜງຄວບຄຸມການແປພາສາໜ້າໃນປ໊ອບອັບຂອງສ່ວນຂະຫຍາຍ"
+	},
+	"settings_option_selectTranslation": {
+		"message": "ການແປພາສາສໍາລັບຂໍ້ຄວາມທີ່ເລືອກ"
+	},
+	"settings_option_selectTranslation_detectTextLanguage": {
+		"message": "ກວດຈັບພາສາຂອງຂໍ້ຄວາມ"
+	},
+	"settings_option_selectTranslation_detectTextLanguage_desc": {
+		"message": "ເມື່ອເປີດໃຊ້ງານ, ຂໍ້ຄວາມທີ່ເລືອກຈະຖືກວິເຄາະເພື່ອກວດຈັບພາສາສໍາລັບການແປ. ມິດຊະນັ້ນ, ພາສາຂອງໜ້າຈະຖືກນໍາໃຊ້"
+	},
+	"settings_option_selectTranslation_disableWhileTranslatePage": {
+		"message": "ປິດໃຊ້ງານໃນຂະນະທີ່ແປພາສາໜ້າ"
+	},
+	"settings_option_selectTranslation_enable": {
+		"message": "ເປີດໃຊ້ການແປຂໍ້ຄວາມທີ່ເລືອກ"
+	},
+	"settings_option_selectTranslation_enable_desc": {
+		"message": "ເມື່ອເປີດໃຊ້ຄຸນນະສົມບັດນີ້, ທ່ານສາມາດເລືອກຂໍ້ຄວາມໃດໆໃນໜ້າແລະແປມັນໃນປ໊ອບອັບ"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton": {
+		"message": "ໂຟກັສອັດຕະໂນມັດໃນປຸ່ມແປພາສາ"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
+		"message": "ເມື່ອປຸ່ມແປພາສາປາກົດໃນໜ້າ, ມັນຈະຖືກໂຟກັສອັດຕະໂນມັດ"
+	},
+	"settings_option_selectTranslation_header_languageChoice": {
+		"message": "ການຕັ້ງຄ່າພາສາ"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang": {
+		"message": "ອະນຸຍາດໃຫ້ໂມດູນແປພາສາກວດຈັບພາສາຂອງຂໍ້ຄວາມ"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
+		"message": "ເມື່ອພາສາຂອງຂໍ້ຄວາມບໍ່ສາມາດກວດຈັບໄດ້ໃນທ້ອງຖິ່ນແລະຕົວເລືອກນີ້ເປີດໃຊ້ງານ, ຂໍ້ຄວາມຈະຖືກແປດ້ວຍພາສາ \"auto\" ຖ້າມີການສະໜອງ.\nເມື່ອຕົວເລືອກຖືກປິດໃຊ້ງານ, ວິທີການສໍາຮອງອື່ນຈະຖືກນໍາໃຊ້ເພື່ອຕັ້ງພາສາຕົ້ນທາງຂອງຂໍ້ຄວາມ"
+	},
+	"settings_option_selectTranslation_mode": {
+		"message": "ການປະຕິບັດຕໍ່ການເລືອກຂໍ້ຄວາມ"
+	},
+	"settings_option_selectTranslation_mode_item_contextMenu": {
+		"message": "ແປຂໍ້ຄວາມຜ່ານເມນູບໍລິບົດ"
+	},
+	"settings_option_selectTranslation_mode_item_popupButton": {
+		"message": "ສະແດງປຸ່ມແປພາສາ"
+	},
+	"settings_option_selectTranslation_mode_item_quickTranslate": {
+		"message": "ແປຂໍ້ຄວາມທັນທີ"
+	},
+	"settings_option_selectTranslation_modifiers": {
+		"message": "ປັບແຕ່ງ"
+	},
+	"settings_option_selectTranslation_modifiers_desc": {
+		"message": "ເລືອກປຸ່ມທີ່ຕ້ອງການກົດໃນຄີບອດເພື່ອສະແດງການແປພາສາ"
+	},
+	"settings_option_selectTranslation_modifiers_key_alt": {
+		"message": "alt"
+	},
+	"settings_option_selectTranslation_modifiers_key_ctrl": {
+		"message": "ctrl"
+	},
+	"settings_option_selectTranslation_modifiers_key_meta": {
+		"message": "meta"
+	},
+	"settings_option_selectTranslation_modifiers_key_shift": {
+		"message": "shift"
+	},
+	"settings_option_selectTranslation_rememberDirection": {
+		"message": "ຈື່ພາສາຂອງຂໍ້ຄວາມທີ່ເລືອກລ່າສຸດ"
+	},
+	"settings_option_selectTranslation_showOnceForSelection": {
+		"message": "ສະແດງປຸ່ມແປພາສາຄັ້ງດຽວຕໍ່ການເລືອກຂໍ້ຄວາມ"
+	},
+	"settings_option_selectTranslation_showOnceForSelection_desc": {
+		"message": "ປຸ່ມຈະປາກົດຄັ້ງດຽວສໍາລັບການເລືອກຂໍ້ຄວາມແຕ່ລະຄັ້ງ ເພື່ອສະແດງມັນອີກຄັ້ງ, ເລືອກຂໍ້ຄວາມອີກຄັ້ງ"
+	},
+	"settings_option_selectTranslation_showOriginalText": {
+		"message": "ສະແດງຂໍ້ຄວາມຕົ້ນສະບັບ"
+	},
+	"settings_option_selectTranslation_showOriginalText_desc": {
+		"message": "ເພີ່ມບລັອກຂໍ້ຄວາມຕົ້ນສະບັບໃນປ໊ອບອັບການແປ"
+	},
+	"settings_option_selectTranslation_strictSelection": {
+		"message": "ໂໝດຂອງການເລືອກຂໍ້ຄວາມຢ່າງເຂັ້ມງວດ",
+		"description": "ຕົວເລືອກນີ້ເກືອບກັບການເລືອກຂໍ້ຄວາມຜ່ານເມົາສ໌"
+	},
+	"settings_option_selectTranslation_strictSelection_desc": {
+		"message": "ມອບການເລືອກຂໍ້ຄວາມຖ້າປຸ່ມເມົາສ໌ຂ້າງຊ້າຍຖືກປ່ອຍອອກນອກບລັອກທີ່ມີຂໍ້ຄວາມທີ່ເລືອກ"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton": {
+		"message": "ລໍຖ້າກ່ອນທີ່ຈະປິດປຸ່ມປ໊ອບອັບ"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton_desc": {
+		"message": "ລໍຖ້າໃນຫົວໜ່ວຍມິລິວິນາທີກ່ອນທີ່ປຸ່ມຈະຖືກປິດເມື່ອເຄື່ອງຊີ້ບໍ່ໄດ້ຢູ່ເທິງມັນ. ການຢູ່ເທິງປຸ່ມຈະປ່ຽນເວລາໃໝ່. ເພື່ອປິດການປິດອັດຕະໂນມັດ, ຕັ້ງຄ່າຄ່ານີ້ໃຫ້ຕໍ່າກວ່າ 1"
+	},
+	"settings_option_selectTranslation_zIndex": {
+		"message": "z-index"
+	},
+	"settings_option_selectTranslation_zIndex_desc": {
+		"message": "ເພີ່ມຄ່ານີ້ຖ້າອົງປະກອບບາງຢ່າງໃນໜ້າເວັບບາງໜ້າທັບຊ້ອນປ່ອນຂໍ້ຄວາມທີ່ແປແລ້ວ"
+	},
+	"settings_option_textTranslator": {
+		"message": "ການແປຂໍ້ຄວາມ"
+	},
+	"settings_option_textTranslator_rememberText": {
+		"message": "ຈື່ຂໍ້ຄວາມທີ່ແປແລ້ວ"
+	},
+	"settings_option_textTranslator_rememberText_desc": {
+		"message": "ຈື່ຂໍ້ຄວາມທີ່ແປແລ້ວສໍາລັບຄັ້ງຕໍ່ໄປທີ່ໜ້າຕ່າງເປີດ"
+	},
+	"settings_option_textTranslator_spellCheck": {
+		"message": "ເປີດການກວດຄວາມຖືກຕ້ອງ"
+	},
+	"settings_option_textTranslator_suggestLanguage": {
+		"message": "ສະແດງພາສາຂໍ້ຄວາມທີ່ຖືກຄົ້ນພົບ"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways": {
+		"message": "ຄົ້ນພົບແລະແນະນໍາພາສາສະເໝີ"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways_desc": {
+		"message": "ເມື່ອປິດ, ຄວາມແນະນໍາພາສາຈະປາກົດພຽງແຕ່ຖ້າພາສາຕົ້ນສະບັບຖືກຕັ້ງເປັນ \"auto\""
+	},
+	"settings_option_translatePreferences": {
+		"message": "ຄວາມຕ້ອງການແປ"
+	},
+	"settings_option_translateScheduler": {
+		"message": "ຕາຕະລາງການແປ"
+	},
+	"settings_option_translateScheduler_delay": {
+		"message": "ຄວາມລ່າຊ້າຂອງການສະສົມຂໍ້ຄວາມ"
+	},
+	"settings_option_translateScheduler_delay_desc": {
+		"message": "ຕາຕະລາງການແປຈະຫຼຸດຈໍານວນຄໍາຮ້ອງຂໍໄປຫາ API ບໍລິການແປໂດຍສະສົມຂໍ້ຄວາມໃຫ້ໄດ້ຫຼາຍທີ່ສຸດເພື່ອສົ່ງໃນຄໍາຮ້ອງຂໍດຽວ. ຕາຕະລາງຈະລໍຖ້າເວລາທີ່ກໍານົດໃນຫົວໜ່ວຍມິລິວິນາທີເພື່ອສະສົມຂໍ້ຄວາມຫຼາຍຂຶ້ນກ່ອນທີ່ຈະເລີ່ມການແປ"
+	},
+	"settings_option_translateScheduler_retryLimit": {
+		"message": "ຂອບເຂດສໍາລັບຄວາມພະຍາຍາມແປຄືນ"
+	},
+	"settings_option_translateScheduler_retryLimit_desc": {
+		"message": "ຕາຕະລາງຈະພະຍາຍາມແປຂໍ້ຄວາມຄືນເມື່ອມີຂໍ້ຜິດພາດໃນການແປ. ຕົວເລືອກນີ້ຈະຕັ້ງຂອບເຂດສໍາລັບຄວາມພະຍາຍາມແປຄືນ. ຕັ້ງຄ່າເປັນຈໍານວນລົບເພື່ອອະນຸຍາດໃຫ້ມີຄວາມພະຍາຍາມຄືນບໍ່ຈໍາກັດ"
+	},
+	"settings_option_translatorModule": {
+		"message": "ໂມດູນແປ"
+	},
+	"settings_option_translatorModule_desc": {
+		"message": "ຄຸນນະພາບຂອງການແປແລະພາສາທີ່ມີຢູ່ຂຶ້ນຢູ່ກັບໂມດູນແປ"
+	},
+	"settings_option_tts": {
+		"message": "ການປ່ຽນຂໍ້ຄວາມເປັນສຽງ (TTS)"
+	},
+	"settings_option_ttsCustomModules": {
+		"message": "ໂມດູນສັງເຄາະສຽງທີ່ກໍານົດເອງ"
+	},
+	"settings_option_ttsCustomModules_button": {
+		"message": "ຈັດການໂມດູນສັງເຄາະສຽງ"
+	},
+	"settings_option_ttsCustomModules_desc": {
+		"message": "ທ່ານສາມາດເພີ່ມໂມດູນສັງເຄາະສຽງທີ່ໃຊ້ບໍລິການແລະເຄື່ອງຈັກສຽງທີ່ທ່ານມັກ. ອ່ານເພີ່ມເຕີມໃນ <slot id=docs>ເອກະສານ TTS ທີ່ກໍານົດເອງ</slot>"
+	},
+	"settings_option_ttsModule": {
+		"message": "ໂມດູນ TTS ທີ່ເລືອກ"
+	},
+	"settings_option_ttsModule_desc": {
+		"message": "ເຄື່ອງຈັກສຽງທີ່ໃຊ້ສໍາລັບການອ່ານຂໍ້ຄວາມ"
+	},
+	"settings_option_userLanguage": {
+		"message": "ພາສາຂອງທ່ານ"
+	},
+	"settings_option_userLanguage_desc": {
+		"message": "ພາສາທີ່ຂໍ້ຄວາມຈະຖືກແປເປັນ"
+	},
+	"settings_pageTitle": {
+		"message": "ການຕັ້ງຄ່າ"
+	},
+	"settings_section_history": {
+		"message": "ປະຫວັດ"
+	},
+	"settings_section_popup": {
+		"message": "ປ່ອນຂໍ້ຄວາມ"
+	},
+	"textTranslator_suggestLanguage": {
+		"message": "ມັນເບິ່ງຄືວ່າພາສາຂອງຂໍ້ຄວາມແມ່ນ <slot id=languageSuggest>$language_name$</slot>",
+		"placeholders": {
+			"language_name": {
+				"content": "$1",
+				"example": "Japanese"
+			}
+		}
+	},
+	"textTranslator_translateInputPlaceholder": {
+		"message": "ໃສ່ຂໍ້ຄວາມສໍາລັບການແປ",
+		"description": "Request to user input some text for translation"
+	},
+	"textTranslator_translatePlaceholder": {
+		"message": "ຂໍ້ຄວາມທີ່ແປຈະຢູ່ທີ່ນີ້"
+	},
+	"translatorsManagerWindow_add": {
+		"message": "ເພີ່ມໂມດູນການແປ"
+	},
+	"translatorsManagerWindow_close": {
+		"message": "ປິດ"
+	},
+	"translatorsManagerWindow_emptyTranslatorsListText": {
+		"message": "ຍັງບໍ່ມີໂມດູນການແປທີ່ກໍານົດເອງ"
+	},
+	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
+		"message": "ທ່ານແນ່ໃຈບໍທີ່ຈະລຶບໂມດູນການແປ \"$translator_name$\"?",
+		"placeholders": {
+			"translator_name": {
+				"content": "$1",
+				"example": "Google translator"
+			}
+		}
+	},
+	"translatorsManagerWindow_title": {
+		"message": "ໂມດູນການແປທີ່ກໍານົດເອງ"
+	},
+	"translatorsManagerWindow_translator_delete": {
+		"message": "ລຶບ"
+	},
+	"translatorsManagerWindow_translator_edit": {
+		"message": "ແກ້ໄຂ"
+	},
+	"ttsManagerWindow_add": {
+		"message": "ເພີ່ມໂມດູນ TTS"
+	},
+	"ttsManagerWindow_close": {
+		"message": "ປິດ"
+	},
+	"ttsManagerWindow_emptyTranslatorsListText": {
+		"message": "ຍັງບໍ່ມີໂມດູນ TTS"
+	},
+	"ttsManagerWindow_message_ttsRemoveConfirmation": {
+		"message": "ທ່ານແນ່ໃຈບໍທີ່ຈະລຶບໂມດູນ TTS \"$tts_name$\"?",
+		"placeholders": {
+			"tts_name": {
+				"content": "$1",
+				"example": "Google TTS"
+			}
+		}
+	},
+	"ttsManagerWindow_title": {
+		"message": "ໂມດູນຂໍ້ຄວາມເປັນສຽງ"
+	},
+	"ttsManagerWindow_translator_delete": {
+		"message": "ລຶບ"
+	},
+	"ttsManagerWindow_translator_edit": {
+		"message": "ແກ້ໄຂ"
+	},
+	"validation_number": {
+		"message": "ຄ່າຕ້ອງເປັນຕົວເລກ"
+	},
+	"validation_numberBetweenRange": {
+		"message": "ຄ່າຕ້ອງເປັນຕົວເລກລະຫວ່າງ $1 ແລະ $2"
+	},
+	"validation_positiveNumber": {
+		"message": "ຄ່າຕ້ອງເປັນຕົວເລກບວກ"
+	}
+}

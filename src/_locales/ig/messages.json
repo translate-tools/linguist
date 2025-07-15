@@ -1,0 +1,623 @@
+{
+	"common_action_addToDictionary": {
+		"message": "Tinye ntụgharị asụsụ na akwụkwọ nkowa"
+	},
+	"common_action_removeFromDictionary": {
+		"message": "Wepu ntụgharị asụsụ na akwụkwọ nkowa"
+	},
+	"common_bgUnavailable": {
+		"message": "Ihe omume ndabere adịghị"
+	},
+	"common_cancel": {
+		"message": "Kagbuo"
+	},
+	"common_close": {
+		"message": "Mechie"
+	},
+	"common_copy": {
+		"message": "Detuo"
+	},
+	"common_error": {
+		"message": "Njehie"
+	},
+	"common_offlineTranslator": {
+		"message": "$1 - Onye ntụgharị asụsụ na-enweghị njikọ"
+	},
+	"common_retry": {
+		"message": "Gbalịa ọzọ"
+	},
+	"common_translate": {
+		"message": "Tụgharịa"
+	},
+	"component_hotkey_placeholder": {
+		"message": "Pịa iji dekọọ ụzọ mkpirisi"
+	},
+	"component_hotkey_recordPlaceholder": {
+		"message": "Pịa igodo"
+	},
+	"component_hotkey_resetButton": {
+		"message": "Tọgharịa"
+	},
+	"contextMenu_disablePageTranslation": {
+		"message": "Kwụsị ntụgharị ibe"
+	},
+	"contextMenu_translatePage": {
+		"message": "Tụgharịa ibe"
+	},
+	"contextMenu_translateSelectedText": {
+		"message": "Tụgharịa ederede ahọpụtara"
+	},
+	"dictionaryButton_add": {
+		"message": "Tinye na akwụkwọ nkowa"
+	},
+	"dictionaryButton_delete": {
+		"message": "Hichapụ na akwụkwọ nkowa"
+	},
+	"dictionary_button_export": {
+		"message": "Mbupụ"
+	},
+	"dictionary_button_removeAll": {
+		"message": "Wepu niile"
+	},
+	"dictionary_deleteAll": {
+		"message": "Ị kwenyesiri ike na ịchọrọ ihichapụ NDỊ ntụgharị asụsụ niile na akwụkwọ nkowa?"
+	},
+	"dictionary_deleteConfirmation": {
+		"message": "Ị kwenyesiri ike na ịchọrọ ihichapụ ntụgharị asụsụ a?"
+	},
+	"dictionary_description": {
+		"message": "Chekwaa ntụgharị asụsụ na akwụkwọ nkowa iji chọta ha ngwa ngwa n'ọdịnihu"
+	},
+	"dictionary_emptyDictionary": {
+		"message": "Akwụkwọ nkowa adịghị, malite ịjupụta ya site na ntụgharị ụfọdụ ederede"
+	},
+	"dictionary_filter_from": {
+		"message": "Asụsụ ederede isi mmalite"
+	},
+	"dictionary_filter_to": {
+		"message": "Asụsụ ebumnuche"
+	},
+	"dictionary_message_deleteAll_success": {
+		"message": "A napụla ntụgharị asụsụ niile"
+	},
+	"dictionary_notFoundEntries": {
+		"message": "Enweghị ntụgharị asụsụ dabara na ihe nzacha ndị a"
+	},
+	"dictionary_pageTitle": {
+		"message": "Akwụkwọ nkowa"
+	},
+	"dictionary_resetFilters": {
+		"message": "Tọgharịa ihe nzacha"
+	},
+	"dictionary_searchPlaceholder": {
+		"message": "Chọọ site na ederede"
+	},
+	"editorWindow_close": {
+		"message": "Mechie"
+	},
+	"editorWindow_data_code": {
+		"message": "Koodu"
+	},
+	"editorWindow_data_title": {
+		"message": "Aha modul"
+	},
+	"editorWindow_message_invalidTitle": {
+		"message": "Aha modul ga-enwerịrị opekata mpe otu mkpụrụ edemede"
+	},
+	"editorWindow_save": {
+		"message": "Chekwa"
+	},
+	"ext_description": {
+		"message": "Ntụgharị weebụ peeji, ntụgharị ederede, akwụkwọ, akụkọ ihe mere eme, ndị ntụgharị omenala, ihe niile ịchọrọ iji mebie mgbochi asụsụ"
+	},
+	"ext_name": {
+		"message": "Linguist - onye ntụgharị peeji weebụ"
+	},
+	"history_control_selectEntry": {
+		"message": "Họrọ ntụgharị maka omume ibu",
+		"description": "Description in finite form \"to pick\" with explaining what this checkbox will do"
+	},
+	"history_controls_clearHistory": {
+		"message": "Hichapụ akụkọ ihe mere eme"
+	},
+	"history_controls_deleteSelected": {
+		"message": "Hichapụ ntụgharị ahọpụtara"
+	},
+	"history_controls_selectAll": {
+		"message": "Họrọ ntụgharị niile"
+	},
+	"history_message_clearHistoryConfirmation": {
+		"message": "Ị ma na ịchọrọ ihichapụ akụkọ ihe mere eme? A ga-ewepụ ihe ndekọ niile"
+	},
+	"history_message_deleteEntryConfirmation": {
+		"message": "Ị ma na ịchọrọ ihichapụ ihe ndekọ a?"
+	},
+	"history_message_deleteSelectedEntriesConfirmation": {
+		"message": "Ị ma na ịchọrọ ihichapụ ihe ndekọ ahọpụtara ($1)?"
+	},
+	"history_message_entriesNotFound": {
+		"message": "Enweghị ntụgharị dị na nhazi"
+	},
+	"history_message_noEntries": {
+		"message": "Akụkọ ihe mere eme adịghị"
+	},
+	"history_notification_disabled": {
+		"message": "Ndekọ akụkọ ihe mere eme bụ na-adịghị arụ ọrụ, yabụ ihe ndekọ ọhụrụ agaghị apụta. Ị nwere ike ịgbanwe nke a na <slot id=preferences>Preferences</slot>"
+	},
+	"history_pageTitle": {
+		"message": "Akụkọ ihe mere eme"
+	},
+	"history_searchPlaceholder": {
+		"message": "Chọọ site na ederede"
+	},
+	"inlineTranslator_showOriginalText": {
+		"message": "Gosi ederede mbụ"
+	},
+	"lang_change": {
+		"message": "Gbanwee asụsụ"
+	},
+	"lang_detect": {
+		"message": "Nchọpụta akpaka"
+	},
+	"lang_select": {
+		"message": "Họrọ asụsụ"
+	},
+	"lang_swap": {
+		"message": "Swapu asụsụ"
+	},
+	"message_unknownError": {
+		"message": "Njehie amaghị"
+	},
+	"pageTranslator_alwaysTranslateLang": {
+		"message": "Na-atụgharị asụsụ a mgbe niile"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disable": {
+		"message": "Gbanyụọ"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
+		"message": "Gbanyụọ maka saịtị niile"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_enable": {
+		"message": "Gbanye"
+	},
+	"pageTranslator_commonPreferences_title": {
+		"message": "Nhọrọ nkịtị maka asụsụ a"
+	},
+	"pageTranslator_option_autoTranslate": {
+		"message": "Ntụgharị-akpaka"
+	},
+	"pageTranslator_showOriginal": {
+		"message": "Gosi nke mbụ"
+	},
+	"pageTranslator_showTranslationPreferences": {
+		"message": "Nhọrọ ntụgharị"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_always": {
+		"message": "Na-atụgharị mgbe niile"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
+		"message": "Na-atụgharị mgbe niile maka asụsụ a"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_default": {
+		"message": "Jiri iwu nkịtị"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
+		"message": "Jiri iwu nkịtị maka asụsụ a"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_never": {
+		"message": "Atụghịgharị mgbe ọ bụla"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
+		"message": "Atụghịgharị mgbe ọ bụla maka asụsụ a"
+	},
+	"pageTranslator_sitePreferences_title": {
+		"message": "Nhọrọ maka"
+	},
+	"pageTranslator_translatePage": {
+		"message": "Tụgharị ibe"
+	},
+	"pageTranslator_translationReport": {
+		"message": "Akụkọ ntụgharị"
+	},
+	"pageTranslator_translationReport_queue": {
+		"message": "Na-eche"
+	},
+	"pageTranslator_translationReport_reject": {
+		"message": "Njehie"
+	},
+	"pageTranslator_translationReport_resolve": {
+		"message": "E tụgharịrị"
+	},
+	"popup_tabIdNotFound": {
+		"message": "Taabụ \"$1\" achọtaghị"
+	},
+	"popup_tab_translatePage": {
+		"message": "Ntụgharị ibe"
+	},
+	"popup_tab_translateText": {
+		"message": "Ntụgharị ederede"
+	},
+	"settings_button_cancel": {
+		"message": "Kagbuo"
+	},
+	"settings_button_export": {
+		"message": "Mbupụ nhazi"
+	},
+	"settings_button_import": {
+		"message": "Mbubata nhazi"
+	},
+	"settings_button_reset": {
+		"message": "Tọgharịa nhazi"
+	},
+	"settings_button_saveChanges": {
+		"message": "Chekwaa mgbanwe"
+	},
+	"settings_message_clearCache_success": {
+		"message": "Nchekwa ehichapụ"
+	},
+	"settings_message_common_invalidValueType": {
+		"message": "Uru na-ezighi ezi"
+	},
+	"settings_message_importConfig_invalidFile": {
+		"message": "Faịlụ nhazi enyere ezighi ezi ma ọ bụ mebiri emebi, enweghị ike ịrụ ọrụ ya"
+	},
+	"settings_message_importConfig_success": {
+		"message": "Mbubata zuru ezu"
+	},
+	"settings_message_resetConfig_confirm": {
+		"message": "Kwenye ịtọgharịa ntọala na ụkpụrụ ndabara"
+	},
+	"settings_message_resetConfig_success": {
+		"message": "Ntọala tọgharịrị"
+	},
+	"settings_message_saveChanges_success": {
+		"message": "Ndị mgbanwe echekwara"
+	},
+	"settings_option_cache": {
+		"message": "Nchekwa"
+	},
+	"settings_option_cache_clear": {
+		"message": "Hichapụ nchekwa"
+	},
+	"settings_option_cache_clear_desc": {
+		"message": "Ọ bụrụ na ị hụ njehie ntụgharị ma ọ bụ mee ka ederede nzuzo bụrụ nke a na-atụgharị n'ebughị n'uche mgbe nchekwa na-arụ ọrụ, ị nwere ike ihichapụ data niile site na nchekwa",
+		"description": "Nkọwa maka onye ọrụ gbasara ọnọdụ mgbe ọ bara uru ihichapụ nchekwa"
+	},
+	"settings_option_cache_enable": {
+		"message": "Kwado nchekwa"
+	},
+	"settings_option_cache_enable_desc": {
+		"message": "Mgbe nchekwa na-arụ ọrụ, ederede ndị a tụgharịrị na mbụ ga-atụgharị ozugbo na-enweghị arịrịọ ndị ọzọ na ọrụ ntụgharị"
+	},
+	"settings_option_cache_ignoreCase": {
+		"message": "Jiri nchekwa na-enweghị mmetụta na mkpụrụokwu"
+	},
+	"settings_option_cache_ignoreCase_desc": {
+		"message": "Mgbe a kwadoro ya, a ga-eji ntụgharị echekwara maka ederede nwere mkpụrụokwu dị iche iche, nke nwere ike ibute ntụgharị ntụgharị n'ọnọdụ ụfọdụ"
+	},
+	"settings_option_commonSettings": {
+		"message": "Ntọala nkịtị"
+	},
+	"settings_option_customTranslatorModule": {
+		"message": "Ngwaọrụ ntụgharị omenala",
+		"description": "Koodu onye ọrụ kọwara nke na-emezigharị modul ntụgharị"
+	},
+	"settings_option_customTranslatorModule_desc": {
+		"message": "Ị nwere ike ịgbakwunye modul ntụgharị omenala nke na-eji ọrụ ntụgharị masịrị gị. Mụta ihe ndị ọzọ na <slot id=docs>akwụkwọ ntụgharị omenala</slot>"
+	},
+	"settings_option_customTranslatorModule_manageButton": {
+		"message": "Na-achịkwa ndị ntụgharị",
+		"description": "Bọtịnụ iji gosi ndepụta nke modul ntụgharị"
+	},
+	"settings_option_history_enable": {
+		"message": "Kwado akụkọ ihe mere eme"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "Mgbe a kwadoro ya, a ga-edekọ ntụgharị ma pụta na <slot id=historyPage>peeji nke akụkọ ihe mere eme</slot>"
+	},
+	"settings_option_pageTranslation": {
+		"message": "Ntụgharị peeji zuru oke"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent": {
+		"message": "Chọpụta asụsụ site na ọdịnaya"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent_desc": {
+		"message": "Nyochaa ederede na ibe weebụ iji chọpụta asụsụ ya. Mgbe a na-ewepụ ya, a ga-eji asụsụ akọwapụtara na <slot id=docs>metadata peeji</slot>"
+	},
+	"settings_option_pageTranslation_enableContextMenu": {
+		"message": "Kwado bọtịnụ menu ọdịnaya"
+	},
+	"settings_option_pageTranslation_enableContextMenu_desc": {
+		"message": "Tinye bọtịnụ iji gbanwee ntụgharị peeji na menu ọdịnaya peeji"
+	},
+	"settings_option_pageTranslation_excludeSelectors": {
+		"message": "Ndị na-ahọrọ ka ewepụ ya na ntụgharị"
+	},
+	"settings_option_pageTranslation_excludeSelectors_desc": {
+		"message": "Ndepụta nke ndị na-ahọrọ CSS maka ihe ndị a ga-ewepụ na ntụgharị. Otu onye na-ahọrọ kwa ahịrị. Ọ bụrụ na ihe dakọtara na onye na-ahọrọ ndị a, ederede ya, njirimara, na ihe ndị dị n'ime ya agaghị atụgharị"
+	},
+	"settings_option_pageTranslation_lazyTranslate": {
+		"message": "Tụgharịa naanị ihe ndị a na-ahụ anya"
+	},
+	"settings_option_pageTranslation_lazyTranslate_desc": {
+		"message": "Mgbe nhọrọ a na-arụ ọrụ, naanị ihe ndị a na-ahụ anya ga-atụgharị. Nhọrọ a na-ebelata okporo ụzọ netwọkụ"
+	},
+	"settings_option_pageTranslation_originalTextPopup": {
+		"message": "Kwado popup na ederede mbụ"
+	},
+	"settings_option_pageTranslation_originalTextPopup_desc": {
+		"message": "Gosi popup na ederede mbụ mgbe ị na-agagharị na blọgụ ederede a tụgharịrị"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation": {
+		"message": "Nzọụkwụ mkpirisi"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation_desc": {
+		"message": "Nzọụkwụ mkpirisi iji gbanwee ntụgharị peeji\nPịa ESC iji tọgharịa igodo"
+	},
+	"settings_option_pageTranslation_translatableAttributes": {
+		"message": "Njirimara a na-atụgharị"
+	},
+	"settings_option_pageTranslation_translatableAttributes_desc": {
+		"message": "Tinye <slot id=htmlAttributes>aha njirimara HTML</slot> iji tụgharịa, otu njirimara kwa ahịrị\nNaanị njirimara ndị dị na ndepụta a ka a ga-atụgharị"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters": {
+		"message": "Gosi ọganihu ntụgharị"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters_desc": {
+		"message": "Gosi panel na-egosi mmepegharị ibe na mgbakwunye popup"
+	},
+	"settings_option_selectTranslation": {
+		"message": "Ntụgharị asụsụ maka ederede ahọpụtara"
+	},
+	"settings_option_selectTranslation_detectTextLanguage": {
+		"message": "Chọpụta asụsụ ederede"
+	},
+	"settings_option_selectTranslation_detectTextLanguage_desc": {
+		"message": "Mgbe etinyere ya, a ga-enyocha ederede ahọpụtara iji chọpụta asụsụ maka ntụgharị asụsụ. Ma ọ bụghị ya, a ga-eji asụsụ ibe ahụ"
+	},
+	"settings_option_selectTranslation_disableWhileTranslatePage": {
+		"message": "Gbanyụọ mgbe ị na-atụgharị ibe ahụ"
+	},
+	"settings_option_selectTranslation_enable": {
+		"message": "Kwado ntụgharị asụsụ ederede ahọpụtara"
+	},
+	"settings_option_selectTranslation_enable_desc": {
+		"message": "Mgbe a kwadoro atụmatụ a, ị nwere ike ịhọrọ ederede ọ bụla na ibe ahụ ma tụgharịa ya na popup"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton": {
+		"message": "Kwekọọ na bọtịnụ ntụgharị asụsụ"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
+		"message": "Mgbe bọtịnụ ntụgharị asụsụ pụtara na ibe ahụ, a ga-akpaghị aka lekwasị anya na ya"
+	},
+	"settings_option_selectTranslation_header_languageChoice": {
+		"message": "Nhọrọ asụsụ"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang": {
+		"message": "Kwe ka modul ntụgharị asụsụ chọpụta asụsụ ederede"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
+		"message": "Mgbe a pụghị ịchọpụta asụsụ ederede n'ịntanetị na nhọrọ a kwadoro, a ga-atụgharị ederede ahụ na asụsụ \"auto\" ma ọ bụrụ na a na-akwado ya.\nMgbe a na-ewepụ nhọrọ ahụ, a ga-eji ụzọ ọzọ dochie anya iji setịpụ asụsụ isi nke ederede"
+	},
+	"settings_option_selectTranslation_mode": {
+		"message": "Omume na nhọpụta ederede"
+	},
+	"settings_option_selectTranslation_mode_item_contextMenu": {
+		"message": "Tụgharịa ederede site na menu ọdịnaya"
+	},
+	"settings_option_selectTranslation_mode_item_popupButton": {
+		"message": "Gosi bọtịnụ ntụgharị asụsụ"
+	},
+	"settings_option_selectTranslation_mode_item_quickTranslate": {
+		"message": "Tụgharịa ederede ozugbo"
+	},
+	"settings_option_selectTranslation_modifiers": {
+		"message": "Ntụgharị"
+	},
+	"settings_option_selectTranslation_modifiers_desc": {
+		"message": "Họrọ igodo ndị a ga-pịa na keyboard iji gosipụta ntụgharị asụsụ"
+	},
+	"settings_option_selectTranslation_modifiers_key_alt": {
+		"message": "alt"
+	},
+	"settings_option_selectTranslation_modifiers_key_ctrl": {
+		"message": "ctrl"
+	},
+	"settings_option_selectTranslation_modifiers_key_meta": {
+		"message": "meta"
+	},
+	"settings_option_selectTranslation_modifiers_key_shift": {
+		"message": "shift"
+	},
+	"settings_option_selectTranslation_rememberDirection": {
+		"message": "Cheta asụsụ ederede ahọpụtara na nso nso a"
+	},
+	"settings_option_selectTranslation_showOnceForSelection": {
+		"message": "Gosi bọtịnụ ntụgharị asụsụ otu ugboro maka nhọpụta ederede"
+	},
+	"settings_option_selectTranslation_showOnceForSelection_desc": {
+		"message": "Bọtịnụ ahụ ga-apụta naanị otu ugboro maka nhọpụta ederede ọ bụla Iji gosi ya ọzọ, họrọ ederede ahụ ọzọ"
+	},
+	"settings_option_selectTranslation_showOriginalText": {
+		"message": "Gosi ederede mbụ"
+	},
+	"settings_option_selectTranslation_showOriginalText_desc": {
+		"message": "Tinye ngọngọ nwere ederede mbụ na popup ntụgharị asụsụ"
+	},
+	"settings_option_selectTranslation_strictSelection": {
+		"message": "Ụdị siri ike nke nhọpụta ederede span",
+		"description": "This option is about selecting text via mouse"
+	},
+	"settings_option_selectTranslation_strictSelection_desc": {
+		"message": "Leghara nhọpụta ederede span anya ma ọ bụrụ na a tọhapụrụ aka ekpe n'èzí ngọngọ nke nwere ederede ahọpụtara"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton": {
+		"message": "Njedebe tupu zoo bọtịnụ popup"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton_desc": {
+		"message": "Ntụle na milliseconds tupu zoo bọtịnụ mgbe cursor adịghị na ya. Iji bọtịnụ na-emegharị oge. Iji gbanyụọ auto-zoo, debe uru ahụ ka ọ dị ala karịa 1"
+	},
+	"settings_option_selectTranslation_zIndex": {
+		"message": "z-index"
+	},
+	"settings_option_selectTranslation_zIndex_desc": {
+		"message": "Welie uru a ma ọ bụrụ na ihe ndị dị na ụfọdụ ibe na-agafe popup na ederede a sụgharịrị"
+	},
+	"settings_option_textTranslator": {
+		"message": "Ntụgharị ederede"
+	},
+	"settings_option_textTranslator_rememberText": {
+		"message": "Ịcheta ederede a sụgharịrị"
+	},
+	"settings_option_textTranslator_rememberText_desc": {
+		"message": "Ịcheta ederede a sụgharịrị maka oge ọzọ window meghere"
+	},
+	"settings_option_textTranslator_spellCheck": {
+		"message": "Kwado nchọpụta mkpụrụokwu"
+	},
+	"settings_option_textTranslator_suggestLanguage": {
+		"message": "Na-egosi asụsụ ederede a chọpụtara"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways": {
+		"message": "Na-achọpụta na na-atụ aro asụsụ mgbe niile"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways_desc": {
+		"message": "Mgbe agbanyụrụ, aro asụsụ na-apụta naanị ma ọ bụrụ na asụsụ isi mmalite edoziri na \"auto\""
+	},
+	"settings_option_translatePreferences": {
+		"message": "Nhọrọ ntụgharị"
+	},
+	"settings_option_translateScheduler": {
+		"message": "Ntụgharị oge"
+	},
+	"settings_option_translateScheduler_delay": {
+		"message": "Ntụle oge nchịkọta ederede"
+	},
+	"settings_option_translateScheduler_delay_desc": {
+		"message": "Ntụgharị oge na-ebelata ọnụ ọgụgụ arịrịọ na API ọrụ ntụgharị site na nchịkọta ọtụtụ ederede dị ka o kwere mee iji zipu na otu arịrịọ. Oge a ga-echere oge akọwapụtara na milliseconds iji chịkọta ederede ndị ọzọ tupu ịmalite ntụgharị"
+	},
+	"settings_option_translateScheduler_retryLimit": {
+		"message": "Ọnụ ọgụgụ mgbalị ntụgharị ọzọ"
+	},
+	"settings_option_translateScheduler_retryLimit_desc": {
+		"message": "Oge ga-anwa ntụgharị ederede ọzọ mgbe njehie ntụgharị mere. Nhọrọ a na-etinye oke na mgbalị ntụgharị ọzọ. Debe nọmba na-adịghị mma iji kwe ka ntụgharị ọzọ na-enweghị njedebe"
+	},
+	"settings_option_translatorModule": {
+		"message": "Mọdule ntụgharị"
+	},
+	"settings_option_translatorModule_desc": {
+		"message": "Ọdịmma nke ntụgharị na asụsụ dị na ya dabere na mọdule ntụgharị"
+	},
+	"settings_option_tts": {
+		"message": "Ntụgharị ederede na olu (TTS)"
+	},
+	"settings_option_ttsCustomModules": {
+		"message": "Mọdule nhazi olu omenala"
+	},
+	"settings_option_ttsCustomModules_button": {
+		"message": "Ịchịkwa mọdule nhazi olu"
+	},
+	"settings_option_ttsCustomModules_desc": {
+		"message": "Ị nwere ike ịgbakwunye mọdule nhazi olu na-eji ọrụ na igwe olu masịrị gị. Gụọkwuo na <slot id=docs>akwụkwọ TTS omenala</slot>"
+	},
+	"settings_option_ttsModule": {
+		"message": "Mọdule TTS ahọpụtara"
+	},
+	"settings_option_ttsModule_desc": {
+		"message": "Igwe olu eji maka ịkpọpụta ederede"
+	},
+	"settings_option_userLanguage": {
+		"message": "Asụsụ gị"
+	},
+	"settings_option_userLanguage_desc": {
+		"message": "Asụsụ nke a ga-atụgharị ederede na ya"
+	},
+	"settings_pageTitle": {
+		"message": "Nhazi"
+	},
+	"settings_section_history": {
+		"message": "Akụkọ ihe mere eme"
+	},
+	"settings_section_popup": {
+		"message": "Popup"
+	},
+	"textTranslator_suggestLanguage": {
+		"message": "O yiri ka asụsụ ederede bụ <slot id=languageSuggest>$language_name$</slot>",
+		"placeholders": {
+			"language_name": {
+				"content": "$1",
+				"example": "Japanese"
+			}
+		}
+	},
+	"textTranslator_translateInputPlaceholder": {
+		"message": "Tinye ederede maka ntụgharị",
+		"description": "Request to user input some text for translation"
+	},
+	"textTranslator_translatePlaceholder": {
+		"message": "Ederede e gbanwere ga-adị ebe a"
+	},
+	"translatorsManagerWindow_add": {
+		"message": "Tinye modul ntụgharị"
+	},
+	"translatorsManagerWindow_close": {
+		"message": "Mechie"
+	},
+	"translatorsManagerWindow_emptyTranslatorsListText": {
+		"message": "Enweghị modul ntụgharị omenala agbakwunyere"
+	},
+	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
+		"message": "Ị kwsure na ịchọrọ iwepụ modul ntụgharị \"$translator_name$\"?",
+		"placeholders": {
+			"translator_name": {
+				"content": "$1",
+				"example": "Google translator"
+			}
+		}
+	},
+	"translatorsManagerWindow_title": {
+		"message": "Modul ntụgharị omenala"
+	},
+	"translatorsManagerWindow_translator_delete": {
+		"message": "Hichapụ"
+	},
+	"translatorsManagerWindow_translator_edit": {
+		"message": "Dezie"
+	},
+	"ttsManagerWindow_add": {
+		"message": "Tinye modul TTS"
+	},
+	"ttsManagerWindow_close": {
+		"message": "Mechie"
+	},
+	"ttsManagerWindow_emptyTranslatorsListText": {
+		"message": "Enweghị modul TTS agbakwunyere"
+	},
+	"ttsManagerWindow_message_ttsRemoveConfirmation": {
+		"message": "Ị kwsure na ịchọrọ iwepụ modul TTS \"$tts_name$\"?",
+		"placeholders": {
+			"tts_name": {
+				"content": "$1",
+				"example": "Google TTS"
+			}
+		}
+	},
+	"ttsManagerWindow_title": {
+		"message": "Modul Text-to-Speech"
+	},
+	"ttsManagerWindow_translator_delete": {
+		"message": "Hichapụ"
+	},
+	"ttsManagerWindow_translator_edit": {
+		"message": "Dezie"
+	},
+	"validation_number": {
+		"message": "Uru ga-abụ nọmba"
+	},
+	"validation_numberBetweenRange": {
+		"message": "Uru ga-abụ nọmba n'etiti $1 na $2"
+	},
+	"validation_positiveNumber": {
+		"message": "Uru ga-abụ nọmba dị mma"
+	}
+}

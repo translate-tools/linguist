@@ -1,9 +1,9 @@
 {
 	"common_action_addToDictionary": {
-		"message": "Tambahkan terjemahan ke kamus"
+		"message": "Tambah terjemahan ke dalam kamus"
 	},
 	"common_action_removeFromDictionary": {
-		"message": "Hapus terjemahan dari kamus"
+		"message": "Buang terjemahan dari kamus"
 	},
 	"common_bgUnavailable": {
 		"message": "Skrip latar belakang tidak tersedia"
@@ -27,31 +27,31 @@
 		"message": "Cuba semula"
 	},
 	"common_translate": {
-		"message": "Terjemahkan"
+		"message": "Terjemah"
 	},
 	"component_hotkey_placeholder": {
-		"message": "Klik untuk merekodkan hotkey"
+		"message": "Klik untuk merekod pintasan"
 	},
 	"component_hotkey_recordPlaceholder": {
 		"message": "Tekan kekunci"
 	},
 	"component_hotkey_resetButton": {
-		"message": "Menetap semula"
+		"message": "Tetapkan semula"
 	},
 	"contextMenu_disablePageTranslation": {
-		"message": "Nyahaktifkan terjemahan laman web"
+		"message": "Hentikan terjemahan halaman"
 	},
 	"contextMenu_translatePage": {
-		"message": "Terjemahkan laman web"
+		"message": "Terjemah halaman"
 	},
 	"contextMenu_translateSelectedText": {
-		"message": "Terjemahkan teks yang ditekankan"
+		"message": "Terjemah teks yang dipilih"
 	},
 	"dictionaryButton_add": {
-		"message": "Tambah ke kamus"
+		"message": "Tambah ke dalam kamus"
 	},
 	"dictionaryButton_delete": {
-		"message": "Padam dari kamus"
+		"message": "Buang dari kamus"
 	},
 	"dictionary_button_export": {
 		"message": "Eksport"
@@ -60,34 +60,34 @@
 		"message": "Buang semua"
 	},
 	"dictionary_deleteAll": {
-		"message": "Adakah anda pasti untuk memadam SEMUA terjemahan dalam kamus?"
+		"message": "Adakah anda pasti mahu membuang SEMUA terjemahan dari kamus?"
 	},
 	"dictionary_deleteConfirmation": {
-		"message": "Adakah anda pasti untuk memadam terjemahan ini?"
+		"message": "Adakah anda pasti mahu membuang terjemahan ini?"
 	},
 	"dictionary_description": {
-		"message": "Simpan terjemahan anda dalam kamus untuk mencari mereka kemudian"
+		"message": "Simpan terjemahan dalam kamus untuk mencarinya dengan cepat kemudian"
 	},
 	"dictionary_emptyDictionary": {
-		"message": "Kamus kosong. Mulakan mengisinya semasa menterjemahkan teks"
+		"message": "Kamus kosong, mula mengisinya dengan menterjemah beberapa teks"
 	},
 	"dictionary_filter_from": {
-		"message": "Dari"
+		"message": "Bahasa teks sumber"
 	},
 	"dictionary_filter_to": {
-		"message": "Kepada"
+		"message": "Bahasa sasaran"
 	},
 	"dictionary_message_deleteAll_success": {
-		"message": "Semua terjemahan telah dipadamkan"
+		"message": "Semua terjemahan telah dibuang"
 	},
 	"dictionary_notFoundEntries": {
-		"message": "Tiada padanan terjemahan dengan penyaring ini"
+		"message": "Tiada terjemahan yang sepadan dengan penapis ini ditemui"
 	},
 	"dictionary_pageTitle": {
 		"message": "Kamus"
 	},
 	"dictionary_resetFilters": {
-		"message": "Tetapkan semula penyaring"
+		"message": "Tetapkan semula penapis"
 	},
 	"dictionary_searchPlaceholder": {
 		"message": "Cari mengikut teks"
@@ -98,50 +98,51 @@
 	"editorWindow_data_code": {
 		"message": "Kod"
 	},
-	"editorWindow_data_name": {
-		"message": "Nama"
+	"editorWindow_data_title": {
+		"message": "Nama modul"
 	},
-	"editorWindow_message_invalidName": {
-		"message": "Nama mesti mengandungi sekurang-kurangnya satu simbol"
+	"editorWindow_message_invalidTitle": {
+		"message": "Nama modul mesti mempunyai sekurang-kurangnya satu aksara"
 	},
 	"editorWindow_save": {
 		"message": "Simpan"
 	},
 	"ext_description": {
-		"message": "Terjemahan halaman dan teks, kamus, sejarah, penterjemah luar talian dan tersuai"
+		"message": "Terjemahan halaman web, terjemahan teks, kamus, sejarah, penterjemah tersuai, semua yang anda perlukan untuk mengatasi halangan bahasa"
 	},
 	"ext_name": {
-		"message": "Penterjemah - penterjemah halaman web"
+		"message": "Linguist - penterjemah halaman web"
 	},
 	"history_control_selectEntry": {
-		"message": "Pilih masukan"
+		"message": "Pilih terjemahan untuk tindakan pukal",
+		"description": "Description in finite form \"to pick\" with explaining what this checkbox will do"
 	},
 	"history_controls_clearHistory": {
-		"message": "Padam sejarah"
+		"message": "Kosongkan sejarah"
 	},
 	"history_controls_deleteSelected": {
-		"message": "Padam terpilih"
+		"message": "Padam terjemahan terpilih"
 	},
 	"history_controls_selectAll": {
 		"message": "Pilih semua terjemahan"
 	},
 	"history_message_clearHistoryConfirmation": {
-		"message": "Adakah anda pasti untuk membersihkan sejarah? Semua entri akan dipadamkan"
+		"message": "Adakah anda pasti mahu mengosongkan sejarah? Semua entri akan dipadam"
 	},
 	"history_message_deleteEntryConfirmation": {
-		"message": "Adakah anda pasti untuk memadam entri ini?"
+		"message": "Adakah anda pasti mahu memadam entri ini?"
 	},
 	"history_message_deleteSelectedEntriesConfirmation": {
-		"message": "Adakah anda pasti untuk memadam entri yang dipilih ($1)?"
-	},
-	"history_message_emptyEntries": {
-		"message": "Sejarah dihapuskan"
+		"message": "Adakah anda pasti mahu memadam entri terpilih ($1)?"
 	},
 	"history_message_entriesNotFound": {
-		"message": "Tiada terjemahan yang ditemui mengikut kriteria"
+		"message": "Tiada terjemahan ditemui yang sepadan dengan penapis"
+	},
+	"history_message_noEntries": {
+		"message": "Sejarah kosong"
 	},
 	"history_notification_disabled": {
-		"message": "Rakaman sejarah dimatikan, jadi entri baru tidak akan muncul. Anda boleh menukarnya di <slot id=preferences>keutamaan</slot>"
+		"message": "Rakaman sejarah dilumpuhkan, jadi entri baru tidak akan muncul. Anda boleh menukar ini dalam <slot id=preferences>Keutamaan</slot>"
 	},
 	"history_pageTitle": {
 		"message": "Sejarah"
@@ -156,7 +157,7 @@
 		"message": "Tukar bahasa"
 	},
 	"lang_detect": {
-		"message": "Autodikesan"
+		"message": "Auto-kesan"
 	},
 	"lang_select": {
 		"message": "Pilih bahasa"
@@ -164,59 +165,38 @@
 	"lang_swap": {
 		"message": "Tukar bahasa"
 	},
-	"message_askResetConfig": {
-		"message": "Set semula tetapan?"
-	},
-	"message_cacheFlushed": {
-		"message": "Cache dikosongkan"
-	},
-	"message_changesSaved": {
-		"message": "Perubahan disimpan"
-	},
-	"message_error": {
-		"message": "Ralat"
-	},
-	"message_errorOfTranslate": {
-		"message": "Ralat Terjemahan"
-	},
-	"message_serviceRequiredKey": {
-		"message": "Perkhidmatan memerlukan kunci"
-	},
-	"message_translateOfText": {
-		"message": "Diterjemahkan"
-	},
 	"message_unknownError": {
 		"message": "Ralat tidak diketahui"
 	},
 	"pageTranslator_alwaysTranslateLang": {
-		"message": "Sentiasa terjemahkan bahasa ini"
+		"message": "Sentiasa terjemah bahasa ini"
 	},
 	"pageTranslator_commonPreferences_autoTranslate_disable": {
-		"message": "Nyahaktifkan"
+		"message": "Lumpuhkan"
 	},
 	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
-		"message": "Nyahaktifkan untuk semua laman web"
+		"message": "Lumpuhkan untuk semua laman"
 	},
 	"pageTranslator_commonPreferences_autoTranslate_enable": {
 		"message": "Aktifkan"
 	},
 	"pageTranslator_commonPreferences_title": {
-		"message": "Keutamaan bersama untuk bahasa ini"
+		"message": "Keutamaan biasa untuk bahasa ini"
 	},
 	"pageTranslator_option_autoTranslate": {
-		"message": "Terjemahkan automatik"
-	},
-	"pageTranslator_showOptions": {
-		"message": "Tunjukkan pilihan"
+		"message": "Terjemah automatik"
 	},
 	"pageTranslator_showOriginal": {
 		"message": "Tunjukkan asal"
 	},
+	"pageTranslator_showTranslationPreferences": {
+		"message": "Keutamaan terjemahan"
+	},
 	"pageTranslator_sitePreferences_autoTranslate_always": {
-		"message": "Sentiasa terjemahkan"
+		"message": "Sentiasa terjemah"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
-		"message": "Sentiasa terjemahkan untuk bahasa ini"
+		"message": "Sentiasa terjemah untuk bahasa ini"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_default": {
 		"message": "Gunakan peraturan biasa"
@@ -225,22 +205,22 @@
 		"message": "Gunakan peraturan biasa untuk bahasa ini"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_never": {
-		"message": "Jangan pernah terjemahkan"
+		"message": "Jangan terjemah"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
-		"message": "Jangan pernah terjemahkan untuk bahasa ini"
+		"message": "Jangan terjemah untuk bahasa ini"
 	},
 	"pageTranslator_sitePreferences_title": {
 		"message": "Keutamaan untuk"
 	},
 	"pageTranslator_translatePage": {
-		"message": "Terjemahkan halaman"
+		"message": "Terjemah halaman"
 	},
 	"pageTranslator_translationReport": {
-		"message": "Laporan Terjemahan"
+		"message": "Laporan terjemahan"
 	},
 	"pageTranslator_translationReport_queue": {
-		"message": "Antrian"
+		"message": "Menunggu"
 	},
 	"pageTranslator_translationReport_reject": {
 		"message": "Ralat"
@@ -252,10 +232,10 @@
 		"message": "Tab \"$1\" tidak ditemui"
 	},
 	"popup_tab_translatePage": {
-		"message": "Terjemah Laman"
+		"message": "Terjemahan halaman"
 	},
 	"popup_tab_translateText": {
-		"message": "Terjemah Teks"
+		"message": "Terjemahan teks"
 	},
 	"settings_button_cancel": {
 		"message": "Batal"
@@ -267,49 +247,31 @@
 		"message": "Import konfigurasi"
 	},
 	"settings_button_reset": {
-		"message": "Reset konfigurasi"
+		"message": "Tetapkan semula konfigurasi"
 	},
 	"settings_button_saveChanges": {
 		"message": "Simpan perubahan"
 	},
 	"settings_message_clearCache_success": {
-		"message": "Cache telah dibersihkan"
+		"message": "Cache dibersihkan"
 	},
 	"settings_message_common_invalidValueType": {
 		"message": "Nilai tidak sah"
 	},
 	"settings_message_importConfig_invalidFile": {
-		"message": "Fail untuk diimport tidak dapat dikendalikan"
+		"message": "Fail konfigurasi yang disediakan tidak betul atau rosak, dan tidak dapat diproses"
 	},
 	"settings_message_importConfig_success": {
 		"message": "Import selesai"
 	},
 	"settings_message_resetConfig_confirm": {
-		"message": "Adakah anda ingin menetapkan semula tetapan?"
+		"message": "Sahkan untuk menetapkan semula tetapan kepada nilai lalai"
 	},
 	"settings_message_resetConfig_success": {
 		"message": "Tetapan ditetapkan semula"
 	},
 	"settings_message_saveChanges_success": {
 		"message": "Perubahan disimpan"
-	},
-	"settings_option_appIcon": {
-		"message": "Ikon Sambungan"
-	},
-	"settings_option_appIcon_desc": {
-		"message": "Apabila ikon dinamik dipilih, warna akan disesuaikan dengan tema pelayar"
-	},
-	"settings_option_appIcon_item_auto": {
-		"message": "Dinamik"
-	},
-	"settings_option_appIcon_item_color": {
-		"message": "Warna"
-	},
-	"settings_option_appIcon_item_dark": {
-		"message": "Gelap"
-	},
-	"settings_option_appIcon_item_light": {
-		"message": "Terang"
 	},
 	"settings_option_cache": {
 		"message": "Cache"
@@ -318,139 +280,142 @@
 		"message": "Kosongkan cache"
 	},
 	"settings_option_cache_clear_desc": {
-		"message": "Buang cache jika anda mempunyai artifak terjemahan atau perlu mengeluarkan rahsia"
+		"message": "Jika anda perasan kesilapan terjemahan atau secara tidak sengaja menterjemah teks peribadi semasa cache diaktifkan, anda boleh memadam semua data dari cache",
+		"description": "Explanation for user about cases when it's useful to clear cache"
 	},
 	"settings_option_cache_enable": {
-		"message": "Dayakan cache"
+		"message": "Aktifkan cache"
 	},
 	"settings_option_cache_enable_desc": {
-		"message": "Apabila cache diaktifkan, terjemahan yang telah diterjemahkan sekali akan tersedia dengan segera, bahkan tanpa internet"
+		"message": "Apabila cache diaktifkan, teks yang telah diterjemahkan sebelum ini akan diterjemahkan serta-merta tanpa permintaan tambahan kepada perkhidmatan terjemahan"
 	},
 	"settings_option_cache_ignoreCase": {
-		"message": "Tidak sensitif huruf besar/kecil"
+		"message": "Gunakan cache tidak sensitif huruf besar/kecil"
 	},
 	"settings_option_cache_ignoreCase_desc": {
-		"message": "Apabila diaktifkan, terjemahan dari cache akan digunakan dengan pencocokan yang tidak tepat, yang boleh menyebabkan artifak terjemahan"
+		"message": "Apabila diaktifkan, terjemahan yang di-cache akan digunakan untuk teks dengan huruf besar/kecil yang berbeza, yang mungkin menyebabkan distorsi terjemahan dalam situasi tertentu"
 	},
 	"settings_option_commonSettings": {
-		"message": "Tetapan biasa"
+		"message": "Tetapan umum"
 	},
 	"settings_option_customTranslatorModule": {
-		"message": "Penterjemah kustom"
+		"message": "Modul terjemahan tersuai",
+		"description": "An user defined code that implements a translation module"
 	},
 	"settings_option_customTranslatorModule_desc": {
-		"message": "Anda boleh menambahkan penterjemah kustom untuk perkhidmatan terjemahan kegemaran anda. Baca lebih lanjut dan cari modul dalam dokumen <slot id=docs>penterjemah kustom</slot>."
+		"message": "Anda boleh menambah modul terjemahan tersuai yang menggunakan perkhidmatan terjemahan kegemaran anda. Ketahui lebih lanjut dalam <slot id=docs>dokumen penterjemah tersuai</slot>"
 	},
 	"settings_option_customTranslatorModule_manageButton": {
-		"message": "Urus penterjemah"
+		"message": "Mengurus penterjemah",
+		"description": "A button to show list of translation modules"
 	},
 	"settings_option_history_enable": {
 		"message": "Aktifkan sejarah"
 	},
 	"settings_option_history_enable_desc": {
-		"message": "Apabila diaktifkan, setiap terjemahan akan direkodkan ke halaman sejarah"
-	},
-	"settings_option_mainPreferences": {
-		"message": "Tetapan utama"
+		"message": "Apabila diaktifkan, terjemahan akan direkodkan dan muncul di <slot id=historyPage>halaman sejarah</slot>"
 	},
 	"settings_option_pageTranslation": {
-		"message": "Terjemahan halaman"
+		"message": "Terjemahan halaman penuh"
 	},
 	"settings_option_pageTranslation_detectLanguageByContent": {
-		"message": "Kesanan bahasa melalui kandungan"
+		"message": "Kesan bahasa melalui kandungan"
 	},
 	"settings_option_pageTranslation_detectLanguageByContent_desc": {
-		"message": "Analisis teks pada halaman web untuk kesan bahasa halaman. Apabila dilumpuhkan, akan menggunakan bahasa yang disediakan dalam metadata halaman."
+		"message": "Analisis teks pada halaman web untuk mengesan bahasanya. Apabila dinyahaktifkan, bahasa yang dinyatakan dalam <slot id=docs>metadata halaman</slot> akan digunakan"
 	},
 	"settings_option_pageTranslation_enableContextMenu": {
 		"message": "Aktifkan butang menu konteks"
 	},
 	"settings_option_pageTranslation_enableContextMenu_desc": {
-		"message": "Tambah butang untuk menghidupkan terjemahan halaman pada menu konteks"
+		"message": "Tambah butang untuk menukar terjemahan halaman dalam menu konteks halaman"
 	},
 	"settings_option_pageTranslation_excludeSelectors": {
-		"message": "Penentu pilihan untuk dikecualikan daripada terjemahan"
+		"message": "Pemilih untuk dikecualikan daripada terjemahan"
 	},
 	"settings_option_pageTranslation_excludeSelectors_desc": {
-		"message": "Senarai penentu CSS yang tidak akan diterjemahkan. Satu penentu setiap baris. Jika sesebuah elemen sepadan dengan mana-mana penentu ini, elemen tersebut bersama atribut dan elemen bersarangnya tidak akan diterjemahkan."
+		"message": "Senarai pemilih CSS untuk elemen yang akan dikecualikan daripada terjemahan. Satu pemilih setiap baris. Jika elemen sepadan dengan mana-mana pemilih ini, teks, atribut, dan elemen bersarangnya tidak akan diterjemahkan"
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
 		"message": "Terjemah hanya elemen yang kelihatan"
 	},
 	"settings_option_pageTranslation_lazyTranslate_desc": {
-		"message": "Apabila pilihan ini diaktifkan, hanya elemen yang kelihatan sahaja yang akan diterjemahkan. Ini mungkin berguna untuk menjimatkan lalu lintas rangkaian"
+		"message": "Apabila pilihan ini diaktifkan, hanya elemen yang kelihatan akan diterjemahkan. Pilihan ini mengurangkan trafik rangkaian"
 	},
 	"settings_option_pageTranslation_originalTextPopup": {
 		"message": "Aktifkan popup dengan teks asal"
 	},
 	"settings_option_pageTranslation_originalTextPopup_desc": {
-		"message": "Tunjukkan popup dengan teks asal dengan menyerong tetikus ke atas teks yang diterjemahkan"
+		"message": "Tunjukkan popup dengan teks asal apabila melayang di atas blok teks yang diterjemahkan"
 	},
-	"settings_option_pageTranslation_toggleTranslationHotkey": {
-		"message": "Hotkey"
+	"settings_option_pageTranslation_shortcut_toggleTranslation": {
+		"message": "Pintasan"
 	},
-	"settings_option_pageTranslation_toggleTranslationHotkey_desc": {
-		"message": "Pintasan untuk menghidupkan/ mematikan terjemahan halaman\nTekan ESC untuk menetapkan semula kekunci"
+	"settings_option_pageTranslation_shortcut_toggleTranslation_desc": {
+		"message": "Pintasan untuk menukar terjemahan halaman\nTekan ESC untuk menetapkan semula kekunci"
 	},
 	"settings_option_pageTranslation_translatableAttributes": {
-		"message": "Atribut yang boleh diterjemahkan."
+		"message": "Atribut yang boleh diterjemah"
 	},
 	"settings_option_pageTranslation_translatableAttributes_desc": {
-		"message": "Masukkan nama-nama <slot id= htmlAttributes>atribut HTML</slot> untuk diterjemahkan. Satu atribut setiap baris"
+		"message": "Masukkan nama <slot id=htmlAttributes>atribut HTML</slot> untuk diterjemahkan, satu atribut setiap baris\nHanya atribut dalam senarai ini akan diterjemahkan"
 	},
 	"settings_option_popupTab_pageTranslator_showCounters": {
-		"message": "Tunjukkan statistik terjemahan"
+		"message": "Tunjukkan kemajuan terjemahan"
 	},
 	"settings_option_popupTab_pageTranslator_showCounters_desc": {
-		"message": "Tunjukkan statistik untuk terjemahan laman"
+		"message": "Tunjukkan panel dengan kemajuan terjemahan halaman dalam popup sambungan"
 	},
 	"settings_option_selectTranslation": {
-		"message": "Terjemahan teks yang dipilih"
+		"message": "Terjemahan untuk teks yang dipilih"
 	},
-	"settings_option_selectTranslation_detectedLangFirst": {
-		"message": "Lebih suka bahasa dikesan pada teks berbanding bahasa laman"
+	"settings_option_selectTranslation_detectTextLanguage": {
+		"message": "Kesan bahasa teks"
 	},
-	"settings_option_selectTranslation_detectedLangFirst_desc": {
-		"message": "Apabila diaktifkan, bahasa dikesan pada teks yang dipilih akan dipilih daripada bahasa laman"
+	"settings_option_selectTranslation_detectTextLanguage_desc": {
+		"message": "Apabila diaktifkan, teks yang dipilih akan dianalisis untuk mengesan bahasa untuk terjemahan. Jika tidak, bahasa halaman akan digunakan"
 	},
 	"settings_option_selectTranslation_disableWhileTranslatePage": {
-		"message": "Nyahaktif semasa menterjemahkan laman"
+		"message": "Lumpuhkan semasa menterjemah halaman"
 	},
 	"settings_option_selectTranslation_enable": {
-		"message": "Aktifkan"
+		"message": "Aktifkan terjemahan teks yang dipilih"
+	},
+	"settings_option_selectTranslation_enable_desc": {
+		"message": "Apabila ciri ini diaktifkan, anda boleh memilih mana-mana teks pada halaman dan menterjemahkannya dalam popup"
 	},
 	"settings_option_selectTranslation_focusOnTranslateButton": {
-		"message": "Auto-fokus pada butang terjemahan"
+		"message": "Fokus automatik pada butang terjemahan"
 	},
 	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
-		"message": "Fokus pada butang terjemahan apabila ia muncul"
+		"message": "Apabila butang terjemahan muncul di halaman, ia akan difokuskan secara automatik"
 	},
 	"settings_option_selectTranslation_header_languageChoice": {
-		"message": "Tetapan Bahasa"
+		"message": "Tetapan bahasa"
 	},
 	"settings_option_selectTranslation_isUseAutoForDetectLang": {
-		"message": "Aktifkan pengesanan bahasa automatik oleh penterjemah"
+		"message": "Benarkan modul terjemahan mengesan bahasa teks"
 	},
 	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
-		"message": "Gunakan pengesanan bahasa automatik oleh penterjemah apabila bahasa tidak dapat dikesan secara tempatan"
+		"message": "Apabila bahasa teks tidak dapat dikesan secara tempatan dan pilihan ini diaktifkan, teks akan diterjemahkan dengan bahasa \"auto\" jika disokong.\nApabila pilihan ini dinyahaktifkan, kaedah sandaran lain akan digunakan untuk menetapkan bahasa sumber teks"
 	},
 	"settings_option_selectTranslation_mode": {
-		"message": "Pencetus terjemahan"
+		"message": "Tindakan pada pemilihan teks"
 	},
 	"settings_option_selectTranslation_mode_item_contextMenu": {
-		"message": "Butang menu konteks"
+		"message": "Terjemah teks melalui menu konteks"
 	},
 	"settings_option_selectTranslation_mode_item_popupButton": {
-		"message": "Butang popup"
+		"message": "Tunjukkan butang terjemahan"
 	},
 	"settings_option_selectTranslation_mode_item_quickTranslate": {
-		"message": "Terjemahan Cepat melalui Pemilihan"
+		"message": "Terjemah teks serta-merta"
 	},
 	"settings_option_selectTranslation_modifiers": {
-		"message": "Pemodifikasi"
+		"message": "Pengubah"
 	},
 	"settings_option_selectTranslation_modifiers_desc": {
-		"message": "Pilih kunci yang harus ditekan pada keyboard untuk menampilkan terjemahan"
+		"message": "Pilih kekunci yang mesti ditekan pada papan kekunci untuk memaparkan terjemahan"
 	},
 	"settings_option_selectTranslation_modifiers_key_alt": {
 		"message": "alt"
@@ -465,106 +430,107 @@
 		"message": "shift"
 	},
 	"settings_option_selectTranslation_rememberDirection": {
-		"message": "Ingat arah bahasa terkini yang dipilih bagi teks"
+		"message": "Ingat bahasa teks yang dipilih baru-baru ini"
 	},
 	"settings_option_selectTranslation_showOnceForSelection": {
-		"message": "Paparkan butang terjemahan sekali sahaja untuk setiap pemilihan teks"
+		"message": "Tunjukkan butang terjemahan sekali untuk setiap pemilihan teks"
 	},
 	"settings_option_selectTranslation_showOnceForSelection_desc": {
-		"message": "Butang akan dipaparkan hanya sekali untuk setiap pemilihan teks. Jika anda perlu memaparkannya lagi, sila pilih semula teks"
+		"message": "Butang akan muncul hanya sekali untuk setiap pemilihan teks. Untuk menunjukkannya semula, pilih semula teks"
 	},
 	"settings_option_selectTranslation_showOriginalText": {
 		"message": "Tunjukkan teks asal"
 	},
 	"settings_option_selectTranslation_showOriginalText_desc": {
-		"message": "Tambah blok dengan teks asal ke dalam popup dengan terjemahan"
+		"message": "Tambah blok dengan teks asal ke dalam popup terjemahan"
 	},
 	"settings_option_selectTranslation_strictSelection": {
-		"message": "Pemilihan ketat"
+		"message": "Mod ketat pemilihan rentang teks",
+		"description": "Pilihan ini adalah tentang memilih teks melalui tetikus"
 	},
 	"settings_option_selectTranslation_strictSelection_desc": {
-		"message": "Abaikan pemilihan jika butang tetikus kiri dilesenkan di luar blok yang mengandungi teks yang dipilih"
+		"message": "Abaikan pemilihan rentang teks jika butang kiri tetikus dilepaskan di luar blok yang mengandungi teks yang dipilih"
 	},
 	"settings_option_selectTranslation_timeoutForHideButton": {
-		"message": "Lengah untuk menyembunyikan butang"
+		"message": "Tunda sebelum menyembunyikan butang popup"
 	},
 	"settings_option_selectTranslation_timeoutForHideButton_desc": {
-		"message": "Lebihan milisaat sebelum menyembunyikan butang apabila kursor tidak dihover. Kursor yang melayang pada butang akan menetapkan semula pemasa. Untuk melumpuhkan pengasingan automatik, set nilai kurang dari 1"
+		"message": "Kelewatan dalam milisaat sebelum menyembunyikan butang apabila kursor tidak melayang di atasnya. Melayang di atas butang akan menetapkan semula pemasa. Untuk mematikan auto-sembunyi, tetapkan nilai kepada kurang daripada 1"
 	},
 	"settings_option_selectTranslation_zIndex": {
-		"message": "z-indeks"
+		"message": "z-index"
 	},
 	"settings_option_selectTranslation_zIndex_desc": {
-		"message": "Tingkatkan nilai jika beberapa elemen pada beberapa halaman tindih dengan popup teks terjemahan"
+		"message": "Tingkatkan nilai ini jika elemen pada beberapa halaman bertindih dengan popup teks terjemahan"
 	},
 	"settings_option_textTranslator": {
 		"message": "Terjemahan teks"
 	},
 	"settings_option_textTranslator_rememberText": {
-		"message": "Ingati teks terjemahan"
+		"message": "Mengingati teks yang diterjemah"
 	},
 	"settings_option_textTranslator_rememberText_desc": {
-		"message": "Ingati teks terjemahan untuk masa hadapan apabila tetingkap dibuka semula"
+		"message": "Mengingati teks yang diterjemah untuk kali seterusnya tetingkap dibuka"
 	},
 	"settings_option_textTranslator_spellCheck": {
-		"message": "Dayakan semak ejaan"
+		"message": "Aktifkan semakan ejaan"
 	},
 	"settings_option_textTranslator_suggestLanguage": {
-		"message": "Cadangkan bahasa teks dikesan"
+		"message": "Menunjukkan bahasa teks yang dikesan"
 	},
 	"settings_option_textTranslator_suggestLanguageAlways": {
 		"message": "Sentiasa mengesan dan mencadangkan bahasa"
 	},
 	"settings_option_textTranslator_suggestLanguageAlways_desc": {
-		"message": "Apabila dilumpuhkan, cadangan bahasa hanya akan muncul apabila bahasa asal dikesan secara automatik"
+		"message": "Apabila dinyahdayakan, cadangan bahasa hanya muncul jika bahasa sumber ditetapkan kepada \"auto\""
 	},
 	"settings_option_translatePreferences": {
-		"message": "Keutamaan Terjemahan"
+		"message": "Keutamaan terjemahan"
 	},
 	"settings_option_translateScheduler": {
-		"message": "Jadual Pengalihbahasaan"
+		"message": "Penjadual terjemahan"
 	},
 	"settings_option_translateScheduler_delay": {
-		"message": "Lengah pengumpulan teks"
+		"message": "Kelewatan pengumpulan teks"
 	},
 	"settings_option_translateScheduler_delay_desc": {
-		"message": "Penjadual pengalihbahasaan mengurangkan bilangan permintaan kepada API perkhidmatan pengalihbahasaan. Penjadual cuba mengumpul teks untuk dihantar sebanyak mungkin per satu permintaan. Penjadual akan menunggu masa yang ditetapkan dalam millisecond untuk mengumpul teks baru sebelum memulakan pengalihbahasaan."
+		"message": "Penjadual terjemahan mengurangkan bilangan permintaan kepada API perkhidmatan terjemahan dengan mengumpulkan sebanyak mungkin teks untuk dihantar dalam satu permintaan. Penjadual akan menunggu masa yang ditetapkan dalam milisaat untuk mengumpul lebih banyak teks sebelum memulakan terjemahan"
 	},
 	"settings_option_translateScheduler_retryLimit": {
-		"message": "Percubaan semula pengalihbahasaan"
+		"message": "Had untuk percubaan semula terjemahan"
 	},
 	"settings_option_translateScheduler_retryLimit_desc": {
-		"message": "Penjadual akan mencuba semula mengalihbahasaan teks bagi kesilapan pengalihbahasaan. Pilihan ini menetapkan had bagi percubaan semula. Tetapkan nombor negatif untuk membenarkan percubaan tak terhad"
+		"message": "Penjadual akan mencuba semula menterjemah teks apabila berlaku ralat terjemahan. Pilihan ini menetapkan had pada percubaan semula. Tetapkan nombor negatif untuk membenarkan percubaan semula tanpa had"
 	},
 	"settings_option_translatorModule": {
-		"message": "Modul pengalihbahasaan"
+		"message": "Modul terjemahan"
 	},
 	"settings_option_translatorModule_desc": {
-		"message": "Kualiti terjemahan dan bahasa yang tersedia untuk diterjemahkan bergantung kepada penterjemah."
+		"message": "Kualiti terjemahan dan bahasa yang tersedia bergantung pada modul terjemahan"
 	},
 	"settings_option_tts": {
-		"message": "Teks ke ucapan (TTS)"
+		"message": "Penukaran Teks ke Ucapan (TTS)"
 	},
 	"settings_option_ttsCustomModules": {
-		"message": "TTS Kustom"
+		"message": "Modul sintesis ucapan tersuai"
 	},
 	"settings_option_ttsCustomModules_button": {
-		"message": "Urus Modul TTS"
+		"message": "Menguruskan modul sintesis ucapan"
 	},
 	"settings_option_ttsCustomModules_desc": {
-		"message": "Anda boleh menambah modul TTS yang menggunakan perkhidmatan dan suara kegemaran anda. Baca lebih lanjut dan cari modul di dalam dokumentasi TTS kustom."
+		"message": "Anda boleh menambah modul sintesis ucapan yang menggunakan perkhidmatan dan enjin suara kegemaran anda. Baca lebih lanjut dalam <slot id=docs>dokumen TTS tersuai</slot>"
 	},
 	"settings_option_ttsModule": {
-		"message": "Modul TTS"
+		"message": "Modul TTS yang dipilih"
 	},
 	"settings_option_ttsModule_desc": {
-		"message": "Modul untuk mengucapkan teks"
+		"message": "Enjin suara yang digunakan untuk menyuarakan teks"
 	},
 	"settings_option_userLanguage": {
 		"message": "Bahasa anda"
 	},
 	"settings_option_userLanguage_desc": {
-		"message": "Bahasa sasaran untuk menterjemahkan teks"
+		"message": "Bahasa yang teks akan diterjemahkan ke dalam"
 	},
 	"settings_pageTitle": {
 		"message": "Tetapan"
@@ -576,34 +542,41 @@
 		"message": "Popup"
 	},
 	"textTranslator_suggestLanguage": {
-		"message": "Nampaknya bahasa itu adalah"
+		"message": "Nampaknya bahasa teks adalah <slot id=languageSuggest>$language_name$</slot>",
+		"placeholders": {
+			"language_name": {
+				"content": "$1",
+				"example": "Japanese"
+			}
+		}
 	},
 	"textTranslator_translateInputPlaceholder": {
-		"message": "Teks input"
+		"message": "Masukkan teks untuk terjemahan",
+		"description": "Request to user input some text for translation"
 	},
 	"textTranslator_translatePlaceholder": {
-		"message": "Teks yang diterjemahkan"
+		"message": "Teks terjemahan akan berada di sini"
 	},
 	"translatorsManagerWindow_add": {
-		"message": "Tambah"
+		"message": "Tambah modul terjemahan"
 	},
 	"translatorsManagerWindow_close": {
 		"message": "Tutup"
 	},
 	"translatorsManagerWindow_emptyTranslatorsListText": {
-		"message": "Penterjemah tersuai belum ditambah lagi"
+		"message": "Tiada modul terjemahan tersuai ditambah lagi"
 	},
 	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
-		"message": "Adakah anda pasti untuk mengeluarkan penterjemah \"$translator_name$\"?",
+		"message": "Adakah anda pasti mahu mengeluarkan modul terjemahan \"$translator_name$\"?",
 		"placeholders": {
 			"translator_name": {
 				"content": "$1",
-				"example": "Google terjemahan"
+				"example": "Google translator"
 			}
 		}
 	},
 	"translatorsManagerWindow_title": {
-		"message": "Penterjemah tersuai"
+		"message": "Modul terjemahan tersuai"
 	},
 	"translatorsManagerWindow_translator_delete": {
 		"message": "Padam"
@@ -612,16 +585,16 @@
 		"message": "Edit"
 	},
 	"ttsManagerWindow_add": {
-		"message": "Tambah"
+		"message": "Tambah modul TTS"
 	},
 	"ttsManagerWindow_close": {
 		"message": "Tutup"
 	},
 	"ttsManagerWindow_emptyTranslatorsListText": {
-		"message": "Modul TTS belum ditambahkan"
+		"message": "Tiada modul TTS ditambah lagi"
 	},
 	"ttsManagerWindow_message_ttsRemoveConfirmation": {
-		"message": "Apakah Anda yakin ingin menghapus TTS \"$tts_name$\"?",
+		"message": "Adakah anda pasti mahu mengeluarkan modul TTS \"$tts_name$\"?",
 		"placeholders": {
 			"tts_name": {
 				"content": "$1",
@@ -630,573 +603,21 @@
 		}
 	},
 	"ttsManagerWindow_title": {
-		"message": "Module teks ke ucapan"
+		"message": "Modul Teks-ke-Ucapan"
 	},
 	"ttsManagerWindow_translator_delete": {
-		"message": "Hapus"
+		"message": "Padam"
 	},
 	"ttsManagerWindow_translator_edit": {
 		"message": "Edit"
 	},
 	"validation_number": {
-		"message": "Parameter harus berupa angka"
+		"message": "Nilai mesti nombor"
 	},
 	"validation_numberBetweenRange": {
-		"message": "Parameter harus berupa angka antara $1 dan $2"
+		"message": "Nilai mesti nombor antara $1 dan $2"
 	},
 	"validation_positiveNumber": {
-		"message": "Parameter harus berupa angka positif."
-	},
-	"langCode_aa": {
-		"message": "Afar"
-	},
-	"langCode_ab": {
-		"message": "Abkhazia"
-	},
-	"langCode_ae": {
-		"message": "Avestan"
-	},
-	"langCode_af": {
-		"message": "Afrikaans"
-	},
-	"langCode_ak": {
-		"message": "Akan"
-	},
-	"langCode_am": {
-		"message": "Amharic"
-	},
-	"langCode_an": {
-		"message": "Aragon"
-	},
-	"langCode_ar": {
-		"message": "Arab"
-	},
-	"langCode_as": {
-		"message": "Assam"
-	},
-	"langCode_av": {
-		"message": "Avaric"
-	},
-	"langCode_ay": {
-		"message": "Aymara"
-	},
-	"langCode_az": {
-		"message": "Azerbaijan"
-	},
-	"langCode_ba": {
-		"message": "Bashkir"
-	},
-	"langCode_be": {
-		"message": "Belarus"
-	},
-	"langCode_bg": {
-		"message": "Bulgaria"
-	},
-	"langCode_bh": {
-		"message": "Bhojpuri"
-	},
-	"langCode_bi": {
-		"message": "Bislama"
-	},
-	"langCode_bm": {
-		"message": "Bambara"
-	},
-	"langCode_bn": {
-		"message": "Benggali"
-	},
-	"langCode_bo": {
-		"message": "Tibet"
-	},
-	"langCode_br": {
-		"message": "Breton"
-	},
-	"langCode_bs": {
-		"message": "Bosnia"
-	},
-	"langCode_ca": {
-		"message": "Catalonia"
-	},
-	"langCode_ce": {
-		"message": "Chechen"
-	},
-	"langCode_ch": {
-		"message": "Chamorro"
-	},
-	"langCode_co": {
-		"message": "Corsica"
-	},
-	"langCode_cr": {
-		"message": "Cr"
-	},
-	"langCode_cs": {
-		"message": "Czech"
-	},
-	"langCode_cu": {
-		"message": "Slavik Gereja"
-	},
-	"langCode_cv": {
-		"message": "Chuvash"
-	},
-	"langCode_cy": {
-		"message": "Wales"
-	},
-	"langCode_da": {
-		"message": "Denmark"
-	},
-	"langCode_de": {
-		"message": "Jerman"
-	},
-	"langCode_dv": {
-		"message": "Divehi"
-	},
-	"langCode_dz": {
-		"message": "Dzongkha"
-	},
-	"langCode_ee": {
-		"message": "Ewe"
-	},
-	"langCode_el": {
-		"message": "Greek"
-	},
-	"langCode_en": {
-		"message": "Inggeris"
-	},
-	"langCode_eo": {
-		"message": "Esperanto"
-	},
-	"langCode_es": {
-		"message": "Sepanyol"
-	},
-	"langCode_et": {
-		"message": "Estonia"
-	},
-	"langCode_eu": {
-		"message": "Basque"
-	},
-	"langCode_fa": {
-		"message": "Parsi"
-	},
-	"langCode_ff": {
-		"message": "Fulah"
-	},
-	"langCode_fi": {
-		"message": "Finland"
-	},
-	"langCode_fj": {
-		"message": "Fiji"
-	},
-	"langCode_fo": {
-		"message": "Faroe"
-	},
-	"langCode_fr": {
-		"message": "Perancis"
-	},
-	"langCode_fy": {
-		"message": "Frisian Barat"
-	},
-	"langCode_ga": {
-		"message": "Ireland"
-	},
-	"langCode_gd": {
-		"message": "Scots Gaelic"
-	},
-	"langCode_gl": {
-		"message": "Galicia"
-	},
-	"langCode_gn": {
-		"message": "Guarani"
-	},
-	"langCode_gu": {
-		"message": "Gujerat"
-	},
-	"langCode_gv": {
-		"message": "Manx"
-	},
-	"langCode_ha": {
-		"message": "Hausa"
-	},
-	"langCode_he": {
-		"message": "Ibrani"
-	},
-	"langCode_hi": {
-		"message": "Hindi"
-	},
-	"langCode_ho": {
-		"message": "Ho"
-	},
-	"langCode_hr": {
-		"message": "Croatia"
-	},
-	"langCode_ht": {
-		"message": "Kreol Haiti"
-	},
-	"langCode_hu": {
-		"message": "Hungary"
-	},
-	"langCode_hy": {
-		"message": "Armenia"
-	},
-	"langCode_hz": {
-		"message": "Herero"
-	},
-	"langCode_ia": {
-		"message": "Interlingua"
-	},
-	"langCode_id": {
-		"message": "Indonesia"
-	},
-	"langCode_ie": {
-		"message": "Interlingue"
-	},
-	"langCode_ig": {
-		"message": "Igbo"
-	},
-	"langCode_ii": {
-		"message": "Sichuan Yi"
-	},
-	"langCode_ik": {
-		"message": "Ik"
-	},
-	"langCode_io": {
-		"message": "Ido"
-	},
-	"langCode_is": {
-		"message": "Iceland"
-	},
-	"langCode_it": {
-		"message": "Itali"
-	},
-	"langCode_iu": {
-		"message": "Inuktitut"
-	},
-	"langCode_ja": {
-		"message": "Jepun"
-	},
-	"langCode_jv": {
-		"message": "Jawa"
-	},
-	"langCode_ka": {
-		"message": "Georgia"
-	},
-	"langCode_kg": {
-		"message": "Kongo"
-	},
-	"langCode_ki": {
-		"message": "Kikuya"
-	},
-	"langCode_kj": {
-		"message": "Kuanyama"
-	},
-	"langCode_kk": {
-		"message": "Kazakhstan"
-	},
-	"langCode_kl": {
-		"message": "Kalaallisut"
-	},
-	"langCode_km": {
-		"message": "Khmer"
-	},
-	"langCode_kn": {
-		"message": "Kannada"
-	},
-	"langCode_ko": {
-		"message": "Korea"
-	},
-	"langCode_kr": {
-		"message": "Kanuri"
-	},
-	"langCode_ks": {
-		"message": "Kashmir"
-	},
-	"langCode_ku": {
-		"message": "Kurdish"
-	},
-	"langCode_kv": {
-		"message": "Komi"
-	},
-	"langCode_kw": {
-		"message": "Cornish"
-	},
-	"langCode_ky": {
-		"message": "Kirghiz"
-	},
-	"langCode_la": {
-		"message": "Latin"
-	},
-	"langCode_lb": {
-		"message": "Luxembourg"
-	},
-	"langCode_lg": {
-		"message": "Ganda"
-	},
-	"langCode_li": {
-		"message": "Limburgish"
-	},
-	"langCode_ln": {
-		"message": "Lingala"
-	},
-	"langCode_lo": {
-		"message": "Laos"
-	},
-	"langCode_lt": {
-		"message": "Lithuania"
-	},
-	"langCode_lu": {
-		"message": "Luba-Katanga"
-	},
-	"langCode_lv": {
-		"message": "Latvia"
-	},
-	"langCode_mg": {
-		"message": "Malagasy"
-	},
-	"langCode_mh": {
-		"message": "Marshall"
-	},
-	"langCode_mi": {
-		"message": "Maori"
-	},
-	"langCode_mk": {
-		"message": "Macedonia"
-	},
-	"langCode_ml": {
-		"message": "Malayalam"
-	},
-	"langCode_mn": {
-		"message": "Mongolia"
-	},
-	"langCode_mr": {
-		"message": "Marathi"
-	},
-	"langCode_ms": {
-		"message": "Melayu"
-	},
-	"langCode_mt": {
-		"message": "Malta"
-	},
-	"langCode_my": {
-		"message": "Burma"
-	},
-	"langCode_na": {
-		"message": "Nauru"
-	},
-	"langCode_nb": {
-		"message": "Bokmal Norway"
-	},
-	"langCode_nd": {
-		"message": "Ndebele Utara"
-	},
-	"langCode_ne": {
-		"message": "Nepal"
-	},
-	"langCode_ng": {
-		"message": "Ndonga"
-	},
-	"langCode_nl": {
-		"message": "Belanda"
-	},
-	"langCode_nn": {
-		"message": "Nynorsk Norway"
-	},
-	"langCode_no": {
-		"message": "Norway"
-	},
-	"langCode_nr": {
-		"message": "Ndebele Selatan"
-	},
-	"langCode_nv": {
-		"message": "Navajo"
-	},
-	"langCode_ny": {
-		"message": "Nyanja"
-	},
-	"langCode_oc": {
-		"message": "Occitania"
-	},
-	"langCode_oj": {
-		"message": "Oj"
-	},
-	"langCode_om": {
-		"message": "Oromo"
-	},
-	"langCode_or": {
-		"message": "Odia"
-	},
-	"langCode_os": {
-		"message": "Ossete"
-	},
-	"langCode_pa": {
-		"message": "Punjabi"
-	},
-	"langCode_pi": {
-		"message": "Pi"
-	},
-	"langCode_pl": {
-		"message": "Poland"
-	},
-	"langCode_ps": {
-		"message": "Pashto"
-	},
-	"langCode_pt": {
-		"message": "Portugis"
-	},
-	"langCode_qu": {
-		"message": "Quechua"
-	},
-	"langCode_rm": {
-		"message": "Romansh"
-	},
-	"langCode_rn": {
-		"message": "Rundi"
-	},
-	"langCode_ro": {
-		"message": "Romania"
-	},
-	"langCode_ru": {
-		"message": "Rusia"
-	},
-	"langCode_rw": {
-		"message": "Kinyarwanda"
-	},
-	"langCode_sa": {
-		"message": "Sanskrit"
-	},
-	"langCode_sc": {
-		"message": "Sardinia"
-	},
-	"langCode_sd": {
-		"message": "Sindhi"
-	},
-	"langCode_se": {
-		"message": "Sami Utara"
-	},
-	"langCode_sg": {
-		"message": "Sango"
-	},
-	"langCode_si": {
-		"message": "Sinhala"
-	},
-	"langCode_sk": {
-		"message": "Slovak"
-	},
-	"langCode_sl": {
-		"message": "Slovenia"
-	},
-	"langCode_sm": {
-		"message": "Samoa"
-	},
-	"langCode_sn": {
-		"message": "Shona"
-	},
-	"langCode_so": {
-		"message": "Somali"
-	},
-	"langCode_sq": {
-		"message": "Albania"
-	},
-	"langCode_sr": {
-		"message": "Serbia"
-	},
-	"langCode_ss": {
-		"message": "Swati"
-	},
-	"langCode_st": {
-		"message": "Sotho Selatan"
-	},
-	"langCode_su": {
-		"message": "Sunda"
-	},
-	"langCode_sv": {
-		"message": "Sweden"
-	},
-	"langCode_sw": {
-		"message": "Swahili"
-	},
-	"langCode_ta": {
-		"message": "Tamil"
-	},
-	"langCode_te": {
-		"message": "Telugu"
-	},
-	"langCode_tg": {
-		"message": "Tajik"
-	},
-	"langCode_th": {
-		"message": "Thai"
-	},
-	"langCode_ti": {
-		"message": "Tigrinya"
-	},
-	"langCode_tk": {
-		"message": "Turkmen"
-	},
-	"langCode_tl": {
-		"message": "Filipina"
-	},
-	"langCode_tn": {
-		"message": "Tswana"
-	},
-	"langCode_to": {
-		"message": "Tonga"
-	},
-	"langCode_tr": {
-		"message": "Turki"
-	},
-	"langCode_ts": {
-		"message": "Tsonga"
-	},
-	"langCode_tt": {
-		"message": "Tatar"
-	},
-	"langCode_tw": {
-		"message": "Akan"
-	},
-	"langCode_ty": {
-		"message": "Tahiti"
-	},
-	"langCode_ug": {
-		"message": "Uyghur"
-	},
-	"langCode_uk": {
-		"message": "Ukraine"
-	},
-	"langCode_ur": {
-		"message": "Urdu"
-	},
-	"langCode_uz": {
-		"message": "Uzbekistan"
-	},
-	"langCode_ve": {
-		"message": "Venda"
-	},
-	"langCode_vi": {
-		"message": "Vietnam"
-	},
-	"langCode_vo": {
-		"message": "Volapük"
-	},
-	"langCode_wa": {
-		"message": "Walloon"
-	},
-	"langCode_wo": {
-		"message": "Wolof"
-	},
-	"langCode_xh": {
-		"message": "Xhosa"
-	},
-	"langCode_yi": {
-		"message": "Yiddish"
-	},
-	"langCode_yo": {
-		"message": "Yoruba"
-	},
-	"langCode_za": {
-		"message": "Za"
-	},
-	"langCode_zh": {
-		"message": "Cina"
-	},
-	"langCode_zu": {
-		"message": "Zulu"
+		"message": "Nilai mesti nombor positif"
 	}
 }

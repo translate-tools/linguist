@@ -1,0 +1,623 @@
+{
+	"common_action_addToDictionary": {
+		"message": "Tambahake terjemahan menyang kamus"
+	},
+	"common_action_removeFromDictionary": {
+		"message": "Busak terjemahan saka kamus"
+	},
+	"common_bgUnavailable": {
+		"message": "Skrip latar mburi ora kasedhiya"
+	},
+	"common_cancel": {
+		"message": "Batal"
+	},
+	"common_close": {
+		"message": "Tutup"
+	},
+	"common_copy": {
+		"message": "Salin"
+	},
+	"common_error": {
+		"message": "Kesalahan"
+	},
+	"common_offlineTranslator": {
+		"message": "$1 - Penerjemah offline"
+	},
+	"common_retry": {
+		"message": "Coba maneh"
+	},
+	"common_translate": {
+		"message": "Terjemahake"
+	},
+	"component_hotkey_placeholder": {
+		"message": "Klik kanggo ngrekam pintasan"
+	},
+	"component_hotkey_recordPlaceholder": {
+		"message": "Pencet tombol"
+	},
+	"component_hotkey_resetButton": {
+		"message": "Reset"
+	},
+	"contextMenu_disablePageTranslation": {
+		"message": "Mandhegake terjemahan kaca"
+	},
+	"contextMenu_translatePage": {
+		"message": "Terjemahake kaca"
+	},
+	"contextMenu_translateSelectedText": {
+		"message": "Terjemahake teks sing dipilih"
+	},
+	"dictionaryButton_add": {
+		"message": "Tambahake menyang kamus"
+	},
+	"dictionaryButton_delete": {
+		"message": "Busak saka kamus"
+	},
+	"dictionary_button_export": {
+		"message": "Ekspor"
+	},
+	"dictionary_button_removeAll": {
+		"message": "Busak kabeh"
+	},
+	"dictionary_deleteAll": {
+		"message": "Apa sampeyan yakin pengin mbusak KABEH terjemahan saka kamus?"
+	},
+	"dictionary_deleteConfirmation": {
+		"message": "Apa sampeyan yakin pengin mbusak terjemahan iki?"
+	},
+	"dictionary_description": {
+		"message": "Simpen terjemahan ing kamus kanggo nemokake kanthi cepet mengko"
+	},
+	"dictionary_emptyDictionary": {
+		"message": "Kamus kosong, wiwiti ngisi kanthi nerjemahake sawetara teks"
+	},
+	"dictionary_filter_from": {
+		"message": "Basa teks sumber"
+	},
+	"dictionary_filter_to": {
+		"message": "Basa target"
+	},
+	"dictionary_message_deleteAll_success": {
+		"message": "Kabeh terjemahan wis dibusak"
+	},
+	"dictionary_notFoundEntries": {
+		"message": "Ora ana terjemahan sing cocog karo saringan iki"
+	},
+	"dictionary_pageTitle": {
+		"message": "Kamus"
+	},
+	"dictionary_resetFilters": {
+		"message": "Reset saringan"
+	},
+	"dictionary_searchPlaceholder": {
+		"message": "Golèk miturut teks"
+	},
+	"editorWindow_close": {
+		"message": "Tutup"
+	},
+	"editorWindow_data_code": {
+		"message": "Kode"
+	},
+	"editorWindow_data_title": {
+		"message": "Jeneng modul"
+	},
+	"editorWindow_message_invalidTitle": {
+		"message": "Jeneng modul kudu paling ora ana siji karakter"
+	},
+	"editorWindow_save": {
+		"message": "Simpen"
+	},
+	"ext_description": {
+		"message": "Terjemahan kaca web, terjemahan teks, kamus, riwayat, penerjemah khusus, kabeh sing dibutuhake kanggo ngatasi alangan basa"
+	},
+	"ext_name": {
+		"message": "Linguist - penerjemah kaca web"
+	},
+	"history_control_selectEntry": {
+		"message": "Pilih terjemahan kanggo tumindak massal",
+		"description": "Description in finite form \"to pick\" with explaining what this checkbox will do"
+	},
+	"history_controls_clearHistory": {
+		"message": "Busak riwayat"
+	},
+	"history_controls_deleteSelected": {
+		"message": "Busak terjemahan sing dipilih"
+	},
+	"history_controls_selectAll": {
+		"message": "Pilih kabeh terjemahan"
+	},
+	"history_message_clearHistoryConfirmation": {
+		"message": "Apa sampeyan yakin pengin mbusak riwayat? Kabeh entri bakal dibusak"
+	},
+	"history_message_deleteEntryConfirmation": {
+		"message": "Apa sampeyan yakin pengin mbusak entri iki?"
+	},
+	"history_message_deleteSelectedEntriesConfirmation": {
+		"message": "Apa sampeyan yakin pengin mbusak entri sing dipilih ($1)?"
+	},
+	"history_message_entriesNotFound": {
+		"message": "Ora ana terjemahan sing cocog karo saringan"
+	},
+	"history_message_noEntries": {
+		"message": "Riwayat kosong"
+	},
+	"history_notification_disabled": {
+		"message": "Rekam riwayat dipateni, dadi entri anyar ora bakal katon. Sampeyan bisa ngganti iki ing <slot id=preferences>Preferensi</slot>"
+	},
+	"history_pageTitle": {
+		"message": "Riwayat"
+	},
+	"history_searchPlaceholder": {
+		"message": "Golèk miturut teks"
+	},
+	"inlineTranslator_showOriginalText": {
+		"message": "Tampilake teks asli"
+	},
+	"lang_change": {
+		"message": "Ganti basa"
+	},
+	"lang_detect": {
+		"message": "Deteksi otomatis"
+	},
+	"lang_select": {
+		"message": "Pilih basa"
+	},
+	"lang_swap": {
+		"message": "Tukar basa"
+	},
+	"message_unknownError": {
+		"message": "Kesalahan ora dingerteni"
+	},
+	"pageTranslator_alwaysTranslateLang": {
+		"message": "Tansah nerjemahake basa iki"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disable": {
+		"message": "Pateni"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
+		"message": "Pateni kanggo kabeh situs"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_enable": {
+		"message": "Aktifake"
+	},
+	"pageTranslator_commonPreferences_title": {
+		"message": "Preferensi umum kanggo basa iki"
+	},
+	"pageTranslator_option_autoTranslate": {
+		"message": "Auto-terjemah"
+	},
+	"pageTranslator_showOriginal": {
+		"message": "Tampilake asli"
+	},
+	"pageTranslator_showTranslationPreferences": {
+		"message": "Preferensi terjemahan"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_always": {
+		"message": "Tansah nerjemahake"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
+		"message": "Tansah nerjemahake kanggo basa iki"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_default": {
+		"message": "Gunakake aturan umum"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
+		"message": "Gunakake aturan umum kanggo basa iki"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_never": {
+		"message": "Ora tau nerjemahake"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
+		"message": "Ora tau nerjemahake kanggo basa iki"
+	},
+	"pageTranslator_sitePreferences_title": {
+		"message": "Preferensi kanggo"
+	},
+	"pageTranslator_translatePage": {
+		"message": "Nerjemahake kaca"
+	},
+	"pageTranslator_translationReport": {
+		"message": "Laporan terjemahan"
+	},
+	"pageTranslator_translationReport_queue": {
+		"message": "Nunggu"
+	},
+	"pageTranslator_translationReport_reject": {
+		"message": "Kesalahan"
+	},
+	"pageTranslator_translationReport_resolve": {
+		"message": "Wis diterjemahake"
+	},
+	"popup_tabIdNotFound": {
+		"message": "Tab \"$1\" ora ditemokake"
+	},
+	"popup_tab_translatePage": {
+		"message": "Terjemahan kaca"
+	},
+	"popup_tab_translateText": {
+		"message": "Terjemahan teks"
+	},
+	"settings_button_cancel": {
+		"message": "Batal"
+	},
+	"settings_button_export": {
+		"message": "Ekspor konfigurasi"
+	},
+	"settings_button_import": {
+		"message": "Impor konfigurasi"
+	},
+	"settings_button_reset": {
+		"message": "Reset konfigurasi"
+	},
+	"settings_button_saveChanges": {
+		"message": "Simpen owah-owahan"
+	},
+	"settings_message_clearCache_success": {
+		"message": "Cache wis dibusak"
+	},
+	"settings_message_common_invalidValueType": {
+		"message": "Nilai ora sah"
+	},
+	"settings_message_importConfig_invalidFile": {
+		"message": "File konfigurasi sing diwenehake ora bener utawa rusak, lan ora bisa diproses"
+	},
+	"settings_message_importConfig_success": {
+		"message": "Impor rampung"
+	},
+	"settings_message_resetConfig_confirm": {
+		"message": "Konfirmasi kanggo ngreset setelan menyang nilai default"
+	},
+	"settings_message_resetConfig_success": {
+		"message": "Setelan wis direset"
+	},
+	"settings_message_saveChanges_success": {
+		"message": "Owahan disimpen"
+	},
+	"settings_option_cache": {
+		"message": "Cache"
+	},
+	"settings_option_cache_clear": {
+		"message": "Busak cache"
+	},
+	"settings_option_cache_clear_desc": {
+		"message": "Yen sampeyan nemokake kesalahan terjemahan utawa kanthi ora sengaja nerjemahake teks pribadi nalika cache diaktifake, sampeyan bisa mbusak kabeh data saka cache",
+		"description": "Explanation for user about cases when it's useful to clear cache"
+	},
+	"settings_option_cache_enable": {
+		"message": "Aktifake cache"
+	},
+	"settings_option_cache_enable_desc": {
+		"message": "Nalika cache diaktifake, teks sing wis diterjemahake sadurunge bakal diterjemahake kanthi cepet tanpa panjalukan tambahan menyang layanan terjemahan"
+	},
+	"settings_option_cache_ignoreCase": {
+		"message": "Gunakake cache tanpa memperhatikan huruf besar"
+	},
+	"settings_option_cache_ignoreCase_desc": {
+		"message": "Nalika diaktifake, terjemahan sing disimpen ing cache bakal digunakake kanggo teks kanthi huruf besar sing beda, sing bisa nyebabake distorsi terjemahan ing kahanan tartamtu"
+	},
+	"settings_option_commonSettings": {
+		"message": "Setelan umum"
+	},
+	"settings_option_customTranslatorModule": {
+		"message": "Modul terjemahan khusus",
+		"description": "An user defined code that implements a translation module"
+	},
+	"settings_option_customTranslatorModule_desc": {
+		"message": "Sampeyan bisa nambah modul terjemahan khusus sing nggunakake layanan terjemahan favorit sampeyan. Sinau luwih lengkap ing <slot id=docs>dokumen penerjemah khusus</slot>"
+	},
+	"settings_option_customTranslatorModule_manageButton": {
+		"message": "Ngatur penerjemah",
+		"description": "A button to show list of translation modules"
+	},
+	"settings_option_history_enable": {
+		"message": "Aktifake riwayat"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "Nalika diaktifake, terjemahan bakal direkam lan katon ing <slot id=historyPage>halaman riwayat</slot>"
+	},
+	"settings_option_pageTranslation": {
+		"message": "Terjemahan kaca lengkap"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent": {
+		"message": "Deteksi basa miturut konten"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent_desc": {
+		"message": "Analisa teks ing kaca web kanggo ndeteksi basane. Nalika dipateni, basa sing ditemtokake ing <slot id=docs>metadata kaca</slot> bakal digunakake"
+	},
+	"settings_option_pageTranslation_enableContextMenu": {
+		"message": "Aktifake tombol menu konteks"
+	},
+	"settings_option_pageTranslation_enableContextMenu_desc": {
+		"message": "Tambahake tombol kanggo ngalih terjemahan kaca ing menu konteks kaca"
+	},
+	"settings_option_pageTranslation_excludeSelectors": {
+		"message": "Selector sing ora kalebu ing terjemahan"
+	},
+	"settings_option_pageTranslation_excludeSelectors_desc": {
+		"message": "Dhaptar selector CSS kanggo unsur sing ora kalebu ing terjemahan. Siji selector saben baris. Yen unsur cocog karo salah siji saka selector iki, teks, atribut, lan unsur sing ana ing njero ora bakal diterjemahake"
+	},
+	"settings_option_pageTranslation_lazyTranslate": {
+		"message": "Terjemahake mung unsur sing katon"
+	},
+	"settings_option_pageTranslation_lazyTranslate_desc": {
+		"message": "Nalika pilihan iki diaktifake, mung unsur sing katon sing bakal diterjemahake. Pilihan iki nyuda lalu lintas jaringan"
+	},
+	"settings_option_pageTranslation_originalTextPopup": {
+		"message": "Aktifake popup karo teks asli"
+	},
+	"settings_option_pageTranslation_originalTextPopup_desc": {
+		"message": "Tampilake popup karo teks asli nalika ngambang ing ndhuwur blok teks sing diterjemahake"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation": {
+		"message": "Pintasan"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation_desc": {
+		"message": "Pintasan kanggo ngalih terjemahan kaca\nPencet ESC kanggo nyetel ulang tombol"
+	},
+	"settings_option_pageTranslation_translatableAttributes": {
+		"message": "Atribut sing bisa diterjemahake"
+	},
+	"settings_option_pageTranslation_translatableAttributes_desc": {
+		"message": "Lebokake jeneng <slot id=htmlAttributes>atribut HTML</slot> kanggo diterjemahake, siji atribut saben baris\nMung atribut ing dhaptar iki sing bakal diterjemahake"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters": {
+		"message": "Tampilake kemajuan terjemahan"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters_desc": {
+		"message": "Tampilake panel kanthi kemajuan terjemahan kaca ing popup ekstensi"
+	},
+	"settings_option_selectTranslation": {
+		"message": "Terjemahan kanggo teks sing dipilih"
+	},
+	"settings_option_selectTranslation_detectTextLanguage": {
+		"message": "Deteksi basa teks"
+	},
+	"settings_option_selectTranslation_detectTextLanguage_desc": {
+		"message": "Yen diaktifake, teks sing dipilih bakal dianalisis kanggo ndeteksi basa kanggo terjemahan. Yen ora, basa kaca bakal digunakake"
+	},
+	"settings_option_selectTranslation_disableWhileTranslatePage": {
+		"message": "Mateni nalika nerjemahake kaca"
+	},
+	"settings_option_selectTranslation_enable": {
+		"message": "Aktifake terjemahan teks sing dipilih"
+	},
+	"settings_option_selectTranslation_enable_desc": {
+		"message": "Yen fitur iki diaktifake, sampeyan bisa milih teks apa wae ing kaca lan nerjemahake ing popup"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton": {
+		"message": "Fokus otomatis ing tombol terjemahan"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
+		"message": "Nalika tombol terjemahan katon ing kaca, bakal otomatis difokusake"
+	},
+	"settings_option_selectTranslation_header_languageChoice": {
+		"message": "Setelan basa"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang": {
+		"message": "Ngidini modul terjemahan ndeteksi basa teks"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
+		"message": "Yen basa teks ora bisa dideteksi sacara lokal lan pilihan iki diaktifake, teks bakal diterjemahake kanthi basa \"auto\" yen didhukung.\nYen pilihan iki dipateni, cara fallback liyane bakal digunakake kanggo nyetel basa sumber teks"
+	},
+	"settings_option_selectTranslation_mode": {
+		"message": "Tindakan ing pilihan teks"
+	},
+	"settings_option_selectTranslation_mode_item_contextMenu": {
+		"message": "Terjemahake teks liwat menu konteks"
+	},
+	"settings_option_selectTranslation_mode_item_popupButton": {
+		"message": "Tampilake tombol terjemahan"
+	},
+	"settings_option_selectTranslation_mode_item_quickTranslate": {
+		"message": "Terjemahake teks kanthi cepet"
+	},
+	"settings_option_selectTranslation_modifiers": {
+		"message": "Modifikator"
+	},
+	"settings_option_selectTranslation_modifiers_desc": {
+		"message": "Pilih tombol sing kudu dipencet ing keyboard kanggo nampilake terjemahan"
+	},
+	"settings_option_selectTranslation_modifiers_key_alt": {
+		"message": "alt"
+	},
+	"settings_option_selectTranslation_modifiers_key_ctrl": {
+		"message": "ctrl"
+	},
+	"settings_option_selectTranslation_modifiers_key_meta": {
+		"message": "meta"
+	},
+	"settings_option_selectTranslation_modifiers_key_shift": {
+		"message": "shift"
+	},
+	"settings_option_selectTranslation_rememberDirection": {
+		"message": "Elinga basa teks sing paling anyar dipilih"
+	},
+	"settings_option_selectTranslation_showOnceForSelection": {
+		"message": "Tampilake tombol terjemahan sapisan saben pilihan teks"
+	},
+	"settings_option_selectTranslation_showOnceForSelection_desc": {
+		"message": "Tombol bakal katon mung sapisan kanggo saben pilihan teks Kanggo nampilake maneh, pilih maneh teks"
+	},
+	"settings_option_selectTranslation_showOriginalText": {
+		"message": "Tampilake teks asli"
+	},
+	"settings_option_selectTranslation_showOriginalText_desc": {
+		"message": "Tambah blok kanthi teks asli menyang popup terjemahan"
+	},
+	"settings_option_selectTranslation_strictSelection": {
+		"message": "Mode ketat pilihan span teks",
+		"description": "This option is about selecting text via mouse"
+	},
+	"settings_option_selectTranslation_strictSelection_desc": {
+		"message": "Ngabaikan pilihan span teks yen tombol mouse kiwa dirilis ing njaba blok sing ngemot teks sing dipilih"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton": {
+		"message": "Tundha sadurunge ndhelikake tombol popup"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton_desc": {
+		"message": "Telat ing milidetik sadurunge ndhelikake tombol nalika kursor ora ngambang ing ndhuwur. Ngambang ing ndhuwur tombol bakal ngreset timer. Kanggo mateni auto-hide, atur nilai kurang saka 1"
+	},
+	"settings_option_selectTranslation_zIndex": {
+		"message": "z-index"
+	},
+	"settings_option_selectTranslation_zIndex_desc": {
+		"message": "Tambahake nilai iki yen unsur ing sawetara kaca tumpang tindih karo popup teks sing wis diterjemahake"
+	},
+	"settings_option_textTranslator": {
+		"message": "Terjemahan teks"
+	},
+	"settings_option_textTranslator_rememberText": {
+		"message": "Ngelingi teks sing wis diterjemahake"
+	},
+	"settings_option_textTranslator_rememberText_desc": {
+		"message": "Ngelingi teks sing wis diterjemahake kanggo wektu sabanjure jendhela dibukak"
+	},
+	"settings_option_textTranslator_spellCheck": {
+		"message": "Aktifake pemeriksaan ejaan"
+	},
+	"settings_option_textTranslator_suggestLanguage": {
+		"message": "Nuduhake basa teks sing dideteksi"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways": {
+		"message": "Tansah ndeteksi lan nyaranake basa"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways_desc": {
+		"message": "Yen dipateni, saran basa mung katon yen basa sumber disetel menyang \"auto\""
+	},
+	"settings_option_translatePreferences": {
+		"message": "Preferensi terjemahan"
+	},
+	"settings_option_translateScheduler": {
+		"message": "Jadwal terjemahan"
+	},
+	"settings_option_translateScheduler_delay": {
+		"message": "Telat akumulasi teks"
+	},
+	"settings_option_translateScheduler_delay_desc": {
+		"message": "Jadwal terjemahan nyuda jumlah panjalukan menyang API layanan terjemahan kanthi ngumpulake teks sabisa-bisa kanggo dikirim ing siji panjalukan. Jadwal bakal ngenteni wektu sing ditemtokake ing milidetik kanggo nglumpukake luwih akeh teks sadurunge miwiti terjemahan"
+	},
+	"settings_option_translateScheduler_retryLimit": {
+		"message": "Watesan kanggo nyoba maneh terjemahan"
+	},
+	"settings_option_translateScheduler_retryLimit_desc": {
+		"message": "Jadwal bakal nyoba maneh nerjemahake teks nalika kesalahan terjemahan kedadeyan. Pilihan iki nyetel watesan kanggo nyoba maneh. Atur angka negatif kanggo ngidini nyoba maneh tanpa watesan"
+	},
+	"settings_option_translatorModule": {
+		"message": "Modul terjemahan"
+	},
+	"settings_option_translatorModule_desc": {
+		"message": "Kualitas terjemahan lan basa sing kasedhiya gumantung ing modul terjemahan"
+	},
+	"settings_option_tts": {
+		"message": "Konversi Teks dadi Ucapan (TTS)"
+	},
+	"settings_option_ttsCustomModules": {
+		"message": "Modul sintesis ucapan khusus"
+	},
+	"settings_option_ttsCustomModules_button": {
+		"message": "Ngatur modul sintesis ucapan"
+	},
+	"settings_option_ttsCustomModules_desc": {
+		"message": "Sampeyan bisa nambah modul sintesis ucapan sing nggunakake layanan lan mesin swara favorit sampeyan. Waca luwih lengkap ing <slot id=docs>dokumen TTS khusus</slot>"
+	},
+	"settings_option_ttsModule": {
+		"message": "Modul TTS sing dipilih"
+	},
+	"settings_option_ttsModule_desc": {
+		"message": "Mesin swara sing digunakake kanggo ngucapake teks"
+	},
+	"settings_option_userLanguage": {
+		"message": "Basa sampeyan"
+	},
+	"settings_option_userLanguage_desc": {
+		"message": "Basa sing bakal diterjemahake teks"
+	},
+	"settings_pageTitle": {
+		"message": "Setelan"
+	},
+	"settings_section_history": {
+		"message": "Riwayat"
+	},
+	"settings_section_popup": {
+		"message": "Popup"
+	},
+	"textTranslator_suggestLanguage": {
+		"message": "Kayane basa teks iku <slot id=languageSuggest>$language_name$</slot>",
+		"placeholders": {
+			"language_name": {
+				"content": "$1",
+				"example": "Japanese"
+			}
+		}
+	},
+	"textTranslator_translateInputPlaceholder": {
+		"message": "Lebokna teks kanggo terjemahan",
+		"description": "Request to user input some text for translation"
+	},
+	"textTranslator_translatePlaceholder": {
+		"message": "Teks terjemahan bakal ana ing kene"
+	},
+	"translatorsManagerWindow_add": {
+		"message": "Tambah modul terjemahan"
+	},
+	"translatorsManagerWindow_close": {
+		"message": "Tutup"
+	},
+	"translatorsManagerWindow_emptyTranslatorsListText": {
+		"message": "Durung ana modul terjemahan khusus sing ditambahake"
+	},
+	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
+		"message": "Apa sampeyan yakin pengin mbusak modul terjemahan \"$translator_name$\"?",
+		"placeholders": {
+			"translator_name": {
+				"content": "$1",
+				"example": "Google translator"
+			}
+		}
+	},
+	"translatorsManagerWindow_title": {
+		"message": "Modul terjemahan khusus"
+	},
+	"translatorsManagerWindow_translator_delete": {
+		"message": "Busak"
+	},
+	"translatorsManagerWindow_translator_edit": {
+		"message": "Sunting"
+	},
+	"ttsManagerWindow_add": {
+		"message": "Tambah modul TTS"
+	},
+	"ttsManagerWindow_close": {
+		"message": "Tutup"
+	},
+	"ttsManagerWindow_emptyTranslatorsListText": {
+		"message": "Durung ana modul TTS sing ditambahake"
+	},
+	"ttsManagerWindow_message_ttsRemoveConfirmation": {
+		"message": "Apa sampeyan yakin pengin mbusak modul TTS \"$tts_name$\"?",
+		"placeholders": {
+			"tts_name": {
+				"content": "$1",
+				"example": "Google TTS"
+			}
+		}
+	},
+	"ttsManagerWindow_title": {
+		"message": "Modul Teks-kanggo-Wicara"
+	},
+	"ttsManagerWindow_translator_delete": {
+		"message": "Busak"
+	},
+	"ttsManagerWindow_translator_edit": {
+		"message": "Sunting"
+	},
+	"validation_number": {
+		"message": "Nilai kudu angka"
+	},
+	"validation_numberBetweenRange": {
+		"message": "Nilai kudu angka antarane $1 lan $2"
+	},
+	"validation_positiveNumber": {
+		"message": "Nilai kudu angka positif"
+	}
+}

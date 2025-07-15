@@ -1,0 +1,623 @@
+{
+	"common_action_addToDictionary": {
+		"message": "Shto përkthimin në fjalor"
+	},
+	"common_action_removeFromDictionary": {
+		"message": "Hiq përkthimin nga fjalori"
+	},
+	"common_bgUnavailable": {
+		"message": "Skripti i sfondit i padisponueshëm"
+	},
+	"common_cancel": {
+		"message": "Anulo"
+	},
+	"common_close": {
+		"message": "Mbyll"
+	},
+	"common_copy": {
+		"message": "Kopjo"
+	},
+	"common_error": {
+		"message": "Gabim"
+	},
+	"common_offlineTranslator": {
+		"message": "$1 - Përkthyes offline"
+	},
+	"common_retry": {
+		"message": "Përpiquni përsëri"
+	},
+	"common_translate": {
+		"message": "Përkthe"
+	},
+	"component_hotkey_placeholder": {
+		"message": "Kliko për të regjistruar një shkurtore"
+	},
+	"component_hotkey_recordPlaceholder": {
+		"message": "Shtypni tastet"
+	},
+	"component_hotkey_resetButton": {
+		"message": "Rivendos"
+	},
+	"contextMenu_disablePageTranslation": {
+		"message": "Ndalo përkthimin e faqes"
+	},
+	"contextMenu_translatePage": {
+		"message": "Përkthe faqen"
+	},
+	"contextMenu_translateSelectedText": {
+		"message": "Përkthe tekstin e zgjedhur"
+	},
+	"dictionaryButton_add": {
+		"message": "Shto në fjalor"
+	},
+	"dictionaryButton_delete": {
+		"message": "Fshi nga fjalori"
+	},
+	"dictionary_button_export": {
+		"message": "Eksporto"
+	},
+	"dictionary_button_removeAll": {
+		"message": "Hiq të gjitha"
+	},
+	"dictionary_deleteAll": {
+		"message": "A jeni i sigurt që dëshironi të fshini TË GJITHA përkthimet nga fjalori?"
+	},
+	"dictionary_deleteConfirmation": {
+		"message": "A jeni i sigurt që dëshironi të fshini këtë përkthim?"
+	},
+	"dictionary_description": {
+		"message": "Ruani përkthimet në fjalor për t'i gjetur shpejt më vonë"
+	},
+	"dictionary_emptyDictionary": {
+		"message": "Fjalori është bosh, filloni ta mbushni duke përkthyer disa tekste"
+	},
+	"dictionary_filter_from": {
+		"message": "Gjuha e tekstit burimor"
+	},
+	"dictionary_filter_to": {
+		"message": "Gjuha e synuar"
+	},
+	"dictionary_message_deleteAll_success": {
+		"message": "Të gjitha përkthimet janë hequr"
+	},
+	"dictionary_notFoundEntries": {
+		"message": "Nuk u gjetën përkthime që përputhen me këto filtra"
+	},
+	"dictionary_pageTitle": {
+		"message": "Fjalor"
+	},
+	"dictionary_resetFilters": {
+		"message": "Rivendos filtrat"
+	},
+	"dictionary_searchPlaceholder": {
+		"message": "Kërko sipas tekstit"
+	},
+	"editorWindow_close": {
+		"message": "Mbyll"
+	},
+	"editorWindow_data_code": {
+		"message": "Kodi"
+	},
+	"editorWindow_data_title": {
+		"message": "Emri i modulit"
+	},
+	"editorWindow_message_invalidTitle": {
+		"message": "Emri i modulit duhet të ketë të paktën një karakter"
+	},
+	"editorWindow_save": {
+		"message": "Ruaj"
+	},
+	"ext_description": {
+		"message": "Përkthimi i faqeve të internetit, përkthimi i teksteve, fjalori, historia, përkthyes të personalizuar, gjithçka që ju nevojitet për të kapërcyer barrierat gjuhësore"
+	},
+	"ext_name": {
+		"message": "Linguist - përkthyes i faqeve të internetit"
+	},
+	"history_control_selectEntry": {
+		"message": "Zgjidh përkthimin për veprim masiv",
+		"description": "Description in finite form \"to pick\" with explaining what this checkbox will do"
+	},
+	"history_controls_clearHistory": {
+		"message": "Pastro historinë"
+	},
+	"history_controls_deleteSelected": {
+		"message": "Fshi përkthimet e zgjedhura"
+	},
+	"history_controls_selectAll": {
+		"message": "Zgjidh të gjitha përkthimet"
+	},
+	"history_message_clearHistoryConfirmation": {
+		"message": "A jeni i sigurt që dëshironi të pastroni historinë? Të gjitha hyrjet do të hiqen"
+	},
+	"history_message_deleteEntryConfirmation": {
+		"message": "A jeni i sigurt që dëshironi të fshini këtë hyrje?"
+	},
+	"history_message_deleteSelectedEntriesConfirmation": {
+		"message": "A jeni i sigurt që dëshironi të fshini hyrjet e zgjedhura ($1)?"
+	},
+	"history_message_entriesNotFound": {
+		"message": "Nuk u gjetën përkthime që përputhen me filtrin"
+	},
+	"history_message_noEntries": {
+		"message": "Historia është bosh"
+	},
+	"history_notification_disabled": {
+		"message": "Regjistrimi i historisë është i çaktivizuar, kështu që hyrjet e reja nuk do të shfaqen. Ju mund ta ndryshoni këtë në <slot id=preferences>Preferencat</slot>"
+	},
+	"history_pageTitle": {
+		"message": "Historia"
+	},
+	"history_searchPlaceholder": {
+		"message": "Kërko sipas tekstit"
+	},
+	"inlineTranslator_showOriginalText": {
+		"message": "Shfaq tekstin origjinal"
+	},
+	"lang_change": {
+		"message": "Ndrysho gjuhën"
+	},
+	"lang_detect": {
+		"message": "Zbulim automatik"
+	},
+	"lang_select": {
+		"message": "Zgjidh gjuhën"
+	},
+	"lang_swap": {
+		"message": "Ndërro gjuhët"
+	},
+	"message_unknownError": {
+		"message": "Gabim i panjohur"
+	},
+	"pageTranslator_alwaysTranslateLang": {
+		"message": "Përkthe gjithmonë këtë gjuhë"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disable": {
+		"message": "Çaktivizo"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
+		"message": "Çaktivizo për të gjitha faqet"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_enable": {
+		"message": "Aktivizo"
+	},
+	"pageTranslator_commonPreferences_title": {
+		"message": "Preferencat e zakonshme për këtë gjuhë"
+	},
+	"pageTranslator_option_autoTranslate": {
+		"message": "Përkthe automatikisht"
+	},
+	"pageTranslator_showOriginal": {
+		"message": "Shfaq origjinalin"
+	},
+	"pageTranslator_showTranslationPreferences": {
+		"message": "Preferencat e përkthimit"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_always": {
+		"message": "Përkthe gjithmonë"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
+		"message": "Përkthe gjithmonë për këtë gjuhë"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_default": {
+		"message": "Përdor rregullat e zakonshme"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
+		"message": "Përdor rregullat e zakonshme për këtë gjuhë"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_never": {
+		"message": "Mos përkthe kurrë"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
+		"message": "Mos përkthe kurrë për këtë gjuhë"
+	},
+	"pageTranslator_sitePreferences_title": {
+		"message": "Preferencat për"
+	},
+	"pageTranslator_translatePage": {
+		"message": "Përkthe faqen"
+	},
+	"pageTranslator_translationReport": {
+		"message": "Raporti i përkthimit"
+	},
+	"pageTranslator_translationReport_queue": {
+		"message": "Në pritje"
+	},
+	"pageTranslator_translationReport_reject": {
+		"message": "Gabime"
+	},
+	"pageTranslator_translationReport_resolve": {
+		"message": "E përkthyer"
+	},
+	"popup_tabIdNotFound": {
+		"message": "Tab \"$1\" nuk u gjet"
+	},
+	"popup_tab_translatePage": {
+		"message": "Përkthimi i faqes"
+	},
+	"popup_tab_translateText": {
+		"message": "Përkthimi i tekstit"
+	},
+	"settings_button_cancel": {
+		"message": "Anulo"
+	},
+	"settings_button_export": {
+		"message": "Eksporto konfigurimin"
+	},
+	"settings_button_import": {
+		"message": "Importo konfigurimin"
+	},
+	"settings_button_reset": {
+		"message": "Rivendos konfigurimin"
+	},
+	"settings_button_saveChanges": {
+		"message": "Ruaj ndryshimet"
+	},
+	"settings_message_clearCache_success": {
+		"message": "Cache u pastrua"
+	},
+	"settings_message_common_invalidValueType": {
+		"message": "Vlerë e pavlefshme"
+	},
+	"settings_message_importConfig_invalidFile": {
+		"message": "Skedari i dhënë i konfigurimit është i pasaktë ose i korruptuar dhe nuk mund të përpunohet"
+	},
+	"settings_message_importConfig_success": {
+		"message": "Importimi përfundoi"
+	},
+	"settings_message_resetConfig_confirm": {
+		"message": "Konfirmo për të rivendosur cilësimet në vlerat e paracaktuara"
+	},
+	"settings_message_resetConfig_success": {
+		"message": "Cilësimet u rivendosën"
+	},
+	"settings_message_saveChanges_success": {
+		"message": "Ndryshimet u ruajtën"
+	},
+	"settings_option_cache": {
+		"message": "Cache"
+	},
+	"settings_option_cache_clear": {
+		"message": "Pastro cache"
+	},
+	"settings_option_cache_clear_desc": {
+		"message": "Nëse vëreni gabime në përkthim ose përktheni aksidentalisht tekste private ndërsa cache është i aktivizuar, mund të fshini të gjitha të dhënat nga cache",
+		"description": "Explanation for user about cases when it's useful to clear cache"
+	},
+	"settings_option_cache_enable": {
+		"message": "Aktivizo cache"
+	},
+	"settings_option_cache_enable_desc": {
+		"message": "Kur cache është i aktivizuar, tekstet që janë përkthyer më parë do të përkthehen menjëherë pa kërkesa shtesë në shërbimin e përkthimit"
+	},
+	"settings_option_cache_ignoreCase": {
+		"message": "Përdor cache pa ndjeshmëri ndaj shkronjave të mëdha"
+	},
+	"settings_option_cache_ignoreCase_desc": {
+		"message": "Kur është i aktivizuar, përkthimet e ruajtura do të përdoren për tekste me shkronja të ndryshme, gjë që mund të shkaktojë shtrembërime në përkthim në situata të caktuara"
+	},
+	"settings_option_commonSettings": {
+		"message": "Cilësimet e përgjithshme"
+	},
+	"settings_option_customTranslatorModule": {
+		"message": "Modulet e përkthimit të personalizuar",
+		"description": "An user defined code that implements a translation module"
+	},
+	"settings_option_customTranslatorModule_desc": {
+		"message": "Mund të shtoni module përkthimi të personalizuara që përdorin shërbimet tuaja të preferuara të përkthimit. Mësoni më shumë në <slot id=docs> dokumentacionin e përkthyesve të personalizuar</slot>"
+	},
+	"settings_option_customTranslatorModule_manageButton": {
+		"message": "Menaxhimi i përkthyesve",
+		"description": "A button to show list of translation modules"
+	},
+	"settings_option_history_enable": {
+		"message": "Aktivizo historinë"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "Kur është i aktivizuar, përkthimet do të regjistrohen dhe do të shfaqen në <slot id=historyPage>faqen e historisë</slot>"
+	},
+	"settings_option_pageTranslation": {
+		"message": "Përkthimi i plotë i faqes"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent": {
+		"message": "Zbulo gjuhën nga përmbajtja"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent_desc": {
+		"message": "Analizoni tekstin në faqen e internetit për të zbuluar gjuhën e tij. Kur është i çaktivizuar, do të përdoret gjuha e specifikuar në <slot id=docs>metadata e faqes</slot>"
+	},
+	"settings_option_pageTranslation_enableContextMenu": {
+		"message": "Aktivizo butonin e menusë kontekstuale"
+	},
+	"settings_option_pageTranslation_enableContextMenu_desc": {
+		"message": "Shto një buton për të ndërruar përkthimin e faqes në menunë kontekstuale të faqes"
+	},
+	"settings_option_pageTranslation_excludeSelectors": {
+		"message": "Selektorët për të përjashtuar nga përkthimi"
+	},
+	"settings_option_pageTranslation_excludeSelectors_desc": {
+		"message": "Lista e selektorëve CSS për elementet që do të përjashtohen nga përkthimi. Një selektor për rresht. Nëse një element përputhet me ndonjë nga këta selektorë, teksti, atributet dhe elementet e tij të brendshme nuk do të përkthehen"
+	},
+	"settings_option_pageTranslation_lazyTranslate": {
+		"message": "Përkthe vetëm elementet e dukshme"
+	},
+	"settings_option_pageTranslation_lazyTranslate_desc": {
+		"message": "Kur kjo opsion është i aktivizuar, vetëm elementet e dukshme do të përkthehen. Ky opsion redukton trafikun e rrjetit"
+	},
+	"settings_option_pageTranslation_originalTextPopup": {
+		"message": "Aktivizo popup me tekstin origjinal"
+	},
+	"settings_option_pageTranslation_originalTextPopup_desc": {
+		"message": "Shfaq një popup me tekstin origjinal kur kaloni mbi blloqet e tekstit të përkthyer"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation": {
+		"message": "Shkurtore"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation_desc": {
+		"message": "Shkurtore për të ndërruar përkthimin e faqes\nShtypni ESC për të rivendosur çelësat"
+	},
+	"settings_option_pageTranslation_translatableAttributes": {
+		"message": "Atributet e përkthyeshme"
+	},
+	"settings_option_pageTranslation_translatableAttributes_desc": {
+		"message": "Futni emrat e <slot id=htmlAttributes>atributeve HTML</slot> për të përkthyer, një atribut për rresht\nVetëm atributet në këtë listë do të përkthehen"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters": {
+		"message": "Shfaq progresin e përkthimit"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters_desc": {
+		"message": "Shfaq një panel me progresin e përkthimit të faqes në dritaren e zgjerimit"
+	},
+	"settings_option_selectTranslation": {
+		"message": "Përkthimi për tekstin e zgjedhur"
+	},
+	"settings_option_selectTranslation_detectTextLanguage": {
+		"message": "Zbulo gjuhën e tekstit"
+	},
+	"settings_option_selectTranslation_detectTextLanguage_desc": {
+		"message": "Kur aktivizohet, teksti i zgjedhur do të analizohet për të zbuluar gjuhën për përkthim. Përndryshe, do të përdoret gjuha e faqes"
+	},
+	"settings_option_selectTranslation_disableWhileTranslatePage": {
+		"message": "Çaktivizo gjatë përkthimit të faqes"
+	},
+	"settings_option_selectTranslation_enable": {
+		"message": "Aktivizo përkthimin e tekstit të zgjedhur"
+	},
+	"settings_option_selectTranslation_enable_desc": {
+		"message": "Kur kjo veçori është e aktivizuar, mund të zgjidhni çdo tekst në faqe dhe ta përktheni atë në një dritare"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton": {
+		"message": "Fokus automatik në butonin e përkthimit"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
+		"message": "Kur butoni i përkthimit shfaqet në faqe, ai do të fokusohet automatikisht"
+	},
+	"settings_option_selectTranslation_header_languageChoice": {
+		"message": "Cilësimet e gjuhës"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang": {
+		"message": "Lejo modulin e përkthimit të zbulojë gjuhën e tekstit"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
+		"message": "Kur gjuha e tekstit nuk mund të zbulohet lokalisht dhe kjo opsion është e aktivizuar, teksti do të përkthehet me gjuhën \"auto\" nëse mbështetet.\nKur opsioni është i çaktivizuar, do të përdoret një metodë tjetër për të vendosur gjuhën burimore të tekstit"
+	},
+	"settings_option_selectTranslation_mode": {
+		"message": "Veprimi në zgjedhjen e tekstit"
+	},
+	"settings_option_selectTranslation_mode_item_contextMenu": {
+		"message": "Përkthe tekstin përmes menusë kontekstuale"
+	},
+	"settings_option_selectTranslation_mode_item_popupButton": {
+		"message": "Shfaq butonin e përkthimit"
+	},
+	"settings_option_selectTranslation_mode_item_quickTranslate": {
+		"message": "Përkthe tekstin menjëherë"
+	},
+	"settings_option_selectTranslation_modifiers": {
+		"message": "Modifikuesit"
+	},
+	"settings_option_selectTranslation_modifiers_desc": {
+		"message": "Zgjidhni çelësat që duhet të shtypen në tastierë për të shfaqur përkthimin"
+	},
+	"settings_option_selectTranslation_modifiers_key_alt": {
+		"message": "alt"
+	},
+	"settings_option_selectTranslation_modifiers_key_ctrl": {
+		"message": "ctrl"
+	},
+	"settings_option_selectTranslation_modifiers_key_meta": {
+		"message": "meta"
+	},
+	"settings_option_selectTranslation_modifiers_key_shift": {
+		"message": "shift"
+	},
+	"settings_option_selectTranslation_rememberDirection": {
+		"message": "Mbaj mend gjuhën e fundit të zgjedhur të tekstit"
+	},
+	"settings_option_selectTranslation_showOnceForSelection": {
+		"message": "Shfaq butonin e përkthimit një herë për çdo zgjedhje teksti"
+	},
+	"settings_option_selectTranslation_showOnceForSelection_desc": {
+		"message": "Butoni do të shfaqet vetëm një herë për çdo zgjedhje teksti. Për ta shfaqur përsëri, rizgjidhni tekstin"
+	},
+	"settings_option_selectTranslation_showOriginalText": {
+		"message": "Shfaq tekstin origjinal"
+	},
+	"settings_option_selectTranslation_showOriginalText_desc": {
+		"message": "Shto një bllok me tekstin origjinal në dritaren e përkthimit"
+	},
+	"settings_option_selectTranslation_strictSelection": {
+		"message": "Modaliteti i rreptë i zgjedhjes së pjesës së tekstit",
+		"description": "Kjo opsion është për zgjedhjen e tekstit përmes miut"
+	},
+	"settings_option_selectTranslation_strictSelection_desc": {
+		"message": "Injoro zgjedhjen e pjesës së tekstit nëse butoni i majtë i miut lirohet jashtë bllokut që përmban tekstin e zgjedhur"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton": {
+		"message": "Vonesa para fshehjes së butonit të dritares"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton_desc": {
+		"message": "Vonesa në milisekonda para se të fshihet butoni kur kursori nuk është mbi të. Qëndrimi mbi buton e rivendos kohëmatësin. Për të çaktivizuar fshehjen automatike, vendosni vlerën më pak se 1"
+	},
+	"settings_option_selectTranslation_zIndex": {
+		"message": "z-index"
+	},
+	"settings_option_selectTranslation_zIndex_desc": {
+		"message": "Rritni këtë vlerë nëse elementet në disa faqe mbivendosen mbi dritaren me tekstin e përkthyer"
+	},
+	"settings_option_textTranslator": {
+		"message": "Përkthimi i tekstit"
+	},
+	"settings_option_textTranslator_rememberText": {
+		"message": "Mbajtja mend e tekstit të përkthyer"
+	},
+	"settings_option_textTranslator_rememberText_desc": {
+		"message": "Mbajtja mend e tekstit të përkthyer për herën tjetër kur hapet dritarja"
+	},
+	"settings_option_textTranslator_spellCheck": {
+		"message": "Aktivizo kontrollin e drejtshkrimit"
+	},
+	"settings_option_textTranslator_suggestLanguage": {
+		"message": "Shfaqja e gjuhës së zbuluar të tekstit"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways": {
+		"message": "Gjithmonë zbulo dhe sugjero gjuhën"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways_desc": {
+		"message": "Kur çaktivizohet, sugjerimet e gjuhës shfaqen vetëm nëse gjuha burimore është vendosur në \"auto\""
+	},
+	"settings_option_translatePreferences": {
+		"message": "Preferencat e përkthimit"
+	},
+	"settings_option_translateScheduler": {
+		"message": "Planifikuesi i përkthimit"
+	},
+	"settings_option_translateScheduler_delay": {
+		"message": "Vonesa e grumbullimit të tekstit"
+	},
+	"settings_option_translateScheduler_delay_desc": {
+		"message": "Planifikuesi i përkthimit redukton numrin e kërkesave në API-në e shërbimit të përkthimit duke grumbulluar sa më shumë tekste të jetë e mundur për t'i dërguar në një kërkesë të vetme. Planifikuesi do të presë për kohën e specifikuar në milisekonda për të mbledhur më shumë tekste para se të fillojë përkthimin"
+	},
+	"settings_option_translateScheduler_retryLimit": {
+		"message": "Kufiri për përpjekjet e përsëritjes së përkthimit"
+	},
+	"settings_option_translateScheduler_retryLimit_desc": {
+		"message": "Planifikuesi do të përpiqet të përkthejë tekstet kur ndodhin gabime në përkthim. Kjo opsion vendos një kufi për përpjekjet e përsëritjes. Vendosni një numër negativ për të lejuar përsëritje të pakufizuara"
+	},
+	"settings_option_translatorModule": {
+		"message": "Moduli i përkthimit"
+	},
+	"settings_option_translatorModule_desc": {
+		"message": "Cilësia e përkthimeve dhe gjuhët e disponueshme varen nga moduli i përkthimit"
+	},
+	"settings_option_tts": {
+		"message": "Konvertimi i Tekstit në Zë (TTS)"
+	},
+	"settings_option_ttsCustomModules": {
+		"message": "Modulet e personalizuara të sintetizimit të zërit"
+	},
+	"settings_option_ttsCustomModules_button": {
+		"message": "Menaxhimi i moduleve të sintetizimit të zërit"
+	},
+	"settings_option_ttsCustomModules_desc": {
+		"message": "Mund të shtoni module të sintetizimit të zërit që përdorin shërbimet dhe motorët tuaj të preferuar të zërit. Lexoni më shumë në <slot id=docs> dokumentacionin e personalizuar të TTS</slot>"
+	},
+	"settings_option_ttsModule": {
+		"message": "Moduli i zgjedhur i TTS"
+	},
+	"settings_option_ttsModule_desc": {
+		"message": "Motori i zërit i përdorur për të folur tekstin"
+	},
+	"settings_option_userLanguage": {
+		"message": "Gjuha juaj"
+	},
+	"settings_option_userLanguage_desc": {
+		"message": "Gjuha në të cilën do të përkthehen tekstet"
+	},
+	"settings_pageTitle": {
+		"message": "Cilësimet"
+	},
+	"settings_section_history": {
+		"message": "Historia"
+	},
+	"settings_section_popup": {
+		"message": "Popup"
+	},
+	"textTranslator_suggestLanguage": {
+		"message": "Duket se gjuha e tekstit është <slot id=languageSuggest>$language_name$</slot>",
+		"placeholders": {
+			"language_name": {
+				"content": "$1",
+				"example": "Japanese"
+			}
+		}
+	},
+	"textTranslator_translateInputPlaceholder": {
+		"message": "Futni tekstin për përkthim",
+		"description": "Request to user input some text for translation"
+	},
+	"textTranslator_translatePlaceholder": {
+		"message": "Teksti i përkthyer do të jetë këtu"
+	},
+	"translatorsManagerWindow_add": {
+		"message": "Shto modul përkthimi"
+	},
+	"translatorsManagerWindow_close": {
+		"message": "Mbyll"
+	},
+	"translatorsManagerWindow_emptyTranslatorsListText": {
+		"message": "Nuk janë shtuar ende module përkthimi të personalizuara"
+	},
+	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
+		"message": "A jeni i sigurt që dëshironi të hiqni modulin e përkthimit \"$translator_name$\"?",
+		"placeholders": {
+			"translator_name": {
+				"content": "$1",
+				"example": "Google translator"
+			}
+		}
+	},
+	"translatorsManagerWindow_title": {
+		"message": "Module përkthimi të personalizuara"
+	},
+	"translatorsManagerWindow_translator_delete": {
+		"message": "Fshi"
+	},
+	"translatorsManagerWindow_translator_edit": {
+		"message": "Redakto"
+	},
+	"ttsManagerWindow_add": {
+		"message": "Shto modul TTS"
+	},
+	"ttsManagerWindow_close": {
+		"message": "Mbyll"
+	},
+	"ttsManagerWindow_emptyTranslatorsListText": {
+		"message": "Nuk janë shtuar ende module TTS"
+	},
+	"ttsManagerWindow_message_ttsRemoveConfirmation": {
+		"message": "A jeni i sigurt që dëshironi të hiqni modulin TTS \"$tts_name$\"?",
+		"placeholders": {
+			"tts_name": {
+				"content": "$1",
+				"example": "Google TTS"
+			}
+		}
+	},
+	"ttsManagerWindow_title": {
+		"message": "Module Text-to-Speech"
+	},
+	"ttsManagerWindow_translator_delete": {
+		"message": "Fshi"
+	},
+	"ttsManagerWindow_translator_edit": {
+		"message": "Redakto"
+	},
+	"validation_number": {
+		"message": "Vlera duhet të jetë një numër"
+	},
+	"validation_numberBetweenRange": {
+		"message": "Vlera duhet të jetë një numër midis $1 dhe $2"
+	},
+	"validation_positiveNumber": {
+		"message": "Vlera duhet të jetë një numër pozitiv"
+	}
+}

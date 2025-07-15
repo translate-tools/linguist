@@ -1,0 +1,623 @@
+{
+	"common_action_addToDictionary": {
+		"message": "Tarjimani lug‘atga qo‘shish"
+	},
+	"common_action_removeFromDictionary": {
+		"message": "Tarjimani lug‘atdan olib tashlash"
+	},
+	"common_bgUnavailable": {
+		"message": "Fon skripti mavjud emas"
+	},
+	"common_cancel": {
+		"message": "Bekor qilish"
+	},
+	"common_close": {
+		"message": "Yopish"
+	},
+	"common_copy": {
+		"message": "Nusxalash"
+	},
+	"common_error": {
+		"message": "Xato"
+	},
+	"common_offlineTranslator": {
+		"message": "$1 - Oflayn tarjimon"
+	},
+	"common_retry": {
+		"message": "Qayta urinib ko‘rish"
+	},
+	"common_translate": {
+		"message": "Tarjima qilish"
+	},
+	"component_hotkey_placeholder": {
+		"message": "Qisqa yo‘lni yozish uchun bosing"
+	},
+	"component_hotkey_recordPlaceholder": {
+		"message": "Tugmalarni bosing"
+	},
+	"component_hotkey_resetButton": {
+		"message": "Qayta tiklash"
+	},
+	"contextMenu_disablePageTranslation": {
+		"message": "Sahifa tarjimasini to‘xtatish"
+	},
+	"contextMenu_translatePage": {
+		"message": "Sahifani tarjima qilish"
+	},
+	"contextMenu_translateSelectedText": {
+		"message": "Tanlangan matnni tarjima qilish"
+	},
+	"dictionaryButton_add": {
+		"message": "Lug‘atga qo‘shish"
+	},
+	"dictionaryButton_delete": {
+		"message": "Lug‘atdan o‘chirish"
+	},
+	"dictionary_button_export": {
+		"message": "Eksport qilish"
+	},
+	"dictionary_button_removeAll": {
+		"message": "Hammasini olib tashlash"
+	},
+	"dictionary_deleteAll": {
+		"message": "Lug‘atdan BARCHA tarjimalarni o‘chirishni xohlaysizmi?"
+	},
+	"dictionary_deleteConfirmation": {
+		"message": "Ushbu tarjimani o‘chirishni xohlaysizmi?"
+	},
+	"dictionary_description": {
+		"message": "Tarjimalarni lug‘atda saqlang va keyin ularni tezda toping"
+	},
+	"dictionary_emptyDictionary": {
+		"message": "Lug‘at bo‘sh, uni to‘ldirish uchun biror matnni tarjima qiling"
+	},
+	"dictionary_filter_from": {
+		"message": "Manba matn tili"
+	},
+	"dictionary_filter_to": {
+		"message": "Maqsad tili"
+	},
+	"dictionary_message_deleteAll_success": {
+		"message": "Barcha tarjimalar olib tashlandi"
+	},
+	"dictionary_notFoundEntries": {
+		"message": "Ushbu filtrlar bo‘yicha mos tarjimalar topilmadi"
+	},
+	"dictionary_pageTitle": {
+		"message": "Lug‘at"
+	},
+	"dictionary_resetFilters": {
+		"message": "Filtrlarni qayta tiklash"
+	},
+	"dictionary_searchPlaceholder": {
+		"message": "Matn bo'yicha qidirish"
+	},
+	"editorWindow_close": {
+		"message": "Yopish"
+	},
+	"editorWindow_data_code": {
+		"message": "Kod"
+	},
+	"editorWindow_data_title": {
+		"message": "Modul nomi"
+	},
+	"editorWindow_message_invalidTitle": {
+		"message": "Modul nomi kamida bitta belgidan iborat bo'lishi kerak"
+	},
+	"editorWindow_save": {
+		"message": "Saqlash"
+	},
+	"ext_description": {
+		"message": "Veb sahifa tarjimasi, matn tarjimasi, lug'at, tarix, maxsus tarjimonlar, til to'siqlarini yengish uchun kerak bo'lgan hamma narsa"
+	},
+	"ext_name": {
+		"message": "Linguist - veb sahifa tarjimoni"
+	},
+	"history_control_selectEntry": {
+		"message": "Ommaviy harakat uchun tarjimani tanlash",
+		"description": "Description in finite form \"to pick\" with explaining what this checkbox will do"
+	},
+	"history_controls_clearHistory": {
+		"message": "Tarixni tozalash"
+	},
+	"history_controls_deleteSelected": {
+		"message": "Tanlangan tarjimalarni o'chirish"
+	},
+	"history_controls_selectAll": {
+		"message": "Barcha tarjimalarni tanlash"
+	},
+	"history_message_clearHistoryConfirmation": {
+		"message": "Tarixni tozalashni xohlaysizmi? Barcha yozuvlar o'chiriladi"
+	},
+	"history_message_deleteEntryConfirmation": {
+		"message": "Ushbu yozuvni o'chirishni xohlaysizmi?"
+	},
+	"history_message_deleteSelectedEntriesConfirmation": {
+		"message": "Tanlangan yozuvlarni o'chirishni xohlaysizmi ($1)?"
+	},
+	"history_message_entriesNotFound": {
+		"message": "Filtrga mos tarjimalar topilmadi"
+	},
+	"history_message_noEntries": {
+		"message": "Tarix bo'sh"
+	},
+	"history_notification_disabled": {
+		"message": "Tarix yozuvi o'chirilgan, shuning uchun yangi yozuvlar paydo bo'lmaydi. Buni <slot id=preferences>Sozlamalar</slot>da o'zgartirishingiz mumkin"
+	},
+	"history_pageTitle": {
+		"message": "Tarix"
+	},
+	"history_searchPlaceholder": {
+		"message": "Matn bo'yicha qidirish"
+	},
+	"inlineTranslator_showOriginalText": {
+		"message": "Asl matnni ko'rsatish"
+	},
+	"lang_change": {
+		"message": "Tilni o'zgartirish"
+	},
+	"lang_detect": {
+		"message": "Avtomatik aniqlash"
+	},
+	"lang_select": {
+		"message": "Tilni tanlash"
+	},
+	"lang_swap": {
+		"message": "Tillarni almashtirish"
+	},
+	"message_unknownError": {
+		"message": "Noma'lum xato"
+	},
+	"pageTranslator_alwaysTranslateLang": {
+		"message": "Har doim ushbu tilni tarjima qilish"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disable": {
+		"message": "O'chirish"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
+		"message": "Barcha saytlar uchun o'chirish"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_enable": {
+		"message": "Yoqqish"
+	},
+	"pageTranslator_commonPreferences_title": {
+		"message": "Ushbu til uchun umumiy sozlamalar"
+	},
+	"pageTranslator_option_autoTranslate": {
+		"message": "Avtomatik tarjima"
+	},
+	"pageTranslator_showOriginal": {
+		"message": "Aslini ko'rsatish"
+	},
+	"pageTranslator_showTranslationPreferences": {
+		"message": "Tarjima sozlamalari"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_always": {
+		"message": "Har doim tarjima qilish"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
+		"message": "Ushbu til uchun har doim tarjima qilish"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_default": {
+		"message": "Umumiy qoidalarni qo'llash"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
+		"message": "Ushbu til uchun umumiy qoidalarni qo'llash"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_never": {
+		"message": "Hech qachon tarjima qilmaslik"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
+		"message": "Ushbu til uchun hech qachon tarjima qilmaslik"
+	},
+	"pageTranslator_sitePreferences_title": {
+		"message": "Sozlamalar"
+	},
+	"pageTranslator_translatePage": {
+		"message": "Sahifani tarjima qilish"
+	},
+	"pageTranslator_translationReport": {
+		"message": "Tarjima hisobot"
+	},
+	"pageTranslator_translationReport_queue": {
+		"message": "Kutilmoqda"
+	},
+	"pageTranslator_translationReport_reject": {
+		"message": "Xatolar"
+	},
+	"pageTranslator_translationReport_resolve": {
+		"message": "Tarjima qilingan"
+	},
+	"popup_tabIdNotFound": {
+		"message": "Tab \"$1\" topilmadi"
+	},
+	"popup_tab_translatePage": {
+		"message": "Sahifa tarjimasi"
+	},
+	"popup_tab_translateText": {
+		"message": "Matn tarjimasi"
+	},
+	"settings_button_cancel": {
+		"message": "Bekor qilish"
+	},
+	"settings_button_export": {
+		"message": "Konfiguratsiyani eksport qilish"
+	},
+	"settings_button_import": {
+		"message": "Konfiguratsiyani import qilish"
+	},
+	"settings_button_reset": {
+		"message": "Konfiguratsiyani tiklash"
+	},
+	"settings_button_saveChanges": {
+		"message": "O'zgarishlarni saqlash"
+	},
+	"settings_message_clearCache_success": {
+		"message": "Kesh tozalandi"
+	},
+	"settings_message_common_invalidValueType": {
+		"message": "Noto'g'ri qiymat"
+	},
+	"settings_message_importConfig_invalidFile": {
+		"message": "Taqdim etilgan konfiguratsiya fayli noto'g'ri yoki buzilgan va uni qayta ishlash mumkin emas"
+	},
+	"settings_message_importConfig_success": {
+		"message": "Import tugallandi"
+	},
+	"settings_message_resetConfig_confirm": {
+		"message": "Sozlamalarni standart qiymatlarga tiklashni tasdiqlang"
+	},
+	"settings_message_resetConfig_success": {
+		"message": "Sozlamalar tiklandi"
+	},
+	"settings_message_saveChanges_success": {
+		"message": "O'zgarishlar saqlandi"
+	},
+	"settings_option_cache": {
+		"message": "Kesh"
+	},
+	"settings_option_cache_clear": {
+		"message": "Keshi tozalash"
+	},
+	"settings_option_cache_clear_desc": {
+		"message": "Agar kesh yoqilganida tarjima xatolarini sezsangiz yoki tasodifan shaxsiy matnlarni tarjima qilsangiz, barcha ma'lumotlarni keshdan o'chirishingiz mumkin",
+		"description": "Explanation for user about cases when it's useful to clear cache"
+	},
+	"settings_option_cache_enable": {
+		"message": "Keshi yoqish"
+	},
+	"settings_option_cache_enable_desc": {
+		"message": "Kesh yoqilganida, ilgari tarjima qilingan matnlar qo'shimcha so'rovlar qilmasdan darhol tarjima qilinadi"
+	},
+	"settings_option_cache_ignoreCase": {
+		"message": "Katta-kichik harflarni e'tiborsiz keshdan foydalanish"
+	},
+	"settings_option_cache_ignoreCase_desc": {
+		"message": "Yoqilganda, keshdagi tarjimalar turli katta-kichik harflar uchun ishlatiladi, bu ba'zi holatlarda tarjima buzilishiga olib kelishi mumkin"
+	},
+	"settings_option_commonSettings": {
+		"message": "Umumiy sozlamalar"
+	},
+	"settings_option_customTranslatorModule": {
+		"message": "Maxsus tarjima modullari",
+		"description": "An user defined code that implements a translation module"
+	},
+	"settings_option_customTranslatorModule_desc": {
+		"message": "Sevimli tarjima xizmatlaringizdan foydalanadigan maxsus tarjima modullarini qo'shishingiz mumkin. <slot id=docs>maxsus tarjimonlar hujjatlari</slot>da ko'proq ma'lumot oling"
+	},
+	"settings_option_customTranslatorModule_manageButton": {
+		"message": "Tarjimonlarni boshqarish",
+		"description": "A button to show list of translation modules"
+	},
+	"settings_option_history_enable": {
+		"message": "Tarixni yoqish"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "Yoqilganda, tarjimalar yoziladi va <slot id=historyPage>tarix sahifasida</slot> ko'rinadi"
+	},
+	"settings_option_pageTranslation": {
+		"message": "To'liq sahifa tarjimasi"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent": {
+		"message": "Tilni mazmun bo'yicha aniqlash"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent_desc": {
+		"message": "Veb-sahifadagi matnni tahlil qilib, uning tilini aniqlash. O'chirilganda, <slot id=docs>sahifa metama'lumotlari</slot>da ko'rsatilgan til ishlatiladi"
+	},
+	"settings_option_pageTranslation_enableContextMenu": {
+		"message": "Kontekst menyusi tugmasini yoqish"
+	},
+	"settings_option_pageTranslation_enableContextMenu_desc": {
+		"message": "Sahifa kontekst menyusida sahifa tarjimasini yoqish/o‘chirish tugmasini qo‘shish"
+	},
+	"settings_option_pageTranslation_excludeSelectors": {
+		"message": "Tarjimadan chiqarib tashlash uchun selektorlar"
+	},
+	"settings_option_pageTranslation_excludeSelectors_desc": {
+		"message": "Tarjimadan chiqarib tashlanadigan elementlar uchun CSS selektorlar ro'yxati. Har bir qator uchun bitta selektor. Agar element ushbu selektorlardan biriga mos kelsa, uning matni, atributlari va ichki elementlari tarjima qilinmaydi"
+	},
+	"settings_option_pageTranslation_lazyTranslate": {
+		"message": "Faqat ko'rinadigan elementlarni tarjima qilish"
+	},
+	"settings_option_pageTranslation_lazyTranslate_desc": {
+		"message": "Ushbu parametr yoqilganda, faqat ko'rinadigan elementlar tarjima qilinadi. Ushbu parametr tarmoq trafigini kamaytiradi"
+	},
+	"settings_option_pageTranslation_originalTextPopup": {
+		"message": "Asl matn bilan pop-upni yoqish"
+	},
+	"settings_option_pageTranslation_originalTextPopup_desc": {
+		"message": "Tarjima qilingan matn bloklari ustiga sichqoncha bilan bosilganda asl matn bilan pop-upni ko'rsatish"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation": {
+		"message": "Qisqa yo'l"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation_desc": {
+		"message": "Sahifa tarjimasini yoqish/o‘chirish uchun qisqa yo‘l\nKalitlarni tiklash uchun ESC tugmasini bosing"
+	},
+	"settings_option_pageTranslation_translatableAttributes": {
+		"message": "Tarjima qilinadigan atributlar"
+	},
+	"settings_option_pageTranslation_translatableAttributes_desc": {
+		"message": "Tarjima qilish uchun <slot id=htmlAttributes>HTML atribut</slot> nomlarini kiriting, har bir qator uchun bitta atribut\nFaqat ushbu ro'yxatdagi atributlar tarjima qilinadi"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters": {
+		"message": "Tarjima jarayonini ko'rsatish"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters_desc": {
+		"message": "Kengaytma pop-upida sahifa tarjimasi jarayonini ko'rsatish panelini ko'rsatish"
+	},
+	"settings_option_selectTranslation": {
+		"message": "Tanlangan matn uchun tarjima"
+	},
+	"settings_option_selectTranslation_detectTextLanguage": {
+		"message": "Matn tilini aniqlash"
+	},
+	"settings_option_selectTranslation_detectTextLanguage_desc": {
+		"message": "Agar yoqilgan bo'lsa, tanlangan matn tarjima uchun tilni aniqlash uchun tahlil qilinadi. Aks holda, sahifa tili ishlatiladi"
+	},
+	"settings_option_selectTranslation_disableWhileTranslatePage": {
+		"message": "Sahifa tarjima qilinayotganda o'chirish"
+	},
+	"settings_option_selectTranslation_enable": {
+		"message": "Tanlangan matn tarjimasini yoqish"
+	},
+	"settings_option_selectTranslation_enable_desc": {
+		"message": "Ushbu xususiyat yoqilganda, sahifadagi har qanday matnni tanlab, pop-upda tarjima qilishingiz mumkin"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton": {
+		"message": "Tarjima tugmasiga avtomatik e'tibor qaratish"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
+		"message": "Sahifada tarjima tugmasi paydo bo'lganda, u avtomatik ravishda e'tibor qaratiladi"
+	},
+	"settings_option_selectTranslation_header_languageChoice": {
+		"message": "Til sozlamalari"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang": {
+		"message": "Tarjima moduliga matn tilini aniqlashga ruxsat berish"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
+		"message": "Agar matn tili mahalliy ravishda aniqlanmasa va bu parametr yoqilgan bo'lsa, matn \"auto\" tili bilan tarjima qilinadi, agar qo'llab-quvvatlansa.\nParametr o'chirilgan bo'lsa, matnning manba tilini o'rnatish uchun boshqa zaxira usul ishlatiladi"
+	},
+	"settings_option_selectTranslation_mode": {
+		"message": "Matn tanlashda harakat"
+	},
+	"settings_option_selectTranslation_mode_item_contextMenu": {
+		"message": "Kontekst menyusi orqali matnni tarjima qilish"
+	},
+	"settings_option_selectTranslation_mode_item_popupButton": {
+		"message": "Tarjima tugmasini ko'rsatish"
+	},
+	"settings_option_selectTranslation_mode_item_quickTranslate": {
+		"message": "Matnni tezda tarjima qilish"
+	},
+	"settings_option_selectTranslation_modifiers": {
+		"message": "Modifikatorlar"
+	},
+	"settings_option_selectTranslation_modifiers_desc": {
+		"message": "Tarjimani ko'rsatish uchun klaviaturada bosilishi kerak bo'lgan tugmalarni tanlang"
+	},
+	"settings_option_selectTranslation_modifiers_key_alt": {
+		"message": "alt"
+	},
+	"settings_option_selectTranslation_modifiers_key_ctrl": {
+		"message": "ctrl"
+	},
+	"settings_option_selectTranslation_modifiers_key_meta": {
+		"message": "meta"
+	},
+	"settings_option_selectTranslation_modifiers_key_shift": {
+		"message": "shift"
+	},
+	"settings_option_selectTranslation_rememberDirection": {
+		"message": "Eng so'nggi tanlangan matn tilini eslab qolish"
+	},
+	"settings_option_selectTranslation_showOnceForSelection": {
+		"message": "Har bir matn tanlovi uchun tarjima tugmasini bir marta ko'rsatish"
+	},
+	"settings_option_selectTranslation_showOnceForSelection_desc": {
+		"message": "Tugma har bir matn tanlovi uchun faqat bir marta paydo bo'ladi. Uni qayta ko'rsatish uchun matnni qayta tanlang"
+	},
+	"settings_option_selectTranslation_showOriginalText": {
+		"message": "Asl matnni ko'rsatish"
+	},
+	"settings_option_selectTranslation_showOriginalText_desc": {
+		"message": "Tarjima pop-upiga asl matn bilan blok qo'shish"
+	},
+	"settings_option_selectTranslation_strictSelection": {
+		"message": "Matn tanlashning qat'iy rejimi",
+		"description": "Ushbu parametr sichqoncha orqali matn tanlash haqida"
+	},
+	"settings_option_selectTranslation_strictSelection_desc": {
+		"message": "Agar chap sichqoncha tugmasi tanlangan matnni o'z ichiga olgan blokdan tashqarida qo'yib yuborilsa, matn tanlashni e'tiborsiz qoldirish"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton": {
+		"message": "Pop-up tugmasini yashirishdan oldin kechikish"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton_desc": {
+		"message": "Tugma ustida kursor bo'lmaganda tugmani yashirishdan oldin millisekundlarda kechikish. Tugma ustida kursorni ushlab turish taymerni qayta o'rnatadi. Avto-yashirishni o'chirish uchun qiymatni 1 dan kamroq qilib belgilang"
+	},
+	"settings_option_selectTranslation_zIndex": {
+		"message": "z-index"
+	},
+	"settings_option_selectTranslation_zIndex_desc": {
+		"message": "Agar ba'zi sahifalardagi elementlar tarjima qilingan matn bilan ochiladigan oynani yopib qo'ysa, bu qiymatni oshiring"
+	},
+	"settings_option_textTranslator": {
+		"message": "Matn tarjimasi"
+	},
+	"settings_option_textTranslator_rememberText": {
+		"message": "Tarjima qilingan matnni eslab qolish"
+	},
+	"settings_option_textTranslator_rememberText_desc": {
+		"message": "Oyna ochilganda tarjima qilingan matnni eslab qolish"
+	},
+	"settings_option_textTranslator_spellCheck": {
+		"message": "Imlo tekshiruvini yoqish"
+	},
+	"settings_option_textTranslator_suggestLanguage": {
+		"message": "Aniqlangan matn tilini ko'rsatish"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways": {
+		"message": "Har doim tilni aniqlash va taklif qilish"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways_desc": {
+		"message": "O'chirilganda, til takliflari faqat manba tili \"avto\" ga o'rnatilgan bo'lsa paydo bo'ladi"
+	},
+	"settings_option_translatePreferences": {
+		"message": "Tarjima afzalliklari"
+	},
+	"settings_option_translateScheduler": {
+		"message": "Tarjima rejalashtiruvchisi"
+	},
+	"settings_option_translateScheduler_delay": {
+		"message": "Matn yig'ish kechikishi"
+	},
+	"settings_option_translateScheduler_delay_desc": {
+		"message": "Tarjima rejalashtiruvchisi iloji boricha ko'proq matnlarni bitta so'rovda yuborish uchun yig'ib, tarjima xizmatiga so'rovlar sonini kamaytiradi. Rejalashtiruvchi tarjimani boshlashdan oldin ko'proq matnlarni yig'ish uchun belgilangan vaqtni millisekundlarda kutadi"
+	},
+	"settings_option_translateScheduler_retryLimit": {
+		"message": "Tarjima qayta urinishlari uchun cheklov"
+	},
+	"settings_option_translateScheduler_retryLimit_desc": {
+		"message": "Rejalashtiruvchi tarjima xatolari yuzaga kelganda matnlarni qayta tarjima qilishga urinadi. Ushbu parametr qayta urinishlar soniga cheklov qo'yadi. Cheksiz qayta urinishlarga ruxsat berish uchun manfiy sonni belgilang"
+	},
+	"settings_option_translatorModule": {
+		"message": "Tarjima moduli"
+	},
+	"settings_option_translatorModule_desc": {
+		"message": "Tarjimalar sifati va mavjud tillar tarjima moduliga bog'liq"
+	},
+	"settings_option_tts": {
+		"message": "Matndan nutqqa aylantirish (TTS)"
+	},
+	"settings_option_ttsCustomModules": {
+		"message": "Maxsus nutq sintezi modullari"
+	},
+	"settings_option_ttsCustomModules_button": {
+		"message": "Nutq sintezi modullarini boshqarish"
+	},
+	"settings_option_ttsCustomModules_desc": {
+		"message": "Siz o'zingiz yoqtirgan xizmatlar va ovoz dvigatellaridan foydalanadigan nutq sintezi modullarini qo'shishingiz mumkin. <slot id=docs>maxsus TTS hujjatlari</slot> da ko'proq o'qing"
+	},
+	"settings_option_ttsModule": {
+		"message": "Tanlangan TTS moduli"
+	},
+	"settings_option_ttsModule_desc": {
+		"message": "Matnni ovozli qilish uchun ishlatiladigan ovoz dvigateli"
+	},
+	"settings_option_userLanguage": {
+		"message": "Sizning tilingiz"
+	},
+	"settings_option_userLanguage_desc": {
+		"message": "Matnlar tarjima qilinadigan til"
+	},
+	"settings_pageTitle": {
+		"message": "Sozlamalar"
+	},
+	"settings_section_history": {
+		"message": "Tarix"
+	},
+	"settings_section_popup": {
+		"message": "Popup"
+	},
+	"textTranslator_suggestLanguage": {
+		"message": "Ko'rinib turibdiki, matn tili <slot id=languageSuggest>$language_name$</slot>",
+		"placeholders": {
+			"language_name": {
+				"content": "$1",
+				"example": "Yaponcha"
+			}
+		}
+	},
+	"textTranslator_translateInputPlaceholder": {
+		"message": "Tarjima uchun matn kiriting",
+		"description": "Request to user input some text for translation"
+	},
+	"textTranslator_translatePlaceholder": {
+		"message": "Tarjima qilingan matn bu yerda bo'ladi"
+	},
+	"translatorsManagerWindow_add": {
+		"message": "Tarjima modulini qo'shish"
+	},
+	"translatorsManagerWindow_close": {
+		"message": "Yopish"
+	},
+	"translatorsManagerWindow_emptyTranslatorsListText": {
+		"message": "Hozircha hech qanday maxsus tarjima modullari qo'shilmagan"
+	},
+	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
+		"message": "Siz \"$translator_name$\" tarjima modulini olib tashlamoqchimisiz?",
+		"placeholders": {
+			"translator_name": {
+				"content": "$1",
+				"example": "Google translator"
+			}
+		}
+	},
+	"translatorsManagerWindow_title": {
+		"message": "Maxsus tarjima modullari"
+	},
+	"translatorsManagerWindow_translator_delete": {
+		"message": "O'chirish"
+	},
+	"translatorsManagerWindow_translator_edit": {
+		"message": "Tahrirlash"
+	},
+	"ttsManagerWindow_add": {
+		"message": "TTS modulini qo'shish"
+	},
+	"ttsManagerWindow_close": {
+		"message": "Yopish"
+	},
+	"ttsManagerWindow_emptyTranslatorsListText": {
+		"message": "Hozircha hech qanday TTS modullari qo'shilmagan"
+	},
+	"ttsManagerWindow_message_ttsRemoveConfirmation": {
+		"message": "Siz \"$tts_name$\" TTS modulini olib tashlamoqchimisiz?",
+		"placeholders": {
+			"tts_name": {
+				"content": "$1",
+				"example": "Google TTS"
+			}
+		}
+	},
+	"ttsManagerWindow_title": {
+		"message": "Matndan nutqqa modullari"
+	},
+	"ttsManagerWindow_translator_delete": {
+		"message": "O'chirish"
+	},
+	"ttsManagerWindow_translator_edit": {
+		"message": "Tahrirlash"
+	},
+	"validation_number": {
+		"message": "Qiymat raqam bo'lishi kerak"
+	},
+	"validation_numberBetweenRange": {
+		"message": "Qiymat $1 va $2 orasida raqam bo'lishi kerak"
+	},
+	"validation_positiveNumber": {
+		"message": "Qiymat musbat raqam bo'lishi kerak"
+	}
+}

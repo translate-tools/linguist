@@ -1,0 +1,623 @@
+{
+	"common_action_addToDictionary": {
+		"message": "Иловаи тарҷума ба луғат"
+	},
+	"common_action_removeFromDictionary": {
+		"message": "Ҳазфи тарҷума аз луғат"
+	},
+	"common_bgUnavailable": {
+		"message": "Скрипти замина дастнорас аст"
+	},
+	"common_cancel": {
+		"message": "Бекор кардан"
+	},
+	"common_close": {
+		"message": "Пӯшидан"
+	},
+	"common_copy": {
+		"message": "Нусхабардорӣ"
+	},
+	"common_error": {
+		"message": "Хато"
+	},
+	"common_offlineTranslator": {
+		"message": "$1 - Тарҷумони офлайн"
+	},
+	"common_retry": {
+		"message": "Боз кӯшидан"
+	},
+	"common_translate": {
+		"message": "Тарҷума кардан"
+	},
+	"component_hotkey_placeholder": {
+		"message": "Барои сабти кӯтоҳ роҳро клик кунед"
+	},
+	"component_hotkey_recordPlaceholder": {
+		"message": "Калидҳоро пахш кунед"
+	},
+	"component_hotkey_resetButton": {
+		"message": "Аз нав танзим кардан"
+	},
+	"contextMenu_disablePageTranslation": {
+		"message": "Тарҷумаи саҳифаро қатъ кунед"
+	},
+	"contextMenu_translatePage": {
+		"message": "Тарҷумаи саҳифа"
+	},
+	"contextMenu_translateSelectedText": {
+		"message": "Тарҷумаи матни интихобшуда"
+	},
+	"dictionaryButton_add": {
+		"message": "Ба луғат илова кунед"
+	},
+	"dictionaryButton_delete": {
+		"message": "Аз луғат ҳазф кунед"
+	},
+	"dictionary_button_export": {
+		"message": "Содирот"
+	},
+	"dictionary_button_removeAll": {
+		"message": "Ҳамаашро ҳазф кунед"
+	},
+	"dictionary_deleteAll": {
+		"message": "Шумо мутмаин ҳастед, ки мехоҳед ҲАМАИ тарҷумаҳоро аз луғат ҳазф кунед?"
+	},
+	"dictionary_deleteConfirmation": {
+		"message": "Шумо мутмаин ҳастед, ки мехоҳед ин тарҷумаро ҳазф кунед?"
+	},
+	"dictionary_description": {
+		"message": "Тарҷумаҳоро дар луғат захира кунед, то онҳоро зудтар пайдо кунед"
+	},
+	"dictionary_emptyDictionary": {
+		"message": "Луғат холӣ аст, онро бо тарҷумаи баъзе матнҳо пур кунед"
+	},
+	"dictionary_filter_from": {
+		"message": "Забони матни аслӣ"
+	},
+	"dictionary_filter_to": {
+		"message": "Забони мақсад"
+	},
+	"dictionary_message_deleteAll_success": {
+		"message": "Ҳамаи тарҷумаҳо ҳазф шуданд"
+	},
+	"dictionary_notFoundEntries": {
+		"message": "Тарҷумаҳое, ки ба ин филтрҳо мувофиқанд, ёфт нашуданд"
+	},
+	"dictionary_pageTitle": {
+		"message": "Луғат"
+	},
+	"dictionary_resetFilters": {
+		"message": "Филтрҳоро аз нав танзим кунед"
+	},
+	"dictionary_searchPlaceholder": {
+		"message": "Ҷустуҷӯ аз рӯи матн"
+	},
+	"editorWindow_close": {
+		"message": "Пӯшидан"
+	},
+	"editorWindow_data_code": {
+		"message": "Код"
+	},
+	"editorWindow_data_title": {
+		"message": "Номи модул"
+	},
+	"editorWindow_message_invalidTitle": {
+		"message": "Номи модул бояд ҳадди ақал як аломат дошта бошад"
+	},
+	"editorWindow_save": {
+		"message": "Захира кардан"
+	},
+	"ext_description": {
+		"message": "Тарҷумаи саҳифаҳои веб, тарҷумаи матн, луғат, таърих, тарҷумонҳои фармоишӣ, ҳама чизҳое, ки барои шикастани монеаҳои забонӣ лозим аст"
+	},
+	"ext_name": {
+		"message": "Linguist - тарҷумони саҳифаҳои веб"
+	},
+	"history_control_selectEntry": {
+		"message": "Интихоби тарҷума барои амалиёти оммавӣ",
+		"description": "Description in finite form \"to pick\" with explaining what this checkbox will do"
+	},
+	"history_controls_clearHistory": {
+		"message": "Тоза кардани таърих"
+	},
+	"history_controls_deleteSelected": {
+		"message": "Тарҷумаҳои интихобшударо нест кунед"
+	},
+	"history_controls_selectAll": {
+		"message": "Интихоби ҳамаи тарҷумаҳо"
+	},
+	"history_message_clearHistoryConfirmation": {
+		"message": "Шумо боварӣ доред, ки мехоҳед таърихро тоза кунед? Ҳама сабтҳо нест карда мешаванд"
+	},
+	"history_message_deleteEntryConfirmation": {
+		"message": "Шумо боварӣ доред, ки мехоҳед ин сабтро нест кунед?"
+	},
+	"history_message_deleteSelectedEntriesConfirmation": {
+		"message": "Шумо боварӣ доред, ки мехоҳед сабтҳои интихобшударо нест кунед ($1)?"
+	},
+	"history_message_entriesNotFound": {
+		"message": "Тарҷумаҳои мувофиқ бо филтр ёфт нашуданд"
+	},
+	"history_message_noEntries": {
+		"message": "Таърих холӣ аст"
+	},
+	"history_notification_disabled": {
+		"message": "Сабти таърих ғайрифаъол аст, бинобар ин сабтҳои нав пайдо намешаванд. Шумо метавонед инро дар <slot id=preferences>Танзимот</slot> тағйир диҳед"
+	},
+	"history_pageTitle": {
+		"message": "Таърих"
+	},
+	"history_searchPlaceholder": {
+		"message": "Ҷустуҷӯ аз рӯи матн"
+	},
+	"inlineTranslator_showOriginalText": {
+		"message": "Намоиши матни аслӣ"
+	},
+	"lang_change": {
+		"message": "Тағйири забон"
+	},
+	"lang_detect": {
+		"message": "Авто-муайянкунӣ"
+	},
+	"lang_select": {
+		"message": "Интихоби забон"
+	},
+	"lang_swap": {
+		"message": "Иваз кардани забонҳо"
+	},
+	"message_unknownError": {
+		"message": "Хатои номаълум"
+	},
+	"pageTranslator_alwaysTranslateLang": {
+		"message": "Ҳамеша ин забонро тарҷума кунед"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disable": {
+		"message": "Ғайрифаъол кардан"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
+		"message": "Барои ҳамаи сайтҳо ғайрифаъол кунед"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_enable": {
+		"message": "Фаъол кардан"
+	},
+	"pageTranslator_commonPreferences_title": {
+		"message": "Танзимоти умумӣ барои ин забон"
+	},
+	"pageTranslator_option_autoTranslate": {
+		"message": "Тарҷумаи автоматӣ"
+	},
+	"pageTranslator_showOriginal": {
+		"message": "Нусхаи аслӣ нишон диҳед"
+	},
+	"pageTranslator_showTranslationPreferences": {
+		"message": "Танзимоти тарҷума"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_always": {
+		"message": "Ҳамеша тарҷума кунед"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
+		"message": "Ҳамеша барои ин забон тарҷума кунед"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_default": {
+		"message": "Қоидаҳои умумиро истифода баред"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
+		"message": "Қоидаҳои умумиро барои ин забон истифода баред"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_never": {
+		"message": "Ҳеҷ гоҳ тарҷума накунед"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
+		"message": "Ҳеҷ гоҳ барои ин забон тарҷума накунед"
+	},
+	"pageTranslator_sitePreferences_title": {
+		"message": "Танзимот барои"
+	},
+	"pageTranslator_translatePage": {
+		"message": "Саҳифаро тарҷума кунед"
+	},
+	"pageTranslator_translationReport": {
+		"message": "Ҳисоботи тарҷума"
+	},
+	"pageTranslator_translationReport_queue": {
+		"message": "Дар интизорӣ"
+	},
+	"pageTranslator_translationReport_reject": {
+		"message": "Хатоҳо"
+	},
+	"pageTranslator_translationReport_resolve": {
+		"message": "Тарҷума шуд"
+	},
+	"popup_tabIdNotFound": {
+		"message": "Ҷадвали \"$1\" ёфт нашуд"
+	},
+	"popup_tab_translatePage": {
+		"message": "Тарҷумаи саҳифа"
+	},
+	"popup_tab_translateText": {
+		"message": "Тарҷумаи матн"
+	},
+	"settings_button_cancel": {
+		"message": "Бекор кардан"
+	},
+	"settings_button_export": {
+		"message": "Содироти конфигуратсия"
+	},
+	"settings_button_import": {
+		"message": "Воридоти конфигуратсия"
+	},
+	"settings_button_reset": {
+		"message": "Танзимоти конфигуратсияро барқарор кунед"
+	},
+	"settings_button_saveChanges": {
+		"message": "Тағйиротро захира кунед"
+	},
+	"settings_message_clearCache_success": {
+		"message": "Кэш тоза шуд"
+	},
+	"settings_message_common_invalidValueType": {
+		"message": "Арзиши нодуруст"
+	},
+	"settings_message_importConfig_invalidFile": {
+		"message": "Файли конфигуратсияе, ки пешниҳод шудааст, нодуруст ё вайрон шудааст ва коркард намешавад"
+	},
+	"settings_message_importConfig_success": {
+		"message": "Воридот анҷом ёфт"
+	},
+	"settings_message_resetConfig_confirm": {
+		"message": "Барои барқарор кардани танзимот ба арзишҳои пешфарз тасдиқ кунед"
+	},
+	"settings_message_resetConfig_success": {
+		"message": "Танзимот барқарор шуд"
+	},
+	"settings_message_saveChanges_success": {
+		"message": "Тағйиротҳо ҳифз шуданд"
+	},
+	"settings_option_cache": {
+		"message": "Кэш"
+	},
+	"settings_option_cache_clear": {
+		"message": "Тоза кардани кэш"
+	},
+	"settings_option_cache_clear_desc": {
+		"message": "Агар шумо хатогиҳои тарҷумаро пай баред ё тасодуфан матнҳои хусусиро ҳангоми фаъол будани кэш тарҷума кунед, шумо метавонед ҳамаи маълумотро аз кэш тоза кунед",
+		"description": "Шарҳ барои корбар дар бораи ҳолатҳое, ки тоза кардани кэш муфид аст"
+	},
+	"settings_option_cache_enable": {
+		"message": "Фаъол кардани кэш"
+	},
+	"settings_option_cache_enable_desc": {
+		"message": "Вақте ки кэш фаъол аст, матнҳое, ки қаблан тарҷума шудаанд, фавран бе дархостҳои иловагӣ ба хидмати тарҷума тарҷума мешаванд"
+	},
+	"settings_option_cache_ignoreCase": {
+		"message": "Истифодаи кэши ҳассос ба регистр"
+	},
+	"settings_option_cache_ignoreCase_desc": {
+		"message": "Вақте ки фаъол аст, тарҷумаҳои кэшшуда барои матнҳо бо регистрҳои гуногун истифода мешаванд, ки метавонад дар баъзе ҳолатҳо таҳрифҳои тарҷумаро ба вуҷуд орад"
+	},
+	"settings_option_commonSettings": {
+		"message": "Танзимоти умумӣ"
+	},
+	"settings_option_customTranslatorModule": {
+		"message": "Модулҳои тарҷумаи фармоишӣ",
+		"description": "Коди муайянкардаи корбар, ки модулҳои тарҷумаро амалӣ мекунад"
+	},
+	"settings_option_customTranslatorModule_desc": {
+		"message": "Шумо метавонед модулҳои тарҷумаи фармоиширо, ки хидматҳои тарҷумаи дӯстдоштаи шуморо истифода мебаранд, илова кунед. Маълумоти бештарро дар <slot id=docs>ҳуҷҷатҳои тарҷумонҳои фармоишӣ</slot> омӯзед"
+	},
+	"settings_option_customTranslatorModule_manageButton": {
+		"message": "Идоракунии тарҷумонҳо",
+		"description": "Тугма барои нишон додани рӯйхати модулҳои тарҷума"
+	},
+	"settings_option_history_enable": {
+		"message": "Фаъол кардани таърих"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "Вақте ки фаъол аст, тарҷумаҳо сабт мешаванд ва дар <slot id=historyPage>саҳифаи таърих</slot> пайдо мешаванд"
+	},
+	"settings_option_pageTranslation": {
+		"message": "Тарҷумаи пурраи саҳифа"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent": {
+		"message": "Муайян кардани забон аз рӯи мундариҷа"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent_desc": {
+		"message": "Матни дар саҳифаи веб буда таҳлил карда мешавад, то забони он муайян карда шавад. Вақте ки ғайрифаъол аст, забоне, ки дар <slot id=docs>метамаълумоти саҳифа</slot> муайян шудааст, истифода мешавад"
+	},
+	"settings_option_pageTranslation_enableContextMenu": {
+		"message": "Фаъол кардани тугмаи менюи контекстӣ"
+	},
+	"settings_option_pageTranslation_enableContextMenu_desc": {
+		"message": "Илова кардани тугма барои иваз кардани тарҷумаи саҳифа дар менюи контекстии саҳифа"
+	},
+	"settings_option_pageTranslation_excludeSelectors": {
+		"message": "Селекторҳо барои истисно аз тарҷума"
+	},
+	"settings_option_pageTranslation_excludeSelectors_desc": {
+		"message": "Рӯйхати селекторҳои CSS барои унсурҳое, ки бояд аз тарҷума истисно шаванд. Як селектор дар як сатр. Агар унсур бо ягон аз ин селекторҳо мувофиқат кунад, матн, атрибутҳо ва унсурҳои дохилии он тарҷума намешаванд"
+	},
+	"settings_option_pageTranslation_lazyTranslate": {
+		"message": "Тарҷума кардани танҳо унсурҳои намоён"
+	},
+	"settings_option_pageTranslation_lazyTranslate_desc": {
+		"message": "Вақте ки ин имконот фаъол аст, танҳо унсурҳои намоён тарҷума мешаванд. Ин имконот трафики шабакаро коҳиш медиҳад"
+	},
+	"settings_option_pageTranslation_originalTextPopup": {
+		"message": "Фаъол кардани попап бо матни аслӣ"
+	},
+	"settings_option_pageTranslation_originalTextPopup_desc": {
+		"message": "Намоиши попап бо матни аслӣ ҳангоми гузариш ба блокҳои матни тарҷумашуда"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation": {
+		"message": "Тугмаи кӯтоҳ"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation_desc": {
+		"message": "Тугмаи кӯтоҳ барои иваз кардани тарҷумаи саҳифа\nТугмаи ESC-ро пахш кунед, то калидҳоро барқарор кунед"
+	},
+	"settings_option_pageTranslation_translatableAttributes": {
+		"message": "Атрибутҳои тарҷумашаванда"
+	},
+	"settings_option_pageTranslation_translatableAttributes_desc": {
+		"message": "Номҳои <slot id=htmlAttributes>атрибутҳои HTML</slot>-ро барои тарҷума ворид кунед, як атрибут дар як сатр\nТанҳо атрибутҳои дар ин рӯйхат буда тарҷума мешаванд"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters": {
+		"message": "Намоиши пешрафти тарҷума"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters_desc": {
+		"message": "Намоиши панел бо пешрафти тарҷумаи саҳифа дар попапи васеъкунӣ"
+	},
+	"settings_option_selectTranslation": {
+		"message": "Тарҷума барои матни интихобшуда"
+	},
+	"settings_option_selectTranslation_detectTextLanguage": {
+		"message": "Шинохтани забони матн"
+	},
+	"settings_option_selectTranslation_detectTextLanguage_desc": {
+		"message": "Вақте ки фаъол аст, матни интихобшуда барои шинохтани забон барои тарҷума таҳлил карда мешавад. Дар акси ҳол, забони саҳифа истифода мешавад"
+	},
+	"settings_option_selectTranslation_disableWhileTranslatePage": {
+		"message": "Ғайрифаъол ҳангоми тарҷумаи саҳифа"
+	},
+	"settings_option_selectTranslation_enable": {
+		"message": "Фаъол кардани тарҷумаи матни интихобшуда"
+	},
+	"settings_option_selectTranslation_enable_desc": {
+		"message": "Вақте ки ин хусусият фаъол аст, шумо метавонед ҳар гуна матнро дар саҳифа интихоб кунед ва онро дар попап тарҷума кунед"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton": {
+		"message": "Авто-фокус ба тугмаи тарҷума"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
+		"message": "Вақте ки тугмаи тарҷума дар саҳифа пайдо мешавад, он ба таври худкор фокус мешавад"
+	},
+	"settings_option_selectTranslation_header_languageChoice": {
+		"message": "Танзимоти забон"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang": {
+		"message": "Иҷозат додан ба модул барои шинохтани забони матн"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
+		"message": "Вақте ки забони матн дар маҳаллӣ шинохта намешавад ва ин имконот фаъол аст, матн бо забони \"auto\" тарҷума мешавад, агар дастгирӣ шавад.\nВақте ки имконот ғайрифаъол аст, усули дигар барои муқаррар кардани забони манбаи матн истифода мешавад"
+	},
+	"settings_option_selectTranslation_mode": {
+		"message": "Амалиёт ҳангоми интихоби матн"
+	},
+	"settings_option_selectTranslation_mode_item_contextMenu": {
+		"message": "Тарҷумаи матн тавассути менюи контекстӣ"
+	},
+	"settings_option_selectTranslation_mode_item_popupButton": {
+		"message": "Намоиши тугмаи тарҷума"
+	},
+	"settings_option_selectTranslation_mode_item_quickTranslate": {
+		"message": "Тарҷумаи фаврии матн"
+	},
+	"settings_option_selectTranslation_modifiers": {
+		"message": "Модификаторҳо"
+	},
+	"settings_option_selectTranslation_modifiers_desc": {
+		"message": "Тугмаҳои лозимаро интихоб кунед, ки бояд дар клавиатура пахш карда шаванд, то тарҷума намоиш дода шавад"
+	},
+	"settings_option_selectTranslation_modifiers_key_alt": {
+		"message": "alt"
+	},
+	"settings_option_selectTranslation_modifiers_key_ctrl": {
+		"message": "ctrl"
+	},
+	"settings_option_selectTranslation_modifiers_key_meta": {
+		"message": "meta"
+	},
+	"settings_option_selectTranslation_modifiers_key_shift": {
+		"message": "shift"
+	},
+	"settings_option_selectTranslation_rememberDirection": {
+		"message": "Забони матни охирин интихобшударо дар хотир доред"
+	},
+	"settings_option_selectTranslation_showOnceForSelection": {
+		"message": "Тугмаи тарҷумаро як маротиба барои ҳар як интихоби матн нишон диҳед"
+	},
+	"settings_option_selectTranslation_showOnceForSelection_desc": {
+		"message": "Тугма танҳо як маротиба барои ҳар як интихоби матн пайдо мешавад. Барои боз нишон додани он, матнро дубора интихоб кунед"
+	},
+	"settings_option_selectTranslation_showOriginalText": {
+		"message": "Намоиши матни аслӣ"
+	},
+	"settings_option_selectTranslation_showOriginalText_desc": {
+		"message": "Илова кардани блок бо матни аслӣ ба попапи тарҷума"
+	},
+	"settings_option_selectTranslation_strictSelection": {
+		"message": "Режими сахти интихоби матни спан",
+		"description": "Ин имконот дар бораи интихоби матн тавассути муш аст"
+	},
+	"settings_option_selectTranslation_strictSelection_desc": {
+		"message": "Интихоби матни спанро нодида гиред, агар тугмаи чапи муш берун аз блоки дорои матни интихобшуда озод карда шавад"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton": {
+		"message": "Таъхир пеш аз пинҳон кардани тугмаи попап"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton_desc": {
+		"message": "Таъхир дар миллисонияҳо пеш аз пинҳон кардани тугма вақте ки курсор болои он нест. Ҳангоми гузариш болои тугма таймерро аз нав оғоз мекунад. Барои ғайрифаъол кардани пинҳонкунии автоматӣ, арзишро камтар аз 1 таъин кунед"
+	},
+	"settings_option_selectTranslation_zIndex": {
+		"message": "z-index"
+	},
+	"settings_option_selectTranslation_zIndex_desc": {
+		"message": "Агар унсурҳо дар баъзе саҳифаҳо болои попап бо матни тарҷумашуда бошанд, ин арзишро зиёд кунед"
+	},
+	"settings_option_textTranslator": {
+		"message": "Тарҷумаи матн"
+	},
+	"settings_option_textTranslator_rememberText": {
+		"message": "Ёддошт кардани матни тарҷумашуда"
+	},
+	"settings_option_textTranslator_rememberText_desc": {
+		"message": "Ёддошт кардани матни тарҷумашуда барои дафъаи оянда ҳангоми кушодани равзана"
+	},
+	"settings_option_textTranslator_spellCheck": {
+		"message": "Фаъол кардани санҷиши имло"
+	},
+	"settings_option_textTranslator_suggestLanguage": {
+		"message": "Намоиши забони матни муайяншуда"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways": {
+		"message": "Ҳамеша муайян ва пешниҳод кардани забон"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways_desc": {
+		"message": "Ҳангоми ғайрифаъол будан, пешниҳодҳои забон танҳо вақте пайдо мешаванд, ки забони манбаъ ба \"авто\" таъин шудааст"
+	},
+	"settings_option_translatePreferences": {
+		"message": "Тарҷумаи афзалиятҳо"
+	},
+	"settings_option_translateScheduler": {
+		"message": "Ҷадвали тарҷума"
+	},
+	"settings_option_translateScheduler_delay": {
+		"message": "Таъхири ҷамъоварии матн"
+	},
+	"settings_option_translateScheduler_delay_desc": {
+		"message": "Ҷадвали тарҷума шумораи дархостҳо ба API хидмати тарҷумаро бо ҷамъоварии ҳарчи бештар матнҳо барои фиристодан дар як дархост коҳиш медиҳад. Ҷадвал барои вақти муайяншуда дар миллисонияҳо интизор мешавад, то матнҳои бештарро пеш аз оғози тарҷума ҷамъ оварад"
+	},
+	"settings_option_translateScheduler_retryLimit": {
+		"message": "Маҳдудият барои кӯшишҳои такрории тарҷума"
+	},
+	"settings_option_translateScheduler_retryLimit_desc": {
+		"message": "Ҷадвал ҳангоми рух додани хатогиҳои тарҷума кӯшиш мекунад, ки матнҳоро дубора тарҷума кунад. Ин имконот маҳдудияти кӯшишҳои такрориро таъин мекунад. Барои иҷозати кӯшишҳои беохир, рақами манфӣ таъин кунед"
+	},
+	"settings_option_translatorModule": {
+		"message": "Модули тарҷума"
+	},
+	"settings_option_translatorModule_desc": {
+		"message": "Сифати тарҷумаҳо ва забонҳои дастрас аз модули тарҷума вобаста аст"
+	},
+	"settings_option_tts": {
+		"message": "Табдили матн ба нутқ (TTS)"
+	},
+	"settings_option_ttsCustomModules": {
+		"message": "Модулҳои синтези нутқи фармоишӣ"
+	},
+	"settings_option_ttsCustomModules_button": {
+		"message": "Идоракунии модулҳои синтези нутқ"
+	},
+	"settings_option_ttsCustomModules_desc": {
+		"message": "Шумо метавонед модулҳои синтези нутқро, ки хидматҳо ва муҳаррикҳои овозии дӯстдоштаи шуморо истифода мебаранд, илова кунед. Маълумоти бештарро дар <slot id=docs>ҳуҷҷатҳои фармоишии TTS</slot> хонед"
+	},
+	"settings_option_ttsModule": {
+		"message": "Модули TTS интихобшуда"
+	},
+	"settings_option_ttsModule_desc": {
+		"message": "Муҳаррики овозӣ барои овоздиҳии матн истифода мешавад"
+	},
+	"settings_option_userLanguage": {
+		"message": "Забони шумо"
+	},
+	"settings_option_userLanguage_desc": {
+		"message": "Забоне, ки матнҳо ба он тарҷума мешаванд"
+	},
+	"settings_pageTitle": {
+		"message": "Танзимот"
+	},
+	"settings_section_history": {
+		"message": "Таърих"
+	},
+	"settings_section_popup": {
+		"message": "Попап"
+	},
+	"textTranslator_suggestLanguage": {
+		"message": "Ба назар мерасад, ки забони матн <slot id=languageSuggest>$language_name$</slot> аст",
+		"placeholders": {
+			"language_name": {
+				"content": "$1",
+				"example": "Japanese"
+			}
+		}
+	},
+	"textTranslator_translateInputPlaceholder": {
+		"message": "Матни барои тарҷума ворид кунед",
+		"description": "Request to user input some text for translation"
+	},
+	"textTranslator_translatePlaceholder": {
+		"message": "Матни тарҷумашуда дар ин ҷо хоҳад буд"
+	},
+	"translatorsManagerWindow_add": {
+		"message": "Модули тарҷумаро илова кунед"
+	},
+	"translatorsManagerWindow_close": {
+		"message": "Пӯшидан"
+	},
+	"translatorsManagerWindow_emptyTranslatorsListText": {
+		"message": "Ҳанӯз ягон модули тарҷумаи фармоишӣ илова нашудааст"
+	},
+	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
+		"message": "Оё шумо боварӣ доред, ки мехоҳед модули тарҷумаи \"$translator_name$\"-ро хориҷ кунед?",
+		"placeholders": {
+			"translator_name": {
+				"content": "$1",
+				"example": "Google translator"
+			}
+		}
+	},
+	"translatorsManagerWindow_title": {
+		"message": "Модулҳои тарҷумаи фармоишӣ"
+	},
+	"translatorsManagerWindow_translator_delete": {
+		"message": "Ҳазф кардан"
+	},
+	"translatorsManagerWindow_translator_edit": {
+		"message": "Таҳрир кардан"
+	},
+	"ttsManagerWindow_add": {
+		"message": "Модули TTS-ро илова кунед"
+	},
+	"ttsManagerWindow_close": {
+		"message": "Пӯшидан"
+	},
+	"ttsManagerWindow_emptyTranslatorsListText": {
+		"message": "Ҳанӯз ягон модули TTS илова нашудааст"
+	},
+	"ttsManagerWindow_message_ttsRemoveConfirmation": {
+		"message": "Оё шумо боварӣ доред, ки мехоҳед модули TTS \"$tts_name$\"-ро хориҷ кунед?",
+		"placeholders": {
+			"tts_name": {
+				"content": "$1",
+				"example": "Google TTS"
+			}
+		}
+	},
+	"ttsManagerWindow_title": {
+		"message": "Модулҳои матн ба овоз"
+	},
+	"ttsManagerWindow_translator_delete": {
+		"message": "Ҳазф кардан"
+	},
+	"ttsManagerWindow_translator_edit": {
+		"message": "Таҳрир кардан"
+	},
+	"validation_number": {
+		"message": "Арзиш бояд рақам бошад"
+	},
+	"validation_numberBetweenRange": {
+		"message": "Арзиш бояд рақам байни $1 ва $2 бошад"
+	},
+	"validation_positiveNumber": {
+		"message": "Арзиш бояд рақами мусбат бошад"
+	}
+}

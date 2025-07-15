@@ -1,0 +1,623 @@
+{
+	"common_action_addToDictionary": {
+		"message": "Ƙara fassara zuwa kundin kalmomi"
+	},
+	"common_action_removeFromDictionary": {
+		"message": "Cire fassara daga kundin kalmomi"
+	},
+	"common_bgUnavailable": {
+		"message": "Ba a samun rubutun bango"
+	},
+	"common_cancel": {
+		"message": "Soke"
+	},
+	"common_close": {
+		"message": "Rufe"
+	},
+	"common_copy": {
+		"message": "Kwafi"
+	},
+	"common_error": {
+		"message": "Kuskure"
+	},
+	"common_offlineTranslator": {
+		"message": "$1 - Mai fassara a layi"
+	},
+	"common_retry": {
+		"message": "Sake gwadawa"
+	},
+	"common_translate": {
+		"message": "Fassara"
+	},
+	"component_hotkey_placeholder": {
+		"message": "Danna don yin rikodin gajerun hanyoyi"
+	},
+	"component_hotkey_recordPlaceholder": {
+		"message": "Latsa maɓallan"
+	},
+	"component_hotkey_resetButton": {
+		"message": "Sake saita"
+	},
+	"contextMenu_disablePageTranslation": {
+		"message": "Dakatar da fassarar shafi"
+	},
+	"contextMenu_translatePage": {
+		"message": "Fassara shafi"
+	},
+	"contextMenu_translateSelectedText": {
+		"message": "Fassara rubutun da aka zaɓa"
+	},
+	"dictionaryButton_add": {
+		"message": "Ƙara zuwa kundin kalmomi"
+	},
+	"dictionaryButton_delete": {
+		"message": "Cire daga kundin kalmomi"
+	},
+	"dictionary_button_export": {
+		"message": "Fitarwa"
+	},
+	"dictionary_button_removeAll": {
+		"message": "Cire duk"
+	},
+	"dictionary_deleteAll": {
+		"message": "Ka tabbata kana son cire DUK fassara daga kundin kalmomi?"
+	},
+	"dictionary_deleteConfirmation": {
+		"message": "Ka tabbata kana son cire wannan fassara?"
+	},
+	"dictionary_description": {
+		"message": "Ajiye fassara a cikin kundin kalmomi don samun su cikin sauri daga baya"
+	},
+	"dictionary_emptyDictionary": {
+		"message": "Kundin kalmomi babu komai, fara cika shi ta hanyar fassara wasu rubutu"
+	},
+	"dictionary_filter_from": {
+		"message": "Harshe na rubutun asali"
+	},
+	"dictionary_filter_to": {
+		"message": "Harshe na manufa"
+	},
+	"dictionary_message_deleteAll_success": {
+		"message": "An cire duk fassara"
+	},
+	"dictionary_notFoundEntries": {
+		"message": "Ba a sami fassara da suka dace da waɗannan matattara ba"
+	},
+	"dictionary_pageTitle": {
+		"message": "Kundin kalmomi"
+	},
+	"dictionary_resetFilters": {
+		"message": "Sake saita matattara"
+	},
+	"dictionary_searchPlaceholder": {
+		"message": "Nemo taƙaici"
+	},
+	"editorWindow_close": {
+		"message": "Rufe"
+	},
+	"editorWindow_data_code": {
+		"message": "Lambar"
+	},
+	"editorWindow_data_title": {
+		"message": "Sunan Module"
+	},
+	"editorWindow_message_invalidTitle": {
+		"message": "Sunan module dole ya ƙunshi aƙalla harafi ɗaya"
+	},
+	"editorWindow_save": {
+		"message": "Ajiye"
+	},
+	"ext_description": {
+		"message": "Fassarar shafin yanar gizo, fassarar rubutu, ƙamus, tarihi, masu fassara na musamman, duk abin da kuke buƙata don karya shingen harshe"
+	},
+	"ext_name": {
+		"message": "Linguist - mai fassara shafin yanar gizo"
+	},
+	"history_control_selectEntry": {
+		"message": "Zaɓi fassarar don aikin taro",
+		"description": "Description in finite form \"to pick\" with explaining what this checkbox will do"
+	},
+	"history_controls_clearHistory": {
+		"message": "Goge tarihi"
+	},
+	"history_controls_deleteSelected": {
+		"message": "Share fassarorin da aka zaɓa"
+	},
+	"history_controls_selectAll": {
+		"message": "Zaɓi duk fassarorin"
+	},
+	"history_message_clearHistoryConfirmation": {
+		"message": "Kuna da tabbacin cewa kuna son goge tarihin? Duk abubuwan shigar za a cire su"
+	},
+	"history_message_deleteEntryConfirmation": {
+		"message": "Kuna da tabbacin cewa kuna son share wannan shigar?"
+	},
+	"history_message_deleteSelectedEntriesConfirmation": {
+		"message": "Kuna da tabbacin cewa kuna son share abubuwan da aka zaɓa ($1)?"
+	},
+	"history_message_entriesNotFound": {
+		"message": "Ba a sami fassarorin da suka dace da matattara ba"
+	},
+	"history_message_noEntries": {
+		"message": "Tarihi babu komai"
+	},
+	"history_notification_disabled": {
+		"message": "An kashe rikodin tarihi, don haka sababbin abubuwan shigar ba za su bayyana ba. Kuna iya canza wannan a cikin <slot id=preferences>Zaɓuɓɓuka</slot>"
+	},
+	"history_pageTitle": {
+		"message": "Tarihi"
+	},
+	"history_searchPlaceholder": {
+		"message": "Nemo taƙaici"
+	},
+	"inlineTranslator_showOriginalText": {
+		"message": "Nuna rubutun asali"
+	},
+	"lang_change": {
+		"message": "Canja harshe"
+	},
+	"lang_detect": {
+		"message": "Gano ta atomatik"
+	},
+	"lang_select": {
+		"message": "Zaɓi harshe"
+	},
+	"lang_swap": {
+		"message": "Sauya harsuna"
+	},
+	"message_unknownError": {
+		"message": "Kuskuren da ba a sani ba"
+	},
+	"pageTranslator_alwaysTranslateLang": {
+		"message": "Koyaushe fassara wannan harshe"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disable": {
+		"message": "Kashe"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
+		"message": "Kashe don duk shafuka"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_enable": {
+		"message": "Kunna"
+	},
+	"pageTranslator_commonPreferences_title": {
+		"message": "Zaɓuɓɓuka gama gari don wannan yaren"
+	},
+	"pageTranslator_option_autoTranslate": {
+		"message": "Fassara ta atomatik"
+	},
+	"pageTranslator_showOriginal": {
+		"message": "Nuna asali"
+	},
+	"pageTranslator_showTranslationPreferences": {
+		"message": "Zaɓuɓɓukan fassara"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_always": {
+		"message": "Koyaushe fassara"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
+		"message": "Koyaushe fassara don wannan yaren"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_default": {
+		"message": "Yi amfani da dokoki gama gari"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
+		"message": "Yi amfani da dokoki gama gari don wannan yaren"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_never": {
+		"message": "Kada a taɓa fassara"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
+		"message": "Kada a taɓa fassara don wannan yaren"
+	},
+	"pageTranslator_sitePreferences_title": {
+		"message": "Zaɓuɓɓuka don"
+	},
+	"pageTranslator_translatePage": {
+		"message": "Fassara shafi"
+	},
+	"pageTranslator_translationReport": {
+		"message": "Rahoton fassara"
+	},
+	"pageTranslator_translationReport_queue": {
+		"message": "Ana jiran aiki"
+	},
+	"pageTranslator_translationReport_reject": {
+		"message": "Kurakurai"
+	},
+	"pageTranslator_translationReport_resolve": {
+		"message": "An fassara"
+	},
+	"popup_tabIdNotFound": {
+		"message": "Tab \"$1\" ba a samu ba"
+	},
+	"popup_tab_translatePage": {
+		"message": "Fassarar shafi"
+	},
+	"popup_tab_translateText": {
+		"message": "Fassarar rubutu"
+	},
+	"settings_button_cancel": {
+		"message": "Soke"
+	},
+	"settings_button_export": {
+		"message": "Fitar da saitin"
+	},
+	"settings_button_import": {
+		"message": "Shigo da saitin"
+	},
+	"settings_button_reset": {
+		"message": "Sake saitin"
+	},
+	"settings_button_saveChanges": {
+		"message": "Ajiye canje-canje"
+	},
+	"settings_message_clearCache_success": {
+		"message": "An share cache"
+	},
+	"settings_message_common_invalidValueType": {
+		"message": "Matsayin ƙima mara inganci"
+	},
+	"settings_message_importConfig_invalidFile": {
+		"message": "Fayil ɗin saitin da aka bayar ba daidai ba ne ko kuma ya lalace, ba za a iya sarrafa shi ba"
+	},
+	"settings_message_importConfig_success": {
+		"message": "Shigo da ya cika"
+	},
+	"settings_message_resetConfig_confirm": {
+		"message": "Tabbatar da sake saitin saitunan zuwa ƙimar tsoho"
+	},
+	"settings_message_resetConfig_success": {
+		"message": "An sake saitin saituna"
+	},
+	"settings_message_saveChanges_success": {
+		"message": "Canje-canje sun ajiye"
+	},
+	"settings_option_cache": {
+		"message": "Ajiyar wuri"
+	},
+	"settings_option_cache_clear": {
+		"message": "Goge ajiyar wuri"
+	},
+	"settings_option_cache_clear_desc": {
+		"message": "Idan ka lura da kurakuran fassara ko ka fassara rubutun sirri ba da gangan ba yayin da ajiyar wuri ke kunne, zaka iya goge duk bayanan daga ajiyar wuri",
+		"description": "Explanation for user about cases when it's useful to clear cache"
+	},
+	"settings_option_cache_enable": {
+		"message": "Kunna ajiyar wuri"
+	},
+	"settings_option_cache_enable_desc": {
+		"message": "Lokacin da ajiyar wuri ke kunne, rubutun da aka fassara a baya za a fassara su nan take ba tare da ƙarin buƙatu zuwa sabis na fassara ba"
+	},
+	"settings_option_cache_ignoreCase": {
+		"message": "Yi amfani da ajiyar wuri mara bambanci"
+	},
+	"settings_option_cache_ignoreCase_desc": {
+		"message": "Lokacin da aka kunna, za a yi amfani da fassarorin da aka adana don rubutun da ke da bambancin haruffa, wanda zai iya haifar da nakasu a fassara a wasu yanayi"
+	},
+	"settings_option_commonSettings": {
+		"message": "Saitunan gama gari"
+	},
+	"settings_option_customTranslatorModule": {
+		"message": "Kayayyakin fassara na musamman",
+		"description": "An user defined code that implements a translation module"
+	},
+	"settings_option_customTranslatorModule_desc": {
+		"message": "Zaka iya ƙara kayayyakin fassara na musamman da ke amfani da sabis na fassara da kake so. Kara koyo a cikin <slot id=docs>takardun fassara na musamman</slot>"
+	},
+	"settings_option_customTranslatorModule_manageButton": {
+		"message": "Gudanar da masu fassara",
+		"description": "A button to show list of translation modules"
+	},
+	"settings_option_history_enable": {
+		"message": "Kunna tarihi"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "Lokacin da aka kunna, za a rubuta fassarori kuma su bayyana a <slot id=historyPage>shafin tarihi</slot>"
+	},
+	"settings_option_pageTranslation": {
+		"message": "Fassarar shafi cikakke"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent": {
+		"message": "Gano harshe ta abun ciki"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent_desc": {
+		"message": "Bincika rubutun a shafin yanar gizo don gano harshensa. Lokacin da aka kashe, za a yi amfani da harshen da aka ayyana a cikin <slot id=docs>metadatan shafi</slot>"
+	},
+	"settings_option_pageTranslation_enableContextMenu": {
+		"message": "Kunna maɓallin menu na mahallin"
+	},
+	"settings_option_pageTranslation_enableContextMenu_desc": {
+		"message": "Ƙara maɓalli don kunna fassarar shafi a cikin menu na mahallin shafi"
+	},
+	"settings_option_pageTranslation_excludeSelectors": {
+		"message": "Zaɓaɓɓun abubuwan da za a cire daga fassara"
+	},
+	"settings_option_pageTranslation_excludeSelectors_desc": {
+		"message": "Jerin zaɓaɓɓun CSS don abubuwan da za a cire daga fassara. Zaɓaɓɓa ɗaya a kowane layi. Idan wani abu ya dace da kowane daga cikin waɗannan zaɓaɓɓun, rubutunsa, halayensa, da abubuwan da ke ciki ba za a fassara su ba"
+	},
+	"settings_option_pageTranslation_lazyTranslate": {
+		"message": "Fassara abubuwan da ake gani kawai"
+	},
+	"settings_option_pageTranslation_lazyTranslate_desc": {
+		"message": "Lokacin da aka kunna wannan zaɓi, za a fassara abubuwan da ake gani kawai. Wannan zaɓi yana rage zirga-zirgar hanyar sadarwa"
+	},
+	"settings_option_pageTranslation_originalTextPopup": {
+		"message": "Kunna faifan rubutu na asali"
+	},
+	"settings_option_pageTranslation_originalTextPopup_desc": {
+		"message": "Nuna faifan rubutu na asali lokacin da aka hover akan tubalan rubutu da aka fassara"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation": {
+		"message": "Gajerun hanyoyi"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation_desc": {
+		"message": "Gajerun hanyoyi don kunna fassarar shafi\nDanna ESC don sake saita maɓallan"
+	},
+	"settings_option_pageTranslation_translatableAttributes": {
+		"message": "Halayen da za a iya fassara"
+	},
+	"settings_option_pageTranslation_translatableAttributes_desc": {
+		"message": "Shigar da sunayen <slot id=htmlAttributes>halayen HTML</slot> da za a fassara, halaye ɗaya a kowane layi\nHalayen da ke cikin wannan jerin kawai za a fassara"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters": {
+		"message": "Nuna ci gaban fassara"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters_desc": {
+		"message": "Nuna panel da ke nuna ci gaban fassarar shafi a cikin faifan kari"
+	},
+	"settings_option_selectTranslation": {
+		"message": "Fassara don rubutun da aka zaɓa"
+	},
+	"settings_option_selectTranslation_detectTextLanguage": {
+		"message": "Gano harshen rubutu"
+	},
+	"settings_option_selectTranslation_detectTextLanguage_desc": {
+		"message": "Idan an kunna, za a bincika rubutun da aka zaɓa don gano harshen don fassara. In ba haka ba, za a yi amfani da harshen shafi"
+	},
+	"settings_option_selectTranslation_disableWhileTranslatePage": {
+		"message": "Kashe yayin fassara shafin"
+	},
+	"settings_option_selectTranslation_enable": {
+		"message": "Kunna fassarar rubutun da aka zaɓa"
+	},
+	"settings_option_selectTranslation_enable_desc": {
+		"message": "Idan an kunna wannan fasalin, za ku iya zaɓar kowane rubutu a shafin kuma ku fassara shi a cikin faifan"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton": {
+		"message": "Mayar da hankali kai tsaye kan maɓallin fassara"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
+		"message": "Lokacin da maɓallin fassara ya bayyana a shafin, za a mayar da hankali kai tsaye"
+	},
+	"settings_option_selectTranslation_header_languageChoice": {
+		"message": "Saitunan harshe"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang": {
+		"message": "Bada damar ga module na fassara don gano harshen rubutu"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
+		"message": "Idan ba za a iya gano harshen rubutu a cikin gida ba kuma an kunna wannan zaɓin, za a fassara rubutun da harshen \"auto\" idan an goyi bayan sa. Idan an kashe zaɓin, za a yi amfani da wata hanyar madadin don saita harshen asalin rubutun"
+	},
+	"settings_option_selectTranslation_mode": {
+		"message": "Aiki akan zaɓin rubutu"
+	},
+	"settings_option_selectTranslation_mode_item_contextMenu": {
+		"message": "Fassara rubutu ta hanyar menu na mahallin"
+	},
+	"settings_option_selectTranslation_mode_item_popupButton": {
+		"message": "Nuna maɓallin fassara"
+	},
+	"settings_option_selectTranslation_mode_item_quickTranslate": {
+		"message": "Fassara rubutu nan take"
+	},
+	"settings_option_selectTranslation_modifiers": {
+		"message": "Masu gyara"
+	},
+	"settings_option_selectTranslation_modifiers_desc": {
+		"message": "Zaɓi maɓallan da dole ne a danna a kan madannai don nuna fassarar"
+	},
+	"settings_option_selectTranslation_modifiers_key_alt": {
+		"message": "alt"
+	},
+	"settings_option_selectTranslation_modifiers_key_ctrl": {
+		"message": "ctrl"
+	},
+	"settings_option_selectTranslation_modifiers_key_meta": {
+		"message": "meta"
+	},
+	"settings_option_selectTranslation_modifiers_key_shift": {
+		"message": "shift"
+	},
+	"settings_option_selectTranslation_rememberDirection": {
+		"message": "Tuna da harshen rubutun da aka zaɓa kwanan nan"
+	},
+	"settings_option_selectTranslation_showOnceForSelection": {
+		"message": "Nuna maɓallin fassara sau ɗaya a kowane zaɓin rubutu"
+	},
+	"settings_option_selectTranslation_showOnceForSelection_desc": {
+		"message": "Maɓallin zai bayyana sau ɗaya kawai don kowane zaɓin rubutu Don sake nuna shi, sake zaɓar rubutun"
+	},
+	"settings_option_selectTranslation_showOriginalText": {
+		"message": "Nuna rubutun asali"
+	},
+	"settings_option_selectTranslation_showOriginalText_desc": {
+		"message": "Ƙara toshe tare da rubutun asali zuwa faifan fassara"
+	},
+	"settings_option_selectTranslation_strictSelection": {
+		"message": "Yanayin zaɓin tsauraran matakan rubutu",
+		"description": "This option is about selecting text via mouse"
+	},
+	"settings_option_selectTranslation_strictSelection_desc": {
+		"message": "Yi watsi da zaɓin tsauraran matakan rubutu idan an saki maɓallin linzamin hagu a wajen toshe wanda ke ɗauke da rubutun da aka zaɓa"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton": {
+		"message": "Jinkiri kafin ɓoye maɓallin faifan"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton_desc": {
+		"message": "Jinkiri a cikin milliseconds kafin ɓoye maɓallin lokacin da siginan ba ya kan shi. Tsayawa a kan maɓallin yana sake saita agogon. Don kashe ɓoye kai tsaye, saita ƙimar zuwa ƙasa da 1"
+	},
+	"settings_option_selectTranslation_zIndex": {
+		"message": "z-index"
+	},
+	"settings_option_selectTranslation_zIndex_desc": {
+		"message": "Kara wannan ƙimar idan abubuwa a wasu shafuka sun rufe fitowar da ke da rubutun da aka fassara"
+	},
+	"settings_option_textTranslator": {
+		"message": "Fassarar rubutu"
+	},
+	"settings_option_textTranslator_rememberText": {
+		"message": "Tuna rubutun da aka fassara"
+	},
+	"settings_option_textTranslator_rememberText_desc": {
+		"message": "Tuna rubutun da aka fassara don lokacin da taga ta sake buɗewa"
+	},
+	"settings_option_textTranslator_spellCheck": {
+		"message": "Kunna duba rubutu"
+	},
+	"settings_option_textTranslator_suggestLanguage": {
+		"message": "Nuna harshen rubutun da aka gano"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways": {
+		"message": "Koyaushe gano da bayar da shawarar harshe"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways_desc": {
+		"message": "Idan an kashe, shawarwarin harshe suna bayyana ne kawai idan an saita harshen asali zuwa \"auto\""
+	},
+	"settings_option_translatePreferences": {
+		"message": "Zaɓuɓɓukan fassara"
+	},
+	"settings_option_translateScheduler": {
+		"message": "Jadawalin fassara"
+	},
+	"settings_option_translateScheduler_delay": {
+		"message": "Jinkirin tarin rubutu"
+	},
+	"settings_option_translateScheduler_delay_desc": {
+		"message": "Jadawalin fassara yana rage yawan buƙatun zuwa API na sabis na fassara ta hanyar tara rubutu da yawa kamar yadda zai yiwu don aika a cikin buƙata ɗaya. Jadawalin zai jira lokacin da aka ƙayyade a cikin milliseconds don tattara ƙarin rubutu kafin fara fassara"
+	},
+	"settings_option_translateScheduler_retryLimit": {
+		"message": "Iyakar yawan ƙoƙarin sake fassara"
+	},
+	"settings_option_translateScheduler_retryLimit_desc": {
+		"message": "Jadawalin zai sake ƙoƙarin fassara rubutu lokacin da kurakuran fassara suka faru. Wannan zaɓin yana saita iyaka akan ƙoƙarin sake gwadawa. Saita lamba mara kyau don ba da damar sake gwadawa mara iyaka"
+	},
+	"settings_option_translatorModule": {
+		"message": "Matsayin fassara"
+	},
+	"settings_option_translatorModule_desc": {
+		"message": "Ingancin fassara da harsunan da ake da su suna dogara da tsarin fassara"
+	},
+	"settings_option_tts": {
+		"message": "Canjin rubutu zuwa magana (TTS)"
+	},
+	"settings_option_ttsCustomModules": {
+		"message": "Matsayin ƙirƙirar magana na al'ada"
+	},
+	"settings_option_ttsCustomModules_button": {
+		"message": "Gudanar da tsarin ƙirƙirar magana"
+	},
+	"settings_option_ttsCustomModules_desc": {
+		"message": "Kuna iya ƙara tsarin ƙirƙirar magana waɗanda ke amfani da sabis da injunan murya da kuka fi so. Karanta ƙarin a cikin <slot id=docs>takaddun TTS na al'ada</slot>"
+	},
+	"settings_option_ttsModule": {
+		"message": "Zaɓaɓɓen tsarin TTS"
+	},
+	"settings_option_ttsModule_desc": {
+		"message": "Injin murya da aka yi amfani da shi don yin magana da rubutu"
+	},
+	"settings_option_userLanguage": {
+		"message": "Harshe naka"
+	},
+	"settings_option_userLanguage_desc": {
+		"message": "Harshe da za a fassara rubutu zuwa"
+	},
+	"settings_pageTitle": {
+		"message": "Saituna"
+	},
+	"settings_section_history": {
+		"message": "Tarihi"
+	},
+	"settings_section_popup": {
+		"message": "Fitowa"
+	},
+	"textTranslator_suggestLanguage": {
+		"message": "Yana kama da harshen rubutun shine <slot id=languageSuggest>$language_name$</slot>",
+		"placeholders": {
+			"language_name": {
+				"content": "$1",
+				"example": "Japanese"
+			}
+		}
+	},
+	"textTranslator_translateInputPlaceholder": {
+		"message": "Shigar da rubutu don fassara",
+		"description": "Request to user input some text for translation"
+	},
+	"textTranslator_translatePlaceholder": {
+		"message": "Anan za a sami fassarar rubutu"
+	},
+	"translatorsManagerWindow_add": {
+		"message": "Ƙara module na fassara"
+	},
+	"translatorsManagerWindow_close": {
+		"message": "Rufe"
+	},
+	"translatorsManagerWindow_emptyTranslatorsListText": {
+		"message": "Ba a ƙara wani module na fassara na musamman ba tukuna"
+	},
+	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
+		"message": "Ka tabbata kana son cire module na fassara \"$translator_name$\"?",
+		"placeholders": {
+			"translator_name": {
+				"content": "$1",
+				"example": "Google translator"
+			}
+		}
+	},
+	"translatorsManagerWindow_title": {
+		"message": "Modules na fassara na musamman"
+	},
+	"translatorsManagerWindow_translator_delete": {
+		"message": "Goge"
+	},
+	"translatorsManagerWindow_translator_edit": {
+		"message": "Gyara"
+	},
+	"ttsManagerWindow_add": {
+		"message": "Ƙara module na TTS"
+	},
+	"ttsManagerWindow_close": {
+		"message": "Rufe"
+	},
+	"ttsManagerWindow_emptyTranslatorsListText": {
+		"message": "Ba a ƙara wani module na TTS ba tukuna"
+	},
+	"ttsManagerWindow_message_ttsRemoveConfirmation": {
+		"message": "Ka tabbata kana son cire module na TTS \"$tts_name$\"?",
+		"placeholders": {
+			"tts_name": {
+				"content": "$1",
+				"example": "Google TTS"
+			}
+		}
+	},
+	"ttsManagerWindow_title": {
+		"message": "Modules na Text-to-Speech"
+	},
+	"ttsManagerWindow_translator_delete": {
+		"message": "Goge"
+	},
+	"ttsManagerWindow_translator_edit": {
+		"message": "Gyara"
+	},
+	"validation_number": {
+		"message": "Dole ne darajar ta zama lamba"
+	},
+	"validation_numberBetweenRange": {
+		"message": "Dole ne darajar ta zama lamba tsakanin $1 da $2"
+	},
+	"validation_positiveNumber": {
+		"message": "Dole ne darajar ta zama lamba mai kyau"
+	}
+}

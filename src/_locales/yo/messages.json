@@ -1,0 +1,623 @@
+{
+	"common_action_addToDictionary": {
+		"message": "Ṣe afikun itumọ si iwe-ọrọ"
+	},
+	"common_action_removeFromDictionary": {
+		"message": "Yọ itumọ kuro ninu iwe-ọrọ"
+	},
+	"common_bgUnavailable": {
+		"message": "Akọsilẹ abẹlẹ ko si"
+	},
+	"common_cancel": {
+		"message": "Fagilee"
+	},
+	"common_close": {
+		"message": "Pa"
+	},
+	"common_copy": {
+		"message": "Daakọ"
+	},
+	"common_error": {
+		"message": "Aṣiṣe"
+	},
+	"common_offlineTranslator": {
+		"message": "$1 - Onitumọ aisinipo"
+	},
+	"common_retry": {
+		"message": "Tun gbiyanju"
+	},
+	"common_translate": {
+		"message": "Tumọ"
+	},
+	"component_hotkey_placeholder": {
+		"message": "Tẹ lati ṣe igbasilẹ ọna abuja"
+	},
+	"component_hotkey_recordPlaceholder": {
+		"message": "Tẹ awọn bọtini"
+	},
+	"component_hotkey_resetButton": {
+		"message": "Tunṣe"
+	},
+	"contextMenu_disablePageTranslation": {
+		"message": "Duro itumọ oju-iwe"
+	},
+	"contextMenu_translatePage": {
+		"message": "Tumọ oju-iwe"
+	},
+	"contextMenu_translateSelectedText": {
+		"message": "Tumọ ọrọ ti a yan"
+	},
+	"dictionaryButton_add": {
+		"message": "Ṣe afikun si iwe-ọrọ"
+	},
+	"dictionaryButton_delete": {
+		"message": "Pa kuro ninu iwe-ọrọ"
+	},
+	"dictionary_button_export": {
+		"message": "Gbe jade"
+	},
+	"dictionary_button_removeAll": {
+		"message": "Yọ gbogbo rẹ"
+	},
+	"dictionary_deleteAll": {
+		"message": "Ṣe o da ọ loju pe o fẹ pa GBOGBO awọn itumọ kuro ninu iwe-ọrọ?"
+	},
+	"dictionary_deleteConfirmation": {
+		"message": "Ṣe o da ọ loju pe o fẹ pa itumọ yii?"
+	},
+	"dictionary_description": {
+		"message": "Fipamọ awọn itumọ sinu iwe-ọrọ lati wa wọn ni kiakia nigbamii"
+	},
+	"dictionary_emptyDictionary": {
+		"message": "Iwe-ọrọ ṣofo, bẹrẹ fifi kun nipa itumọ diẹ ninu ọrọ"
+	},
+	"dictionary_filter_from": {
+		"message": "Ede ọrọ orisun"
+	},
+	"dictionary_filter_to": {
+		"message": "Ede ibi-afẹde"
+	},
+	"dictionary_message_deleteAll_success": {
+		"message": "Gbogbo awọn itumọ ti wa ni yọ kuro"
+	},
+	"dictionary_notFoundEntries": {
+		"message": "Ko si awọn itumọ ti o baamu awọn asẹ wọnyi ti a rii"
+	},
+	"dictionary_pageTitle": {
+		"message": "Iwe-ọrọ"
+	},
+	"dictionary_resetFilters": {
+		"message": "Tun awọn asẹ ṣe"
+	},
+	"dictionary_searchPlaceholder": {
+		"message": "Ṣàwárí nípa ọrọ"
+	},
+	"editorWindow_close": {
+		"message": "Pa"
+	},
+	"editorWindow_data_code": {
+		"message": "Koodu"
+	},
+	"editorWindow_data_title": {
+		"message": "Orukọ module"
+	},
+	"editorWindow_message_invalidTitle": {
+		"message": "Orukọ module gbọ́dọ̀ ní o kere ju àmi kan"
+	},
+	"editorWindow_save": {
+		"message": "Fipamọ"
+	},
+	"ext_description": {
+		"message": "Ìtumọ̀ ojúewé wẹẹ̀bù, ìtumọ̀ ọrọ, ìwé ìtúmọ̀, ìtàn, àwọn onítúmọ̀ àdani, gbogbo ohun tí o nílò láti bù ú ìdí àṣà"
+	},
+	"ext_name": {
+		"message": "Linguist - onítúmọ̀ ojúewé wẹẹ̀bù"
+	},
+	"history_control_selectEntry": {
+		"message": "Yan ìtumọ̀ fún ìṣe àkójọpọ̀",
+		"description": "Description in finite form \"to pick\" with explaining what this checkbox will do"
+	},
+	"history_controls_clearHistory": {
+		"message": "Nu ìtàn kúrò"
+	},
+	"history_controls_deleteSelected": {
+		"message": "Pa àwọn ìtumọ̀ tí a yàn kúrò"
+	},
+	"history_controls_selectAll": {
+		"message": "Yan gbogbo ìtumọ̀"
+	},
+	"history_message_clearHistoryConfirmation": {
+		"message": "Ṣé o dájú pé o fẹ́ nu ìtàn kúrò? Gbogbo àwọn ìwé àkọsílẹ̀ yóò yọkúrò"
+	},
+	"history_message_deleteEntryConfirmation": {
+		"message": "Ṣé o dájú pé o fẹ́ pa ìwé àkọsílẹ̀ yìí kúrò?"
+	},
+	"history_message_deleteSelectedEntriesConfirmation": {
+		"message": "Ṣé o dájú pé o fẹ́ pa àwọn ìwé àkọsílẹ̀ tí a yàn kúrò ($1)?"
+	},
+	"history_message_entriesNotFound": {
+		"message": "Kò sí ìtumọ̀ tí ó bá àyẹ̀wò mu"
+	},
+	"history_message_noEntries": {
+		"message": "Ìtàn ṣófo"
+	},
+	"history_notification_disabled": {
+		"message": "Ìkọ̀wé ìtàn ti di àìṣiṣẹ́, nítorí náà àwọn ìwé àkọsílẹ̀ tuntun kò ní farahàn. O lè yí èyí padà nínú <slot id=preferences>Àwọn ààyè</slot>"
+	},
+	"history_pageTitle": {
+		"message": "Ìtàn"
+	},
+	"history_searchPlaceholder": {
+		"message": "Ṣàwárí nípa ọrọ"
+	},
+	"inlineTranslator_showOriginalText": {
+		"message": "Fi ọrọ ìpilẹ̀ hàn"
+	},
+	"lang_change": {
+		"message": "Yí èdè padà"
+	},
+	"lang_detect": {
+		"message": "Ìdánimọ̀ láìsí ìfọwọ́si"
+	},
+	"lang_select": {
+		"message": "Yan èdè"
+	},
+	"lang_swap": {
+		"message": "Yí àwọn èdè padà"
+	},
+	"message_unknownError": {
+		"message": "Àsìṣe àìmọ̀"
+	},
+	"pageTranslator_alwaysTranslateLang": {
+		"message": "Máa túmọ̀ èdè yìí nígbà gbogbo"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disable": {
+		"message": "Ìdènà"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
+		"message": "Ìdènà fún gbogbo àwọn ojúewé"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_enable": {
+		"message": "Ṣíṣẹ́"
+	},
+	"pageTranslator_commonPreferences_title": {
+		"message": "Àwọn ààyè àpapọ̀ fún èdè yìí"
+	},
+	"pageTranslator_option_autoTranslate": {
+		"message": "Ìtumọ̀ laifọwọyi"
+	},
+	"pageTranslator_showOriginal": {
+		"message": "Fi àtẹ̀jáde hàn"
+	},
+	"pageTranslator_showTranslationPreferences": {
+		"message": "Ààyè ìtumọ̀"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_always": {
+		"message": "Máa túmọ̀ nígbà gbogbo"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
+		"message": "Máa túmọ̀ fún èdè yìí nígbà gbogbo"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_default": {
+		"message": "Lo àwọn ìlànà àpapọ̀"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
+		"message": "Lo àwọn ìlànà àpapọ̀ fún èdè yìí"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_never": {
+		"message": "Má ṣe túmọ̀"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
+		"message": "Má ṣe túmọ̀ fún èdè yìí"
+	},
+	"pageTranslator_sitePreferences_title": {
+		"message": "Ààyè fún"
+	},
+	"pageTranslator_translatePage": {
+		"message": "Túmọ̀ ojúewé"
+	},
+	"pageTranslator_translationReport": {
+		"message": "Ìròyìn ìtumọ̀"
+	},
+	"pageTranslator_translationReport_queue": {
+		"message": "Ní ìdúró"
+	},
+	"pageTranslator_translationReport_reject": {
+		"message": "Àṣìṣe"
+	},
+	"pageTranslator_translationReport_resolve": {
+		"message": "Túmọ̀"
+	},
+	"popup_tabIdNotFound": {
+		"message": "Àkọsílẹ̀ \"$1\" kò rí"
+	},
+	"popup_tab_translatePage": {
+		"message": "Ìtumọ̀ ojúewé"
+	},
+	"popup_tab_translateText": {
+		"message": "Ìtumọ̀ ọ̀rọ̀"
+	},
+	"settings_button_cancel": {
+		"message": "Fagilé"
+	},
+	"settings_button_export": {
+		"message": "Gbigbe àtúnṣe jáde"
+	},
+	"settings_button_import": {
+		"message": "Ìkópa àtúnṣe wọlé"
+	},
+	"settings_button_reset": {
+		"message": "Ìtúnṣe àtúnṣe"
+	},
+	"settings_button_saveChanges": {
+		"message": "Fipamọ́ àwọn àtúnṣe"
+	},
+	"settings_message_clearCache_success": {
+		"message": "Ìkànsí ti wẹ́"
+	},
+	"settings_message_common_invalidValueType": {
+		"message": "Ìye àìtọ́"
+	},
+	"settings_message_importConfig_invalidFile": {
+		"message": "Fáìlì àtúnṣe tí a pèsè kò tọ́ tàbí ti bàjẹ́, kò sì lè ṣe àtúnṣe"
+	},
+	"settings_message_importConfig_success": {
+		"message": "Ìkópa parí"
+	},
+	"settings_message_resetConfig_confirm": {
+		"message": "Jẹ́risi láti tún àwọn ààyè padà sí àwọn ìye àtẹ̀jáde"
+	},
+	"settings_message_resetConfig_success": {
+		"message": "Àwọn ààyè ti túnṣe"
+	},
+	"settings_message_saveChanges_success": {
+		"message": "Àwọn ayipada ti fipamọ"
+	},
+	"settings_option_cache": {
+		"message": "Kashi"
+	},
+	"settings_option_cache_clear": {
+		"message": "Nu kashi"
+	},
+	"settings_option_cache_clear_desc": {
+		"message": "Ti o ba ṣe akiyesi awọn aṣiṣe itumọ tabi ti o ba tumọ awọn ọrọ ikọkọ lairotẹlẹ nigba ti kashi ba ti muu ṣiṣẹ, o le paarẹ gbogbo data lati inu kashi",
+		"description": "Explanation for user about cases when it's useful to clear cache"
+	},
+	"settings_option_cache_enable": {
+		"message": "Muu kashi ṣiṣẹ"
+	},
+	"settings_option_cache_enable_desc": {
+		"message": "Nigbati kashi ba ti muu ṣiṣẹ, awọn ọrọ ti a ti tumọ tẹlẹ yoo ti tumọ ni kiakia laisi awọn ibeere afikun si iṣẹ itumọ"
+	},
+	"settings_option_cache_ignoreCase": {
+		"message": "Lo kashi ti ko ni ifarahan si ọran"
+	},
+	"settings_option_cache_ignoreCase_desc": {
+		"message": "Nigbati o ba ti muu ṣiṣẹ, awọn itumọ ti o wa ninu kashi yoo ṣee lo fun awọn ọrọ pẹlu awọn ọran oriṣiriṣi, eyiti o le fa awọn iyipada itumọ ni awọn ipo kan"
+	},
+	"settings_option_commonSettings": {
+		"message": "Àwọn eto àpapọ"
+	},
+	"settings_option_customTranslatorModule": {
+		"message": "Àwọn module itumọ ti adani",
+		"description": "An user defined code that implements a translation module"
+	},
+	"settings_option_customTranslatorModule_desc": {
+		"message": "O le ṣafikun awọn module itumọ ti adani ti o lo awọn iṣẹ itumọ ayanfẹ rẹ. Kọ ẹkọ diẹ sii ninu <slot id=docs>iwe itumọ adani</slot>"
+	},
+	"settings_option_customTranslatorModule_manageButton": {
+		"message": "Ṣakoso awọn itumọ",
+		"description": "A button to show list of translation modules"
+	},
+	"settings_option_history_enable": {
+		"message": "Muu itan ṣiṣẹ"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "Nigbati o ba ti muu ṣiṣẹ, awọn itumọ yoo wa ni igbasilẹ ati han lori <slot id=historyPage>iwe itan</slot>"
+	},
+	"settings_option_pageTranslation": {
+		"message": "Itumọ oju-iwe kikun"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent": {
+		"message": "Ṣawari ede nipasẹ akoonu"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent_desc": {
+		"message": "Ṣe itupalẹ ọrọ lori oju-iwe wẹẹbu lati ṣawari ede rẹ. Nigbati o ba ti mu ma ṣiṣẹ, ede ti a ṣalaye ninu <slot id=docs>metadata oju-iwe</slot> ni yoo lo"
+	},
+	"settings_option_pageTranslation_enableContextMenu": {
+		"message": "Muu bọtini akojọ aṣayan ipo ṣiṣẹ"
+	},
+	"settings_option_pageTranslation_enableContextMenu_desc": {
+		"message": "Ṣafikun bọtini lati yi itumọ oju-iwe pada ninu akojọ aṣayan ipo oju-iwe"
+	},
+	"settings_option_pageTranslation_excludeSelectors": {
+		"message": "Àwọn aṣayan lati yọkuro ninu itumọ"
+	},
+	"settings_option_pageTranslation_excludeSelectors_desc": {
+		"message": "Atokọ ti awọn aṣayan CSS fun awọn eroja lati yọkuro ninu itumọ. Aṣayan kan fun ila kan. Ti eroja ba baamu eyikeyi ninu awọn aṣayan wọnyi, ọrọ rẹ, awọn abuda, ati awọn eroja ti o wa ninu rẹ kii yoo tumọ"
+	},
+	"settings_option_pageTranslation_lazyTranslate": {
+		"message": "Tumọ awọn eroja ti o han nikan"
+	},
+	"settings_option_pageTranslation_lazyTranslate_desc": {
+		"message": "Nigbati aṣayan yii ba ti muu ṣiṣẹ, awọn eroja ti o han nikan ni yoo tumọ. Aṣayan yii dinku ijabọ nẹtiwọọki"
+	},
+	"settings_option_pageTranslation_originalTextPopup": {
+		"message": "Muu popup pẹlu ọrọ atilẹba ṣiṣẹ"
+	},
+	"settings_option_pageTranslation_originalTextPopup_desc": {
+		"message": "Fihan popup pẹlu ọrọ atilẹba nigbati o ba gbe sori awọn bulọọki ọrọ ti a tumọ"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation": {
+		"message": "Kukuru"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation_desc": {
+		"message": "Kukuru lati yi itumọ oju-iwe pada\nTẹ ESC lati tun awọn bọtini ṣe"
+	},
+	"settings_option_pageTranslation_translatableAttributes": {
+		"message": "Àwọn abuda ti o le tumọ"
+	},
+	"settings_option_pageTranslation_translatableAttributes_desc": {
+		"message": "Tẹ awọn orukọ <slot id=htmlAttributes>abuda HTML</slot> lati tumọ, abuda kan fun ila kan\nAwọn abuda nikan ninu atokọ yii ni yoo tumọ"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters": {
+		"message": "Fihan ilọsiwaju itumọ"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters_desc": {
+		"message": "Fi panel kan han pẹlu ilọsiwaju itumọ oju-iwe ninu itẹsiwaju popup"
+	},
+	"settings_option_selectTranslation": {
+		"message": "Itumọ fun ọrọ ti a yan"
+	},
+	"settings_option_selectTranslation_detectTextLanguage": {
+		"message": "Ṣawari ede ọrọ"
+	},
+	"settings_option_selectTranslation_detectTextLanguage_desc": {
+		"message": "Nigbati o ba ti muu ṣiṣẹ, ọrọ ti a yan yoo ṣe itupalẹ lati ṣawari ede fun itumọ. Bibẹẹkọ, ede oju-iwe naa ni yoo lo"
+	},
+	"settings_option_selectTranslation_disableWhileTranslatePage": {
+		"message": "Mu ma ṣiṣẹ lakoko itumọ oju-iwe"
+	},
+	"settings_option_selectTranslation_enable": {
+		"message": "Muu ṣiṣẹ itumọ ọrọ ti a yan"
+	},
+	"settings_option_selectTranslation_enable_desc": {
+		"message": "Nigbati ẹya yii ba ti muu ṣiṣẹ, o le yan eyikeyi ọrọ lori oju-iwe ki o tumọ si inu popup"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton": {
+		"message": "Fojusi laifọwọyi lori bọtini itumọ"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
+		"message": "Nigbati bọtini itumọ ba han lori oju-iwe, yoo fojusi laifọwọyi"
+	},
+	"settings_option_selectTranslation_header_languageChoice": {
+		"message": "Eto ede"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang": {
+		"message": "Gba module itumọ laaye lati ṣawari ede ọrọ"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
+		"message": "Nigbati ede ọrọ ko le ṣe awari ni agbegbe ati pe aṣayan yii ti muu ṣiṣẹ, ọrọ naa yoo tumọ pẹlu ede \"auto\" ti o ba ṣe atilẹyin.\nNigbati aṣayan naa ba ti mu ma ṣiṣẹ, ọna idasilẹ miiran yoo ṣee lo lati ṣeto ede orisun ti ọrọ naa"
+	},
+	"settings_option_selectTranslation_mode": {
+		"message": "Iṣe lori yiyan ọrọ"
+	},
+	"settings_option_selectTranslation_mode_item_contextMenu": {
+		"message": "Tumọ ọrọ nipasẹ akojọ aṣayan ipo"
+	},
+	"settings_option_selectTranslation_mode_item_popupButton": {
+		"message": "Fi bọtini itumọ han"
+	},
+	"settings_option_selectTranslation_mode_item_quickTranslate": {
+		"message": "Tumọ ọrọ ni kiakia"
+	},
+	"settings_option_selectTranslation_modifiers": {
+		"message": "Awọn ayipada"
+	},
+	"settings_option_selectTranslation_modifiers_desc": {
+		"message": "Yan awọn bọtini ti o gbọdọ tẹ lori bọtini itẹwe lati ṣafihan itumọ"
+	},
+	"settings_option_selectTranslation_modifiers_key_alt": {
+		"message": "alt"
+	},
+	"settings_option_selectTranslation_modifiers_key_ctrl": {
+		"message": "ctrl"
+	},
+	"settings_option_selectTranslation_modifiers_key_meta": {
+		"message": "meta"
+	},
+	"settings_option_selectTranslation_modifiers_key_shift": {
+		"message": "shift"
+	},
+	"settings_option_selectTranslation_rememberDirection": {
+		"message": "Ranti ede ọrọ ti a yan laipe"
+	},
+	"settings_option_selectTranslation_showOnceForSelection": {
+		"message": "Fi bọtini itumọ han lẹẹkan fun yiyan ọrọ kọọkan"
+	},
+	"settings_option_selectTranslation_showOnceForSelection_desc": {
+		"message": "Bọtini naa yoo han lẹẹkan ṣoṣo fun yiyan ọrọ kọọkan Lati fi han lẹẹkansi, yan ọrọ naa lẹẹkansi"
+	},
+	"settings_option_selectTranslation_showOriginalText": {
+		"message": "Fi ọrọ atilẹba han"
+	},
+	"settings_option_selectTranslation_showOriginalText_desc": {
+		"message": "Fi bulọọki kan kun pẹlu ọrọ atilẹba si itumọ popup"
+	},
+	"settings_option_selectTranslation_strictSelection": {
+		"message": "Ipo to muna ti yiyan ọrọ",
+		"description": "Aṣayan yii jẹ nipa yiyan ọrọ nipasẹ asin"
+	},
+	"settings_option_selectTranslation_strictSelection_desc": {
+		"message": "Foju yiyan ọrọ ti o ba ti bọtini asin osi ti tu silẹ ni ita bulọọki ti o ni ọrọ ti a yan"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton": {
+		"message": "Idaduro ṣaaju tito bọtini popup"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton_desc": {
+		"message": "Idaduro ni milliseconds ṣaaju ki o to farapamọ bọtini naa nigbati kọnsọ naa ko si lori rẹ. Ti o ba wa lori bọtini naa, yoo tunto akoko naa. Lati mu auto-hide kuro, ṣeto iye naa si kere ju 1 lọ"
+	},
+	"settings_option_selectTranslation_zIndex": {
+		"message": "z-index"
+	},
+	"settings_option_selectTranslation_zIndex_desc": {
+		"message": "Mu iye yii pọ si ti awọn eroja lori diẹ ninu awọn oju-iwe ba bo popup pẹlu ọrọ ti a tumọ"
+	},
+	"settings_option_textTranslator": {
+		"message": "Itumọ ọrọ"
+	},
+	"settings_option_textTranslator_rememberText": {
+		"message": "Ranti ọrọ ti a tumọ"
+	},
+	"settings_option_textTranslator_rememberText_desc": {
+		"message": "Ranti ọrọ ti a tumọ fun igba ti atẹle ti window ba ṣii"
+	},
+	"settings_option_textTranslator_spellCheck": {
+		"message": "Mu ayẹwo ọrọ aṣiṣe ṣiṣẹ"
+	},
+	"settings_option_textTranslator_suggestLanguage": {
+		"message": "Fifi han ede ọrọ ti a ri"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways": {
+		"message": "Nigbagbogbo ri ati daba ede"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways_desc": {
+		"message": "Nigbati o ba ti mu ma ṣiṣẹ, awọn aba ede yoo han nikan ti ede orisun ba ṣeto si \"auto\""
+	},
+	"settings_option_translatePreferences": {
+		"message": "Awọn ayanfẹ itumọ"
+	},
+	"settings_option_translateScheduler": {
+		"message": "Atunṣe itumọ"
+	},
+	"settings_option_translateScheduler_delay": {
+		"message": "Idaduro ikojọpọ ọrọ"
+	},
+	"settings_option_translateScheduler_delay_desc": {
+		"message": "Atunṣe itumọ dinku nọmba awọn ibeere si API iṣẹ itumọ nipa ikojọpọ bi ọpọlọpọ awọn ọrọ bi o ti ṣee ṣe lati firanṣẹ ni ibeere kan. Atunṣe naa yoo duro fun akoko ti a ṣalaye ni milliseconds lati kojọpọ awọn ọrọ diẹ sii ṣaaju ki o to bẹrẹ itumọ"
+	},
+	"settings_option_translateScheduler_retryLimit": {
+		"message": "Iye to lopin fun awọn igbiyanju atunṣe itumọ"
+	},
+	"settings_option_translateScheduler_retryLimit_desc": {
+		"message": "Atunṣe naa yoo tun gbiyanju lati tumọ awọn ọrọ nigbati awọn aṣiṣe itumọ ba waye. Aṣayan yii ṣeto opin lori awọn igbiyanju atunṣe. Ṣeto nọmba odi lati gba awọn atunṣe ailopin laaye"
+	},
+	"settings_option_translatorModule": {
+		"message": "Ẹka itumọ"
+	},
+	"settings_option_translatorModule_desc": {
+		"message": "Didara awọn itumọ ati awọn ede ti o wa da lori ẹka itumọ"
+	},
+	"settings_option_tts": {
+		"message": "Iyipada ọrọ si Ohùn (TTS)"
+	},
+	"settings_option_ttsCustomModules": {
+		"message": "Awọn ẹka sisọ ohùn ti ara ẹni"
+	},
+	"settings_option_ttsCustomModules_button": {
+		"message": "Ṣakoso awọn ẹka sisọ ohùn"
+	},
+	"settings_option_ttsCustomModules_desc": {
+		"message": "O le ṣafikun awọn ẹka sisọ ohùn ti o lo awọn iṣẹ ayanfẹ rẹ ati awọn ẹrọ ohùn. Ka diẹ sii ninu <slot id=docs>iwe itumọ TTS ti ara ẹni</slot>"
+	},
+	"settings_option_ttsModule": {
+		"message": "Ẹka TTS ti a yan"
+	},
+	"settings_option_ttsModule_desc": {
+		"message": "Ẹrọ ohùn ti a lo fun sisọ ọrọ"
+	},
+	"settings_option_userLanguage": {
+		"message": "Ede rẹ"
+	},
+	"settings_option_userLanguage_desc": {
+		"message": "Ede ti awọn ọrọ yoo jẹ tumọ si"
+	},
+	"settings_pageTitle": {
+		"message": "Awọn eto"
+	},
+	"settings_section_history": {
+		"message": "Itan"
+	},
+	"settings_section_popup": {
+		"message": "Popup"
+	},
+	"textTranslator_suggestLanguage": {
+		"message": "O dabi pe ede ọrọ naa jẹ <slot id=languageSuggest>$language_name$</slot>",
+		"placeholders": {
+			"language_name": {
+				"content": "$1",
+				"example": "Japanese"
+			}
+		}
+	},
+	"textTranslator_translateInputPlaceholder": {
+		"message": "Tẹ ọrọ sii fun itumọ",
+		"description": "Request to user input some text for translation"
+	},
+	"textTranslator_translatePlaceholder": {
+		"message": "Ọrọ ti a tumọ yoo wa nibi"
+	},
+	"translatorsManagerWindow_add": {
+		"message": "Fi module itumọ kun"
+	},
+	"translatorsManagerWindow_close": {
+		"message": "Pa"
+	},
+	"translatorsManagerWindow_emptyTranslatorsListText": {
+		"message": "Ko si awọn module itumọ aṣa ti a ti fi kun sibẹsibẹ"
+	},
+	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
+		"message": "Ṣe o da ọ loju pe o fẹ yọ module itumọ \"$translator_name$\" kuro?",
+		"placeholders": {
+			"translator_name": {
+				"content": "$1",
+				"example": "Google translator"
+			}
+		}
+	},
+	"translatorsManagerWindow_title": {
+		"message": "Awọn module itumọ aṣa"
+	},
+	"translatorsManagerWindow_translator_delete": {
+		"message": "Paarẹ"
+	},
+	"translatorsManagerWindow_translator_edit": {
+		"message": "Ṣatunkọ"
+	},
+	"ttsManagerWindow_add": {
+		"message": "Fi module TTS kun"
+	},
+	"ttsManagerWindow_close": {
+		"message": "Pa"
+	},
+	"ttsManagerWindow_emptyTranslatorsListText": {
+		"message": "Ko si awọn module TTS ti a fi kun sibẹsibẹ"
+	},
+	"ttsManagerWindow_message_ttsRemoveConfirmation": {
+		"message": "Ṣe o da ọ loju pe o fẹ yọ module TTS \"$tts_name$\" kuro?",
+		"placeholders": {
+			"tts_name": {
+				"content": "$1",
+				"example": "Google TTS"
+			}
+		}
+	},
+	"ttsManagerWindow_title": {
+		"message": "Awọn module Ọrọ-si-Ohun"
+	},
+	"ttsManagerWindow_translator_delete": {
+		"message": "Paarẹ"
+	},
+	"ttsManagerWindow_translator_edit": {
+		"message": "Ṣatunkọ"
+	},
+	"validation_number": {
+		"message": "Iye gbọdọ jẹ nọmba"
+	},
+	"validation_numberBetweenRange": {
+		"message": "Iye gbọdọ jẹ nọmba laarin $1 ati $2"
+	},
+	"validation_positiveNumber": {
+		"message": "Iye gbọdọ jẹ nọmba ti o dara"
+	}
+}

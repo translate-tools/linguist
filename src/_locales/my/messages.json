@@ -1,0 +1,623 @@
+{
+	"common_action_addToDictionary": {
+		"message": "ဘာသာပြန်ချက်ကို အဘိဓာန်ထဲထည့်ပါ"
+	},
+	"common_action_removeFromDictionary": {
+		"message": "ဘာသာပြန်ချက်ကို အဘိဓာန်ထဲမှ ဖယ်ရှားပါ"
+	},
+	"common_bgUnavailable": {
+		"message": "နောက်ခံ စာရွက် မရရှိနိုင်ပါ"
+	},
+	"common_cancel": {
+		"message": "ပယ်ဖျက်ပါ"
+	},
+	"common_close": {
+		"message": "ပိတ်ပါ"
+	},
+	"common_copy": {
+		"message": "ကူးယူပါ"
+	},
+	"common_error": {
+		"message": "အမှား"
+	},
+	"common_offlineTranslator": {
+		"message": "$1 - အော့ဖ်လိုင်း ဘာသာပြန်စနစ်"
+	},
+	"common_retry": {
+		"message": "ထပ်မံကြိုးစားပါ"
+	},
+	"common_translate": {
+		"message": "ဘာသာပြန်ပါ"
+	},
+	"component_hotkey_placeholder": {
+		"message": "လမ်းကြောင်းအတိုကောက်ကို မှတ်တမ်းတင်ရန် နှိပ်ပါ"
+	},
+	"component_hotkey_recordPlaceholder": {
+		"message": "သော့များကို နှိပ်ပါ"
+	},
+	"component_hotkey_resetButton": {
+		"message": "ပြန်လည်သတ်မှတ်ပါ"
+	},
+	"contextMenu_disablePageTranslation": {
+		"message": "စာမျက်နှာ ဘာသာပြန်ခြင်းကို ရပ်တန့်ပါ"
+	},
+	"contextMenu_translatePage": {
+		"message": "စာမျက်နှာကို ဘာသာပြန်ပါ"
+	},
+	"contextMenu_translateSelectedText": {
+		"message": "ရွေးချယ်ထားသော စာသားကို ဘာသာပြန်ပါ"
+	},
+	"dictionaryButton_add": {
+		"message": "အဘိဓာန်ထဲထည့်ပါ"
+	},
+	"dictionaryButton_delete": {
+		"message": "အဘိဓာန်ထဲမှ ဖျက်ပါ"
+	},
+	"dictionary_button_export": {
+		"message": "တင်ပို့ပါ"
+	},
+	"dictionary_button_removeAll": {
+		"message": "အားလုံးကို ဖယ်ရှားပါ"
+	},
+	"dictionary_deleteAll": {
+		"message": "အဘိဓာန်မှ ဘာသာပြန်ချက်အားလုံးကို ဖျက်လိုပါသလား?"
+	},
+	"dictionary_deleteConfirmation": {
+		"message": "ဤဘာသာပြန်ချက်ကို ဖျက်လိုပါသလား?"
+	},
+	"dictionary_description": {
+		"message": "ဘာသာပြန်ချက်များကို အဘိဓာန်ထဲသိမ်းဆည်းပြီး နောက်ပိုင်းတွင် အလွယ်တကူ ရှာဖွေပါ"
+	},
+	"dictionary_emptyDictionary": {
+		"message": "အဘိဓာန်သည် ဗလာဖြစ်သည်၊ စာသားတစ်ချို့ကို ဘာသာပြန်ခြင်းဖြင့် စတင်ဖြည့်ပါ"
+	},
+	"dictionary_filter_from": {
+		"message": "မူလစာသား ဘာသာစကား"
+	},
+	"dictionary_filter_to": {
+		"message": "ရည်မှန်း ဘာသာစကား"
+	},
+	"dictionary_message_deleteAll_success": {
+		"message": "ဘာသာပြန်ချက်အားလုံးကို ဖယ်ရှားပြီးပါပြီ"
+	},
+	"dictionary_notFoundEntries": {
+		"message": "ဤစစ်ထုတ်မှုများနှင့် ကိုက်ညီသော ဘာသာပြန်ချက်များ မတွေ့ရှိပါ"
+	},
+	"dictionary_pageTitle": {
+		"message": "အဘိဓာန်"
+	},
+	"dictionary_resetFilters": {
+		"message": "စစ်ထုတ်မှုများကို ပြန်လည်သတ်မှတ်ပါ"
+	},
+	"dictionary_searchPlaceholder": {
+		"message": "စာသားဖြင့် ရှာဖွေပါ"
+	},
+	"editorWindow_close": {
+		"message": "ပိတ်ပါ"
+	},
+	"editorWindow_data_code": {
+		"message": "ကုဒ်"
+	},
+	"editorWindow_data_title": {
+		"message": "မော်ဂျူးအမည်"
+	},
+	"editorWindow_message_invalidTitle": {
+		"message": "မော်ဂျူးအမည်တွင် အနည်းဆုံး အက္ခရာတစ်လုံး ပါရှိရမည်"
+	},
+	"editorWindow_save": {
+		"message": "သိမ်းဆည်းပါ"
+	},
+	"ext_description": {
+		"message": "ဝဘ်စာမျက်နှာဘာသာပြန်ခြင်း၊ စာသားဘာသာပြန်ခြင်း၊ အဘိဓာန်၊ သမိုင်း၊ စိတ်ကြိုက်ဘာသာပြန်သူများ၊ ဘာသာစကားအတားအဆီးများကို ချိုးဖျက်ရန် လိုအပ်သမျှ"
+	},
+	"ext_name": {
+		"message": "Linguist - ဝဘ်စာမျက်နှာဘာသာပြန်သူ"
+	},
+	"history_control_selectEntry": {
+		"message": "အစုလိုက်လုပ်ဆောင်မှုအတွက် ဘာသာပြန်ချက်ကို ရွေးပါ",
+		"description": "Description in finite form \"to pick\" with explaining what this checkbox will do"
+	},
+	"history_controls_clearHistory": {
+		"message": "သမိုင်းကို ရှင်းလင်းပါ"
+	},
+	"history_controls_deleteSelected": {
+		"message": "ရွေးချယ်ထားသော ဘာသာပြန်ချက်များကို ဖျက်ပါ"
+	},
+	"history_controls_selectAll": {
+		"message": "ဘာသာပြန်ချက်အားလုံးကို ရွေးပါ"
+	},
+	"history_message_clearHistoryConfirmation": {
+		"message": "သမိုင်းကို ရှင်းလင်းချင်ပါသလား? အချက်အလက်အားလုံးကို ဖျက်သိမ်းပါမည်"
+	},
+	"history_message_deleteEntryConfirmation": {
+		"message": "ဤအချက်အလက်ကို ဖျက်ချင်ပါသလား?"
+	},
+	"history_message_deleteSelectedEntriesConfirmation": {
+		"message": "ရွေးချယ်ထားသော အချက်အလက်များ ($1) ကို ဖျက်ချင်ပါသလား?"
+	},
+	"history_message_entriesNotFound": {
+		"message": "စစ်ထုတ်မှုနှင့် ကိုက်ညီသော ဘာသာပြန်ချက်များ မတွေ့ပါ"
+	},
+	"history_message_noEntries": {
+		"message": "သမိုင်း မရှိပါ"
+	},
+	"history_notification_disabled": {
+		"message": "သမိုင်းမှတ်တမ်းတင်ခြင်းကို ပိတ်ထားသောကြောင့် အချက်အလက်အသစ်များ မပေါ်ပါ။ ၎င်းကို <slot id=preferences>Preferences</slot> တွင် ပြောင်းလဲနိုင်ပါသည်"
+	},
+	"history_pageTitle": {
+		"message": "သမိုင်း"
+	},
+	"history_searchPlaceholder": {
+		"message": "စာသားဖြင့် ရှာဖွေပါ"
+	},
+	"inlineTranslator_showOriginalText": {
+		"message": "မူရင်းစာသားကို ပြပါ"
+	},
+	"lang_change": {
+		"message": "ဘာသာစကားပြောင်းပါ"
+	},
+	"lang_detect": {
+		"message": "အလိုအလျောက်သိရှိပါ"
+	},
+	"lang_select": {
+		"message": "ဘာသာစကားရွေးပါ"
+	},
+	"lang_swap": {
+		"message": "ဘာသာစကားများကို လဲလှယ်ပါ"
+	},
+	"message_unknownError": {
+		"message": "အမည်မသိ အမှား"
+	},
+	"pageTranslator_alwaysTranslateLang": {
+		"message": "ဤဘာသာစကားကို အမြဲဘာသာပြန်ပါ"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disable": {
+		"message": "ပိတ်ပါ"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
+		"message": "ဆိုက်အားလုံးအတွက် ပိတ်ပါ"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_enable": {
+		"message": "ဖွင့်ပါ"
+	},
+	"pageTranslator_commonPreferences_title": {
+		"message": "ဤဘာသာစကားအတွက် ပုံမှန်ရွေးချယ်မှုများ"
+	},
+	"pageTranslator_option_autoTranslate": {
+		"message": "အလိုအလျောက်ဘာသာပြန်"
+	},
+	"pageTranslator_showOriginal": {
+		"message": "မူရင်းကိုပြပါ"
+	},
+	"pageTranslator_showTranslationPreferences": {
+		"message": "ဘာသာပြန်ရွေးချယ်မှုများ"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_always": {
+		"message": "အမြဲဘာသာပြန်ပါ"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
+		"message": "ဤဘာသာစကားအတွက် အမြဲဘာသာပြန်ပါ"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_default": {
+		"message": "ပုံမှန်စည်းမျဉ်းများကို အသုံးပြုပါ"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
+		"message": "ဤဘာသာစကားအတွက် ပုံမှန်စည်းမျဉ်းများကို အသုံးပြုပါ"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_never": {
+		"message": "ဘယ်တော့မှ ဘာသာပြန်မလုပ်ပါ"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
+		"message": "ဤဘာသာစကားအတွက် ဘယ်တော့မှ ဘာသာပြန်မလုပ်ပါ"
+	},
+	"pageTranslator_sitePreferences_title": {
+		"message": "ရွေးချယ်မှုများ"
+	},
+	"pageTranslator_translatePage": {
+		"message": "စာမျက်နှာကို ဘာသာပြန်ပါ"
+	},
+	"pageTranslator_translationReport": {
+		"message": "ဘာသာပြန်အစီရင်ခံစာ"
+	},
+	"pageTranslator_translationReport_queue": {
+		"message": "ဆိုင်းငံ့ထား"
+	},
+	"pageTranslator_translationReport_reject": {
+		"message": "အမှားများ"
+	},
+	"pageTranslator_translationReport_resolve": {
+		"message": "ဘာသာပြန်ပြီး"
+	},
+	"popup_tabIdNotFound": {
+		"message": "Tab \"$1\" ကို မတွေ့ပါ"
+	},
+	"popup_tab_translatePage": {
+		"message": "စာမျက်နှာ ဘာသာပြန်ခြင်း"
+	},
+	"popup_tab_translateText": {
+		"message": "စာသား ဘာသာပြန်ခြင်း"
+	},
+	"settings_button_cancel": {
+		"message": "ပယ်ဖျက်ပါ"
+	},
+	"settings_button_export": {
+		"message": "ဖွဲ့စည်းမှုကို တင်ပို့ပါ"
+	},
+	"settings_button_import": {
+		"message": "ဖွဲ့စည်းမှုကို တင်သွင်းပါ"
+	},
+	"settings_button_reset": {
+		"message": "ဖွဲ့စည်းမှုကို ပြန်လည်သတ်မှတ်ပါ"
+	},
+	"settings_button_saveChanges": {
+		"message": "ပြောင်းလဲမှုများကို သိမ်းဆည်းပါ"
+	},
+	"settings_message_clearCache_success": {
+		"message": "အလျင်အမြန်မှတ်တမ်းကို ရှင်းလင်းပြီး"
+	},
+	"settings_message_common_invalidValueType": {
+		"message": "မမှန်ကန်သော တန်ဖိုး"
+	},
+	"settings_message_importConfig_invalidFile": {
+		"message": "ပေးထားသော ဖွဲ့စည်းမှုဖိုင်သည် မမှန်ကန်ပါ၊ ပျက်စီးနေပါသည်၊ ထို့ကြောင့် အလုပ်မလုပ်နိုင်ပါ"
+	},
+	"settings_message_importConfig_success": {
+		"message": "တင်သွင်းမှု ပြီးစီးပါပြီ"
+	},
+	"settings_message_resetConfig_confirm": {
+		"message": "ပြန်လည်သတ်မှတ်ရန် အတည်ပြုပါ"
+	},
+	"settings_message_resetConfig_success": {
+		"message": "ပြန်လည်သတ်မှတ်မှု ပြီးစီးပါပြီ"
+	},
+	"settings_message_saveChanges_success": {
+		"message": "ပြောင်းလဲမှုများကို သိမ်းဆည်းပြီး"
+	},
+	"settings_option_cache": {
+		"message": "Cache"
+	},
+	"settings_option_cache_clear": {
+		"message": "Cache ကိုရှင်းလင်းပါ"
+	},
+	"settings_option_cache_clear_desc": {
+		"message": "ဘာသာပြန်မှုအမှားများကို သတိပြုမိပါက သို့မဟုတ် cache ကိုဖွင့်ထားစဉ်ကိုယ်ပိုင်စာသားများကို မတော်တဆဘာသာပြန်မိပါက cache မှ အချက်အလက်အားလုံးကို ဖျက်နိုင်သည်",
+		"description": "Explanation for user about cases when it's useful to clear cache"
+	},
+	"settings_option_cache_enable": {
+		"message": "Cache ကိုဖွင့်ပါ"
+	},
+	"settings_option_cache_enable_desc": {
+		"message": "Cache ကိုဖွင့်ထားသောအခါ ယခင်ဘာသာပြန်ထားသောစာသားများကို ဘာသာပြန်မှုဝန်ဆောင်မှုသို့ ထပ်မံတောင်းဆိုခြင်းမရှိဘဲ ချက်ချင်းဘာသာပြန်ပေးမည်"
+	},
+	"settings_option_cache_ignoreCase": {
+		"message": "အမှုအမျိုးမျိုးကိုမထီမဲ့ cache ကိုအသုံးပြုပါ"
+	},
+	"settings_option_cache_ignoreCase_desc": {
+		"message": "ဖွင့်ထားသောအခါ အမှုအမျိုးမျိုးရှိသောစာသားများအတွက် cache ထဲမှဘာသာပြန်ချက်များကို အသုံးပြုမည်၊ အချို့သောအခြေအနေများတွင် ဘာသာပြန်မှုအလွဲများဖြစ်ပေါ်စေနိုင်သည်"
+	},
+	"settings_option_commonSettings": {
+		"message": "အထွေထွေပြင်ဆင်မှုများ"
+	},
+	"settings_option_customTranslatorModule": {
+		"message": "စိတ်ကြိုက်ဘာသာပြန်မှု module များ",
+		"description": "An user defined code that implements a translation module"
+	},
+	"settings_option_customTranslatorModule_desc": {
+		"message": "သင်နှစ်သက်သောဘာသာပြန်ဝန်ဆောင်မှုများကို အသုံးပြုသော စိတ်ကြိုက်ဘာသာပြန်မှု module များကို ထည့်သွင်းနိုင်သည်။ <slot id=docs>စိတ်ကြိုက်ဘာသာပြန်သူများ၏စာရွက်စာတမ်း</slot>တွင် ပိုမိုလေ့လာပါ"
+	},
+	"settings_option_customTranslatorModule_manageButton": {
+		"message": "ဘာသာပြန်သူများကိုစီမံပါ",
+		"description": "A button to show list of translation modules"
+	},
+	"settings_option_history_enable": {
+		"message": "မှတ်တမ်းကိုဖွင့်ပါ"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "ဖွင့်ထားသောအခါ ဘာသာပြန်ချက်များကို မှတ်တမ်းတင်ပြီး <slot id=historyPage>မှတ်တမ်းစာမျက်နှာ</slot>တွင် ပေါ်လာမည်"
+	},
+	"settings_option_pageTranslation": {
+		"message": "စာမျက်နှာအပြည့်အဝဘာသာပြန်ခြင်း"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent": {
+		"message": "အကြောင်းအရာဖြင့်ဘာသာစကားကိုသိရှိပါ"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent_desc": {
+		"message": "ဝဘ်စာမျက်နှာပေါ်ရှိစာသားကို ချက်ခြင်းဘာသာစကားကိုသိရှိရန်ခွဲခြမ်းစိတ်ဖြာပါ။ ပိတ်ထားသောအခါ <slot id=docs>စာမျက်နှာ metadata</slot> တွင်ဖော်ပြထားသောဘာသာစကားကို အသုံးပြုမည်"
+	},
+	"settings_option_pageTranslation_enableContextMenu": {
+		"message": "context menu ခလုတ်ကိုဖွင့်ပါ"
+	},
+	"settings_option_pageTranslation_enableContextMenu_desc": {
+		"message": "စာမျက်နှာ context menu တွင် စာမျက်နှာဘာသာပြန်ခြင်းကို toggle လုပ်ရန် ခလုတ်တစ်ခုထည့်ပါ"
+	},
+	"settings_option_pageTranslation_excludeSelectors": {
+		"message": "ဘာသာပြန်မှုမှထုတ်ပယ်ရန်ရွေးချယ်သူများ"
+	},
+	"settings_option_pageTranslation_excludeSelectors_desc": {
+		"message": "ဘာသာပြန်မှုမှထုတ်ပယ်ရန်အရာဝတ္ထုများအတွက် CSS ရွေးချယ်သူများစာရင်း။ တစ်ကြောင်းလျှင်ရွေးချယ်သူတစ်ခု။ အရာဝတ္ထုတစ်ခုသည် ဤရွေးချယ်သူများထဲမှတစ်ခုနှင့်ကိုက်ညီပါက ၎င်း၏စာသား၊ အင်္ဂါရပ်များနှင့် nested အရာဝတ္ထုများကို ဘာသာပြန်မည်မဟုတ်ပါ"
+	},
+	"settings_option_pageTranslation_lazyTranslate": {
+		"message": "မြင်သာသောအရာဝတ္ထုများကိုသာဘာသာပြန်ပါ"
+	},
+	"settings_option_pageTranslation_lazyTranslate_desc": {
+		"message": "ဤရွေးချယ်မှုကိုဖွင့်ထားသောအခါ မြင်သာသောအရာဝတ္ထုများကိုသာဘာသာပြန်မည်။ ဤရွေးချယ်မှုသည်ကွန်ရက်အသုံးပြုမှုကိုလျှော့ချသည်"
+	},
+	"settings_option_pageTranslation_originalTextPopup": {
+		"message": "မူရင်းစာသားပါသော popup ကိုဖွင့်ပါ"
+	},
+	"settings_option_pageTranslation_originalTextPopup_desc": {
+		"message": "ဘာသာပြန်ထားသောစာသားအပိုင်းများကို hover လုပ်သောအခါ မူရင်းစာသားပါသော popup ကိုပြပါ"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation": {
+		"message": "Shortcut"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation_desc": {
+		"message": "စာမျက်နှာဘာသာပြန်ခြင်းကို toggle လုပ်ရန် Shortcut\nESC ကိုနှိပ်၍ key များကိုပြန်လည်သတ်မှတ်ပါ"
+	},
+	"settings_option_pageTranslation_translatableAttributes": {
+		"message": "ဘာသာပြန်နိုင်သော attribute များ"
+	},
+	"settings_option_pageTranslation_translatableAttributes_desc": {
+		"message": "ဘာသာပြန်ရန် <slot id=htmlAttributes>HTML attribute</slot> အမည်များကိုထည့်ပါ၊ တစ်ကြောင်းလျှင် attribute တစ်ခုသာ\nဤစာရင်းတွင်သာ attribute များကို ဘာသာပြန်မည်"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters": {
+		"message": "ဘာသာပြန်မှုတိုးတက်မှုကိုပြပါ"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters_desc": {
+		"message": "အပိုဒ်ဘာသာပြန်မှုတိုးတက်မှုကို extension popup တွင်ပြသပါ"
+	},
+	"settings_option_selectTranslation": {
+		"message": "ရွေးချယ်ထားသောစာသားအတွက်ဘာသာပြန်ခြင်း"
+	},
+	"settings_option_selectTranslation_detectTextLanguage": {
+		"message": "စာသားဘာသာစကားကိုရှာဖွေပါ"
+	},
+	"settings_option_selectTranslation_detectTextLanguage_desc": {
+		"message": "ဖွင့်ထားပါက ရွေးချယ်ထားသောစာသားကိုဘာသာပြန်ရန်ဘာသာစကားကိုရှာဖွေရန်ခွဲခြားစစ်ဆေးပါမည်။ အခြားနည်းဖြင့် စာမျက်နှာဘာသာစကားကိုအသုံးပြုပါမည်"
+	},
+	"settings_option_selectTranslation_disableWhileTranslatePage": {
+		"message": "စာမျက်နှာကိုဘာသာပြန်နေစဉ် ပိတ်ထားပါ"
+	},
+	"settings_option_selectTranslation_enable": {
+		"message": "ရွေးချယ်ထားသောစာသားဘာသာပြန်ခြင်းကိုဖွင့်ပါ"
+	},
+	"settings_option_selectTranslation_enable_desc": {
+		"message": "ဤအင်္ဂါရပ်ကိုဖွင့်ထားပါက စာမျက်နှာပေါ်ရှိစာသားကိုရွေးချယ်ပြီး popup တွင်ဘာသာပြန်နိုင်ပါသည်"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton": {
+		"message": "ဘာသာပြန်ခလုတ်ကိုအလိုအလျောက်အာရုံစိုက်ပါ"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
+		"message": "ဘာသာပြန်ခလုတ်သည်စာမျက်နှာပေါ်တွင်ပေါ်လာသောအခါ အလိုအလျောက်အာရုံစိုက်ပါမည်"
+	},
+	"settings_option_selectTranslation_header_languageChoice": {
+		"message": "ဘာသာစကားဆက်တင်များ"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang": {
+		"message": "ဘာသာပြန် module ကိုစာသားဘာသာစကားကိုရှာဖွေရန်ခွင့်ပြုပါ"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
+		"message": "စာသားဘာသာစကားကိုဒေသတွင်းတွင်ရှာဖွေနိုင်ခြင်းမရှိပါက ဤရွေးချယ်မှုကိုဖွင့်ထားပါက \"auto\" ဘာသာစကားဖြင့်ဘာသာပြန်ပါမည်။\nဤရွေးချယ်မှုကိုပိတ်ထားပါက အခြား fallback နည်းလမ်းကိုအသုံးပြု၍ စာသား၏မူလဘာသာစကားကိုသတ်မှတ်ပါမည်"
+	},
+	"settings_option_selectTranslation_mode": {
+		"message": "စာသားရွေးချယ်မှုအပေါ်လုပ်ဆောင်ချက်"
+	},
+	"settings_option_selectTranslation_mode_item_contextMenu": {
+		"message": "context menu မှတစ်ဆင့်စာသားကိုဘာသာပြန်ပါ"
+	},
+	"settings_option_selectTranslation_mode_item_popupButton": {
+		"message": "ဘာသာပြန်ခလုတ်ကိုပြပါ"
+	},
+	"settings_option_selectTranslation_mode_item_quickTranslate": {
+		"message": "စာသားကိုချက်ချင်းဘာသာပြန်ပါ"
+	},
+	"settings_option_selectTranslation_modifiers": {
+		"message": "ပြုပြင်ချက်များ"
+	},
+	"settings_option_selectTranslation_modifiers_desc": {
+		"message": "ဘာသာပြန်မှုကိုပြရန် keyboard ပေါ်တွင်ဖိရမည့်သော့များကိုရွေးချယ်ပါ"
+	},
+	"settings_option_selectTranslation_modifiers_key_alt": {
+		"message": "alt"
+	},
+	"settings_option_selectTranslation_modifiers_key_ctrl": {
+		"message": "ctrl"
+	},
+	"settings_option_selectTranslation_modifiers_key_meta": {
+		"message": "meta"
+	},
+	"settings_option_selectTranslation_modifiers_key_shift": {
+		"message": "shift"
+	},
+	"settings_option_selectTranslation_rememberDirection": {
+		"message": "မကြာသေးမီကရွေးချယ်ထားသောစာသားဘာသာစကားကိုမှတ်မိပါ"
+	},
+	"settings_option_selectTranslation_showOnceForSelection": {
+		"message": "စာသားရွေးချယ်မှုတစ်ခုစီအတွက်ဘာသာပြန်ခလုတ်ကိုတစ်ကြိမ်ပြပါ"
+	},
+	"settings_option_selectTranslation_showOnceForSelection_desc": {
+		"message": "ခလုတ်သည်စာသားရွေးချယ်မှုတစ်ခုစီအတွက်တစ်ကြိမ်သာပေါ်လာပါမည်။ ထပ်မံပြရန် စာသားကိုပြန်လည်ရွေးချယ်ပါ"
+	},
+	"settings_option_selectTranslation_showOriginalText": {
+		"message": "မူရင်းစာသားကိုပြပါ"
+	},
+	"settings_option_selectTranslation_showOriginalText_desc": {
+		"message": "ဘာသာပြန် popup တွင်မူရင်းစာသားပါရှိသော block ကိုထည့်ပါ"
+	},
+	"settings_option_selectTranslation_strictSelection": {
+		"message": "စာသား span ရွေးချယ်မှု၏တင်းကျပ်သော mode",
+		"description": "This option is about selecting text via mouse"
+	},
+	"settings_option_selectTranslation_strictSelection_desc": {
+		"message": "ရွေးချယ်ထားသောစာသားပါရှိသော block အပြင်ဘက်တွင်ဘယ်မောက်စ်ခလုတ်ကိုလွှတ်ပါက စာသား span ရွေးချယ်မှုကိုလျစ်လျူရှုပါ"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton": {
+		"message": "popup ခလုတ်ကိုဖျောက်ရန်မီနောက်ကျမှု"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton_desc": {
+		"message": "ခလုတ်ကိုဖျောက်ရန် cursor မပေါ်နေသောအခါ milliseconds အနည်းငယ်ကြာမြင့်ပါသည်။ ခလုတ်ပေါ်တွင် cursor ရှိနေပါက အချိန်ကိုပြန်လည်စတင်ပါသည်။ auto-hide ကိုပိတ်ရန်အတွက် တန်ဖိုးကို 1 ထက်နည်းအောင်ထားပါ။"
+	},
+	"settings_option_selectTranslation_zIndex": {
+		"message": "z-index"
+	},
+	"settings_option_selectTranslation_zIndex_desc": {
+		"message": "အချို့သောစာမျက်နှာများတွင် အစိတ်အပိုင်းများသည် ဘာသာပြန်ထားသောစာသားနှင့် popup ကိုကျော်လွှားပါက ဤတန်ဖိုးကိုတိုးပါ။"
+	},
+	"settings_option_textTranslator": {
+		"message": "စာသားဘာသာပြန်ခြင်း"
+	},
+	"settings_option_textTranslator_rememberText": {
+		"message": "ဘာသာပြန်ထားသောစာသားကိုမှတ်မိခြင်း"
+	},
+	"settings_option_textTranslator_rememberText_desc": {
+		"message": "ပြန်ဖွင့်သောအခါ ဘာသာပြန်ထားသောစာသားကိုမှတ်မိခြင်း"
+	},
+	"settings_option_textTranslator_spellCheck": {
+		"message": "စာလုံးပေါင်းစစ်ခြင်းကိုဖွင့်ပါ"
+	},
+	"settings_option_textTranslator_suggestLanguage": {
+		"message": "တွေ့ရှိသောစာသားဘာသာစကားကိုပြပါ"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways": {
+		"message": "အမြဲတမ်းဘာသာစကားကိုတွေ့ရှိပြီးအကြံပြုပါ"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways_desc": {
+		"message": "ပိတ်ထားပါက ဘာသာစကားအကြံပြုချက်များသည် \"auto\" သတ်မှတ်ထားသောအခါတွင်သာပေါ်ပါမည်။"
+	},
+	"settings_option_translatePreferences": {
+		"message": "ဘာသာပြန်ရွေးချယ်မှုများ"
+	},
+	"settings_option_translateScheduler": {
+		"message": "ဘာသာပြန်အချိန်ဇယား"
+	},
+	"settings_option_translateScheduler_delay": {
+		"message": "စာသားစုဆောင်းမှုနှောင့်နှေးမှု"
+	},
+	"settings_option_translateScheduler_delay_desc": {
+		"message": "ဘာသာပြန်အချိန်ဇယားသည် တစ်ကြိမ်တည်းတောင်းဆိုမှုတွင် စာသားများစွာကိုပေးပို့ရန် စုဆောင်းခြင်းဖြင့် ဘာသာပြန်ဝန်ဆောင်မှု API သို့တောင်းဆိုမှုအရေအတွက်ကိုလျှော့ချသည်။ ဘာသာပြန်မှုကိုစတင်မီ စာသားများကိုပိုမိုစုဆောင်းရန် milliseconds အချိန်သတ်မှတ်ထားသည်။"
+	},
+	"settings_option_translateScheduler_retryLimit": {
+		"message": "ဘာသာပြန်ပြန်လည်ကြိုးစားမှုအတွက်ကန့်သတ်ချက်"
+	},
+	"settings_option_translateScheduler_retryLimit_desc": {
+		"message": "ဘာသာပြန်မှုအမှားများဖြစ်ပေါ်သောအခါ စာသားများကိုပြန်လည်ဘာသာပြန်ရန် အချိန်ဇယားသည်ကြိုးစားပါမည်။ ဤရွေးချယ်မှုသည် ကြိုးစားမှုအရေအတွက်ကိုကန့်သတ်သည်။ အကန့်အသတ်မရှိသောကြိုးစားမှုများကိုခွင့်ပြုရန် အနုတ်လက္ခဏာနံပါတ်ကိုသတ်မှတ်ပါ။"
+	},
+	"settings_option_translatorModule": {
+		"message": "ဘာသာပြန်မော်ဂျူး"
+	},
+	"settings_option_translatorModule_desc": {
+		"message": "ဘာသာပြန်မှုအရည်အသွေးနှင့်ရရှိနိုင်သောဘာသာစကားများသည် ဘာသာပြန်မော်ဂျူးပေါ်မူတည်သည်။"
+	},
+	"settings_option_tts": {
+		"message": "စာသားမှအသံပြောင်းခြင်း (TTS)"
+	},
+	"settings_option_ttsCustomModules": {
+		"message": "စိတ်ကြိုက်အသံဖျော်ဖြေရေးမော်ဂျူးများ"
+	},
+	"settings_option_ttsCustomModules_button": {
+		"message": "အသံဖျော်ဖြေရေးမော်ဂျူးများကိုစီမံခန့်ခွဲခြင်း"
+	},
+	"settings_option_ttsCustomModules_desc": {
+		"message": "သင်နှစ်သက်သောဝန်ဆောင်မှုများနှင့်အသံအင်ဂျင်များကိုအသုံးပြုသောအသံဖျော်ဖြေရေးမော်ဂျူးများကိုထည့်နိုင်သည်။ <slot id=docs>စိတ်ကြိုက် TTS စာရွက်စာတမ်း</slot> တွင်ပိုမိုဖတ်ရှုပါ။"
+	},
+	"settings_option_ttsModule": {
+		"message": "ရွေးချယ်ထားသော TTS မော်ဂျူး"
+	},
+	"settings_option_ttsModule_desc": {
+		"message": "စာသားကိုအသံထွက်ပေးရန်အသံအင်ဂျင်"
+	},
+	"settings_option_userLanguage": {
+		"message": "သင်၏ဘာသာစကား"
+	},
+	"settings_option_userLanguage_desc": {
+		"message": "ဘာသာပြန်ထားသောစာသားများကိုဘာသာပြန်မည့်ဘာသာစကား"
+	},
+	"settings_pageTitle": {
+		"message": "ဆက်တင်များ"
+	},
+	"settings_section_history": {
+		"message": "သမိုင်း"
+	},
+	"settings_section_popup": {
+		"message": "Popup"
+	},
+	"textTranslator_suggestLanguage": {
+		"message": "စာသားဘာသာစကားသည် <slot id=languageSuggest>$language_name$</slot> ဖြစ်သည်ဟုထင်ရသည်။",
+		"placeholders": {
+			"language_name": {
+				"content": "$1",
+				"example": "Japanese"
+			}
+		}
+	},
+	"textTranslator_translateInputPlaceholder": {
+		"message": "ဘာသာပြန်ရန် စာသားထည့်ပါ",
+		"description": "ဘာသာပြန်ရန် စာသားတစ်ခုခု ထည့်ရန် အသုံးပြုသူကို တောင်းဆိုခြင်း"
+	},
+	"textTranslator_translatePlaceholder": {
+		"message": "ဘာသာပြန်ထားသော စာသားသည် ဤနေရာတွင်ရှိမည်"
+	},
+	"translatorsManagerWindow_add": {
+		"message": "ဘာသာပြန်မော်ဂျူး ထည့်ပါ"
+	},
+	"translatorsManagerWindow_close": {
+		"message": "ပိတ်ပါ"
+	},
+	"translatorsManagerWindow_emptyTranslatorsListText": {
+		"message": "စိတ်ကြိုက် ဘာသာပြန်မော်ဂျူးများ မထည့်ရသေးပါ"
+	},
+	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
+		"message": "သင် \"$translator_name$\" ဘာသာပြန်မော်ဂျူးကို ဖျက်လိုသည်မှာ သေချာပါသလား?",
+		"placeholders": {
+			"translator_name": {
+				"content": "$1",
+				"example": "Google translator"
+			}
+		}
+	},
+	"translatorsManagerWindow_title": {
+		"message": "စိတ်ကြိုက် ဘာသာပြန်မော်ဂျူးများ"
+	},
+	"translatorsManagerWindow_translator_delete": {
+		"message": "ဖျက်ပါ"
+	},
+	"translatorsManagerWindow_translator_edit": {
+		"message": "တည်းဖြတ်ပါ"
+	},
+	"ttsManagerWindow_add": {
+		"message": "TTS မော်ဂျူး ထည့်ပါ"
+	},
+	"ttsManagerWindow_close": {
+		"message": "ပိတ်ပါ"
+	},
+	"ttsManagerWindow_emptyTranslatorsListText": {
+		"message": "TTS မော်ဂျူးများ မထည့်ရသေးပါ"
+	},
+	"ttsManagerWindow_message_ttsRemoveConfirmation": {
+		"message": "သင် \"$tts_name$\" TTS မော်ဂျူးကို ဖျက်လိုသည်မှာ သေချာပါသလား?",
+		"placeholders": {
+			"tts_name": {
+				"content": "$1",
+				"example": "Google TTS"
+			}
+		}
+	},
+	"ttsManagerWindow_title": {
+		"message": "စာသားမှ-အသံ မော်ဂျူးများ"
+	},
+	"ttsManagerWindow_translator_delete": {
+		"message": "ဖျက်ပါ"
+	},
+	"ttsManagerWindow_translator_edit": {
+		"message": "တည်းဖြတ်ပါ"
+	},
+	"validation_number": {
+		"message": "တန်ဖိုးသည် နံပါတ်ဖြစ်ရမည်"
+	},
+	"validation_numberBetweenRange": {
+		"message": "တန်ဖိုးသည် $1 နှင့် $2 အကြား နံပါတ်ဖြစ်ရမည်"
+	},
+	"validation_positiveNumber": {
+		"message": "တန်ဖိုးသည် အပေါင်းဖြစ်ရမည်"
+	}
+}

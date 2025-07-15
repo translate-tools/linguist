@@ -1,0 +1,623 @@
+{
+	"common_action_addToDictionary": {
+		"message": "Terjime sözlüge goş"
+	},
+	"common_action_removeFromDictionary": {
+		"message": "Terjimäni sözlükden aýyr"
+	},
+	"common_bgUnavailable": {
+		"message": "Fon skripti elýeterli däl"
+	},
+	"common_cancel": {
+		"message": "Ýatyr"
+	},
+	"common_close": {
+		"message": "Ýap"
+	},
+	"common_copy": {
+		"message": "Köçür"
+	},
+	"common_error": {
+		"message": "Ýalňyşlyk"
+	},
+	"common_offlineTranslator": {
+		"message": "$1 - Offline terjimeçi"
+	},
+	"common_retry": {
+		"message": "Gaýtadan synan"
+	},
+	"common_translate": {
+		"message": "Terjime et"
+	},
+	"component_hotkey_placeholder": {
+		"message": "Gysga ýoly ýazmak üçin basyň"
+	},
+	"component_hotkey_recordPlaceholder": {
+		"message": "Tuşlary basyň"
+	},
+	"component_hotkey_resetButton": {
+		"message": "Täzeden düz"
+	},
+	"contextMenu_disablePageTranslation": {
+		"message": "Sahypa terjimesini bes et"
+	},
+	"contextMenu_translatePage": {
+		"message": "Sahypany terjime et"
+	},
+	"contextMenu_translateSelectedText": {
+		"message": "Saýlanan teksti terjime et"
+	},
+	"dictionaryButton_add": {
+		"message": "Sözlüge goş"
+	},
+	"dictionaryButton_delete": {
+		"message": "Sözlükden aýyr"
+	},
+	"dictionary_button_export": {
+		"message": "Eksport et"
+	},
+	"dictionary_button_removeAll": {
+		"message": "Hemmesini aýyr"
+	},
+	"dictionary_deleteAll": {
+		"message": "Sözlükdäki ÄHLI terjimäni hakykatdanam aýyrasyňyz gelýärmi?"
+	},
+	"dictionary_deleteConfirmation": {
+		"message": "Bu terjimäni hakykatdanam aýyrasyňyz gelýärmi?"
+	},
+	"dictionary_description": {
+		"message": "Terjimeleri sözlükde saklaň, soňra çalt tapmak üçin"
+	},
+	"dictionary_emptyDictionary": {
+		"message": "Sözlük boş, käbir teksti terjime edip dolduryň"
+	},
+	"dictionary_filter_from": {
+		"message": "Çeşme tekst dili"
+	},
+	"dictionary_filter_to": {
+		"message": "Maksat dil"
+	},
+	"dictionary_message_deleteAll_success": {
+		"message": "Ähli terjimeler aýryldy"
+	},
+	"dictionary_notFoundEntries": {
+		"message": "Bu süzgüçlere laýyk terjimeler tapylmady"
+	},
+	"dictionary_pageTitle": {
+		"message": "Sözlük"
+	},
+	"dictionary_resetFilters": {
+		"message": "Süzgüçleri täzeden düz"
+	},
+	"dictionary_searchPlaceholder": {
+		"message": "Tekst boýunça gözle"
+	},
+	"editorWindow_close": {
+		"message": "Ýap"
+	},
+	"editorWindow_data_code": {
+		"message": "Kod"
+	},
+	"editorWindow_data_title": {
+		"message": "Modul ady"
+	},
+	"editorWindow_message_invalidTitle": {
+		"message": "Modul ady azyndan bir harp bolmaly"
+	},
+	"editorWindow_save": {
+		"message": "Ýatda sakla"
+	},
+	"ext_description": {
+		"message": "Web sahypa terjimesi, tekst terjimesi, sözlük, taryh, ýörite terjimeçiler, dil päsgelçiliklerini aýyrmak üçin ähli zat"
+	},
+	"ext_name": {
+		"message": "Linguist - web sahypa terjimeçisi"
+	},
+	"history_control_selectEntry": {
+		"message": "Köpçülikleýin hereket üçin terjime saýla",
+		"description": "Description in finite form \"to pick\" with explaining what this checkbox will do"
+	},
+	"history_controls_clearHistory": {
+		"message": "Taryhy arassala"
+	},
+	"history_controls_deleteSelected": {
+		"message": "Saýlanan terjimeleri poz"
+	},
+	"history_controls_selectAll": {
+		"message": "Ähli terjimeleri saýla"
+	},
+	"history_message_clearHistoryConfirmation": {
+		"message": "Taryhy arassalamak isleýändigiňize ynanýarsyňyzmy? Ähli ýazgylar aýrylar"
+	},
+	"history_message_deleteEntryConfirmation": {
+		"message": "Bu ýazgyny pozmak isleýändigiňize ynanýarsyňyzmy?"
+	},
+	"history_message_deleteSelectedEntriesConfirmation": {
+		"message": "Saýlanan ýazgylary ($1) pozmak isleýändigiňize ynanýarsyňyzmy?"
+	},
+	"history_message_entriesNotFound": {
+		"message": "Filtr bilen gabat gelýän terjimeler tapylmady"
+	},
+	"history_message_noEntries": {
+		"message": "Taryh boş"
+	},
+	"history_notification_disabled": {
+		"message": "Taryh ýazgysy öçürilen, şonuň üçin täze ýazgylar peýda bolmaz. Muny <slot id=preferences>Saýlawlar</slot> bölüminde üýtgedip bilersiňiz"
+	},
+	"history_pageTitle": {
+		"message": "Taryh"
+	},
+	"history_searchPlaceholder": {
+		"message": "Tekst boýunça gözle"
+	},
+	"inlineTranslator_showOriginalText": {
+		"message": "Asyl teksti görkez"
+	},
+	"lang_change": {
+		"message": "Dili üýtget"
+	},
+	"lang_detect": {
+		"message": "Awtomatiki tanamak"
+	},
+	"lang_select": {
+		"message": "Dili saýla"
+	},
+	"lang_swap": {
+		"message": "Dilleri çalyş"
+	},
+	"message_unknownError": {
+		"message": "Näbelli ýalňyşlyk"
+	},
+	"pageTranslator_alwaysTranslateLang": {
+		"message": "Bu dili hemişe terjime et"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disable": {
+		"message": "Öçür"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
+		"message": "Ähli sahypalar üçin öçür"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_enable": {
+		"message": "Işlet"
+	},
+	"pageTranslator_commonPreferences_title": {
+		"message": "Bu dil üçin umumy saýlawlar"
+	},
+	"pageTranslator_option_autoTranslate": {
+		"message": "Awtomatiki terjime"
+	},
+	"pageTranslator_showOriginal": {
+		"message": "Asyl görnüşini görkez"
+	},
+	"pageTranslator_showTranslationPreferences": {
+		"message": "Terjime saýlawlary"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_always": {
+		"message": "Elmydama terjime et"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
+		"message": "Bu dil üçin elmydama terjime et"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_default": {
+		"message": "Umumy düzgünleri ulanyň"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
+		"message": "Bu dil üçin umumy düzgünleri ulanyň"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_never": {
+		"message": "Hiç haçan terjime etme"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
+		"message": "Bu dil üçin hiç haçan terjime etme"
+	},
+	"pageTranslator_sitePreferences_title": {
+		"message": "Saýlawlar"
+	},
+	"pageTranslator_translatePage": {
+		"message": "Sahypany terjime et"
+	},
+	"pageTranslator_translationReport": {
+		"message": "Terjime hasabaty"
+	},
+	"pageTranslator_translationReport_queue": {
+		"message": "Garaşylýar"
+	},
+	"pageTranslator_translationReport_reject": {
+		"message": "Ýalňyşlyklar"
+	},
+	"pageTranslator_translationReport_resolve": {
+		"message": "Terjime edildi"
+	},
+	"popup_tabIdNotFound": {
+		"message": "\"$1\" belligi tapylmady"
+	},
+	"popup_tab_translatePage": {
+		"message": "Sahypa terjimesi"
+	},
+	"popup_tab_translateText": {
+		"message": "Tekst terjimesi"
+	},
+	"settings_button_cancel": {
+		"message": "Ýatyr"
+	},
+	"settings_button_export": {
+		"message": "Konfigürasiýany eksport et"
+	},
+	"settings_button_import": {
+		"message": "Konfigürasiýany import et"
+	},
+	"settings_button_reset": {
+		"message": "Konfigürasiýany täzeden düz"
+	},
+	"settings_button_saveChanges": {
+		"message": "Üýtgeşmeleri sakla"
+	},
+	"settings_message_clearCache_success": {
+		"message": "Keş arassalandy"
+	},
+	"settings_message_common_invalidValueType": {
+		"message": "Nädogry baha"
+	},
+	"settings_message_importConfig_invalidFile": {
+		"message": "Berlen konfigürasiýa faýly nädogry ýa-da zaýalanan we işlenip bilinmez"
+	},
+	"settings_message_importConfig_success": {
+		"message": "Import tamamlandy"
+	},
+	"settings_message_resetConfig_confirm": {
+		"message": "Saýlawlary deslapky bahalara täzeden düzmegi tassykla"
+	},
+	"settings_message_resetConfig_success": {
+		"message": "Saýlawlar täzeden düzüldi"
+	},
+	"settings_message_saveChanges_success": {
+		"message": "Üýtgeşmeler ýatda saklandy"
+	},
+	"settings_option_cache": {
+		"message": "Keş"
+	},
+	"settings_option_cache_clear": {
+		"message": "Keşi arassala"
+	},
+	"settings_option_cache_clear_desc": {
+		"message": "Eger terjime ýalňyşlyklaryny ýa-da keş işjeňleşdirilen wagty şahsy tekstleri tötänleýin terjime edeniňizi görseňiz, keşdäki ähli maglumatlary pozup bilersiňiz",
+		"description": "Explanation for user about cases when it's useful to clear cache"
+	},
+	"settings_option_cache_enable": {
+		"message": "Keşi işjeňleşdiriň"
+	},
+	"settings_option_cache_enable_desc": {
+		"message": "Keş işjeňleşdirilende, öň terjime edilen tekstler goşmaça terjime hyzmatyna sorag ibermän derrew terjime ediler"
+	},
+	"settings_option_cache_ignoreCase": {
+		"message": "Kiçi-uly harp tapawudy bolmadyk keşi ulanyň"
+	},
+	"settings_option_cache_ignoreCase_desc": {
+		"message": "Işjeňleşdirilende, dürli harp ululygy bilen tekstler üçin keşlenen terjimeler ulanylar, bu käbir ýagdaýlarda terjime ýoýulmalaryna sebäp bolup biler"
+	},
+	"settings_option_commonSettings": {
+		"message": "Umumy sazlamalar"
+	},
+	"settings_option_customTranslatorModule": {
+		"message": "Özboluşly terjime modullary",
+		"description": "An user defined code that implements a translation module"
+	},
+	"settings_option_customTranslatorModule_desc": {
+		"message": "Halan terjime hyzmatlaryňyzy ulanýan özboluşly terjime modullaryny goşup bilersiňiz. <slot id=docs>özboluşly terjimeçiler dokumentasiýasy</slot> bilen has giňişleýin tanyşyň"
+	},
+	"settings_option_customTranslatorModule_manageButton": {
+		"message": "Terjimeçileri dolandyrmak",
+		"description": "A button to show list of translation modules"
+	},
+	"settings_option_history_enable": {
+		"message": "Taryhy işjeňleşdiriň"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "Işjeňleşdirilende, terjimeler ýazgy edilip, <slot id=historyPage>taryh sahypasynda</slot> peýda bolar"
+	},
+	"settings_option_pageTranslation": {
+		"message": "Doly sahypa terjimesi"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent": {
+		"message": "Mazmun boýunça dili anykla"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent_desc": {
+		"message": "Web sahypasyndaky tekstiň dilini anyklamak üçin analiz ediň. Işjeň däl wagtynda, <slot id=docs>sahypa metadata</slot>-da görkezilen dil ulanylar"
+	},
+	"settings_option_pageTranslation_enableContextMenu": {
+		"message": "Kontekst menýu düwmesini işjeňleşdiriň"
+	},
+	"settings_option_pageTranslation_enableContextMenu_desc": {
+		"message": "Sahypa kontekst menýusyna sahypa terjimesini üýtgetmek üçin düwme goşuň"
+	},
+	"settings_option_pageTranslation_excludeSelectors": {
+		"message": "Terjimeden çykarmak üçin saýlaýjylar"
+	},
+	"settings_option_pageTranslation_excludeSelectors_desc": {
+		"message": "Terjimeden çykarylmaly elementler üçin CSS saýlaýjylarynyň sanawy. Her setirde bir saýlaýjy. Eger element bu saýlaýjylaryň haýsydyr biri bilen gabat gelse, onuň teksti, atributlary we içki elementleri terjime edilmez"
+	},
+	"settings_option_pageTranslation_lazyTranslate": {
+		"message": "Diňe görünýän elementleri terjime et"
+	},
+	"settings_option_pageTranslation_lazyTranslate_desc": {
+		"message": "Bu opsiýa işjeňleşdirilende, diňe görünýän elementler terjime ediler. Bu opsiýa tor traffigini azaldar"
+	},
+	"settings_option_pageTranslation_originalTextPopup": {
+		"message": "Asyl tekst bilen açylan penjireni işjeňleşdiriň"
+	},
+	"settings_option_pageTranslation_originalTextPopup_desc": {
+		"message": "Terjime edilen tekst bloklarynyň üstüne syçanjygyňyzy getireniňizde asyl tekst bilen açylan penjire görkeziler"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation": {
+		"message": "Gysga ýoly"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation_desc": {
+		"message": "Sahypa terjimesini üýtgetmek üçin gysga ýol\nTugmalary täzeden düzmek üçin ESC basyň"
+	},
+	"settings_option_pageTranslation_translatableAttributes": {
+		"message": "Terjime edilip bilinýän atributlar"
+	},
+	"settings_option_pageTranslation_translatableAttributes_desc": {
+		"message": "Terjime ediljek <slot id=htmlAttributes>HTML atribut</slot> atlaryny giriziň, her setirde bir atribut\nDiňe bu sanawdaky atributlar terjime ediler"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters": {
+		"message": "Terjime ösüşini görkez"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters_desc": {
+		"message": "Sahypa terjime etmegiň ösüşini görkezýän paneli giňeltme açylan penjiresinde görkez"
+	},
+	"settings_option_selectTranslation": {
+		"message": "Saýlanan tekstiň terjimesi"
+	},
+	"settings_option_selectTranslation_detectTextLanguage": {
+		"message": "Tekstiň dilini anykla"
+	},
+	"settings_option_selectTranslation_detectTextLanguage_desc": {
+		"message": "Bu funksiýa işjeňleşdirilende, saýlanan tekst terjime üçin dilini anyklamak üçin seljeriler. Başgaça bolsa, sahypanyň dili ulanylar"
+	},
+	"settings_option_selectTranslation_disableWhileTranslatePage": {
+		"message": "Sahypa terjime edilýän wagty öçür"
+	},
+	"settings_option_selectTranslation_enable": {
+		"message": "Saýlanan tekstiň terjimesini işjeňleşdir"
+	},
+	"settings_option_selectTranslation_enable_desc": {
+		"message": "Bu funksiýa işjeňleşdirilende, sahypada islendik teksti saýlap, açylan penjiresinde terjime edip bilersiňiz"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton": {
+		"message": "Terjime düwmesine awtomatiki üns ber"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
+		"message": "Sahypada terjime düwmesi peýda bolanda, ol awtomatiki üns beriler"
+	},
+	"settings_option_selectTranslation_header_languageChoice": {
+		"message": "Dil sazlamalary"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang": {
+		"message": "Terjime modulyna tekstiň dilini anyklamaga rugsat ber"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
+		"message": "Tekstiň dili ýerli derejede anyklanyp bilinmese we bu opsiýa işjeňleşdirilen bolsa, tekst \"auto\" dili bilen terjime ediler, eger goldanylýan bolsa.\nOpsiýa öçürilen bolsa, tekstiň çeşme dilini kesgitlemek üçin başga bir ätiýaçlyk usuly ulanylar"
+	},
+	"settings_option_selectTranslation_mode": {
+		"message": "Teksti saýlamak boýunça hereket"
+	},
+	"settings_option_selectTranslation_mode_item_contextMenu": {
+		"message": "Kontekst menýusyndan teksti terjime et"
+	},
+	"settings_option_selectTranslation_mode_item_popupButton": {
+		"message": "Terjime düwmesini görkez"
+	},
+	"settings_option_selectTranslation_mode_item_quickTranslate": {
+		"message": "Teksti derrew terjime et"
+	},
+	"settings_option_selectTranslation_modifiers": {
+		"message": "Modifikatorlar"
+	},
+	"settings_option_selectTranslation_modifiers_desc": {
+		"message": "Terjimäni görkezmek üçin klawiaturada basylmaly düwmeleri saýlaň"
+	},
+	"settings_option_selectTranslation_modifiers_key_alt": {
+		"message": "alt"
+	},
+	"settings_option_selectTranslation_modifiers_key_ctrl": {
+		"message": "ctrl"
+	},
+	"settings_option_selectTranslation_modifiers_key_meta": {
+		"message": "meta"
+	},
+	"settings_option_selectTranslation_modifiers_key_shift": {
+		"message": "shift"
+	},
+	"settings_option_selectTranslation_rememberDirection": {
+		"message": "Iň soňky saýlanan tekstiň dilini ýatda sakla"
+	},
+	"settings_option_selectTranslation_showOnceForSelection": {
+		"message": "Her tekst saýlamasy üçin terjime düwmesini bir gezek görkez"
+	},
+	"settings_option_selectTranslation_showOnceForSelection_desc": {
+		"message": "Düwme diňe her tekst saýlamasy üçin bir gezek peýda bolar. Ony gaýtadan görkezmek üçin teksti täzeden saýlaň"
+	},
+	"settings_option_selectTranslation_showOriginalText": {
+		"message": "Asyl teksti görkez"
+	},
+	"settings_option_selectTranslation_showOriginalText_desc": {
+		"message": "Terjime açylan penjiresine asyl teksti goşmak"
+	},
+	"settings_option_selectTranslation_strictSelection": {
+		"message": "Tekst bölegini saýlamagyň berk tertibi",
+		"description": "This option is about selecting text via mouse"
+	},
+	"settings_option_selectTranslation_strictSelection_desc": {
+		"message": "Saýlanan teksti öz içine alýan blokdan daşarda çep syçanjyk düwmesi goýberilse, tekst bölegini saýlamagy äsgermezlik et"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton": {
+		"message": "Açylan düwmäni gizlemezden öňki gijikdirme"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton_desc": {
+		"message": "Görkeziji düwmeden aýrylanda düwmäni gizlemezden ozal millisekuntlarda gijikdirme. Düwmäniň üstünde durmak wagty täzeden başlaýar. Awtomatiki gizlemäni öçürmek üçin bahany 1-den az goýuň"
+	},
+	"settings_option_selectTranslation_zIndex": {
+		"message": "z-index"
+	},
+	"settings_option_selectTranslation_zIndex_desc": {
+		"message": "Käbir sahypalardaky elementler terjime edilen tekst bilen açylan penjire bilen örtülse, bu bahany ýokarlandyryň"
+	},
+	"settings_option_textTranslator": {
+		"message": "Tekst terjimesi"
+	},
+	"settings_option_textTranslator_rememberText": {
+		"message": "Terjime edilen teksti ýatda saklamak"
+	},
+	"settings_option_textTranslator_rememberText_desc": {
+		"message": "Penjire açylanda terjime edilen teksti ýatda saklamak"
+	},
+	"settings_option_textTranslator_spellCheck": {
+		"message": "Ýazuw ýalňyşlaryny barlamagy açmak"
+	},
+	"settings_option_textTranslator_suggestLanguage": {
+		"message": "Tapylan tekst dilini görkezmek"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways": {
+		"message": "Dili hemişe tapmak we teklip etmek"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways_desc": {
+		"message": "Öçürilen ýagdaýynda, dil teklipleri diňe çeşme dili \"awto\" hökmünde kesgitlenende peýda bolýar"
+	},
+	"settings_option_translatePreferences": {
+		"message": "Terjime islegleri"
+	},
+	"settings_option_translateScheduler": {
+		"message": "Terjime meýilnamasy"
+	},
+	"settings_option_translateScheduler_delay": {
+		"message": "Tekst ýygnamak gijikdirilmesi"
+	},
+	"settings_option_translateScheduler_delay_desc": {
+		"message": "Terjime meýilnamasy, mümkin boldugyça köp teksti bir haýyşda ibermek üçin ýygnap, terjime hyzmaty API-ine haýyşlaryň sanyny azaldýar. Terjime başlamazdan ozal has köp tekst ýygnamak üçin meýilnama kesgitlenen wagty millisekuntlarda garaşar"
+	},
+	"settings_option_translateScheduler_retryLimit": {
+		"message": "Terjime gaýtadan synanyşmak çägi"
+	},
+	"settings_option_translateScheduler_retryLimit_desc": {
+		"message": "Terjime ýalňyşlyklary ýüze çykanda meýilnama tekstleri terjime etmäge gaýtadan synanyşar. Bu opsiýa gaýtadan synanyşmalaryň çägini kesgitleýär. Çäksiz gaýtadan synanyşmalara rugsat bermek üçin otrisatel san goýuň"
+	},
+	"settings_option_translatorModule": {
+		"message": "Terjime moduly"
+	},
+	"settings_option_translatorModule_desc": {
+		"message": "Terjimeleriň hili we elýeterli diller terjime modulyna bagly"
+	},
+	"settings_option_tts": {
+		"message": "Teksti sese öwürmek (TTS)"
+	},
+	"settings_option_ttsCustomModules": {
+		"message": "Özbaşdak ses sintez modullary"
+	},
+	"settings_option_ttsCustomModules_button": {
+		"message": "Ses sintez modullaryny dolandyrmak"
+	},
+	"settings_option_ttsCustomModules_desc": {
+		"message": "Halanýan hyzmatlaryňyzy we ses hereketlendirijileriňizi ulanýan ses sintez modullaryny goşup bilersiňiz. <slot id=docs>özbaşdak TTS dokumentasiýasy</slot> hakda has giňişleýin okaň"
+	},
+	"settings_option_ttsModule": {
+		"message": "Saýlanan TTS moduly"
+	},
+	"settings_option_ttsModule_desc": {
+		"message": "Teksti seslendirmek üçin ulanylýan ses hereketlendirijisi"
+	},
+	"settings_option_userLanguage": {
+		"message": "Siziň diliňiz"
+	},
+	"settings_option_userLanguage_desc": {
+		"message": "Tekstleriň terjime ediljek dili"
+	},
+	"settings_pageTitle": {
+		"message": "Sazlamalar"
+	},
+	"settings_section_history": {
+		"message": "Taryh"
+	},
+	"settings_section_popup": {
+		"message": "Popup"
+	},
+	"textTranslator_suggestLanguage": {
+		"message": "Tekst dili <slot id=languageSuggest>$language_name$</slot> ýaly görünýär",
+		"placeholders": {
+			"language_name": {
+				"content": "$1",
+				"example": "Japanese"
+			}
+		}
+	},
+	"textTranslator_translateInputPlaceholder": {
+		"message": "Terjime üçin tekst giriziň",
+		"description": "Request to user input some text for translation"
+	},
+	"textTranslator_translatePlaceholder": {
+		"message": "Terjime edilen tekst şu ýerde bolar"
+	},
+	"translatorsManagerWindow_add": {
+		"message": "Terjime modulyny goş"
+	},
+	"translatorsManagerWindow_close": {
+		"message": "Ýap"
+	},
+	"translatorsManagerWindow_emptyTranslatorsListText": {
+		"message": "Heniz hiç hili ýörite terjime modullary goşulmandyr"
+	},
+	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
+		"message": "\"$translator_name$\" terjime modulyny aýyrmaga hakykatdanam ynanýarsyňyzmy?",
+		"placeholders": {
+			"translator_name": {
+				"content": "$1",
+				"example": "Google translator"
+			}
+		}
+	},
+	"translatorsManagerWindow_title": {
+		"message": "Ýörite terjime modullary"
+	},
+	"translatorsManagerWindow_translator_delete": {
+		"message": "Öçür"
+	},
+	"translatorsManagerWindow_translator_edit": {
+		"message": "Üýtget"
+	},
+	"ttsManagerWindow_add": {
+		"message": "TTS modulyny goş"
+	},
+	"ttsManagerWindow_close": {
+		"message": "Ýap"
+	},
+	"ttsManagerWindow_emptyTranslatorsListText": {
+		"message": "Heniz hiç hili TTS modullary goşulmandyr"
+	},
+	"ttsManagerWindow_message_ttsRemoveConfirmation": {
+		"message": "\"$tts_name$\" TTS modulyny aýyrmaga hakykatdanam ynanýarsyňyzmy?",
+		"placeholders": {
+			"tts_name": {
+				"content": "$1",
+				"example": "Google TTS"
+			}
+		}
+	},
+	"ttsManagerWindow_title": {
+		"message": "Tekstden ses çykaryş modullary"
+	},
+	"ttsManagerWindow_translator_delete": {
+		"message": "Öçür"
+	},
+	"ttsManagerWindow_translator_edit": {
+		"message": "Üýtget"
+	},
+	"validation_number": {
+		"message": "Görnüşi san bolmaly"
+	},
+	"validation_numberBetweenRange": {
+		"message": "Görnüşi $1 bilen $2 aralygynda san bolmaly"
+	},
+	"validation_positiveNumber": {
+		"message": "Görnüşi oňyn san bolmaly"
+	}
+}

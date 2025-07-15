@@ -3,6 +3,7 @@ import browser from 'webextension-polyfill';
 import { isLanguageCodeISO639v1 } from '@translate-tools/core/languages';
 
 import { isMobileBrowser } from './browser';
+import { capitalizeString } from './utils';
 
 export const getUserLanguage = () => browser.i18n.getUILanguage().split('-')[0];
 
@@ -77,10 +78,22 @@ export function getLanguageNameByCode(
 	langCode: string,
 	encodeNotFoundToString: boolean = true,
 ) {
-	const fixedLangCode = langCode === 'auto' ? 'lang_detect' : `langCode_${langCode}`;
-	return encodeNotFoundToString
-		? getMessage(fixedLangCode)
-		: getInternationalizedMessage(fixedLangCode, undefined, null);
+	if (langCode === 'auto') {
+		return encodeNotFoundToString
+			? getMessage('lang_detect')
+			: getInternationalizedMessage('lang_detect', undefined, null);
+	}
+
+	const languageNames = new Intl.DisplayNames([browser.i18n.getUILanguage(), 'en'], {
+		type: 'language',
+	});
+
+	const languageName = languageNames.of(langCode);
+	if (!languageName || languageName === langCode) {
+		return encodeNotFoundToString ? languageName : null;
+	}
+
+	return capitalizeString(languageName);
 }
 
 export const detectLanguage = async (text: string, reliableOnly = false) => {

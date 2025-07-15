@@ -1,0 +1,623 @@
+{
+	"common_action_addToDictionary": {
+		"message": "ترجمو ڊڪشنري ۾ شامل ڪريو"
+	},
+	"common_action_removeFromDictionary": {
+		"message": "ترجمو ڊڪشنري مان هٽايو"
+	},
+	"common_bgUnavailable": {
+		"message": "پس منظر اسڪرپٽ دستياب ناهي"
+	},
+	"common_cancel": {
+		"message": "منسوخ ڪريو"
+	},
+	"common_close": {
+		"message": "بند ڪريو"
+	},
+	"common_copy": {
+		"message": "ڪاپي ڪريو"
+	},
+	"common_error": {
+		"message": "غلطي"
+	},
+	"common_offlineTranslator": {
+		"message": "$1 - آف لائن مترجم"
+	},
+	"common_retry": {
+		"message": "ٻيهر ڪوشش ڪريو"
+	},
+	"common_translate": {
+		"message": "ترجمو ڪريو"
+	},
+	"component_hotkey_placeholder": {
+		"message": "شارٽ ڪٽ رڪارڊ ڪرڻ لاءِ ڪلڪ ڪريو"
+	},
+	"component_hotkey_recordPlaceholder": {
+		"message": "ڪيز دٻايو"
+	},
+	"component_hotkey_resetButton": {
+		"message": "ري سيٽ ڪريو"
+	},
+	"contextMenu_disablePageTranslation": {
+		"message": "صفحي جو ترجمو بند ڪريو"
+	},
+	"contextMenu_translatePage": {
+		"message": "صفحي جو ترجمو ڪريو"
+	},
+	"contextMenu_translateSelectedText": {
+		"message": "منتخب ٿيل متن جو ترجمو ڪريو"
+	},
+	"dictionaryButton_add": {
+		"message": "ڊڪشنري ۾ شامل ڪريو"
+	},
+	"dictionaryButton_delete": {
+		"message": "ڊڪشنري مان حذف ڪريو"
+	},
+	"dictionary_button_export": {
+		"message": "برآمد ڪريو"
+	},
+	"dictionary_button_removeAll": {
+		"message": "سڀ هٽايو"
+	},
+	"dictionary_deleteAll": {
+		"message": "ڇا توهان کي پڪ آهي ته توهان ڊڪشنري مان سڀ ترجما حذف ڪرڻ چاهيو ٿا؟"
+	},
+	"dictionary_deleteConfirmation": {
+		"message": "ڇا توهان کي پڪ آهي ته توهان هي ترجمو حذف ڪرڻ چاهيو ٿا؟"
+	},
+	"dictionary_description": {
+		"message": "ترجما ڊڪشنري ۾ محفوظ ڪريو ته جيئن انهن کي جلدي ڳولي سگهو"
+	},
+	"dictionary_emptyDictionary": {
+		"message": "ڊڪشنري خالي آهي، ڪجهه متن ترجمو ڪري ان کي ڀريو"
+	},
+	"dictionary_filter_from": {
+		"message": "ذريعو متن جي ٻولي"
+	},
+	"dictionary_filter_to": {
+		"message": "هدف ٻولي"
+	},
+	"dictionary_message_deleteAll_success": {
+		"message": "سڀ ترجما هٽايا ويا آهن"
+	},
+	"dictionary_notFoundEntries": {
+		"message": "انهن فلٽرن سان ملندڙ ڪو به ترجمو نه مليو"
+	},
+	"dictionary_pageTitle": {
+		"message": "ڊڪشنري"
+	},
+	"dictionary_resetFilters": {
+		"message": "فلٽر ري سيٽ ڪريو"
+	},
+	"dictionary_searchPlaceholder": {
+		"message": "متن سان ڳولا ڪريو"
+	},
+	"editorWindow_close": {
+		"message": "بند ڪريو"
+	},
+	"editorWindow_data_code": {
+		"message": "ڪوڊ"
+	},
+	"editorWindow_data_title": {
+		"message": "ماڊيول جو نالو"
+	},
+	"editorWindow_message_invalidTitle": {
+		"message": "ماڊيول جو نالو گهٽ ۾ گهٽ هڪ اکر هجڻ گهرجي"
+	},
+	"editorWindow_save": {
+		"message": "محفوظ ڪريو"
+	},
+	"ext_description": {
+		"message": "ويب صفحي جو ترجمو، متن جو ترجمو، لغت، تاريخ، ڪسٽم مترجم، سڀ ڪجهه جيڪو توهان کي ٻوليءَ جي رڪاوٽن کي ٽوڙڻ لاءِ گهربل آهي"
+	},
+	"ext_name": {
+		"message": "Linguist - ويب صفحي جو مترجم"
+	},
+	"history_control_selectEntry": {
+		"message": "بلڪ عمل لاءِ ترجمو چونڊيو",
+		"description": "Description in finite form \"to pick\" with explaining what this checkbox will do"
+	},
+	"history_controls_clearHistory": {
+		"message": "تاريخ صاف ڪريو"
+	},
+	"history_controls_deleteSelected": {
+		"message": "منتخب ٿيل ترجمن کي حذف ڪريو"
+	},
+	"history_controls_selectAll": {
+		"message": "سڀ ترجمن کي چونڊيو"
+	},
+	"history_message_clearHistoryConfirmation": {
+		"message": "ڇا توهان کي پڪ آهي ته توهان تاريخ صاف ڪرڻ چاهيو ٿا؟ سڀ داخلا ختم ٿي وينديون"
+	},
+	"history_message_deleteEntryConfirmation": {
+		"message": "ڇا توهان کي پڪ آهي ته توهان هي داخلا حذف ڪرڻ چاهيو ٿا؟"
+	},
+	"history_message_deleteSelectedEntriesConfirmation": {
+		"message": "ڇا توهان کي پڪ آهي ته توهان منتخب ٿيل داخلا ($1) حذف ڪرڻ چاهيو ٿا؟"
+	},
+	"history_message_entriesNotFound": {
+		"message": "فلٽر سان ملندڙ ڪو به ترجمو نه مليو"
+	},
+	"history_message_noEntries": {
+		"message": "تاريخ خالي آهي"
+	},
+	"history_notification_disabled": {
+		"message": "تاريخ جي رڪارڊنگ غير فعال آهي، تنهنڪري نيون داخلا ظاهر نه ٿينديون. توهان ان کي <slot id=preferences>ترجيحات</slot> ۾ تبديل ڪري سگهو ٿا"
+	},
+	"history_pageTitle": {
+		"message": "تاريخ"
+	},
+	"history_searchPlaceholder": {
+		"message": "متن سان ڳولا ڪريو"
+	},
+	"inlineTranslator_showOriginalText": {
+		"message": "اصلي متن ڏيکاريو"
+	},
+	"lang_change": {
+		"message": "ٻولي تبديل ڪريو"
+	},
+	"lang_detect": {
+		"message": "خودڪار سڃاڻپ"
+	},
+	"lang_select": {
+		"message": "ٻولي چونڊيو"
+	},
+	"lang_swap": {
+		"message": "ٻوليون مٽايو"
+	},
+	"message_unknownError": {
+		"message": "اڻڄاتل غلطي"
+	},
+	"pageTranslator_alwaysTranslateLang": {
+		"message": "هميشه هن ٻولي جو ترجمو ڪريو"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disable": {
+		"message": "غير فعال ڪريو"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
+		"message": "سڀني سائيٽن لاءِ غير فعال ڪريو"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_enable": {
+		"message": "فعال ڪريو"
+	},
+	"pageTranslator_commonPreferences_title": {
+		"message": "ھن ٻوليءَ لاءِ عام ترجيحات"
+	},
+	"pageTranslator_option_autoTranslate": {
+		"message": "خودڪار ترجمو"
+	},
+	"pageTranslator_showOriginal": {
+		"message": "اصلي ڏيکاريو"
+	},
+	"pageTranslator_showTranslationPreferences": {
+		"message": "ترجمي جون ترجيحات"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_always": {
+		"message": "هميشه ترجمو ڪريو"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
+		"message": "هن ٻوليءَ لاءِ هميشه ترجمو ڪريو"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_default": {
+		"message": "عام قاعدا استعمال ڪريو"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
+		"message": "هن ٻوليءَ لاءِ عام قاعدا استعمال ڪريو"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_never": {
+		"message": "ڪڏهن به ترجمو نه ڪريو"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
+		"message": "هن ٻوليءَ لاءِ ڪڏهن به ترجمو نه ڪريو"
+	},
+	"pageTranslator_sitePreferences_title": {
+		"message": "ترجيحات"
+	},
+	"pageTranslator_translatePage": {
+		"message": "صفحو ترجمو ڪريو"
+	},
+	"pageTranslator_translationReport": {
+		"message": "ترجمي جي رپورٽ"
+	},
+	"pageTranslator_translationReport_queue": {
+		"message": "منتظر"
+	},
+	"pageTranslator_translationReport_reject": {
+		"message": "غلطين"
+	},
+	"pageTranslator_translationReport_resolve": {
+		"message": "ترجمو ٿيل"
+	},
+	"popup_tabIdNotFound": {
+		"message": "ٽيب \"$1\" نه مليو"
+	},
+	"popup_tab_translatePage": {
+		"message": "صفحي جو ترجمو"
+	},
+	"popup_tab_translateText": {
+		"message": "متن جو ترجمو"
+	},
+	"settings_button_cancel": {
+		"message": "منسوخ ڪريو"
+	},
+	"settings_button_export": {
+		"message": "ترتيب برآمد ڪريو"
+	},
+	"settings_button_import": {
+		"message": "ترتيب درآمد ڪريو"
+	},
+	"settings_button_reset": {
+		"message": "ترتيب ري سيٽ ڪريو"
+	},
+	"settings_button_saveChanges": {
+		"message": "تبديلين کي محفوظ ڪريو"
+	},
+	"settings_message_clearCache_success": {
+		"message": "ڪيش صاف ٿي ويو"
+	},
+	"settings_message_common_invalidValueType": {
+		"message": "غلط قيمت"
+	},
+	"settings_message_importConfig_invalidFile": {
+		"message": "فراهم ڪيل ترتيب فائل غلط يا خراب آهي، ۽ ان کي پروسيس نٿو ڪري سگهجي"
+	},
+	"settings_message_importConfig_success": {
+		"message": "درآمد مڪمل"
+	},
+	"settings_message_resetConfig_confirm": {
+		"message": "ترتيبات کي اصل قيمتن تي ري سيٽ ڪرڻ جي تصديق ڪريو"
+	},
+	"settings_message_resetConfig_success": {
+		"message": "ترتيبات ري سيٽ ٿي ويون"
+	},
+	"settings_message_saveChanges_success": {
+		"message": "تبديلون محفوظ ڪيا ويا"
+	},
+	"settings_option_cache": {
+		"message": "ڪيش"
+	},
+	"settings_option_cache_clear": {
+		"message": "ڪيش صاف ڪريو"
+	},
+	"settings_option_cache_clear_desc": {
+		"message": "جيڪڏهن توهان ترجمي جي غلطيون محسوس ڪريو يا ڪيش فعال ٿيڻ دوران ذاتي متن کي غلط طور تي ترجمو ڪريو، ته توهان ڪيش مان سڀ ڊيٽا حذف ڪري سگهو ٿا",
+		"description": "Explanation for user about cases when it's useful to clear cache"
+	},
+	"settings_option_cache_enable": {
+		"message": "ڪيش کي فعال ڪريو"
+	},
+	"settings_option_cache_enable_desc": {
+		"message": "جڏهن ڪيش فعال هوندو، ته اڳ ۾ ترجمو ڪيل متن بغير ڪنهن اضافي درخواست جي ترجمي سروس ڏانهن فوري طور تي ترجمو ٿيندو"
+	},
+	"settings_option_cache_ignoreCase": {
+		"message": "ڪيس-غير حساس ڪيش استعمال ڪريو"
+	},
+	"settings_option_cache_ignoreCase_desc": {
+		"message": "جڏهن فعال هوندو، ته ڪيش ڪيل ترجما مختلف ڪيسن سان متن لاءِ استعمال ڪيا ويندا، جيڪو ڪجهه حالتن ۾ ترجمي جي بگاڙ جو سبب بڻجي سگهي ٿو"
+	},
+	"settings_option_commonSettings": {
+		"message": "عام سيٽنگون"
+	},
+	"settings_option_customTranslatorModule": {
+		"message": "ڪسٽم ترجمو ماڊول",
+		"description": "An user defined code that implements a translation module"
+	},
+	"settings_option_customTranslatorModule_desc": {
+		"message": "توهان پنهنجي پسنديده ترجمي خدمتن کي استعمال ڪندي ڪسٽم ترجمو ماڊول شامل ڪري سگهو ٿا. وڌيڪ ڄاڻو <slot id=docs>ڪسٽم ترجما دستاويز</slot> ۾"
+	},
+	"settings_option_customTranslatorModule_manageButton": {
+		"message": "ترجما منظم ڪرڻ",
+		"description": "A button to show list of translation modules"
+	},
+	"settings_option_history_enable": {
+		"message": "تاريخ کي فعال ڪريو"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "جڏهن فعال هوندو، ته ترجما رڪارڊ ڪيا ويندا ۽ <slot id=historyPage>تاريخ صفحو</slot> تي ظاهر ٿيندا"
+	},
+	"settings_option_pageTranslation": {
+		"message": "مڪمل صفحي جو ترجمو"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent": {
+		"message": "مواد جي ذريعي ٻولي معلوم ڪريو"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent_desc": {
+		"message": "ويب صفحي تي متن جو تجزيو ڪريو ته جيئن ان جي ٻولي معلوم ٿئي. جڏهن غير فعال هوندو، ته <slot id=docs>صفحي جي ميٽا ڊيٽا</slot> ۾ ڄاڻايل ٻولي استعمال ڪئي ويندي"
+	},
+	"settings_option_pageTranslation_enableContextMenu": {
+		"message": "سياقي مينيو بٽڻ کي فعال ڪريو"
+	},
+	"settings_option_pageTranslation_enableContextMenu_desc": {
+		"message": "صفحي جي سياقي مينيو ۾ صفحي جي ترجمي کي ٽوگل ڪرڻ لاءِ بٽڻ شامل ڪريو"
+	},
+	"settings_option_pageTranslation_excludeSelectors": {
+		"message": "ترجمي کان خارج ڪرڻ لاءِ سليڪٽر"
+	},
+	"settings_option_pageTranslation_excludeSelectors_desc": {
+		"message": "عنصرن لاءِ CSS سليڪٽرن جي فهرست جيڪي ترجمي کان خارج ڪيا ويندا. هڪ لائن تي هڪ سليڪٽر. جيڪڏهن ڪو عنصر انهن سليڪٽرن مان ڪنهن سان ملندو آهي، ته ان جو متن، خاصيتون، ۽ اندروني عنصر ترجمو نه ٿيندا"
+	},
+	"settings_option_pageTranslation_lazyTranslate": {
+		"message": "صرف نظر ايندڙ عنصرن کي ترجمو ڪريو"
+	},
+	"settings_option_pageTranslation_lazyTranslate_desc": {
+		"message": "جڏهن هي اختيار فعال هوندو، ته صرف نظر ايندڙ عنصرن کي ترجمو ڪيو ويندو. هي اختيار نيٽ ورڪ ٽرئفڪ کي گهٽائي ٿو"
+	},
+	"settings_option_pageTranslation_originalTextPopup": {
+		"message": "اصلي متن سان پاپ اپ کي فعال ڪريو"
+	},
+	"settings_option_pageTranslation_originalTextPopup_desc": {
+		"message": "ترجمو ڪيل متن بلاڪن تي ماؤس هور ڪرڻ تي اصلي متن سان پاپ اپ ڏيکاريو"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation": {
+		"message": "شارٽ ڪٽ"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation_desc": {
+		"message": "صفحي جي ترجمي کي ٽوگل ڪرڻ لاءِ شارٽ ڪٽ\nڪيچ کي ري سيٽ ڪرڻ لاءِ ESC دٻايو"
+	},
+	"settings_option_pageTranslation_translatableAttributes": {
+		"message": "ترجمو ٿيندڙ خاصيتون"
+	},
+	"settings_option_pageTranslation_translatableAttributes_desc": {
+		"message": "<slot id=htmlAttributes>HTML خاصيت</slot> جا نالا داخل ڪريو جيڪي ترجمو ٿين، هڪ لائن تي هڪ خاصيت\nصرف هن فهرست ۾ خاصيتون ترجمو ٿينديون"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters": {
+		"message": "ترجمي جي ترقي ڏيکاريو"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters_desc": {
+		"message": "ايڪسٽينشن پوپ اپ ۾ صفحي جي ترجمي جي ترقي سان گڏ هڪ پينل ڏيکاريو"
+	},
+	"settings_option_selectTranslation": {
+		"message": "منتخب ڪيل متن لاءِ ترجمو"
+	},
+	"settings_option_selectTranslation_detectTextLanguage": {
+		"message": "متن جي ٻولي کي سڃاڻو"
+	},
+	"settings_option_selectTranslation_detectTextLanguage_desc": {
+		"message": "جڏهن فعال ڪيو وڃي، منتخب ڪيل متن کي ترجمي لاءِ ٻولي سڃاڻڻ لاءِ تجزيو ڪيو ويندو. ٻي صورت ۾، صفحي جي ٻولي استعمال ڪئي ويندي"
+	},
+	"settings_option_selectTranslation_disableWhileTranslatePage": {
+		"message": "صفحي کي ترجمو ڪندي غير فعال ڪريو"
+	},
+	"settings_option_selectTranslation_enable": {
+		"message": "منتخب ڪيل متن جي ترجمي کي فعال ڪريو"
+	},
+	"settings_option_selectTranslation_enable_desc": {
+		"message": "جڏهن هي خاصيت فعال آهي، توهان صفحي تي ڪنهن به متن کي منتخب ڪري سگهو ٿا ۽ ان کي پوپ اپ ۾ ترجمو ڪري سگهو ٿا"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton": {
+		"message": "ترجمي جي بٽڻ تي خودڪار ڌيان ڏيو"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
+		"message": "جڏهن صفحي تي ترجمي جو بٽڻ ظاهر ٿئي ٿو، اهو خودڪار طريقي سان ڌيان ۾ اچي ويندو"
+	},
+	"settings_option_selectTranslation_header_languageChoice": {
+		"message": "ٻولي جون سيٽنگون"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang": {
+		"message": "ترجمي جي ماڊيول کي متن جي ٻولي سڃاڻڻ جي اجازت ڏيو"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
+		"message": "جڏهن متن جي ٻولي کي مقامي طور تي سڃاڻي نه سگهجي ۽ هي اختيار فعال آهي، متن کي \"آٽو\" ٻولي سان ترجمو ڪيو ويندو جيڪڏهن سپورٽ ٿيل آهي.\nجڏهن اختيار غير فعال آهي، ٻيو متبادل طريقو استعمال ڪيو ويندو متن جي ماخذ ٻولي مقرر ڪرڻ لاءِ"
+	},
+	"settings_option_selectTranslation_mode": {
+		"message": "متن جي چونڊ تي عمل"
+	},
+	"settings_option_selectTranslation_mode_item_contextMenu": {
+		"message": "متن کي ڪنٽيڪسٽ مينيو ذريعي ترجمو ڪريو"
+	},
+	"settings_option_selectTranslation_mode_item_popupButton": {
+		"message": "ترجمي جو بٽڻ ڏيکاريو"
+	},
+	"settings_option_selectTranslation_mode_item_quickTranslate": {
+		"message": "متن کي فوري طور تي ترجمو ڪريو"
+	},
+	"settings_option_selectTranslation_modifiers": {
+		"message": "ترميم ڪندڙ"
+	},
+	"settings_option_selectTranslation_modifiers_desc": {
+		"message": "اهي ڪيئي چونڊيو جيڪي ترجمي کي ڏيکارڻ لاءِ ڪيبورڊ تي دٻائڻ لازمي آهن"
+	},
+	"settings_option_selectTranslation_modifiers_key_alt": {
+		"message": "alt"
+	},
+	"settings_option_selectTranslation_modifiers_key_ctrl": {
+		"message": "ctrl"
+	},
+	"settings_option_selectTranslation_modifiers_key_meta": {
+		"message": "meta"
+	},
+	"settings_option_selectTranslation_modifiers_key_shift": {
+		"message": "shift"
+	},
+	"settings_option_selectTranslation_rememberDirection": {
+		"message": "تازو چونڊيل متن جي ٻولي کي ياد ڪريو"
+	},
+	"settings_option_selectTranslation_showOnceForSelection": {
+		"message": "هر متن جي چونڊ لاءِ ترجمي جو بٽڻ هڪ ڀيرو ڏيکاريو"
+	},
+	"settings_option_selectTranslation_showOnceForSelection_desc": {
+		"message": "بٽڻ هر متن جي چونڊ لاءِ صرف هڪ ڀيرو ظاهر ٿيندو. ان کي ٻيهر ڏيکارڻ لاءِ، متن کي ٻيهر چونڊيو"
+	},
+	"settings_option_selectTranslation_showOriginalText": {
+		"message": "اصلي متن ڏيکاريو"
+	},
+	"settings_option_selectTranslation_showOriginalText_desc": {
+		"message": "ترجمي جي پوپ اپ ۾ اصلي متن سان گڏ هڪ بلاڪ شامل ڪريو"
+	},
+	"settings_option_selectTranslation_strictSelection": {
+		"message": "متن جي چونڊ لاءِ سخت موڊ",
+		"description": "This option is about selecting text via mouse"
+	},
+	"settings_option_selectTranslation_strictSelection_desc": {
+		"message": "متن جي چونڊ کي نظرانداز ڪريو جيڪڏهن کاٻي مائوس بٽڻ چونڊيل متن تي مشتمل بلاڪ کان ٻاهر ڇڏجي وڃي"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton": {
+		"message": "پوپ اپ بٽڻ کي لڪائڻ کان اڳ دير"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton_desc": {
+		"message": "بٽڻ کي لڪائڻ کان اڳ ڪرسر ان تي نه هئڻ تي دير ملي سيڪنڊن ۾. بٽڻ تي ڪرسر رکڻ سان ٽائمر ري سيٽ ٿي ويندو. خودڪار لڪائڻ کي غير فعال ڪرڻ لاءِ، قدر کي 1 کان گهٽ مقرر ڪريو"
+	},
+	"settings_option_selectTranslation_zIndex": {
+		"message": "z-index"
+	},
+	"settings_option_selectTranslation_zIndex_desc": {
+		"message": "جيڪڏهن ڪجهه صفحن تي عنصر ترجمو ٿيل متن سان پاپ اپ تي اوورليپ ڪن ٿا ته هن قدر کي وڌايو"
+	},
+	"settings_option_textTranslator": {
+		"message": "متن جو ترجمو"
+	},
+	"settings_option_textTranslator_rememberText": {
+		"message": "ترجمو ٿيل متن کي ياد رکڻ"
+	},
+	"settings_option_textTranslator_rememberText_desc": {
+		"message": "ونڊو کولڻ تي ترجمو ٿيل متن کي ياد رکڻ"
+	},
+	"settings_option_textTranslator_spellCheck": {
+		"message": "هجي چيڪ کي فعال ڪريو"
+	},
+	"settings_option_textTranslator_suggestLanguage": {
+		"message": "پڌري ٿيل متن جي ٻولي ڏيکارڻ"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways": {
+		"message": "هميشه ٻولي کي پڌرو ۽ تجويز ڪريو"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways_desc": {
+		"message": "جڏهن غير فعال هجي، ٻولي جون تجويزون صرف تڏهن ظاهر ٿينديون جڏهن ماخذ ٻولي \"خودڪار\" تي مقرر هجي"
+	},
+	"settings_option_translatePreferences": {
+		"message": "ترجمي جون ترجيحات"
+	},
+	"settings_option_translateScheduler": {
+		"message": "ترجمو شيڊولر"
+	},
+	"settings_option_translateScheduler_delay": {
+		"message": "متن گڏ ڪرڻ جي دير"
+	},
+	"settings_option_translateScheduler_delay_desc": {
+		"message": "ترجمو شيڊولر ترجمي سروس API ڏانهن درخواستن جي تعداد کي گهٽائي ٿو جيترو ممڪن هجي متن گڏ ڪرڻ لاءِ هڪ ئي درخواست ۾ موڪلڻ لاءِ. شيڊولر وڌيڪ متن گڏ ڪرڻ لاءِ مخصوص وقت ملي سيڪنڊن ۾ انتظار ڪندو ترجمو شروع ڪرڻ کان اڳ"
+	},
+	"settings_option_translateScheduler_retryLimit": {
+		"message": "ترجمو ٻيهر ڪوشش جي حد"
+	},
+	"settings_option_translateScheduler_retryLimit_desc": {
+		"message": "شيڊولر ترجمو غلطين جي صورت ۾ متن کي ٻيهر ترجمو ڪرڻ جي ڪوشش ڪندو. هي اختيار ٻيهر ڪوشش جي حد مقرر ڪري ٿو. لامحدود ڪوششون جي اجازت ڏيڻ لاءِ منفي نمبر مقرر ڪريو"
+	},
+	"settings_option_translatorModule": {
+		"message": "ترجمو ماڊل"
+	},
+	"settings_option_translatorModule_desc": {
+		"message": "ترجمن جي معيار ۽ موجود ٻوليون ترجمو ماڊل تي دارومدار رکن ٿيون"
+	},
+	"settings_option_tts": {
+		"message": "متن کي آواز ۾ تبديل ڪرڻ (TTS)"
+	},
+	"settings_option_ttsCustomModules": {
+		"message": "ڪسٽم آواز جي تخليق جا ماڊل"
+	},
+	"settings_option_ttsCustomModules_button": {
+		"message": "آواز جي تخليق جا ماڊل منظم ڪرڻ"
+	},
+	"settings_option_ttsCustomModules_desc": {
+		"message": "توهان پنهنجي پسنديده خدمتن ۽ آواز انجڻن کي استعمال ڪندي آواز جي تخليق جا ماڊل شامل ڪري سگهو ٿا. وڌيڪ پڙهو <slot id=docs>ڪسٽم TTS دستاويز</slot> ۾"
+	},
+	"settings_option_ttsModule": {
+		"message": "منتخب ٿيل TTS ماڊل"
+	},
+	"settings_option_ttsModule_desc": {
+		"message": "متن کي آواز ڏيڻ لاءِ استعمال ٿيل آواز انجڻ"
+	},
+	"settings_option_userLanguage": {
+		"message": "توهان جي ٻولي"
+	},
+	"settings_option_userLanguage_desc": {
+		"message": "ٻولي جنهن ۾ متن ترجمو ڪيو ويندو"
+	},
+	"settings_pageTitle": {
+		"message": "ترتيبون"
+	},
+	"settings_section_history": {
+		"message": "تاريخ"
+	},
+	"settings_section_popup": {
+		"message": "پاپ اپ"
+	},
+	"textTranslator_suggestLanguage": {
+		"message": "لڳي ٿو ته متن جي ٻولي <slot id=languageSuggest>$language_name$</slot> آهي",
+		"placeholders": {
+			"language_name": {
+				"content": "$1",
+				"example": "Japanese"
+			}
+		}
+	},
+	"textTranslator_translateInputPlaceholder": {
+		"message": "ترجمي لاءِ متن داخل ڪريو",
+		"description": "Request to user input some text for translation"
+	},
+	"textTranslator_translatePlaceholder": {
+		"message": "ترجمو ٿيل متن هتي هوندو"
+	},
+	"translatorsManagerWindow_add": {
+		"message": "ترجمي جو ماڊل شامل ڪريو"
+	},
+	"translatorsManagerWindow_close": {
+		"message": "بند ڪريو"
+	},
+	"translatorsManagerWindow_emptyTranslatorsListText": {
+		"message": "ڪو به ڪسٽم ترجمي جو ماڊل شامل نه ڪيو ويو آهي"
+	},
+	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
+		"message": "ڇا توهان کي يقين آهي ته توهان \"$translator_name$\" ترجمي جو ماڊل هٽائڻ چاهيو ٿا؟",
+		"placeholders": {
+			"translator_name": {
+				"content": "$1",
+				"example": "Google translator"
+			}
+		}
+	},
+	"translatorsManagerWindow_title": {
+		"message": "ڪسٽم ترجمي جا ماڊل"
+	},
+	"translatorsManagerWindow_translator_delete": {
+		"message": "حذف ڪريو"
+	},
+	"translatorsManagerWindow_translator_edit": {
+		"message": "ترميم ڪريو"
+	},
+	"ttsManagerWindow_add": {
+		"message": "TTS ماڊل شامل ڪريو"
+	},
+	"ttsManagerWindow_close": {
+		"message": "بند ڪريو"
+	},
+	"ttsManagerWindow_emptyTranslatorsListText": {
+		"message": "ڪو به TTS ماڊل شامل نه ڪيو ويو آهي"
+	},
+	"ttsManagerWindow_message_ttsRemoveConfirmation": {
+		"message": "ڇا توهان کي يقين آهي ته توهان \"$tts_name$\" TTS ماڊل هٽائڻ چاهيو ٿا؟",
+		"placeholders": {
+			"tts_name": {
+				"content": "$1",
+				"example": "Google TTS"
+			}
+		}
+	},
+	"ttsManagerWindow_title": {
+		"message": "ٽيڪسٽ-ٽو-اسپيچ جا ماڊل"
+	},
+	"ttsManagerWindow_translator_delete": {
+		"message": "حذف ڪريو"
+	},
+	"ttsManagerWindow_translator_edit": {
+		"message": "ترميم ڪريو"
+	},
+	"validation_number": {
+		"message": "قدر هڪ نمبر هجڻ گهرجي"
+	},
+	"validation_numberBetweenRange": {
+		"message": "قدر $1 ۽ $2 جي وچ ۾ هڪ نمبر هجڻ گهرجي"
+	},
+	"validation_positiveNumber": {
+		"message": "قدر هڪ مثبت نمبر هجڻ گهرجي"
+	}
+}

@@ -1,32 +1,40 @@
 import OpenAI, { ClientOptions } from 'openai';
 
-import { LLMFetcher } from './LLMFetcher';
+import { LLMFetcher, MessageObject } from './LLMFetcher';
 
 export class BasicLLMFetcher implements LLMFetcher {
 	private readonly api: OpenAI;
 	constructor(
 		params: ClientOptions,
-		private readonly config: { model: string; temperature?: number },
+		private readonly config: {
+			model: string;
+			temperature?: number;
+			systemPrompt?: MessageObject[];
+		},
 	) {
 		this.api = new OpenAI(params);
 	}
 
-	async fetch(prompt: string) {
+	async query(messages: MessageObject[]): Promise<MessageObject[]> {
 		const response = await this.api.chat.completions.create({
 			model: this.config.model,
 			temperature: this.config.temperature,
-			messages: [{ role: 'user', content: prompt }],
+			messages: [...(this.config.systemPrompt ?? []), ...messages],
 		});
 
-		const { content } = response.choices[0].message;
+		const result: MessageObject[] = [];
+		for (const choice of response.choices) {
+			const { message } = choice;
+			if (typeof message.content !== 'string') throw new Error('Invalid response');
 
-		if (!content) throw new Error('Invalid response');
+			result.push(message as MessageObject);
+		}
 
-		return content;
+		return result;
 	}
 
 	getLengthLimit() {
-		return 5000;
+		return 25000;
 	}
 
 	getRequestsTimeout() {

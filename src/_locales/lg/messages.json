@@ -1,0 +1,623 @@
+{
+	"common_action_addToDictionary": {
+		"message": "Gatta obutaputa mu lupapula"
+	},
+	"common_action_removeFromDictionary": {
+		"message": "Jjamu obutaputa mu lupapula"
+	},
+	"common_bgUnavailable": {
+		"message": "Ekipya ky'emabega tekiriwo"
+	},
+	"common_cancel": {
+		"message": "Sazaamu"
+	},
+	"common_close": {
+		"message": "Ggalawo"
+	},
+	"common_copy": {
+		"message": "Koppa"
+	},
+	"common_error": {
+		"message": "Ensobi"
+	},
+	"common_offlineTranslator": {
+		"message": "$1 - Omutaputa atali ku mutimbagano"
+	},
+	"common_retry": {
+		"message": "Ddamu"
+	},
+	"common_translate": {
+		"message": "Tandika"
+	},
+	"component_hotkey_placeholder": {
+		"message": "Kuba wano okuteekawo akatambi"
+	},
+	"component_hotkey_recordPlaceholder": {
+		"message": "Kuba ebisumuluzo"
+	},
+	"component_hotkey_resetButton": {
+		"message": "Ddamu"
+	},
+	"contextMenu_disablePageTranslation": {
+		"message": "Lekera awo okutaputa olupapula"
+	},
+	"contextMenu_translatePage": {
+		"message": "Tandika olupapula"
+	},
+	"contextMenu_translateSelectedText": {
+		"message": "Tandika ekitundu ekyalondeddwa"
+	},
+	"dictionaryButton_add": {
+		"message": "Gatta ku lupapula"
+	},
+	"dictionaryButton_delete": {
+		"message": "Jjamu ku lupapula"
+	},
+	"dictionary_button_export": {
+		"message": "Fuluma"
+	},
+	"dictionary_button_removeAll": {
+		"message": "Jjamu byonna"
+	},
+	"dictionary_deleteAll": {
+		"message": "Oli mukakafu nti oyagala kujjamu obutaputa bwonna mu lupapula?"
+	},
+	"dictionary_deleteConfirmation": {
+		"message": "Oli mukakafu nti oyagala kujjamu obutaputa buno?"
+	},
+	"dictionary_description": {
+		"message": "Tereka obutaputa mu lupapula okusobola okubuzuula amangu oluvannyuma"
+	},
+	"dictionary_emptyDictionary": {
+		"message": "Olupapula lulimu bwereere, tandika okulujjuza nga otaputa ebimu ku bitundu"
+	},
+	"dictionary_filter_from": {
+		"message": "Olulimi lw'ensibuko"
+	},
+	"dictionary_filter_to": {
+		"message": "Olulimi lw'ekigendererwa"
+	},
+	"dictionary_message_deleteAll_success": {
+		"message": "Obutaputa bwonna buggiddwamu"
+	},
+	"dictionary_notFoundEntries": {
+		"message": "Tewali butaputa busangiddwa nga bukwatagana n'ensengeka zino"
+	},
+	"dictionary_pageTitle": {
+		"message": "Olupapula"
+	},
+	"dictionary_resetFilters": {
+		"message": "Ddamu ensengeka"
+	},
+	"dictionary_searchPlaceholder": {
+		"message": "Noonya ng'ebigambo"
+	},
+	"editorWindow_close": {
+		"message": "Ggalawo"
+	},
+	"editorWindow_data_code": {
+		"message": "Koodi"
+	},
+	"editorWindow_data_title": {
+		"message": "Erinnya ly'ekitundu"
+	},
+	"editorWindow_message_invalidTitle": {
+		"message": "Erinnya ly'ekitundu lirina okuba n'akatono akamu"
+	},
+	"editorWindow_save": {
+		"message": "Kuuma"
+	},
+	"ext_description": {
+		"message": "Okutaputa empapula ku mukutu, okutaputa ebigambo, olulimi, ebyafaayo, abataputa ab'enjawulo, byonna by'oyetaaga okusobola okumenya embeera z'olulimi"
+	},
+	"ext_name": {
+		"message": "Linguist - omutaputa w'empapula ku mukutu"
+	},
+	"history_control_selectEntry": {
+		"message": "Kikola okutaputa okwa bulk action",
+		"description": "Description in finite form \"to pick\" with explaining what this checkbox will do"
+	},
+	"history_controls_clearHistory": {
+		"message": "Jjamu ebyafaayo"
+	},
+	"history_controls_deleteSelected": {
+		"message": "Jjamu okutaputa okwasaliddwawo"
+	},
+	"history_controls_selectAll": {
+		"message": "Londa okutaputa kwonna"
+	},
+	"history_message_clearHistoryConfirmation": {
+		"message": "Oli mukakafu nti oyagala kujjamu ebyafaayo? Ebyafaayo byonna bijja kuggyibwawo"
+	},
+	"history_message_deleteEntryConfirmation": {
+		"message": "Oli mukakafu nti oyagala kujjamu ekintu kino?"
+	},
+	"history_message_deleteSelectedEntriesConfirmation": {
+		"message": "Oli mukakafu nti oyagala kujjamu ebintu ebisale ($1)?"
+	},
+	"history_message_entriesNotFound": {
+		"message": "Tewali kutaputa kwazuuliddwa nga kufaanana n'ekifaananyi"
+	},
+	"history_message_noEntries": {
+		"message": "Ebyafaayo tebiriiwo"
+	},
+	"history_notification_disabled": {
+		"message": "Okubala ebyafaayo kwaziyizibwa, n'olwekyo ebintu ebiggya tebijja kulabika. Osobola okukyusa kino mu <slot id=preferences>Preferences</slot>"
+	},
+	"history_pageTitle": {
+		"message": "Ebyafaayo"
+	},
+	"history_searchPlaceholder": {
+		"message": "Noonya ng'ebigambo"
+	},
+	"inlineTranslator_showOriginalText": {
+		"message": "Laga ekigambo ekya ddala"
+	},
+	"lang_change": {
+		"message": "Kyusa olulimi"
+	},
+	"lang_detect": {
+		"message": "Kizuula kyokka"
+	},
+	"lang_select": {
+		"message": "Londa olulimi"
+	},
+	"lang_swap": {
+		"message": "Kyusa ennimi"
+	},
+	"message_unknownError": {
+		"message": "Ensobi etategeerekeka"
+	},
+	"pageTranslator_alwaysTranslateLang": {
+		"message": "Bulijjo taputa olulimi luno"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disable": {
+		"message": "Ziyiza"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
+		"message": "Ziyiza ku bifo byonna"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_enable": {
+		"message": "Kkiriza"
+	},
+	"pageTranslator_commonPreferences_title": {
+		"message": "Eby'okukozesa ebisookerwako ku lulimi luno"
+	},
+	"pageTranslator_option_autoTranslate": {
+		"message": "Okutaputa awatali kukozesa mukono"
+	},
+	"pageTranslator_showOriginal": {
+		"message": "Laga ekyasooka"
+	},
+	"pageTranslator_showTranslationPreferences": {
+		"message": "Eby'okukozesa eby'okutaputa"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_always": {
+		"message": "Bulijjo taputa"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
+		"message": "Bulijjo taputa ku lulimi luno"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_default": {
+		"message": "Kozesa amateeka agasookerwako"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
+		"message": "Kozesa amateeka agasookerwako ku lulimi luno"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_never": {
+		"message": "Tosobola kutaputa"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
+		"message": "Tosobola kutaputa ku lulimi luno"
+	},
+	"pageTranslator_sitePreferences_title": {
+		"message": "Eby'okukozesa bya"
+	},
+	"pageTranslator_translatePage": {
+		"message": "Taputa olupapula"
+	},
+	"pageTranslator_translationReport": {
+		"message": "Lipoota y'okutaputa"
+	},
+	"pageTranslator_translationReport_queue": {
+		"message": "Okulindirira"
+	},
+	"pageTranslator_translationReport_reject": {
+		"message": "Ebikyamu"
+	},
+	"pageTranslator_translationReport_resolve": {
+		"message": "Kitataputiddwa"
+	},
+	"popup_tabIdNotFound": {
+		"message": "Tab \"$1\" teziriiwo"
+	},
+	"popup_tab_translatePage": {
+		"message": "Okutaputa olupapula"
+	},
+	"popup_tab_translateText": {
+		"message": "Okutaputa obubaka"
+	},
+	"settings_button_cancel": {
+		"message": "Sazaamu"
+	},
+	"settings_button_export": {
+		"message": "Fulumya config"
+	},
+	"settings_button_import": {
+		"message": "Yingiza config"
+	},
+	"settings_button_reset": {
+		"message": "Ddamu config"
+	},
+	"settings_button_saveChanges": {
+		"message": "Kuuma enkyukakyuka"
+	},
+	"settings_message_clearCache_success": {
+		"message": "Cache ekkasiddwa"
+	},
+	"settings_message_common_invalidValueType": {
+		"message": "Omuwendo ogutali mu mateeka"
+	},
+	"settings_message_importConfig_invalidFile": {
+		"message": "Fayiro ya config eweereddwa si ntuufu oba eyonoonese, era tesobola kukolebwa"
+	},
+	"settings_message_importConfig_success": {
+		"message": "Okuyingiza kuwedde"
+	},
+	"settings_message_resetConfig_confirm": {
+		"message": "Kakasa okuddamu ebikozesebwa ku bintu ebisookerwako"
+	},
+	"settings_message_resetConfig_success": {
+		"message": "Eby'okukozesa bidda mu nteekateeka"
+	},
+	"settings_message_saveChanges_success": {
+		"message": "Ebigambo bisaziddwa"
+	},
+	"settings_option_cache": {
+		"message": "Kache"
+	},
+	"settings_option_cache_clear": {
+		"message": "Jjamu kache"
+	},
+	"settings_option_cache_clear_desc": {
+		"message": "Bw'oba olaba ensobi mu kutaputa oba ng'otaputa ebigambo ebyekyama nga kache ekola, osobola okusangula data yonna okuva mu kache",
+		"description": "Explanation for user about cases when it's useful to clear cache"
+	},
+	"settings_option_cache_enable": {
+		"message": "Kozesa kache"
+	},
+	"settings_option_cache_enable_desc": {
+		"message": "Nga kache ekola, ebigambo ebibadde bitapuddwa dda bijja kutapuddwa amangu awatali kusaba kw'ongerezebwa ku buweereza bwa kutaputa"
+	},
+	"settings_option_cache_ignoreCase": {
+		"message": "Kozesa kache etatunuulira enjawulo mu nnyukuta"
+	},
+	"settings_option_cache_ignoreCase_desc": {
+		"message": "Nga kino kikolebwa, okutaputa okuli mu kache kujja kukozesebwa ku bigambo ebirina enjawulo mu nnyukuta, ekisobola okuleeta enjawulo mu kutaputa mu mbeera ezimu"
+	},
+	"settings_option_commonSettings": {
+		"message": "Eby'okulonda ebisookerwako"
+	},
+	"settings_option_customTranslatorModule": {
+		"message": "Eby'okulonda ebikolebwa omuntu ku kutaputa",
+		"description": "An user defined code that implements a translation module"
+	},
+	"settings_option_customTranslatorModule_desc": {
+		"message": "Osobola okwongeza eby'okulonda ebikolebwa omuntu ku kutaputa ebikozesa eby'okutaputa by'oyagala. Yiga ebisingawo mu <slot id=docs>ebiwandiiko ku kutaputa okw'enjawulo</slot>"
+	},
+	"settings_option_customTranslatorModule_manageButton": {
+		"message": "Okutwala abataputa",
+		"description": "A button to show list of translation modules"
+	},
+	"settings_option_history_enable": {
+		"message": "Kozesa ebyafaayo"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "Nga kino kikolebwa, okutaputa kujja kubeera ku lukalala era kulabikire ku <slot id=historyPage>mukutu gw'ebyafaayo</slot>"
+	},
+	"settings_option_pageTranslation": {
+		"message": "Okutaputa olupapula lwonna"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent": {
+		"message": "Kizuula olulimi ng'oyita mu bigambo"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent_desc": {
+		"message": "Kebereza ebigambo ku mukutu gwa webuukusensa okuzuula olulimi lwabyo. Nga kino tekikolebwa, olulimi oluli mu <slot id=docs>metadata y'olupapula</slot> lujja kukozesebwa"
+	},
+	"settings_option_pageTranslation_enableContextMenu": {
+		"message": "Kozesa akatundu akalina obusobozi"
+	},
+	"settings_option_pageTranslation_enableContextMenu_desc": {
+		"message": "Yongeza akatundu akalina obusobozi okwekyusa okutaputa olupapula mu katundu akalina obusobozi ku mukutu"
+	},
+	"settings_option_pageTranslation_excludeSelectors": {
+		"message": "Eby'okulonda ebitalina kutaputibwa"
+	},
+	"settings_option_pageTranslation_excludeSelectors_desc": {
+		"message": "Olukalala lw'ebyo ebikozesebwa mu CSS ebirina okwewalibwa okutaputibwa. Ekimu ku kimu ku mutwe. Singa ekintu kyonna kikwatagana n'ebyo ebikozesebwa, ebigambo byakyo, ebikozesebwa, n'ebyo ebirimu tebijja kutaputibwa"
+	},
+	"settings_option_pageTranslation_lazyTranslate": {
+		"message": "Taputa ebintu ebirabika byokka"
+	},
+	"settings_option_pageTranslation_lazyTranslate_desc": {
+		"message": "Nga kino kikolebwa, ebintu ebirabika byokka bye bijja kutaputibwa. Kino kijja kukendeeza ku by'okukozesa ku mukutu"
+	},
+	"settings_option_pageTranslation_originalTextPopup": {
+		"message": "Kozesa akatundu akalina obusobozi n'ebigambo eby'olubereberye"
+	},
+	"settings_option_pageTranslation_originalTextPopup_desc": {
+		"message": "Laga akatundu akalina obusobozi n'ebigambo eby'olubereberye nga oyita ku bigambo ebibadde bitapuddwa"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation": {
+		"message": "Akakodyo"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation_desc": {
+		"message": "Akakodyo akalina obusobozi okutaputa olupapula\nKuba ESC okuddamu okuteekateeka ebikozesebwa"
+	},
+	"settings_option_pageTranslation_translatableAttributes": {
+		"message": "Eby'okutaputa ebikozesebwa"
+	},
+	"settings_option_pageTranslation_translatableAttributes_desc": {
+		"message": "Yingiza amannya g'ebikozesebwa mu <slot id=htmlAttributes>HTML</slot> okutaputa, ekimu ku kimu ku mutwe\nEby'okutaputa ebikozesebwa mu lukalala luno byokka bye bijja kutaputibwa"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters": {
+		"message": "Laga okutaputa okutuukiridde"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters_desc": {
+		"message": "Laga ekibawo ekiraga enkulaakulana y'okutaputa olupapula mu kifo ky'ekyongerwako"
+	},
+	"settings_option_selectTranslation": {
+		"message": "Okutaputa kw'ebigambo ebirondebwa"
+	},
+	"settings_option_selectTranslation_detectTextLanguage": {
+		"message": "Kizuula olulimi lw'ebigambo"
+	},
+	"settings_option_selectTranslation_detectTextLanguage_desc": {
+		"message": "Bw'ekyikolebwa kino kyekolebwa, ebigambo ebirondebwa bijja kusunsulibwa okuzuula olulimi lw'okutaputa. Oba, olulimi lw'olupapula lwe lujja okukozesebwa"
+	},
+	"settings_option_selectTranslation_disableWhileTranslatePage": {
+		"message": "Kikomye ng'otaputa olupapula"
+	},
+	"settings_option_selectTranslation_enable": {
+		"message": "Kikole okutaputa kw'ebigambo ebirondebwa"
+	},
+	"settings_option_selectTranslation_enable_desc": {
+		"message": "Bw'ekyikolebwa kino kyekolebwa, osobola okulonda ebigambo ku lupapula n'obitaputa mu kifo ky'ekyongerwako"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton": {
+		"message": "Funa ku buton y'okutaputa"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
+		"message": "Buton y'okutaputa bw'ejja okulabika ku lupapula, ejja kufunibwa ku bw'ekyikolebwa"
+	},
+	"settings_option_selectTranslation_header_languageChoice": {
+		"message": "Enteekateeka y'olulimi"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang": {
+		"message": "Kiriza ekitongole ky'okutaputa okuzuula olulimi lw'ebigambo"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
+		"message": "Bw'olulimi lw'ebigambo terusobola kutegeerekeka mu kifo era kino kyekolebwa, ebigambo bijja kutaputibwa n'olulimi \"auto\" singa kisoboka.\nBw'ekyikolebwa kino tekikolebwa, engeri endala ejja okukozesebwa okuteekawo olulimi lw'ebigambo"
+	},
+	"settings_option_selectTranslation_mode": {
+		"message": "Ekikolwa ku kulonda ebigambo"
+	},
+	"settings_option_selectTranslation_mode_item_contextMenu": {
+		"message": "Taputa ebigambo okuyita mu menyu y'ensonga"
+	},
+	"settings_option_selectTranslation_mode_item_popupButton": {
+		"message": "Laga buton y'okutaputa"
+	},
+	"settings_option_selectTranslation_mode_item_quickTranslate": {
+		"message": "Taputa ebigambo amangu ddala"
+	},
+	"settings_option_selectTranslation_modifiers": {
+		"message": "Ebyongerwako"
+	},
+	"settings_option_selectTranslation_modifiers_desc": {
+		"message": "Londa ebinnyonnyola ebirina okukwatibwa ku kiboozi okulangirira okutaputa"
+	},
+	"settings_option_selectTranslation_modifiers_key_alt": {
+		"message": "alt"
+	},
+	"settings_option_selectTranslation_modifiers_key_ctrl": {
+		"message": "ctrl"
+	},
+	"settings_option_selectTranslation_modifiers_key_meta": {
+		"message": "meta"
+	},
+	"settings_option_selectTranslation_modifiers_key_shift": {
+		"message": "shift"
+	},
+	"settings_option_selectTranslation_rememberDirection": {
+		"message": "Jjukira olulimi lw'ebigambo ebirondebwa ennyo"
+	},
+	"settings_option_selectTranslation_showOnceForSelection": {
+		"message": "Laga buton y'okutaputa omulundi gumu ku kulonda ebigambo"
+	},
+	"settings_option_selectTranslation_showOnceForSelection_desc": {
+		"message": "Buton ejja kulabika omulundi gumu ku kulonda ebigambo buli. Okulaga nate, londa ebigambo nate"
+	},
+	"settings_option_selectTranslation_showOriginalText": {
+		"message": "Laga ebigambo eby'olubereberye"
+	},
+	"settings_option_selectTranslation_showOriginalText_desc": {
+		"message": "Gatta ekibawo n'ebigambo eby'olubereberye mu kifo ky'okutaputa"
+	},
+	"settings_option_selectTranslation_strictSelection": {
+		"message": "Enkola ey'amaanyi ku kulonda ebigambo",
+		"description": "Ekikolebwa kino kikwata ku kulonda ebigambo okuyita ku musipi"
+	},
+	"settings_option_selectTranslation_strictSelection_desc": {
+		"message": "Leekawo kulonda ebigambo singa akakokola k'omukono ak'ekyama kava mu kifo ekirimu ebigambo ebirondebwa"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton": {
+		"message": "Akaseera akatono nga tonakweka buton y'ekyongerwako"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton_desc": {
+		"message": "Okusooka mu milisekondi nga tonnafuluma ku buton. Okusooka ku buton kuddizaawo obudde. Okuggyawo okukweka awatali kyekyo, teeka omuwendo ogusinga obutono ku 1"
+	},
+	"settings_option_selectTranslation_zIndex": {
+		"message": "z-index"
+	},
+	"settings_option_selectTranslation_zIndex_desc": {
+		"message": "Yongera omuwendo guno singa ebintu ku lupapula biddirira ku popup n'ebigambo ebivvuunuddwa"
+	},
+	"settings_option_textTranslator": {
+		"message": "Okutaputa ebigambo"
+	},
+	"settings_option_textTranslator_rememberText": {
+		"message": "Okujjukira ebigambo ebivvuunuddwa"
+	},
+	"settings_option_textTranslator_rememberText_desc": {
+		"message": "Okujjukira ebigambo ebivvuunuddwa ku mulundi oguddako lw'oguliko"
+	},
+	"settings_option_textTranslator_spellCheck": {
+		"message": "Kkiriza okukebera ennukuta"
+	},
+	"settings_option_textTranslator_suggestLanguage": {
+		"message": "Okulaga olulimi lw'ebigambo ebirabiddwa"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways": {
+		"message": "Bulijjo okuzuula n'okulaga olulimi"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways_desc": {
+		"message": "Bwe kiba tekikozesebwa, ebirowoozo by'olulimi birabika nga olulimi lw'ensibuko luli ku \"auto\""
+	},
+	"settings_option_translatePreferences": {
+		"message": "Eby'okwagala mu kutaputa"
+	},
+	"settings_option_translateScheduler": {
+		"message": "Olukalala lw'okutaputa"
+	},
+	"settings_option_translateScheduler_delay": {
+		"message": "Okusooka kw'okukuŋŋaanya ebigambo"
+	},
+	"settings_option_translateScheduler_delay_desc": {
+		"message": "Olukalala lw'okutaputa lukendeeza ku bungi bw'ebisaba ku API y'okutaputa nga lukuŋŋaanya ebigambo bingi ddala okusindika mu kisaba kimu. Olukalala lujja kulinda obudde obulambikiddwa mu milisekondi okuŋŋaanya ebigambo ebirala nga tonnatandika kutaputa"
+	},
+	"settings_option_translateScheduler_retryLimit": {
+		"message": "Omuwendo gw'okugezaako okutaputa nate"
+	},
+	"settings_option_translateScheduler_retryLimit_desc": {
+		"message": "Olukalala lujja kugezako okutaputa ebigambo nate nga waliwo ensobi mu kutaputa. Kino kirambika omuwendo gw'okugezaako nate. Teeka omuwendo ogutali muwendo gwa nnegativu okusobola okukkiriza okutuuka ku nkomerero"
+	},
+	"settings_option_translatorModule": {
+		"message": "Ekibinja ky'okutaputa"
+	},
+	"settings_option_translatorModule_desc": {
+		"message": "Omulembe gw'okutaputa n'olulimi oluliwo bisinga ku kibinja ky'okutaputa"
+	},
+	"settings_option_tts": {
+		"message": "Okukyusa ebigambo okufuuka eddoboozi (TTS)"
+	},
+	"settings_option_ttsCustomModules": {
+		"message": "Ebikozesebwa eby'okukyusa eddoboozi ebya kka"
+	},
+	"settings_option_ttsCustomModules_button": {
+		"message": "Okutwala ebikozesebwa eby'okukyusa eddoboozi"
+	},
+	"settings_option_ttsCustomModules_desc": {
+		"message": "Osobola okwongeza ebikozesebwa eby'okukyusa eddoboozi ebikozesa ebyo by'oyagala n'amakubo g'eddoboozi. Soma ebisingawo mu <slot id=docs>ebiwandiiko by'okukyusa eddoboozi ebya kka</slot>"
+	},
+	"settings_option_ttsModule": {
+		"message": "Ekibinja ky'okukyusa eddoboozi ekirondebwa"
+	},
+	"settings_option_ttsModule_desc": {
+		"message": "Amakubo g'eddoboozi agakozesebwa mu kuyita ebigambo"
+	},
+	"settings_option_userLanguage": {
+		"message": "Olulimi lwo"
+	},
+	"settings_option_userLanguage_desc": {
+		"message": "Olulimi ebigambo ebirina okutaputibwa mu"
+	},
+	"settings_pageTitle": {
+		"message": "Eby'okuteekateeka"
+	},
+	"settings_section_history": {
+		"message": "Ebyafaayo"
+	},
+	"settings_section_popup": {
+		"message": "Popup"
+	},
+	"textTranslator_suggestLanguage": {
+		"message": "Kifaanana ng'olulimi lw'ebigambo luli <slot id=languageSuggest>$language_name$</slot>",
+		"placeholders": {
+			"language_name": {
+				"content": "$1",
+				"example": "Japanese"
+			}
+		}
+	},
+	"textTranslator_translateInputPlaceholder": {
+		"message": "Wandika ekigambo ky'oyagala okuddamu",
+		"description": "Request to user input some text for translation"
+	},
+	"textTranslator_translatePlaceholder": {
+		"message": "Ebigambo ebiddamu bijja kuba wano"
+	},
+	"translatorsManagerWindow_add": {
+		"message": "Gatta ekitundu ky'okuddamu"
+	},
+	"translatorsManagerWindow_close": {
+		"message": "Ggalawo"
+	},
+	"translatorsManagerWindow_emptyTranslatorsListText": {
+		"message": "Tewannaba kuteekebwako bitundu by'okuddamu"
+	},
+	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
+		"message": "Oli mukakafu nti oyagala okuggyawo ekitundu ky'okuddamu \"$translator_name$\"?",
+		"placeholders": {
+			"translator_name": {
+				"content": "$1",
+				"example": "Google translator"
+			}
+		}
+	},
+	"translatorsManagerWindow_title": {
+		"message": "Ebitundu by'okuddamu eby'omuntu"
+	},
+	"translatorsManagerWindow_translator_delete": {
+		"message": "Gyawo"
+	},
+	"translatorsManagerWindow_translator_edit": {
+		"message": "Kyuusa"
+	},
+	"ttsManagerWindow_add": {
+		"message": "Gatta ekitundu kya TTS"
+	},
+	"ttsManagerWindow_close": {
+		"message": "Ggalawo"
+	},
+	"ttsManagerWindow_emptyTranslatorsListText": {
+		"message": "Tewannaba kuteekebwako bitundu bya TTS"
+	},
+	"ttsManagerWindow_message_ttsRemoveConfirmation": {
+		"message": "Oli mukakafu nti oyagala okuggyawo ekitundu kya TTS \"$tts_name$\"?",
+		"placeholders": {
+			"tts_name": {
+				"content": "$1",
+				"example": "Google TTS"
+			}
+		}
+	},
+	"ttsManagerWindow_title": {
+		"message": "Ebitundu bya Text-to-Speech"
+	},
+	"ttsManagerWindow_translator_delete": {
+		"message": "Gyawo"
+	},
+	"ttsManagerWindow_translator_edit": {
+		"message": "Kyuusa"
+	},
+	"validation_number": {
+		"message": "Omuwendo gulina kuba namba"
+	},
+	"validation_numberBetweenRange": {
+		"message": "Omuwendo gulina kuba namba wakati wa $1 ne $2"
+	},
+	"validation_positiveNumber": {
+		"message": "Omuwendo gulina kuba namba entuufu"
+	}
+}

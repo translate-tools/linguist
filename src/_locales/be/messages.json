@@ -1,0 +1,623 @@
+{
+	"common_action_addToDictionary": {
+		"message": "Дадаць пераклад у слоўнік"
+	},
+	"common_action_removeFromDictionary": {
+		"message": "Выдаліць пераклад са слоўніка"
+	},
+	"common_bgUnavailable": {
+		"message": "Фонавы скрыпт недаступны"
+	},
+	"common_cancel": {
+		"message": "Адмяніць"
+	},
+	"common_close": {
+		"message": "Закрыць"
+	},
+	"common_copy": {
+		"message": "Капіяваць"
+	},
+	"common_error": {
+		"message": "Памылка"
+	},
+	"common_offlineTranslator": {
+		"message": "$1 - Афлайн перакладчык"
+	},
+	"common_retry": {
+		"message": "Паўтарыць"
+	},
+	"common_translate": {
+		"message": "Перакласці"
+	},
+	"component_hotkey_placeholder": {
+		"message": "Націсніце, каб запісаць спалучэнне"
+	},
+	"component_hotkey_recordPlaceholder": {
+		"message": "Націсніце клавішы"
+	},
+	"component_hotkey_resetButton": {
+		"message": "Скінуць"
+	},
+	"contextMenu_disablePageTranslation": {
+		"message": "Спыніць пераклад старонкі"
+	},
+	"contextMenu_translatePage": {
+		"message": "Перакласці старонку"
+	},
+	"contextMenu_translateSelectedText": {
+		"message": "Перакласці выбраны тэкст"
+	},
+	"dictionaryButton_add": {
+		"message": "Дадаць у слоўнік"
+	},
+	"dictionaryButton_delete": {
+		"message": "Выдаліць са слоўніка"
+	},
+	"dictionary_button_export": {
+		"message": "Экспартаваць"
+	},
+	"dictionary_button_removeAll": {
+		"message": "Выдаліць усё"
+	},
+	"dictionary_deleteAll": {
+		"message": "Вы ўпэўнены, што жадаеце выдаліць УСЕ пераклады са слоўніка?"
+	},
+	"dictionary_deleteConfirmation": {
+		"message": "Вы ўпэўнены, што жадаеце выдаліць гэты пераклад?"
+	},
+	"dictionary_description": {
+		"message": "Захоўвайце пераклады ў слоўніку, каб хутка знайсці іх пазней"
+	},
+	"dictionary_emptyDictionary": {
+		"message": "Слоўнік пусты, пачніце запаўняць яго, перакладаючы тэкст"
+	},
+	"dictionary_filter_from": {
+		"message": "Мова зыходнага тэксту"
+	},
+	"dictionary_filter_to": {
+		"message": "Мэтавая мова"
+	},
+	"dictionary_message_deleteAll_success": {
+		"message": "Усе пераклады былі выдалены"
+	},
+	"dictionary_notFoundEntries": {
+		"message": "Пераклады, якія адпавядаюць гэтым фільтрам, не знойдзены"
+	},
+	"dictionary_pageTitle": {
+		"message": "Слоўнік"
+	},
+	"dictionary_resetFilters": {
+		"message": "Скінуць фільтры"
+	},
+	"dictionary_searchPlaceholder": {
+		"message": "Пошук па тэксце"
+	},
+	"editorWindow_close": {
+		"message": "Закрыць"
+	},
+	"editorWindow_data_code": {
+		"message": "Код"
+	},
+	"editorWindow_data_title": {
+		"message": "Назва модуля"
+	},
+	"editorWindow_message_invalidTitle": {
+		"message": "Назва модуля павінна мець хаця б адзін сімвал"
+	},
+	"editorWindow_save": {
+		"message": "Захаваць"
+	},
+	"ext_description": {
+		"message": "Пераклад вэб-старонак, пераклад тэксту, слоўнік, гісторыя, карыстальніцкія перакладчыкі, усё, што трэба для пераадолення моўных бар'ераў"
+	},
+	"ext_name": {
+		"message": "Linguist - перакладчык вэб-старонак"
+	},
+	"history_control_selectEntry": {
+		"message": "Выбраць пераклад для масавага дзеяння",
+		"description": "Description in finite form \"to pick\" with explaining what this checkbox will do"
+	},
+	"history_controls_clearHistory": {
+		"message": "Ачысціць гісторыю"
+	},
+	"history_controls_deleteSelected": {
+		"message": "Выдаліць выбраныя пераклады"
+	},
+	"history_controls_selectAll": {
+		"message": "Выбраць усе пераклады"
+	},
+	"history_message_clearHistoryConfirmation": {
+		"message": "Вы ўпэўнены, што хочаце ачысціць гісторыю? Усе запісы будуць выдалены"
+	},
+	"history_message_deleteEntryConfirmation": {
+		"message": "Вы ўпэўнены, што хочаце выдаліць гэты запіс?"
+	},
+	"history_message_deleteSelectedEntriesConfirmation": {
+		"message": "Вы ўпэўнены, што хочаце выдаліць выбраныя запісы ($1)?"
+	},
+	"history_message_entriesNotFound": {
+		"message": "Пераклады, якія адпавядаюць фільтру, не знойдзены"
+	},
+	"history_message_noEntries": {
+		"message": "Гісторыя пустая"
+	},
+	"history_notification_disabled": {
+		"message": "Запіс гісторыі адключаны, таму новыя запісы не з'явяцца. Вы можаце змяніць гэта ў <slot id=preferences>Наладах</slot>"
+	},
+	"history_pageTitle": {
+		"message": "Гісторыя"
+	},
+	"history_searchPlaceholder": {
+		"message": "Пошук па тэксце"
+	},
+	"inlineTranslator_showOriginalText": {
+		"message": "Паказаць арыгінальны тэкст"
+	},
+	"lang_change": {
+		"message": "Змяніць мову"
+	},
+	"lang_detect": {
+		"message": "Аўта-выяўленне"
+	},
+	"lang_select": {
+		"message": "Выбраць мову"
+	},
+	"lang_swap": {
+		"message": "Памяняць мовы месцамі"
+	},
+	"message_unknownError": {
+		"message": "Невядомая памылка"
+	},
+	"pageTranslator_alwaysTranslateLang": {
+		"message": "Заўсёды перакладаць гэтую мову"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disable": {
+		"message": "Адключыць"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
+		"message": "Адключыць для ўсіх сайтаў"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_enable": {
+		"message": "Уключыць"
+	},
+	"pageTranslator_commonPreferences_title": {
+		"message": "Агульныя налады для гэтай мовы"
+	},
+	"pageTranslator_option_autoTranslate": {
+		"message": "Аўтапераклад"
+	},
+	"pageTranslator_showOriginal": {
+		"message": "Паказаць арыгінал"
+	},
+	"pageTranslator_showTranslationPreferences": {
+		"message": "Налады перакладу"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_always": {
+		"message": "Заўсёды перакладаць"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
+		"message": "Заўсёды перакладаць для гэтай мовы"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_default": {
+		"message": "Выкарыстоўваць агульныя правілы"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
+		"message": "Выкарыстоўваць агульныя правілы для гэтай мовы"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_never": {
+		"message": "Ніколі не перакладаць"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
+		"message": "Ніколі не перакладаць для гэтай мовы"
+	},
+	"pageTranslator_sitePreferences_title": {
+		"message": "Налады для"
+	},
+	"pageTranslator_translatePage": {
+		"message": "Перакласці старонку"
+	},
+	"pageTranslator_translationReport": {
+		"message": "Справаздача аб перакладзе"
+	},
+	"pageTranslator_translationReport_queue": {
+		"message": "У чаканні"
+	},
+	"pageTranslator_translationReport_reject": {
+		"message": "Памылкі"
+	},
+	"pageTranslator_translationReport_resolve": {
+		"message": "Перакладзена"
+	},
+	"popup_tabIdNotFound": {
+		"message": "Укладка \"$1\" не знойдзена"
+	},
+	"popup_tab_translatePage": {
+		"message": "Пераклад старонкі"
+	},
+	"popup_tab_translateText": {
+		"message": "Пераклад тэксту"
+	},
+	"settings_button_cancel": {
+		"message": "Адмяніць"
+	},
+	"settings_button_export": {
+		"message": "Экспартаваць канфігурацыю"
+	},
+	"settings_button_import": {
+		"message": "Імпартаваць канфігурацыю"
+	},
+	"settings_button_reset": {
+		"message": "Скінуць канфігурацыю"
+	},
+	"settings_button_saveChanges": {
+		"message": "Захаваць змены"
+	},
+	"settings_message_clearCache_success": {
+		"message": "Кэш ачышчаны"
+	},
+	"settings_message_common_invalidValueType": {
+		"message": "Няправільнае значэнне"
+	},
+	"settings_message_importConfig_invalidFile": {
+		"message": "Прадастаўлены файл канфігурацыі няправільны або пашкоджаны і не можа быць апрацаваны"
+	},
+	"settings_message_importConfig_success": {
+		"message": "Імпарт завершаны"
+	},
+	"settings_message_resetConfig_confirm": {
+		"message": "Пацвердзіце скід налад да значэнняў па змаўчанні"
+	},
+	"settings_message_resetConfig_success": {
+		"message": "Налады скінуты"
+	},
+	"settings_message_saveChanges_success": {
+		"message": "Змены захаваны"
+	},
+	"settings_option_cache": {
+		"message": "Кэш"
+	},
+	"settings_option_cache_clear": {
+		"message": "Ачысціць кэш"
+	},
+	"settings_option_cache_clear_desc": {
+		"message": "Калі вы заўважылі памылкі перакладу або выпадкова пераклалі прыватныя тэксты пры ўключаным кэшы, вы можаце выдаліць усе дадзеныя з кэша",
+		"description": "Explanation for user about cases when it's useful to clear cache"
+	},
+	"settings_option_cache_enable": {
+		"message": "Уключыць кэш"
+	},
+	"settings_option_cache_enable_desc": {
+		"message": "Калі кэш уключаны, тэксты, якія былі перакладзены раней, будуць перакладацца імгненна без дадатковых запытаў да сэрвісу перакладу"
+	},
+	"settings_option_cache_ignoreCase": {
+		"message": "Выкарыстоўваць кэш без уліку рэгістра"
+	},
+	"settings_option_cache_ignoreCase_desc": {
+		"message": "Калі ўключана, кэшаваныя пераклады будуць выкарыстоўвацца для тэкстаў з рознымі рэгістрамі, што можа выклікаць скажэнні перакладу ў пэўных сітуацыях"
+	},
+	"settings_option_commonSettings": {
+		"message": "Агульныя налады"
+	},
+	"settings_option_customTranslatorModule": {
+		"message": "Карыстальніцкія модулі перакладу",
+		"description": "An user defined code that implements a translation module"
+	},
+	"settings_option_customTranslatorModule_desc": {
+		"message": "Вы можаце дадаць карыстальніцкія модулі перакладу, якія выкарыстоўваюць вашы любімыя сэрвісы перакладу. Даведайцеся больш у <slot id=docs>дакументацыі па карыстальніцкіх перакладчыках</slot>"
+	},
+	"settings_option_customTranslatorModule_manageButton": {
+		"message": "Кіраванне перакладчыкамі",
+		"description": "A button to show list of translation modules"
+	},
+	"settings_option_history_enable": {
+		"message": "Уключыць гісторыю"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "Калі ўключана, пераклады будуць запісвацца і з'яўляцца на <slot id=historyPage>старонцы гісторыі</slot>"
+	},
+	"settings_option_pageTranslation": {
+		"message": "Поўны пераклад старонкі"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent": {
+		"message": "Вызначыць мову па змесце"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent_desc": {
+		"message": "Аналізаваць тэкст на вэб-старонцы для вызначэння яго мовы. Калі адключана, будзе выкарыстоўвацца мова, указаная ў <slot id=docs>метададзеных старонкі</slot>"
+	},
+	"settings_option_pageTranslation_enableContextMenu": {
+		"message": "Уключыць кнопку кантэкстнага меню"
+	},
+	"settings_option_pageTranslation_enableContextMenu_desc": {
+		"message": "Дадаць кнопку для пераключэння перакладу старонкі ў кантэкстным меню старонкі"
+	},
+	"settings_option_pageTranslation_excludeSelectors": {
+		"message": "Селектары для выключэння з перакладу"
+	},
+	"settings_option_pageTranslation_excludeSelectors_desc": {
+		"message": "Спіс CSS-селектараў для элементаў, якія трэба выключыць з перакладу. Адзін селектар на радок. Калі элемент адпавядае любому з гэтых селектараў, яго тэкст, атрыбуты і ўкладзеныя элементы не будуць перакладзены"
+	},
+	"settings_option_pageTranslation_lazyTranslate": {
+		"message": "Перакладаць толькі бачныя элементы"
+	},
+	"settings_option_pageTranslation_lazyTranslate_desc": {
+		"message": "Калі гэтая опцыя ўключана, будуць перакладацца толькі бачныя элементы. Гэтая опцыя зніжае сеткавы трафік"
+	},
+	"settings_option_pageTranslation_originalTextPopup": {
+		"message": "Уключыць усплывальнае акно з арыгінальным тэкстам"
+	},
+	"settings_option_pageTranslation_originalTextPopup_desc": {
+		"message": "Паказваць усплывальнае акно з арыгінальным тэкстам пры навядзенні на перакладзеныя блокі тэксту"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation": {
+		"message": "Спалучэнне клавіш"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation_desc": {
+		"message": "Спалучэнне клавіш для пераключэння перакладу старонкі\nНацісніце ESC, каб скінуць клавішы"
+	},
+	"settings_option_pageTranslation_translatableAttributes": {
+		"message": "Атрыбуты для перакладу"
+	},
+	"settings_option_pageTranslation_translatableAttributes_desc": {
+		"message": "Увядзіце назвы <slot id=htmlAttributes>HTML-атрыбутаў</slot> для перакладу, адзін атрыбут на радок\nТолькі атрыбуты з гэтага спісу будуць перакладзены"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters": {
+		"message": "Паказваць прагрэс перакладу"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters_desc": {
+		"message": "Паказваць панэль з прагрэсам перакладу старонкі ў ўсплываючым акне пашырэння"
+	},
+	"settings_option_selectTranslation": {
+		"message": "Пераклад для выбранага тэксту"
+	},
+	"settings_option_selectTranslation_detectTextLanguage": {
+		"message": "Вызначыць мову тэксту"
+	},
+	"settings_option_selectTranslation_detectTextLanguage_desc": {
+		"message": "Калі ўключана, выбраны тэкст будзе аналізавацца для вызначэння мовы для перакладу. У адваротным выпадку будзе выкарыстоўвацца мова старонкі"
+	},
+	"settings_option_selectTranslation_disableWhileTranslatePage": {
+		"message": "Адключыць падчас перакладу старонкі"
+	},
+	"settings_option_selectTranslation_enable": {
+		"message": "Уключыць пераклад выбранага тэксту"
+	},
+	"settings_option_selectTranslation_enable_desc": {
+		"message": "Калі гэтая функцыя ўключана, вы можаце выбраць любы тэкст на старонцы і перакласці яго ў ўсплываючым акне"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton": {
+		"message": "Аўтаматычна фокусаваць на кнопцы перакладу"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
+		"message": "Калі кнопка перакладу з'яўляецца на старонцы, яна будзе аўтаматычна фокусавацца"
+	},
+	"settings_option_selectTranslation_header_languageChoice": {
+		"message": "Налады мовы"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang": {
+		"message": "Дазволіць модулю перакладу вызначаць мову тэксту"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
+		"message": "Калі мова тэксту не можа быць вызначана лакальна і гэтая опцыя ўключана, тэкст будзе перакладзены з мовай \"auto\", калі падтрымліваецца.\nКалі опцыя адключана, будзе выкарыстаны іншы метад для ўстанаўлення зыходнай мовы тэксту"
+	},
+	"settings_option_selectTranslation_mode": {
+		"message": "Дзеянне пры выбары тэксту"
+	},
+	"settings_option_selectTranslation_mode_item_contextMenu": {
+		"message": "Перакласці тэкст праз кантэкстнае меню"
+	},
+	"settings_option_selectTranslation_mode_item_popupButton": {
+		"message": "Паказаць кнопку перакладу"
+	},
+	"settings_option_selectTranslation_mode_item_quickTranslate": {
+		"message": "Перакласці тэкст імгненна"
+	},
+	"settings_option_selectTranslation_modifiers": {
+		"message": "Мадыфікатары"
+	},
+	"settings_option_selectTranslation_modifiers_desc": {
+		"message": "Выберыце клавішы, якія трэба націснуць на клавіятуры для адлюстравання перакладу"
+	},
+	"settings_option_selectTranslation_modifiers_key_alt": {
+		"message": "alt"
+	},
+	"settings_option_selectTranslation_modifiers_key_ctrl": {
+		"message": "ctrl"
+	},
+	"settings_option_selectTranslation_modifiers_key_meta": {
+		"message": "meta"
+	},
+	"settings_option_selectTranslation_modifiers_key_shift": {
+		"message": "shift"
+	},
+	"settings_option_selectTranslation_rememberDirection": {
+		"message": "Запомніць апошнюю выбраную мову тэксту"
+	},
+	"settings_option_selectTranslation_showOnceForSelection": {
+		"message": "Паказваць кнопку перакладу адзін раз на выбар тэксту"
+	},
+	"settings_option_selectTranslation_showOnceForSelection_desc": {
+		"message": "Кнопка з'явіцца толькі адзін раз для кожнага выбару тэксту. Каб паказаць яе зноў, выберыце тэкст яшчэ раз"
+	},
+	"settings_option_selectTranslation_showOriginalText": {
+		"message": "Паказаць арыгінальны тэкст"
+	},
+	"settings_option_selectTranslation_showOriginalText_desc": {
+		"message": "Дадаць блок з арыгінальным тэкстам у ўсплываючае акно перакладу"
+	},
+	"settings_option_selectTranslation_strictSelection": {
+		"message": "Строгі рэжым выбару фрагмента тэксту",
+		"description": "This option is about selecting text via mouse"
+	},
+	"settings_option_selectTranslation_strictSelection_desc": {
+		"message": "Ігнараваць выбар фрагмента тэксту, калі левая кнопка мышы адпушчана за межамі блока, які змяшчае выбраны тэкст"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton": {
+		"message": "Затрымка перад схаваннем кнопкі ўсплываючага акна"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton_desc": {
+		"message": "Затрымка ў мілісекундах перад схаваннем кнопкі, калі курсор не знаходзіцца над ёй. Калі курсор знаходзіцца над кнопкай, таймер скідваецца. Каб адключыць аўтаматычнае схаванне, усталюйце значэнне менш за 1"
+	},
+	"settings_option_selectTranslation_zIndex": {
+		"message": "z-index"
+	},
+	"settings_option_selectTranslation_zIndex_desc": {
+		"message": "Павялічце гэта значэнне, калі элементы на некаторых старонках перакрываюць усплывальнае акно з перакладзеным тэкстам"
+	},
+	"settings_option_textTranslator": {
+		"message": "Пераклад тэксту"
+	},
+	"settings_option_textTranslator_rememberText": {
+		"message": "Запамінанне перакладзенага тэксту"
+	},
+	"settings_option_textTranslator_rememberText_desc": {
+		"message": "Запамінанне перакладзенага тэксту для наступнага адкрыцця акна"
+	},
+	"settings_option_textTranslator_spellCheck": {
+		"message": "Уключыць праверку арфаграфіі"
+	},
+	"settings_option_textTranslator_suggestLanguage": {
+		"message": "Паказ мовы выяўленага тэксту"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways": {
+		"message": "Заўсёды вызначаць і прапаноўваць мову"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways_desc": {
+		"message": "Калі адключана, прапановы мовы з'яўляюцца толькі калі мова крыніцы ўсталявана на \"аўта\""
+	},
+	"settings_option_translatePreferences": {
+		"message": "Налады перакладу"
+	},
+	"settings_option_translateScheduler": {
+		"message": "Планавальнік перакладу"
+	},
+	"settings_option_translateScheduler_delay": {
+		"message": "Затрымка назапашвання тэксту"
+	},
+	"settings_option_translateScheduler_delay_desc": {
+		"message": "Планавальнік перакладу зніжае колькасць запытаў да API сэрвісу перакладу, назапашваючы як мага больш тэкстаў для адпраўкі ў адным запыце. Планавальнік будзе чакаць вызначаны час у мілісекундах, каб сабраць больш тэкстаў перад пачаткам перакладу"
+	},
+	"settings_option_translateScheduler_retryLimit": {
+		"message": "Ліміт спробаў паўторнага перакладу"
+	},
+	"settings_option_translateScheduler_retryLimit_desc": {
+		"message": "Планавальнік будзе спрабаваць перакладаць тэксты, калі ўзнікаюць памылкі перакладу. Гэтая опцыя ўсталёўвае ліміт на колькасць спробаў. Усталюйце адмоўнае значэнне, каб дазволіць неабмежаваную колькасць спробаў"
+	},
+	"settings_option_translatorModule": {
+		"message": "Модуль перакладу"
+	},
+	"settings_option_translatorModule_desc": {
+		"message": "Якасць перакладаў і даступныя мовы залежаць ад модуля перакладу"
+	},
+	"settings_option_tts": {
+		"message": "Пераўтварэнне тэксту ў маўленне (TTS)"
+	},
+	"settings_option_ttsCustomModules": {
+		"message": "Карыстальніцкія модулі сінтэзу маўлення"
+	},
+	"settings_option_ttsCustomModules_button": {
+		"message": "Кіраванне модулямі сінтэзу маўлення"
+	},
+	"settings_option_ttsCustomModules_desc": {
+		"message": "Вы можаце дадаць модулі сінтэзу маўлення, якія выкарыстоўваюць вашы любімыя сэрвісы і галасавыя рухавікі. Чытайце больш у <slot id=docs>дакументацыі па карыстальніцкім TTS</slot>"
+	},
+	"settings_option_ttsModule": {
+		"message": "Выбраны модуль TTS"
+	},
+	"settings_option_ttsModule_desc": {
+		"message": "Галасавы рухавік, які выкарыстоўваецца для агучвання тэксту"
+	},
+	"settings_option_userLanguage": {
+		"message": "Ваша мова"
+	},
+	"settings_option_userLanguage_desc": {
+		"message": "Мова, на якую будуць перакладзены тэксты"
+	},
+	"settings_pageTitle": {
+		"message": "Налады"
+	},
+	"settings_section_history": {
+		"message": "Гісторыя"
+	},
+	"settings_section_popup": {
+		"message": "Усплывальнае акно"
+	},
+	"textTranslator_suggestLanguage": {
+		"message": "Здаецца, мова тэксту <slot id=languageSuggest>$language_name$</slot>",
+		"placeholders": {
+			"language_name": {
+				"content": "$1",
+				"example": "Japanese"
+			}
+		}
+	},
+	"textTranslator_translateInputPlaceholder": {
+		"message": "Увядзіце тэкст для перакладу",
+		"description": "Request to user input some text for translation"
+	},
+	"textTranslator_translatePlaceholder": {
+		"message": "Перакладзены тэкст будзе тут"
+	},
+	"translatorsManagerWindow_add": {
+		"message": "Дадаць модуль перакладу"
+	},
+	"translatorsManagerWindow_close": {
+		"message": "Закрыць"
+	},
+	"translatorsManagerWindow_emptyTranslatorsListText": {
+		"message": "Карыстальніцкія модулі перакладу яшчэ не дададзены"
+	},
+	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
+		"message": "Вы ўпэўнены, што жадаеце выдаліць модуль перакладу \"$translator_name$\"?",
+		"placeholders": {
+			"translator_name": {
+				"content": "$1",
+				"example": "Google translator"
+			}
+		}
+	},
+	"translatorsManagerWindow_title": {
+		"message": "Карыстальніцкія модулі перакладу"
+	},
+	"translatorsManagerWindow_translator_delete": {
+		"message": "Выдаліць"
+	},
+	"translatorsManagerWindow_translator_edit": {
+		"message": "Рэдагаваць"
+	},
+	"ttsManagerWindow_add": {
+		"message": "Дадаць модуль TTS"
+	},
+	"ttsManagerWindow_close": {
+		"message": "Закрыць"
+	},
+	"ttsManagerWindow_emptyTranslatorsListText": {
+		"message": "Модулі TTS яшчэ не дададзены"
+	},
+	"ttsManagerWindow_message_ttsRemoveConfirmation": {
+		"message": "Вы ўпэўнены, што жадаеце выдаліць модуль TTS \"$tts_name$\"?",
+		"placeholders": {
+			"tts_name": {
+				"content": "$1",
+				"example": "Google TTS"
+			}
+		}
+	},
+	"ttsManagerWindow_title": {
+		"message": "Модулі пераўтварэння тэксту ў маўленне"
+	},
+	"ttsManagerWindow_translator_delete": {
+		"message": "Выдаліць"
+	},
+	"ttsManagerWindow_translator_edit": {
+		"message": "Рэдагаваць"
+	},
+	"validation_number": {
+		"message": "Значэнне павінна быць лікам"
+	},
+	"validation_numberBetweenRange": {
+		"message": "Значэнне павінна быць лікам паміж $1 і $2"
+	},
+	"validation_positiveNumber": {
+		"message": "Значэнне павінна быць станоўчым лікам"
+	}
+}

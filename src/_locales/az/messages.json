@@ -1,0 +1,623 @@
+{
+	"common_action_addToDictionary": {
+		"message": "Tərcüməni lüğətə əlavə et"
+	},
+	"common_action_removeFromDictionary": {
+		"message": "Tərcüməni lüğətdən sil"
+	},
+	"common_bgUnavailable": {
+		"message": "Fon skripti mövcud deyil"
+	},
+	"common_cancel": {
+		"message": "Ləğv et"
+	},
+	"common_close": {
+		"message": "Bağla"
+	},
+	"common_copy": {
+		"message": "Kopyala"
+	},
+	"common_error": {
+		"message": "Xəta"
+	},
+	"common_offlineTranslator": {
+		"message": "$1 - Offline tərcüməçi"
+	},
+	"common_retry": {
+		"message": "Təkrar cəhd et"
+	},
+	"common_translate": {
+		"message": "Tərcümə et"
+	},
+	"component_hotkey_placeholder": {
+		"message": "Qısa yol yazmaq üçün klikləyin"
+	},
+	"component_hotkey_recordPlaceholder": {
+		"message": "Düymələri basın"
+	},
+	"component_hotkey_resetButton": {
+		"message": "Sıfırla"
+	},
+	"contextMenu_disablePageTranslation": {
+		"message": "Səhifə tərcüməsini dayandır"
+	},
+	"contextMenu_translatePage": {
+		"message": "Səhifəni tərcümə et"
+	},
+	"contextMenu_translateSelectedText": {
+		"message": "Seçilmiş mətni tərcümə et"
+	},
+	"dictionaryButton_add": {
+		"message": "Lüğətə əlavə et"
+	},
+	"dictionaryButton_delete": {
+		"message": "Lüğətdən sil"
+	},
+	"dictionary_button_export": {
+		"message": "İxrac et"
+	},
+	"dictionary_button_removeAll": {
+		"message": "Hamısını sil"
+	},
+	"dictionary_deleteAll": {
+		"message": "Bütün tərcümələri lüğətdən silmək istədiyinizə əminsinizmi?"
+	},
+	"dictionary_deleteConfirmation": {
+		"message": "Bu tərcüməni silmək istədiyinizə əminsinizmi?"
+	},
+	"dictionary_description": {
+		"message": "Tərcümələri lüğətdə saxlayın ki, onları sonra tez tapa biləsiniz"
+	},
+	"dictionary_emptyDictionary": {
+		"message": "Lüğət boşdur, bəzi mətnləri tərcümə edərək doldurmağa başlayın"
+	},
+	"dictionary_filter_from": {
+		"message": "Mənbə mətn dili"
+	},
+	"dictionary_filter_to": {
+		"message": "Hədəf dil"
+	},
+	"dictionary_message_deleteAll_success": {
+		"message": "Bütün tərcümələr silindi"
+	},
+	"dictionary_notFoundEntries": {
+		"message": "Bu filtrlərə uyğun tərcümələr tapılmadı"
+	},
+	"dictionary_pageTitle": {
+		"message": "Lüğət"
+	},
+	"dictionary_resetFilters": {
+		"message": "Filtrləri sıfırla"
+	},
+	"dictionary_searchPlaceholder": {
+		"message": "Mətni axtar"
+	},
+	"editorWindow_close": {
+		"message": "Bağla"
+	},
+	"editorWindow_data_code": {
+		"message": "Kod"
+	},
+	"editorWindow_data_title": {
+		"message": "Modul adı"
+	},
+	"editorWindow_message_invalidTitle": {
+		"message": "Modul adı ən azı bir simvola malik olmalıdır"
+	},
+	"editorWindow_save": {
+		"message": "Yadda saxla"
+	},
+	"ext_description": {
+		"message": "Veb səhifə tərcüməsi, mətn tərcüməsi, lüğət, tarixçə, xüsusi tərcüməçilər, dil maneələrini aşmaq üçün lazım olan hər şey"
+	},
+	"ext_name": {
+		"message": "Linguist - veb səhifə tərcüməçisi"
+	},
+	"history_control_selectEntry": {
+		"message": "Kütləvi əməliyyat üçün tərcüməni seçmək",
+		"description": "Description in finite form \"to pick\" with explaining what this checkbox will do"
+	},
+	"history_controls_clearHistory": {
+		"message": "Tarixçəni təmizlə"
+	},
+	"history_controls_deleteSelected": {
+		"message": "Seçilmiş tərcümələri sil"
+	},
+	"history_controls_selectAll": {
+		"message": "Bütün tərcümələri seç"
+	},
+	"history_message_clearHistoryConfirmation": {
+		"message": "Tarixçəni təmizləmək istədiyinizə əminsinizmi? Bütün qeydlər silinəcək"
+	},
+	"history_message_deleteEntryConfirmation": {
+		"message": "Bu qeydi silmək istədiyinizə əminsinizmi?"
+	},
+	"history_message_deleteSelectedEntriesConfirmation": {
+		"message": "Seçilmiş qeydləri silmək istədiyinizə əminsinizmi ($1)?"
+	},
+	"history_message_entriesNotFound": {
+		"message": "Filtrə uyğun tərcümə tapılmadı"
+	},
+	"history_message_noEntries": {
+		"message": "Tarixçə boşdur"
+	},
+	"history_notification_disabled": {
+		"message": "Tarixçə yazılması deaktiv edilib, buna görə yeni qeydlər görünməyəcək. Bunu <slot id=preferences>Parametrlər</slot> bölməsində dəyişə bilərsiniz"
+	},
+	"history_pageTitle": {
+		"message": "Tarixçə"
+	},
+	"history_searchPlaceholder": {
+		"message": "Mətni axtar"
+	},
+	"inlineTranslator_showOriginalText": {
+		"message": "Orijinal mətni göstər"
+	},
+	"lang_change": {
+		"message": "Dili dəyiş"
+	},
+	"lang_detect": {
+		"message": "Avtomatik tanıma"
+	},
+	"lang_select": {
+		"message": "Dili seç"
+	},
+	"lang_swap": {
+		"message": "Dilləri dəyiş"
+	},
+	"message_unknownError": {
+		"message": "Naməlum səhv"
+	},
+	"pageTranslator_alwaysTranslateLang": {
+		"message": "Bu dili həmişə tərcümə et"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disable": {
+		"message": "Deaktiv et"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
+		"message": "Bütün saytlar üçün deaktiv et"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_enable": {
+		"message": "Aktiv et"
+	},
+	"pageTranslator_commonPreferences_title": {
+		"message": "Bu dil üçün ümumi seçimlər"
+	},
+	"pageTranslator_option_autoTranslate": {
+		"message": "Avtomatik tərcümə"
+	},
+	"pageTranslator_showOriginal": {
+		"message": "Orijinalı göstər"
+	},
+	"pageTranslator_showTranslationPreferences": {
+		"message": "Tərcümə seçimləri"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_always": {
+		"message": "Həmişə tərcümə et"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
+		"message": "Bu dil üçün həmişə tərcümə et"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_default": {
+		"message": "Ümumi qaydaları istifadə et"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
+		"message": "Bu dil üçün ümumi qaydaları istifadə et"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_never": {
+		"message": "Heç vaxt tərcümə etmə"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
+		"message": "Bu dil üçün heç vaxt tərcümə etmə"
+	},
+	"pageTranslator_sitePreferences_title": {
+		"message": "Üçün seçimlər"
+	},
+	"pageTranslator_translatePage": {
+		"message": "Səhifəni tərcümə et"
+	},
+	"pageTranslator_translationReport": {
+		"message": "Tərcümə hesabatı"
+	},
+	"pageTranslator_translationReport_queue": {
+		"message": "Gözləyir"
+	},
+	"pageTranslator_translationReport_reject": {
+		"message": "Səhvlər"
+	},
+	"pageTranslator_translationReport_resolve": {
+		"message": "Tərcümə edildi"
+	},
+	"popup_tabIdNotFound": {
+		"message": "Tab \"$1\" tapılmadı"
+	},
+	"popup_tab_translatePage": {
+		"message": "Səhifə tərcüməsi"
+	},
+	"popup_tab_translateText": {
+		"message": "Mətn tərcüməsi"
+	},
+	"settings_button_cancel": {
+		"message": "Ləğv et"
+	},
+	"settings_button_export": {
+		"message": "Konfiqurasiya ixrac et"
+	},
+	"settings_button_import": {
+		"message": "Konfiqurasiya idxal et"
+	},
+	"settings_button_reset": {
+		"message": "Konfiqurasiyanı sıfırla"
+	},
+	"settings_button_saveChanges": {
+		"message": "Dəyişiklikləri yadda saxla"
+	},
+	"settings_message_clearCache_success": {
+		"message": "Keş təmizləndi"
+	},
+	"settings_message_common_invalidValueType": {
+		"message": "Yanlış dəyər"
+	},
+	"settings_message_importConfig_invalidFile": {
+		"message": "Təqdim olunan konfiqurasiya faylı səhvdir və ya zədələnib, işlənə bilmir"
+	},
+	"settings_message_importConfig_success": {
+		"message": "İdxal tamamlandı"
+	},
+	"settings_message_resetConfig_confirm": {
+		"message": "Ayarları standart dəyərlərə sıfırlamağı təsdiqləyin"
+	},
+	"settings_message_resetConfig_success": {
+		"message": "Ayarlar sıfırlandı"
+	},
+	"settings_message_saveChanges_success": {
+		"message": "Dəyişikliklər yadda saxlanıldı"
+	},
+	"settings_option_cache": {
+		"message": "Keş"
+	},
+	"settings_option_cache_clear": {
+		"message": "Keşi təmizlə"
+	},
+	"settings_option_cache_clear_desc": {
+		"message": "Əgər tərcümə səhvləri və ya keş aktiv olduğu halda təsadüfən şəxsi mətnləri tərcümə etdiyinizi görsəniz, bütün məlumatları keşdən silə bilərsiniz",
+		"description": "Explanation for user about cases when it's useful to clear cache"
+	},
+	"settings_option_cache_enable": {
+		"message": "Keşi aktiv et"
+	},
+	"settings_option_cache_enable_desc": {
+		"message": "Keş aktiv olduqda, əvvəllər tərcümə edilmiş mətnlər əlavə sorğular olmadan dərhal tərcümə olunacaq"
+	},
+	"settings_option_cache_ignoreCase": {
+		"message": "Hərf həssaslığı olmayan keşi istifadə et"
+	},
+	"settings_option_cache_ignoreCase_desc": {
+		"message": "Aktiv olduqda, keşlənmiş tərcümələr fərqli hərf halları üçün istifadə olunacaq, bu isə bəzi hallarda tərcümə təhriflərinə səbəb ola bilər"
+	},
+	"settings_option_commonSettings": {
+		"message": "Ümumi parametrlər"
+	},
+	"settings_option_customTranslatorModule": {
+		"message": "Xüsusi tərcümə modulları",
+		"description": "An user defined code that implements a translation module"
+	},
+	"settings_option_customTranslatorModule_desc": {
+		"message": "Sevdiyiniz tərcümə xidmətlərini istifadə edən xüsusi tərcümə modulları əlavə edə bilərsiniz. Daha ətraflı məlumat üçün <slot id=docs>xüsusi tərcüməçilər sənədləri</slot> bölməsinə baxın"
+	},
+	"settings_option_customTranslatorModule_manageButton": {
+		"message": "Tərcüməçiləri idarə et",
+		"description": "A button to show list of translation modules"
+	},
+	"settings_option_history_enable": {
+		"message": "Tarixi aktiv et"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "Aktiv olduqda, tərcümələr qeydə alınacaq və <slot id=historyPage>tarix səhifəsində</slot> görünəcək"
+	},
+	"settings_option_pageTranslation": {
+		"message": "Tam səhifə tərcüməsi"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent": {
+		"message": "Dili məzmunla müəyyən et"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent_desc": {
+		"message": "Veb səhifədəki mətnin dilini müəyyən etmək üçün analiz et. Deaktiv olduqda, <slot id=docs>səhifə metadatasında</slot> göstərilən dil istifadə olunacaq"
+	},
+	"settings_option_pageTranslation_enableContextMenu": {
+		"message": "Kontekst menyusu düyməsini aktiv et"
+	},
+	"settings_option_pageTranslation_enableContextMenu_desc": {
+		"message": "Səhifə kontekst menyusunda səhifə tərcüməsini dəyişmək üçün düymə əlavə et"
+	},
+	"settings_option_pageTranslation_excludeSelectors": {
+		"message": "Tərcümədən çıxarılacaq seçicilər"
+	},
+	"settings_option_pageTranslation_excludeSelectors_desc": {
+		"message": "Tərcümədən çıxarılacaq elementlər üçün CSS seçicilərinin siyahısı. Hər sətirdə bir seçici. Əgər element bu seçicilərdən hər hansı birinə uyğun gəlirsə, onun mətni, atributları və içindəki elementlər tərcümə olunmayacaq"
+	},
+	"settings_option_pageTranslation_lazyTranslate": {
+		"message": "Yalnız görünən elementləri tərcümə et"
+	},
+	"settings_option_pageTranslation_lazyTranslate_desc": {
+		"message": "Bu seçim aktiv olduqda, yalnız görünən elementlər tərcümə olunacaq. Bu seçim şəbəkə trafikini azaldır"
+	},
+	"settings_option_pageTranslation_originalTextPopup": {
+		"message": "Orijinal mətnlə pop-upu aktiv et"
+	},
+	"settings_option_pageTranslation_originalTextPopup_desc": {
+		"message": "Tərcümə edilmiş mətn bloklarının üzərinə gəldikdə orijinal mətnlə pop-up göstər"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation": {
+		"message": "Qısa yol"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation_desc": {
+		"message": "Səhifə tərcüməsini dəyişmək üçün qısa yol\nDüymələri sıfırlamaq üçün ESC basın"
+	},
+	"settings_option_pageTranslation_translatableAttributes": {
+		"message": "Tərcümə edilə bilən atributlar"
+	},
+	"settings_option_pageTranslation_translatableAttributes_desc": {
+		"message": "Tərcümə etmək üçün <slot id=htmlAttributes>HTML atribut</slot> adlarını daxil edin, hər sətirdə bir atribut\nYalnız bu siyahıdakı atributlar tərcümə olunacaq"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters": {
+		"message": "Tərcümə irəliləyişini göstər"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters_desc": {
+		"message": "Uzantı pəncərəsində səhifə tərcüməsi irəliləyişini göstərən paneli göstər"
+	},
+	"settings_option_selectTranslation": {
+		"message": "Seçilmiş mətnin tərcüməsi"
+	},
+	"settings_option_selectTranslation_detectTextLanguage": {
+		"message": "Mətn dilini aşkar et"
+	},
+	"settings_option_selectTranslation_detectTextLanguage_desc": {
+		"message": "Aktiv olduqda, seçilmiş mətnin tərcümə üçün dili aşkar ediləcək. Əks halda, səhifə dili istifadə olunacaq"
+	},
+	"settings_option_selectTranslation_disableWhileTranslatePage": {
+		"message": "Səhifə tərcümə edilərkən deaktiv et"
+	},
+	"settings_option_selectTranslation_enable": {
+		"message": "Seçilmiş mətnin tərcüməsini aktiv et"
+	},
+	"settings_option_selectTranslation_enable_desc": {
+		"message": "Bu xüsusiyyət aktiv olduqda, səhifədə istənilən mətni seçib pəncərədə tərcümə edə bilərsiniz"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton": {
+		"message": "Tərcümə düyməsinə avtomatik fokuslan"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
+		"message": "Səhifədə tərcümə düyməsi göründükdə, avtomatik olaraq fokuslanacaq"
+	},
+	"settings_option_selectTranslation_header_languageChoice": {
+		"message": "Dil parametrləri"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang": {
+		"message": "Tərcümə moduluna mətn dilini aşkar etməyə icazə ver"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
+		"message": "Mətn dili yerli olaraq aşkar edilə bilmədikdə və bu seçim aktiv olduqda, mətn \"auto\" dili ilə tərcümə ediləcək, əgər dəstəklənirsə.\nSeçim deaktiv olduqda, mətnin mənbə dilini təyin etmək üçün başqa bir ehtiyat üsul istifadə olunacaq"
+	},
+	"settings_option_selectTranslation_mode": {
+		"message": "Mətn seçimi üzərində hərəkət"
+	},
+	"settings_option_selectTranslation_mode_item_contextMenu": {
+		"message": "Kontekst menyusu vasitəsilə mətni tərcümə et"
+	},
+	"settings_option_selectTranslation_mode_item_popupButton": {
+		"message": "Tərcümə düyməsini göstər"
+	},
+	"settings_option_selectTranslation_mode_item_quickTranslate": {
+		"message": "Mətni dərhal tərcümə et"
+	},
+	"settings_option_selectTranslation_modifiers": {
+		"message": "Modifikatorlar"
+	},
+	"settings_option_selectTranslation_modifiers_desc": {
+		"message": "Tərcüməni göstərmək üçün klaviaturada basılmalı olan düymələri seçin"
+	},
+	"settings_option_selectTranslation_modifiers_key_alt": {
+		"message": "alt"
+	},
+	"settings_option_selectTranslation_modifiers_key_ctrl": {
+		"message": "ctrl"
+	},
+	"settings_option_selectTranslation_modifiers_key_meta": {
+		"message": "meta"
+	},
+	"settings_option_selectTranslation_modifiers_key_shift": {
+		"message": "shift"
+	},
+	"settings_option_selectTranslation_rememberDirection": {
+		"message": "Ən son seçilmiş mətn dilini yadda saxla"
+	},
+	"settings_option_selectTranslation_showOnceForSelection": {
+		"message": "Hər mətn seçimi üçün tərcümə düyməsini bir dəfə göstər"
+	},
+	"settings_option_selectTranslation_showOnceForSelection_desc": {
+		"message": "Düymə hər mətn seçimi üçün yalnız bir dəfə görünəcək. Yenidən göstərmək üçün mətni yenidən seçin"
+	},
+	"settings_option_selectTranslation_showOriginalText": {
+		"message": "Orijinal mətni göstər"
+	},
+	"settings_option_selectTranslation_showOriginalText_desc": {
+		"message": "Tərcümə pəncərəsinə orijinal mətn ilə blok əlavə et"
+	},
+	"settings_option_selectTranslation_strictSelection": {
+		"message": "Mətn seçiminin sərt rejimi",
+		"description": "Bu seçim mətnin siçan vasitəsilə seçilməsi ilə bağlıdır"
+	},
+	"settings_option_selectTranslation_strictSelection_desc": {
+		"message": "Seçilmiş mətni ehtiva edən blokdan kənarda sol siçan düyməsi buraxıldıqda mətn seçimini nəzərə alma"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton": {
+		"message": "Pəncərə düyməsini gizlətməzdən əvvəl gecikmə"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton_desc": {
+		"message": "Kursor üzərində olmadıqda düymənin gizlədilməsindən əvvəlki gecikmə müddəti (millisaniyə ilə). Düymənin üzərində olmaq taymeri sıfırlayır. Avtomatik gizlətməni söndürmək üçün dəyəri 1-dən az təyin edin"
+	},
+	"settings_option_selectTranslation_zIndex": {
+		"message": "z-index"
+	},
+	"settings_option_selectTranslation_zIndex_desc": {
+		"message": "Bəzi səhifələrdə elementlər tərcümə edilmiş mətnlə açılan pəncərəni üstələyirsə, bu dəyəri artırın"
+	},
+	"settings_option_textTranslator": {
+		"message": "Mətn tərcüməsi"
+	},
+	"settings_option_textTranslator_rememberText": {
+		"message": "Tərcümə edilmiş mətni yadda saxlamaq"
+	},
+	"settings_option_textTranslator_rememberText_desc": {
+		"message": "Pəncərə növbəti dəfə açıldıqda tərcümə edilmiş mətni yadda saxlamaq"
+	},
+	"settings_option_textTranslator_spellCheck": {
+		"message": "Orfoqrafiya yoxlamasını aktivləşdir"
+	},
+	"settings_option_textTranslator_suggestLanguage": {
+		"message": "Aşkar edilmiş mətn dilini göstərmək"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways": {
+		"message": "Həmişə dili aşkar et və təklif et"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways_desc": {
+		"message": "Söndürüldükdə, dil təklifləri yalnız mənbə dili \"avto\" olaraq təyin edildikdə görünür"
+	},
+	"settings_option_translatePreferences": {
+		"message": "Tərcümə seçimləri"
+	},
+	"settings_option_translateScheduler": {
+		"message": "Tərcümə cədvəli"
+	},
+	"settings_option_translateScheduler_delay": {
+		"message": "Mətn yığılma gecikməsi"
+	},
+	"settings_option_translateScheduler_delay_desc": {
+		"message": "Tərcümə cədvəli, mümkün qədər çox mətni bir sorğuda göndərmək üçün yığaraq tərcümə xidməti API-sinə sorğuların sayını azaldır. Tərcüməyə başlamazdan əvvəl daha çox mətn toplamaq üçün cədvəl təyin edilmiş vaxtı millisaniyə ilə gözləyəcək"
+	},
+	"settings_option_translateScheduler_retryLimit": {
+		"message": "Tərcümə yenidən cəhd limitləri"
+	},
+	"settings_option_translateScheduler_retryLimit_desc": {
+		"message": "Tərcümə səhvləri baş verdikdə cədvəl mətnləri yenidən tərcümə etməyə çalışacaq. Bu seçim yenidən cəhd limitini təyin edir. Məhdudiyyətsiz yenidən cəhdlərə icazə vermək üçün mənfi bir rəqəm təyin edin"
+	},
+	"settings_option_translatorModule": {
+		"message": "Tərcümə modulu"
+	},
+	"settings_option_translatorModule_desc": {
+		"message": "Tərcümələrin keyfiyyəti və mövcud dillər tərcümə modulundan asılıdır"
+	},
+	"settings_option_tts": {
+		"message": "Mətnin Səsə çevrilməsi (TTS)"
+	},
+	"settings_option_ttsCustomModules": {
+		"message": "Xüsusi səs sintez modulları"
+	},
+	"settings_option_ttsCustomModules_button": {
+		"message": "Səs sintez modullarını idarə etmək"
+	},
+	"settings_option_ttsCustomModules_desc": {
+		"message": "Sevdiyiniz xidmətlər və səs mühərriklərindən istifadə edən səs sintez modulları əlavə edə bilərsiniz. Daha ətraflı <slot id=docs>xüsusi TTS sənədlərində</slot> oxuyun"
+	},
+	"settings_option_ttsModule": {
+		"message": "Seçilmiş TTS modulu"
+	},
+	"settings_option_ttsModule_desc": {
+		"message": "Mətni səsləndirmək üçün istifadə olunan səs mühərriki"
+	},
+	"settings_option_userLanguage": {
+		"message": "Sizin diliniz"
+	},
+	"settings_option_userLanguage_desc": {
+		"message": "Mətnlərin tərcümə ediləcəyi dil"
+	},
+	"settings_pageTitle": {
+		"message": "Ayarlar"
+	},
+	"settings_section_history": {
+		"message": "Tarixçə"
+	},
+	"settings_section_popup": {
+		"message": "Popup"
+	},
+	"textTranslator_suggestLanguage": {
+		"message": "Görünür, mətnin dili <slot id=languageSuggest>$language_name$</slot>",
+		"placeholders": {
+			"language_name": {
+				"content": "$1",
+				"example": "Yapon"
+			}
+		}
+	},
+	"textTranslator_translateInputPlaceholder": {
+		"message": "Tərcümə üçün mətn daxil edin",
+		"description": "İstifadəçidən tərcümə üçün mətn daxil etməsi istənilir"
+	},
+	"textTranslator_translatePlaceholder": {
+		"message": "Tərcümə olunmuş mətn burada olacaq"
+	},
+	"translatorsManagerWindow_add": {
+		"message": "Tərcümə modulunu əlavə et"
+	},
+	"translatorsManagerWindow_close": {
+		"message": "Bağla"
+	},
+	"translatorsManagerWindow_emptyTranslatorsListText": {
+		"message": "Hələ heç bir xüsusi tərcümə modulu əlavə edilməyib"
+	},
+	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
+		"message": "\"$translator_name$\" tərcümə modulunu silmək istədiyinizə əminsinizmi?",
+		"placeholders": {
+			"translator_name": {
+				"content": "$1",
+				"example": "Google translator"
+			}
+		}
+	},
+	"translatorsManagerWindow_title": {
+		"message": "Xüsusi tərcümə modulları"
+	},
+	"translatorsManagerWindow_translator_delete": {
+		"message": "Sil"
+	},
+	"translatorsManagerWindow_translator_edit": {
+		"message": "Redaktə et"
+	},
+	"ttsManagerWindow_add": {
+		"message": "TTS modulunu əlavə et"
+	},
+	"ttsManagerWindow_close": {
+		"message": "Bağla"
+	},
+	"ttsManagerWindow_emptyTranslatorsListText": {
+		"message": "Hələ heç bir TTS modulu əlavə edilməyib"
+	},
+	"ttsManagerWindow_message_ttsRemoveConfirmation": {
+		"message": "TTS modulunu \"$tts_name$\" silmək istədiyinizə əminsinizmi?",
+		"placeholders": {
+			"tts_name": {
+				"content": "$1",
+				"example": "Google TTS"
+			}
+		}
+	},
+	"ttsManagerWindow_title": {
+		"message": "Mətn-dan-Səsə modulları"
+	},
+	"ttsManagerWindow_translator_delete": {
+		"message": "Sil"
+	},
+	"ttsManagerWindow_translator_edit": {
+		"message": "Redaktə et"
+	},
+	"validation_number": {
+		"message": "Dəyər rəqəm olmalıdır"
+	},
+	"validation_numberBetweenRange": {
+		"message": "Dəyər $1 və $2 arasında rəqəm olmalıdır"
+	},
+	"validation_positiveNumber": {
+		"message": "Dəyər müsbət rəqəm olmalıdır"
+	}
+}

@@ -1,0 +1,623 @@
+{
+	"common_action_addToDictionary": {
+		"message": "Voeg vertaling by woordeboek"
+	},
+	"common_action_removeFromDictionary": {
+		"message": "Verwyder vertaling uit woordeboek"
+	},
+	"common_bgUnavailable": {
+		"message": "Agtergrondskrip onbeskikbaar"
+	},
+	"common_cancel": {
+		"message": "Kanselleer"
+	},
+	"common_close": {
+		"message": "Maak toe"
+	},
+	"common_copy": {
+		"message": "Kopieer"
+	},
+	"common_error": {
+		"message": "Fout"
+	},
+	"common_offlineTranslator": {
+		"message": "$1 - Vanlyn vertaler"
+	},
+	"common_retry": {
+		"message": "Probeer weer"
+	},
+	"common_translate": {
+		"message": "Vertaal"
+	},
+	"component_hotkey_placeholder": {
+		"message": "Klik om 'n kortpad op te neem"
+	},
+	"component_hotkey_recordPlaceholder": {
+		"message": "Druk sleutels"
+	},
+	"component_hotkey_resetButton": {
+		"message": "Herstel"
+	},
+	"contextMenu_disablePageTranslation": {
+		"message": "Stop bladsyvertaling"
+	},
+	"contextMenu_translatePage": {
+		"message": "Vertaal bladsy"
+	},
+	"contextMenu_translateSelectedText": {
+		"message": "Vertaal geselekteerde teks"
+	},
+	"dictionaryButton_add": {
+		"message": "Voeg by woordeboek"
+	},
+	"dictionaryButton_delete": {
+		"message": "Verwyder uit woordeboek"
+	},
+	"dictionary_button_export": {
+		"message": "Voer uit"
+	},
+	"dictionary_button_removeAll": {
+		"message": "Verwyder alles"
+	},
+	"dictionary_deleteAll": {
+		"message": "Is jy seker jy wil ALLE vertalings uit die woordeboek verwyder?"
+	},
+	"dictionary_deleteConfirmation": {
+		"message": "Is jy seker jy wil hierdie vertaling verwyder?"
+	},
+	"dictionary_description": {
+		"message": "Stoor vertalings in die woordeboek om dit later vinnig te vind"
+	},
+	"dictionary_emptyDictionary": {
+		"message": "Woordeboek is leeg, begin dit vul deur 'n paar teks te vertaal"
+	},
+	"dictionary_filter_from": {
+		"message": "Bronteks taal"
+	},
+	"dictionary_filter_to": {
+		"message": "Teikentaal"
+	},
+	"dictionary_message_deleteAll_success": {
+		"message": "Alle vertalings is verwyder"
+	},
+	"dictionary_notFoundEntries": {
+		"message": "Geen vertalings wat by hierdie filters pas, is gevind nie"
+	},
+	"dictionary_pageTitle": {
+		"message": "Woordeboek"
+	},
+	"dictionary_resetFilters": {
+		"message": "Herstel filters"
+	},
+	"dictionary_searchPlaceholder": {
+		"message": "Soek volgens teks"
+	},
+	"editorWindow_close": {
+		"message": "Sluit"
+	},
+	"editorWindow_data_code": {
+		"message": "Kode"
+	},
+	"editorWindow_data_title": {
+		"message": "Module naam"
+	},
+	"editorWindow_message_invalidTitle": {
+		"message": "Module naam moet ten minste een karakter hê"
+	},
+	"editorWindow_save": {
+		"message": "Stoor"
+	},
+	"ext_description": {
+		"message": "Webbladsyvertaling, teksvertaling, woordeboek, geskiedenis, pasgemaakte vertalers, alles wat jy nodig het om taalhindernisse te oorkom"
+	},
+	"ext_name": {
+		"message": "Linguist - webbladsyvertaler"
+	},
+	"history_control_selectEntry": {
+		"message": "Kies vertaling vir massiewe aksie",
+		"description": "Description in finite form \"to pick\" with explaining what this checkbox will do"
+	},
+	"history_controls_clearHistory": {
+		"message": "Vee geskiedenis uit"
+	},
+	"history_controls_deleteSelected": {
+		"message": "Vee geselekteerde vertalings uit"
+	},
+	"history_controls_selectAll": {
+		"message": "Kies alle vertalings"
+	},
+	"history_message_clearHistoryConfirmation": {
+		"message": "Is jy seker jy wil die geskiedenis uitvee? Alle inskrywings sal verwyder word"
+	},
+	"history_message_deleteEntryConfirmation": {
+		"message": "Is jy seker jy wil hierdie inskrywing uitvee?"
+	},
+	"history_message_deleteSelectedEntriesConfirmation": {
+		"message": "Is jy seker jy wil die geselekteerde inskrywings ($1) uitvee?"
+	},
+	"history_message_entriesNotFound": {
+		"message": "Geen vertalings gevind wat by die filter pas nie"
+	},
+	"history_message_noEntries": {
+		"message": "Geskiedenis is leeg"
+	},
+	"history_notification_disabled": {
+		"message": "Geskiedenisopname is gedeaktiveer, so nuwe inskrywings sal nie verskyn nie. Jy kan dit verander in <slot id=preferences>Voorkeure</slot>"
+	},
+	"history_pageTitle": {
+		"message": "Geskiedenis"
+	},
+	"history_searchPlaceholder": {
+		"message": "Soek volgens teks"
+	},
+	"inlineTranslator_showOriginalText": {
+		"message": "Wys oorspronklike teks"
+	},
+	"lang_change": {
+		"message": "Verander taal"
+	},
+	"lang_detect": {
+		"message": "Outomatiese opsporing"
+	},
+	"lang_select": {
+		"message": "Kies taal"
+	},
+	"lang_swap": {
+		"message": "Ruil tale om"
+	},
+	"message_unknownError": {
+		"message": "Onbekende fout"
+	},
+	"pageTranslator_alwaysTranslateLang": {
+		"message": "Vertaal altyd hierdie taal"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disable": {
+		"message": "Deaktiveer"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
+		"message": "Deaktiveer vir alle webwerwe"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_enable": {
+		"message": "Aktiveer"
+	},
+	"pageTranslator_commonPreferences_title": {
+		"message": "Algemene voorkeure vir hierdie taal"
+	},
+	"pageTranslator_option_autoTranslate": {
+		"message": "Outomaties vertaal"
+	},
+	"pageTranslator_showOriginal": {
+		"message": "Wys oorspronklike"
+	},
+	"pageTranslator_showTranslationPreferences": {
+		"message": "Vertaalvoorkeure"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_always": {
+		"message": "Vertaal altyd"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
+		"message": "Vertaal altyd vir hierdie taal"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_default": {
+		"message": "Gebruik algemene reëls"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
+		"message": "Gebruik algemene reëls vir hierdie taal"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_never": {
+		"message": "Moet nooit vertaal nie"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
+		"message": "Moet nooit vertaal vir hierdie taal nie"
+	},
+	"pageTranslator_sitePreferences_title": {
+		"message": "Voorkeure vir"
+	},
+	"pageTranslator_translatePage": {
+		"message": "Vertaal bladsy"
+	},
+	"pageTranslator_translationReport": {
+		"message": "Vertaalverslag"
+	},
+	"pageTranslator_translationReport_queue": {
+		"message": "Hangende"
+	},
+	"pageTranslator_translationReport_reject": {
+		"message": "Foute"
+	},
+	"pageTranslator_translationReport_resolve": {
+		"message": "Vertaal"
+	},
+	"popup_tabIdNotFound": {
+		"message": "Oortjie \"$1\" nie gevind nie"
+	},
+	"popup_tab_translatePage": {
+		"message": "Bladsyvertaling"
+	},
+	"popup_tab_translateText": {
+		"message": "Teksvertaling"
+	},
+	"settings_button_cancel": {
+		"message": "Kanselleer"
+	},
+	"settings_button_export": {
+		"message": "Voer konfigurasie uit"
+	},
+	"settings_button_import": {
+		"message": "Voer konfigurasie in"
+	},
+	"settings_button_reset": {
+		"message": "Herstel konfigurasie"
+	},
+	"settings_button_saveChanges": {
+		"message": "Stoor veranderinge"
+	},
+	"settings_message_clearCache_success": {
+		"message": "Kas skoongemaak"
+	},
+	"settings_message_common_invalidValueType": {
+		"message": "Ongeldige waarde"
+	},
+	"settings_message_importConfig_invalidFile": {
+		"message": "Die verskafde konfigurasielêer is verkeerd of beskadig en kan nie verwerk word nie"
+	},
+	"settings_message_importConfig_success": {
+		"message": "Invoer voltooi"
+	},
+	"settings_message_resetConfig_confirm": {
+		"message": "Bevestig om die instellings na verstekwaardes te herstel"
+	},
+	"settings_message_resetConfig_success": {
+		"message": "Instellings herstel"
+	},
+	"settings_message_saveChanges_success": {
+		"message": "Veranderings gestoor"
+	},
+	"settings_option_cache": {
+		"message": "Kas"
+	},
+	"settings_option_cache_clear": {
+		"message": "Maak kas skoon"
+	},
+	"settings_option_cache_clear_desc": {
+		"message": "As jy vertaalfoute opmerk of per ongeluk privaat tekste vertaal terwyl die kas geaktiveer is, kan jy alle data uit die kas verwyder",
+		"description": "Explanation for user about cases when it's useful to clear cache"
+	},
+	"settings_option_cache_enable": {
+		"message": "Aktiveer kas"
+	},
+	"settings_option_cache_enable_desc": {
+		"message": "Wanneer die kas geaktiveer is, sal tekste wat voorheen vertaal is, onmiddellik vertaal word sonder bykomende versoeke aan die vertaaldienst"
+	},
+	"settings_option_cache_ignoreCase": {
+		"message": "Gebruik kas ongevoelig vir hoofletters"
+	},
+	"settings_option_cache_ignoreCase_desc": {
+		"message": "Wanneer geaktiveer, sal gekasde vertalings gebruik word vir tekste met verskillende hoofletters, wat vertaalvervormings in sekere situasies kan veroorsaak"
+	},
+	"settings_option_commonSettings": {
+		"message": "Algemene instellings"
+	},
+	"settings_option_customTranslatorModule": {
+		"message": "Pasgemaakte vertaalmodules",
+		"description": "An user defined code that implements a translation module"
+	},
+	"settings_option_customTranslatorModule_desc": {
+		"message": "Jy kan pasgemaakte vertaalmodules byvoeg wat jou gunsteling vertaaldienste gebruik. Leer meer in die <slot id=docs>pasgemaakte vertalers dokumentasie</slot>"
+	},
+	"settings_option_customTranslatorModule_manageButton": {
+		"message": "Bestuur vertalers",
+		"description": "A button to show list of translation modules"
+	},
+	"settings_option_history_enable": {
+		"message": "Aktiveer geskiedenis"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "Wanneer geaktiveer, sal vertalings aangeteken word en op die <slot id=historyPage>geskiedenisbladsy</slot> verskyn"
+	},
+	"settings_option_pageTranslation": {
+		"message": "Die volledige bladsy vertaling"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent": {
+		"message": "Bepaal taal deur inhoud"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent_desc": {
+		"message": "Analiseer die teks op die webblad om sy taal te bepaal. Wanneer gedeaktiveer, sal die taal gespesifiseer in die <slot id=docs>bladsy metadata</slot> gebruik word"
+	},
+	"settings_option_pageTranslation_enableContextMenu": {
+		"message": "Aktiveer konteksmenu knoppie"
+	},
+	"settings_option_pageTranslation_enableContextMenu_desc": {
+		"message": "Voeg 'n knoppie by om bladsyvertaling in die bladsykonteksmenu te wissel"
+	},
+	"settings_option_pageTranslation_excludeSelectors": {
+		"message": "Selektore om van vertaling uit te sluit"
+	},
+	"settings_option_pageTranslation_excludeSelectors_desc": {
+		"message": "Lys van CSS-selektore vir elemente wat van vertaling uitgesluit moet word. Een selektor per reël. As 'n element by enige van hierdie selektore pas, sal sy teks, eienskappe en geneste elemente nie vertaal word nie"
+	},
+	"settings_option_pageTranslation_lazyTranslate": {
+		"message": "Vertaal slegs sigbare elemente"
+	},
+	"settings_option_pageTranslation_lazyTranslate_desc": {
+		"message": "Wanneer hierdie opsie geaktiveer is, sal slegs sigbare elemente vertaal word. Hierdie opsie verminder netwerkverkeer"
+	},
+	"settings_option_pageTranslation_originalTextPopup": {
+		"message": "Aktiveer opspringvenster met die oorspronklike teks"
+	},
+	"settings_option_pageTranslation_originalTextPopup_desc": {
+		"message": "Wys 'n opspringvenster met die oorspronklike teks wanneer oor vertaalde teksblokke gehou word"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation": {
+		"message": "Kortpad"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation_desc": {
+		"message": "Kortpad om bladsyvertaling te wissel\nDruk ESC om sleutels te herstel"
+	},
+	"settings_option_pageTranslation_translatableAttributes": {
+		"message": "Vertaalbare eienskappe"
+	},
+	"settings_option_pageTranslation_translatableAttributes_desc": {
+		"message": "Voer <slot id=htmlAttributes>HTML-eienskap</slot> name in om te vertaal, een eienskap per reël\nSlegs die eienskappe in hierdie lys sal vertaal word"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters": {
+		"message": "Wys vertaalvordering"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters_desc": {
+		"message": "Wys 'n paneel met bladsyvertalingsvordering in die uitbreidingskassie"
+	},
+	"settings_option_selectTranslation": {
+		"message": "Vertaling vir geselekteerde teks"
+	},
+	"settings_option_selectTranslation_detectTextLanguage": {
+		"message": "Bepaal teks taal"
+	},
+	"settings_option_selectTranslation_detectTextLanguage_desc": {
+		"message": "Wanneer geaktiveer, sal geselekteerde teks geanaliseer word om die taal vir vertaling te bepaal. Andersins sal die bladsytaal gebruik word"
+	},
+	"settings_option_selectTranslation_disableWhileTranslatePage": {
+		"message": "Deaktiveer terwyl die bladsy vertaal word"
+	},
+	"settings_option_selectTranslation_enable": {
+		"message": "Aktiveer geselekteerde teks vertaling"
+	},
+	"settings_option_selectTranslation_enable_desc": {
+		"message": "Wanneer hierdie funksie geaktiveer is, kan jy enige teks op die bladsy kies en dit in 'n opspringvenster vertaal"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton": {
+		"message": "Outomaties fokus op die vertalingsknoppie"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
+		"message": "Wanneer die vertalingsknoppie op die bladsy verskyn, sal dit outomaties gefokus word"
+	},
+	"settings_option_selectTranslation_header_languageChoice": {
+		"message": "Taalinstellings"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang": {
+		"message": "Laat die vertalingsmodule toe om die teks taal te bepaal"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
+		"message": "Wanneer die teks taal nie plaaslik bepaal kan word nie en hierdie opsie geaktiveer is, sal die teks vertaal word met die taal \"auto\" indien ondersteun.\nWanneer die opsie gedeaktiveer is, sal 'n ander terugvalmetode gebruik word om die brontaal van die teks te stel"
+	},
+	"settings_option_selectTranslation_mode": {
+		"message": "Aksie op teks seleksie"
+	},
+	"settings_option_selectTranslation_mode_item_contextMenu": {
+		"message": "Vertaal teks via kontekskieslys"
+	},
+	"settings_option_selectTranslation_mode_item_popupButton": {
+		"message": "Wys vertalingsknoppie"
+	},
+	"settings_option_selectTranslation_mode_item_quickTranslate": {
+		"message": "Vertaal teks onmiddellik"
+	},
+	"settings_option_selectTranslation_modifiers": {
+		"message": "Modifiseerders"
+	},
+	"settings_option_selectTranslation_modifiers_desc": {
+		"message": "Kies die sleutels wat op die sleutelbord gedruk moet word om die vertaling te vertoon"
+	},
+	"settings_option_selectTranslation_modifiers_key_alt": {
+		"message": "alt"
+	},
+	"settings_option_selectTranslation_modifiers_key_ctrl": {
+		"message": "ctrl"
+	},
+	"settings_option_selectTranslation_modifiers_key_meta": {
+		"message": "meta"
+	},
+	"settings_option_selectTranslation_modifiers_key_shift": {
+		"message": "shift"
+	},
+	"settings_option_selectTranslation_rememberDirection": {
+		"message": "Onthou die mees onlangs geselekteerde teks taal"
+	},
+	"settings_option_selectTranslation_showOnceForSelection": {
+		"message": "Wys die vertalingsknoppie een keer per teks seleksie"
+	},
+	"settings_option_selectTranslation_showOnceForSelection_desc": {
+		"message": "Die knoppie sal slegs een keer vir elke teks seleksie verskyn. Om dit weer te wys, kies die teks weer"
+	},
+	"settings_option_selectTranslation_showOriginalText": {
+		"message": "Wys oorspronklike teks"
+	},
+	"settings_option_selectTranslation_showOriginalText_desc": {
+		"message": "Voeg 'n blok met die oorspronklike teks by die vertalingskassie"
+	},
+	"settings_option_selectTranslation_strictSelection": {
+		"message": "Streng modus van teks span seleksie",
+		"description": "This option is about selecting text via mouse"
+	},
+	"settings_option_selectTranslation_strictSelection_desc": {
+		"message": "Ignoreer teks span seleksie as die linkermuisknoppie buite die blok wat die geselekteerde teks bevat, losgelaat word"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton": {
+		"message": "Vertraging voordat die opspringknoppie versteek word"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton_desc": {
+		"message": "Vertraging in millisekondes voordat die knoppie versteek word wanneer die wyser nie daaroor sweef nie. Om oor die knoppie te sweef, stel die timer terug. Om outomatiese verberging te deaktiveer, stel die waarde op minder as 1"
+	},
+	"settings_option_selectTranslation_zIndex": {
+		"message": "z-indeks"
+	},
+	"settings_option_selectTranslation_zIndex_desc": {
+		"message": "Verhoog hierdie waarde as elemente op sommige bladsye die opspringvenster met vertaalde teks oorvleuel"
+	},
+	"settings_option_textTranslator": {
+		"message": "Teksvertaling"
+	},
+	"settings_option_textTranslator_rememberText": {
+		"message": "Onthou vertaalde teks"
+	},
+	"settings_option_textTranslator_rememberText_desc": {
+		"message": "Onthou vertaalde teks vir die volgende keer wanneer die venster oopgemaak word"
+	},
+	"settings_option_textTranslator_spellCheck": {
+		"message": "Aktiveer speltoets"
+	},
+	"settings_option_textTranslator_suggestLanguage": {
+		"message": "Toon opgespoorde teks taal"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways": {
+		"message": "Voer altyd taalopsporing en -voorstel uit"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways_desc": {
+		"message": "Wanneer gedeaktiveer, verskyn taalvoorstelle slegs as die brontaal op \"auto\" gestel is"
+	},
+	"settings_option_translatePreferences": {
+		"message": "Vertaalvoorkeure"
+	},
+	"settings_option_translateScheduler": {
+		"message": "Vertaal skeduleerder"
+	},
+	"settings_option_translateScheduler_delay": {
+		"message": "Teksakkumulasie vertraging"
+	},
+	"settings_option_translateScheduler_delay_desc": {
+		"message": "Die vertaal skeduleerder verminder die aantal versoeke aan die vertaaldiens API deur soveel moontlik tekste op te gaar om in 'n enkele versoek te stuur. Die skeduleerder sal vir die gespesifiseerde tyd in millisekondes wag om meer tekste te versamel voordat vertaling begin"
+	},
+	"settings_option_translateScheduler_retryLimit": {
+		"message": "Beperking vir vertaalherprobeerpogings"
+	},
+	"settings_option_translateScheduler_retryLimit_desc": {
+		"message": "Die skeduleerder sal probeer om tekste weer te vertaal wanneer vertaalfoute voorkom. Hierdie opsie stel 'n beperking op herprobeerpogings. Stel 'n negatiewe getal in om onbeperkte herprobeersels toe te laat"
+	},
+	"settings_option_translatorModule": {
+		"message": "Vertaalmodule"
+	},
+	"settings_option_translatorModule_desc": {
+		"message": "Die kwaliteit van vertalings en die beskikbare tale hang af van die vertaalmodule"
+	},
+	"settings_option_tts": {
+		"message": "Teks na Spraak omskakeling (TTS)"
+	},
+	"settings_option_ttsCustomModules": {
+		"message": "Pasgemaakte spraaksintese modules"
+	},
+	"settings_option_ttsCustomModules_button": {
+		"message": "Bestuur spraaksintese modules"
+	},
+	"settings_option_ttsCustomModules_desc": {
+		"message": "Jy kan spraaksintese modules byvoeg wat jou gunsteling dienste en stemenjins gebruik. Lees meer in die <slot id=docs>pasgemaakte TTS dokumentasie</slot>"
+	},
+	"settings_option_ttsModule": {
+		"message": "Geselekteerde TTS module"
+	},
+	"settings_option_ttsModule_desc": {
+		"message": "Stem enjin gebruik vir die stem van die teks"
+	},
+	"settings_option_userLanguage": {
+		"message": "Jou taal"
+	},
+	"settings_option_userLanguage_desc": {
+		"message": "Die taal waarin tekste vertaal sal word"
+	},
+	"settings_pageTitle": {
+		"message": "Instellings"
+	},
+	"settings_section_history": {
+		"message": "Geskiedenis"
+	},
+	"settings_section_popup": {
+		"message": "Opspringvenster"
+	},
+	"textTranslator_suggestLanguage": {
+		"message": "Dit lyk of die teks taal is <slot id=languageSuggest>$language_name$</slot>",
+		"placeholders": {
+			"language_name": {
+				"content": "$1",
+				"example": "Japanese"
+			}
+		}
+	},
+	"textTranslator_translateInputPlaceholder": {
+		"message": "Voer teks in vir vertaling",
+		"description": "Request to user input some text for translation"
+	},
+	"textTranslator_translatePlaceholder": {
+		"message": "Vertaalde teks sal hier wees"
+	},
+	"translatorsManagerWindow_add": {
+		"message": "Voeg vertaalmodule by"
+	},
+	"translatorsManagerWindow_close": {
+		"message": "Sluit"
+	},
+	"translatorsManagerWindow_emptyTranslatorsListText": {
+		"message": "Geen pasgemaakte vertaalmodules is nog bygevoeg nie"
+	},
+	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
+		"message": "Is jy seker jy wil die \"$translator_name$\" vertaalmodule verwyder?",
+		"placeholders": {
+			"translator_name": {
+				"content": "$1",
+				"example": "Google translator"
+			}
+		}
+	},
+	"translatorsManagerWindow_title": {
+		"message": "Pasgemaakte vertaalmodules"
+	},
+	"translatorsManagerWindow_translator_delete": {
+		"message": "Verwyder"
+	},
+	"translatorsManagerWindow_translator_edit": {
+		"message": "Wysig"
+	},
+	"ttsManagerWindow_add": {
+		"message": "Voeg TTS-module by"
+	},
+	"ttsManagerWindow_close": {
+		"message": "Sluit"
+	},
+	"ttsManagerWindow_emptyTranslatorsListText": {
+		"message": "Geen TTS-modules is nog bygevoeg nie"
+	},
+	"ttsManagerWindow_message_ttsRemoveConfirmation": {
+		"message": "Is jy seker jy wil die TTS-module \"$tts_name$\" verwyder?",
+		"placeholders": {
+			"tts_name": {
+				"content": "$1",
+				"example": "Google TTS"
+			}
+		}
+	},
+	"ttsManagerWindow_title": {
+		"message": "Teks-na-Spraak modules"
+	},
+	"ttsManagerWindow_translator_delete": {
+		"message": "Verwyder"
+	},
+	"ttsManagerWindow_translator_edit": {
+		"message": "Wysig"
+	},
+	"validation_number": {
+		"message": "Waarde moet 'n getal wees"
+	},
+	"validation_numberBetweenRange": {
+		"message": "Waarde moet 'n getal tussen $1 en $2 wees"
+	},
+	"validation_positiveNumber": {
+		"message": "Waarde moet 'n positiewe getal wees"
+	}
+}

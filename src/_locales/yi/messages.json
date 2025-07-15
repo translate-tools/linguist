@@ -1,0 +1,623 @@
+{
+	"common_action_addToDictionary": {
+		"message": "צולייגן איבערזעצונג צום ווערטערבוך"
+	},
+	"common_action_removeFromDictionary": {
+		"message": "אַראָפּנעמען איבערזעצונג פון ווערטערבוך"
+	},
+	"common_bgUnavailable": {
+		"message": "הינטערגרונט סקריפּט נישט פאַראַנען"
+	},
+	"common_cancel": {
+		"message": "באָטל מאַכן"
+	},
+	"common_close": {
+		"message": "נאָענט"
+	},
+	"common_copy": {
+		"message": "קאָפּיע"
+	},
+	"common_error": {
+		"message": "טעות"
+	},
+	"common_offlineTranslator": {
+		"message": "$1 - אָפפלינע איבערזעצער"
+	},
+	"common_retry": {
+		"message": "פּרוּוו ווידער"
+	},
+	"common_translate": {
+		"message": "איבערזעצן"
+	},
+	"component_hotkey_placeholder": {
+		"message": "דריקט צו רעקאָרדירן אַ קורץ וועג"
+	},
+	"component_hotkey_recordPlaceholder": {
+		"message": "דריקט שליסלען"
+	},
+	"component_hotkey_resetButton": {
+		"message": "צוריקשטעלן"
+	},
+	"contextMenu_disablePageTranslation": {
+		"message": "אָפּשטעלן בלאַט איבערזעצונג"
+	},
+	"contextMenu_translatePage": {
+		"message": "איבערזעצן בלאַט"
+	},
+	"contextMenu_translateSelectedText": {
+		"message": "איבערזעצן אויסגעקליבן טעקסט"
+	},
+	"dictionaryButton_add": {
+		"message": "צולייגן צום ווערטערבוך"
+	},
+	"dictionaryButton_delete": {
+		"message": "אויסמעקן פון ווערטערבוך"
+	},
+	"dictionary_button_export": {
+		"message": "אַרויספירן"
+	},
+	"dictionary_button_removeAll": {
+		"message": "אַראָפּנעמען אַלע"
+	},
+	"dictionary_deleteAll": {
+		"message": "זענט איר זיכער אַז איר ווילט אויסמעקן אַלע איבערזעצונגען פון דעם ווערטערבוך?"
+	},
+	"dictionary_deleteConfirmation": {
+		"message": "זענט איר זיכער אַז איר ווילט אויסמעקן די איבערזעצונג?"
+	},
+	"dictionary_description": {
+		"message": "היט איבערזעצונגען אין דעם ווערטערבוך צו געפֿינען זיי שנעלער שפּעטער"
+	},
+	"dictionary_emptyDictionary": {
+		"message": "ווערטערבוך איז ליידיק, אָנהייב עס אָנפילן דורך איבערזעצן עטלעכע טעקסט"
+	},
+	"dictionary_filter_from": {
+		"message": "מקור טעקסט שפּראַך"
+	},
+	"dictionary_filter_to": {
+		"message": "ציל שפּראַך"
+	},
+	"dictionary_message_deleteAll_success": {
+		"message": "אַלע איבערזעצונגען זענען אַראָפּגענומען געוואָרן"
+	},
+	"dictionary_notFoundEntries": {
+		"message": "קיין איבערזעצונגען וואָס פּאַסן די פילטערס זענען נישט געפֿונען געוואָרן"
+	},
+	"dictionary_pageTitle": {
+		"message": "ווערטערבוך"
+	},
+	"dictionary_resetFilters": {
+		"message": "צוריקשטעלן פילטערס"
+	},
+	"dictionary_searchPlaceholder": {
+		"message": "זוכן לויט טעקסט"
+	},
+	"editorWindow_close": {
+		"message": "נאָענט"
+	},
+	"editorWindow_data_code": {
+		"message": "קאָדעקס"
+	},
+	"editorWindow_data_title": {
+		"message": "מאָדול נאָמען"
+	},
+	"editorWindow_message_invalidTitle": {
+		"message": "מאָדול נאָמען מוזן האָבן לפּחות איין כאַראַקטער"
+	},
+	"editorWindow_save": {
+		"message": "היטן"
+	},
+	"ext_description": {
+		"message": "וועב בלאַט איבערזעצונג, טעקסט איבערזעצונג, ווערטערבוך, געשיכטע, מנהג איבערזעצער, אַלע איר דאַרפֿן צו ברעכן שפּראַך שלאַבאַן"
+	},
+	"ext_name": {
+		"message": "לינגוויסט - וועב בלאַט איבערזעצער"
+	},
+	"history_control_selectEntry": {
+		"message": "צו קלייַבן איבערזעצונג פֿאַר פאַרנעם קאַמף",
+		"description": "Description in finite form \"to pick\" with explaining what this checkbox will do"
+	},
+	"history_controls_clearHistory": {
+		"message": "קלאָר געשיכטע"
+	},
+	"history_controls_deleteSelected": {
+		"message": "ויסמעקן אויסגעקליבן איבערזעצונגען"
+	},
+	"history_controls_selectAll": {
+		"message": "קלייַבן אַלע איבערזעצונגען"
+	},
+	"history_message_clearHistoryConfirmation": {
+		"message": "זענט איר זיכער אַז איר ווילן צו קלאָר די געשיכטע? אַלע פּאָזיציעס וועלן ווערן אַוועקגענומען"
+	},
+	"history_message_deleteEntryConfirmation": {
+		"message": "זענט איר זיכער אַז איר ווילן צו ויסמעקן דעם פּאָזיציע?"
+	},
+	"history_message_deleteSelectedEntriesConfirmation": {
+		"message": "זענט איר זיכער אַז איר ווילן צו ויסמעקן די אויסגעקליבן פּאָזיציעס ($1)?"
+	},
+	"history_message_entriesNotFound": {
+		"message": "קיין איבערזעצונגען געפֿונען וואָס גלייַכן די פילטער"
+	},
+	"history_message_noEntries": {
+		"message": "געשיכטע איז ליידיק"
+	},
+	"history_notification_disabled": {
+		"message": "געשיכטע רעקאָרדינג איז פאַרקריפּלט, אַזוי נייַ פּאָזיציעס וועלן נישט דערשייַנען. איר קענען טוישן דעם אין <slot id=preferences>פּרעפֿערענצן</slot>"
+	},
+	"history_pageTitle": {
+		"message": "געשיכטע"
+	},
+	"history_searchPlaceholder": {
+		"message": "זוכן לויט טעקסט"
+	},
+	"inlineTranslator_showOriginalText": {
+		"message": "ווייַזן אָריגינעל טעקסט"
+	},
+	"lang_change": {
+		"message": "טוישן שפּראַך"
+	},
+	"lang_detect": {
+		"message": "אַוטאָ-דעטעקט"
+	},
+	"lang_select": {
+		"message": "קלייַבן שפּראַך"
+	},
+	"lang_swap": {
+		"message": "בייַטן שפּראַכן"
+	},
+	"message_unknownError": {
+		"message": "אומבאַקאַנט טעות"
+	},
+	"pageTranslator_alwaysTranslateLang": {
+		"message": "שטענדיק איבערזעצן דעם שפּראַך"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disable": {
+		"message": "פאַרקריפּלט"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
+		"message": "פאַרקריפּלט פֿאַר אַלע זייטלעך"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_enable": {
+		"message": "ענייבאַל"
+	},
+	"pageTranslator_commonPreferences_title": {
+		"message": "געמיינזאמער פּרעפֿערענצן פֿאַר דעם שפּראַך"
+	},
+	"pageTranslator_option_autoTranslate": {
+		"message": "אַוטאָ-יבערזעצן"
+	},
+	"pageTranslator_showOriginal": {
+		"message": "ווייַזן אָריגינעל"
+	},
+	"pageTranslator_showTranslationPreferences": {
+		"message": "יבערזעצונג פּרעפֿערענצן"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_always": {
+		"message": "שטענדיק איבערזעצן"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
+		"message": "שטענדיק איבערזעצן פֿאַר דעם שפּראַך"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_default": {
+		"message": "ניצן געמיינזאמער כּללים"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
+		"message": "ניצן געמיינזאמער כּללים פֿאַר דעם שפּראַך"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_never": {
+		"message": "קיינמאָל איבערזעצן"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
+		"message": "קיינמאָל איבערזעצן פֿאַר דעם שפּראַך"
+	},
+	"pageTranslator_sitePreferences_title": {
+		"message": "פּרעפֿערענצן פֿאַר"
+	},
+	"pageTranslator_translatePage": {
+		"message": "יבערזעצן בלאַט"
+	},
+	"pageTranslator_translationReport": {
+		"message": "יבערזעצונג באריכט"
+	},
+	"pageTranslator_translationReport_queue": {
+		"message": "וואַרטן"
+	},
+	"pageTranslator_translationReport_reject": {
+		"message": "ערראָרס"
+	},
+	"pageTranslator_translationReport_resolve": {
+		"message": "יבערגעזעצט"
+	},
+	"popup_tabIdNotFound": {
+		"message": "טאַב \"$1\" נישט געפֿונען"
+	},
+	"popup_tab_translatePage": {
+		"message": "בלאַט איבערזעצונג"
+	},
+	"popup_tab_translateText": {
+		"message": "טעקסט איבערזעצונג"
+	},
+	"settings_button_cancel": {
+		"message": "באָטל מאַכן"
+	},
+	"settings_button_export": {
+		"message": "אַרויספירן קאָנפיג"
+	},
+	"settings_button_import": {
+		"message": "אַרייַנפיר קאָנפיג"
+	},
+	"settings_button_reset": {
+		"message": "צוריקשטעלן קאָנפיג"
+	},
+	"settings_button_saveChanges": {
+		"message": "היט ענדערונגען"
+	},
+	"settings_message_clearCache_success": {
+		"message": "קאַש קלאָר"
+	},
+	"settings_message_common_invalidValueType": {
+		"message": "אומגילטיק ווערט"
+	},
+	"settings_message_importConfig_invalidFile": {
+		"message": "דער צוגעשטעלט קאָנפיג טעקע איז פאַלש אָדער קאָרופּט, און קען נישט זיין פּראַסעסט"
+	},
+	"settings_message_importConfig_success": {
+		"message": "אַרייַנפיר פאַרטיק"
+	},
+	"settings_message_resetConfig_confirm": {
+		"message": "באַשטעטיקן צו צוריקשטעלן די סעטטינגס צו פעליק סטאַנדאַרטן"
+	},
+	"settings_message_resetConfig_success": {
+		"message": "סעטטינגס צוריקגעשטעלט"
+	},
+	"settings_message_saveChanges_success": {
+		"message": "ענדערונגען געראטעוועט"
+	},
+	"settings_option_cache": {
+		"message": "קאַש"
+	},
+	"settings_option_cache_clear": {
+		"message": "קלאָר קאַש"
+	},
+	"settings_option_cache_clear_desc": {
+		"message": "אויב איר באַמערקן איבערזעצונג ערראָרס אָדער צופעליק איבערזעצן פּריוואַט טעקסטן בשעת די קאַש איז ענייבאַלד, איר קענט אויסמעקן אַלע דאַטן פון די קאַש",
+		"description": "Explanation for user about cases when it's useful to clear cache"
+	},
+	"settings_option_cache_enable": {
+		"message": "ענייבאַל קאַש"
+	},
+	"settings_option_cache_enable_desc": {
+		"message": "ווען די קאַש איז ענייבאַלד, טעקסטן וואָס זענען שוין איבערגעזעצט וועלן ווערן איבערגעזעצט גלייך אָן נאָך בעטן צו די איבערזעצונג דינסט"
+	},
+	"settings_option_cache_ignoreCase": {
+		"message": "נוצן פאַל-אומזיכער קאַש"
+	},
+	"settings_option_cache_ignoreCase_desc": {
+		"message": "ווען ענייבאַלד, קאַשט איבערזעצונגען וועלן ווערן געניצט פֿאַר טעקסטן מיט פאַרשידענע קאַסעס, וואָס קען פאַרשאַפן איבערזעצונג דיסטאָרשאַנז אין זיכער סיטואַטיאָנס"
+	},
+	"settings_option_commonSettings": {
+		"message": "געמיינזאמען סעטטינגס"
+	},
+	"settings_option_customTranslatorModule": {
+		"message": "מנהג איבערזעצונג מאָדולעס",
+		"description": "An user defined code that implements a translation module"
+	},
+	"settings_option_customTranslatorModule_desc": {
+		"message": "איר קענט לייגן מנהג איבערזעצונג מאָדולעס וואָס נוצן אייער באַליבסטע איבערזעצונג באַדינונגען. לערנען מער אין די <slot id=docs>מנהג איבערזעצער דאָקומענטאַציע</slot>"
+	},
+	"settings_option_customTranslatorModule_manageButton": {
+		"message": "פירן איבערזעצער",
+		"description": "A button to show list of translation modules"
+	},
+	"settings_option_history_enable": {
+		"message": "ענייבאַל געשיכטע"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "ווען ענייבאַלד, איבערזעצונגען וועלן ווערן רעקאָרדעד און דערשייַנען אויף די <slot id=historyPage>געשיכטע בלאַט</slot>"
+	},
+	"settings_option_pageTranslation": {
+		"message": "די פול בלאַט איבערזעצונג"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent": {
+		"message": "דעטעקט שפּראַך דורך אינהאַלט"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent_desc": {
+		"message": "אַנאַליזירן די טעקסט אויף די וועב בלאַט צו דעטעקט זייַן שפּראַך. ווען דיסייבאַלד, די שפּראַך ספּעסיפיעד אין די <slot id=docs>בלאַט מעטאַדאַטאַ</slot> וועט ווערן גענוצט"
+	},
+	"settings_option_pageTranslation_enableContextMenu": {
+		"message": "ענייבאַל קאָנטעקסט מעניו קנעפּל"
+	},
+	"settings_option_pageTranslation_enableContextMenu_desc": {
+		"message": "לייג אַ קנעפּל צו טאַגלען בלאַט איבערזעצונג אין די בלאַט קאָנטעקסט מעניו"
+	},
+	"settings_option_pageTranslation_excludeSelectors": {
+		"message": "סעלעקטאָרס צו ויסשליסן פון איבערזעצונג"
+	},
+	"settings_option_pageTranslation_excludeSelectors_desc": {
+		"message": "רשימה פון CSS סעלעקטאָרס פֿאַר עלעמענטן צו ווערן אויסגעשלאסן פון איבערזעצונג. איין סעלעקטאָר פּער שורה. אויב אַ עלעמענט גלייַכן קיין פון די סעלעקטאָרס, זייַן טעקסט, אַטריביוץ, און נעסטעד עלעמענטן וועלן נישט ווערן איבערגעזעצט"
+	},
+	"settings_option_pageTranslation_lazyTranslate": {
+		"message": "איבערזעצן בלויז וויזאַבאַל עלעמענטן"
+	},
+	"settings_option_pageTranslation_lazyTranslate_desc": {
+		"message": "ווען דעם אָפּציע איז ענייבאַלד, בלויז וויזאַבאַל עלעמענטן וועלן ווערן איבערגעזעצט. דעם אָפּציע רעדוצירט נעץ פאַרקער"
+	},
+	"settings_option_pageTranslation_originalTextPopup": {
+		"message": "ענייבאַל פּאָפּאַפּ מיט די אָריגינעל טעקסט"
+	},
+	"settings_option_pageTranslation_originalTextPopup_desc": {
+		"message": "ווייַזן אַ פּאָפּאַפּ מיט די אָריגינעל טעקסט ווען כאָווערינג איבער איבערגעזעצטע טעקסט בלאַקס"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation": {
+		"message": "שאָרטקאַט"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation_desc": {
+		"message": "שאָרטקאַט צו טאַגלען בלאַט איבערזעצונג\nדרוק ESC צו רעסעט שליסלען"
+	},
+	"settings_option_pageTranslation_translatableAttributes": {
+		"message": "איבערזעצבאַר אַטריביוץ"
+	},
+	"settings_option_pageTranslation_translatableAttributes_desc": {
+		"message": "אַרייַן <slot id=htmlAttributes>HTML אַטריביוט</slot> נעמען צו איבערזעצן, איין אַטריביוט פּער שורה\nנאָר די אַטריביוץ אין דעם רשימה וועלן ווערן איבערגעזעצט"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters": {
+		"message": "ווייַזן איבערזעצונג פּראָגרעס"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters_desc": {
+		"message": "ווייַזן אַ טאַפליע מיט בלאַט איבערזעצונג פּראָגרעס אין די עקסטענסיאָן פּאָפּופּ"
+	},
+	"settings_option_selectTranslation": {
+		"message": "איבערזעצונג פֿאַר אויסגעקליבן טעקסט"
+	},
+	"settings_option_selectTranslation_detectTextLanguage": {
+		"message": "דעטעקט טעקסט שפּראַך"
+	},
+	"settings_option_selectTranslation_detectTextLanguage_desc": {
+		"message": "ווען געעפנט, וועט אויסגעקליבן טעקסט זיין אַנאַלייזד צו דעטעקט די שפּראַך פֿאַר איבערזעצונג. אַנדערש, וועט די בלאַט שפּראַך ווערן גענוצט"
+	},
+	"settings_option_selectTranslation_disableWhileTranslatePage": {
+		"message": "דיסייבל בשעת איבערזעצן די בלאַט"
+	},
+	"settings_option_selectTranslation_enable": {
+		"message": "ענייבל אויסגעקליבן טעקסט איבערזעצונג"
+	},
+	"settings_option_selectTranslation_enable_desc": {
+		"message": "ווען די פֿעיִקייט איז געעפנט, קענט איר אויסקלייַבן קיין טעקסט אויף די בלאַט און איבערזעצן עס אין אַ פּאָפּופּ"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton": {
+		"message": "אַוטאָ-פאָקוס אויף די איבערזעצונג קנעפּל"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
+		"message": "ווען די איבערזעצונג קנעפּל דערשייַנען אויף די בלאַט, וועט עס אויטאָמאַטיש ווערן פאָוקיסט"
+	},
+	"settings_option_selectTranslation_header_languageChoice": {
+		"message": "שפּראַך סעטטינגס"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang": {
+		"message": "ערלויבן די איבערזעצונג מאָדול צו דעטעקט די טעקסט שפּראַך"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
+		"message": "ווען די טעקסט שפּראַך קען נישט ווערן דעטעקטעד לאקאל און די אָפּציע איז געעפנט, וועט די טעקסט ווערן איבערגעזעצט מיט די שפּראַך \"אַוטאָ\" אויב געשטיצט.\nווען די אָפּציע איז פארמאכט, וועט אן אנדער פאַלבאַק מעטאָד ווערן גענוצט צו שטעלן די מקור שפּראַך פון די טעקסט"
+	},
+	"settings_option_selectTranslation_mode": {
+		"message": "אַקציע אויף טעקסט סעלעקציע"
+	},
+	"settings_option_selectTranslation_mode_item_contextMenu": {
+		"message": "איבערזעצן טעקסט דורך קאָנטעקסט מעניו"
+	},
+	"settings_option_selectTranslation_mode_item_popupButton": {
+		"message": "ווייַזן איבערזעצונג קנעפּל"
+	},
+	"settings_option_selectTranslation_mode_item_quickTranslate": {
+		"message": "איבערזעצן טעקסט גלייך"
+	},
+	"settings_option_selectTranslation_modifiers": {
+		"message": "מאָדיפיערס"
+	},
+	"settings_option_selectTranslation_modifiers_desc": {
+		"message": "אויסקלייַבן די שליסלען וואָס מוזן ווערן געדריקט אויף די קלאַוויאַטור צו אַרויסווייַזן די איבערזעצונג"
+	},
+	"settings_option_selectTranslation_modifiers_key_alt": {
+		"message": "אַלט"
+	},
+	"settings_option_selectTranslation_modifiers_key_ctrl": {
+		"message": "קאָנטראָל"
+	},
+	"settings_option_selectTranslation_modifiers_key_meta": {
+		"message": "מעטאַ"
+	},
+	"settings_option_selectTranslation_modifiers_key_shift": {
+		"message": "שיפט"
+	},
+	"settings_option_selectTranslation_rememberDirection": {
+		"message": "געדענקען די לעצט אויסגעקליבן טעקסט שפּראַך"
+	},
+	"settings_option_selectTranslation_showOnceForSelection": {
+		"message": "ווייַזן די איבערזעצונג קנעפּל איין מאָל פּער טעקסט סעלעקציע"
+	},
+	"settings_option_selectTranslation_showOnceForSelection_desc": {
+		"message": "די קנעפּל וועט דערשייַנען בלויז איין מאָל פֿאַר יעדער טעקסט סעלעקציע צו ווייַזן עס ווידער, ריסעלעקט די טעקסט"
+	},
+	"settings_option_selectTranslation_showOriginalText": {
+		"message": "ווייַזן אָריגינעל טעקסט"
+	},
+	"settings_option_selectTranslation_showOriginalText_desc": {
+		"message": "לייג אַ בלאָק מיט די אָריגינעל טעקסט צו די איבערזעצונג פּאָפּופּ"
+	},
+	"settings_option_selectTranslation_strictSelection": {
+		"message": "שטרענג מאָדע פון טעקסט שפּאַן סעלעקציע",
+		"description": "This option is about selecting text via mouse"
+	},
+	"settings_option_selectTranslation_strictSelection_desc": {
+		"message": "תתעלם מבחירת טקסט אם הכפתור השמאלי של העכבר משתחרר מחוץ לבלוק המכיל את הטקסט הנבחר"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton": {
+		"message": "פאַרהאַלטן איידער פאַרבאָרגן די פּאָפּופּ קנעפּל"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton_desc": {
+		"message": "פאַרהאַלטן אין מיליסעקונדעס איידער פאַרבאָרגן דעם קנעפּל ווען דער קורסאָר איז נישט האַווערינג איבער אים. האַווערינג איבער דעם קנעפּל רעסעץ דעם טיימער. צו פאַרקריפּלען אַוטאָ-הייד, שטעלן די ווערט צו ווייניקער ווי 1"
+	},
+	"settings_option_selectTranslation_zIndex": {
+		"message": "z-index"
+	},
+	"settings_option_selectTranslation_zIndex_desc": {
+		"message": "פאַרגרעסערן דעם ווערט אויב עלעמענטן אויף עטלעכע בלעטער אָוווערלאַפּן דעם פּאָפּאַפּ מיט איבערגעזעצט טעקסט"
+	},
+	"settings_option_textTranslator": {
+		"message": "טעקסט איבערזעצונג"
+	},
+	"settings_option_textTranslator_rememberText": {
+		"message": "געדענקען איבערגעזעצט טעקסט"
+	},
+	"settings_option_textTranslator_rememberText_desc": {
+		"message": "געדענקען איבערגעזעצט טעקסט פֿאַר די ווייַטער מאָל די פֿענצטער עפֿנט זיך"
+	},
+	"settings_option_textTranslator_spellCheck": {
+		"message": "ענייבאַל ספּעל טשעק"
+	},
+	"settings_option_textTranslator_suggestLanguage": {
+		"message": "ווייַזנדיק דיטעקטעד טעקסט שפּראַך"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways": {
+		"message": "שטענדיק דיטעקט און פאָרשלאָגן שפּראַך"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways_desc": {
+		"message": "ווען פאַרקריפּלט, שפּראַך פֿירלייגן דערשייַנען בלויז אויב די מקור שפּראַך איז באַשטימט צו \"אַוטאָ\""
+	},
+	"settings_option_translatePreferences": {
+		"message": "איבערזעצונג פּרעפֿערענצן"
+	},
+	"settings_option_translateScheduler": {
+		"message": "איבערזעצונג פּלאַנירונג"
+	},
+	"settings_option_translateScheduler_delay": {
+		"message": "טעקסט אַקיומיאַליישאַן פאַרהאַלטן"
+	},
+	"settings_option_translateScheduler_delay_desc": {
+		"message": "דער איבערזעצונג פּלאַנירער רידוסאַז די נומער פון ריקוועס צו די איבערזעצונג דינסט אַפּי דורך אַקיומיאַלייטינג ווי פילע טעקסטן ווי מעגלעך צו שיקן אין אַ איין בעטן. דער פּלאַנירער וועט וואַרטן פֿאַר די ספּעציפיצירט צייט אין מיליסעקונדעס צו קלייַבן מער טעקסטן איידער סטאַרטינג איבערזעצונג"
+	},
+	"settings_option_translateScheduler_retryLimit": {
+		"message": "גרענעץ פֿאַר איבערזעצונג ריטרי פּרווון"
+	},
+	"settings_option_translateScheduler_retryLimit_desc": {
+		"message": "דער פּלאַנירער וועט ריטרי איבערזעצן טעקסטן ווען איבערזעצונג ערראָרס פּאַסירן. דעם אָפּציע שטעלט אַ שיעור אויף ריטרי פּרווון. שטעלן אַ נעגאַטיוו נומער צו לאָזן אַנלימאַטאַד ריטריעס"
+	},
+	"settings_option_translatorModule": {
+		"message": "איבערזעצונג מאָדולע"
+	},
+	"settings_option_translatorModule_desc": {
+		"message": "די קוואַליטעט פון איבערזעצונגען און די פאַראַנען שפּראַכן אָפענגען אויף די איבערזעצונג מאָדולע"
+	},
+	"settings_option_tts": {
+		"message": "טעקסט צו רעדן קאַנווערזשאַן (TTS)"
+	},
+	"settings_option_ttsCustomModules": {
+		"message": "מנהג רעדן סינטעז מאָדולעס"
+	},
+	"settings_option_ttsCustomModules_button": {
+		"message": "פאַרוואַלטונג רעדן סינטעז מאָדולעס"
+	},
+	"settings_option_ttsCustomModules_desc": {
+		"message": "איר קענען לייגן רעדן סינטעז מאָדולעס וואָס נוצן אייער באַליבסטע באַדינונגען און קול ענדזשאַנז. לייענען מער אין די <slot id=docs>מנהג TTS דאָקומענטאַציע</slot>"
+	},
+	"settings_option_ttsModule": {
+		"message": "אויסגעקליבן TTS מאָדולע"
+	},
+	"settings_option_ttsModule_desc": {
+		"message": "קול מאָטאָר געניצט פֿאַר וואָיסינג די טעקסט"
+	},
+	"settings_option_userLanguage": {
+		"message": "דיין שפּראַך"
+	},
+	"settings_option_userLanguage_desc": {
+		"message": "די שפּראַך וואָס טעקסטן וועט זיין איבערגעזעצט אין"
+	},
+	"settings_pageTitle": {
+		"message": "סעטטינגס"
+	},
+	"settings_section_history": {
+		"message": "געשיכטע"
+	},
+	"settings_section_popup": {
+		"message": "פּאָפּאַפּ"
+	},
+	"textTranslator_suggestLanguage": {
+		"message": "עס קוקט אויס ווי די טעקסט שפּראַך איז <slot id=languageSuggest>$language_name$</slot>",
+		"placeholders": {
+			"language_name": {
+				"content": "$1",
+				"example": "Japanese"
+			}
+		}
+	},
+	"textTranslator_translateInputPlaceholder": {
+		"message": "אַרײַנלייגן טעקסט פֿאַר איבערזעצונג",
+		"description": "Request to user input some text for translation"
+	},
+	"textTranslator_translatePlaceholder": {
+		"message": "איבערגעזעצטער טעקסט וועט זײַן דאָ"
+	},
+	"translatorsManagerWindow_add": {
+		"message": "צולייגן איבערזעצונג מאָדול"
+	},
+	"translatorsManagerWindow_close": {
+		"message": "פֿאַרמאַכן"
+	},
+	"translatorsManagerWindow_emptyTranslatorsListText": {
+		"message": "קיין קאַסטאַמייזד איבערזעצונג מאָדולן זענען נאָך נישט צוגעגעבן"
+	},
+	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
+		"message": "זענט איר זיכער אַז איר ווילט אַראָפּנעמען די \"$translator_name$\" איבערזעצונג מאָדול?",
+		"placeholders": {
+			"translator_name": {
+				"content": "$1",
+				"example": "Google translator"
+			}
+		}
+	},
+	"translatorsManagerWindow_title": {
+		"message": "קאַסטאַמייזד איבערזעצונג מאָדולן"
+	},
+	"translatorsManagerWindow_translator_delete": {
+		"message": "אויסמעקן"
+	},
+	"translatorsManagerWindow_translator_edit": {
+		"message": "רעדאַגירן"
+	},
+	"ttsManagerWindow_add": {
+		"message": "צולייגן TTS מאָדול"
+	},
+	"ttsManagerWindow_close": {
+		"message": "פֿאַרמאַכן"
+	},
+	"ttsManagerWindow_emptyTranslatorsListText": {
+		"message": "קיין TTS מאָדולן זענען נאָך נישט צוגעגעבן"
+	},
+	"ttsManagerWindow_message_ttsRemoveConfirmation": {
+		"message": "זענט איר זיכער אַז איר ווילט אַראָפּנעמען די TTS מאָדול \"$tts_name$\"?",
+		"placeholders": {
+			"tts_name": {
+				"content": "$1",
+				"example": "Google TTS"
+			}
+		}
+	},
+	"ttsManagerWindow_title": {
+		"message": "טעקסט-צו-רעדן מאָדולן"
+	},
+	"ttsManagerWindow_translator_delete": {
+		"message": "אויסמעקן"
+	},
+	"ttsManagerWindow_translator_edit": {
+		"message": "רעדאַגירן"
+	},
+	"validation_number": {
+		"message": "ווערט מוז זײַן אַ נומער"
+	},
+	"validation_numberBetweenRange": {
+		"message": "ווערט מוז זײַן אַ נומער צווישן $1 און $2"
+	},
+	"validation_positiveNumber": {
+		"message": "ווערט מוז זײַן אַ פּאָזיטיווער נומער"
+	}
+}

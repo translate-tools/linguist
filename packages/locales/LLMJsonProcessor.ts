@@ -1,6 +1,37 @@
-import { LLMFetcher } from './LLMFetcher';
+import deepmerge from 'deepmerge';
+
+import { LLMFetcher, MessageObject } from './LLMFetcher';
 import { sliceJsonString } from './utils/json';
+import { ObjectFilter, splitObjectByFilter } from './utils/splitObjectByFilter';
 import { waitTimeWithJitter } from './utils/time';
+
+export type ValidatorResult =
+	| {
+			isValid: true;
+	  }
+	| {
+			isValid: false;
+			reason?: unknown;
+			correctionRequest?: MessageObject[];
+	  };
+
+export type ObjectTransformingValidator = (
+	sourceObject: any,
+	processedObject: any,
+) => ValidatorResult;
+
+export type ProcessingHooks = {
+	onParsingError?: (response: string) => MessageObject[];
+	onProcessed?: (info: { completed: number; total: number }) => void;
+	onError?: (info: { error: unknown; retry: number; id: number }) => void;
+};
+
+export type ProcessingOptions = ProcessingHooks & {
+	prompt: (json: string) => string;
+	filter?: ObjectFilter;
+	validate?: ObjectTransformingValidator;
+	validateSlice?: ObjectTransformingValidator;
+};
 
 /**
  * LLM processor for JSON objects that support object slicing
@@ -25,16 +56,20 @@ export class LLMJsonProcessor {
 		sourceObject: T,
 		{
 			prompt,
+			onProcessed,
+			onParsingError,
+			onError,
+			filter,
 			validate,
 			validateSlice,
-		}: {
-			prompt: (json: string) => string;
-			validate?: (sourceObject: any, processedObject: any) => boolean;
-			validateSlice?: (sourceObject: any, processedObject: any) => boolean;
-		},
+		}: ProcessingOptions,
 	) {
+		const filteredObject = filter
+			? splitObjectByFilter(sourceObject, filter)
+			: { included: sourceObject, excluded: {} };
+
 		const objectSlices = sliceJsonString(
-			JSON.stringify(sourceObject),
+			JSON.stringify(filteredObject.included),
 			this.fetcher.getLengthLimit(),
 			this.config.termsLimit ?? 6,
 		);
@@ -42,6 +77,7 @@ export class LLMJsonProcessor {
 		const transformedSlices: [string, unknown][][] = Array(objectSlices.length);
 
 		let index = 0;
+		let completedCounter = 0;
 		const abort = new AbortController();
 		await Promise.all(
 			Array(this.config.concurrency ?? 3)
@@ -56,27 +92,82 @@ export class LLMJsonProcessor {
 						// End of worker
 						if (!slice) return;
 
+						const messages: MessageObject[] = [
+							{ role: 'user', content: prompt(slice) },
+						];
+						let correctionMessages: null | MessageObject[] = null;
 						for (let retry = 0; true; retry++) {
 							if (abort.signal.aborted) return;
 
 							try {
-								const transformedSlice = await this.fetcher.fetch(
-									prompt(slice),
-								);
-								const sourceObject = JSON.parse(slice);
-								const transformedObject = JSON.parse(transformedSlice);
+								// Update request
+								if (correctionMessages) {
+									messages.push(...correctionMessages);
+									correctionMessages = null;
+								}
 
-								if (
-									validateSlice &&
-									!validateSlice(sourceObject, transformedObject)
-								) {
-									throw new TypeError('Invalid slice');
+								const response = await this.fetcher.query(
+									structuredClone(messages),
+								);
+
+								// Update messages
+								messages.push(...response);
+
+								const transformedSlice = messages.slice(-1)[0].content;
+								if (!transformedSlice)
+									throw new TypeError('Empty message in response');
+
+								const sourceObject = JSON.parse(slice);
+								let transformedObject;
+								try {
+									transformedObject = JSON.parse(transformedSlice);
+								} catch (error) {
+									if (onParsingError) {
+										correctionMessages =
+											onParsingError(transformedSlice);
+									}
+									throw error;
+								}
+
+								// Validate slice
+								if (validateSlice) {
+									const validationResult = validateSlice(
+										sourceObject,
+										transformedObject,
+									);
+
+									if (!validationResult.isValid) {
+										// Correction messages
+										if (validationResult.correctionRequest) {
+											correctionMessages =
+												validationResult.correctionRequest;
+										}
+
+										throw validationResult.reason
+											? validationResult.reason
+											: new TypeError('Invalid slice');
+									}
 								}
 
 								transformedSlices[currentIndex] =
 									Object.entries(transformedObject);
+
+								completedCounter++;
+
+								// Notify successful processing
+								if (onProcessed) {
+									onProcessed({
+										completed: completedCounter,
+										total: objectSlices.length,
+									});
+								}
 								break;
 							} catch (error) {
+								// Notify error
+								if (onError) {
+									onError({ error, retry, id: index });
+								}
+
 								if (
 									retry++ < (this.config.chunkParsingRetriesLimit ?? 5)
 								) {
@@ -105,9 +196,17 @@ export class LLMJsonProcessor {
 			throw error;
 		});
 
-		const transformedObject = Object.fromEntries(transformedSlices.flat());
-		if (validate && !validate(sourceObject, transformedObject))
-			throw new TypeError('Invalid result object');
+		const transformedObject = deepmerge.all([
+			Object.fromEntries(transformedSlices.flat()),
+			filteredObject.excluded,
+		]);
+
+		// Validate result object
+		if (validate) {
+			const validationResult = validate(sourceObject, transformedObject);
+			if (!validationResult.isValid)
+				throw validationResult.reason ?? new TypeError('Invalid result object');
+		}
 
 		return transformedObject;
 	}

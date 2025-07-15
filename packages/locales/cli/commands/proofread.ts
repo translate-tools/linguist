@@ -75,7 +75,7 @@ command
 					},
 					{
 						model: process.env.OPENAI_MODEL ?? 'openai/gpt-4.1-mini',
-						temperature: 1,
+						temperature: 0,
 					},
 				),
 				{ concurrency: 10 },
@@ -115,11 +115,27 @@ command
 					You should fix any grammar issues and typos.
 
 					You must never add any dots at end of sentences, because you don't know how it will be used and you will break some use cases.
+
+					You must never change slogans and marketing descriptions for a products.
+
+					Never change text intention. For example, if text is formulated as an question, you must never remove question mark.
 	
 					In case a message have no problems, you must leave it as is.
 	
 					Be careful when creating an JSON object; it must be syntactically correct and do not change quotation marks.
+
+					Never change texts if it not necessary. Preserve original text always when it is possible.
+					This is critical error if you will change text that is fine and not require any changes.
 	
+					# The context
+
+					You must consider next project description as context when you work on localization:
+
+					> Linguist is a browser extension for translate web pages. It is a full-featured translation solution.
+					> With Linguist user may run full page translation, translate any custom text, translate selected text.
+					> Linguist supports a custom translators, so user can add its own implementation of translator module.
+					> Linguist is a privacy focused, includes embedded modules for offline translation in user device (locally).
+
 					# Your task
 	
 					Here is the JSON to proofread:

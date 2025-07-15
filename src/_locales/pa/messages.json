@@ -1,0 +1,623 @@
+{
+	"common_action_addToDictionary": {
+		"message": "ਅਨੁਵਾਦ ਨੂੰ ਸ਼ਬਦਕੋਸ਼ ਵਿੱਚ ਸ਼ਾਮਲ ਕਰੋ"
+	},
+	"common_action_removeFromDictionary": {
+		"message": "ਅਨੁਵਾਦ ਨੂੰ ਸ਼ਬਦਕੋਸ਼ ਤੋਂ ਹਟਾਓ"
+	},
+	"common_bgUnavailable": {
+		"message": "ਪਿਛੋਕੜ ਸਕ੍ਰਿਪਟ ਉਪਲਬਧ ਨਹੀਂ"
+	},
+	"common_cancel": {
+		"message": "ਰੱਦ ਕਰੋ"
+	},
+	"common_close": {
+		"message": "ਬੰਦ ਕਰੋ"
+	},
+	"common_copy": {
+		"message": "ਕਾਪੀ ਕਰੋ"
+	},
+	"common_error": {
+		"message": "ਗਲਤੀ"
+	},
+	"common_offlineTranslator": {
+		"message": "$1 - ਆਫਲਾਈਨ ਅਨੁਵਾਦਕ"
+	},
+	"common_retry": {
+		"message": "ਮੁੜ ਕੋਸ਼ਿਸ਼ ਕਰੋ"
+	},
+	"common_translate": {
+		"message": "ਅਨੁਵਾਦ ਕਰੋ"
+	},
+	"component_hotkey_placeholder": {
+		"message": "ਇੱਕ ਸ਼ਾਰਟਕੱਟ ਰਿਕਾਰਡ ਕਰਨ ਲਈ ਕਲਿੱਕ ਕਰੋ"
+	},
+	"component_hotkey_recordPlaceholder": {
+		"message": "ਕੁੰਜੀਆਂ ਦਬਾਓ"
+	},
+	"component_hotkey_resetButton": {
+		"message": "ਰੀਸੈੱਟ ਕਰੋ"
+	},
+	"contextMenu_disablePageTranslation": {
+		"message": "ਪੰਨਾ ਅਨੁਵਾਦ ਰੋਕੋ"
+	},
+	"contextMenu_translatePage": {
+		"message": "ਪੰਨਾ ਅਨੁਵਾਦ ਕਰੋ"
+	},
+	"contextMenu_translateSelectedText": {
+		"message": "ਚੁਣੇ ਗਏ ਪਾਠ ਦਾ ਅਨੁਵਾਦ ਕਰੋ"
+	},
+	"dictionaryButton_add": {
+		"message": "ਸ਼ਬਦਕੋਸ਼ ਵਿੱਚ ਸ਼ਾਮਲ ਕਰੋ"
+	},
+	"dictionaryButton_delete": {
+		"message": "ਸ਼ਬਦਕੋਸ਼ ਤੋਂ ਹਟਾਓ"
+	},
+	"dictionary_button_export": {
+		"message": "ਨਿਰਯਾਤ ਕਰੋ"
+	},
+	"dictionary_button_removeAll": {
+		"message": "ਸਭ ਹਟਾਓ"
+	},
+	"dictionary_deleteAll": {
+		"message": "ਕੀ ਤੁਸੀਂ ਯਕੀਨਨ ਸਾਰੇ ਅਨੁਵਾਦਾਂ ਨੂੰ ਸ਼ਬਦਕੋਸ਼ ਤੋਂ ਹਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ?"
+	},
+	"dictionary_deleteConfirmation": {
+		"message": "ਕੀ ਤੁਸੀਂ ਯਕੀਨਨ ਇਸ ਅਨੁਵਾਦ ਨੂੰ ਹਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ?"
+	},
+	"dictionary_description": {
+		"message": "ਅਨੁਵਾਦਾਂ ਨੂੰ ਸ਼ਬਦਕੋਸ਼ ਵਿੱਚ ਸੁਰੱਖਿਅਤ ਕਰੋ ਤਾਂ ਜੋ ਬਾਅਦ ਵਿੱਚ ਉਨ੍ਹਾਂ ਨੂੰ ਜਲਦੀ ਲੱਭ ਸਕੋ"
+	},
+	"dictionary_emptyDictionary": {
+		"message": "ਸ਼ਬਦਕੋਸ਼ ਖਾਲੀ ਹੈ, ਕੁਝ ਪਾਠ ਦਾ ਅਨੁਵਾਦ ਕਰਕੇ ਇਸਨੂੰ ਭਰਨਾ ਸ਼ੁਰੂ ਕਰੋ"
+	},
+	"dictionary_filter_from": {
+		"message": "ਸਰੋਤ ਪਾਠ ਦੀ ਭਾਸ਼ਾ"
+	},
+	"dictionary_filter_to": {
+		"message": "ਟਾਰਗੇਟ ਭਾਸ਼ਾ"
+	},
+	"dictionary_message_deleteAll_success": {
+		"message": "ਸਾਰੇ ਅਨੁਵਾਦ ਹਟਾ ਦਿੱਤੇ ਗਏ ਹਨ"
+	},
+	"dictionary_notFoundEntries": {
+		"message": "ਇਹਨਾਂ ਫਿਲਟਰਾਂ ਨਾਲ ਕੋਈ ਅਨੁਵਾਦ ਨਹੀਂ ਮਿਲਿਆ"
+	},
+	"dictionary_pageTitle": {
+		"message": "ਸ਼ਬਦਕੋਸ਼"
+	},
+	"dictionary_resetFilters": {
+		"message": "ਫਿਲਟਰ ਰੀਸੈੱਟ ਕਰੋ"
+	},
+	"dictionary_searchPlaceholder": {
+		"message": "ਪਾਠ ਦੁਆਰਾ ਖੋਜੋ"
+	},
+	"editorWindow_close": {
+		"message": "ਬੰਦ ਕਰੋ"
+	},
+	"editorWindow_data_code": {
+		"message": "ਕੋਡ"
+	},
+	"editorWindow_data_title": {
+		"message": "ਮੋਡੀਊਲ ਨਾਮ"
+	},
+	"editorWindow_message_invalidTitle": {
+		"message": "ਮੋਡੀਊਲ ਨਾਮ ਵਿੱਚ ਘੱਟੋ-ਘੱਟ ਇੱਕ ਅੱਖਰ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ"
+	},
+	"editorWindow_save": {
+		"message": "ਸੰਭਾਲੋ"
+	},
+	"ext_description": {
+		"message": "ਵੈੱਬ ਪੇਜ ਅਨੁਵਾਦ, ਪਾਠ ਅਨੁਵਾਦ, ਸ਼ਬਦਕੋਸ਼, ਇਤਿਹਾਸ, ਕਸਟਮ ਅਨੁਵਾਦਕ, ਸਾਰੇ ਤੁਹਾਨੂੰ ਭਾਸ਼ਾ ਦੀਆਂ ਰੁਕਾਵਟਾਂ ਨੂੰ ਤੋੜਨ ਲਈ ਲੋੜੀਂਦੇ ਹਨ"
+	},
+	"ext_name": {
+		"message": "Linguist - ਵੈੱਬ ਪੇਜ ਅਨੁਵਾਦਕ"
+	},
+	"history_control_selectEntry": {
+		"message": "ਬਲਕ ਕਾਰਵਾਈ ਲਈ ਅਨੁਵਾਦ ਚੁਣੋ",
+		"description": "Description in finite form \"to pick\" with explaining what this checkbox will do"
+	},
+	"history_controls_clearHistory": {
+		"message": "ਇਤਿਹਾਸ ਸਾਫ਼ ਕਰੋ"
+	},
+	"history_controls_deleteSelected": {
+		"message": "ਚੁਣੇ ਹੋਏ ਅਨੁਵਾਦ ਮਿਟਾਓ"
+	},
+	"history_controls_selectAll": {
+		"message": "ਸਾਰੇ ਅਨੁਵਾਦ ਚੁਣੋ"
+	},
+	"history_message_clearHistoryConfirmation": {
+		"message": "ਕੀ ਤੁਸੀਂ ਯਕੀਨਨ ਇਤਿਹਾਸ ਸਾਫ਼ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ? ਸਾਰੇ ਐਨਟਰੀ ਹਟਾ ਦਿੱਤੇ ਜਾਣਗੇ"
+	},
+	"history_message_deleteEntryConfirmation": {
+		"message": "ਕੀ ਤੁਸੀਂ ਯਕੀਨਨ ਇਸ ਐਨਟਰੀ ਨੂੰ ਮਿਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ?"
+	},
+	"history_message_deleteSelectedEntriesConfirmation": {
+		"message": "ਕੀ ਤੁਸੀਂ ਯਕੀਨਨ ਚੁਣੀਆਂ ਗਈਆਂ ਐਨਟਰੀਆਂ ($1) ਨੂੰ ਮਿਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ?"
+	},
+	"history_message_entriesNotFound": {
+		"message": "ਫਿਲਟਰ ਨਾਲ ਮੇਲ ਖਾਂਦੇ ਅਨੁਵਾਦ ਨਹੀਂ ਮਿਲੇ"
+	},
+	"history_message_noEntries": {
+		"message": "ਇਤਿਹਾਸ ਖਾਲੀ ਹੈ"
+	},
+	"history_notification_disabled": {
+		"message": "ਇਤਿਹਾਸ ਦੀ ਰਿਕਾਰਡਿੰਗ ਅਯੋਗ ਹੈ, ਇਸ ਲਈ ਨਵੀਆਂ ਐਨਟਰੀਆਂ ਨਹੀਂ ਆਉਣਗੀਆਂ। ਤੁਸੀਂ ਇਸਨੂੰ <slot id=preferences>ਪਸੰਦਾਂ</slot> ਵਿੱਚ ਬਦਲ ਸਕਦੇ ਹੋ"
+	},
+	"history_pageTitle": {
+		"message": "ਇਤਿਹਾਸ"
+	},
+	"history_searchPlaceholder": {
+		"message": "ਪਾਠ ਦੁਆਰਾ ਖੋਜੋ"
+	},
+	"inlineTranslator_showOriginalText": {
+		"message": "ਮੂਲ ਪਾਠ ਦਿਖਾਓ"
+	},
+	"lang_change": {
+		"message": "ਭਾਸ਼ਾ ਬਦਲੋ"
+	},
+	"lang_detect": {
+		"message": "ਆਟੋ-ਡਿਟੈਕਟ"
+	},
+	"lang_select": {
+		"message": "ਭਾਸ਼ਾ ਚੁਣੋ"
+	},
+	"lang_swap": {
+		"message": "ਭਾਸ਼ਾਵਾਂ ਬਦਲੋ"
+	},
+	"message_unknownError": {
+		"message": "ਅਣਜਾਣ ਗਲਤੀ"
+	},
+	"pageTranslator_alwaysTranslateLang": {
+		"message": "ਹਮੇਸ਼ਾਂ ਇਸ ਭਾਸ਼ਾ ਦਾ ਅਨੁਵਾਦ ਕਰੋ"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disable": {
+		"message": "ਅਯੋਗ ਕਰੋ"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
+		"message": "ਸਾਰੇ ਸਾਈਟਾਂ ਲਈ ਅਯੋਗ ਕਰੋ"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_enable": {
+		"message": "ਯੋਗ ਕਰੋ"
+	},
+	"pageTranslator_commonPreferences_title": {
+		"message": "ਇਸ ਭਾਸ਼ਾ ਲਈ ਆਮ ਪਸੰਦਾਂ"
+	},
+	"pageTranslator_option_autoTranslate": {
+		"message": "ਆਟੋ-ਅਨੁਵਾਦ"
+	},
+	"pageTranslator_showOriginal": {
+		"message": "ਅਸਲ ਵੇਖਾਓ"
+	},
+	"pageTranslator_showTranslationPreferences": {
+		"message": "ਅਨੁਵਾਦ ਪਸੰਦਾਂ"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_always": {
+		"message": "ਹਮੇਸ਼ਾ ਅਨੁਵਾਦ ਕਰੋ"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
+		"message": "ਇਸ ਭਾਸ਼ਾ ਲਈ ਹਮੇਸ਼ਾ ਅਨੁਵਾਦ ਕਰੋ"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_default": {
+		"message": "ਆਮ ਨਿਯਮ ਵਰਤੋ"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
+		"message": "ਇਸ ਭਾਸ਼ਾ ਲਈ ਆਮ ਨਿਯਮ ਵਰਤੋ"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_never": {
+		"message": "ਕਦੇ ਵੀ ਅਨੁਵਾਦ ਨਾ ਕਰੋ"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
+		"message": "ਇਸ ਭਾਸ਼ਾ ਲਈ ਕਦੇ ਵੀ ਅਨੁਵਾਦ ਨਾ ਕਰੋ"
+	},
+	"pageTranslator_sitePreferences_title": {
+		"message": "ਲਈ ਪਸੰਦਾਂ"
+	},
+	"pageTranslator_translatePage": {
+		"message": "ਪੰਨਾ ਅਨੁਵਾਦ ਕਰੋ"
+	},
+	"pageTranslator_translationReport": {
+		"message": "ਅਨੁਵਾਦ ਰਿਪੋਰਟ"
+	},
+	"pageTranslator_translationReport_queue": {
+		"message": "ਬਕਾਇਆ"
+	},
+	"pageTranslator_translationReport_reject": {
+		"message": "ਗਲਤੀਆਂ"
+	},
+	"pageTranslator_translationReport_resolve": {
+		"message": "ਅਨੁਵਾਦ ਕੀਤਾ"
+	},
+	"popup_tabIdNotFound": {
+		"message": "ਟੈਬ \"$1\" ਨਹੀਂ ਮਿਲਿਆ"
+	},
+	"popup_tab_translatePage": {
+		"message": "ਪੰਨਾ ਅਨੁਵਾਦ"
+	},
+	"popup_tab_translateText": {
+		"message": "ਪਾਠ ਅਨੁਵਾਦ"
+	},
+	"settings_button_cancel": {
+		"message": "ਰੱਦ ਕਰੋ"
+	},
+	"settings_button_export": {
+		"message": "ਕੰਫਿਗਰੇਸ਼ਨ ਨਿਰਯਾਤ ਕਰੋ"
+	},
+	"settings_button_import": {
+		"message": "ਕੰਫਿਗਰੇਸ਼ਨ ਆਯਾਤ ਕਰੋ"
+	},
+	"settings_button_reset": {
+		"message": "ਕੰਫਿਗਰੇਸ਼ਨ ਰੀਸੈਟ ਕਰੋ"
+	},
+	"settings_button_saveChanges": {
+		"message": "ਬਦਲਾਅ ਸੁਰੱਖਿਅਤ ਕਰੋ"
+	},
+	"settings_message_clearCache_success": {
+		"message": "ਕੈਸ਼ ਸਾਫ਼ ਕੀਤਾ"
+	},
+	"settings_message_common_invalidValueType": {
+		"message": "ਗਲਤ ਮੁੱਲ"
+	},
+	"settings_message_importConfig_invalidFile": {
+		"message": "ਦਿੱਤੀ ਗਈ ਕੰਫਿਗਰੇਸ਼ਨ ਫਾਈਲ ਗਲਤ ਜਾਂ ਖਰਾਬ ਹੈ, ਅਤੇ ਪ੍ਰਕਿਰਿਆ ਨਹੀਂ ਕੀਤੀ ਜਾ ਸਕਦੀ"
+	},
+	"settings_message_importConfig_success": {
+		"message": "ਆਯਾਤ ਪੂਰਾ"
+	},
+	"settings_message_resetConfig_confirm": {
+		"message": "ਸੈਟਿੰਗਜ਼ ਨੂੰ ਮੂਲ ਮੁੱਲਾਂ 'ਤੇ ਰੀਸੈਟ ਕਰਨ ਦੀ ਪੁਸ਼ਟੀ ਕਰੋ"
+	},
+	"settings_message_resetConfig_success": {
+		"message": "ਸੈਟਿੰਗਜ਼ ਰੀਸੈਟ"
+	},
+	"settings_message_saveChanges_success": {
+		"message": "ਬਦਲਾਅ ਸੁਰੱਖਿਅਤ ਕੀਤੇ"
+	},
+	"settings_option_cache": {
+		"message": "ਕੈਸ਼"
+	},
+	"settings_option_cache_clear": {
+		"message": "ਕੈਸ਼ ਸਾਫ਼ ਕਰੋ"
+	},
+	"settings_option_cache_clear_desc": {
+		"message": "ਜੇਕਰ ਤੁਸੀਂ ਅਨੁਵਾਦ ਦੀਆਂ ਗਲਤੀਆਂ ਨੋਟ ਕਰਦੇ ਹੋ ਜਾਂ ਕੈਸ਼ ਚਾਲੂ ਹੋਣ ਤੇ ਗਲਤੀ ਨਾਲ ਨਿੱਜੀ ਪਾਠਾਂ ਦਾ ਅਨੁਵਾਦ ਕਰਦੇ ਹੋ, ਤਾਂ ਤੁਸੀਂ ਕੈਸ਼ ਤੋਂ ਸਾਰੇ ਡਾਟਾ ਨੂੰ ਮਿਟਾ ਸਕਦੇ ਹੋ",
+		"description": "Explanation for user about cases when it's useful to clear cache"
+	},
+	"settings_option_cache_enable": {
+		"message": "ਕੈਸ਼ ਚਾਲੂ ਕਰੋ"
+	},
+	"settings_option_cache_enable_desc": {
+		"message": "ਜਦੋਂ ਕੈਸ਼ ਚਾਲੂ ਹੁੰਦਾ ਹੈ, ਤਾਂ ਪਹਿਲਾਂ ਅਨੁਵਾਦ ਕੀਤੇ ਗਏ ਪਾਠਾਂ ਦਾ ਤੁਰੰਤ ਅਨੁਵਾਦ ਕੀਤਾ ਜਾਵੇਗਾ ਬਿਨਾਂ ਅਨੁਵਾਦ ਸੇਵਾ ਨੂੰ ਵਾਧੂ ਬੇਨਤੀ ਕੀਤੇ"
+	},
+	"settings_option_cache_ignoreCase": {
+		"message": "ਕੇਸ-ਅਣਗੌਲ ਕੈਸ਼ ਵਰਤੋ"
+	},
+	"settings_option_cache_ignoreCase_desc": {
+		"message": "ਜਦੋਂ ਚਾਲੂ ਕੀਤਾ ਜਾਂਦਾ ਹੈ, ਕੈਸ਼ ਕੀਤੇ ਅਨੁਵਾਦ ਵੱਖਰੇ ਕੇਸਾਂ ਵਾਲੇ ਪਾਠਾਂ ਲਈ ਵਰਤੇ ਜਾਣਗੇ, ਜੋ ਕੁਝ ਹਾਲਾਤਾਂ ਵਿੱਚ ਅਨੁਵਾਦ ਵਿਘਟਨ ਪੈਦਾ ਕਰ ਸਕਦੇ ਹਨ"
+	},
+	"settings_option_commonSettings": {
+		"message": "ਸਧਾਰਨ ਸੈਟਿੰਗਾਂ"
+	},
+	"settings_option_customTranslatorModule": {
+		"message": "ਕਸਟਮ ਅਨੁਵਾਦ ਮਾਡਿਊਲ",
+		"description": "An user defined code that implements a translation module"
+	},
+	"settings_option_customTranslatorModule_desc": {
+		"message": "ਤੁਸੀਂ ਆਪਣੇ ਮਨਪਸੰਦ ਅਨੁਵਾਦ ਸੇਵਾਵਾਂ ਦੀ ਵਰਤੋਂ ਕਰਨ ਵਾਲੇ ਕਸਟਮ ਅਨੁਵਾਦ ਮਾਡਿਊਲ ਜੋੜ ਸਕਦੇ ਹੋ। <slot id=docs>ਕਸਟਮ ਅਨੁਵਾਦਕ ਦਸਤਾਵੇਜ਼</slot> ਵਿੱਚ ਹੋਰ ਜਾਣੋ"
+	},
+	"settings_option_customTranslatorModule_manageButton": {
+		"message": "ਅਨੁਵਾਦਕਾਂ ਦਾ ਪ੍ਰਬੰਧਨ",
+		"description": "A button to show list of translation modules"
+	},
+	"settings_option_history_enable": {
+		"message": "ਇਤਿਹਾਸ ਚਾਲੂ ਕਰੋ"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "ਜਦੋਂ ਚਾਲੂ ਕੀਤਾ ਜਾਂਦਾ ਹੈ, ਅਨੁਵਾਦ ਦਰਜ ਕੀਤੇ ਜਾਣਗੇ ਅਤੇ <slot id=historyPage>ਇਤਿਹਾਸ ਪੰਨਾ</slot> 'ਤੇ ਦਿਖਾਈ ਦੇਣਗੇ"
+	},
+	"settings_option_pageTranslation": {
+		"message": "ਪੂਰੇ ਪੰਨੇ ਦਾ ਅਨੁਵਾਦ"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent": {
+		"message": "ਸਮੱਗਰੀ ਦੁਆਰਾ ਭਾਸ਼ਾ ਪਛਾਣੋ"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent_desc": {
+		"message": "ਇਸ ਦੀ ਭਾਸ਼ਾ ਪਛਾਣਣ ਲਈ ਵੈੱਬ ਪੰਨੇ ਦੇ ਪਾਠ ਦਾ ਵਿਸ਼ਲੇਸ਼ਣ ਕਰੋ। ਜਦੋਂ ਅਯੋਗ ਕੀਤਾ ਜਾਂਦਾ ਹੈ, ਤਾਂ <slot id=docs>ਪੰਨਾ ਮੈਟਾਡੇਟਾ</slot> ਵਿੱਚ ਨਿਰਧਾਰਤ ਭਾਸ਼ਾ ਵਰਤੀ ਜਾਵੇਗੀ"
+	},
+	"settings_option_pageTranslation_enableContextMenu": {
+		"message": "ਸੰਦਰਭ ਮੀਨੂ ਬਟਨ ਚਾਲੂ ਕਰੋ"
+	},
+	"settings_option_pageTranslation_enableContextMenu_desc": {
+		"message": "ਪੰਨੇ ਦੇ ਸੰਦਰਭ ਮੀਨੂ ਵਿੱਚ ਪੰਨੇ ਦੇ ਅਨੁਵਾਦ ਨੂੰ ਟੌਗਲ ਕਰਨ ਲਈ ਬਟਨ ਸ਼ਾਮਲ ਕਰੋ"
+	},
+	"settings_option_pageTranslation_excludeSelectors": {
+		"message": "ਅਨੁਵਾਦ ਤੋਂ ਬਾਹਰ ਕੱਢਣ ਲਈ ਚੁਣਨਹਾਰ"
+	},
+	"settings_option_pageTranslation_excludeSelectors_desc": {
+		"message": "ਉਹ ਤੱਤ ਜੋ ਅਨੁਵਾਦ ਤੋਂ ਬਾਹਰ ਕੱਢੇ ਜਾਣੇ ਹਨ, ਲਈ CSS ਚੁਣਨਹਾਰਾਂ ਦੀ ਸੂਚੀ। ਪ੍ਰਤੀ ਲਾਈਨ ਇੱਕ ਚੁਣਨਹਾਰ। ਜੇਕਰ ਕੋਈ ਤੱਤ ਇਨ੍ਹਾਂ ਚੁਣਨਹਾਰਾਂ ਵਿੱਚੋਂ ਕਿਸੇ ਨਾਲ ਮੇਲ ਖਾਂਦਾ ਹੈ, ਤਾਂ ਇਸਦਾ ਪਾਠ, ਗੁਣ, ਅਤੇ ਗੁੱਥੇ ਤੱਤ ਅਨੁਵਾਦ ਨਹੀਂ ਕੀਤੇ ਜਾਣਗੇ"
+	},
+	"settings_option_pageTranslation_lazyTranslate": {
+		"message": "ਕੇਵਲ ਦਿਖਾਈ ਦੇਣ ਵਾਲੇ ਤੱਤਾਂ ਦਾ ਅਨੁਵਾਦ ਕਰੋ"
+	},
+	"settings_option_pageTranslation_lazyTranslate_desc": {
+		"message": "ਜਦੋਂ ਇਹ ਵਿਕਲਪ ਚਾਲੂ ਹੁੰਦਾ ਹੈ, ਤਾਂ ਕੇਵਲ ਦਿਖਾਈ ਦੇਣ ਵਾਲੇ ਤੱਤਾਂ ਦਾ ਅਨੁਵਾਦ ਕੀਤਾ ਜਾਵੇਗਾ। ਇਹ ਵਿਕਲਪ ਨੈੱਟਵਰਕ ਟ੍ਰੈਫਿਕ ਨੂੰ ਘਟਾਉਂਦਾ ਹੈ"
+	},
+	"settings_option_pageTranslation_originalTextPopup": {
+		"message": "ਮੂਲ ਪਾਠ ਨਾਲ ਪੌਪਅੱਪ ਚਾਲੂ ਕਰੋ"
+	},
+	"settings_option_pageTranslation_originalTextPopup_desc": {
+		"message": "ਅਨੁਵਾਦ ਕੀਤੇ ਪਾਠ ਬਲਾਕਾਂ 'ਤੇ ਹਵਰ ਕਰਨ 'ਤੇ ਮੂਲ ਪਾਠ ਨਾਲ ਪੌਪਅੱਪ ਦਿਖਾਓ"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation": {
+		"message": "ਸ਼ਾਰਟਕੱਟ"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation_desc": {
+		"message": "ਪੰਨੇ ਦੇ ਅਨੁਵਾਦ ਨੂੰ ਟੌਗਲ ਕਰਨ ਲਈ ਸ਼ਾਰਟਕੱਟ\nਕੁੰਜੀਆਂ ਰੀਸੈਟ ਕਰਨ ਲਈ ESC ਦਬਾਓ"
+	},
+	"settings_option_pageTranslation_translatableAttributes": {
+		"message": "ਅਨੁਵਾਦਯੋਗ ਗੁਣ"
+	},
+	"settings_option_pageTranslation_translatableAttributes_desc": {
+		"message": "ਅਨੁਵਾਦ ਕਰਨ ਲਈ <slot id=htmlAttributes>HTML ਗੁਣ</slot> ਨਾਮ ਦਰਜ ਕਰੋ, ਪ੍ਰਤੀ ਲਾਈਨ ਇੱਕ ਗੁਣ\nਕੇਵਲ ਇਸ ਸੂਚੀ ਵਿੱਚ ਗੁਣ ਅਨੁਵਾਦ ਕੀਤੇ ਜਾਣਗੇ"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters": {
+		"message": "ਅਨੁਵਾਦ ਪ੍ਰਗਤੀ ਦਿਖਾਓ"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters_desc": {
+		"message": "ਐਕਸਟੈਂਸ਼ਨ ਪੌਪਅੱਪ ਵਿੱਚ ਪੇਜ ਅਨੁਵਾਦ ਪ੍ਰਗਤੀ ਨਾਲ ਪੈਨਲ ਦਿਖਾਓ"
+	},
+	"settings_option_selectTranslation": {
+		"message": "ਚੁਣੇ ਗਏ ਪਾਠ ਲਈ ਅਨੁਵਾਦ"
+	},
+	"settings_option_selectTranslation_detectTextLanguage": {
+		"message": "ਪਾਠ ਦੀ ਭਾਸ਼ਾ ਪਛਾਣੋ"
+	},
+	"settings_option_selectTranslation_detectTextLanguage_desc": {
+		"message": "ਜਦੋਂ ਯੋਗ ਕੀਤਾ ਜਾਂਦਾ ਹੈ, ਚੁਣੇ ਗਏ ਪਾਠ ਨੂੰ ਅਨੁਵਾਦ ਲਈ ਭਾਸ਼ਾ ਪਛਾਣਨ ਲਈ ਵਿਸ਼ਲੇਸ਼ਣ ਕੀਤਾ ਜਾਵੇਗਾ। ਨਹੀਂ ਤਾਂ, ਪੇਜ ਦੀ ਭਾਸ਼ਾ ਵਰਤੀ ਜਾਵੇਗੀ"
+	},
+	"settings_option_selectTranslation_disableWhileTranslatePage": {
+		"message": "ਪੇਜ ਦਾ ਅਨੁਵਾਦ ਕਰਦੇ ਸਮੇਂ ਅਯੋਗ ਕਰੋ"
+	},
+	"settings_option_selectTranslation_enable": {
+		"message": "ਚੁਣੇ ਗਏ ਪਾਠ ਦਾ ਅਨੁਵਾਦ ਯੋਗ ਕਰੋ"
+	},
+	"settings_option_selectTranslation_enable_desc": {
+		"message": "ਜਦੋਂ ਇਹ ਵਿਸ਼ੇਸ਼ਤਾ ਯੋਗ ਕੀਤੀ ਜਾਂਦੀ ਹੈ, ਤੁਸੀਂ ਪੇਜ 'ਤੇ ਕਿਸੇ ਵੀ ਪਾਠ ਨੂੰ ਚੁਣ ਸਕਦੇ ਹੋ ਅਤੇ ਇਸਨੂੰ ਪੌਪਅੱਪ ਵਿੱਚ ਅਨੁਵਾਦ ਕਰ ਸਕਦੇ ਹੋ"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton": {
+		"message": "ਅਨੁਵਾਦ ਬਟਨ 'ਤੇ ਸਵੈ-ਕੇਂਦ੍ਰਿਤ"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
+		"message": "ਜਦੋਂ ਅਨੁਵਾਦ ਬਟਨ ਪੇਜ 'ਤੇ ਪ੍ਰਗਟ ਹੁੰਦਾ ਹੈ, ਇਹ ਸਵੈ-ਕੇਂਦ੍ਰਿਤ ਹੋ ਜਾਵੇਗਾ"
+	},
+	"settings_option_selectTranslation_header_languageChoice": {
+		"message": "ਭਾਸ਼ਾ ਸੈਟਿੰਗਾਂ"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang": {
+		"message": "ਅਨੁਵਾਦ ਮੋਡੀਊਲ ਨੂੰ ਪਾਠ ਦੀ ਭਾਸ਼ਾ ਪਛਾਣਨ ਦੀ ਆਗਿਆ ਦਿਓ"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
+		"message": "ਜਦੋਂ ਪਾਠ ਦੀ ਭਾਸ਼ਾ ਸਥਾਨਕ ਤੌਰ 'ਤੇ ਪਛਾਣੀ ਨਹੀਂ ਜਾ ਸਕਦੀ ਅਤੇ ਇਹ ਵਿਕਲਪ ਯੋਗ ਹੈ, ਤਾਂ ਪਾਠ ਨੂੰ \"auto\" ਭਾਸ਼ਾ ਨਾਲ ਅਨੁਵਾਦ ਕੀਤਾ ਜਾਵੇਗਾ ਜੇਕਰ ਸਮਰਥਿਤ ਹੋਵੇ।\nਜਦੋਂ ਵਿਕਲਪ ਅਯੋਗ ਹੁੰਦਾ ਹੈ, ਤਾਂ ਪਾਠ ਦੀ ਮੂਲ ਭਾਸ਼ਾ ਸੈੱਟ ਕਰਨ ਲਈ ਹੋਰ ਫਾਲਬੈਕ ਵਿਧੀ ਵਰਤੀ ਜਾਵੇਗੀ"
+	},
+	"settings_option_selectTranslation_mode": {
+		"message": "ਪਾਠ ਚੋਣ 'ਤੇ ਕਾਰਵਾਈ"
+	},
+	"settings_option_selectTranslation_mode_item_contextMenu": {
+		"message": "ਸੰਦਰਭ ਮੀਨੂ ਰਾਹੀਂ ਪਾਠ ਦਾ ਅਨੁਵਾਦ ਕਰੋ"
+	},
+	"settings_option_selectTranslation_mode_item_popupButton": {
+		"message": "ਅਨੁਵਾਦ ਬਟਨ ਦਿਖਾਓ"
+	},
+	"settings_option_selectTranslation_mode_item_quickTranslate": {
+		"message": "ਤੁਰੰਤ ਪਾਠ ਦਾ ਅਨੁਵਾਦ ਕਰੋ"
+	},
+	"settings_option_selectTranslation_modifiers": {
+		"message": "ਸੰਸ਼ੋਧਕ"
+	},
+	"settings_option_selectTranslation_modifiers_desc": {
+		"message": "ਅਨੁਵਾਦ ਦਿਖਾਉਣ ਲਈ ਕੀਬੋਰਡ 'ਤੇ ਦਬਾਏ ਜਾਣ ਵਾਲੀਆਂ ਕੁੰਜੀਆਂ ਚੁਣੋ"
+	},
+	"settings_option_selectTranslation_modifiers_key_alt": {
+		"message": "alt"
+	},
+	"settings_option_selectTranslation_modifiers_key_ctrl": {
+		"message": "ctrl"
+	},
+	"settings_option_selectTranslation_modifiers_key_meta": {
+		"message": "meta"
+	},
+	"settings_option_selectTranslation_modifiers_key_shift": {
+		"message": "shift"
+	},
+	"settings_option_selectTranslation_rememberDirection": {
+		"message": "ਸਭ ਤੋਂ ਹਾਲ ਹੀ ਚੁਣੀ ਗਈ ਪਾਠ ਭਾਸ਼ਾ ਨੂੰ ਯਾਦ ਰੱਖੋ"
+	},
+	"settings_option_selectTranslation_showOnceForSelection": {
+		"message": "ਪਾਠ ਚੋਣ ਪ੍ਰਤੀ ਇੱਕ ਵਾਰ ਅਨੁਵਾਦ ਬਟਨ ਦਿਖਾਓ"
+	},
+	"settings_option_selectTranslation_showOnceForSelection_desc": {
+		"message": "ਹਰ ਪਾਠ ਚੋਣ ਲਈ ਬਟਨ ਸਿਰਫ ਇੱਕ ਵਾਰ ਪ੍ਰਗਟ ਹੋਵੇਗਾ। ਇਸਨੂੰ ਦੁਬਾਰਾ ਦਿਖਾਉਣ ਲਈ, ਪਾਠ ਨੂੰ ਮੁੜ ਚੁਣੋ"
+	},
+	"settings_option_selectTranslation_showOriginalText": {
+		"message": "ਮੂਲ ਪਾਠ ਦਿਖਾਓ"
+	},
+	"settings_option_selectTranslation_showOriginalText_desc": {
+		"message": "ਅਨੁਵਾਦ ਪੌਪਅੱਪ ਵਿੱਚ ਮੂਲ ਪਾਠ ਨਾਲ ਇੱਕ ਬਲਾਕ ਸ਼ਾਮਲ ਕਰੋ"
+	},
+	"settings_option_selectTranslation_strictSelection": {
+		"message": "ਪਾਠ ਸਪੈਨ ਚੋਣ ਦਾ ਸਖਤ ਮੋਡ",
+		"description": "This option is about selecting text via mouse"
+	},
+	"settings_option_selectTranslation_strictSelection_desc": {
+		"message": "ਜੇਕਰ ਖੱਬਾ ਮਾਊਸ ਬਟਨ ਚੁਣੇ ਗਏ ਪਾਠ ਵਾਲੇ ਬਲਾਕ ਤੋਂ ਬਾਹਰ ਛੱਡਿਆ ਜਾਂਦਾ ਹੈ ਤਾਂ ਪਾਠ ਸਪੈਨ ਚੋਣ ਨੂੰ ਅਣਡਿੱਠਾ ਕਰੋ"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton": {
+		"message": "ਪੌਪਅੱਪ ਬਟਨ ਨੂੰ ਲੁਕਾਉਣ ਤੋਂ ਪਹਿਲਾਂ ਦੇਰੀ"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton_desc": {
+		"message": "ਜਦੋਂ ਕਰਸਰ ਬਟਨ 'ਤੇ ਨਹੀਂ ਹੁੰਦਾ, ਤਾਂ ਬਟਨ ਨੂੰ ਲੁਕਾਉਣ ਤੋਂ ਪਹਿਲਾਂ ਮਿਲੀਸੈਕੰਡ ਵਿੱਚ ਦੇਰੀ। ਬਟਨ 'ਤੇ ਹੋਵਰ ਕਰਨ ਨਾਲ ਟਾਈਮਰ ਰੀਸੈੱਟ ਹੋ ਜਾਂਦਾ ਹੈ। ਆਟੋ-ਹਾਈਡ ਨੂੰ ਅਯੋਗ ਕਰਨ ਲਈ, ਮੁੱਲ ਨੂੰ 1 ਤੋਂ ਘੱਟ ਸੈੱਟ ਕਰੋ"
+	},
+	"settings_option_selectTranslation_zIndex": {
+		"message": "z-index"
+	},
+	"settings_option_selectTranslation_zIndex_desc": {
+		"message": "ਜੇ ਕੁਝ ਪੰਨਿਆਂ 'ਤੇ ਤੱਤ ਅਨੁਵਾਦਿਤ ਪਾਠ ਵਾਲੇ ਪੋਪਅੱਪ ਨੂੰ ਓਵਰਲੈਪ ਕਰਦੇ ਹਨ ਤਾਂ ਇਸ ਮੁੱਲ ਨੂੰ ਵਧਾਓ"
+	},
+	"settings_option_textTranslator": {
+		"message": "ਪਾਠ ਅਨੁਵਾਦ"
+	},
+	"settings_option_textTranslator_rememberText": {
+		"message": "ਅਨੁਵਾਦਿਤ ਪਾਠ ਨੂੰ ਯਾਦ ਰੱਖਣਾ"
+	},
+	"settings_option_textTranslator_rememberText_desc": {
+		"message": "ਅਗਲੀ ਵਾਰ ਵਿੰਡੋ ਖੁਲ੍ਹਣ 'ਤੇ ਅਨੁਵਾਦਿਤ ਪਾਠ ਨੂੰ ਯਾਦ ਰੱਖਣਾ"
+	},
+	"settings_option_textTranslator_spellCheck": {
+		"message": "ਸਪੈਲ ਚੈੱਕ ਨੂੰ ਯੋਗ ਕਰੋ"
+	},
+	"settings_option_textTranslator_suggestLanguage": {
+		"message": "ਪਤਾ ਲੱਗੀ ਪਾਠ ਦੀ ਭਾਸ਼ਾ ਦਿਖਾਉਣਾ"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways": {
+		"message": "ਹਮੇਸ਼ਾਂ ਭਾਸ਼ਾ ਪਤਾ ਲਗਾਓ ਅਤੇ ਸੁਝਾਅ ਦਿਓ"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways_desc": {
+		"message": "ਜਦੋਂ ਅਯੋਗ ਕੀਤਾ ਜਾਂਦਾ ਹੈ, ਤਾਂ ਭਾਸ਼ਾ ਦੇ ਸੁਝਾਅ ਸਿਰਫ਼ ਉਸ ਵੇਲੇ ਪ੍ਰਗਟ ਹੁੰਦੇ ਹਨ ਜਦੋਂ ਸਰੋਤ ਭਾਸ਼ਾ ਨੂੰ \"auto\" 'ਤੇ ਸੈੱਟ ਕੀਤਾ ਜਾਂਦਾ ਹੈ"
+	},
+	"settings_option_translatePreferences": {
+		"message": "ਅਨੁਵਾਦ ਪਸੰਦਾਂ"
+	},
+	"settings_option_translateScheduler": {
+		"message": "ਅਨੁਵਾਦ ਸ਼ਡਿਊਲਰ"
+	},
+	"settings_option_translateScheduler_delay": {
+		"message": "ਪਾਠ ਸੰਚਿਤ ਕਰਨ ਦੀ ਦੇਰੀ"
+	},
+	"settings_option_translateScheduler_delay_desc": {
+		"message": "ਅਨੁਵਾਦ ਸ਼ਡਿਊਲਰ ਇੱਕੋ ਬੇਨਤੀ ਵਿੱਚ ਭੇਜਣ ਲਈ ਜਿੰਨੇ ਹੋ ਸਕਦੇ ਹਨ ਪਾਠਾਂ ਨੂੰ ਇਕੱਠਾ ਕਰਕੇ ਅਨੁਵਾਦ ਸੇਵਾ API ਲਈ ਬੇਨਤੀਆਂ ਦੀ ਗਿਣਤੀ ਘਟਾਉਂਦਾ ਹੈ। ਅਨੁਵਾਦ ਸ਼ੁਰੂ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ ਹੋਰ ਪਾਠਾਂ ਨੂੰ ਇਕੱਠਾ ਕਰਨ ਲਈ ਸ਼ਡਿਊਲਰ ਨਿਰਧਾਰਤ ਸਮੇਂ ਲਈ ਮਿਲੀਸੈਕੰਡ ਵਿੱਚ ਉਡੀਕ ਕਰੇਗਾ"
+	},
+	"settings_option_translateScheduler_retryLimit": {
+		"message": "ਅਨੁਵਾਦ ਮੁੜ ਕੋਸ਼ਿਸ਼ ਦੀਆਂ ਕੋਸ਼ਿਸ਼ਾਂ ਲਈ ਸੀਮਾ"
+	},
+	"settings_option_translateScheduler_retryLimit_desc": {
+		"message": "ਜਦੋਂ ਅਨੁਵਾਦ ਦੀਆਂ ਗਲਤੀਆਂ ਹੁੰਦੀਆਂ ਹਨ ਤਾਂ ਸ਼ਡਿਊਲਰ ਪਾਠਾਂ ਦਾ ਅਨੁਵਾਦ ਮੁੜ ਕੋਸ਼ਿਸ਼ ਕਰੇਗਾ। ਇਹ ਵਿਕਲਪ ਮੁੜ ਕੋਸ਼ਿਸ਼ਾਂ ਦੀ ਸੀਮਾ ਸੈੱਟ ਕਰਦਾ ਹੈ। ਅਨੰਤ ਮੁੜ ਕੋਸ਼ਿਸ਼ਾਂ ਦੀ ਆਗਿਆ ਦੇਣ ਲਈ ਨਕਾਰਾਤਮਕ ਸੰਖਿਆ ਸੈੱਟ ਕਰੋ"
+	},
+	"settings_option_translatorModule": {
+		"message": "ਅਨੁਵਾਦ ਮੋਡੀਊਲ"
+	},
+	"settings_option_translatorModule_desc": {
+		"message": "ਅਨੁਵਾਦਾਂ ਦੀ ਗੁਣਵੱਤਾ ਅਤੇ ਉਪਲਬਧ ਭਾਸ਼ਾਵਾਂ ਅਨੁਵਾਦ ਮੋਡੀਊਲ 'ਤੇ ਨਿਰਭਰ ਕਰਦੀਆਂ ਹਨ"
+	},
+	"settings_option_tts": {
+		"message": "ਪਾਠ ਤੋਂ ਬੋਲਣ ਦੀ ਰੂਪਾਂਤਰਨ (TTS)"
+	},
+	"settings_option_ttsCustomModules": {
+		"message": "ਕਸਟਮ ਬੋਲਣ ਦੀ ਸੰਸਲੇਸ਼ਣ ਮੋਡੀਊਲ"
+	},
+	"settings_option_ttsCustomModules_button": {
+		"message": "ਬੋਲਣ ਦੀ ਸੰਸਲੇਸ਼ਣ ਮੋਡੀਊਲ ਦਾ ਪ੍ਰਬੰਧਨ"
+	},
+	"settings_option_ttsCustomModules_desc": {
+		"message": "ਤੁਸੀਂ ਆਪਣੇ ਮਨਪਸੰਦ ਸੇਵਾਵਾਂ ਅਤੇ ਵੌਇਸ ਇੰਜਣਾਂ ਦੀ ਵਰਤੋਂ ਕਰਨ ਵਾਲੇ ਬੋਲਣ ਦੀ ਸੰਸਲੇਸ਼ਣ ਮੋਡੀਊਲ ਸ਼ਾਮਲ ਕਰ ਸਕਦੇ ਹੋ। <slot id=docs>ਕਸਟਮ TTS ਦਸਤਾਵੇਜ਼</slot> ਵਿੱਚ ਹੋਰ ਪੜ੍ਹੋ"
+	},
+	"settings_option_ttsModule": {
+		"message": "ਚੁਣਿਆ ਗਿਆ TTS ਮੋਡੀਊਲ"
+	},
+	"settings_option_ttsModule_desc": {
+		"message": "ਪਾਠ ਨੂੰ ਬੋਲਣ ਲਈ ਵਰਤਿਆ ਗਿਆ ਵੌਇਸ ਇੰਜਣ"
+	},
+	"settings_option_userLanguage": {
+		"message": "ਤੁਹਾਡੀ ਭਾਸ਼ਾ"
+	},
+	"settings_option_userLanguage_desc": {
+		"message": "ਭਾਸ਼ਾ ਜਿਸ ਵਿੱਚ ਪਾਠਾਂ ਦਾ ਅਨੁਵਾਦ ਕੀਤਾ ਜਾਵੇਗਾ"
+	},
+	"settings_pageTitle": {
+		"message": "ਸੈਟਿੰਗਾਂ"
+	},
+	"settings_section_history": {
+		"message": "ਇਤਿਹਾਸ"
+	},
+	"settings_section_popup": {
+		"message": "ਪੋਪਅੱਪ"
+	},
+	"textTranslator_suggestLanguage": {
+		"message": "ਲੱਗਦਾ ਹੈ ਕਿ ਪਾਠ ਦੀ ਭਾਸ਼ਾ <slot id=languageSuggest>$language_name$</slot> ਹੈ",
+		"placeholders": {
+			"language_name": {
+				"content": "$1",
+				"example": "ਜਪਾਨੀ"
+			}
+		}
+	},
+	"textTranslator_translateInputPlaceholder": {
+		"message": "ਅਨੁਵਾਦ ਲਈ ਪਾਠ ਦਰਜ ਕਰੋ",
+		"description": "Request to user input some text for translation"
+	},
+	"textTranslator_translatePlaceholder": {
+		"message": "ਅਨੁਵਾਦਿਤ ਪਾਠ ਇੱਥੇ ਹੋਵੇਗਾ"
+	},
+	"translatorsManagerWindow_add": {
+		"message": "ਅਨੁਵਾਦ ਮੋਡੀਊਲ ਸ਼ਾਮਲ ਕਰੋ"
+	},
+	"translatorsManagerWindow_close": {
+		"message": "ਬੰਦ ਕਰੋ"
+	},
+	"translatorsManagerWindow_emptyTranslatorsListText": {
+		"message": "ਕੋਈ ਵੀ ਕਸਟਮ ਅਨੁਵਾਦ ਮੋਡੀਊਲ ਅਜੇ ਤੱਕ ਸ਼ਾਮਲ ਨਹੀਂ ਕੀਤੇ ਗਏ"
+	},
+	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
+		"message": "ਕੀ ਤੁਸੀਂ ਯਕੀਨਨ \"$translator_name$\" ਅਨੁਵਾਦ ਮੋਡੀਊਲ ਨੂੰ ਹਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ?",
+		"placeholders": {
+			"translator_name": {
+				"content": "$1",
+				"example": "Google translator"
+			}
+		}
+	},
+	"translatorsManagerWindow_title": {
+		"message": "ਕਸਟਮ ਅਨੁਵਾਦ ਮੋਡੀਊਲ"
+	},
+	"translatorsManagerWindow_translator_delete": {
+		"message": "ਹਟਾਓ"
+	},
+	"translatorsManagerWindow_translator_edit": {
+		"message": "ਸੋਧੋ"
+	},
+	"ttsManagerWindow_add": {
+		"message": "TTS ਮੋਡੀਊਲ ਸ਼ਾਮਲ ਕਰੋ"
+	},
+	"ttsManagerWindow_close": {
+		"message": "ਬੰਦ ਕਰੋ"
+	},
+	"ttsManagerWindow_emptyTranslatorsListText": {
+		"message": "ਕੋਈ ਵੀ TTS ਮੋਡੀਊਲ ਅਜੇ ਤੱਕ ਸ਼ਾਮਲ ਨਹੀਂ ਕੀਤੇ ਗਏ"
+	},
+	"ttsManagerWindow_message_ttsRemoveConfirmation": {
+		"message": "ਕੀ ਤੁਸੀਂ ਯਕੀਨਨ \"$tts_name$\" TTS ਮੋਡੀਊਲ ਨੂੰ ਹਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ?",
+		"placeholders": {
+			"tts_name": {
+				"content": "$1",
+				"example": "Google TTS"
+			}
+		}
+	},
+	"ttsManagerWindow_title": {
+		"message": "ਪਾਠ-ਤੋਂ-ਬੋਲ ਮੋਡੀਊਲ"
+	},
+	"ttsManagerWindow_translator_delete": {
+		"message": "ਹਟਾਓ"
+	},
+	"ttsManagerWindow_translator_edit": {
+		"message": "ਸੋਧੋ"
+	},
+	"validation_number": {
+		"message": "ਮੁੱਲ ਇੱਕ ਨੰਬਰ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ"
+	},
+	"validation_numberBetweenRange": {
+		"message": "ਮੁੱਲ $1 ਅਤੇ $2 ਦੇ ਵਿਚਕਾਰ ਇੱਕ ਨੰਬਰ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ"
+	},
+	"validation_positiveNumber": {
+		"message": "ਮੁੱਲ ਇੱਕ ਸਕਾਰਾਤਮਕ ਨੰਬਰ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ"
+	}
+}

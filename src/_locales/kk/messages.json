@@ -1,0 +1,623 @@
+{
+	"common_action_addToDictionary": {
+		"message": "Аударманы сөздікке қосу"
+	},
+	"common_action_removeFromDictionary": {
+		"message": "Аударманы сөздіктен жою"
+	},
+	"common_bgUnavailable": {
+		"message": "Фондық скрипт қолжетімсіз"
+	},
+	"common_cancel": {
+		"message": "Болдырмау"
+	},
+	"common_close": {
+		"message": "Жабу"
+	},
+	"common_copy": {
+		"message": "Көшіру"
+	},
+	"common_error": {
+		"message": "Қате"
+	},
+	"common_offlineTranslator": {
+		"message": "$1 - Офлайн аудармашы"
+	},
+	"common_retry": {
+		"message": "Қайталау"
+	},
+	"common_translate": {
+		"message": "Аудару"
+	},
+	"component_hotkey_placeholder": {
+		"message": "Түймешікті жазу үшін басыңыз"
+	},
+	"component_hotkey_recordPlaceholder": {
+		"message": "Пернелерді басыңыз"
+	},
+	"component_hotkey_resetButton": {
+		"message": "Қалпына келтіру"
+	},
+	"contextMenu_disablePageTranslation": {
+		"message": "Бет аудармасын тоқтату"
+	},
+	"contextMenu_translatePage": {
+		"message": "Бетті аудару"
+	},
+	"contextMenu_translateSelectedText": {
+		"message": "Таңдалған мәтінді аудару"
+	},
+	"dictionaryButton_add": {
+		"message": "Сөздікке қосу"
+	},
+	"dictionaryButton_delete": {
+		"message": "Сөздіктен жою"
+	},
+	"dictionary_button_export": {
+		"message": "Экспорттау"
+	},
+	"dictionary_button_removeAll": {
+		"message": "Барлығын жою"
+	},
+	"dictionary_deleteAll": {
+		"message": "Барлық аудармаларды сөздіктен жоюға сенімдісіз бе?"
+	},
+	"dictionary_deleteConfirmation": {
+		"message": "Бұл аударманы жоюға сенімдісіз бе?"
+	},
+	"dictionary_description": {
+		"message": "Аудармаларды сөздікке сақтап, кейін тез табыңыз"
+	},
+	"dictionary_emptyDictionary": {
+		"message": "Сөздік бос, оны мәтіндерді аудару арқылы толтырыңыз"
+	},
+	"dictionary_filter_from": {
+		"message": "Бастапқы мәтін тілі"
+	},
+	"dictionary_filter_to": {
+		"message": "Мақсатты тіл"
+	},
+	"dictionary_message_deleteAll_success": {
+		"message": "Барлық аудармалар жойылды"
+	},
+	"dictionary_notFoundEntries": {
+		"message": "Бұл сүзгілерге сәйкес келетін аудармалар табылмады"
+	},
+	"dictionary_pageTitle": {
+		"message": "Сөздік"
+	},
+	"dictionary_resetFilters": {
+		"message": "Сүзгілерді қалпына келтіру"
+	},
+	"dictionary_searchPlaceholder": {
+		"message": "Мәтін бойынша іздеу"
+	},
+	"editorWindow_close": {
+		"message": "Жабу"
+	},
+	"editorWindow_data_code": {
+		"message": "Код"
+	},
+	"editorWindow_data_title": {
+		"message": "Модуль атауы"
+	},
+	"editorWindow_message_invalidTitle": {
+		"message": "Модуль атауы кем дегенде бір таңбадан тұруы керек"
+	},
+	"editorWindow_save": {
+		"message": "Сақтау"
+	},
+	"ext_description": {
+		"message": "Веб-беттерді аудару, мәтін аудару, сөздік, тарих, арнайы аудармашылар, тілдік кедергілерді жою үшін қажеттінің бәрі"
+	},
+	"ext_name": {
+		"message": "Linguist - веб-бет аудармашысы"
+	},
+	"history_control_selectEntry": {
+		"message": "Топтық әрекет үшін аударманы таңдау",
+		"description": "Description in finite form \"to pick\" with explaining what this checkbox will do"
+	},
+	"history_controls_clearHistory": {
+		"message": "Тарихты тазалау"
+	},
+	"history_controls_deleteSelected": {
+		"message": "Таңдалған аудармаларды жою"
+	},
+	"history_controls_selectAll": {
+		"message": "Барлық аудармаларды таңдау"
+	},
+	"history_message_clearHistoryConfirmation": {
+		"message": "Тарихты тазартқыңыз келетініне сенімдісіз бе? Барлық жазбалар жойылады"
+	},
+	"history_message_deleteEntryConfirmation": {
+		"message": "Бұл жазбаны жойғыңыз келетініне сенімдісіз бе?"
+	},
+	"history_message_deleteSelectedEntriesConfirmation": {
+		"message": "Таңдалған жазбаларды жойғыңыз келетініне сенімдісіз бе ($1)?"
+	},
+	"history_message_entriesNotFound": {
+		"message": "Сүзгіге сәйкес келетін аудармалар табылмады"
+	},
+	"history_message_noEntries": {
+		"message": "Тарих бос"
+	},
+	"history_notification_disabled": {
+		"message": "Тарих жазу өшірілген, сондықтан жаңа жазбалар пайда болмайды. Мұны <slot id=preferences>Параметрлер</slot> бөлімінде өзгерте аласыз"
+	},
+	"history_pageTitle": {
+		"message": "Тарих"
+	},
+	"history_searchPlaceholder": {
+		"message": "Мәтін бойынша іздеу"
+	},
+	"inlineTranslator_showOriginalText": {
+		"message": "Түпнұсқа мәтінді көрсету"
+	},
+	"lang_change": {
+		"message": "Тілді өзгерту"
+	},
+	"lang_detect": {
+		"message": "Автоанықтау"
+	},
+	"lang_select": {
+		"message": "Тілді таңдау"
+	},
+	"lang_swap": {
+		"message": "Тілдерді ауыстыру"
+	},
+	"message_unknownError": {
+		"message": "Белгісіз қате"
+	},
+	"pageTranslator_alwaysTranslateLang": {
+		"message": "Бұл тілді әрқашан аудару"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disable": {
+		"message": "Өшіру"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
+		"message": "Барлық сайттар үшін өшіру"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_enable": {
+		"message": "Қосу"
+	},
+	"pageTranslator_commonPreferences_title": {
+		"message": "Бұл тіл үшін жалпы параметрлер"
+	},
+	"pageTranslator_option_autoTranslate": {
+		"message": "Авто-аударма"
+	},
+	"pageTranslator_showOriginal": {
+		"message": "Түпнұсқаны көрсету"
+	},
+	"pageTranslator_showTranslationPreferences": {
+		"message": "Аударма параметрлері"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_always": {
+		"message": "Әрқашан аудару"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
+		"message": "Бұл тіл үшін әрқашан аудару"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_default": {
+		"message": "Жалпы ережелерді қолдану"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
+		"message": "Бұл тіл үшін жалпы ережелерді қолдану"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_never": {
+		"message": "Ешқашан аудармау"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
+		"message": "Бұл тіл үшін ешқашан аудармау"
+	},
+	"pageTranslator_sitePreferences_title": {
+		"message": "Үшін параметрлер"
+	},
+	"pageTranslator_translatePage": {
+		"message": "Бетті аудару"
+	},
+	"pageTranslator_translationReport": {
+		"message": "Аударма есебі"
+	},
+	"pageTranslator_translationReport_queue": {
+		"message": "Күтілуде"
+	},
+	"pageTranslator_translationReport_reject": {
+		"message": "Қателер"
+	},
+	"pageTranslator_translationReport_resolve": {
+		"message": "Аударылған"
+	},
+	"popup_tabIdNotFound": {
+		"message": "Қойынды \"$1\" табылмады"
+	},
+	"popup_tab_translatePage": {
+		"message": "Бетті аудару"
+	},
+	"popup_tab_translateText": {
+		"message": "Мәтінді аудару"
+	},
+	"settings_button_cancel": {
+		"message": "Болдырмау"
+	},
+	"settings_button_export": {
+		"message": "Конфигурацияны экспорттау"
+	},
+	"settings_button_import": {
+		"message": "Конфигурацияны импорттау"
+	},
+	"settings_button_reset": {
+		"message": "Конфигурацияны қалпына келтіру"
+	},
+	"settings_button_saveChanges": {
+		"message": "Өзгерістерді сақтау"
+	},
+	"settings_message_clearCache_success": {
+		"message": "Кэш тазартылды"
+	},
+	"settings_message_common_invalidValueType": {
+		"message": "Жарамсыз мән"
+	},
+	"settings_message_importConfig_invalidFile": {
+		"message": "Берілген конфигурация файлы дұрыс емес немесе бүлінген, өңдеу мүмкін емес"
+	},
+	"settings_message_importConfig_success": {
+		"message": "Импорт аяқталды"
+	},
+	"settings_message_resetConfig_confirm": {
+		"message": "Баптауларды әдепкі мәндерге қалпына келтіруді растаңыз"
+	},
+	"settings_message_resetConfig_success": {
+		"message": "Баптаулар қалпына келтірілді"
+	},
+	"settings_message_saveChanges_success": {
+		"message": "Өзгерістер сақталды"
+	},
+	"settings_option_cache": {
+		"message": "Кэш"
+	},
+	"settings_option_cache_clear": {
+		"message": "Кэшті тазалау"
+	},
+	"settings_option_cache_clear_desc": {
+		"message": "Егер сіз аударма қателерін байқасаңыз немесе кэш қосулы кезде жеке мәтіндерді кездейсоқ аударсаңыз, барлық деректерді кэштен жоюға болады",
+		"description": "Explanation for user about cases when it's useful to clear cache"
+	},
+	"settings_option_cache_enable": {
+		"message": "Кэшті қосу"
+	},
+	"settings_option_cache_enable_desc": {
+		"message": "Кэш қосулы кезде бұрын аударылған мәтіндер қосымша сұрауларсыз бірден аударылады"
+	},
+	"settings_option_cache_ignoreCase": {
+		"message": "Регистрге сезімтал емес кэшті пайдалану"
+	},
+	"settings_option_cache_ignoreCase_desc": {
+		"message": "Қосылған кезде, кэште сақталған аудармалар әртүрлі регистрдегі мәтіндер үшін қолданылады, бұл кейбір жағдайларда аударма бұрмалануына әкелуі мүмкін"
+	},
+	"settings_option_commonSettings": {
+		"message": "Жалпы баптаулар"
+	},
+	"settings_option_customTranslatorModule": {
+		"message": "Арнайы аударма модульдері",
+		"description": "An user defined code that implements a translation module"
+	},
+	"settings_option_customTranslatorModule_desc": {
+		"message": "Сіз өзіңіздің сүйікті аударма қызметтеріңізді пайдаланатын арнайы аударма модульдерін қоса аласыз. <slot id=docs>арнайы аудармашылар құжаттамасынан</slot> көбірек біліңіз"
+	},
+	"settings_option_customTranslatorModule_manageButton": {
+		"message": "Аудармашыларды басқару",
+		"description": "Аударма модульдерінің тізімін көрсетуге арналған батырма"
+	},
+	"settings_option_history_enable": {
+		"message": "Тарихты қосу"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "Қосылған кезде, аудармалар жазылады және <slot id=historyPage>тарих бетінде</slot> көрсетіледі"
+	},
+	"settings_option_pageTranslation": {
+		"message": "Толық бет аудармасы"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent": {
+		"message": "Мазмұн бойынша тілді анықтау"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent_desc": {
+		"message": "Веб-беттегі мәтінді талдау арқылы оның тілін анықтау. Өшірілген кезде, <slot id=docs>бет метадеректерінде</slot> көрсетілген тіл қолданылады"
+	},
+	"settings_option_pageTranslation_enableContextMenu": {
+		"message": "Контекстік мәзір батырмасын қосу"
+	},
+	"settings_option_pageTranslation_enableContextMenu_desc": {
+		"message": "Бет контекстік мәзіріне бет аудармасын ауыстыру батырмасын қосу"
+	},
+	"settings_option_pageTranslation_excludeSelectors": {
+		"message": "Аудармадан шығару үшін селекторлар"
+	},
+	"settings_option_pageTranslation_excludeSelectors_desc": {
+		"message": "Аударудан шығарылатын элементтер үшін CSS селекторларының тізімі. Әр жолға бір селектор. Егер элемент осы селекторлардың кез келгеніне сәйкес келсе, оның мәтіні, атрибуттары және ішкі элементтері аударылмайды"
+	},
+	"settings_option_pageTranslation_lazyTranslate": {
+		"message": "Тек көрінетін элементтерді аудару"
+	},
+	"settings_option_pageTranslation_lazyTranslate_desc": {
+		"message": "Бұл опция қосылған кезде тек көрінетін элементтер аударылады. Бұл опция желі трафигін азайтады"
+	},
+	"settings_option_pageTranslation_originalTextPopup": {
+		"message": "Түпнұсқа мәтінмен қалқымалы терезені қосу"
+	},
+	"settings_option_pageTranslation_originalTextPopup_desc": {
+		"message": "Аударылған мәтін блоктарының үстіне апарғанда түпнұсқа мәтінмен қалқымалы терезені көрсету"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation": {
+		"message": "Түймешік"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation_desc": {
+		"message": "Бетті аударуды ауыстыру үшін түймешік\nПернелерді қалпына келтіру үшін ESC басыңыз"
+	},
+	"settings_option_pageTranslation_translatableAttributes": {
+		"message": "Аударылатын атрибуттар"
+	},
+	"settings_option_pageTranslation_translatableAttributes_desc": {
+		"message": "Аударылатын <slot id=htmlAttributes>HTML атрибут</slot> атауларын енгізіңіз, әр жолға бір атрибут\nТек осы тізімдегі атрибуттар аударылады"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters": {
+		"message": "Аудару барысын көрсету"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters_desc": {
+		"message": "Кеңейтім қалқымалы терезесінде бет аудармасының прогрессін көрсететін панельді көрсету"
+	},
+	"settings_option_selectTranslation": {
+		"message": "Таңдалған мәтіннің аудармасы"
+	},
+	"settings_option_selectTranslation_detectTextLanguage": {
+		"message": "Мәтін тілін анықтау"
+	},
+	"settings_option_selectTranslation_detectTextLanguage_desc": {
+		"message": "Қосылған кезде, таңдалған мәтін аударма үшін тілін анықтау мақсатында талданады. Әйтпесе, бет тілі қолданылады"
+	},
+	"settings_option_selectTranslation_disableWhileTranslatePage": {
+		"message": "Бетті аудару кезінде өшіру"
+	},
+	"settings_option_selectTranslation_enable": {
+		"message": "Таңдалған мәтінді аударуды қосу"
+	},
+	"settings_option_selectTranslation_enable_desc": {
+		"message": "Бұл функция қосылған кезде, беттегі кез келген мәтінді таңдап, оны қалқымалы терезеде аудара аласыз"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton": {
+		"message": "Аударма түймесіне автоматты түрде фокус қою"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
+		"message": "Бетте аударма түймесі пайда болған кезде, ол автоматты түрде фокусқа қойылады"
+	},
+	"settings_option_selectTranslation_header_languageChoice": {
+		"message": "Тіл параметрлері"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang": {
+		"message": "Мәтін тілін анықтауға аударма модуліне рұқсат беру"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
+		"message": "Мәтін тілі жергілікті түрде анықталмаса және бұл опция қосылған болса, мәтін \"auto\" тілімен аударылады, егер қолдау көрсетілсе.\nОпция өшірілгенде, мәтіннің бастапқы тілін орнату үшін басқа әдіс қолданылады"
+	},
+	"settings_option_selectTranslation_mode": {
+		"message": "Мәтінді таңдау әрекеті"
+	},
+	"settings_option_selectTranslation_mode_item_contextMenu": {
+		"message": "Контекстік мәзір арқылы мәтінді аудару"
+	},
+	"settings_option_selectTranslation_mode_item_popupButton": {
+		"message": "Аударма батырмасын көрсету"
+	},
+	"settings_option_selectTranslation_mode_item_quickTranslate": {
+		"message": "Мәтінді тез аудару"
+	},
+	"settings_option_selectTranslation_modifiers": {
+		"message": "Модификаторлар"
+	},
+	"settings_option_selectTranslation_modifiers_desc": {
+		"message": "Аударманы көрсету үшін пернетақтада басылуы тиіс пернелерді таңдаңыз"
+	},
+	"settings_option_selectTranslation_modifiers_key_alt": {
+		"message": "alt"
+	},
+	"settings_option_selectTranslation_modifiers_key_ctrl": {
+		"message": "ctrl"
+	},
+	"settings_option_selectTranslation_modifiers_key_meta": {
+		"message": "meta"
+	},
+	"settings_option_selectTranslation_modifiers_key_shift": {
+		"message": "shift"
+	},
+	"settings_option_selectTranslation_rememberDirection": {
+		"message": "Соңғы таңдалған мәтін тілін есте сақтау"
+	},
+	"settings_option_selectTranslation_showOnceForSelection": {
+		"message": "Әрбір мәтін таңдау үшін аударма батырмасын бір рет көрсету"
+	},
+	"settings_option_selectTranslation_showOnceForSelection_desc": {
+		"message": "Батырма әрбір мәтін таңдау үшін тек бір рет пайда болады. Оны қайта көрсету үшін мәтінді қайта таңдаңыз"
+	},
+	"settings_option_selectTranslation_showOriginalText": {
+		"message": "Түпнұсқа мәтінді көрсету"
+	},
+	"settings_option_selectTranslation_showOriginalText_desc": {
+		"message": "Аударма қалқымалы терезесіне түпнұсқа мәтінмен блок қосу"
+	},
+	"settings_option_selectTranslation_strictSelection": {
+		"message": "Мәтін таңдау қатаң режимі",
+		"description": "Бұл опция мәтінді тышқанмен таңдау туралы"
+	},
+	"settings_option_selectTranslation_strictSelection_desc": {
+		"message": "Таңдалған мәтінді қамтитын блоктан тыс сол жақ тышқан батырмасы босатылса, мәтін таңдауын елемеу"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton": {
+		"message": "Қалқымалы батырманы жасыру алдында кідіріс"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton_desc": {
+		"message": "Тінтуір көрсеткіші батырманың үстінде тұрмаған кезде батырманы жасыру алдында миллисекундтардағы кідіріс. Батырманың үстінде тұру таймерді қалпына келтіреді. Авто-жасыруды өшіру үшін мәнді 1-ден аз етіп орнатыңыз"
+	},
+	"settings_option_selectTranslation_zIndex": {
+		"message": "z-index"
+	},
+	"settings_option_selectTranslation_zIndex_desc": {
+		"message": "Кейбір беттердегі элементтер аударылған мәтіні бар қалқымалы терезені жауып қалса, бұл мәнді арттырыңыз"
+	},
+	"settings_option_textTranslator": {
+		"message": "Мәтінді аудару"
+	},
+	"settings_option_textTranslator_rememberText": {
+		"message": "Аударылған мәтінді есте сақтау"
+	},
+	"settings_option_textTranslator_rememberText_desc": {
+		"message": "Терезе келесі жолы ашылғанда аударылған мәтінді есте сақтау"
+	},
+	"settings_option_textTranslator_spellCheck": {
+		"message": "Емле тексеруді қосу"
+	},
+	"settings_option_textTranslator_suggestLanguage": {
+		"message": "Танылған мәтін тілін көрсету"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways": {
+		"message": "Әрқашан тілді анықтап, ұсыну"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways_desc": {
+		"message": "Өшірілген кезде, тіл ұсыныстары тек бастапқы тіл \"авто\" ретінде орнатылғанда ғана пайда болады"
+	},
+	"settings_option_translatePreferences": {
+		"message": "Аударма параметрлері"
+	},
+	"settings_option_translateScheduler": {
+		"message": "Аударма жоспарлаушысы"
+	},
+	"settings_option_translateScheduler_delay": {
+		"message": "Мәтінді жинақтау кідірісі"
+	},
+	"settings_option_translateScheduler_delay_desc": {
+		"message": "Аударма жоспарлаушысы аударма қызметінің API-не сұраулар санын азайту үшін мүмкіндігінше көп мәтінді бір сұрауда жіберу үшін жинақтайды. Жоспарлаушы аударманы бастамас бұрын көбірек мәтін жинау үшін миллисекундпен көрсетілген уақытты күтеді"
+	},
+	"settings_option_translateScheduler_retryLimit": {
+		"message": "Аударманы қайта әрекет ету шегін орнату"
+	},
+	"settings_option_translateScheduler_retryLimit_desc": {
+		"message": "Жоспарлаушы аударма қателері болғанда мәтіндерді қайта аударуға тырысады. Бұл опция қайта әрекет ету шегін орнатады. Шексіз қайта әрекет етуге рұқсат беру үшін теріс сан орнатыңыз"
+	},
+	"settings_option_translatorModule": {
+		"message": "Аударма модулі"
+	},
+	"settings_option_translatorModule_desc": {
+		"message": "Аудармалардың сапасы және қолжетімді тілдер аударма модуліне байланысты"
+	},
+	"settings_option_tts": {
+		"message": "Мәтінді сөйлеуге түрлендіру (TTS)"
+	},
+	"settings_option_ttsCustomModules": {
+		"message": "Арнайы сөйлеу синтезі модульдері"
+	},
+	"settings_option_ttsCustomModules_button": {
+		"message": "Сөйлеу синтезі модульдерін басқару"
+	},
+	"settings_option_ttsCustomModules_desc": {
+		"message": "Сіз өзіңізге ұнайтын қызметтер мен дауыс қозғалтқыштарын пайдаланатын сөйлеу синтезі модульдерін қоса аласыз. Толығырақ <slot id=docs>арнайы TTS құжаттамасында</slot> оқыңыз"
+	},
+	"settings_option_ttsModule": {
+		"message": "Таңдалған TTS модулі"
+	},
+	"settings_option_ttsModule_desc": {
+		"message": "Мәтінді дыбыстау үшін қолданылатын дауыс қозғалтқышы"
+	},
+	"settings_option_userLanguage": {
+		"message": "Сіздің тіліңіз"
+	},
+	"settings_option_userLanguage_desc": {
+		"message": "Мәтіндер аударылатын тіл"
+	},
+	"settings_pageTitle": {
+		"message": "Параметрлер"
+	},
+	"settings_section_history": {
+		"message": "Тарих"
+	},
+	"settings_section_popup": {
+		"message": "Қалқымалы терезе"
+	},
+	"textTranslator_suggestLanguage": {
+		"message": "Мәтін тілі <slot id=languageSuggest>$language_name$</slot> сияқты көрінеді",
+		"placeholders": {
+			"language_name": {
+				"content": "$1",
+				"example": "Жапон"
+			}
+		}
+	},
+	"textTranslator_translateInputPlaceholder": {
+		"message": "Аударма үшін мәтінді енгізіңіз",
+		"description": "Request to user input some text for translation"
+	},
+	"textTranslator_translatePlaceholder": {
+		"message": "Аударылған мәтін осында болады"
+	},
+	"translatorsManagerWindow_add": {
+		"message": "Аударма модулін қосу"
+	},
+	"translatorsManagerWindow_close": {
+		"message": "Жабу"
+	},
+	"translatorsManagerWindow_emptyTranslatorsListText": {
+		"message": "Әлі ешқандай арнайы аударма модульдері қосылмаған"
+	},
+	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
+		"message": "\"$translator_name$\" аударма модулін жоюға сенімдісіз бе?",
+		"placeholders": {
+			"translator_name": {
+				"content": "$1",
+				"example": "Google translator"
+			}
+		}
+	},
+	"translatorsManagerWindow_title": {
+		"message": "Арнайы аударма модульдері"
+	},
+	"translatorsManagerWindow_translator_delete": {
+		"message": "Жою"
+	},
+	"translatorsManagerWindow_translator_edit": {
+		"message": "Өңдеу"
+	},
+	"ttsManagerWindow_add": {
+		"message": "TTS модулін қосу"
+	},
+	"ttsManagerWindow_close": {
+		"message": "Жабу"
+	},
+	"ttsManagerWindow_emptyTranslatorsListText": {
+		"message": "Әлі TTS модульдері қосылмаған"
+	},
+	"ttsManagerWindow_message_ttsRemoveConfirmation": {
+		"message": "Сіз \"$tts_name$\" TTS модулін жоюға сенімдісіз бе?",
+		"placeholders": {
+			"tts_name": {
+				"content": "$1",
+				"example": "Google TTS"
+			}
+		}
+	},
+	"ttsManagerWindow_title": {
+		"message": "Мәтінді дауыспен оқу модульдері"
+	},
+	"ttsManagerWindow_translator_delete": {
+		"message": "Жою"
+	},
+	"ttsManagerWindow_translator_edit": {
+		"message": "Өңдеу"
+	},
+	"validation_number": {
+		"message": "Мән сан болуы керек"
+	},
+	"validation_numberBetweenRange": {
+		"message": "Мән $1 мен $2 арасында сан болуы керек"
+	},
+	"validation_positiveNumber": {
+		"message": "Мән оң сан болуы керек"
+	}
+}

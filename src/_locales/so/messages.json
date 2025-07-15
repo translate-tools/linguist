@@ -1,0 +1,623 @@
+{
+	"common_action_addToDictionary": {
+		"message": "Ku dar turjumaadda qaamuuska"
+	},
+	"common_action_removeFromDictionary": {
+		"message": "Ka saar turjumaadda qaamuuska"
+	},
+	"common_bgUnavailable": {
+		"message": "Qoraalka asalka ah lama heli karo"
+	},
+	"common_cancel": {
+		"message": "Jooji"
+	},
+	"common_close": {
+		"message": "Xir"
+	},
+	"common_copy": {
+		"message": "Nuqul"
+	},
+	"common_error": {
+		"message": "Khalad"
+	},
+	"common_offlineTranslator": {
+		"message": "$1 - Turjumaan aan khadka ahayn"
+	},
+	"common_retry": {
+		"message": "Dib u day"
+	},
+	"common_translate": {
+		"message": "Turjun"
+	},
+	"component_hotkey_placeholder": {
+		"message": "Guji si aad u duubto gaabinta"
+	},
+	"component_hotkey_recordPlaceholder": {
+		"message": "Riix furayaasha"
+	},
+	"component_hotkey_resetButton": {
+		"message": "Dib u celi"
+	},
+	"contextMenu_disablePageTranslation": {
+		"message": "Jooji turjumaadda bogga"
+	},
+	"contextMenu_translatePage": {
+		"message": "Turjun bogga"
+	},
+	"contextMenu_translateSelectedText": {
+		"message": "Turjun qoraalka la xushay"
+	},
+	"dictionaryButton_add": {
+		"message": "Ku dar qaamuuska"
+	},
+	"dictionaryButton_delete": {
+		"message": "Ka saar qaamuuska"
+	},
+	"dictionary_button_export": {
+		"message": "Dhoofin"
+	},
+	"dictionary_button_removeAll": {
+		"message": "Ka saar dhammaan"
+	},
+	"dictionary_deleteAll": {
+		"message": "Ma hubtaa inaad rabto inaad tirtirto DHAMMAAN turjumaadaha ku jira qaamuuska?"
+	},
+	"dictionary_deleteConfirmation": {
+		"message": "Ma hubtaa inaad rabto inaad tirtirto turjumaaddan?"
+	},
+	"dictionary_description": {
+		"message": "Ku keydi turjumaadaha qaamuuska si aad si degdeg ah u hesho mustaqbalka"
+	},
+	"dictionary_emptyDictionary": {
+		"message": "Qaamuusku waa madhan yahay, bilow inaad buuxiso adigoo turjumaya qoraal"
+	},
+	"dictionary_filter_from": {
+		"message": "Luuqadda qoraalka asalka ah"
+	},
+	"dictionary_filter_to": {
+		"message": "Luuqadda bartilmaameedka"
+	},
+	"dictionary_message_deleteAll_success": {
+		"message": "Dhammaan turjumaadaha waa la saaray"
+	},
+	"dictionary_notFoundEntries": {
+		"message": "Lama helin turjumaad ku habboon shaandhooyinkan"
+	},
+	"dictionary_pageTitle": {
+		"message": "Qaamuus"
+	},
+	"dictionary_resetFilters": {
+		"message": "Dib u celi shaandhooyinka"
+	},
+	"dictionary_searchPlaceholder": {
+		"message": "Raadi qoraal"
+	},
+	"editorWindow_close": {
+		"message": "Xir"
+	},
+	"editorWindow_data_code": {
+		"message": "Koodh"
+	},
+	"editorWindow_data_title": {
+		"message": "Magaca module"
+	},
+	"editorWindow_message_invalidTitle": {
+		"message": "Magaca module waa inuu lahaadaa ugu yaraan hal xaraf"
+	},
+	"editorWindow_save": {
+		"message": "Kaydi"
+	},
+	"ext_description": {
+		"message": "Tarjumaadda bogga webka, tarjumaadda qoraalka, qaamuus, taariikh, turjumaad gaar ah, dhammaan waxaad u baahan tahay inaad jebiso caqabadaha luqadda"
+	},
+	"ext_name": {
+		"message": "Linguist - turjumaadda bogga webka"
+	},
+	"history_control_selectEntry": {
+		"message": "Dooro tarjumaadda ficilka ballaaran",
+		"description": "Description in finite form \"to pick\" with explaining what this checkbox will do"
+	},
+	"history_controls_clearHistory": {
+		"message": "Tirtir taariikhda"
+	},
+	"history_controls_deleteSelected": {
+		"message": "Tirtir tarjumaadaha la doortay"
+	},
+	"history_controls_selectAll": {
+		"message": "Dooro dhammaan tarjumaadaha"
+	},
+	"history_message_clearHistoryConfirmation": {
+		"message": "Ma hubtaa inaad rabto inaad tirtirto taariikhda? Dhammaan gelitaanka waa la saari doonaa"
+	},
+	"history_message_deleteEntryConfirmation": {
+		"message": "Ma hubtaa inaad rabto inaad tirtirto gelitaankan?"
+	},
+	"history_message_deleteSelectedEntriesConfirmation": {
+		"message": "Ma hubtaa inaad rabto inaad tirtirto gelitaanka la doortay ($1)?"
+	},
+	"history_message_entriesNotFound": {
+		"message": "Lama helin tarjumaad ku habboon shaandhada"
+	},
+	"history_message_noEntries": {
+		"message": "Taariikhdu waa madhan tahay"
+	},
+	"history_notification_disabled": {
+		"message": "Diiwaangelinta taariikhda waa naafo, sidaas darteed gelitaan cusub ma muuqan doonaan. Waxaad tan ku beddeli kartaa <slot id=preferences>Doorbidida</slot>"
+	},
+	"history_pageTitle": {
+		"message": "Taariikhda"
+	},
+	"history_searchPlaceholder": {
+		"message": "Raadi qoraal"
+	},
+	"inlineTranslator_showOriginalText": {
+		"message": "Muuji qoraalka asalka ah"
+	},
+	"lang_change": {
+		"message": "Beddel luqadda"
+	},
+	"lang_detect": {
+		"message": "Si toos ah u ogaado"
+	},
+	"lang_select": {
+		"message": "Dooro luqadda"
+	},
+	"lang_swap": {
+		"message": "Isdhaaf luqadaha"
+	},
+	"message_unknownError": {
+		"message": "Khalad aan la garanayn"
+	},
+	"pageTranslator_alwaysTranslateLang": {
+		"message": "Had iyo jeer turjun luqaddan"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disable": {
+		"message": "Dami"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
+		"message": "Dami dhammaan goobaha"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_enable": {
+		"message": "Fur"
+	},
+	"pageTranslator_commonPreferences_title": {
+		"message": "Doorashooyinka guud ee luqaddan"
+	},
+	"pageTranslator_option_autoTranslate": {
+		"message": "Si toos ah u turjun"
+	},
+	"pageTranslator_showOriginal": {
+		"message": "Muuji asalka"
+	},
+	"pageTranslator_showTranslationPreferences": {
+		"message": "Doorashooyinka turjumaadda"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_always": {
+		"message": "Had iyo jeer turjun"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
+		"message": "Had iyo jeer turjun luqaddan"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_default": {
+		"message": "Isticmaal xeerarka guud"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
+		"message": "Isticmaal xeerarka guud ee luqaddan"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_never": {
+		"message": "Waligaa ha turjumin"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
+		"message": "Waligaa ha turjumin luqaddan"
+	},
+	"pageTranslator_sitePreferences_title": {
+		"message": "Doorashooyinka"
+	},
+	"pageTranslator_translatePage": {
+		"message": "Turjun bogga"
+	},
+	"pageTranslator_translationReport": {
+		"message": "Warbixinta turjumaadda"
+	},
+	"pageTranslator_translationReport_queue": {
+		"message": "Sugaya"
+	},
+	"pageTranslator_translationReport_reject": {
+		"message": "Khaladaad"
+	},
+	"pageTranslator_translationReport_resolve": {
+		"message": "La turjumay"
+	},
+	"popup_tabIdNotFound": {
+		"message": "Tab \"$1\" lama helin"
+	},
+	"popup_tab_translatePage": {
+		"message": "Turjumaadda bogga"
+	},
+	"popup_tab_translateText": {
+		"message": "Turjumaadda qoraalka"
+	},
+	"settings_button_cancel": {
+		"message": "Jooji"
+	},
+	"settings_button_export": {
+		"message": "Dhoofinta qaabka"
+	},
+	"settings_button_import": {
+		"message": "Soo dejinta qaabka"
+	},
+	"settings_button_reset": {
+		"message": "Dib u dejinta qaabka"
+	},
+	"settings_button_saveChanges": {
+		"message": "Kaydi isbeddelada"
+	},
+	"settings_message_clearCache_success": {
+		"message": "Kaydka waa la nadiifiyey"
+	},
+	"settings_message_common_invalidValueType": {
+		"message": "Qiime aan sax ahayn"
+	},
+	"settings_message_importConfig_invalidFile": {
+		"message": "Faylka qaabka la bixiyay waa khalad ama waa musuqmaasuq, mana la socon karo"
+	},
+	"settings_message_importConfig_success": {
+		"message": "Soo dejinta waa dhammaystiran"
+	},
+	"settings_message_resetConfig_confirm": {
+		"message": "Xaqiiji in la dejiyo dejimaha qiimayaasha caadiga ah"
+	},
+	"settings_message_resetConfig_success": {
+		"message": "Dejinta waa la dejiyey"
+	},
+	"settings_message_saveChanges_success": {
+		"message": "Isbeddellada waa la keydiyay"
+	},
+	"settings_option_cache": {
+		"message": "Kayd"
+	},
+	"settings_option_cache_clear": {
+		"message": "Nadiifi kaydka"
+	},
+	"settings_option_cache_clear_desc": {
+		"message": "Haddii aad aragto khaladaadka tarjumaadda ama aad si kama' ah u turjunto qoraallada gaarka ah inta kaydku shaqeynayo, waxaad tirtiri kartaa dhammaan xogta kaydka",
+		"description": "Explanation for user about cases when it's useful to clear cache"
+	},
+	"settings_option_cache_enable": {
+		"message": "Daar kaydka"
+	},
+	"settings_option_cache_enable_desc": {
+		"message": "Marka kaydku shaqeynayo, qoraallada horay loo turjumay waxaa lagu turjumi doonaa isla markiiba iyada oo aan la helin codsiyo dheeraad ah oo loo diro adeegga tarjumaadda"
+	},
+	"settings_option_cache_ignoreCase": {
+		"message": "Isticmaal kayd aan xasaasi u ahayn kiisaska"
+	},
+	"settings_option_cache_ignoreCase_desc": {
+		"message": "Marka la daarayo, tarjumaadaha kaydsan waxaa loo isticmaali doonaa qoraallada leh kiisaska kala duwan, taas oo laga yaabo inay keento qallooca tarjumaadda xaaladaha qaarkood"
+	},
+	"settings_option_commonSettings": {
+		"message": "Dejinta guud"
+	},
+	"settings_option_customTranslatorModule": {
+		"message": "Qaybaha tarjumaadda gaarka ah",
+		"description": "An user defined code that implements a translation module"
+	},
+	"settings_option_customTranslatorModule_desc": {
+		"message": "Waxaad ku dari kartaa qaybo tarjumaad oo gaar ah oo adeegsanaya adeegyada tarjumaadda ee aad jeceshahay. Wax badan ka baro <slot id=docs>dukumentiyada tarjumaadaha gaarka ah</slot>"
+	},
+	"settings_option_customTranslatorModule_manageButton": {
+		"message": "Maareynta tarjumaadaha",
+		"description": "A button to show list of translation modules"
+	},
+	"settings_option_history_enable": {
+		"message": "Daar taariikhda"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "Marka la daarayo, tarjumaadaha waa la diiwaangelin doonaa oo waxay ka soo muuqan doonaan <slot id=historyPage>bogga taariikhda</slot>"
+	},
+	"settings_option_pageTranslation": {
+		"message": "Tarjumaadda bogga oo dhan"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent": {
+		"message": "Ogow luqadda iyadoo la adeegsanayo nuxurka"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent_desc": {
+		"message": "Falanqee qoraalka bogga si loo ogaado luqaddiisa. Marka la naafo yahay, luqadda lagu qeexay <slot id=docs>metadata bogga</slot> ayaa la isticmaali doonaa"
+	},
+	"settings_option_pageTranslation_enableContextMenu": {
+		"message": "Daar badhanka liiska macnaha guud"
+	},
+	"settings_option_pageTranslation_enableContextMenu_desc": {
+		"message": "Ku dar badhan si aad u beddesho tarjumaadda bogga ee liiska macnaha guud ee bogga"
+	},
+	"settings_option_pageTranslation_excludeSelectors": {
+		"message": "Xulayaasha laga reebay tarjumaadda"
+	},
+	"settings_option_pageTranslation_excludeSelectors_desc": {
+		"message": "Liiska xulayaasha CSS ee walxaha laga reebay tarjumaadda. Hal xulasho halkii khad. Haddii walax ay la jaanqaado mid ka mid ah xulayaashan, qoraalkeeda, sifooyinkeeda, iyo walxaha ku dhex jira lama tarjumi doono"
+	},
+	"settings_option_pageTranslation_lazyTranslate": {
+		"message": "Turjun kaliya walxaha muuqda"
+	},
+	"settings_option_pageTranslation_lazyTranslate_desc": {
+		"message": "Marka ikhtiyaarkan la daarayo, kaliya walxaha muuqda ayaa la turjumi doonaa. Ikhtiyaarkan wuxuu yareeyaa taraafikada shabakadda"
+	},
+	"settings_option_pageTranslation_originalTextPopup": {
+		"message": "Daar pop-up-ka qoraalka asalka ah"
+	},
+	"settings_option_pageTranslation_originalTextPopup_desc": {
+		"message": "Muuji pop-up leh qoraalka asalka ah marka aad dul joogto xirmooyinka qoraalka ee la turjumay"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation": {
+		"message": "Jidka gaaban"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation_desc": {
+		"message": "Jidka gaaban ee lagu beddelayo tarjumaadda bogga\nRiix ESC si aad u soo celiso furayaasha"
+	},
+	"settings_option_pageTranslation_translatableAttributes": {
+		"message": "Sifooyinka la turjumi karo"
+	},
+	"settings_option_pageTranslation_translatableAttributes_desc": {
+		"message": "Geli magacyada <slot id=htmlAttributes>sifooyinka HTML</slot> si loo turjumo, hal sifo halkii khad\nKaliya sifooyinka ku jira liiskan ayaa la turjumi doonaa"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters": {
+		"message": "Muuji horumarka tarjumaadda"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters_desc": {
+		"message": "Muuji guddi leh horumarka tarjumaadda bogga ee ku jira fidinta popup-ka"
+	},
+	"settings_option_selectTranslation": {
+		"message": "Tarjumaadda qoraalka la doortay"
+	},
+	"settings_option_selectTranslation_detectTextLanguage": {
+		"message": "Ogaanshaha luqadda qoraalka"
+	},
+	"settings_option_selectTranslation_detectTextLanguage_desc": {
+		"message": "Marka la hawlgeliyo, qoraalka la doortay ayaa la falanqeyn doonaa si loo ogaado luqadda loogu talagalay tarjumaadda. Haddii kale, luqadda bogga ayaa la isticmaali doonaa"
+	},
+	"settings_option_selectTranslation_disableWhileTranslatePage": {
+		"message": "Dami inta lagu jiro tarjumaadda bogga"
+	},
+	"settings_option_selectTranslation_enable": {
+		"message": "Hawlgelinta tarjumaadda qoraalka la doortay"
+	},
+	"settings_option_selectTranslation_enable_desc": {
+		"message": "Marka astaantan la hawlgeliyo, waxaad dooran kartaa qoraal kasta oo ku yaal bogga oo waxaad ku tarjumi kartaa popup-ka"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton": {
+		"message": "Si toos ah u diiradda saar badhanka tarjumaadda"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
+		"message": "Marka badhanka tarjumaadda uu ka soo muuqdo bogga, si toos ah ayaa loo diiradda saari doonaa"
+	},
+	"settings_option_selectTranslation_header_languageChoice": {
+		"message": "Dejinta luqadda"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang": {
+		"message": "U oggolow module-ka tarjumaadda inuu ogaado luqadda qoraalka"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
+		"message": "Marka luqadda qoraalka aan si maxalli ah loo ogaan karin oo xulashadan la hawlgeliyo, qoraalka waxaa lagu tarjumi doonaa luqadda \"auto\" haddii la taageero.\nMarka xulashadan la damiyo, hab kale oo beddel ah ayaa loo isticmaali doonaa in lagu dejiyo luqadda asalka ah ee qoraalka"
+	},
+	"settings_option_selectTranslation_mode": {
+		"message": "Ficilka xulashada qoraalka"
+	},
+	"settings_option_selectTranslation_mode_item_contextMenu": {
+		"message": "Ku tarjumo qoraalka menu-ka macnaha guud"
+	},
+	"settings_option_selectTranslation_mode_item_popupButton": {
+		"message": "Muuji badhanka tarjumaadda"
+	},
+	"settings_option_selectTranslation_mode_item_quickTranslate": {
+		"message": "Ku tarjumo qoraalka si degdeg ah"
+	},
+	"settings_option_selectTranslation_modifiers": {
+		"message": "Wax ka beddelayaasha"
+	},
+	"settings_option_selectTranslation_modifiers_desc": {
+		"message": "Dooro furayaasha waa in la riixaa si loo soo bandhigo tarjumaadda"
+	},
+	"settings_option_selectTranslation_modifiers_key_alt": {
+		"message": "alt"
+	},
+	"settings_option_selectTranslation_modifiers_key_ctrl": {
+		"message": "ctrl"
+	},
+	"settings_option_selectTranslation_modifiers_key_meta": {
+		"message": "meta"
+	},
+	"settings_option_selectTranslation_modifiers_key_shift": {
+		"message": "shift"
+	},
+	"settings_option_selectTranslation_rememberDirection": {
+		"message": "Xusuuso luqadda qoraalka ugu dambeeyay ee la doortay"
+	},
+	"settings_option_selectTranslation_showOnceForSelection": {
+		"message": "Muuji badhanka tarjumaadda hal mar xulashada qoraalka kasta"
+	},
+	"settings_option_selectTranslation_showOnceForSelection_desc": {
+		"message": "Badhanka wuxuu soo muuqan doonaa hal mar oo keliya xulashada qoraalka kasta Si aad mar kale u muujiso, dib u dooro qoraalka"
+	},
+	"settings_option_selectTranslation_showOriginalText": {
+		"message": "Muuji qoraalka asalka ah"
+	},
+	"settings_option_selectTranslation_showOriginalText_desc": {
+		"message": "Ku dar block leh qoraalka asalka ah ee popup-ka tarjumaadda"
+	},
+	"settings_option_selectTranslation_strictSelection": {
+		"message": "Habka adag ee xulashada span-ka qoraalka",
+		"description": "This option is about selecting text via mouse"
+	},
+	"settings_option_selectTranslation_strictSelection_desc": {
+		"message": "Iska indho xulashada span-ka qoraalka haddii badhanka bidix ee mouse-ka la sii daayo meel ka baxsan block-ka ku jira qoraalka la doortay"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton": {
+		"message": "Dib u dhac ka hor inta aan la qarin badhanka popup-ka"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton_desc": {
+		"message": "Dib u dhac milisegando ah ka hor inta aan la qarin badhanka marka cursor-ka aanu dul saarnayn. Dul saarka badhanka wuxuu dib u dejinayaa wakhtiga. Si aad u joojiso qarinta tooska ah, dhig qiimaha ka yar 1"
+	},
+	"settings_option_selectTranslation_zIndex": {
+		"message": "z-index"
+	},
+	"settings_option_selectTranslation_zIndex_desc": {
+		"message": "Kordhi qiimahan haddii walxaha bogagga qaarkood ay ku dul dhacaan popup-ka qoraalka la tarjumay"
+	},
+	"settings_option_textTranslator": {
+		"message": "Tarjumaadda qoraalka"
+	},
+	"settings_option_textTranslator_rememberText": {
+		"message": "Xusuusashada qoraalka la tarjumay"
+	},
+	"settings_option_textTranslator_rememberText_desc": {
+		"message": "Xusuusashada qoraalka la tarjumay markale marka daaqadda la furo"
+	},
+	"settings_option_textTranslator_spellCheck": {
+		"message": "Hawl geli hubinta higgaadda"
+	},
+	"settings_option_textTranslator_suggestLanguage": {
+		"message": "Tusidda luqadda qoraalka la ogaaday"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways": {
+		"message": "Had iyo jeer ogaanshaha iyo soo jeedinta luqadda"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways_desc": {
+		"message": "Marka la naafo yahay, soo jeedinta luqadda waxay soo muuqanaysaa oo keliya haddii luqadda isha la dejiyo \"auto\""
+	},
+	"settings_option_translatePreferences": {
+		"message": "Doorbidida tarjumaadda"
+	},
+	"settings_option_translateScheduler": {
+		"message": "Jadwalka tarjumaadda"
+	},
+	"settings_option_translateScheduler_delay": {
+		"message": "Dib u dhac ururinta qoraalka"
+	},
+	"settings_option_translateScheduler_delay_desc": {
+		"message": "Jadwalka tarjumaadda wuxuu yareeyaa tirada codsiyada loo diro API-ga adeegga tarjumaadda iyadoo la ururinayo qoraallo badan intii suurtagal ah si loogu diro hal codsi. Jadwalku wuxuu sugi doonaa wakhtiga la cayimay ee milisegando ah si uu u ururiyo qoraallo badan ka hor inta aan la bilaabin tarjumaadda"
+	},
+	"settings_option_translateScheduler_retryLimit": {
+		"message": "Xadka isku dayga dib u tarjumaadda"
+	},
+	"settings_option_translateScheduler_retryLimit_desc": {
+		"message": "Jadwalku wuxuu isku dayi doonaa inuu dib u tarjumo qoraallada marka khaladaadka tarjumaadda dhacaan. Xulashadan waxay dejinaysaa xadka isku dayga dib u tarjumaadda. Dhig tiro taban si aad u oggolaato isku dayo aan xadidnayn"
+	},
+	"settings_option_translatorModule": {
+		"message": "Qaybta tarjumaadda"
+	},
+	"settings_option_translatorModule_desc": {
+		"message": "Tayada tarjumaadaha iyo luqadaha la heli karo waxay ku xiran yihiin qaybta tarjumaadda"
+	},
+	"settings_option_tts": {
+		"message": "Beddelka Qoraalka Ilaa Hadalka (TTS)"
+	},
+	"settings_option_ttsCustomModules": {
+		"message": "Qaybaha habaynta hadalka ee gaarka ah"
+	},
+	"settings_option_ttsCustomModules_button": {
+		"message": "Maareynta qaybaha habaynta hadalka"
+	},
+	"settings_option_ttsCustomModules_desc": {
+		"message": "Waxaad ku dari kartaa qaybaha habaynta hadalka ee adeegyada aad jeceshahay iyo matoorada codka. Akhri wax badan oo ku saabsan <slot id=docs>dukumentiga TTS ee gaarka ah</slot>"
+	},
+	"settings_option_ttsModule": {
+		"message": "Qaybta TTS ee la doortay"
+	},
+	"settings_option_ttsModule_desc": {
+		"message": "Matoorka codka ee loo isticmaalo codsiinta qoraalka"
+	},
+	"settings_option_userLanguage": {
+		"message": "Luqaddaada"
+	},
+	"settings_option_userLanguage_desc": {
+		"message": "Luqadda qoraallada loo tarjumi doono"
+	},
+	"settings_pageTitle": {
+		"message": "Dejinta"
+	},
+	"settings_section_history": {
+		"message": "Taariikhda"
+	},
+	"settings_section_popup": {
+		"message": "Popup"
+	},
+	"textTranslator_suggestLanguage": {
+		"message": "Waxay u muuqataa in luqadda qoraalka ay tahay <slot id=languageSuggest>$language_name$</slot>",
+		"placeholders": {
+			"language_name": {
+				"content": "$1",
+				"example": "Japanese"
+			}
+		}
+	},
+	"textTranslator_translateInputPlaceholder": {
+		"message": "Geli qoraalka si loo turjumo",
+		"description": "Request to user input some text for translation"
+	},
+	"textTranslator_translatePlaceholder": {
+		"message": "Qoraalka la turjumay wuxuu noqon doonaa halkan"
+	},
+	"translatorsManagerWindow_add": {
+		"message": "Kudar module turjumaad"
+	},
+	"translatorsManagerWindow_close": {
+		"message": "Xir"
+	},
+	"translatorsManagerWindow_emptyTranslatorsListText": {
+		"message": "Lama darin wax modules turjumaad ah oo gaar ah weli"
+	},
+	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
+		"message": "Ma hubtaa inaad rabto inaad ka saarto module-ka turjumaadda \"$translator_name$\"?",
+		"placeholders": {
+			"translator_name": {
+				"content": "$1",
+				"example": "Google translator"
+			}
+		}
+	},
+	"translatorsManagerWindow_title": {
+		"message": "Modules turjumaad oo gaar ah"
+	},
+	"translatorsManagerWindow_translator_delete": {
+		"message": "Tirtir"
+	},
+	"translatorsManagerWindow_translator_edit": {
+		"message": "Tafatir"
+	},
+	"ttsManagerWindow_add": {
+		"message": "Kudar module TTS"
+	},
+	"ttsManagerWindow_close": {
+		"message": "Xir"
+	},
+	"ttsManagerWindow_emptyTranslatorsListText": {
+		"message": "Lama darin wax modules TTS ah weli"
+	},
+	"ttsManagerWindow_message_ttsRemoveConfirmation": {
+		"message": "Ma hubtaa inaad rabto inaad ka saarto module-ka TTS \"$tts_name$\"?",
+		"placeholders": {
+			"tts_name": {
+				"content": "$1",
+				"example": "Google TTS"
+			}
+		}
+	},
+	"ttsManagerWindow_title": {
+		"message": "Modules Text-to-Speech"
+	},
+	"ttsManagerWindow_translator_delete": {
+		"message": "Tirtir"
+	},
+	"ttsManagerWindow_translator_edit": {
+		"message": "Tafatir"
+	},
+	"validation_number": {
+		"message": "Qiimaha waa inuu noqdaa tiro"
+	},
+	"validation_numberBetweenRange": {
+		"message": "Qiimaha waa inuu noqdaa tiro u dhaxaysa $1 iyo $2"
+	},
+	"validation_positiveNumber": {
+		"message": "Qiimaha waa inuu noqdaa tiro togan"
+	}
+}

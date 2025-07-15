@@ -1,0 +1,623 @@
+{
+	"common_action_addToDictionary": {
+		"message": "Wedzera dudziro muduramazwi"
+	},
+	"common_action_removeFromDictionary": {
+		"message": "Bvisa dudziro muduramazwi"
+	},
+	"common_bgUnavailable": {
+		"message": "Chinyorwa chekumashure hachiwanikwi"
+	},
+	"common_cancel": {
+		"message": "Kanzura"
+	},
+	"common_close": {
+		"message": "Vhara"
+	},
+	"common_copy": {
+		"message": "Kopa"
+	},
+	"common_error": {
+		"message": "Kanganiso"
+	},
+	"common_offlineTranslator": {
+		"message": "$1 - Muturikiri asiri paIndaneti"
+	},
+	"common_retry": {
+		"message": "Edzazve"
+	},
+	"common_translate": {
+		"message": "Dudzira"
+	},
+	"component_hotkey_placeholder": {
+		"message": "Dzvanya kuti utore pfupiso"
+	},
+	"component_hotkey_recordPlaceholder": {
+		"message": "Dzvanya makiyi"
+	},
+	"component_hotkey_resetButton": {
+		"message": "Tangazve"
+	},
+	"contextMenu_disablePageTranslation": {
+		"message": "Mira kududzira peji"
+	},
+	"contextMenu_translatePage": {
+		"message": "Dudzira peji"
+	},
+	"contextMenu_translateSelectedText": {
+		"message": "Dudzira chinyorwa chakasarudzwa"
+	},
+	"dictionaryButton_add": {
+		"message": "Wedzera muduramazwi"
+	},
+	"dictionaryButton_delete": {
+		"message": "Bvisa muduramazwi"
+	},
+	"dictionary_button_export": {
+		"message": "Tumira kunze"
+	},
+	"dictionary_button_removeAll": {
+		"message": "Bvisa zvese"
+	},
+	"dictionary_deleteAll": {
+		"message": "Une chokwadi here kuti unoda kubvisa DUDZIRO DZESI muduramazwi?"
+	},
+	"dictionary_deleteConfirmation": {
+		"message": "Une chokwadi here kuti unoda kubvisa dudziro iyi?"
+	},
+	"dictionary_description": {
+		"message": "Chengetedza dudziro muduramazwi kuti uwane nekukurumidza gare gare"
+	},
+	"dictionary_emptyDictionary": {
+		"message": "Duramazwi harisina chinhu, tanga kuzadza nekududzira chinyorwa"
+	},
+	"dictionary_filter_from": {
+		"message": "Mutauro wechinyorwa chepakutanga"
+	},
+	"dictionary_filter_to": {
+		"message": "Mutauro wekuenda"
+	},
+	"dictionary_message_deleteAll_success": {
+		"message": "Dudziro dzese dzabviswa"
+	},
+	"dictionary_notFoundEntries": {
+		"message": "Hapana dudziro dzinoenderana nemasefa aya dzakawanikwa"
+	},
+	"dictionary_pageTitle": {
+		"message": "Duramazwi"
+	},
+	"dictionary_resetFilters": {
+		"message": "Tangazve masefa"
+	},
+	"dictionary_searchPlaceholder": {
+		"message": "Tsvaga nemavara"
+	},
+	"editorWindow_close": {
+		"message": "Vhara"
+	},
+	"editorWindow_data_code": {
+		"message": "Kodhi"
+	},
+	"editorWindow_data_title": {
+		"message": "Zita remodule"
+	},
+	"editorWindow_message_invalidTitle": {
+		"message": "Zita remodule rinofanira kunge riine kanenge kadiki kamwe chete"
+	},
+	"editorWindow_save": {
+		"message": "Chengetedza"
+	},
+	"ext_description": {
+		"message": "Shanduro yepapeji rewebhu, shanduro yemavara, duramazwi, nhoroondo, vatambi vekushandura, zvese zvaunoda kupwanya miganhu yemutauro"
+	},
+	"ext_name": {
+		"message": "Linguist - shanduro yepapeji rewebhu"
+	},
+	"history_control_selectEntry": {
+		"message": "Sarudza shanduro yekuita kwakawanda",
+		"description": "Description in finite form \"to pick\" with explaining what this checkbox will do"
+	},
+	"history_controls_clearHistory": {
+		"message": "Bvisa nhoroondo"
+	},
+	"history_controls_deleteSelected": {
+		"message": "Bvisa shanduro dzakasarudzwa"
+	},
+	"history_controls_selectAll": {
+		"message": "Sarudza shanduro dzese"
+	},
+	"history_message_clearHistoryConfirmation": {
+		"message": "Une chokwadi here kuti unoda kubvisa nhoroondo? Zvese zvinyorwa zvichabviswa"
+	},
+	"history_message_deleteEntryConfirmation": {
+		"message": "Une chokwadi here kuti unoda kubvisa ichi chinyorwa?"
+	},
+	"history_message_deleteSelectedEntriesConfirmation": {
+		"message": "Une chokwadi here kuti unoda kubvisa zvinyorwa zvakasarudzwa ($1)?"
+	},
+	"history_message_entriesNotFound": {
+		"message": "Hapana shanduro dzakawanikwa dzinoenderana nefirita"
+	},
+	"history_message_noEntries": {
+		"message": "Nhoroondo haina chinhu"
+	},
+	"history_notification_disabled": {
+		"message": "Kurekodha nhoroondo kwakaremara, saka zvinyorwa zvitsva hazvizowonekwi. Unogona kuchinja izvi mu <slot id=preferences>Preferences</slot>"
+	},
+	"history_pageTitle": {
+		"message": "Nhoroondo"
+	},
+	"history_searchPlaceholder": {
+		"message": "Tsvaga nemavara"
+	},
+	"inlineTranslator_showOriginalText": {
+		"message": "Ratidza mavara ekutanga"
+	},
+	"lang_change": {
+		"message": "Chinja mutauro"
+	},
+	"lang_detect": {
+		"message": "Otomatiki kuona"
+	},
+	"lang_select": {
+		"message": "Sarudza mutauro"
+	},
+	"lang_swap": {
+		"message": "Chinjana mitauro"
+	},
+	"message_unknownError": {
+		"message": "Kanganiso isingazivikanwe"
+	},
+	"pageTranslator_alwaysTranslateLang": {
+		"message": "Gara uchishandura mutauro uyu"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disable": {
+		"message": "Dzima"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
+		"message": "Dzima kumasaiti ese"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_enable": {
+		"message": "Bvumira"
+	},
+	"pageTranslator_commonPreferences_title": {
+		"message": "Sarudzo dzakajairika dzemutauro uyu"
+	},
+	"pageTranslator_option_autoTranslate": {
+		"message": "Kuzvishandura"
+	},
+	"pageTranslator_showOriginal": {
+		"message": "Ratidza yekutanga"
+	},
+	"pageTranslator_showTranslationPreferences": {
+		"message": "Sarudzo dzekushandura"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_always": {
+		"message": "Gara uchishandura"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
+		"message": "Gara uchishandura mutauro uyu"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_default": {
+		"message": "Shandisa mitemo yakajairika"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
+		"message": "Shandisa mitemo yakajairika yemutauro uyu"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_never": {
+		"message": "Usamboshandura"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
+		"message": "Usamboshandura mutauro uyu"
+	},
+	"pageTranslator_sitePreferences_title": {
+		"message": "Sarudzo dze"
+	},
+	"pageTranslator_translatePage": {
+		"message": "Shandura peji"
+	},
+	"pageTranslator_translationReport": {
+		"message": "Chirevo chekushandura"
+	},
+	"pageTranslator_translationReport_queue": {
+		"message": "Kumirira"
+	},
+	"pageTranslator_translationReport_reject": {
+		"message": "Zvikanganiso"
+	},
+	"pageTranslator_translationReport_resolve": {
+		"message": "Zvakashandurwa"
+	},
+	"popup_tabIdNotFound": {
+		"message": "Tab \"$1\" haina kuwanikwa"
+	},
+	"popup_tab_translatePage": {
+		"message": "Kushandura peji"
+	},
+	"popup_tab_translateText": {
+		"message": "Kushandura chinyorwa"
+	},
+	"settings_button_cancel": {
+		"message": "Kanzura"
+	},
+	"settings_button_export": {
+		"message": "Tumira config"
+	},
+	"settings_button_import": {
+		"message": "Tora config"
+	},
+	"settings_button_reset": {
+		"message": "Dzorerazve config"
+	},
+	"settings_button_saveChanges": {
+		"message": "Chengetedza shanduko"
+	},
+	"settings_message_clearCache_success": {
+		"message": "Cache yakachena"
+	},
+	"settings_message_common_invalidValueType": {
+		"message": "Kukosha kusiri iko"
+	},
+	"settings_message_importConfig_invalidFile": {
+		"message": "Faira reconfig rakapihwa harina kunaka kana kuti rakanganisika, uye harigone kugadziriswa"
+	},
+	"settings_message_importConfig_success": {
+		"message": "Kupinza kwapera"
+	},
+	"settings_message_resetConfig_confirm": {
+		"message": "Simbisa kudzorerazve marongero kune akajairika kukosha"
+	},
+	"settings_message_resetConfig_success": {
+		"message": "Marongero adzorerwa"
+	},
+	"settings_message_saveChanges_success": {
+		"message": "Shanduko dzachengetwa"
+	},
+	"settings_option_cache": {
+		"message": "Cache"
+	},
+	"settings_option_cache_clear": {
+		"message": "Bvisa cache"
+	},
+	"settings_option_cache_clear_desc": {
+		"message": "Kana ukaona zvikanganiso mukushandura kana kushandura zvinyorwa zvakavanzika netsaona apo cache yakavhurwa, unogona kubvisa data rese kubva mu cache",
+		"description": "Explanation for user about cases when it's useful to clear cache"
+	},
+	"settings_option_cache_enable": {
+		"message": "Vhura cache"
+	},
+	"settings_option_cache_enable_desc": {
+		"message": "Kana cache yakavhurwa, zvinyorwa zvakamboshandurwa zvichashandurwa pakarepo pasina kukumbira kuwedzera kubasa rekushandura"
+	},
+	"settings_option_cache_ignoreCase": {
+		"message": "Shandisa cache isina basa nekusiyana kwemavara"
+	},
+	"settings_option_cache_ignoreCase_desc": {
+		"message": "Kana yakavhurwa, shanduro dzakachengetwa dzichashandiswa kuzvinyorwa zvine kusiyana kwemavara, izvo zvinogona kukonzera kukanganisa mukushandura mune dzimwe nguva"
+	},
+	"settings_option_commonSettings": {
+		"message": "Zvirongwa zvakajairika"
+	},
+	"settings_option_customTranslatorModule": {
+		"message": "Mamwe ma module ekushandura",
+		"description": "An user defined code that implements a translation module"
+	},
+	"settings_option_customTranslatorModule_desc": {
+		"message": "Unogona kuwedzera mamwe ma module ekushandura anoshandisa masevhisi ako aunofarira ekushandura. Dzidza zvakawanda mu <slot id=docs>custom translators documentation</slot>"
+	},
+	"settings_option_customTranslatorModule_manageButton": {
+		"message": "Kugadzirisa vashanduri",
+		"description": "A button to show list of translation modules"
+	},
+	"settings_option_history_enable": {
+		"message": "Vhura nhoroondo"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "Kana yakavhurwa, shanduro dzichanyorwa uye dzinoonekwa pa <slot id=historyPage>peji renhoroondo</slot>"
+	},
+	"settings_option_pageTranslation": {
+		"message": "Kushandurwa kwepeji rose"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent": {
+		"message": "Ona mutauro nezviri mukati"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent_desc": {
+		"message": "Ongorora zvinyorwa zviri papeji rewebhu kuti uone mutauro waro. Kana yakadzimwa, mutauro wakatsanangurwa mu <slot id=docs>page metadata</slot> uchashandiswa"
+	},
+	"settings_option_pageTranslation_enableContextMenu": {
+		"message": "Vhura bhatani remenu yemamiriro"
+	},
+	"settings_option_pageTranslation_enableContextMenu_desc": {
+		"message": "Wedzera bhatani rekushandura peji mu menu yemamiriro epeji"
+	},
+	"settings_option_pageTranslation_excludeSelectors": {
+		"message": "Sarudza zvekubvisa mukushandura"
+	},
+	"settings_option_pageTranslation_excludeSelectors_desc": {
+		"message": "Rondedzero yeCSS selectors yezvinhu zvekubvisa mukushandura. Selector imwe pamutsetse. Kana chinhu chichienderana nechero chemasarudzo aya, zvinyorwa zvacho, maitiro, uye zvinhu zvakadzika hazvizoshandurwi"
+	},
+	"settings_option_pageTranslation_lazyTranslate": {
+		"message": "Shandura zvinhu zvinooneka chete"
+	},
+	"settings_option_pageTranslation_lazyTranslate_desc": {
+		"message": "Kana sarudzo iyi yakavhurwa, zvinhu zvinooneka chete ndizvo zvichashandurwa. Sarudzo iyi inoderedza traffic yenetiweki"
+	},
+	"settings_option_pageTranslation_originalTextPopup": {
+		"message": "Vhura popup ine zvinyorwa zvekutanga"
+	},
+	"settings_option_pageTranslation_originalTextPopup_desc": {
+		"message": "Ratidza popup ine zvinyorwa zvekutanga kana uchifambisa pamusoro pezvinyorwa zvashandurwa"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation": {
+		"message": "Shortcut"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation_desc": {
+		"message": "Shortcut yekuchinja kushandura peji\nDzvanya ESC kuti udzore makiyi"
+	},
+	"settings_option_pageTranslation_translatableAttributes": {
+		"message": "Zvinhu zvinogona kushandurwa"
+	},
+	"settings_option_pageTranslation_translatableAttributes_desc": {
+		"message": "Nyora mazita e <slot id=htmlAttributes>HTML attribute</slot> kuti ashandurwe, imwe attribute pamutsetse\nZvinhu zviri murondedzero iyi chete ndizvo zvichashandurwa"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters": {
+		"message": "Ratidza kufambira mberi kwekushandura"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters_desc": {
+		"message": "Ratidza pani ine kufambira mberi kwekushandura peji muwedzero popup"
+	},
+	"settings_option_selectTranslation": {
+		"message": "Kushandura kwechinyorwa chakasarudzwa"
+	},
+	"settings_option_selectTranslation_detectTextLanguage": {
+		"message": "Ona mutauro wechinyorwa"
+	},
+	"settings_option_selectTranslation_detectTextLanguage_desc": {
+		"message": "Kana yakagoneswa, chinyorwa chakasarudzwa chichaongororwa kuti chione mutauro wekushandura. Kana zvisina kudaro, mutauro wepeji uchashandiswa"
+	},
+	"settings_option_selectTranslation_disableWhileTranslatePage": {
+		"message": "Dzima panguva yekushandura peji"
+	},
+	"settings_option_selectTranslation_enable": {
+		"message": "Gonesa kushandura kwechinyorwa chakasarudzwa"
+	},
+	"settings_option_selectTranslation_enable_desc": {
+		"message": "Kana chinhu ichi chakagoneswa, unogona kusarudza chero chinyorwa papeji uye kuchishandura mu popup"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton": {
+		"message": "Otomatiki-tarisa pabhatani rekushandura"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
+		"message": "Kana bhatani rekushandura rikaonekwa papeji, richatariswa otomatiki"
+	},
+	"settings_option_selectTranslation_header_languageChoice": {
+		"message": "Zvirongwa zvemutauro"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang": {
+		"message": "Bvumira module yekushandura kuona mutauro wechinyorwa"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
+		"message": "Kana mutauro wechinyorwa usingakwanisi kuonekwa munharaunda uye sarudzo iyi yakagoneswa, chinyorwa chichashandurwa nemutauro \"auto\" kana chitsigirwa.\nKana sarudzo yakaremara, imwe nzira yekudzokera ichashandiswa kuseta mutauro wechinyorwa"
+	},
+	"settings_option_selectTranslation_mode": {
+		"message": "Chiito pakusarudzwa kwechinyorwa"
+	},
+	"settings_option_selectTranslation_mode_item_contextMenu": {
+		"message": "Shandura chinyorwa kuburikidza nemenu yemamiriro"
+	},
+	"settings_option_selectTranslation_mode_item_popupButton": {
+		"message": "Ratidza bhatani rekushandura"
+	},
+	"settings_option_selectTranslation_mode_item_quickTranslate": {
+		"message": "Shandura chinyorwa pakarepo"
+	},
+	"settings_option_selectTranslation_modifiers": {
+		"message": "Modifiers"
+	},
+	"settings_option_selectTranslation_modifiers_desc": {
+		"message": "Sarudza makiyi anofanira kudzvanywa pakhibhodi kuti aratidze shanduro"
+	},
+	"settings_option_selectTranslation_modifiers_key_alt": {
+		"message": "alt"
+	},
+	"settings_option_selectTranslation_modifiers_key_ctrl": {
+		"message": "ctrl"
+	},
+	"settings_option_selectTranslation_modifiers_key_meta": {
+		"message": "meta"
+	},
+	"settings_option_selectTranslation_modifiers_key_shift": {
+		"message": "shift"
+	},
+	"settings_option_selectTranslation_rememberDirection": {
+		"message": "Rangarira mutauro wechinyorwa wakasarudzwa nguva pfupi yadarika"
+	},
+	"settings_option_selectTranslation_showOnceForSelection": {
+		"message": "Ratidza bhatani rekushandura kamwe chete pakusarudzwa kwechinyorwa"
+	},
+	"settings_option_selectTranslation_showOnceForSelection_desc": {
+		"message": "Bhatani richangoonekwa kamwe chete pakusarudzwa kwechinyorwa. Kuti riratidze zvakare, sarudza chinyorwa zvakare"
+	},
+	"settings_option_selectTranslation_showOriginalText": {
+		"message": "Ratidza chinyorwa chepakutanga"
+	},
+	"settings_option_selectTranslation_showOriginalText_desc": {
+		"message": "Wedzera bhuroko rine chinyorwa chepakutanga ku popup yekushandura"
+	},
+	"settings_option_selectTranslation_strictSelection": {
+		"message": "Maitiro akaomarara ekusarudza chinyorwa span",
+		"description": "This option is about selecting text via mouse"
+	},
+	"settings_option_selectTranslation_strictSelection_desc": {
+		"message": "Siyai kusarudzwa kwechinyorwa span kana bhatani rekuruboshwe remouse rakasunungurwa kunze kwebhuroko rine chinyorwa chakasarudzwa"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton": {
+		"message": "Kunonoka kusati kwavanza bhatani repopup"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton_desc": {
+		"message": "Kunonoka mumasekonzi usati wakanganwa bhatani kana mbeva isiri pamusoro payo. Kana mbeva iri pamusoro pebhatani, nguva inotangazve. Kuti ubvise auto-hide, isa kukosha pasi pe1"
+	},
+	"settings_option_selectTranslation_zIndex": {
+		"message": "z-index"
+	},
+	"settings_option_selectTranslation_zIndex_desc": {
+		"message": "Wedzera kukosha uku kana zvinhu pamapeji mamwe zvichifukidza popup ine zvinyorwa zvakashandurwa"
+	},
+	"settings_option_textTranslator": {
+		"message": "Kushandura zvinyorwa"
+	},
+	"settings_option_textTranslator_rememberText": {
+		"message": "Kuchengeta zvinyorwa zvakashandurwa"
+	},
+	"settings_option_textTranslator_rememberText_desc": {
+		"message": "Kuchengeta zvinyorwa zvakashandurwa kuti zvishandiswe nguva inotevera hwindo parinovhurwa"
+	},
+	"settings_option_textTranslator_spellCheck": {
+		"message": "Batidza kuongorora mashoko"
+	},
+	"settings_option_textTranslator_suggestLanguage": {
+		"message": "Kuratidza mutauro wezvinyorwa wakawanikwa"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways": {
+		"message": "Nguva dzose ona uye kuratidza mutauro"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways_desc": {
+		"message": "Kana dzimwa, kurudziro dzemutauro dzinoonekwa chete kana mutauro wekutanga wakaiswa ku \"auto\""
+	},
+	"settings_option_translatePreferences": {
+		"message": "Zvaunofarira pakushandura"
+	},
+	"settings_option_translateScheduler": {
+		"message": "Purogiramu yekushandura"
+	},
+	"settings_option_translateScheduler_delay": {
+		"message": "Kunonoka kwekuunganidza zvinyorwa"
+	},
+	"settings_option_translateScheduler_delay_desc": {
+		"message": "Purogiramu yekushandura inoderedza huwandu hwezvikumbiro kuAPI yekushandura nekubatanidza zvinyorwa zvakawanda sezvinobvira kuti zvitumirwe mukumbiro kumwe chete. Purogiramu ichamirira nguva yakatarwa mumasekonzi kuti iunganidze zvimwe zvinyorwa isati yatanga kushandura"
+	},
+	"settings_option_translateScheduler_retryLimit": {
+		"message": "Muganhu wekuedza kushandura zvakare"
+	},
+	"settings_option_translateScheduler_retryLimit_desc": {
+		"message": "Purogiramu ichaedzazve kushandura zvinyorwa kana zvikanganiso zvekushandura zvikaitika. Sarudzo iyi inogadza muganhu wekuedza zvakare. Isa nhamba isina kunaka kuti ubvumidze kuedza kusingaperi"
+	},
+	"settings_option_translatorModule": {
+		"message": "Module yekushandura"
+	},
+	"settings_option_translatorModule_desc": {
+		"message": "Hunhu hwekushandura uye mitauro inowanikwa zvinoenderana ne module yekushandura"
+	},
+	"settings_option_tts": {
+		"message": "Kushandura Zvinyorwa kuKutaura (TTS)"
+	},
+	"settings_option_ttsCustomModules": {
+		"message": "Mimodule yekugadzira yekutaura"
+	},
+	"settings_option_ttsCustomModules_button": {
+		"message": "Kugadzirisa mimodule yekugadzira yekutaura"
+	},
+	"settings_option_ttsCustomModules_desc": {
+		"message": "Unogona kuwedzera mimodule yekugadzira yekutaura inoshandisa masevhisi aunofarira uye injini dzezwi. Verenga zvimwe mu <slot id=docs>gwaro reTTS rakagadzirwa</slot>"
+	},
+	"settings_option_ttsModule": {
+		"message": "Module yeTTS yakasarudzwa"
+	},
+	"settings_option_ttsModule_desc": {
+		"message": "Injini yezwi inoshandiswa pakutaura zvinyorwa"
+	},
+	"settings_option_userLanguage": {
+		"message": "Mutauro wako"
+	},
+	"settings_option_userLanguage_desc": {
+		"message": "Mutauro uyo zvinyorwa zvichashandurirwa"
+	},
+	"settings_pageTitle": {
+		"message": "Zvirongwa"
+	},
+	"settings_section_history": {
+		"message": "Nhoroondo"
+	},
+	"settings_section_popup": {
+		"message": "Popup"
+	},
+	"textTranslator_suggestLanguage": {
+		"message": "Zvinoratidzika kuti mutauro wezvinyorwa ndi <slot id=languageSuggest>$language_name$</slot>",
+		"placeholders": {
+			"language_name": {
+				"content": "$1",
+				"example": "Japanese"
+			}
+		}
+	},
+	"textTranslator_translateInputPlaceholder": {
+		"message": "Nyora chinyorwa chekuturikira",
+		"description": "Request to user input some text for translation"
+	},
+	"textTranslator_translatePlaceholder": {
+		"message": "Chinyorwa chakaturikirwa chichava pano"
+	},
+	"translatorsManagerWindow_add": {
+		"message": "Wedzera module yekuturikira"
+	},
+	"translatorsManagerWindow_close": {
+		"message": "Vhara"
+	},
+	"translatorsManagerWindow_emptyTranslatorsListText": {
+		"message": "Hapana ma module ekuturikira akawedzerwa parizvino"
+	},
+	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
+		"message": "Une chokwadi here kuti unoda kubvisa module yekuturikira \"$translator_name$\"?",
+		"placeholders": {
+			"translator_name": {
+				"content": "$1",
+				"example": "Google translator"
+			}
+		}
+	},
+	"translatorsManagerWindow_title": {
+		"message": "Ma module ekuturikira akagadzirwa"
+	},
+	"translatorsManagerWindow_translator_delete": {
+		"message": "Bvisa"
+	},
+	"translatorsManagerWindow_translator_edit": {
+		"message": "Gadzirisa"
+	},
+	"ttsManagerWindow_add": {
+		"message": "Wedzera module yeTTS"
+	},
+	"ttsManagerWindow_close": {
+		"message": "Vhara"
+	},
+	"ttsManagerWindow_emptyTranslatorsListText": {
+		"message": "Hapana ma module eTTS akawedzerwa parizvino"
+	},
+	"ttsManagerWindow_message_ttsRemoveConfirmation": {
+		"message": "Une chokwadi here kuti unoda kubvisa module yeTTS \"$tts_name$\"?",
+		"placeholders": {
+			"tts_name": {
+				"content": "$1",
+				"example": "Google TTS"
+			}
+		}
+	},
+	"ttsManagerWindow_title": {
+		"message": "Ma module eText-to-Speech"
+	},
+	"ttsManagerWindow_translator_delete": {
+		"message": "Bvisa"
+	},
+	"ttsManagerWindow_translator_edit": {
+		"message": "Gadzirisa"
+	},
+	"validation_number": {
+		"message": "Kukosha kunofanira kuva nhamba"
+	},
+	"validation_numberBetweenRange": {
+		"message": "Kukosha kunofanira kuva nhamba pakati pa $1 na $2"
+	},
+	"validation_positiveNumber": {
+		"message": "Kukosha kunofanira kuva nhamba yakanaka"
+	}
+}

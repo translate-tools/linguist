@@ -6,10 +6,10 @@
 		"message": "Удалить перевод из словаря"
 	},
 	"common_bgUnavailable": {
-		"message": "Фоновый скрипт не отвечает"
+		"message": "Фоновый скрипт недоступен"
 	},
 	"common_cancel": {
-		"message": "Отмена"
+		"message": "Отменить"
 	},
 	"common_close": {
 		"message": "Закрыть"
@@ -21,16 +21,16 @@
 		"message": "Ошибка"
 	},
 	"common_offlineTranslator": {
-		"message": "$1 - Оффлайн переводчик"
+		"message": "$1 - Офлайн переводчик"
 	},
 	"common_retry": {
-		"message": "Повторить попытку"
+		"message": "Повторить"
 	},
 	"common_translate": {
 		"message": "Перевести"
 	},
 	"component_hotkey_placeholder": {
-		"message": "Нажмите, чтобы записать горячие клавиши"
+		"message": "Нажмите, чтобы записать сочетание клавиш"
 	},
 	"component_hotkey_recordPlaceholder": {
 		"message": "Нажмите клавиши"
@@ -39,7 +39,7 @@
 		"message": "Сбросить"
 	},
 	"contextMenu_disablePageTranslation": {
-		"message": "Выключить перевод страницы"
+		"message": "Остановить перевод страницы"
 	},
 	"contextMenu_translatePage": {
 		"message": "Перевести страницу"
@@ -48,46 +48,46 @@
 		"message": "Перевести выделенный текст"
 	},
 	"dictionaryButton_add": {
-		"message": "Добавить перевод в словарь"
+		"message": "Добавить в словарь"
 	},
 	"dictionaryButton_delete": {
-		"message": "Удалить перевод из словаря"
+		"message": "Удалить из словаря"
 	},
 	"dictionary_button_export": {
-		"message": "Экспорт"
+		"message": "Экспортировать"
 	},
 	"dictionary_button_removeAll": {
-		"message": "Очистить"
+		"message": "Удалить все"
 	},
 	"dictionary_deleteAll": {
-		"message": "Вы уверены что хотите удалить ВСЕ переводы из словаря?"
+		"message": "Вы уверены, что хотите удалить ВСЕ переводы из словаря?"
 	},
 	"dictionary_deleteConfirmation": {
-		"message": "Вы уверены что хотите удалить этот перевод?"
+		"message": "Вы уверены, что хотите удалить этот перевод?"
 	},
 	"dictionary_description": {
-		"message": "Сохраняйте переводы в словаре, что бы найти их позже"
+		"message": "Сохраняйте переводы в словаре, чтобы быстро находить их позже"
 	},
 	"dictionary_emptyDictionary": {
-		"message": "Словарь пуст. Начните сохранять тексты при переводе"
+		"message": "Словарь пуст, начните заполнять его, переводя текст"
 	},
 	"dictionary_filter_from": {
-		"message": "Исходный язык"
+		"message": "Язык исходного текста"
 	},
 	"dictionary_filter_to": {
 		"message": "Целевой язык"
 	},
 	"dictionary_message_deleteAll_success": {
-		"message": "Словарь успешно очищен"
+		"message": "Все переводы были удалены"
 	},
 	"dictionary_notFoundEntries": {
-		"message": "Не найдены записи, соответствующие фильтрам"
+		"message": "Переводы, соответствующие этим фильтрам, не найдены"
 	},
 	"dictionary_pageTitle": {
 		"message": "Словарь"
 	},
 	"dictionary_resetFilters": {
-		"message": "сбросить фильтры"
+		"message": "Сбросить фильтры"
 	},
 	"dictionary_searchPlaceholder": {
 		"message": "Поиск по тексту"
@@ -98,50 +98,51 @@
 	"editorWindow_data_code": {
 		"message": "Код"
 	},
-	"editorWindow_data_name": {
-		"message": "Название"
+	"editorWindow_data_title": {
+		"message": "Название модуля"
 	},
-	"editorWindow_message_invalidName": {
-		"message": "Название должно содержать как минимум 1 символ"
+	"editorWindow_message_invalidTitle": {
+		"message": "Название модуля должно содержать хотя бы один символ"
 	},
 	"editorWindow_save": {
 		"message": "Сохранить"
 	},
 	"ext_description": {
-		"message": "Перевод страниц и текстов, словарь, история, автономные и настраиваемые переводчики"
+		"message": "Перевод веб-страниц, перевод текста, словарь, история, пользовательские переводчики, всё, что нужно для преодоления языковых барьеров"
 	},
 	"ext_name": {
 		"message": "Linguist - переводчик веб-страниц"
 	},
 	"history_control_selectEntry": {
-		"message": "Выбрать перевод для массового действия"
+		"message": "Выбрать перевод для массового действия",
+		"description": "Description in finite form \"to pick\" with explaining what this checkbox will do"
 	},
 	"history_controls_clearHistory": {
 		"message": "Очистить историю"
 	},
 	"history_controls_deleteSelected": {
-		"message": "Удалить выбранное"
+		"message": "Удалить выбранные переводы"
 	},
 	"history_controls_selectAll": {
 		"message": "Выбрать все переводы"
 	},
 	"history_message_clearHistoryConfirmation": {
-		"message": "Очистить историю? Все записи будут удалены"
+		"message": "Вы уверены, что хотите очистить историю? Все записи будут удалены"
 	},
 	"history_message_deleteEntryConfirmation": {
-		"message": "Удалить этот перевод?"
+		"message": "Вы уверены, что хотите удалить эту запись?"
 	},
 	"history_message_deleteSelectedEntriesConfirmation": {
-		"message": "Удалить выбранные записи ($1)?"
-	},
-	"history_message_emptyEntries": {
-		"message": "История пуста"
+		"message": "Вы уверены, что хотите удалить выбранные записи ($1)?"
 	},
 	"history_message_entriesNotFound": {
-		"message": "Не найдены переводы, соответствующие фильтрам"
+		"message": "Переводы, соответствующие фильтру, не найдены"
+	},
+	"history_message_noEntries": {
+		"message": "История пуста"
 	},
 	"history_notification_disabled": {
-		"message": "Запись истории отключена, поэтому новые записи не будут появляться. Вы можете изменить это в <slot id=preferences>настройках</slot>"
+		"message": "Запись истории отключена, поэтому новые записи не появятся. Вы можете изменить это в <slot id=preferences>Настройки</slot>"
 	},
 	"history_pageTitle": {
 		"message": "История"
@@ -153,37 +154,16 @@
 		"message": "Показать оригинальный текст"
 	},
 	"lang_change": {
-		"message": "Сменить язык"
+		"message": "Изменить язык"
 	},
 	"lang_detect": {
-		"message": "Определить язык"
+		"message": "Автоопределение"
 	},
 	"lang_select": {
 		"message": "Выбрать язык"
 	},
 	"lang_swap": {
 		"message": "Поменять языки местами"
-	},
-	"message_askResetConfig": {
-		"message": "Сбросить настройки?"
-	},
-	"message_cacheFlushed": {
-		"message": "Кеш очищен"
-	},
-	"message_changesSaved": {
-		"message": "Изменения сохранены"
-	},
-	"message_error": {
-		"message": "Ошибка"
-	},
-	"message_errorOfTranslate": {
-		"message": "Ошибка перевода"
-	},
-	"message_serviceRequiredKey": {
-		"message": "Сервис требует указания ключа"
-	},
-	"message_translateOfText": {
-		"message": "Переведено"
 	},
 	"message_unknownError": {
 		"message": "Неизвестная ошибка"
@@ -204,13 +184,13 @@
 		"message": "Общие настройки для этого языка"
 	},
 	"pageTranslator_option_autoTranslate": {
-		"message": "Автоматический перевод"
-	},
-	"pageTranslator_showOptions": {
-		"message": "Настройки перевода"
+		"message": "Автоперевод"
 	},
 	"pageTranslator_showOriginal": {
 		"message": "Показать оригинал"
+	},
+	"pageTranslator_showTranslationPreferences": {
+		"message": "Настройки перевода"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_always": {
 		"message": "Всегда переводить"
@@ -240,7 +220,7 @@
 		"message": "Отчёт о переводе"
 	},
 	"pageTranslator_translationReport_queue": {
-		"message": "В очереди"
+		"message": "В ожидании"
 	},
 	"pageTranslator_translationReport_reject": {
 		"message": "Ошибки"
@@ -261,31 +241,31 @@
 		"message": "Отменить"
 	},
 	"settings_button_export": {
-		"message": "Экспорт настроек"
+		"message": "Экспортировать конфигурацию"
 	},
 	"settings_button_import": {
-		"message": "Импорт настроек"
+		"message": "Импортировать конфигурацию"
 	},
 	"settings_button_reset": {
-		"message": "Сброс настроек"
+		"message": "Сбросить конфигурацию"
 	},
 	"settings_button_saveChanges": {
 		"message": "Сохранить изменения"
 	},
 	"settings_message_clearCache_success": {
-		"message": "Кеш очищен"
+		"message": "Кэш очищен"
 	},
 	"settings_message_common_invalidValueType": {
 		"message": "Недопустимое значение"
 	},
 	"settings_message_importConfig_invalidFile": {
-		"message": "Файл для импорта не может быть обработан"
+		"message": "Предоставленный файл конфигурации некорректен или повреждён и не может быть обработан"
 	},
 	"settings_message_importConfig_success": {
-		"message": "Импорт завершен"
+		"message": "Импорт завершён"
 	},
 	"settings_message_resetConfig_confirm": {
-		"message": "Желаете сбросить настройки?"
+		"message": "Подтвердите сброс настроек до значений по умолчанию"
 	},
 	"settings_message_resetConfig_success": {
 		"message": "Настройки сброшены"
@@ -293,164 +273,149 @@
 	"settings_message_saveChanges_success": {
 		"message": "Изменения сохранены"
 	},
-	"settings_option_appIcon": {
-		"message": "Иконка расширения"
-	},
-	"settings_option_appIcon_desc": {
-		"message": "При установке динамической иконки, цвет будет подстраиваться под тему браузера"
-	},
-	"settings_option_appIcon_item_auto": {
-		"message": "Динамический выбор"
-	},
-	"settings_option_appIcon_item_color": {
-		"message": "Цветная"
-	},
-	"settings_option_appIcon_item_dark": {
-		"message": "Темная"
-	},
-	"settings_option_appIcon_item_light": {
-		"message": "Светлая"
-	},
 	"settings_option_cache": {
-		"message": "Кеш"
+		"message": "Кэш"
 	},
 	"settings_option_cache_clear": {
-		"message": "Очистить кеш"
+		"message": "Очистить кэш"
 	},
 	"settings_option_cache_clear_desc": {
-		"message": "Если производился перевод секретного текста с включенным кешем или появились ошибки перевода, можно очистить кеш"
+		"message": "Если вы заметили ошибки перевода или случайно перевели личные тексты при включённом кэше, вы можете удалить все данные из кэша",
+		"description": "Explanation for user about cases when it's useful to clear cache"
 	},
 	"settings_option_cache_enable": {
-		"message": "Использовать кеш"
+		"message": "Включить кэш"
 	},
 	"settings_option_cache_enable_desc": {
-		"message": "При использовании кеша, переводы сохраняются в локальное хранилище и в будущем аналогичные запросы будут переведены мгновенно.\n\nМожно, например, перевести страницу и переключаться между переводом и оригинальной версией, при отсутствии интернета"
+		"message": "Когда кэш включён, тексты, которые были переведены ранее, будут переводиться мгновенно без дополнительных запросов к сервису перевода"
 	},
 	"settings_option_cache_ignoreCase": {
-		"message": "Чувствительность к регистру"
+		"message": "Использовать кэш без учёта регистра"
 	},
 	"settings_option_cache_ignoreCase_desc": {
-		"message": "При отключенной опции, большее количество текста будет браться из кеша, но это может вызвать артефакты в переводе"
+		"message": "При включении кэшированные переводы будут использоваться для текстов с разным регистром, что может вызвать искажения перевода в некоторых ситуациях"
 	},
 	"settings_option_commonSettings": {
 		"message": "Общие настройки"
 	},
 	"settings_option_customTranslatorModule": {
-		"message": "Пользовательские модули перевода"
+		"message": "Пользовательские модули перевода",
+		"description": "An user defined code that implements a translation module"
 	},
 	"settings_option_customTranslatorModule_desc": {
-		"message": "Вы можете добавить собственные переводчики, использующие ваши любимые сервисы перевода"
+		"message": "Вы можете добавить пользовательские модули перевода, которые используют ваши любимые сервисы перевода. Узнайте больше в <slot id=docs>документации по пользовательским переводчикам</slot>"
 	},
 	"settings_option_customTranslatorModule_manageButton": {
-		"message": "Управление переводчиками"
+		"message": "Управление переводчиками",
+		"description": "A button to show list of translation modules"
 	},
 	"settings_option_history_enable": {
 		"message": "Включить историю"
 	},
 	"settings_option_history_enable_desc": {
-		"message": "При включении любые переводы будут сохраняться на странице истории"
-	},
-	"settings_option_mainPreferences": {
-		"message": "Основные настройки"
+		"message": "Когда включено, переводы будут записываться и отображаться на <slot id=historyPage>странице истории</slot>"
 	},
 	"settings_option_pageTranslation": {
-		"message": "Перевод страниц"
+		"message": "Полный перевод страницы"
 	},
 	"settings_option_pageTranslation_detectLanguageByContent": {
-		"message": "Определять язык страницы по содержимому тексту"
+		"message": "Определять язык по содержимому"
 	},
 	"settings_option_pageTranslation_detectLanguageByContent_desc": {
-		"message": "Пытаться определить язык страницы по содержимому тексту в первую очередь. По умолчанию, язык определяется по мета информации предоставленной страницей"
+		"message": "Анализировать текст на веб-странице для определения его языка. Когда отключено, будет использоваться язык, указанный в <slot id=docs>метаданных страницы</slot>"
 	},
 	"settings_option_pageTranslation_enableContextMenu": {
 		"message": "Включить кнопку в контекстном меню"
 	},
 	"settings_option_pageTranslation_enableContextMenu_desc": {
-		"message": "Добавить кнопку для переключения перевода страницы в контекстное меню"
+		"message": "Добавить кнопку для переключения перевода страницы в контекстное меню страницы"
 	},
 	"settings_option_pageTranslation_excludeSelectors": {
-		"message": "Селекторы для исключения из перевода"
+		"message": "Селекторы, исключаемые из перевода"
 	},
 	"settings_option_pageTranslation_excludeSelectors_desc": {
-		"message": "Список CSS-селекторов, которые не будут переводиться. Один селектор на строку. Если элемент соответствует любому из этих селекторов, он, его атрибуты и вложенные элементы не будут переведены."
+		"message": "Список CSS-селекторов для элементов, которые следует исключить из перевода. Один селектор на строку. Если элемент соответствует любому из этих селекторов, его текст, атрибуты и вложенные элементы не будут переведены"
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
-		"message": "Переводить только видимую часть текста"
+		"message": "Переводить только видимые элементы"
 	},
 	"settings_option_pageTranslation_lazyTranslate_desc": {
-		"message": "При отключении, страницы переводятся полностью сразу. Эта настройка может значительно экономить на трафик"
+		"message": "Когда эта опция включена, будут переведены только видимые элементы. Эта опция уменьшает сетевой трафик"
 	},
 	"settings_option_pageTranslation_originalTextPopup": {
-		"message": "Показывать оригинальный текст при наведении"
+		"message": "Включить всплывающее окно с оригинальным текстом"
 	},
 	"settings_option_pageTranslation_originalTextPopup_desc": {
-		"message": "Показать всплывающее окно с исходным текстом при наведении мыши на переведенный текст"
+		"message": "Показывать всплывающее окно с оригинальным текстом при наведении на переведённые текстовые блоки"
 	},
-	"settings_option_pageTranslation_toggleTranslationHotkey": {
-		"message": "Горячие клавиши"
+	"settings_option_pageTranslation_shortcut_toggleTranslation": {
+		"message": "Сочетание клавиш"
 	},
-	"settings_option_pageTranslation_toggleTranslationHotkey_desc": {
-		"message": "Сочетания клавиш для переключения перевода страницы\nНажмите ESC для сброса клавиш"
+	"settings_option_pageTranslation_shortcut_toggleTranslation_desc": {
+		"message": "Сочетание клавиш для переключения перевода страницы\nНажмите ESC для сброса клавиш"
 	},
 	"settings_option_pageTranslation_translatableAttributes": {
-		"message": "Список аттрибутов для перевода"
+		"message": "Переводимые атрибуты"
 	},
 	"settings_option_pageTranslation_translatableAttributes_desc": {
-		"message": "Переводятся только аттрибуты из списка. Указывайте каждый аттрибут с новой строки"
+		"message": "Введите имена <slot id=htmlAttributes>HTML атрибутов</slot> для перевода, по одному атрибуту на строку\nБудут переведены только атрибуты из этого списка"
 	},
 	"settings_option_popupTab_pageTranslator_showCounters": {
-		"message": "Показывать статистику перевода"
+		"message": "Показывать прогресс перевода"
 	},
 	"settings_option_popupTab_pageTranslator_showCounters_desc": {
-		"message": "Отображать статистику перевода страницы"
+		"message": "Показывать панель с прогрессом перевода страницы в всплывающем окне расширения"
 	},
 	"settings_option_selectTranslation": {
-		"message": "Перевод при выделении"
+		"message": "Перевод для выделенного текста"
 	},
-	"settings_option_selectTranslation_detectedLangFirst": {
-		"message": "Предпочитать определённый язык текста, языку страницы"
+	"settings_option_selectTranslation_detectTextLanguage": {
+		"message": "Определить язык текста"
 	},
-	"settings_option_selectTranslation_detectedLangFirst_desc": {
-		"message": "При включении, модуль будет пытаться определить язык выделенного текста, иначе при переводе будет предложен язык страницы"
+	"settings_option_selectTranslation_detectTextLanguage_desc": {
+		"message": "Когда включено, выделенный текст будет анализироваться для определения языка перевода. В противном случае будет использоваться язык страницы"
 	},
 	"settings_option_selectTranslation_disableWhileTranslatePage": {
-		"message": "Отключать во время перевода страницы"
+		"message": "Отключить во время перевода страницы"
 	},
 	"settings_option_selectTranslation_enable": {
-		"message": "Включить"
+		"message": "Включить перевод выделенного текста"
+	},
+	"settings_option_selectTranslation_enable_desc": {
+		"message": "Когда эта функция включена, вы можете выбрать любой текст на странице и перевести его во всплывающем окне"
 	},
 	"settings_option_selectTranslation_focusOnTranslateButton": {
-		"message": "Автоматический фокус на кнопке перевода"
+		"message": "Автофокус на кнопке перевода"
 	},
 	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
-		"message": "Фокусироваться на кнопку при завершении выделения. Полезно при работе с клавиатуры"
+		"message": "Когда кнопка перевода появляется на странице, она будет автоматически сфокусирована"
 	},
 	"settings_option_selectTranslation_header_languageChoice": {
-		"message": "Выбор языка"
+		"message": "Настройки языка"
 	},
 	"settings_option_selectTranslation_isUseAutoForDetectLang": {
-		"message": "Включить определение языка переводчиком"
+		"message": "Разрешить модулю перевода определять язык текста"
 	},
 	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
-		"message": "Использовать автоматическое определение языка переводчиком, если не удаётся определить язык текста локально"
+		"message": "Когда язык текста не может быть определён локально и эта опция включена, текст будет переведён с языком \"auto\", если он поддерживается.\nКогда опция отключена, будет использован другой метод для установки исходного языка текста"
 	},
 	"settings_option_selectTranslation_mode": {
-		"message": "Способ перевода"
+		"message": "Действие при выделении текста"
 	},
 	"settings_option_selectTranslation_mode_item_contextMenu": {
-		"message": "Кнопка в контекстном меню"
+		"message": "Перевести текст через контекстное меню"
 	},
 	"settings_option_selectTranslation_mode_item_popupButton": {
-		"message": "Всплывающая кнопка"
+		"message": "Показать кнопку перевода"
 	},
 	"settings_option_selectTranslation_mode_item_quickTranslate": {
-		"message": "Быстрый перевод по выделению"
+		"message": "Перевести текст мгновенно"
 	},
 	"settings_option_selectTranslation_modifiers": {
 		"message": "Модификаторы"
 	},
 	"settings_option_selectTranslation_modifiers_desc": {
-		"message": "Отметьте клавиши, которые необходимо нажать, для срабатывания модуля перевода по выделению"
+		"message": "Выберите клавиши, которые необходимо нажать на клавиатуре для отображения перевода"
 	},
 	"settings_option_selectTranslation_modifiers_key_alt": {
 		"message": "alt"
@@ -465,58 +430,59 @@
 		"message": "shift"
 	},
 	"settings_option_selectTranslation_rememberDirection": {
-		"message": "Запоминать последнее направление перевода"
+		"message": "Запомнить язык последнего выбранного текста"
 	},
 	"settings_option_selectTranslation_showOnceForSelection": {
-		"message": "Показывать кнопку один раз для каждого выделения текста"
+		"message": "Показывать кнопку перевода один раз за выбор текста"
 	},
 	"settings_option_selectTranslation_showOnceForSelection_desc": {
-		"message": "Кнопка будет показываться только один раз после каждого выделения. Если нужно показать кнопку ещё раз, выделите текст снова"
+		"message": "Кнопка появится только один раз для каждого выбора текста. Чтобы показать её снова, выберите текст заново"
 	},
 	"settings_option_selectTranslation_showOriginalText": {
-		"message": "Показывать блок с оригинальным текстом"
+		"message": "Показать оригинальный текст"
 	},
 	"settings_option_selectTranslation_showOriginalText_desc": {
-		"message": "Добавить блок с исходным текстом во всплывающее окно с переводом"
+		"message": "Добавить блок с оригинальным текстом в всплывающее окно перевода"
 	},
 	"settings_option_selectTranslation_strictSelection": {
-		"message": "Строгое выделение"
+		"message": "Строгий режим выделения текста",
+		"description": "Эта опция касается выделения текста с помощью мыши"
 	},
 	"settings_option_selectTranslation_strictSelection_desc": {
-		"message": "Игнорировать выделение, при отпускании мыши за пределами блока содержащего текст"
+		"message": "Игнорировать выделение текста, если левая кнопка мыши отпущена за пределами блока, содержащего выделенный текст"
 	},
 	"settings_option_selectTranslation_timeoutForHideButton": {
-		"message": "Задержка автоматического скрытия кнопки перевода"
+		"message": "Задержка перед скрытием кнопки всплывающего окна"
 	},
 	"settings_option_selectTranslation_timeoutForHideButton_desc": {
-		"message": "Время в мс, по истечении которого кнопка перевода будет скрыта после выделения текста.\nНаведение курсора на кнопку сбрасывает таймер.\n\nДля отключения автоматического скрытия, установите значение меньше еденицы"
+		"message": "Задержка в миллисекундах перед скрытием кнопки, когда курсор не находится над ней. Наведение курсора на кнопку сбрасывает таймер. Чтобы отключить автоматическое скрытие, установите значение меньше 1"
 	},
 	"settings_option_selectTranslation_zIndex": {
 		"message": "z-index"
 	},
 	"settings_option_selectTranslation_zIndex_desc": {
-		"message": "Если блок перевода перекрывается другими элементами, увеличьте это значение"
+		"message": "Увеличьте это значение, если элементы на некоторых страницах перекрывают всплывающее окно с переведённым текстом"
 	},
 	"settings_option_textTranslator": {
 		"message": "Перевод текста"
 	},
 	"settings_option_textTranslator_rememberText": {
-		"message": "Запоминать переведённый текст"
+		"message": "Запоминание переведённого текста"
 	},
 	"settings_option_textTranslator_rememberText_desc": {
-		"message": "Опция позволяет запоминать переведённый текст для следующего открытия окна"
+		"message": "Запоминание переведённого текста для следующего открытия окна"
 	},
 	"settings_option_textTranslator_spellCheck": {
-		"message": "Включить проверку правописания"
+		"message": "Включить проверку орфографии"
 	},
 	"settings_option_textTranslator_suggestLanguage": {
-		"message": "Определять и предлагать язык текста"
+		"message": "Показ обнаруженного языка текста"
 	},
 	"settings_option_textTranslator_suggestLanguageAlways": {
-		"message": "Определять и предлагать язык всегда"
+		"message": "Всегда определять и предлагать язык"
 	},
 	"settings_option_textTranslator_suggestLanguageAlways_desc": {
-		"message": "В выключенном состоянии язык будет определяться только при не установленном языке текста"
+		"message": "Когда отключено, предложения по языку появляются только если исходный язык установлен на \"auto\""
 	},
 	"settings_option_translatePreferences": {
 		"message": "Настройки перевода"
@@ -525,46 +491,46 @@
 		"message": "Планировщик перевода"
 	},
 	"settings_option_translateScheduler_delay": {
-		"message": "Задержка для накопления текста (в мс)"
+		"message": "Задержка накопления текста"
 	},
 	"settings_option_translateScheduler_delay_desc": {
-		"message": "Планировщик перевода старается уменьшить количество запросов к сервисам перевода и для этого накапливает тексты в блоки, что бы отправить на перевод несколько текстов одним запросом.\n\nПосле добавления текста в блок, планировщик ожидает некоторое время и если по истечении указанного времени новых текстов не добавляется, он отправляет блок на перевод"
+		"message": "Планировщик перевода уменьшает количество запросов к API сервиса перевода, накапливая как можно больше текстов для отправки в одном запросе. Планировщик будет ждать указанное время в миллисекундах, чтобы собрать больше текстов перед началом перевода"
 	},
 	"settings_option_translateScheduler_retryLimit": {
-		"message": "Количество повторных попыток перевода"
+		"message": "Лимит попыток повторного перевода"
 	},
 	"settings_option_translateScheduler_retryLimit_desc": {
-		"message": "При неудачной попытке перевода, будут предприняты повторные попытки, не превышающие установленный лимит.\nДля снятия ограничения, установите отрицательное значение"
+		"message": "Планировщик будет повторно пытаться перевести тексты при возникновении ошибок перевода. Эта опция устанавливает лимит на количество повторных попыток. Установите отрицательное число, чтобы разрешить неограниченное количество повторных попыток"
 	},
 	"settings_option_translatorModule": {
 		"message": "Модуль перевода"
 	},
 	"settings_option_translatorModule_desc": {
-		"message": "От выбранного модуля зависит скорость и качество переводов, а также доступные направления перевода.\n\nЕсли модуль работает некорректно, смените его"
+		"message": "Качество переводов и доступные языки зависят от модуля перевода"
 	},
 	"settings_option_tts": {
-		"message": "Озвучивание текста (TTS)"
+		"message": "Преобразование текста в речь (TTS)"
 	},
 	"settings_option_ttsCustomModules": {
-		"message": "Модули озвучивания текста"
+		"message": "Пользовательские модули синтеза речи"
 	},
 	"settings_option_ttsCustomModules_button": {
-		"message": "Управление TTS модулями"
+		"message": "Управление модулями синтеза речи"
 	},
 	"settings_option_ttsCustomModules_desc": {
-		"message": "Вы можете добавить модули TTS, которые используют ваши любимые сервисы и голоса. Узнайте больше и ищите модули в документации по настройке TTS"
+		"message": "Вы можете добавить модули синтеза речи, использующие ваши любимые сервисы и голосовые движки. Подробнее в <slot id=docs>документации по пользовательским TTS</slot>"
 	},
 	"settings_option_ttsModule": {
-		"message": "TTS модуль"
+		"message": "Выбранный модуль TTS"
 	},
 	"settings_option_ttsModule_desc": {
-		"message": "Модуль для озвучивания текстов"
+		"message": "Голосовой движок, используемый для озвучивания текста"
 	},
 	"settings_option_userLanguage": {
 		"message": "Ваш язык"
 	},
 	"settings_option_userLanguage_desc": {
-		"message": "На этот язык будут переводиться тексты по умолчанию\n\nЯзык интерфейса зависит от языка браузера, возможно в будущем его можно будет установить в настройках расширения"
+		"message": "Язык, на который будут переводиться тексты"
 	},
 	"settings_pageTitle": {
 		"message": "Настройки"
@@ -576,25 +542,32 @@
 		"message": "Всплывающее окно"
 	},
 	"textTranslator_suggestLanguage": {
-		"message": "Кажется, язык текста"
+		"message": "Похоже, язык текста — <slot id=languageSuggest>$language_name$</slot>",
+		"placeholders": {
+			"language_name": {
+				"content": "$1",
+				"example": "Японский"
+			}
+		}
 	},
 	"textTranslator_translateInputPlaceholder": {
-		"message": "Введите текст"
+		"message": "Введите текст для перевода",
+		"description": "Запрос пользователю ввести текст для перевода"
 	},
 	"textTranslator_translatePlaceholder": {
-		"message": "Здесь будет перевод"
+		"message": "Переведённый текст будет здесь"
 	},
 	"translatorsManagerWindow_add": {
-		"message": "Добавить"
+		"message": "Добавить модуль перевода"
 	},
 	"translatorsManagerWindow_close": {
 		"message": "Закрыть"
 	},
 	"translatorsManagerWindow_emptyTranslatorsListText": {
-		"message": "Список пуст. Самое время добавить новый переводчик"
+		"message": "Пользовательские модули перевода ещё не добавлены"
 	},
 	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
-		"message": "Вы действительно хотите удалить переводчик \"$translator_name$\"?",
+		"message": "Вы уверены, что хотите удалить модуль перевода \"$translator_name$\"?",
 		"placeholders": {
 			"translator_name": {
 				"content": "$1",
@@ -612,16 +585,16 @@
 		"message": "Редактировать"
 	},
 	"ttsManagerWindow_add": {
-		"message": "Добавить"
+		"message": "Добавить модуль TTS"
 	},
 	"ttsManagerWindow_close": {
 		"message": "Закрыть"
 	},
 	"ttsManagerWindow_emptyTranslatorsListText": {
-		"message": "Пользовательские модули TTS еще не добавлены"
+		"message": "Модули TTS ещё не добавлены"
 	},
 	"ttsManagerWindow_message_ttsRemoveConfirmation": {
-		"message": "Удалить модуль озвучивания текста \"$tts_name$\"?",
+		"message": "Вы уверены, что хотите удалить модуль TTS \"$tts_name$\"?",
 		"placeholders": {
 			"tts_name": {
 				"content": "$1",
@@ -630,7 +603,7 @@
 		}
 	},
 	"ttsManagerWindow_title": {
-		"message": "Озвучивание текста (TTS)"
+		"message": "Модули преобразования текста в речь"
 	},
 	"ttsManagerWindow_translator_delete": {
 		"message": "Удалить"
@@ -639,564 +612,12 @@
 		"message": "Редактировать"
 	},
 	"validation_number": {
-		"message": "Параметр должен быть числом"
+		"message": "Значение должно быть числом"
 	},
 	"validation_numberBetweenRange": {
-		"message": "Параметр должен быть числом от $1 до $2"
+		"message": "Значение должно быть числом в диапазоне от $1 до $2"
 	},
 	"validation_positiveNumber": {
-		"message": "Параметр должен быть положительным числом"
-	},
-	"langCode_aa": {
-		"message": "Афарский"
-	},
-	"langCode_ab": {
-		"message": "Абхазский"
-	},
-	"langCode_ae": {
-		"message": "Авестийский"
-	},
-	"langCode_af": {
-		"message": "Африкаанс"
-	},
-	"langCode_ak": {
-		"message": "Акан"
-	},
-	"langCode_am": {
-		"message": "Амхарский"
-	},
-	"langCode_an": {
-		"message": "Арагонский"
-	},
-	"langCode_ar": {
-		"message": "Арабский"
-	},
-	"langCode_as": {
-		"message": "Ассамский"
-	},
-	"langCode_av": {
-		"message": "Аварский"
-	},
-	"langCode_ay": {
-		"message": "Аймара"
-	},
-	"langCode_az": {
-		"message": "Азербайджанский"
-	},
-	"langCode_ba": {
-		"message": "Башкирский"
-	},
-	"langCode_be": {
-		"message": "Белорусский"
-	},
-	"langCode_bg": {
-		"message": "Болгарский"
-	},
-	"langCode_bh": {
-		"message": "Бходжпури"
-	},
-	"langCode_bi": {
-		"message": "Бислама"
-	},
-	"langCode_bm": {
-		"message": "Бамбара"
-	},
-	"langCode_bn": {
-		"message": "Бенгальский"
-	},
-	"langCode_bo": {
-		"message": "Тибетский"
-	},
-	"langCode_br": {
-		"message": "Бретонский"
-	},
-	"langCode_bs": {
-		"message": "Боснийский"
-	},
-	"langCode_ca": {
-		"message": "Каталанский"
-	},
-	"langCode_ce": {
-		"message": "Чеченский"
-	},
-	"langCode_ch": {
-		"message": "Чаморро"
-	},
-	"langCode_co": {
-		"message": "Корсиканский"
-	},
-	"langCode_cr": {
-		"message": "Кри"
-	},
-	"langCode_cs": {
-		"message": "Чешский"
-	},
-	"langCode_cu": {
-		"message": "Церковнославянский"
-	},
-	"langCode_cv": {
-		"message": "Чувашский"
-	},
-	"langCode_cy": {
-		"message": "Валлийский"
-	},
-	"langCode_da": {
-		"message": "Датский"
-	},
-	"langCode_de": {
-		"message": "Немецкий"
-	},
-	"langCode_dv": {
-		"message": "Мальдивский"
-	},
-	"langCode_dz": {
-		"message": "Дзонг-кэ"
-	},
-	"langCode_ee": {
-		"message": "Эве"
-	},
-	"langCode_el": {
-		"message": "Греческий"
-	},
-	"langCode_en": {
-		"message": "Английский"
-	},
-	"langCode_eo": {
-		"message": "Эсперанто"
-	},
-	"langCode_es": {
-		"message": "Испанский"
-	},
-	"langCode_et": {
-		"message": "Эстонский"
-	},
-	"langCode_eu": {
-		"message": "Баскский"
-	},
-	"langCode_fa": {
-		"message": "Персидский"
-	},
-	"langCode_ff": {
-		"message": "Фулах"
-	},
-	"langCode_fi": {
-		"message": "Финский"
-	},
-	"langCode_fj": {
-		"message": "Фиджи"
-	},
-	"langCode_fo": {
-		"message": "Фарерский"
-	},
-	"langCode_fr": {
-		"message": "Французский"
-	},
-	"langCode_fy": {
-		"message": "Западнофризский"
-	},
-	"langCode_ga": {
-		"message": "Ирландский"
-	},
-	"langCode_gd": {
-		"message": "Гэльский"
-	},
-	"langCode_gl": {
-		"message": "Галисийский"
-	},
-	"langCode_gn": {
-		"message": "Гуарани"
-	},
-	"langCode_gu": {
-		"message": "Гуджарати"
-	},
-	"langCode_gv": {
-		"message": "Мэнский"
-	},
-	"langCode_ha": {
-		"message": "Хауса"
-	},
-	"langCode_he": {
-		"message": "Иврит"
-	},
-	"langCode_hi": {
-		"message": "Хинди"
-	},
-	"langCode_ho": {
-		"message": "Хиримоту"
-	},
-	"langCode_hr": {
-		"message": "Хорватский"
-	},
-	"langCode_ht": {
-		"message": "Гаитянский"
-	},
-	"langCode_hu": {
-		"message": "Венгерский"
-	},
-	"langCode_hy": {
-		"message": "Армянский"
-	},
-	"langCode_hz": {
-		"message": "Гереро"
-	},
-	"langCode_ia": {
-		"message": "Интерлингва"
-	},
-	"langCode_id": {
-		"message": "Индонезийский"
-	},
-	"langCode_ie": {
-		"message": "Интерлингве"
-	},
-	"langCode_ig": {
-		"message": "Игбо"
-	},
-	"langCode_ii": {
-		"message": "Носу"
-	},
-	"langCode_ik": {
-		"message": "Инупиак"
-	},
-	"langCode_io": {
-		"message": "Идо"
-	},
-	"langCode_is": {
-		"message": "Исландский"
-	},
-	"langCode_it": {
-		"message": "Итальянский"
-	},
-	"langCode_iu": {
-		"message": "Инуктитут"
-	},
-	"langCode_ja": {
-		"message": "Японский"
-	},
-	"langCode_jv": {
-		"message": "Яванский"
-	},
-	"langCode_ka": {
-		"message": "Грузинский"
-	},
-	"langCode_kg": {
-		"message": "Конго"
-	},
-	"langCode_ki": {
-		"message": "Кикуйю"
-	},
-	"langCode_kj": {
-		"message": "Кунама"
-	},
-	"langCode_kk": {
-		"message": "Казахский"
-	},
-	"langCode_kl": {
-		"message": "Гренландский"
-	},
-	"langCode_km": {
-		"message": "Кхмерский"
-	},
-	"langCode_kn": {
-		"message": "Каннада"
-	},
-	"langCode_ko": {
-		"message": "Корейский"
-	},
-	"langCode_kr": {
-		"message": "Канури"
-	},
-	"langCode_ks": {
-		"message": "Кашмири"
-	},
-	"langCode_ku": {
-		"message": "Курдский"
-	},
-	"langCode_kv": {
-		"message": "Коми"
-	},
-	"langCode_kw": {
-		"message": "Корнский"
-	},
-	"langCode_ky": {
-		"message": "Киргизский"
-	},
-	"langCode_la": {
-		"message": "Латинский"
-	},
-	"langCode_lb": {
-		"message": "Люксембургский"
-	},
-	"langCode_lg": {
-		"message": "Ганда"
-	},
-	"langCode_li": {
-		"message": "Лимбургский"
-	},
-	"langCode_ln": {
-		"message": "Лингала"
-	},
-	"langCode_lo": {
-		"message": "Лаосский"
-	},
-	"langCode_lt": {
-		"message": "Литовский"
-	},
-	"langCode_lu": {
-		"message": "Луба-катанга"
-	},
-	"langCode_lv": {
-		"message": "Латышский"
-	},
-	"langCode_mg": {
-		"message": "Малагасийский"
-	},
-	"langCode_mh": {
-		"message": "Маршалльский"
-	},
-	"langCode_mi": {
-		"message": "Маори"
-	},
-	"langCode_mk": {
-		"message": "Македонский"
-	},
-	"langCode_ml": {
-		"message": "Малаялам"
-	},
-	"langCode_mn": {
-		"message": "Монгольский"
-	},
-	"langCode_mr": {
-		"message": "Маратхи"
-	},
-	"langCode_ms": {
-		"message": "Малайский"
-	},
-	"langCode_mt": {
-		"message": "Мальтийский"
-	},
-	"langCode_my": {
-		"message": "Бирманский"
-	},
-	"langCode_na": {
-		"message": "Науру"
-	},
-	"langCode_nb": {
-		"message": "Норвежский букмол"
-	},
-	"langCode_nd": {
-		"message": "Северный ндебеле"
-	},
-	"langCode_ne": {
-		"message": "Непальский"
-	},
-	"langCode_ng": {
-		"message": "Ндонга"
-	},
-	"langCode_nl": {
-		"message": "Нидерландский"
-	},
-	"langCode_nn": {
-		"message": "Нюнорск"
-	},
-	"langCode_no": {
-		"message": "Норвежский"
-	},
-	"langCode_nr": {
-		"message": "Южный ндебеле"
-	},
-	"langCode_nv": {
-		"message": "Навахо"
-	},
-	"langCode_ny": {
-		"message": "Ньянджа"
-	},
-	"langCode_oc": {
-		"message": "Окситанский"
-	},
-	"langCode_oj": {
-		"message": "Оджибва"
-	},
-	"langCode_om": {
-		"message": "Оромо"
-	},
-	"langCode_or": {
-		"message": "Ория"
-	},
-	"langCode_os": {
-		"message": "Осетинский"
-	},
-	"langCode_pa": {
-		"message": "Панджаби"
-	},
-	"langCode_pi": {
-		"message": "Пали"
-	},
-	"langCode_pl": {
-		"message": "Польский"
-	},
-	"langCode_ps": {
-		"message": "Пушту"
-	},
-	"langCode_pt": {
-		"message": "Португальский"
-	},
-	"langCode_qu": {
-		"message": "Кечуа"
-	},
-	"langCode_rm": {
-		"message": "Романшский"
-	},
-	"langCode_rn": {
-		"message": "Рунди"
-	},
-	"langCode_ro": {
-		"message": "Румынский"
-	},
-	"langCode_ru": {
-		"message": "Русский"
-	},
-	"langCode_rw": {
-		"message": "Киньяруанда"
-	},
-	"langCode_sa": {
-		"message": "Санскрит"
-	},
-	"langCode_sc": {
-		"message": "Сардинский"
-	},
-	"langCode_sd": {
-		"message": "Синдхи"
-	},
-	"langCode_se": {
-		"message": "Северносаамский"
-	},
-	"langCode_sg": {
-		"message": "Санго"
-	},
-	"langCode_si": {
-		"message": "Сингальский"
-	},
-	"langCode_sk": {
-		"message": "Словацкий"
-	},
-	"langCode_sl": {
-		"message": "Словенский"
-	},
-	"langCode_sm": {
-		"message": "Самоанский"
-	},
-	"langCode_sn": {
-		"message": "Шона"
-	},
-	"langCode_so": {
-		"message": "Сомали"
-	},
-	"langCode_sq": {
-		"message": "Албанский"
-	},
-	"langCode_sr": {
-		"message": "Сербский"
-	},
-	"langCode_ss": {
-		"message": "Свази"
-	},
-	"langCode_st": {
-		"message": "Южный сото"
-	},
-	"langCode_su": {
-		"message": "Сунданский"
-	},
-	"langCode_sv": {
-		"message": "Шведский"
-	},
-	"langCode_sw": {
-		"message": "Суахили"
-	},
-	"langCode_ta": {
-		"message": "Тамильский"
-	},
-	"langCode_te": {
-		"message": "Телугу"
-	},
-	"langCode_tg": {
-		"message": "Таджикский"
-	},
-	"langCode_th": {
-		"message": "Тайский"
-	},
-	"langCode_ti": {
-		"message": "Тигринья"
-	},
-	"langCode_tk": {
-		"message": "Туркменский"
-	},
-	"langCode_tl": {
-		"message": "Филиппинский"
-	},
-	"langCode_tn": {
-		"message": "Тсвана"
-	},
-	"langCode_to": {
-		"message": "Тонганский"
-	},
-	"langCode_tr": {
-		"message": "Турецкий"
-	},
-	"langCode_ts": {
-		"message": "Тсонга"
-	},
-	"langCode_tt": {
-		"message": "Татарский"
-	},
-	"langCode_tw": {
-		"message": "Акан"
-	},
-	"langCode_ty": {
-		"message": "Таитянский"
-	},
-	"langCode_ug": {
-		"message": "Уйгурский"
-	},
-	"langCode_uk": {
-		"message": "Украинский"
-	},
-	"langCode_ur": {
-		"message": "Урду"
-	},
-	"langCode_uz": {
-		"message": "Узбекский"
-	},
-	"langCode_ve": {
-		"message": "Венда"
-	},
-	"langCode_vi": {
-		"message": "Вьетнамский"
-	},
-	"langCode_vo": {
-		"message": "Волапюк"
-	},
-	"langCode_wa": {
-		"message": "Валлонский"
-	},
-	"langCode_wo": {
-		"message": "Волоф"
-	},
-	"langCode_xh": {
-		"message": "Коса"
-	},
-	"langCode_yi": {
-		"message": "Идиш"
-	},
-	"langCode_yo": {
-		"message": "Йоруба"
-	},
-	"langCode_za": {
-		"message": "Чжуань"
-	},
-	"langCode_zh": {
-		"message": "Китайский"
-	},
-	"langCode_zu": {
-		"message": "Зулу"
+		"message": "Значение должно быть положительным числом"
 	}
 }

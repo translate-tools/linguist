@@ -1,0 +1,623 @@
+{
+	"common_action_addToDictionary": {
+		"message": "Mbojoapy ñe'ẽñemi ñe'ẽryrupe"
+	},
+	"common_action_removeFromDictionary": {
+		"message": "Japo'o ñe'ẽñemi ñe'ẽryruguive"
+	},
+	"common_bgUnavailable": {
+		"message": "Script fondo ndojeguerekói"
+	},
+	"common_cancel": {
+		"message": "Heja"
+	},
+	"common_close": {
+		"message": "Mboty"
+	},
+	"common_copy": {
+		"message": "Mokopi"
+	},
+	"common_error": {
+		"message": "Mbopya'ã"
+	},
+	"common_offlineTranslator": {
+		"message": "$1 - Ñe'ẽñemi offline"
+	},
+	"common_retry": {
+		"message": "Ñepyrũ jey"
+	},
+	"common_translate": {
+		"message": "Ñe'ẽñemi"
+	},
+	"component_hotkey_placeholder": {
+		"message": "Eklik ha'e eñemoĩ peteĩ mbytekuaa"
+	},
+	"component_hotkey_recordPlaceholder": {
+		"message": "Eñapytĩ umi kláve"
+	},
+	"component_hotkey_resetButton": {
+		"message": "Ñemohenda jey"
+	},
+	"contextMenu_disablePageTranslation": {
+		"message": "Eheja pe ñe'ẽñemi kuatiarogue"
+	},
+	"contextMenu_translatePage": {
+		"message": "Ñe'ẽñemi kuatiarogue"
+	},
+	"contextMenu_translateSelectedText": {
+		"message": "Ñe'ẽñemi oiporavóva ñe'ẽ"
+	},
+	"dictionaryButton_add": {
+		"message": "Mbojoapy ñe'ẽryrupe"
+	},
+	"dictionaryButton_delete": {
+		"message": "Japo'o ñe'ẽryruguive"
+	},
+	"dictionary_button_export": {
+		"message": "Ñeguenohẽ"
+	},
+	"dictionary_button_removeAll": {
+		"message": "Japo'o opaite"
+	},
+	"dictionary_deleteAll": {
+		"message": "¿Añete piko reipota japo'o OPAITE ñe'ẽñemi ñe'ẽryruguive?"
+	},
+	"dictionary_deleteConfirmation": {
+		"message": "¿Añete piko reipota japo'o ko ñe'ẽñemi?"
+	},
+	"dictionary_description": {
+		"message": "Eñongatu ñe'ẽñemi ñe'ẽryrupe ikatu hag̃uáicha eheka pya'eve upe rire"
+	},
+	"dictionary_emptyDictionary": {
+		"message": "Ñe'ẽryru nandi, eñepyrũ eñemoĩvo ñe'ẽñemi"
+	},
+	"dictionary_filter_from": {
+		"message": "Ñe'ẽ ypykue"
+	},
+	"dictionary_filter_to": {
+		"message": "Ñe'ẽ paha"
+	},
+	"dictionary_message_deleteAll_success": {
+		"message": "Opaite ñe'ẽñemi oñemboje'o"
+	},
+	"dictionary_notFoundEntries": {
+		"message": "Ndaipóri ñe'ẽñemi oĩva ko'ãveve filtrope"
+	},
+	"dictionary_pageTitle": {
+		"message": "Ñe'ẽryru"
+	},
+	"dictionary_resetFilters": {
+		"message": "Ñemohenda jey filtrope"
+	},
+	"dictionary_searchPlaceholder": {
+		"message": "heka kuatiarogue rehe"
+	},
+	"editorWindow_close": {
+		"message": "Mboty"
+	},
+	"editorWindow_data_code": {
+		"message": "Código"
+	},
+	"editorWindow_data_title": {
+		"message": "Módulo réra"
+	},
+	"editorWindow_message_invalidTitle": {
+		"message": "Módulo réra tekotevẽ peteĩ pu'ae jepe"
+	},
+	"editorWindow_save": {
+		"message": "Ñongatu"
+	},
+	"ext_description": {
+		"message": "Ñembojere kuatiarogue, ñe'ẽ ñembojere, ñe'ẽryru, rembiasakue, ñe'ẽmboguata ha'e opa mba'e reikotevẽva oikytĩ hag̃ua ñe'ẽ ñemombyry"
+	},
+	"ext_name": {
+		"message": "Linguist - kuatiarogue moñe'ẽha"
+	},
+	"history_control_selectEntry": {
+		"message": "Purahei ñembojere tembiapo heta rehe",
+		"description": "Description in finite form \"to pick\" with explaining what this checkbox will do"
+	},
+	"history_controls_clearHistory": {
+		"message": "Mopotĩ rembiasakue"
+	},
+	"history_controls_deleteSelected": {
+		"message": "Ñemombo umi ñe'ẽmboguata oiporavóva"
+	},
+	"history_controls_selectAll": {
+		"message": "Poravo opaite ñe'ẽmboguata"
+	},
+	"history_message_clearHistoryConfirmation": {
+		"message": "Añete piko remopotĩse rembiasakue? Opaite kuatiañe'ẽ oñembogue"
+	},
+	"history_message_deleteEntryConfirmation": {
+		"message": "Añete piko remombose ko kuatiañe'ẽ?"
+	},
+	"history_message_deleteSelectedEntriesConfirmation": {
+		"message": "Añete piko remombose umi kuatiañe'ẽ oiporavóva ($1)?"
+	},
+	"history_message_entriesNotFound": {
+		"message": "Ndaipóri ñe'ẽmboguata ojojáva pe ñemohenda rehe"
+	},
+	"history_message_noEntries": {
+		"message": "Rembiasakue nandi"
+	},
+	"history_notification_disabled": {
+		"message": "Rembiasakue ñemboguata oñembogue, upévare kuatiañe'ẽ pyahu ndojehechamo'ãi. Ikatu rembohasa ko mba'e <slot id=preferences>Preferencias</slot>pe"
+	},
+	"history_pageTitle": {
+		"message": "Rembiasakue"
+	},
+	"history_searchPlaceholder": {
+		"message": "heka kuatiarogue rehe"
+	},
+	"inlineTranslator_showOriginalText": {
+		"message": "Mombe'u kuatiarogue ypykue"
+	},
+	"lang_change": {
+		"message": "Ñe'ẽ ñembojere"
+	},
+	"lang_detect": {
+		"message": "Ñe'ẽ ñemohenda"
+	},
+	"lang_select": {
+		"message": "Poravo ñe'ẽ"
+	},
+	"lang_swap": {
+		"message": "Ñe'ẽ ñembojerejoja"
+	},
+	"message_unknownError": {
+		"message": "Tekotevẽva oikuaa'ỹva"
+	},
+	"pageTranslator_alwaysTranslateLang": {
+		"message": "Ñembojere ko ñe'ẽ akóinte"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disable": {
+		"message": "Mbogue"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
+		"message": "Mbogue opaite tenda rehe"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_enable": {
+		"message": "Mboheko"
+	},
+	"pageTranslator_commonPreferences_title": {
+		"message": "Preferensia komun ko ñe'ẽme g̃uarã"
+	},
+	"pageTranslator_option_autoTranslate": {
+		"message": "Ñembojere automático"
+	},
+	"pageTranslator_showOriginal": {
+		"message": "Mombe'u original"
+	},
+	"pageTranslator_showTranslationPreferences": {
+		"message": "Preferensia ñembojerére"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_always": {
+		"message": "Mbojere meme"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
+		"message": "Mbojere meme ko ñe'ẽme g̃uarã"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_default": {
+		"message": "Eipuru regla komun"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
+		"message": "Eipuru regla komun ko ñe'ẽme g̃uarã"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_never": {
+		"message": "Ani mbojere araka'eve"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
+		"message": "Ani mbojere araka'eve ko ñe'ẽme g̃uarã"
+	},
+	"pageTranslator_sitePreferences_title": {
+		"message": "Preferensia g̃uarã"
+	},
+	"pageTranslator_translatePage": {
+		"message": "Mbojere kuatiañe'ẽ"
+	},
+	"pageTranslator_translationReport": {
+		"message": "Reporte ñembojerére"
+	},
+	"pageTranslator_translationReport_queue": {
+		"message": "Oĩva"
+	},
+	"pageTranslator_translationReport_reject": {
+		"message": "Ojejavy"
+	},
+	"pageTranslator_translationReport_resolve": {
+		"message": "Oñembohasa"
+	},
+	"popup_tabIdNotFound": {
+		"message": "Tab \"$1\" ndojejuhúi"
+	},
+	"popup_tab_translatePage": {
+		"message": "Ñembohasa kuatiañe'ẽ"
+	},
+	"popup_tab_translateText": {
+		"message": "Ñembohasa ñe'ẽ"
+	},
+	"settings_button_cancel": {
+		"message": "Heja"
+	},
+	"settings_button_export": {
+		"message": "Exporta configuración"
+	},
+	"settings_button_import": {
+		"message": "Importa configuración"
+	},
+	"settings_button_reset": {
+		"message": "Resetea configuración"
+	},
+	"settings_button_saveChanges": {
+		"message": "Guarda mba'eporã"
+	},
+	"settings_message_clearCache_success": {
+		"message": "Cache oñemopotĩ"
+	},
+	"settings_message_common_invalidValueType": {
+		"message": "Valor noĩporãiva"
+	},
+	"settings_message_importConfig_invalidFile": {
+		"message": "Archivo de configuración ome'ẽva noĩporãi térã oñembyai, ha ndaikatúi oñemog̃uahẽ"
+	},
+	"settings_message_importConfig_success": {
+		"message": "Importación ojehupyty"
+	},
+	"settings_message_resetConfig_confirm": {
+		"message": "Ehechauka reipotaha resetea configuración valor porãme"
+	},
+	"settings_message_resetConfig_success": {
+		"message": "Configuración oñemohenda jey"
+	},
+	"settings_message_saveChanges_success": {
+		"message": "Oñembopyahu ñepyrũmby"
+	},
+	"settings_option_cache": {
+		"message": "Cache"
+	},
+	"settings_option_cache_clear": {
+		"message": "Ñemopotĩ cache"
+	},
+	"settings_option_cache_clear_desc": {
+		"message": "Rehechakuaa ramo mba'ekuaa jejavy térã reipyso ramo mba'ekuaa ñemi cache oĩ aja, ikatu remopotĩ opaite mba'ekuaa cache-gui",
+		"description": "Explanation for user about cases when it's useful to clear cache"
+	},
+	"settings_option_cache_enable": {
+		"message": "Mombarete cache"
+	},
+	"settings_option_cache_enable_desc": {
+		"message": "Cache oĩ ramo, umi mba'ekuaa ojehechauka va'ekue yma oñehechauka pya'eve'ỹre oje'eve'ỹre mba'ekuaa jejokoha"
+	},
+	"settings_option_cache_ignoreCase": {
+		"message": "Cache oipuru'ỹva maymáva"
+	},
+	"settings_option_cache_ignoreCase_desc": {
+		"message": "Oñemombarete ramo, umi mba'ekuaa ojehechauka va'ekue ojeipuru maymáva rehe, ikatu oiko jejavy mba'ekuaa jejokoha"
+	},
+	"settings_option_commonSettings": {
+		"message": "Ñemohenda jepivegua"
+	},
+	"settings_option_customTranslatorModule": {
+		"message": "Mba'ekuaa jejokoha jepivegua",
+		"description": "An user defined code that implements a translation module"
+	},
+	"settings_option_customTranslatorModule_desc": {
+		"message": "Ikatu remoinge mba'ekuaa jejokoha jepivegua oipuru hag̃ua ne mba'ekuaa jejokoha ojehayhuvéva. Eikuaave <slot id=docs>mba'ekuaa jejokoha jepivegua kuatiañe'ẽme</slot>"
+	},
+	"settings_option_customTranslatorModule_manageButton": {
+		"message": "Mba'ekuaa jejokoha ñemotenonde",
+		"description": "A button to show list of translation modules"
+	},
+	"settings_option_history_enable": {
+		"message": "Mombarete tembiasakue"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "Oñemombarete ramo, umi mba'ekuaa ojehechauka va'ekue oñeñongatu ha ojehecha <slot id=historyPage>tembiasakue kuatiañe'ẽme</slot>"
+	},
+	"settings_option_pageTranslation": {
+		"message": "Ñemohenda kuatiañe'ẽ"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent": {
+		"message": "Ñemohenda ñe'ẽ kuatiañe'ẽre"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent_desc": {
+		"message": "Ñemohenda kuatiañe'ẽre ojehecha hag̃ua mba'ekuaa ñe'ẽ. Oñemombarete'ỹ ramo, ojeipuru ñe'ẽ oĩva <slot id=docs>kuatiañe'ẽ kuatiañe'ẽme</slot>"
+	},
+	"settings_option_pageTranslation_enableContextMenu": {
+		"message": "Mombarete tembiapo kuatiañe'ẽme"
+	},
+	"settings_option_pageTranslation_enableContextMenu_desc": {
+		"message": "Mbojoapy peteĩ tembiapo kuatiañe'ẽme ojehechauka hag̃ua kuatiañe'ẽ"
+	},
+	"settings_option_pageTranslation_excludeSelectors": {
+		"message": "Mba'ekuaa jejokoha ojehechauka'ỹva"
+	},
+	"settings_option_pageTranslation_excludeSelectors_desc": {
+		"message": "Mba'ekuaa jejokoha CSS ojehechauka'ỹva. Peteĩ mba'ekuaa jejokoha peteĩ líña rehe. Peteĩ mba'ekuaa ojehechauka ramo peteĩva ko'ã mba'ekuaa jejokoha, mba'ekuaa, mba'ekuaa jejokoha ha mba'ekuaa jejokoha ojehechauka'ỹ"
+	},
+	"settings_option_pageTranslation_lazyTranslate": {
+		"message": "Ñemohenda mba'ekuaa ojehechauka'ỹva"
+	},
+	"settings_option_pageTranslation_lazyTranslate_desc": {
+		"message": "Ko tembiapo oñemombarete ramo, mba'ekuaa ojehechauka'ỹva añoite ojehechauka. Ko tembiapo omboguejy mba'ekuaa jejokoha"
+	},
+	"settings_option_pageTranslation_originalTextPopup": {
+		"message": "Mombarete mba'ekuaa ojehechauka'ỹva"
+	},
+	"settings_option_pageTranslation_originalTextPopup_desc": {
+		"message": "Mbojoapy peteĩ mba'ekuaa ojehechauka'ỹva mba'ekuaa ojehechauka'ỹva rehe"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation": {
+		"message": "Ñemohenda"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation_desc": {
+		"message": "Ñemohenda ojehechauka hag̃ua kuatiañe'ẽ\nEñepyrũ jey ESC ojehechauka hag̃ua mba'ekuaa"
+	},
+	"settings_option_pageTranslation_translatableAttributes": {
+		"message": "Mba'ekuaa jejokoha ojehechauka'ỹva"
+	},
+	"settings_option_pageTranslation_translatableAttributes_desc": {
+		"message": "Eike <slot id=htmlAttributes>HTML mba'ekuaa jejokoha</slot> ojehechauka hag̃ua, peteĩ mba'ekuaa peteĩ líña rehe\nMba'ekuaa oĩva ko lísta-pe añoite ojehechauka"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters": {
+		"message": "Mba'ekuaa jejokoha ojehechauka'ỹva"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters_desc": {
+		"message": "Ehechauka peteĩ panel ohechaukáva mba'éichapa oho pe traduksión de páhina pe extensión popup-pe"
+	},
+	"settings_option_selectTranslation": {
+		"message": "Traduksión pe téxto ojehechaukáva"
+	},
+	"settings_option_selectTranslation_detectTextLanguage": {
+		"message": "Eheka mba'éichapa pe idioma ojehai"
+	},
+	"settings_option_selectTranslation_detectTextLanguage_desc": {
+		"message": "Oñemoñepyrũramo, pe téxto ojehechaukáva oñeanalisáta ojehecha hag̃ua mba'éichapa pe idioma otradusíva. Ambue hendáicha, pe idioma de páhina ojeiporúta"
+	},
+	"settings_option_selectTranslation_disableWhileTranslatePage": {
+		"message": "Eñembogue pe páhina otradusíramo"
+	},
+	"settings_option_selectTranslation_enable": {
+		"message": "Eñemoñepyrũ pe traduksión de téxto ojehechaukáva"
+	},
+	"settings_option_selectTranslation_enable_desc": {
+		"message": "Ko tembiapo oñemoñepyrũramo, ikatu reiporavo peteĩ téxto pe páhina ha otradusi peteĩ popup-pe"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton": {
+		"message": "Auto-foco pe botón de traduksión rehe"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
+		"message": "Pe botón de traduksión ojehechaukáramo pe páhina, oñemoĩta auto-foco rehe"
+	},
+	"settings_option_selectTranslation_header_languageChoice": {
+		"message": "Configuración de idioma"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang": {
+		"message": "Eheja pe módulo de traduksión ohecha mba'éichapa pe idioma ojehai"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
+		"message": "Pe idioma de téxto ndaikatúiramo ojehecha localmente ha ko opción oñemoñepyrũramo, pe téxto otradusíta pe idioma \"auto\" rehe ojehechaukáramo.\nPe opción oñembogue ramo, ambue método de fallback ojeiporúta omoĩ hag̃ua pe idioma de origen pe téxto rehe"
+	},
+	"settings_option_selectTranslation_mode": {
+		"message": "Aksión pe téxto ojehechaukáva rehe"
+	},
+	"settings_option_selectTranslation_mode_item_contextMenu": {
+		"message": "Otradusi téxto vía menú de contexto"
+	},
+	"settings_option_selectTranslation_mode_item_popupButton": {
+		"message": "Ehechauka botón de traduksión"
+	},
+	"settings_option_selectTranslation_mode_item_quickTranslate": {
+		"message": "Otradusi téxto pya'e"
+	},
+	"settings_option_selectTranslation_modifiers": {
+		"message": "Modifikadore"
+	},
+	"settings_option_selectTranslation_modifiers_desc": {
+		"message": "Eiporavo umi tecla ojeikeva'erã pe teclado-pe ohechauka hag̃ua pe traduksión"
+	},
+	"settings_option_selectTranslation_modifiers_key_alt": {
+		"message": "alt"
+	},
+	"settings_option_selectTranslation_modifiers_key_ctrl": {
+		"message": "ctrl"
+	},
+	"settings_option_selectTranslation_modifiers_key_meta": {
+		"message": "meta"
+	},
+	"settings_option_selectTranslation_modifiers_key_shift": {
+		"message": "shift"
+	},
+	"settings_option_selectTranslation_rememberDirection": {
+		"message": "Eñemomandu'a pe idioma de téxto ojehechaukáva ipahápe"
+	},
+	"settings_option_selectTranslation_showOnceForSelection": {
+		"message": "Ehechauka pe botón de traduksión peteĩ jeynte pe téxto ojehechaukáva rehe"
+	},
+	"settings_option_selectTranslation_showOnceForSelection_desc": {
+		"message": "Pe botón ojehechaukáta peteĩ jeynte peteĩ téxto ojehechaukáva rehe. Ojehechaukájeýramo, eiporavo jey pe téxto"
+	},
+	"settings_option_selectTranslation_showOriginalText": {
+		"message": "Ehechauka téxto original"
+	},
+	"settings_option_selectTranslation_showOriginalText_desc": {
+		"message": "Eheja peteĩ blóke orekóva pe téxto original pe traduksión popup-pe"
+	},
+	"settings_option_selectTranslation_strictSelection": {
+		"message": "Modo estrikto de selección de téxto span",
+		"description": "This option is about selecting text via mouse"
+	},
+	"settings_option_selectTranslation_strictSelection_desc": {
+		"message": "Eñembogue pe selección de téxto span pe botón de la izquierda del ratón ojeipe'áramo pe blóke orekóva pe téxto ojehechaukáva"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton": {
+		"message": "Aplazamiento mboyve oñembogue pe botón de popup"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton_desc": {
+		"message": "Mba'asyryry millisegundo-pe oikóva mboyve ojepe'ávo pe botón arapýgui. Oñemo'ãvo pe botón rehe, oñemohenda jey pe aravo. Ojepe'a hag̃ua auto-ocultar, emoĩ pe valor michĩvéva 1-gui"
+	},
+	"settings_option_selectTranslation_zIndex": {
+		"message": "z-index"
+	},
+	"settings_option_selectTranslation_zIndex_desc": {
+		"message": "Emombo ko valor oĩramo elemento ohasa pe popup rehe oĩva umi páhina rehe"
+	},
+	"settings_option_textTranslator": {
+		"message": "Ñe'ẽmbohasa"
+	},
+	"settings_option_textTranslator_rememberText": {
+		"message": "Ñe'ẽmbohasa mandu'apy"
+	},
+	"settings_option_textTranslator_rememberText_desc": {
+		"message": "Ñe'ẽmbohasa mandu'apy pe aravo ojepe'ávo pe ventána"
+	},
+	"settings_option_textTranslator_spellCheck": {
+		"message": "Eñepyrũ ñe'ẽjoja"
+	},
+	"settings_option_textTranslator_suggestLanguage": {
+		"message": "Ojehechauka ñe'ẽ ojehechakuaáva"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways": {
+		"message": "Ojehechakuaa ha ojehechauka ñe'ẽ katuete"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways_desc": {
+		"message": "Ojepe'áramo, ñe'ẽ jehechakuaa ojehechauka añónte oĩramo fuente ñe'ẽ omoĩva \"auto\"-pe"
+	},
+	"settings_option_translatePreferences": {
+		"message": "Ñe'ẽmbohasa preferénsia"
+	},
+	"settings_option_translateScheduler": {
+		"message": "Ñe'ẽmbohasa aravoñemohenda"
+	},
+	"settings_option_translateScheduler_delay": {
+		"message": "Ñe'ẽ ñembyaty aravoñemohenda"
+	},
+	"settings_option_translateScheduler_delay_desc": {
+		"message": "Pe ñe'ẽmbohasa aravoñemohenda omboguejy umi mba'eporandu número API ñe'ẽmbohasa rehegua ombyatyvo hetaite ñe'ẽ ikatúva omondo peteĩ mba'eporandu-pe. Pe aravoñemohenda oha'arõ pe aravo oje'eva millisegundo-pe ombyatyve hag̃ua ñe'ẽ oñepyrũ mboyve ñe'ẽmbohasa"
+	},
+	"settings_option_translateScheduler_retryLimit": {
+		"message": "Mba'asyryry límite ñe'ẽmbohasa jevy"
+	},
+	"settings_option_translateScheduler_retryLimit_desc": {
+		"message": "Pe aravoñemohenda ojevyta oñeha'ãvo ñe'ẽmbohasa oiko jave error ñe'ẽmbohasa rehe. Ko opción omoĩ límite jevy ñe'ẽmbohasa rehe. Emoĩ peteĩ número negativo oheja hag̃ua jevy opavave"
+	},
+	"settings_option_translatorModule": {
+		"message": "Ñe'ẽmbohasa módulo"
+	},
+	"settings_option_translatorModule_desc": {
+		"message": "Pe ñe'ẽmbohasa calidad ha umi ñe'ẽ oĩva odepende pe módulo ñe'ẽmbohasa rehe"
+	},
+	"settings_option_tts": {
+		"message": "Ñe'ẽgui Ñe'ẽme (TTS)"
+	},
+	"settings_option_ttsCustomModules": {
+		"message": "Módulo ñe'ẽ ñemoñe'ẽ jeporavo"
+	},
+	"settings_option_ttsCustomModules_button": {
+		"message": "Ñemoñe'ẽ módulo ñemotenonde"
+	},
+	"settings_option_ttsCustomModules_desc": {
+		"message": "Ikatu remoinge módulo ñe'ẽ ñemoñe'ẽ oipuruva ne servísio ha motor de voz favorito. Leiave <slot id=docs>documentación TTS jeporavo</slot>"
+	},
+	"settings_option_ttsModule": {
+		"message": "Módulo TTS jeporavo"
+	},
+	"settings_option_ttsModule_desc": {
+		"message": "Motor de voz oipuruva ñe'ẽ ñemoñe'ẽ"
+	},
+	"settings_option_userLanguage": {
+		"message": "Ne ñe'ẽ"
+	},
+	"settings_option_userLanguage_desc": {
+		"message": "Pe ñe'ẽ ojehechaukáva oñembohasa hag̃ua"
+	},
+	"settings_pageTitle": {
+		"message": "Configuración"
+	},
+	"settings_section_history": {
+		"message": "Historial"
+	},
+	"settings_section_popup": {
+		"message": "Popup"
+	},
+	"textTranslator_suggestLanguage": {
+		"message": "Ojehecha pe ñe'ẽ oĩva <slot id=languageSuggest>$language_name$</slot>",
+		"placeholders": {
+			"language_name": {
+				"content": "$1",
+				"example": "Japanese"
+			}
+		}
+	},
+	"textTranslator_translateInputPlaceholder": {
+		"message": "Mbohasa ñe'ẽme guarãmoĩva",
+		"description": "Request to user input some text for translation"
+	},
+	"textTranslator_translatePlaceholder": {
+		"message": "Mbohasapyre oĩta ko'ápe"
+	},
+	"translatorsManagerWindow_add": {
+		"message": "Moĩ mbohasa módulo"
+	},
+	"translatorsManagerWindow_close": {
+		"message": "Mboty"
+	},
+	"translatorsManagerWindow_emptyTranslatorsListText": {
+		"message": "Ndaipóri gueteri módulo mbohasa rehegua"
+	},
+	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
+		"message": "Añete piko removaese \"$translator_name$\" módulo mbohasa rehegua?",
+		"placeholders": {
+			"translator_name": {
+				"content": "$1",
+				"example": "Google translator"
+			}
+		}
+	},
+	"translatorsManagerWindow_title": {
+		"message": "Módulo mbohasa rehegua"
+	},
+	"translatorsManagerWindow_translator_delete": {
+		"message": "Mbogue"
+	},
+	"translatorsManagerWindow_translator_edit": {
+		"message": "Mbohape"
+	},
+	"ttsManagerWindow_add": {
+		"message": "Moĩ TTS módulo"
+	},
+	"ttsManagerWindow_close": {
+		"message": "Mboty"
+	},
+	"ttsManagerWindow_emptyTranslatorsListText": {
+		"message": "Ndaipóri gueteri TTS módulo"
+	},
+	"ttsManagerWindow_message_ttsRemoveConfirmation": {
+		"message": "Añete piko removaese TTS módulo \"$tts_name$\"?",
+		"placeholders": {
+			"tts_name": {
+				"content": "$1",
+				"example": "Google TTS"
+			}
+		}
+	},
+	"ttsManagerWindow_title": {
+		"message": "Módulo Text-to-Speech rehegua"
+	},
+	"ttsManagerWindow_translator_delete": {
+		"message": "Mbogue"
+	},
+	"ttsManagerWindow_translator_edit": {
+		"message": "Mbohape"
+	},
+	"validation_number": {
+		"message": "Valor tekotevẽva peteĩ papapy"
+	},
+	"validation_numberBetweenRange": {
+		"message": "Valor tekotevẽva peteĩ papapy $1 ha $2 mbytépe"
+	},
+	"validation_positiveNumber": {
+		"message": "Valor tekotevẽva peteĩ papapy ipositivova"
+	}
+}

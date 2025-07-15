@@ -1,0 +1,623 @@
+{
+	"common_action_addToDictionary": {
+		"message": "Hiikoo gara kuusaa jechootti dabali"
+	},
+	"common_action_removeFromDictionary": {
+		"message": "Hiikoo gara kuusaa jechoo irraa haqi"
+	},
+	"common_bgUnavailable": {
+		"message": "Skriptii duubbee hin jiru"
+	},
+	"common_cancel": {
+		"message": "Haquu"
+	},
+	"common_close": {
+		"message": "Cufi"
+	},
+	"common_copy": {
+		"message": "Gulaali"
+	},
+	"common_error": {
+		"message": "Dogoggora"
+	},
+	"common_offlineTranslator": {
+		"message": "$1 - Hiiktoota alatti"
+	},
+	"common_retry": {
+		"message": "Irra deebi'i"
+	},
+	"common_translate": {
+		"message": "Hiiki"
+	},
+	"component_hotkey_placeholder": {
+		"message": "Gabatee gabaabaa galmeessi"
+	},
+	"component_hotkey_recordPlaceholder": {
+		"message": "Furmaata cuqaasi"
+	},
+	"component_hotkey_resetButton": {
+		"message": "Haqi"
+	},
+	"contextMenu_disablePageTranslation": {
+		"message": "Hiikoo fuulaa dhaabi"
+	},
+	"contextMenu_translatePage": {
+		"message": "Fuula hiiki"
+	},
+	"contextMenu_translateSelectedText": {
+		"message": "Barruu filatame hiiki"
+	},
+	"dictionaryButton_add": {
+		"message": "Gara kuusaa jechootti dabali"
+	},
+	"dictionaryButton_delete": {
+		"message": "Gara kuusaa jechoo irraa haqi"
+	},
+	"dictionary_button_export": {
+		"message": "Ergi"
+	},
+	"dictionary_button_removeAll": {
+		"message": "Hundumaa haqi"
+	},
+	"dictionary_deleteAll": {
+		"message": "Hiikoo hunda kuusaa jechoo irraa haquu barbaadduu?"
+	},
+	"dictionary_deleteConfirmation": {
+		"message": "Hiikoo kana haquu barbaadduu?"
+	},
+	"dictionary_description": {
+		"message": "Hiikoo kuusaa jechootti olkaa'i, booda si'ana argachuuf"
+	},
+	"dictionary_emptyDictionary": {
+		"message": "Kuusaan jechoo duwwaa dha, barruu tokko hiikuu jalqabi"
+	},
+	"dictionary_filter_from": {
+		"message": "Afaan barruu asilii"
+	},
+	"dictionary_filter_to": {
+		"message": "Afaan barbaadame"
+	},
+	"dictionary_message_deleteAll_success": {
+		"message": "Hiikoo hunda haquun milkaa'eera"
+	},
+	"dictionary_notFoundEntries": {
+		"message": "Hiikoo filatamanii hin argamne"
+	},
+	"dictionary_pageTitle": {
+		"message": "Kuusaa Jechoo"
+	},
+	"dictionary_resetFilters": {
+		"message": "Filannoo haqi"
+	},
+	"dictionary_searchPlaceholder": {
+		"message": "Barbaadi barruu"
+	},
+	"editorWindow_close": {
+		"message": "Cufi"
+	},
+	"editorWindow_data_code": {
+		"message": "Koodii"
+	},
+	"editorWindow_data_title": {
+		"message": "Maqaa moojulii"
+	},
+	"editorWindow_message_invalidTitle": {
+		"message": "Maqaan moojulii qubee tokkoo ol qabaachuu qaba"
+	},
+	"editorWindow_save": {
+		"message": "Olkaa'i"
+	},
+	"ext_description": {
+		"message": "Hiikkaa fuula webii, hiikkaa barruu, kuusaa jechootaa, seenaa, hiiktota addaa, waan hundaa daangaa afaanii diiguuf barbaachisu"
+	},
+	"ext_name": {
+		"message": "Linguist - hiiktuu fuula webii"
+	},
+	"history_control_selectEntry": {
+		"message": "Hiikkaa hojii baay'ee filadhu",
+		"description": "Description in finite form \"to pick\" with explaining what this checkbox will do"
+	},
+	"history_controls_clearHistory": {
+		"message": "Seenaa haqi"
+	},
+	"history_controls_deleteSelected": {
+		"message": "Hiikkaa filataman haqi"
+	},
+	"history_controls_selectAll": {
+		"message": "Hiikkaa hunda filadhu"
+	},
+	"history_message_clearHistoryConfirmation": {
+		"message": "Seenaa haquuf mirkaneeffatta? Galmeen hundi ni haqama"
+	},
+	"history_message_deleteEntryConfirmation": {
+		"message": "Galmee kana haquuf mirkaneeffatta?"
+	},
+	"history_message_deleteSelectedEntriesConfirmation": {
+		"message": "Galmee filataman ($1) haquuf mirkaneeffatta?"
+	},
+	"history_message_entriesNotFound": {
+		"message": "Hiikkaan filtariin wal simatu hin argamne"
+	},
+	"history_message_noEntries": {
+		"message": "Seenaa hin jiru"
+	},
+	"history_notification_disabled": {
+		"message": "Galmee seenaa galmeessuu hin danda'amu, kanaaf galmeen haaraa hin mul'atu. Kana <slot id=preferences>Filannoo</slot> keessatti jijjiiru dandeessa"
+	},
+	"history_pageTitle": {
+		"message": "Seenaa"
+	},
+	"history_searchPlaceholder": {
+		"message": "Barbaadi barruu"
+	},
+	"inlineTranslator_showOriginalText": {
+		"message": "Barruu jalqabaa agarsiisi"
+	},
+	"lang_change": {
+		"message": "Afaan jijjiiri"
+	},
+	"lang_detect": {
+		"message": "Ofiin beeksiisi"
+	},
+	"lang_select": {
+		"message": "Afaan filadhu"
+	},
+	"lang_swap": {
+		"message": "Afaanota jijjiiri"
+	},
+	"message_unknownError": {
+		"message": "Dogoggora hin beekamne"
+	},
+	"pageTranslator_alwaysTranslateLang": {
+		"message": "Afaan kana yeroo hunda hiiki"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disable": {
+		"message": "Dadhabsiisi"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
+		"message": "Bakka hundaaf dadhabsiisi"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_enable": {
+		"message": "Dandeessisi"
+	},
+	"pageTranslator_commonPreferences_title": {
+		"message": "Filannoo waliigalaa afaan kanaaf"
+	},
+	"pageTranslator_option_autoTranslate": {
+		"message": "Hiika ofiin"
+	},
+	"pageTranslator_showOriginal": {
+		"message": "Kan duraa agarsiisi"
+	},
+	"pageTranslator_showTranslationPreferences": {
+		"message": "Filannoo hiikaa"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_always": {
+		"message": "Yeroo hunda hiiki"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
+		"message": "Yeroo hunda afaan kanaaf hiiki"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_default": {
+		"message": "Seerota waliigalaa fayyadami"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
+		"message": "Seerota waliigalaa afaan kanaaf fayyadami"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_never": {
+		"message": "Hin hiikin"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
+		"message": "Afaan kanaaf hin hiikin"
+	},
+	"pageTranslator_sitePreferences_title": {
+		"message": "Filannoo"
+	},
+	"pageTranslator_translatePage": {
+		"message": "Fuula hiiki"
+	},
+	"pageTranslator_translationReport": {
+		"message": "Gabaasa hiikaa"
+	},
+	"pageTranslator_translationReport_queue": {
+		"message": "Eegaa"
+	},
+	"pageTranslator_translationReport_reject": {
+		"message": "Dogoggora"
+	},
+	"pageTranslator_translationReport_resolve": {
+		"message": "Hiikame"
+	},
+	"popup_tabIdNotFound": {
+		"message": "Tab \"$1\" hin argamne"
+	},
+	"popup_tab_translatePage": {
+		"message": "Hiika fuulaa"
+	},
+	"popup_tab_translateText": {
+		"message": "Hiika barruu"
+	},
+	"settings_button_cancel": {
+		"message": "Haquu"
+	},
+	"settings_button_export": {
+		"message": "Qindeessa baasi"
+	},
+	"settings_button_import": {
+		"message": "Qindeessa galchi"
+	},
+	"settings_button_reset": {
+		"message": "Qindeessa deebisi"
+	},
+	"settings_button_saveChanges": {
+		"message": "Fooyya'iinsa olkaa'i"
+	},
+	"settings_message_clearCache_success": {
+		"message": "Kaashii qulqulleeffame"
+	},
+	"settings_message_common_invalidValueType": {
+		"message": "Gatii dogoggora"
+	},
+	"settings_message_importConfig_invalidFile": {
+		"message": "Faayilii qindeessaa dhiyaate dogoggora qaba yookaan miidhame, kan hin hojjenne"
+	},
+	"settings_message_importConfig_success": {
+		"message": "Galchii xumurame"
+	},
+	"settings_message_resetConfig_confirm": {
+		"message": "Qindeessoota gara gatii duraanitti deebisuuf mirkaneessi"
+	},
+	"settings_message_resetConfig_success": {
+		"message": "Qindeessoota deebifame"
+	},
+	"settings_message_saveChanges_success": {
+		"message": "Fooyya'iin ni eebbifame"
+	},
+	"settings_option_cache": {
+		"message": "Kaashii"
+	},
+	"settings_option_cache_clear": {
+		"message": "Kaashii qulqulleessi"
+	},
+	"settings_option_cache_clear_desc": {
+		"message": "Yoo dogoggora hiikkaa argite ykn ergaa dhuunfaa yeroo kaashii baname hiikuu dandeesse, odeeffannoo kaashii keessaa mara haquu dandeessa",
+		"description": "Explanation for user about cases when it's useful to clear cache"
+	},
+	"settings_option_cache_enable": {
+		"message": "Kaashii ban"
+	},
+	"settings_option_cache_enable_desc": {
+		"message": "Yeroo kaashii baname, barruun duraan hiikame, gaafii dabalataa tajaajila hiikkaa hin barbaachisin saffisaan ni hiikama"
+	},
+	"settings_option_cache_ignoreCase": {
+		"message": "Kaashii hima hin ilaallanne fayyadami"
+	},
+	"settings_option_cache_ignoreCase_desc": {
+		"message": "Yeroo baname, hiikkaan kaashii himoota hima adda addaa waliin ni fayyadama, kunis yeroo muraasa keessatti dogoggora hiikkaa fiduu danda'a"
+	},
+	"settings_option_commonSettings": {
+		"message": "Qindaa'ina waliigalaa"
+	},
+	"settings_option_customTranslatorModule": {
+		"message": "Modula hiikkaa addaa",
+		"description": "An user defined code that implements a translation module"
+	},
+	"settings_option_customTranslatorModule_desc": {
+		"message": "Modula hiikkaa addaa tajaajila hiikkaa jaalatamaa fayyadamu dabaluu dandeessa. Odeeffannoo dabalataa <slot id=docs>barreeffama hiikkaa addaa</slot> keessatti baradhu"
+	},
+	"settings_option_customTranslatorModule_manageButton": {
+		"message": "Hiikkattoota to'achuu",
+		"description": "A button to show list of translation modules"
+	},
+	"settings_option_history_enable": {
+		"message": "Seenaa ban"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "Yeroo baname, hiikkaan ni galmaa'a fi <slot id=historyPage>fuula seenaa</slot> irratti ni mul'ata"
+	},
+	"settings_option_pageTranslation": {
+		"message": "Hiikkaa fuula guutuu"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent": {
+		"message": "Afaan ergaa irraa adda baasi"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent_desc": {
+		"message": "Afaan fuula intarneetii irratti barruu qorachuun adda baasi. Yeroo cufame, afaan <slot id=docs>metadata fuula</slot> keessatti ibsame ni fayyadama"
+	},
+	"settings_option_pageTranslation_enableContextMenu": {
+		"message": "Button meenuu kutaatti fayyadami"
+	},
+	"settings_option_pageTranslation_enableContextMenu_desc": {
+		"message": "Button hiikkaa fuula kutaatti jijjiiruuf meenuu kutaatti dabaluu"
+	},
+	"settings_option_pageTranslation_excludeSelectors": {
+		"message": "Filatamtoota hiikkaa irraa haquu"
+	},
+	"settings_option_pageTranslation_excludeSelectors_desc": {
+		"message": "Filatamtoota CSS kanneen hiikkaa irraa haquuf tarree. Filatama tokko sarara tokko irratti. Yoo wanti tokko filatamtoota kana keessaa tokko waliin walsimatu, barruu isaa, amaloota, fi wantoota keessa jiru hin hiikaman"
+	},
+	"settings_option_pageTranslation_lazyTranslate": {
+		"message": "Wantoota mul'atan qofa hiiki"
+	},
+	"settings_option_pageTranslation_lazyTranslate_desc": {
+		"message": "Yeroo filannoon kun baname, wantoota mul'atan qofa ni hiikama. Filannoon kun tajaajila network xiqqeessa"
+	},
+	"settings_option_pageTranslation_originalTextPopup": {
+		"message": "Popup barruu duraanii fayyadami"
+	},
+	"settings_option_pageTranslation_originalTextPopup_desc": {
+		"message": "Popup barruu duraanii yeroo barruu hiikame irratti olka'uu mul'isi"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation": {
+		"message": "Gabaabaa"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation_desc": {
+		"message": "Gabaabaa hiikkaa fuula jijjiiruuf\nESC dhiibi furtuu deebisi"
+	},
+	"settings_option_pageTranslation_translatableAttributes": {
+		"message": "Amaloota hiikaman"
+	},
+	"settings_option_pageTranslation_translatableAttributes_desc": {
+		"message": "Maqaa <slot id=htmlAttributes>amaloota HTML</slot> hiikaman galchi, amaloota tokko sarara tokko irratti\nAmaloota tarree kana keessatti qofa ni hiikamu"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters": {
+		"message": "Sadarkaa hiikkaa agarsiisi"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters_desc": {
+		"message": "Paanaalii agarsiisi kan guddina hiikkaa fuulaa agarsiisu keessatti poppaaphiitti"
+	},
+	"settings_option_selectTranslation": {
+		"message": "Hiikkaa barreeffama filatameef"
+	},
+	"settings_option_selectTranslation_detectTextLanguage": {
+		"message": "Afaan barreeffama adda baasi"
+	},
+	"settings_option_selectTranslation_detectTextLanguage_desc": {
+		"message": "Yoo kanneen qindaa'an, barreeffama filatame ni qorataaf afaan hiikkaaf adda baasuuf. Kan biraa yoo ta'e, afaan fuulaa ni fayyadama"
+	},
+	"settings_option_selectTranslation_disableWhileTranslatePage": {
+		"message": "Yeroo fuula hiikkutti dhaabi"
+	},
+	"settings_option_selectTranslation_enable": {
+		"message": "Hiikkaa barreeffama filatame qindeessi"
+	},
+	"settings_option_selectTranslation_enable_desc": {
+		"message": "Yoo amaloota kana qindeessite, barreeffama kamiyyuu fuula irratti filachuu dandeessaaf poppaaphiitti hiikkachuu dandeessa"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton": {
+		"message": "Tuqaa hiikkaa irratti ofumaan xiyyeeffannoo kenni"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
+		"message": "Yeroo tuqaan hiikkaa fuula irratti mul'atu, ofumaan ni xiyyeeffata"
+	},
+	"settings_option_selectTranslation_header_languageChoice": {
+		"message": "Qindaa'ina afaanii"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang": {
+		"message": "Modula hiikkaa afaan barreeffama adda baasuuf hayyami"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
+		"message": "Yeroo afaan barreeffama iddoo bu'aa hin argamne fi filannoon kun qindaa'e, barreeffama afaan \"auto\" yoo deggarameen ni hiikkama.\nYeroo filannoon kun hin qindaa'in, mala bu'aa biraa ni fayyadama afaan madda barreeffama qindeessuuf"
+	},
+	"settings_option_selectTranslation_mode": {
+		"message": "Dalagaa filannoo barreeffama irratti"
+	},
+	"settings_option_selectTranslation_mode_item_contextMenu": {
+		"message": "Barreeffama karaa meenuu kutaatti hiiki"
+	},
+	"settings_option_selectTranslation_mode_item_popupButton": {
+		"message": "Tuqaa hiikkaa agarsiisi"
+	},
+	"settings_option_selectTranslation_mode_item_quickTranslate": {
+		"message": "Barreeffama saffisaan hiiki"
+	},
+	"settings_option_selectTranslation_modifiers": {
+		"message": "Gulaallii"
+	},
+	"settings_option_selectTranslation_modifiers_desc": {
+		"message": "Tuqaa hiikkaa agarsiisuuf furtuuwwan keyboard irratti qabamuu qaban filadhu"
+	},
+	"settings_option_selectTranslation_modifiers_key_alt": {
+		"message": "alt"
+	},
+	"settings_option_selectTranslation_modifiers_key_ctrl": {
+		"message": "ctrl"
+	},
+	"settings_option_selectTranslation_modifiers_key_meta": {
+		"message": "meta"
+	},
+	"settings_option_selectTranslation_modifiers_key_shift": {
+		"message": "shift"
+	},
+	"settings_option_selectTranslation_rememberDirection": {
+		"message": "Afaan barreeffama filatame yeroo dhiyoo yaadadhu"
+	},
+	"settings_option_selectTranslation_showOnceForSelection": {
+		"message": "Tuqaa hiikkaa yeroo tokko filannoo barreeffamaaf agarsiisi"
+	},
+	"settings_option_selectTranslation_showOnceForSelection_desc": {
+		"message": "Tuqaan filannoo barreeffamaaf yeroo tokko qofa ni mul'ata. Irra deebi'ee agarsiisuuf, barreeffama irra deebi'ee filadhu"
+	},
+	"settings_option_selectTranslation_showOriginalText": {
+		"message": "Barreeffama duraa agarsiisi"
+	},
+	"settings_option_selectTranslation_showOriginalText_desc": {
+		"message": "Barreeffama duraa waliin poppaaphiitti ida'i"
+	},
+	"settings_option_selectTranslation_strictSelection": {
+		"message": "Haala filannoo barreeffama murtaa'aa",
+		"description": "Filannoo barreeffama karaa mouse"
+	},
+	"settings_option_selectTranslation_strictSelection_desc": {
+		"message": "Filannoo barreeffama yoo tuqaan bitaa alatti gadhiifame iddoo filannoo barreeffama keessa jiru yoo ta'e, ni dhiisa"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton": {
+		"message": "Yeroo dura tuqaa poppaaphiitti dhoksuuf turtii"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton_desc": {
+		"message": "Yeroo xiqqaa (milliseconds) dura buttoni akka dhokatuuf yeroo kenname. Yoo cursor button irratti hin qubbanne, yeroo kenname ni dhumata. Button irratti yoo qubbanne, yeroo ni haaromsa. Akka hin dhokanne gochuuf, gatii 1 gadiitti kaa'i"
+	},
+	"settings_option_selectTranslation_zIndex": {
+		"message": "z-index"
+	},
+	"settings_option_selectTranslation_zIndex_desc": {
+		"message": "Gatii kana dabali yoo elementootni fuula tokko tokko irratti pop-up barreeffama hiikame waliin walitti bu'an"
+	},
+	"settings_option_textTranslator": {
+		"message": "Hiika barruu"
+	},
+	"settings_option_textTranslator_rememberText": {
+		"message": "Barreeffama hiikame yaadachuu"
+	},
+	"settings_option_textTranslator_rememberText_desc": {
+		"message": "Barreeffama hiikame yeroo itti aanu man'ee banamu yaadachuu"
+	},
+	"settings_option_textTranslator_spellCheck": {
+		"message": "Qorannoo qubee qindeessi"
+	},
+	"settings_option_textTranslator_suggestLanguage": {
+		"message": "Afaan barreeffama argame agarsiisuu"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways": {
+		"message": "Afaan yeroo hunda argisiisi fi yaadi"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways_desc": {
+		"message": "Yoo dhaabbate, yaadni afaanii yeroo afaan madda \"auto\" irratti kaa'ame qofa ni mul'ata"
+	},
+	"settings_option_translatePreferences": {
+		"message": "Filannoo hiika"
+	},
+	"settings_option_translateScheduler": {
+		"message": "Yeroo hiika"
+	},
+	"settings_option_translateScheduler_delay": {
+		"message": "Yeroo turtii walitti qabuu barruu"
+	},
+	"settings_option_translateScheduler_delay_desc": {
+		"message": "Yeroo hiika ni xiqqeessa lakkoofsa gaaffii API tajaajila hiikaaf ta'u, barruu baay'ee walitti qabee gaaffii tokko keessatti erguuf. Yeroo kenname (milliseconds) ni eega barruu dabalataa walitti qabuu dura hiika jalqabuuf"
+	},
+	"settings_option_translateScheduler_retryLimit": {
+		"message": "Daangaa yaalii hiika irra deebi'uu"
+	},
+	"settings_option_translateScheduler_retryLimit_desc": {
+		"message": "Yeroo dogoggorri hiika uumamu, yeroo hiika irra deebi'uu ni yaala. Filannoon kun daangaa yaalii irra deebi'uu kaa'a. Lakkoofsa faallaa kaa'i yaalii irra deebi'uu daangaa malee gochuuf"
+	},
+	"settings_option_translatorModule": {
+		"message": "Modula hiika"
+	},
+	"settings_option_translatorModule_desc": {
+		"message": "Gammachuu hiika fi afaanota argaman modula hiika irratti hundaa'a"
+	},
+	"settings_option_tts": {
+		"message": "Gara dubbii jijjiiruu (TTS)"
+	},
+	"settings_option_ttsCustomModules": {
+		"message": "Modula sagalee uumuu addaa"
+	},
+	"settings_option_ttsCustomModules_button": {
+		"message": "Modula sagalee uumuu to'achuu"
+	},
+	"settings_option_ttsCustomModules_desc": {
+		"message": "Modula sagalee uumuu kan tajaajiloota fi injineri sagalee jaalataman fayyadamu dabaluu dandeessa. Dabalata dubbisi <slot id=docs>dokumantii TTS addaa</slot>"
+	},
+	"settings_option_ttsModule": {
+		"message": "Modula TTS filatame"
+	},
+	"settings_option_ttsModule_desc": {
+		"message": "Injineri sagalee kan barreeffama sagaleessuu"
+	},
+	"settings_option_userLanguage": {
+		"message": "Afaan kee"
+	},
+	"settings_option_userLanguage_desc": {
+		"message": "Afaan barreeffamni itti hiikamu"
+	},
+	"settings_pageTitle": {
+		"message": "Qindaa'ina"
+	},
+	"settings_section_history": {
+		"message": "Seenaa"
+	},
+	"settings_section_popup": {
+		"message": "Pop-up"
+	},
+	"textTranslator_suggestLanguage": {
+		"message": "Afaan barreeffama <slot id=languageSuggest>$language_name$</slot> fakkaata",
+		"placeholders": {
+			"language_name": {
+				"content": "$1",
+				"example": "Japanese"
+			}
+		}
+	},
+	"textTranslator_translateInputPlaceholder": {
+		"message": "Galmee barruu jijjiirraa",
+		"description": "Request to user input some text for translation"
+	},
+	"textTranslator_translatePlaceholder": {
+		"message": "Barruun jijjiirame asitti ni mul'ata"
+	},
+	"translatorsManagerWindow_add": {
+		"message": "Moojula jijjiirraa dabaluu"
+	},
+	"translatorsManagerWindow_close": {
+		"message": "Cufi"
+	},
+	"translatorsManagerWindow_emptyTranslatorsListText": {
+		"message": "Moojulonni jijjiirraa addaa hin dabalamin"
+	},
+	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
+		"message": "Moojula jijjiirraa \"$translator_name$\" haquuf mirkaneeffachuu barbaaddaa?",
+		"placeholders": {
+			"translator_name": {
+				"content": "$1",
+				"example": "Google translator"
+			}
+		}
+	},
+	"translatorsManagerWindow_title": {
+		"message": "Moojuloota jijjiirraa addaa"
+	},
+	"translatorsManagerWindow_translator_delete": {
+		"message": "Haqi"
+	},
+	"translatorsManagerWindow_translator_edit": {
+		"message": "Gulaali"
+	},
+	"ttsManagerWindow_add": {
+		"message": "Moojula TTS dabaluu"
+	},
+	"ttsManagerWindow_close": {
+		"message": "Cufi"
+	},
+	"ttsManagerWindow_emptyTranslatorsListText": {
+		"message": "Moojulonni TTS hin dabalamin"
+	},
+	"ttsManagerWindow_message_ttsRemoveConfirmation": {
+		"message": "Moojula TTS \"$tts_name$\" haquuf mirkaneeffachuu barbaaddaa?",
+		"placeholders": {
+			"tts_name": {
+				"content": "$1",
+				"example": "Google TTS"
+			}
+		}
+	},
+	"ttsManagerWindow_title": {
+		"message": "Moojuloota Text-to-Speech"
+	},
+	"ttsManagerWindow_translator_delete": {
+		"message": "Haqi"
+	},
+	"ttsManagerWindow_translator_edit": {
+		"message": "Gulaali"
+	},
+	"validation_number": {
+		"message": "Gatii lakkoofsa ta'uu qaba"
+	},
+	"validation_numberBetweenRange": {
+		"message": "Gatii lakkoofsa gidduu $1 fi $2 ta'uu qaba"
+	},
+	"validation_positiveNumber": {
+		"message": "Gatii lakkoofsa toora ta'uu qaba"
+	}
+}

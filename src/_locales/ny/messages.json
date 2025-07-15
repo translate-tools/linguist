@@ -1,0 +1,623 @@
+{
+	"common_action_addToDictionary": {
+		"message": "Onjezerani kumasulira ku dikishonale"
+	},
+	"common_action_removeFromDictionary": {
+		"message": "Chotsani kumasulira mu dikishonale"
+	},
+	"common_bgUnavailable": {
+		"message": "Sikirepi ya kumbuyo ilibe kupezeka"
+	},
+	"common_cancel": {
+		"message": "Lekani"
+	},
+	"common_close": {
+		"message": "Tsekani"
+	},
+	"common_copy": {
+		"message": "Kopera"
+	},
+	"common_error": {
+		"message": "Cholakwika"
+	},
+	"common_offlineTranslator": {
+		"message": "$1 - Womasulira wopanda intaneti"
+	},
+	"common_retry": {
+		"message": "Yesaninso"
+	},
+	"common_translate": {
+		"message": "Tanthauzirani"
+	},
+	"component_hotkey_placeholder": {
+		"message": "Dinani kuti mulembetse njira yachidule"
+	},
+	"component_hotkey_recordPlaceholder": {
+		"message": "Dinani makiyi"
+	},
+	"component_hotkey_resetButton": {
+		"message": "Bwezerani"
+	},
+	"contextMenu_disablePageTranslation": {
+		"message": "Imitsani kumasulira tsamba"
+	},
+	"contextMenu_translatePage": {
+		"message": "Tanthauzirani tsamba"
+	},
+	"contextMenu_translateSelectedText": {
+		"message": "Tanthauzirani zolembedwa zosankhidwa"
+	},
+	"dictionaryButton_add": {
+		"message": "Onjezerani ku dikishonale"
+	},
+	"dictionaryButton_delete": {
+		"message": "Chotsani mu dikishonale"
+	},
+	"dictionary_button_export": {
+		"message": "Tumizani kunja"
+	},
+	"dictionary_button_removeAll": {
+		"message": "Chotsani zonse"
+	},
+	"dictionary_deleteAll": {
+		"message": "Kodi mukutsimikiza kuti mukufuna kuchotsa ZONSE kumasulira mu dikishonale?"
+	},
+	"dictionary_deleteConfirmation": {
+		"message": "Kodi mukutsimikiza kuti mukufuna kuchotsa kumasulira uku?"
+	},
+	"dictionary_description": {
+		"message": "Sungani kumasulira mu dikishonale kuti muzipeza mwachangu mtsogolo"
+	},
+	"dictionary_emptyDictionary": {
+		"message": "Dikishonale ndi yopanda kanthu, yambani kudzaza ndi kutanthauzira zolembedwa zina"
+	},
+	"dictionary_filter_from": {
+		"message": "Chiyankhulo cha zolembedwa zoyambira"
+	},
+	"dictionary_filter_to": {
+		"message": "Chiyankhulo cholinga"
+	},
+	"dictionary_message_deleteAll_success": {
+		"message": "Kumasulira konse kwachotsedwa"
+	},
+	"dictionary_notFoundEntries": {
+		"message": "Palibe kumasulira komwe kumagwirizana ndi zosefera izi komwe kunapezeka"
+	},
+	"dictionary_pageTitle": {
+		"message": "Dikishonale"
+	},
+	"dictionary_resetFilters": {
+		"message": "Bwezerani zosefera"
+	},
+	"dictionary_searchPlaceholder": {
+		"message": "Sakani ndi mawu"
+	},
+	"editorWindow_close": {
+		"message": "Tsekani"
+	},
+	"editorWindow_data_code": {
+		"message": "Code"
+	},
+	"editorWindow_data_title": {
+		"message": "Dzina la module"
+	},
+	"editorWindow_message_invalidTitle": {
+		"message": "Dzina la module liyenera kukhala ndi zilembo zosachepera chimodzi"
+	},
+	"editorWindow_save": {
+		"message": "Sungani"
+	},
+	"ext_description": {
+		"message": "Kumasulira masamba a pa intaneti, kumasulira mawu, dikishonale, mbiri, omasulira makonda, zonse zomwe mukufuna kuthyola zopinga za chilankhulo"
+	},
+	"ext_name": {
+		"message": "Linguist - womasulira masamba a pa intaneti"
+	},
+	"history_control_selectEntry": {
+		"message": "Kusankha kumasulira kwa zochita zambiri",
+		"description": "Description in finite form \"to pick\" with explaining what this checkbox will do"
+	},
+	"history_controls_clearHistory": {
+		"message": "Chotsani mbiri"
+	},
+	"history_controls_deleteSelected": {
+		"message": "Chotsani kumasulira kosankhidwa"
+	},
+	"history_controls_selectAll": {
+		"message": "Sankhani kumasulira konse"
+	},
+	"history_message_clearHistoryConfirmation": {
+		"message": "Kodi mukutsimikiza kuti mukufuna kuchotsa mbiri? Zolemba zonse zichotsedwa"
+	},
+	"history_message_deleteEntryConfirmation": {
+		"message": "Kodi mukutsimikiza kuti mukufuna kuchotsa cholemba ichi?"
+	},
+	"history_message_deleteSelectedEntriesConfirmation": {
+		"message": "Kodi mukutsimikiza kuti mukufuna kuchotsa zolemba zosankhidwa ($1)?"
+	},
+	"history_message_entriesNotFound": {
+		"message": "Palibe kumasulira komwe kunapezeka kofanana ndi fyuluta"
+	},
+	"history_message_noEntries": {
+		"message": "Mbiri ndi yopanda kanthu"
+	},
+	"history_notification_disabled": {
+		"message": "Kulemba mbiri kwatsekedwa, kotero zolemba zatsopano sizidzawonekera. Mutha kusintha izi mu <slot id=preferences>Preferences</slot>"
+	},
+	"history_pageTitle": {
+		"message": "Mbiri"
+	},
+	"history_searchPlaceholder": {
+		"message": "Sakani ndi mawu"
+	},
+	"inlineTranslator_showOriginalText": {
+		"message": "Onetsani mawu oyambirira"
+	},
+	"lang_change": {
+		"message": "Sintha chilankhulo"
+	},
+	"lang_detect": {
+		"message": "Kuzindikira zokha"
+	},
+	"lang_select": {
+		"message": "Sankhani chilankhulo"
+	},
+	"lang_swap": {
+		"message": "Sintha zilankhulo"
+	},
+	"message_unknownError": {
+		"message": "Cholakwika chosadziwika"
+	},
+	"pageTranslator_alwaysTranslateLang": {
+		"message": "Nthawi zonse kumasulira chilankhulo ichi"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disable": {
+		"message": "Letsani"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
+		"message": "Letsani pamalo onse"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_enable": {
+		"message": "Yambitsani"
+	},
+	"pageTranslator_commonPreferences_title": {
+		"message": "Zokonda wamba pa chinenero ichi"
+	},
+	"pageTranslator_option_autoTranslate": {
+		"message": "Kumasulira zokha"
+	},
+	"pageTranslator_showOriginal": {
+		"message": "Onetsa choyambirira"
+	},
+	"pageTranslator_showTranslationPreferences": {
+		"message": "Zokonda za kumasulira"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_always": {
+		"message": "Masulira nthawi zonse"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
+		"message": "Masulira nthawi zonse pa chinenero ichi"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_default": {
+		"message": "Gwiritsani ntchito malamulo wamba"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
+		"message": "Gwiritsani ntchito malamulo wamba pa chinenero ichi"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_never": {
+		"message": "Osamasulira"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
+		"message": "Osamasulira pa chinenero ichi"
+	},
+	"pageTranslator_sitePreferences_title": {
+		"message": "Zokonda za"
+	},
+	"pageTranslator_translatePage": {
+		"message": "Kumasulira tsamba"
+	},
+	"pageTranslator_translationReport": {
+		"message": "Lipoti la kumasulira"
+	},
+	"pageTranslator_translationReport_queue": {
+		"message": "Zikuyembekezera"
+	},
+	"pageTranslator_translationReport_reject": {
+		"message": "Zolakwika"
+	},
+	"pageTranslator_translationReport_resolve": {
+		"message": "Zomasuliridwa"
+	},
+	"popup_tabIdNotFound": {
+		"message": "Tab \"$1\" silinapezeke"
+	},
+	"popup_tab_translatePage": {
+		"message": "Kumasulira tsamba"
+	},
+	"popup_tab_translateText": {
+		"message": "Kumasulira malemba"
+	},
+	"settings_button_cancel": {
+		"message": "Lekani"
+	},
+	"settings_button_export": {
+		"message": "Tumizani config"
+	},
+	"settings_button_import": {
+		"message": "Lowetsani config"
+	},
+	"settings_button_reset": {
+		"message": "Bwezerani config"
+	},
+	"settings_button_saveChanges": {
+		"message": "Sungani zosintha"
+	},
+	"settings_message_clearCache_success": {
+		"message": "Cache yachotsedwa"
+	},
+	"settings_message_common_invalidValueType": {
+		"message": "Mtengo wolakwika"
+	},
+	"settings_message_importConfig_invalidFile": {
+		"message": "Fayilo ya config yoperekedwa ndi yolakwika kapena yawonongeka, ndipo sangathe kukonzedwa"
+	},
+	"settings_message_importConfig_success": {
+		"message": "Kutumiza kwatha"
+	},
+	"settings_message_resetConfig_confirm": {
+		"message": "Tsimikizani kuti mubwezeretse makonda ku makonda oyambira"
+	},
+	"settings_message_resetConfig_success": {
+		"message": "Makonda abwezeretsedwa"
+	},
+	"settings_message_saveChanges_success": {
+		"message": "Zosintha zasungidwa"
+	},
+	"settings_option_cache": {
+		"message": "Cache"
+	},
+	"settings_option_cache_clear": {
+		"message": "Chotsani cache"
+	},
+	"settings_option_cache_clear_desc": {
+		"message": "Ngati muwona zolakwika za kumasulira kapena mwangozi kumasulira zolemba zachinsinsi pomwe cache yayatsidwa, mutha kuchotsa deta yonse mu cache",
+		"description": "Explanation for user about cases when it's useful to clear cache"
+	},
+	"settings_option_cache_enable": {
+		"message": "Yatsani cache"
+	},
+	"settings_option_cache_enable_desc": {
+		"message": "Pamene cache yayatsidwa, zolemba zomwe zidasuliridwa kale zidzamasuliridwa mwachangu popanda zopempha zina ku utumiki womasulira"
+	},
+	"settings_option_cache_ignoreCase": {
+		"message": "Gwiritsani ntchito cache yosanyalanyaza milandu"
+	},
+	"settings_option_cache_ignoreCase_desc": {
+		"message": "Pamene yayatsidwa, kumasulira kosungidwa kudzagwiritsidwa ntchito pazolemba zamitundu yosiyanasiyana, zomwe zingayambitse kusokoneza kumasulira pazochitika zina"
+	},
+	"settings_option_commonSettings": {
+		"message": "Zikhazikiko zofala"
+	},
+	"settings_option_customTranslatorModule": {
+		"message": "Maimidwe a kumasulira mwamakonda",
+		"description": "An user defined code that implements a translation module"
+	},
+	"settings_option_customTranslatorModule_desc": {
+		"message": "Mutha kuwonjezera maimidwe a kumasulira mwamakonda omwe amagwiritsa ntchito ntchito zanu zomwe mumakonda. Dziwani zambiri mu <slot id=docs>zolemba za kumasulira mwamakonda</slot>"
+	},
+	"settings_option_customTranslatorModule_manageButton": {
+		"message": "Kuwongolera omasulira",
+		"description": "A button to show list of translation modules"
+	},
+	"settings_option_history_enable": {
+		"message": "Yatsani mbiri"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "Pamene yayatsidwa, kumasulira kudzajambulidwa ndikuwonekera pa <slot id=historyPage>tsamba la mbiri</slot>"
+	},
+	"settings_option_pageTranslation": {
+		"message": "Kumasulira tsamba lonse"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent": {
+		"message": "Dziwani chinenero ndi zomwe zili"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent_desc": {
+		"message": "Sinthani zolemba patsamba la webu kuti mupeze chinenero chake. Pamene zayimitsidwa, chinenero chomwe chatchulidwa mu <slot id=docs>metadata ya tsamba</slot> chidzagwiritsidwa ntchito"
+	},
+	"settings_option_pageTranslation_enableContextMenu": {
+		"message": "Yatsani batani la menyu ya zochitika"
+	},
+	"settings_option_pageTranslation_enableContextMenu_desc": {
+		"message": "Onjezani batani kuti musinthe kumasulira tsamba mu menyu ya zochitika za tsamba"
+	},
+	"settings_option_pageTranslation_excludeSelectors": {
+		"message": "Zosankha zomwe zidzachotsedwe mu kumasulira"
+	},
+	"settings_option_pageTranslation_excludeSelectors_desc": {
+		"message": "Mndandanda wa zosankha za CSS za zinthu zomwe zidzachotsedwe mu kumasulira. Chosankha chimodzi pa mzere. Ngati chinthu chikugwirizana ndi chilichonse mwa zosankha izi, zolemba zake, mawonekedwe ake, ndi zinthu zomwe zili mkati sizidzamasuliridwa"
+	},
+	"settings_option_pageTranslation_lazyTranslate": {
+		"message": "Kumasulira zinthu zowoneka zokha"
+	},
+	"settings_option_pageTranslation_lazyTranslate_desc": {
+		"message": "Pamene njira iyi yayatsidwa, zinthu zowoneka zokha zidzamasuliridwa. Njira iyi imachepetsa kuchuluka kwa netiweki"
+	},
+	"settings_option_pageTranslation_originalTextPopup": {
+		"message": "Yatsani popup ndi zolemba zoyambirira"
+	},
+	"settings_option_pageTranslation_originalTextPopup_desc": {
+		"message": "Onetsani popup ndi zolemba zoyambirira mukamapita pamwamba pa zolemba zomasuliridwa"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation": {
+		"message": "Chidule"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation_desc": {
+		"message": "Chidule chosinthira kumasulira tsamba\nDinani ESC kuti mubwezeretse makiyi"
+	},
+	"settings_option_pageTranslation_translatableAttributes": {
+		"message": "Mawonekedwe omasuliridwa"
+	},
+	"settings_option_pageTranslation_translatableAttributes_desc": {
+		"message": "Lowetsani mayina a <slot id=htmlAttributes>mawonekedwe a HTML</slot> kuti musinthe, mawonekedwe amodzi pa mzere\nMawonekedwe omwe ali pamndandandawu okha ndi omwe adzamasuliridwa"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters": {
+		"message": "Onetsani kupita patsogolo kwa kumasulira"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters_desc": {
+		"message": "Onetsani gulu lokhala ndi kupita patsogolo kwa kumasulira tsamba mu pulogalamu yowonjezera"
+	},
+	"settings_option_selectTranslation": {
+		"message": "Kumasulira kwa malemba osankhidwa"
+	},
+	"settings_option_selectTranslation_detectTextLanguage": {
+		"message": "Dziwani chinenero cha malemba"
+	},
+	"settings_option_selectTranslation_detectTextLanguage_desc": {
+		"message": "Mukayatsa, malemba osankhidwa adzasanthulidwa kuti adziwe chinenero chomasulira. Apo ayi, chinenero cha tsamba lidzagwiritsidwa ntchito"
+	},
+	"settings_option_selectTranslation_disableWhileTranslatePage": {
+		"message": "Letsani pomwe mukumasulira tsamba"
+	},
+	"settings_option_selectTranslation_enable": {
+		"message": "Yatsani kumasulira kwa malemba osankhidwa"
+	},
+	"settings_option_selectTranslation_enable_desc": {
+		"message": "Mukayatsa chinthu ichi, mutha kusankha malemba aliwonse patsamba ndikumasulira mu pulogalamu yowonekera"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton": {
+		"message": "Kuyang'ana zokha pa batani la kumasulira"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
+		"message": "Batani la kumasulira likawonekera patsamba, lidzayang'aniridwa zokha"
+	},
+	"settings_option_selectTranslation_header_languageChoice": {
+		"message": "Zokonda za chinenero"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang": {
+		"message": "Lolani gawo la kumasulira kuti lidziwe chinenero cha malemba"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
+		"message": "Chinenero cha malemba chikapanda kudziwika kwanuko ndipo njira iyi yayatsidwa, malembawo adzamasuliridwa ndi chinenero \"auto\" ngati chithandizidwa.\nMukaletsa njira iyi, njira ina idzagwiritsidwa ntchito kukhazikitsa chinenero choyambira cha malemba"
+	},
+	"settings_option_selectTranslation_mode": {
+		"message": "Chitani pa kusankha malemba"
+	},
+	"settings_option_selectTranslation_mode_item_contextMenu": {
+		"message": "Masulira malemba kudzera pa menyu ya zochitika"
+	},
+	"settings_option_selectTranslation_mode_item_popupButton": {
+		"message": "Onetsani batani la kumasulira"
+	},
+	"settings_option_selectTranslation_mode_item_quickTranslate": {
+		"message": "Masulira malemba mwachangu"
+	},
+	"settings_option_selectTranslation_modifiers": {
+		"message": "Zosintha"
+	},
+	"settings_option_selectTranslation_modifiers_desc": {
+		"message": "Sankhani makiyi omwe ayenera kukanikizidwa pa kiyibodi kuti muwonetse kumasulira"
+	},
+	"settings_option_selectTranslation_modifiers_key_alt": {
+		"message": "alt"
+	},
+	"settings_option_selectTranslation_modifiers_key_ctrl": {
+		"message": "ctrl"
+	},
+	"settings_option_selectTranslation_modifiers_key_meta": {
+		"message": "meta"
+	},
+	"settings_option_selectTranslation_modifiers_key_shift": {
+		"message": "shift"
+	},
+	"settings_option_selectTranslation_rememberDirection": {
+		"message": "Kumbukirani chinenero cha malemba osankhidwa posachedwa"
+	},
+	"settings_option_selectTranslation_showOnceForSelection": {
+		"message": "Onetsani batani la kumasulira kamodzi pa kusankha malemba"
+	},
+	"settings_option_selectTranslation_showOnceForSelection_desc": {
+		"message": "Batani lidzawonekera kamodzi kokha pa kusankha malemba Aliwonse kuti liwonekere kachiwiri, sankhani malembawo kachiwiri"
+	},
+	"settings_option_selectTranslation_showOriginalText": {
+		"message": "Onetsani malemba oyambirira"
+	},
+	"settings_option_selectTranslation_showOriginalText_desc": {
+		"message": "Onjezani gawo lokhala ndi malemba oyambirira ku pulogalamu yowonekera ya kumasulira"
+	},
+	"settings_option_selectTranslation_strictSelection": {
+		"message": "Njira yokhazikika yosankha malemba",
+		"description": "Njira iyi ndi yokhudza kusankha malemba kudzera pa mbewa"
+	},
+	"settings_option_selectTranslation_strictSelection_desc": {
+		"message": "Anyalanyazani kusankha malemba ngati batani lamanzere la mbewa litasulidwa kunja kwa gawo lokhala ndi malemba osankhidwa"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton": {
+		"message": "Kuchedwa musanabisale batani la pulogalamu yowonekera"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton_desc": {
+		"message": "Kuchedwa mu milliseconds musanabisale batani pamene cholozera sichili pamwamba pake. Kukhala pamwamba pa batani kumabwezeretsa nthawi. Kuti musachotse zokha, ikani mtengo kukhala wochepera 1"
+	},
+	"settings_option_selectTranslation_zIndex": {
+		"message": "z-index"
+	},
+	"settings_option_selectTranslation_zIndex_desc": {
+		"message": "Onjezani mtengo uwu ngati zinthu patsamba zina zikuphimba popup yokhala ndi mawu omasuliridwa"
+	},
+	"settings_option_textTranslator": {
+		"message": "Kumasulira kwa mawu"
+	},
+	"settings_option_textTranslator_rememberText": {
+		"message": "Kukumbukira mawu omasuliridwa"
+	},
+	"settings_option_textTranslator_rememberText_desc": {
+		"message": "Kukumbukira mawu omasuliridwa nthawi ina pamene zenera likatsegulidwa"
+	},
+	"settings_option_textTranslator_spellCheck": {
+		"message": "Yambitsani kuyang'ana zolakwika"
+	},
+	"settings_option_textTranslator_suggestLanguage": {
+		"message": "Kuwonetsa chinenero cha mawu omwe apezeka"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways": {
+		"message": "Nthawi zonse pezani ndi kusonyeza chinenero"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways_desc": {
+		"message": "Mukachotsa, malingaliro a chinenero amawonekera kokha ngati chinenero choyambira chakhazikitsidwa kukhala \"auto\""
+	},
+	"settings_option_translatePreferences": {
+		"message": "Zokonda kumasulira"
+	},
+	"settings_option_translateScheduler": {
+		"message": "Wokonza nthawi ya kumasulira"
+	},
+	"settings_option_translateScheduler_delay": {
+		"message": "Kuchedwa kwa kusonkhanitsa mawu"
+	},
+	"settings_option_translateScheduler_delay_desc": {
+		"message": "Wokonza nthawi ya kumasulira amachepetsa kuchuluka kwa zopempha ku API ya utumiki wa kumasulira powonjezera mawu ambiri momwe angathere kuti atumize mu pempho limodzi. Wokonza nthawi adikirira nthawi yotchulidwa mu milliseconds kuti asonkhanitse mawu ambiri asanayambe kumasulira"
+	},
+	"settings_option_translateScheduler_retryLimit": {
+		"message": "Malire a kuyesanso kumasulira"
+	},
+	"settings_option_translateScheduler_retryLimit_desc": {
+		"message": "Wokonza nthawi adzayesanso kumasulira mawu pamene zolakwika za kumasulira zikachitika. Njirayi imakhazikitsa malire a kuyesanso. Ikani nambala yochepa kuti mulole kuyesanso kopanda malire"
+	},
+	"settings_option_translatorModule": {
+		"message": "Module ya kumasulira"
+	},
+	"settings_option_translatorModule_desc": {
+		"message": "Ubwino wa kumasulira ndi zilankhulo zomwe zilipo zimadalira module ya kumasulira"
+	},
+	"settings_option_tts": {
+		"message": "Kusintha Mawu kukhala Mawu (TTS)"
+	},
+	"settings_option_ttsCustomModules": {
+		"message": "Ma module a synthesis a mawu omwe mwachita mwamakonda"
+	},
+	"settings_option_ttsCustomModules_button": {
+		"message": "Kuwongolera ma module a synthesis a mawu"
+	},
+	"settings_option_ttsCustomModules_desc": {
+		"message": "Mutha kuwonjezera ma module a synthesis a mawu omwe amagwiritsa ntchito mautumiki ndi ma injini a mawu omwe mumakonda. Werengani zambiri mu <slot id=docs>zolemba za TTS mwamakonda</slot>"
+	},
+	"settings_option_ttsModule": {
+		"message": "Module ya TTS yosankhidwa"
+	},
+	"settings_option_ttsModule_desc": {
+		"message": "Injini ya mawu yomwe imagwiritsidwa ntchito poyankhula mawu"
+	},
+	"settings_option_userLanguage": {
+		"message": "Chilankhulo chanu"
+	},
+	"settings_option_userLanguage_desc": {
+		"message": "Chilankhulo chomwe mawu adzamasuliridwa"
+	},
+	"settings_pageTitle": {
+		"message": "Zokonda"
+	},
+	"settings_section_history": {
+		"message": "Mbiri"
+	},
+	"settings_section_popup": {
+		"message": "Popup"
+	},
+	"textTranslator_suggestLanguage": {
+		"message": "Zikuwoneka ngati chinenero cha mawu ndi <slot id=languageSuggest>$language_name$</slot>",
+		"placeholders": {
+			"language_name": {
+				"content": "$1",
+				"example": "Japanese"
+			}
+		}
+	},
+	"textTranslator_translateInputPlaceholder": {
+		"message": "Lowetsani mawu kuti asinthidwe",
+		"description": "Request to user input some text for translation"
+	},
+	"textTranslator_translatePlaceholder": {
+		"message": "Mawu osinthidwa adzakhala pano"
+	},
+	"translatorsManagerWindow_add": {
+		"message": "Onjezani gawo losinthira"
+	},
+	"translatorsManagerWindow_close": {
+		"message": "Tsekani"
+	},
+	"translatorsManagerWindow_emptyTranslatorsListText": {
+		"message": "Palibe magawo osinthira omwe awonjezedwa pano"
+	},
+	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
+		"message": "Mukutsimikiza kuti mukufuna kuchotsa gawo losinthira \"$translator_name$\"?",
+		"placeholders": {
+			"translator_name": {
+				"content": "$1",
+				"example": "Google translator"
+			}
+		}
+	},
+	"translatorsManagerWindow_title": {
+		"message": "Magawo osinthira makonda"
+	},
+	"translatorsManagerWindow_translator_delete": {
+		"message": "Chotsani"
+	},
+	"translatorsManagerWindow_translator_edit": {
+		"message": "Sinthani"
+	},
+	"ttsManagerWindow_add": {
+		"message": "Onjezani gawo la TTS"
+	},
+	"ttsManagerWindow_close": {
+		"message": "Tsekani"
+	},
+	"ttsManagerWindow_emptyTranslatorsListText": {
+		"message": "Palibe magawo a TTS omwe awonjezedwa pano"
+	},
+	"ttsManagerWindow_message_ttsRemoveConfirmation": {
+		"message": "Mukutsimikiza kuti mukufuna kuchotsa gawo la TTS \"$tts_name$\"?",
+		"placeholders": {
+			"tts_name": {
+				"content": "$1",
+				"example": "Google TTS"
+			}
+		}
+	},
+	"ttsManagerWindow_title": {
+		"message": "Magawo a Text-to-Speech"
+	},
+	"ttsManagerWindow_translator_delete": {
+		"message": "Chotsani"
+	},
+	"ttsManagerWindow_translator_edit": {
+		"message": "Sinthani"
+	},
+	"validation_number": {
+		"message": "Mtengo uyenera kukhala nambala"
+	},
+	"validation_numberBetweenRange": {
+		"message": "Mtengo uyenera kukhala nambala pakati pa $1 ndi $2"
+	},
+	"validation_positiveNumber": {
+		"message": "Mtengo uyenera kukhala nambala yabwino"
+	}
+}

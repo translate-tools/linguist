@@ -1,0 +1,623 @@
+{
+	"common_action_addToDictionary": {
+		"message": "Ավելացնել թարգմանությունը բառարանին"
+	},
+	"common_action_removeFromDictionary": {
+		"message": "Հեռացնել թարգմանությունը բառարանից"
+	},
+	"common_bgUnavailable": {
+		"message": "Հետին պլանի սցենարը անհասանելի է"
+	},
+	"common_cancel": {
+		"message": "Չեղարկել"
+	},
+	"common_close": {
+		"message": "Փակել"
+	},
+	"common_copy": {
+		"message": "Պատճենել"
+	},
+	"common_error": {
+		"message": "Սխալ"
+	},
+	"common_offlineTranslator": {
+		"message": "$1 - Անցանց թարգմանիչ"
+	},
+	"common_retry": {
+		"message": "Կրկին փորձել"
+	},
+	"common_translate": {
+		"message": "Թարգմանել"
+	},
+	"component_hotkey_placeholder": {
+		"message": "Սեղմեք՝ կարճուղի գրանցելու համար"
+	},
+	"component_hotkey_recordPlaceholder": {
+		"message": "Սեղմեք ստեղները"
+	},
+	"component_hotkey_resetButton": {
+		"message": "Վերականգնել"
+	},
+	"contextMenu_disablePageTranslation": {
+		"message": "Դադարեցնել էջի թարգմանությունը"
+	},
+	"contextMenu_translatePage": {
+		"message": "Թարգմանել էջը"
+	},
+	"contextMenu_translateSelectedText": {
+		"message": "Թարգմանել ընտրված տեքստը"
+	},
+	"dictionaryButton_add": {
+		"message": "Ավելացնել բառարանին"
+	},
+	"dictionaryButton_delete": {
+		"message": "Հեռացնել բառարանից"
+	},
+	"dictionary_button_export": {
+		"message": "Արտահանել"
+	},
+	"dictionary_button_removeAll": {
+		"message": "Հեռացնել բոլորը"
+	},
+	"dictionary_deleteAll": {
+		"message": "Վստա՞հ եք, որ ցանկանում եք հեռացնել ԲՈԼՈՐ թարգմանությունները բառարանից:"
+	},
+	"dictionary_deleteConfirmation": {
+		"message": "Վստա՞հ եք, որ ցանկանում եք հեռացնել այս թարգմանությունը:"
+	},
+	"dictionary_description": {
+		"message": "Պահպանեք թարգմանությունները բառարանում՝ դրանք արագ գտնելու համար"
+	},
+	"dictionary_emptyDictionary": {
+		"message": "Բառարանը դատարկ է, սկսեք լրացնել այն՝ որոշ տեքստեր թարգմանելով"
+	},
+	"dictionary_filter_from": {
+		"message": "Աղբյուր տեքստի լեզու"
+	},
+	"dictionary_filter_to": {
+		"message": "Նպատակային լեզու"
+	},
+	"dictionary_message_deleteAll_success": {
+		"message": "Բոլոր թարգմանությունները հեռացված են"
+	},
+	"dictionary_notFoundEntries": {
+		"message": "Այս ֆիլտրերին համապատասխանող թարգմանություններ չեն գտնվել"
+	},
+	"dictionary_pageTitle": {
+		"message": "Բառարան"
+	},
+	"dictionary_resetFilters": {
+		"message": "Վերականգնել ֆիլտրերը"
+	},
+	"dictionary_searchPlaceholder": {
+		"message": "Որոնել տեքստով"
+	},
+	"editorWindow_close": {
+		"message": "Փակել"
+	},
+	"editorWindow_data_code": {
+		"message": "Կոդ"
+	},
+	"editorWindow_data_title": {
+		"message": "Մոդուլի անուն"
+	},
+	"editorWindow_message_invalidTitle": {
+		"message": "Մոդուլի անունը պետք է ունենա առնվազն մեկ նիշ"
+	},
+	"editorWindow_save": {
+		"message": "Պահպանել"
+	},
+	"ext_description": {
+		"message": "Վեբ էջերի թարգմանություն, տեքստի թարգմանություն, բառարան, պատմություն, հարմարեցված թարգմանիչներ, ամեն ինչ, ինչ ձեզ հարկավոր է լեզվական խոչընդոտները հաղթահարելու համար"
+	},
+	"ext_name": {
+		"message": "Linguist - վեբ էջերի թարգմանիչ"
+	},
+	"history_control_selectEntry": {
+		"message": "Ընտրել թարգմանությունը խմբակային գործողության համար",
+		"description": "Description in finite form \"to pick\" with explaining what this checkbox will do"
+	},
+	"history_controls_clearHistory": {
+		"message": "Մաքրել պատմությունը"
+	},
+	"history_controls_deleteSelected": {
+		"message": "Ջնջել ընտրված թարգմանությունները"
+	},
+	"history_controls_selectAll": {
+		"message": "Ընտրել բոլոր թարգմանությունները"
+	},
+	"history_message_clearHistoryConfirmation": {
+		"message": "Համոզվա՞ծ եք, որ ցանկանում եք մաքրել պատմությունը: Բոլոր գրառումները կջնջվեն"
+	},
+	"history_message_deleteEntryConfirmation": {
+		"message": "Համոզվա՞ծ եք, որ ցանկանում եք ջնջել այս գրառումը:"
+	},
+	"history_message_deleteSelectedEntriesConfirmation": {
+		"message": "Համոզվա՞ծ եք, որ ցանկանում եք ջնջել ընտրված գրառումները ($1)?"
+	},
+	"history_message_entriesNotFound": {
+		"message": "Թարգմանություններ չեն գտնվել, որոնք համապատասխանում են ֆիլտրին"
+	},
+	"history_message_noEntries": {
+		"message": "Պատմությունը դատարկ է"
+	},
+	"history_notification_disabled": {
+		"message": "Պատմության գրանցումը անջատված է, ուստի նոր գրառումներ չեն հայտնվի: Դուք կարող եք փոխել սա <slot id=preferences>Կարգավորումներ</slot> բաժնում"
+	},
+	"history_pageTitle": {
+		"message": "Պատմություն"
+	},
+	"history_searchPlaceholder": {
+		"message": "Որոնել տեքստով"
+	},
+	"inlineTranslator_showOriginalText": {
+		"message": "Ցուցադրել բնօրինակ տեքստը"
+	},
+	"lang_change": {
+		"message": "Փոխել լեզուն"
+	},
+	"lang_detect": {
+		"message": "Ավտոմատ հայտնաբերում"
+	},
+	"lang_select": {
+		"message": "Ընտրել լեզուն"
+	},
+	"lang_swap": {
+		"message": "Փոխանակել լեզուները"
+	},
+	"message_unknownError": {
+		"message": "Անհայտ սխալ"
+	},
+	"pageTranslator_alwaysTranslateLang": {
+		"message": "Միշտ թարգմանել այս լեզուն"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disable": {
+		"message": "Անջատել"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
+		"message": "Անջատել բոլոր կայքերի համար"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_enable": {
+		"message": "Միացնել"
+	},
+	"pageTranslator_commonPreferences_title": {
+		"message": "Ընդհանուր նախընտրանքներ այս լեզվի համար"
+	},
+	"pageTranslator_option_autoTranslate": {
+		"message": "Ավտոմատ թարգմանություն"
+	},
+	"pageTranslator_showOriginal": {
+		"message": "Ցուցադրել բնօրինակը"
+	},
+	"pageTranslator_showTranslationPreferences": {
+		"message": "Թարգմանության նախընտրանքներ"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_always": {
+		"message": "Միշտ թարգմանել"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
+		"message": "Միշտ թարգմանել այս լեզվի համար"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_default": {
+		"message": "Օգտագործել ընդհանուր կանոնները"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
+		"message": "Օգտագործել ընդհանուր կանոնները այս լեզվի համար"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_never": {
+		"message": "Երբեք չթարգմանել"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
+		"message": "Երբեք չթարգմանել այս լեզվի համար"
+	},
+	"pageTranslator_sitePreferences_title": {
+		"message": "Նախընտրանքներ"
+	},
+	"pageTranslator_translatePage": {
+		"message": "Թարգմանել էջը"
+	},
+	"pageTranslator_translationReport": {
+		"message": "Թարգմանության հաշվետվություն"
+	},
+	"pageTranslator_translationReport_queue": {
+		"message": "Սպասման մեջ"
+	},
+	"pageTranslator_translationReport_reject": {
+		"message": "Սխալներ"
+	},
+	"pageTranslator_translationReport_resolve": {
+		"message": "Թարգմանված է"
+	},
+	"popup_tabIdNotFound": {
+		"message": "Ներդիրը \"$1\" չի գտնվել"
+	},
+	"popup_tab_translatePage": {
+		"message": "Էջի թարգմանություն"
+	},
+	"popup_tab_translateText": {
+		"message": "Տեքստի թարգմանություն"
+	},
+	"settings_button_cancel": {
+		"message": "Չեղարկել"
+	},
+	"settings_button_export": {
+		"message": "Արտահանել կարգավորումները"
+	},
+	"settings_button_import": {
+		"message": "Ներմուծել կարգավորումները"
+	},
+	"settings_button_reset": {
+		"message": "Վերակայել կարգավորումները"
+	},
+	"settings_button_saveChanges": {
+		"message": "Պահպանել փոփոխությունները"
+	},
+	"settings_message_clearCache_success": {
+		"message": "Քեշը մաքրված է"
+	},
+	"settings_message_common_invalidValueType": {
+		"message": "Անվավեր արժեք"
+	},
+	"settings_message_importConfig_invalidFile": {
+		"message": "Ներկայացված կարգավորման ֆայլը սխալ է կամ վնասված և չի կարող մշակվել"
+	},
+	"settings_message_importConfig_success": {
+		"message": "Ներմուծումը ավարտված է"
+	},
+	"settings_message_resetConfig_confirm": {
+		"message": "Հաստատեք կարգավորումները վերականգնել նախնական արժեքներով"
+	},
+	"settings_message_resetConfig_success": {
+		"message": "Կարգավորումները վերականգնված են"
+	},
+	"settings_message_saveChanges_success": {
+		"message": "Փոփոխությունները պահպանված են"
+	},
+	"settings_option_cache": {
+		"message": "Քեշ"
+	},
+	"settings_option_cache_clear": {
+		"message": "Մաքրել քեշը"
+	},
+	"settings_option_cache_clear_desc": {
+		"message": "Եթե նկատում եք թարգմանության սխալներ կամ պատահաբար թարգմանում եք անձնական տեքստեր, երբ քեշը միացված է, կարող եք ջնջել բոլոր տվյալները քեշից",
+		"description": "Explanation for user about cases when it's useful to clear cache"
+	},
+	"settings_option_cache_enable": {
+		"message": "Միացնել քեշը"
+	},
+	"settings_option_cache_enable_desc": {
+		"message": "Երբ քեշը միացված է, նախկինում թարգմանված տեքստերը կթարգմանվեն անմիջապես՝ առանց լրացուցիչ հարցումների թարգմանական ծառայությանը"
+	},
+	"settings_option_cache_ignoreCase": {
+		"message": "Օգտագործել քեշը առանց մեծատառերի զգայունության"
+	},
+	"settings_option_cache_ignoreCase_desc": {
+		"message": "Երբ միացված է, քեշավորված թարգմանությունները կօգտագործվեն տարբեր մեծատառերով տեքստերի համար, ինչը կարող է առաջացնել թարգմանության խեղաթյուրումներ որոշ իրավիճակներում"
+	},
+	"settings_option_commonSettings": {
+		"message": "Ընդհանուր կարգավորումներ"
+	},
+	"settings_option_customTranslatorModule": {
+		"message": "Անհատական թարգմանական մոդուլներ",
+		"description": "An user defined code that implements a translation module"
+	},
+	"settings_option_customTranslatorModule_desc": {
+		"message": "Դուք կարող եք ավելացնել անհատական թարգմանական մոդուլներ, որոնք օգտագործում են ձեր նախընտրած թարգմանական ծառայությունները։ Իմացեք ավելին <slot id=docs>անհատական թարգմանիչների փաստաթղթերում</slot>"
+	},
+	"settings_option_customTranslatorModule_manageButton": {
+		"message": "Թարգմանիչների կառավարում",
+		"description": "A button to show list of translation modules"
+	},
+	"settings_option_history_enable": {
+		"message": "Միացնել պատմությունը"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "Երբ միացված է, թարգմանությունները կգրանցվեն և կհայտնվեն <slot id=historyPage>պատմության էջում</slot>"
+	},
+	"settings_option_pageTranslation": {
+		"message": "Ամբողջ էջի թարգմանություն"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent": {
+		"message": "Բովանդակությամբ լեզվի հայտնաբերում"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent_desc": {
+		"message": "Վերլուծել վեբ էջի տեքստը՝ նրա լեզուն հայտնաբերելու համար։ Երբ անջատված է, կօգտագործվի <slot id=docs>էջի մետատվյալներում</slot> նշված լեզուն"
+	},
+	"settings_option_pageTranslation_enableContextMenu": {
+		"message": "Միացնել համատեքստային մենյուի կոճակը"
+	},
+	"settings_option_pageTranslation_enableContextMenu_desc": {
+		"message": "Ավելացնել կոճակ՝ էջի թարգմանությունը համատեքստային մենյուում միացնելու համար"
+	},
+	"settings_option_pageTranslation_excludeSelectors": {
+		"message": "Թարգմանությունից բացառվող ընտրիչներ"
+	},
+	"settings_option_pageTranslation_excludeSelectors_desc": {
+		"message": "CSS ընտրիչների ցանկ՝ թարգմանությունից բացառվող տարրերի համար։ Մեկ ընտրիչ մեկ տողում։ Եթե տարրը համապատասխանում է այս ընտրիչներից որևէ մեկին, նրա տեքստը, ատրիբուտները և ներդրված տարրերը չեն թարգմանվի"
+	},
+	"settings_option_pageTranslation_lazyTranslate": {
+		"message": "Թարգմանել միայն տեսանելի տարրերը"
+	},
+	"settings_option_pageTranslation_lazyTranslate_desc": {
+		"message": "Երբ այս տարբերակը միացված է, միայն տեսանելի տարրերը կթարգմանվեն։ Այս տարբերակը նվազեցնում է ցանցային տրաֆիկը"
+	},
+	"settings_option_pageTranslation_originalTextPopup": {
+		"message": "Միացնել բնօրինակ տեքստի փոփափը"
+	},
+	"settings_option_pageTranslation_originalTextPopup_desc": {
+		"message": "Ցուցադրել բնօրինակ տեքստի փոփափը, երբ մկնիկը պահում եք թարգմանված տեքստի բլոկների վրա"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation": {
+		"message": "Կարճուղի"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation_desc": {
+		"message": "Կարճուղի՝ էջի թարգմանությունը միացնելու համար\nՍեղմեք ESC՝ ստեղները վերականգնելու համար"
+	},
+	"settings_option_pageTranslation_translatableAttributes": {
+		"message": "Թարգմանվող ատրիբուտներ"
+	},
+	"settings_option_pageTranslation_translatableAttributes_desc": {
+		"message": "Մուտքագրեք <slot id=htmlAttributes>HTML ատրիբուտ</slot> անունները՝ թարգմանելու համար, մեկ ատրիբուտ մեկ տողում\nՄիայն այս ցանկում գտնվող ատրիբուտները կթարգմանվեն"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters": {
+		"message": "Ցուցադրել թարգմանության առաջընթացը"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters_desc": {
+		"message": "Ցուցադրել էջի թարգմանության առաջընթացի վահանակը ընդլայնման փոփափում"
+	},
+	"settings_option_selectTranslation": {
+		"message": "Թարգմանություն ընտրված տեքստի համար"
+	},
+	"settings_option_selectTranslation_detectTextLanguage": {
+		"message": "Հայտնաբերել տեքստի լեզուն"
+	},
+	"settings_option_selectTranslation_detectTextLanguage_desc": {
+		"message": "Երբ միացված է, ընտրված տեքստը կվերլուծվի լեզուն հայտնաբերելու համար թարգմանության համար։ Հակառակ դեպքում, կօգտագործվի էջի լեզուն"
+	},
+	"settings_option_selectTranslation_disableWhileTranslatePage": {
+		"message": "Անջատել էջը թարգմանելիս"
+	},
+	"settings_option_selectTranslation_enable": {
+		"message": "Միացնել ընտրված տեքստի թարգմանությունը"
+	},
+	"settings_option_selectTranslation_enable_desc": {
+		"message": "Երբ այս ֆունկցիան միացված է, դուք կարող եք ընտրել ցանկացած տեքստ էջում և թարգմանել այն փոփափում"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton": {
+		"message": "Ավտոմատ կենտրոնանալ թարգմանության կոճակի վրա"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
+		"message": "Երբ թարգմանության կոճակը հայտնվում է էջում, այն ավտոմատ կերպով կկենտրոնանա"
+	},
+	"settings_option_selectTranslation_header_languageChoice": {
+		"message": "Լեզվի կարգավորումներ"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang": {
+		"message": "Թույլատրել թարգմանության մոդուլին հայտնաբերել տեքստի լեզուն"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
+		"message": "Երբ տեքստի լեզուն չի կարող հայտնաբերվել տեղական և այս տարբերակը միացված է, տեքստը կթարգմանվի \"auto\" լեզվով, եթե աջակցվում է։\nԵրբ տարբերակը անջատված է, կօգտագործվի այլ պահուստային մեթոդ՝ տեքստի աղբյուրի լեզուն սահմանելու համար"
+	},
+	"settings_option_selectTranslation_mode": {
+		"message": "Գործողություն տեքստի ընտրության վրա"
+	},
+	"settings_option_selectTranslation_mode_item_contextMenu": {
+		"message": "Թարգմանել տեքստը համատեքստային մենյուի միջոցով"
+	},
+	"settings_option_selectTranslation_mode_item_popupButton": {
+		"message": "Ցուցադրել թարգմանության կոճակը"
+	},
+	"settings_option_selectTranslation_mode_item_quickTranslate": {
+		"message": "Թարգմանել տեքստը անմիջապես"
+	},
+	"settings_option_selectTranslation_modifiers": {
+		"message": "Փոփոխիչներ"
+	},
+	"settings_option_selectTranslation_modifiers_desc": {
+		"message": "Ընտրեք ստեղները, որոնք պետք է սեղմվեն ստեղնաշարի վրա՝ թարգմանությունը ցուցադրելու համար"
+	},
+	"settings_option_selectTranslation_modifiers_key_alt": {
+		"message": "alt"
+	},
+	"settings_option_selectTranslation_modifiers_key_ctrl": {
+		"message": "ctrl"
+	},
+	"settings_option_selectTranslation_modifiers_key_meta": {
+		"message": "meta"
+	},
+	"settings_option_selectTranslation_modifiers_key_shift": {
+		"message": "shift"
+	},
+	"settings_option_selectTranslation_rememberDirection": {
+		"message": "Հիշել վերջին ընտրված տեքստի լեզուն"
+	},
+	"settings_option_selectTranslation_showOnceForSelection": {
+		"message": "Ցուցադրել թարգմանության կոճակը մեկ անգամ յուրաքանչյուր տեքստի ընտրության համար"
+	},
+	"settings_option_selectTranslation_showOnceForSelection_desc": {
+		"message": "Կոճակը կհայտնվի միայն մեկ անգամ յուրաքանչյուր տեքստի ընտրության համար։ Նորից ցուցադրելու համար, նորից ընտրեք տեքստը"
+	},
+	"settings_option_selectTranslation_showOriginalText": {
+		"message": "Ցուցադրել բնօրինակ տեքստը"
+	},
+	"settings_option_selectTranslation_showOriginalText_desc": {
+		"message": "Ավելացնել բնօրինակ տեքստի բլոկ թարգմանության փոփափում"
+	},
+	"settings_option_selectTranslation_strictSelection": {
+		"message": "Խիստ ռեժիմ տեքստի հատվածի ընտրության համար",
+		"description": "This option is about selecting text via mouse"
+	},
+	"settings_option_selectTranslation_strictSelection_desc": {
+		"message": "Անտեսել տեքստի հատվածի ընտրությունը, եթե ձախ մկնիկի կոճակը բաց է թողնվում ընտրված տեքստը պարունակող բլոկից դուրս"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton": {
+		"message": "Հապաղում փոփափ կոճակը թաքցնելուց առաջ"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton_desc": {
+		"message": "Միլիվայրկյանների ուշացում, մինչև կոճակը թաքցնելը, երբ կուրսորը չի գտնվում դրա վրա: Կուրսորը կոճակի վրա պահելը վերականգնում է ժամանակաչափը: Ավտոմատ թաքցնելը անջատելու համար, արժեքը սահմանեք 1-ից պակաս"
+	},
+	"settings_option_selectTranslation_zIndex": {
+		"message": "z-index"
+	},
+	"settings_option_selectTranslation_zIndex_desc": {
+		"message": "Ավելացրեք այս արժեքը, եթե որոշ էջերի տարրերը ծածկում են թարգմանված տեքստի փոփափը"
+	},
+	"settings_option_textTranslator": {
+		"message": "Տեքստի թարգմանություն"
+	},
+	"settings_option_textTranslator_rememberText": {
+		"message": "Թարգմանված տեքստի հիշում"
+	},
+	"settings_option_textTranslator_rememberText_desc": {
+		"message": "Թարգմանված տեքստի հիշում հաջորդ անգամ պատուհանը բացելու համար"
+	},
+	"settings_option_textTranslator_spellCheck": {
+		"message": "Ստուգել ուղղագրությունը"
+	},
+	"settings_option_textTranslator_suggestLanguage": {
+		"message": "Ցուցադրել հայտնաբերված տեքստի լեզուն"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways": {
+		"message": "Միշտ հայտնաբերել և առաջարկել լեզուն"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways_desc": {
+		"message": "Երբ անջատված է, լեզվի առաջարկները հայտնվում են միայն, եթե աղբյուրի լեզուն սահմանված է \"ավտո\""
+	},
+	"settings_option_translatePreferences": {
+		"message": "Թարգմանության նախընտրանքներ"
+	},
+	"settings_option_translateScheduler": {
+		"message": "Թարգմանության ժամանակացույց"
+	},
+	"settings_option_translateScheduler_delay": {
+		"message": "Տեքստի կուտակման ուշացում"
+	},
+	"settings_option_translateScheduler_delay_desc": {
+		"message": "Թարգմանության ժամանակացույցը նվազեցնում է թարգմանության ծառայության API-ին հարցումների քանակը՝ հնարավորինս շատ տեքստեր կուտակելով մեկ հարցման մեջ ուղարկելու համար: Ժամանակացույցը սպասելու է նշված միլիվայրկյանների ընթացքում՝ ավելի շատ տեքստեր հավաքելու համար, նախքան թարգմանությունը սկսելը"
+	},
+	"settings_option_translateScheduler_retryLimit": {
+		"message": "Թարգմանության կրկնակի փորձերի սահմանափակում"
+	},
+	"settings_option_translateScheduler_retryLimit_desc": {
+		"message": "Ժամանակացույցը կփորձի կրկին թարգմանել տեքստերը, երբ թարգմանության սխալներ են առաջանում: Այս ընտրանքը սահմանում է կրկնակի փորձերի սահմանափակում: Սահմանեք բացասական թիվ՝ անսահմանափակ կրկնակի փորձերի համար"
+	},
+	"settings_option_translatorModule": {
+		"message": "Թարգմանության մոդուլ"
+	},
+	"settings_option_translatorModule_desc": {
+		"message": "Թարգմանությունների որակը և հասանելի լեզուները կախված են թարգմանության մոդուլից"
+	},
+	"settings_option_tts": {
+		"message": "Տեքստից խոսքի փոխարկում (TTS)"
+	},
+	"settings_option_ttsCustomModules": {
+		"message": "Անհատական խոսքի սինթեզի մոդուլներ"
+	},
+	"settings_option_ttsCustomModules_button": {
+		"message": "Խոսքի սինթեզի մոդուլների կառավարում"
+	},
+	"settings_option_ttsCustomModules_desc": {
+		"message": "Դուք կարող եք ավելացնել խոսքի սինթեզի մոդուլներ, որոնք օգտագործում են ձեր նախընտրած ծառայությունները և ձայնային շարժիչները: Կարդացեք ավելին <slot id=docs>անհատական TTS փաստաթղթերում</slot>"
+	},
+	"settings_option_ttsModule": {
+		"message": "Ընտրված TTS մոդուլ"
+	},
+	"settings_option_ttsModule_desc": {
+		"message": "Ձայնային շարժիչը, որը օգտագործվում է տեքստի հնչեցման համար"
+	},
+	"settings_option_userLanguage": {
+		"message": "Ձեր լեզուն"
+	},
+	"settings_option_userLanguage_desc": {
+		"message": "Լեզուն, որին տեքստերը կթարգմանվեն"
+	},
+	"settings_pageTitle": {
+		"message": "Կարգավորումներ"
+	},
+	"settings_section_history": {
+		"message": "Պատմություն"
+	},
+	"settings_section_popup": {
+		"message": "Փոփափ"
+	},
+	"textTranslator_suggestLanguage": {
+		"message": "Թվում է, թե տեքստի լեզուն <slot id=languageSuggest>$language_name$</slot> է",
+		"placeholders": {
+			"language_name": {
+				"content": "$1",
+				"example": "Japanese"
+			}
+		}
+	},
+	"textTranslator_translateInputPlaceholder": {
+		"message": "Մուտքագրեք տեքստը թարգմանության համար",
+		"description": "Request to user input some text for translation"
+	},
+	"textTranslator_translatePlaceholder": {
+		"message": "Թարգմանված տեքստը կլինի այստեղ"
+	},
+	"translatorsManagerWindow_add": {
+		"message": "Ավելացնել թարգմանության մոդուլ"
+	},
+	"translatorsManagerWindow_close": {
+		"message": "Փակել"
+	},
+	"translatorsManagerWindow_emptyTranslatorsListText": {
+		"message": "Անհատական թարգմանության մոդուլներ դեռ չեն ավելացվել"
+	},
+	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
+		"message": "Վստա՞հ եք, որ ցանկանում եք հեռացնել \"$translator_name$\" թարգմանության մոդուլը:",
+		"placeholders": {
+			"translator_name": {
+				"content": "$1",
+				"example": "Google translator"
+			}
+		}
+	},
+	"translatorsManagerWindow_title": {
+		"message": "Անհատական թարգմանության մոդուլներ"
+	},
+	"translatorsManagerWindow_translator_delete": {
+		"message": "Ջնջել"
+	},
+	"translatorsManagerWindow_translator_edit": {
+		"message": "Խմբագրել"
+	},
+	"ttsManagerWindow_add": {
+		"message": "Ավելացնել TTS մոդուլ"
+	},
+	"ttsManagerWindow_close": {
+		"message": "Փակել"
+	},
+	"ttsManagerWindow_emptyTranslatorsListText": {
+		"message": "TTS մոդուլներ դեռ չեն ավելացվել"
+	},
+	"ttsManagerWindow_message_ttsRemoveConfirmation": {
+		"message": "Վստա՞հ եք, որ ցանկանում եք հեռացնել \"$tts_name$\" TTS մոդուլը:",
+		"placeholders": {
+			"tts_name": {
+				"content": "$1",
+				"example": "Google TTS"
+			}
+		}
+	},
+	"ttsManagerWindow_title": {
+		"message": "Տեքստից-խոսքի մոդուլներ"
+	},
+	"ttsManagerWindow_translator_delete": {
+		"message": "Ջնջել"
+	},
+	"ttsManagerWindow_translator_edit": {
+		"message": "Խմբագրել"
+	},
+	"validation_number": {
+		"message": "Արժեքը պետք է լինի թիվ"
+	},
+	"validation_numberBetweenRange": {
+		"message": "Արժեքը պետք է լինի թիվ $1 և $2 միջև"
+	},
+	"validation_positiveNumber": {
+		"message": "Արժեքը պետք է լինի դրական թիվ"
+	}
+}

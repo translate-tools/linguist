@@ -1,0 +1,623 @@
+{
+	"common_action_addToDictionary": {
+		"message": "Yika kisalu na dikisinale"
+	},
+	"common_action_removeFromDictionary": {
+		"message": "Longola kisalu na dikisinale"
+	},
+	"common_bgUnavailable": {
+		"message": "Lukanu ya nsuka ya nsungi me lembama"
+	},
+	"common_cancel": {
+		"message": "Lembisa"
+	},
+	"common_close": {
+		"message": "Funga"
+	},
+	"common_copy": {
+		"message": "Kopiya"
+	},
+	"common_error": {
+		"message": "Kisalu"
+	},
+	"common_offlineTranslator": {
+		"message": "$1 - Nsungi ya nsuka ya nsi"
+	},
+	"common_retry": {
+		"message": "Luta diaka"
+	},
+	"common_translate": {
+		"message": "Tindika"
+	},
+	"component_hotkey_placeholder": {
+		"message": "Fina po na kumba nsungi"
+	},
+	"component_hotkey_recordPlaceholder": {
+		"message": "Fina maki"
+	},
+	"component_hotkey_resetButton": {
+		"message": "Luta diaka"
+	},
+	"contextMenu_disablePageTranslation": {
+		"message": "Lembisa kisalu ya lutinu"
+	},
+	"contextMenu_translatePage": {
+		"message": "Tindika lutinu"
+	},
+	"contextMenu_translateSelectedText": {
+		"message": "Tindika kisalu ya yibuka"
+	},
+	"dictionaryButton_add": {
+		"message": "Yika na dikisinale"
+	},
+	"dictionaryButton_delete": {
+		"message": "Longola na dikisinale"
+	},
+	"dictionary_button_export": {
+		"message": "Tindika na nsi"
+	},
+	"dictionary_button_removeAll": {
+		"message": "Longola yonso"
+	},
+	"dictionary_deleteAll": {
+		"message": "Oza na kikesa ya longola yonso kisalu na dikisinale?"
+	},
+	"dictionary_deleteConfirmation": {
+		"message": "Oza na kikesa ya longola kisalu yai?"
+	},
+	"dictionary_description": {
+		"message": "Kumba misalu na dikisinale po na kuzwa yo mbangu na nsuka"
+	},
+	"dictionary_emptyDictionary": {
+		"message": "Dikisinale me lembama, yika yo na kutindika kisalu"
+	},
+	"dictionary_filter_from": {
+		"message": "Lulimi ya kisalu ya yibuka"
+	},
+	"dictionary_filter_to": {
+		"message": "Lulimi ya kisalu ya nsuka"
+	},
+	"dictionary_message_deleteAll_success": {
+		"message": "Yonso misalu me longama"
+	},
+	"dictionary_notFoundEntries": {
+		"message": "Kisalu ya yibuka me lembama na nsungi yai"
+	},
+	"dictionary_pageTitle": {
+		"message": "Dikisinale"
+	},
+	"dictionary_resetFilters": {
+		"message": "Luta diaka nsungi"
+	},
+	"dictionary_searchPlaceholder": {
+		"message": "Luta na mambu"
+	},
+	"editorWindow_close": {
+		"message": "Kanga"
+	},
+	"editorWindow_data_code": {
+		"message": "Code"
+	},
+	"editorWindow_data_title": {
+		"message": "Nkombo ya module"
+	},
+	"editorWindow_message_invalidTitle": {
+		"message": "Nkombo ya module esengeli kozala na litere moko mpenza"
+	},
+	"editorWindow_save": {
+		"message": "Kobomba"
+	},
+	"ext_description": {
+		"message": "Kibosana ya masolo ya nse, kobosana ya mambu, dikisonari, lisolo, batranslateurs ya mimeseno, nyonso oyo osengeli mpo na kobuka bisika ya minoko"
+	},
+	"ext_name": {
+		"message": "Linguist - kibosana ya masolo ya nse"
+	},
+	"history_control_selectEntry": {
+		"message": "Kopona kobosana mpo na mosala ya ebele",
+		"description": "Description in finite form \"to pick\" with explaining what this checkbox will do"
+	},
+	"history_controls_clearHistory": {
+		"message": "Kolongola lisolo"
+	},
+	"history_controls_deleteSelected": {
+		"message": "Kolongola kobosana oyo eponami"
+	},
+	"history_controls_selectAll": {
+		"message": "Kopona kobosana nyonso"
+	},
+	"history_message_clearHistoryConfirmation": {
+		"message": "Ozali naino na elikya ya kolongola lisolo? Kobosana nyonso ekolongolama"
+	},
+	"history_message_deleteEntryConfirmation": {
+		"message": "Ozali naino na elikya ya kolongola kobosana oyo?"
+	},
+	"history_message_deleteSelectedEntriesConfirmation": {
+		"message": "Ozali naino na elikya ya kolongola kobosana oyo ($1)?"
+	},
+	"history_message_entriesNotFound": {
+		"message": "Kobosana moko te ekoki na eloko oyo"
+	},
+	"history_message_noEntries": {
+		"message": "Lisolo ezali mpamba"
+	},
+	"history_notification_disabled": {
+		"message": "Kobosana ya lisolo ezali na mpasi, yango wana kobosana ya sika ekomonana te. Okoki kobongola yango na <slot id=preferences>Preferences</slot>"
+	},
+	"history_pageTitle": {
+		"message": "Lisolo"
+	},
+	"history_searchPlaceholder": {
+		"message": "Luta na mambu"
+	},
+	"inlineTranslator_showOriginalText": {
+		"message": "Lakisa mambu ya liboso"
+	},
+	"lang_change": {
+		"message": "Kobongola monoko"
+	},
+	"lang_detect": {
+		"message": "Koyeba na yango moko"
+	},
+	"lang_select": {
+		"message": "Kopona monoko"
+	},
+	"lang_swap": {
+		"message": "Kobongola minoko"
+	},
+	"message_unknownError": {
+		"message": "Libunga oyo eyebani te"
+	},
+	"pageTranslator_alwaysTranslateLang": {
+		"message": "Kobosana ntango nyonso monoko oyo"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disable": {
+		"message": "Kolongola"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
+		"message": "Kolongola mpo na bisika nyonso"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_enable": {
+		"message": "Kobongisa"
+	},
+	"pageTranslator_commonPreferences_title": {
+		"message": "Mikano ya mambu ya nkaka ya kieleka yai"
+	},
+	"pageTranslator_option_autoTranslate": {
+		"message": "Kukeba na mambu"
+	},
+	"pageTranslator_showOriginal": {
+		"message": "Landa ya ntete"
+	},
+	"pageTranslator_showTranslationPreferences": {
+		"message": "Mikano ya kukeba na mambu"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_always": {
+		"message": "Kukeba na mambu ntangu yonso"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
+		"message": "Kukeba na mambu ntangu yonso na kieleka yai"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_default": {
+		"message": "Sambila mikano ya mambu ya nkaka"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
+		"message": "Sambila mikano ya mambu ya nkaka na kieleka yai"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_never": {
+		"message": "Kukeba na mambu ve"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
+		"message": "Kukeba na mambu ve na kieleka yai"
+	},
+	"pageTranslator_sitePreferences_title": {
+		"message": "Mikano ya"
+	},
+	"pageTranslator_translatePage": {
+		"message": "Kukeba na lutiti"
+	},
+	"pageTranslator_translationReport": {
+		"message": "Raporo ya kukeba na mambu"
+	},
+	"pageTranslator_translationReport_queue": {
+		"message": "Kele na nzila"
+	},
+	"pageTranslator_translationReport_reject": {
+		"message": "Mifutila"
+	},
+	"pageTranslator_translationReport_resolve": {
+		"message": "Kukeba na mambu"
+	},
+	"popup_tabIdNotFound": {
+		"message": "Tab \"$1\" me zaba ve"
+	},
+	"popup_tab_translatePage": {
+		"message": "Kukeba na lutiti"
+	},
+	"popup_tab_translateText": {
+		"message": "Kukeba na mambu"
+	},
+	"settings_button_cancel": {
+		"message": "Kima"
+	},
+	"settings_button_export": {
+		"message": "Kukonda mikano"
+	},
+	"settings_button_import": {
+		"message": "Kukota mikano"
+	},
+	"settings_button_reset": {
+		"message": "Kukabula mikano"
+	},
+	"settings_button_saveChanges": {
+		"message": "Kukeba bambongwana"
+	},
+	"settings_message_clearCache_success": {
+		"message": "Cache me katuka"
+	},
+	"settings_message_common_invalidValueType": {
+		"message": "Kieleka ve"
+	},
+	"settings_message_importConfig_invalidFile": {
+		"message": "Fwaile ya mikano me zaba ve to me vanda na kimpwanza, me zaba ve"
+	},
+	"settings_message_importConfig_success": {
+		"message": "Kukota me suka"
+	},
+	"settings_message_resetConfig_confirm": {
+		"message": "Kangama na kukabula mikano na mambu ya ntete"
+	},
+	"settings_message_resetConfig_success": {
+		"message": "Mikano me kabuka"
+	},
+	"settings_message_saveChanges_success": {
+		"message": "Bikuma bisanjoli"
+	},
+	"settings_option_cache": {
+		"message": "Cache"
+	},
+	"settings_option_cache_clear": {
+		"message": "Sukula cache"
+	},
+	"settings_option_cache_clear_desc": {
+		"message": "Soki ozwisi mabunga na botekisi to otekisi na mabe makomi ya motema na ntina ya cache, okoki kolongola makomi nyonso na cache",
+		"description": "Explanation for user about cases when it's useful to clear cache"
+	},
+	"settings_option_cache_enable": {
+		"message": "Sukisa cache"
+	},
+	"settings_option_cache_enable_desc": {
+		"message": "Ntango cache esukisi, makomi oyo etekisamaki liboso ekotekisama mbala moko kozanga kosenga lisusu na mosala ya botekisi"
+	},
+	"settings_option_cache_ignoreCase": {
+		"message": "Sukisa cache oyo eyebi te makomi minene to mike"
+	},
+	"settings_option_cache_ignoreCase_desc": {
+		"message": "Ntango esukisi, botekisi oyo ebombami ekosalema mpo na makomi na minene to mike, oyo ekoki kopesa mabunga na botekisi na bantango mosusu"
+	},
+	"settings_option_commonSettings": {
+		"message": "Bikuma ya bomoko"
+	},
+	"settings_option_customTranslatorModule": {
+		"message": "Bikuma ya botekisi ya moto moko",
+		"description": "An user defined code that implements a translation module"
+	},
+	"settings_option_customTranslatorModule_desc": {
+		"message": "Okoki kobakisa bikuma ya botekisi ya moto moko oyo esalelaka baservice ya botekisi oyo olingaka. Yekola mingi na <slot id=docs>ndakisa ya botekisi ya moto moko</slot>"
+	},
+	"settings_option_customTranslatorModule_manageButton": {
+		"message": "Kokamba batranslator",
+		"description": "A button to show list of translation modules"
+	},
+	"settings_option_history_enable": {
+		"message": "Sukisa lisolo"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "Ntango esukisi, botekisi ekokoma mpe ekomonana na <slot id=historyPage>lokasa ya lisolo</slot>"
+	},
+	"settings_option_pageTranslation": {
+		"message": "Botekisi ya lokasa mobimba"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent": {
+		"message": "Luka lokota na makomi"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent_desc": {
+		"message": "Tala makomi na lokasa ya internet mpo na koyeba lokota na yango. Ntango esukisi te, lokota oyo etangami na <slot id=docs>metadata ya lokasa</slot> ekosalema"
+	},
+	"settings_option_pageTranslation_enableContextMenu": {
+		"message": "Sukisa bouton ya menu ya contexte"
+	},
+	"settings_option_pageTranslation_enableContextMenu_desc": {
+		"message": "Bakisa bouton mpo na kosala botekisi ya lokasa na menu ya contexte ya lokasa"
+	},
+	"settings_option_pageTranslation_excludeSelectors": {
+		"message": "Baponami ya kolongola na botekisi"
+	},
+	"settings_option_pageTranslation_excludeSelectors_desc": {
+		"message": "Listi ya baponami ya CSS mpo na biloko ya kolongola na botekisi. Baponami moko na mokolo. Soki eloko ekokani na moko ya baponami oyo, makomi na yango, biloko, mpe biloko ya kati ekotekisama te"
+	},
+	"settings_option_pageTranslation_lazyTranslate": {
+		"message": "Tekisa kaka biloko oyo emonanaka"
+	},
+	"settings_option_pageTranslation_lazyTranslate_desc": {
+		"message": "Ntango likambo oyo esukisi, kaka biloko oyo emonanaka nde ekotekisama. Likambo oyo ekitisa traffic ya réseau"
+	},
+	"settings_option_pageTranslation_originalTextPopup": {
+		"message": "Sukisa popup na makomi ya liboso"
+	},
+	"settings_option_pageTranslation_originalTextPopup_desc": {
+		"message": "Lakisa popup na makomi ya liboso ntango ozali na likolo ya biloko ya makomi oyo etekisami"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation": {
+		"message": "Kobongola"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation_desc": {
+		"message": "Kobongola mpo na kosala botekisi ya lokasa\nPesa ESC mpo na kosukisa maboko"
+	},
+	"settings_option_pageTranslation_translatableAttributes": {
+		"message": "Biloko oyo ekotekisama"
+	},
+	"settings_option_pageTranslation_translatableAttributes_desc": {
+		"message": "Kota nkombo ya <slot id=htmlAttributes>biloko ya HTML</slot> mpo na kotekisa, biloko moko na mokolo\nKaka biloko na listi oyo nde ekotekisama"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters": {
+		"message": "Lakisa botekisi ya progresi"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters_desc": {
+		"message": "Landa paneli na mambu ya kulanda nsangu ya kutanga na extension popup"
+	},
+	"settings_option_selectTranslation": {
+		"message": "Kulanda nsangu ya mambu me selamaka"
+	},
+	"settings_option_selectTranslation_detectTextLanguage": {
+		"message": "Kumona kieleka ya nsangu"
+	},
+	"settings_option_selectTranslation_detectTextLanguage_desc": {
+		"message": "Kana me salama, mambu me selamaka ta landama sambu na kumona kieleka ya kulanda nsangu. Kana ve, kieleka ya lutiti ta salama"
+	},
+	"settings_option_selectTranslation_disableWhileTranslatePage": {
+		"message": "Kanga ntangu ya kutanga lutiti"
+	},
+	"settings_option_selectTranslation_enable": {
+		"message": "Landa nsangu ya mambu me selamaka"
+	},
+	"settings_option_selectTranslation_enable_desc": {
+		"message": "Kana kisalu yai me salama, nge ta sala mambu me selamaka na lutiti mpi kutanga yo na popup"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton": {
+		"message": "Fokusa na buta ya kulanda nsangu"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
+		"message": "Kana buta ya kulanda nsangu me monana na lutiti, yo ta fokusa na yo na yawu"
+	},
+	"settings_option_selectTranslation_header_languageChoice": {
+		"message": "Mambu ya kieleka"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang": {
+		"message": "Landa module ya kulanda nsangu sambu na kumona kieleka ya nsangu"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
+		"message": "Kana kieleka ya nsangu ve kumonama na yawu mpi kisalu yai me salama, nsangu ta landama ti kieleka \"auto\" kana me sadila. Kana kisalu yai ve salama, yindula ya nkaka ta sadilama sambu na kutia kieleka ya nsangu"
+	},
+	"settings_option_selectTranslation_mode": {
+		"message": "Kisalu na kusala mambu"
+	},
+	"settings_option_selectTranslation_mode_item_contextMenu": {
+		"message": "Landa nsangu na menu ya context"
+	},
+	"settings_option_selectTranslation_mode_item_popupButton": {
+		"message": "Landa buta ya kulanda nsangu"
+	},
+	"settings_option_selectTranslation_mode_item_quickTranslate": {
+		"message": "Landa nsangu na yawu"
+	},
+	"settings_option_selectTranslation_modifiers": {
+		"message": "Mambu ya kubongisa"
+	},
+	"settings_option_selectTranslation_modifiers_desc": {
+		"message": "Sola mambu ya kubongisa na keyboard sambu na kumonisa kulanda nsangu"
+	},
+	"settings_option_selectTranslation_modifiers_key_alt": {
+		"message": "alt"
+	},
+	"settings_option_selectTranslation_modifiers_key_ctrl": {
+		"message": "ctrl"
+	},
+	"settings_option_selectTranslation_modifiers_key_meta": {
+		"message": "meta"
+	},
+	"settings_option_selectTranslation_modifiers_key_shift": {
+		"message": "shift"
+	},
+	"settings_option_selectTranslation_rememberDirection": {
+		"message": "Kumbuka kieleka ya nsangu me selamaka na yawu"
+	},
+	"settings_option_selectTranslation_showOnceForSelection": {
+		"message": "Monisa buta ya kulanda nsangu mbala mosi sambu na mambu me selamaka"
+	},
+	"settings_option_selectTranslation_showOnceForSelection_desc": {
+		"message": "Buta ta monana mbala mosi kaka sambu na mambu me selamaka. Sambu na kumonisa yo diaka, sola mambu diaka"
+	},
+	"settings_option_selectTranslation_showOriginalText": {
+		"message": "Monisa nsangu ya ntete"
+	},
+	"settings_option_selectTranslation_showOriginalText_desc": {
+		"message": "Tia block ti nsangu ya ntete na popup ya kulanda nsangu"
+	},
+	"settings_option_selectTranslation_strictSelection": {
+		"message": "Mode ya kiese ya kusala mambu me selamaka",
+		"description": "Kisalu yai kele sambu na kusala mambu na mouse"
+	},
+	"settings_option_selectTranslation_strictSelection_desc": {
+		"message": "Kanga kusala mambu me selamaka kana buta ya mouse ya maboko ya kitoko me vanda na nganda ya block me vandaka na mambu me selamaka"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton": {
+		"message": "Kuma ntangu ya kufuta buta ya popup"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton_desc": {
+		"message": "Kisika na milisekondi pele kuficha butoni ntangu cursor kele ve na zulu na yandi. Ntangu cursor kele na zulu na butoni, timer ke reset. Na kufuta auto-hide, sala kiadi na nsi na 1"
+	},
+	"settings_option_selectTranslation_zIndex": {
+		"message": "z-index"
+	},
+	"settings_option_selectTranslation_zIndex_desc": {
+		"message": "Tombula kiadi yai kana bima na ba pages yankaka ke zipa popup ti text ya kutanina"
+	},
+	"settings_option_textTranslator": {
+		"message": "Kutana text"
+	},
+	"settings_option_textTranslator_rememberText": {
+		"message": "Kubikila text ya kutanina"
+	},
+	"settings_option_textTranslator_rememberText_desc": {
+		"message": "Kubikila text ya kutanina sambu na ntangu ya zole ntangu luwindow ke fungwama"
+	},
+	"settings_option_textTranslator_spellCheck": {
+		"message": "Kubakisa spell check"
+	},
+	"settings_option_textTranslator_suggestLanguage": {
+		"message": "Kumonisa linga ya text ya kutanina"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways": {
+		"message": "Ntangu yonso kumona mpi kusosa linga"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways_desc": {
+		"message": "Ntangu yai kele ve, ba suggestion ya linga ke monana kaka kana linga ya kisika kele na \"auto\""
+	},
+	"settings_option_translatePreferences": {
+		"message": "Ba preference ya kutanina"
+	},
+	"settings_option_translateScheduler": {
+		"message": "Scheduler ya kutanina"
+	},
+	"settings_option_translateScheduler_delay": {
+		"message": "Kisika ya kumonisa text"
+	},
+	"settings_option_translateScheduler_delay_desc": {
+		"message": "Scheduler ya kutanina ke futa ba request na API ya kutanina na kubikila mingi ya ba text sambu na kutinda na request mosi. Scheduler ke zola ntangu ya kisika na milisekondi sambu na kubikila mingi ya ba text pele ya kutanina"
+	},
+	"settings_option_translateScheduler_retryLimit": {
+		"message": "Limit sambu na ba tentative ya kutanina"
+	},
+	"settings_option_translateScheduler_retryLimit_desc": {
+		"message": "Scheduler ke zola kutanina ba text ntangu ba error ya kutanina ke salama. Option yai ke sala limit na ba tentative ya kutanina. Sala kiadi ya negative sambu na kubakisa ba tentative ya kutanina"
+	},
+	"settings_option_translatorModule": {
+		"message": "Module ya kutanina"
+	},
+	"settings_option_translatorModule_desc": {
+		"message": "Kwalite ya ba kutanina mpi ba linga ya kele na module ya kutanina"
+	},
+	"settings_option_tts": {
+		"message": "Kutana text na mambu (TTS)"
+	},
+	"settings_option_ttsCustomModules": {
+		"message": "Ba module ya synthesis ya mambu ya custom"
+	},
+	"settings_option_ttsCustomModules_button": {
+		"message": "Kumanisa ba module ya synthesis ya mambu"
+	},
+	"settings_option_ttsCustomModules_desc": {
+		"message": "Oyo ke zola kubakisa ba module ya synthesis ya mambu ke sala ti ba service mpi ba engine ya mambu ya ke zola. Tanga mingi na <slot id=docs>documentation ya TTS ya custom</slot>"
+	},
+	"settings_option_ttsModule": {
+		"message": "Module ya TTS ya kusala"
+	},
+	"settings_option_ttsModule_desc": {
+		"message": "Engine ya mambu ke sala sambu na kutana text"
+	},
+	"settings_option_userLanguage": {
+		"message": "Linga na nge"
+	},
+	"settings_option_userLanguage_desc": {
+		"message": "Linga ya ba text ke kutanina na yandi"
+	},
+	"settings_pageTitle": {
+		"message": "Ba settings"
+	},
+	"settings_section_history": {
+		"message": "History"
+	},
+	"settings_section_popup": {
+		"message": "Popup"
+	},
+	"textTranslator_suggestLanguage": {
+		"message": "Ke monana linga ya text kele <slot id=languageSuggest>$language_name$</slot>",
+		"placeholders": {
+			"language_name": {
+				"content": "$1",
+				"example": "Japanese"
+			}
+		}
+	},
+	"textTranslator_translateInputPlaceholder": {
+		"message": "Tia mambu ya kutanga",
+		"description": "Request to user input some text for translation"
+	},
+	"textTranslator_translatePlaceholder": {
+		"message": "Mambu ya kutangama ta nsi yai"
+	},
+	"translatorsManagerWindow_add": {
+		"message": "Yika module ya kutanga"
+	},
+	"translatorsManagerWindow_close": {
+		"message": "Kanga"
+	},
+	"translatorsManagerWindow_emptyTranslatorsListText": {
+		"message": "Beno me yika ve module ya kutanga ya beno mosi"
+	},
+	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
+		"message": "Kele na kiese na nge na kufuta module ya kutanga \"$translator_name$\"?",
+		"placeholders": {
+			"translator_name": {
+				"content": "$1",
+				"example": "Google translator"
+			}
+		}
+	},
+	"translatorsManagerWindow_title": {
+		"message": "Beno mosi module ya kutanga"
+	},
+	"translatorsManagerWindow_translator_delete": {
+		"message": "Futa"
+	},
+	"translatorsManagerWindow_translator_edit": {
+		"message": "Sokola"
+	},
+	"ttsManagerWindow_add": {
+		"message": "Yika module ya TTS"
+	},
+	"ttsManagerWindow_close": {
+		"message": "Kanga"
+	},
+	"ttsManagerWindow_emptyTranslatorsListText": {
+		"message": "Beno me yika ve module ya TTS"
+	},
+	"ttsManagerWindow_message_ttsRemoveConfirmation": {
+		"message": "Kele na kiese na nge na kufuta module ya TTS \"$tts_name$\"?",
+		"placeholders": {
+			"tts_name": {
+				"content": "$1",
+				"example": "Google TTS"
+			}
+		}
+	},
+	"ttsManagerWindow_title": {
+		"message": "Module ya Text-to-Speech"
+	},
+	"ttsManagerWindow_translator_delete": {
+		"message": "Futa"
+	},
+	"ttsManagerWindow_translator_edit": {
+		"message": "Sokola"
+	},
+	"validation_number": {
+		"message": "Kima kele na nkiadi ya nkiadi"
+	},
+	"validation_numberBetweenRange": {
+		"message": "Kima kele na nkiadi ya nkiadi kati na $1 ti $2"
+	},
+	"validation_positiveNumber": {
+		"message": "Kima kele na nkiadi ya nkiadi ya ngolo"
+	}
+}

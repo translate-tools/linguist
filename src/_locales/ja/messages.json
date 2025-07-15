@@ -21,7 +21,7 @@
 		"message": "エラー"
 	},
 	"common_offlineTranslator": {
-		"message": "$1 - オフライン翻訳"
+		"message": "$1 - オフライントランスレーター"
 	},
 	"common_retry": {
 		"message": "再試行"
@@ -30,7 +30,7 @@
 		"message": "翻訳"
 	},
 	"component_hotkey_placeholder": {
-		"message": "ホットキーの録音をクリックしてください"
+		"message": "ショートカットを記録するにはクリック"
 	},
 	"component_hotkey_recordPlaceholder": {
 		"message": "キーを押してください"
@@ -39,13 +39,13 @@
 		"message": "リセット"
 	},
 	"contextMenu_disablePageTranslation": {
-		"message": "ページ翻訳を無効にする"
+		"message": "ページ翻訳を停止"
 	},
 	"contextMenu_translatePage": {
 		"message": "ページを翻訳"
 	},
 	"contextMenu_translateSelectedText": {
-		"message": "選択されたテキストを翻訳"
+		"message": "選択したテキストを翻訳"
 	},
 	"dictionaryButton_add": {
 		"message": "辞書に追加"
@@ -60,34 +60,34 @@
 		"message": "すべて削除"
 	},
 	"dictionary_deleteAll": {
-		"message": "すべての辞書内の翻訳を削除してもよろしいですか？"
+		"message": "辞書からすべての翻訳を削除してもよろしいですか？"
 	},
 	"dictionary_deleteConfirmation": {
 		"message": "この翻訳を削除してもよろしいですか？"
 	},
 	"dictionary_description": {
-		"message": "後で見つけるために辞書に翻訳を保持する"
+		"message": "翻訳を辞書に保存して、後で素早く見つけられるようにします"
 	},
 	"dictionary_emptyDictionary": {
-		"message": "辞書が空です。テキストを翻訳しながら入力を開始してください"
+		"message": "辞書が空です。いくつかのテキストを翻訳して埋め始めてください"
 	},
 	"dictionary_filter_from": {
-		"message": "From"
+		"message": "ソーステキストの言語"
 	},
 	"dictionary_filter_to": {
-		"message": "To"
+		"message": "ターゲット言語"
 	},
 	"dictionary_message_deleteAll_success": {
 		"message": "すべての翻訳が削除されました"
 	},
 	"dictionary_notFoundEntries": {
-		"message": "これらのフィルタに一致する翻訳が見つかりません"
+		"message": "これらのフィルターに一致する翻訳は見つかりませんでした"
 	},
 	"dictionary_pageTitle": {
 		"message": "辞書"
 	},
 	"dictionary_resetFilters": {
-		"message": "フィルタをリセット"
+		"message": "フィルターをリセット"
 	},
 	"dictionary_searchPlaceholder": {
 		"message": "テキストで検索"
@@ -98,56 +98,57 @@
 	"editorWindow_data_code": {
 		"message": "コード"
 	},
-	"editorWindow_data_name": {
-		"message": "名前"
+	"editorWindow_data_title": {
+		"message": "モジュール名"
 	},
-	"editorWindow_message_invalidName": {
-		"message": "名前には少なくとも1つの記号を含める必要があります"
+	"editorWindow_message_invalidTitle": {
+		"message": "モジュール名は少なくとも1文字必要です"
 	},
 	"editorWindow_save": {
 		"message": "保存"
 	},
 	"ext_description": {
-		"message": "ページとテキストの翻訳、辞書、履歴、オフラインおよびカスタム翻訳"
+		"message": "ウェブページ翻訳、テキスト翻訳、辞書、履歴、カスタム翻訳者、言語の壁を打破するために必要なすべて"
 	},
 	"ext_name": {
-		"message": "Linguist - ウェブページ翻訳者"
+		"message": "Linguist - ウェブページ翻訳ツール"
 	},
 	"history_control_selectEntry": {
-		"message": "エントリーを選択"
+		"message": "一括操作のための翻訳を選択",
+		"description": "Description in finite form \"to pick\" with explaining what this checkbox will do"
 	},
 	"history_controls_clearHistory": {
 		"message": "履歴をクリア"
 	},
 	"history_controls_deleteSelected": {
-		"message": "選択したものを削除"
+		"message": "選択した翻訳を削除"
 	},
 	"history_controls_selectAll": {
 		"message": "すべての翻訳を選択"
 	},
 	"history_message_clearHistoryConfirmation": {
-		"message": "履歴を消去してもよろしいですか？すべての項目が削除されます。"
+		"message": "履歴をクリアしてもよろしいですか？すべてのエントリが削除されます"
 	},
 	"history_message_deleteEntryConfirmation": {
 		"message": "このエントリを削除してもよろしいですか？"
 	},
 	"history_message_deleteSelectedEntriesConfirmation": {
-		"message": "選択したエントリ ($1) を削除してもよろしいですか？"
-	},
-	"history_message_emptyEntries": {
-		"message": "履歴がクリアされました"
+		"message": "選択したエントリ（$1）を削除してもよろしいですか？"
 	},
 	"history_message_entriesNotFound": {
-		"message": "フィルターに合致する翻訳が見つかりませんでした"
+		"message": "フィルターに一致する翻訳が見つかりません"
+	},
+	"history_message_noEntries": {
+		"message": "履歴は空です"
 	},
 	"history_notification_disabled": {
-		"message": "履歴記録が無効になっているため、新しい項目は表示されません。<slot id=preferences>設定</slot>で変更できます"
+		"message": "履歴の記録が無効になっているため、新しいエントリは表示されません。これを変更するには<slot id=preferences>設定</slot>で行えます"
 	},
 	"history_pageTitle": {
 		"message": "履歴"
 	},
 	"history_searchPlaceholder": {
-		"message": "テキスト検索"
+		"message": "テキストで検索"
 	},
 	"inlineTranslator_showOriginalText": {
 		"message": "元のテキストを表示"
@@ -162,34 +163,13 @@
 		"message": "言語を選択"
 	},
 	"lang_swap": {
-		"message": "言語を交換"
-	},
-	"message_askResetConfig": {
-		"message": "設定をリセットしますか？"
-	},
-	"message_cacheFlushed": {
-		"message": "キャッシュがクリアされました"
-	},
-	"message_changesSaved": {
-		"message": "変更が保存されました"
-	},
-	"message_error": {
-		"message": "エラー"
-	},
-	"message_errorOfTranslate": {
-		"message": "翻訳エラー"
-	},
-	"message_serviceRequiredKey": {
-		"message": "サービスにはキーが必要です"
-	},
-	"message_translateOfText": {
-		"message": "翻訳済み"
+		"message": "言語を入れ替え"
 	},
 	"message_unknownError": {
 		"message": "不明なエラー"
 	},
 	"pageTranslator_alwaysTranslateLang": {
-		"message": "常にこの言語を翻訳する"
+		"message": "この言語を常に翻訳"
 	},
 	"pageTranslator_commonPreferences_autoTranslate_disable": {
 		"message": "無効にする"
@@ -206,41 +186,41 @@
 	"pageTranslator_option_autoTranslate": {
 		"message": "自動翻訳"
 	},
-	"pageTranslator_showOptions": {
-		"message": "オプションを表示"
-	},
 	"pageTranslator_showOriginal": {
-		"message": "原文を表示"
+		"message": "元の表示"
+	},
+	"pageTranslator_showTranslationPreferences": {
+		"message": "翻訳設定"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_always": {
-		"message": "常に翻訳する"
+		"message": "常に翻訳"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
-		"message": "この言語では常に翻訳する"
+		"message": "この言語を常に翻訳"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_default": {
-		"message": "共通ルールを使用する"
+		"message": "共通ルールを使用"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
-		"message": "この言語では共通ルールを使用する"
+		"message": "この言語の共通ルールを使用"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_never": {
 		"message": "翻訳しない"
 	},
 	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
-		"message": "この言語では翻訳しない"
+		"message": "この言語を翻訳しない"
 	},
 	"pageTranslator_sitePreferences_title": {
 		"message": "の設定"
 	},
 	"pageTranslator_translatePage": {
-		"message": "ページを翻訳する"
+		"message": "ページを翻訳"
 	},
 	"pageTranslator_translationReport": {
 		"message": "翻訳レポート"
 	},
 	"pageTranslator_translationReport_queue": {
-		"message": "キュー"
+		"message": "保留中"
 	},
 	"pageTranslator_translationReport_reject": {
 		"message": "エラー"
@@ -249,13 +229,13 @@
 		"message": "翻訳済み"
 	},
 	"popup_tabIdNotFound": {
-		"message": "タブ\"$1\"が見つかりません"
+		"message": "タブ \"$1\" が見つかりません"
 	},
 	"popup_tab_translatePage": {
-		"message": "ページの翻訳"
+		"message": "ページ翻訳"
 	},
 	"popup_tab_translateText": {
-		"message": "テキストの翻訳"
+		"message": "テキスト翻訳"
 	},
 	"settings_button_cancel": {
 		"message": "キャンセル"
@@ -276,40 +256,22 @@
 		"message": "キャッシュがクリアされました"
 	},
 	"settings_message_common_invalidValueType": {
-		"message": "無効な値です"
+		"message": "無効な値"
 	},
 	"settings_message_importConfig_invalidFile": {
-		"message": "インポートできないファイルです"
+		"message": "提供された設定ファイルが不正または破損しており、処理できません"
 	},
 	"settings_message_importConfig_success": {
-		"message": "インポートが完了しました"
+		"message": "インポート完了"
 	},
 	"settings_message_resetConfig_confirm": {
-		"message": "設定をリセットしますか？"
+		"message": "設定をデフォルト値にリセットすることを確認"
 	},
 	"settings_message_resetConfig_success": {
 		"message": "設定がリセットされました"
 	},
 	"settings_message_saveChanges_success": {
 		"message": "変更が保存されました"
-	},
-	"settings_option_appIcon": {
-		"message": "拡張機能のアイコン"
-	},
-	"settings_option_appIcon_desc": {
-		"message": "ダイナミックアイコンが選択されている場合、色がブラウザーテーマに適応されます"
-	},
-	"settings_option_appIcon_item_auto": {
-		"message": "ダイナミック"
-	},
-	"settings_option_appIcon_item_color": {
-		"message": "色"
-	},
-	"settings_option_appIcon_item_dark": {
-		"message": "ダーク"
-	},
-	"settings_option_appIcon_item_light": {
-		"message": "ライト"
 	},
 	"settings_option_cache": {
 		"message": "キャッシュ"
@@ -318,139 +280,142 @@
 		"message": "キャッシュをクリア"
 	},
 	"settings_option_cache_clear_desc": {
-		"message": "翻訳の不具合や秘密情報の削除が必要な場合にキャッシュを削除します"
+		"message": "キャッシュが有効な場合に翻訳エラーに気付いたり、誤ってプライベートテキストを翻訳した場合は、キャッシュからすべてのデータを削除できます",
+		"description": "Explanation for user about cases when it's useful to clear cache"
 	},
 	"settings_option_cache_enable": {
 		"message": "キャッシュを有効にする"
 	},
 	"settings_option_cache_enable_desc": {
-		"message": "キャッシュが有効になっていると、一度翻訳された翻訳はインターネット接続なしでもすぐに利用できます"
+		"message": "キャッシュが有効な場合、以前に翻訳されたテキストは翻訳サービスへの追加リクエストなしで即座に翻訳されます"
 	},
 	"settings_option_cache_ignoreCase": {
-		"message": "大文字小文字を区別しない"
+		"message": "大文字小文字を区別しないキャッシュを使用"
 	},
 	"settings_option_cache_ignoreCase_desc": {
-		"message": "有効にすると、キャッシュからの翻訳が完全一致ではない場合に使用されるため、翻訳の不具合が発生する可能性があります"
+		"message": "有効にすると、異なる大文字小文字のテキストに対してキャッシュされた翻訳が使用されるため、特定の状況で翻訳の歪みが生じる可能性があります"
 	},
 	"settings_option_commonSettings": {
-		"message": "一般設定"
+		"message": "共通設定"
 	},
 	"settings_option_customTranslatorModule": {
-		"message": "カスタム翻訳"
+		"message": "カスタム翻訳モジュール",
+		"description": "An user defined code that implements a translation module"
 	},
 	"settings_option_customTranslatorModule_desc": {
-		"message": "<slot id=docs>カスタム翻訳のドキュメンテーション</slot>を読んでモジュールを見つけ、お気に入りの翻訳サービスにカスタム翻訳を追加できます。"
+		"message": "お気に入りの翻訳サービスを使用するカスタム翻訳モジュールを追加できます。詳細は<slot id=docs>カスタム翻訳者のドキュメント</slot>をご覧ください"
 	},
 	"settings_option_customTranslatorModule_manageButton": {
-		"message": "翻訳を管理する"
+		"message": "翻訳者の管理",
+		"description": "翻訳モジュールのリストを表示するボタン"
 	},
 	"settings_option_history_enable": {
 		"message": "履歴を有効にする"
 	},
 	"settings_option_history_enable_desc": {
-		"message": "有効にすると、翻訳はすべて履歴ページに記録されます"
-	},
-	"settings_option_mainPreferences": {
-		"message": "メイン設定"
+		"message": "有効にすると、翻訳が記録され、<slot id=historyPage>履歴ページ</slot>に表示されます"
 	},
 	"settings_option_pageTranslation": {
-		"message": "ページ翻訳"
+		"message": "ページ全体の翻訳"
 	},
 	"settings_option_pageTranslation_detectLanguageByContent": {
-		"message": "コンテンツから言語を検出する"
+		"message": "コンテンツで言語を検出"
 	},
 	"settings_option_pageTranslation_detectLanguageByContent_desc": {
-		"message": "ウェブページ上のテキストを分析してページの言語を検出します。無効にすると、ページメタデータで提供される言語が使用されます。"
+		"message": "ウェブページのテキストを分析して言語を検出します。無効にすると、<slot id=docs>ページメタデータ</slot>で指定された言語が使用されます"
 	},
 	"settings_option_pageTranslation_enableContextMenu": {
-		"message": "コンテキストメニューボタンを有効にする"
+		"message": "コンテキストメニューのボタンを有効にする"
 	},
 	"settings_option_pageTranslation_enableContextMenu_desc": {
-		"message": "コンテキストメニューにページ翻訳を切り替えるボタンを追加する"
+		"message": "ページのコンテキストメニューにページ翻訳を切り替えるボタンを追加します"
 	},
 	"settings_option_pageTranslation_excludeSelectors": {
-		"message": "翻訳をスキップするセレクター"
+		"message": "翻訳から除外するセレクター"
 	},
 	"settings_option_pageTranslation_excludeSelectors_desc": {
-		"message": "翻訳しないCSSセレクターのリスト。セレクターは1行に1つずつ記入してください。要素がこれらのいずれかのセレクターに一致する場合、その要素および属性、ネストされた要素は翻訳されません。"
+		"message": "翻訳から除外する要素のCSSセレクタのリスト。1行に1つのセレクタ。これらのセレクタに一致する要素のテキスト、属性、およびネストされた要素は翻訳されません。"
 	},
 	"settings_option_pageTranslation_lazyTranslate": {
-		"message": "表示されている要素のみを翻訳する"
+		"message": "表示されている要素のみを翻訳"
 	},
 	"settings_option_pageTranslation_lazyTranslate_desc": {
-		"message": "このオプションを有効にすると、表示されている要素のみが翻訳されます。これはネットワークトラフィックを節約するために役立つ場合があります。"
+		"message": "このオプションを有効にすると、表示されている要素のみが翻訳されます。このオプションはネットワークトラフィックを削減します。"
 	},
 	"settings_option_pageTranslation_originalTextPopup": {
 		"message": "元のテキストのポップアップを有効にする"
 	},
 	"settings_option_pageTranslation_originalTextPopup_desc": {
-		"message": "マウスを翻訳されたテキストの上に置くと、元のテキストが表示されるポップアップを表示する"
+		"message": "翻訳されたテキストブロックにカーソルを合わせたときに元のテキストのポップアップを表示"
 	},
-	"settings_option_pageTranslation_toggleTranslationHotkey": {
-		"message": "ホットキー"
+	"settings_option_pageTranslation_shortcut_toggleTranslation": {
+		"message": "ショートカット"
 	},
-	"settings_option_pageTranslation_toggleTranslationHotkey_desc": {
-		"message": "ページ翻訳の切り替えショートカット\nESCを押すとキーがリセットされます。"
+	"settings_option_pageTranslation_shortcut_toggleTranslation_desc": {
+		"message": "ページ翻訳を切り替えるショートカット\nESCを押してキーをリセット"
 	},
 	"settings_option_pageTranslation_translatableAttributes": {
-		"message": "翻訳可能な属性。"
+		"message": "翻訳可能な属性"
 	},
 	"settings_option_pageTranslation_translatableAttributes_desc": {
-		"message": "翻訳するための <slot id=htmlAttributes>HTML属性</slot> 名を入力してください。1行につき1つの属性。"
+		"message": "翻訳する<slot id=htmlAttributes>HTML属性</slot>名を入力し、1行に1つの属性\nこのリストにある属性のみが翻訳されます。"
 	},
 	"settings_option_popupTab_pageTranslator_showCounters": {
-		"message": "翻訳統計を表示する"
+		"message": "翻訳進行状況を表示"
 	},
 	"settings_option_popupTab_pageTranslator_showCounters_desc": {
-		"message": "ページ翻訳の統計情報を表示する"
+		"message": "拡張機能のポップアップにページ翻訳の進行状況を表示するパネルを表示"
 	},
 	"settings_option_selectTranslation": {
-		"message": "選択したテキストを翻訳する"
+		"message": "選択したテキストの翻訳"
 	},
-	"settings_option_selectTranslation_detectedLangFirst": {
-		"message": "ページ言語ではなく、テキストの検出言語を優先する"
+	"settings_option_selectTranslation_detectTextLanguage": {
+		"message": "テキストの言語を検出"
 	},
-	"settings_option_selectTranslation_detectedLangFirst_desc": {
-		"message": "有効にすると、選択したテキストの検出言語がページ言語より優先されます"
+	"settings_option_selectTranslation_detectTextLanguage_desc": {
+		"message": "有効にすると、選択したテキストが分析され、翻訳のための言語が検出されます。無効の場合、ページの言語が使用されます"
 	},
 	"settings_option_selectTranslation_disableWhileTranslatePage": {
-		"message": "ページ翻訳中は無効にする"
+		"message": "ページを翻訳中は無効にする"
 	},
 	"settings_option_selectTranslation_enable": {
-		"message": "有効化する"
+		"message": "選択したテキストの翻訳を有効にする"
+	},
+	"settings_option_selectTranslation_enable_desc": {
+		"message": "この機能を有効にすると、ページ上の任意のテキストを選択し、ポップアップで翻訳できます"
 	},
 	"settings_option_selectTranslation_focusOnTranslateButton": {
-		"message": "翻訳ボタンに自動フォーカスする"
+		"message": "翻訳ボタンに自動フォーカス"
 	},
 	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
-		"message": "ボタンが表示されたときに翻訳ボタンにフォーカスする"
+		"message": "ページに翻訳ボタンが表示されると、自動的にフォーカスされます"
 	},
 	"settings_option_selectTranslation_header_languageChoice": {
 		"message": "言語設定"
 	},
 	"settings_option_selectTranslation_isUseAutoForDetectLang": {
-		"message": "翻訳者による自動言語検出を有効にする"
+		"message": "翻訳モジュールにテキストの言語を検出させる"
 	},
 	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
-		"message": "ローカルで言語が検出されない場合に、翻訳者による自動言語検出を使用する"
+		"message": "テキストの言語がローカルで検出できず、このオプションが有効な場合、サポートされていれば言語「auto」で翻訳されます。\nオプションが無効な場合、テキストのソース言語を設定するために別のフォールバック方法が使用されます"
 	},
 	"settings_option_selectTranslation_mode": {
-		"message": "翻訳トリガー"
+		"message": "テキスト選択時のアクション"
 	},
 	"settings_option_selectTranslation_mode_item_contextMenu": {
-		"message": "コンテキストメニューボタン"
+		"message": "コンテキストメニューでテキストを翻訳"
 	},
 	"settings_option_selectTranslation_mode_item_popupButton": {
-		"message": "ポップアップボタン"
+		"message": "翻訳ボタンを表示"
 	},
 	"settings_option_selectTranslation_mode_item_quickTranslate": {
-		"message": "選択によるクイック翻訳"
+		"message": "テキストを即座に翻訳"
 	},
 	"settings_option_selectTranslation_modifiers": {
-		"message": "修飾子"
+		"message": "修飾キー"
 	},
 	"settings_option_selectTranslation_modifiers_desc": {
-		"message": "キーボードで押下する必要のあるキーを選択して、翻訳を表示します"
+		"message": "翻訳を表示するために押す必要があるキーボードのキーを選択"
 	},
 	"settings_option_selectTranslation_modifiers_key_alt": {
 		"message": "alt"
@@ -459,43 +424,44 @@
 		"message": "ctrl"
 	},
 	"settings_option_selectTranslation_modifiers_key_meta": {
-		"message": "メタ"
+		"message": "meta"
 	},
 	"settings_option_selectTranslation_modifiers_key_shift": {
-		"message": "シフト"
+		"message": "shift"
 	},
 	"settings_option_selectTranslation_rememberDirection": {
-		"message": "テキストの最近選択した言語を記憶する"
+		"message": "最後に選択したテキストの言語を記憶する"
 	},
 	"settings_option_selectTranslation_showOnceForSelection": {
-		"message": "テキスト選択ごとに一度だけ翻訳ボタンを表示する"
+		"message": "テキスト選択ごとに翻訳ボタンを一度表示する"
 	},
 	"settings_option_selectTranslation_showOnceForSelection_desc": {
-		"message": "テキスト選択ごとにボタンは一度だけ表示されます。再度表示する必要がある場合は、テキストを再選択してください。"
+		"message": "ボタンは各テキスト選択に対して一度だけ表示されます。再度表示するには、テキストを再選択してください。"
 	},
 	"settings_option_selectTranslation_showOriginalText": {
-		"message": "オリジナルテキストを表示する"
+		"message": "元のテキストを表示"
 	},
 	"settings_option_selectTranslation_showOriginalText_desc": {
-		"message": "翻訳のポップアップに元のテキストを含むブロックを追加します。"
+		"message": "翻訳ポップアップに元のテキストを含むブロックを追加する"
 	},
 	"settings_option_selectTranslation_strictSelection": {
-		"message": "厳密な選択"
+		"message": "テキスト範囲選択の厳密モード",
+		"description": "このオプションはマウスによるテキスト選択に関するものです"
 	},
 	"settings_option_selectTranslation_strictSelection_desc": {
-		"message": "選択したテキストが含まれているブロックの外側で左クリックされた場合、選択を無視する"
+		"message": "選択したテキストを含むブロックの外で左マウスボタンが離された場合、テキスト範囲選択を無視する"
 	},
 	"settings_option_selectTranslation_timeoutForHideButton": {
-		"message": "ボタンを非表示にするための遅延時間"
+		"message": "ポップアップボタンを隠す前の遅延"
 	},
 	"settings_option_selectTranslation_timeoutForHideButton_desc": {
-		"message": "カーソルがホバーされていない場合にボタンを非表示にするまでの遅延時間（ミリ秒単位）。ボタン上でカーソルをホバーさせると、タイマーがリセットされます。自動非表示を無効にするには、値を1未満に設定してください。"
+		"message": "カーソルがボタンにホバーしていないときにボタンを非表示にするまでの遅延時間（ミリ秒）。ボタンにホバーするとタイマーがリセットされます。自動非表示を無効にするには、値を1未満に設定します"
 	},
 	"settings_option_selectTranslation_zIndex": {
-		"message": "zインデックス"
+		"message": "z-index"
 	},
 	"settings_option_selectTranslation_zIndex_desc": {
-		"message": "翻訳されたテキストのポップアップが一部のページの要素と重複する場合は、値を増やしてください。"
+		"message": "一部のページで要素が翻訳されたテキストのポップアップと重なる場合、この値を増やしてください"
 	},
 	"settings_option_textTranslator": {
 		"message": "テキスト翻訳"
@@ -504,67 +470,67 @@
 		"message": "翻訳されたテキストを記憶する"
 	},
 	"settings_option_textTranslator_rememberText_desc": {
-		"message": "ウィンドウが次に開かれたときに翻訳されたテキストを記憶します。"
+		"message": "ウィンドウが次回開かれるときに翻訳されたテキストを記憶する"
 	},
 	"settings_option_textTranslator_spellCheck": {
 		"message": "スペルチェックを有効にする"
 	},
 	"settings_option_textTranslator_suggestLanguage": {
-		"message": "検出されたテキストの言語を提案する"
+		"message": "検出されたテキストの言語を表示する"
 	},
 	"settings_option_textTranslator_suggestLanguageAlways": {
 		"message": "常に言語を検出して提案する"
 	},
 	"settings_option_textTranslator_suggestLanguageAlways_desc": {
-		"message": "無効にすると、言語の提案は自動検出されたソース言語の場合にのみ表示されます。"
+		"message": "無効にすると、言語の提案はソース言語が「自動」に設定されている場合にのみ表示されます"
 	},
 	"settings_option_translatePreferences": {
-		"message": "翻訳の設定"
+		"message": "翻訳設定"
 	},
 	"settings_option_translateScheduler": {
 		"message": "翻訳スケジューラー"
 	},
 	"settings_option_translateScheduler_delay": {
-		"message": "テキスト蓄積ディレイ"
+		"message": "テキスト蓄積遅延"
 	},
 	"settings_option_translateScheduler_delay_desc": {
-		"message": "翻訳スケジューラーは、翻訳サービスAPIへのリクエスト数を減らします。スケジューラーは、1回のリクエストで送信するテキストを多くするようにテキストを蓄積しようとします。新しいテキストを収集するために指定された時間（ミリ秒単位）待機してから翻訳を開始します。"
+		"message": "翻訳スケジューラーは、できるだけ多くのテキストを1回のリクエストで送信するために蓄積し、翻訳サービスAPIへのリクエスト数を減らします。スケジューラーは、翻訳を開始する前に、指定されたミリ秒の時間を待って、より多くのテキストを収集します"
 	},
 	"settings_option_translateScheduler_retryLimit": {
-		"message": "翻訳再試行回数"
+		"message": "翻訳再試行回数の制限"
 	},
 	"settings_option_translateScheduler_retryLimit_desc": {
-		"message": "スケジューラーは、翻訳エラーのテキストを再試行して翻訳します。このオプションは、再試行回数の上限を設定します。無制限の再試行を許可する場合は、負の数を設定します。"
+		"message": "翻訳エラーが発生した場合、スケジューラーはテキストの翻訳を再試行します。このオプションは再試行回数の制限を設定します。無制限の再試行を許可するには負の数を設定します"
 	},
 	"settings_option_translatorModule": {
 		"message": "翻訳モジュール"
 	},
 	"settings_option_translatorModule_desc": {
-		"message": "翻訳品質と利用可能な翻訳言語は、翻訳者によって異なります。"
+		"message": "翻訳の品質と利用可能な言語は翻訳モジュールに依存します"
 	},
 	"settings_option_tts": {
-		"message": "テキスト読み上げ (TTS)"
+		"message": "テキスト読み上げ変換（TTS）"
 	},
 	"settings_option_ttsCustomModules": {
-		"message": "カスタム TTS"
+		"message": "カスタム音声合成モジュール"
 	},
 	"settings_option_ttsCustomModules_button": {
-		"message": "TTSモジュールを管理"
+		"message": "音声合成モジュールの管理"
 	},
 	"settings_option_ttsCustomModules_desc": {
-		"message": "お気に入りのサービスと音声を使用するTTSモジュールを追加できます。カスタムTTSドキュメントで詳細を確認し、モジュールを見つけてください。"
+		"message": "お気に入りのサービスや音声エンジンを使用する音声合成モジュールを追加できます。詳細は<slot id=docs>カスタムTTSドキュメント</slot>をご覧ください"
 	},
 	"settings_option_ttsModule": {
-		"message": "TTSモジュール"
+		"message": "選択されたTTSモジュール"
 	},
 	"settings_option_ttsModule_desc": {
-		"message": "テキストを読み上げるためのモジュール"
+		"message": "テキストを音声化するために使用される音声エンジン"
 	},
 	"settings_option_userLanguage": {
 		"message": "あなたの言語"
 	},
 	"settings_option_userLanguage_desc": {
-		"message": "翻訳対象の言語"
+		"message": "テキストが翻訳される言語"
 	},
 	"settings_pageTitle": {
 		"message": "設定"
@@ -576,34 +542,41 @@
 		"message": "ポップアップ"
 	},
 	"textTranslator_suggestLanguage": {
-		"message": "その言語は次のように見えます"
+		"message": "テキストの言語は<slot id=languageSuggest>$language_name$</slot>のようです",
+		"placeholders": {
+			"language_name": {
+				"content": "$1",
+				"example": "Japanese"
+			}
+		}
 	},
 	"textTranslator_translateInputPlaceholder": {
-		"message": "テキストを入力してください"
+		"message": "翻訳するテキストを入力",
+		"description": "Request to user input some text for translation"
 	},
 	"textTranslator_translatePlaceholder": {
-		"message": "翻訳された文章"
+		"message": "翻訳されたテキストがここに表示されます"
 	},
 	"translatorsManagerWindow_add": {
-		"message": "追加"
+		"message": "翻訳モジュールを追加"
 	},
 	"translatorsManagerWindow_close": {
 		"message": "閉じる"
 	},
 	"translatorsManagerWindow_emptyTranslatorsListText": {
-		"message": "カスタムの翻訳機能はまだ追加されていません"
+		"message": "カスタム翻訳モジュールはまだ追加されていません"
 	},
 	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
-		"message": "\"$translator_name$\" 翻訳機能を削除してもよろしいですか？",
+		"message": "\"$translator_name$\" 翻訳モジュールを削除してもよろしいですか？",
 		"placeholders": {
 			"translator_name": {
 				"content": "$1",
-				"example": "Google 翻訳"
+				"example": "Google translator"
 			}
 		}
 	},
 	"translatorsManagerWindow_title": {
-		"message": "カスタム翻訳機能"
+		"message": "カスタム翻訳モジュール"
 	},
 	"translatorsManagerWindow_translator_delete": {
 		"message": "削除"
@@ -612,7 +585,7 @@
 		"message": "編集"
 	},
 	"ttsManagerWindow_add": {
-		"message": "追加"
+		"message": "TTSモジュールを追加"
 	},
 	"ttsManagerWindow_close": {
 		"message": "閉じる"
@@ -621,7 +594,7 @@
 		"message": "TTSモジュールはまだ追加されていません"
 	},
 	"ttsManagerWindow_message_ttsRemoveConfirmation": {
-		"message": "\"$tts_name$\" TTSを削除してもよろしいですか？",
+		"message": "TTSモジュール「$tts_name$」を削除してもよろしいですか？",
 		"placeholders": {
 			"tts_name": {
 				"content": "$1",
@@ -633,570 +606,18 @@
 		"message": "テキスト読み上げモジュール"
 	},
 	"ttsManagerWindow_translator_delete": {
-		"message": "削除する"
+		"message": "削除"
 	},
 	"ttsManagerWindow_translator_edit": {
-		"message": "編集する"
+		"message": "編集"
 	},
 	"validation_number": {
-		"message": "パラメーターは数値でなければなりません"
+		"message": "値は数値でなければなりません"
 	},
 	"validation_numberBetweenRange": {
-		"message": "パラメーターは $1 から $2 の間の数値でなければなりません"
+		"message": "値は$1から$2の間の数値でなければなりません"
 	},
 	"validation_positiveNumber": {
-		"message": "パラメーターは正の数でなければなりません。"
-	},
-	"langCode_aa": {
-		"message": "アファル語"
-	},
-	"langCode_ab": {
-		"message": "アブハズ語"
-	},
-	"langCode_ae": {
-		"message": "アヴェスタ語"
-	},
-	"langCode_af": {
-		"message": "アフリカーンス語"
-	},
-	"langCode_ak": {
-		"message": "アカン語"
-	},
-	"langCode_am": {
-		"message": "アムハラ語"
-	},
-	"langCode_an": {
-		"message": "アラゴン語"
-	},
-	"langCode_ar": {
-		"message": "アラビア語"
-	},
-	"langCode_as": {
-		"message": "アッサム語"
-	},
-	"langCode_av": {
-		"message": "アヴァル語"
-	},
-	"langCode_ay": {
-		"message": "アイマラ語"
-	},
-	"langCode_az": {
-		"message": "アゼルバイジャン語"
-	},
-	"langCode_ba": {
-		"message": "バシキール語"
-	},
-	"langCode_be": {
-		"message": "ベラルーシ語"
-	},
-	"langCode_bg": {
-		"message": "ブルガリア語"
-	},
-	"langCode_bh": {
-		"message": "ボージュプリー語"
-	},
-	"langCode_bi": {
-		"message": "ビスラマ語"
-	},
-	"langCode_bm": {
-		"message": "バンバラ語"
-	},
-	"langCode_bn": {
-		"message": "ベンガル語"
-	},
-	"langCode_bo": {
-		"message": "チベット語"
-	},
-	"langCode_br": {
-		"message": "ブルトン語"
-	},
-	"langCode_bs": {
-		"message": "ボスニア語"
-	},
-	"langCode_ca": {
-		"message": "カタロニア語"
-	},
-	"langCode_ce": {
-		"message": "チェチェン語"
-	},
-	"langCode_ch": {
-		"message": "チャモロ語"
-	},
-	"langCode_co": {
-		"message": "コルシカ語"
-	},
-	"langCode_cr": {
-		"message": "クリー語"
-	},
-	"langCode_cs": {
-		"message": "チェコ語"
-	},
-	"langCode_cu": {
-		"message": "教会スラブ語"
-	},
-	"langCode_cv": {
-		"message": "チュヴァシ語"
-	},
-	"langCode_cy": {
-		"message": "ウェールズ語"
-	},
-	"langCode_da": {
-		"message": "デンマーク語"
-	},
-	"langCode_de": {
-		"message": "ドイツ語"
-	},
-	"langCode_dv": {
-		"message": "ディベヒ語"
-	},
-	"langCode_dz": {
-		"message": "ゾンカ語"
-	},
-	"langCode_ee": {
-		"message": "エウェ語"
-	},
-	"langCode_el": {
-		"message": "ギリシャ語"
-	},
-	"langCode_en": {
-		"message": "英語"
-	},
-	"langCode_eo": {
-		"message": "エスペラント語"
-	},
-	"langCode_es": {
-		"message": "スペイン語"
-	},
-	"langCode_et": {
-		"message": "エストニア語"
-	},
-	"langCode_eu": {
-		"message": "バスク語"
-	},
-	"langCode_fa": {
-		"message": "ペルシア語"
-	},
-	"langCode_ff": {
-		"message": "フラ語"
-	},
-	"langCode_fi": {
-		"message": "フィンランド語"
-	},
-	"langCode_fj": {
-		"message": "フィジー語"
-	},
-	"langCode_fo": {
-		"message": "フェロー語"
-	},
-	"langCode_fr": {
-		"message": "フランス語"
-	},
-	"langCode_fy": {
-		"message": "西フリジア語"
-	},
-	"langCode_ga": {
-		"message": "アイルランド語"
-	},
-	"langCode_gd": {
-		"message": "スコットランド・ゲール語"
-	},
-	"langCode_gl": {
-		"message": "ガリシア語"
-	},
-	"langCode_gn": {
-		"message": "グアラニー語"
-	},
-	"langCode_gu": {
-		"message": "グジャラート語"
-	},
-	"langCode_gv": {
-		"message": "マン島語"
-	},
-	"langCode_ha": {
-		"message": "ハウサ語"
-	},
-	"langCode_he": {
-		"message": "ヘブライ語"
-	},
-	"langCode_hi": {
-		"message": "ヒンディー語"
-	},
-	"langCode_ho": {
-		"message": "ヒリモツ語"
-	},
-	"langCode_hr": {
-		"message": "クロアチア語"
-	},
-	"langCode_ht": {
-		"message": "ハイチ・クレオール語"
-	},
-	"langCode_hu": {
-		"message": "ハンガリー語"
-	},
-	"langCode_hy": {
-		"message": "アルメニア語"
-	},
-	"langCode_hz": {
-		"message": "ヘレロ語"
-	},
-	"langCode_ia": {
-		"message": "インターリングア"
-	},
-	"langCode_id": {
-		"message": "インドネシア語"
-	},
-	"langCode_ie": {
-		"message": "インターリング"
-	},
-	"langCode_ig": {
-		"message": "イボ語"
-	},
-	"langCode_ii": {
-		"message": "四川イ語"
-	},
-	"langCode_ik": {
-		"message": "イヌピアック語"
-	},
-	"langCode_io": {
-		"message": "イド語"
-	},
-	"langCode_is": {
-		"message": "アイスランド語"
-	},
-	"langCode_it": {
-		"message": "イタリア語"
-	},
-	"langCode_iu": {
-		"message": "イヌクティトット語"
-	},
-	"langCode_ja": {
-		"message": "日本語"
-	},
-	"langCode_jv": {
-		"message": "ジャワ語"
-	},
-	"langCode_ka": {
-		"message": "ジョージア語"
-	},
-	"langCode_kg": {
-		"message": "コンゴ語"
-	},
-	"langCode_ki": {
-		"message": "キクユ語"
-	},
-	"langCode_kj": {
-		"message": "クワニャマ語"
-	},
-	"langCode_kk": {
-		"message": "カザフ語"
-	},
-	"langCode_kl": {
-		"message": "グリーンランド語"
-	},
-	"langCode_km": {
-		"message": "クメール語"
-	},
-	"langCode_kn": {
-		"message": "カンナダ語"
-	},
-	"langCode_ko": {
-		"message": "韓国語"
-	},
-	"langCode_kr": {
-		"message": "カヌリ語"
-	},
-	"langCode_ks": {
-		"message": "カシミール語"
-	},
-	"langCode_ku": {
-		"message": "クルド語"
-	},
-	"langCode_kv": {
-		"message": "コミ語"
-	},
-	"langCode_kw": {
-		"message": "コーンウォール語"
-	},
-	"langCode_ky": {
-		"message": "キルギス語"
-	},
-	"langCode_la": {
-		"message": "ラテン語"
-	},
-	"langCode_lb": {
-		"message": "ルクセンブルク語"
-	},
-	"langCode_lg": {
-		"message": "ガンダ語"
-	},
-	"langCode_li": {
-		"message": "リンブルフ語"
-	},
-	"langCode_ln": {
-		"message": "リンガラ語"
-	},
-	"langCode_lo": {
-		"message": "ラオ語"
-	},
-	"langCode_lt": {
-		"message": "リトアニア語"
-	},
-	"langCode_lu": {
-		"message": "ルバ・カタンガ語"
-	},
-	"langCode_lv": {
-		"message": "ラトビア語"
-	},
-	"langCode_mg": {
-		"message": "マダガスカル語"
-	},
-	"langCode_mh": {
-		"message": "マーシャル語"
-	},
-	"langCode_mi": {
-		"message": "マオリ語"
-	},
-	"langCode_mk": {
-		"message": "マケドニア語"
-	},
-	"langCode_ml": {
-		"message": "マラヤーラム語"
-	},
-	"langCode_mn": {
-		"message": "モンゴル語"
-	},
-	"langCode_mr": {
-		"message": "マラーティー語"
-	},
-	"langCode_ms": {
-		"message": "マレー語"
-	},
-	"langCode_mt": {
-		"message": "マルタ語"
-	},
-	"langCode_my": {
-		"message": "ミャンマー語"
-	},
-	"langCode_na": {
-		"message": "ナウル語"
-	},
-	"langCode_nb": {
-		"message": "ノルウェー語(ブークモール)"
-	},
-	"langCode_nd": {
-		"message": "北ンデベレ語"
-	},
-	"langCode_ne": {
-		"message": "ネパール語"
-	},
-	"langCode_ng": {
-		"message": "ンドンガ語"
-	},
-	"langCode_nl": {
-		"message": "オランダ語"
-	},
-	"langCode_nn": {
-		"message": "ノルウェー語(ニーノシュク)"
-	},
-	"langCode_no": {
-		"message": "ノルウェー語"
-	},
-	"langCode_nr": {
-		"message": "南ンデベレ語"
-	},
-	"langCode_nv": {
-		"message": "ナバホ語"
-	},
-	"langCode_ny": {
-		"message": "ニャンジャ語"
-	},
-	"langCode_oc": {
-		"message": "オック語"
-	},
-	"langCode_oj": {
-		"message": "オジブウェー語"
-	},
-	"langCode_om": {
-		"message": "オロモ語"
-	},
-	"langCode_or": {
-		"message": "オディア語"
-	},
-	"langCode_os": {
-		"message": "オセット語"
-	},
-	"langCode_pa": {
-		"message": "パンジャブ語"
-	},
-	"langCode_pi": {
-		"message": "パーリ語"
-	},
-	"langCode_pl": {
-		"message": "ポーランド語"
-	},
-	"langCode_ps": {
-		"message": "パシュトゥー語"
-	},
-	"langCode_pt": {
-		"message": "ポルトガル語"
-	},
-	"langCode_qu": {
-		"message": "ケチュア語"
-	},
-	"langCode_rm": {
-		"message": "ロマンシュ語"
-	},
-	"langCode_rn": {
-		"message": "ルンディ語"
-	},
-	"langCode_ro": {
-		"message": "ルーマニア語"
-	},
-	"langCode_ru": {
-		"message": "ロシア語"
-	},
-	"langCode_rw": {
-		"message": "キニアルワンダ語"
-	},
-	"langCode_sa": {
-		"message": "サンスクリット語"
-	},
-	"langCode_sc": {
-		"message": "サルデーニャ語"
-	},
-	"langCode_sd": {
-		"message": "シンド語"
-	},
-	"langCode_se": {
-		"message": "北サーミ語"
-	},
-	"langCode_sg": {
-		"message": "サンゴ語"
-	},
-	"langCode_si": {
-		"message": "シンハラ語"
-	},
-	"langCode_sk": {
-		"message": "スロバキア語"
-	},
-	"langCode_sl": {
-		"message": "スロベニア語"
-	},
-	"langCode_sm": {
-		"message": "サモア語"
-	},
-	"langCode_sn": {
-		"message": "ショナ語"
-	},
-	"langCode_so": {
-		"message": "ソマリ語"
-	},
-	"langCode_sq": {
-		"message": "アルバニア語"
-	},
-	"langCode_sr": {
-		"message": "セルビア語"
-	},
-	"langCode_ss": {
-		"message": "スワジ語"
-	},
-	"langCode_st": {
-		"message": "南部ソト語"
-	},
-	"langCode_su": {
-		"message": "スンダ語"
-	},
-	"langCode_sv": {
-		"message": "スウェーデン語"
-	},
-	"langCode_sw": {
-		"message": "スワヒリ語"
-	},
-	"langCode_ta": {
-		"message": "タミル語"
-	},
-	"langCode_te": {
-		"message": "テルグ語"
-	},
-	"langCode_tg": {
-		"message": "タジク語"
-	},
-	"langCode_th": {
-		"message": "タイ語"
-	},
-	"langCode_ti": {
-		"message": "ティグリニア語"
-	},
-	"langCode_tk": {
-		"message": "トルクメン語"
-	},
-	"langCode_tl": {
-		"message": "フィリピノ語"
-	},
-	"langCode_tn": {
-		"message": "ツワナ語"
-	},
-	"langCode_to": {
-		"message": "トンガ語"
-	},
-	"langCode_tr": {
-		"message": "トルコ語"
-	},
-	"langCode_ts": {
-		"message": "ツォンガ語"
-	},
-	"langCode_tt": {
-		"message": "タタール語"
-	},
-	"langCode_tw": {
-		"message": "アカン語"
-	},
-	"langCode_ty": {
-		"message": "タヒチ語"
-	},
-	"langCode_ug": {
-		"message": "ウイグル語"
-	},
-	"langCode_uk": {
-		"message": "ウクライナ語"
-	},
-	"langCode_ur": {
-		"message": "ウルドゥー語"
-	},
-	"langCode_uz": {
-		"message": "ウズベク語"
-	},
-	"langCode_ve": {
-		"message": "ベンダ語"
-	},
-	"langCode_vi": {
-		"message": "ベトナム語"
-	},
-	"langCode_vo": {
-		"message": "ヴォラピュク語"
-	},
-	"langCode_wa": {
-		"message": "ワロン語"
-	},
-	"langCode_wo": {
-		"message": "ウォロフ語"
-	},
-	"langCode_xh": {
-		"message": "コサ語"
-	},
-	"langCode_yi": {
-		"message": "イディッシュ語"
-	},
-	"langCode_yo": {
-		"message": "ヨルバ語"
-	},
-	"langCode_za": {
-		"message": "チワン語"
-	},
-	"langCode_zh": {
-		"message": "中国語"
-	},
-	"langCode_zu": {
-		"message": "ズールー語"
+		"message": "値は正の数でなければなりません"
 	}
 }

@@ -1,0 +1,623 @@
+{
+	"common_action_addToDictionary": {
+		"message": "Ajoute tradiksyon nan diksyonè"
+	},
+	"common_action_removeFromDictionary": {
+		"message": "Retire tradiksyon nan diksyonè"
+	},
+	"common_bgUnavailable": {
+		"message": "Skript background pa disponib"
+	},
+	"common_cancel": {
+		"message": "Anile"
+	},
+	"common_close": {
+		"message": "Fèmen"
+	},
+	"common_copy": {
+		"message": "Kopi"
+	},
+	"common_error": {
+		"message": "Erè"
+	},
+	"common_offlineTranslator": {
+		"message": "$1 - Tradiktè offline"
+	},
+	"common_retry": {
+		"message": "Eseye ankò"
+	},
+	"common_translate": {
+		"message": "Tradui"
+	},
+	"component_hotkey_placeholder": {
+		"message": "Klike pou anrejistre yon rakoursi"
+	},
+	"component_hotkey_recordPlaceholder": {
+		"message": "Peze kle yo"
+	},
+	"component_hotkey_resetButton": {
+		"message": "Reyajiste"
+	},
+	"contextMenu_disablePageTranslation": {
+		"message": "Sispann tradiksyon paj la"
+	},
+	"contextMenu_translatePage": {
+		"message": "Tradui paj la"
+	},
+	"contextMenu_translateSelectedText": {
+		"message": "Tradui tèks chwazi a"
+	},
+	"dictionaryButton_add": {
+		"message": "Ajoute nan diksyonè"
+	},
+	"dictionaryButton_delete": {
+		"message": "Efase nan diksyonè"
+	},
+	"dictionary_button_export": {
+		"message": "Ekspòte"
+	},
+	"dictionary_button_removeAll": {
+		"message": "Retire tout"
+	},
+	"dictionary_deleteAll": {
+		"message": "Èske ou sèten ou vle efase TOUT tradiksyon nan diksyonè a?"
+	},
+	"dictionary_deleteConfirmation": {
+		"message": "Èske ou sèten ou vle efase tradiksyon sa a?"
+	},
+	"dictionary_description": {
+		"message": "Sove tradiksyon yo nan diksyonè a pou jwenn yo rapidman pita"
+	},
+	"dictionary_emptyDictionary": {
+		"message": "Diksyonè a vid, kòmanse ranpli li lè w tradui kèk tèks"
+	},
+	"dictionary_filter_from": {
+		"message": "Lang tèks sous"
+	},
+	"dictionary_filter_to": {
+		"message": "Lang sib"
+	},
+	"dictionary_message_deleteAll_success": {
+		"message": "Tout tradiksyon yo te retire"
+	},
+	"dictionary_notFoundEntries": {
+		"message": "Pa gen tradiksyon ki koresponn ak filtè sa yo ki te jwenn"
+	},
+	"dictionary_pageTitle": {
+		"message": "Diksyonè"
+	},
+	"dictionary_resetFilters": {
+		"message": "Reyajiste filtè yo"
+	},
+	"dictionary_searchPlaceholder": {
+		"message": "Chèche pa tèks"
+	},
+	"editorWindow_close": {
+		"message": "Fèmen"
+	},
+	"editorWindow_data_code": {
+		"message": "Kòd"
+	},
+	"editorWindow_data_title": {
+		"message": "Non modil"
+	},
+	"editorWindow_message_invalidTitle": {
+		"message": "Non modil dwe gen omwen yon karaktè"
+	},
+	"editorWindow_save": {
+		"message": "Sove"
+	},
+	"ext_description": {
+		"message": "Tradiksyon paj wèb, tradiksyon tèks, diksyonè, istwa, tradiktè pèsonalize, tout sa ou bezwen pou kraze baryè lang"
+	},
+	"ext_name": {
+		"message": "Linguist - tradiktè paj wèb"
+	},
+	"history_control_selectEntry": {
+		"message": "Chwazi tradiksyon pou aksyon an mas",
+		"description": "Description in finite form \"to pick\" with explaining what this checkbox will do"
+	},
+	"history_controls_clearHistory": {
+		"message": "Efase istwa"
+	},
+	"history_controls_deleteSelected": {
+		"message": "Efase tradiksyon chwazi yo"
+	},
+	"history_controls_selectAll": {
+		"message": "Chwazi tout tradiksyon yo"
+	},
+	"history_message_clearHistoryConfirmation": {
+		"message": "Èske ou sèten ou vle efase istwa a? Tout antre yo pral retire"
+	},
+	"history_message_deleteEntryConfirmation": {
+		"message": "Èske ou sèten ou vle efase antre sa a?"
+	},
+	"history_message_deleteSelectedEntriesConfirmation": {
+		"message": "Èske ou sèten ou vle efase antre chwazi yo ($1)?"
+	},
+	"history_message_entriesNotFound": {
+		"message": "Pa gen tradiksyon ki koresponn ak filtè a"
+	},
+	"history_message_noEntries": {
+		"message": "Istwa a vid"
+	},
+	"history_notification_disabled": {
+		"message": "Anrejistreman istwa a dezaktive, kidonk nouvo antre yo pap parèt. Ou ka chanje sa nan <slot id=preferences>Preferans</slot>"
+	},
+	"history_pageTitle": {
+		"message": "Istwa"
+	},
+	"history_searchPlaceholder": {
+		"message": "Chèche pa tèks"
+	},
+	"inlineTranslator_showOriginalText": {
+		"message": "Montre tèks orijinal la"
+	},
+	"lang_change": {
+		"message": "Chanje lang"
+	},
+	"lang_detect": {
+		"message": "Deteksyon otomatik"
+	},
+	"lang_select": {
+		"message": "Chwazi lang"
+	},
+	"lang_swap": {
+		"message": "Echanje lang yo"
+	},
+	"message_unknownError": {
+		"message": "Erè enkoni"
+	},
+	"pageTranslator_alwaysTranslateLang": {
+		"message": "Toujou tradui lang sa a"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disable": {
+		"message": "Dezaktive"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
+		"message": "Dezaktive pou tout sit"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_enable": {
+		"message": "Aktive"
+	},
+	"pageTranslator_commonPreferences_title": {
+		"message": "Preferans komen pou lang sa a"
+	},
+	"pageTranslator_option_autoTranslate": {
+		"message": "Tradui otomatikman"
+	},
+	"pageTranslator_showOriginal": {
+		"message": "Montre orijinal la"
+	},
+	"pageTranslator_showTranslationPreferences": {
+		"message": "Preferans tradiksyon"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_always": {
+		"message": "Toujou tradui"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
+		"message": "Toujou tradui pou lang sa a"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_default": {
+		"message": "Sèvi ak règ komen yo"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
+		"message": "Sèvi ak règ komen pou lang sa a"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_never": {
+		"message": "Pa janm tradui"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
+		"message": "Pa janm tradui pou lang sa a"
+	},
+	"pageTranslator_sitePreferences_title": {
+		"message": "Preferans pou"
+	},
+	"pageTranslator_translatePage": {
+		"message": "Tradui paj la"
+	},
+	"pageTranslator_translationReport": {
+		"message": "Rapò tradiksyon"
+	},
+	"pageTranslator_translationReport_queue": {
+		"message": "An atant"
+	},
+	"pageTranslator_translationReport_reject": {
+		"message": "Erè"
+	},
+	"pageTranslator_translationReport_resolve": {
+		"message": "Tradui"
+	},
+	"popup_tabIdNotFound": {
+		"message": "Onglè \"$1\" pa jwenn"
+	},
+	"popup_tab_translatePage": {
+		"message": "Tradiksyon paj"
+	},
+	"popup_tab_translateText": {
+		"message": "Tradiksyon tèks"
+	},
+	"settings_button_cancel": {
+		"message": "Anile"
+	},
+	"settings_button_export": {
+		"message": "Ekspòte konfigirasyon"
+	},
+	"settings_button_import": {
+		"message": "Enpòte konfigirasyon"
+	},
+	"settings_button_reset": {
+		"message": "Reyajiste konfigirasyon"
+	},
+	"settings_button_saveChanges": {
+		"message": "Sove chanjman yo"
+	},
+	"settings_message_clearCache_success": {
+		"message": "Kach la efase"
+	},
+	"settings_message_common_invalidValueType": {
+		"message": "Valè pa valab"
+	},
+	"settings_message_importConfig_invalidFile": {
+		"message": "Fichye konfigirasyon an bay la pa kòrèk oswa li domaje, epi li pa ka trete"
+	},
+	"settings_message_importConfig_success": {
+		"message": "Enpòte fini"
+	},
+	"settings_message_resetConfig_confirm": {
+		"message": "Konfime pou reyajiste anviwònman yo nan valè default yo"
+	},
+	"settings_message_resetConfig_success": {
+		"message": "Anviwònman yo reyajiste"
+	},
+	"settings_message_saveChanges_success": {
+		"message": "Chanjman yo sove"
+	},
+	"settings_option_cache": {
+		"message": "Cache"
+	},
+	"settings_option_cache_clear": {
+		"message": "Efase cache"
+	},
+	"settings_option_cache_clear_desc": {
+		"message": "Si ou remake erè tradiksyon oswa aksidantèlman tradui tèks prive pandan cache a aktive, ou ka efase tout done nan cache a",
+		"description": "Explanation for user about cases when it's useful to clear cache"
+	},
+	"settings_option_cache_enable": {
+		"message": "Aktive cache"
+	},
+	"settings_option_cache_enable_desc": {
+		"message": "Lè cache a aktive, tèks ki te tradui anvan yo pral tradui imedyatman san demann adisyonèl nan sèvis tradiksyon an"
+	},
+	"settings_option_cache_ignoreCase": {
+		"message": "Sèvi ak cache san distenksyon majiskil/miniskil"
+	},
+	"settings_option_cache_ignoreCase_desc": {
+		"message": "Lè aktive, tradiksyon ki nan cache yo pral itilize pou tèks ak diferan majiskil/miniskil, sa ki ka lakòz distòsyon tradiksyon nan sèten sitiyasyon"
+	},
+	"settings_option_commonSettings": {
+		"message": "Anviwònman komen"
+	},
+	"settings_option_customTranslatorModule": {
+		"message": "Modil tradiksyon koutim",
+		"description": "An user defined code that implements a translation module"
+	},
+	"settings_option_customTranslatorModule_desc": {
+		"message": "Ou ka ajoute modil tradiksyon koutim ki itilize sèvis tradiksyon pi renmen ou yo. Aprann plis nan <slot id=docs>dokimantasyon tradiktè koutim</slot>"
+	},
+	"settings_option_customTranslatorModule_manageButton": {
+		"message": "Jere tradiktè yo",
+		"description": "A button to show list of translation modules"
+	},
+	"settings_option_history_enable": {
+		"message": "Aktive istwa"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "Lè aktive, tradiksyon yo pral anrejistre epi parèt sou <slot id=historyPage>paj istwa</slot>"
+	},
+	"settings_option_pageTranslation": {
+		"message": "Tradiksyon paj konplè"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent": {
+		"message": "Detekte lang pa kontni"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent_desc": {
+		"message": "Analize tèks sou paj wèb la pou detekte lang li. Lè dezaktive, lang ki espesifye nan <slot id=docs>metadata paj</slot> la pral itilize"
+	},
+	"settings_option_pageTranslation_enableContextMenu": {
+		"message": "Aktive bouton meni kontèks"
+	},
+	"settings_option_pageTranslation_enableContextMenu_desc": {
+		"message": "Ajoute yon bouton pou chanje tradiksyon paj nan meni kontèks paj la"
+	},
+	"settings_option_pageTranslation_excludeSelectors": {
+		"message": "Selektè pou eskli nan tradiksyon"
+	},
+	"settings_option_pageTranslation_excludeSelectors_desc": {
+		"message": "Lis selektè CSS pou eleman ki dwe eskli nan tradiksyon. Yon selektè pa liy. Si yon eleman matche ak nenpòt nan selektè sa yo, tèks li yo, atribi yo, ak eleman ki anndan yo p ap tradui"
+	},
+	"settings_option_pageTranslation_lazyTranslate": {
+		"message": "Tradui sèlman eleman vizib"
+	},
+	"settings_option_pageTranslation_lazyTranslate_desc": {
+		"message": "Lè opsyon sa a aktive, sèlman eleman vizib yo pral tradui. Opsyon sa a diminye trafik rezo"
+	},
+	"settings_option_pageTranslation_originalTextPopup": {
+		"message": "Aktive popup ak tèks orijinal la"
+	},
+	"settings_option_pageTranslation_originalTextPopup_desc": {
+		"message": "Montre yon popup ak tèks orijinal la lè ou pase sourit sou blòk tèks tradui yo"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation": {
+		"message": "Koutchemen"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation_desc": {
+		"message": "Koutchemen pou chanje tradiksyon paj\nPeze ESC pou réinitialiser kle yo"
+	},
+	"settings_option_pageTranslation_translatableAttributes": {
+		"message": "Atribi tradiktab"
+	},
+	"settings_option_pageTranslation_translatableAttributes_desc": {
+		"message": "Antre non <slot id=htmlAttributes>atribit HTML</slot> pou tradui, yon atribi pa liy\nSe sèlman atribi ki nan lis sa a ki pral tradui"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters": {
+		"message": "Montre pwogrè tradiksyon an"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters_desc": {
+		"message": "Montre yon panèl ak pwogrè tradiksyon paj la nan popup ekstansyon an"
+	},
+	"settings_option_selectTranslation": {
+		"message": "Tradiksyon pou tèks chwazi"
+	},
+	"settings_option_selectTranslation_detectTextLanguage": {
+		"message": "Detekte lang tèks la"
+	},
+	"settings_option_selectTranslation_detectTextLanguage_desc": {
+		"message": "Lè aktive, tèks chwazi a pral analize pou detekte lang pou tradiksyon. Sinon, lang paj la pral itilize"
+	},
+	"settings_option_selectTranslation_disableWhileTranslatePage": {
+		"message": "Dezaktive pandan wap tradui paj la"
+	},
+	"settings_option_selectTranslation_enable": {
+		"message": "Aktive tradiksyon tèks chwazi"
+	},
+	"settings_option_selectTranslation_enable_desc": {
+		"message": "Lè karakteristik sa a aktive, ou ka chwazi nenpòt tèks sou paj la epi tradui li nan yon popup"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton": {
+		"message": "Oto-fokis sou bouton tradiksyon an"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
+		"message": "Lè bouton tradiksyon an parèt sou paj la, li pral otomatikman fokis"
+	},
+	"settings_option_selectTranslation_header_languageChoice": {
+		"message": "Anviwònman lang"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang": {
+		"message": "Pèmèt modil tradiksyon an detekte lang tèks la"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
+		"message": "Lè lang tèks la pa ka detekte lokalman epi opsyon sa a aktive, tèks la pral tradui ak lang \"oto\" si sipòte.\nLè opsyon an dezaktive, yon lòt metòd ranplasman pral itilize pou mete lang sous tèks la"
+	},
+	"settings_option_selectTranslation_mode": {
+		"message": "Aksyon sou seleksyon tèks"
+	},
+	"settings_option_selectTranslation_mode_item_contextMenu": {
+		"message": "Tradui tèks atravè meni kontèks"
+	},
+	"settings_option_selectTranslation_mode_item_popupButton": {
+		"message": "Montre bouton tradiksyon"
+	},
+	"settings_option_selectTranslation_mode_item_quickTranslate": {
+		"message": "Tradui tèks imedyatman"
+	},
+	"settings_option_selectTranslation_modifiers": {
+		"message": "Modifikatè"
+	},
+	"settings_option_selectTranslation_modifiers_desc": {
+		"message": "Chwazi kle yo ki dwe peze sou klavye a pou montre tradiksyon an"
+	},
+	"settings_option_selectTranslation_modifiers_key_alt": {
+		"message": "alt"
+	},
+	"settings_option_selectTranslation_modifiers_key_ctrl": {
+		"message": "ctrl"
+	},
+	"settings_option_selectTranslation_modifiers_key_meta": {
+		"message": "meta"
+	},
+	"settings_option_selectTranslation_modifiers_key_shift": {
+		"message": "shift"
+	},
+	"settings_option_selectTranslation_rememberDirection": {
+		"message": "Sonje lang tèks ki te chwazi pi resamman"
+	},
+	"settings_option_selectTranslation_showOnceForSelection": {
+		"message": "Montre bouton tradiksyon an yon fwa pou chak seleksyon tèks"
+	},
+	"settings_option_selectTranslation_showOnceForSelection_desc": {
+		"message": "Bouton an ap parèt sèlman yon fwa pou chak seleksyon tèks Pou montre li ankò, re-chwazi tèks la"
+	},
+	"settings_option_selectTranslation_showOriginalText": {
+		"message": "Montre tèks orijinal la"
+	},
+	"settings_option_selectTranslation_showOriginalText_desc": {
+		"message": "Ajoute yon blòk ak tèks orijinal la nan popup tradiksyon an"
+	},
+	"settings_option_selectTranslation_strictSelection": {
+		"message": "Mòd strik pou seleksyon span tèks",
+		"description": "Opsyon sa a se sou seleksyon tèks atravè sourit"
+	},
+	"settings_option_selectTranslation_strictSelection_desc": {
+		"message": "Ignorè seleksyon span tèks si bouton gòch sourit la lage deyò blòk ki gen tèks chwazi a"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton": {
+		"message": "Retard anvan kache bouton popup la"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton_desc": {
+		"message": "Retard an milisgond anvan kache bouton an lè kurseur la pa sou li. Lè w ap pase sou bouton an, li réinitialiser tan an. Pou dezaktive oto-kache, mete valè a mwens pase 1"
+	},
+	"settings_option_selectTranslation_zIndex": {
+		"message": "z-index"
+	},
+	"settings_option_selectTranslation_zIndex_desc": {
+		"message": "Ogmante valè sa a si eleman sou kèk paj kouvri popup la ak tèks tradui a"
+	},
+	"settings_option_textTranslator": {
+		"message": "Tradiksyon tèks"
+	},
+	"settings_option_textTranslator_rememberText": {
+		"message": "Sonje tèks tradui"
+	},
+	"settings_option_textTranslator_rememberText_desc": {
+		"message": "Sonje tèks tradui pou pwochen fwa fenèt la louvri"
+	},
+	"settings_option_textTranslator_spellCheck": {
+		"message": "Pèmèt koreksyon òtograf"
+	},
+	"settings_option_textTranslator_suggestLanguage": {
+		"message": "Montre lang tèks detekte a"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways": {
+		"message": "Toujou detekte epi sijere lang"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways_desc": {
+		"message": "Lè li dezaktive, sijesyon lang parèt sèlman si lang sous la mete sou \"oto\""
+	},
+	"settings_option_translatePreferences": {
+		"message": "Preferans tradiksyon"
+	},
+	"settings_option_translateScheduler": {
+		"message": "Planifikatè tradiksyon"
+	},
+	"settings_option_translateScheduler_delay": {
+		"message": "Retard akimilasyon tèks"
+	},
+	"settings_option_translateScheduler_delay_desc": {
+		"message": "Planifikatè tradiksyon an diminye kantite demann nan API sèvis tradiksyon an pa akimile otan tèks ke posib pou voye nan yon sèl demann. Planifikatè a ap tann pou tan espesifye an milisgond pou rasanble plis tèks anvan li kòmanse tradiksyon"
+	},
+	"settings_option_translateScheduler_retryLimit": {
+		"message": "Limit pou tantativ retradiksyon"
+	},
+	"settings_option_translateScheduler_retryLimit_desc": {
+		"message": "Planifikatè a ap eseye retradui tèks lè erè tradiksyon rive. Opsyon sa a mete yon limit sou tantativ retradiksyon. Mete yon nimewo negatif pou pèmèt retradiksyon san limit"
+	},
+	"settings_option_translatorModule": {
+		"message": "Modil tradiksyon"
+	},
+	"settings_option_translatorModule_desc": {
+		"message": "Kalite tradiksyon yo ak lang ki disponib yo depann de modil tradiksyon an"
+	},
+	"settings_option_tts": {
+		"message": "Konvèsyon Tèks an Lapawòl (TTS)"
+	},
+	"settings_option_ttsCustomModules": {
+		"message": "Modil sentèz lapawòl koutim"
+	},
+	"settings_option_ttsCustomModules_button": {
+		"message": "Jere modil sentèz lapawòl"
+	},
+	"settings_option_ttsCustomModules_desc": {
+		"message": "Ou ka ajoute modil sentèz lapawòl ki itilize sèvis ak motè vwa ou pi renmen. Li plis nan <slot id=docs>dokimantasyon TTS koutim</slot>"
+	},
+	"settings_option_ttsModule": {
+		"message": "Modil TTS chwazi"
+	},
+	"settings_option_ttsModule_desc": {
+		"message": "Motè vwa itilize pou vwa tèks la"
+	},
+	"settings_option_userLanguage": {
+		"message": "Lang ou"
+	},
+	"settings_option_userLanguage_desc": {
+		"message": "Lang tèks yo pral tradui nan"
+	},
+	"settings_pageTitle": {
+		"message": "Anviwònman"
+	},
+	"settings_section_history": {
+		"message": "Istwa"
+	},
+	"settings_section_popup": {
+		"message": "Popup"
+	},
+	"textTranslator_suggestLanguage": {
+		"message": "Li sanble lang tèks la se <slot id=languageSuggest>$language_name$</slot>",
+		"placeholders": {
+			"language_name": {
+				"content": "$1",
+				"example": "Japanese"
+			}
+		}
+	},
+	"textTranslator_translateInputPlaceholder": {
+		"message": "Antre tèks pou tradiksyon",
+		"description": "Request to user input some text for translation"
+	},
+	"textTranslator_translatePlaceholder": {
+		"message": "Tèks tradui a ap parèt isit la"
+	},
+	"translatorsManagerWindow_add": {
+		"message": "Ajoute modil tradiksyon"
+	},
+	"translatorsManagerWindow_close": {
+		"message": "Fèmen"
+	},
+	"translatorsManagerWindow_emptyTranslatorsListText": {
+		"message": "Pa gen modil tradiksyon pèsonalize ki te ajoute ankò"
+	},
+	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
+		"message": "Èske ou sèten ou vle retire modil tradiksyon \"$translator_name$\"?",
+		"placeholders": {
+			"translator_name": {
+				"content": "$1",
+				"example": "Google translator"
+			}
+		}
+	},
+	"translatorsManagerWindow_title": {
+		"message": "Modil tradiksyon pèsonalize"
+	},
+	"translatorsManagerWindow_translator_delete": {
+		"message": "Efase"
+	},
+	"translatorsManagerWindow_translator_edit": {
+		"message": "Modifye"
+	},
+	"ttsManagerWindow_add": {
+		"message": "Ajoute modil TTS"
+	},
+	"ttsManagerWindow_close": {
+		"message": "Fèmen"
+	},
+	"ttsManagerWindow_emptyTranslatorsListText": {
+		"message": "Pa gen modil TTS ki te ajoute ankò"
+	},
+	"ttsManagerWindow_message_ttsRemoveConfirmation": {
+		"message": "Èske ou sèten ou vle retire modil TTS \"$tts_name$\"?",
+		"placeholders": {
+			"tts_name": {
+				"content": "$1",
+				"example": "Google TTS"
+			}
+		}
+	},
+	"ttsManagerWindow_title": {
+		"message": "Modil Tèks-a-Pawòl"
+	},
+	"ttsManagerWindow_translator_delete": {
+		"message": "Efase"
+	},
+	"ttsManagerWindow_translator_edit": {
+		"message": "Modifye"
+	},
+	"validation_number": {
+		"message": "Valè a dwe yon nimewo"
+	},
+	"validation_numberBetweenRange": {
+		"message": "Valè a dwe yon nimewo ant $1 ak $2"
+	},
+	"validation_positiveNumber": {
+		"message": "Valè a dwe yon nimewo pozitif"
+	}
+}

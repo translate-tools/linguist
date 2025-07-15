@@ -1,0 +1,623 @@
+{
+	"common_action_addToDictionary": {
+		"message": "បន្ថែមការបកប្រែទៅក្នុងវចនានុក្រម"
+	},
+	"common_action_removeFromDictionary": {
+		"message": "យកការបកប្រែចេញពីវចនានុក្រម"
+	},
+	"common_bgUnavailable": {
+		"message": "ស្គ្រីបផ្ទៃខាងក្រោយមិនអាចប្រើបាន"
+	},
+	"common_cancel": {
+		"message": "បោះបង់"
+	},
+	"common_close": {
+		"message": "បិទ"
+	},
+	"common_copy": {
+		"message": "ចម្លង"
+	},
+	"common_error": {
+		"message": "កំហុស"
+	},
+	"common_offlineTranslator": {
+		"message": "$1 - អ្នកបកប្រែក្រៅបណ្តាញ"
+	},
+	"common_retry": {
+		"message": "សាកល្បងម្តងទៀត"
+	},
+	"common_translate": {
+		"message": "បកប្រែ"
+	},
+	"component_hotkey_placeholder": {
+		"message": "ចុចដើម្បីកត់ត្រាការចុចផ្លូវកាត់"
+	},
+	"component_hotkey_recordPlaceholder": {
+		"message": "ចុចកូនសោ"
+	},
+	"component_hotkey_resetButton": {
+		"message": "កំណត់ឡើងវិញ"
+	},
+	"contextMenu_disablePageTranslation": {
+		"message": "បញ្ឈប់ការបកប្រែទំព័រ"
+	},
+	"contextMenu_translatePage": {
+		"message": "បកប្រែទំព័រ"
+	},
+	"contextMenu_translateSelectedText": {
+		"message": "បកប្រែអត្ថបទដែលបានជ្រើស"
+	},
+	"dictionaryButton_add": {
+		"message": "បន្ថែមទៅវចនានុក្រម"
+	},
+	"dictionaryButton_delete": {
+		"message": "លុបចេញពីវចនានុក្រម"
+	},
+	"dictionary_button_export": {
+		"message": "នាំចេញ"
+	},
+	"dictionary_button_removeAll": {
+		"message": "យកចេញទាំងអស់"
+	},
+	"dictionary_deleteAll": {
+		"message": "តើអ្នកប្រាកដថាចង់លុបការបកប្រែទាំងអស់ចេញពីវចនានុក្រមឬ?"
+	},
+	"dictionary_deleteConfirmation": {
+		"message": "តើអ្នកប្រាកដថាចង់លុបការបកប្រែនេះឬ?"
+	},
+	"dictionary_description": {
+		"message": "រក្សាទុកការបកប្រែក្នុងវចនានុក្រមដើម្បីរកឃើញពួកវាបានយ៉ាងឆាប់រហ័សនៅពេលក្រោយ"
+	},
+	"dictionary_emptyDictionary": {
+		"message": "វចនានុក្រមគឺទទេ ចាប់ផ្តើមបំពេញវាដោយការបកប្រែអត្ថបទ"
+	},
+	"dictionary_filter_from": {
+		"message": "ភាសាអត្ថបទដើម"
+	},
+	"dictionary_filter_to": {
+		"message": "ភាសាគោលដៅ"
+	},
+	"dictionary_message_deleteAll_success": {
+		"message": "ការបកប្រែទាំងអស់ត្រូវបានយកចេញ"
+	},
+	"dictionary_notFoundEntries": {
+		"message": "រកមិនឃើញការបកប្រែដែលផ្គូផ្គងនឹងតម្រងទាំងនេះ"
+	},
+	"dictionary_pageTitle": {
+		"message": "វចនានុក្រម"
+	},
+	"dictionary_resetFilters": {
+		"message": "កំណត់តម្រងឡើងវិញ"
+	},
+	"dictionary_searchPlaceholder": {
+		"message": "ស្វែងរកតាមអត្ថបទ"
+	},
+	"editorWindow_close": {
+		"message": "បិទ"
+	},
+	"editorWindow_data_code": {
+		"message": "កូដ"
+	},
+	"editorWindow_data_title": {
+		"message": "ឈ្មោះម៉ូឌុល"
+	},
+	"editorWindow_message_invalidTitle": {
+		"message": "ឈ្មោះម៉ូឌុលត្រូវមានតួអក្សរយ៉ាងហោចណាស់មួយ"
+	},
+	"editorWindow_save": {
+		"message": "រក្សាទុក"
+	},
+	"ext_description": {
+		"message": "ការបកប្រែគេហទំព័រ, ការបកប្រែអត្ថបទ, វចនានុក្រម, ប្រវត្តិ, អ្នកបកប្រែផ្ទាល់ខ្លួន, ទាំងអស់ដែលអ្នកត្រូវការដើម្បីបំបែកឧបសគ្គភាសា"
+	},
+	"ext_name": {
+		"message": "Linguist - អ្នកបកប្រែកេហទំព័រ"
+	},
+	"history_control_selectEntry": {
+		"message": "ជ្រើសការបកប្រែសម្រាប់សកម្មភាពផ្ដុំ",
+		"description": "Description in finite form \"to pick\" with explaining what this checkbox will do"
+	},
+	"history_controls_clearHistory": {
+		"message": "សម្អាតប្រវត្តិ"
+	},
+	"history_controls_deleteSelected": {
+		"message": "លុបការបកប្រែដែលបានជ្រើស"
+	},
+	"history_controls_selectAll": {
+		"message": "ជ្រើសការបកប្រែទាំងអស់"
+	},
+	"history_message_clearHistoryConfirmation": {
+		"message": "តើអ្នកប្រាកដថាអ្នកចង់សម្អាតប្រវត្តិមែនទេ? កំណត់ត្រាទាំងអស់នឹងត្រូវបានយកចេញ"
+	},
+	"history_message_deleteEntryConfirmation": {
+		"message": "តើអ្នកប្រាកដថាអ្នកចង់លុបធាតុនេះមែនទេ?"
+	},
+	"history_message_deleteSelectedEntriesConfirmation": {
+		"message": "តើអ្នកប្រាកដថាអ្នកចង់លុបធាតុដែលបានជ្រើស ($1) មែនទេ?"
+	},
+	"history_message_entriesNotFound": {
+		"message": "រកមិនឃើញការបកប្រែដែលផ្គូផ្គងនឹងតម្រង"
+	},
+	"history_message_noEntries": {
+		"message": "ប្រវត្តិទទេ"
+	},
+	"history_notification_disabled": {
+		"message": "ការកត់ត្រាប្រវត្តិត្រូវបានបិទ ដូច្នេះធាតុថ្មីនឹងមិនបង្ហាញឡើង។ អ្នកអាចផ្លាស់ប្តូរនេះនៅក្នុង <slot id=preferences>ចំណូលចិត្ត</slot>"
+	},
+	"history_pageTitle": {
+		"message": "ប្រវត្តិ"
+	},
+	"history_searchPlaceholder": {
+		"message": "ស្វែងរកតាមអត្ថបទ"
+	},
+	"inlineTranslator_showOriginalText": {
+		"message": "បង្ហាញអត្ថបទដើម"
+	},
+	"lang_change": {
+		"message": "ផ្លាស់ប្តូរភាសា"
+	},
+	"lang_detect": {
+		"message": "រកឃើញដោយស្វ័យប្រវត្តិ"
+	},
+	"lang_select": {
+		"message": "ជ្រើសភាសា"
+	},
+	"lang_swap": {
+		"message": "ប្ដូរភាសា"
+	},
+	"message_unknownError": {
+		"message": "កំហុសមិនស្គាល់"
+	},
+	"pageTranslator_alwaysTranslateLang": {
+		"message": "បកប្រែភាសានេះជានិច្ច"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disable": {
+		"message": "បិទ"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
+		"message": "បិទសម្រាប់គេហទំព័រទាំងអស់"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_enable": {
+		"message": "បើក"
+	},
+	"pageTranslator_commonPreferences_title": {
+		"message": "ចំណូលចិត្តទូទៅសម្រាប់ភាសានេះ"
+	},
+	"pageTranslator_option_autoTranslate": {
+		"message": "បកប្រែដោយស្វ័យប្រវត្តិ"
+	},
+	"pageTranslator_showOriginal": {
+		"message": "បង្ហាញដើម"
+	},
+	"pageTranslator_showTranslationPreferences": {
+		"message": "ចំណូលចិត្តបកប្រែ"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_always": {
+		"message": "បកប្រែជានិច្ច"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
+		"message": "បកប្រែជានិច្ចសម្រាប់ភាសានេះ"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_default": {
+		"message": "ប្រើច្បាប់ទូទៅ"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
+		"message": "ប្រើច្បាប់ទូទៅសម្រាប់ភាសានេះ"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_never": {
+		"message": "មិនបកប្រែ"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
+		"message": "មិនបកប្រែសម្រាប់ភាសានេះ"
+	},
+	"pageTranslator_sitePreferences_title": {
+		"message": "ចំណូលចិត្តសម្រាប់"
+	},
+	"pageTranslator_translatePage": {
+		"message": "បកប្រែទំព័រ"
+	},
+	"pageTranslator_translationReport": {
+		"message": "របាយការណ៍បកប្រែ"
+	},
+	"pageTranslator_translationReport_queue": {
+		"message": "កំពុងរង់ចាំ"
+	},
+	"pageTranslator_translationReport_reject": {
+		"message": "កំហុស"
+	},
+	"pageTranslator_translationReport_resolve": {
+		"message": "បានបកប្រែ"
+	},
+	"popup_tabIdNotFound": {
+		"message": "Tab \"$1\" មិនបានរកឃើញ"
+	},
+	"popup_tab_translatePage": {
+		"message": "ការបកប្រែទំព័រ"
+	},
+	"popup_tab_translateText": {
+		"message": "ការបកប្រែអត្ថបទ"
+	},
+	"settings_button_cancel": {
+		"message": "បោះបង់"
+	},
+	"settings_button_export": {
+		"message": "នាំចេញការកំណត់"
+	},
+	"settings_button_import": {
+		"message": "នាំចូលការកំណត់"
+	},
+	"settings_button_reset": {
+		"message": "កំណត់ឡើងវិញការកំណត់"
+	},
+	"settings_button_saveChanges": {
+		"message": "រក្សាទុកការផ្លាស់ប្តូរ"
+	},
+	"settings_message_clearCache_success": {
+		"message": "បានសម្អាតឃ្លាំងសម្ងាត់"
+	},
+	"settings_message_common_invalidValueType": {
+		"message": "តម្លៃមិនត្រឹមត្រូវ"
+	},
+	"settings_message_importConfig_invalidFile": {
+		"message": "ឯកសារកំណត់ដែលបានផ្តល់មិនត្រឹមត្រូវ ឬខូចខាត ហើយមិនអាចដំណើរការបាន"
+	},
+	"settings_message_importConfig_success": {
+		"message": "ការនាំចូលបានបញ្ចប់"
+	},
+	"settings_message_resetConfig_confirm": {
+		"message": "បញ្ជាក់ដើម្បីកំណត់ការកំណត់ទៅតម្លៃលំនាំដើម"
+	},
+	"settings_message_resetConfig_success": {
+		"message": "បានកំណត់ការកំណត់ឡើងវិញ"
+	},
+	"settings_message_saveChanges_success": {
+		"message": "បានរក្សាទុកការផ្លាស់ប្តូរ"
+	},
+	"settings_option_cache": {
+		"message": "ឃ្លាំង"
+	},
+	"settings_option_cache_clear": {
+		"message": "សម្អាតឃ្លាំង"
+	},
+	"settings_option_cache_clear_desc": {
+		"message": "ប្រសិនបើអ្នកសង្កេតឃើញកំហុសនៃការបកប្រែ ឬបកប្រែអត្ថបទឯកជនដោយចៃដន្យ ខណៈពេលដែលឃ្លាំងត្រូវបានបើក អ្នកអាចលុបទិន្នន័យទាំងអស់ពីឃ្លាំង",
+		"description": "Explanation for user about cases when it's useful to clear cache"
+	},
+	"settings_option_cache_enable": {
+		"message": "បើកឃ្លាំង"
+	},
+	"settings_option_cache_enable_desc": {
+		"message": "នៅពេលដែលឃ្លាំងត្រូវបានបើក អត្ថបទដែលត្រូវបានបកប្រែពីមុន នឹងត្រូវបានបកប្រែភ្លាមៗ ដោយគ្មានការស្នើសុំបន្ថែមទៅសេវាកម្មបកប្រែ"
+	},
+	"settings_option_cache_ignoreCase": {
+		"message": "ប្រើឃ្លាំងមិនគិតពីអក្សរធំតូច"
+	},
+	"settings_option_cache_ignoreCase_desc": {
+		"message": "នៅពេលដែលបើក ឃ្លាំងបកប្រែ នឹងត្រូវបានប្រើសម្រាប់អត្ថបទដែលមានអក្សរធំតូចខុសគ្នា ដែលអាចបណ្តាលឱ្យមានការខូចខាតនៃការបកប្រែក្នុងស្ថានភាពជាក់លាក់មួយចំនួន"
+	},
+	"settings_option_commonSettings": {
+		"message": "ការកំណត់ទូទៅ"
+	},
+	"settings_option_customTranslatorModule": {
+		"message": "ម៉ូឌុលបកប្រែផ្ទាល់ខ្លួន",
+		"description": "An user defined code that implements a translation module"
+	},
+	"settings_option_customTranslatorModule_desc": {
+		"message": "អ្នកអាចបន្ថែមម៉ូឌុលបកប្រែផ្ទាល់ខ្លួន ដែលប្រើសេវាកម្មបកប្រែដែលអ្នកចូលចិត្ត សូមស្វែងយល់បន្ថែមនៅក្នុង <slot id=docs>ឯកសារអំពីអ្នកបកប្រែផ្ទាល់ខ្លួន</slot>"
+	},
+	"settings_option_customTranslatorModule_manageButton": {
+		"message": "គ្រប់គ្រងអ្នកបកប្រែ",
+		"description": "A button to show list of translation modules"
+	},
+	"settings_option_history_enable": {
+		"message": "បើកប្រវត្តិ"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "នៅពេលដែលបើក ការបកប្រែ នឹងត្រូវបានកត់ត្រា និងបង្ហាញនៅលើ <slot id=historyPage>ទំព័រប្រវត្តិ</slot>"
+	},
+	"settings_option_pageTranslation": {
+		"message": "ការបកប្រែទំព័រទាំងមូល"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent": {
+		"message": "រកមើលភាសាតាមមាតិកា"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent_desc": {
+		"message": "វិភាគអត្ថបទនៅលើទំព័របណ្តាញ ដើម្បីរកមើលភាសារបស់វា នៅពេលដែលបិទ ភាសាដែលបានបញ្ជាក់នៅក្នុង <slot id=docs>មេតាដាតាទំព័រ</slot> នឹងត្រូវបានប្រើ"
+	},
+	"settings_option_pageTranslation_enableContextMenu": {
+		"message": "បើកប៊ូតុងម៉ឺនុយបរិបទ"
+	},
+	"settings_option_pageTranslation_enableContextMenu_desc": {
+		"message": "បន្ថែមប៊ូតុង ដើម្បីប្តូរការបកប្រែទំព័រ នៅក្នុងម៉ឺនុយបរិបទទំព័រ"
+	},
+	"settings_option_pageTranslation_excludeSelectors": {
+		"message": "ឧបករណ៍ជ្រើសរើសដើម្បីដកចេញពីការបកប្រែ"
+	},
+	"settings_option_pageTranslation_excludeSelectors_desc": {
+		"message": "បញ្ជីឧបករណ៍ជ្រើសរើស CSS សម្រាប់ធាតុដែលត្រូវដកចេញពីការបកប្រែ មួយឧបករណ៍ជ្រើសរើសក្នុងមួយបន្ទាត់ ប្រសិនបើធាតុណាមួយត្រូវគ្នាជាមួយឧបករណ៍ជ្រើសរើសទាំងនេះ អត្ថបទ របស់វា គុណលក្ខណៈ និងធាតុដែលបានបង្កប់ នឹងមិនត្រូវបានបកប្រែ"
+	},
+	"settings_option_pageTranslation_lazyTranslate": {
+		"message": "បកប្រែតែធាតុដែលមើលឃើញ"
+	},
+	"settings_option_pageTranslation_lazyTranslate_desc": {
+		"message": "នៅពេលដែលជម្រើសនេះត្រូវបានបើក តែធាតុដែលមើលឃើញ នឹងត្រូវបានបកប្រែ ជម្រើសនេះកាត់បន្ថយចរាចរណ៍បណ្តាញ"
+	},
+	"settings_option_pageTranslation_originalTextPopup": {
+		"message": "បើកបង្អួចបង្ហាញអត្ថបទដើម"
+	},
+	"settings_option_pageTranslation_originalTextPopup_desc": {
+		"message": "បង្ហាញបង្អួចបង្ហាញអត្ថបទដើម នៅពេលដែលរំកិលលើប្លុកអត្ថបទដែលបានបកប្រែ"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation": {
+		"message": "ផ្លូវកាត់"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation_desc": {
+		"message": "ផ្លូវកាត់ ដើម្បីប្តូរការបកប្រែទំព័រ\nចុច ESC ដើម្បីកំណត់កូនសោឡើងវិញ"
+	},
+	"settings_option_pageTranslation_translatableAttributes": {
+		"message": "គុណលក្ខណៈដែលអាចបកប្រែបាន"
+	},
+	"settings_option_pageTranslation_translatableAttributes_desc": {
+		"message": "បញ្ចូលឈ្មោះ <slot id=htmlAttributes>គុណលក្ខណៈ HTML</slot> ដើម្បីបកប្រែ មួយគុណលក្ខណៈក្នុងមួយបន្ទាត់\nតែគុណលក្ខណៈក្នុងបញ្ជីនេះ នឹងត្រូវបានបកប្រែ"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters": {
+		"message": "បង្ហាញវឌ្ឍនភាពនៃការបកប្រែ"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters_desc": {
+		"message": "បង្ហាញបន្ទះជាមួយនឹងការរីកចម្រើននៃការបកប្រែទំព័រនៅក្នុងបង្អួចបន្ថែម"
+	},
+	"settings_option_selectTranslation": {
+		"message": "ការបកប្រែសម្រាប់អត្ថបទដែលបានជ្រើស"
+	},
+	"settings_option_selectTranslation_detectTextLanguage": {
+		"message": "រកមើលភាសាអត្ថបទ"
+	},
+	"settings_option_selectTranslation_detectTextLanguage_desc": {
+		"message": "នៅពេលដែលបានបើក អត្ថបទដែលបានជ្រើសនឹងត្រូវបានវិភាគដើម្បីរកមើលភាសាសម្រាប់បកប្រែ។ បើមិនដូច្នោះទេ ភាសាទំព័រនឹងត្រូវបានប្រើ"
+	},
+	"settings_option_selectTranslation_disableWhileTranslatePage": {
+		"message": "បិទនៅពេលកំពុងបកប្រែទំព័រ"
+	},
+	"settings_option_selectTranslation_enable": {
+		"message": "បើកការបកប្រែអត្ថបទដែលបានជ្រើស"
+	},
+	"settings_option_selectTranslation_enable_desc": {
+		"message": "នៅពេលដែលមុខងារនេះត្រូវបានបើក អ្នកអាចជ្រើសអត្ថបទណាមួយនៅលើទំព័រហើយបកប្រែមកក្នុងបង្អួច"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton": {
+		"message": "ផ្តោតដោយស្វ័យប្រវត្តិលើប៊ូតុងបកប្រែ"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
+		"message": "នៅពេលដែលប៊ូតុងបកប្រែបង្ហាញនៅលើទំព័រ វានឹងត្រូវបានផ្តោតដោយស្វ័យប្រវត្តិ"
+	},
+	"settings_option_selectTranslation_header_languageChoice": {
+		"message": "ការកំណត់ភាសា"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang": {
+		"message": "អនុញ្ញាតឱ្យម៉ូឌុលបកប្រែរកមើលភាសាអត្ថបទ"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
+		"message": "នៅពេលដែលភាសាអត្ថបទមិនអាចត្រូវបានរកមើលក្នុងស្រុក ហើយជម្រើសនេះត្រូវបានបើក អត្ថបទនឹងត្រូវបានបកប្រែជាមួយភាសា \"auto\" ប្រសិនបើគាំទ្រ។\nនៅពេលដែលជម្រើសត្រូវបានបិទ វិធីសាស្រ្តបម្រុងផ្សេងទៀតនឹងត្រូវបានប្រើដើម្បីកំណត់ភាសាដើមនៃអត្ថបទ"
+	},
+	"settings_option_selectTranslation_mode": {
+		"message": "សកម្មភាពនៅលើការជ្រើសអត្ថបទ"
+	},
+	"settings_option_selectTranslation_mode_item_contextMenu": {
+		"message": "បកប្រែអត្ថបទតាមមឺនុយបរិបទ"
+	},
+	"settings_option_selectTranslation_mode_item_popupButton": {
+		"message": "បង្ហាញប៊ូតុងបកប្រែ"
+	},
+	"settings_option_selectTranslation_mode_item_quickTranslate": {
+		"message": "បកប្រែអត្ថបទភ្លាមៗ"
+	},
+	"settings_option_selectTranslation_modifiers": {
+		"message": "កែប្រែ"
+	},
+	"settings_option_selectTranslation_modifiers_desc": {
+		"message": "ជ្រើសគ្រាប់ចុចដែលត្រូវចុចនៅលើក្តារចុចដើម្បីបង្ហាញការបកប្រែ"
+	},
+	"settings_option_selectTranslation_modifiers_key_alt": {
+		"message": "alt"
+	},
+	"settings_option_selectTranslation_modifiers_key_ctrl": {
+		"message": "ctrl"
+	},
+	"settings_option_selectTranslation_modifiers_key_meta": {
+		"message": "meta"
+	},
+	"settings_option_selectTranslation_modifiers_key_shift": {
+		"message": "shift"
+	},
+	"settings_option_selectTranslation_rememberDirection": {
+		"message": "ចងចាំភាសាអត្ថបទដែលបានជ្រើសចុងក្រោយបំផុត"
+	},
+	"settings_option_selectTranslation_showOnceForSelection": {
+		"message": "បង្ហាញប៊ូតុងបកប្រែម្តងសម្រាប់ការជ្រើសអត្ថបទមួយ"
+	},
+	"settings_option_selectTranslation_showOnceForSelection_desc": {
+		"message": "ប៊ូតុងនឹងបង្ហាញតែម្តងសម្រាប់ការជ្រើសអត្ថបទមួយ ដើម្បីបង្ហាញវាម្តងទៀត សូមជ្រើសអត្ថបទឡើងវិញ"
+	},
+	"settings_option_selectTranslation_showOriginalText": {
+		"message": "បង្ហាញអត្ថបទដើម"
+	},
+	"settings_option_selectTranslation_showOriginalText_desc": {
+		"message": "បន្ថែមប្លុកជាមួយអត្ថបទដើមទៅក្នុងបង្អួចបកប្រែ"
+	},
+	"settings_option_selectTranslation_strictSelection": {
+		"message": "របៀបតឹងរឹងនៃការជ្រើសអត្ថបទ",
+		"description": "ជម្រើសនេះគឺអំពីការជ្រើសអត្ថបទតាមកណ្តុរខាងស្តាំ"
+	},
+	"settings_option_selectTranslation_strictSelection_desc": {
+		"message": "មិនអើពើការជ្រើសអត្ថបទប្រសិនបើប៊ូតុងកណ្តុរខាងស្តាំត្រូវបានដោះចេញនៅខាងក្រៅប្លុកដែលមានអត្ថបទដែលបានជ្រើស"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton": {
+		"message": "ពន្យាពេលមុនពេលលាក់ប៊ូតុងបង្អួច"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton_desc": {
+		"message": "ការពន្យារពេលជាមីលីវិនាទីមុនពេលលាក់ប៊ូតុងនៅពេលកណ្តុរមិនបានរំកិលលើវា។ ការរំកិលលើប៊ូតុងនឹងកំណត់ម៉ោងឡើងវិញ។ ដើម្បីបិទការលាក់ដោយស្វ័យប្រវត្តិ សូមកំណត់តម្លៃទៅតិចជាង 1"
+	},
+	"settings_option_selectTranslation_zIndex": {
+		"message": "z-index"
+	},
+	"settings_option_selectTranslation_zIndex_desc": {
+		"message": "បង្កើនតម្លៃនេះប្រសិនបើធាតុនៅលើទំព័រខ្លះធ្វើឱ្យផ្ទាំងបង្អួចជាមួយអត្ថបទបកប្រែ"
+	},
+	"settings_option_textTranslator": {
+		"message": "ការបកប្រែអត្ថបទ"
+	},
+	"settings_option_textTranslator_rememberText": {
+		"message": "ការចងចាំអត្ថបទបកប្រែ"
+	},
+	"settings_option_textTranslator_rememberText_desc": {
+		"message": "ការចងចាំអត្ថបទបកប្រែសម្រាប់ពេលបើកវីនដូរបន្ទាប់"
+	},
+	"settings_option_textTranslator_spellCheck": {
+		"message": "បើកការត្រួតពិនិត្យអក្ខរក្រម"
+	},
+	"settings_option_textTranslator_suggestLanguage": {
+		"message": "បង្ហាញភាសាអត្ថបទដែលបានរកឃើញ"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways": {
+		"message": "តែងតែរកឃើញនិងផ្តល់យោបល់ភាសា"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways_desc": {
+		"message": "នៅពេលបិទ ការផ្តល់យោបល់ភាសានឹងបង្ហាញតែប៉ុណ្ណោះប្រសិនបើភាសាប្រភពត្រូវបានកំណត់ទៅ \"auto\""
+	},
+	"settings_option_translatePreferences": {
+		"message": "ចំណូលចិត្តបកប្រែ"
+	},
+	"settings_option_translateScheduler": {
+		"message": "កាលវិភាគបកប្រែ"
+	},
+	"settings_option_translateScheduler_delay": {
+		"message": "ការពន្យារពេលបញ្ចូលអត្ថបទ"
+	},
+	"settings_option_translateScheduler_delay_desc": {
+		"message": "កាលវិភាគបកប្រែបន្ថយចំនួនសំណើទៅ API សេវាកម្មបកប្រែដោយបញ្ចូលអត្ថបទឱ្យបានច្រើនបំផុតដើម្បីផ្ញើក្នុងសំណើតែមួយ។ កាលវិភាគនឹងរង់ចាំពេលវេលាដែលបានបញ្ជាក់ជាមីលីវិនាទីដើម្បីប្រមូលអត្ថបទបន្ថែមមុនពេលចាប់ផ្តើមបកប្រែ"
+	},
+	"settings_option_translateScheduler_retryLimit": {
+		"message": "ដែនកំណត់សម្រាប់ការបកប្រែសាកល្បងម្តងទៀត"
+	},
+	"settings_option_translateScheduler_retryLimit_desc": {
+		"message": "កាលវិភាគនឹងសាកល្បងបកប្រែអត្ថបទម្តងទៀតនៅពេលមានកំហុសបកប្រែ។ ជម្រើសនេះកំណត់ដែនកំណត់លើការសាកល្បងម្តងទៀត។ កំណត់លេខអវិជ្ជមានដើម្បីអនុញ្ញាតឱ្យសាកល្បងម្តងទៀតដោយគ្មានដែនកំណត់"
+	},
+	"settings_option_translatorModule": {
+		"message": "ម៉ូឌុលបកប្រែ"
+	},
+	"settings_option_translatorModule_desc": {
+		"message": "គុណភាពនៃការបកប្រែ និងភាសាដែលអាចប្រើបានអាស្រ័យលើម៉ូឌុលបកប្រែ"
+	},
+	"settings_option_tts": {
+		"message": "ការបម្លែងអត្ថបទទៅជាសំឡេង (TTS)"
+	},
+	"settings_option_ttsCustomModules": {
+		"message": "ម៉ូឌុលសំឡេងផ្ទាល់ខ្លួន"
+	},
+	"settings_option_ttsCustomModules_button": {
+		"message": "ការគ្រប់គ្រងម៉ូឌុលសំឡេង"
+	},
+	"settings_option_ttsCustomModules_desc": {
+		"message": "អ្នកអាចបន្ថែមម៉ូឌុលសំឡេងដែលប្រើសេវាកម្មនិងម៉ាស៊ីនសំឡេងដែលអ្នកចូលចិត្ត។ អានបន្ថែមនៅក្នុង <slot id=docs>ឯកសារតាមបំណង TTS</slot>"
+	},
+	"settings_option_ttsModule": {
+		"message": "ម៉ូឌុល TTS ដែលបានជ្រើសរើស"
+	},
+	"settings_option_ttsModule_desc": {
+		"message": "ម៉ាស៊ីនសំឡេងដែលប្រើសម្រាប់បញ្ចេញសំឡេងអត្ថបទ"
+	},
+	"settings_option_userLanguage": {
+		"message": "ភាសារបស់អ្នក"
+	},
+	"settings_option_userLanguage_desc": {
+		"message": "ភាសាដែលអត្ថបទនឹងត្រូវបានបកប្រែទៅ"
+	},
+	"settings_pageTitle": {
+		"message": "ការកំណត់"
+	},
+	"settings_section_history": {
+		"message": "ប្រវត្តិ"
+	},
+	"settings_section_popup": {
+		"message": "ផ្ទាំងបង្អួច"
+	},
+	"textTranslator_suggestLanguage": {
+		"message": "វាហាក់ដូចជាភាសាអត្ថបទគឺ <slot id=languageSuggest>$language_name$</slot>",
+		"placeholders": {
+			"language_name": {
+				"content": "$1",
+				"example": "Japanese"
+			}
+		}
+	},
+	"textTranslator_translateInputPlaceholder": {
+		"message": "បញ្ចូលអត្ថបទសម្រាប់ការបកប្រែ",
+		"description": "Request to user input some text for translation"
+	},
+	"textTranslator_translatePlaceholder": {
+		"message": "អត្ថបទបកប្រែនឹងមាននៅទីនេះ"
+	},
+	"translatorsManagerWindow_add": {
+		"message": "បន្ថែមម៉ូឌុលបកប្រែ"
+	},
+	"translatorsManagerWindow_close": {
+		"message": "បិទ"
+	},
+	"translatorsManagerWindow_emptyTranslatorsListText": {
+		"message": "មិនមានម៉ូឌុលបកប្រែផ្ទាល់ខ្លួនត្រូវបានបន្ថែមនៅឡើយទេ"
+	},
+	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
+		"message": "តើអ្នកប្រាកដថាអ្នកចង់យកម៉ូឌុលបកប្រែ \"$translator_name$\" ចេញមែនទេ?",
+		"placeholders": {
+			"translator_name": {
+				"content": "$1",
+				"example": "Google translator"
+			}
+		}
+	},
+	"translatorsManagerWindow_title": {
+		"message": "ម៉ូឌុលបកប្រែផ្ទាល់ខ្លួន"
+	},
+	"translatorsManagerWindow_translator_delete": {
+		"message": "លុប"
+	},
+	"translatorsManagerWindow_translator_edit": {
+		"message": "កែសម្រួល"
+	},
+	"ttsManagerWindow_add": {
+		"message": "បន្ថែមម៉ូឌុល TTS"
+	},
+	"ttsManagerWindow_close": {
+		"message": "បិទ"
+	},
+	"ttsManagerWindow_emptyTranslatorsListText": {
+		"message": "មិនមានម៉ូឌុល TTS ត្រូវបានបន្ថែមនៅឡើយទេ"
+	},
+	"ttsManagerWindow_message_ttsRemoveConfirmation": {
+		"message": "តើអ្នកប្រាកដថាអ្នកចង់យកម៉ូឌុល TTS \"$tts_name$\" ចេញមែនទេ?",
+		"placeholders": {
+			"tts_name": {
+				"content": "$1",
+				"example": "Google TTS"
+			}
+		}
+	},
+	"ttsManagerWindow_title": {
+		"message": "ម៉ូឌុលអត្ថបទទៅសំឡេង"
+	},
+	"ttsManagerWindow_translator_delete": {
+		"message": "លុប"
+	},
+	"ttsManagerWindow_translator_edit": {
+		"message": "កែសម្រួល"
+	},
+	"validation_number": {
+		"message": "តម្លៃត្រូវតែជាលេខ"
+	},
+	"validation_numberBetweenRange": {
+		"message": "តម្លៃត្រូវតែជាលេខរវាង $1 និង $2"
+	},
+	"validation_positiveNumber": {
+		"message": "តម្លៃត្រូវតែជាលេខវិជ្ជមាន"
+	}
+}

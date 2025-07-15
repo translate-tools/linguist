@@ -1,0 +1,623 @@
+{
+	"common_action_addToDictionary": {
+		"message": "Tsenya phetolelo mo thanolong"
+	},
+	"common_action_removeFromDictionary": {
+		"message": "Tlosa phetolelo mo thanolong"
+	},
+	"common_bgUnavailable": {
+		"message": "Skripiti sa morago ga se sepe"
+	},
+	"common_cancel": {
+		"message": "Khansela"
+	},
+	"common_close": {
+		"message": "Tswala"
+	},
+	"common_copy": {
+		"message": "Kopa"
+	},
+	"common_error": {
+		"message": "Phoso"
+	},
+	"common_offlineTranslator": {
+		"message": "$1 - Mofetoleli wa kwa ntle ga inthanete"
+	},
+	"common_retry": {
+		"message": "Lekang gape"
+	},
+	"common_translate": {
+		"message": "Fetolela"
+	},
+	"component_hotkey_placeholder": {
+		"message": "Tobetsa go rekota kgonagalo"
+	},
+	"component_hotkey_recordPlaceholder": {
+		"message": "Tobetsa dinotlolo"
+	},
+	"component_hotkey_resetButton": {
+		"message": "Seta sesha"
+	},
+	"contextMenu_disablePageTranslation": {
+		"message": "Emisa phetolelo ya tsebe"
+	},
+	"contextMenu_translatePage": {
+		"message": "Fetolela tsebe"
+	},
+	"contextMenu_translateSelectedText": {
+		"message": "Fetolela selekanyo sa mafoko"
+	},
+	"dictionaryButton_add": {
+		"message": "Tsenya mo thanolong"
+	},
+	"dictionaryButton_delete": {
+		"message": "Tlosa mo thanolong"
+	},
+	"dictionary_button_export": {
+		"message": "Romela kwa ntle"
+	},
+	"dictionary_button_removeAll": {
+		"message": "Tlosa tsotlhe"
+	},
+	"dictionary_deleteAll": {
+		"message": "A o tshepa gore o batla go tlosa DIPHETOLELO TSOTLHE mo thanolong?"
+	},
+	"dictionary_deleteConfirmation": {
+		"message": "A o tshepa gore o batla go tlosa phetolelo e?"
+	},
+	"dictionary_description": {
+		"message": "Boloka diphetolelo mo thanolong go di bona ka bonako morago"
+	},
+	"dictionary_emptyDictionary": {
+		"message": "Thanolo e se na sepe, simolola go e tlatsa ka go fetolela mafoko mangwe"
+	},
+	"dictionary_filter_from": {
+		"message": "Puo ya mafoko a a tswang"
+	},
+	"dictionary_filter_to": {
+		"message": "Puo e e yang"
+	},
+	"dictionary_message_deleteAll_success": {
+		"message": "Diphetolelo tsotlhe di tlositswe"
+	},
+	"dictionary_notFoundEntries": {
+		"message": "Ga go na diphetolelo tse di tshwanelang diphetolo tse di fitlhetsweng"
+	},
+	"dictionary_pageTitle": {
+		"message": "Thanolo"
+	},
+	"dictionary_resetFilters": {
+		"message": "Seta diphetolo sesha"
+	},
+	"dictionary_searchPlaceholder": {
+		"message": "Batla ka lentswe"
+	},
+	"editorWindow_close": {
+		"message": "Tswala"
+	},
+	"editorWindow_data_code": {
+		"message": "Khoutu"
+	},
+	"editorWindow_data_title": {
+		"message": "Leina la modula"
+	},
+	"editorWindow_message_invalidTitle": {
+		"message": "Leina la modula le tshwanetse go nna le tlhaku e le nngwe"
+	},
+	"editorWindow_save": {
+		"message": "Boloka"
+	},
+	"ext_description": {
+		"message": "Phetolelo ya tsebe ya webosaete, phetolelo ya lentswe, thanodi, hisitori, bafetoleli ba itlhophileng, tsotlhe tse o di tlhokang go tlola diphepa tsa puo"
+	},
+	"ext_name": {
+		"message": "Linguist - mofetoleli wa tsebe ya webosaete"
+	},
+	"history_control_selectEntry": {
+		"message": "Kgetha phetolelo ya tiro e kgolo",
+		"description": "Description in finite form \"to pick\" with explaining what this checkbox will do"
+	},
+	"history_controls_clearHistory": {
+		"message": "Tlosa hisitori"
+	},
+	"history_controls_deleteSelected": {
+		"message": "Tlosa diphetolelo tse di kgethilweng"
+	},
+	"history_controls_selectAll": {
+		"message": "Kgetha diphetolelo tsotlhe"
+	},
+	"history_message_clearHistoryConfirmation": {
+		"message": "A o tshepa gore o batla go tlosa hisitori? Dintlha tsotlhe di tlaa tlosiwa"
+	},
+	"history_message_deleteEntryConfirmation": {
+		"message": "A o tshepa gore o batla go tlosa ntlha e?"
+	},
+	"history_message_deleteSelectedEntriesConfirmation": {
+		"message": "A o tshepa gore o batla go tlosa dintlha tse di kgethilweng ($1)?"
+	},
+	"history_message_entriesNotFound": {
+		"message": "Ga go na diphetolelo tse di fitlhelwang tse di tshwanelang sefefo"
+	},
+	"history_message_noEntries": {
+		"message": "Hisitori e se na sepe"
+	},
+	"history_notification_disabled": {
+		"message": "Go kwala hisitori go thibetswe, jalo dintlha tse disha ga di kitla di bonala. O ka fetola seno mo <slot id=preferences>Preferences</slot>"
+	},
+	"history_pageTitle": {
+		"message": "Hisitori"
+	},
+	"history_searchPlaceholder": {
+		"message": "Batla ka lentswe"
+	},
+	"inlineTranslator_showOriginalText": {
+		"message": "Bontsha lentswe la ntlha"
+	},
+	"lang_change": {
+		"message": "Fetola puo"
+	},
+	"lang_detect": {
+		"message": "Ithute ka boitshepo"
+	},
+	"lang_select": {
+		"message": "Kgetha puo"
+	},
+	"lang_swap": {
+		"message": "Fetola dipuo"
+	},
+	"message_unknownError": {
+		"message": "Phoso e e sa itsiweng"
+	},
+	"pageTranslator_alwaysTranslateLang": {
+		"message": "Nna o fetole puo e"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disable": {
+		"message": "Thibela"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_disableForAll": {
+		"message": "Thibela mo mafelong otlhe"
+	},
+	"pageTranslator_commonPreferences_autoTranslate_enable": {
+		"message": "Thusa"
+	},
+	"pageTranslator_commonPreferences_title": {
+		"message": "Dikgetho tse tlwaelegileng tsa puo eno"
+	},
+	"pageTranslator_option_autoTranslate": {
+		"message": "Itlhalose"
+	},
+	"pageTranslator_showOriginal": {
+		"message": "Bontsha ya ntlha"
+	},
+	"pageTranslator_showTranslationPreferences": {
+		"message": "Dikgetho tsa phetolo"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_always": {
+		"message": "Nna o fetole"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_alwaysForThisLang": {
+		"message": "Nna o fetole puo eno"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_default": {
+		"message": "Dirisa melao e tlwaelegileng"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_defaultForThisLang": {
+		"message": "Dirisa melao e tlwaelegileng ya puo eno"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_never": {
+		"message": "Se fetole"
+	},
+	"pageTranslator_sitePreferences_autoTranslate_neverForThisLang": {
+		"message": "Se fetole puo eno"
+	},
+	"pageTranslator_sitePreferences_title": {
+		"message": "Dikgetho tsa"
+	},
+	"pageTranslator_translatePage": {
+		"message": "Fetolela letlhakore"
+	},
+	"pageTranslator_translationReport": {
+		"message": "Pegelo ya phetolo"
+	},
+	"pageTranslator_translationReport_queue": {
+		"message": "E emetse"
+	},
+	"pageTranslator_translationReport_reject": {
+		"message": "Diphoso"
+	},
+	"pageTranslator_translationReport_resolve": {
+		"message": "E fetotswe"
+	},
+	"popup_tabIdNotFound": {
+		"message": "Tabo \"$1\" ga e a bonwa"
+	},
+	"popup_tab_translatePage": {
+		"message": "Phetolo ya letlhakore"
+	},
+	"popup_tab_translateText": {
+		"message": "Phetolo ya mafoko"
+	},
+	"settings_button_cancel": {
+		"message": "Tlhakanya"
+	},
+	"settings_button_export": {
+		"message": "Romela kwa ntle config"
+	},
+	"settings_button_import": {
+		"message": "Tsaya config"
+	},
+	"settings_button_reset": {
+		"message": "Seta config"
+	},
+	"settings_button_saveChanges": {
+		"message": "Boloka diphetogo"
+	},
+	"settings_message_clearCache_success": {
+		"message": "Cache e tlositswe"
+	},
+	"settings_message_common_invalidValueType": {
+		"message": "Boleng bo sa siamang"
+	},
+	"settings_message_importConfig_invalidFile": {
+		"message": "Faele ya config e e filweng e phoso kgotsa e senyegile, mme e ka se dirwe"
+	},
+	"settings_message_importConfig_success": {
+		"message": "Go tsenngwa go feletse"
+	},
+	"settings_message_resetConfig_confirm": {
+		"message": "Netefatsa go seta diphetogo go ya kwa boleng jwa ntlha"
+	},
+	"settings_message_resetConfig_success": {
+		"message": "Diphetogo di setilwe"
+	},
+	"settings_message_saveChanges_success": {
+		"message": "Diphetogo di bolokilwe"
+	},
+	"settings_option_cache": {
+		"message": "Cache"
+	},
+	"settings_option_cache_clear": {
+		"message": "Tlosa cache"
+	},
+	"settings_option_cache_clear_desc": {
+		"message": "Fa o lemoga diphoso tsa phetolo kgotsa o fetolela dipuo tse di ikemetseng ka phoso fa cache e bulegile, o ka phimola data yotlhe mo cache",
+		"description": "Explanation for user about cases when it's useful to clear cache"
+	},
+	"settings_option_cache_enable": {
+		"message": "Bula cache"
+	},
+	"settings_option_cache_enable_desc": {
+		"message": "Fa cache e bulegile, dipuo tse di kileng tsa fetolelwa di tla fetolelwa ka bonako ntle le dikopo tse dingwe kwa tirelong ya phetolo"
+	},
+	"settings_option_cache_ignoreCase": {
+		"message": "Sebelisa cache e sa amegeng ke maemo"
+	},
+	"settings_option_cache_ignoreCase_desc": {
+		"message": "Fa e bulegile, diphetolo tse di bolokilweng di tla dirisiwa mo dipuong tse di nang le maemo a a farologaneng, se se ka baka diphoso mo diphetolong mo maemong a mangwe"
+	},
+	"settings_option_commonSettings": {
+		"message": "Dikgetho tse di tlwaelegileng"
+	},
+	"settings_option_customTranslatorModule": {
+		"message": "Dikgokaganyo tsa phetolo tse di ikemetseng",
+		"description": "An user defined code that implements a translation module"
+	},
+	"settings_option_customTranslatorModule_desc": {
+		"message": "O ka oketsa dikgokaganyo tsa phetolo tse di ikemetseng tse di dirisang ditirelo tsa gago tse o di ratang tsa phetolo. Ithute go le gontsi mo <slot id=docs>dikgokaganyong tsa phetolo tse di ikemetseng</slot>"
+	},
+	"settings_option_customTranslatorModule_manageButton": {
+		"message": "Tsamaisa diphetolo",
+		"description": "A button to show list of translation modules"
+	},
+	"settings_option_history_enable": {
+		"message": "Bula hisitori"
+	},
+	"settings_option_history_enable_desc": {
+		"message": "Fa e bulegile, diphetolo di tla gatisiwa mme di tla bonala mo <slot id=historyPage>letlhakoreng la hisitori</slot>"
+	},
+	"settings_option_pageTranslation": {
+		"message": "Phetolo ya letlhakore lotlhe"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent": {
+		"message": "Lemoga puo ka dikateng"
+	},
+	"settings_option_pageTranslation_detectLanguageByContent_desc": {
+		"message": "Sekaseka mafoko a a mo letlhakoreng la webu go lemoga puo ya one. Fa e sa bulege, puo e e tlhalositsweng mo <slot id=docs>metadata ya letlhakore</slot> e tla dirisiwa"
+	},
+	"settings_option_pageTranslation_enableContextMenu": {
+		"message": "Bula konokono ya menu ya maemo"
+	},
+	"settings_option_pageTranslation_enableContextMenu_desc": {
+		"message": "Oketsa konokono go fetola phetolo ya letlhakore mo menung ya maemo a letlhakore"
+	},
+	"settings_option_pageTranslation_excludeSelectors": {
+		"message": "Dikgetho tse di sa akarediweng mo phetolong"
+	},
+	"settings_option_pageTranslation_excludeSelectors_desc": {
+		"message": "Lethathamo la dikgetho tsa CSS tsa dikarolo tse di sa akarediweng mo phetolong. Kgetho nngwe le nngwe mo mothaleng o le mongwe. Fa karolo e e tshwana le nngwe ya dikgetho tse, mafoko a yone, ditshobokanyo, le dikarolo tse di tsenngwang mo go yone ga di kitla di fetolelwa"
+	},
+	"settings_option_pageTranslation_lazyTranslate": {
+		"message": "Fetolela fela dikarolo tse di bonalang"
+	},
+	"settings_option_pageTranslation_lazyTranslate_desc": {
+		"message": "Fa kgetho e e bulegile, dikarolo tse di bonalang fela di tla fetolelwa. Kgetho e e fokotsa phitlhelelo ya marang-rang"
+	},
+	"settings_option_pageTranslation_originalTextPopup": {
+		"message": "Bula popup ka mafoko a a simologileng"
+	},
+	"settings_option_pageTranslation_originalTextPopup_desc": {
+		"message": "Bontsha popup ka mafoko a a simologileng fa o le mo godimo ga diphetolo tsa mafoko"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation": {
+		"message": "Kakanyo"
+	},
+	"settings_option_pageTranslation_shortcut_toggleTranslation_desc": {
+		"message": "Kakanyo go fetola phetolo ya letlhakore\nTobetsa ESC go busetsa mafoko"
+	},
+	"settings_option_pageTranslation_translatableAttributes": {
+		"message": "Ditshobokanyo tse di fetolelwang"
+	},
+	"settings_option_pageTranslation_translatableAttributes_desc": {
+		"message": "Kenya maina a <slot id=htmlAttributes>ditshobokanyo tsa HTML</slot> tse di fetolelwang, tshobokanyo nngwe le nngwe mo mothaleng o le mongwe\nDitshobokanyo tse di mo lethathamong le fela tse di tla fetolelwang"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters": {
+		"message": "Bontsha kgatelopele ya phetolo"
+	},
+	"settings_option_popupTab_pageTranslator_showCounters_desc": {
+		"message": "Bontsha phanele ka kgatelopele ya phetolelo ya leqepheng mo popo ya katoloso"
+	},
+	"settings_option_selectTranslation": {
+		"message": "Phetolelo ya selekanyo sa selekanyo"
+	},
+	"settings_option_selectTranslation_detectTextLanguage": {
+		"message": "Lemoga puo ya selekanyo"
+	},
+	"settings_option_selectTranslation_detectTextLanguage_desc": {
+		"message": "Fa e buletswe, selekanyo sa selekanyo se tla sekasekwa go lemoga puo ya phetolelo. Fa e se jalo, puo ya leqepheng e tla dirisiwa"
+	},
+	"settings_option_selectTranslation_disableWhileTranslatePage": {
+		"message": "Tima fa o fetolela leqepheng"
+	},
+	"settings_option_selectTranslation_enable": {
+		"message": "Bula phetolelo ya selekanyo sa selekanyo"
+	},
+	"settings_option_selectTranslation_enable_desc": {
+		"message": "Fa tiriso e e buletswe, o ka kgetha selekanyo sepe mo leqepheng mme o se fetole mo popo"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton": {
+		"message": "Itlhophele konopo ya phetolelo"
+	},
+	"settings_option_selectTranslation_focusOnTranslateButton_desc": {
+		"message": "Fa konopo ya phetolelo e tlhaga mo leqepheng, e tla itlhophela ka bo yone"
+	},
+	"settings_option_selectTranslation_header_languageChoice": {
+		"message": "Dikgetho tsa puo"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang": {
+		"message": "Dumela modula ya phetolelo go lemoga puo ya selekanyo"
+	},
+	"settings_option_selectTranslation_isUseAutoForDetectLang_desc": {
+		"message": "Fa puo ya selekanyo e sa kgone go lemogwa mo lefelong mme kgetho e e buletswe, selekanyo se tla fetolelwa ka puo \"auto\" fa e tshegediwa.\nFa kgetho e tima, tsela e nngwe e tla dirisiwa go tlhoma puo ya selekanyo"
+	},
+	"settings_option_selectTranslation_mode": {
+		"message": "Tiro mo kgethong ya selekanyo"
+	},
+	"settings_option_selectTranslation_mode_item_contextMenu": {
+		"message": "Fetolela selekanyo ka menu ya kontekese"
+	},
+	"settings_option_selectTranslation_mode_item_popupButton": {
+		"message": "Bontsha konopo ya phetolelo"
+	},
+	"settings_option_selectTranslation_mode_item_quickTranslate": {
+		"message": "Fetolela selekanyo ka bonako"
+	},
+	"settings_option_selectTranslation_modifiers": {
+		"message": "Dikgokaganyi"
+	},
+	"settings_option_selectTranslation_modifiers_desc": {
+		"message": "Kgetha dinotlolo tse di tshwanetseng go tobetswa mo konopong ya borai go bontsha phetolelo"
+	},
+	"settings_option_selectTranslation_modifiers_key_alt": {
+		"message": "alt"
+	},
+	"settings_option_selectTranslation_modifiers_key_ctrl": {
+		"message": "ctrl"
+	},
+	"settings_option_selectTranslation_modifiers_key_meta": {
+		"message": "meta"
+	},
+	"settings_option_selectTranslation_modifiers_key_shift": {
+		"message": "shift"
+	},
+	"settings_option_selectTranslation_rememberDirection": {
+		"message": "Gakologelwa puo ya selekanyo e e kgethilweng bosheng"
+	},
+	"settings_option_selectTranslation_showOnceForSelection": {
+		"message": "Bontsha konopo ya phetolelo gangwe fela ka kgetho ya selekanyo"
+	},
+	"settings_option_selectTranslation_showOnceForSelection_desc": {
+		"message": "Konopo e tla tlhaga gangwe fela ka kgetho nngwe le nngwe ya selekanyo Go e bontsha gape, kgetha selekanyo gape"
+	},
+	"settings_option_selectTranslation_showOriginalText": {
+		"message": "Bontsha selekanyo sa ntlha"
+	},
+	"settings_option_selectTranslation_showOriginalText_desc": {
+		"message": "Oketsa boloko ka selekanyo sa ntlha mo popo ya phetolelo"
+	},
+	"settings_option_selectTranslation_strictSelection": {
+		"message": "Mokgwa o o thata wa kgetho ya selekanyo sa selekanyo",
+		"description": "This option is about selecting text via mouse"
+	},
+	"settings_option_selectTranslation_strictSelection_desc": {
+		"message": "Tlogela kgetho ya selekanyo sa selekanyo fa konopo ya legare e gololwa kwa ntle ga boloko jo bo nang le selekanyo se se kgethilweng"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton": {
+		"message": "Tieo pele ga go fitlha konopo ya popo"
+	},
+	"settings_option_selectTranslation_timeoutForHideButton_desc": {
+		"message": "Tieo ka metsotswana pele ga go fitlha konopo fa motswedi o sa e tsamaela. Go tsamaya ka konopo go seta nako sesha. Go tima go fitlha ka boitshepo, seta boleng go le kwa tlase ga 1"
+	},
+	"settings_option_selectTranslation_zIndex": {
+		"message": "z-index"
+	},
+	"settings_option_selectTranslation_zIndex_desc": {
+		"message": "Oketsa boleng jono fa dikarolo tse dingwe mo ditlhageng di fitlha popup ka mafoko a a ranotsweng"
+	},
+	"settings_option_textTranslator": {
+		"message": "Phetolelo ya mafoko"
+	},
+	"settings_option_textTranslator_rememberText": {
+		"message": "Go gopola mafoko a a ranotsweng"
+	},
+	"settings_option_textTranslator_rememberText_desc": {
+		"message": "Go gopola mafoko a a ranotsweng nako e e latelang fa fensetere e bula"
+	},
+	"settings_option_textTranslator_spellCheck": {
+		"message": "Tshwaraganya tlhahlobo ya mopeleto"
+	},
+	"settings_option_textTranslator_suggestLanguage": {
+		"message": "Go bontsha puo e e lemogilweng ya mafoko"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways": {
+		"message": "Nna o lemoge le go tshitshinya puo ka metlha"
+	},
+	"settings_option_textTranslator_suggestLanguageAlways_desc": {
+		"message": "Fa e tima, ditshitshinyo tsa puo di tlaa bonala fela fa puo ya motswedi e setilwe go \"auto\""
+	},
+	"settings_option_translatePreferences": {
+		"message": "Dikgetho tsa phetolelo"
+	},
+	"settings_option_translateScheduler": {
+		"message": "Mokgweetsi wa phetolelo"
+	},
+	"settings_option_translateScheduler_delay": {
+		"message": "Tieo ya go phuthela mafoko"
+	},
+	"settings_option_translateScheduler_delay_desc": {
+		"message": "Mokgweetsi wa phetolelo o fokotsa palo ya dikopo go API ya tirelo ya phetolelo ka go phuthela mafoko a mantsi ka moo go ka kgonegang go a romela ka kopo e le nngwe. Mokgweetsi o tlaa emela nako e e kgethilweng ka metsotswana go phuthela mafoko a mantsi pele ga go simolola phetolelo"
+	},
+	"settings_option_translateScheduler_retryLimit": {
+		"message": "Molaetsa wa melelwane ya maiteko a go leka go ranola gape"
+	},
+	"settings_option_translateScheduler_retryLimit_desc": {
+		"message": "Mokgweetsi o tlaa leka go ranola mafoko gape fa diphoso tsa phetolelo di direga. Kgetho eno e seta melelwane ya maiteko a go leka gape. Seta palo e e sa siamang go letlelela maiteko a a se nang melelwane"
+	},
+	"settings_option_translatorModule": {
+		"message": "Mokgwa wa phetolelo"
+	},
+	"settings_option_translatorModule_desc": {
+		"message": "Boleng jwa diphetolelo le dipuo tse di leng teng di ikaegile ka mokgwa wa phetolelo"
+	},
+	"settings_option_tts": {
+		"message": "Phetolelo ya mafoko go go bua (TTS)"
+	},
+	"settings_option_ttsCustomModules": {
+		"message": "Dikgwebo tsa go bopa puo tse di kgethegileng"
+	},
+	"settings_option_ttsCustomModules_button": {
+		"message": "Go tsamaisa dikgwebo tsa go bopa puo"
+	},
+	"settings_option_ttsCustomModules_desc": {
+		"message": "O ka oketsa dikgwebo tsa go bopa puo tse di dirisang ditirelo tse o di ratang le mechine ya mantswe. Bala go feta mo <slot id=docs>dikgatisong tsa TTS tse di kgethegileng</slot>"
+	},
+	"settings_option_ttsModule": {
+		"message": "Mokgwa wa TTS o o kgethilweng"
+	},
+	"settings_option_ttsModule_desc": {
+		"message": "Enjine ya mantswe e e dirisiwang go bua mafoko"
+	},
+	"settings_option_userLanguage": {
+		"message": "Puo ya gago"
+	},
+	"settings_option_userLanguage_desc": {
+		"message": "Puo e mafoko a tlaa ranolwang mo go yone"
+	},
+	"settings_pageTitle": {
+		"message": "Dikgetho"
+	},
+	"settings_section_history": {
+		"message": "Hisitori"
+	},
+	"settings_section_popup": {
+		"message": "Popup"
+	},
+	"textTranslator_suggestLanguage": {
+		"message": "Go bonala puo ya mafoko ke <slot id=languageSuggest>$language_name$</slot>",
+		"placeholders": {
+			"language_name": {
+				"content": "$1",
+				"example": "Japanese"
+			}
+		}
+	},
+	"textTranslator_translateInputPlaceholder": {
+		"message": "Tsena mo go kwalang mafoko a a fetolelwang",
+		"description": "Request to user input some text for translation"
+	},
+	"textTranslator_translatePlaceholder": {
+		"message": "Mafoko a a fetotsweng a tlaa nna fano"
+	},
+	"translatorsManagerWindow_add": {
+		"message": "Tsenya setlhopha sa phetolo"
+	},
+	"translatorsManagerWindow_close": {
+		"message": "Tswala"
+	},
+	"translatorsManagerWindow_emptyTranslatorsListText": {
+		"message": "Ga go na ditlhopha tsa phetolo tse di kgethegileng tse di tsentsweng"
+	},
+	"translatorsManagerWindow_message_translatorRemovingConfirmation": {
+		"message": "A o tshepa gore o batla go tlosa setlhopha sa phetolo \"$translator_name$\"?",
+		"placeholders": {
+			"translator_name": {
+				"content": "$1",
+				"example": "Google translator"
+			}
+		}
+	},
+	"translatorsManagerWindow_title": {
+		"message": "Ditlhopha tsa phetolo tse di kgethegileng"
+	},
+	"translatorsManagerWindow_translator_delete": {
+		"message": "Tlosa"
+	},
+	"translatorsManagerWindow_translator_edit": {
+		"message": "Fetola"
+	},
+	"ttsManagerWindow_add": {
+		"message": "Tsenya setlhopha sa TTS"
+	},
+	"ttsManagerWindow_close": {
+		"message": "Tswala"
+	},
+	"ttsManagerWindow_emptyTranslatorsListText": {
+		"message": "Ga go na ditlhopha tsa TTS tse di tsentsweng"
+	},
+	"ttsManagerWindow_message_ttsRemoveConfirmation": {
+		"message": "A o tshepa gore o batla go tlosa setlhopha sa TTS \"$tts_name$\"?",
+		"placeholders": {
+			"tts_name": {
+				"content": "$1",
+				"example": "Google TTS"
+			}
+		}
+	},
+	"ttsManagerWindow_title": {
+		"message": "Ditlhopha tsa Puo-ka-Mantsoe"
+	},
+	"ttsManagerWindow_translator_delete": {
+		"message": "Tlosa"
+	},
+	"ttsManagerWindow_translator_edit": {
+		"message": "Fetola"
+	},
+	"validation_number": {
+		"message": "Boleng bo tshwanetse go nna palo"
+	},
+	"validation_numberBetweenRange": {
+		"message": "Boleng bo tshwanetse go nna palo fa gare ga $1 le $2"
+	},
+	"validation_positiveNumber": {
+		"message": "Boleng bo tshwanetse go nna palo e e siameng"
+	}
+}
