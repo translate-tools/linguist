@@ -1,4 +1,4 @@
-import * as IDB from 'idb/with-async-ittr';
+import * as IDB from 'idb';
 
 export type SerializedSpeaker = {
 	name: string;

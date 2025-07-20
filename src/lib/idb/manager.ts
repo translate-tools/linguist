@@ -1,4 +1,4 @@
-import * as IDB from 'idb/with-async-ittr';
+import * as IDB from 'idb';
 
 /**
  * Object contains constructor for exact IDB version
