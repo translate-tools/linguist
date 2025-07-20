@@ -1,4 +1,4 @@
-import { TTSProviderProps, TTSProviderStaticProps } from '@translate-tools/core/tts';
+import { TTSProviderProps, TTSProviderStaticProps } from 'anylang/tts';
 
 import { TTSManager } from './TTSManager';
 

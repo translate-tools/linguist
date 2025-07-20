@@ -1,6 +1,5 @@
+import { isLanguageCodeISO639v1 } from 'anylang/languages';
 import { TypeOf } from 'io-ts';
-import { isLanguageCodeISO639v1 } from '@translate-tools/core/languages';
-import { langCode, langCodeWithAuto } from '@translate-tools/core/translators/Translator';
 
 import { StringLiteralType, type } from '../lib/types';
 
@@ -15,28 +14,24 @@ export const ArrayOfStrings = new type.Type<string[], string[], unknown>(
 	type.identity,
 );
 
-export const LangCode = new type.Type<langCode, langCode, unknown>(
+export const LangCode = new type.Type<string, string, unknown>(
 	'LangCode',
-	(input: unknown): input is langCode =>
+	(input: unknown): input is string =>
 		typeof input === 'string' && isLanguageCodeISO639v1(input),
 	(input, context) =>
 		typeof input === 'string' && isLanguageCodeISO639v1(input)
-			? type.success(input as langCode)
+			? type.success(input as string)
 			: type.failure(input, context),
 	type.identity,
 );
 
-export const LangCodeWithAuto = new type.Type<
-	langCodeWithAuto,
-	langCodeWithAuto,
-	unknown
->(
+export const LangCodeWithAuto = new type.Type<string, string, unknown>(
 	'LangCodeWithAuto',
-	(input: unknown): input is langCodeWithAuto =>
+	(input: unknown): input is string =>
 		input === 'auto' || (typeof input === 'string' && isLanguageCodeISO639v1(input)),
 	(input, context) =>
 		input === 'auto' || (typeof input === 'string' && isLanguageCodeISO639v1(input))
-			? type.success(input as langCodeWithAuto)
+			? type.success(input as string)
 			: type.failure(input, context),
 	type.identity,
 );

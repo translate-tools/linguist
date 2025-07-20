@@ -1,4 +1,4 @@
-import { TranslatorConstructor } from '@translate-tools/core/translators/Translator';
+import { TranslatorConstructor } from 'anylang/translators';
 
 import { embeddedTranslators, TranslatorsMap } from '../../../app/Background';
 import { getCustomTranslatorClass } from '../../../lib/translators/customTranslators/utils';

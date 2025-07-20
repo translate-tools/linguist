@@ -1,5 +1,5 @@
+import { TranslatorInstanceMembers } from 'anylang/translators';
 import { AsyncMethodReturns, connectToParent } from 'penpal';
-import { TranslatorInstanceMembers } from '@translate-tools/core/translators/Translator';
 
 import { loadTranslator } from '../../lib/translators/customTranslators/loadTranslator';
 import { CustomTranslatorsParentFrameApi } from '../../requests/offscreen/customTranslators/types';

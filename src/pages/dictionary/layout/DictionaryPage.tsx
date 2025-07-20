@@ -1,8 +1,8 @@
 import React, { FC, useCallback, useEffect, useMemo, useState } from 'react';
 import { useImmutableCallback } from 'react-elegant-ui/esm/hooks/useImmutableCallback';
+import { getLanguageCodesISO639 } from 'anylang/languages';
 import Papa from 'papaparse';
 import { cn } from '@bem-react/classname';
-import { getLanguageCodesISO639 } from '@translate-tools/core/languages';
 
 import { LayoutFlow } from '../../../components/layouts/LayoutFlow/LayoutFlow';
 import { Page } from '../../../components/layouts/Page/Page';

@@ -1,4 +1,4 @@
-import { getLanguageCodesISO639 } from '@translate-tools/core/languages';
+import { getLanguageCodesISO639 } from 'anylang/languages';
 
 import {
 	buildLink,

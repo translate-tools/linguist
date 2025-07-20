@@ -1,6 +1,4 @@
-import { TTSProvider } from '@translate-tools/core/tts';
-import { GoogleTTS } from '@translate-tools/core/tts/GoogleTTS';
-import { LingvaTTS } from '@translate-tools/core/tts/LingvaTTS';
+import { GoogleTTS, LingvaTTS, TTSProvider } from 'anylang/tts';
 
 import { SerializedSpeaker, TTSKey, TTSStorage } from '../TTSStorage';
 import { tryLoadTTSCode } from './ttsLoader';

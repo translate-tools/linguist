@@ -1,4 +1,4 @@
-import { TranslatorConstructor } from '@translate-tools/core/translators/Translator';
+import { TranslatorConstructor } from 'anylang/translators';
 
 export const loadTranslator = (code: string) => {
 	const translatorClass = eval(code);

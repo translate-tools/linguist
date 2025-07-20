@@ -1,8 +1,10 @@
-import { isEqual } from 'lodash';
 // Translators
-import { GoogleTranslator } from '@translate-tools/core/translators/GoogleTranslator';
-import { TranslatorConstructor } from '@translate-tools/core/translators/Translator';
-import { YandexTranslator } from '@translate-tools/core/translators/YandexTranslator';
+import {
+	GoogleTranslator,
+	TranslatorConstructor,
+	YandexTranslator,
+} from 'anylang/translators';
+import { isEqual } from 'lodash';
 
 import { createSelector } from '../../lib/effector/createSelector';
 import { BergamotTranslator } from '../../lib/translators/bergamot/BergamotTranslator';

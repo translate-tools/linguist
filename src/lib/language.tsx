@@ -1,6 +1,6 @@
 import React, { ComponentType, FC, ReactNode } from 'react';
+import { isLanguageCodeISO639v1 } from 'anylang/languages';
 import browser from 'webextension-polyfill';
-import { isLanguageCodeISO639v1 } from '@translate-tools/core/languages';
 
 import { isMobileBrowser } from './browser';
 import { capitalizeString } from './utils';

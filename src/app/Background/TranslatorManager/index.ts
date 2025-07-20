@@ -1,9 +1,5 @@
-import { isLanguageCodeISO639v1 } from '@translate-tools/core/languages';
-import {
-	IScheduler,
-	Scheduler,
-	SchedulerWithCache,
-} from '@translate-tools/core/scheduling';
+import { isLanguageCodeISO639v1 } from 'anylang/languages';
+import { IScheduler, Scheduler, SchedulerWithCache } from 'anylang/scheduling';
 
 import { AppConfigType } from '../../../types/runtime';
 import { RecordValues } from '../../../types/utils';
