@@ -1,6 +1,7 @@
 // Translators
 import {
 	GoogleTranslator,
+	MicrosoftTranslator,
 	TranslatorConstructor,
 	YandexTranslator,
 } from 'anylang/translators';
@@ -21,6 +22,7 @@ import { TTSController } from './TTS/TTSController';
 import { TTSManager } from './TTS/TTSManager';
 
 export const embeddedTranslators = {
+	MicrosoftTranslator,
 	GoogleTranslator,
 	YandexTranslator,
 	BergamotTranslator,
