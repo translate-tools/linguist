@@ -115,7 +115,7 @@ exports[`config migrations > migrate config v0 to latest version 1`] = `
     "suggestLanguage": true,
     "suggestLanguageAlways": true,
   },
-  "translatorModule": "GoogleTranslator",
+  "translatorModule": "MicrosoftTranslator",
   "ttsModule": "google",
 }
 `;
@@ -235,7 +235,7 @@ exports[`config migrations > race condition detection > Detection race condition
     "suggestLanguage": true,
     "suggestLanguageAlways": true,
   },
-  "translatorModule": "GoogleTranslator",
+  "translatorModule": "MicrosoftTranslator",
   "ttsModule": "google",
 }
 `;
@@ -355,7 +355,7 @@ exports[`config migrations > race condition detection > Detection race condition
     "suggestLanguage": true,
     "suggestLanguageAlways": true,
   },
-  "translatorModule": "GoogleTranslator",
+  "translatorModule": "MicrosoftTranslator",
   "ttsModule": "google",
 }
 `;
@@ -475,7 +475,7 @@ exports[`config migrations > race condition detection > Detection race condition
     "suggestLanguage": true,
     "suggestLanguageAlways": true,
   },
-  "translatorModule": "GoogleTranslator",
+  "translatorModule": "MicrosoftTranslator",
   "ttsModule": "google",
 }
 `;
@@ -595,7 +595,7 @@ exports[`config migrations > race condition detection > Detection race condition
     "suggestLanguage": true,
     "suggestLanguageAlways": true,
   },
-  "translatorModule": "GoogleTranslator",
+  "translatorModule": "MicrosoftTranslator",
   "ttsModule": "google",
 }
 `;
@@ -715,7 +715,7 @@ exports[`config migrations > race condition detection > Detection race condition
     "suggestLanguage": true,
     "suggestLanguageAlways": true,
   },
-  "translatorModule": "GoogleTranslator",
+  "translatorModule": "MicrosoftTranslator",
   "ttsModule": "google",
 }
 `;
