@@ -168,41 +168,22 @@ export default tseslint.config(
 			],
 
 			// TODO: remove style comments that may have conflicts with prettier
-			// Style
-			'function-call-argument-newline': ['error', 'consistent'],
-			'no-var': 'error',
-			'no-bitwise': 'error',
+			// Formatting
 			'no-multi-spaces': 'error',
 			'no-multiple-empty-lines': 'error',
-			'space-in-parens': 'error',
 			semi: 'error',
-			'prefer-const': 'error',
-			'no-use-before-define': 'off',
 			camelcase: [
 				'error',
 				{
 					allow: ['^UNSAFE_', '^UNSTABLE_'],
 				},
 			],
-			'arrow-parens': ['error', 'always'],
-			'operator-linebreak': [
-				'error',
-				'after',
-				{
-					overrides: {
-						'?': 'before',
-						':': 'before',
-					},
-				},
-			],
-			'space-before-function-paren': [
-				'error',
-				{
-					asyncArrow: 'always',
-					anonymous: 'never',
-					named: 'never',
-				},
-			],
+
+			// Behavior
+			'no-var': 'error',
+			'prefer-const': 'error',
+			'no-bitwise': 'error',
+			'no-use-before-define': 'error',
 		},
 	},
 
