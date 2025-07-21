@@ -21,7 +21,9 @@ export function addRequestHandler(action: string, handler: RequestHandler) {
 	browser.runtime.onMessage.addListener(wrapper);
 
 	// Return cleanup hook
-	const cleanup = () => browser.runtime.onMessage.removeListener(wrapper);
+	const cleanup = () => {
+		browser.runtime.onMessage.removeListener(wrapper);
+	};
 	return cleanup;
 }
 

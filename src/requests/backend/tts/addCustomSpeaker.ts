@@ -6,9 +6,9 @@ export const [addCustomSpeakerFactory, addCustomSpeaker] = buildBackendRequest(
 	{
 		factoryHandler:
 			({ backgroundContext }) =>
-				async (speaker: SerializedSpeaker) => {
-					const ttsManager = backgroundContext.getTTSManager();
-					return ttsManager.add(speaker);
-				},
+			async (speaker: SerializedSpeaker) => {
+				const ttsManager = backgroundContext.getTTSManager();
+				return ttsManager.add(speaker);
+			},
 	},
 );

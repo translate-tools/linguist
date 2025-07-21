@@ -6,13 +6,13 @@
 }
 
 .Loader-Image {
-	animation-name: Loader-Spin;
+	animation-name: loader-spin;
 	animation-duration: 0.8s;
 	animation-iteration-count: infinite;
 	animation-timing-function: linear;
 }
 
-@keyframes Loader-Spin {
+@keyframes loader-spin {
 	from {
 		transform: rotate(0deg);
 	}

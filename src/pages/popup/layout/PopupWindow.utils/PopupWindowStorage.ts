@@ -39,7 +39,7 @@ export class PopupWindowStorage {
 		activeTab: {},
 	};
 
-	private getData = async () => {
+	private readonly getData = async () => {
 		const storeName = this.storeName;
 		const { [storeName]: tabData } = await browser.storage.local.get(storeName);
 
@@ -48,7 +48,7 @@ export class PopupWindowStorage {
 		return struct.errors ? this.defaultData : struct.data;
 	};
 
-	private setData = async (data: StorageType) => {
+	private readonly setData = async (data: StorageType) => {
 		const struct = decodeStruct(storageStruct, data);
 
 		if (struct.errors !== null) return;
@@ -57,7 +57,7 @@ export class PopupWindowStorage {
 		await browser.storage.local.set({ [storeName]: data });
 	};
 
-	private updateData = async (data: Partial<StorageType>) => {
+	private readonly updateData = async (data: Partial<StorageType>) => {
 		const actualData = await this.getData();
 		const mergedData = Object.assign(actualData, data);
 

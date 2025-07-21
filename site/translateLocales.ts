@@ -50,8 +50,8 @@ const localesDirectories = ['./src/components/Landing/locales'];
 		const cacheFilename = path.resolve('./.locales-cache.json');
 		const translationCache = existsSync(cacheFilename)
 			? await readFile(cacheFilename).then((buffer) =>
-				JSON.parse(buffer.toString()),
-			  )
+					JSON.parse(buffer.toString()),
+				)
 			: {};
 
 		const sourceDataHash = crypto

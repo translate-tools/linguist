@@ -2,7 +2,7 @@
 	max-width: 600px;
 }
 
-@media (min-width: 600px) {
+@media (width >= 600px) {
 	.TranslatorsManager {
 		min-width: 400px;
 	}

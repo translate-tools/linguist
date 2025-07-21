@@ -176,7 +176,7 @@ export class App {
 			});
 	}
 
-	private onInstalled = async (details: OnInstalledData) => {
+	private readonly onInstalled = async (details: OnInstalledData) => {
 		if (details === null) return;
 
 		// Inject content scripts for chrome, to make page translation available just after install

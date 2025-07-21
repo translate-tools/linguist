@@ -3,7 +3,7 @@ import { TTSProviderProps, TTSProviderStaticProps } from 'anylang/tts';
 import { TTSManager } from './TTSManager';
 
 export class TTSController {
-	private ttsManager;
+	private readonly ttsManager;
 	private speakerId;
 	constructor(ttsManager: TTSManager, speakerId: string) {
 		this.ttsManager = ttsManager;

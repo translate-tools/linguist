@@ -21,7 +21,7 @@ const isLightText = (theme: FirefoxTheme) => {
  * Class to explore firefox theme
  */
 export class FirefoxThemeInfo implements ThemeInfo {
-	private handlers;
+	private readonly handlers;
 	constructor() {
 		this.handlers = new Set<ThemeChangeHandler>();
 	}
@@ -34,7 +34,7 @@ export class FirefoxThemeInfo implements ThemeInfo {
 		this.handlers.delete(handler);
 	}
 
-	private observer = ({ theme }: any) => {
+	private readonly observer = ({ theme }: any) => {
 		const isLightTheme = this.isLightThemePredicate(theme);
 
 		this.handlers.forEach((handler) => {
@@ -42,7 +42,7 @@ export class FirefoxThemeInfo implements ThemeInfo {
 		});
 	};
 
-	private isLightThemePredicate = (theme: any) => {
+	private readonly isLightThemePredicate = (theme: any) => {
 		const isLightThemeText = isLightText(theme);
 		const isLightTheme = !isLightThemeText;
 		return isLightTheme;

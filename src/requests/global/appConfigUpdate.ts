@@ -13,13 +13,13 @@ export const sendAppConfigUpdateEvent = (config: AppConfigType) => {
 		// Ignore errors
 		.catch(() => {});
 
-	getAllTabs().then((tabs) =>
+	getAllTabs().then((tabs) => {
 		tabs.forEach((tab) =>
 			sendTabRequest(tab.id, appConfigUpdateEventName, config)
 				// Ignore errors
 				.catch(() => {}),
-		),
-	);
+		);
+	});
 };
 
 /**

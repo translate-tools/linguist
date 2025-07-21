@@ -23,11 +23,13 @@ export class XMutationObserver {
 	private callHandlers(eventName: EventName, params: CallbackData) {
 		const handlers = this.handlers.get(eventName);
 		if (handlers !== undefined) {
-			handlers.forEach((fn: Callback) => fn(params));
+			handlers.forEach((fn: Callback) => {
+				fn(params);
+			});
 		}
 	}
 
-	private observerHandler = (mutations: MutationRecord[]) => {
+	private readonly observerHandler = (mutations: MutationRecord[]) => {
 		const nodeCounters = new Map<Node, NodeCounters>();
 
 		mutations.forEach((mutation) => {

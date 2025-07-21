@@ -7,7 +7,7 @@ import { FirefoxThemeInfo } from './FirefoxThemeInfo';
  * WARNING: it's can't explore chromium theme
  */
 export const getBrowserThemeInfo = () => {
-	if (navigator.userAgent.indexOf('Firefox') !== -1) {
+	if (navigator.userAgent.includes('Firefox')) {
 		return FirefoxThemeInfo;
 	}
 

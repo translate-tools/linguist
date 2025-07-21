@@ -16,7 +16,7 @@ function observeScrollfix() {
 	const indentB = `${className}__indent-bottom`;
 
 	// Run only in firefox
-	if (navigator.userAgent.indexOf('Firefox') === -1) return;
+	if (!navigator.userAgent.includes('Firefox')) return;
 
 	// Dependencies
 	const store = new Set<Element>();
@@ -81,14 +81,14 @@ function observeScrollfix() {
 	mutationObserver.addHandler('elementAdded', (evt) => {
 		const elm = evt.target;
 		if (elm instanceof Element) {
-			if (!elm.classList || !elm.classList.contains(className)) return;
+			if (!elm.classList?.contains(className)) return;
 			addHandler(elm);
 		}
 	});
 	mutationObserver.addHandler('elementRemoved', (evt) => {
 		const elm = evt.target;
 		if (elm instanceof Element) {
-			if (!elm.classList || !elm.classList.contains(className)) return;
+			if (!elm.classList?.contains(className)) return;
 			rmHandler(elm);
 		}
 	});
@@ -96,7 +96,7 @@ function observeScrollfix() {
 		const elm = evt.target;
 		if (elm instanceof Element) {
 			if (!store.has(elm)) return;
-			if (!elm.classList || !elm.classList.contains(className)) rmHandler(elm);
+			if (!elm.classList?.contains(className)) rmHandler(elm);
 		}
 	});
 	mutationObserver.observe(document.body);

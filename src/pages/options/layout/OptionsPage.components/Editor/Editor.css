@@ -13,7 +13,7 @@
 	min-height: 300px;
 }
 
-@media (max-width: 950px) {
+@media (width <= 950px) {
 	.Editor-Container {
 		width: 95vw;
 	}

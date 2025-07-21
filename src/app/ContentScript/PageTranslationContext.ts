@@ -34,17 +34,17 @@ export class PageTranslationContext {
 		updatePageTranslationState: createEvent<PageTranslationOptions | null>(),
 	};
 
-	private $config: Store<AppConfigType>;
+	private readonly $config: Store<AppConfigType>;
 
 	/**
 	 * Collected data about page
 	 */
-	private $pageData: Store<PageData>;
+	private readonly $pageData: Store<PageData>;
 
 	/**
 	 * The translators state source of truth
 	 */
-	private $translatorsState: Store<TranslatorsState>;
+	private readonly $translatorsState: Store<TranslatorsState>;
 
 	constructor($config: Store<AppConfigType>) {
 		this.$config = $config;
@@ -98,13 +98,13 @@ export class PageTranslationContext {
 			.watch(textTranslatorStateChanged);
 	}
 
-	private controllers: {
+	private readonly controllers: {
 		pageTranslator: PageTranslatorController | null;
 		selectTranslator: SelectTranslatorController | null;
 	} = {
-			pageTranslator: null,
-			selectTranslator: null,
-		};
+		pageTranslator: null,
+		selectTranslator: null,
+	};
 
 	public getDOMTranslator() {
 		return this.controllers.pageTranslator;
@@ -233,7 +233,7 @@ export class PageTranslationContext {
 			});
 	}
 
-	private initTranslation = async ({
+	private readonly initTranslation = async ({
 		config,
 		translatorsState,
 		pageData,

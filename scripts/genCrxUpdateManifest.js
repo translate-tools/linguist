@@ -1,3 +1,4 @@
+/* eslint-disable @cspell/spellchecker */
 const { version } = require(__dirname + '/../package.json');
 
 const appid = 'bjbijcdiadijepllfddlcbehcdhcfhkh';

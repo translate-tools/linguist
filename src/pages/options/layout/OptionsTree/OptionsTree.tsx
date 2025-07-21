@@ -108,9 +108,9 @@ export const OptionsTree: FC<OptionsTreeProps> = ({
 					return (
 						<Checkbox
 							checked={checked}
-							setChecked={(checked) =>
-								setOptionValueProxy(path, reverse != checked)
-							}
+							setChecked={(checked) => {
+								setOptionValueProxy(path, reverse != checked);
+							}}
 							label={option.text}
 						/>
 					);
@@ -146,7 +146,7 @@ export const OptionsTree: FC<OptionsTreeProps> = ({
 									<Checkbox
 										key={index}
 										checked={checked}
-										setChecked={(checked) =>
+										setChecked={(checked) => {
 											setOptionValueProxy(
 												path,
 												value
@@ -157,8 +157,8 @@ export const OptionsTree: FC<OptionsTreeProps> = ({
 															? [optionName]
 															: [],
 													),
-											)
-										}
+											);
+										}}
 										label={checkbox.text}
 									/>
 								);
@@ -214,7 +214,9 @@ export const OptionsTree: FC<OptionsTreeProps> = ({
 						<Select
 							options={option.options}
 							value={value}
-							setValue={(newValue) => setOptionValueProxy(path, newValue)}
+							setValue={(newValue) => {
+								setOptionValueProxy(path, newValue);
+							}}
 						/>
 					);
 			}

@@ -6,7 +6,7 @@ import { getMessage } from '../../lib/language';
 import { translateSelectedText } from '../../requests/contentscript/translateSelectedText';
 
 export class TranslateSelectionContextMenu {
-	private menuId = 'translateText';
+	private readonly menuId = 'translateText';
 	private isEnabled = false;
 
 	public enable() {
@@ -29,7 +29,7 @@ export class TranslateSelectionContextMenu {
 		browser.contextMenus.remove(this.menuId);
 	}
 
-	private onClicked = (info: Menus.OnClickData, tab: Tabs.Tab | undefined) => {
+	private readonly onClicked = (info: Menus.OnClickData, tab: Tabs.Tab | undefined) => {
 		if (info.menuItemId !== this.menuId || !tab || !isValidBrowserTabId(tab.id))
 			return;
 

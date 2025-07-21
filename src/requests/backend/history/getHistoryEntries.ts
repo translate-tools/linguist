@@ -12,6 +12,6 @@ export const [getTranslationHistoryEntriesFactory, getTranslationHistoryEntries]
 		responseValidator: type.array(TranslationHistoryEntryWithKeyType),
 		factoryHandler:
 			() =>
-				(options: TranslationHistoryFetcherOptions = {}) =>
-					getEntries(options),
+			(options: TranslationHistoryFetcherOptions = {}) =>
+				getEntries(options),
 	});

@@ -174,7 +174,7 @@ export const TextTranslator: FC<TextTranslatorComponentProps> = ({
 					const isValidLang = (lang: any): lang is string => {
 						if (typeof lang !== 'string') return false;
 
-						if (supportedLanguages.indexOf(lang) !== -1) return true;
+						if (supportedLanguages.includes(lang)) return true;
 						// TODO: rename `isSupportAutodetect` to `isSupportAutoDetect`
 						if (lang === 'auto' && isSupportAutodetect) return true;
 
@@ -320,8 +320,8 @@ export const TextTranslator: FC<TextTranslatorComponentProps> = ({
 				isMobile
 					? cnTextTranslator('MobileHead')
 					: cnTextTranslator('Container', {
-						direction: 'right',
-					  })
+							direction: 'right',
+						})
 			}
 		>
 			<Button
@@ -350,8 +350,8 @@ export const TextTranslator: FC<TextTranslatorComponentProps> = ({
 						className={
 							!isMobile
 								? cnTextTranslator('Container', {
-									direction: 'left',
-								  })
+										direction: 'left',
+									})
 								: undefined
 						}
 					>

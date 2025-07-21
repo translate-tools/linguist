@@ -74,10 +74,7 @@ export function getLanguageNameByCode(
 	langCode: string,
 	encodeNotFoundToString: false,
 ): string | null;
-export function getLanguageNameByCode(
-	langCode: string,
-	encodeNotFoundToString: boolean = true,
-) {
+export function getLanguageNameByCode(langCode: string, encodeNotFoundToString = true) {
 	if (langCode === 'auto') {
 		return encodeNotFoundToString
 			? getMessage('lang_detect')
@@ -117,9 +114,8 @@ export const isValidLanguage = (language: string) => isLanguageCodeISO639v1(lang
 
 export const buildLink =
 	(url: string): FC =>
-		({ children }) =>
-			(
-				<a href={url} target="_blank" rel="noopener">
-					{children}
-				</a>
-			);
+	({ children }) => (
+		<a href={url} target="_blank" rel="noopener noreferrer">
+			{children}
+		</a>
+	);

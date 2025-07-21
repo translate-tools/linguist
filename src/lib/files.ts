@@ -48,6 +48,8 @@ export const readAsText = (blob: Blob) =>
 			}
 			res(fr.result);
 		};
-		fr.onerror = () => rej(fr.error);
+		fr.onerror = () => {
+			rej(fr.error);
+		};
 		fr.readAsText(blob);
 	});

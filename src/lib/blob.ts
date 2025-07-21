@@ -6,7 +6,7 @@ export const blobToBase64 = (blob: Blob) => {
 		const reader = new FileReader();
 		reader.onloadend = () => {
 			if (typeof reader.result === 'string') {
-				resolve(reader.result as string);
+				resolve(reader.result);
 			} else {
 				throw new TypeError('Unexpected type of result');
 			}

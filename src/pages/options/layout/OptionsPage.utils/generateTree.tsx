@@ -69,19 +69,19 @@ export const generateTree = ({
 				Object.keys(translatorModules).length === 0
 					? undefined
 					: {
-						title: getMessage('settings_option_translatorModule'),
-						description: getMessage(
-							'settings_option_translatorModule_desc',
-						),
-						path: 'translatorModule',
-						optionContent: {
-							type: 'SelectList',
-							options: Object.keys(translatorModules).map((value) => ({
-								id: value,
-								content: translatorModules[value],
-							})),
+							title: getMessage('settings_option_translatorModule'),
+							description: getMessage(
+								'settings_option_translatorModule_desc',
+							),
+							path: 'translatorModule',
+							optionContent: {
+								type: 'SelectList',
+								options: Object.keys(translatorModules).map((value) => ({
+									id: value,
+									content: translatorModules[value],
+								})),
+							},
 						},
-					  },
 				{
 					title: getMessage('settings_option_customTranslatorModule'),
 					description: getLocalizedNode({
@@ -165,17 +165,17 @@ export const generateTree = ({
 				Object.keys(ttsModules).length === 0
 					? undefined
 					: {
-						title: getMessage('settings_option_ttsModule'),
-						description: getMessage('settings_option_ttsModule_desc'),
-						path: 'ttsModule',
-						optionContent: {
-							type: 'SelectList',
-							options: Object.entries(ttsModules).map(([id, name]) => ({
-								id,
-								content: name,
-							})),
+							title: getMessage('settings_option_ttsModule'),
+							description: getMessage('settings_option_ttsModule_desc'),
+							path: 'ttsModule',
+							optionContent: {
+								type: 'SelectList',
+								options: Object.entries(ttsModules).map(([id, name]) => ({
+									id,
+									content: name,
+								})),
+							},
 						},
-					  },
 				{
 					title: getMessage('settings_option_ttsCustomModules'),
 					description: getLocalizedNode({

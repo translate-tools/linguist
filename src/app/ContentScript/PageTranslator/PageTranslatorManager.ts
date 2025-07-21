@@ -6,8 +6,8 @@ import { PageTranslationOptions } from '../PageTranslationContext';
 import { PageTranslator } from './PageTranslator';
 
 export class PageTranslatorManager {
-	private $state;
-	private pageTranslator: PageTranslator;
+	private readonly $state;
+	private readonly pageTranslator: PageTranslator;
 
 	constructor(
 		$state: Store<{

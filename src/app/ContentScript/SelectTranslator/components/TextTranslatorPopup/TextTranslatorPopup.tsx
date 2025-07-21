@@ -43,7 +43,7 @@ export const TextTranslatorPopup: FC<TextTranslatorPopupProps> = ({
 }) => {
 	const { closeHandler } = props;
 
-	const [translating, setTranslating] = useState(quickTranslate === true);
+	const [translating, setTranslating] = useState(quickTranslate);
 
 	const doTranslate = useCallback(() => {
 		if (!translating) {
@@ -94,7 +94,7 @@ export const TextTranslatorPopup: FC<TextTranslatorPopupProps> = ({
 	}, []);
 
 	useEffect(() => {
-		if (translating === true) {
+		if (translating) {
 			toggleAutoclose(false);
 		}
 	}, [toggleAutoclose, translating]);
@@ -172,7 +172,9 @@ export const TextTranslatorPopup: FC<TextTranslatorPopupProps> = ({
 	const [isComponentLoaded, setIsComponentLoaded] = useState(false);
 	useEffect(() => {
 		// Wait 1 frame after render
-		requestAnimationFrame(() => setIsComponentLoaded(true));
+		requestAnimationFrame(() => {
+			setIsComponentLoaded(true);
+		});
 	}, []);
 
 	// Focus by load component and by change state
@@ -211,8 +213,12 @@ export const TextTranslatorPopup: FC<TextTranslatorPopupProps> = ({
 						}
 					}}
 					onClick={doTranslate}
-					onMouseOver={() => toggleAutoclose(false)}
-					onMouseLeave={() => toggleAutoclose(true)}
+					onMouseOver={() => {
+						toggleAutoclose(false);
+					}}
+					onMouseLeave={() => {
+						toggleAutoclose(true);
+					}}
 				>
 					<LogoElement className={cnTextTranslatorPopup('TranslateButton')} />
 				</div>

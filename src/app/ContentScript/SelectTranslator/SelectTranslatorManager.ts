@@ -6,7 +6,7 @@ import { PageData } from '../PageTranslationContext';
 import { SelectTranslator } from './SelectTranslator';
 
 export class SelectTranslatorManager {
-	private $state;
+	private readonly $state;
 	constructor(
 		$state: Store<{
 			enabled: boolean;

@@ -19,13 +19,13 @@ export const [offscreenWorkerEventFactory, offscreenWorkerEvent] = buildBackendR
 	// Skip messages addressed to another instances
 	filter:
 		(context) =>
-			({ workerId }) =>
-				context.workerId !== null && context.workerId === workerId,
+		({ workerId }) =>
+			context.workerId !== null && context.workerId === workerId,
 	factoryHandler:
 		(context) =>
-			async ({ name, data }) => {
-				context.onMessage(name, unserialize(data));
-			},
+		async ({ name, data }) => {
+			context.onMessage(name, unserialize(data));
+		},
 });
 
 export const sendEventToOffscreenWorker = (options: OffscreenWorkerEvent) =>

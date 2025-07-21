@@ -14,12 +14,12 @@ export function decodeStruct<T>(
 	| { data: T; errors: null }
 	| {
 			data: null;
-			errors: Array<{
+			errors: {
 				key: string;
 				value: unknown;
 				type: t.Decoder<any, any>;
 				message?: string;
-			}>;
+			}[];
 	  } {
 	const decodeResult = type.decode(data);
 

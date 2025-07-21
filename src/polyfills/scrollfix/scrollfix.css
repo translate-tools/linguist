@@ -1,16 +1,16 @@
 :root {
-	--scrollFix-scrollY: 17px;
-	--scrollFix-scrollX: 17px;
+	--scrollfix-scroll-y: 17px;
+	--scrollfix-scroll-x: 17px;
 }
 
 .scrollFix__indent-right {
-	margin-right: var(--scrollFix-scrollY);
+	margin-right: var(--scrollfix-scroll-y);
 }
 
 .scrollFix__indent-left {
-	margin-left: var(--scrollFix-scrollY);
+	margin-left: var(--scrollfix-scroll-y);
 }
 
 .scrollFix__indent-bottom {
-	margin-bottom: var(--scrollFix-scrollX);
+	margin-bottom: var(--scrollfix-scroll-x);
 }

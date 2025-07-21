@@ -44,8 +44,8 @@ export class XResizeObserver {
 		}
 	}
 
-	private loopRegistry = new WeakSet<Element>();
-	private runLoop = (node: Element) => {
+	private readonly loopRegistry = new WeakSet<Element>();
+	private readonly runLoop = (node: Element) => {
 		if (this.loopRegistry.has(node)) return;
 
 		const loop = () => {

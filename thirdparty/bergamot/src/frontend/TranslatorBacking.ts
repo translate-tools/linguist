@@ -54,7 +54,7 @@ export class TranslatorBacking {
 		 * registry of all available models and their urls
 		 * @type {Promise<Model[]>}
 		 */
-		this.registry = this.loadModelRegistery();
+		this.registry = this.loadModelRegistry();
 
 		/**
 		 * Map of downloaded model data files as buffers per model.
@@ -198,7 +198,7 @@ export class TranslatorBacking {
 	 *   }[]
 	 * }>}
 	 */
-	async loadModelRegistery(): Promise<Registry> {
+	async loadModelRegistry(): Promise<Registry> {
 		const response = await fetch(this.registryUrl, { credentials: 'omit' });
 		const registry = await response.json();
 

@@ -3,7 +3,7 @@ import { isEqual } from 'lodash';
 export const isTextsContainsSubstring = (
 	substring: string,
 	texts: string[],
-	ignoreCase: boolean = true,
+	ignoreCase = true,
 ) => {
 	const textToSearch = ignoreCase ? substring.toLowerCase() : substring;
 

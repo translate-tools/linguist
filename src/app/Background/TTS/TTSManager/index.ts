@@ -51,7 +51,7 @@ const speakerValidatorGuard = (speaker: SerializedSpeaker) => {
  * Controller that manage a text to speech modules
  */
 export class TTSManager {
-	private storage;
+	private readonly storage;
 	constructor() {
 		this.storage = new TTSStorage();
 	}

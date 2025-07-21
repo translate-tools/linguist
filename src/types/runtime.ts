@@ -20,7 +20,7 @@ export const LangCode = new type.Type<string, string, unknown>(
 		typeof input === 'string' && isLanguageCodeISO639v1(input),
 	(input, context) =>
 		typeof input === 'string' && isLanguageCodeISO639v1(input)
-			? type.success(input as string)
+			? type.success(input)
 			: type.failure(input, context),
 	type.identity,
 );
@@ -31,7 +31,7 @@ export const LangCodeWithAuto = new type.Type<string, string, unknown>(
 		input === 'auto' || (typeof input === 'string' && isLanguageCodeISO639v1(input)),
 	(input, context) =>
 		input === 'auto' || (typeof input === 'string' && isLanguageCodeISO639v1(input))
-			? type.success(input as string)
+			? type.success(input)
 			: type.failure(input, context),
 	type.identity,
 );

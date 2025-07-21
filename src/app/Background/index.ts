@@ -38,7 +38,7 @@ export type TranslatorsMap = Record<string, TranslatorConstructor>;
  */
 export class Background {
 	private readonly config: ObservableAsyncStorage<AppConfigType>;
-	private ttsManager;
+	private readonly ttsManager;
 	constructor(config: ObservableAsyncStorage<AppConfigType>) {
 		this.config = config;
 		this.ttsManager = new TTSManager();

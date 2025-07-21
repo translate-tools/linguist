@@ -12,8 +12,8 @@ export const [addLanguagePreferencesFactory, addLanguagePreferencesReq] =
 
 		factoryHandler:
 			() =>
-				({ lang, preferences }) =>
-					addLanguage(lang, preferences),
+			({ lang, preferences }) =>
+				addLanguage(lang, preferences),
 	});
 
 export const addLanguagePreferences = (lang: string, preferences: LanguageInfo) =>

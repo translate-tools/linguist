@@ -43,7 +43,7 @@ export class ConfigStorage implements AsyncStorage<AppConfigType> {
 }
 
 export class ObservableAsyncStorage<T extends Record<any, any>>
-implements AsyncStorage<T>
+	implements AsyncStorage<T>
 {
 	private readonly config: AsyncStorage<T>;
 

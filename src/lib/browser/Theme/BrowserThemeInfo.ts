@@ -6,7 +6,7 @@ import { ThemeChangeHandler, ThemeInfo } from './ThemeInfo';
  * Class to explore browser theme
  */
 export class BrowserThemeInfo implements ThemeInfo {
-	private handlers;
+	private readonly handlers;
 	constructor() {
 		this.handlers = new Set<ThemeChangeHandler>();
 	}

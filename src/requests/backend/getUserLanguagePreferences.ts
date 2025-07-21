@@ -8,8 +8,8 @@ export const [getUserLanguagePreferencesFactory, getUserLanguagePreferences] =
 
 		factoryHandler:
 			({ config }) =>
-				async () => {
-					const { language } = await config.get();
-					return language;
-				},
+			async () => {
+				const { language } = await config.get();
+				return language;
+			},
 	});

@@ -11,7 +11,7 @@ export const [themeUpdateFactory, themeUpdate] = buildBackendRequest<
 >('customTranslator.create', {
 	factoryHandler:
 		({ onChange }) =>
-			async ({ isLight }) => {
-				onChange(isLight);
-			},
+		async ({ isLight }) => {
+			onChange(isLight);
+		},
 });

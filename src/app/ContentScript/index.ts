@@ -10,7 +10,7 @@ export class ContentScript {
 		await contentscript.start();
 	}
 
-	private config: ClientConfig;
+	private readonly config: ClientConfig;
 	constructor(config: ClientConfig) {
 		this.config = config;
 	}

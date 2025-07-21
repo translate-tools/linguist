@@ -70,10 +70,10 @@ export const getJsonTranslationPrompt = (json: string, from: string, to: string)
 	Make sure twice, that every translated message sounds natively in ${targetLang} language.
 
 	${
-	languageRules
-		? `# Language specific rules\nFollow the next rules for ${targetLang} language:\n${languageRules}`
-		: ''
-}
+		languageRules
+			? `# Language specific rules\nFollow the next rules for ${targetLang} language:\n${languageRules}`
+			: ''
+	}
 
 	# Your task
 

@@ -9,10 +9,10 @@ export const [getPageLanguageFactory, getPageLanguage] = buildTabRequest(
 		responseValidator: type.union([type.string, type.null]),
 		factoryHandler:
 			({ $config }) =>
-				async () =>
-					getPageLanguageHelper(
-						$config.getState().pageTranslator.detectLanguageByContent,
-						true,
-					),
+			async () =>
+				getPageLanguageHelper(
+					$config.getState().pageTranslator.detectLanguageByContent,
+					true,
+				),
 	},
 );

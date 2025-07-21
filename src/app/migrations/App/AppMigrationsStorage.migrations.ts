@@ -8,9 +8,8 @@ export const migrationsForMigrationsStorage = createMigrationTask([
 		version: 1,
 		async migrate() {
 			const browserStorageKey = 'migrationsInfo';
-			const { [browserStorageKey]: rawData } = await browser.storage.local.get(
-				browserStorageKey,
-			);
+			const { [browserStorageKey]: rawData } =
+				await browser.storage.local.get(browserStorageKey);
 
 			const legacyStructure = type.type({
 				appConfig: type.number,

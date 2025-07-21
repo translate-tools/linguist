@@ -14,10 +14,10 @@ export const [addTranslationHistoryEntryFactory, addTranslationHistoryEntry] =
 
 		factoryHandler:
 			({ config }) =>
-				async (data) => {
-					const { history } = await config.get();
-					if (!history.enabled) return null;
+			async (data) => {
+				const { history } = await config.get();
+				if (!history.enabled) return null;
 
-					return addEntry({ ...data, timestamp: Date.now() });
-				},
+				return addEntry({ ...data, timestamp: Date.now() });
+			},
 	});

@@ -30,7 +30,7 @@ export function getPageLanguageFromMeta() {
 	for (const name of langAttributes) {
 		const pageLangRaw = html.getAttribute(name);
 		if (pageLangRaw !== null) {
-			const match = pageLangRaw.match(/^([a-z]+)(-[a-zA-Z]+)?$/);
+			const match = /^([a-z]+)(-[a-zA-Z]+)?$/.exec(pageLangRaw);
 			if (match !== null) {
 				const language = match[1];
 				return isValidLanguage(language) ? language : null;
