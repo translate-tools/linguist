@@ -1,6 +1,15 @@
 name: Test
+permissions:
+  contents: read
 
-on: [push]
+on:
+  push:
+  pull_request:
+    # The branches below must be a subset of the branches above
+    branches: [master]
+    types: [opened, synchronize, reopened]
+  pull_request_review:
+    types: [submitted]
 
 jobs:
   test:

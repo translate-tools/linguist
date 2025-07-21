@@ -1,8 +1,17 @@
 name: Site
+permissions:
+  contents: write
+  deployments: write
 
 on:
-  push:
   workflow_dispatch:
+  push:
+  pull_request:
+    # The branches below must be a subset of the branches above
+    branches: [master]
+    types: [opened, synchronize, reopened]
+  pull_request_review:
+    types: [submitted]
 
 # TODO: run only for changes in `site` directory
 jobs:
