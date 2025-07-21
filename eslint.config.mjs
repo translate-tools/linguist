@@ -70,7 +70,10 @@ export default tseslint.config(
 
 			// Imports
 			'import/no-useless-path-segments': ['error', { noUselessIndex: true }],
-			'import/no-unresolved': ['error', { ignore: ['^vitest/config'] }],
+			'import/no-unresolved': [
+				'error',
+				{ ignore: ['^vitest/config', '^@docusaurus/', '^@site/'] },
+			],
 			'import/export': 'off',
 			'import/namespace': 'warn',
 			'import/no-duplicates': ['error', { 'prefer-inline': true }],
