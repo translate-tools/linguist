@@ -1,8 +1,5 @@
 {
   "extends": "stylelint-config-standard",
-  "plugins": [
-    "stylelint-no-unsupported-browser-features"
-  ],
   "rules": {
     "selector-class-pattern": null,
     "no-descending-specificity": null

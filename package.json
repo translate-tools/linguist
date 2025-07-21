@@ -11,6 +11,7 @@
 		"build:tokens": "themekit build -c themekit.config.json",
 		"release:patch": "npm version patch",
 		"prettify": "prettier --write \"{*,**/*}.{ts,tsx,js,jsx}\" && eslint --fix \".\" && stylelint --fix \"{*,**/*}.css\"",
+		"lint": "prettier \"{*,**/*}.{ts,tsx,js,jsx}\" --check && eslint --max-warnings 0 . && stylelint --fix \"{*,**/*}.css\"",
 		"prepare": "husky install"
 	},
 	"engines": {
