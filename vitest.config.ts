@@ -26,7 +26,7 @@ export default defineConfig({
 	],
 	test: {
 		exclude: [
-			'node_modules/**',
+			'**/node_modules/**',
 
 			// Optional targets
 			...(testTargets.includes('all')
