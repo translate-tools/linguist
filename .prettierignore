@@ -1,8 +1,6 @@
 # directories
 node_modules
-# TODO: enable linting for site files
-site
-build
+**/build
 modules
 test
 thirdparty

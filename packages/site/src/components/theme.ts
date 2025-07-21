@@ -1,4 +1,5 @@
-import { extendTheme, StyleFunctionProps, theme as chakraTheme } from '@chakra-ui/react';
+/* eslint-disable @cspell/spellchecker */
+import { extendTheme, theme as chakraTheme } from '@chakra-ui/react';
 
 const theme = extendTheme({
 	styles: {
@@ -13,7 +14,7 @@ const theme = extendTheme({
 		Button: {
 			...chakraTheme.components.Button,
 			variants: {
-				action: (props: StyleFunctionProps) => ({
+				action: () => ({
 					bg: '#4f113f',
 					color: '#ffedfa',
 					transition: 'all 0s',

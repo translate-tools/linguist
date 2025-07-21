@@ -329,7 +329,10 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 											t={t}
 											i18nKey="features.items.customTranslators.content"
 											components={[
-												<Link href="https://github.com/translate-tools/linguist/blob/master/docs/CustomTranslator.md" />,
+												<Link
+													key="link"
+													href="https://github.com/translate-tools/linguist/blob/master/docs/CustomTranslator.md"
+												/>,
 											]}
 										/>
 									</Text>
@@ -348,8 +351,14 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 								t={t}
 								i18nKey="sections.opensource.content"
 								components={[
-									<Link href="https://github.com/translate-tools/linguist" />,
-									<Link href="https://github.com/translate-tools/linguist#donations" />,
+									<Link
+										key="github"
+										href="https://github.com/translate-tools/linguist"
+									/>,
+									<Link
+										key="donations"
+										href="https://github.com/translate-tools/linguist#donations"
+									/>,
 								]}
 							/>
 						</Text>
@@ -365,10 +374,13 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 								t={t}
 								i18nKey="sections.support.content"
 								components={[
-									<Link href="mailto:support@linguister.io">
+									<Link key="email" href="mailto:support@linguister.io">
 										support@linguister.io
 									</Link>,
-									<Link href="https://github.com/translate-tools/linguist/issues/new/choose" />,
+									<Link
+										key="issue"
+										href="https://github.com/translate-tools/linguist/issues/new/choose"
+									/>,
 								]}
 							/>
 						</Text>

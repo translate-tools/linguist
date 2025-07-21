@@ -1,3 +1,4 @@
+/* eslint-disable @cspell/spellchecker */
 import React from 'react';
 
 import { AnalyticsProvider } from '../components/Analytics/AnalyticsProvider';

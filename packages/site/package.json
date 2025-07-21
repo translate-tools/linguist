@@ -17,8 +17,8 @@
 	},
 	"dependencies": {
 		"@chakra-ui/react": "^2.8.2",
-		"@docusaurus/core": "3.4.0",
-		"@docusaurus/preset-classic": "3.4.0",
+		"@docusaurus/core": "^3.8.1",
+		"@docusaurus/preset-classic": "^3.8.1",
 		"@emotion/react": "^11.11.4",
 		"@emotion/styled": "^11.11.5",
 		"@mdx-js/react": "^3.0.0",
@@ -36,9 +36,9 @@
 		"react-i18next": "^14.1.2"
 	},
 	"devDependencies": {
-		"@docusaurus/module-type-aliases": "3.4.0",
-		"@docusaurus/tsconfig": "3.4.0",
-		"@docusaurus/types": "3.4.0",
+		"@docusaurus/module-type-aliases": "^3.8.1",
+		"@docusaurus/tsconfig": "^3.8.1",
+		"@docusaurus/types": "^3.8.1",
 		"tsx": "^4.15.7",
 		"typescript": "~5.2.2"
 	},

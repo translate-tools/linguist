@@ -16,7 +16,7 @@ const config: Config = {
 			'@docusaurus/preset-classic',
 			{
 				docs: {
-					path: '../docs',
+					path: '../../docs',
 					include: ['{*,**/*}.md', '{*,**/*}.mdx'],
 				},
 				blog: {
