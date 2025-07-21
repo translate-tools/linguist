@@ -1,7 +1,11 @@
 # directories
 node_modules
-/build
-/thirdparty
+# TODO: enable linting for site files
+site
+build
+modules
+test
+thirdparty
 
 # files
 *.d.ts
