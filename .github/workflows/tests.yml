@@ -12,6 +12,15 @@ jobs:
       - name: Run tests
         run: npm test
 
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/init
+
+      - name: Lint files
+        run: npm run lint
+
   build:
     runs-on: ubuntu-latest
     steps:
