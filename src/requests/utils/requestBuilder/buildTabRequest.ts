@@ -48,7 +48,7 @@ export const buildTabRequest = <O = void, R = void>(
 
 	return [
 		factory,
-		hook as O extends unknown
+		hook as O extends undefined
 			? (tabId: number) => Promise<R>
 			: (tabId: number, options: O) => Promise<R>,
 	] as const;
