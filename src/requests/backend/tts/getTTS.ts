@@ -1,4 +1,4 @@
-import splitLongText from 'google-tts-api/dist/splitLongText';
+import { splitLongText } from 'anylang/utils/text';
 
 import { base64ToBlob, blobToBase64 } from '../../../lib/blob';
 import { detectLanguage } from '../../../lib/language';
