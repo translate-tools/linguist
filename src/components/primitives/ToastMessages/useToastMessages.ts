@@ -138,7 +138,9 @@ export const useToastMessages = ({ hideDelay = 3000 }: Options) => {
 	}, [messagePointers, messagesMap]);
 
 	const haltMessages = useCallback(
-		(state: boolean) => toggleMessageHalt(state),
+		(state: boolean) => {
+			toggleMessageHalt(state);
+		},
 		[toggleMessageHalt],
 	);
 

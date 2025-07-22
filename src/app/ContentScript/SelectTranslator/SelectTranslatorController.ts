@@ -1,7 +1,7 @@
 import { SelectTranslatorManager } from './SelectTranslatorManager';
 
 export class SelectTranslatorController {
-	private manager: SelectTranslatorManager;
+	private readonly manager: SelectTranslatorManager;
 	constructor(manager: SelectTranslatorManager) {
 		this.manager = manager;
 	}

@@ -1,6 +1,4 @@
-import { TTSProvider } from '@translate-tools/core/tts';
-import { GoogleTTS } from '@translate-tools/core/tts/GoogleTTS';
-import { LingvaTTS } from '@translate-tools/core/tts/LingvaTTS';
+import { GoogleTTS, LingvaTTS, TTSProvider } from 'anylang/tts';
 
 import { SerializedSpeaker, TTSKey, TTSStorage } from '../TTSStorage';
 import { tryLoadTTSCode } from './ttsLoader';
@@ -53,7 +51,7 @@ const speakerValidatorGuard = (speaker: SerializedSpeaker) => {
  * Controller that manage a text to speech modules
  */
 export class TTSManager {
-	private storage;
+	private readonly storage;
 	constructor() {
 		this.storage = new TTSStorage();
 	}

@@ -184,8 +184,8 @@ export const TranslatorsManager: FC<{
 						{translators.length !== 0
 							? undefined
 							: getMessage(
-								'translatorsManagerWindow_emptyTranslatorsListText',
-							  )}
+									'translatorsManagerWindow_emptyTranslatorsListText',
+								)}
 					</ModalLayout>
 				</div>
 			)}

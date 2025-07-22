@@ -31,7 +31,7 @@ export const getFileVersion = (filename: string, ref = 'master') => {
 		]).toString('utf8');
 
 		return prevVersion;
-	} catch (error) {
+	} catch (_error) {
 		return null;
 	}
 };

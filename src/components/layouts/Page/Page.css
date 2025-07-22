@@ -12,17 +12,8 @@ body {
 	max-width: 800px;
 	margin: auto;
 	font-family:
-		-apple-system,
-		BlinkMacSystemFont,
-		Segoe UI,
-		Roboto,
-		Oxygen,
-		Ubuntu,
-		Cantarell,
-		Fira Sans,
-		Droid Sans,
-		Helvetica Neue,
-		sans-serif;
+		-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+		'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 	font-size: var(--typography-layout-size-m-font-size);
 }
 
@@ -33,10 +24,7 @@ body {
 /* Placeholder */
 .Page-Placeholder {
 	position: absolute;
-	left: 0;
-	right: 0;
-	top: 0;
-	bottom: 0;
+	inset: 0;
 }
 
 .Page-Placeholder .Loader {

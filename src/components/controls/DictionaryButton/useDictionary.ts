@@ -74,9 +74,9 @@ export const useDictionary = (translation: ITranslation | null) => {
 			}
 		} else {
 			if (dictionaryEntryId !== null) {
-				deleteTranslation(dictionaryEntryId).then(() =>
-					setDictionaryEntryId(null),
-				);
+				deleteTranslation(dictionaryEntryId).then(() => {
+					setDictionaryEntryId(null);
+				});
 			}
 		}
 	}, [

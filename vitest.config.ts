@@ -19,21 +19,23 @@ export default defineConfig({
 					const sqlContent = readFileSync(path.resolve(id), 'utf-8');
 					return `export default ${JSON.stringify(sqlContent)};`;
 				}
+
+				return;
 			},
 		},
 	],
 	test: {
 		exclude: [
-			'node_modules/**',
+			'**/node_modules/**',
 
 			// Optional targets
 			...(testTargets.includes('all')
 				? []
 				: [
-					...(testTargets.includes('integration')
-						? []
-						: ['**/*.integration.test.ts']),
-				  ]),
+						...(testTargets.includes('integration')
+							? []
+							: ['**/*.integration.test.ts']),
+					]),
 		],
 		globals: true,
 		environment: 'jsdom',

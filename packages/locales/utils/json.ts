@@ -11,7 +11,7 @@ export const sliceJsonString = (
 	if (typeof json !== 'object' || json === null)
 		throw new TypeError('Json data cannot be split to slices');
 
-	const result: Array<Array<[string, unknown]>> = [];
+	const result: [string, unknown][][] = [];
 	let offset = 0;
 	for (const slice of Object.entries(json)) {
 		const isEmptyChunk = result[offset] && result[offset].length > 0;
@@ -124,7 +124,7 @@ export const getObjectPatch = (
 		),
 	);
 	const superset = Object.fromEntries(
-		Object.entries(source).filter(([key]) => key in subset === false),
+		Object.entries(source).filter(([key]) => !(key in subset)),
 	);
 
 	return {
@@ -140,7 +140,7 @@ export const getObjectPathsFromTraverse = (
 	allPaths = false,
 ) => {
 	const paths: string[] = [];
-	traverseContext.forEach(function() {
+	traverseContext.forEach(function () {
 		if (this.isRoot) return;
 
 		if (allPaths || this.isLeaf) {
@@ -176,7 +176,7 @@ export const getObjectsDiff = (
 	const sourceWalker = traverse(source);
 	const targetWalker = traverse(target);
 
-	const intersection = targetWalker.map(function() {
+	const intersection = targetWalker.map(function () {
 		if (this.isRoot) return;
 
 		// Remove whole subtrees that is not match the search mode
@@ -215,7 +215,7 @@ export const getObjectsDiff = (
 	if (mode === 'intersection') return intersection;
 
 	const intersectionWalker = traverse(intersection);
-	return targetWalker.map(function() {
+	return targetWalker.map(function () {
 		if (this.isRoot || !this.isLeaf) return;
 
 		if (!intersectionWalker.has(this.path)) return;

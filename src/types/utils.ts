@@ -7,18 +7,16 @@ import { Dispatch, SetStateAction } from 'react';
  * @example
  * type SomeCar = ClassObject<AbstractRedCar, typeof AbstractRedCar>;
  */
-export type ClassObject<Class, StaticProps extends {} = {}> = {
-	new (...args: any[]): Class;
-} & StaticProps;
+export type ClassObject<Class, StaticProps extends {} = {}> = (new (
+	...args: any[]
+) => Class) &
+	StaticProps;
 
 /**
  * Define value and setter for it
  */
-export type MutableValue<Name extends string, Type> = {
-	[K in `${Name}`]: Type;
-} & {
-	[K in `set${Capitalize<Name>}`]: Dispatch<SetStateAction<Type>>;
-};
+export type MutableValue<Name extends string, Type> = Record<`${Name}`, Type> &
+	Record<`set${Capitalize<Name>}`, Dispatch<SetStateAction<Type>>>;
 
 /**
  * Return object values as keys
@@ -31,5 +29,5 @@ export type RecordValues<T extends Record<any, any>> = T[keyof T];
 export type DeepPartial<T> = T extends object
 	? {
 			[P in keyof T]?: DeepPartial<T[P]>;
-	  }
+		}
 	: T;

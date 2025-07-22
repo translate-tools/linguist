@@ -1,7 +1,10 @@
 # directories
 node_modules
-/build
-/thirdparty
+**/build
+**/.docusaurus
+modules
+test
+thirdparty
 
 # files
 *.d.ts

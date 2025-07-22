@@ -6,7 +6,7 @@ export const [setConfigFactory, setConfig] = buildBackendRequest('setConfig', {
 	requestValidator: AppConfig,
 	factoryHandler:
 		({ config }) =>
-			async (newConfig) => {
-				await config.set(newConfig);
-			},
+		async (newConfig) => {
+			await config.set(newConfig);
+		},
 });

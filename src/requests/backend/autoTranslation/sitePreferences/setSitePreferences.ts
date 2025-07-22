@@ -13,8 +13,8 @@ export const [setSitePreferencesFactory, setSitePreferencesReq] = buildBackendRe
 
 		factoryHandler:
 			() =>
-				({ site, options }) =>
-					setPreferences(site, options),
+			({ site, options }) =>
+				setPreferences(site, options),
 	},
 );
 

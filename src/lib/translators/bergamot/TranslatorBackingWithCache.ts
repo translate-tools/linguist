@@ -15,7 +15,7 @@ import { OffscreenWorker } from './OffscreenWorker';
 export class TranslatorBackingWithCache extends TranslatorBacking {
 	private readonly backingStorageName = 'bergamotBacking';
 
-	async loadModelRegistery(): Promise<TranslationModel[]> {
+	async loadModelRegistry(): Promise<TranslationModel[]> {
 		// TODO: return cache only when fetch failed
 		const { [this.backingStorageName]: dataFromStorage } =
 			await browser.storage.local.get(this.backingStorageName);
@@ -23,7 +23,7 @@ export class TranslatorBackingWithCache extends TranslatorBacking {
 			return dataFromStorage;
 		}
 
-		const modelRegistry = await super.loadModelRegistery();
+		const modelRegistry = await super.loadModelRegistry();
 
 		// Write data
 		await browser.storage.local.set({ [this.backingStorageName]: modelRegistry });

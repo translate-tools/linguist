@@ -145,12 +145,12 @@ TextTranslatorTab.init = async ({ translatorFeatures, config }) => {
 
 		if (
 			(lastFrom === 'auto' && isSupportAutodetect) ||
-			supportedLanguages.indexOf(lastFrom) !== -1
+			supportedLanguages.includes(lastFrom)
 		) {
 			from = lastFrom;
 		}
 
-		if (supportedLanguages.indexOf(lastTo) !== -1) {
+		if (supportedLanguages.includes(lastTo)) {
 			to = lastTo;
 		}
 

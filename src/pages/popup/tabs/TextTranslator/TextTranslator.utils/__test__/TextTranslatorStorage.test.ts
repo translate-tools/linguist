@@ -62,9 +62,8 @@ describe('TextTranslatorStorage migrations', () => {
 
 		// Test migration result
 		const browserStorageName = 'TextTranslatorStorage';
-		const { [browserStorageName]: actualData } = await browser.storage.local.get(
-			browserStorageName,
-		);
+		const { [browserStorageName]: actualData } =
+			await browser.storage.local.get(browserStorageName);
 
 		expect(actualData).toEqual(dataSampleV1);
 	});
@@ -80,9 +79,8 @@ describe('TextTranslatorStorage migrations', () => {
 		await TextTranslatorStorageMigration.migrate(2, 3);
 
 		// Test migration result
-		const { [browserStorageName]: actualData } = await browser.storage.local.get(
-			browserStorageName,
-		);
+		const { [browserStorageName]: actualData } =
+			await browser.storage.local.get(browserStorageName);
 		expect(actualData).toEqual(dataSampleV2);
 	});
 });

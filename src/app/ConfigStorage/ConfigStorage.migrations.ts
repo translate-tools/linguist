@@ -23,9 +23,8 @@ const migrations: Migration[] = [
 			const storageData = JSON.parse(storageDataRaw);
 			if (typeof storageData === 'object') {
 				// Merge actual data with legacy
-				let { [storageNameV2]: actualData } = await browser.storage.local.get(
-					storageNameV2,
-				);
+				let { [storageNameV2]: actualData } =
+					await browser.storage.local.get(storageNameV2);
 				if (typeof actualData !== 'object') {
 					actualData = {};
 				}
@@ -48,9 +47,8 @@ const migrations: Migration[] = [
 			const storageNameV2 = 'appConfig';
 
 			// Merge actual data with old
-			let { [storageNameV2]: actualData } = await browser.storage.local.get(
-				storageNameV2,
-			);
+			let { [storageNameV2]: actualData } =
+				await browser.storage.local.get(storageNameV2);
 			if (typeof actualData !== 'object') {
 				actualData = {};
 			}
@@ -86,9 +84,8 @@ const migrations: Migration[] = [
 		async migrate() {
 			const storageName = 'appConfig';
 
-			let { [storageName]: actualData } = await browser.storage.local.get(
-				storageName,
-			);
+			let { [storageName]: actualData } =
+				await browser.storage.local.get(storageName);
 			if (typeof actualData !== 'object') {
 				actualData = {};
 			}
@@ -117,9 +114,8 @@ const migrations: Migration[] = [
 		async migrate() {
 			const storageName = 'appConfig';
 
-			let { [storageName]: actualData } = await browser.storage.local.get(
-				storageName,
-			);
+			let { [storageName]: actualData } =
+				await browser.storage.local.get(storageName);
 			if (typeof actualData !== 'object') {
 				actualData = {};
 			}
@@ -146,9 +142,8 @@ const migrations: Migration[] = [
 		async migrate() {
 			const storageName = 'appConfig';
 
-			let { [storageName]: actualData } = await browser.storage.local.get(
-				storageName,
-			);
+			let { [storageName]: actualData } =
+				await browser.storage.local.get(storageName);
 			if (typeof actualData !== 'object') {
 				actualData = {};
 			}
@@ -168,9 +163,8 @@ const migrations: Migration[] = [
 		async migrate() {
 			const storageName = 'appConfig';
 
-			let { [storageName]: actualData } = await browser.storage.local.get(
-				storageName,
-			);
+			let { [storageName]: actualData } =
+				await browser.storage.local.get(storageName);
 			if (typeof actualData !== 'object') {
 				actualData = {};
 			}

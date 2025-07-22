@@ -1,6 +1,16 @@
 name: Test
+permissions:
+  contents: read
 
-on: [push]
+on:
+  push:
+    branches: [master]
+  pull_request:
+    # The branches below must be a subset of the branches above
+    branches: [master]
+    types: [opened, synchronize, reopened]
+  pull_request_review:
+    types: [submitted]
 
 jobs:
   test:
@@ -11,6 +21,15 @@ jobs:
 
       - name: Run tests
         run: npm test
+
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/init
+
+      - name: Lint files
+        run: npm run lint
 
   build:
     runs-on: ubuntu-latest

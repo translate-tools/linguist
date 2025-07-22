@@ -1,4 +1,4 @@
-import * as IDB from 'idb/with-async-ittr';
+import * as IDB from 'idb';
 
 import { ExtractSchemeFromIDBConstructor, getIDBPlan } from '../../../lib/idb/manager';
 import { type } from '../../../lib/types';

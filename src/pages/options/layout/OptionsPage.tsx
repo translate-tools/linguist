@@ -128,14 +128,14 @@ export const OptionsPage: FC<OptionsPageProps> = ({ messageHideDelay }) => {
 
 					setConfigReq(configData)
 						.then(updateConfig)
-						.then(() =>
+						.then(() => {
 							addMessage(
 								getMessage('settings_message_importConfig_success'),
 								'info',
-							),
-						)
+							);
+						})
 						.catch(handleError);
-				} catch (error) {
+				} catch (_error) {
 					addMessage(
 						getMessage('settings_message_importConfig_invalidFile'),
 						'error',
@@ -157,9 +157,9 @@ export const OptionsPage: FC<OptionsPageProps> = ({ messageHideDelay }) => {
 
 		resetConfigReq()
 			.then(updateConfig)
-			.then(() =>
-				addMessage(getMessage('settings_message_resetConfig_success'), 'info'),
-			)
+			.then(() => {
+				addMessage(getMessage('settings_message_resetConfig_success'), 'info');
+			})
 			.catch(handleError);
 	}, [addMessage, handleError, updateConfig]);
 
@@ -201,11 +201,13 @@ export const OptionsPage: FC<OptionsPageProps> = ({ messageHideDelay }) => {
 	const clearCache = useCallback(() => {
 		setClearCacheProcess(true);
 		clearCacheReq()
-			.then(() =>
-				addMessage(getMessage('settings_message_clearCache_success'), 'info'),
-			)
+			.then(() => {
+				addMessage(getMessage('settings_message_clearCache_success'), 'info');
+			})
 			.catch(handleError)
-			.finally(() => setClearCacheProcess(false));
+			.finally(() => {
+				setClearCacheProcess(false);
+			});
 	}, [addMessage, handleError]);
 
 	//
@@ -368,12 +370,16 @@ export const OptionsPage: FC<OptionsPageProps> = ({ messageHideDelay }) => {
 				<OptionsModalsContext.Provider value={windowsStackRef}>
 					<TranslatorsManager
 						visible={isOpenCustomTranslatorsWindow}
-						onClose={() => setIsOpenCustomTranslatorsWindow(false)}
+						onClose={() => {
+							setIsOpenCustomTranslatorsWindow(false);
+						}}
 						updateConfig={updateConfig}
 					/>
 					<TTSList
 						visible={isTTSModulesWindowOpen}
-						onClose={() => setIsTTSModulesWindowOpen(false)}
+						onClose={() => {
+							setIsTTSModulesWindowOpen(false);
+						}}
 						updateConfig={updateConfig}
 					/>
 				</OptionsModalsContext.Provider>

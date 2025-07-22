@@ -51,7 +51,7 @@ export class AppMigrationsStorage implements MigrationsStorage {
 		}
 	};
 
-	private getMigrationsMetaInfo = async () => {
+	private readonly getMigrationsMetaInfo = async () => {
 		const storage = await browser.storage.local.get(this.storageName);
 		const isMigrationsStorageExist =
 			this.storageName in storage && storage[this.storageName] !== undefined;
@@ -67,7 +67,7 @@ export class AppMigrationsStorage implements MigrationsStorage {
 		};
 	};
 
-	private getMigrationsData = async () => {
+	private readonly getMigrationsData = async () => {
 		await this.prepareStorage();
 
 		const { [this.storageName]: rawData } = await browser.storage.local.get(
@@ -83,7 +83,7 @@ export class AppMigrationsStorage implements MigrationsStorage {
 		return codec.data;
 	};
 
-	private setMigrationsData = async (migrationsData: MigrationsData) => {
+	private readonly setMigrationsData = async (migrationsData: MigrationsData) => {
 		await browser.storage.local.set({ [this.storageName]: migrationsData });
 	};
 

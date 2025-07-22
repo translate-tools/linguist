@@ -28,9 +28,8 @@ import {
 	mapLanguagePreferences,
 } from './PageTranslator.utils/utils';
 
-export type SitePrefs = ReturnType<typeof getSitePreferences> extends Promise<infer T>
-	? T
-	: never;
+export type SitePrefs =
+	ReturnType<typeof getSitePreferences> extends Promise<infer T> ? T : never;
 
 type InitData = {
 	tabId: number;
@@ -196,15 +195,15 @@ export const PageTranslatorTab: TabComponent<InitFn<InitData>> = ({
 			return;
 		}
 
-		getLanguagePreferences(from).then((state) =>
+		getLanguagePreferences(from).then((state) => {
 			setLanguagePreferencesState(
 				state === null
 					? languagePreferenceOptions.DISABLE
 					: state
 						? languagePreferenceOptions.ENABLE
 						: languagePreferenceOptions.DISABLE_FOR_ALL,
-			),
-		);
+			);
+		});
 	}, [from]);
 
 	const setLanguagePreferencesProxy: any = useCallback(
@@ -251,11 +250,15 @@ export const PageTranslatorTab: TabComponent<InitFn<InitData>> = ({
 		// TODO: handle errors
 		if (!isTranslated) {
 			enableTranslatePage(tabId, from, to)
-				.then(() => setIsTranslated(true))
+				.then(() => {
+					setIsTranslated(true);
+				})
 				.catch(console.warn);
 		} else {
 			disableTranslatePage(tabId)
-				.then(() => setIsTranslated(false))
+				.then(() => {
+					setIsTranslated(false);
+				})
 				.catch(console.warn);
 		}
 	}, [from, isTranslated, tabId, to]);
@@ -332,9 +335,8 @@ PageTranslatorTab.init = async ({ translatorFeatures, config }): Promise<InitDat
 	const tabId = await getCurrentTabId();
 
 	// Get state
-	const { isTranslated, counters, translateDirection } = await getPageTranslateState(
-		tabId,
-	);
+	const { isTranslated, counters, translateDirection } =
+		await getPageTranslateState(tabId);
 
 	let from: string | null = null;
 	let to: string | null = null;
@@ -366,9 +368,8 @@ PageTranslatorTab.init = async ({ translatorFeatures, config }): Promise<InitDat
 		from,
 		sitePreferences,
 	);
-	const languagePreferences = await getLanguagePreferences(from).then(
-		mapLanguagePreferences,
-	);
+	const languagePreferences =
+		await getLanguagePreferences(from).then(mapLanguagePreferences);
 
 	const pageTranslationStorage = new PageTranslationStorage();
 	const isShowOptions = await pageTranslationStorage

@@ -16,11 +16,11 @@ export const [updateTranslatorFactory, updateTranslator] = buildBackendRequest(
 
 		factoryHandler:
 			() =>
-				async ({ id, translator }) => {
-					await validateTranslatorCode(translator.code);
+			async ({ id, translator }) => {
+				await validateTranslatorCode(translator.code);
 
-					await db.updateTranslator(id, translator);
-					await applyTranslators();
-				},
+				await db.updateTranslator(id, translator);
+				await applyTranslators();
+			},
 	},
 );

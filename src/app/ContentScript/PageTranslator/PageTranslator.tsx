@@ -25,7 +25,7 @@ function isBlockElement(element: Element) {
 	const blockTypes = ['block', 'flex', 'grid', 'table', 'table-row', 'list-item'];
 	const display = getComputedStyle(element).display;
 
-	return blockTypes.indexOf(display) !== -1;
+	return blockTypes.includes(display);
 }
 
 type PageTranslatorConfig = Partial<
@@ -188,7 +188,7 @@ export class PageTranslator {
 		styles: ['contentscript.css'],
 	});
 
-	private showOriginalTextHandler = (evt: MouseEvent) => {
+	private readonly showOriginalTextHandler = (evt: MouseEvent) => {
 		const target: Element = evt.target as Element;
 
 		const getTextOfElement = (element: Node) => {
@@ -240,7 +240,7 @@ export class PageTranslator {
 	private readonly updateTimeout = 100;
 	private lastSentUpdate = 0;
 	private timer: number | null = null;
-	private translateStateUpdate = () => {
+	private readonly translateStateUpdate = () => {
 		if (this.timer !== null) return;
 
 		const sendUpdate = () => {

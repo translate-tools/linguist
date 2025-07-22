@@ -14,26 +14,26 @@ const offscreenWorkerCreate = buildBackendRequest<
 >('offscreenWorker.create', {
 	factoryHandler:
 		({ workers }) =>
-			async ({ url }) => {
-				const workerId = String(new Date().getTime());
-				const worker = new Worker(url);
+		async ({ url }) => {
+			const workerId = String(new Date().getTime());
+			const worker = new Worker(url);
 
-				workers.set(workerId, worker);
+			workers.set(workerId, worker);
 
-				(['message', 'error', 'messageerror'] as const).forEach((eventName) => {
-					worker.addEventListener(eventName, (event) => {
-						if (!('data' in event)) return;
+			(['message', 'error', 'messageerror'] as const).forEach((eventName) => {
+				worker.addEventListener(eventName, (event) => {
+					if (!('data' in event)) return;
 
-						sendEventToOffscreenWorker({
-							workerId,
-							name: eventName,
-							data: event.data,
-						});
+					sendEventToOffscreenWorker({
+						workerId,
+						name: eventName,
+						data: event.data,
 					});
 				});
+			});
 
-				return workerId;
-			},
+			return workerId;
+		},
 });
 
 const offscreenWorkerTerminate = buildBackendRequest<
@@ -43,15 +43,15 @@ const offscreenWorkerTerminate = buildBackendRequest<
 >('offscreenWorker.terminate', {
 	factoryHandler:
 		({ workers }) =>
-			async ({ workerId }) => {
-				const worker = workers.get(workerId);
-				if (!worker) {
-					throw new Error(`Not found worker "${workerId}"`);
-				}
+		async ({ workerId }) => {
+			const worker = workers.get(workerId);
+			if (!worker) {
+				throw new Error(`Not found worker "${workerId}"`);
+			}
 
-				worker.terminate();
-				workers.delete(workerId);
-			},
+			worker.terminate();
+			workers.delete(workerId);
+		},
 });
 
 const offscreenWorkerPostMessage = buildBackendRequest<
@@ -61,14 +61,14 @@ const offscreenWorkerPostMessage = buildBackendRequest<
 >('offscreenWorker.postMessage', {
 	factoryHandler:
 		({ workers }) =>
-			async ({ workerId, args }) => {
-				const worker = workers.get(workerId);
-				if (!worker) {
-					throw new Error(`Not found worker "${workerId}"`);
-				}
+		async ({ workerId, args }) => {
+			const worker = workers.get(workerId);
+			if (!worker) {
+				throw new Error(`Not found worker "${workerId}"`);
+			}
 
-				worker.postMessage(unserialize(args));
-			},
+			worker.postMessage(unserialize(args));
+		},
 });
 
 export const offscreenWorkerApi = {

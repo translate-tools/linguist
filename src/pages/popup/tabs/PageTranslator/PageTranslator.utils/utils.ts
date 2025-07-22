@@ -29,9 +29,9 @@ export const getTranslatePreferencesForSite = (
 			translatePreference = sitePreferenceOptions.ALWAYS;
 		} else {
 			const isAutoTranslatedLang =
-				sitePreferences.autoTranslateLanguages.indexOf(lang) !== -1;
+				sitePreferences.autoTranslateLanguages.includes(lang);
 			const isIgnoredLang =
-				sitePreferences.autoTranslateIgnoreLanguages.indexOf(lang) !== -1;
+				sitePreferences.autoTranslateIgnoreLanguages.includes(lang);
 
 			if (isIgnoredLang) {
 				translatePreference = sitePreferenceOptions.NEVER_FOR_THIS_LANGUAGE;

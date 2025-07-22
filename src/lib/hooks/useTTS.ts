@@ -57,11 +57,19 @@ export const useTTS = (
 	const [isPlayed, setIsPlayed] = useState(false);
 
 	useEffect(() => {
-		const startLoading = () => setIsLoading(true);
-		const stopLoading = () => setIsLoading(false);
+		const startLoading = () => {
+			setIsLoading(true);
+		};
+		const stopLoading = () => {
+			setIsLoading(false);
+		};
 
-		const startPlaying = () => setIsPlayed(true);
-		const stopPlaying = () => setIsPlayed(false);
+		const startPlaying = () => {
+			setIsPlayed(true);
+		};
+		const stopPlaying = () => {
+			setIsPlayed(false);
+		};
 
 		player.current.addEventListener('ended', nextSourcePusher);
 

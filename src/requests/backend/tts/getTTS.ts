@@ -1,4 +1,4 @@
-import splitLongText from 'google-tts-api/dist/splitLongText';
+import { splitLongText } from 'anylang/utils/text';
 
 import { base64ToBlob, blobToBase64 } from '../../../lib/blob';
 import { detectLanguage } from '../../../lib/language';
@@ -8,24 +8,24 @@ import { buildBackendRequest } from '../../utils/requestBuilder';
 export const [getTTSFactory, getTTSReq] = buildBackendRequest('tts.getTTS', {
 	factoryHandler:
 		({ backgroundContext }) =>
-			async ({ text, lang }: { text: string; lang: string }) => {
+		async ({ text, lang }: { text: string; lang: string }) => {
 			// Fix lang auto to detected language
-				if (lang === 'auto') {
-					lang = (await detectLanguage(text, true)) || 'en';
-				}
+			if (lang === 'auto') {
+				lang = (await detectLanguage(text, true)) || 'en';
+			}
 
-				const ttsController = await backgroundContext.getTTSController();
-				const tts = await ttsController.getSpeaker();
-				return Promise.all(
-					splitLongText(text).map((text) =>
-						tts.instance
-							.getAudioBuffer(text, lang)
-							.then((audio) =>
-								blobToBase64(new Blob([audio.buffer], { type: audio.type })),
-							),
-					),
-				);
-			},
+			const ttsController = await backgroundContext.getTTSController();
+			const tts = await ttsController.getSpeaker();
+			return Promise.all(
+				splitLongText(text).map((text) =>
+					tts.instance
+						.getAudioBuffer(text, lang)
+						.then((audio) =>
+							blobToBase64(new Blob([audio.buffer], { type: audio.type })),
+						),
+				),
+			);
+		},
 });
 
 /**

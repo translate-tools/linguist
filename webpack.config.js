@@ -84,10 +84,10 @@ module.exports = {
 		new MiniCssExtractPlugin({}),
 		...(isBundleAnalyzingEnabled
 			? [
-				new BundleAnalyzerPlugin({
-					analyzerPort: 8888 + 10 + targetsList.indexOf(target),
-				}),
-			  ]
+					new BundleAnalyzerPlugin({
+						analyzerPort: 8888 + 10 + targetsList.indexOf(target),
+					}),
+				]
 			: []),
 		new CopyPlugin({
 			patterns: [
@@ -95,7 +95,7 @@ module.exports = {
 				{
 					from: `./manifests/manifest.json`,
 					to: path.join(outputPath, 'manifest.json'),
-					transform(content, absoluteFrom) {
+					transform(content) {
 						const rawManifest = content.toString();
 						let manifest = JSON.parse(rawManifest);
 
@@ -197,6 +197,7 @@ module.exports = {
 				use: {
 					loader: 'ts-loader',
 					options: {
+						onlyCompileBundledFiles: true,
 						allowTsInNodeModules: true,
 						transpileOnly: isFastBuild,
 					},

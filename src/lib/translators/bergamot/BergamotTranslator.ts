@@ -9,7 +9,7 @@ export class BergamotTranslator {
 	static translatorName = getMessage('common_offlineTranslator', 'Bergamot');
 	static isRequiredKey = () => false;
 
-	private translator;
+	private readonly translator;
 	constructor() {
 		const workerUrl = browser.runtime.getURL(
 			'thirdparty/bergamot/translator.worker.js',

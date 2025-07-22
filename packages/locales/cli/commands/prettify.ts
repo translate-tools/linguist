@@ -39,10 +39,7 @@ command
 		const languages = (
 			options.languages ?? z.string().array().parse(readdirSync(resolvedDir))
 		).filter((language) => {
-			if (
-				options.excludedLanguages &&
-				options.excludedLanguages.includes(language)
-			) {
+			if (options.excludedLanguages?.includes(language)) {
 				return false;
 			}
 

@@ -9,8 +9,8 @@ export class OffscreenWorker implements Worker {
 	public onmessageerror: Worker['onmessageerror'] = null;
 	public onerror: Worker['onerror'] = null;
 
-	private workerId: Promise<string>;
-	private requestsHandlerCleanup;
+	private readonly workerId: Promise<string>;
+	private readonly requestsHandlerCleanup;
 	constructor(url: string) {
 		this.workerId = offscreenWorkerApi.create({ url });
 

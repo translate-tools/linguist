@@ -23,15 +23,21 @@ export const ToastMessages: FC<ToastMessagesProps> = ({
 			{messages.length === 0 ? undefined : (
 				<div
 					className={cnToastMessages()}
-					onMouseOver={() => haltMessages(true)}
-					onMouseLeave={() => haltMessages(false)}
+					onMouseOver={() => {
+						haltMessages(true);
+					}}
+					onMouseLeave={() => {
+						haltMessages(false);
+					}}
 				>
 					{messages.map(({ text, type, id }, index) => {
 						return (
 							<div
 								key={index}
 								className={cnToastMessages('Message', { type })}
-								onClick={() => deleteMessage(id)}
+								onClick={() => {
+									deleteMessage(id);
+								}}
 							>
 								{text}
 							</div>

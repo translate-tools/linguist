@@ -1,3 +1,4 @@
+/* eslint-disable @cspell/spellchecker */
 import React, { FC, RefObject, useCallback, useEffect, useMemo, useRef } from 'react';
 import { useRefHost } from 'react-elegant-ui/hooks/useRefHost';
 import { editor, languages } from 'monaco-editor-core';
@@ -79,8 +80,8 @@ export const MonacoEditor: FC<MonacoEditorProps> = ({
 			automaticLayout: true,
 			minimap: isMobileBrowser()
 				? {
-					enabled: false,
-				  }
+						enabled: false,
+					}
 				: undefined,
 		});
 

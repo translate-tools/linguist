@@ -9,7 +9,7 @@ export interface Options {
 	/**
 	 * Key modifiers to activate translate of selected text
 	 */
-	modifiers: Array<'ctrlKey' | 'altKey' | 'shiftKey' | 'metaKey'>;
+	modifiers: ('ctrlKey' | 'altKey' | 'shiftKey' | 'metaKey')[];
 
 	/**
 	 * Skip when pointerdown not on the selected text
@@ -80,7 +80,7 @@ export const getSelectedTextOfInput = (elm: HTMLInputElement | HTMLTextAreaEleme
  * This wrapper on component need to allow convenient manage state
  */
 export class SelectTranslator {
-	private options: Options = {
+	private readonly options: Options = {
 		modifiers: ['ctrlKey'],
 		detectedLangFirst: false,
 		quickTranslate: false,
@@ -103,7 +103,7 @@ export class SelectTranslator {
 	// Flag which set while every selection event and reset while button shown
 	private unhandledSelection = false;
 	private selectionTarget: HTMLElement | null = null;
-	private selectionFlagUpdater = (evt: Event) => {
+	private readonly selectionFlagUpdater = (evt: Event) => {
 		this.unhandledSelection = true;
 		this.selectionTarget = evt.target instanceof HTMLElement ? evt.target : null;
 	};
@@ -118,7 +118,7 @@ export class SelectTranslator {
 		}
 
 		this.shadowRoot.createRootNode();
-		const root = this.shadowRoot.getRootNode() as HTMLElement;
+		const root = this.shadowRoot.getRootNode()!;
 
 		// Add event listeners
 		root.addEventListener('keydown', this.keyDown);
@@ -186,7 +186,7 @@ export class SelectTranslator {
 		});
 	};
 
-	private getSelectedText = () =>
+	private readonly getSelectedText = () =>
 		new Promise<{ selection: Selection; text: string } | null>((res) => {
 			const root = this.shadowRoot.getRootNode();
 
@@ -223,7 +223,7 @@ export class SelectTranslator {
 		});
 
 	// Prevent handle keys by page. It important for search language on pages like youtube where F key can open fullscreen mode
-	private keyDown = (evt: KeyboardEvent) => {
+	private readonly keyDown = (evt: KeyboardEvent) => {
 		evt.stopImmediatePropagation();
 	};
 
@@ -231,7 +231,7 @@ export class SelectTranslator {
 	/**
 	 * Close popup by click outside the root
 	 */
-	private pointerDown = (evt: PointerEvent | TouchEvent) => {
+	private readonly pointerDown = (evt: PointerEvent | TouchEvent) => {
 		const root = this.shadowRoot.getRootNode();
 		if (root !== null && evt.target instanceof Node && root.contains(evt.target))
 			return;
@@ -246,7 +246,7 @@ export class SelectTranslator {
 	/**
 	 * Open popup by text selection on the page
 	 */
-	private pointerUp = async (evt: PointerEvent | TouchEvent) => {
+	private readonly pointerUp = async (evt: PointerEvent | TouchEvent) => {
 		await new Promise((res) => setTimeout(res, 10));
 
 		const getIsTouchEvt = (evt: Event): evt is TouchEvent =>
@@ -312,7 +312,7 @@ export class SelectTranslator {
 		});
 	};
 
-	private showPopup = (text: string, x: number, y: number) => {
+	private readonly showPopup = (text: string, x: number, y: number) => {
 		const trimmedText = text.trim();
 
 		if (trimmedText.length === 0) return;
@@ -357,11 +357,11 @@ export class SelectTranslator {
 		);
 	};
 
-	private hidePopup = () => {
+	private readonly hidePopup = () => {
 		this.mountEmptyComponent();
 	};
 
-	private mountEmptyComponent = () => {
+	private readonly mountEmptyComponent = () => {
 		this.shadowRoot.mountComponent();
 	};
 }

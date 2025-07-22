@@ -68,6 +68,7 @@
 	padding: var(--textarea-size-m-control-indent);
 	white-space: pre-line;
 	box-sizing: border-box;
+	/* stylelint-disable-next-line declaration-property-value-keyword-no-deprecated */
 	word-break: break-word;
 }
 

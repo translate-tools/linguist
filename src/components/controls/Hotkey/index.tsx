@@ -99,7 +99,11 @@ export const Hotkey: FC<HotkeyProps> = ({ value, onChange }) => {
 						: getMessage('component_hotkey_placeholder')
 				}
 			/>
-			<Button onClick={() => onChange(null)}>
+			<Button
+				onClick={() => {
+					onChange(null);
+				}}
+			>
 				{getMessage('component_hotkey_resetButton')}
 			</Button>
 		</LayoutFlow>

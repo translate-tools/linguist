@@ -1,4 +1,4 @@
-import { BaseTranslator } from '@translate-tools/core/translators/BaseTranslator';
+import { BaseTranslator } from 'anylang/translators';
 
 import { CustomTranslatorInfo } from '../../../offscreen-documents/translator';
 import { customTranslatorsApi } from '../../../requests/offscreen/customTranslators';

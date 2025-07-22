@@ -273,7 +273,9 @@ export const TranslationsHistory: FC<TranslationsHistoryProps> = ({
 					placeholder={getMessage('history_searchPlaceholder')}
 					value={searchInput.value}
 					onInputText={searchInput.setValue}
-					onClearClick={() => searchInput.setValue('')}
+					onClearClick={() => {
+						searchInput.setValue('');
+					}}
 				/>
 
 				<LayoutFlow direction="horizontal" indent="l">
@@ -346,7 +348,9 @@ export const TranslationsHistory: FC<TranslationsHistoryProps> = ({
 								headStartSlot={
 									<Checkbox
 										checked={key in checkedItems}
-										setChecked={() => toggleCheckbox(key)}
+										setChecked={() => {
+											toggleCheckbox(key);
+										}}
 										title={getMessage('history_control_selectEntry')}
 									/>
 								}
@@ -356,7 +360,9 @@ export const TranslationsHistory: FC<TranslationsHistoryProps> = ({
 										<Button
 											view="clear"
 											size="s"
-											onPress={() => deleteEntry(key)}
+											onPress={() => {
+												deleteEntry(key);
+											}}
 											title={getMessage(
 												'common_action_removeFromDictionary',
 											)}

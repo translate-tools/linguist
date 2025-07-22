@@ -20,11 +20,11 @@ beforeEach(() => {
 			const match = json.match(/^(translation request\[(\w+)-(\w+)\])/);
 			return match
 				? json
-					.slice(match[0].length)
-					.replaceAll(
-						/:"(.+?)"/g,
-						`:"translated[${match[2]}-${match[3]}] $1"`,
-					)
+						.slice(match[0].length)
+						.replaceAll(
+							/:"(.+?)"/g,
+							`:"translated[${match[2]}-${match[3]}] $1"`,
+						)
 				: json;
 		}),
 	);

@@ -109,11 +109,11 @@ export const buildBackendRequest = <O = void, R = void, C = RequestHandlerFactor
 
 export const joinRequestHandlers =
 	(handlers: RequestHandlerFactory[]): RequestHandlerFactory =>
-		(props) => {
-			const cancelHandlers = handlers.map((handler) => handler(props));
-			return () => {
-				cancelHandlers.forEach((cancel) => {
-					cancel();
-				});
-			};
+	(props) => {
+		const cancelHandlers = handlers.map((handler) => handler(props));
+		return () => {
+			cancelHandlers.forEach((cancel) => {
+				cancel();
+			});
 		};
+	};

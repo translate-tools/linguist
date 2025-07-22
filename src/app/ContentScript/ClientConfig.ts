@@ -10,7 +10,7 @@ export class ClientConfig {
 	private store: Store<AppConfigType> | null = null;
 	private readonly updateData = createEvent<AppConfigType>();
 
-	private cleanupCallbacks: (() => void)[] = [];
+	private readonly cleanupCallbacks: (() => void)[] = [];
 	public async getStore() {
 		if (this.store === null) {
 			// TODO: add deadline
@@ -34,7 +34,9 @@ export class ClientConfig {
 	public disconnect() {
 		if (this.store === null) return;
 
-		this.cleanupCallbacks.forEach((cleanup) => cleanup());
+		this.cleanupCallbacks.forEach((cleanup) => {
+			cleanup();
+		});
 		this.store = null;
 	}
 }

@@ -1,4 +1,4 @@
-import * as IDB from 'idb/with-async-ittr';
+import * as IDB from 'idb';
 
 export type SerializedSpeaker = {
 	name: string;
@@ -64,10 +64,10 @@ export class TTSStorage {
 		const db = await this.getDB();
 		const tx = db.transaction('speakers', 'readwrite');
 
-		const speakers: Array<{
+		const speakers: {
 			id: TTSKey;
 			data: SerializedSpeaker;
-		}> = [];
+		}[] = [];
 
 		const startCursor = await tx.store.openCursor(null, 'next');
 		if (startCursor !== null) {

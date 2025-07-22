@@ -1,3 +1,5 @@
+/* eslint-disable no-useless-escape */
+/* eslint-disable @cspell/spellchecker */
 // File copied from https://github.com/microsoft/monaco-editor/blob/84d1bed101c30355d2ad4115e7c7d91882b578d5/src/basic-languages/typescript/typescript.ts
 
 /*---------------------------------------------------------------------------------------------

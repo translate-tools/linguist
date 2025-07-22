@@ -1,4 +1,4 @@
-import { DBSchema } from 'idb/with-async-ittr';
+import { DBSchema } from 'idb';
 
 import { IDBConstructor } from '../../../../../lib/idb/manager';
 

@@ -15,8 +15,8 @@ export type PageTranslatorState = {
 };
 
 export class PageTranslatorController {
-	private manager: PageTranslatorManager;
-	private updateTranslationState: Event<PageTranslationOptions | null>;
+	private readonly manager: PageTranslatorManager;
+	private readonly updateTranslationState: Event<PageTranslationOptions | null>;
 	constructor(
 		manager: PageTranslatorManager,
 		updateTranslationState: Event<PageTranslationOptions | null>,

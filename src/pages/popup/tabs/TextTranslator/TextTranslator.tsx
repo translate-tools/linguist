@@ -112,9 +112,9 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 	} | null>(
 		lastTranslation !== null && lastTranslation.translatedText !== null
 			? {
-				original: lastTranslation.originalText,
-				text: lastTranslation.translatedText,
-			  }
+					original: lastTranslation.originalText,
+					text: lastTranslation.translatedText,
+				}
 			: null,
 	);
 
@@ -294,11 +294,11 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 			userInput.length === 0
 				? null
 				: {
-					originalText: userInput,
-					translatedText: isTranslatedTextRelative
-						? translation.text
-						: null,
-				  },
+						originalText: userInput,
+						translatedText: isTranslatedTextRelative
+							? translation.text
+							: null,
+					},
 		);
 	}, [isTranslatedTextRelative, setLastTranslation, translation, userInput]);
 
@@ -432,8 +432,12 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 							hasClear
 							onClearClick={clearState}
 							spellCheck={spellCheck}
-							onFocus={() => setIsFocusOnInput(true)}
-							onBlur={() => setIsFocusOnInput(false)}
+							onFocus={() => {
+								setIsFocusOnInput(true);
+							}}
+							onBlur={() => {
+								setIsFocusOnInput(false);
+							}}
 							addonAfterControl={
 								<div className={cnTextTranslator('TextActions')}>
 									<Button

@@ -40,5 +40,6 @@
 	height: 100%;
 	text-align: center;
 	vertical-align: middle;
+	/* stylelint-disable-next-line declaration-property-value-no-unknown */
 	word-wrap: anywhere;
 }

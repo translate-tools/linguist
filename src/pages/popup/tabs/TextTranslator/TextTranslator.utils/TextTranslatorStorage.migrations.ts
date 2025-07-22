@@ -58,9 +58,8 @@ const migrations: Migration[] = [
 		version: 3,
 		async migrate() {
 			const browserStorageName = 'TextTranslatorStorage';
-			const { [browserStorageName]: tabData } = await browser.storage.local.get(
-				browserStorageName,
-			);
+			const { [browserStorageName]: tabData } =
+				await browser.storage.local.get(browserStorageName);
 
 			const codec = decodeStruct(dataStructureVersions[0], tabData);
 
@@ -74,9 +73,9 @@ const migrations: Migration[] = [
 					to,
 					translate: translate
 						? {
-							originalText: translate.text,
-							translatedText: translate.translate,
-						  }
+								originalText: translate.text,
+								translatedText: translate.translate,
+							}
 						: null,
 				},
 			});

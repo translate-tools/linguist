@@ -1,6 +1,6 @@
 import React, { ComponentType, FC, ReactNode } from 'react';
+import { isLanguageCodeISO639v1 } from 'anylang/languages';
 import browser from 'webextension-polyfill';
-import { isLanguageCodeISO639v1 } from '@translate-tools/core/languages';
 
 import { isMobileBrowser } from './browser';
 import { capitalizeString } from './utils';
@@ -74,10 +74,7 @@ export function getLanguageNameByCode(
 	langCode: string,
 	encodeNotFoundToString: false,
 ): string | null;
-export function getLanguageNameByCode(
-	langCode: string,
-	encodeNotFoundToString: boolean = true,
-) {
+export function getLanguageNameByCode(langCode: string, encodeNotFoundToString = true) {
 	if (langCode === 'auto') {
 		return encodeNotFoundToString
 			? getMessage('lang_detect')
@@ -117,9 +114,8 @@ export const isValidLanguage = (language: string) => isLanguageCodeISO639v1(lang
 
 export const buildLink =
 	(url: string): FC =>
-		({ children }) =>
-			(
-				<a href={url} target="_blank" rel="noopener">
-					{children}
-				</a>
-			);
+	({ children }) => (
+		<a href={url} target="_blank" rel="noopener noreferrer">
+			{children}
+		</a>
+	);

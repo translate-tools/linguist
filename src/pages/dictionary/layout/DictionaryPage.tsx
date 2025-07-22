@@ -1,8 +1,8 @@
 import React, { FC, useCallback, useEffect, useMemo, useState } from 'react';
 import { useImmutableCallback } from 'react-elegant-ui/esm/hooks/useImmutableCallback';
+import { getLanguageCodesISO639 } from 'anylang/languages';
 import Papa from 'papaparse';
 import { cn } from '@bem-react/classname';
-import { getLanguageCodesISO639 } from '@translate-tools/core/languages';
 
 import { LayoutFlow } from '../../../components/layouts/LayoutFlow/LayoutFlow';
 import { Page } from '../../../components/layouts/Page/Page';
@@ -58,7 +58,10 @@ export const DictionaryPage: FC<IDictionaryPageProps> = ({ confirmDelete = true 
 	const [entries, setEntries] = useState<ITranslationEntryWithKey[] | null>(null);
 
 	const updateData = useCallback(
-		() => getTranslations().then((entries) => setEntries(entries)),
+		() =>
+			getTranslations().then((entries) => {
+				setEntries(entries);
+			}),
 		[],
 	);
 
@@ -193,30 +196,30 @@ export const DictionaryPage: FC<IDictionaryPageProps> = ({ confirmDelete = true 
 		// TODO: optimize it. Filtrate it on backend, debounce search input handling
 		const fromIsEmpty = from === undefined || from === 'any';
 		const toIsEmpty = to === undefined || to === 'any';
-		const filtredEntries =
+		const filteredEntries =
 			fromIsEmpty && toIsEmpty && search.length === 0
 				? entries
 				: entries.filter((entry) => {
-					const translation = entry.data.translation;
+						const translation = entry.data.translation;
 
-					if (!fromIsEmpty && translation.from !== from) return false;
-					if (!toIsEmpty && translation.to !== to) return false;
+						if (!fromIsEmpty && translation.from !== from) return false;
+						if (!toIsEmpty && translation.to !== to) return false;
 
-					// Match text
-					if (search.length !== 0) {
-						const isTextsMatchSearch = isTextsContainsSubstring(
-							search,
-							[translation.originalText, translation.translatedText],
-							true,
-						);
-						return isTextsMatchSearch;
-					}
+						// Match text
+						if (search.length !== 0) {
+							const isTextsMatchSearch = isTextsContainsSubstring(
+								search,
+								[translation.originalText, translation.translatedText],
+								true,
+							);
+							return isTextsMatchSearch;
+						}
 
-					return true;
-				  });
+						return true;
+					});
 
 		// Empty content
-		if (filtredEntries.length === 0)
+		if (filteredEntries.length === 0)
 			return (
 				<div className={cnDictionaryPage('NotFoundMessage')}>
 					<div className={cnDictionaryPage('NotFoundMessageContent')}>
@@ -229,7 +232,7 @@ export const DictionaryPage: FC<IDictionaryPageProps> = ({ confirmDelete = true 
 			);
 
 		// Render entries
-		return filtredEntries.map(({ data, key }, idx) => {
+		return filteredEntries.map(({ data, key }, idx) => {
 			const { timestamp, translation } = data;
 			return (
 				<TranslationCard
@@ -296,7 +299,9 @@ export const DictionaryPage: FC<IDictionaryPageProps> = ({ confirmDelete = true 
 							value={search}
 							onInputText={setSearch}
 							className={cnDictionaryPage('SearchControl')}
-							onClearClick={() => setSearch('')}
+							onClearClick={() => {
+								setSearch('');
+							}}
 							hasClear
 						/>
 

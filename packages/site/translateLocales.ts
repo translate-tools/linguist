@@ -1,8 +1,8 @@
+import { Scheduler } from 'anylang/scheduling';
+import { YandexTranslator } from 'anylang/translators';
 import crypto from 'crypto';
 import { existsSync } from 'fs';
 import path from 'path';
-import { Scheduler } from '@translate-tools/core/scheduling/Scheduler';
-import { YandexTranslator } from '@translate-tools/core/translators/YandexTranslator';
 
 import { readFile, writeFile } from 'fs/promises';
 import { languages } from './supportedLanguages';
@@ -50,8 +50,8 @@ const localesDirectories = ['./src/components/Landing/locales'];
 		const cacheFilename = path.resolve('./.locales-cache.json');
 		const translationCache = existsSync(cacheFilename)
 			? await readFile(cacheFilename).then((buffer) =>
-				JSON.parse(buffer.toString()),
-			  )
+					JSON.parse(buffer.toString()),
+				)
 			: {};
 
 		const sourceDataHash = crypto

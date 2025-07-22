@@ -143,7 +143,7 @@ export const PopupWindow: FC<PopupWindowProps> = ({
 
 		// Hack which implement resize body in firefox
 		// It need when popup wrap have overflow items (like language selector)
-		// Standart ResizeObserver can't track this even with option `box: 'border-box'`
+		// Standard ResizeObserver can't track this even with option `box: 'border-box'`
 		const isFirefox = /firefox/i.test(navigator.userAgent);
 		if (isFirefox) {
 			// TODO: fix size decreasing

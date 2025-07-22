@@ -22,28 +22,28 @@ export const createValidator =
 		context: TranslationContext;
 		fix?: InvalidTranslationPromptFetcher;
 	}) =>
-		(source: Record<any, any>, transformed: Record<any, any>): ValidatorResult => {
-			const missedPaths = getObjectPaths(
-				getObjectsDiff(transformed, source, 'diff', Boolean),
-			);
-			const addedPaths = getObjectPaths(
-				getObjectsDiff(source, transformed, 'diff', Boolean),
-			);
+	(source: Record<any, any>, transformed: Record<any, any>): ValidatorResult => {
+		const missedPaths = getObjectPaths(
+			getObjectsDiff(transformed, source, 'diff', Boolean),
+		);
+		const addedPaths = getObjectPaths(
+			getObjectsDiff(source, transformed, 'diff', Boolean),
+		);
 
-			if (missedPaths.length === 0 && addedPaths.length === 0) return { isValid: true };
+		if (missedPaths.length === 0 && addedPaths.length === 0) return { isValid: true };
 
-			return {
-				isValid: false,
-				reason: new Error('Not equal structures'),
-				correctionRequest: fix
-					? fix({
+		return {
+			isValid: false,
+			reason: new Error('Not equal structures'),
+			correctionRequest: fix
+				? fix({
 						missedPaths,
 						addedPaths,
 						context: structuredClone(context),
-				  })
-					: undefined,
-			};
+					})
+				: undefined,
 		};
+	};
 
 export class LLMJsonTranslator {
 	constructor(

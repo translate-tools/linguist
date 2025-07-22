@@ -18,10 +18,10 @@ type PageTranslationState = {
 };
 
 export class TranslatePageContextMenu {
-	private menuId = 'translatePage';
+	private readonly menuId = 'translatePage';
 
-	private tabStateUpdated;
-	private $tabState;
+	private readonly tabStateUpdated;
+	private readonly $tabState;
 
 	constructor() {
 		this.tabStateUpdated = createEvent<PageTranslationState>();
@@ -96,7 +96,7 @@ export class TranslatePageContextMenu {
 		}
 	}
 
-	private updateMenuItem = async (tabId: number) => {
+	private readonly updateMenuItem = async (tabId: number) => {
 		const currentWindow = await browser.windows.getCurrent();
 		const tab = await browser.tabs.get(tabId);
 
@@ -129,7 +129,7 @@ export class TranslatePageContextMenu {
 					tabId,
 					isTranslating: translateState.isTranslated,
 				});
-			} catch (error) {
+			} catch (_error) {
 				// Handle case when tab contentscript is not loaded yet
 				// and requests do not handle
 				browser.contextMenus.update(this.menuId, {
@@ -139,7 +139,7 @@ export class TranslatePageContextMenu {
 		}
 	};
 
-	private onClickMenu = async (
+	private readonly onClickMenu = async (
 		info: browser.Menus.OnClickData,
 		tab: browser.Tabs.Tab | undefined,
 	) => {

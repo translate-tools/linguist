@@ -5,11 +5,11 @@ export const [disableTranslatePageFactory, disableTranslatePage] = buildTabReque
 	{
 		factoryHandler:
 			({ pageTranslationContext }) =>
-				async () => {
-					const domTranslator = pageTranslationContext.getDOMTranslator();
-					if (domTranslator !== null) {
-						domTranslator.stopTranslate();
-					}
-				},
+			async () => {
+				const domTranslator = pageTranslationContext.getDOMTranslator();
+				if (domTranslator !== null) {
+					domTranslator.stopTranslate();
+				}
+			},
 	},
 );

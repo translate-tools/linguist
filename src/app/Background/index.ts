@@ -1,8 +1,11 @@
-import { isEqual } from 'lodash';
 // Translators
-import { GoogleTranslator } from '@translate-tools/core/translators/GoogleTranslator';
-import { TranslatorConstructor } from '@translate-tools/core/translators/Translator';
-import { YandexTranslator } from '@translate-tools/core/translators/YandexTranslator';
+import {
+	GoogleTranslator,
+	MicrosoftTranslator,
+	TranslatorConstructor,
+	YandexTranslator,
+} from 'anylang/translators';
+import { isEqual } from 'lodash';
 
 import { createSelector } from '../../lib/effector/createSelector';
 import { BergamotTranslator } from '../../lib/translators/bergamot/BergamotTranslator';
@@ -19,6 +22,7 @@ import { TTSController } from './TTS/TTSController';
 import { TTSManager } from './TTS/TTSManager';
 
 export const embeddedTranslators = {
+	MicrosoftTranslator,
 	GoogleTranslator,
 	YandexTranslator,
 	BergamotTranslator,
@@ -34,7 +38,7 @@ export type TranslatorsMap = Record<string, TranslatorConstructor>;
  */
 export class Background {
 	private readonly config: ObservableAsyncStorage<AppConfigType>;
-	private ttsManager;
+	private readonly ttsManager;
 	constructor(config: ObservableAsyncStorage<AppConfigType>) {
 		this.config = config;
 		this.ttsManager = new TTSManager();
