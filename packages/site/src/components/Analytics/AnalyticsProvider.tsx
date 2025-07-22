@@ -1,6 +1,10 @@
 import React, { PropsWithChildren, useCallback, useEffect, useState } from 'react';
-import Plausible from 'plausible-tracker';
-import { PlausibleInitOptions } from 'plausible-tracker/build/main/lib/tracker';
+import {
+	enableAutoOutboundTracking,
+	enableAutoPageviews,
+	Plausible,
+	PlausibleInitOptions,
+} from 'plausible-client';
 import Head from '@docusaurus/Head';
 
 import { analyticsContext, IAnalyticsContext } from './useAnalyticsContext';
@@ -17,7 +21,7 @@ export const AnalyticsProvider = ({
 	googleAnalytics,
 	children,
 }: AnalyticsProviderProps) => {
-	const [plausible] = useState(() => Plausible(plausibleOptions));
+	const [plausible] = useState(() => new Plausible(plausibleOptions));
 
 	const trackEvent: IAnalyticsContext['trackEvent'] = useCallback(
 		(eventName, props) => {
@@ -39,8 +43,8 @@ export const AnalyticsProvider = ({
 
 	// Setup default analytic listeners
 	useEffect(() => {
-		plausible.enableAutoPageviews();
-		plausible.enableAutoOutboundTracking();
+		enableAutoPageviews(plausible);
+		enableAutoOutboundTracking(plausible);
 
 		// Track clicks
 		document.body.addEventListener('click', (event: MouseEvent) => {
