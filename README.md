@@ -47,10 +47,10 @@ To try it on a chromium browser, download the normal extension for Chrome.
 
 See more info on https://linguister.io
 
-![](./site/static/screenshots/page-translation.png)
-![](./site/static/screenshots/text-translation.png)
-![](./site/static/screenshots/selected-text-translation.png)
-![](./site/static/screenshots/settings.png)
+![](./packages/site/static/screenshots/page-translation.png)
+![](./packages/site/static/screenshots/text-translation.png)
+![](./packages/site/static/screenshots/selected-text-translation.png)
+![](./packages/site/static/screenshots/settings.png)
 
 # Development
 
