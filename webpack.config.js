@@ -38,6 +38,7 @@ console.log('WebpackConfig', {
 	mode,
 	target,
 	outputPath,
+	isFastBuild,
 });
 
 const offscreenDocuments = ['main', 'worker', 'translator'];
