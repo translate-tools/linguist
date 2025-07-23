@@ -4,6 +4,7 @@ import browser from 'webextension-polyfill';
 import { isFirefox } from '../../lib/browser';
 import { getCurrentTabId, isValidBrowserTabId } from '../../lib/browser/tabs';
 import { getMessage } from '../../lib/language';
+import { wait } from '../../lib/time';
 import { getConfig } from '../../requests/backend/getConfig';
 import { getTranslatorFeatures } from '../../requests/backend/getTranslatorFeatures';
 import { disableTranslatePage } from '../../requests/contentscript/pageTranslation/disableTranslatePage';
@@ -96,7 +97,12 @@ export class TranslatePageContextMenu {
 		}
 	}
 
+	private updateMenuContext: unknown = null;
 	private readonly updateMenuItem = async (tabId: number) => {
+		// Update context
+		const currentContext = {};
+		this.updateMenuContext = currentContext;
+
 		const currentWindow = await browser.windows.getCurrent();
 		const tab = await browser.tabs.get(tabId);
 
@@ -123,18 +129,46 @@ export class TranslatePageContextMenu {
 		});
 
 		if (isVisible) {
-			try {
-				const translateState = await getPageTranslateState(tabId);
-				this.tabStateUpdated({
-					tabId,
-					isTranslating: translateState.isTranslated,
-				});
-			} catch (_error) {
-				// Handle case when tab contentscript is not loaded yet
-				// and requests do not handle
-				browser.contextMenus.update(this.menuId, {
-					visible: false,
-				});
+			const timeout = 50;
+			const retriesLimit = 30;
+
+			// Retry loop
+			// eslint-disable-next-line no-constant-condition
+			for (let retry = 0; true; retry++) {
+				// Handle case if user have changed tab while waiting
+				if (this.updateMenuContext !== currentContext) break;
+
+				try {
+					const translateState = await getPageTranslateState(tabId);
+
+					browser.contextMenus.update(this.menuId, {
+						visible: true,
+					});
+
+					this.tabStateUpdated({
+						tabId,
+						isTranslating: translateState.isTranslated,
+					});
+
+					break;
+				} catch (error) {
+					// Handle case when tab contentscript is not loaded yet
+					// and requests do not handle
+					browser.contextMenus.update(this.menuId, {
+						visible: false,
+					});
+
+					// Retry attempt
+					if (retry < retriesLimit) {
+						await wait(timeout);
+						continue;
+					}
+
+					// Out of limit
+					console.warn('Error while render context menu for page translation');
+					console.error(error);
+					break;
+				}
 			}
 		}
 	};
