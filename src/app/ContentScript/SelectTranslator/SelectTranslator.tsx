@@ -335,6 +335,20 @@ export class SelectTranslator {
 
 		const isForceQuickTranslate = enableTranslateFromContextMenu;
 
+		const rootNode = this.shadowRoot.getRootNode();
+		if (!rootNode) throw new Error('Root node is not found');
+
+		// Fix x/y position to set position related to root node
+		// Otherwise, in case a root node is shifted (for example when the body is resized),
+		// the element will be rendered too far of requested coordinates,
+		// because element renders related root node
+		// See issue #529
+		const bounds = rootNode.getBoundingClientRect();
+		const fixedPosition = {
+			x: x - bounds.x,
+			y: y - bounds.y,
+		};
+
 		this.shadowRoot.mountComponent(
 			<TextTranslatorPopup
 				closeHandler={this.hidePopup}
@@ -349,9 +363,8 @@ export class SelectTranslator {
 					zIndex,
 					timeoutForHideButton,
 					focusOnTranslateButton,
-					x,
-					y,
 					text: trimmedText,
+					...fixedPosition,
 				}}
 			/>,
 		);
