@@ -3,6 +3,14 @@ import ReactDOM from 'react-dom';
 import root from 'react-shadow';
 import browser from 'webextension-polyfill';
 
+// Set position explicitly
+const rootContainerStyles = {
+	all: 'unset',
+	position: 'absolute',
+	top: 0,
+	left: 0,
+} satisfies React.CSSProperties;
+
 /**
  * Shadow DOM container manager
  */
@@ -25,7 +33,10 @@ export class ShadowDOMContainerManager {
 		document.body.appendChild(this.root);
 
 		// Reset all styles
-		this.root.style.setProperty('all', 'unset');
+		for (const style of Object.entries(rootContainerStyles)) {
+			const [name, value] = style;
+			this.root.style.setProperty(name, String(value));
+		}
 
 		return this.root;
 	}
@@ -52,7 +63,7 @@ export class ShadowDOMContainerManager {
 		}
 
 		ReactDOM.render(
-			<root.div style={{ all: 'unset' }} mode="closed">
+			<root.div style={{ ...rootContainerStyles }} mode="closed">
 				{/* Include styles and scripts */}
 				{this.styles.map((path, index) => (
 					<link
