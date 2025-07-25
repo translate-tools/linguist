@@ -41,7 +41,6 @@ const config: Config = {
 			logo: {
 				alt: 'Linguist Translate',
 				src: '/logo.svg',
-				srcDark: 'img/logo_dark.svg',
 				href: '/',
 				target: '_self',
 				width: 100,
