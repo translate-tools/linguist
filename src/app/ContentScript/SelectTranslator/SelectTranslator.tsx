@@ -76,6 +76,15 @@ export const getSelectedTextOfInput = (elm: HTMLInputElement | HTMLTextAreaEleme
 	return elm.value.slice(selectionStart, selectionEnd);
 };
 
+export const getAbsolutePositionOfElement = (element: HTMLElement) => {
+	const bounds = element.getBoundingClientRect();
+	const { scrollX = 0, scrollY = 0 } = window;
+	return {
+		x: bounds.x + scrollX,
+		y: bounds.y + scrollY,
+	};
+};
+
 /**
  * This wrapper on component need to allow convenient manage state
  */
@@ -343,10 +352,10 @@ export class SelectTranslator {
 		// the element will be rendered too far of requested coordinates,
 		// because element renders related root node
 		// See issue #529
-		const bounds = rootNode.getBoundingClientRect();
+		const rootPosition = getAbsolutePositionOfElement(rootNode);
 		const fixedPosition = {
-			x: x - bounds.x,
-			y: y - bounds.y,
+			x: x - rootPosition.x,
+			y: y - rootPosition.y,
 		};
 
 		this.shadowRoot.mountComponent(
