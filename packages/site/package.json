@@ -13,6 +13,7 @@
 		"serve": "docusaurus serve",
 		"write-translations": "docusaurus write-translations",
 		"write-heading-ids": "docusaurus write-heading-ids",
+		"static:update": "icon-gen -i static/favicon.svg -o static --ico --ico-name favicon",
 		"typecheck": "tsc"
 	},
 	"dependencies": {
@@ -39,6 +40,7 @@
 		"@docusaurus/module-type-aliases": "^3.8.1",
 		"@docusaurus/tsconfig": "^3.8.1",
 		"@docusaurus/types": "^3.8.1",
+		"icon-gen": "^5.0.0",
 		"tsx": "^4.15.7",
 		"typescript": "~5.2.2"
 	},
