@@ -15,6 +15,22 @@ export const [translateFactory, translateRequest] = buildBackendRequest<
 		({ backgroundContext }) =>
 		async ({ text, from, to, options }) => {
 			const translateManager = await backgroundContext.getTranslateManager();
+
+			const { supportedLanguages, isSupportAutodetect } =
+				translateManager.getTranslatorFeatures();
+
+			if (
+				(from === 'auto' && !isSupportAutodetect) ||
+				(from !== 'auto' && !supportedLanguages.includes(from))
+			)
+				throw new Error(
+					'Source language is not supported by selected translator',
+				);
+			if (!supportedLanguages.includes(to))
+				throw new Error(
+					'Target language is not supported by selected translator',
+				);
+
 			const scheduler = translateManager.getScheduler();
 
 			return scheduler.translate(text, from, to, options);
