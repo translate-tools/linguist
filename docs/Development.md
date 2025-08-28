@@ -2,23 +2,33 @@ The build scripts are designed to run on unix platform (linux, mac, bsd, etc), i
 
 # Build from sources
 
-Prerequisites:
+## Prerequisites
+
+- AMD64 platform. Currently ARM platform is not tested, so build may fail there
 - UNIX-like OS
 - Installed make
 - Installed docker
 
-Instructions:
-- Create `.env` file. You may copy file `.env.config` and configure it with your options
-- To build all code, create packages, and check it with linter just run `make build`
-	- If you build from a platform other than amd64, you may have problems with build a third party code. To resolve a problem, you have to build code in environment that are compatible with amd64. You may [enable emulation](https://stackoverflow.com/questions/65612411/forcing-docker-to-use-linux-amd64-platform-by-default-on-macos), if you use docker - set variable `export DOCKER_DEFAULT_PLATFORM=linux/amd64` or provide option `platform: linux/amd64` to a `docker-compose.yml` file
-- To make build only for specific platform, you may run `make` with specific target like `buildFirefox`, `buildChromium`, etc (see `makefile` for details)
-	- You must build a third party code with `make buildThirdparty` before run specific target. Example: `make prepare buildThirdparty buildFirefox`
-- Artifacts is placed in `build` directory
+If you have ARM CPU and want to build the code, you can emulate AMD64 and run build there. You may also try to [enable emulation](https://stackoverflow.com/questions/65612411/forcing-docker-to-use-linux-amd64-platform-by-default-on-macos) on docker level. If you use docker - set variable `export DOCKER_DEFAULT_PLATFORM=linux/amd64` or provide option `platform: linux/amd64` to a `docker-compose.yml` file.
 
-Available platforms:
+## Build
+
+- Create `.env` file. You may copy file `.env.config` and configure it with your options
+- Run `make build` to build whole project, pack it, and check it with linter
+- Artifacts will be placed in `build` directory
+
+
+## Partial build
+
+To build extension only for specific browsers, you may run `make` with specific target like `buildFirefox`, `buildChromium`, etc (see `makefile` for details). Some of targets:
 - firefox
 - chrome
 - chromium: special build with auto updates not from google store
+
+You must install dependencies and build a third party code with `make prepare buildThirdparty` before run specific target.
+
+Example command to build only firefox version: `make prepare buildThirdparty buildFirefox`.
+
 
 # Development
 
