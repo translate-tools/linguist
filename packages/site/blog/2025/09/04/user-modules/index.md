@@ -2,7 +2,7 @@
 title: Use any translation service in browser via Linguist
 authors: [vitonsky]
 tags: [feature]
-date: 2025-09-05T9:20
+date: 2025-09-05T09:20
 ---
 
 Linguist is a highly customizable solution for translation in browser. By default you may choose one of embedded translators, you may even use offline translator for privacy sensitive texts.
