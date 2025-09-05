@@ -4,10 +4,39 @@
         <title>Linguist Translate Blog</title>
         <link>https://linguister.io/blog</link>
         <description>Linguist Translate Blog</description>
-        <lastBuildDate>Tue, 25 Jun 2024 16:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 05 Sep 2025 09:20:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Use any translation service in browser via Linguist]]></title>
+            <link>https://linguister.io/blog/2025/09/04/user-modules</link>
+            <guid>https://linguister.io/blog/2025/09/04/user-modules</guid>
+            <pubDate>Fri, 05 Sep 2025 09:20:00 GMT</pubDate>
+            <description><![CDATA[Linguist is a highly customizable solution for translation in the browser. By default, you may choose one of the embedded translators, you may even use an offline translator for privacy-sensitive texts.]]></description>
+            <content:encoded><![CDATA[<p>Linguist is a highly customizable solution for translation in the browser. By default, you may choose one of the embedded translators, you may even use an offline translator for privacy-sensitive texts.</p>
+<p>Although Linguist does not limit you to embedded translators, you may integrate literally any third-party service with Linguist. ChatGPT, DeepL, Ollama, or anything else, you may integrate it all as a <a href="https://linguister.io/docs/CustomTranslator">custom translator</a>.</p>
+<p>This feature is especially useful for those involved in research work and using Linguist intensively to translate content in many foreign languages, when standard translators may not provide good enough translation quality, or when translation must be fine-tuned.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="what-is-a-custom-translator">What is a custom translator?<a href="https://linguister.io/blog/2025/09/04/user-modules#what-is-a-custom-translator" class="hash-link" aria-label="Direct link to What is a custom translator?" title="Direct link to What is a custom translator?">​</a></h2>
+<p>A custom translator is a Javascript code that implements the <code>Translator</code> interface to fetch translations for requested source text and language to a target language.</p>
+<p>You may implement the translator yourself if you can program, see <a href="https://linguister.io/docs/CustomTranslator">custom translator interface</a> that must be implemented.</p>
+<p>Alternatively, you may find the code of the translator in the <a href="https://github.com/translate-tools/linguist-translators" target="_blank" rel="noopener noreferrer">public translators list</a>. If there is no translator for the service you want to have, feel free to <a href="https://github.com/translate-tools/linguist-translators/issues/new/choose" target="_blank" rel="noopener noreferrer">make an issue</a> about it.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="usage">Usage<a href="https://linguister.io/blog/2025/09/04/user-modules#usage" class="hash-link" aria-label="Direct link to Usage" title="Direct link to Usage">​</a></h2>
+<p>To add a custom translator, follow these steps</p>
+<ul>
+<li>Go to the settings page and click "Manage translators" <img decoding="async" loading="lazy" src="https://linguister.io/assets/images/settings-da644374685fd68e0504fcf745862c98.png" width="831" height="302" class="img_ev3q"></li>
+<li>Click the button to add a new translator <img decoding="async" loading="lazy" src="https://linguister.io/assets/images/custom-translators-list-9d38f0def45ce19a2c979abf34f8b4be.png" width="788" height="294" class="img_ev3q"></li>
+<li>Insert the code of the custom translator <img decoding="async" loading="lazy" src="https://linguister.io/assets/images/custom-translator-editor-d6c4db249bf7eaab5619a395ef921a1e.png" width="986" height="778" class="img_ev3q"></li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="security">Security<a href="https://linguister.io/blog/2025/09/04/user-modules#security" class="hash-link" aria-label="Direct link to Security" title="Direct link to Security">​</a></h2>
+<p>Technically, a custom translator code runs in a browser extension context, so <strong>you must never paste untrusted code</strong>.</p>
+<p>Actually, the code is sandboxed via an iframe with no origin context, so there is no access to the browser extension API. The iframe context is patched to transparently proxify a <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API" target="_blank" rel="noopener noreferrer"><code>fetch</code> API</a>, so any requests will be forwarded through the browser extension context, to make it possible to request any resources with no CORS limitations.</p>
+<p>This design is needed to allow you to fetch any API, even those that set strict CORS rules, or are deployed locally. You may just call any API with no hassle.</p>
+<p>The sandbox must prevent any potential ability to run custom code in a browser extension context. So this code must not be able to read or modify content on web pages or anything like this.</p>
+<p>However, <strong>it is potentially possible to make authenticated requests</strong> to any services, so <em>if you use untrusted code, hackers may steal your data or money from your bank account</em>.</p>]]></content:encoded>
+            <author>robert@vitonsky.net (Robert Vitonsky)</author>
+            <category>feature</category>
+        </item>
         <item>
             <title><![CDATA[Release 6.0.0]]></title>
             <link>https://linguister.io/blog/release/6.0.0</link>
@@ -28,7 +57,7 @@
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="manifest-v3">Manifest V3<a href="https://linguister.io/blog/release/6.0.0#manifest-v3" class="hash-link" aria-label="Direct link to Manifest V3" title="Direct link to Manifest V3">​</a></h2>
 <p>A chrome <a href="https://developer.chrome.com/blog/resuming-the-transition-to-mv3/#the_phase-out_timeline" target="_blank" rel="noopener noreferrer">announced</a> they will deprecate and disable extensions with manifest v2 soon. So Linguist migrate to manifest v3 on Chrome and stay on manifest v2 on Firefox.</p>
 <p>Due to some limitations of Manifest V3, Linguist may not work on too old browsers like Chrome 109 and older.</p>]]></content:encoded>
-            <author>rob@vitonsky.net (Robert Vitonsky)</author>
+            <author>robert@vitonsky.net (Robert Vitonsky)</author>
             <category>release</category>
         </item>
     </channel>

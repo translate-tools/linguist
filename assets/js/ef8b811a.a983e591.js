@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksite=self.webpackChunksite||[]).push([[8947],{6600:t=>{t.exports=JSON.parse('{"authors":[{"name":"Robert Vitonsky","title":"Founder of Linguist Translate","url":"https://vitonsky.net","email":"robert@vitonsky.net","imageURL":"https://github.com/vitonsky.png","key":"vitonsky","page":null,"count":2}]}')}}]);
