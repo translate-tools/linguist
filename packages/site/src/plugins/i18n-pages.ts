@@ -22,6 +22,10 @@ export default (
 		return {
 			name: 'i18n-pages',
 
+			getPathsToWatch() {
+				return routes.map((route) => `${route.i18n.localesDir}/**/*.json`);
+			},
+
 			async contentLoaded({ actions }) {
 				const { addRoute, createData } = actions;
 
