@@ -19,16 +19,16 @@
 	},
 	"sections": {
 		"hero": {
-			"title": "Linguist is a privacy‑focused, full‑featured translation solution.",
-			"description": "Translate web pages, highlighted text, Netflix subtitles, and private messages. Speak the translated text and save important translations to your personal dictionary to learn words even offline."
+			"title": "Translate all the things.",
+			"description": "The Linguist is a browser extension that translates anything for you.\n\nTranslate whole web pages, highlighted text, Netflix subtitles, and private messages. Speak the translated text and save important translations to your personal dictionary to learn words even offline.\n\nLinguist is a state of the art and privacy‑focused alternative for a google translate. Try\u00A0it\u00A0for\u00A0free."
 		},
 		"opensource": {
 			"title": "Open source",
-			"content": "Linguist is completely free, <0>open-source</0>, and it does not collect any user data to sell.<br><br>You may <1>support the project</1> with your donations to help Linguist maintain its independence and high quality. Share Linguist with your friends to make it popular together!"
+			"content": "Linguist is completely free and <0>open-source</0> browser extension. It does not collect any user data to sell.\n\nYou may <1>donate</1> to support the Linguist and help us keep independence and high quality.\n\nShare the Linguist in social media. Spread the word - help us to make it popular!"
 		},
 		"support": {
 			"title": "Support",
-			"content": "For support contact <0/>. If you have bug - <1>create issue</1> on GitHub."
+			"content": "If you have any questions, contact us <0/>.\nIf you found some bugs and have a GitHub - <1>create issue</1>."
 		},
 		"createdBy": {
 			"content": "Created by <0/>."
@@ -39,27 +39,27 @@
 		"items": {
 			"offlineTranslation": {
 				"title": "Offline translation and privacy",
-				"content": "Linguist can translate texts even without the internet - a feature that no other extension has. The offline translator allows you to translate texts on your device without sending any private messages over the internet, ensuring your privacy. Simply enable the feature on the options page to maintain your privacy while translating work emails and personal messages."
+				"content": "Translate any texts on your device without sending any private messages over the internet with an embedded offline translator.\n\nSimply enable the feature on the options page to maintain your privacy while translating work emails and personal messages.\n\nWith the offline translator you may translate pages even with no internet, that is especially useful in travel."
 			},
 			"fullPageTranslation": {
 				"title": "Full page translation",
-				"content": "Fast and high-quality whole-page translation in one click, even for private pages that need login. Flexible configuration for auto-translation based on domain name and languages. Translation is available by hotkey. You may see the original text by hovering over it."
+				"content": "Fast and high-quality full-page translation in few clicks.\n\nTranslation is available by hotkey. You may see the original text by hovering over it. Translate even a private pages over log-in or a pay-wall.\n\nSetup the auto-translation for a pages with rules based on page language or its domain."
 			},
 			"selectedTextTranslation": {
 				"title": "Translation for selected text",
-				"content": "Encountering unfamiliar words while reading an online article? Just select the text on the page and click the button to translate it. You can speak the translated and original text and save the translation to your dictionary."
+				"content": "Encountering unfamiliar words while reading an online article?\nJust select the text on the page and click the button to translate it.\n\nYou can speak the translated and original text and save the translation to your dictionary, to find it later."
 			},
 			"textTranslation": {
 				"title": "Text translation always at hand",
-				"content": "If you need to translate any text, just click the Linguist button to open the pop-up window. No more tabs with translation services, just use Linguist."
+				"content": "If you need to translate anything, just click the Linguist button and enter your text. No more tabs with translation services, just use Linguist with any service you prefer."
 			},
 			"knowledgeBase": {
 				"title": "Make your own personal knowledge base",
-				"content": "Any translated text is saved in the history, and you can add your favorite translations to your dictionary. You can search for translations in both your dictionary and history, and even filter your translations by language. The dictionary feature is available even when you are offline, making it an ideal tool for language learners or travelers who require constant access to their word lists."
+				"content": "Any translated text is saved in the history, and you can add a favorite translations to dictionary. You can search for translations in your dictionary and history. Nothing will be lost even after extensive research activity.\n\nThe dictionary is available even when you are offline. Linguist is built for a language learners and travelers who require constant access to their word lists."
 			},
 			"customTranslators": {
 				"title": "Custom translators",
-				"content": "Unlike other browser extensions, Linguist is not just a wrapper over the Google Translator Widget; it's a complete and independent translation system. If you are not satisfied with embedded translators, you can use Linguist with your favorite translation service by adding a custom translator. Read more about it in <0>docs</0>."
+				"content": "With Linguist you have control over the translation service to use.\n\nThe Linguist provides a popular translation services from Google, Yandex, Microsoft, and others.\n\nIf you miss some service in the list, you can add it as a <0>custom translator</0>.\n\nWith the custom translators you may add any service that is not added into Linguist yet. It may be a new LLM like ChatGPT was in 2022, or it may be any service that runs locally on your device, like Ollama or LibreTranslate."
 			}
 		}
 	}
