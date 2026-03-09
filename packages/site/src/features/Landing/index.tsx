@@ -21,6 +21,12 @@ const MetaTags = () => {
 		<Head>
 			{title && <title>{title}</title>}
 			{description && <meta name="description" content={description} />}
+			<link
+				rel="sitemap"
+				type="application/xml"
+				title="Sitemap"
+				href="/sitemap.xml"
+			></link>
 			<meta
 				property="og:image"
 				content={getUrl('screenshots/page-translation.png')}
