@@ -1,9 +1,25 @@
 import type { Config } from '@docusaurus/types';
 
+import i18nPages from './src/plugins/i18n-pages';
+
 const config: Config = {
 	title: 'Linguist Translate',
 	tagline: 'Privacy focused translation',
 	favicon: 'favicon.ico',
+
+	plugins: [
+		i18nPages([
+			{
+				url: '/{{locale}}',
+				pageComponent: '@site/src/features/Landing',
+				i18n: {
+					localesDir: './src/i18n/locales',
+					defaultLocale: 'en',
+					namespaces: ['landing'],
+				},
+			},
+		]),
+	],
 
 	// Set the production url of your site here
 	url: 'https://linguister.io',

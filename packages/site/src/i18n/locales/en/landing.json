@@ -1,0 +1,66 @@
+{
+	"navigation": {
+		"features": {
+			"content": "Features"
+		},
+		"blog": {
+			"content": "Blog"
+		},
+		"docs": {
+			"content": "Docs"
+		},
+		"github": {
+			"content": "GitHub"
+		}
+	},
+	"install": {
+		"chrome": "Install for Chrome",
+		"firefox": "Install for Firefox"
+	},
+	"sections": {
+		"hero": {
+			"title": "Linguist is a privacy‑focused, full‑featured translation solution.",
+			"description": "Translate web pages, highlighted text, Netflix subtitles, and private messages. Speak the translated text and save important translations to your personal dictionary to learn words even offline."
+		},
+		"opensource": {
+			"title": "Open source",
+			"content": "Linguist is completely free, <0>open-source</0>, and it does not collect any user data to sell.<br><br>You may <1>support the project</1> with your donations to help Linguist maintain its independence and high quality. Share Linguist with your friends to make it popular together!"
+		},
+		"support": {
+			"title": "Support",
+			"content": "For support contact <0/>. If you have bug - <1>create issue</1> on GitHub."
+		},
+		"createdBy": {
+			"content": "Created by <0/>."
+		}
+	},
+	"features": {
+		"title": "Features",
+		"items": {
+			"offlineTranslation": {
+				"title": "Offline translation and privacy",
+				"content": "Linguist can translate texts even without the internet - a feature that no other extension has. The offline translator allows you to translate texts on your device without sending any private messages over the internet, ensuring your privacy. Simply enable the feature on the options page to maintain your privacy while translating work emails and personal messages."
+			},
+			"fullPageTranslation": {
+				"title": "Full page translation",
+				"content": "Fast and high-quality whole-page translation in one click, even for private pages that need login. Flexible configuration for auto-translation based on domain name and languages. Translation is available by hotkey. You may see the original text by hovering over it."
+			},
+			"selectedTextTranslation": {
+				"title": "Translation for selected text",
+				"content": "Encountering unfamiliar words while reading an online article? Just select the text on the page and click the button to translate it. You can speak the translated and original text and save the translation to your dictionary."
+			},
+			"textTranslation": {
+				"title": "Text translation always at hand",
+				"content": "If you need to translate any text, just click the Linguist button to open the pop-up window. No more tabs with translation services, just use Linguist."
+			},
+			"knowledgeBase": {
+				"title": "Make your own personal knowledge base",
+				"content": "Any translated text is saved in the history, and you can add your favorite translations to your dictionary. You can search for translations in both your dictionary and history, and even filter your translations by language. The dictionary feature is available even when you are offline, making it an ideal tool for language learners or travelers who require constant access to their word lists."
+			},
+			"customTranslators": {
+				"title": "Custom translators",
+				"content": "Unlike other browser extensions, Linguist is not just a wrapper over the Google Translator Widget; it's a complete and independent translation system. If you are not satisfied with embedded translators, you can use Linguist with your favorite translation service by adding a custom translator. Read more about it in <0>docs</0>."
+			}
+		}
+	}
+}
