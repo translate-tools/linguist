@@ -3,9 +3,9 @@ import type { Config } from '@docusaurus/types';
 import i18nPages from './src/plugins/i18n-pages';
 
 const config: Config = {
-	title: 'Linguist - Privacy-Focused Browser Translator Extension',
+	title: 'Linguist – Privacy-Focused Browser Translator Extension',
 	tagline:
-		'Browser translator extension for Chrome and Firefox. Translate pages, highlighted text and subtitles instantly with privacy and offline support.',
+		'Privacy-focused browser translator extension for Chrome and Firefox. Translate web pages, highlighted text and subtitles instantly with offline support.',
 	favicon: 'favicon.ico',
 
 	plugins: [
@@ -48,7 +48,6 @@ const config: Config = {
 	],
 
 	themeConfig: {
-		image: '/screenshots/page-translation.png',
 		colorMode: {
 			defaultMode: 'light',
 			disableSwitch: true,
