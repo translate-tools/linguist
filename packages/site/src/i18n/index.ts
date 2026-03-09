@@ -31,6 +31,9 @@ export function createI18nInstance(
 			[lang]: resources,
 		},
 		interpolation: { escapeValue: false },
+		react: {
+			transKeepBasicHtmlNodesFor: ['br', 'strong', 'i', 'p', 'wbr'],
+		},
 	});
 
 	return instance;
