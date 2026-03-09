@@ -189,7 +189,7 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 									alignItems="start"
 									spacing={6}
 								>
-									<Text as="h2" fontSize={26}>
+									<Text as="h3" fontSize={26}>
 										{t('features.items.offlineTranslation.title')}
 									</Text>
 									<Text variant="description">
@@ -213,7 +213,7 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 									alignItems="start"
 									spacing={6}
 								>
-									<Text as="h2" fontSize={26}>
+									<Text as="h3" fontSize={26}>
 										{t('features.items.fullPageTranslation.title')}
 									</Text>
 									<Text variant="description">
@@ -239,7 +239,7 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 									alignItems="start"
 									spacing={6}
 								>
-									<Text as="h2" fontSize={26}>
+									<Text as="h3" fontSize={26}>
 										{t(
 											'features.items.selectedTextTranslation.title',
 										)}
@@ -267,7 +267,7 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 									alignItems="start"
 									spacing={6}
 								>
-									<Text as="h2" fontSize={26}>
+									<Text as="h3" fontSize={26}>
 										{t('features.items.textTranslation.title')}
 									</Text>
 									<Text variant="description">
@@ -289,7 +289,7 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 									alignItems="start"
 									spacing={6}
 								>
-									<Text as="h2" fontSize={26}>
+									<Text as="h3" fontSize={26}>
 										{t('features.items.knowledgeBase.title')}
 									</Text>
 									<Text variant="description">
@@ -313,7 +313,7 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 									alignItems="start"
 									spacing={6}
 								>
-									<Text as="h2" fontSize={26}>
+									<Text as="h3" fontSize={26}>
 										{t('features.items.customTranslators.title')}
 									</Text>
 									<Text variant="description">
