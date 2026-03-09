@@ -175,10 +175,15 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 							{t('features.title')}
 						</Text>
 
-						<VStack w="100%" alignItems="start" spacing="2rem">
+						<VStack
+							w="100%"
+							alignItems="start"
+							spacing="8rem"
+							className={styles.FeaturesList}
+						>
 							<HStack
 								alignItems="start"
-								spacing={8}
+								spacing={'3rem'}
 								className={styles.Feature}
 							>
 								<div className={clsx(styles.FeatureImage)}>
@@ -200,7 +205,7 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 
 							<HStack
 								alignItems="start"
-								spacing={8}
+								spacing={'3rem'}
 								className={styles.Feature}
 							>
 								<div className={clsx(styles.FeatureImage)}>
@@ -224,7 +229,7 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 
 							<HStack
 								alignItems="start"
-								spacing={8}
+								spacing={'3rem'}
 								className={styles.Feature}
 							>
 								<div className={clsx(styles.FeatureImage)}>
@@ -254,7 +259,7 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 
 							<HStack
 								alignItems="start"
-								spacing={8}
+								spacing={'3rem'}
 								className={styles.Feature}
 							>
 								<div className={clsx(styles.FeatureImage)}>
@@ -278,7 +283,7 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 
 							<HStack
 								alignItems="start"
-								spacing={8}
+								spacing={'3rem'}
 								className={styles.Feature}
 							>
 								<div className={clsx(styles.FeatureImage)}>
@@ -300,7 +305,7 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 
 							<HStack
 								alignItems="start"
-								spacing={8}
+								spacing={'3rem'}
 								className={styles.Feature}
 							>
 								<div className={clsx(styles.FeatureImage)}>
