@@ -30,9 +30,17 @@ export default (
 
 					// Create pages
 					for (const locale of locales.getSupportedLanguages()) {
+						const isDefaultLocale = locale === i18n.defaultLocale;
+
 						const localeData = locales.getI18nContext({
 							language: locale,
 							namespaces: i18n.namespaces,
+							getAltPath(language) {
+								return getPageUrl(
+									url,
+									isDefaultLocale ? language : undefined,
+								);
+							},
 						});
 						const i18nContentPath = await createData(
 							`i18n/${locale}/${i18n.namespaces.join('-')}.json`,
@@ -47,7 +55,7 @@ export default (
 							},
 						});
 
-						if (locale === i18n.defaultLocale) {
+						if (isDefaultLocale) {
 							addRoute({
 								path: getPageUrl(url),
 								component: pageComponent,

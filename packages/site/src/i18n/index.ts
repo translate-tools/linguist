@@ -5,6 +5,15 @@ export type i18nContext = {
 	lang: string;
 	// Translations for a single language, keyed by namespace
 	resources: Record<string, ResourceKey>;
+
+	/**
+	 * Alt versions of current page
+	 */
+	altVersions: {
+		url: string;
+		langCode: string;
+		langName: string;
+	}[];
 };
 
 export function createI18nInstance(

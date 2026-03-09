@@ -3,6 +3,7 @@ import path from 'node:path';
 
 import type { ResourceKey } from 'i18next';
 
+import { getNativeLanguageName } from './utils';
 import { i18nContext } from '.';
 
 export class LocalesController {
@@ -47,9 +48,11 @@ export class LocalesController {
 	getI18nContext({
 		language,
 		namespaces,
+		getAltPath,
 	}: {
 		language: string;
 		namespaces: string[];
+		getAltPath?: (language: string) => string;
 	}): i18nContext {
 		const commonNamespaces = [];
 		const resources = this.getLocaleResources(language, [
@@ -57,24 +60,19 @@ export class LocalesController {
 			...namespaces,
 		]);
 
+		const supportedLanguages = this.getSupportedLanguages();
 		return {
 			lang: language,
 			resources,
-			// altVersions:
-			// 	!path || !path.startsWith('/' + currentLanguage)
-			// 		? []
-			// 		: SUPPORTED_LANGUAGES.values()
-			// 			.map((lang) => {
-			// 				const segments = path.split('/');
-			// 				segments[1] = lang; // swap language only
-
-			// 				return {
-			// 					langCode: lang,
-			// 					langName: getNativeLanguageName(lang),
-			// 					url: segments.join('/'),
-			// 				};
-			// 			})
-			// 			.toArray(),
+			altVersions: getAltPath
+				? supportedLanguages.map((lang) => {
+						return {
+							langCode: lang,
+							langName: getNativeLanguageName(lang),
+							url: getAltPath(lang),
+						};
+					})
+				: [],
 		};
 	}
 }

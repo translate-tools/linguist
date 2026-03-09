@@ -1,37 +1,31 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Trans, useTranslation } from 'react-i18next';
 import { clsx } from 'clsx';
 import {
 	Button,
+	Divider,
 	HStack,
 	Icon,
 	Image,
 	Link,
-	Select,
 	Text,
 	VStack,
 } from '@chakra-ui/react';
 import { buildPathGetter } from '@site/src/utils/url';
-import { languages } from '@site/supportedLanguages';
 
 import { useAnalyticsContext } from '../Analytics/useAnalyticsContext';
+import { useAltPageVersions } from '../useAltPageVersions';
 import Logo from './logo.svg';
 
 import styles from './Landing.module.css';
 
-const getLanguageName = (lang: string) => {
-	const languageName = new Intl.DisplayNames([lang], {
-		type: 'language',
-	}).of(lang);
-
-	return languageName.slice(0, 1).toUpperCase() + languageName.slice(1);
-};
 export const Landing = ({ baseUrl }: { baseUrl: string }) => {
-	const { t, i18n } = useTranslation('landing');
+	const { t } = useTranslation('landing');
 
 	const getUrl = buildPathGetter(baseUrl);
 
 	const { trackEvent } = useAnalyticsContext();
+	const altVersions = useAltPageVersions();
 
 	return (
 		<VStack w="100%" spacing={0}>
@@ -58,20 +52,6 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 							},
 						}}
 					>
-						<Select
-							minWidth="max-content"
-							value={i18n.language}
-							onChange={({ target }) => {
-								i18n.changeLanguage(target.value);
-							}}
-							variant="unstyled"
-						>
-							{languages.map((lang) => (
-								<option key={lang} value={lang}>
-									{getLanguageName(lang)}
-								</option>
-							))}
-						</Select>
 						<Link variant="base" href="#features">
 							{t('navigation.features.content')}
 						</Link>
@@ -387,13 +367,14 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 					</VStack>
 				</VStack>
 			</VStack>
+
+			<Divider />
+
 			<HStack
-				py="3rem"
-				sx={{
-					'& p': {
-						margin: 'unset',
-					},
-				}}
+				width={'100%'}
+				className={clsx(styles.PageContainer)}
+				padding="3rem 1rem"
+				gap={'2rem'}
 			>
 				<Link href="https://primebits.org">
 					<Image
@@ -402,6 +383,21 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 						alt="Created by PrimeBits"
 					/>
 				</Link>
+
+				<HStack
+					align={'center'}
+					justifyContent={'center'}
+					marginInlineStart={'auto'}
+				>
+					{altVersions.map((version, index) => (
+						<Fragment key={version.langCode}>
+							{index > 0 && ' | '}
+							<Link href={version.url} hrefLang={version.langCode}>
+								{version.langName}
+							</Link>
+						</Fragment>
+					))}
+				</HStack>
 			</HStack>
 		</VStack>
 	);

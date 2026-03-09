@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from '@docusaurus/Head';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import { PageAltVersionsContext } from '@site/src/components/useAltPageVersions';
 import { createI18nInstance, i18nContext } from '@site/src/i18n';
 
 import { Landing } from '../../components/Landing/Landing';
@@ -19,7 +20,9 @@ export default function Page({ i18n }: { i18n: i18nContext }): JSX.Element {
 					content={getUrl('screenshots/page-translation.png')}
 				/>
 			</Head>
-			<Landing baseUrl={siteConfig.baseUrl} />
+			<PageAltVersionsContext.Provider value={i18n.altVersions}>
+				<Landing baseUrl={siteConfig.baseUrl} />
+			</PageAltVersionsContext.Provider>
 		</PageLayout>
 	);
 }
