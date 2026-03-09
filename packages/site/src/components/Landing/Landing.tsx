@@ -30,7 +30,11 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 	return (
 		<VStack w="100%" spacing={0}>
 			<VStack w="100%" className={clsx(styles.TopScreen)}>
-				<HStack w="100%" className={clsx(styles.Head, styles.PageContainer)}>
+				<HStack
+					w="100%"
+					className={clsx(styles.Head, styles.PageContainer)}
+					paddingTop={'1rem'}
+				>
 					<Icon
 						as={Logo}
 						h="24px"
@@ -69,6 +73,7 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 						</Link>
 					</HStack>
 				</HStack>
+
 				<HStack
 					spacing={10}
 					py={20}
@@ -81,12 +86,19 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 						justifyContent="space-between"
 						className={clsx(styles.TopScreenContent)}
 					>
-						<VStack alignItems="start">
-							<Text as="h1" fontSize="38px">
+						<VStack alignItems="start" maxWidth={'100%'}>
+							<Text
+								as="h1"
+								fontSize={{ base: '1.8rem', md: '2.6rem' }}
+								maxWidth={'100%'}
+							>
 								{t(['sections.hero.title'])}
 							</Text>
-							<Text fontSize="24px" maxW={750}>
-								{t(['sections.hero.description'])}
+							<Text fontSize="24px" maxW={750} whiteSpace={'pre-line'}>
+								<Trans
+									t={t}
+									i18nKey={['sections.hero.description']}
+								></Trans>
 							</Text>
 
 							<HStack w="100%" className={clsx(styles.ButtonsGroup)}>
@@ -326,7 +338,7 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 							{t('sections.opensource.title')}
 						</Text>
 
-						<Text variant="description">
+						<Text variant="description" whiteSpace={'pre-line'}>
 							<Trans
 								t={t}
 								i18nKey="sections.opensource.content"
@@ -349,7 +361,7 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 							{t('sections.support.title')}
 						</Text>
 
-						<Text variant="description">
+						<Text variant="description" whiteSpace={'pre-line'}>
 							<Trans
 								t={t}
 								i18nKey="sections.support.content"
