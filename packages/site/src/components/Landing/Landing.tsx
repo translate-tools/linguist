@@ -548,6 +548,7 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 				className={clsx(styles.PageContainer)}
 				padding="3rem 1rem"
 				gap={'2rem'}
+				flexDirection={{ base: 'column-reverse', md: 'row' }}
 			>
 				<Link href="https://primebits.org">
 					<Image
