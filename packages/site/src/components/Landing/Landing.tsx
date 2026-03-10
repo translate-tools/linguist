@@ -145,10 +145,9 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 				>
 					<Icon
 						as={Logo}
-						h="24px"
+						h="2rem"
 						w="auto"
 						boxSizing="content-box"
-						py="1rem"
 						marginRight="auto"
 					/>
 
@@ -500,7 +499,7 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 				align={'start'}
 				spacing={'2rem'}
 			>
-				<Text as="h2" fontSize={'1.8rem'}>
+				<Text as="h2" fontSize={'1.8rem'} paddingInline={'1rem'}>
 					{t('faq.title')}
 				</Text>
 
