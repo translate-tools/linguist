@@ -39,6 +39,24 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 			content: <Trans t={t} i18nKey={'faq.items.whyLinguist.content'} />,
 		},
 		{
+			title: t('faq.items.theLinguistLogo.title'),
+			content: (
+				<Trans
+					t={t}
+					i18nKey={'faq.items.theLinguistLogo.content'}
+					components={{
+						wiki: (
+							<Link
+								key="3"
+								href="https://en.wikipedia.org/wiki/Tower_of_Babel"
+								target="_blank"
+							/>
+						),
+					}}
+				/>
+			),
+		},
+		{
 			title: t('faq.items.howTranslatePages.title'),
 			content: <Trans t={t} i18nKey={'faq.items.howTranslatePages.content'} />,
 		},
