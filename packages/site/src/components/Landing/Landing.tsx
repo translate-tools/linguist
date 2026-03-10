@@ -35,10 +35,6 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 
 	const faq = [
 		{
-			title: t('faq.items.whatIsLinguist.title'),
-			content: <Trans t={t} i18nKey={'faq.items.whatIsLinguist.content'} />,
-		},
-		{
 			title: t('faq.items.whyLinguist.title'),
 			content: <Trans t={t} i18nKey={'faq.items.whyLinguist.content'} />,
 		},
@@ -114,6 +110,10 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 					}}
 				/>
 			),
+		},
+		{
+			title: t('faq.items.whatIsLinguist.title'),
+			content: <Trans t={t} i18nKey={'faq.items.whatIsLinguist.content'} />,
 		},
 	];
 
