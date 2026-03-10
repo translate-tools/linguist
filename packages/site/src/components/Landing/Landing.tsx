@@ -561,6 +561,7 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 					align={'center'}
 					justifyContent={'center'}
 					marginInlineStart={'auto'}
+					flexWrap={'wrap'}
 				>
 					{altVersions.map((version, index) => (
 						<Fragment key={version.langCode}>

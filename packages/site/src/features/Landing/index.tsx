@@ -17,13 +17,14 @@ const MetaTags = () => {
 
 	const { siteConfig } = useDocusaurusContext();
 	const getUrl = buildPathGetter(siteConfig.baseUrl);
-	const { t } = useTranslation('landing');
+	const { t, i18n } = useTranslation('landing');
 
 	const title = t('meta.title', { defaultValue: '' });
 	const description = t('meta.description', { defaultValue: '' });
 
 	return (
 		<Head>
+			<html lang={i18n.language} />
 			{title && <title>{title}</title>}
 			{description && <meta name="description" content={description} />}
 			<link
