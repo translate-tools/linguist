@@ -57,6 +57,10 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 			),
 		},
 		{
+			title: t('faq.items.imageTranslation.title'),
+			content: <Trans t={t} i18nKey={'faq.items.imageTranslation.content'} />,
+		},
+		{
 			title: t('faq.items.howTranslatePages.title'),
 			content: <Trans t={t} i18nKey={'faq.items.howTranslatePages.content'} />,
 		},
