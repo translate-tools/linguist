@@ -2,6 +2,12 @@ import React, { Fragment } from 'react';
 import { Trans, useTranslation } from 'react-i18next';
 import { clsx } from 'clsx';
 import {
+	Accordion,
+	AccordionButton,
+	AccordionIcon,
+	AccordionItem,
+	AccordionPanel,
+	Box,
 	Button,
 	Divider,
 	HStack,
@@ -26,6 +32,90 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 
 	const { trackEvent } = useAnalyticsContext();
 	const altVersions = useAltPageVersions();
+
+	const faq = [
+		{
+			title: t('faq.items.whatIsLinguist.title'),
+			content: <Trans t={t} i18nKey={'faq.items.whatIsLinguist.content'} />,
+		},
+		{
+			title: t('faq.items.whyLinguist.title'),
+			content: <Trans t={t} i18nKey={'faq.items.whyLinguist.content'} />,
+		},
+		{
+			title: t('faq.items.howTranslatePages.title'),
+			content: <Trans t={t} i18nKey={'faq.items.howTranslatePages.content'} />,
+		},
+		{
+			title: t('faq.items.offlineTranslation.title'),
+			content: <Trans t={t} i18nKey={'faq.items.offlineTranslation.content'} />,
+		},
+		{
+			title: t('faq.items.privacy.title'),
+			content: (
+				<Trans
+					t={t}
+					i18nKey={'faq.items.privacy.content'}
+					components={{
+						OfflineTranslator: (
+							<Link href={getUrl('/docs/manuals/OfflineTranslation')} />
+						),
+					}}
+				/>
+			),
+		},
+		{
+			title: t('faq.items.supportedBrowsers.title'),
+			content: <Trans t={t} i18nKey={'faq.items.supportedBrowsers.content'} />,
+		},
+		{
+			title: t('faq.items.selectedText.title'),
+			content: <Trans t={t} i18nKey={'faq.items.selectedText.content'} />,
+		},
+		{
+			title: t('faq.items.customTranslators.title'),
+			content: (
+				<Trans
+					t={t}
+					i18nKey={'faq.items.customTranslators.content'}
+					components={{
+						'custom-translator': (
+							<Link href={getUrl('/docs/CustomTranslator')} />
+						),
+						'libre-translate': (
+							<Link href="https://libretranslate.com/" target="_blank" />
+						),
+						ollama: (
+							<Link key="3" href="https://ollama.com/" target="_blank" />
+						),
+					}}
+				/>
+			),
+		},
+		{
+			title: t('faq.items.isFree.title'),
+			content: (
+				<Trans
+					t={t}
+					i18nKey={'faq.items.isFree.content'}
+					components={{
+						linguist: (
+							<Link
+								href="https://github.com/translate-tools/linguist"
+								target="_blank"
+							/>
+						),
+						donations: (
+							<Link
+								href="https://github.com/translate-tools/linguist#donations"
+								target="_blank"
+							/>
+						),
+					}}
+				/>
+			),
+		},
+	];
 
 	return (
 		<VStack w="100%" spacing={0}>
@@ -383,6 +473,51 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 						</Text>
 					</VStack>
 				</VStack>
+			</VStack>
+
+			<VStack
+				className={clsx(styles.PageContainer)}
+				marginBlock={'5rem'}
+				width={'100%'}
+				align={'start'}
+				spacing={'2rem'}
+			>
+				<Text as="h2" fontSize={'1.8rem'}>
+					{t('faq.title')}
+				</Text>
+
+				<Accordion
+					defaultIndex={[0, 1]}
+					allowMultiple
+					fontSize={'1.2rem'}
+					width={'100%'}
+				>
+					{faq.map((question) => (
+						<AccordionItem key={question.title}>
+							<Text as="h2" margin={0}>
+								<AccordionButton paddingBlock={'1.5rem'}>
+									<Box
+										as="span"
+										flex="1"
+										textAlign="left"
+										fontSize={'1.2rem'}
+										fontWeight={'bold'}
+									>
+										{question.title}
+									</Box>
+									<AccordionIcon />
+								</AccordionButton>
+							</Text>
+							<AccordionPanel
+								paddingTop={'1rem'}
+								paddingBottom={'5rem'}
+								whiteSpace={'pre-line'}
+							>
+								{question.content}
+							</AccordionPanel>
+						</AccordionItem>
+					))}
+				</Accordion>
 			</VStack>
 
 			<Divider />

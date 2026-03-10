@@ -66,5 +66,46 @@
 				"content": "With Linguist you control which translation service to use.\n\nLinguist supports popular translation providers such as Google, Yandex, Microsoft, and others.\n\nIf a service is missing, you can add it as a <0>custom translator</0>.\n\nCustom translators allow you to integrate any translation system — from new LLM services like ChatGPT to local translators running on your device such as Ollama or LibreTranslate."
 			}
 		}
+	},
+	"faq": {
+		"title": "FAQ",
+		"items": {
+			"whatIsLinguist": {
+				"title": "What is Linguist?",
+				"content": "Linguist is a privacy‑focused browser translator extension for Chrome and Firefox.\n\nIt allows you to translate full web pages, highlighted text, subtitles, and messages directly in your browser without switching to external translation websites."
+			},
+			"whyLinguist": {
+				"title": "Why i should use Linguist?",
+				"content": "There are many browser extensions for a web page translation nowadays, and some browsers have built in translators, why you should try a Linguist?\n\nModern browsers actually have a built-in translators, and it can even work for you. The most significant problems of built-in translators is you cannot to configure. Usually you may translate text with only one service like Google Translate or Microsoft Bing translator for chromium browsers, or via offline translator in Firefox. You may notice the low translation quality for your use cases, or it may be unacceptable for you to send a private text to Google, but you have no choice with built in translators. With Linguist you may choose translation service that works fine for you, so Linguist is a good choice for an Advanced Users.\n\nYet another problem of other solutions is they are not feels like all-in-one translation solution. They can only translate a whole page, or only translate selected text. With Linguist you may translate everything, and back track your favorite translations via dictionary and history."
+			},
+			"howTranslatePages": {
+				"title": "How does Linguist translate web pages?",
+				"content": "Linguist can translate entire web pages in just a few clicks. You can trigger page translation using the extension button or a hotkey.\n\nThe original text remains accessible, and you can view it by hovering over the translated content."
+			},
+			"offlineTranslation": {
+				"title": "Can Linguist translate pages offline?",
+				"content": "Yes. Linguist includes a built‑in offline translator that allows you to translate text without sending your data over the internet.\n\nThis is useful for maintaining privacy and for translating content when you have no internet connection."
+			},
+			"privacy": {
+				"title": "Is Linguist private?",
+				"content": "Yes. Linguist is designed with privacy in mind.\n\nThe extension does not collect or sell user data. When using the <OfflineTranslator>offline translator</OfflineTranslator>, your translations stay entirely on your device."
+			},
+			"supportedBrowsers": {
+				"title": "What browsers does Linguist support?",
+				"content": "Linguist is available for Chrome and Firefox. It also works in other Chromium‑based browsers that support Chrome extensions.\n\nLinguist support the Android browsers, so you can use it in mobile Firefox and Chromium browsers."
+			},
+			"selectedText": {
+				"title": "Can Linguist translate selected text?",
+				"content": "Yes. Simply highlight any text on a web page and use the translation button to translate it instantly.\n\nYou can also listen to the translated text and save it to your personal dictionary."
+			},
+			"customTranslators": {
+				"title": "Can I use my own translation service?",
+				"content": "Yes. Linguist supports <custom-translator>custom translators</custom-translator>, allowing you to integrate additional translation services.\n\nYou can connect external APIs or even local translation systems such as <libre-translate>LibreTranslate</libre-translate> or <ollama>Ollama</ollama>."
+			},
+			"isFree": {
+				"title": "Is Linguist free?",
+				"content": "Yes. Linguist is completely free and <linguist>open source</linguist>.\n\nThe project is supported by the community, and you can optionally <donations>contribute through donations</donations>."
+			}
+		}
 	}
 }
