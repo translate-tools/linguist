@@ -5,6 +5,7 @@ services:
     build:
         context: ./docker/transmart
         dockerfile: Dockerfile
+    user: "${UID}:${GID}"
     working_dir: /app
     volumes:
       - ./src/i18n/locales:/app/src/i18n/locales
