@@ -37,15 +37,15 @@ export default (
 
 					// Create pages
 					for (const locale of locales.getSupportedLanguages()) {
-						const isDefaultLocale = locale === i18n.defaultLocale;
-
 						const localeData = locales.getI18nContext({
 							language: locale,
 							namespaces: i18n.namespaces,
 							getAltPath(language) {
 								const pagePath = compilePagePath(
 									urlTemplate,
-									isDefaultLocale ? language : undefined,
+									language === i18n.defaultLocale
+										? undefined
+										: language,
 								);
 
 								// Build path
@@ -76,6 +76,7 @@ export default (
 							},
 						});
 
+						const isDefaultLocale = locale === i18n.defaultLocale;
 						if (isDefaultLocale) {
 							addRoute({
 								path: compilePagePath(urlTemplate),
