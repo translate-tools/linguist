@@ -67,8 +67,12 @@ module.exports = {
 	// openAIApiModel: 'openai/gpt-4o-mini',
 	// modelContextLimit: 128_000,
 
-	openAIApiModel: 'anthropic/claude-sonnet-4.6',
-	// openAIApiModel: 'anthropic/claude-opus-4.6',
-	modelContextLimit: 1_000_000,
+	openAIApiModel: 'google/gemini-3.1-pro-preview',
+	modelContextLimit: 100_000,
+
+	// openAIApiModel: 'openai/gpt-5.4',
+	// // openAIApiModel: 'anthropic/claude-sonnet-4.6',
+	// // openAIApiModel: 'anthropic/claude-opus-4.6',
+	// modelContextLimit: 1_000_000,
 	context,
 };
