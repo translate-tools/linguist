@@ -1,0 +1,119 @@
+{
+	"meta": {
+		"title": "Linguist – Chrome ve Firefox için Gizlilik Odaklı Çeviri Eklentisi",
+		"description": "Web sayfalarını, seçili metinleri ve altyazıları çeviren tarayıcı eklentisi. Anında çalışır ve çevrimdışı çeviriyi destekler."
+	},
+	"navigation": {
+		"features": {
+			"content": "Özellikler"
+		},
+		"blog": {
+			"content": "Blog"
+		},
+		"docs": {
+			"content": "Belgeler"
+		},
+		"github": {
+			"content": "GitHub"
+		}
+	},
+	"install": {
+		"chrome": "Chrome için Yükle",
+		"firefox": "Firefox için Yükle"
+	},
+	"sections": {
+		"hero": {
+			"title": "Tarayıcınızdaki her şeyi çevirin",
+			"description": "Linguist, metinleri anında çeviren bir tarayıcı eklentisidir.\n\nWeb sayfalarının tamamını, seçili metinleri, Netflix altyazılarını ve özel mesajları çevirebilirsiniz. Çevrilen metinleri dinleyebilir ve yeni kelimeler öğrenmek için önemli çevirileri kişisel sözlüğünüze kaydedebilirsiniz; üstelik internet bağlantınız olmasa bile.\n\nLinguist, Google Çeviri tarayıcı eklentilerine modern ve gizlilik odaklı bir alternatiftir. Ücretsiz deneyin."
+		},
+		"opensource": {
+			"title": "Açık kaynak",
+			"content": "Linguist, ücretsiz ve <0>açık kaynaklı</0> bir tarayıcı çeviri eklentisidir. Kullanıcı verilerini toplamaz veya satmaz.\n\nLinguist'i desteklemek, bağımsızlığımızı ve yüksek kaliteyi korumamıza yardımcı olmak için <1>bağış yapabilirsiniz</1>.\n\nBaşkalarının da keşfetmesine yardımcı olmak için Linguist'i sosyal medyada paylaşın."
+		},
+		"support": {
+			"title": "Destek",
+			"content": "Sorularınız varsa bizimle iletişime geçin <0/>.\nBir hata bulduysanız ve GitHub hesabınız varsa, lütfen <1>bir hata kaydı oluşturun</1>."
+		},
+		"createdBy": {
+			"content": "<0/> tarafından geliştirildi."
+		}
+	},
+	"features": {
+		"title": "Özellikler",
+		"items": {
+			"offlineTranslation": {
+				"title": "Çevrimdışı çeviri ve gizlilik",
+				"content": "Yerleşik çevrimdışı çevirmen ile metinleri doğrudan cihazınızda çevirin. Metniniz gizli kalır ve internet üzerinden gönderilmez.\n\nE-postalar, belgeler veya kişisel mesajlarla çalışırken çevirilerinizi gizli tutmak için bu özelliği seçenekler sayfasından etkinleştirebilirsiniz.\n\nÇevrimdışı çevirmen ayrıca internet bağlantısı olmadan sayfaları çevirmenize olanak tanır, bu da özellikle seyahat ederken çok faydalıdır."
+			},
+			"fullPageTranslation": {
+				"title": "Tam sayfa çeviri",
+				"content": "Sadece birkaç tıklamayla hızlı ve yüksek kaliteli tam sayfa çeviri.\n\nAnında çeviri yapmak için bir kısayol tuşu kullanın. Orijinalini görmek için imleci çevrilmiş metnin üzerine getirin. Giriş formlarının veya ödeme duvarlarının arkasındaki gizli sayfaları bile çevirebilirsiniz.\n\nSayfa diline veya alan adına göre otomatik çeviri kuralları ayarlayın.\n\nLinguist, sayfayı en az düzeyde değiştirme yaklaşımını benimser: yalnızca metin düğümlerini değiştirir, sayfa düzenini ve kullanıcı deneyimini korur.\n\nZoom, Google Meet ve Microsoft Teams'deki farklı dillerdeki toplantılar için gerçek zamanlı çeviriyi etkinleştirin."
+			},
+			"selectedTextTranslation": {
+				"title": "Seçili metin çevirisi",
+				"content": "Çevrimiçi bir makale okurken bilmediğiniz kelimelerle mi karşılaştınız?\nSayfadaki metni seçin ve çevir düğmesine tıklayın.\n\nHem orijinal hem de çevrilmiş metni dinleyebilir ve daha sonra incelemek üzere çevirileri sözlüğünüze kaydedebilirsiniz."
+			},
+			"textTranslation": {
+				"title": "Hızlı metin çevirisi",
+				"content": "Hızlıca bir şey mi çevirmeniz gerekiyor? Linguist simgesine tıklayın ve metninizi girin.\n\nSekmeler arasında geçiş yapmanıza veya çeviri web sitelerini açmanıza gerek yok. Tercih ettiğiniz hizmeti kullanarak doğrudan tarayıcınızda çeviri yapın."
+			},
+			"knowledgeBase": {
+				"title": "Kişisel bilgi tabanınızı oluşturun",
+				"content": "Her çeviri geçmişinize kaydedilir ve önemli kayıtları kişisel sözlüğünüze ekleyebilirsiniz. Sözlüğünüzde ve çeviri geçmişinizde dilediğiniz zaman arama yapın.\n\nUzun araştırma veya öğrenme oturumlarında bile hiçbir şey kaybolmaz.\n\nSözlük çevrimdışı çalışır; bu da Linguist'i, kelime listelerine sürekli erişime ihtiyaç duyan dil öğrenenler ve gezginler için ideal hale getirir."
+			},
+			"customTranslators": {
+				"title": "Özel çevirmenler",
+				"content": "Linguist, hangi çeviri hizmetini kullanacağınızı seçmenize olanak tanır.\n\nGoogle, Yandex ve Microsoft gibi popüler çeviri sağlayıcılarını destekler ve 100'den fazla dil seçeneği sunar.\n\nİhtiyaç duyduğunuz bir hizmet listede yoksa, onu bir <0>özel çevirmen</0> olarak ekleyebilirsiniz.\n\nÖzel çevirmenler, ChatGPT, DeepL, DeepSeek ve Gemini gibi modern LLM hizmetlerinden Ollama veya LibreTranslate gibi cihazınızda çalışan yerel çevirmenlere kadar her türlü çeviri sistemini entegre etmenizi sağlar."
+			}
+		}
+	},
+	"faq": {
+		"title": "Sıkça Sorulan Sorular",
+		"items": {
+			"whatIsLinguist": {
+				"title": "Linguist nedir?",
+				"content": "Linguist, Chrome ve Firefox için gizlilik odaklı bir tarayıcı çeviri eklentisidir.\n\nHarici çeviri web sitelerine geçiş yapmadan web sayfalarının tamamını, seçili metinleri, altyazıları ve mesajları doğrudan tarayıcınızda çevirmenizi sağlar."
+			},
+			"whyLinguist": {
+				"title": "Neden Linguist kullanmalıyım?",
+				"content": "Web sayfalarını çeviren birçok tarayıcı eklentisi var ve bazı tarayıcılar yerleşik çevirmenler bile içeriyor. Peki neden Linguist kullanmalısınız?\n\nÇoğu yerleşik çevirmen ve çeviri eklentisi esneklik açısından sınırlıdır. Birçoğu Google Çeviri veya Microsoft Bing gibi tek bir çeviri sağlayıcısına güvenirken, Firefox kendi çevrimdışı çevirmenini sunar. Çoğu durumda, ihtiyaçlarınıza en uygun hizmeti seçemezsiniz.\n\nÇeviri kalitesi kullanım senaryonuz için yeterince iyi değilse veya özel metinleri üçüncü taraf hizmetlere göndermek sizin için kabul edilebilir değilse, birçok araç sizi iyi bir alternatiften mahrum bırakır.\n\nBirçok araç aynı zamanda yalnızca tek bir göreve odaklanır. Bazıları tam sayfaları çevirirken, diğerleri yalnızca seçili metni çevirir.\n\nAynı zamanda, bazı çeviri eklentileri temel olarak para kazanma amacıyla oluşturulmuştur. Çeviri geçmişi veya kişisel sözlükler gibi özellikler abonelik gerektirebilir ve bazen karanlık tema gibi temel özellikler bile premium seçenekler olarak sunulur.\n\nLinguist farklı bir yaklaşım benimser. Pratik bir çeviri aracı olarak tasarlanmıştır. Sizin için en iyi çalışan çeviri hizmetini seçebilir, sağlayıcılar arasında geçiş yapabilir veya kendi özel çevirmenlerinizi ekleyebilirsiniz.\n\nLinguist ayrıca her şeyi tek bir yerde toplar: web sayfalarının tamamını, seçili metinleri, altyazıları ve mesajları çevirirken, önemli çevirileri geçmişinizde ve kişisel sözlüğünüzde takip edebilirsiniz."
+			},
+			"theLinguistLogo": {
+				"title": "Linguist logosu neden Babil Kulesi?",
+				"content": "Linguist logosu, dil ve iletişim hakkındaki en eski hikayelerden biri olan <wiki>Babil Kulesi</wiki>'nden ilham almıştır.\n\nHikayeye göre, insanlar bir zamanlar aynı dili konuşuyorlardı ve gökyüzüne ulaşan bir kule inşa etmeye çalıştılar. Kule hiçbir zaman tamamlanamadı ve insanlık birçok farklı dile bölündü. O zamandan beri, dil farklılıkları iletişimi genellikle daha zor hale getirdi.\n\nLinguist bu sorunu çözmeye yardımcı olmak için yaratıldı.\n\nLogodaki Babil Kulesi bu hikayenin bir hatırlatıcısıdır: birçok dil, birçok kültür ve insanların birbirini anlamak için gösterdiği sürekli çaba. Linguist, çeviriyi doğrudan tarayıcınızda basit, esnek ve erişilebilir hale getirerek bu boşlukları doldurmaya yardımcı olur.\n\nLogo aynı zamanda projenin ruhunu da yansıtır. Linguist, sadece \"Google Çeviri\" için hazırlanmış bir arayüz değildir. Dilleri, gizliliği ve açık teknolojiyi önemseyen insanlar tarafından geliştirilmiştir. Babil Kulesi merakı, öğrenmeyi ve dil farklılıklarının insanları birbirinden uzaklaştırmak yerine bir araya getirmesi gerektiği fikrini temsil eder."
+			},
+			"imageTranslation": {
+				"title": "Linguist neden görsellerdeki metinleri çevirmiyor?",
+				"content": "Linguist, güvenilir ve yüksek kaliteli çeviri özelliklerine odaklanır.\n\nGörsellerin içindeki metinleri çevirmek için farklı yaklaşımları araştırdık. Şu anda mevcut çözümlerin çoğu, özellikle kullanıcı gizliliğini korumak için önemli olan doğrudan tarayıcıda çalışma konusunda tutarlı sonuçlar vermiyor.\n\nBu nedenle, Linguist şu anda görsel çevirisini içermiyor. Kalite standartlarımızı karşılamayan özellikleri sunmamayı tercih ediyoruz.\n\nGelecekte görsel çevirisini uygulamanın güvenilir ve gizliliğe saygılı bir yolunu bulursak, bunu eklemekten mutluluk duyarız."
+			},
+			"howTranslatePages": {
+				"title": "Linguist web sayfalarını nasıl çevirir?",
+				"content": "Linguist, web sayfalarının tamamını sadece birkaç tıklamayla çevirebilir. Eklenti düğmesini veya bir klavye kısayolunu kullanarak sayfa çevirisini başlatabilirsiniz.\n\nOrijinal metin her zaman erişilebilir kalır. Orijinalini görmek için imleci çevrilmiş metnin üzerine getirin."
+			},
+			"offlineTranslation": {
+				"title": "Linguist sayfaları çevrimdışı çevirebilir mi?",
+				"content": "Evet. Linguist, internet üzerinden veri göndermeden metin çevirmenize olanak tanıyan yerleşik bir çevrimdışı çevirmen içerir.\n\nBu, gizliliğinizi korumanıza yardımcı olur ve internet bağlantınız olmasa bile içerikleri çevirmenizi sağlar."
+			},
+			"privacy": {
+				"title": "Linguist gizliliğinizi korur mu?",
+				"content": "Evet. Linguist gizlilik göz önünde bulundurularak tasarlanmıştır.\n\nEklenti, kullanıcı verilerini toplamaz veya satmaz. <offline-translator>Çevrimdışı çevirmen</offline-translator> kullanıldığında, çeviriler tamamen cihazınızda işlenir."
+			},
+			"supportedBrowsers": {
+				"title": "Linguist hangi tarayıcıları destekler?",
+				"content": "Linguist, Chrome ve Firefox için mevcuttur. Ayrıca Chrome eklentilerini destekleyen diğer Chromium tabanlı tarayıcılarda da çalışır.\n\nLinguist, Android için Firefox ve bazı Chromium tabanlı tarayıcılar gibi eklentileri destekleyen Android tarayıcılarında da çalışır."
+			},
+			"selectedText": {
+				"title": "Linguist seçili metni çevirebilir mi?",
+				"content": "Evet. Herhangi bir web sayfasındaki metni seçin ve anında çevirmek için çeviri düğmesini kullanın.\n\nAyrıca çeviriyi dinleyebilir ve kişisel sözlüğünüze kaydedebilirsiniz."
+			},
+			"customTranslators": {
+				"title": "Kendi çeviri hizmetimi kullanabilir miyim?",
+				"content": "Evet. Linguist, ek çeviri hizmetlerini entegre etmenize olanak tanıyan <custom-translator>özel çevirmenleri</custom-translator> destekler.\n\nHarici API'leri veya <libre-translate>LibreTranslate</libre-translate> ya da <ollama>Ollama</ollama> gibi yerel çeviri sistemlerini bağlayabilirsiniz."
+			},
+			"isFree": {
+				"title": "Linguist ücretsiz mi?",
+				"content": "Evet. Linguist tamamen ücretsiz ve <linguist>açık kaynaklıdır</linguist>.\n\nProje topluluk tarafından desteklenmektedir ve isterseniz <donations>bağış yaparak destek olabilirsiniz</donations>."
+			}
+		}
+	}
+}

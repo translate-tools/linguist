@@ -1,0 +1,119 @@
+{
+	"meta": {
+		"title": "Linguist – Die datenschutzfreundliche Übersetzungs-Erweiterung für Chrome und Firefox",
+		"description": "Eine Browser-Erweiterung, die Webseiten, markierten Text und Untertitel übersetzt. Funktioniert in Echtzeit und unterstützt Offline-Übersetzungen."
+	},
+	"navigation": {
+		"features": {
+			"content": "Funktionen"
+		},
+		"blog": {
+			"content": "Blog"
+		},
+		"docs": {
+			"content": "Dokumentation"
+		},
+		"github": {
+			"content": "GitHub"
+		}
+	},
+	"install": {
+		"chrome": "Für Chrome installieren",
+		"firefox": "Für Firefox installieren"
+	},
+	"sections": {
+		"hero": {
+			"title": "Alles direkt im Browser übersetzen",
+			"description": "Linguist ist eine Browser-Erweiterung, die Texte in Echtzeit übersetzt.\n\nOb ganze Webseiten, markierte Texte, Netflix-Untertitel oder private Nachrichten – alles lässt sich nahtlos übersetzen. Übersetzte Texte können angehört und wichtige Begriffe im persönlichen Wörterbuch gespeichert werden, um auch offline neue Wörter zu lernen.\n\nLinguist ist eine moderne und datenschutzfreundliche Alternative zu Google Translate. Jetzt kostenlos ausprobieren."
+		},
+		"opensource": {
+			"title": "Open Source",
+			"content": "Linguist ist eine kostenlose <0>Open-Source-Erweiterung</0> für Übersetzungen im Browser. Es werden keine Nutzerdaten gesammelt oder verkauft.\n\nMit einer <1>Spende</1> lässt sich Linguist unterstützen, damit das Projekt unabhängig bleibt und die hohe Qualität bewahrt wird.\n\nTeilen Sie Linguist gerne in den sozialen Medien, um das Projekt bekannter zu machen."
+		},
+		"support": {
+			"title": "Support",
+			"content": "Bei Fragen können Sie uns gerne kontaktieren <0/>.\nFalls Sie einen Fehler gefunden haben und ein GitHub-Konto besitzen, <1>erstellen Sie bitte ein Issue</1>."
+		},
+		"createdBy": {
+			"content": "Entwickelt von <0/>."
+		}
+	},
+	"features": {
+		"title": "Funktionen",
+		"items": {
+			"offlineTranslation": {
+				"title": "Offline-Übersetzung und Datenschutz",
+				"content": "Mit dem integrierten Offline-Übersetzer werden Texte direkt auf dem eigenen Gerät übersetzt. Die Inhalte bleiben privat und werden nicht über das Internet verschickt.\n\nDiese Funktion lässt sich in den Einstellungen aktivieren, um höchste Vertraulichkeit bei E-Mails, Dokumenten oder persönlichen Nachrichten zu gewährleisten.\n\nZudem ermöglicht der Offline-Übersetzer das Übersetzen von Webseiten ganz ohne Internetverbindung – besonders praktisch auf Reisen."
+			},
+			"fullPageTranslation": {
+				"title": "Übersetzung ganzer Webseiten",
+				"content": "Schnelle und hochwertige Übersetzungen ganzer Webseiten mit nur wenigen Klicks.\n\nEin Tastenkürzel sorgt für sofortige Ergebnisse. Fährt man mit der Maus über den übersetzten Text, wird das Original angezeigt. Selbst private Seiten hinter Logins oder Paywalls lassen sich problemlos übersetzen.\n\nZusätzlich können automatische Übersetzungsregeln basierend auf der Sprache oder Domain eingerichtet werden.\n\nLinguist greift dabei nur minimal in die Webseite ein: Es werden ausschließlich Textbausteine ausgetauscht, sodass das ursprüngliche Layout und die Bedienbarkeit vollständig erhalten bleiben.\n\nFür mehrsprachige Meetings in Zoom, Google Meet und Microsoft Teams lässt sich zudem eine Echtzeit-Übersetzung aktivieren."
+			},
+			"selectedTextTranslation": {
+				"title": "Übersetzung von markiertem Text",
+				"content": "Unbekannte Wörter in einem Online-Artikel entdeckt?\nEinfach den gewünschten Text markieren und auf die Übersetzen-Schaltfläche klicken.\n\nSowohl der Originaltext als auch die Übersetzung können angehört werden. Wichtige Begriffe lassen sich im persönlichen Wörterbuch speichern, um sie später zu wiederholen."
+			},
+			"textTranslation": {
+				"title": "Schnelle Textübersetzung",
+				"content": "Schnell etwas übersetzen? Ein Klick auf das Linguist-Symbol genügt, um den Text direkt einzugeben.\n\nDas Wechseln zwischen Tabs oder das Öffnen externer Übersetzungs-Webseiten entfällt. Die Übersetzung erfolgt direkt im Browser – mit dem bevorzugten Übersetzungsdienst."
+			},
+			"knowledgeBase": {
+				"title": "Aufbau einer persönlichen Wissensdatenbank",
+				"content": "Jede Übersetzung wird im Verlauf gespeichert, und wichtige Begriffe können dem persönlichen Wörterbuch hinzugefügt werden. Das Wörterbuch und der Übersetzungsverlauf lassen sich jederzeit durchsuchen.\n\nSo geht nichts verloren – auch nicht bei intensiven Recherchen oder langen Lerneinheiten.\n\nDa das Wörterbuch auch offline funktioniert, ist Linguist ideal für alle, die Sprachen lernen oder auf Reisen ständigen Zugriff auf ihre Vokabeln benötigen."
+			},
+			"customTranslators": {
+				"title": "Benutzerdefinierte Übersetzer",
+				"content": "Mit Linguist lässt sich der bevorzugte Übersetzungsdienst frei wählen.\n\nBeliebte Anbieter wie Google, Yandex und Microsoft werden mit über 100 verfügbaren Sprachen direkt unterstützt.\n\nSollte ein gewünschter Dienst fehlen, kann dieser einfach als <0>benutzerdefinierter Übersetzer</0> hinzugefügt werden.\n\nSo lässt sich jedes beliebige Übersetzungssystem integrieren – von modernen KI-Diensten wie ChatGPT, DeepL, DeepSeek und Gemini bis hin zu lokalen Übersetzern, die direkt auf dem eigenen Gerät laufen, wie etwa Ollama oder LibreTranslate."
+			}
+		}
+	},
+	"faq": {
+		"title": "FAQ",
+		"items": {
+			"whatIsLinguist": {
+				"title": "Was ist Linguist?",
+				"content": "Linguist ist eine datenschutzfreundliche Übersetzungs-Erweiterung für Chrome und Firefox.\n\nDamit lassen sich ganze Webseiten, markierte Texte, Untertitel und Nachrichten direkt im Browser übersetzen, ohne auf externe Übersetzungs-Webseiten wechseln zu müssen."
+			},
+			"whyLinguist": {
+				"title": "Warum sollte man Linguist nutzen?",
+				"content": "Es gibt viele Browser-Erweiterungen zum Übersetzen von Webseiten, und einige Browser haben sogar integrierte Übersetzer. Warum also Linguist?\n\nDie meisten integrierten Übersetzer und Erweiterungen sind in ihrer Flexibilität eingeschränkt. Viele verlassen sich auf einen einzigen Anbieter wie Google Translate oder Microsoft Bing, während Firefox einen eigenen Offline-Übersetzer anbietet. In den meisten Fällen lässt sich der Dienst nicht frei wählen.\n\nWenn die Übersetzungsqualität für den eigenen Bedarf nicht ausreicht oder das Senden privater Texte an Drittanbieter ein No-Go ist, bieten viele Tools keine gute Alternative.\n\nZudem konzentrieren sich viele Werkzeuge nur auf eine einzige Aufgabe: Einige übersetzen nur ganze Seiten, andere nur markierten Text.\n\nGleichzeitig sind einige Erweiterungen stark auf Monetarisierung ausgelegt. Funktionen wie ein Übersetzungsverlauf oder ein persönliches Wörterbuch erfordern oft ein Abonnement, und manchmal werden selbst grundlegende Dinge wie ein dunkles Design als Premium-Funktion verkauft.\n\nLinguist verfolgt einen anderen Ansatz. Es ist als praktisches und vielseitiges Werkzeug konzipiert. Der Übersetzungsdienst kann frei gewählt und jederzeit gewechselt werden – oder man fügt einfach eigene, benutzerdefinierte Übersetzer hinzu.\n\nDarüber hinaus vereint Linguist alles an einem Ort: Ganze Webseiten, markierte Texte, Untertitel und Nachrichten lassen sich nahtlos übersetzen, während wichtige Begriffe im Verlauf und im persönlichen Wörterbuch festgehalten werden."
+			},
+			"theLinguistLogo": {
+				"title": "Warum ist das Logo von Linguist der Turmbau zu Babel?",
+				"content": "Das Logo von Linguist ist vom <wiki>Turmbau zu Babel</wiki> inspiriert, einer der ältesten Geschichten über Sprache und Kommunikation.\n\nDer Erzählung nach sprachen die Menschen einst dieselbe Sprache und versuchten, einen Turm bis in den Himmel zu bauen. Der Turm wurde nie vollendet, und die Menschheit wurde in viele verschiedene Sprachen aufgeteilt. Seitdem machen sprachliche Barrieren die Kommunikation oft zu einer Herausforderung.\n\nLinguist wurde entwickelt, um genau dieses Problem zu lösen.\n\nDer Turm zu Babel im Logo erinnert an diese Geschichte: viele Sprachen, viele Kulturen und das stetige menschliche Bestreben, einander zu verstehen. Linguist hilft dabei, diese Brücken zu bauen, indem es Übersetzungen einfach, flexibel und direkt im Browser zugänglich macht.\n\nDas Logo spiegelt auch den Geist des Projekts wider. Linguist ist nicht einfach nur eine weitere Benutzeroberfläche für „Google Translate“. Es wird von Menschen entwickelt, denen Sprachen, Datenschutz und offene Technologien am Herzen liegen. Der Turmbau zu Babel steht für Neugier, das Lernen und die Überzeugung, dass sprachliche Vielfalt die Menschen zusammenbringen sollte, anstatt sie zu trennen."
+			},
+			"imageTranslation": {
+				"title": "Warum übersetzt Linguist keinen Text in Bildern?",
+				"content": "Linguist konzentriert sich auf zuverlässige und hochwertige Übersetzungsfunktionen.\n\nWir haben verschiedene Ansätze zur Übersetzung von Text in Bildern untersucht. Derzeit liefern die meisten verfügbaren Lösungen keine konsistenten Ergebnisse, insbesondere wenn sie direkt im Browser ausgeführt werden – was jedoch entscheidend ist, um die Privatsphäre der Nutzer zu schützen.\n\nAus diesem Grund bietet Linguist momentan keine Bildübersetzung an. Wir verzichten lieber auf Funktionen, die unseren Qualitätsstandards nicht entsprechen.\n\nSobald wir einen zuverlässigen und datenschutzfreundlichen Weg finden, die Bildübersetzung umzusetzen, werden wir diese Funktion gerne hinzufügen."
+			},
+			"howTranslatePages": {
+				"title": "Wie übersetzt Linguist Webseiten?",
+				"content": "Linguist kann ganze Webseiten mit nur wenigen Klicks übersetzen. Die Übersetzung lässt sich über die Schaltfläche der Erweiterung oder ein Tastenkürzel starten.\n\nDer Originaltext bleibt dabei immer zugänglich: Fährt man mit der Maus über den übersetzten Text, wird das Original eingeblendet."
+			},
+			"offlineTranslation": {
+				"title": "Kann Linguist Seiten offline übersetzen?",
+				"content": "Ja. Linguist verfügt über einen integrierten Offline-Übersetzer, mit dem Texte übersetzt werden können, ohne Daten über das Internet zu senden.\n\nDas schützt die Privatsphäre und ermöglicht es, Inhalte auch ganz ohne Internetverbindung zu übersetzen."
+			},
+			"privacy": {
+				"title": "Ist Linguist datenschutzfreundlich?",
+				"content": "Ja. Linguist wurde mit einem starken Fokus auf Datenschutz entwickelt.\n\nDie Erweiterung sammelt oder verkauft keine Nutzerdaten. Bei der Nutzung des <offline-translator>Offline-Übersetzers</offline-translator> werden alle Übersetzungen vollständig lokal auf dem eigenen Gerät verarbeitet."
+			},
+			"supportedBrowsers": {
+				"title": "Welche Browser werden von Linguist unterstützt?",
+				"content": "Linguist ist für Chrome und Firefox verfügbar. Es funktioniert auch in anderen Chromium-basierten Browsern, die Chrome-Erweiterungen unterstützen.\n\nDarüber hinaus läuft Linguist in Android-Browsern mit Erweiterungs-Support, wie beispielsweise Firefox für Android und einigen Chromium-basierten Browsern."
+			},
+			"selectedText": {
+				"title": "Kann Linguist markierten Text übersetzen?",
+				"content": "Ja. Einfach den gewünschten Text auf einer beliebigen Webseite markieren und die Übersetzen-Schaltfläche nutzen, um ihn sofort zu übersetzen.\n\nDie Übersetzung kann zudem angehört und im persönlichen Wörterbuch gespeichert werden."
+			},
+			"customTranslators": {
+				"title": "Kann ich meinen eigenen Übersetzungsdienst nutzen?",
+				"content": "Ja. Linguist unterstützt <custom-translator>benutzerdefinierte Übersetzer</custom-translator>, mit denen sich zusätzliche Übersetzungsdienste integrieren lassen.\n\nSo können externe APIs oder lokale Übersetzungssysteme wie <libre-translate>LibreTranslate</libre-translate> oder <ollama>Ollama</ollama> angebunden werden."
+			},
+			"isFree": {
+				"title": "Ist Linguist kostenlos?",
+				"content": "Ja. Linguist ist vollständig kostenlos und <linguist>Open Source</linguist>.\n\nDas Projekt wird von der Community getragen und kann optional <donations>mit einer Spende unterstützt werden</donations>."
+			}
+		}
+	}
+}
