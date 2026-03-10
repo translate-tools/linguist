@@ -71,7 +71,7 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 					t={t}
 					i18nKey={'faq.items.privacy.content'}
 					components={{
-						OfflineTranslator: (
+						'offline-translator': (
 							<Link href={getUrl('/docs/manuals/OfflineTranslation')} />
 						),
 					}}
