@@ -1,9 +1,27 @@
 import type { Config } from '@docusaurus/types';
 
+import i18nPages from './src/plugins/i18n-pages';
+
 const config: Config = {
-	title: 'Linguist Translate',
-	tagline: 'Privacy focused translation',
+	title: 'Linguist – Privacy‑First Translation Extension for Chrome and Firefox',
+	tagline:
+		'Browser extension that translates web pages, selected text, and subtitles. Works instantly and supports offline translation.',
+
 	favicon: 'favicon.ico',
+
+	plugins: [
+		i18nPages([
+			{
+				url: '/{{locale}}',
+				pageComponent: '@site/src/features/Landing',
+				i18n: {
+					localesDir: './src/i18n/locales',
+					defaultLocale: 'en',
+					namespaces: ['landing'],
+				},
+			},
+		]),
+	],
 
 	// Set the production url of your site here
 	url: 'https://linguister.io',
@@ -31,7 +49,6 @@ const config: Config = {
 	],
 
 	themeConfig: {
-		image: '/screenshots/page-translation.png',
 		colorMode: {
 			defaultMode: 'light',
 			disableSwitch: true,

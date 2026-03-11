@@ -1,11 +1,18 @@
 import React, { PropsWithChildren, useCallback, useEffect, useState } from 'react';
+import ReactGA from 'react-ga4';
 import {
 	enableAutoOutboundTracking,
 	enableAutoPageviews,
+	enableEngagementTracking,
+	enableLinkClicksCapture,
+	enableSessionScoring,
+	EngagementTimeTracker,
 	Plausible,
 	PlausibleInitOptions,
+	skipForHosts,
+	userId,
 } from 'plausible-client';
-import Head from '@docusaurus/Head';
+import { useLocation } from '@docusaurus/router';
 
 import { analyticsContext, IAnalyticsContext } from './useAnalyticsContext';
 
@@ -21,68 +28,78 @@ export const AnalyticsProvider = ({
 	googleAnalytics,
 	children,
 }: AnalyticsProviderProps) => {
-	const [plausible] = useState(() => new Plausible(plausibleOptions));
+	const [plausible] = useState(
+		() =>
+			new Plausible({
+				...plausibleOptions,
+				filter: skipForHosts(['localhost']),
+				transform: userId(),
+			}),
+	);
+
+	const [engagementTracker] = useState(() => new EngagementTimeTracker());
+	useEffect(() => {
+		engagementTracker.start();
+		return () => {
+			engagementTracker.stop();
+		};
+	});
+
+	useEffect(() => {
+		ReactGA.initialize(googleAnalytics.tagId);
+	}, [googleAnalytics.tagId]);
+
+	const spaLocation = useLocation();
+	useEffect(() => {
+		ReactGA.send({
+			hitType: 'pageview',
+			page: spaLocation.pathname + spaLocation.search,
+		});
+	}, [spaLocation]);
 
 	const trackEvent: IAnalyticsContext['trackEvent'] = useCallback(
 		(eventName, props) => {
-			const timestamp = performance.now();
 			plausible.trackEvent(eventName, {
 				// Additional props for every event
 				props: {
 					// Current location
 					location: location.toString(),
-					// Time since visit page
-					timestamp: timestamp,
-					timestampSeconds: timestamp / 1000,
+					timeOnPage: Math.round(engagementTracker.getTotalTime() / 1000),
+					engagementTime: Math.round(
+						engagementTracker.getCurrentSegmentTime() / 1000,
+					),
+					languages: navigator.languages.join(','),
 					...props,
 				},
 			});
+
+			ReactGA.event({
+				action: eventName,
+				category: 'User Interaction',
+				...props,
+			});
 		},
-		[plausible],
+		[engagementTracker, plausible],
 	);
 
 	// Setup default analytic listeners
 	useEffect(() => {
-		enableAutoPageviews(plausible);
-		enableAutoOutboundTracking(plausible);
+		const cleanups = [
+			enableAutoPageviews(plausible),
+			enableEngagementTracking(plausible),
+			enableSessionScoring(plausible),
 
-		// Track clicks
-		document.body.addEventListener('click', (event: MouseEvent) => {
-			// Explore click targets to find a link element
-			const targets = event?.composedPath() || [event.target];
-			for (const target of targets) {
-				if (!(target instanceof HTMLAnchorElement)) continue;
+			enableAutoOutboundTracking(plausible, { captureText: true }),
+			enableLinkClicksCapture(plausible, { captureText: true }),
+		];
 
-				trackEvent('Link click', {
-					url: target.href,
-					text: target.innerText,
-				});
-				break;
-			}
-		});
+		return () => {
+			cleanups.forEach((cleanup) => cleanup?.());
+		};
 	}, [plausible, trackEvent]);
 
 	return (
 		<analyticsContext.Provider value={{ trackEvent }}>
-			<Head>
-				<script
-					async
-					src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalytics.tagId}`}
-				></script>
-			</Head>
-			<script
-				dangerouslySetInnerHTML={{
-					__html: `
-						window.dataLayer = window.dataLayer || [];
-						function gtag(){dataLayer.push(arguments);}
-						gtag('js', new Date());
-
-						gtag('config', '${googleAnalytics.tagId}');
-					`
-						.replace(/\t/g, '')
-						.trim(),
-				}}
-			/>
 			{children}
 		</analyticsContext.Provider>
 	);

@@ -1,0 +1,119 @@
+{
+	"meta": {
+		"title": "Linguist – 隐私优先的 Chrome 和 Firefox 翻译扩展",
+		"description": "一款支持网页全篇、划词及字幕翻译的浏览器扩展。即时生效，并支持离线翻译。"
+	},
+	"navigation": {
+		"features": {
+			"content": "功能特性"
+		},
+		"blog": {
+			"content": "博客"
+		},
+		"docs": {
+			"content": "文档"
+		},
+		"github": {
+			"content": "GitHub"
+		}
+	},
+	"install": {
+		"chrome": "安装 Chrome 版",
+		"firefox": "安装 Firefox 版"
+	},
+	"sections": {
+		"hero": {
+			"title": "在浏览器中翻译一切",
+			"description": "Linguist 是一款提供即时翻译的浏览器扩展。\n\n无论是网页全篇、划词文本、Netflix 字幕还是私人消息，都能轻松翻译。你可以收听翻译发音，将重要的翻译保存到个人词典中以便学习新词，甚至在离线状态下也能使用。\n\n作为 Google 翻译扩展的现代替代方案，Linguist 始终将你的隐私放在首位。欢迎免费体验。"
+		},
+		"opensource": {
+			"title": "开源",
+			"content": "Linguist 是一款免费且<0>开源</0>的浏览器翻译扩展。它不会收集或出售任何用户数据。\n\n你可以通过<1>捐赠</1>来支持 Linguist，帮助我们保持独立并持续提供高质量的服务。\n\n欢迎在社交媒体上分享 Linguist，让更多人发现它。"
+		},
+		"support": {
+			"title": "支持",
+			"content": "如有疑问，请联系我们 <0/>。\n如果你发现了 Bug 并且拥有 GitHub 账号，请<1>提交 Issue</1>。"
+		},
+		"createdBy": {
+			"content": "由 <0/> 创建。"
+		}
+	},
+	"features": {
+		"title": "功能特性",
+		"items": {
+			"offlineTranslation": {
+				"title": "离线翻译与隐私保护",
+				"content": "使用内置的离线翻译引擎，直接在你的设备上处理文本。你的文本将保持私密，不会通过网络发送。\n\n在处理电子邮件、文档或私人消息时，可以在选项页面开启此功能，以确保翻译过程的绝对隐私。\n\n离线翻译功能还允许你在没有网络连接的情况下翻译网页，这在旅行时尤为实用。"
+			},
+			"fullPageTranslation": {
+				"title": "网页全篇翻译",
+				"content": "只需点击几下，即可获得快速、高质量的网页全篇翻译。\n\n使用快捷键即可瞬间完成翻译。将鼠标悬停在译文上可查看原文。即使是需要登录或付费订阅的私密页面，也能轻松翻译。\n\n你可以根据网页语言或域名设置自动翻译规则。\n\nLinguist 采用最小化页面修改的原则：仅替换文本节点，完美保留原网页的排版布局和使用体验。\n\n在 Zoom、Google Meet 和 Microsoft Teams 的跨语言会议中，你还可以开启实时翻译功能。"
+			},
+			"selectedTextTranslation": {
+				"title": "划词翻译",
+				"content": "在阅读在线文章时遇到生词？\n只需在页面上选中该文本，然后点击翻译按钮即可。\n\n你可以收听原文和译文的发音，并将翻译结果保存到个人词典中，方便日后复习。"
+			},
+			"textTranslation": {
+				"title": "快捷文本翻译",
+				"content": "需要快速翻译某段文字？点击 Linguist 图标并输入文本即可。\n\n无需在标签页之间切换，也不必打开专门的翻译网站。使用你偏好的翻译服务，直接在浏览器中完成翻译。"
+			},
+			"knowledgeBase": {
+				"title": "构建个人知识库",
+				"content": "每一次翻译都会保存在历史记录中，你可以将重要的内容添加到个人词典。随时搜索你的词典和翻译历史。\n\n即使在长时间的深入研究或学习过程中，也不会丢失任何信息。\n\n个人词典支持离线使用，这使得 Linguist 成为需要随时查阅生词本的语言学习者和旅行者的理想选择。"
+			},
+			"customTranslators": {
+				"title": "自定义翻译源",
+				"content": "Linguist 允许你自由选择所需的翻译服务。\n\n它原生支持 Google、Yandex 和 Microsoft 等主流翻译引擎，提供超过 100 种语言的翻译。\n\n如果你需要的服务不在列表中，可以将其作为<0>自定义翻译源</0>添加。\n\n自定义翻译源功能让你能够接入任何翻译系统——无论是 ChatGPT、DeepL、DeepSeek 和 Gemini 等现代大语言模型服务，还是 Ollama 或 LibreTranslate 等运行在本地设备上的翻译工具。"
+			}
+		}
+	},
+	"faq": {
+		"title": "常见问题",
+		"items": {
+			"whatIsLinguist": {
+				"title": "Linguist 是什么？",
+				"content": "Linguist 是一款主打隐私优先的浏览器翻译扩展，支持 Chrome 和 Firefox。\n\n它能让你直接在浏览器中翻译网页全篇、划词文本、字幕和消息，无需跳转到外部翻译网站。"
+			},
+			"whyLinguist": {
+				"title": "为什么选择 Linguist？",
+				"content": "市面上有许多网页翻译扩展，部分浏览器甚至自带翻译功能。那么，为什么要使用 Linguist 呢？\n\n大多数内置翻译器和翻译扩展在灵活性上存在局限。它们往往依赖单一的翻译服务（如 Google 翻译或 Microsoft Bing），而 Firefox 则提供自家的离线翻译。在多数情况下，你无法自由选择最适合自己需求的服务。\n\n如果默认的翻译质量无法满足你的使用场景，或者你不希望将私密文本发送给第三方服务，许多工具都无法提供更好的替代方案。\n\n此外，许多工具只专注于单一功能。有些只能翻译整个网页，有些则仅支持划词翻译。\n\n与此同时，部分翻译扩展主要以盈利为目的。像翻译历史或个人词典这样的功能可能需要付费订阅，有时甚至连深色模式等基础功能都被设为高级选项。\n\nLinguist 采取了截然不同的理念。它被设计为一款纯粹实用的翻译工具。你可以选择最适合自己的翻译服务，在不同引擎之间无缝切换，或者添加你专属的自定义翻译源。\n\nLinguist 还将所有功能融为一体：在翻译网页全篇、划词文本、字幕和消息的同时，还能通过历史记录和个人词典妥善管理重要的翻译内容。"
+			},
+			"theLinguistLogo": {
+				"title": "为什么 Linguist 的标志是巴别塔？",
+				"content": "Linguist 的标志灵感来源于<wiki>巴别塔</wiki>，这是关于语言和沟通最古老的故事之一。\n\n相传，人类曾经说着同一种语言，并试图建造一座通天塔。这座塔最终未能建成，人类也被分散，演化出众多不同的语言。从那时起，语言的差异往往让沟通变得困难。\n\nLinguist 的诞生正是为了帮助解决这个问题。\n\n标志中的巴别塔是对这个故事的致敬：多元的语言、多样的文化，以及人类为了相互理解而不断付出的努力。Linguist 通过在浏览器中提供简单、灵活且触手可及的翻译功能，帮助跨越这些鸿沟。\n\n这个标志也反映了项目的精神。Linguist 不仅仅是“Google 翻译”的又一个套壳工具。它由一群真正关心语言、隐私和开源技术的人打造。巴别塔代表着好奇心、持续学习，以及一种信念：语言的差异应该将人们联系在一起，而不是让人彼此疏远。"
+			},
+			"imageTranslation": {
+				"title": "为什么 Linguist 不支持图片翻译？",
+				"content": "Linguist 专注于提供可靠且高质量的翻译功能。\n\n我们研究过多种图片内文本翻译的技术方案。目前，大多数现有的解决方案都无法提供稳定的结果，尤其是在直接于浏览器内运行（这对于保护用户隐私至关重要）的情况下。\n\n因此，Linguist 暂未包含图片翻译功能。我们宁愿不发布未达到我们质量标准的功能。\n\n如果未来我们找到一种既可靠又能尊重用户隐私的图片翻译实现方式，我们会非常乐意将其加入。"
+			},
+			"howTranslatePages": {
+				"title": "Linguist 是如何翻译网页的？",
+				"content": "只需点击几下，Linguist 就能翻译整个网页。你可以通过扩展按钮或快捷键来启动网页翻译。\n\n原文始终保留。将鼠标悬停在译文上即可查看原文。"
+			},
+			"offlineTranslation": {
+				"title": "Linguist 可以离线翻译网页吗？",
+				"content": "可以。Linguist 内置了离线翻译引擎，允许你在不通过网络发送数据的情况下翻译文本。\n\n这不仅有助于保护你的隐私，还能让你在没有网络连接时依然可以翻译内容。"
+			},
+			"privacy": {
+				"title": "Linguist 注重隐私吗？",
+				"content": "是的。Linguist 在设计之初就将隐私保护作为核心。\n\n该扩展不会收集或出售任何用户数据。当使用<offline-translator>离线翻译</offline-translator>时，所有的翻译过程都完全在你的设备本地进行。"
+			},
+			"supportedBrowsers": {
+				"title": "Linguist 支持哪些浏览器？",
+				"content": "Linguist 支持 Chrome 和 Firefox。它同样适用于其他支持 Chrome 扩展的 Chromium 内核浏览器。\n\n此外，Linguist 也可以在支持扩展的 Android 浏览器中运行，例如 Firefox for Android 以及部分基于 Chromium 的移动端浏览器。"
+			},
+			"selectedText": {
+				"title": "Linguist 可以翻译选中的文本吗？",
+				"content": "可以。只需在任何网页上选中一段文本，然后点击翻译按钮即可瞬间完成翻译。\n\n你还可以收听译文的发音，并将其保存到个人词典中。"
+			},
+			"customTranslators": {
+				"title": "我可以使用自己的翻译服务吗？",
+				"content": "可以。Linguist 支持<custom-translator>自定义翻译源</custom-translator>，允许你接入额外的翻译服务。\n\n你可以连接外部 API，或是 <libre-translate>LibreTranslate</libre-translate> 和 <ollama>Ollama</ollama> 等本地翻译系统。"
+			},
+			"isFree": {
+				"title": "Linguist 是免费的吗？",
+				"content": "是的。Linguist 完全免费且<linguist>开源</linguist>。\n\n该项目由社区支持，你可以自愿选择<donations>通过捐赠来支持它</donations>。"
+			}
+		}
+	}
+}
