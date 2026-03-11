@@ -243,6 +243,7 @@ export const Landing = () => {
 							>
 								{t(['sections.hero.title'])}
 							</Text>
+
 							<Text
 								as="div"
 								fontSize="24px"
@@ -255,8 +256,13 @@ export const Landing = () => {
 								></Trans>
 							</Text>
 
-							<HStack w="100%" className={clsx(styles.ButtonsGroup)}>
+							<HStack
+								w="100%"
+								className={clsx(styles.ButtonsGroup)}
+								marginTop={'2rem'}
+							>
 								<Button
+									width={{ base: '100%', sm: 'auto' }}
 									leftIcon={
 										<Image
 											src={chromeIcon}
@@ -279,6 +285,7 @@ export const Landing = () => {
 									{t('install.chrome')}
 								</Button>
 								<Button
+									width={{ base: '100%', sm: 'auto' }}
 									leftIcon={
 										<Image
 											src={firefoxIcon}
@@ -609,7 +616,7 @@ export const Landing = () => {
 				width={'100%'}
 				className={clsx(styles.PageContainer)}
 				padding="3rem 1rem"
-				gap={'2rem'}
+				gap={{ base: '4rem', sm: '2rem' }}
 				flexDirection={{ base: 'column-reverse', md: 'row' }}
 			>
 				<Link href="https://primebits.org">

@@ -1,0 +1,119 @@
+{
+	"meta": {
+		"title": "Linguist - Zasebno prevajanje spletnih strani | Razširitev za prevajanje v brskalnikih Chrome in Firefox",
+		"description": "Razširitev za prevajanje v brskalnikih Chrome in Firefox, ki spoštuje vašo zasebnost. Takojšnje prevajanje spletnih strani, izbranega besedila, podnapisov in sporočil. Deluje brez povezave in podpira integracije prevajalskih storitev ter API-jev."
+	},
+	"navigation": {
+		"features": {
+			"content": "Funkcije"
+		},
+		"blog": {
+			"content": "Blog"
+		},
+		"docs": {
+			"content": "Dokumentacija"
+		},
+		"github": {
+			"content": "GitHub"
+		}
+	},
+	"install": {
+		"chrome": "Namesti za Chrome",
+		"firefox": "Namesti za Firefox"
+	},
+	"sections": {
+		"hero": {
+			"title": "Tekoče prevajanje spletnih strani",
+			"description": "Linguist je prilagodljiv prevajalnik za brskalnike, ki ga poganjajo najbolj priljubljene prevajalske storitve.\n\nPrevedite celotne spletne strani, izbrano besedilo, podnapise na Netflixu ali v video klicih ter zasebna sporočila. Poslušajte prevode in shranite pomembne v svoj osebni slovar za učenje novih besed, tudi brez spletne povezave.\n\nLinguist je sodobna alternativa razširitvam, kot je Google Translate, ki na prvo mesto postavlja vašo zasebnost. Preizkusite brezplačno."
+		},
+		"opensource": {
+			"title": "Odprta koda",
+			"content": "Linguist je brezplačna in <0>odprtokodna</0> razširitev za prevajanje v brskalniku. Ne zbira in ne prodaja uporabniških podatkov.\n\nZ <1>donacijo</1> lahko podprete Linguist in nam pomagate ohraniti neodvisnost ter visoko kakovost.\n\nDelite Linguist na družbenih omrežjih in pomagajte drugim, da ga odkrijejo."
+		},
+		"support": {
+			"title": "Podpora",
+			"content": "Če imate vprašanja, nas kontaktirajte <0/>.\nČe ste našli napako in imate račun na GitHubu, prosimo, <1>prijavite napako</1>."
+		},
+		"createdBy": {
+			"content": "Ustvaril <0/>."
+		}
+	},
+	"features": {
+		"title": "Funkcije",
+		"items": {
+			"offlineTranslation": {
+				"title": "Prevajanje brez povezave in zasebnost",
+				"content": "Prevedite besedilo neposredno na svoji napravi z vgrajenim prevajalnikom brez povezave. Vaše besedilo ostane zasebno in se ne pošilja prek spleta.\n\nOmogočite to funkcijo v nastavitvah, da ohranite zasebnost prevodov pri delu z e-pošto, dokumenti ali osebnimi sporočili.\n\nPrevajalnik brez povezave vam omogoča tudi prevajanje strani brez internetne povezave, kar je še posebej uporabno na potovanjih."
+			},
+			"fullPageTranslation": {
+				"title": "Prevajanje celotnih spletnih strani",
+				"content": "Hitro in visokokakovostno prevajanje celotnih strani v le nekaj klikih.\n\nUporabite bližnjico na tipkovnici za takojšen prevod. Pomaknite se z miško na prevedeno besedilo, da vidite izvirnik. Prevajajte tudi zasebne strani za prijavnimi obrazci ali plačljivimi zidovi.\n\nNastavite pravila za samodejno prevajanje glede na jezik strani ali domeno.\n\nLinguist uporablja pristop minimalnega spreminjanja strani: spremeni le besedilna vozlišča ter ohrani postavitev strani in uporabniško izkušnjo.\n\nOmogočite prevajanje v realnem času za večjezične sestanke na platformah Zoom, Google Meet in Microsoft Teams."
+			},
+			"selectedTextTranslation": {
+				"title": "Prevajanje izbranega besedila na katerikoli spletni strani",
+				"content": "Ste med branjem spletnega članka naleteli na neznane besede?\nPreprosto izberite besedilo na strani in kliknite gumb za prevod.\n\nPoslušajte izvirno in prevedeno besedilo ter shranite prevode v svoj slovar za kasnejši pregled."
+			},
+			"textTranslation": {
+				"title": "Hitro prevajanje besedila",
+				"content": "Potrebujete hiter prevod? Kliknite ikono Linguist in vnesite besedilo.\n\nNi vam treba preklapljati med zavihki ali odpirati prevajalskih spletnih strani. Prevajajte neposredno v brskalniku z uporabo storitve, ki vam najbolj ustreza."
+			},
+			"knowledgeBase": {
+				"title": "Zgradite svojo osebno bazo znanja",
+				"content": "Vsak prevod se shrani v vašo zgodovino, pomembne vnose pa lahko dodate v svoj osebni slovar. Kadarkoli lahko preiščete svoj slovar in zgodovino prevodov.\n\nNič se ne izgubi, niti med dolgimi raziskavami ali učenjem.\n\nSlovar deluje brez povezave, zato je Linguist idealen za učenje jezikov in popotnike, ki potrebujejo stalen dostop do svojih seznamov besed."
+			},
+			"customTranslators": {
+				"title": "Integracija prevajalskih storitev in API-jev",
+				"content": "Linguist vam omogoča izbiro prevajalske storitve.\n\nPodpira priljubljene ponudnike prevodov, kot so Google, Yandex in Microsoft, z več kot 100 jeziki na voljo.\n\nČe storitev, ki jo potrebujete, ni vključena, jo lahko dodate kot <0>prevajalnik po meri</0>.\n\nPrevajalniki po meri vam omogočajo integracijo kateregakoli prevajalskega sistema — od sodobnih LLM storitev, kot so ChatGPT, DeepL, DeepSeek in Gemini, do lokalnih prevajalnikov, ki delujejo na vaši napravi, kot sta Ollama ali LibreTranslate."
+			}
+		}
+	},
+	"faq": {
+		"title": "Pogosta vprašanja",
+		"items": {
+			"whatIsLinguist": {
+				"title": "Kaj je Linguist?",
+				"content": "Linguist je razširitev za prevajanje v brskalnikih Chrome in Firefox, ki na prvo mesto postavlja vašo zasebnost.\n\nOmogoča vam prevajanje celotnih spletnih strani, izbranega besedila, podnapisov in sporočil neposredno v brskalniku, ne da bi morali preklapljati na zunanje prevajalske spletne strani."
+			},
+			"whyLinguist": {
+				"title": "Zakaj uporabljati Linguist?",
+				"content": "Obstaja veliko razširitev za brskalnike, ki prevajajo spletne strani, nekateri brskalniki pa imajo celo vgrajene prevajalnike. Zakaj torej uporabljati Linguist?\n\nVečina vgrajenih prevajalnikov in razširitev je omejena v svoji prilagodljivosti. Mnogi se zanašajo na enega samega ponudnika prevodov, kot sta Google Translate ali Microsoft Bing, medtem ko Firefox ponuja svoj prevajalnik brez povezave. V večini primerov ne morete izbrati storitve, ki bi najbolje ustrezala vašim potrebam.\n\nČe kakovost prevoda ni dovolj dobra za vaš primer uporabe ali če pošiljanje zasebnega besedila storitvam tretjih oseb ni sprejemljivo, vas mnoga orodja pustijo brez dobre alternative.\n\nMnoga orodja se osredotočajo tudi samo na eno nalogo. Nekatera prevajajo celotne strani, druga pa le izbrano besedilo.\n\nHkrati so nekatere prevajalske razširitve zgrajene predvsem z mislijo na monetizacijo. Funkcije, kot sta zgodovina prevodov ali osebni slovar, lahko zahtevajo naročnino, včasih pa so celo osnovne funkcije, kot je temna tema, obravnavane kot plačljive možnosti.\n\nLinguist ubira drugačen pristop. Zasnovan je kot praktično orodje za prevajanje. Izberete lahko prevajalsko storitev, ki vam najbolj ustreza, preklapljate med ponudniki ali dodate svoje prevajalnike po meri.\n\nLinguist prav tako združuje vse na enem mestu: prevajajte celotne spletne strani, izbrano besedilo, podnapise in sporočila, hkrati pa ohranite pregled nad pomembnimi prevodi v svoji zgodovini in osebnem slovarju."
+			},
+			"theLinguistLogo": {
+				"title": "Zakaj je logotip Linguist Babilonski stolp?",
+				"content": "Logotip Linguist navdihuje <wiki>Babilonski stolp</wiki>, ena najstarejših zgodb o jeziku in komunikaciji.\n\nPo tej zgodbi so ljudje nekoč govorili isti jezik in poskušali zgraditi stolp, ki bi segal do neba. Stolp ni bil nikoli dokončan, človeštvo pa se je razkropilo in začelo govoriti različne jezike. Od takrat so jezikovne razlike pogosto oteževale komunikacijo.\n\nLinguist je bil ustvarjen, da pomaga rešiti to težavo.\n\nBabilonski stolp v logotipu je opomin na to zgodbo: veliko jezikov, veliko kultur in nenehen človeški trud, da bi razumeli drug drugega. Linguist pomaga premostiti te vrzeli tako, da naredi prevajanje preprosto, prilagodljivo in dostopno neposredno v vašem brskalniku.\n\nLogotip odraža tudi duh projekta. Linguist ni le še en vmesnik za \"Google Translate\". Ustvarjajo ga ljudje, ki jim je mar za jezike, zasebnost in odprto tehnologijo. Babilonski stolp predstavlja radovednost, učenje in idejo, da bi morale jezikovne razlike ljudi združevati, ne pa ločevati."
+			},
+			"imageTranslation": {
+				"title": "Zakaj Linguist ne prevaja besedila na slikah?",
+				"content": "Linguist se osredotoča na zanesljive in visokokakovostne funkcije prevajanja.\n\nRaziskali smo različne pristope k prevajanju besedila znotraj slik. Trenutno večina razpoložljivih rešitev ne zagotavlja doslednih rezultatov, še posebej, če se izvajajo neposredno v brskalniku — kar je pomembno za ohranjanje zasebnosti uporabnikov.\n\nZaradi tega Linguist trenutno ne vključuje prevajanja slik. Raje ne ponujamo funkcij, ki ne ustrezajo našim standardom kakovosti.\n\nČe bomo v prihodnosti našli zanesljiv način za implementacijo prevajanja slik, ki bo spoštoval zasebnost, ga bomo z veseljem dodali."
+			},
+			"howTranslatePages": {
+				"title": "Kako Linguist prevaja spletne strani?",
+				"content": "Linguist lahko prevede celotne spletne strani v le nekaj klikih. Prevajanje strani lahko začnete z gumbom razširitve ali bližnjico na tipkovnici.\n\nIzvirno besedilo vedno ostane dostopno. Pomaknite se z miško na prevedeno besedilo, da vidite izvirnik."
+			},
+			"offlineTranslation": {
+				"title": "Ali lahko Linguist prevaja strani brez povezave?",
+				"content": "Da. Linguist vključuje vgrajen prevajalnik brez povezave, ki vam omogoča prevajanje besedila brez pošiljanja podatkov prek spleta.\n\nTo pomaga zaščititi vašo zasebnost in vam omogoča prevajanje vsebine tudi brez internetne povezave."
+			},
+			"privacy": {
+				"title": "Ali je Linguist zaseben?",
+				"content": "Da. Linguist je zasnovan z mislijo na zasebnost.\n\nRazširitev ne zbira in ne prodaja uporabniških podatkov. Pri uporabi <offline-translator>prevajalnika brez povezave</offline-translator> se prevodi v celoti obdelajo na vaši napravi."
+			},
+			"supportedBrowsers": {
+				"title": "Katere brskalnike podpira Linguist?",
+				"content": "Linguist je na voljo za Chrome in Firefox. Deluje tudi v drugih brskalnikih, ki temeljijo na Chromiumu in podpirajo razširitve za Chrome.\n\nLinguist deluje tudi v brskalnikih za Android, ki podpirajo razširitve, kot je Firefox za Android in nekateri brskalniki, ki temeljijo na Chromiumu."
+			},
+			"selectedText": {
+				"title": "Ali lahko Linguist prevede izbrano besedilo?",
+				"content": "Da. Preprosto izberite besedilo na katerikoli spletni strani in uporabite gumb za prevod, da ga takoj prevedete.\n\nPrevod lahko tudi poslušate in ga shranite v svoj osebni slovar."
+			},
+			"customTranslators": {
+				"title": "Ali lahko uporabim svojo prevajalsko storitev?",
+				"content": "Da. Linguist podpira <custom-translator>prevajalnike po meri</custom-translator>, ki vam omogočajo integracijo dodatnih prevajalskih storitev.\n\nPovežete lahko zunanje API-je ali lokalne prevajalske sisteme, kot sta <libre-translate>LibreTranslate</libre-translate> ali <ollama>Ollama</ollama>."
+			},
+			"isFree": {
+				"title": "Ali je Linguist brezplačen?",
+				"content": "Da. Linguist je popolnoma brezplačen in <linguist>odprtokoden</linguist>.\n\nProjekt podpira skupnost, po želji pa ga lahko <donations>podprete z donacijo</donations>."
+			}
+		}
+	}
+}

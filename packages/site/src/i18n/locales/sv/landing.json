@@ -1,0 +1,119 @@
+{
+	"meta": {
+		"title": "Linguist – Översätt webbsidor privat | Översättningstillägg för Chrome och Firefox",
+		"description": "Integritetsfokuserat översättningstillägg för Chrome och Firefox. Översätt webbsidor, markerad text, undertexter och meddelanden direkt. Fungerar offline och stöder integrationer av översättningstjänster och API:er."
+	},
+	"navigation": {
+		"features": {
+			"content": "Funktioner"
+		},
+		"blog": {
+			"content": "Blogg"
+		},
+		"docs": {
+			"content": "Dokumentation"
+		},
+		"github": {
+			"content": "GitHub"
+		}
+	},
+	"install": {
+		"chrome": "Installera för Chrome",
+		"firefox": "Installera för Firefox"
+	},
+	"sections": {
+		"hero": {
+			"title": "Översätt webbsidor smidigt",
+			"description": "Linguist är en flexibel översättare för webbläsaren som drivs av de mest populära översättningstjänsterna.\n\nÖversätt hela webbsidor, markerad text, undertexter på Netflix eller i videosamtal, samt privata meddelanden. Lyssna på översättningar och spara de viktigaste i din personliga ordbok för att lära dig nya ord, även offline.\n\nLinguist är ett modernt och integritetsfokuserat alternativ till Google Translate-tillägg. Prova det gratis."
+		},
+		"opensource": {
+			"title": "Öppen källkod",
+			"content": "Linguist är ett gratis översättningstillägg med <0>öppen källkod</0>. Det varken samlar in eller säljer användardata.\n\nDu kan <1>donera</1> för att stödja Linguist och hjälpa oss att behålla vårt oberoende och vår höga kvalitet.\n\nDela gärna Linguist på sociala medier för att hjälpa andra att upptäcka det."
+		},
+		"support": {
+			"title": "Support",
+			"content": "Om du har frågor är du välkommen att kontakta oss <0/>.\nOm du har hittat ett fel och har ett GitHub-konto får du gärna <1>skapa ett ärende</1>."
+		},
+		"createdBy": {
+			"content": "Skapat av <0/>."
+		}
+	},
+	"features": {
+		"title": "Funktioner",
+		"items": {
+			"offlineTranslation": {
+				"title": "Offline-översättning och integritet",
+				"content": "Översätt text direkt på din enhet med den inbyggda offline-översättaren. Din text förblir privat och skickas inte över internet.\n\nAktivera den här funktionen på inställningssidan för att hålla översättningar privata när du hanterar e-post, dokument eller personliga meddelanden.\n\nOffline-översättaren gör det också möjligt att översätta sidor utan internetuppkoppling, vilket är särskilt användbart när du reser."
+			},
+			"fullPageTranslation": {
+				"title": "Översätt hela webbsidor",
+				"content": "Snabb och högkvalitativ översättning av hela sidor med bara några klick.\n\nAnvänd ett kortkommando för att översätta direkt. Håll muspekaren över den översatta texten för att se originalet. Översätt även privata sidor bakom inloggningsformulär eller betalväggar.\n\nStäll in regler för automatisk översättning baserat på sidans språk eller domän.\n\nLinguist använder en metod som minimerar ändringar på sidan: tillägget ändrar endast textnoder och bevarar sidans layout och användarupplevelse.\n\nAktivera översättning i realtid för flerspråkiga möten i Zoom, Google Meet och Microsoft Teams."
+			},
+			"selectedTextTranslation": {
+				"title": "Översätt markerad text på valfri webbplats",
+				"content": "Stöter du på obekanta ord när du läser en artikel på nätet?\nMarkera bara texten på sidan och klicka på översättningsknappen.\n\nLyssna på både originalet och den översatta texten, och spara översättningar i din ordbok för att repetera dem senare."
+			},
+			"textTranslation": {
+				"title": "Snabb textöversättning",
+				"content": "Behöver du översätta något snabbt? Klicka på Linguist-ikonen och skriv in din text.\n\nDu behöver inte byta flik eller öppna översättningssidor. Översätt direkt i webbläsaren med den tjänst du föredrar."
+			},
+			"knowledgeBase": {
+				"title": "Bygg din personliga kunskapsbas",
+				"content": "Varje översättning sparas i din historik, och du kan lägga till viktiga ord i din personliga ordbok. Sök i din ordbok och översättningshistorik när som helst.\n\nInget går förlorat, inte ens under långa forsknings- eller studiepass.\n\nOrdboken fungerar offline, vilket gör Linguist idealiskt för språkstuderande och resenärer som behöver ständig tillgång till sina ordlistor."
+			},
+			"customTranslators": {
+				"title": "Integrera översättningstjänster och API:er",
+				"content": "Med Linguist kan du själv välja vilken översättningstjänst du vill använda.\n\nTillägget stöder populära leverantörer som Google, Yandex och Microsoft, med över 100 tillgängliga språk.\n\nOm en tjänst du behöver saknas kan du lägga till den som en <0>anpassad översättare</0>.\n\nAnpassade översättare gör det möjligt att integrera valfritt översättningssystem – från moderna LLM-tjänster som ChatGPT, DeepL, DeepSeek och Gemini till lokala översättare som körs på din enhet, exempelvis Ollama eller LibreTranslate."
+			}
+		}
+	},
+	"faq": {
+		"title": "Vanliga frågor",
+		"items": {
+			"whatIsLinguist": {
+				"title": "Vad är Linguist?",
+				"content": "Linguist är ett integritetsfokuserat översättningstillägg för Chrome och Firefox.\n\nDet låter dig översätta hela webbsidor, markerad text, undertexter och meddelanden direkt i webbläsaren utan att du behöver byta till externa översättningssidor."
+			},
+			"whyLinguist": {
+				"title": "Varför ska man använda Linguist?",
+				"content": "Det finns många webbläsartillägg som översätter webbsidor, och vissa webbläsare har till och med inbyggda översättare. Så varför ska man använda Linguist?\n\nDe flesta inbyggda översättare och tillägg har begränsad flexibilitet. Många förlitar sig på en enda leverantör, som Google Translate eller Microsoft Bing, medan Firefox erbjuder sin egen offline-översättare. I de flesta fall kan du inte välja den tjänst som passar dina behov bäst.\n\nOm översättningskvaliteten inte räcker till för ditt syfte, eller om det inte är acceptabelt att skicka privat text till tredjepartstjänster, lämnar många verktyg dig utan ett bra alternativ.\n\nMånga verktyg fokuserar också på en enda uppgift. Vissa översätter hela sidor, medan andra bara översätter markerad text.\n\nSamtidigt är vissa översättningstillägg i första hand byggda för intäktsgenerering. Funktioner som översättningshistorik eller personliga ordböcker kan kräva en prenumeration, och ibland behandlas till och med grundläggande funktioner som mörkt tema som premiumalternativ.\n\nLinguist har ett annat tillvägagångssätt. Det är utformat som ett praktiskt översättningsverktyg. Du kan välja den översättningstjänst som fungerar bäst för dig, byta mellan leverantörer eller lägga till dina egna anpassade översättare.\n\nLinguist samlar också allt på ett ställe: översätt hela webbsidor, markerad text, undertexter och meddelanden samtidigt som du håller koll på viktiga översättningar i din historik och personliga ordbok."
+			},
+			"theLinguistLogo": {
+				"title": "Varför är Linguists logotyp Babels torn?",
+				"content": "Linguists logotyp är inspirerad av <wiki>Babels torn</wiki>, en av de äldsta berättelserna om språk och kommunikation.\n\nEnligt berättelsen talade människor en gång samma språk och försökte bygga ett torn som nådde upp till himlen. Tornet blev aldrig färdigt, och mänskligheten splittrades över många olika språk. Sedan dess har språkskillnader ofta gjort kommunikation svårare.\n\nLinguist skapades för att hjälpa till att lösa det problemet.\n\nBabels torn i logotypen är en påminnelse om den berättelsen: många språk, många kulturer och människans ständiga strävan efter att förstå varandra. Linguist hjälper till att överbrygga dessa klyftor genom att göra översättning enkelt, flexibelt och tillgängligt direkt i din webbläsare.\n\nLogotypen återspeglar också projektets anda. Linguist är inte bara ännu ett skal kring \"Google Translate\". Det är byggt av människor som bryr sig om språk, integritet och öppen teknik. Babels torn representerar nyfikenhet, lärande och tanken att språkskillnader bör föra människor samman snarare än att hålla dem isär."
+			},
+			"imageTranslation": {
+				"title": "Varför översätter inte Linguist text i bilder?",
+				"content": "Linguist fokuserar på pålitliga och högkvalitativa översättningsfunktioner.\n\nVi har undersökt olika metoder för att översätta text i bilder. För närvarande ger de flesta tillgängliga lösningar inte konsekventa resultat, särskilt inte när de körs direkt i webbläsaren – vilket är viktigt för att bevara användarnas integritet.\n\nDärför inkluderar Linguist för närvarande inte bildöversättning. Vi föredrar att inte lansera funktioner som inte uppfyller våra kvalitetskrav.\n\nOm vi i framtiden hittar ett pålitligt och integritetsvänligt sätt att implementera bildöversättning, lägger vi gärna till det."
+			},
+			"howTranslatePages": {
+				"title": "Hur översätter Linguist webbsidor?",
+				"content": "Linguist kan översätta hela webbsidor med bara några klick. Du kan starta sidöversättningen via tilläggsknappen eller med ett kortkommando.\n\nOriginaltexten förblir alltid tillgänglig. Håll muspekaren över den översatta texten för att se originalet."
+			},
+			"offlineTranslation": {
+				"title": "Kan Linguist översätta sidor offline?",
+				"content": "Ja. Linguist innehåller en inbyggd offline-översättare som låter dig översätta text utan att skicka data över internet.\n\nDetta hjälper till att skydda din integritet och gör det möjligt att översätta innehåll även utan internetuppkoppling."
+			},
+			"privacy": {
+				"title": "Är Linguist privat?",
+				"content": "Ja. Linguist är utformat med integritet i åtanke.\n\nTillägget varken samlar in eller säljer användardata. När du använder <offline-translator>offline-översättaren</offline-translator> bearbetas översättningarna helt och hållet på din enhet."
+			},
+			"supportedBrowsers": {
+				"title": "Vilka webbläsare stöder Linguist?",
+				"content": "Linguist finns tillgängligt för Chrome och Firefox. Det fungerar även i andra Chromium-baserade webbläsare som stöder Chrome-tillägg.\n\nLinguist fungerar också i Android-webbläsare som stöder tillägg, till exempel Firefox för Android och vissa Chromium-baserade webbläsare."
+			},
+			"selectedText": {
+				"title": "Kan Linguist översätta markerad text?",
+				"content": "Ja. Markera bara text på valfri webbsida och använd översättningsknappen för att översätta den direkt.\n\nDu kan också lyssna på översättningen och spara den i din personliga ordbok."
+			},
+			"customTranslators": {
+				"title": "Kan jag använda min egen översättningstjänst?",
+				"content": "Ja. Linguist stöder <custom-translator>anpassade översättare</custom-translator>, vilket gör det möjligt att integrera ytterligare översättningstjänster.\n\nDu kan ansluta externa API:er eller lokala översättningssystem som <libre-translate>LibreTranslate</libre-translate> eller <ollama>Ollama</ollama>."
+			},
+			"isFree": {
+				"title": "Är Linguist gratis?",
+				"content": "Ja. Linguist är helt gratis och har <linguist>öppen källkod</linguist>.\n\nProjektet stöds av gemenskapen, och du kan om du vill <donations>stödja det med en donation</donations>."
+			}
+		}
+	}
+}

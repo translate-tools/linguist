@@ -38,6 +38,10 @@ const MetaTags = () => {
 				property="og:image"
 				content={withBaseUrl(screenshotPageTranslation, { absolute: true })}
 			/>
+			<meta
+				property="twitter:image"
+				content={withBaseUrl(screenshotPageTranslation, { absolute: true })}
+			/>
 			{altVersions.map((version) => (
 				<link
 					key={version.langCode}

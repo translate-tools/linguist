@@ -1,0 +1,119 @@
+{
+	"meta": {
+		"title": "Linguist – Käännä verkkosivuja yksityisesti | Selainlaajennus Chromelle ja Firefoxille",
+		"description": "Yksityisyyttä kunnioittava kääntäjälaajennus Chromelle ja Firefoxille. Käännä verkkosivuja, valittua tekstiä, tekstityksiä ja viestejä välittömästi. Toimii ilman verkkoyhteyttä ja tukee käännöspalveluiden integraatioita sekä rajapintoja."
+	},
+	"navigation": {
+		"features": {
+			"content": "Ominaisuudet"
+		},
+		"blog": {
+			"content": "Blogi"
+		},
+		"docs": {
+			"content": "Dokumentaatio"
+		},
+		"github": {
+			"content": "GitHub"
+		}
+	},
+	"install": {
+		"chrome": "Asenna Chromelle",
+		"firefox": "Asenna Firefoxille"
+	},
+	"sections": {
+		"hero": {
+			"title": "Käännä verkkosivuja sujuvasti",
+			"description": "Linguist on joustava selaimen kääntäjä, joka hyödyntää suosituimpia käännöspalveluita.\n\nKäännä kokonaisia verkkosivuja, valittua tekstiä, Netflixin tai videopuheluiden tekstityksiä sekä yksityisviestejä. Kuuntele käännöksiä ja tallenna tärkeimmät omaan sanakirjaasi oppiaksesi uusia sanoja, jopa ilman verkkoyhteyttä.\n\nLinguist on moderni ja yksityisyyttä kunnioittava vaihtoehto Google Kääntäjä -selainlaajennuksille. Kokeile ilmaiseksi."
+		},
+		"opensource": {
+			"title": "Avoin lähdekoodi",
+			"content": "Linguist on ilmainen ja <0>avoimen lähdekoodin</0> kääntäjälaajennus selaimelle. Se ei kerää tai myy käyttäjätietoja.\n\nVoit <1>tehdä lahjoituksen</1> tukeaksesi Linguistia ja auttaaksesi meitä säilyttämään riippumattomuutemme ja korkean laadun.\n\nJaa Linguist sosiaalisessa mediassa auttaaksesi muita löytämään sen."
+		},
+		"support": {
+			"title": "Tuki",
+			"content": "Jos sinulla on kysyttävää, ota meihin yhteyttä <0/>.\nJos löysit virheen ja sinulla on GitHub-tili, <1>tee vikailmoitus</1>."
+		},
+		"createdBy": {
+			"content": "Tekijä: <0/>."
+		}
+	},
+	"features": {
+		"title": "Ominaisuudet",
+		"items": {
+			"offlineTranslation": {
+				"title": "Kääntäminen ilman verkkoyhteyttä ja yksityisyys",
+				"content": "Käännä tekstiä suoraan laitteellasi sisäänrakennetun offline-kääntäjän avulla. Tekstisi pysyy yksityisenä, eikä sitä lähetetä internetin yli.\n\nOta tämä ominaisuus käyttöön asetuksista pitääksesi käännökset yksityisinä, kun käsittelet sähköposteja, asiakirjoja tai yksityisviestejä.\n\nOffline-kääntäjä mahdollistaa myös sivujen kääntämisen ilman verkkoyhteyttä, mikä on erityisen hyödyllistä matkustaessa."
+			},
+			"fullPageTranslation": {
+				"title": "Käännä kokonaisia verkkosivuja",
+				"content": "Nopea ja laadukas koko sivun käännös vain muutamalla painalluksella.\n\nKäytä pikanäppäintä kääntääksesi välittömästi. Vie hiiri käännetyn tekstin päälle nähdäksesi alkuperäisen. Käännä myös yksityisiä sivuja, jotka ovat kirjautumisen tai maksumuurin takana.\n\nMääritä automaattisia käännössääntöjä sivun kielen tai verkkotunnuksen perusteella.\n\nLinguist muokkaa sivua mahdollisimman vähän: se muuttaa vain tekstielementtejä ja säilyttää sivun asettelun sekä käyttökokemuksen.\n\nOta käyttöön reaaliaikainen käännös monikielisissä kokouksissa Zoomissa, Google Meetissä ja Microsoft Teamsissa."
+			},
+			"selectedTextTranslation": {
+				"title": "Käännä valittua tekstiä millä tahansa verkkosivulla",
+				"content": "Tuleeko verkkoartikkelia lukiessa vastaan vieraita sanoja?\nValitse vain teksti sivulta ja paina käännöspainiketta.\n\nKuuntele sekä alkuperäinen että käännetty teksti, ja tallenna käännökset sanakirjaasi myöhempää kertausta varten."
+			},
+			"textTranslation": {
+				"title": "Nopea tekstin kääntäminen",
+				"content": "Tarvitseeko sinun kääntää jotain nopeasti? Napsauta Linguist-kuvaketta ja syötä tekstisi.\n\nSinun ei tarvitse vaihdella välilehtien välillä tai avata käännössivustoja. Käännä suoraan selaimessasi käyttäen haluamaasi palvelua."
+			},
+			"knowledgeBase": {
+				"title": "Rakenna oma tietopankkisi",
+				"content": "Jokainen käännös tallentuu historiaasi, ja voit lisätä tärkeitä termejä omaan sanakirjaasi. Hae sanakirjastasi ja käännöshistoriastasi milloin tahansa.\n\nMitään ei katoa, edes pitkien tutkimus- tai opiskelusessioiden aikana.\n\nSanakirja toimii ilman verkkoyhteyttä, mikä tekee Linguistista ihanteellisen kieltenopiskelijoille ja matkailijoille, jotka tarvitsevat jatkuvan pääsyn sanalistoihinsa."
+			},
+			"customTranslators": {
+				"title": "Integroi käännöspalveluita ja rajapintoja",
+				"content": "Linguist antaa sinun valita, mitä käännöspalvelua haluat käyttää.\n\nSe tukee suosittuja käännöspalveluita, kuten Googlea, Yandexia ja Microsoftia, tarjoten yli 100 kieltä.\n\nJos tarvitsemaasi palvelua ei löydy valmiina, voit lisätä sen <0>mukautettuna kääntäjänä</0>.\n\nMukautetut kääntäjät mahdollistavat minkä tahansa käännösjärjestelmän integroinnin – moderneista kielimalleista (kuten ChatGPT, DeepL, DeepSeek ja Gemini) aina laitteellasi toimiviin paikallisiin kääntäjiin (kuten Ollama tai LibreTranslate)."
+			}
+		}
+	},
+	"faq": {
+		"title": "Usein kysytyt kysymykset",
+		"items": {
+			"whatIsLinguist": {
+				"title": "Mikä Linguist on?",
+				"content": "Linguist on yksityisyyttä kunnioittava kääntäjälaajennus Chromelle ja Firefoxille.\n\nSen avulla voit kääntää kokonaisia verkkosivuja, valittua tekstiä, tekstityksiä ja viestejä suoraan selaimessasi siirtymättä erillisille käännössivustoille."
+			},
+			"whyLinguist": {
+				"title": "Miksi valita Linguist?",
+				"content": "Verkkosivuja kääntäviä selainlaajennuksia on monia, ja joissakin selaimissa on jopa sisäänrakennettu kääntäjä. Miksi siis käyttää Linguistia?\n\nUseimmat sisäänrakennetut kääntäjät ja laajennukset ovat joustavuudeltaan rajallisia. Monet luottavat vain yhteen käännöspalveluun, kuten Google Kääntäjään tai Microsoft Bingiin, kun taas Firefox tarjoaa oman offline-kääntäjänsä. Useimmiten et voi valita omiin tarpeisiisi parhaiten sopivaa palvelua.\n\nJos käännöksen laatu ei riitä käyttötarkoitukseesi, tai jos yksityisen tekstin lähettäminen kolmansien osapuolten palveluihin ei ole hyväksyttävää, monet työkalut jättävät sinut ilman hyvää vaihtoehtoa.\n\nMonet työkalut keskittyvät myös vain yhteen tehtävään. Toiset kääntävät kokonaisia sivuja, kun taas toiset kääntävät vain valittua tekstiä.\n\nSamanaikaisesti jotkin kääntäjälaajennukset on rakennettu ensisijaisesti tuottamaan rahaa. Ominaisuudet, kuten käännöshistoria tai omat sanakirjat, saattavat vaatia tilauksen, ja joskus jopa perusominaisuudet, kuten tumma teema, on rajattu maksullisiksi.\n\nLinguist lähestyy asiaa eri tavalla. Se on suunniteltu käytännölliseksi käännöstyökaluksi. Voit valita sinulle parhaiten sopivan käännöspalvelun, vaihtaa palveluntarjoajien välillä tai lisätä omia mukautettuja kääntäjiäsi.\n\nLinguist myös kokoaa kaiken yhteen paikkaan: käännä kokonaisia verkkosivuja, valittua tekstiä, tekstityksiä ja viestejä, samalla kun pidät kirjaa tärkeistä käännöksistä historiassasi ja omassa sanakirjassasi."
+			},
+			"theLinguistLogo": {
+				"title": "Miksi Linguistin logona on Baabelin torni?",
+				"content": "Linguistin logo on saanut inspiraationsa <wiki>Baabelin tornista</wiki>, joka on yksi vanhimmista kieltä ja viestintää käsittelevistä tarinoista.\n\nTarinan mukaan ihmiset puhuivat kerran samaa kieltä ja yrittivät rakentaa taivaaseen ulottuvan tornin. Tornia ei koskaan saatu valmiiksi, ja ihmiskunta hajautui puhumaan monia eri kieliä. Siitä lähtien kielimuurit ovat usein vaikeuttaneet viestintää.\n\nLinguist luotiin auttamaan tämän ongelman ratkaisemisessa.\n\nLogon Baabelin torni on muistutus tästä tarinasta: monista kielistä, monista kulttuureista ja ihmisten jatkuvasta pyrkimyksestä ymmärtää toisiaan. Linguist auttaa ylittämään näitä kuiluja tekemällä kääntämisestä yksinkertaista, joustavaa ja helposti saavutettavaa suoraan selaimessasi.\n\nLogo heijastaa myös projektin henkeä. Linguist ei ole vain yksi uusi käyttöliittymä Google Kääntäjälle. Sen ovat rakentaneet ihmiset, jotka välittävät kielistä, yksityisyydestä ja avoimesta teknologiasta. Baabelin torni edustaa uteliaisuutta, oppimista ja ajatusta siitä, että kielierojen tulisi tuoda ihmisiä yhteen, ei erottaa heitä."
+			},
+			"imageTranslation": {
+				"title": "Miksi Linguist ei käännä kuvissa olevaa tekstiä?",
+				"content": "Linguist keskittyy luotettaviin ja laadukkaisiin käännösominaisuuksiin.\n\nOlemme tutkineet erilaisia tapoja kääntää kuvien sisällä olevaa tekstiä. Tällä hetkellä useimmat saatavilla olevat ratkaisut eivät tarjoa tasalaatuisia tuloksia, etenkään silloin, kun ne suoritetaan suoraan selaimessa – mikä on tärkeää käyttäjien yksityisyyden säilyttämiseksi.\n\nTästä syystä Linguist ei tällä hetkellä sisällä kuvien kääntämistä. Emme halua julkaista ominaisuuksia, jotka eivät täytä laatustandardejamme.\n\nJos löydämme tulevaisuudessa luotettavan ja yksityisyyttä kunnioittavan tavan toteuttaa kuvien kääntäminen, lisäämme sen mielellämme."
+			},
+			"howTranslatePages": {
+				"title": "Miten Linguist kääntää verkkosivuja?",
+				"content": "Linguist voi kääntää kokonaisia verkkosivuja vain muutamalla painalluksella. Voit aloittaa sivun kääntämisen laajennuksen painikkeesta tai pikanäppäimellä.\n\nAlkuperäinen teksti pysyy aina saatavilla. Vie hiiri käännetyn tekstin päälle nähdäksesi alkuperäisen."
+			},
+			"offlineTranslation": {
+				"title": "Voiko Linguist kääntää sivuja ilman verkkoyhteyttä?",
+				"content": "Kyllä. Linguist sisältää sisäänrakennetun offline-kääntäjän, jonka avulla voit kääntää tekstiä lähettämättä tietoja internetin yli.\n\nTämä auttaa suojaamaan yksityisyyttäsi ja mahdollistaa sisällön kääntämisen myös ilman verkkoyhteyttä."
+			},
+			"privacy": {
+				"title": "Onko Linguist yksityinen?",
+				"content": "Kyllä. Linguist on suunniteltu yksityisyyttä silmällä pitäen.\n\nLaajennus ei kerää tai myy käyttäjätietoja. Kun käytät <offline-translator>offline-kääntäjää</offline-translator>, käännökset käsitellään kokonaan omalla laitteellasi."
+			},
+			"supportedBrowsers": {
+				"title": "Mitä selaimia Linguist tukee?",
+				"content": "Linguist on saatavilla Chromelle ja Firefoxille. Se toimii myös muissa Chromium-pohjaisissa selaimissa, jotka tukevat Chrome-laajennuksia.\n\nLinguist toimii lisäksi laajennuksia tukevissa Android-selaimissa, kuten Firefox for Androidissa ja joissakin Chromium-pohjaisissa selaimissa."
+			},
+			"selectedText": {
+				"title": "Voiko Linguist kääntää valittua tekstiä?",
+				"content": "Kyllä. Valitse vain tekstiä miltä tahansa verkkosivulta ja käytä käännöspainiketta kääntääksesi sen välittömästi.\n\nVoit myös kuunnella käännöksen ja tallentaa sen omaan sanakirjaasi."
+			},
+			"customTranslators": {
+				"title": "Voinko käyttää omaa käännöspalveluani?",
+				"content": "Kyllä. Linguist tukee <custom-translator>mukautettuja kääntäjiä</custom-translator>, joiden avulla voit integroida lisättyjä käännöspalveluita.\n\nVoit yhdistää ulkoisia rajapintoja tai paikallisia käännösjärjestelmiä, kuten <libre-translate>LibreTranslaten</libre-translate> tai <ollama>Ollaman</ollama>."
+			},
+			"isFree": {
+				"title": "Onko Linguist ilmainen?",
+				"content": "Kyllä. Linguist on täysin ilmainen ja <linguist>avoimen lähdekoodin</linguist> ohjelmisto.\n\nProjekti on yhteisön tukema, ja voit halutessasi <donations>tukea sitä lahjoituksella</donations>."
+			}
+		}
+	}
+}

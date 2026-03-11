@@ -49,6 +49,8 @@ const config: Config = {
 	],
 
 	themeConfig: {
+		image: 'img/app.png',
+		metadata: [{ name: 'twitter:card', content: 'summary_large_image' }],
 		colorMode: {
 			defaultMode: 'light',
 			disableSwitch: true,

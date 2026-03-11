@@ -1,0 +1,119 @@
+{
+	"meta": {
+		"title": "Linguist – Prywatne tłumaczenie stron internetowych | Tłumacz w przeglądarce dla Chrome i Firefox",
+		"description": "Rozszerzenie do Chrome i Firefox, które stawia prywatność na pierwszym miejscu. Błyskawicznie tłumacz strony internetowe, zaznaczony tekst, napisy i wiadomości. Działa offline i obsługuje integracje z zewnętrznymi tłumaczami oraz API."
+	},
+	"navigation": {
+		"features": {
+			"content": "Funkcje"
+		},
+		"blog": {
+			"content": "Blog"
+		},
+		"docs": {
+			"content": "Dokumentacja"
+		},
+		"github": {
+			"content": "GitHub"
+		}
+	},
+	"install": {
+		"chrome": "Zainstaluj dla Chrome",
+		"firefox": "Zainstaluj dla Firefox"
+	},
+	"sections": {
+		"hero": {
+			"title": "Płynne tłumaczenie stron internetowych",
+			"description": "Linguist to wszechstronny tłumacz w przeglądarce, korzystający z najpopularniejszych usług tłumaczeniowych.\n\nTłumacz całe strony internetowe, zaznaczony tekst, napisy na Netflixie lub podczas wideorozmów, a także prywatne wiadomości. Odsłuchuj tłumaczenia i dodawaj ważne pojęcia do osobistego słownika, aby uczyć się nowych słów, również offline.\n\nLinguist to nowoczesna alternatywa dla rozszerzenia Tłumacz Google, która chroni Twoją prywatność. Wypróbuj bezpłatnie."
+		},
+		"opensource": {
+			"title": "Otwarte oprogramowanie",
+			"content": "Linguist to bezpłatne rozszerzenie do tłumaczenia o <0>otwartym kodzie źródłowym</0>. Nie gromadzi ani nie sprzedaje danych użytkowników.\n\nMożesz <1>przekazać darowiznę</1>, aby wesprzeć Linguist i pomóc nam utrzymać niezależność oraz wysoką jakość.\n\nUdostępnij Linguist w mediach społecznościowych, aby pomóc innym go odkryć."
+		},
+		"support": {
+			"title": "Wsparcie",
+			"content": "Jeśli masz pytania, skontaktuj się z nami <0/>.\nJeśli zauważysz błąd i masz konto na GitHubie, <1>zgłoś problem</1>."
+		},
+		"createdBy": {
+			"content": "Stworzone przez <0/>."
+		}
+	},
+	"features": {
+		"title": "Funkcje",
+		"items": {
+			"offlineTranslation": {
+				"title": "Tłumaczenie offline i prywatność",
+				"content": "Tłumacz tekst bezpośrednio na swoim urządzeniu dzięki wbudowanemu tłumaczowi offline. Twój tekst pozostaje prywatny i nie jest wysyłany przez internet.\n\nWłącz tę funkcję w ustawieniach, aby zachować prywatność tłumaczeń podczas pracy z e-mailami, dokumentami lub prywatnymi wiadomościami.\n\nTłumacz offline pozwala również na tłumaczenie stron bez połączenia z internetem, co jest szczególnie przydatne w podróży."
+			},
+			"fullPageTranslation": {
+				"title": "Tłumaczenie całych stron internetowych",
+				"content": "Szybkie tłumaczenie całych stron w wysokiej jakości za pomocą zaledwie kilku kliknięć.\n\nUżyj skrótu klawiszowego, aby tłumaczyć błyskawicznie. Najedź kursorem na przetłumaczony tekst, aby zobaczyć oryginał. Tłumacz nawet prywatne strony ukryte za formularzami logowania lub paywallami.\n\nSkonfiguruj reguły automatycznego tłumaczenia na podstawie języka strony lub domeny.\n\nLinguist ingeruje w strukturę strony w minimalnym stopniu: zmienia tylko fragmenty tekstowe, zachowując oryginalny układ i wygodę przeglądania.\n\nWłącz tłumaczenie w czasie rzeczywistym podczas międzynarodowych spotkań na Zoomie, Google Meet i Microsoft Teams."
+			},
+			"selectedTextTranslation": {
+				"title": "Tłumaczenie zaznaczonego tekstu na dowolnej stronie",
+				"content": "Trafiasz na nieznane słowa podczas czytania artykułu w sieci?\nPo prostu zaznacz tekst na stronie i kliknij przycisk tłumaczenia.\n\nPosłuchaj zarówno oryginalnego, jak i przetłumaczonego tekstu, a następnie zapisz tłumaczenia w swoim słowniku, aby wrócić do nich później."
+			},
+			"textTranslation": {
+				"title": "Szybkie tłumaczenie tekstu",
+				"content": "Potrzebujesz coś szybko przetłumaczyć? Kliknij ikonę Linguist i wpisz swój tekst.\n\nNie musisz przełączać się między kartami ani otwierać stron z tłumaczami. Tłumacz bezpośrednio w przeglądarce, korzystając z wybranej przez siebie usługi."
+			},
+			"knowledgeBase": {
+				"title": "Budowanie osobistej bazy wiedzy",
+				"content": "Każde tłumaczenie jest zapisywane w historii, a ważne pojęcia możesz dodawać do osobistego słownika. W dowolnej chwili przeszukuj swój słownik i historię tłumaczeń.\n\nNic nie zginie, nawet podczas długich poszukiwań informacji czy nauki.\n\nSłownik działa offline, co czyni Linguist idealnym narzędziem dla osób uczących się języków i podróżników, którzy potrzebują stałego dostępu do swoich list słówek."
+			},
+			"customTranslators": {
+				"title": "Integracja usług tłumaczeniowych i API",
+				"content": "Linguist pozwala Ci wybrać, z której usługi tłumaczeniowej chcesz korzystać.\n\nObsługuje popularnych dostawców, takich jak Google, Yandex i Microsoft, oferując dostęp do ponad 100 języków.\n\nJeśli brakuje usługi, której potrzebujesz, możesz dodać ją jako <0>własnego tłumacza</0>.\n\nWłasne tłumacze pozwalają na integrację dowolnego systemu tłumaczeniowego — od nowoczesnych usług opartych na modelach językowych (LLM), takich jak ChatGPT, DeepL, DeepSeek i Gemini, po lokalne translatory działające na Twoim urządzeniu, takie jak Ollama czy LibreTranslate."
+			}
+		}
+	},
+	"faq": {
+		"title": "FAQ",
+		"items": {
+			"whatIsLinguist": {
+				"title": "Czym jest Linguist?",
+				"content": "Linguist to rozszerzenie do tłumaczenia dla Chrome i Firefox, które stawia prywatność na pierwszym miejscu.\n\nPozwala tłumaczyć całe strony internetowe, zaznaczony tekst, napisy i wiadomości bezpośrednio w przeglądarce, bez konieczności przechodzenia na zewnętrzne strony tłumaczy."
+			},
+			"whyLinguist": {
+				"title": "Dlaczego warto korzystać z Linguist?",
+				"content": "Istnieje wiele rozszerzeń do tłumaczenia stron, a niektóre przeglądarki mają nawet wbudowane translatory. Dlaczego więc warto wybrać Linguist?\n\nWiększość wbudowanych tłumaczy i rozszerzeń jest mało elastyczna. Wiele z nich opiera się na jednym dostawcy, takim jak Tłumacz Google czy Microsoft Bing, podczas gdy Firefox oferuje własnego tłumacza offline. W większości przypadków nie masz możliwości wyboru usługi, która najlepiej odpowiada Twoim potrzebom.\n\nJeśli jakość tłumaczenia nie jest wystarczająca do Twoich celów lub jeśli wysyłanie prywatnych tekstów do zewnętrznych usług jest dla Ciebie nie do przyjęcia, wiele narzędzi nie oferuje żadnej dobrej alternatywy.\n\nPonadto wiele narzędzi skupia się tylko na jednym zadaniu. Niektóre tłumaczą całe strony, podczas gdy inne tylko zaznaczony tekst.\n\nJednocześnie niektóre rozszerzenia są tworzone głównie z myślą o zarabianiu. Funkcje takie jak historia tłumaczeń czy osobiste słowniki mogą wymagać subskrypcji, a czasem nawet podstawowe opcje, jak ciemny motyw, są traktowane jako funkcje premium.\n\nLinguist przyjmuje inne podejście. Został zaprojektowany jako praktyczne narzędzie do tłumaczenia. Możesz wybrać usługę, która sprawdza się u Ciebie najlepiej, przełączać się między dostawcami lub dodawać własne, niestandardowe translatory.\n\nLinguist łączy również wszystko w jednym miejscu: tłumacz całe strony internetowe, zaznaczony tekst, napisy i wiadomości, zachowując jednocześnie ważne tłumaczenia w historii i osobistym słowniku."
+			},
+			"theLinguistLogo": {
+				"title": "Dlaczego w logo Linguist znajduje się Wieża Babel?",
+				"content": "Logo Linguist jest inspirowane <wiki>Wieżą Babel</wiki>, jedną z najstarszych opowieści o języku i komunikacji.\n\nWedług tej historii ludzie mówili kiedyś jednym językiem i próbowali zbudować wieżę sięgającą nieba. Budowla nigdy nie została ukończona, a ludzkość rozproszyła się, tworząc wiele różnych języków. Od tego czasu różnice językowe często utrudniały komunikację.\n\nLinguist powstał, aby pomóc rozwiązać ten problem.\n\nWieża Babel w logo jest przypomnieniem tej historii: wielu języków, wielu kultur i nieustannego ludzkiego wysiłku, by się nawzajem zrozumieć. Linguist pomaga pokonywać te bariery, czyniąc tłumaczenie prostym, elastycznym i dostępnym bezpośrednio w przeglądarce.\n\nLogo odzwierciedla również ducha projektu. Linguist to nie tylko kolejna nakładka na „Tłumacza Google”. Tworzą go ludzie, którym zależy na językach, prywatności i otwartych technologiach. Wieża Babel symbolizuje ciekawość, naukę i ideę, że różnice językowe powinny zbliżać ludzi, a nie ich dzielić."
+			},
+			"imageTranslation": {
+				"title": "Dlaczego Linguist nie tłumaczy tekstu na obrazach?",
+				"content": "Linguist skupia się na niezawodnych funkcjach tłumaczeniowych wysokiej jakości.\n\nZbadaliśmy różne podejścia do tłumaczenia tekstu znajdującego się na obrazach. Obecnie większość dostępnych rozwiązań nie zapewnia spójnych wyników, zwłaszcza gdy działają bezpośrednio w przeglądarce — co jest kluczowe dla zachowania prywatności użytkowników.\n\nZ tego powodu Linguist nie oferuje obecnie tłumaczenia obrazów. Wolimy nie udostępniać funkcji, które nie spełniają naszych standardów jakości.\n\nJeśli w przyszłości znajdziemy niezawodny i szanujący prywatność sposób na wdrożenie tłumaczenia obrazów, z przyjemnością go dodamy."
+			},
+			"howTranslatePages": {
+				"title": "Jak Linguist tłumaczy strony internetowe?",
+				"content": "Linguist potrafi przetłumaczyć całe strony internetowe za pomocą zaledwie kilku kliknięć. Możesz rozpocząć tłumaczenie strony, używając przycisku rozszerzenia lub skrótu klawiszowego.\n\nOryginalny tekst zawsze pozostaje dostępny. Najedź kursorem na przetłumaczony fragment, aby zobaczyć oryginał."
+			},
+			"offlineTranslation": {
+				"title": "Czy Linguist potrafi tłumaczyć strony offline?",
+				"content": "Tak. Linguist zawiera wbudowanego tłumacza offline, który pozwala na tłumaczenie tekstu bez wysyłania danych przez internet.\n\nPomaga to chronić Twoją prywatność i umożliwia tłumaczenie treści nawet bez połączenia z siecią."
+			},
+			"privacy": {
+				"title": "Czy Linguist dba o prywatność?",
+				"content": "Tak. Linguist został zaprojektowany z myślą o prywatności.\n\nRozszerzenie nie gromadzi ani nie sprzedaje danych użytkowników. Podczas korzystania z <offline-translator>tłumacza offline</offline-translator>, tłumaczenia są przetwarzane w całości na Twoim urządzeniu."
+			},
+			"supportedBrowsers": {
+				"title": "Jakie przeglądarki obsługuje Linguist?",
+				"content": "Linguist jest dostępny dla Chrome i Firefox. Działa również w innych przeglądarkach opartych na silniku Chromium, które obsługują rozszerzenia z Chrome.\n\nLinguist działa także w przeglądarkach na Androida obsługujących rozszerzenia, takich jak Firefox dla Androida oraz niektórych przeglądarkach opartych na Chromium."
+			},
+			"selectedText": {
+				"title": "Czy Linguist potrafi tłumaczyć zaznaczony tekst?",
+				"content": "Tak. Po prostu zaznacz tekst na dowolnej stronie internetowej i użyj przycisku tłumaczenia, aby przetłumaczyć go błyskawicznie.\n\nMożesz również odsłuchać tłumaczenie i zapisać je w swoim osobistym słowniku."
+			},
+			"customTranslators": {
+				"title": "Czy mogę używać własnej usługi tłumaczeniowej?",
+				"content": "Tak. Linguist obsługuje <custom-translator>własne tłumacze</custom-translator>, co pozwala na integrację dodatkowych usług tłumaczeniowych.\n\nMożesz podłączyć zewnętrzne API lub lokalne systemy tłumaczeniowe, takie jak <libre-translate>LibreTranslate</libre-translate> czy <ollama>Ollama</ollama>."
+			},
+			"isFree": {
+				"title": "Czy Linguist jest darmowy?",
+				"content": "Tak. Linguist jest całkowicie bezpłatny i udostępniany jako <linguist>otwarte oprogramowanie (open source)</linguist>.\n\nProjekt rozwija się dzięki wsparciu społeczności, a Ty możesz opcjonalnie <donations>wesprzeć go darowizną</donations>."
+			}
+		}
+	}
+}

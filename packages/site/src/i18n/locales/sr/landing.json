@@ -1,0 +1,119 @@
+{
+	"meta": {
+		"title": "Linguist - Privatno prevođenje veb-stranica | Ekstenzija za prevođenje za Chrome i Firefox",
+		"description": "Ekstenzija za prevođenje za Chrome i Firefox sa fokusom na privatnost. Trenutno prevođenje veb-stranica, obeleženog teksta, titlova i poruka. Radi oflajn i podržava integracije prevodilačkih servisa i API-ja."
+	},
+	"navigation": {
+		"features": {
+			"content": "Funkcije"
+		},
+		"blog": {
+			"content": "Blog"
+		},
+		"docs": {
+			"content": "Dokumentacija"
+		},
+		"github": {
+			"content": "GitHub"
+		}
+	},
+	"install": {
+		"chrome": "Instaliraj za Chrome",
+		"firefox": "Instaliraj za Firefox"
+	},
+	"sections": {
+		"hero": {
+			"title": "Tečno prevođenje veb-stranica",
+			"description": "Linguist je fleksibilan prevodilac za pregledače koji pokreću najpopularniji prevodilački servisi.\n\nPrevodite cele veb-stranice, obeleženi tekst, titlove na Netflix-u ili u video pozivima, kao i privatne poruke. Slušajte prevode i sačuvajte one važne u lični rečnik kako biste učili nove reči, čak i bez interneta.\n\nLinguist je moderna alternativa Google Translate ekstenzijama, koja poštuje vašu privatnost. Isprobajte besplatno."
+		},
+		"opensource": {
+			"title": "Otvoreni kod",
+			"content": "Linguist je besplatna ekstenzija za prevođenje <0>otvorenog koda</0>. Ne prikuplja i ne prodaje korisničke podatke.\n\nMožete <1>donirati</1> kako biste podržali Linguist i pomogli nam da zadržimo nezavisnost i visok kvalitet.\n\nPodelite Linguist na društvenim mrežama kako bi i drugi saznali za njega."
+		},
+		"support": {
+			"title": "Podrška",
+			"content": "Ako imate pitanja, kontaktirajte nas <0/>.\nUkoliko ste pronašli grešku i imate GitHub nalog, molimo vas da <1>prijavite problem</1>."
+		},
+		"createdBy": {
+			"content": "Kreirao <0/>."
+		}
+	},
+	"features": {
+		"title": "Funkcije",
+		"items": {
+			"offlineTranslation": {
+				"title": "Oflajn prevođenje i privatnost",
+				"content": "Prevodite tekst direktno na svom uređaju pomoću ugrađenog oflajn prevodioca. Vaš tekst ostaje privatan i ne šalje se preko interneta.\n\nUključite ovu funkciju u podešavanjima kako biste osigurali privatnost prevoda dok radite sa imejlovima, dokumentima ili ličnim porukama.\n\nOflajn prevodilac vam takođe omogućava prevođenje stranica bez internet konekcije, što je posebno korisno tokom putovanja."
+			},
+			"fullPageTranslation": {
+				"title": "Prevođenje celih veb-stranica",
+				"content": "Brzo i kvalitetno prevođenje celih stranica u samo nekoliko klikova.\n\nKoristite prečicu na tastaturi za trenutni prevod. Pređite mišem preko prevedenog teksta da biste videli original. Prevodite čak i privatne stranice iza formi za prijavu ili pretplatu.\n\nPostavite pravila za automatsko prevođenje na osnovu jezika stranice ili domena.\n\nLinguist primenjuje pristup minimalnih izmena na stranici: menja samo tekstualne elemente, čuvajući originalni izgled i korisničko iskustvo.\n\nUključite prevođenje u realnom vremenu za višejezične sastanke na platformama Zoom, Google Meet i Microsoft Teams."
+			},
+			"selectedTextTranslation": {
+				"title": "Prevođenje obeleženog teksta na bilo kom sajtu",
+				"content": "Nailazite na nepoznate reči dok čitate članak na internetu?\nJednostavno obeležite tekst na stranici i kliknite na dugme za prevod.\n\nPoslušajte i originalni i prevedeni tekst, a prevode sačuvajte u rečnik kako biste ih kasnije obnovili."
+			},
+			"textTranslation": {
+				"title": "Brzo prevođenje teksta",
+				"content": "Potrebno vam je da nešto brzo prevedete? Kliknite na Linguist ikonicu i unesite tekst.\n\nNema potrebe za menjanjem kartica ili otvaranjem sajtova za prevođenje. Prevodite direktno u pregledaču koristeći servis koji vam najviše odgovara."
+			},
+			"knowledgeBase": {
+				"title": "Izgradite ličnu bazu znanja",
+				"content": "Svaki prevod se čuva u istoriji, a važne unose možete dodati u svoj lični rečnik. Pretražujte rečnik i istoriju prevoda u bilo kom trenutku.\n\nNišta se ne gubi, čak ni tokom dugih sesija istraživanja ili učenja.\n\nRečnik radi oflajn, što Linguist čini idealnim za one koji uče jezike i putnike kojima je potreban stalan pristup listama reči."
+			},
+			"customTranslators": {
+				"title": "Integracija prevodilačkih servisa i API-ja",
+				"content": "Linguist vam omogućava da birate koji prevodilački servis želite da koristite.\n\nPodržava popularne provajdere kao što su Google, Yandex i Microsoft, sa više od 100 dostupnih jezika.\n\nAko servis koji vam je potreban nije uključen, možete ga dodati kao <0>prilagođenog prevodioca</0>.\n\nPrilagođeni prevodioci vam omogućavaju integraciju bilo kog sistema za prevođenje — od modernih LLM servisa kao što su ChatGPT, DeepL, DeepSeek i Gemini, do lokalnih prevodilaca koji rade na vašem uređaju, poput Ollama ili LibreTranslate."
+			}
+		}
+	},
+	"faq": {
+		"title": "Česta pitanja",
+		"items": {
+			"whatIsLinguist": {
+				"title": "Šta je Linguist?",
+				"content": "Linguist je ekstenzija za prevođenje za Chrome i Firefox, sa fokusom na privatnost.\n\nOmogućava vam prevođenje celih veb-stranica, obeleženog teksta, titlova i poruka direktno u pregledaču, bez prelaska na spoljne sajtove za prevođenje."
+			},
+			"whyLinguist": {
+				"title": "Zašto koristiti Linguist?",
+				"content": "Postoji mnogo ekstenzija koje prevode veb-stranice, a neki pregledači čak imaju i ugrađene prevodioce. Zašto onda koristiti Linguist?\n\nVećina ugrađenih prevodilaca i ekstenzija je ograničena u pogledu fleksibilnosti. Mnogi se oslanjaju na samo jednog provajdera, kao što su Google Translate ili Microsoft Bing, dok Firefox nudi sopstveni oflajn prevodilac. U većini slučajeva, ne možete da izaberete servis koji najbolje odgovara vašim potrebama.\n\nAko kvalitet prevoda nije dovoljno dobar za ono što vam treba, ili ako slanje privatnog teksta servisima trećih strana nije prihvatljivo, mnogi alati vas ostavljaju bez dobre alternative.\n\nTakođe, mnogi alati se fokusiraju samo na jedan zadatak. Neki prevode cele stranice, dok drugi prevode samo obeleženi tekst.\n\nIstovremeno, neke ekstenzije za prevođenje su napravljene prvenstveno radi zarade. Funkcije poput istorije prevoda ili ličnih rečnika mogu zahtevati pretplatu, a ponekad se čak i osnovne opcije, poput tamne teme, tretiraju kao premijum.\n\nLinguist ima drugačiji pristup. Dizajniran je kao praktičan alat za prevođenje. Možete odabrati prevodilački servis koji vam najviše odgovara, menjati provajdere ili dodati sopstvene prilagođene prevodioce.\n\nLinguist takođe spaja sve na jednom mestu: prevodite cele veb-stranice, obeleženi tekst, titlove i poruke, dok istovremeno čuvate važne prevode u svojoj istoriji i ličnom rečniku."
+			},
+			"theLinguistLogo": {
+				"title": "Zašto je logo Linguist-a Vavilonska kula?",
+				"content": "Logo Linguist-a je inspirisan <wiki>Vavilonskom kulom</wiki>, jednom od najstarijih priča o jeziku i komunikaciji.\n\nPrema priči, ljudi su nekada govorili istim jezikom i pokušali da sagrade kulu koja bi dosegla nebo. Kula nikada nije završena, a čovečanstvo se raspršilo kroz mnoštvo jezika. Od tada, jezičke razlike često otežavaju komunikaciju.\n\nLinguist je stvoren da pomogne u rešavanju ovog problema.\n\nVavilonska kula na logotipu je podsetnik na tu priču: mnogo jezika, mnogo kultura i stalan ljudski trud da se međusobno razumemo. Linguist pomaže u premošćavanju tih razlika čineći prevođenje jednostavnim, fleksibilnim i dostupnim direktno u vašem pregledaču.\n\nLogo takođe odražava duh projekta. Linguist nije samo još jedan posrednik za „Google Translate”. Gradili su ga ljudi kojima je stalo do jezika, privatnosti i otvorenih tehnologija. Vavilonska kula predstavlja radoznalost, učenje i ideju da jezičke razlike treba da spajaju ljude, a ne da ih razdvajaju."
+			},
+			"imageTranslation": {
+				"title": "Zašto Linguist ne prevodi tekst na slikama?",
+				"content": "Linguist se fokusira na pouzdane i visokokvalitetne funkcije prevođenja.\n\nIstraživali smo različite pristupe prevođenju teksta unutar slika. Trenutno, većina dostupnih rešenja ne pruža dosledne rezultate, posebno kada se pokreću direktno u pregledaču — što je važno za očuvanje privatnosti korisnika.\n\nZbog toga Linguist trenutno ne uključuje prevođenje slika. Radije ne objavljujemo funkcije koje ne ispunjavaju naše standarde kvaliteta.\n\nUkoliko u budućnosti pronađemo pouzdan način za implementaciju prevođenja slika koji poštuje privatnost, rado ćemo ga dodati."
+			},
+			"howTranslatePages": {
+				"title": "Kako Linguist prevodi veb-stranice?",
+				"content": "Linguist može da prevede cele veb-stranice u samo nekoliko klikova. Prevođenje stranice možete pokrenuti pomoću dugmeta ekstenzije ili prečice na tastaturi.\n\nOriginalni tekst uvek ostaje dostupan. Pređite mišem preko prevedenog teksta da biste videli original."
+			},
+			"offlineTranslation": {
+				"title": "Da li Linguist može da prevodi stranice oflajn?",
+				"content": "Da. Linguist sadrži ugrađeni oflajn prevodilac koji vam omogućava prevođenje teksta bez slanja podataka preko interneta.\n\nOvo pomaže u zaštiti vaše privatnosti i omogućava vam da prevodite sadržaj čak i bez internet konekcije."
+			},
+			"privacy": {
+				"title": "Da li je Linguist privatan?",
+				"content": "Da. Linguist je dizajniran sa fokusom na privatnost.\n\nEkstenzija ne prikuplja i ne prodaje korisničke podatke. Kada koristite <offline-translator>oflajn prevodilac</offline-translator>, prevodi se u potpunosti obrađuju na vašem uređaju."
+			},
+			"supportedBrowsers": {
+				"title": "Koje pregledače Linguist podržava?",
+				"content": "Linguist je dostupan za Chrome i Firefox. Takođe radi i u drugim pregledačima baziranim na Chromium-u koji podržavaju Chrome ekstenzije.\n\nLinguist funkcioniše i u Android pregledačima koji podržavaju ekstenzije, kao što su Firefox za Android i pojedini pregledači bazirani na Chromium-u."
+			},
+			"selectedText": {
+				"title": "Da li Linguist može da prevodi obeleženi tekst?",
+				"content": "Da. Jednostavno obeležite tekst na bilo kojoj veb-stranici i upotrebite dugme za prevod da biste ga trenutno preveli.\n\nTakođe možete poslušati prevod i sačuvati ga u svoj lični rečnik."
+			},
+			"customTranslators": {
+				"title": "Mogu li da koristim sopstveni prevodilački servis?",
+				"content": "Da. Linguist podržava <custom-translator>prilagođene prevodioce</custom-translator>, koji vam omogućavaju integraciju dodatnih prevodilačkih servisa.\n\nMožete povezati spoljne API-je ili lokalne sisteme za prevođenje kao što su <libre-translate>LibreTranslate</libre-translate> ili <ollama>Ollama</ollama>."
+			},
+			"isFree": {
+				"title": "Da li je Linguist besplatan?",
+				"content": "Da. Linguist je potpuno besplatan i <linguist>otvorenog koda</linguist>.\n\nProjekat podržava zajednica, a vi ga po želji možete <donations>podržati donacijom</donations>."
+			}
+		}
+	}
+}
