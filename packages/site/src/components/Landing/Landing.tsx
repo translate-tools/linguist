@@ -516,7 +516,14 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 					{faq.map((question) => (
 						<AccordionItem key={question.title}>
 							<Text as="h2" margin={0}>
-								<AccordionButton paddingBlock={'1.5rem'}>
+								<AccordionButton
+									paddingBlock={'1.5rem'}
+									onClick={() => {
+										trackEvent('FAQ click', {
+											title: question.title,
+										});
+									}}
+								>
 									<Box
 										as="span"
 										flex="1"
@@ -567,7 +574,15 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 					{altVersions.map((version, index) => (
 						<Fragment key={version.langCode}>
 							{index > 0 && ' | '}
-							<Link href={version.url} hrefLang={version.langCode}>
+							<Link
+								href={version.url}
+								hrefLang={version.langCode}
+								onClick={() => {
+									trackEvent('Alt page version click', {
+										language: version.langCode,
+									});
+								}}
+							>
 								{version.langName}
 							</Link>
 						</Fragment>
