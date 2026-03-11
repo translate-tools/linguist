@@ -251,6 +251,7 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 										<Image
 											src={getUrl('icons/chrome.png')}
 											boxSize="2em"
+											alt="Chrome Browser logo"
 										/>
 									}
 									variant="action"
@@ -272,6 +273,7 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 										<Image
 											src={getUrl('icons/firefox.png')}
 											boxSize="2em"
+											alt="Firefox Browser logo"
 										/>
 									}
 									variant="action"
@@ -296,6 +298,7 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 							src={getUrl('screenshots/text-translation-popup.png')}
 							maxW={600}
 							minW={400}
+							alt="The Linguist in-Browser Popup screenshot"
 						/>
 					</HStack>
 				</HStack>
@@ -331,7 +334,10 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 								className={styles.Feature}
 							>
 								<div className={clsx(styles.FeatureImage)}>
-									<Image src={getUrl('screenshots/settings.png')} />
+									<Image
+										src={getUrl('screenshots/settings.png')}
+										alt="Linguist settings screen. User choose a Bergamot - offline translator"
+									/>
 								</div>
 								<VStack
 									className={clsx(styles.FeatureDescription)}
@@ -355,6 +361,7 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 								<div className={clsx(styles.FeatureImage)}>
 									<Image
 										src={getUrl('screenshots/page-translation.png')}
+										alt="The wikipedia page European honey buzzard translated via Linguist"
 									/>
 								</div>
 								<VStack
@@ -381,6 +388,7 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 										src={getUrl(
 											'screenshots/selected-text-translation.png',
 										)}
+										alt="The Linguist translation popup for selected text on Wikipedia page about European honey buzzard"
 									/>
 								</div>
 								<VStack
@@ -409,6 +417,7 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 								<div className={clsx(styles.FeatureImage)}>
 									<Image
 										src={getUrl('screenshots/text-translation.png')}
+										alt="Linguist popup where user input text and translate it from English to German language"
 									/>
 								</div>
 								<VStack
@@ -431,7 +440,10 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 								className={styles.Feature}
 							>
 								<div className={clsx(styles.FeatureImage)}>
-									<Image src={getUrl('screenshots/dictionary.png')} />
+									<Image
+										src={getUrl('screenshots/dictionary.png')}
+										alt="Linguist dictionary page"
+									/>
 								</div>
 								<VStack
 									className={clsx(styles.FeatureDescription)}
@@ -455,6 +467,7 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 								<div className={clsx(styles.FeatureImage)}>
 									<Image
 										src={getUrl('screenshots/custom-translators.png')}
+										alt="Linguist settings screen with opened modal window to select custom translator"
 									/>
 								</div>
 								<VStack
