@@ -41,10 +41,37 @@ const MetaTags = () => {
 				<link
 					key={version.langCode}
 					rel="alternate"
-					hrefLang={version.langCode}
+					hrefLang={version.langCode === 'en' ? 'x-default' : version.langCode}
 					href={version.url}
 				></link>
 			))}
+			<script
+				type="application/ld+json"
+				dangerouslySetInnerHTML={{
+					__html: JSON.stringify(
+						{
+							'@context': 'https://schema.org',
+							'@type': 'WebPage',
+							name: 'Linguist - Browser Translation Extension',
+							description:
+								'Linguist is an open-source browser extension for translating web pages efficiently.',
+							url: 'https://linguister.io/',
+							mainEntity: {
+								'@type': 'SoftwareApplication',
+								name: 'Linguist',
+								applicationCategory: 'BrowserApplication',
+								operatingSystem: 'All',
+								url: 'https://linguister.io/',
+								license: 'https://opensource.org/licenses/MIT',
+								description:
+									'An open-source browser extension that translates web pages into your preferred language.',
+							},
+						},
+						null,
+						'\t',
+					),
+				}}
+			></script>
 		</Head>
 	);
 };
