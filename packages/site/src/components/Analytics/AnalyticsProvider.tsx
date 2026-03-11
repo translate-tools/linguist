@@ -2,8 +2,13 @@ import React, { PropsWithChildren, useCallback, useEffect, useState } from 'reac
 import {
 	enableAutoOutboundTracking,
 	enableAutoPageviews,
+	enableEngagementTracking,
+	enableLinkClicksCapture,
+	enableSessionScoring,
 	Plausible,
 	PlausibleInitOptions,
+	skipForHosts,
+	userId,
 } from 'plausible-client';
 import Head from '@docusaurus/Head';
 
@@ -21,7 +26,14 @@ export const AnalyticsProvider = ({
 	googleAnalytics,
 	children,
 }: AnalyticsProviderProps) => {
-	const [plausible] = useState(() => new Plausible(plausibleOptions));
+	const [plausible] = useState(
+		() =>
+			new Plausible({
+				...plausibleOptions,
+				filter: skipForHosts(['localhost']),
+				transform: userId(),
+			}),
+	);
 
 	const trackEvent: IAnalyticsContext['trackEvent'] = useCallback(
 		(eventName, props) => {
@@ -43,23 +55,18 @@ export const AnalyticsProvider = ({
 
 	// Setup default analytic listeners
 	useEffect(() => {
-		enableAutoPageviews(plausible);
-		enableAutoOutboundTracking(plausible);
+		const cleanups = [
+			enableAutoPageviews(plausible),
+			enableEngagementTracking(plausible),
+			enableSessionScoring(plausible),
 
-		// Track clicks
-		document.body.addEventListener('click', (event: MouseEvent) => {
-			// Explore click targets to find a link element
-			const targets = event?.composedPath() || [event.target];
-			for (const target of targets) {
-				if (!(target instanceof HTMLAnchorElement)) continue;
+			enableAutoOutboundTracking(plausible, { captureText: true }),
+			enableLinkClicksCapture(plausible, { captureText: true }),
+		];
 
-				trackEvent('Link click', {
-					url: target.href,
-					text: target.innerText,
-				});
-				break;
-			}
-		});
+		return () => {
+			cleanups.forEach((cleanup) => cleanup?.());
+		};
 	}, [plausible, trackEvent]);
 
 	return (
