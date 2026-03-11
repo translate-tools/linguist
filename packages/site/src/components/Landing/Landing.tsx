@@ -238,7 +238,12 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 							>
 								{t(['sections.hero.title'])}
 							</Text>
-							<Text fontSize="24px" maxW={750} whiteSpace={'pre-line'}>
+							<Text
+								as="div"
+								fontSize="24px"
+								maxW={750}
+								whiteSpace={'pre-line'}
+							>
 								<Trans
 									t={t}
 									i18nKey={['sections.hero.description']}
@@ -347,7 +352,7 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 									<Text as="h3" fontSize={26}>
 										{t('features.items.offlineTranslation.title')}
 									</Text>
-									<Text variant="description">
+									<Text as="div" variant="description">
 										{t('features.items.offlineTranslation.content')}
 									</Text>
 								</VStack>
@@ -372,7 +377,7 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 									<Text as="h3" fontSize={26}>
 										{t('features.items.fullPageTranslation.title')}
 									</Text>
-									<Text variant="description">
+									<Text as="div" variant="description">
 										{t('features.items.fullPageTranslation.content')}
 									</Text>
 								</VStack>
@@ -401,7 +406,7 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 											'features.items.selectedTextTranslation.title',
 										)}
 									</Text>
-									<Text variant="description">
+									<Text as="div" variant="description">
 										{t(
 											'features.items.selectedTextTranslation.content',
 										)}
@@ -428,7 +433,7 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 									<Text as="h3" fontSize={26}>
 										{t('features.items.textTranslation.title')}
 									</Text>
-									<Text variant="description">
+									<Text as="div" variant="description">
 										{t('features.items.textTranslation.content')}
 									</Text>
 								</VStack>
@@ -453,7 +458,7 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 									<Text as="h3" fontSize={26}>
 										{t('features.items.knowledgeBase.title')}
 									</Text>
-									<Text variant="description">
+									<Text as="div" variant="description">
 										{t('features.items.knowledgeBase.content')}
 									</Text>
 								</VStack>
@@ -478,7 +483,7 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 									<Text as="h3" fontSize={26}>
 										{t('features.items.customTranslators.title')}
 									</Text>
-									<Text variant="description">
+									<Text as="div" variant="description">
 										<Trans
 											t={t}
 											i18nKey="features.items.customTranslators.content"
@@ -500,7 +505,7 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 							{t('sections.opensource.title')}
 						</Text>
 
-						<Text variant="description" whiteSpace={'pre-line'}>
+						<Text as="div" variant="description" whiteSpace={'pre-line'}>
 							<Trans
 								t={t}
 								i18nKey="sections.opensource.content"
@@ -523,7 +528,7 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 							{t('sections.support.title')}
 						</Text>
 
-						<Text variant="description" whiteSpace={'pre-line'}>
+						<Text as="div" variant="description" whiteSpace={'pre-line'}>
 							<Trans
 								t={t}
 								i18nKey="sections.support.content"
