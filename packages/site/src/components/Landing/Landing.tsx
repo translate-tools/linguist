@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useRef } from 'react';
 import { Trans, useTranslation } from 'react-i18next';
 import { clsx } from 'clsx';
 import {
@@ -22,6 +22,7 @@ import { buildPathGetter } from '@site/src/utils/url';
 import { useAnalyticsContext } from '../Analytics/useAnalyticsContext';
 import { useAltPageVersions } from '../useAltPageVersions';
 import Logo from './logo.svg';
+import { useElementAttentionTracker } from './useElementAttentionTracker';
 
 import styles from './Landing.module.css';
 
@@ -33,12 +34,43 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 	const { trackEvent } = useAnalyticsContext();
 	const altVersions = useAltPageVersions();
 
+	const faqWhyRef = useRef<HTMLDivElement>(null);
+	useElementAttentionTracker({
+		ref: faqWhyRef,
+		minTime: 8000,
+		onEngagement() {
+			trackEvent('Engagement: Reading', { target: 'FAQ: Why Linguist' });
+		},
+	});
+
+	const faqBabelTowerRef = useRef<HTMLDivElement>(null);
+	useElementAttentionTracker({
+		ref: faqBabelTowerRef,
+		minTime: 5000,
+		onEngagement() {
+			trackEvent('Engagement: Reading', { target: 'FAQ: The Babel Tower story' });
+		},
+	});
+
+	const faqImagesRef = useRef<HTMLDivElement>(null);
+	useElementAttentionTracker({
+		ref: faqImagesRef,
+		minTime: 5000,
+		onEngagement() {
+			trackEvent('Engagement: Reading', {
+				target: "FAQ: Why doesn't translate images",
+			});
+		},
+	});
+
 	const faq = [
 		{
+			ref: faqWhyRef,
 			title: t('faq.items.whyLinguist.title'),
 			content: <Trans t={t} i18nKey={'faq.items.whyLinguist.content'} />,
 		},
 		{
+			ref: faqBabelTowerRef,
 			title: t('faq.items.theLinguistLogo.title'),
 			content: (
 				<Trans
@@ -57,6 +89,7 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 			),
 		},
 		{
+			ref: faqImagesRef,
 			title: t('faq.items.imageTranslation.title'),
 			content: <Trans t={t} i18nKey={'faq.items.imageTranslation.content'} />,
 		},
@@ -537,6 +570,7 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 								</AccordionButton>
 							</Text>
 							<AccordionPanel
+								ref={question.ref}
 								paddingTop={'1rem'}
 								paddingBottom={'5rem'}
 								whiteSpace={'pre-line'}
