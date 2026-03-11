@@ -1,0 +1,119 @@
+{
+	"meta": {
+		"title": "Linguist – Bezpečný překlad webových stránek | Překladač do prohlížeče Chrome a Firefox",
+		"description": "Překladač do prohlížeče Chrome a Firefox, který respektuje vaše soukromí. Okamžitě překládá webové stránky, vybraný text, titulky i zprávy. Funguje offline a umožňuje integraci dalších překladatelských služeb a API."
+	},
+	"navigation": {
+		"features": {
+			"content": "Funkce"
+		},
+		"blog": {
+			"content": "Blog"
+		},
+		"docs": {
+			"content": "Dokumentace"
+		},
+		"github": {
+			"content": "GitHub"
+		}
+	},
+	"install": {
+		"chrome": "Instalovat pro Chrome",
+		"firefox": "Instalovat pro Firefox"
+	},
+	"sections": {
+		"hero": {
+			"title": "Přirozený překlad webových stránek",
+			"description": "Linguist je všestranný překladač do prohlížeče, který využívá ty nejoblíbenější překladatelské služby.\n\nSnadno přeloží celé webové stránky, vybraný text, titulky na Netflixu i ve videohovorech nebo soukromé zprávy. Překlady si můžete poslechnout a ty důležité uložit do osobního slovníku pro rozšiřování slovní zásoby, a to i offline.\n\nLinguist představuje moderní a bezpečnou alternativu k rozšíření Překladač Google. Vyzkoušejte ho zdarma."
+		},
+		"opensource": {
+			"title": "Open source",
+			"content": "Linguist je bezplatný překladač do prohlížeče s <0>otevřeným zdrojovým kódem</0>. Neshromažďuje ani neprodává žádná uživatelská data.\n\nVývoj projektu můžete <1>podpořit finančním příspěvkem</1>, který nám pomůže zachovat jeho nezávislost a vysokou kvalitu.\n\nBudeme rádi, když o Linguistu dáte vědět ostatním sdílením na sociálních sítích."
+		},
+		"support": {
+			"title": "Podpora",
+			"content": "V případě dotazů nás neváhejte kontaktovat <0/>.\nPokud narazíte na chybu a máte účet na GitHubu, můžete <1>založit nový požadavek (issue)</1>."
+		},
+		"createdBy": {
+			"content": "Vytvořil <0/>."
+		}
+	},
+	"features": {
+		"title": "Funkce",
+		"items": {
+			"offlineTranslation": {
+				"title": "Offline překlad a ochrana soukromí",
+				"content": "Vestavěný offline překladač zpracovává text přímo ve vašem zařízení. Zpracovávaný obsah se nikam neodesílá a zůstává tak v naprostém bezpečí.\n\nTuto funkci si můžete zapnout v nastavení. Je ideální pro zachování soukromí při práci s e-maily, citlivými dokumenty nebo osobními zprávami.\n\nOffline překladač navíc umožňuje překládat webové stránky i bez připojení k internetu, což oceníte zejména na cestách."
+			},
+			"fullPageTranslation": {
+				"title": "Překlad celých webových stránek",
+				"content": "Rychlý a kvalitní překlad celé stránky na pár kliknutí.\n\nPro okamžitý překlad stačí využít klávesovou zkratku. Po přejetí myší přes přeložený text se zobrazí originál. Překládat lze i soukromé stránky chráněné přihlášením nebo platební bránou.\n\nPro vybrané jazyky nebo konkrétní domény si můžete nastavit pravidla pro automatický překlad.\n\nLinguist zasahuje do struktury webu minimálně: upravuje pouze samotný text, takže původní vzhled a rozložení stránky zůstávají nedotčeny.\n\nBěhem mezinárodních schůzek přes Zoom, Google Meet nebo Microsoft Teams si navíc můžete zapnout překlad v reálném čase."
+			},
+			"selectedTextTranslation": {
+				"title": "Překlad vybraného textu na libovolném webu",
+				"content": "Narazili jste při čtení článku na neznámá slova?\nStačí daný text označit a kliknout na tlačítko pro překlad.\n\nOriginál i překlad si můžete nechat přečíst nahlas a nová slovíčka si uložit do osobního slovníku pro pozdější zopakování."
+			},
+			"textTranslation": {
+				"title": "Rychlý překlad textu",
+				"content": "Potřebujete něco rychle přeložit? Stačí kliknout na ikonu rozšíření Linguist a zadat text.\n\nOdpadá tak nutnost přepínat mezi panely nebo otevírat stránky s překladačem. Vše přeložíte přímo v prohlížeči pomocí služby, která vám vyhovuje nejvíce."
+			},
+			"knowledgeBase": {
+				"title": "Tvorba osobní znalostní databáze",
+				"content": "Všechny překlady se ukládají do historie a ty nejdůležitější si můžete přidat do osobního slovníku. V historii i ve slovníku lze kdykoliv snadno vyhledávat.\n\nDíky tomu se vám žádné informace neztratí ani při dlouhém studiu nebo rešerších.\n\nSlovník navíc funguje offline. Linguist je tak skvělým pomocníkem pro studenty jazyků i cestovatele, kteří potřebují mít svá slovíčka neustále po ruce."
+			},
+			"customTranslators": {
+				"title": "Integrace překladatelských služeb a API",
+				"content": "S rozšířením Linguist si sami zvolíte, kterou překladatelskou službu chcete využívat.\n\nPodporuje oblíbené poskytovatele, jako je Google, Yandex nebo Microsoft, a nabízí překlady do více než 100 jazyků.\n\nPokud vám některá služba chybí, můžete si ji snadno přidat jako <0>vlastní překladač</0>.\n\nTato funkce umožňuje propojení s libovolným překladatelským systémem – od moderních AI modelů jako ChatGPT, DeepL, DeepSeek a Gemini až po lokální překladače běžící přímo ve vašem zařízení, jako je Ollama nebo LibreTranslate."
+			}
+		}
+	},
+	"faq": {
+		"title": "Časté dotazy",
+		"items": {
+			"whatIsLinguist": {
+				"title": "Co je Linguist?",
+				"content": "Linguist je překladač do prohlížeče Chrome a Firefox, který klade důraz na ochranu soukromí.\n\nUmožňuje překládat celé webové stránky, vybraný text, titulky i zprávy přímo v prohlížeči, aniž byste museli otevírat externí stránky s překladačem."
+			},
+			"whyLinguist": {
+				"title": "Proč používat Linguist?",
+				"content": "Existuje mnoho rozšíření pro překlad webových stránek a některé prohlížeče mají překladač dokonce integrovaný. Proč tedy zvolit právě Linguist?\n\nVětšina vestavěných překladačů a rozšíření nenabízí dostatečnou flexibilitu. Často spoléhají na jediného poskytovatele, jako je Překladač Google nebo Microsoft Bing, zatímco Firefox nabízí vlastní offline řešení. Ve většině případů si tak nemůžete vybrat službu, která by vám vyhovovala nejvíce.\n\nPokud kvalita překladu neodpovídá vašim potřebám, nebo pokud nechcete odesílat citlivé texty třetím stranám, většina nástrojů vám nenabídne vhodnou alternativu.\n\nŘada nástrojů se navíc zaměřuje pouze na jednu funkci. Některé umí přeložit celou stránku, jiné zase jen vybraný text.\n\nNěkterá rozšíření jsou navíc vytvořena primárně za účelem zisku. Funkce jako historie překladů nebo osobní slovník mohou vyžadovat předplatné a někdy jsou i základní funkce, jako je tmavý režim, zpoplatněny.\n\nLinguist k tomu přistupuje jinak. Je navržen jako praktický a užitečný nástroj. Můžete si vybrat překladatelskou službu, která vám nejvíce vyhovuje, libovolně mezi nimi přepínat nebo si přidat vlastní překladače.\n\nLinguist navíc spojuje vše potřebné na jednom místě: přeložíte s ním celé webové stránky, vybraný text, titulky i zprávy, a zároveň si můžete důležité překlady ukládat do historie a osobního slovníku."
+			},
+			"theLinguistLogo": {
+				"title": "Proč má Linguist v logu Babylonskou věž?",
+				"content": "Logo rozšíření Linguist je inspirováno <wiki>Babylonskou věží</wiki>, jedním z nejstarších příběhů o jazyce a komunikaci.\n\nPodle tohoto příběhu lidé kdysi mluvili jedním jazykem a rozhodli se postavit věž sahající až do nebe. Věž však nikdy nebyla dokončena a lidstvo se rozdělilo do mnoha různých jazyků. Od té doby jazykové bariéry často ztěžují vzájemné porozumění.\n\nLinguist vznikl právě proto, aby s tímto problémem pomohl.\n\nBabylonská věž v logu je připomínkou tohoto příběhu: symbolizuje množství jazyků, rozmanitost kultur a neustálou lidskou snahu si navzájem porozumět. Linguist pomáhá tyto bariéry překonávat tím, že nabízí jednoduchý, flexibilní a snadno dostupný překlad přímo v prohlížeči.\n\nLogo zároveň odráží samotného ducha projektu. Linguist není jen další nadstavbou pro „Překladač Google“. Tvoří ho lidé, kterým záleží na jazycích, ochraně soukromí a otevřených technologiích. Babylonská věž tak představuje zvídavost, touhu po poznání a myšlenku, že jazykové rozdíly by měly lidi spojovat, nikoliv rozdělovat."
+			},
+			"imageTranslation": {
+				"title": "Proč Linguist nepřekládá text v obrázcích?",
+				"content": "Linguist se zaměřuje na spolehlivé a vysoce kvalitní funkce překladu.\n\nZkoumali jsme různé přístupy k překladu textu v obrázcích. V současné době však většina dostupných řešení neposkytuje konzistentní výsledky, zejména pokud mají běžet přímo v prohlížeči – což je pro nás klíčové z hlediska ochrany soukromí uživatelů.\n\nZ tohoto důvodu Linguist zatím překlad obrázků nenabízí. Nechceme přidávat funkce, které nesplňují naše standardy kvality.\n\nPokud v budoucnu najdeme spolehlivý způsob, jak překlad obrázků implementovat při zachování maximálního soukromí, rádi tuto funkci přidáme."
+			},
+			"howTranslatePages": {
+				"title": "Jak Linguist překládá webové stránky?",
+				"content": "Linguist dokáže přeložit celé webové stránky na pár kliknutí. Překlad stránky můžete spustit pomocí tlačítka rozšíření nebo klávesové zkratky.\n\nPůvodní text přitom zůstává vždy dostupný. Stačí přejet myší přes přeloženou část a zobrazí se vám originál."
+			},
+			"offlineTranslation": {
+				"title": "Umí Linguist překládat stránky offline?",
+				"content": "Ano. Linguist obsahuje vestavěný offline překladač, který umožňuje překládat texty bez odesílání dat přes internet.\n\nTo pomáhá chránit vaše soukromí a umožňuje překládat obsah i bez připojení k internetu."
+			},
+			"privacy": {
+				"title": "Je Linguist bezpečný z hlediska soukromí?",
+				"content": "Ano. Linguist je od základu navržen s ohledem na maximální ochranu soukromí.\n\nRozšíření neshromažďuje ani neprodává žádná uživatelská data. Při použití <offline-translator>offline překladače</offline-translator> se navíc veškeré překlady zpracovávají výhradně ve vašem zařízení."
+			},
+			"supportedBrowsers": {
+				"title": "Které prohlížeče Linguist podporuje?",
+				"content": "Linguist je dostupný pro Chrome a Firefox. Funguje také v dalších prohlížečích postavených na jádře Chromium, které podporují rozšíření pro Chrome.\n\nLinguist lze používat i v prohlížečích pro Android s podporou rozšíření, jako je Firefox pro Android a některé prohlížeče na bázi Chromia."
+			},
+			"selectedText": {
+				"title": "Umí Linguist přeložit vybraný text?",
+				"content": "Ano. Stačí označit text na libovolné webové stránce a pomocí tlačítka jej okamžitě přeložit.\n\nPřeklad si můžete také nechat přečíst nahlas a uložit si ho do osobního slovníku."
+			},
+			"customTranslators": {
+				"title": "Mohu používat vlastní překladatelskou službu?",
+				"content": "Ano. Linguist podporuje <custom-translator>vlastní překladače</custom-translator>, díky kterým můžete integrovat další překladatelské služby.\n\nLze tak připojit externí API nebo lokální překladatelské systémy, jako je <libre-translate>LibreTranslate</libre-translate> nebo <ollama>Ollama</ollama>."
+			},
+			"isFree": {
+				"title": "Je Linguist zdarma?",
+				"content": "Ano. Linguist je zcela zdarma a má <linguist>otevřený zdrojový kód (open source)</linguist>.\n\nProjekt je podporován komunitou a v případě zájmu jej můžete <donations>podpořit finančním příspěvkem</donations>."
+			}
+		}
+	}
+}

@@ -1,0 +1,119 @@
+{
+	"meta": {
+		"title": "Linguist - Weboldalak privát fordítása | Böngésző fordító bővítmény Chrome-hoz és Firefoxhoz",
+		"description": "Adatvédelem-központú böngésző fordító bővítmény Chrome-hoz és Firefoxhoz. Fordítson weboldalakat, kijelölt szöveget, feliratokat és üzeneteket azonnal. Offline is működik, és támogatja a fordítószolgáltatások és API-k integrációját."
+	},
+	"navigation": {
+		"features": {
+			"content": "Funkciók"
+		},
+		"blog": {
+			"content": "Blog"
+		},
+		"docs": {
+			"content": "Dokumentáció"
+		},
+		"github": {
+			"content": "GitHub"
+		}
+	},
+	"install": {
+		"chrome": "Telepítés Chrome-hoz",
+		"firefox": "Telepítés Firefoxhoz"
+	},
+	"sections": {
+		"hero": {
+			"title": "Weboldalak gördülékeny fordítása",
+			"description": "A Linguist egy rugalmas böngésző fordító, amelyet a legnépszerűbb fordítószolgáltatások hajtanak.\n\nFordítson le teljes weboldalakat, kijelölt szövegeket, Netflix-feliratokat, videohívások szövegét és privát üzeneteket. Hallgassa meg a fordításokat, és mentse el a fontosakat a saját szótárába, hogy új szavakat tanulhasson, akár offline is.\n\nA Linguist a Google Fordító böngészőbővítményeinek modern, adatvédelem-központú alternatívája. Próbálja ki ingyenesen."
+		},
+		"opensource": {
+			"title": "Nyílt forráskód",
+			"content": "A Linguist egy ingyenes és <0>nyílt forráskódú</0> böngésző fordító bővítmény. Nem gyűjti és nem árusítja a felhasználói adatokat.\n\n<1>Adományával</1> támogathatja a Linguist fejlesztését, segítve függetlenségünk és a magas minőség megőrzését.\n\nOssza meg a Linguistet a közösségi médiában, hogy mások is felfedezhessék."
+		},
+		"support": {
+			"title": "Támogatás",
+			"content": "Ha kérdése van, lépjen velünk kapcsolatba <0/>.\nHa hibát talált, és rendelkezik GitHub-fiókkal, kérjük, <1>nyisson egy hibajegyet</1>."
+		},
+		"createdBy": {
+			"content": "Készítette: <0/>."
+		}
+	},
+	"features": {
+		"title": "Funkciók",
+		"items": {
+			"offlineTranslation": {
+				"title": "Offline fordítás és adatvédelem",
+				"content": "Fordítson szöveget közvetlenül az eszközén a beépített offline fordítóval. A szöveg privát marad, és nem kerül továbbításra az interneten.\n\nEngedélyezze ezt a funkciót a beállításoknál, hogy a fordítások bizalmasak maradjanak, amikor e-mailekkel, dokumentumokkal vagy személyes üzenetekkel dolgozik.\n\nAz offline fordító lehetővé teszi a weboldalak internetkapcsolat nélküli fordítását is, ami különösen hasznos utazás közben."
+			},
+			"fullPageTranslation": {
+				"title": "Teljes weboldalak fordítása",
+				"content": "Gyors, kiváló minőségű teljes oldalas fordítás mindössze néhány kattintással.\n\nHasználjon gyorsbillentyűt az azonnali fordításhoz. Vigye az egeret a lefordított szöveg fölé az eredeti megtekintéséhez. Fordítson le akár bejelentkezési felületek vagy fizetőfalak mögötti privát oldalakat is.\n\nÁllítson be automatikus fordítási szabályokat az oldal nyelve vagy a domain alapján.\n\nA Linguist minimális módosítást végez az oldalon: csak a szöveges elemeket változtatja meg, így megőrzi az oldal elrendezését és a felhasználói élményt.\n\nKapcsolja be a valós idejű fordítást a többnyelvű megbeszélésekhez a Zoom, a Google Meet és a Microsoft Teams felületein."
+			},
+			"selectedTextTranslation": {
+				"title": "Kijelölt szöveg fordítása bármely weboldalon",
+				"content": "Ismeretlen szavakkal találkozott egy online cikk olvasása közben?\nEgyszerűen jelölje ki a szöveget az oldalon, és kattintson a fordítás gombra.\n\nHallgassa meg az eredeti és a lefordított szöveget is, a fordításokat pedig mentse el a szótárába, hogy később átnézhesse őket."
+			},
+			"textTranslation": {
+				"title": "Gyors szövegfordítás",
+				"content": "Gyorsan le kell fordítania valamit? Kattintson a Linguist ikonra, és írja be a szöveget.\n\nNem kell lapok között váltania vagy fordítóoldalakat megnyitnia. Fordítson közvetlenül a böngészőjében az Ön által preferált szolgáltatás használatával."
+			},
+			"knowledgeBase": {
+				"title": "Építse fel saját tudásbázisát",
+				"content": "Minden fordítás mentésre kerül az előzményekben, a fontos kifejezéseket pedig hozzáadhatja a saját szótárához. Bármikor kereshet a szótárában és a fordítási előzményekben.\n\nSemmi sem vész el, még a hosszú kutatási vagy tanulási folyamatok során sem.\n\nA szótár offline is működik, így a Linguist ideális nyelvtanulóknak és utazóknak, akiknek folyamatos hozzáférésre van szükségük a szójegyzékükhöz."
+			},
+			"customTranslators": {
+				"title": "Fordítószolgáltatások és API-k integrálása",
+				"content": "A Linguist lehetővé teszi, hogy kiválassza a használni kívánt fordítószolgáltatást.\n\nTámogatja a népszerű fordítókat, mint például a Google, a Yandex és a Microsoft, több mint 100 elérhető nyelvvel.\n\nHa egy Önnek szükséges szolgáltatás nem szerepel a listán, hozzáadhatja <0>egyéni fordítóként</0>.\n\nAz egyéni fordítók segítségével bármilyen fordítórendszert integrálhat — a modern LLM szolgáltatásoktól (mint a ChatGPT, DeepL, DeepSeek és Gemini) kezdve az eszközén futó helyi fordítókig (mint az Ollama vagy a LibreTranslate)."
+			}
+		}
+	},
+	"faq": {
+		"title": "GYIK",
+		"items": {
+			"whatIsLinguist": {
+				"title": "Mi az a Linguist?",
+				"content": "A Linguist egy adatvédelem-központú böngésző fordító bővítmény Chrome-hoz és Firefoxhoz.\n\nLehetővé teszi teljes weboldalak, kijelölt szövegek, feliratok és üzenetek fordítását közvetlenül a böngészőben, anélkül, hogy külső fordítóoldalakra kellene váltania."
+			},
+			"whyLinguist": {
+				"title": "Miért érdemes a Linguistet használni?",
+				"content": "Számos böngészőbővítmény létezik weboldalak fordítására, és egyes böngészők beépített fordítóval is rendelkeznek. Miért érdemes mégis a Linguistet használni?\n\nA legtöbb beépített fordító és bővítmény rugalmassága korlátozott. Sokuk egyetlen szolgáltatóra, például a Google Fordítóra vagy a Microsoft Bingre támaszkodik, míg a Firefox saját offline fordítót kínál. A legtöbb esetben nem választhatja ki az igényeinek leginkább megfelelő szolgáltatást.\n\nHa a fordítás minősége nem megfelelő az Ön számára, vagy ha a privát szövegek harmadik félnek történő elküldése nem elfogadható, sok eszköz nem kínál jó alternatívát.\n\nSok eszköz emellett csak egyetlen feladatra összpontosít. Egyesek teljes oldalakat fordítanak, míg mások csak a kijelölt szöveget.\n\nUgyanakkor néhány fordítóbővítményt elsősorban a bevételszerzésre építettek. Az olyan funkciók, mint a fordítási előzmények vagy a saját szótár, előfizetést igényelhetnek, és néha még az olyan alapvető funkciókat is prémium opcióként kezelik, mint a sötét mód.\n\nA Linguist más megközelítést alkalmaz. Praktikus fordítóeszköznek tervezték. Kiválaszthatja az Önnek leginkább megfelelő fordítószolgáltatást, válthat a szolgáltatók között, vagy hozzáadhatja saját egyéni fordítóit.\n\nA Linguist mindent egy helyen kínál: fordítson le teljes weboldalakat, kijelölt szövegeket, feliratokat és üzeneteket, miközben a fontos fordításokat nyomon követheti az előzményekben és a saját szótárában."
+			},
+			"theLinguistLogo": {
+				"title": "Miért a Bábel tornya a Linguist logója?",
+				"content": "A Linguist logóját a <wiki>Bábel tornya</wiki> ihlette, amely a nyelvvel és a kommunikációval kapcsolatos egyik legrégebbi történet.\n\nA történet szerint az emberek egykor egy nyelvet beszéltek, és megpróbáltak egy égig érő tornyot építeni. A torony sosem készült el, az emberiség pedig sokféle nyelvre szóródott szét. Azóta a nyelvi különbségek gyakran megnehezítik a kommunikációt.\n\nA Linguist azért jött létre, hogy segítsen megoldani ezt a problémát.\n\nA logóban látható Bábel tornya erre a történetre emlékeztet: sok nyelv, sok kultúra, és az ember folyamatos törekvése egymás megértésére. A Linguist segít áthidalni ezeket a szakadékokat azáltal, hogy a fordítást egyszerűvé, rugalmassá és közvetlenül a böngészőben elérhetővé teszi.\n\nA logó a projekt szellemiségét is tükrözi. A Linguist nem csupán egy újabb felület a „Google Fordító” köré. Olyan emberek készítik, akik számára fontosak a nyelvek, az adatvédelem és a nyílt technológia. A Bábel tornya a kíváncsiságot, a tanulást és azt a gondolatot jelképezi, hogy a nyelvi különbségeknek össze kell hozniuk az embereket, nem pedig elválasztaniuk őket."
+			},
+			"imageTranslation": {
+				"title": "Miért nem fordítja le a Linguist a képeken lévő szöveget?",
+				"content": "A Linguist a megbízható és kiváló minőségű fordítási funkciókra összpontosít.\n\nKülönböző megközelítéseket vizsgáltunk a képeken belüli szövegek fordítására. Jelenleg a legtöbb elérhető megoldás nem nyújt egyenletes eredményt, különösen akkor, ha közvetlenül a böngészőben futnak — ami fontos a felhasználók adatvédelmének megőrzése érdekében.\n\nEmiatt a Linguist jelenleg nem tartalmaz képfordítást. Inkább nem adunk ki olyan funkciókat, amelyek nem felelnek meg a minőségi elvárásainknak.\n\nHa a jövőben találunk egy megbízható és az adatvédelmet tiszteletben tartó módot a képfordítás megvalósítására, örömmel hozzáadjuk majd."
+			},
+			"howTranslatePages": {
+				"title": "Hogyan fordít weboldalakat a Linguist?",
+				"content": "A Linguist mindössze néhány kattintással képes teljes weboldalakat lefordítani. Az oldalfordítást a bővítmény gombjával vagy egy gyorsbillentyűvel indíthatja el.\n\nAz eredeti szöveg mindig elérhető marad. Vigye az egeret a lefordított szöveg fölé az eredeti megtekintéséhez."
+			},
+			"offlineTranslation": {
+				"title": "Tud a Linguist offline fordítani oldalakat?",
+				"content": "Igen. A Linguist tartalmaz egy beépített offline fordítót, amely lehetővé teszi a szöveg fordítását anélkül, hogy adatokat küldene az interneten keresztül.\n\nEz segít megvédeni az adatvédelmét, és lehetővé teszi a tartalmak fordítását akár internetkapcsolat nélkül is."
+			},
+			"privacy": {
+				"title": "Biztosítja a Linguist az adatvédelmet?",
+				"content": "Igen. A Linguist tervezésekor az adatvédelem volt az elsődleges szempont.\n\nA bővítmény nem gyűjti és nem árusítja a felhasználói adatokat. Az <offline-translator>offline fordító</offline-translator> használatakor a fordítások feldolgozása teljes egészében az Ön eszközén történik."
+			},
+			"supportedBrowsers": {
+				"title": "Mely böngészőket támogatja a Linguist?",
+				"content": "A Linguist elérhető Chrome-hoz és Firefoxhoz. Más Chromium-alapú böngészőkben is működik, amelyek támogatják a Chrome-bővítményeket.\n\nA Linguist olyan Android-böngészőkben is használható, amelyek támogatják a bővítményeket, mint például a Firefox for Android és néhány Chromium-alapú böngésző."
+			},
+			"selectedText": {
+				"title": "Le tudja fordítani a Linguist a kijelölt szöveget?",
+				"content": "Igen. Egyszerűen jelölje ki a szöveget bármelyik weboldalon, és használja a fordítás gombot az azonnali fordításhoz.\n\nMeg is hallgathatja a fordítást, és elmentheti a saját szótárába."
+			},
+			"customTranslators": {
+				"title": "Használhatom a saját fordítószolgáltatásomat?",
+				"content": "Igen. A Linguist támogatja az <custom-translator>egyéni fordítókat</custom-translator>, amelyek lehetővé teszik további fordítószolgáltatások integrálását.\n\nCsatlakoztathat külső API-kat vagy helyi fordítórendszereket, mint például a <libre-translate>LibreTranslate</libre-translate> vagy az <ollama>Ollama</ollama>."
+			},
+			"isFree": {
+				"title": "Ingyenes a Linguist?",
+				"content": "Igen. A Linguist teljesen ingyenes és <linguist>nyílt forráskódú</linguist>.\n\nA projektet a közösség tartja fenn, és ha szeretné, <donations>egy adománnyal Ön is támogathatja</donations>."
+			}
+		}
+	}
+}

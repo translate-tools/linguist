@@ -1,0 +1,119 @@
+{
+	"meta": {
+		"title": "Linguist - Terjemahkan Halaman Web Secara Privat | Ekstensi Penerjemah Browser untuk Chrome & Firefox",
+		"description": "Ekstensi penerjemah browser yang mengutamakan privasi untuk Chrome dan Firefox. Terjemahkan halaman web, teks yang dipilih, subtitle, dan pesan secara instan. Berfungsi offline dan mendukung integrasi layanan terjemahan serta API."
+	},
+	"navigation": {
+		"features": {
+			"content": "Fitur"
+		},
+		"blog": {
+			"content": "Blog"
+		},
+		"docs": {
+			"content": "Dokumentasi"
+		},
+		"github": {
+			"content": "GitHub"
+		}
+	},
+	"install": {
+		"chrome": "Instal untuk Chrome",
+		"firefox": "Instal untuk Firefox"
+	},
+	"sections": {
+		"hero": {
+			"title": "Terjemahkan halaman web dengan lancar",
+			"description": "Linguist adalah penerjemah browser fleksibel yang didukung oleh layanan terjemahan paling populer.\n\nTerjemahkan seluruh halaman web, teks yang dipilih, subtitle di Netflix atau dalam panggilan video, dan pesan pribadi. Dengarkan hasil terjemahan dan simpan yang penting ke kamus pribadi Anda untuk mempelajari kata-kata baru, bahkan saat offline.\n\nLinguist adalah alternatif modern yang mengutamakan privasi untuk ekstensi browser Google Translate. Coba secara gratis."
+		},
+		"opensource": {
+			"title": "Open source",
+			"content": "Linguist adalah ekstensi terjemahan browser yang gratis dan <0>open-source</0>. Ekstensi ini tidak mengumpulkan atau menjual data pengguna.\n\nAnda dapat <1>berdonasi</1> untuk mendukung Linguist dan membantu kami mempertahankan independensi serta kualitas yang tinggi.\n\nBagikan Linguist di media sosial untuk membantu orang lain menemukannya."
+		},
+		"support": {
+			"title": "Dukungan",
+			"content": "Jika Anda memiliki pertanyaan, hubungi kami <0/>.\nJika Anda menemukan bug dan memiliki akun GitHub, silakan <1>buat issue</1>."
+		},
+		"createdBy": {
+			"content": "Dibuat oleh <0/>."
+		}
+	},
+	"features": {
+		"title": "Fitur",
+		"items": {
+			"offlineTranslation": {
+				"title": "Terjemahan offline dan privasi",
+				"content": "Terjemahkan teks langsung di perangkat Anda dengan penerjemah offline bawaan. Teks Anda tetap privat dan tidak dikirim melalui internet.\n\nAktifkan fitur ini di halaman opsi untuk menjaga privasi terjemahan saat Anda bekerja dengan email, dokumen, atau pesan pribadi.\n\nPenerjemah offline juga memungkinkan Anda menerjemahkan halaman tanpa koneksi internet, yang sangat berguna saat bepergian."
+			},
+			"fullPageTranslation": {
+				"title": "Terjemahkan seluruh halaman web",
+				"content": "Terjemahan halaman penuh yang cepat dan berkualitas tinggi hanya dengan beberapa klik.\n\nGunakan pintasan keyboard untuk menerjemahkan secara instan. Arahkan kursor ke teks terjemahan untuk melihat teks aslinya. Terjemahkan bahkan halaman privat di balik formulir login atau paywall.\n\nAtur aturan terjemahan otomatis berdasarkan bahasa halaman atau domain.\n\nLinguist menggunakan pendekatan modifikasi halaman yang minimal: ekstensi ini hanya mengubah simpul teks (text nodes) dan mempertahankan tata letak halaman serta pengalaman pengguna.\n\nAktifkan terjemahan real-time untuk rapat lintas bahasa di Zoom, Google Meet, dan Microsoft Teams."
+			},
+			"selectedTextTranslation": {
+				"title": "Terjemahkan teks yang dipilih di situs web mana pun",
+				"content": "Menemukan kata-kata asing saat membaca artikel online?\nCukup pilih teks di halaman tersebut dan klik tombol terjemahkan.\n\nDengarkan teks asli maupun terjemahannya, dan simpan hasil terjemahan ke kamus Anda untuk dipelajari nanti."
+			},
+			"textTranslation": {
+				"title": "Terjemahan teks cepat",
+				"content": "Perlu menerjemahkan sesuatu dengan cepat? Klik ikon Linguist dan masukkan teks Anda.\n\nTidak perlu berpindah tab atau membuka situs web terjemahan. Terjemahkan langsung di browser Anda menggunakan layanan pilihan Anda."
+			},
+			"knowledgeBase": {
+				"title": "Bangun basis pengetahuan pribadi Anda",
+				"content": "Setiap terjemahan disimpan dalam riwayat Anda, dan Anda dapat menambahkan entri penting ke kamus pribadi Anda. Cari kamus dan riwayat terjemahan Anda kapan saja.\n\nTidak ada yang hilang, bahkan selama sesi riset atau belajar yang panjang.\n\nKamus ini berfungsi secara offline, menjadikan Linguist ideal bagi pembelajar bahasa dan pelancong yang membutuhkan akses konstan ke daftar kata mereka."
+			},
+			"customTranslators": {
+				"title": "Integrasikan Layanan Terjemahan dan API",
+				"content": "Linguist membebaskan Anda memilih layanan terjemahan yang ingin digunakan.\n\nEkstensi ini mendukung penyedia terjemahan populer seperti Google, Yandex, dan Microsoft, dengan lebih dari 100 bahasa yang tersedia.\n\nJika layanan yang Anda butuhkan belum tersedia, Anda dapat menambahkannya sebagai <0>penerjemah kustom</0>.\n\nPenerjemah kustom memungkinkan Anda mengintegrasikan sistem terjemahan apa pun — mulai dari layanan LLM modern seperti ChatGPT, DeepL, DeepSeek, dan Gemini hingga penerjemah lokal yang berjalan di perangkat Anda, seperti Ollama atau LibreTranslate."
+			}
+		}
+	},
+	"faq": {
+		"title": "FAQ",
+		"items": {
+			"whatIsLinguist": {
+				"title": "Apa itu Linguist?",
+				"content": "Linguist adalah ekstensi terjemahan browser yang mengutamakan privasi untuk Chrome dan Firefox.\n\nEkstensi ini memungkinkan Anda menerjemahkan seluruh halaman web, teks yang dipilih, subtitle, dan pesan langsung di browser Anda tanpa perlu beralih ke situs web terjemahan eksternal."
+			},
+			"whyLinguist": {
+				"title": "Mengapa menggunakan Linguist?",
+				"content": "Ada banyak ekstensi browser yang dapat menerjemahkan halaman web, dan beberapa browser bahkan memiliki penerjemah bawaan. Lalu, mengapa menggunakan Linguist?\n\nSebagian besar penerjemah bawaan dan ekstensi terjemahan memiliki fleksibilitas yang terbatas. Banyak yang hanya bergantung pada satu penyedia terjemahan seperti Google Translate atau Microsoft Bing, sementara Firefox menawarkan penerjemah offline-nya sendiri. Sering kali, Anda tidak dapat memilih layanan yang paling sesuai dengan kebutuhan Anda.\n\nJika kualitas terjemahan tidak cukup baik untuk kebutuhan Anda, atau jika mengirimkan teks privat ke layanan pihak ketiga tidak dapat diterima, banyak alat tidak memberikan alternatif yang baik.\n\nBanyak alat juga hanya berfokus pada satu tugas. Beberapa menerjemahkan halaman penuh, sementara yang lain hanya menerjemahkan teks yang dipilih.\n\nPada saat yang sama, beberapa ekstensi terjemahan dibangun terutama untuk monetisasi. Fitur seperti riwayat terjemahan atau kamus pribadi mungkin memerlukan langganan, dan terkadang bahkan fitur dasar seperti tema gelap dianggap sebagai opsi premium.\n\nLinguist mengambil pendekatan yang berbeda. Ekstensi ini dirancang sebagai alat terjemahan yang praktis. Anda dapat memilih layanan terjemahan yang paling cocok untuk Anda, beralih antar penyedia, atau menambahkan penerjemah kustom Anda sendiri.\n\nLinguist juga menyatukan semuanya di satu tempat: terjemahkan seluruh halaman web, teks yang dipilih, subtitle, dan pesan sambil melacak terjemahan penting di riwayat dan kamus pribadi Anda."
+			},
+			"theLinguistLogo": {
+				"title": "Mengapa logo Linguist adalah Menara Babel?",
+				"content": "Logo Linguist terinspirasi dari <wiki>Menara Babel</wiki>, salah satu kisah tertua tentang bahasa dan komunikasi.\n\nMenurut cerita tersebut, manusia dulunya berbicara dengan bahasa yang sama dan mencoba membangun menara yang mencapai langit. Menara itu tidak pernah selesai, dan umat manusia tersebar ke dalam berbagai bahasa. Sejak saat itu, perbedaan bahasa sering kali membuat komunikasi menjadi lebih sulit.\n\nLinguist diciptakan untuk membantu memecahkan masalah ini.\n\nMenara Babel pada logo adalah pengingat akan kisah tersebut: banyak bahasa, banyak budaya, dan upaya manusia yang tiada henti untuk saling memahami. Linguist membantu menjembatani kesenjangan tersebut dengan membuat terjemahan menjadi sederhana, fleksibel, dan dapat diakses langsung di browser Anda.\n\nLogo ini juga mencerminkan semangat proyek ini. Linguist bukan sekadar pembungkus (wrapper) lain untuk \"Google Translate\". Ekstensi ini dibangun oleh orang-orang yang peduli dengan bahasa, privasi, dan teknologi terbuka. Menara Babel mewakili rasa ingin tahu, pembelajaran, dan gagasan bahwa perbedaan bahasa seharusnya menyatukan orang-orang, bukan memisahkan mereka."
+			},
+			"imageTranslation": {
+				"title": "Mengapa Linguist tidak menerjemahkan teks pada gambar?",
+				"content": "Linguist berfokus pada fitur terjemahan yang andal dan berkualitas tinggi.\n\nKami telah meneliti berbagai pendekatan untuk menerjemahkan teks di dalam gambar. Saat ini, sebagian besar solusi yang tersedia tidak memberikan hasil yang konsisten, terutama saat dijalankan langsung di browser — yang mana hal ini penting untuk menjaga privasi pengguna.\n\nOleh karena itu, Linguist saat ini tidak menyertakan terjemahan gambar. Kami memilih untuk tidak merilis fitur yang tidak memenuhi standar kualitas kami.\n\nJika kami menemukan cara yang andal dan menghargai privasi untuk menerapkan terjemahan gambar di masa mendatang, kami akan dengan senang hati menambahkannya."
+			},
+			"howTranslatePages": {
+				"title": "Bagaimana cara Linguist menerjemahkan halaman web?",
+				"content": "Linguist dapat menerjemahkan seluruh halaman web hanya dengan beberapa klik. Anda dapat memulai terjemahan halaman menggunakan tombol ekstensi atau pintasan keyboard.\n\nTeks asli akan selalu dapat diakses. Arahkan kursor ke teks terjemahan untuk melihat teks aslinya."
+			},
+			"offlineTranslation": {
+				"title": "Bisakah Linguist menerjemahkan halaman secara offline?",
+				"content": "Ya. Linguist dilengkapi dengan penerjemah offline bawaan yang memungkinkan Anda menerjemahkan teks tanpa mengirimkan data melalui internet.\n\nHal ini membantu melindungi privasi Anda dan memungkinkan Anda menerjemahkan konten bahkan tanpa koneksi internet."
+			},
+			"privacy": {
+				"title": "Apakah Linguist menjaga privasi?",
+				"content": "Ya. Linguist dirancang dengan mengutamakan privasi.\n\nEkstensi ini tidak mengumpulkan atau menjual data pengguna. Saat menggunakan <offline-translator>penerjemah offline</offline-translator>, terjemahan diproses sepenuhnya di perangkat Anda."
+			},
+			"supportedBrowsers": {
+				"title": "Browser apa saja yang didukung oleh Linguist?",
+				"content": "Linguist tersedia untuk Chrome dan Firefox. Ekstensi ini juga berfungsi di browser berbasis Chromium lainnya yang mendukung ekstensi Chrome.\n\nLinguist juga berfungsi di browser Android yang mendukung ekstensi, seperti Firefox untuk Android dan beberapa browser berbasis Chromium."
+			},
+			"selectedText": {
+				"title": "Bisakah Linguist menerjemahkan teks yang dipilih?",
+				"content": "Ya. Cukup pilih teks di halaman web mana pun dan gunakan tombol terjemahkan untuk menerjemahkannya secara instan.\n\nAnda juga dapat mendengarkan hasil terjemahan dan menyimpannya ke kamus pribadi Anda."
+			},
+			"customTranslators": {
+				"title": "Bisakah saya menggunakan layanan terjemahan saya sendiri?",
+				"content": "Ya. Linguist mendukung <custom-translator>penerjemah kustom</custom-translator>, yang memungkinkan Anda mengintegrasikan layanan terjemahan tambahan.\n\nAnda dapat menghubungkan API eksternal atau sistem terjemahan lokal seperti <libre-translate>LibreTranslate</libre-translate> atau <ollama>Ollama</ollama>."
+			},
+			"isFree": {
+				"title": "Apakah Linguist gratis?",
+				"content": "Ya. Linguist sepenuhnya gratis dan <linguist>open-source</linguist>.\n\nProyek ini didukung oleh komunitas, dan Anda dapat memilih untuk <donations>mendukungnya dengan donasi</donations>."
+			}
+		}
+	}
+}
