@@ -1,7 +1,7 @@
 {
 	"meta": {
-		"title": "Linguist – Privacy‑First Translation Extension for Chrome and Firefox",
-		"description": "Browser extension that translates web pages, selected text, and subtitles. Works instantly and supports offline translation."
+		"title": "Linguist - Translate Web Pages Privately | Browser Translator Extension for Chrome & Firefox",
+		"description": "Privacy‑first browser translator extension for Chrome and Firefox. Translate web pages, selected text, subtitles and messages instantly. Works offline and supports translation service integrations and APIs."
 	},
 	"navigation": {
 		"features": {
@@ -23,8 +23,8 @@
 	},
 	"sections": {
 		"hero": {
-			"title": "Translate anything in your browser",
-			"description": "Linguist is a browser extension that translates text instantly.\n\nTranslate full web pages, selected text, Netflix subtitles, and private messages. Listen to translated text and save important translations to your personal dictionary to learn new words, even offline.\n\nLinguist is a modern, privacy‑first alternative to Google Translate browser extensions. Try it for free."
+			"title": "Translate web pages fluently",
+			"description": "Linguist is a flexible browser translator powered by the most popular translation services.\n\nTranslate entire web pages, selected text, subtitles on Netflix or in video calls, and private messages. Listen to translations and save important ones to your personal dictionary to learn new words, even offline.\n\nLinguist is a modern, privacy‑first alternative to Google Translate browser extensions. Try it for free."
 		},
 		"opensource": {
 			"title": "Open source",
@@ -46,11 +46,11 @@
 				"content": "Translate text directly on your device with the built‑in offline translator. Your text stays private and is not sent over the internet.\n\nEnable this feature in the options page to keep translations private when working with emails, documents, or personal messages.\n\nThe offline translator also allows you to translate pages without an internet connection, which is especially useful while traveling."
 			},
 			"fullPageTranslation": {
-				"title": "Full page translation",
+				"title": "Translate entire web pages",
 				"content": "Fast, high‑quality full‑page translation in just a few clicks.\n\nUse a hotkey to translate instantly. Hover over translated text to see the original. Translate even private pages behind login forms or paywalls.\n\nSet up automatic translation rules based on page language or domain.\n\nLinguist follows a minimal page‑modification approach: it changes only text nodes and preserves the page layout and user experience.\n\nEnable real‑time translation for cross‑language meetings on Zoom, Google Meet, and Microsoft Teams."
 			},
 			"selectedTextTranslation": {
-				"title": "Selected text translation",
+				"title": "Translate selected text on any website",
 				"content": "Encounter unfamiliar words while reading an online article?\nSimply select text on the page and click the translate button.\n\nListen to both the original and translated text, and save translations to your dictionary to review later."
 			},
 			"textTranslation": {
@@ -62,7 +62,7 @@
 				"content": "Every translation is saved in your history, and you can add important entries to your personal dictionary. Search your dictionary and translation history anytime.\n\nNothing is lost, even during long research or learning sessions.\n\nThe dictionary works offline, making Linguist ideal for language learners and travelers who need constant access to their word lists."
 			},
 			"customTranslators": {
-				"title": "Custom translators",
+				"title": "Integrate Translation Services and APIs",
 				"content": "Linguist lets you choose which translation service to use.\n\nIt supports popular translation providers such as Google, Yandex, and Microsoft, with more than 100 languages available.\n\nIf a service you need is not included, you can add it as a <0>custom translator</0>.\n\nCustom translators allow you to integrate any translation system — from modern LLM services such as ChatGPT, DeepL, DeepSeek, and Gemini to local translators running on your device, such as Ollama or LibreTranslate."
 			}
 		}
