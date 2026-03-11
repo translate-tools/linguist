@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import Head from '@docusaurus/Head';
+import { useBaseUrlUtils } from '@docusaurus/useBaseUrl';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import {
 	PageAltVersionsContext,
@@ -8,15 +9,15 @@ import {
 } from '@site/src/components/useAltPageVersions';
 import { createI18nInstance, i18nContext } from '@site/src/i18n';
 
-import { Landing } from '../../components/Landing/Landing';
 import { PageLayout } from '../../components/PageLayout/PageLayout';
-import { buildPathGetter } from '../../utils/url';
+
+import { Landing } from './Landing';
+import screenshotPageTranslation from './screenshots/page-translation.png';
 
 const MetaTags = () => {
 	const altVersions = useAltPageVersions();
+	const { withBaseUrl } = useBaseUrlUtils();
 
-	const { siteConfig } = useDocusaurusContext();
-	const getUrl = buildPathGetter(siteConfig.baseUrl);
 	const { t, i18n } = useTranslation('landing');
 
 	const title = t('meta.title', { defaultValue: '' });
@@ -31,11 +32,11 @@ const MetaTags = () => {
 				rel="sitemap"
 				type="application/xml"
 				title="Sitemap"
-				href="/sitemap.xml"
+				href={withBaseUrl('/sitemap.xml', { absolute: true })}
 			></link>
 			<meta
 				property="og:image"
-				content={getUrl('screenshots/page-translation.png')}
+				content={withBaseUrl(screenshotPageTranslation, { absolute: true })}
 			/>
 			{altVersions.map((version) => (
 				<link

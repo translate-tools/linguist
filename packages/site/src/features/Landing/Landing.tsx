@@ -17,19 +17,26 @@ import {
 	Text,
 	VStack,
 } from '@chakra-ui/react';
-import { buildPathGetter } from '@site/src/utils/url';
 
-import { useAnalyticsContext } from '../Analytics/useAnalyticsContext';
-import { useAltPageVersions } from '../useAltPageVersions';
+import { useAnalyticsContext } from '../../components/Analytics/useAnalyticsContext';
+import { useAltPageVersions } from '../../components/useAltPageVersions';
+import { useElementAttentionTracker } from '../../components/useElementAttentionTracker';
+
+import chromeIcon from './icons/chrome.png';
+import firefoxIcon from './icons/firefox.png';
 import Logo from './logo.svg';
-import { useElementAttentionTracker } from './useElementAttentionTracker';
+import screenshotCustomTranslators from './screenshots/custom-translators.png';
+import screenshotDictionary from './screenshots/dictionary.png';
+import screenshotPageTranslation from './screenshots/page-translation.png';
+import screenshotSelectedTextTranslation from './screenshots/selected-text-translation.png';
+import screenshotSettings from './screenshots/settings.png';
+import screenshotTextTranslation from './screenshots/text-translation.png';
+import screenshotAppPreview from './screenshots/text-translation-popup.png';
 
 import styles from './Landing.module.css';
 
-export const Landing = ({ baseUrl }: { baseUrl: string }) => {
+export const Landing = () => {
 	const { t } = useTranslation('landing');
-
-	const getUrl = buildPathGetter(baseUrl);
 
 	const { trackEvent } = useAnalyticsContext();
 	const altVersions = useAltPageVersions();
@@ -109,7 +116,7 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 					i18nKey={'faq.items.privacy.content'}
 					components={{
 						'offline-translator': (
-							<Link href={getUrl('/docs/manuals/OfflineTranslation')} />
+							<Link href={'/docs/manuals/OfflineTranslation'} />
 						),
 					}}
 				/>
@@ -130,9 +137,7 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 					t={t}
 					i18nKey={'faq.items.customTranslators.content'}
 					components={{
-						'custom-translator': (
-							<Link href={getUrl('/docs/CustomTranslator')} />
-						),
+						'custom-translator': <Link href={'/docs/CustomTranslator'} />,
 						'libre-translate': (
 							<Link href="https://libretranslate.com/" target="_blank" />
 						),
@@ -254,7 +259,7 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 								<Button
 									leftIcon={
 										<Image
-											src={getUrl('icons/chrome.png')}
+											src={chromeIcon}
 											boxSize="2em"
 											alt="Chrome Browser logo"
 										/>
@@ -276,7 +281,7 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 								<Button
 									leftIcon={
 										<Image
-											src={getUrl('icons/firefox.png')}
+											src={firefoxIcon}
 											boxSize="2em"
 											alt="Firefox Browser logo"
 										/>
@@ -300,7 +305,7 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 
 						<Image
 							className={clsx(styles.TopScreenImage)}
-							src={getUrl('screenshots/text-translation-popup.png')}
+							src={screenshotAppPreview}
 							maxW={600}
 							minW={400}
 							alt="The Linguist in-Browser Popup screenshot"
@@ -340,7 +345,7 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 							>
 								<div className={clsx(styles.FeatureImage)}>
 									<Image
-										src={getUrl('screenshots/settings.png')}
+										src={screenshotSettings}
 										alt="Linguist settings screen. User choose a Bergamot - offline translator"
 									/>
 								</div>
@@ -365,7 +370,7 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 							>
 								<div className={clsx(styles.FeatureImage)}>
 									<Image
-										src={getUrl('screenshots/page-translation.png')}
+										src={screenshotPageTranslation}
 										alt="The wikipedia page European honey buzzard translated via Linguist"
 									/>
 								</div>
@@ -390,9 +395,7 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 							>
 								<div className={clsx(styles.FeatureImage)}>
 									<Image
-										src={getUrl(
-											'screenshots/selected-text-translation.png',
-										)}
+										src={screenshotSelectedTextTranslation}
 										alt="The Linguist translation popup for selected text on Wikipedia page about European honey buzzard"
 									/>
 								</div>
@@ -421,7 +424,7 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 							>
 								<div className={clsx(styles.FeatureImage)}>
 									<Image
-										src={getUrl('screenshots/text-translation.png')}
+										src={screenshotTextTranslation}
 										alt="Linguist popup where user input text and translate it from English to German language"
 									/>
 								</div>
@@ -446,7 +449,7 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 							>
 								<div className={clsx(styles.FeatureImage)}>
 									<Image
-										src={getUrl('screenshots/dictionary.png')}
+										src={screenshotDictionary}
 										alt="Linguist dictionary page"
 									/>
 								</div>
@@ -471,7 +474,7 @@ export const Landing = ({ baseUrl }: { baseUrl: string }) => {
 							>
 								<div className={clsx(styles.FeatureImage)}>
 									<Image
-										src={getUrl('screenshots/custom-translators.png')}
+										src={screenshotCustomTranslators}
 										alt="Linguist settings screen with opened modal window to select custom translator"
 									/>
 								</div>
