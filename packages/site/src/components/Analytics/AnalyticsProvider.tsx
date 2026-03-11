@@ -1,4 +1,5 @@
 import React, { PropsWithChildren, useCallback, useEffect, useState } from 'react';
+import ReactGA from 'react-ga4';
 import {
 	enableAutoOutboundTracking,
 	enableAutoPageviews,
@@ -11,7 +12,7 @@ import {
 	skipForHosts,
 	userId,
 } from 'plausible-client';
-import Head from '@docusaurus/Head';
+import { useLocation } from '@docusaurus/router';
 
 import { analyticsContext, IAnalyticsContext } from './useAnalyticsContext';
 
@@ -44,6 +45,18 @@ export const AnalyticsProvider = ({
 		};
 	});
 
+	useEffect(() => {
+		ReactGA.initialize(googleAnalytics.tagId);
+	}, [googleAnalytics.tagId]);
+
+	const spaLocation = useLocation();
+	useEffect(() => {
+		ReactGA.send({
+			hitType: 'pageview',
+			page: spaLocation.pathname + spaLocation.search,
+		});
+	}, [spaLocation]);
+
 	const trackEvent: IAnalyticsContext['trackEvent'] = useCallback(
 		(eventName, props) => {
 			plausible.trackEvent(eventName, {
@@ -58,6 +71,12 @@ export const AnalyticsProvider = ({
 					languages: navigator.languages.join(','),
 					...props,
 				},
+			});
+
+			ReactGA.event({
+				action: eventName,
+				category: 'User Interaction',
+				...props,
 			});
 		},
 		[engagementTracker, plausible],
@@ -81,25 +100,6 @@ export const AnalyticsProvider = ({
 
 	return (
 		<analyticsContext.Provider value={{ trackEvent }}>
-			<Head>
-				<script
-					async
-					src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalytics.tagId}`}
-				></script>
-			</Head>
-			<script
-				dangerouslySetInnerHTML={{
-					__html: `
-						window.dataLayer = window.dataLayer || [];
-						function gtag(){dataLayer.push(arguments);}
-						gtag('js', new Date());
-
-						gtag('config', '${googleAnalytics.tagId}');
-					`
-						.replace(/\t/g, '')
-						.trim(),
-				}}
-			/>
 			{children}
 		</analyticsContext.Provider>
 	);
