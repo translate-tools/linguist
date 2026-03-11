@@ -5,6 +5,7 @@ import {
 	enableEngagementTracking,
 	enableLinkClicksCapture,
 	enableSessionScoring,
+	EngagementTimeTracker,
 	Plausible,
 	PlausibleInitOptions,
 	skipForHosts,
@@ -35,22 +36,31 @@ export const AnalyticsProvider = ({
 			}),
 	);
 
+	const [engagementTracker] = useState(() => new EngagementTimeTracker());
+	useEffect(() => {
+		engagementTracker.start();
+		return () => {
+			engagementTracker.stop();
+		};
+	});
+
 	const trackEvent: IAnalyticsContext['trackEvent'] = useCallback(
 		(eventName, props) => {
-			const timestamp = performance.now();
 			plausible.trackEvent(eventName, {
 				// Additional props for every event
 				props: {
 					// Current location
 					location: location.toString(),
-					// Time since visit page
-					timestamp: timestamp,
-					timestampSeconds: timestamp / 1000,
+					timeOnPage: Math.round(engagementTracker.getTotalTime() / 1000),
+					engagementTime: Math.round(
+						engagementTracker.getCurrentSegmentTime() / 1000,
+					),
+					languages: navigator.languages.join(','),
 					...props,
 				},
 			});
 		},
-		[plausible],
+		[engagementTracker, plausible],
 	);
 
 	// Setup default analytic listeners
