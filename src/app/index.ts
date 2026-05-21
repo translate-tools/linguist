@@ -9,6 +9,7 @@ import { clearCache } from '../requests/backend/clearCache';
 import { sendAppConfigUpdateEvent } from '../requests/global/appConfigUpdate';
 import { customTranslatorsFactory } from '../requests/offscreen/customTranslators';
 import { AppConfigType } from '../types/runtime';
+import { ActionBadgeController } from './ActionBadge/ActionBadgeController';
 import { Background } from './Background';
 import { requestHandlers } from './Background/requestHandlers';
 import { ConfigStorage, ObservableAsyncStorage } from './ConfigStorage/ConfigStorage';
@@ -71,6 +72,12 @@ export class App {
 		}
 
 		this.isStarted = true;
+
+		// Register badge listeners synchronously before any awaits — the first
+		// pageTranslatorStateUpdated message arrives as the service worker wakes up,
+		// before async setup completes. Registering here ensures it isn't missed.
+		const actionBadgeController = new ActionBadgeController();
+		actionBadgeController.enable();
 
 		await this.setupOffscreenDocuments();
 		await this.background.start();
@@ -174,6 +181,7 @@ export class App {
 					translatePageContextMenu.disable();
 				}
 			});
+
 	}
 
 	private readonly onInstalled = async (details: OnInstalledData) => {
