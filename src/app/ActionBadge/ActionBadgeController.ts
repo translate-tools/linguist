@@ -5,43 +5,25 @@ import { pageTranslatorStatsUpdatedHandler } from '../ContentScript/PageTranslat
 
 // webextension-polyfill v0.12+ normalises browser.action for both MV2 and MV3,
 // but @types/webextension-polyfill@0.9.x does not yet include the `action` namespace.
-// Cast through browserAction (identical API shape) to preserve type safety.
 const browserAction = (browser as any).action as typeof browser.browserAction;
 
-// Badge visual states — text and background colour pairs.
-// Text is limited to 4 characters by the browser; single symbols work best.
-const BADGE_TRANSLATING = { text: '...', color: '#f0a500' }; // yellow — in progress
-const BADGE_DONE        = { text: '✓',   color: '#3a8f3a' }; // green  — all segments translated
-const BADGE_PARTIAL     = { text: '~',   color: '#e06000' }; // orange — some segments failed
-const BADGE_ERROR       = { text: '!',   color: '#cc0000' }; // red    — all segments failed
+const BADGE_TRANSLATING = { text: '...', color: '#f0a500' };
+const BADGE_DONE = { text: '✓', color: '#3a8f3a' };
+const BADGE_PARTIAL = { text: '~', color: '#e06000' };
+const BADGE_ERROR = { text: '!', color: '#cc0000' };
 
 /**
- * Shows a per-tab badge on the toolbar icon to reflect page translation state.
+ * Shows a per-tab badge on the toolbar icon reflecting page translation state.
  *
- * Badge lifecycle:
- *   1. Translation starts   → '...' (yellow)
- *   2. All segments done    → '✓'   (green)  — persists until user stops or navigates
- *      Some segments failed → '~'   (orange) — persists until user stops or navigates
- *      All segments failed  → '!'   (red)    — persists until user stops or navigates
- *   3. User stops translate → badge cleared
- *   4. Tab navigates away   → badge cleared
+ * Badge is driven from pageTranslatorStatsUpdated (segment counters) rather than
+ * pageTranslatorStateUpdated (on/off) to avoid a race where stats messages arrive
+ * before the state message at the service worker.
  *
- * Design notes:
- * - Badge state is driven primarily from pageTranslatorStatsUpdated (segment counters)
- *   rather than pageTranslatorStateUpdated (on/off). This avoids a race condition where
- *   stats messages arrive at the service worker before the state message, because
- *   PageTranslatorController fires the effector store update (which synchronously starts
- *   translation and emits the first stats) before calling notifyState().
- * - enable() must be called synchronously during service worker startup, before any
- *   awaited operations, so that the runtime.onMessage listener is registered before
- *   the first message arrives on wake-up.
+ * enable() must be called synchronously during service worker startup so the
+ * runtime.onMessage listener is registered before the first message arrives.
  */
 export class ActionBadgeController {
-	// Tracks any pending timers per tab. Currently unused for auto-clear (all badges
-	// persist until explicitly cleared), but kept for safety so cancelClearTimer()
-	// can always be called unconditionally before any badge update.
 	private readonly clearTimers = new Map<number, ReturnType<typeof setTimeout>>();
-
 	private isEnabled = false;
 	private cleanupCallback: null | (() => void) = null;
 
@@ -49,59 +31,39 @@ export class ActionBadgeController {
 		if (this.isEnabled) return;
 		this.isEnabled = true;
 
-		// Listen for translation on/off events from the content script.
-		// Used to clear the badge when the user manually stops translation.
-		// The '...' badge is NOT set here — see stats handler below.
 		const unwatchState = pageTranslatorStateUpdatedHandler((state, tabId) => {
 			if (tabId === undefined) return;
-
 			if (!state.isTranslated) {
-				// User stopped translation — clear badge
 				this.cancelClearTimer(tabId);
 				this.clearBadge(tabId);
 			}
 		});
 
-		// Listen for segment counter updates from the content script.
-		// This is the primary driver for all badge states, including '...'.
-		// Fired at most every 100ms (throttled in PageTranslator).
 		const unwatchStats = pageTranslatorStatsUpdatedHandler((stats, tabId) => {
 			if (tabId === undefined) return;
 
 			const { resolved, rejected, pending } = stats;
 
-			// PageTranslator.stop() resets counters to zero and flushes one last stats
-			// message before sending the state-updated message. Ignore it here — the
-			// state handler above will clear the badge when isTranslated goes false.
+			// PageTranslator.stop() emits a zero-counters flush before the state message — ignore it.
 			if (pending === 0 && resolved === 0 && rejected === 0) return;
 
 			if (pending > 0) {
-				// Segments still in flight — show progress badge.
-				// Driving '...' from stats (rather than from the state event) ensures
-				// it appears even if the state message arrives out of order.
 				this.cancelClearTimer(tabId);
 				this.setBadge(tabId, BADGE_TRANSLATING);
 				return;
 			}
 
-			// All segments have settled — show final result badge.
+			this.cancelClearTimer(tabId);
 			if (resolved > 0 && rejected === 0) {
-				// Every segment translated successfully
-				this.cancelClearTimer(tabId);
 				this.setBadge(tabId, BADGE_DONE);
 			} else if (resolved > 0 && rejected > 0) {
-				// Mixed result — page is partially translated
-				this.cancelClearTimer(tabId);
 				this.setBadge(tabId, BADGE_PARTIAL);
 			} else {
-				// resolved === 0, rejected > 0 — translation failed entirely
-				this.cancelClearTimer(tabId);
 				this.setBadge(tabId, BADGE_ERROR);
 			}
 		});
 
-		// Clear badge when the user navigates to a different URL in the tab.
-		// changeInfo.url is only present on actual navigations, not on tab focus changes.
+		// changeInfo.url is only present on actual navigations, not focus changes.
 		const onTabUpdated = (
 			tabId: number,
 			changeInfo: browser.Tabs.OnUpdatedChangeInfoType,
@@ -112,7 +74,6 @@ export class ActionBadgeController {
 			}
 		};
 
-		// Clean up timer state when a tab is closed (badge is destroyed with the tab anyway).
 		const onTabRemoved = (tabId: number) => {
 			this.cancelClearTimer(tabId);
 		};
@@ -120,7 +81,6 @@ export class ActionBadgeController {
 		browser.tabs.onUpdated.addListener(onTabUpdated);
 		browser.tabs.onRemoved.addListener(onTabRemoved);
 
-		// Store cleanup callbacks so disable() can remove all listeners cleanly.
 		this.cleanupCallback = () => {
 			unwatchState();
 			unwatchStats();
