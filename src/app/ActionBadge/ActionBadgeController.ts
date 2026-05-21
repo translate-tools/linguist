@@ -23,7 +23,6 @@ const BADGE_ERROR = { text: '!', color: '#cc0000' };
  * runtime.onMessage listener is registered before the first message arrives.
  */
 export class ActionBadgeController {
-	private readonly clearTimers = new Map<number, ReturnType<typeof setTimeout>>();
 	private isEnabled = false;
 	private cleanupCallback: null | (() => void) = null;
 
@@ -34,13 +33,12 @@ export class ActionBadgeController {
 		const unwatchState = pageTranslatorStateUpdatedHandler((state, tabId) => {
 			if (tabId === undefined) return;
 			if (!state.isTranslated) {
-				this.cancelClearTimer(tabId);
 				this.clearBadge(tabId);
 			}
 		});
 
 		const unwatchStats = pageTranslatorStatsUpdatedHandler((stats, tabId) => {
-			if (tabId === undefined) return;
+			if (!this.isEnabled || tabId === undefined) return;
 
 			const { resolved, rejected, pending } = stats;
 
@@ -48,12 +46,10 @@ export class ActionBadgeController {
 			if (pending === 0 && resolved === 0 && rejected === 0) return;
 
 			if (pending > 0) {
-				this.cancelClearTimer(tabId);
 				this.setBadge(tabId, BADGE_TRANSLATING);
 				return;
 			}
 
-			this.cancelClearTimer(tabId);
 			if (resolved > 0 && rejected === 0) {
 				this.setBadge(tabId, BADGE_DONE);
 			} else if (resolved > 0 && rejected > 0) {
@@ -69,52 +65,34 @@ export class ActionBadgeController {
 			changeInfo: browser.Tabs.OnUpdatedChangeInfoType,
 		) => {
 			if (changeInfo.url !== undefined) {
-				this.cancelClearTimer(tabId);
 				this.clearBadge(tabId);
 			}
 		};
 
-		const onTabRemoved = (tabId: number) => {
-			this.cancelClearTimer(tabId);
-		};
-
 		browser.tabs.onUpdated.addListener(onTabUpdated);
-		browser.tabs.onRemoved.addListener(onTabRemoved);
 
 		this.cleanupCallback = () => {
 			unwatchState();
 			unwatchStats();
 			browser.tabs.onUpdated.removeListener(onTabUpdated);
-			browser.tabs.onRemoved.removeListener(onTabRemoved);
 		};
 	}
 
 	public disable() {
 		if (!this.isEnabled) return;
 		this.isEnabled = false;
-
 		this.cleanupCallback?.();
 		this.cleanupCallback = null;
-
-		for (const tabId of this.clearTimers.keys()) {
-			this.cancelClearTimer(tabId);
-		}
-	}
-
-	private cancelClearTimer(tabId: number) {
-		const timer = this.clearTimers.get(tabId);
-		if (timer !== undefined) {
-			clearTimeout(timer);
-			this.clearTimers.delete(tabId);
-		}
 	}
 
 	private setBadge(tabId: number, badge: { text: string; color: string }) {
-		browserAction.setBadgeText({ text: badge.text, tabId });
-		browserAction.setBadgeBackgroundColor({ color: badge.color, tabId });
+		browserAction.setBadgeText({ text: badge.text, tabId }).catch(() => {});
+		browserAction
+			.setBadgeBackgroundColor({ color: badge.color, tabId })
+			.catch(() => {});
 	}
 
 	private clearBadge(tabId: number) {
-		browserAction.setBadgeText({ text: '', tabId });
+		browserAction.setBadgeText({ text: '', tabId }).catch(() => {});
 	}
 }

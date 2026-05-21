@@ -84,6 +84,7 @@ export const AppConfig = type.type({
 		detectLanguageByContent: type.boolean,
 		originalTextPopup: type.boolean,
 		enableContextMenu: type.boolean,
+		showTranslationBadge: type.boolean,
 		toggleTranslationHotkey: type.union([type.null, type.string]),
 	}),
 	textTranslator: type.type({

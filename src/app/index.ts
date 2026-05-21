@@ -73,12 +73,6 @@ export class App {
 
 		this.isStarted = true;
 
-		// Register badge listeners synchronously before any awaits — the first
-		// pageTranslatorStateUpdated message arrives as the service worker wakes up,
-		// before async setup completes. Registering here ensures it isn't missed.
-		const actionBadgeController = new ActionBadgeController();
-		actionBadgeController.enable();
-
 		await this.setupOffscreenDocuments();
 		await this.background.start();
 
@@ -182,6 +176,16 @@ export class App {
 				}
 			});
 
+		const actionBadgeController = new ActionBadgeController();
+		$appConfig
+			.map((config) => config.pageTranslator.showTranslationBadge)
+			.watch((isEnabled) => {
+				if (isEnabled) {
+					actionBadgeController.enable();
+				} else {
+					actionBadgeController.disable();
+				}
+			});
 	}
 
 	private readonly onInstalled = async (details: OnInstalledData) => {
