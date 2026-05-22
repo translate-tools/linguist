@@ -13,61 +13,113 @@ exports[`config migrations > migrate config v0 to latest version 1`] = `
     "detectLanguageByContent": true,
     "enableContextMenu": false,
     "excludeSelectors": [
-      "! Basic tags",
-      "meta",
-      "link",
-      "script",
-      "noscript",
-      "style",
-      "code",
-      "pre",
-      "textarea",
-      "time",
-      "kbd",
-      "svg",
-      "g",
-      "ruby",
-      "rt",
-      "rp",
-      "math",
-      "d-math",
-      "samp",
-      "",
-      "! Elements that request to disable translation",
-      ".notranslate",
-      "[contenteditable="true"]",
-      "[translate=no]",
-      "",
-      "! Social sharing buttons",
-      ".social-share",
-      ".share-nav",
-      "[data-toolbar=share]",
-      ".o-share",
-      "",
-      "! Code elements",
-      ".prism-code",
-      ".enlighter-code",
-      ".rc-CodeBlock",
-      "[role=code]",
-      "table.highlight",
-      "",
-      "! example: https://web.hypothes.is/blog/do-it-yourself-anchoring-and-the-evolution-of-the-hypothesis-toolkit/",
-      "hypothesis-highlight",
-      ".hypothesis-highlight",
-      "",
-      "! Icons",
-      ".material-icons",
-      "material-icon",
-      "span[class^=material-symbols-]",
-      ".google-symbols",
-      "i.fa",
-      "i[class^=fa-]",
-      "",
-      "! Other",
+      "! Basic tags
+",
+      "meta
+",
+      "link
+",
+      "script
+",
+      "noscript
+",
+      "style
+",
+      "code
+",
+      "pre
+",
+      "textarea
+",
+      "time
+",
+      "kbd
+",
+      "svg
+",
+      "g
+",
+      "ruby
+",
+      "rt
+",
+      "rp
+",
+      "math
+",
+      "d-math
+",
+      "samp
+",
+      "
+",
+      "! Elements that request to disable translation
+",
+      ".notranslate
+",
+      "[contenteditable="true"]
+",
+      "[translate=no]
+",
+      "
+",
+      "! Social sharing buttons
+",
+      ".social-share
+",
+      ".share-nav
+",
+      "[data-toolbar=share]
+",
+      ".o-share
+",
+      "
+",
+      "! Code elements
+",
+      ".prism-code
+",
+      ".enlighter-code
+",
+      ".rc-CodeBlock
+",
+      "[role=code]
+",
+      "table.highlight
+",
+      "
+",
+      "! example: https://web.hypothes.is/blog/do-it-yourself-anchoring-and-the-evolution-of-the-hypothesis-toolkit/
+",
+      "hypothesis-highlight
+",
+      ".hypothesis-highlight
+",
+      "
+",
+      "! Icons
+",
+      ".material-icons
+",
+      "material-icon
+",
+      "span[class^=material-symbols-]
+",
+      ".google-symbols
+",
+      "i.fa
+",
+      "i[class^=fa-]
+",
+      "
+",
+      "! Other
+",
       "visuallyhidden",
     ],
     "lazyTranslate": true,
     "originalTextPopup": false,
+    "showTranslationBadge": false,
     "toggleTranslationHotkey": null,
     "translatableAttributes": [
       "title",
@@ -133,61 +185,113 @@ exports[`config migrations > race condition detection > Detection race condition
     "detectLanguageByContent": true,
     "enableContextMenu": false,
     "excludeSelectors": [
-      "! Basic tags",
-      "meta",
-      "link",
-      "script",
-      "noscript",
-      "style",
-      "code",
-      "pre",
-      "textarea",
-      "time",
-      "kbd",
-      "svg",
-      "g",
-      "ruby",
-      "rt",
-      "rp",
-      "math",
-      "d-math",
-      "samp",
-      "",
-      "! Elements that request to disable translation",
-      ".notranslate",
-      "[contenteditable="true"]",
-      "[translate=no]",
-      "",
-      "! Social sharing buttons",
-      ".social-share",
-      ".share-nav",
-      "[data-toolbar=share]",
-      ".o-share",
-      "",
-      "! Code elements",
-      ".prism-code",
-      ".enlighter-code",
-      ".rc-CodeBlock",
-      "[role=code]",
-      "table.highlight",
-      "",
-      "! example: https://web.hypothes.is/blog/do-it-yourself-anchoring-and-the-evolution-of-the-hypothesis-toolkit/",
-      "hypothesis-highlight",
-      ".hypothesis-highlight",
-      "",
-      "! Icons",
-      ".material-icons",
-      "material-icon",
-      "span[class^=material-symbols-]",
-      ".google-symbols",
-      "i.fa",
-      "i[class^=fa-]",
-      "",
-      "! Other",
+      "! Basic tags
+",
+      "meta
+",
+      "link
+",
+      "script
+",
+      "noscript
+",
+      "style
+",
+      "code
+",
+      "pre
+",
+      "textarea
+",
+      "time
+",
+      "kbd
+",
+      "svg
+",
+      "g
+",
+      "ruby
+",
+      "rt
+",
+      "rp
+",
+      "math
+",
+      "d-math
+",
+      "samp
+",
+      "
+",
+      "! Elements that request to disable translation
+",
+      ".notranslate
+",
+      "[contenteditable="true"]
+",
+      "[translate=no]
+",
+      "
+",
+      "! Social sharing buttons
+",
+      ".social-share
+",
+      ".share-nav
+",
+      "[data-toolbar=share]
+",
+      ".o-share
+",
+      "
+",
+      "! Code elements
+",
+      ".prism-code
+",
+      ".enlighter-code
+",
+      ".rc-CodeBlock
+",
+      "[role=code]
+",
+      "table.highlight
+",
+      "
+",
+      "! example: https://web.hypothes.is/blog/do-it-yourself-anchoring-and-the-evolution-of-the-hypothesis-toolkit/
+",
+      "hypothesis-highlight
+",
+      ".hypothesis-highlight
+",
+      "
+",
+      "! Icons
+",
+      ".material-icons
+",
+      "material-icon
+",
+      "span[class^=material-symbols-]
+",
+      ".google-symbols
+",
+      "i.fa
+",
+      "i[class^=fa-]
+",
+      "
+",
+      "! Other
+",
       "visuallyhidden",
     ],
     "lazyTranslate": true,
     "originalTextPopup": false,
+    "showTranslationBadge": false,
     "toggleTranslationHotkey": null,
     "translatableAttributes": [
       "title",
@@ -253,61 +357,113 @@ exports[`config migrations > race condition detection > Detection race condition
     "detectLanguageByContent": true,
     "enableContextMenu": false,
     "excludeSelectors": [
-      "! Basic tags",
-      "meta",
-      "link",
-      "script",
-      "noscript",
-      "style",
-      "code",
-      "pre",
-      "textarea",
-      "time",
-      "kbd",
-      "svg",
-      "g",
-      "ruby",
-      "rt",
-      "rp",
-      "math",
-      "d-math",
-      "samp",
-      "",
-      "! Elements that request to disable translation",
-      ".notranslate",
-      "[contenteditable="true"]",
-      "[translate=no]",
-      "",
-      "! Social sharing buttons",
-      ".social-share",
-      ".share-nav",
-      "[data-toolbar=share]",
-      ".o-share",
-      "",
-      "! Code elements",
-      ".prism-code",
-      ".enlighter-code",
-      ".rc-CodeBlock",
-      "[role=code]",
-      "table.highlight",
-      "",
-      "! example: https://web.hypothes.is/blog/do-it-yourself-anchoring-and-the-evolution-of-the-hypothesis-toolkit/",
-      "hypothesis-highlight",
-      ".hypothesis-highlight",
-      "",
-      "! Icons",
-      ".material-icons",
-      "material-icon",
-      "span[class^=material-symbols-]",
-      ".google-symbols",
-      "i.fa",
-      "i[class^=fa-]",
-      "",
-      "! Other",
+      "! Basic tags
+",
+      "meta
+",
+      "link
+",
+      "script
+",
+      "noscript
+",
+      "style
+",
+      "code
+",
+      "pre
+",
+      "textarea
+",
+      "time
+",
+      "kbd
+",
+      "svg
+",
+      "g
+",
+      "ruby
+",
+      "rt
+",
+      "rp
+",
+      "math
+",
+      "d-math
+",
+      "samp
+",
+      "
+",
+      "! Elements that request to disable translation
+",
+      ".notranslate
+",
+      "[contenteditable="true"]
+",
+      "[translate=no]
+",
+      "
+",
+      "! Social sharing buttons
+",
+      ".social-share
+",
+      ".share-nav
+",
+      "[data-toolbar=share]
+",
+      ".o-share
+",
+      "
+",
+      "! Code elements
+",
+      ".prism-code
+",
+      ".enlighter-code
+",
+      ".rc-CodeBlock
+",
+      "[role=code]
+",
+      "table.highlight
+",
+      "
+",
+      "! example: https://web.hypothes.is/blog/do-it-yourself-anchoring-and-the-evolution-of-the-hypothesis-toolkit/
+",
+      "hypothesis-highlight
+",
+      ".hypothesis-highlight
+",
+      "
+",
+      "! Icons
+",
+      ".material-icons
+",
+      "material-icon
+",
+      "span[class^=material-symbols-]
+",
+      ".google-symbols
+",
+      "i.fa
+",
+      "i[class^=fa-]
+",
+      "
+",
+      "! Other
+",
       "visuallyhidden",
     ],
     "lazyTranslate": true,
     "originalTextPopup": false,
+    "showTranslationBadge": false,
     "toggleTranslationHotkey": null,
     "translatableAttributes": [
       "title",
@@ -373,61 +529,113 @@ exports[`config migrations > race condition detection > Detection race condition
     "detectLanguageByContent": true,
     "enableContextMenu": false,
     "excludeSelectors": [
-      "! Basic tags",
-      "meta",
-      "link",
-      "script",
-      "noscript",
-      "style",
-      "code",
-      "pre",
-      "textarea",
-      "time",
-      "kbd",
-      "svg",
-      "g",
-      "ruby",
-      "rt",
-      "rp",
-      "math",
-      "d-math",
-      "samp",
-      "",
-      "! Elements that request to disable translation",
-      ".notranslate",
-      "[contenteditable="true"]",
-      "[translate=no]",
-      "",
-      "! Social sharing buttons",
-      ".social-share",
-      ".share-nav",
-      "[data-toolbar=share]",
-      ".o-share",
-      "",
-      "! Code elements",
-      ".prism-code",
-      ".enlighter-code",
-      ".rc-CodeBlock",
-      "[role=code]",
-      "table.highlight",
-      "",
-      "! example: https://web.hypothes.is/blog/do-it-yourself-anchoring-and-the-evolution-of-the-hypothesis-toolkit/",
-      "hypothesis-highlight",
-      ".hypothesis-highlight",
-      "",
-      "! Icons",
-      ".material-icons",
-      "material-icon",
-      "span[class^=material-symbols-]",
-      ".google-symbols",
-      "i.fa",
-      "i[class^=fa-]",
-      "",
-      "! Other",
+      "! Basic tags
+",
+      "meta
+",
+      "link
+",
+      "script
+",
+      "noscript
+",
+      "style
+",
+      "code
+",
+      "pre
+",
+      "textarea
+",
+      "time
+",
+      "kbd
+",
+      "svg
+",
+      "g
+",
+      "ruby
+",
+      "rt
+",
+      "rp
+",
+      "math
+",
+      "d-math
+",
+      "samp
+",
+      "
+",
+      "! Elements that request to disable translation
+",
+      ".notranslate
+",
+      "[contenteditable="true"]
+",
+      "[translate=no]
+",
+      "
+",
+      "! Social sharing buttons
+",
+      ".social-share
+",
+      ".share-nav
+",
+      "[data-toolbar=share]
+",
+      ".o-share
+",
+      "
+",
+      "! Code elements
+",
+      ".prism-code
+",
+      ".enlighter-code
+",
+      ".rc-CodeBlock
+",
+      "[role=code]
+",
+      "table.highlight
+",
+      "
+",
+      "! example: https://web.hypothes.is/blog/do-it-yourself-anchoring-and-the-evolution-of-the-hypothesis-toolkit/
+",
+      "hypothesis-highlight
+",
+      ".hypothesis-highlight
+",
+      "
+",
+      "! Icons
+",
+      ".material-icons
+",
+      "material-icon
+",
+      "span[class^=material-symbols-]
+",
+      ".google-symbols
+",
+      "i.fa
+",
+      "i[class^=fa-]
+",
+      "
+",
+      "! Other
+",
       "visuallyhidden",
     ],
     "lazyTranslate": true,
     "originalTextPopup": false,
+    "showTranslationBadge": false,
     "toggleTranslationHotkey": null,
     "translatableAttributes": [
       "title",
@@ -493,61 +701,113 @@ exports[`config migrations > race condition detection > Detection race condition
     "detectLanguageByContent": true,
     "enableContextMenu": false,
     "excludeSelectors": [
-      "! Basic tags",
-      "meta",
-      "link",
-      "script",
-      "noscript",
-      "style",
-      "code",
-      "pre",
-      "textarea",
-      "time",
-      "kbd",
-      "svg",
-      "g",
-      "ruby",
-      "rt",
-      "rp",
-      "math",
-      "d-math",
-      "samp",
-      "",
-      "! Elements that request to disable translation",
-      ".notranslate",
-      "[contenteditable="true"]",
-      "[translate=no]",
-      "",
-      "! Social sharing buttons",
-      ".social-share",
-      ".share-nav",
-      "[data-toolbar=share]",
-      ".o-share",
-      "",
-      "! Code elements",
-      ".prism-code",
-      ".enlighter-code",
-      ".rc-CodeBlock",
-      "[role=code]",
-      "table.highlight",
-      "",
-      "! example: https://web.hypothes.is/blog/do-it-yourself-anchoring-and-the-evolution-of-the-hypothesis-toolkit/",
-      "hypothesis-highlight",
-      ".hypothesis-highlight",
-      "",
-      "! Icons",
-      ".material-icons",
-      "material-icon",
-      "span[class^=material-symbols-]",
-      ".google-symbols",
-      "i.fa",
-      "i[class^=fa-]",
-      "",
-      "! Other",
+      "! Basic tags
+",
+      "meta
+",
+      "link
+",
+      "script
+",
+      "noscript
+",
+      "style
+",
+      "code
+",
+      "pre
+",
+      "textarea
+",
+      "time
+",
+      "kbd
+",
+      "svg
+",
+      "g
+",
+      "ruby
+",
+      "rt
+",
+      "rp
+",
+      "math
+",
+      "d-math
+",
+      "samp
+",
+      "
+",
+      "! Elements that request to disable translation
+",
+      ".notranslate
+",
+      "[contenteditable="true"]
+",
+      "[translate=no]
+",
+      "
+",
+      "! Social sharing buttons
+",
+      ".social-share
+",
+      ".share-nav
+",
+      "[data-toolbar=share]
+",
+      ".o-share
+",
+      "
+",
+      "! Code elements
+",
+      ".prism-code
+",
+      ".enlighter-code
+",
+      ".rc-CodeBlock
+",
+      "[role=code]
+",
+      "table.highlight
+",
+      "
+",
+      "! example: https://web.hypothes.is/blog/do-it-yourself-anchoring-and-the-evolution-of-the-hypothesis-toolkit/
+",
+      "hypothesis-highlight
+",
+      ".hypothesis-highlight
+",
+      "
+",
+      "! Icons
+",
+      ".material-icons
+",
+      "material-icon
+",
+      "span[class^=material-symbols-]
+",
+      ".google-symbols
+",
+      "i.fa
+",
+      "i[class^=fa-]
+",
+      "
+",
+      "! Other
+",
       "visuallyhidden",
     ],
     "lazyTranslate": true,
     "originalTextPopup": false,
+    "showTranslationBadge": false,
     "toggleTranslationHotkey": null,
     "translatableAttributes": [
       "title",
@@ -613,61 +873,113 @@ exports[`config migrations > race condition detection > Detection race condition
     "detectLanguageByContent": true,
     "enableContextMenu": false,
     "excludeSelectors": [
-      "! Basic tags",
-      "meta",
-      "link",
-      "script",
-      "noscript",
-      "style",
-      "code",
-      "pre",
-      "textarea",
-      "time",
-      "kbd",
-      "svg",
-      "g",
-      "ruby",
-      "rt",
-      "rp",
-      "math",
-      "d-math",
-      "samp",
-      "",
-      "! Elements that request to disable translation",
-      ".notranslate",
-      "[contenteditable="true"]",
-      "[translate=no]",
-      "",
-      "! Social sharing buttons",
-      ".social-share",
-      ".share-nav",
-      "[data-toolbar=share]",
-      ".o-share",
-      "",
-      "! Code elements",
-      ".prism-code",
-      ".enlighter-code",
-      ".rc-CodeBlock",
-      "[role=code]",
-      "table.highlight",
-      "",
-      "! example: https://web.hypothes.is/blog/do-it-yourself-anchoring-and-the-evolution-of-the-hypothesis-toolkit/",
-      "hypothesis-highlight",
-      ".hypothesis-highlight",
-      "",
-      "! Icons",
-      ".material-icons",
-      "material-icon",
-      "span[class^=material-symbols-]",
-      ".google-symbols",
-      "i.fa",
-      "i[class^=fa-]",
-      "",
-      "! Other",
+      "! Basic tags
+",
+      "meta
+",
+      "link
+",
+      "script
+",
+      "noscript
+",
+      "style
+",
+      "code
+",
+      "pre
+",
+      "textarea
+",
+      "time
+",
+      "kbd
+",
+      "svg
+",
+      "g
+",
+      "ruby
+",
+      "rt
+",
+      "rp
+",
+      "math
+",
+      "d-math
+",
+      "samp
+",
+      "
+",
+      "! Elements that request to disable translation
+",
+      ".notranslate
+",
+      "[contenteditable="true"]
+",
+      "[translate=no]
+",
+      "
+",
+      "! Social sharing buttons
+",
+      ".social-share
+",
+      ".share-nav
+",
+      "[data-toolbar=share]
+",
+      ".o-share
+",
+      "
+",
+      "! Code elements
+",
+      ".prism-code
+",
+      ".enlighter-code
+",
+      ".rc-CodeBlock
+",
+      "[role=code]
+",
+      "table.highlight
+",
+      "
+",
+      "! example: https://web.hypothes.is/blog/do-it-yourself-anchoring-and-the-evolution-of-the-hypothesis-toolkit/
+",
+      "hypothesis-highlight
+",
+      ".hypothesis-highlight
+",
+      "
+",
+      "! Icons
+",
+      ".material-icons
+",
+      "material-icon
+",
+      "span[class^=material-symbols-]
+",
+      ".google-symbols
+",
+      "i.fa
+",
+      "i[class^=fa-]
+",
+      "
+",
+      "! Other
+",
       "visuallyhidden",
     ],
     "lazyTranslate": true,
     "originalTextPopup": false,
+    "showTranslationBadge": false,
     "toggleTranslationHotkey": null,
     "translatableAttributes": [
       "title",

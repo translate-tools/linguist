@@ -1,4 +1,6 @@
 import { ActionBadgeController } from './ActionBadgeController';
+import type { PageTranslatorStats } from '../ContentScript/PageTranslator/PageTranslator';
+import type { PageTranslatorState } from '../ContentScript/PageTranslator/PageTranslatorController';
 
 vi.mock('webextension-polyfill', () => {
 	const setBadgeText = vi.fn().mockResolvedValue(undefined);
@@ -29,31 +31,20 @@ import { pageTranslatorStatsUpdatedHandler } from '../ContentScript/PageTranslat
 
 const TAB_ID = 1;
 
-function setup() {
-	let statsCallback: (stats: any, tabId?: number) => void = () => {};
-	let stateCallback: (state: any, tabId?: number) => void = () => {};
+beforeEach(() => {
+	vi.clearAllMocks();
+});
 
+test('shows translating badge while segments are pending', () => {
+	let statsCallback!: (stats: PageTranslatorStats, tabId?: number) => void;
 	vi.mocked(pageTranslatorStatsUpdatedHandler).mockImplementation((cb) => {
 		statsCallback = cb;
-		return vi.fn();
-	});
-	vi.mocked(pageTranslatorStateUpdatedHandler).mockImplementation((cb) => {
-		stateCallback = cb;
 		return vi.fn();
 	});
 
 	const controller = new ActionBadgeController();
 	controller.enable();
 
-	return { controller, statsCallback, stateCallback };
-}
-
-beforeEach(() => {
-	vi.clearAllMocks();
-});
-
-test('shows translating badge while segments are pending', () => {
-	const { statsCallback } = setup();
 	statsCallback({ pending: 5, resolved: 0, rejected: 0 }, TAB_ID);
 
 	expect(browser.browserAction.setBadgeText).toHaveBeenCalledWith({
@@ -64,10 +55,20 @@ test('shows translating badge while segments are pending', () => {
 		color: '#f0a500',
 		tabId: TAB_ID,
 	});
+
+	controller.disable();
 });
 
 test('shows done badge when all segments resolved', () => {
-	const { statsCallback } = setup();
+	let statsCallback!: (stats: PageTranslatorStats, tabId?: number) => void;
+	vi.mocked(pageTranslatorStatsUpdatedHandler).mockImplementation((cb) => {
+		statsCallback = cb;
+		return vi.fn();
+	});
+
+	const controller = new ActionBadgeController();
+	controller.enable();
+
 	statsCallback({ pending: 0, resolved: 10, rejected: 0 }, TAB_ID);
 
 	expect(browser.browserAction.setBadgeText).toHaveBeenCalledWith({
@@ -78,10 +79,20 @@ test('shows done badge when all segments resolved', () => {
 		color: '#3a8f3a',
 		tabId: TAB_ID,
 	});
+
+	controller.disable();
 });
 
 test('shows partial badge when some segments failed', () => {
-	const { statsCallback } = setup();
+	let statsCallback!: (stats: PageTranslatorStats, tabId?: number) => void;
+	vi.mocked(pageTranslatorStatsUpdatedHandler).mockImplementation((cb) => {
+		statsCallback = cb;
+		return vi.fn();
+	});
+
+	const controller = new ActionBadgeController();
+	controller.enable();
+
 	statsCallback({ pending: 0, resolved: 7, rejected: 3 }, TAB_ID);
 
 	expect(browser.browserAction.setBadgeText).toHaveBeenCalledWith({
@@ -92,10 +103,20 @@ test('shows partial badge when some segments failed', () => {
 		color: '#e06000',
 		tabId: TAB_ID,
 	});
+
+	controller.disable();
 });
 
 test('shows error badge when all segments failed', () => {
-	const { statsCallback } = setup();
+	let statsCallback!: (stats: PageTranslatorStats, tabId?: number) => void;
+	vi.mocked(pageTranslatorStatsUpdatedHandler).mockImplementation((cb) => {
+		statsCallback = cb;
+		return vi.fn();
+	});
+
+	const controller = new ActionBadgeController();
+	controller.enable();
+
 	statsCallback({ pending: 0, resolved: 0, rejected: 5 }, TAB_ID);
 
 	expect(browser.browserAction.setBadgeText).toHaveBeenCalledWith({
@@ -106,27 +127,58 @@ test('shows error badge when all segments failed', () => {
 		color: '#cc0000',
 		tabId: TAB_ID,
 	});
+
+	controller.disable();
 });
 
 test('clears badge when translation is stopped', () => {
-	const { stateCallback } = setup();
-	stateCallback({ isTranslated: false }, TAB_ID);
+	let stateCallback!: (state: PageTranslatorState, tabId?: number) => void;
+	vi.mocked(pageTranslatorStateUpdatedHandler).mockImplementation((cb) => {
+		stateCallback = cb;
+		return vi.fn();
+	});
+
+	const controller = new ActionBadgeController();
+	controller.enable();
+
+	stateCallback(
+		{
+			isTranslated: false,
+			counters: { pending: 0, resolved: 0, rejected: 0 },
+			translateDirection: null,
+		},
+		TAB_ID,
+	);
 
 	expect(browser.browserAction.setBadgeText).toHaveBeenCalledWith({
 		text: '',
 		tabId: TAB_ID,
 	});
+
+	controller.disable();
 });
 
 test('ignores zero-counter flush from PageTranslator.stop()', () => {
-	const { statsCallback } = setup();
+	let statsCallback!: (stats: PageTranslatorStats, tabId?: number) => void;
+	vi.mocked(pageTranslatorStatsUpdatedHandler).mockImplementation((cb) => {
+		statsCallback = cb;
+		return vi.fn();
+	});
+
+	const controller = new ActionBadgeController();
+	controller.enable();
+
 	statsCallback({ pending: 0, resolved: 0, rejected: 0 }, TAB_ID);
 
 	expect(browser.browserAction.setBadgeText).not.toHaveBeenCalled();
+
+	controller.disable();
 });
 
 test('clears badge on tab navigation', () => {
-	setup();
+	const controller = new ActionBadgeController();
+	controller.enable();
+
 	const onTabUpdated = vi.mocked(browser.tabs.onUpdated.addListener).mock
 		.calls[0]?.[0] as Function;
 	onTabUpdated(TAB_ID, { url: 'https://example.com' }, {});
@@ -135,10 +187,19 @@ test('clears badge on tab navigation', () => {
 		text: '',
 		tabId: TAB_ID,
 	});
+
+	controller.disable();
 });
 
 test('disable() stops responding to events', () => {
-	const { controller, statsCallback } = setup();
+	let statsCallback!: (stats: PageTranslatorStats, tabId?: number) => void;
+	vi.mocked(pageTranslatorStatsUpdatedHandler).mockImplementation((cb) => {
+		statsCallback = cb;
+		return vi.fn();
+	});
+
+	const controller = new ActionBadgeController();
+	controller.enable();
 	controller.disable();
 
 	vi.clearAllMocks();
