@@ -3,9 +3,7 @@ import browser from 'webextension-polyfill';
 import { pageTranslatorStateUpdatedHandler } from '../ContentScript/PageTranslator/requests/pageTranslatorStateUpdated';
 import { pageTranslatorStatsUpdatedHandler } from '../ContentScript/PageTranslator/requests/pageTranslatorStatsUpdated';
 
-// webextension-polyfill v0.12+ normalises browser.action for both MV2 and MV3,
-// but @types/webextension-polyfill@0.9.x does not yet include the `action` namespace.
-const browserAction = (browser as any).action as typeof browser.browserAction;
+const browserAction = browser.action;
 
 const BADGE_TRANSLATING = { text: '...', color: '#f0a500' };
 const BADGE_DONE = { text: '✓', color: '#3a8f3a' };
@@ -25,6 +23,7 @@ const BADGE_ERROR = { text: '!', color: '#cc0000' };
 export class ActionBadgeController {
 	private isEnabled = false;
 	private cleanupCallback: null | (() => void) = null;
+	private readonly badgedTabs = new Set<number>();
 
 	public enable() {
 		if (this.isEnabled) return;
@@ -75,6 +74,10 @@ export class ActionBadgeController {
 			unwatchState();
 			unwatchStats();
 			browser.tabs.onUpdated.removeListener(onTabUpdated);
+			for (const tabId of this.badgedTabs) {
+				browserAction.setBadgeText({ text: '', tabId }).catch(() => {});
+			}
+			this.badgedTabs.clear();
 		};
 	}
 
@@ -86,6 +89,7 @@ export class ActionBadgeController {
 	}
 
 	private setBadge(tabId: number, badge: { text: string; color: string }) {
+		this.badgedTabs.add(tabId);
 		browserAction.setBadgeText({ text: badge.text, tabId }).catch(() => {});
 		browserAction
 			.setBadgeBackgroundColor({ color: badge.color, tabId })
@@ -93,6 +97,7 @@ export class ActionBadgeController {
 	}
 
 	private clearBadge(tabId: number) {
+		this.badgedTabs.delete(tabId);
 		browserAction.setBadgeText({ text: '', tabId }).catch(() => {});
 	}
 }
