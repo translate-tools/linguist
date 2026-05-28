@@ -1,5 +1,7 @@
 import browser from 'webextension-polyfill';
 
+import type { PageTranslatorStats } from '../ContentScript/PageTranslator/PageTranslator.tsx';
+import type { PageTranslatorState } from '../ContentScript/PageTranslator/PageTranslatorController';
 import { pageTranslatorStateUpdatedHandler } from '../ContentScript/PageTranslator/requests/pageTranslatorStateUpdated';
 import { pageTranslatorStatsUpdatedHandler } from '../ContentScript/PageTranslator/requests/pageTranslatorStatsUpdated';
 
@@ -9,6 +11,14 @@ const BADGE_TRANSLATING = { text: '...', color: '#f0a500' };
 const BADGE_DONE = { text: '✓', color: '#3a8f3a' };
 const BADGE_PARTIAL = { text: '~', color: '#e06000' };
 const BADGE_ERROR = { text: '!', color: '#cc0000' };
+
+type Unsubscribe = () => void;
+type StateSubscriber = (
+	cb: (state: PageTranslatorState, tabId?: number) => void,
+) => Unsubscribe;
+type StatsSubscriber = (
+	cb: (stats: PageTranslatorStats, tabId?: number) => void,
+) => Unsubscribe;
 
 /**
  * Shows a per-tab badge on the toolbar icon reflecting page translation state.
@@ -25,18 +35,23 @@ export class ActionBadgeController {
 	private cleanupCallback: null | (() => void) = null;
 	private readonly badgedTabs = new Set<number>();
 
+	constructor(
+		private readonly subscribePageTranslationState: StateSubscriber = pageTranslatorStateUpdatedHandler,
+		private readonly subscribePageTranslationStats: StatsSubscriber = pageTranslatorStatsUpdatedHandler,
+	) {}
+
 	public enable() {
 		if (this.isEnabled) return;
 		this.isEnabled = true;
 
-		const unwatchState = pageTranslatorStateUpdatedHandler((state, tabId) => {
+		const unwatchState = this.subscribePageTranslationState((state, tabId) => {
 			if (tabId === undefined) return;
 			if (!state.isTranslated) {
 				this.clearBadge(tabId);
 			}
 		});
 
-		const unwatchStats = pageTranslatorStatsUpdatedHandler((stats, tabId) => {
+		const unwatchStats = this.subscribePageTranslationStats((stats, tabId) => {
 			if (!this.isEnabled || tabId === undefined) return;
 
 			const { resolved, rejected, pending } = stats;

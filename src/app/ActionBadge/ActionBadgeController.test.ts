@@ -1,16 +1,6 @@
 import { ActionBadgeController } from './ActionBadgeController';
-import type { PageTranslatorStats } from '../ContentScript/PageTranslator/PageTranslator';
+import type { PageTranslatorStats } from '../ContentScript/PageTranslator/PageTranslator.tsx';
 import type { PageTranslatorState } from '../ContentScript/PageTranslator/PageTranslatorController';
-
-vi.mock('../ContentScript/PageTranslator/requests/pageTranslatorStateUpdated', () => ({
-	pageTranslatorStateUpdatedHandler: vi.fn(() => vi.fn()),
-}));
-vi.mock('../ContentScript/PageTranslator/requests/pageTranslatorStatsUpdated', () => ({
-	pageTranslatorStatsUpdatedHandler: vi.fn(() => vi.fn()),
-}));
-
-import { pageTranslatorStateUpdatedHandler } from '../ContentScript/PageTranslator/requests/pageTranslatorStateUpdated';
-import { pageTranslatorStatsUpdatedHandler } from '../ContentScript/PageTranslator/requests/pageTranslatorStatsUpdated';
 
 // jest-webextension-mock sets up chrome.browserAction; webextension.js shims chrome.action to it.
 // @types/chrome is not installed so we access the mock via globalThis.
@@ -26,118 +16,136 @@ beforeEach(() => {
 	vi.clearAllMocks();
 });
 
-function captureStatsCallback() {
-	let captured!: (stats: PageTranslatorStats, tabId?: number) => void;
-	vi.mocked(pageTranslatorStatsUpdatedHandler).mockImplementationOnce((cb) => {
-		captured = cb;
-		return vi.fn();
+function makeSubscriber<T>() {
+	let latestCb: ((data: T, tabId?: number) => void) | null = null;
+	const unsubscribe = vi.fn();
+	const subscribe = vi.fn((cb: (data: T, tabId?: number) => void) => {
+		latestCb = cb;
+		return unsubscribe;
 	});
-	return () => captured;
+	return {
+		subscribe,
+		unsubscribe,
+		emit: (data: T, tabId?: number) => {
+			if (!latestCb) throw new Error('subscribe not yet called');
+			latestCb(data, tabId);
+		},
+	};
 }
 
-function captureStateCallback() {
-	let captured!: (state: PageTranslatorState, tabId?: number) => void;
-	vi.mocked(pageTranslatorStateUpdatedHandler).mockImplementationOnce((cb) => {
-		captured = cb;
-		return vi.fn();
-	});
-	return () => captured;
-}
+const STOPPED_STATE: PageTranslatorState = {
+	isTranslated: false,
+	counters: { pending: 0, resolved: 0, rejected: 0 },
+	translateDirection: null,
+};
 
 test('shows translating badge while segments are pending', () => {
-	const getStats = captureStatsCallback();
-	const controller = new ActionBadgeController();
+	const state = makeSubscriber<PageTranslatorState>();
+	const stats = makeSubscriber<PageTranslatorStats>();
+	const controller = new ActionBadgeController(state.subscribe, stats.subscribe);
 	onTestFinished(() => controller.disable());
 	controller.enable();
 
-	getStats()({ pending: 5, resolved: 0, rejected: 0 }, TAB_ID);
+	stats.emit({ pending: 5, resolved: 0, rejected: 0 }, TAB_ID);
 
-	expect(chromeAction.setBadgeText).toHaveBeenCalledWith({
+	expect(chromeAction.setBadgeText).toHaveBeenLastCalledWith({
 		text: '...',
 		tabId: TAB_ID,
 	});
-	expect(chromeAction.setBadgeBackgroundColor).toHaveBeenCalledWith({
+	expect(chromeAction.setBadgeBackgroundColor).toHaveBeenLastCalledWith({
 		color: '#f0a500',
 		tabId: TAB_ID,
 	});
 });
 
 test('shows done badge when all segments resolved', () => {
-	const getStats = captureStatsCallback();
-	const controller = new ActionBadgeController();
+	const state = makeSubscriber<PageTranslatorState>();
+	const stats = makeSubscriber<PageTranslatorStats>();
+	const controller = new ActionBadgeController(state.subscribe, stats.subscribe);
 	onTestFinished(() => controller.disable());
 	controller.enable();
 
-	getStats()({ pending: 0, resolved: 10, rejected: 0 }, TAB_ID);
+	stats.emit({ pending: 0, resolved: 10, rejected: 0 }, TAB_ID);
 
-	expect(chromeAction.setBadgeText).toHaveBeenCalledWith({ text: '✓', tabId: TAB_ID });
-	expect(chromeAction.setBadgeBackgroundColor).toHaveBeenCalledWith({
+	expect(chromeAction.setBadgeText).toHaveBeenLastCalledWith({
+		text: '✓',
+		tabId: TAB_ID,
+	});
+	expect(chromeAction.setBadgeBackgroundColor).toHaveBeenLastCalledWith({
 		color: '#3a8f3a',
 		tabId: TAB_ID,
 	});
 });
 
 test('shows partial badge when some segments failed', () => {
-	const getStats = captureStatsCallback();
-	const controller = new ActionBadgeController();
+	const state = makeSubscriber<PageTranslatorState>();
+	const stats = makeSubscriber<PageTranslatorStats>();
+	const controller = new ActionBadgeController(state.subscribe, stats.subscribe);
 	onTestFinished(() => controller.disable());
 	controller.enable();
 
-	getStats()({ pending: 0, resolved: 7, rejected: 3 }, TAB_ID);
+	stats.emit({ pending: 0, resolved: 7, rejected: 3 }, TAB_ID);
 
-	expect(chromeAction.setBadgeText).toHaveBeenCalledWith({ text: '~', tabId: TAB_ID });
-	expect(chromeAction.setBadgeBackgroundColor).toHaveBeenCalledWith({
+	expect(chromeAction.setBadgeText).toHaveBeenLastCalledWith({
+		text: '~',
+		tabId: TAB_ID,
+	});
+	expect(chromeAction.setBadgeBackgroundColor).toHaveBeenLastCalledWith({
 		color: '#e06000',
 		tabId: TAB_ID,
 	});
 });
 
 test('shows error badge when all segments failed', () => {
-	const getStats = captureStatsCallback();
-	const controller = new ActionBadgeController();
+	const state = makeSubscriber<PageTranslatorState>();
+	const stats = makeSubscriber<PageTranslatorStats>();
+	const controller = new ActionBadgeController(state.subscribe, stats.subscribe);
 	onTestFinished(() => controller.disable());
 	controller.enable();
 
-	getStats()({ pending: 0, resolved: 0, rejected: 5 }, TAB_ID);
+	stats.emit({ pending: 0, resolved: 0, rejected: 5 }, TAB_ID);
 
-	expect(chromeAction.setBadgeText).toHaveBeenCalledWith({ text: '!', tabId: TAB_ID });
-	expect(chromeAction.setBadgeBackgroundColor).toHaveBeenCalledWith({
+	expect(chromeAction.setBadgeText).toHaveBeenLastCalledWith({
+		text: '!',
+		tabId: TAB_ID,
+	});
+	expect(chromeAction.setBadgeBackgroundColor).toHaveBeenLastCalledWith({
 		color: '#cc0000',
 		tabId: TAB_ID,
 	});
 });
 
 test('clears badge when translation is stopped', () => {
-	const getState = captureStateCallback();
-	const controller = new ActionBadgeController();
+	const state = makeSubscriber<PageTranslatorState>();
+	const stats = makeSubscriber<PageTranslatorStats>();
+	const controller = new ActionBadgeController(state.subscribe, stats.subscribe);
 	onTestFinished(() => controller.disable());
 	controller.enable();
 
-	getState()(
-		{
-			isTranslated: false,
-			counters: { pending: 0, resolved: 0, rejected: 0 },
-			translateDirection: null,
-		},
-		TAB_ID,
-	);
+	state.emit(STOPPED_STATE, TAB_ID);
 
-	expect(chromeAction.setBadgeText).toHaveBeenCalledWith({ text: '', tabId: TAB_ID });
+	expect(chromeAction.setBadgeText).toHaveBeenLastCalledWith({
+		text: '',
+		tabId: TAB_ID,
+	});
 });
 
 test('ignores zero-counter flush from PageTranslator.stop()', () => {
-	const getStats = captureStatsCallback();
-	const controller = new ActionBadgeController();
+	const state = makeSubscriber<PageTranslatorState>();
+	const stats = makeSubscriber<PageTranslatorStats>();
+	const controller = new ActionBadgeController(state.subscribe, stats.subscribe);
 	onTestFinished(() => controller.disable());
 	controller.enable();
 
-	getStats()({ pending: 0, resolved: 0, rejected: 0 }, TAB_ID);
+	stats.emit({ pending: 0, resolved: 0, rejected: 0 }, TAB_ID);
 
 	expect(chromeAction.setBadgeText).not.toHaveBeenCalled();
 });
 
 test('clears badge on tab navigation', () => {
-	const controller = new ActionBadgeController();
+	const state = makeSubscriber<PageTranslatorState>();
+	const stats = makeSubscriber<PageTranslatorStats>();
+	const controller = new ActionBadgeController(state.subscribe, stats.subscribe);
 	onTestFinished(() => controller.disable());
 	controller.enable();
 
@@ -146,30 +154,46 @@ test('clears badge on tab navigation', () => {
 		.mock.calls[0]?.[0] as (...args: unknown[]) => void;
 	onTabUpdated(TAB_ID, { url: 'https://example.com' }, {});
 
-	expect(chromeAction.setBadgeText).toHaveBeenCalledWith({ text: '', tabId: TAB_ID });
+	expect(chromeAction.setBadgeText).toHaveBeenLastCalledWith({
+		text: '',
+		tabId: TAB_ID,
+	});
 });
 
-test('disable() stops responding to events', () => {
-	const getStats = captureStatsCallback();
-	const controller = new ActionBadgeController();
+test('disable() calls unsubscribe and stops responding to events', () => {
+	const state = makeSubscriber<PageTranslatorState>();
+	const stats = makeSubscriber<PageTranslatorStats>();
+	const controller = new ActionBadgeController(state.subscribe, stats.subscribe);
+
 	controller.enable();
+	expect(state.subscribe).toHaveBeenCalledTimes(1);
+	expect(stats.subscribe).toHaveBeenCalledTimes(1);
+	expect(state.unsubscribe).not.toHaveBeenCalled();
+	expect(stats.unsubscribe).not.toHaveBeenCalled();
+
 	controller.disable();
+	expect(state.unsubscribe).toHaveBeenCalledTimes(1);
+	expect(stats.unsubscribe).toHaveBeenCalledTimes(1);
 
-	vi.clearAllMocks();
-	getStats()({ pending: 3, resolved: 0, rejected: 0 }, TAB_ID);
-
+	// Callback fires after disable — badge must not update
+	stats.emit({ pending: 3, resolved: 0, rejected: 0 }, TAB_ID);
 	expect(chromeAction.setBadgeText).not.toHaveBeenCalled();
 });
 
-test('disable() clears the badge and toggle cycle produces correct state', () => {
-	const controller = new ActionBadgeController();
+test('disable() clears badge and toggle cycle produces correct state', () => {
+	const state = makeSubscriber<PageTranslatorState>();
+	const stats = makeSubscriber<PageTranslatorStats>();
+	const controller = new ActionBadgeController(state.subscribe, stats.subscribe);
 
 	// Cycle 1: translating → disable clears
-	const getStats1 = captureStatsCallback();
 	controller.enable();
-	getStats1()({ pending: 3, resolved: 0, rejected: 0 }, TAB_ID);
-	expect(chromeAction.setBadgeText).toHaveBeenCalledWith({
+	stats.emit({ pending: 3, resolved: 0, rejected: 0 }, TAB_ID);
+	expect(chromeAction.setBadgeText).toHaveBeenLastCalledWith({
 		text: '...',
+		tabId: TAB_ID,
+	});
+	expect(chromeAction.setBadgeBackgroundColor).toHaveBeenLastCalledWith({
+		color: '#f0a500',
 		tabId: TAB_ID,
 	});
 
@@ -179,14 +203,14 @@ test('disable() clears the badge and toggle cycle produces correct state', () =>
 		tabId: TAB_ID,
 	});
 
-	vi.clearAllMocks();
-
 	// Cycle 2: partial → disable clears
-	const getStats2 = captureStatsCallback();
 	controller.enable();
-	getStats2()({ pending: 0, resolved: 5, rejected: 2 }, TAB_ID);
-	expect(chromeAction.setBadgeText).toHaveBeenCalledWith({ text: '~', tabId: TAB_ID });
-	expect(chromeAction.setBadgeBackgroundColor).toHaveBeenCalledWith({
+	stats.emit({ pending: 0, resolved: 5, rejected: 2 }, TAB_ID);
+	expect(chromeAction.setBadgeText).toHaveBeenLastCalledWith({
+		text: '~',
+		tabId: TAB_ID,
+	});
+	expect(chromeAction.setBadgeBackgroundColor).toHaveBeenLastCalledWith({
 		color: '#e06000',
 		tabId: TAB_ID,
 	});
@@ -197,13 +221,17 @@ test('disable() clears the badge and toggle cycle produces correct state', () =>
 		tabId: TAB_ID,
 	});
 
-	vi.clearAllMocks();
-
 	// Cycle 3: all-error → disable clears
-	const getStats3 = captureStatsCallback();
 	controller.enable();
-	getStats3()({ pending: 0, resolved: 0, rejected: 10 }, TAB_ID);
-	expect(chromeAction.setBadgeText).toHaveBeenCalledWith({ text: '!', tabId: TAB_ID });
+	stats.emit({ pending: 0, resolved: 0, rejected: 10 }, TAB_ID);
+	expect(chromeAction.setBadgeText).toHaveBeenLastCalledWith({
+		text: '!',
+		tabId: TAB_ID,
+	});
+	expect(chromeAction.setBadgeBackgroundColor).toHaveBeenLastCalledWith({
+		color: '#cc0000',
+		tabId: TAB_ID,
+	});
 
 	controller.disable();
 	expect(chromeAction.setBadgeText).toHaveBeenLastCalledWith({
