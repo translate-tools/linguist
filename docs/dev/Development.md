@@ -1,6 +1,6 @@
-The build scripts are designed to run on unix platform (linux, mac, bsd, etc), if you on windows, try to install [cygwin](https://www.cygwin.com/).
-
 # Build from sources
+
+The build scripts are designed to run on unix platform (linux, mac, bsd, etc), if you on windows, try to install [cygwin](https://www.cygwin.com/).
 
 ## Prerequisites
 
@@ -38,7 +38,7 @@ If you change a theme tokens, you also have to compile a theme files: `npm run b
 
 To debug on android, [see instructions](./AndroidDebug.md).
 
-To make a custom translator, see [translator API](./CustomTranslator.md).
+To make a custom translator, see [translator API](../CustomTranslator.md).
 
 # Tests
 

@@ -1,3 +1,5 @@
+# Text to speech
+
 With custom TTS module you may use Linguist with your favorite text to speech service.
 
 ## Usage
@@ -9,4 +11,4 @@ With custom TTS module you may use Linguist with your favorite text to speech se
 
 ## API
 
-If you want to create custom TTS module, read the [TTS API docs](./modules/tts.md)
+If you want to create custom TTS module, read the [TTS API docs](./api//tts.md)

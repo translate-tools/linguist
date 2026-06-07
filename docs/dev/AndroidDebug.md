@@ -1,3 +1,5 @@
+# Debug on Android
+
 This section provides instructions for debugging Linguist on Android:
 
 - Install and configure [ADB](https://developer.android.com/tools/adb)

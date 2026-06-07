@@ -1,3 +1,5 @@
+# Custom modules introduction
+
 Linguist is privacy-focused and highly customizable, so you can use custom modules that implement core features related to translation, such as translators and text-to-speech.
 
 Read more about the custom modules you need:

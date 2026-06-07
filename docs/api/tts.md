@@ -1,22 +1,12 @@
-Text to speech module (TTS) are used by Linguist to speak text that user translate.
+# Text to speech
+
+Text to speech module (TTS) used to speak any text.
 
 ## TTS API
 
-Code must have a translator class and this object must be the last object in the code.
+The module must be implemented in [custom module format](./custom-module.md).
 
-```js
-class MyTTS {
-	// ...
-}
-
-// some other code may be after declaration
-console.log('Hello world');
-
-// last object in the code must be a translator
-MyTTS;
-```
-
-### TTS class signature
+The class must implement a `TTS` interface:
 
 ```ts
 /**
