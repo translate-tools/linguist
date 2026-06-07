@@ -36,6 +36,8 @@ const config: Config = {
 				docs: {
 					path: '../../docs',
 					include: ['{*,**/*}.md', '{*,**/*}.mdx'],
+					sidebarCollapsed: false,
+					sidebarPath: require.resolve('./sidebars.ts'),
 				},
 				blog: {
 					blogTitle: 'Linguist Translate blog',

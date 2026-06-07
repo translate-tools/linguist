@@ -116,7 +116,7 @@ export const Landing = () => {
 					i18nKey={'faq.items.privacy.content'}
 					components={{
 						'offline-translator': (
-							<Link href={'/docs/manuals/OfflineTranslation'} />
+							<Link href={'/docs/guides/OfflineTranslation'} />
 						),
 					}}
 				/>
@@ -500,7 +500,7 @@ export const Landing = () => {
 											components={[
 												<Link
 													key="link"
-													href="https://github.com/translate-tools/linguist/blob/master/docs/CustomTranslator.md"
+													href="/docs/CustomTranslator"
 												/>,
 											]}
 										/>
