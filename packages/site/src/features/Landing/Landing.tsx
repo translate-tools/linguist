@@ -500,7 +500,7 @@ export const Landing = () => {
 											components={[
 												<Link
 													key="link"
-													href="https://github.com/translate-tools/linguist/blob/master/docs/CustomTranslator.md"
+													href="/docs/CustomTranslator"
 												/>,
 											]}
 										/>
