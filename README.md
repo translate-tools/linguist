@@ -1,19 +1,19 @@
-Linguist is a powerful browser extension that is ready to replace your favorite translation service.
+Linguist is a powerful browser extension built to replace commercial translation services — private, fast, and under your control.
 
-Translate web pages, highlighted text, Netflix subtitles, private messages, speak the translated text, and save important translations to your personal dictionary to learn words in 130 languages.
+Translate web pages, highlighted text, subtitles (including Netflix), and private messages; hear translations via TTS; and save entries to a personal dictionary. Supports 130 languages.
 
 # Why Linguist?
 
-Unlike other browser extensions, Linguist is not just a wrapper over the Google Translator Widget; it's a full-featured and independent translation system. This is why with Linguist you can be private and translate texts offline on your device and use any translation service, [even your own](./docs/CustomTranslator.md) like ChatGPT. See a [custom translators list](https://github.com/translate-tools/linguist-translators) to find bindings for the most popular translation services.
+Linguist is a standalone translation system — not a thin wrapper around a commercial widget. Translate privately and offline on your device, or plug in any backend you choose (including your own; see [Custom translators](https://linguister.io/docs/CustomTranslator)). See a [custom translators list](https://github.com/translate-tools/linguist-translators) for popular bindings.
 
-Linguist is free, open-source, respects your privacy, and does not collect your personal data.
+Linguist is free, open-source, and collects no personal data.
 
 # Features
 
 Most important features
 - Modular translators system
 	- You can use any translation service like Google, Yandex, Bing, DeepL, ChatGPT, etc.
-	- [Custom translators](./docs/CustomTranslator.md): you can use your own translator module
+	- [Custom translators](https://linguister.io/docs/CustomTranslator): you can use your own translator module
 	- Offline translation. With embedded [Bergamot translator](https://github.com/browsermt/bergamot-translator), you can translate texts right on your device. Keep your privacy
 - All-in-one translation solution
 	- Full-page translation with flexible auto-translation configuration
@@ -56,23 +56,21 @@ See more info on https://linguister.io
 
 See [development docs](./docs/Development.md) to get info on how to build and debug.
 
-You can improve Linguist, [make issues](https://github.com/translate-tools/linguist/issues/new) and suggest features or report bugs.
-
-Contribute to Linguist, see the ["help wanted" label](https://github.com/translate-tools/linguist/labels/help%20wanted) to find hot issues.
+Contribute to Linguist: file issues, suggest features, and submit pull requests. See the ["help wanted" label](https://github.com/translate-tools/linguist/labels/help%20wanted) for high-impact tasks.
 
 # Donations
 
-Linguist is completely free, open-source, and does not collect any user data to sell.
+Linguist is free, open-source, and collects no user data. If you rely on Linguist, back its independence and development.
 
-You can support the project to help it maintain independence and high quality:
-- tell others about Linguist
-- [suggest](https://github.com/translate-tools/linguist/issues/new) new ideas and elegant ways to make Linguist better
-- help us translate Linguist into your language. Read the [internationalization guide](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization) and send us a pull request
-- do graphic design for the software
-- help us by trying to reproduce [unconfirmed bug reports](https://github.com/translate-tools/linguist/labels/recheck)
-- help us address bugs if you know Typescript
+How you can support:
+- Star the repository to increase visibility and attract contributors
+- File issues and suggest improvements: [new issue](https://github.com/translate-tools/linguist/issues/new)
+- Help translate the UI (see the internationalization guide) and send a pull request
+- Contribute artwork or UX design
+- Reproduce and test unconfirmed bug reports: [recheck](https://github.com/translate-tools/linguist/labels/recheck)
+- Fix bugs or implement features (TypeScript experience helpful)
 
-Also, you can donate to us to vote with money for goal prioritization, to add some feature or fix some bug as soon as possible. Just donate with any method below, then send transaction details and issue number or feature request description to email [support@linguister.io](mailto:support@linguister.io) (or right in issue comments if you wish). For significant donations, we will start work on your request as soon as possible.
+Donate to vote with your money: prioritize fixes, commission features, or speed up important work. After donating, send transaction details and the issue/feature reference to [support@linguister.io](mailto:support@linguister.io) or add them in the issue comments. For significant donations, we will begin work on your request immediately.
 
 - Monero (XMR): 861w7WuFGecR7SMpuf7GX9BBUgGJb1Xdx8z5pCpMrKY2ZeZAzS3mwZeQeJGV5RPpu35fr5dURSm587ewpHYGzNuGKGroQnD
 - Bitcoin (BTC): bc1q2krassq0sa2aphkx37zn374lfjnthr5frm6s7y
