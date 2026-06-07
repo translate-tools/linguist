@@ -6,7 +6,7 @@ The translator API is designed to handle texts efficiently in terms of the ratio
 
 Translator methods may be called intensively, which is why it is important to set correct rate limits.
 
-### Translator API
+## Translator API
 
 The translator must be implemented in [custom module format](./custom-module.md).
 
@@ -26,7 +26,7 @@ class Translator {
 	 *
 	 * Method to translate multiple texts
 	*/
-	public translateBatch(text: string[], from: string, to: string) => Promise<string>;
+	public translateBatch(text: string[], from: string, to: string) => Promise<string[]>;
 
 	/**
 	 * REQUIRED

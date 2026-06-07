@@ -16,32 +16,32 @@ Quick start instructions to deploy LibreTranslate locally:
 - Install [Docker](https://www.docker.com/get-started/)
 - Install the NVIDIA [Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html) to allow the container to use your GPU
 - Create a `compose.yml` file:
-	```yml
-	services:
-	  libretranslate:
-	  container_name: libretranslate
-	  image: libretranslate/libretranslate:latest-cuda
-	  ports:
-	    - "5000:5000"
-	  restart: unless-stopped
-	  command: --disable-web-ui
-	  environment:
-	    - LT_API_KEYS_DB_PATH=/app/db/api_keys.db
-	    - LT_API_KEYS=True
-	    - LT_UPDATE_MODELS=True
-	    - LT_DEBUG=True
-	    - PUID=root
-	  volumes:
-	    - ~/.libretranslate/db:/app/db
-	    - ~/.libretranslate/data:/root/.local:rw
-	  deploy:
-	  resources:
-	    reservations:
-	    devices:
-	      - driver: nvidia
-	        count: 1
-	        capabilities: [gpu]
-	```
+```yml
+services:
+  libretranslate:
+    container_name: libretranslate
+    image: libretranslate/libretranslate:latest-cuda
+    ports:
+      - "5000:5000"
+    restart: unless-stopped
+    command: --disable-web-ui
+    environment:
+     - LT_API_KEYS_DB_PATH=/app/db/api_keys.db
+     - LT_API_KEYS=True
+     - LT_UPDATE_MODELS=True
+     - LT_DEBUG=True
+     - PUID=root
+    volumes:
+     - ~/.libretranslate/db:/app/db
+     - ~/.libretranslate/data:/root/.local:rw
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+```
 - Start the container with `docker compose up -d --build`
 
 Once the container is built, LibreTranslate will download the models. This will take some time. You can check http://localhost:5000/ or view the Docker logs with `docker compose logs -f`. Once the models are loaded, you can use the translator.
