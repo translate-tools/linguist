@@ -1,17 +1,17 @@
 # Translation services
 
-With custom translator you may use Linguist with your favorite translation service if you not enough an embedded translators.
+With a custom translator, you can use Linguist with your favourite translation service if the built-in translators are not sufficient.
 
 ## Custom translators list
 
-You can find a custom translators in a [custom translators list](https://github.com/translate-tools/linguist-translators).
+You can find custom translators in the [custom translators list](https://github.com/translate-tools/linguist-translators).
 
-Read [Offline translation manual](./guides/OfflineTranslation.md) to get known how to setup offline translation with Linguist.
+Read the [offline translation guide](./guides/OfflineTranslation.md) to learn how to set up offline translation with Linguist.
 
-## Use custom translator
+## Using a custom translator
 
-- Go to Linguist settings in a section "Custom translators"
-- Press button "Manage translators"
+- Go to Linguist settings in the "Custom translators" section
+- Press the "Manage translators" button
 - Press "Add"
-- Input translator name and insert module code
-- Click "Save" and select your translator in "Translation module"
+- Enter a translator name and insert the module code
+- Click "Save" and select your translator in the "Translation module" dropdown

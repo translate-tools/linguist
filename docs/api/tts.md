@@ -1,10 +1,10 @@
 # Text to speech
 
-Text to speech module (TTS) used to speak any text.
+A text to speech module (TTS) is used to speak any text.
 
 ## TTS API
 
-The module must be implemented in [custom module format](./custom-module.md).
+The module must be implemented in the [custom module format](./custom-module.md).
 
 The class must implement a `TTS` interface:
 
@@ -14,7 +14,7 @@ The class must implement a `TTS` interface:
  */
 type TTSAudioBuffer = {
 	/**
-	 * Audio mimetype
+	 * Audio MIME type
 	 */
 	type: string;
 
@@ -26,12 +26,12 @@ type TTSAudioBuffer = {
 
 class TTS {
 	/**
-	 * Method that return buffer with audio to speak text
+	 * Method that returns a buffer with audio to speak the text
 	*/
 	public getAudioBuffer(text: string, language: string) => Promise<TTSAudioBuffer>;
 
 	/**
-	 * Return an array of supported languages as ISO 639-1 codes
+	 * Returns an array of supported languages as ISO 639-1 codes
 	*/
 	static getSupportedLanguages(): langCode[];
 
@@ -40,7 +40,7 @@ class TTS {
 
 ## Example
 
-Example of a dummy TTS module. In your code, feel free to use HTTP requests to any urls.
+Example of a dummy TTS module. In your code, feel free to use HTTP requests to any URLs.
 
 ```js
 class FakeTTS {

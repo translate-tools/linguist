@@ -1,16 +1,16 @@
 # Translator
 
-Translator is a core component called to translate texts between languages.
+The translator is a core component used to translate texts between languages.
 
-The translator API is designed to handle texts efficiently in terms of translated texts per time, and number of requests ratio.
+The translator API is designed to handle texts efficiently in terms of the ratio of texts translated per time to number of requests.
 
-Translator methods may be called intensively, this is why it is important to set correct rate limits.
+Translator methods may be called intensively, which is why it is important to set correct rate limits.
 
 ### Translator API
 
 The translator must be implemented in [custom module format](./custom-module.md).
 
-The minimal translator must implement the API below:
+The minimal translator must implement the following API:
 
 ```ts
 class Translator {
@@ -31,34 +31,34 @@ class Translator {
 	/**
 	 * REQUIRED
 	 *
-	 * return maximal length of string for translating
+	 * returns the maximum length of string for translating
 	*/
 	public getLengthLimit() => number;
 
 	/**
 	 * REQUIRED
 	 *
-	 * return minimal timeout between requests
+	 * returns the minimum timeout between requests
 	*/
 	public getRequestsTimeout() => number;
 
 	/**
 	 * REQUIRED
 	 *
-	 * return number of extra chars for text over limit
+	 * returns the number of extra chars for text over the limit
 	*/
 	public checkLimitExceeding(text: string | string[]): number;
 
 	/**
 	 * REQUIRED
 	 *
-	 * is translator support value 'auto' as text language
+	 * whether the translator supports the value 'auto' as the text language
 	*/
 	static isSupportedAutoFrom(): boolean;
 	/**
 	 * REQUIRED
 	 *
-	 * return array of supported languages as ISO 639-1 codes
+	 * returns an array of supported languages as ISO 639-1 codes
 	*/
 	static getSupportedLanguages(): langCode[];
 
@@ -67,7 +67,7 @@ class Translator {
 
 ## Example
 
-Example of a dummy translator. In your code, feel free to use HTTP requests to any urls.
+Example of a dummy translator. In your code, feel free to use HTTP requests to any URLs.
 
 ```js
 class FakeTranslator {
