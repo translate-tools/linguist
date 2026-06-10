@@ -324,6 +324,12 @@
 	"settings_option_pageTranslation_detectLanguageByContent_desc": {
 		"message": "Analyze the text on the web page to detect its language. When disabled, the language specified in the <slot id=docs>page metadata</slot> will be used"
 	},
+	"settings_option_pageTranslation_showTranslationBadge": {
+		"message": "Show translation badge"
+	},
+	"settings_option_pageTranslation_showTranslationBadge_desc": {
+		"message": "Show a badge on the toolbar icon reflecting the translation state of the current page"
+	},
 	"settings_option_pageTranslation_enableContextMenu": {
 		"message": "Enable context menu button"
 	},

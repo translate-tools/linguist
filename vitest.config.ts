@@ -16,7 +16,10 @@ export default defineConfig({
 			load(id) {
 				const extensions = ['.txt'];
 				if (extensions.some((ext) => id.endsWith(ext))) {
-					const sqlContent = readFileSync(path.resolve(id), 'utf-8');
+					const sqlContent = readFileSync(path.resolve(id), 'utf-8').replace(
+						/\r\n/g,
+						'\n',
+					);
 					return `export default ${JSON.stringify(sqlContent)};`;
 				}
 

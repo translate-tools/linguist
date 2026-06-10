@@ -224,6 +224,18 @@ export const generateTree = ({
 					},
 				},
 				{
+					path: 'pageTranslator.showTranslationBadge',
+					description: getMessage(
+						'settings_option_pageTranslation_showTranslationBadge_desc',
+					),
+					optionContent: {
+						type: 'Checkbox',
+						text: getMessage(
+							'settings_option_pageTranslation_showTranslationBadge',
+						),
+					},
+				},
+				{
 					path: 'pageTranslator.enableContextMenu',
 					description: getMessage(
 						'settings_option_pageTranslation_enableContextMenu_desc',

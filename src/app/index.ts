@@ -9,6 +9,7 @@ import { clearCache } from '../requests/backend/clearCache';
 import { sendAppConfigUpdateEvent } from '../requests/global/appConfigUpdate';
 import { customTranslatorsFactory } from '../requests/offscreen/customTranslators';
 import { AppConfigType } from '../types/runtime';
+import { ActionBadgeController } from './ActionBadge/ActionBadgeController';
 import { Background } from './Background';
 import { requestHandlers } from './Background/requestHandlers';
 import { ConfigStorage, ObservableAsyncStorage } from './ConfigStorage/ConfigStorage';
@@ -172,6 +173,17 @@ export class App {
 					translatePageContextMenu.enable();
 				} else {
 					translatePageContextMenu.disable();
+				}
+			});
+
+		const actionBadgeController = new ActionBadgeController();
+		$appConfig
+			.map((config) => config.pageTranslator.showTranslationBadge)
+			.watch((isEnabled) => {
+				if (isEnabled) {
+					actionBadgeController.enable();
+				} else {
+					actionBadgeController.disable();
 				}
 			});
 	}
