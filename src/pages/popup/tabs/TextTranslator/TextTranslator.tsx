@@ -475,6 +475,19 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 							>
 								<Icon glyph="volume-up" scalable={false} />
 							</Button>
+							<Button
+								disabled={translation === null || resultText === null}
+								onPress={() => {
+									if (resultText !== null) {
+										navigator.clipboard.writeText(resultText);
+									}
+								}}
+								view="clear"
+								size="s"
+								title={getMessage('common_copy')}
+							>
+								<Icon glyph="content-copy" scalable={false} />
+							</Button>
 						</div>
 					</div>
 				</div>
