@@ -4,6 +4,7 @@ import React, {
 	FC,
 	ReactNode,
 	useEffect,
+	useLayoutEffect,
 	useMemo,
 	useRef,
 	useState,
@@ -20,6 +21,8 @@ import { Loader } from '../../../components/primitives/Loader/Loader';
 import { TabsMenu } from '../../../components/primitives/TabsMenu/TabsMenu.bundle/desktop';
 import { isMobileBrowser } from '../../../lib/browser';
 import { getMessage } from '../../../lib/language';
+import { TELEMETRY_EVENT_NAME } from '../../../lib/telemetry';
+import { telemetry } from '../../../lib/telemetry/singleton';
 import { XResizeObserver } from '../../../lib/XResizeObserver';
 import LogoElement from '../../../res/logo-base.svg';
 import { AppConfigType } from '../../../types/runtime';
@@ -125,6 +128,10 @@ export const PopupWindow: FC<PopupWindowProps> = ({
 	rootElement,
 	minWidth,
 }) => {
+	useLayoutEffect(() => {
+		telemetry.track(TELEMETRY_EVENT_NAME.POPUP_OPENED);
+	}, []);
+
 	// Resize window
 	const resizeObserver = useRef<XResizeObserver>();
 	useEffect(() => {

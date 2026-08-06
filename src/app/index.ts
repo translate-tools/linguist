@@ -4,6 +4,8 @@ import browser from 'webextension-polyfill';
 import { defaultConfig } from '../config';
 import { isBackgroundContext, isChromium, isFirefox } from '../lib/browser';
 import { getAllTabs } from '../lib/browser/tabs';
+import { TELEMETRY_EVENT_NAME } from '../lib/telemetry';
+import { telemetry } from '../lib/telemetry/singleton';
 import { TextTranslatorStorage } from '../pages/popup/tabs/TextTranslator/TextTranslator.utils/TextTranslatorStorage';
 import { clearCache } from '../requests/backend/clearCache';
 import { sendAppConfigUpdateEvent } from '../requests/global/appConfigUpdate';
@@ -79,6 +81,8 @@ export class App {
 		await this.handleConfigUpdates();
 
 		this.$onInstalledData.watch(this.onInstalled);
+
+		telemetry.track(TELEMETRY_EVENT_NAME.APP_OPENED);
 	}
 
 	private async setupOffscreenDocuments() {
@@ -127,6 +131,11 @@ export class App {
 		// Send update event
 		$appConfig.watch((config) => {
 			sendAppConfigUpdateEvent(config);
+		});
+
+		// Watch for updates
+		$appConfig.updates.watch(() => {
+			telemetry.track(TELEMETRY_EVENT_NAME.CONFIG_UPDATED);
 		});
 
 		// Clear cache while disable
@@ -178,6 +187,18 @@ export class App {
 
 	private readonly onInstalled = async (details: OnInstalledData) => {
 		if (details === null) return;
+
+		// Track install/updates
+		if (details.reason === 'install') {
+			telemetry.track(TELEMETRY_EVENT_NAME.APP_INSTALLED);
+		}
+		if (
+			details.reason === 'update' &&
+			details.previousVersion !== undefined &&
+			details.previousVersion !== browser.runtime.getManifest().version
+		) {
+			telemetry.track(TELEMETRY_EVENT_NAME.APP_UPDATED);
+		}
 
 		// Inject content scripts for chrome, to make page translation available just after install
 		if (isChromium()) {

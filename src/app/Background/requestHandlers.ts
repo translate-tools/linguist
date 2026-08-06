@@ -18,6 +18,7 @@ import { getRecentUsedLanguagesFactory } from '../../requests/backend/recentUsed
 import { resetConfigFactory } from '../../requests/backend/resetConfig';
 import { setConfigFactory } from '../../requests/backend/setConfig';
 import { suggestLanguageFactory } from '../../requests/backend/suggestLanguage';
+import { telemetryFactory } from '../../requests/backend/telemetry';
 import { translateFactory } from '../../requests/backend/translate';
 import { addTranslationFactory } from '../../requests/backend/translations/addTranslation';
 import { clearTranslationsFactory } from '../../requests/backend/translations/clearTranslations';
@@ -35,6 +36,7 @@ import { updateConfigFactory } from '../../requests/backend/updateConfig';
 
 export const requestHandlers = [
 	translateFactory,
+	telemetryFactory,
 	suggestLanguageFactory,
 	getTranslatorFeaturesFactory,
 	getUserLanguagePreferencesFactory,

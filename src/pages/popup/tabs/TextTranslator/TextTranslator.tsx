@@ -26,9 +26,11 @@ import {
 	getLocalizedNode,
 	getMessage,
 } from '../../../../lib/language';
+import { TELEMETRY_EVENT_NAME } from '../../../../lib/telemetry';
 import { addTranslationHistoryEntry } from '../../../../requests/backend/history/addTranslationHistoryEntry';
 import { TRANSLATION_ORIGIN } from '../../../../requests/backend/history/constants';
 import { suggestLanguage } from '../../../../requests/backend/suggestLanguage';
+import { trackClientEvent } from '../../../../requests/backend/telemetry';
 import { ITranslation } from '../../../../types/translation/Translation';
 import { MutableValue } from '../../../../types/utils';
 import { TabData } from '../../layout/PopupWindow';
@@ -193,19 +195,19 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 		const localContext = textStateContext.current;
 
 		translateHook(userInput, from, to)
-			.then((response) => {
+			.then((translatedText) => {
 				if (localContext !== textStateContext.current) {
 					return;
 				}
 
-				if (typeof response !== 'string') {
+				if (typeof translatedText !== 'string') {
 					throw new Error(
 						`[${getMessage('common_error')}: unexpected response]`,
 					);
 				}
 
 				setTranslation({
-					text: response,
+					text: translatedText,
 					original: userInput,
 				});
 
@@ -215,8 +217,15 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 						from,
 						to,
 						originalText: userInput,
-						translatedText: response,
+						translatedText: translatedText,
 					},
+				});
+
+				trackClientEvent(TELEMETRY_EVENT_NAME.TEXT_TRANSLATION, {
+					from,
+					to,
+					sourceTextLength: userInput.length,
+					translationLength: translatedText.length,
 				});
 			})
 			.catch((reason) => {

@@ -1,5 +1,8 @@
 import { Event } from 'effector';
 
+import { TELEMETRY_EVENT_NAME } from '../../../lib/telemetry';
+import { trackClientEvent } from '../../../requests/backend/telemetry';
+
 import { PageTranslationOptions } from '../PageTranslationContext';
 import { PageTranslatorStats } from './PageTranslator';
 import { PageTranslatorManager } from './PageTranslatorManager';
@@ -28,11 +31,19 @@ export class PageTranslatorController {
 	public translate(options: PageTranslationOptions) {
 		this.updateTranslationState(options);
 		this.notifyState();
+		trackClientEvent(TELEMETRY_EVENT_NAME.PAGE_TRANSLATION, {
+			action: 'run',
+			from: options.from,
+			to: options.to,
+		});
 	}
 
 	public stopTranslate() {
 		this.updateTranslationState(null);
 		this.notifyState();
+		trackClientEvent(TELEMETRY_EVENT_NAME.PAGE_TRANSLATION, {
+			action: 'stop',
+		});
 	}
 
 	public getStatus(): PageTranslatorState {

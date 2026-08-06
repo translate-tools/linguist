@@ -3,6 +3,7 @@ import React, {
 	FC,
 	useCallback,
 	useEffect,
+	useLayoutEffect,
 	useMemo,
 	useRef,
 	useState,
@@ -18,6 +19,8 @@ import { useToastMessages } from '../../../components/primitives/ToastMessages/u
 import { isMobileBrowser } from '../../../lib/browser';
 import { openFileDialog, readAsText, saveFile } from '../../../lib/files';
 import { getMessage } from '../../../lib/language';
+import { TELEMETRY_EVENT_NAME } from '../../../lib/telemetry';
+import { telemetry } from '../../../lib/telemetry/singleton';
 // Requests
 import { clearCache as clearCacheReq } from '../../../requests/backend/clearCache';
 import { getConfig } from '../../../requests/backend/getConfig';
@@ -50,6 +53,10 @@ interface OptionsPageProps {
 }
 
 export const OptionsPage: FC<OptionsPageProps> = ({ messageHideDelay }) => {
+	useLayoutEffect(() => {
+		telemetry.track(TELEMETRY_EVENT_NAME.VISIT_PREFERENCES_SCREEN);
+	}, []);
+
 	const [loaded, setLoaded] = useState<boolean>(false);
 
 	const [config, setConfig] = useState<AppConfigType | undefined>();
