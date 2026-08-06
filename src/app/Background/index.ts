@@ -1,9 +1,9 @@
 // Translators
 import {
+	createFallbackTranslator,
 	GoogleTranslator,
-	MicrosoftTranslator,
+	GoogleTranslatorTokenFree,
 	TranslatorConstructor,
-	YandexTranslator,
 } from 'anylang/translators';
 import { isEqual } from 'lodash';
 
@@ -21,10 +21,40 @@ import { TranslatorManager } from './TranslatorManager';
 import { TTSController } from './TTS/TTSController';
 import { TTSManager } from './TTS/TTSManager';
 
+// Use one of the available Google API
+const AggregatedGoogleTranslator = class extends createFallbackTranslator([
+	{
+		translator: new GoogleTranslator(),
+		languages: new Set(GoogleTranslator.getSupportedLanguages()),
+		languageDetection: GoogleTranslator.isSupportedAutoFrom(),
+	},
+	{
+		translator: new GoogleTranslatorTokenFree(),
+		languages: new Set(GoogleTranslatorTokenFree.getSupportedLanguages()),
+		languageDetection: GoogleTranslatorTokenFree.isSupportedAutoFrom(),
+	},
+]) {
+	static translatorName = 'Google';
+};
+
+const AutoTranslator = class extends createFallbackTranslator([
+	{
+		translator: new AggregatedGoogleTranslator(),
+		languages: new Set(AggregatedGoogleTranslator.getSupportedLanguages()),
+		languageDetection: AggregatedGoogleTranslator.isSupportedAutoFrom(),
+	},
+	{
+		translator: new BergamotTranslator(),
+		languages: new Set(BergamotTranslator.getSupportedLanguages()),
+		languageDetection: BergamotTranslator.isSupportedAutoFrom(),
+	},
+]) {
+	static translatorName = 'Auto';
+};
+
 export const embeddedTranslators = {
-	MicrosoftTranslator,
-	GoogleTranslator,
-	YandexTranslator,
+	AutoTranslator,
+	GoogleTranslator: AggregatedGoogleTranslator,
 	BergamotTranslator,
 } as const;
 
