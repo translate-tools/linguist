@@ -16,6 +16,8 @@ export class RybbitTracker implements EventTracker {
 
 		if (filter && !filter(eventName, props)) return;
 
+		const { uid, userAgent, language, ...restProps } = props ?? {};
+
 		const response = await fetch(new URL('/api/track', apiHost).toString(), {
 			method: 'POST',
 			headers: {
@@ -25,12 +27,10 @@ export class RybbitTracker implements EventTracker {
 				site_id: siteId,
 				type: 'custom_event',
 				event_name: eventName,
-				user_id: typeof props?.uid === 'string' ? props.uid : undefined,
-				user_agent:
-					typeof props?.userAgent === 'string' ? props.userAgent : undefined,
-				language:
-					typeof props?.language === 'string' ? props.language : undefined,
-				properties: JSON.stringify(props),
+				user_id: typeof uid === 'string' ? uid : undefined,
+				user_agent: typeof userAgent === 'string' ? userAgent : undefined,
+				language: typeof language === 'string' ? language : undefined,
+				properties: JSON.stringify(restProps),
 			}),
 		});
 
