@@ -15,4 +15,6 @@ export enum TELEMETRY_EVENT_NAME {
 	POPUP_OPENED = 'Popup opened',
 	VISIT_PREFERENCES_SCREEN = 'Visit preferences screen',
 	CONFIG_UPDATED = 'Config updated',
+
+	CAPTURED_ERROR = 'Captured error',
 }

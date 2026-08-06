@@ -8,6 +8,8 @@ import {
 import { isEqual } from 'lodash';
 
 import { createSelector } from '../../lib/effector/createSelector';
+import { TELEMETRY_EVENT_NAME } from '../../lib/telemetry';
+import { telemetry } from '../../lib/telemetry/singleton';
 import { BergamotTranslator } from '../../lib/translators/bergamot/BergamotTranslator';
 import {
 	createPromiseWithControls,
@@ -50,6 +52,16 @@ const AutoTranslator = class extends createFallbackTranslator([
 	},
 ]) {
 	static translatorName = 'Auto';
+	constructor() {
+		super({
+			onTranslatorError(error) {
+				telemetry.track(TELEMETRY_EVENT_NAME.CAPTURED_ERROR, {
+					scope: 'auto translator',
+					error: String(error),
+				});
+			},
+		});
+	}
 };
 
 export const embeddedTranslators = {

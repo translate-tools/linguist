@@ -1,6 +1,8 @@
 import { isLanguageCodeISO639v1 } from 'anylang/languages';
 import { IScheduler, Scheduler, SchedulerWithCache } from 'anylang/scheduling';
 
+import { TELEMETRY_EVENT_NAME } from '../../../lib/telemetry';
+import { telemetry } from '../../../lib/telemetry/singleton';
 import { AppConfigType } from '../../../types/runtime';
 import { RecordValues } from '../../../types/utils';
 
@@ -85,9 +87,48 @@ export class TranslatorManager<Translators extends TranslatorsMap = TranslatorsM
 		if (!forceCreate && this.translator !== null) return this.translator;
 
 		const translatorClass = this.getTranslatorClass();
-		this.translator = new translatorClass() as InstanceType<
-			RecordValues<Translators>
-		>;
+
+		this.translator = new (class extends translatorClass {
+			async translate(
+				text: string,
+				sourceLanguage: string,
+				targetLanguage: string,
+			): Promise<string> {
+				try {
+					return await super.translate(text, sourceLanguage, targetLanguage);
+				} catch (error) {
+					telemetry.track(TELEMETRY_EVENT_NAME.CAPTURED_ERROR, {
+						scope: 'translator',
+						error: String(error),
+						translatorName: translatorClass.translatorName,
+					});
+
+					throw error;
+				}
+			}
+
+			async translateBatch(
+				text: string[],
+				sourceLanguage: string,
+				targetLanguage: string,
+			): Promise<(string | null)[]> {
+				try {
+					return await super.translateBatch(
+						text,
+						sourceLanguage,
+						targetLanguage,
+					);
+				} catch (error) {
+					telemetry.track(TELEMETRY_EVENT_NAME.CAPTURED_ERROR, {
+						scope: 'translator',
+						error: String(error),
+						translatorName: translatorClass.translatorName,
+					});
+
+					throw error;
+				}
+			}
+		})() as InstanceType<RecordValues<Translators>>;
 
 		return this.translator;
 	}
