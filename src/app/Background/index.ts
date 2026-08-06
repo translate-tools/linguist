@@ -55,7 +55,7 @@ const AutoTranslator = class extends createFallbackTranslator([
 	constructor() {
 		super({
 			onTranslatorError(error) {
-				telemetry.track(TELEMETRY_EVENT_NAME.CAPTURED_ERROR, {
+				telemetry.track(TELEMETRY_EVENT_NAME.ERROR_CAPTURED, {
 					scope: 'auto translator',
 					error: String(error),
 				});

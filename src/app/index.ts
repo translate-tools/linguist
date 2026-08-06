@@ -135,7 +135,7 @@ export class App {
 
 		// Watch for updates
 		$appConfig.updates.watch(() => {
-			telemetry.track(TELEMETRY_EVENT_NAME.CONFIG_UPDATED);
+			telemetry.track(TELEMETRY_EVENT_NAME.SETTINGS_UPDATED);
 		});
 
 		// Clear cache while disable

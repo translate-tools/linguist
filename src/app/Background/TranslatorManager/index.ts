@@ -97,7 +97,7 @@ export class TranslatorManager<Translators extends TranslatorsMap = TranslatorsM
 				try {
 					return await super.translate(text, sourceLanguage, targetLanguage);
 				} catch (error) {
-					telemetry.track(TELEMETRY_EVENT_NAME.CAPTURED_ERROR, {
+					telemetry.track(TELEMETRY_EVENT_NAME.ERROR_CAPTURED, {
 						scope: 'translator',
 						error: String(error),
 						translatorName: translatorClass.translatorName,
@@ -119,7 +119,7 @@ export class TranslatorManager<Translators extends TranslatorsMap = TranslatorsM
 						targetLanguage,
 					);
 				} catch (error) {
-					telemetry.track(TELEMETRY_EVENT_NAME.CAPTURED_ERROR, {
+					telemetry.track(TELEMETRY_EVENT_NAME.ERROR_CAPTURED, {
 						scope: 'translator',
 						error: String(error),
 						translatorName: translatorClass.translatorName,

@@ -221,7 +221,7 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 					},
 				});
 
-				trackClientEvent(TELEMETRY_EVENT_NAME.TEXT_TRANSLATION, {
+				trackClientEvent(TELEMETRY_EVENT_NAME.TEXT_TRANSLATED, {
 					from,
 					to,
 					sourceTextLength: userInput.length,

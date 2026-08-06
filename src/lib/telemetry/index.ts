@@ -8,13 +8,13 @@ export enum TELEMETRY_EVENT_NAME {
 	APP_INSTALLED = 'App installed',
 	APP_UPDATED = 'App updated',
 
-	PAGE_TRANSLATION = 'Page translation',
-	TEXT_TRANSLATION = 'Text translation',
-	SELECTED_TEXT_TRANSLATION = 'Selected text translation',
+	PAGE_TRANSLATION_CHANGED = 'Page translation changed',
+	TEXT_TRANSLATED = 'Text translated',
+	SELECTED_TEXT_TRANSLATED = 'Selected text translated',
 
 	POPUP_OPENED = 'Popup opened',
 	SCREEN_SHOWN = 'Screen shown',
-	CONFIG_UPDATED = 'Config updated',
+	SETTINGS_UPDATED = 'Settings updated',
 
-	CAPTURED_ERROR = 'Captured error',
+	ERROR_CAPTURED = 'Error captured',
 }

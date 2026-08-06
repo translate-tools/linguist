@@ -31,7 +31,7 @@ export class PageTranslatorController {
 	public translate(options: PageTranslationOptions) {
 		this.updateTranslationState(options);
 		this.notifyState();
-		trackClientEvent(TELEMETRY_EVENT_NAME.PAGE_TRANSLATION, {
+		trackClientEvent(TELEMETRY_EVENT_NAME.PAGE_TRANSLATION_CHANGED, {
 			action: 'run',
 			from: options.from,
 			to: options.to,
@@ -41,7 +41,7 @@ export class PageTranslatorController {
 	public stopTranslate() {
 		this.updateTranslationState(null);
 		this.notifyState();
-		trackClientEvent(TELEMETRY_EVENT_NAME.PAGE_TRANSLATION, {
+		trackClientEvent(TELEMETRY_EVENT_NAME.PAGE_TRANSLATION_CHANGED, {
 			action: 'stop',
 		});
 	}
