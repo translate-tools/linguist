@@ -13,7 +13,7 @@ export enum TELEMETRY_EVENT_NAME {
 	SELECTED_TEXT_TRANSLATION = 'Selected text translation',
 
 	POPUP_OPENED = 'Popup opened',
-	VISIT_PREFERENCES_SCREEN = 'Visit preferences screen',
+	SCREEN_SHOWN = 'Screen shown',
 	CONFIG_UPDATED = 'Config updated',
 
 	CAPTURED_ERROR = 'Captured error',

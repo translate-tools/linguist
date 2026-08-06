@@ -54,7 +54,7 @@ interface OptionsPageProps {
 
 export const OptionsPage: FC<OptionsPageProps> = ({ messageHideDelay }) => {
 	useLayoutEffect(() => {
-		telemetry.track(TELEMETRY_EVENT_NAME.VISIT_PREFERENCES_SCREEN);
+		telemetry.track(TELEMETRY_EVENT_NAME.SCREEN_SHOWN, { screen: 'Preferences' });
 	}, []);
 
 	const [loaded, setLoaded] = useState<boolean>(false);

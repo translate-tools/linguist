@@ -3,6 +3,8 @@ import { isEqual } from 'lodash';
 import { cn } from '@bem-react/classname';
 
 import { Page } from '../../../components/layouts/Page/Page';
+import { TELEMETRY_EVENT_NAME } from '../../../lib/telemetry';
+import { telemetry } from '../../../lib/telemetry/singleton';
 import { getConfig } from '../../../requests/backend/getConfig';
 import { ITranslationHistoryEntryWithKey } from '../../../requests/backend/history/data';
 import { getTranslationHistoryEntries } from '../../../requests/backend/history/getHistoryEntries';
@@ -17,6 +19,10 @@ import './HistoryPage.css';
 export const cnHistoryPage = cn('HistoryPage');
 
 export const HistoryPage: FC = () => {
+	useLayoutEffect(() => {
+		telemetry.track(TELEMETRY_EVENT_NAME.SCREEN_SHOWN, { screen: 'History' });
+	}, []);
+
 	const [translations, setTranslations] = useState<
 		null | ITranslationHistoryEntryWithKey[]
 	>(null);

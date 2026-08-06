@@ -1,4 +1,11 @@
-import React, { FC, useCallback, useEffect, useMemo, useState } from 'react';
+import React, {
+	FC,
+	useCallback,
+	useEffect,
+	useLayoutEffect,
+	useMemo,
+	useState,
+} from 'react';
 import { useImmutableCallback } from 'react-elegant-ui/esm/hooks/useImmutableCallback';
 import { getLanguageCodesISO639 } from 'anylang/languages';
 import Papa from 'papaparse';
@@ -17,6 +24,8 @@ import { isMobileBrowser } from '../../../lib/browser';
 import { saveFile } from '../../../lib/files';
 import { useConcurrentTTS } from '../../../lib/hooks/useConcurrentTTS';
 import { getLanguageNameByCode, getMessage } from '../../../lib/language';
+import { TELEMETRY_EVENT_NAME } from '../../../lib/telemetry';
+import { telemetry } from '../../../lib/telemetry/singleton';
 import { isTextsContainsSubstring } from '../../../lib/utils';
 import { clearTranslations } from '../../../requests/backend/translations/clearTranslations';
 import { ITranslationEntryWithKey } from '../../../requests/backend/translations/data';
@@ -51,6 +60,10 @@ export interface IDictionaryPageProps {
  * Represent favorite translates and translate history
  */
 export const DictionaryPage: FC<IDictionaryPageProps> = ({ confirmDelete = true }) => {
+	useLayoutEffect(() => {
+		telemetry.track(TELEMETRY_EVENT_NAME.SCREEN_SHOWN, { screen: 'Dictionary' });
+	}, []);
+
 	const { messages, addMessage, deleteMessage, haltMessages } = useToastMessages({
 		hideDelay: 5000,
 	});
