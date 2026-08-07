@@ -10,7 +10,7 @@ export const [telemetryFactory, telemetryRequest] = buildBackendRequest<{
 	factoryHandler:
 		() =>
 		async ({ eventName, props }) => {
-			await telemetry.track(eventName, props);
+			telemetry.track(eventName, props);
 		},
 });
 

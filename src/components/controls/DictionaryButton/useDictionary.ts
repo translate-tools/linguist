@@ -3,6 +3,8 @@ import { useImmutableCallback } from 'react-elegant-ui/esm/hooks/useImmutableCal
 import { isEqual } from 'lodash';
 
 import { isExtensionContext } from '../../../lib/browser';
+import { TELEMETRY_EVENT_NAME } from '../../../lib/telemetry';
+import { trackClientEvent } from '../../../requests/backend/telemetry';
 import {
 	onClearDictionary,
 	onDictionaryEntryAdd,
@@ -69,13 +71,23 @@ export const useDictionary = (translation: ITranslation | null) => {
 						to,
 						originalText: originalText.trim(),
 						translatedText: translatedText.trim(),
-					}).then(setDictionaryEntryId);
+					}).then((id) => {
+						setDictionaryEntryId(id);
+						trackClientEvent(
+							TELEMETRY_EVENT_NAME.TRANSLATION_MOVED_IN_DICTIONARY,
+							{ action: 'added' },
+						);
+					});
 				})();
 			}
 		} else {
 			if (dictionaryEntryId !== null) {
 				deleteTranslation(dictionaryEntryId).then(() => {
 					setDictionaryEntryId(null);
+					trackClientEvent(
+						TELEMETRY_EVENT_NAME.TRANSLATION_MOVED_IN_DICTIONARY,
+						{ action: 'removed' },
+					);
 				});
 			}
 		}
