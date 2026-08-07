@@ -19,8 +19,8 @@ export class EventTrackerController {
 	/**
 	 * Method to send event on server and ignore any errors like network connection, etc
 	 */
-	public async track(eventName: string, props?: EventPayload) {
-		await this.capture(eventName, props).catch((error) => {
+	public track(eventName: string, props?: EventPayload) {
+		this.capture(eventName, props).catch((error) => {
 			console.warn('Cannot send event to tracker', { eventName, props });
 			console.error(error);
 		});
