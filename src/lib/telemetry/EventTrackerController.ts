@@ -32,10 +32,10 @@ export class EventTrackerController {
 	public async capture(eventName: string, props?: EventPayload) {
 		const uid = await getTelemetryId();
 		await this.tracker.sendEvent(eventName, {
+			...props,
 			uid,
 			language: navigator.language,
 			userAgent: navigator.userAgent,
-			...props,
 		});
 	}
 }
