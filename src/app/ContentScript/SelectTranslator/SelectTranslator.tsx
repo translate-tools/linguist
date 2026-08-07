@@ -380,7 +380,7 @@ export class SelectTranslator {
 			/>,
 		);
 
-		trackClientEvent(TELEMETRY_EVENT_NAME.SELECTED_TEXT_TRANSLATED, {
+		trackClientEvent(TELEMETRY_EVENT_NAME.SELECTED_TEXT_POPUP_SHOWN, {
 			length: trimmedText.length,
 		});
 	};

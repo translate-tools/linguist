@@ -12,11 +12,13 @@ import { isMobileBrowser } from '../../../../../../lib/browser';
 import { useTTS } from '../../../../../../lib/hooks/useTTS';
 import { useTTSLanguages } from '../../../../../../lib/hooks/useTTSLanguages';
 import { detectLanguage, getMessage } from '../../../../../../lib/language';
+import { TELEMETRY_EVENT_NAME } from '../../../../../../lib/telemetry';
 import { TranslatorFeatures } from '../../../../../../pages/popup/layout/PopupWindow';
 import { getTranslatorFeatures } from '../../../../../../requests/backend/getTranslatorFeatures';
 import { getUserLanguagePreferences } from '../../../../../../requests/backend/getUserLanguagePreferences';
 import { addTranslationHistoryEntry } from '../../../../../../requests/backend/history/addTranslationHistoryEntry';
 import { TRANSLATION_ORIGIN } from '../../../../../../requests/backend/history/constants';
+import { trackClientEvent } from '../../../../../../requests/backend/telemetry';
 import { ITranslation } from '../../../../../../types/translation/Translation';
 
 import './TextTranslator.css';
@@ -88,6 +90,14 @@ export const TextTranslator: FC<TextTranslatorComponentProps> = ({
 						translatedText,
 					},
 				});
+
+				trackClientEvent(TELEMETRY_EVENT_NAME.TEXT_TRANSLATED, {
+					scope: 'selected text',
+					from,
+					to,
+					sourceTextLength: originalText.length,
+					translationLength: translatedText.length,
+				});
 			})
 			.catch((reason) => {
 				if (context !== translateContext.current) return;
@@ -102,6 +112,11 @@ export const TextTranslator: FC<TextTranslatorComponentProps> = ({
 				setTranslatedText(null);
 				setError(error);
 				console.error(error);
+
+				trackClientEvent(TELEMETRY_EVENT_NAME.ERROR_CAPTURED, {
+					scope: 'selected text',
+					error,
+				});
 			})
 			.finally(() => {
 				if (context !== translateContext.current) return;
