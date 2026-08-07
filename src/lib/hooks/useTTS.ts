@@ -1,7 +1,10 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { useImmutableCallback } from 'react-elegant-ui/esm/hooks/useImmutableCallback';
 
+import { trackClientEvent } from '../../requests/backend/telemetry';
 import { getTTS } from '../../requests/backend/tts/getTTS';
+
+import { TELEMETRY_EVENT_NAME } from '../telemetry';
 
 type PlayerSignal = {
 	active: symbol | null;
@@ -114,6 +117,11 @@ export const useTTS = (
 
 			player.current.src = urls[0];
 			player.current.play();
+
+			trackClientEvent(TELEMETRY_EVENT_NAME.TTS_STARTED, {
+				lang,
+				length: text.length,
+			});
 		})();
 	}, [lang, stopOtherPlayers, text]);
 
@@ -130,6 +138,8 @@ export const useTTS = (
 		}
 
 		setIsPlayed(false);
+
+		trackClientEvent(TELEMETRY_EVENT_NAME.TTS_STOPPED);
 	}, []);
 
 	const toggle = useImmutableCallback(() => {

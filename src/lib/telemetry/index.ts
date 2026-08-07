@@ -17,5 +17,8 @@ export enum TELEMETRY_EVENT_NAME {
 	SCREEN_SHOWN = 'Screen shown',
 	SETTINGS_UPDATED = 'Settings updated',
 
+	TTS_STARTED = 'TTS playback started',
+	TTS_STOPPED = 'TTS playback stopped',
+
 	ERROR_CAPTURED = 'Error captured',
 }
