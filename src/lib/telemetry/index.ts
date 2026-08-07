@@ -9,7 +9,7 @@ export enum TELEMETRY_EVENT_NAME {
 	APP_UPDATED = 'App updated',
 
 	PAGE_TRANSLATION_CHANGED = 'Page translation changed',
-	TEXT_TRANSLATED = 'Text translated',
+	TEXT_TRANSLATION_COMPLETED = 'Text translation completed',
 
 	POPUP_OPENED = 'Popup opened',
 	SELECTED_TEXT_POPUP_SHOWN = 'Selected text popup shown',

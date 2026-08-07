@@ -20,6 +20,20 @@ import { migrateAll } from './migrations/migrationsList';
 
 type OnInstalledData = null | browser.Runtime.OnInstalledDetailsType;
 
+async function getWebGpuStatus() {
+	if (!navigator.gpu) {
+		return 'unsupported';
+	}
+
+	const adapter = await navigator.gpu.requestAdapter();
+
+	if (!adapter) {
+		return 'no-adapter';
+	}
+
+	return 'available';
+}
+
 /**
  * Manage global states and application context
  */
@@ -82,7 +96,22 @@ export class App {
 
 		this.$onInstalledData.watch(this.onInstalled);
 
-		telemetry.track(TELEMETRY_EVENT_NAME.APP_OPENED);
+		// Send telemetry info
+		this.config
+			.get()
+			.then((config) => config)
+			.catch(() => null)
+			.then(async (config) => {
+				const webGpuStatus = await getWebGpuStatus();
+
+				telemetry.track(TELEMETRY_EVENT_NAME.APP_OPENED, {
+					targetLanguage: config?.language,
+					browserLanguage: navigator.language,
+					browserLanguages: navigator.languages.join(','),
+					webGpuStatus,
+					hardwareConcurrency: navigator.hardwareConcurrency,
+				});
+			});
 	}
 
 	private async setupOffscreenDocuments() {

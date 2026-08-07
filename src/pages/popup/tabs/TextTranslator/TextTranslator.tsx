@@ -221,7 +221,7 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 					},
 				});
 
-				trackClientEvent(TELEMETRY_EVENT_NAME.TEXT_TRANSLATED, {
+				trackClientEvent(TELEMETRY_EVENT_NAME.TEXT_TRANSLATION_COMPLETED, {
 					scope: 'user input',
 					from,
 					to,
