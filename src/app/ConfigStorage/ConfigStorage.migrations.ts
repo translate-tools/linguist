@@ -193,7 +193,11 @@ const migrations: Migration[] = [
 
 			let { [storageName]: actualData } =
 				await browser.storage.local.get(storageName);
-			if (typeof actualData !== 'object') {
+			if (
+				actualData === null ||
+				typeof actualData !== 'object' ||
+				Array.isArray(actualData)
+			) {
 				actualData = {};
 			}
 
