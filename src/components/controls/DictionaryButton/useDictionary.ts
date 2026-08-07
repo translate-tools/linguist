@@ -75,7 +75,7 @@ export const useDictionary = (translation: ITranslation | null) => {
 						setDictionaryEntryId(id);
 						trackClientEvent(
 							TELEMETRY_EVENT_NAME.TRANSLATION_MOVED_IN_DICTIONARY,
-							{ action: 'added' },
+							{ action: 'added', from, to },
 						);
 					});
 				})();
