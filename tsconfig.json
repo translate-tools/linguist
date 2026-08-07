@@ -1,7 +1,7 @@
 {
 	"compilerOptions": {
 		"module": "esnext",
-		"moduleResolution": "node",
+		"moduleResolution": "bundler",
 		"target": "esnext",
 		"esModuleInterop": true,
 		"strict": true,
@@ -16,7 +16,6 @@
 		"noUnusedLocals": true,
 		"noUnusedParameters": true,
 		"declaration": false,
-		"downlevelIteration": true,
 		"emitDecoratorMetadata": true,
 		"experimentalDecorators": true,
 		"pretty": true,
