@@ -125,7 +125,7 @@ export const useTTS = (
 		})();
 	}, [lang, stopOtherPlayers, text]);
 
-	const stop = useImmutableCallback(() => {
+	const stop = useImmutableCallback((synthetic = false) => {
 		contextSymbol.current = {};
 
 		player.current.pause();
@@ -139,7 +139,9 @@ export const useTTS = (
 
 		setIsPlayed(false);
 
-		trackClientEvent(TELEMETRY_EVENT_NAME.TTS_STOPPED);
+		if (!synthetic) {
+			trackClientEvent(TELEMETRY_EVENT_NAME.TTS_STOPPED);
+		}
 	}, []);
 
 	const toggle = useImmutableCallback(() => {
@@ -168,7 +170,7 @@ export const useTTS = (
 	useEffect(() => {
 		contextSymbol.current = {};
 		ttsPlaylist.current = null;
-		stop();
+		stop(true);
 	}, [stop, lang, text]);
 
 	// Stop player by unmount
