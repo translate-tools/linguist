@@ -1,12 +1,10 @@
-import { AsyncMethodReturns, Connection, connectToChild } from 'penpal';
+import { Connection, connectToChild } from 'penpal';
 
 import {
 	CustomTranslatorInfo,
 	TranslatorWorkerApi,
 } from '../../../offscreen-documents/translator';
 import { buildBackendRequest } from '../../utils/requestBuilder';
-
-import { CustomTranslatorsParentFrameApi } from './types';
 
 type CustomTranslatorsContext = {
 	customTranslators: Map<
@@ -65,7 +63,7 @@ export const customTranslatorCreate = buildBackendRequest<
 							};
 						});
 					},
-				} as AsyncMethodReturns<CustomTranslatorsParentFrameApi>,
+				},
 			});
 
 			const id = String(new Date().getTime());

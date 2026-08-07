@@ -1,10 +1,10 @@
 import { TranslatorInstanceMembers } from 'anylang/translators';
-import { AsyncMethodReturns, connectToParent } from 'penpal';
+import { connectToParent } from 'penpal';
 
 import { loadTranslator } from '../../lib/translators/customTranslators/loadTranslator';
 import { CustomTranslatorsParentFrameApi } from '../../requests/offscreen/customTranslators/types';
 
-import { CustomTranslatorInfo, TranslatorWorkerApi } from '.';
+import { CustomTranslatorInfo } from '.';
 
 let translator: TranslatorInstanceMembers | null = null;
 const connection = connectToParent<CustomTranslatorsParentFrameApi>({
@@ -30,7 +30,7 @@ const connection = connectToParent<CustomTranslatorsParentFrameApi>({
 			if (!translator) throw new Error('Translator is not defined');
 			return translator.translateBatch(texts, from, to);
 		},
-	} as AsyncMethodReturns<TranslatorWorkerApi>,
+	},
 });
 
 (window as any).fetch = async (input: string, init = {}) =>

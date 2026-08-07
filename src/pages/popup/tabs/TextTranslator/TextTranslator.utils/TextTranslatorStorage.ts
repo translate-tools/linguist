@@ -56,7 +56,7 @@ export class TextTranslatorStorage {
 		await this.setData({
 			...actualData,
 			...data,
-		} as TextTranslatorData);
+		});
 	};
 
 	public clear = async () => {

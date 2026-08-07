@@ -282,7 +282,10 @@ export const PageTranslatorTab: TabComponent<InitFn<InitData>> = ({
 		(state, setState) => {
 			// Update data
 			if (typeof state !== 'function') {
-				pageTranslationStorage.updateData({ optionsSpoilerState: !!state });
+				pageTranslationStorage.updateData({
+					// eslint-disable-next-line @typescript-eslint/no-unnecessary-type-conversion
+					optionsSpoilerState: Boolean(state),
+				});
 			}
 
 			setState(state);

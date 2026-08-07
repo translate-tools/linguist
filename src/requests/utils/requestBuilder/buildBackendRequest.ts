@@ -104,7 +104,7 @@ export const buildBackendRequest = <O = void, R = void, C = RequestHandlerFactor
 		};
 	};
 
-	return [factory, hook as (options: O) => Promise<R>] as const;
+	return [factory, hook] as const;
 };
 
 export const joinRequestHandlers =

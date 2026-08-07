@@ -48,8 +48,8 @@ export const TextTranslatorTab: TabComponent<InitFn<InitData>> = ({
 			try {
 				const translationState: TextTranslatorData = {
 					// Cast string to `langCode`
-					from: from as any,
-					to: to as any,
+					from,
+					to,
 					translate: null,
 				};
 

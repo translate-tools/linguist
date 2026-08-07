@@ -26,6 +26,4 @@ export const regObjects: ISelectDesktopRegistry = {
 	}) as ISelectDesktopRegistry['PopupComponent'],
 };
 
-export const SelectDesktopRegistry = new Registry({ id: cnSelect() }).fill(
-	regObjects as any,
-);
+export const SelectDesktopRegistry = new Registry({ id: cnSelect() }).fill(regObjects);

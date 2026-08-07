@@ -35,17 +35,7 @@ interface EditorProps extends Pick<IModalProps, 'onClose'> {
 	error: null | string;
 }
 
-export const emptyEditorEntry: EditorEntry = {
-	name: '',
-	code: '',
-};
-
-export const Editor: FC<EditorProps> = ({
-	data = emptyEditorEntry,
-	onClose,
-	onSave,
-	error,
-}) => {
+export const Editor: FC<EditorProps> = ({ data, onClose, onSave, error }) => {
 	const scope = useContext(OptionsModalsContext);
 
 	const [name, setName] = useState('');

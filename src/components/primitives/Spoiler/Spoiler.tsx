@@ -13,6 +13,7 @@ export const Spoiler: FC<ISpoilerProps> = ({ title, children, open, onToggle }) 
 	const onToggleSpoiler: ReactEventHandler<HTMLDetailsElement> = useCallback(
 		(evt) => {
 			if (onToggle !== undefined) {
+				// eslint-disable-next-line @typescript-eslint/no-unnecessary-type-conversion
 				const isOpen = Boolean((evt.target as HTMLDetailsElement).open);
 				onToggle(isOpen);
 			}

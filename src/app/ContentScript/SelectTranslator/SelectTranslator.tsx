@@ -80,6 +80,7 @@ export const getSelectedTextOfInput = (elm: HTMLInputElement | HTMLTextAreaEleme
 
 export const getAbsolutePositionOfElement = (element: HTMLElement) => {
 	const bounds = element.getBoundingClientRect();
+	// eslint-disable-next-line @typescript-eslint/no-useless-default-assignment
 	const { scrollX = 0, scrollY = 0 } = window;
 	return {
 		x: bounds.x + scrollX,
