@@ -5,7 +5,7 @@
 <meta name="generator" content="Docusaurus v3.8.1">
 <title data-rh="true">Build from sources | Linguist – Privacy‑First Translation Extension for Chrome and Firefox</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" property="og:image" content="https://linguister.io/img/app.png"><meta data-rh="true" name="twitter:image" content="https://linguister.io/img/app.png"><meta data-rh="true" property="og:url" content="https://linguister.io/docs/dev/Development"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Build from sources | Linguist – Privacy‑First Translation Extension for Chrome and Firefox"><meta data-rh="true" name="description" content="The build scripts are designed to run on a Unix platform (Linux, macOS, BSD, etc.). If you are on Windows, try installing Cygwin."><meta data-rh="true" property="og:description" content="The build scripts are designed to run on a Unix platform (Linux, macOS, BSD, etc.). If you are on Windows, try installing Cygwin."><link data-rh="true" rel="icon" href="/favicon.ico"><link data-rh="true" rel="canonical" href="https://linguister.io/docs/dev/Development"><link data-rh="true" rel="alternate" href="https://linguister.io/docs/dev/Development" hreflang="en"><link data-rh="true" rel="alternate" href="https://linguister.io/docs/dev/Development" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Build from sources","item":"https://linguister.io/docs/dev/Development"}]}</script><link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="Linguist – Privacy‑First Translation Extension for Chrome and Firefox RSS Feed">
 <link rel="alternate" type="application/atom+xml" href="/blog/atom.xml" title="Linguist – Privacy‑First Translation Extension for Chrome and Firefox Atom Feed"><link rel="stylesheet" href="/assets/css/styles.96f65661.css">
-<script src="/assets/js/runtime~main.af16e0c9.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.6262c1b7.js" defer="defer"></script>
 <script src="/assets/js/main.56ecd9a6.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -24,24 +24,27 @@
 <p>If you have an ARM CPU and want to build the code, you can emulate AMD64 and run the build there. You may also try to <a href="https://stackoverflow.com/questions/65612411/forcing-docker-to-use-linux-amd64-platform-by-default-on-macos" target="_blank" rel="noopener noreferrer">enable emulation</a> at the Docker level. If you use Docker, set the variable <code>export DOCKER_DEFAULT_PLATFORM=linux/amd64</code> or add the option <code>platform: linux/amd64</code> to a <code>docker-compose.yml</code> file.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="build">Build<a href="#build" class="hash-link" aria-label="Direct link to Build" title="Direct link to Build">​</a></h2>
 <ul>
-<li>Create a <code>.env</code> file. You may copy the <code>.env.example</code> file and configure it with your options</li>
+<li>Create <code>.env</code> file. You may copy the <code>.env.example</code> file and configure it with your options</li>
 <li>Run <code>make build</code> to build the whole project, package it, and check it with a linter</li>
 <li>Artifacts will be placed in the <code>build</code> directory</li>
 </ul>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="partial-build">Partial build<a href="#partial-build" class="hash-link" aria-label="Direct link to Partial build" title="Direct link to Partial build">​</a></h2>
-<p>To build the extension for specific browsers only, you may run <code>make</code> with a specific target such as <code>buildFirefox</code>, <code>buildChromium</code>, etc. (see <code>makefile</code> for details). Some targets:</p>
+<p>To build the extension for specific browsers only, you can run <code>make build</code> and set space-separated targets in the <code>PLATFORMS</code> parameter.</p>
+<p>Example: <code>make build PLATFORMS=firefox</code> or <code>make build PLATFORMS=&quot;chrome chromium&quot;</code>.</p>
+<p>Supported platforms:</p>
 <ul>
 <li>firefox</li>
+<li>firefox-standalone</li>
 <li>chrome</li>
-<li>chromium: special build with auto updates not from the Google Store</li>
+<li>chromium: special build with auto updates out of the Google Store</li>
 </ul>
-<p>You must install dependencies and build third party code with <code>make prepare buildThirdparty</code> before running a specific target.</p>
-<p>Example command to build only the Firefox version: <code>make prepare buildThirdparty buildFirefox</code>.</p>
+<p>Example command to build only the Firefox version is <code>make build PLATFORMS=firefox</code>.</p>
 <h1>Development</h1>
 <p>You may run development mode with <code>make dev</code>.</p>
 <p>If you change theme tokens, you also have to compile the theme files: <code>npm run build:tokens</code></p>
 <p>To debug on Android, <a href="/docs/dev/AndroidDebug">see instructions</a>.</p>
 <p>To make a custom translator, see the <a href="/docs/CustomTranslator">translator API</a>.</p>
+<p>If you need offline translation features, build third-party code with <code>make prepare buildThirdparty</code> before running development mode</p>
 <h1>Tests</h1>
 <p>When you change code that touches any user data and interacts with browser storages (<code>localStorage</code>, <code>indexedDB</code>, <code>browser.storage</code>, etc.) or some external API, you must add or update tests for it.</p>
 <p>The general rule is that any code which simply transforms data should be tested.</p>
