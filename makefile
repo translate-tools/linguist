@@ -37,7 +37,7 @@ buildThirdparty:
 buildAll:
 	mkdir -p ./build
 	chmod 777 ./build
-	${DOCKER_COMPOSE} run --rm linguist make $(addprefix build-,$(PLATFORMS))
+	${DOCKER_COMPOSE} run --rm --build linguist make $(addprefix build-,$(PLATFORMS))
 
 # Targets below requires deps and not intended to run manually
 build-firefox:
