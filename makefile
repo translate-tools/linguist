@@ -1,4 +1,12 @@
-include .env
+-include .env
+
+SHELL := /bin/bash
+
+DOCKER_COMPOSE ?= docker compose
+ADB_DEVICE_TO_DEBUG ?=
+FAST_BUILD ?= off
+PLATFORMS ?= firefox firefox-standalone chromium chrome 
+
 export
 
 prepare:
@@ -29,15 +37,16 @@ buildThirdparty:
 buildAll:
 	mkdir -p ./build
 	chmod 777 ./build
-	${DOCKER_COMPOSE} run --rm linguist make buildFirefox buildFirefoxStandalone buildChromium buildChrome
+	${DOCKER_COMPOSE} run --rm linguist make $(addprefix build-,$(PLATFORMS))
 
-buildFirefox:
+# Targets below requires deps and not intended to run manually
+build-firefox:
 	NODE_ENV=production EXT_TARGET=firefox npx webpack-cli -c ./webpack.config.js
-buildFirefoxStandalone:
+build-firefox-standalone:
 	NODE_ENV=production EXT_TARGET=firefox-standalone npx webpack-cli -c ./webpack.config.js
-buildChromium:
+build-chromium:
 	NODE_ENV=production EXT_TARGET=chromium npx webpack-cli -c ./webpack.config.js
-buildChrome:
+build-chrome:
 	NODE_ENV=production EXT_TARGET=chrome npx webpack-cli -c ./webpack.config.js
 
 packAll:
