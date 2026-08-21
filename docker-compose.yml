@@ -7,6 +7,7 @@ services:
     volumes:
       - ./build:/mnt/builder/build
       - ./thirdparty/bergamot/build:/mnt/builder/thirdparty/bergamot/build
+      - ./thirdparty/bergamot/src:/mnt/builder/thirdparty/bergamot/src
 
   bergamot:
     user: node
