@@ -13,19 +13,22 @@ If you have an ARM CPU and want to build the code, you can emulate AMD64 and run
 
 ## Build
 
-- Create a `.env` file. You may copy the `.env.example` file and configure it with your options
+- Create `.env` file. You may copy the `.env.example` file and configure it with your options
 - Run `make build` to build the whole project, package it, and check it with a linter
 - Artifacts will be placed in the `build` directory
 
 
 ## Partial build
 
-To build the extension for specific browsers only, you may run `make` with a specific target such as `buildFirefox`, `buildChromium`, etc. (see `makefile` for details). Some targets:
+To build the extension for specific browsers only, you can run `make build` and set space separated targets in parameter `PLATFORMS`.
+
+Example: `make build PLATFORMS=firefox` or `make build PLATFORMS="chrome chromium"`.
+
+Supported platforms:
 - firefox
 - chrome
-- chromium: special build with auto updates not from the Google Store
+- chromium: special build with auto updates out of the Google Store
 
-You must install dependencies and build third party code with `make prepare buildThirdparty` before running a specific target.
 
 Example command to build only the Firefox version: `make prepare buildThirdparty buildFirefox`.
 
@@ -39,6 +42,8 @@ If you change theme tokens, you also have to compile the theme files: `npm run b
 To debug on Android, [see instructions](./AndroidDebug.md).
 
 To make a custom translator, see the [translator API](../CustomTranslator.md).
+
+If you need an offline translation features, build third party code with `make prepare buildThirdparty` before run dev mode.
 
 # Tests
 
