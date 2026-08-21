@@ -20,17 +20,18 @@ If you have an ARM CPU and want to build the code, you can emulate AMD64 and run
 
 ## Partial build
 
-To build the extension for specific browsers only, you can run `make build` and set space separated targets in parameter `PLATFORMS`.
+To build the extension for specific browsers only, you can run `make build` and set space-separated targets in the `PLATFORMS` parameter.
 
 Example: `make build PLATFORMS=firefox` or `make build PLATFORMS="chrome chromium"`.
 
 Supported platforms:
 - firefox
+- firefox-standalone
 - chrome
 - chromium: special build with auto updates out of the Google Store
 
 
-Example command to build only the Firefox version: `make prepare buildThirdparty buildFirefox`.
+Example command to build only the Firefox version is `make build PLATFORMS=firefox`.
 
 
 # Development
@@ -43,7 +44,7 @@ To debug on Android, [see instructions](./AndroidDebug.md).
 
 To make a custom translator, see the [translator API](../CustomTranslator.md).
 
-If you need an offline translation features, build third party code with `make prepare buildThirdparty` before run dev mode.
+If you need offline translation features, build third-party code with `make prepare buildThirdparty` before running development mode
 
 # Tests
 
