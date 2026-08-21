@@ -55,7 +55,7 @@ jobs:
           key: ${{ steps.cache-thirdparty-restore.outputs.cache-primary-key }}
 
       - name: Build some targets for test
-        run: make prepare firefox firefox-standalone packAll lintBuilds
+        run: make prepare buildAll packAll lintBuilds PLATFORMS="firefox firefox-standalone"
 
       - name: Archive build files
         uses: actions/upload-artifact@v4
