@@ -12,6 +12,7 @@ import { compose, composeU, ExtractProps } from 'react-elegant-ui/esm/lib/compos
 import { withGlyphAutoFix } from '../_glyph/Icon_glyph_autofix';
 import { withGlyphBookmark } from '../_glyph/Icon_glyph_bookmark';
 import { withGlyphBookmarkBorder } from '../_glyph/Icon_glyph_bookmark-border';
+import { withGlyphContentCopy } from '../_glyph/Icon_glyph_content-copy';
 import { withGlyphDelete } from '../_glyph/Icon_glyph_delete';
 import { withGlyphDictionary } from '../_glyph/Icon_glyph_dictionary';
 import { withGlyphHistory } from '../_glyph/Icon_glyph_history';
@@ -30,6 +31,7 @@ export const Icon = compose(
 		withGlyphBookmark,
 		withGlyphBookmarkBorder,
 		withGlyphHistory,
+		withGlyphContentCopy,
 
 		withModIconGlyphUnfoldMore,
 		withModIconGlyphExpandMore,
