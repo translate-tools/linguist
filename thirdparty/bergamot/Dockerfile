@@ -1,4 +1,4 @@
-FROM node:20
+FROM node:26
 WORKDIR /mnt/bergamot
 
 # Install system deps
