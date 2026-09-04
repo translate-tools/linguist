@@ -32,7 +32,7 @@ build: clean prepare buildThirdparty buildAll packAll lintBuilds
 
 buildThirdparty:
 	mkdir -p ./thirdparty/bergamot/build && chmod 777 ./thirdparty/bergamot/build
-	${DOCKER_COMPOSE} run --rm bergamot make build
+	${DOCKER_COMPOSE} run --rm --build bergamot make build
 
 buildAll:
 	mkdir -p ./build
