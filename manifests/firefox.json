@@ -10,5 +10,19 @@
 		"default_popup": "pages/popup/popup.html",
 		"default_title": "__MSG_ext_name__",
 		"default_icon": "static/logo.png"
+	},
+	"browser_specific_settings": {
+		"gecko": {
+			"strict_min_version": 140,
+			"data_collection_permissions": {
+				"required": ["technicalAndInteraction"]
+			}
+		},
+		"gecko_android": {
+			"strict_min_version": 142,
+			"data_collection_permissions": {
+				"required": ["technicalAndInteraction"]
+			}
+		}
 	}
 }
